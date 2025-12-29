@@ -24,736 +24,736 @@ import java.util.HashMap;
 public class InstanceDetail extends AbstractModel {
 
     /**
-    * The ckafka cluster instance Id.
+    * <p>ckafka cluster instance Id.</p>.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * CKafka cluster instance name.
+    * <P>Specifies the name of the ckafka cluster instance.</p>.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Instance VIP information
+    * <P>Specifies the vip information for accessing the instance.</p>.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Instance port information
+    * <P>Specifies the port information to access the instance.</p>.
     */
     @SerializedName("Vport")
     @Expose
     private String Vport;
 
     /**
-    * Virtual IP list
+    * <p>Specifies the virtual IP list.</p>.
     */
     @SerializedName("VipList")
     @Expose
     private VipEntity [] VipList;
 
     /**
-    * Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+    * <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Instance bandwidth in Mbps
+    * <p>Specifies the instance bandwidth in Mbps.</p>.
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * Specifies the ckafka cluster instance disk size in gb.
+    * <p>Specifies the disk size of the ckafka cluster instance, in gb.</p>.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * AZ ID
+    * <p>Specifies the available zone ID.</p>.
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * vpcId. If this parameter is empty, it means the basic network
+    * <p>vpcId. if empty, indicates a basic network.</p>.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID
+    * <P>Subnet id.</p>.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
+    * <P>Specifies whether to renew the instance. int enumeration value: 1 means auto-renew, 2 means explicitly no auto-renew.</p>.
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
+    * <p>Specifies the instance status. valid values: 1 (healthy), 2 (alarm), 3 (instance status exception).</p>.
     */
     @SerializedName("Healthy")
     @Expose
     private Long Healthy;
 
     /**
-    * Instance status information
+    * <P>Specifies the instance status information.</p>.
     */
     @SerializedName("HealthyMessage")
     @Expose
     private String HealthyMessage;
 
     /**
-    * Instance creation time
+    * <P>Specifies the instance creation time.</p>.
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Instance expiration time
+    * <P>Specifies the instance expiration time.</p>.
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * Whether it is an internal customer. 1: yes
+    * <P>Specifies whether it is an internal customer. a value of 1 indicates an internal customer.</p>.
     */
     @SerializedName("IsInternal")
     @Expose
     private Long IsInternal;
 
     /**
-    * Number of topics
+    * <p>Specifies the number of topics.</p>.
     */
     @SerializedName("TopicNum")
     @Expose
     private Long TopicNum;
 
     /**
-    * Tag
+    * <P>Specifies the identifier tag.</p>.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * kafka version information.
+    * <p>kafka version information.</p>.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Cross-Availability zone.
+    * <P>Specifies the cross-availability zone.</p>.
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * ckafka sales type.
+    * <P>Specifies the ckafka sales type.</p>.
     */
     @SerializedName("Cvm")
     @Expose
     private Long Cvm;
 
     /**
-    * Specifies the cluster instance type of ckafka.
+    * <P>Specifies the ckafka cluster instance type.</p>.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Specifies the ckafka cluster instance disk type.
+    * <P>Specifies the disk type of the ckafka cluster instance.</p>.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Maximum number of topics for current specifications.
+    * <p>Maximum number of topics for current specifications.</p>.
     */
     @SerializedName("MaxTopicNumber")
     @Expose
     private Long MaxTopicNumber;
 
     /**
-    * Maximum number of partitions for current specifications.
+    * <p>Specifies the maximum number of partitions for current specifications.</p>.
     */
     @SerializedName("MaxPartitionNumber")
     @Expose
     private Long MaxPartitionNumber;
 
     /**
-    * Scheduled configuration upgrade time.
+    * <P>Specifies the planned configuration upgrade time.</p>.
     */
     @SerializedName("RebalanceTime")
     @Expose
     private String RebalanceTime;
 
     /**
-    * Specifies the number of partitions in the current instance.
+    * <P>Current number of partitions of the instance.</p>.
     */
     @SerializedName("PartitionNumber")
     @Expose
     private Long PartitionNumber;
 
     /**
-    * Specifies the public network bandwidth type of the ckafka cluster instance.
+    * <P>Specifies the public network bandwidth type of the ckafka cluster instance.</p>.
     */
     @SerializedName("PublicNetworkChargeType")
     @Expose
     private String PublicNetworkChargeType;
 
     /**
-    * Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+    * <p>Specifies the public network bandwidth. value range: 3Mbps to 999Mbps. only supported in pro edition.</p>.
     */
     @SerializedName("PublicNetwork")
     @Expose
     private Long PublicNetwork;
 
     /**
-    * Specifies the underlying cluster type of the ckafka cluster instance.
+    * <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * Instance feature list.
+    * <P>Specifies the instance feature list.</p>.
     */
     @SerializedName("Features")
     @Expose
     private String [] Features;
 
     /**
-     * Get The ckafka cluster instance Id. 
-     * @return InstanceId The ckafka cluster instance Id.
+     * Get <p>ckafka cluster instance Id.</p>. 
+     * @return InstanceId <p>ckafka cluster instance Id.</p>.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id.
-     * @param InstanceId The ckafka cluster instance Id.
+     * Set <p>ckafka cluster instance Id.</p>.
+     * @param InstanceId <p>ckafka cluster instance Id.</p>.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get CKafka cluster instance name. 
-     * @return InstanceName CKafka cluster instance name.
+     * Get <P>Specifies the name of the ckafka cluster instance.</p>. 
+     * @return InstanceName <P>Specifies the name of the ckafka cluster instance.</p>.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set CKafka cluster instance name.
-     * @param InstanceName CKafka cluster instance name.
+     * Set <P>Specifies the name of the ckafka cluster instance.</p>.
+     * @param InstanceName <P>Specifies the name of the ckafka cluster instance.</p>.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Instance VIP information 
-     * @return Vip Instance VIP information
+     * Get <P>Specifies the vip information for accessing the instance.</p>. 
+     * @return Vip <P>Specifies the vip information for accessing the instance.</p>.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set Instance VIP information
-     * @param Vip Instance VIP information
+     * Set <P>Specifies the vip information for accessing the instance.</p>.
+     * @param Vip <P>Specifies the vip information for accessing the instance.</p>.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Instance port information 
-     * @return Vport Instance port information
+     * Get <P>Specifies the port information to access the instance.</p>. 
+     * @return Vport <P>Specifies the port information to access the instance.</p>.
      */
     public String getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Instance port information
-     * @param Vport Instance port information
+     * Set <P>Specifies the port information to access the instance.</p>.
+     * @param Vport <P>Specifies the port information to access the instance.</p>.
      */
     public void setVport(String Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Virtual IP list 
-     * @return VipList Virtual IP list
+     * Get <p>Specifies the virtual IP list.</p>. 
+     * @return VipList <p>Specifies the virtual IP list.</p>.
      */
     public VipEntity [] getVipList() {
         return this.VipList;
     }
 
     /**
-     * Set Virtual IP list
-     * @param VipList Virtual IP list
+     * Set <p>Specifies the virtual IP list.</p>.
+     * @param VipList <p>Specifies the virtual IP list.</p>.
      */
     public void setVipList(VipEntity [] VipList) {
         this.VipList = VipList;
     }
 
     /**
-     * Get Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed. 
-     * @return Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+     * Get <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>. 
+     * @return Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
-     * @param Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+     * Set <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+     * @param Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Instance bandwidth in Mbps 
-     * @return Bandwidth Instance bandwidth in Mbps
+     * Get <p>Specifies the instance bandwidth in Mbps.</p>. 
+     * @return Bandwidth <p>Specifies the instance bandwidth in Mbps.</p>.
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set Instance bandwidth in Mbps
-     * @param Bandwidth Instance bandwidth in Mbps
+     * Set <p>Specifies the instance bandwidth in Mbps.</p>.
+     * @param Bandwidth <p>Specifies the instance bandwidth in Mbps.</p>.
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get Specifies the ckafka cluster instance disk size in gb. 
-     * @return DiskSize Specifies the ckafka cluster instance disk size in gb.
+     * Get <p>Specifies the disk size of the ckafka cluster instance, in gb.</p>. 
+     * @return DiskSize <p>Specifies the disk size of the ckafka cluster instance, in gb.</p>.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Specifies the ckafka cluster instance disk size in gb.
-     * @param DiskSize Specifies the ckafka cluster instance disk size in gb.
+     * Set <p>Specifies the disk size of the ckafka cluster instance, in gb.</p>.
+     * @param DiskSize <p>Specifies the disk size of the ckafka cluster instance, in gb.</p>.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get AZ ID 
-     * @return ZoneId AZ ID
+     * Get <p>Specifies the available zone ID.</p>. 
+     * @return ZoneId <p>Specifies the available zone ID.</p>.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ ID
-     * @param ZoneId AZ ID
+     * Set <p>Specifies the available zone ID.</p>.
+     * @param ZoneId <p>Specifies the available zone ID.</p>.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get vpcId. If this parameter is empty, it means the basic network 
-     * @return VpcId vpcId. If this parameter is empty, it means the basic network
+     * Get <p>vpcId. if empty, indicates a basic network.</p>. 
+     * @return VpcId <p>vpcId. if empty, indicates a basic network.</p>.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpcId. If this parameter is empty, it means the basic network
-     * @param VpcId vpcId. If this parameter is empty, it means the basic network
+     * Set <p>vpcId. if empty, indicates a basic network.</p>.
+     * @param VpcId <p>vpcId. if empty, indicates a basic network.</p>.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get <P>Subnet id.</p>. 
+     * @return SubnetId <P>Subnet id.</p>.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set <P>Subnet id.</p>.
+     * @param SubnetId <P>Subnet id.</p>.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no 
-     * @return RenewFlag Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
+     * Get <P>Specifies whether to renew the instance. int enumeration value: 1 means auto-renew, 2 means explicitly no auto-renew.</p>. 
+     * @return RenewFlag <P>Specifies whether to renew the instance. int enumeration value: 1 means auto-renew, 2 means explicitly no auto-renew.</p>.
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
-     * @param RenewFlag Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
+     * Set <P>Specifies whether to renew the instance. int enumeration value: 1 means auto-renew, 2 means explicitly no auto-renew.</p>.
+     * @param RenewFlag <P>Specifies whether to renew the instance. int enumeration value: 1 means auto-renew, 2 means explicitly no auto-renew.</p>.
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional 
-     * @return Healthy Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
+     * Get <p>Specifies the instance status. valid values: 1 (healthy), 2 (alarm), 3 (instance status exception).</p>. 
+     * @return Healthy <p>Specifies the instance status. valid values: 1 (healthy), 2 (alarm), 3 (instance status exception).</p>.
      */
     public Long getHealthy() {
         return this.Healthy;
     }
 
     /**
-     * Set Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
-     * @param Healthy Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
+     * Set <p>Specifies the instance status. valid values: 1 (healthy), 2 (alarm), 3 (instance status exception).</p>.
+     * @param Healthy <p>Specifies the instance status. valid values: 1 (healthy), 2 (alarm), 3 (instance status exception).</p>.
      */
     public void setHealthy(Long Healthy) {
         this.Healthy = Healthy;
     }
 
     /**
-     * Get Instance status information 
-     * @return HealthyMessage Instance status information
+     * Get <P>Specifies the instance status information.</p>. 
+     * @return HealthyMessage <P>Specifies the instance status information.</p>.
      */
     public String getHealthyMessage() {
         return this.HealthyMessage;
     }
 
     /**
-     * Set Instance status information
-     * @param HealthyMessage Instance status information
+     * Set <P>Specifies the instance status information.</p>.
+     * @param HealthyMessage <P>Specifies the instance status information.</p>.
      */
     public void setHealthyMessage(String HealthyMessage) {
         this.HealthyMessage = HealthyMessage;
     }
 
     /**
-     * Get Instance creation time 
-     * @return CreateTime Instance creation time
+     * Get <P>Specifies the instance creation time.</p>. 
+     * @return CreateTime <P>Specifies the instance creation time.</p>.
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Instance creation time
-     * @param CreateTime Instance creation time
+     * Set <P>Specifies the instance creation time.</p>.
+     * @param CreateTime <P>Specifies the instance creation time.</p>.
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Instance expiration time 
-     * @return ExpireTime Instance expiration time
+     * Get <P>Specifies the instance expiration time.</p>. 
+     * @return ExpireTime <P>Specifies the instance expiration time.</p>.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Instance expiration time
-     * @param ExpireTime Instance expiration time
+     * Set <P>Specifies the instance expiration time.</p>.
+     * @param ExpireTime <P>Specifies the instance expiration time.</p>.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Whether it is an internal customer. 1: yes 
-     * @return IsInternal Whether it is an internal customer. 1: yes
+     * Get <P>Specifies whether it is an internal customer. a value of 1 indicates an internal customer.</p>. 
+     * @return IsInternal <P>Specifies whether it is an internal customer. a value of 1 indicates an internal customer.</p>.
      */
     public Long getIsInternal() {
         return this.IsInternal;
     }
 
     /**
-     * Set Whether it is an internal customer. 1: yes
-     * @param IsInternal Whether it is an internal customer. 1: yes
+     * Set <P>Specifies whether it is an internal customer. a value of 1 indicates an internal customer.</p>.
+     * @param IsInternal <P>Specifies whether it is an internal customer. a value of 1 indicates an internal customer.</p>.
      */
     public void setIsInternal(Long IsInternal) {
         this.IsInternal = IsInternal;
     }
 
     /**
-     * Get Number of topics 
-     * @return TopicNum Number of topics
+     * Get <p>Specifies the number of topics.</p>. 
+     * @return TopicNum <p>Specifies the number of topics.</p>.
      */
     public Long getTopicNum() {
         return this.TopicNum;
     }
 
     /**
-     * Set Number of topics
-     * @param TopicNum Number of topics
+     * Set <p>Specifies the number of topics.</p>.
+     * @param TopicNum <p>Specifies the number of topics.</p>.
      */
     public void setTopicNum(Long TopicNum) {
         this.TopicNum = TopicNum;
     }
 
     /**
-     * Get Tag 
-     * @return Tags Tag
+     * Get <P>Specifies the identifier tag.</p>. 
+     * @return Tags <P>Specifies the identifier tag.</p>.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag
-     * @param Tags Tag
+     * Set <P>Specifies the identifier tag.</p>.
+     * @param Tags <P>Specifies the identifier tag.</p>.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get kafka version information. 
-     * @return Version kafka version information.
+     * Get <p>kafka version information.</p>. 
+     * @return Version <p>kafka version information.</p>.
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set kafka version information.
-     * @param Version kafka version information.
+     * Set <p>kafka version information.</p>.
+     * @param Version <p>kafka version information.</p>.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Cross-Availability zone. 
-     * @return ZoneIds Cross-Availability zone.
+     * Get <P>Specifies the cross-availability zone.</p>. 
+     * @return ZoneIds <P>Specifies the cross-availability zone.</p>.
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Cross-Availability zone.
-     * @param ZoneIds Cross-Availability zone.
+     * Set <P>Specifies the cross-availability zone.</p>.
+     * @param ZoneIds <P>Specifies the cross-availability zone.</p>.
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get ckafka sales type. 
-     * @return Cvm ckafka sales type.
+     * Get <P>Specifies the ckafka sales type.</p>. 
+     * @return Cvm <P>Specifies the ckafka sales type.</p>.
      */
     public Long getCvm() {
         return this.Cvm;
     }
 
     /**
-     * Set ckafka sales type.
-     * @param Cvm ckafka sales type.
+     * Set <P>Specifies the ckafka sales type.</p>.
+     * @param Cvm <P>Specifies the ckafka sales type.</p>.
      */
     public void setCvm(Long Cvm) {
         this.Cvm = Cvm;
     }
 
     /**
-     * Get Specifies the cluster instance type of ckafka. 
-     * @return InstanceType Specifies the cluster instance type of ckafka.
+     * Get <P>Specifies the ckafka cluster instance type.</p>. 
+     * @return InstanceType <P>Specifies the ckafka cluster instance type.</p>.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Specifies the cluster instance type of ckafka.
-     * @param InstanceType Specifies the cluster instance type of ckafka.
+     * Set <P>Specifies the ckafka cluster instance type.</p>.
+     * @param InstanceType <P>Specifies the ckafka cluster instance type.</p>.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Specifies the ckafka cluster instance disk type. 
-     * @return DiskType Specifies the ckafka cluster instance disk type.
+     * Get <P>Specifies the disk type of the ckafka cluster instance.</p>. 
+     * @return DiskType <P>Specifies the disk type of the ckafka cluster instance.</p>.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Specifies the ckafka cluster instance disk type.
-     * @param DiskType Specifies the ckafka cluster instance disk type.
+     * Set <P>Specifies the disk type of the ckafka cluster instance.</p>.
+     * @param DiskType <P>Specifies the disk type of the ckafka cluster instance.</p>.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Maximum number of topics for current specifications. 
-     * @return MaxTopicNumber Maximum number of topics for current specifications.
+     * Get <p>Maximum number of topics for current specifications.</p>. 
+     * @return MaxTopicNumber <p>Maximum number of topics for current specifications.</p>.
      */
     public Long getMaxTopicNumber() {
         return this.MaxTopicNumber;
     }
 
     /**
-     * Set Maximum number of topics for current specifications.
-     * @param MaxTopicNumber Maximum number of topics for current specifications.
+     * Set <p>Maximum number of topics for current specifications.</p>.
+     * @param MaxTopicNumber <p>Maximum number of topics for current specifications.</p>.
      */
     public void setMaxTopicNumber(Long MaxTopicNumber) {
         this.MaxTopicNumber = MaxTopicNumber;
     }
 
     /**
-     * Get Maximum number of partitions for current specifications. 
-     * @return MaxPartitionNumber Maximum number of partitions for current specifications.
+     * Get <p>Specifies the maximum number of partitions for current specifications.</p>. 
+     * @return MaxPartitionNumber <p>Specifies the maximum number of partitions for current specifications.</p>.
      */
     public Long getMaxPartitionNumber() {
         return this.MaxPartitionNumber;
     }
 
     /**
-     * Set Maximum number of partitions for current specifications.
-     * @param MaxPartitionNumber Maximum number of partitions for current specifications.
+     * Set <p>Specifies the maximum number of partitions for current specifications.</p>.
+     * @param MaxPartitionNumber <p>Specifies the maximum number of partitions for current specifications.</p>.
      */
     public void setMaxPartitionNumber(Long MaxPartitionNumber) {
         this.MaxPartitionNumber = MaxPartitionNumber;
     }
 
     /**
-     * Get Scheduled configuration upgrade time. 
-     * @return RebalanceTime Scheduled configuration upgrade time.
+     * Get <P>Specifies the planned configuration upgrade time.</p>. 
+     * @return RebalanceTime <P>Specifies the planned configuration upgrade time.</p>.
      */
     public String getRebalanceTime() {
         return this.RebalanceTime;
     }
 
     /**
-     * Set Scheduled configuration upgrade time.
-     * @param RebalanceTime Scheduled configuration upgrade time.
+     * Set <P>Specifies the planned configuration upgrade time.</p>.
+     * @param RebalanceTime <P>Specifies the planned configuration upgrade time.</p>.
      */
     public void setRebalanceTime(String RebalanceTime) {
         this.RebalanceTime = RebalanceTime;
     }
 
     /**
-     * Get Specifies the number of partitions in the current instance. 
-     * @return PartitionNumber Specifies the number of partitions in the current instance.
+     * Get <P>Current number of partitions of the instance.</p>. 
+     * @return PartitionNumber <P>Current number of partitions of the instance.</p>.
      */
     public Long getPartitionNumber() {
         return this.PartitionNumber;
     }
 
     /**
-     * Set Specifies the number of partitions in the current instance.
-     * @param PartitionNumber Specifies the number of partitions in the current instance.
+     * Set <P>Current number of partitions of the instance.</p>.
+     * @param PartitionNumber <P>Current number of partitions of the instance.</p>.
      */
     public void setPartitionNumber(Long PartitionNumber) {
         this.PartitionNumber = PartitionNumber;
     }
 
     /**
-     * Get Specifies the public network bandwidth type of the ckafka cluster instance. 
-     * @return PublicNetworkChargeType Specifies the public network bandwidth type of the ckafka cluster instance.
+     * Get <P>Specifies the public network bandwidth type of the ckafka cluster instance.</p>. 
+     * @return PublicNetworkChargeType <P>Specifies the public network bandwidth type of the ckafka cluster instance.</p>.
      */
     public String getPublicNetworkChargeType() {
         return this.PublicNetworkChargeType;
     }
 
     /**
-     * Set Specifies the public network bandwidth type of the ckafka cluster instance.
-     * @param PublicNetworkChargeType Specifies the public network bandwidth type of the ckafka cluster instance.
+     * Set <P>Specifies the public network bandwidth type of the ckafka cluster instance.</p>.
+     * @param PublicNetworkChargeType <P>Specifies the public network bandwidth type of the ckafka cluster instance.</p>.
      */
     public void setPublicNetworkChargeType(String PublicNetworkChargeType) {
         this.PublicNetworkChargeType = PublicNetworkChargeType;
     }
 
     /**
-     * Get Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in. 
-     * @return PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+     * Get <p>Specifies the public network bandwidth. value range: 3Mbps to 999Mbps. only supported in pro edition.</p>. 
+     * @return PublicNetwork <p>Specifies the public network bandwidth. value range: 3Mbps to 999Mbps. only supported in pro edition.</p>.
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
-     * @param PublicNetwork Public network bandwidth. minimum 3 Mbps. maximum 999 Mbps. only the pro edition supports filling in.
+     * Set <p>Specifies the public network bandwidth. value range: 3Mbps to 999Mbps. only supported in pro edition.</p>.
+     * @param PublicNetwork <p>Specifies the public network bandwidth. value range: 3Mbps to 999Mbps. only supported in pro edition.</p>.
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
     }
 
     /**
-     * Get Specifies the underlying cluster type of the ckafka cluster instance. 
-     * @return ClusterType Specifies the underlying cluster type of the ckafka cluster instance.
+     * Get <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>. 
+     * @return ClusterType <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Specifies the underlying cluster type of the ckafka cluster instance.
-     * @param ClusterType Specifies the underlying cluster type of the ckafka cluster instance.
+     * Set <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
+     * @param ClusterType <P>Specifies the underlying cluster type of the ckafka cluster instance.</p>.
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get Instance feature list. 
-     * @return Features Instance feature list.
+     * Get <P>Specifies the instance feature list.</p>. 
+     * @return Features <P>Specifies the instance feature list.</p>.
      */
     public String [] getFeatures() {
         return this.Features;
     }
 
     /**
-     * Set Instance feature list.
-     * @param Features Instance feature list.
+     * Set <P>Specifies the instance feature list.</p>.
+     * @param Features <P>Specifies the instance feature list.</p>.
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;

@@ -24,509 +24,532 @@ import java.util.HashMap;
 public class CreateInstancePreRequest extends AbstractModel {
 
     /**
-    * Specifies the ckafka cluster instance Name, an arbitrary string with length no more than 128 characters.
+    * <p>Specifies the Name of the ckafka cluster instance, which is any string with a length not more than 128 characters.</p>.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. [view availability zones](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
+    * <P>Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. <a href="https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1">view availability zones</a></p>.
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * Prepaid purchase duration, such as "1m", exactly one month. value ranges from 1m to 36m.
+    * <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
     */
     @SerializedName("Period")
     @Expose
     private String Period;
 
     /**
-    * Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
+    * <P>Specifies the standard edition instance specification for the international site. currently only the standard edition on the international site uses the current field to distinguish specifications, while the domestic site standard edition uses peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.</p>.
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * VPC Id.
+    * <p>VPC Id.</p>.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID
+    * <P>Subnet id.</p>.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Optional. maximum retention time of instance logs, in minutes. default value: 1440 (1 day). value range: 1 minute to 90 days.
+    * <P>Optional. specifies the maximum retention time for instance logs, in minutes. default value: 1440 (1 day) when left blank. configurable range: 1 minute to 90 days.</p>.
     */
     @SerializedName("MsgRetentionTime")
     @Expose
     private Long MsgRetentionTime;
 
     /**
-    * Specifies the cluster Id when creating an instance.
+    * <p>Specifies the cluster Id when creating an instance. this parameter indicates the cluster Id.</p>.
     */
     @SerializedName("ClusterId")
     @Expose
     private Long ClusterId;
 
     /**
-    * Auto-Renewal tag for prepaid services. valid values: 0 (default state, not set by the user, initial status), 1 (auto-renew), 2 (explicitly no auto-renew, set by the user).
+    * <P>Auto-Renewal tag for prepaid services. 0 means default state (not set by the user, i.e. initial state), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user).</p>.
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value 2.4.1. 2.4.1 and 2.4.2 belong to the same version. any can be passed.
+    * <p>Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value is 2.4.1. 2.4.1 and 2.4.2 belong to the same version, any one can be passed.</p>.
     */
     @SerializedName("KafkaVersion")
     @Expose
     private String KafkaVersion;
 
     /**
-    * Specifies the instance type. valid values: standard (default), profession, premium.
+    * <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
     */
     @SerializedName("SpecificationsType")
     @Expose
     private String SpecificationsType;
 
     /**
-    * Disk size. if it does not match the console specification ratio, the creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+    * <P>Disk size. if it does not match the console specification ratio, creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link to view billing specifications: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1</p>.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Instance bandwidth. default value: 40 MB/s. minimum value: 20 MB/s. maximum value for advanced edition: 360 MB/s. maximum value for pro edition: 100000 MB/s. standard version fixed bandwidth specifications: 40 MB/s, 100 MB/s, 150 MB/s. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+    * <p>Instance bandwidth, default value is 40, unit MB/s. minimum value: 20MB/s. advanced edition maximum value: 360MB/s. professional edition maximum value: 100000MB/s. standard version fixed bandwidth specifications: 40MB/s, 100MB/s, 150MB/s. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1</p>.
     */
     @SerializedName("BandWidth")
     @Expose
     private Long BandWidth;
 
     /**
-    * Partition size. if it does not match the console specification ratio, creation will fail. default value is 800, step length is 100. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+    * <P>Specifies the partition size. if it does not match the console specification ratio, the creation cannot succeed. default value is 800 with a step length of 100. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1</p>.
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-    * Tag.
+    * <p>Tag.</p>.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Specifies the disk type for a pro/advanced edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
+    * <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Specifies whether to create a cross-az instance. when the current parameter is true, zoneIds is required.
+    * <p>Specifies whether to create a cross-availability zone instance. when the current parameter is true, zoneIds is required.</p>.
     */
     @SerializedName("MultiZoneFlag")
     @Expose
     private Boolean MultiZoneFlag;
 
     /**
-    * Availability zone list. required item when purchasing a multi-availability zone instance.
+    * <P>Availability zone list. required item when purchasing multi-availability zone instance.</p>.
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * Public network bandwidth size, in Mbps. the default is no free 3 Mbps bandwidth. for example, for a total of 3 Mbps public network bandwidth, pass 0 here; for a total of 6 Mbps public network bandwidth, pass 3 here. default value is 0. ensure the input parameter is a multiple of 3.
+    * <p>Specifies the public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. default value: 0. ensure the input parameter is a multiple of 3.</p>.
     */
     @SerializedName("PublicNetworkMonthly")
     @Expose
     private Long PublicNetworkMonthly;
 
     /**
-    * Number of instances to purchase. optional. default value is 1. when you input this parameter, it enables the creation of multiple instances with case-sensitive suffixes added to instanceName.
+    * <p>Specifies the number of instances to purchase. optional. default value is 1. when input this parameter, it will create multiple instances with case-sensitive suffixes added to instanceName.</p>.
     */
     @SerializedName("InstanceNum")
     @Expose
     private Long InstanceNum;
 
     /**
-    * Whether to automatically select a voucher. valid values: 1 (yes), 0 (no). default is 0.
+    * <P>Specifies whether to automatically select voucher. valid values: 1-yes; 0-no. default is 0.</p>.
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * Elastic bandwidth switch. specifies whether to enable elastic bandwidth. valid values: 0 (not enabled, default), 1 (enabled).
+    * <P>Elastic bandwidth switch 0 disable 1 enable (0 default).</p>.
     */
     @SerializedName("ElasticBandwidthSwitch")
     @Expose
     private Long ElasticBandwidthSwitch;
 
     /**
-     * Get Specifies the ckafka cluster instance Name, an arbitrary string with length no more than 128 characters. 
-     * @return InstanceName Specifies the ckafka cluster instance Name, an arbitrary string with length no more than 128 characters.
+    * <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.comom/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
+    */
+    @SerializedName("CustomSSLCertId")
+    @Expose
+    private String CustomSSLCertId;
+
+    /**
+     * Get <p>Specifies the Name of the ckafka cluster instance, which is any string with a length not more than 128 characters.</p>. 
+     * @return InstanceName <p>Specifies the Name of the ckafka cluster instance, which is any string with a length not more than 128 characters.</p>.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Specifies the ckafka cluster instance Name, an arbitrary string with length no more than 128 characters.
-     * @param InstanceName Specifies the ckafka cluster instance Name, an arbitrary string with length no more than 128 characters.
+     * Set <p>Specifies the Name of the ckafka cluster instance, which is any string with a length not more than 128 characters.</p>.
+     * @param InstanceName <p>Specifies the Name of the ckafka cluster instance, which is any string with a length not more than 128 characters.</p>.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. [view availability zones](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1). 
-     * @return ZoneId Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. [view availability zones](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
+     * Get <P>Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. <a href="https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1">view availability zones</a></p>. 
+     * @return ZoneId <P>Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. <a href="https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1">view availability zones</a></p>.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. [view availability zones](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
-     * @param ZoneId Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. [view availability zones](https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1).
+     * Set <P>Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. <a href="https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1">view availability zones</a></p>.
+     * @param ZoneId <P>Availability zone. when purchasing a multi-availability zone instance, this parameter specifies the primary az. <a href="https://www.tencentcloud.comom/document/product/597/55246?from_cn_redirect=1">view availability zones</a></p>.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Prepaid purchase duration, such as "1m", exactly one month. value ranges from 1m to 36m. 
-     * @return Period Prepaid purchase duration, such as "1m", exactly one month. value ranges from 1m to 36m.
+     * Get <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>. 
+     * @return Period <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
      */
     public String getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Prepaid purchase duration, such as "1m", exactly one month. value ranges from 1m to 36m.
-     * @param Period Prepaid purchase duration, such as "1m", exactly one month. value ranges from 1m to 36m.
+     * Set <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
+     * @param Period <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
      */
     public void setPeriod(String Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8. 
-     * @return InstanceType Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
+     * Get <P>Specifies the standard edition instance specification for the international site. currently only the standard edition on the international site uses the current field to distinguish specifications, while the domestic site standard edition uses peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.</p>. 
+     * @return InstanceType <P>Specifies the standard edition instance specification for the international site. currently only the standard edition on the international site uses the current field to distinguish specifications, while the domestic site standard edition uses peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.</p>.
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
-     * @param InstanceType Specifies the standard edition instance specification for the international site. currently only the international site standard edition uses the current field to distinguish specifications, while the domestic site standard edition distinguishes specifications by peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.
+     * Set <P>Specifies the standard edition instance specification for the international site. currently only the standard edition on the international site uses the current field to distinguish specifications, while the domestic site standard edition uses peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.</p>.
+     * @param InstanceType <P>Specifies the standard edition instance specification for the international site. currently only the standard edition on the international site uses the current field to distinguish specifications, while the domestic site standard edition uses peak bandwidth. fill in 1 for all instances except the international site standard edition. for international site standard edition instances: [entry-level (general)] fill 1; [standard type (standard)] fill 2; [advanced] fill 3; [capacity type (capacity)] fill 4; [advanced type 1 (specialized-1)] fill 5; [advanced type 2 (specialized-2)] fill 6; [advanced type 3 (specialized-3)] fill 7; [advanced type 4 (specialized-4)] fill 8.</p>.
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get VPC Id. 
-     * @return VpcId VPC Id.
+     * Get <p>VPC Id.</p>. 
+     * @return VpcId <p>VPC Id.</p>.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC Id.
-     * @param VpcId VPC Id.
+     * Set <p>VPC Id.</p>.
+     * @param VpcId <p>VPC Id.</p>.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get <P>Subnet id.</p>. 
+     * @return SubnetId <P>Subnet id.</p>.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set <P>Subnet id.</p>.
+     * @param SubnetId <P>Subnet id.</p>.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Optional. maximum retention time of instance logs, in minutes. default value: 1440 (1 day). value range: 1 minute to 90 days. 
-     * @return MsgRetentionTime Optional. maximum retention time of instance logs, in minutes. default value: 1440 (1 day). value range: 1 minute to 90 days.
+     * Get <P>Optional. specifies the maximum retention time for instance logs, in minutes. default value: 1440 (1 day) when left blank. configurable range: 1 minute to 90 days.</p>. 
+     * @return MsgRetentionTime <P>Optional. specifies the maximum retention time for instance logs, in minutes. default value: 1440 (1 day) when left blank. configurable range: 1 minute to 90 days.</p>.
      */
     public Long getMsgRetentionTime() {
         return this.MsgRetentionTime;
     }
 
     /**
-     * Set Optional. maximum retention time of instance logs, in minutes. default value: 1440 (1 day). value range: 1 minute to 90 days.
-     * @param MsgRetentionTime Optional. maximum retention time of instance logs, in minutes. default value: 1440 (1 day). value range: 1 minute to 90 days.
+     * Set <P>Optional. specifies the maximum retention time for instance logs, in minutes. default value: 1440 (1 day) when left blank. configurable range: 1 minute to 90 days.</p>.
+     * @param MsgRetentionTime <P>Optional. specifies the maximum retention time for instance logs, in minutes. default value: 1440 (1 day) when left blank. configurable range: 1 minute to 90 days.</p>.
      */
     public void setMsgRetentionTime(Long MsgRetentionTime) {
         this.MsgRetentionTime = MsgRetentionTime;
     }
 
     /**
-     * Get Specifies the cluster Id when creating an instance. 
-     * @return ClusterId Specifies the cluster Id when creating an instance.
+     * Get <p>Specifies the cluster Id when creating an instance. this parameter indicates the cluster Id.</p>. 
+     * @return ClusterId <p>Specifies the cluster Id when creating an instance. this parameter indicates the cluster Id.</p>.
      */
     public Long getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Specifies the cluster Id when creating an instance.
-     * @param ClusterId Specifies the cluster Id when creating an instance.
+     * Set <p>Specifies the cluster Id when creating an instance. this parameter indicates the cluster Id.</p>.
+     * @param ClusterId <p>Specifies the cluster Id when creating an instance. this parameter indicates the cluster Id.</p>.
      */
     public void setClusterId(Long ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Auto-Renewal tag for prepaid services. valid values: 0 (default state, not set by the user, initial status), 1 (auto-renew), 2 (explicitly no auto-renew, set by the user). 
-     * @return RenewFlag Auto-Renewal tag for prepaid services. valid values: 0 (default state, not set by the user, initial status), 1 (auto-renew), 2 (explicitly no auto-renew, set by the user).
+     * Get <P>Auto-Renewal tag for prepaid services. 0 means default state (not set by the user, i.e. initial state), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user).</p>. 
+     * @return RenewFlag <P>Auto-Renewal tag for prepaid services. 0 means default state (not set by the user, i.e. initial state), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user).</p>.
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Auto-Renewal tag for prepaid services. valid values: 0 (default state, not set by the user, initial status), 1 (auto-renew), 2 (explicitly no auto-renew, set by the user).
-     * @param RenewFlag Auto-Renewal tag for prepaid services. valid values: 0 (default state, not set by the user, initial status), 1 (auto-renew), 2 (explicitly no auto-renew, set by the user).
+     * Set <P>Auto-Renewal tag for prepaid services. 0 means default state (not set by the user, i.e. initial state), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user).</p>.
+     * @param RenewFlag <P>Auto-Renewal tag for prepaid services. 0 means default state (not set by the user, i.e. initial state), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user).</p>.
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value 2.4.1. 2.4.1 and 2.4.2 belong to the same version. any can be passed. 
-     * @return KafkaVersion Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value 2.4.1. 2.4.1 and 2.4.2 belong to the same version. any can be passed.
+     * Get <p>Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value is 2.4.1. 2.4.1 and 2.4.2 belong to the same version, any one can be passed.</p>. 
+     * @return KafkaVersion <p>Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value is 2.4.1. 2.4.1 and 2.4.2 belong to the same version, any one can be passed.</p>.
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value 2.4.1. 2.4.1 and 2.4.2 belong to the same version. any can be passed.
-     * @param KafkaVersion Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value 2.4.1. 2.4.1 and 2.4.2 belong to the same version. any can be passed.
+     * Set <p>Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value is 2.4.1. 2.4.1 and 2.4.2 belong to the same version, any one can be passed.</p>.
+     * @param KafkaVersion <p>Specifies the CKafka version number. valid values: 2.4.1, 2.4.2, 2.8.1, 3.2.3. default value is 2.4.1. 2.4.1 and 2.4.2 belong to the same version, any one can be passed.</p>.
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;
     }
 
     /**
-     * Get Specifies the instance type. valid values: standard (default), profession, premium. 
-     * @return SpecificationsType Specifies the instance type. valid values: standard (default), profession, premium.
+     * Get <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>. 
+     * @return SpecificationsType <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
      */
     public String getSpecificationsType() {
         return this.SpecificationsType;
     }
 
     /**
-     * Set Specifies the instance type. valid values: standard (default), profession, premium.
-     * @param SpecificationsType Specifies the instance type. valid values: standard (default), profession, premium.
+     * Set <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
+     * @param SpecificationsType <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
      */
     public void setSpecificationsType(String SpecificationsType) {
         this.SpecificationsType = SpecificationsType;
     }
 
     /**
-     * Get Disk size. if it does not match the console specification ratio, the creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1 
-     * @return DiskSize Disk size. if it does not match the console specification ratio, the creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+     * Get <P>Disk size. if it does not match the console specification ratio, creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link to view billing specifications: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1</p>. 
+     * @return DiskSize <P>Disk size. if it does not match the console specification ratio, creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link to view billing specifications: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1</p>.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Disk size. if it does not match the console specification ratio, the creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
-     * @param DiskSize Disk size. if it does not match the console specification ratio, the creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+     * Set <P>Disk size. if it does not match the console specification ratio, creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link to view billing specifications: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1</p>.
+     * @param DiskSize <P>Disk size. if it does not match the console specification ratio, creation cannot succeed. default value is 500. step length is set to 100. can be accessed through the following link to view billing specifications: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1</p>.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Instance bandwidth. default value: 40 MB/s. minimum value: 20 MB/s. maximum value for advanced edition: 360 MB/s. maximum value for pro edition: 100000 MB/s. standard version fixed bandwidth specifications: 40 MB/s, 100 MB/s, 150 MB/s. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1 
-     * @return BandWidth Instance bandwidth. default value: 40 MB/s. minimum value: 20 MB/s. maximum value for advanced edition: 360 MB/s. maximum value for pro edition: 100000 MB/s. standard version fixed bandwidth specifications: 40 MB/s, 100 MB/s, 150 MB/s. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+     * Get <p>Instance bandwidth, default value is 40, unit MB/s. minimum value: 20MB/s. advanced edition maximum value: 360MB/s. professional edition maximum value: 100000MB/s. standard version fixed bandwidth specifications: 40MB/s, 100MB/s, 150MB/s. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1</p>. 
+     * @return BandWidth <p>Instance bandwidth, default value is 40, unit MB/s. minimum value: 20MB/s. advanced edition maximum value: 360MB/s. professional edition maximum value: 100000MB/s. standard version fixed bandwidth specifications: 40MB/s, 100MB/s, 150MB/s. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1</p>.
      */
     public Long getBandWidth() {
         return this.BandWidth;
     }
 
     /**
-     * Set Instance bandwidth. default value: 40 MB/s. minimum value: 20 MB/s. maximum value for advanced edition: 360 MB/s. maximum value for pro edition: 100000 MB/s. standard version fixed bandwidth specifications: 40 MB/s, 100 MB/s, 150 MB/s. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
-     * @param BandWidth Instance bandwidth. default value: 40 MB/s. minimum value: 20 MB/s. maximum value for advanced edition: 360 MB/s. maximum value for pro edition: 100000 MB/s. standard version fixed bandwidth specifications: 40 MB/s, 100 MB/s, 150 MB/s. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+     * Set <p>Instance bandwidth, default value is 40, unit MB/s. minimum value: 20MB/s. advanced edition maximum value: 360MB/s. professional edition maximum value: 100000MB/s. standard version fixed bandwidth specifications: 40MB/s, 100MB/s, 150MB/s. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1</p>.
+     * @param BandWidth <p>Instance bandwidth, default value is 40, unit MB/s. minimum value: 20MB/s. advanced edition maximum value: 360MB/s. professional edition maximum value: 100000MB/s. standard version fixed bandwidth specifications: 40MB/s, 100MB/s, 150MB/s. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1</p>.
      */
     public void setBandWidth(Long BandWidth) {
         this.BandWidth = BandWidth;
     }
 
     /**
-     * Get Partition size. if it does not match the console specification ratio, creation will fail. default value is 800, step length is 100. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1 
-     * @return Partition Partition size. if it does not match the console specification ratio, creation will fail. default value is 800, step length is 100. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+     * Get <P>Specifies the partition size. if it does not match the console specification ratio, the creation cannot succeed. default value is 800 with a step length of 100. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1</p>. 
+     * @return Partition <P>Specifies the partition size. if it does not match the console specification ratio, the creation cannot succeed. default value is 800 with a step length of 100. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1</p>.
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set Partition size. if it does not match the console specification ratio, creation will fail. default value is 800, step length is 100. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
-     * @param Partition Partition size. if it does not match the console specification ratio, creation will fail. default value is 800, step length is 100. billing specifications can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+     * Set <P>Specifies the partition size. if it does not match the console specification ratio, the creation cannot succeed. default value is 800 with a step length of 100. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1</p>.
+     * @param Partition <P>Specifies the partition size. if it does not match the console specification ratio, the creation cannot succeed. default value is 800 with a step length of 100. view billing specifications through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1</p>.
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get Tag. 
-     * @return Tags Tag.
+     * Get <p>Tag.</p>. 
+     * @return Tags <p>Tag.</p>.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag.
-     * @param Tags Tag.
+     * Set <p>Tag.</p>.
+     * @param Tags <p>Tag.</p>.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Specifies the disk type for a pro/advanced edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC". 
-     * @return DiskType Specifies the disk type for a pro/advanced edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
+     * Get <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>. 
+     * @return DiskType <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Specifies the disk type for a pro/advanced edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
-     * @param DiskType Specifies the disk type for a pro/advanced edition instance. you do not need to fill it in for a standard edition instance. valid values: "CLOUD_SSD" for SSD CLOUD disk; "CLOUD_BASIC" for high-performance CLOUD block storage. default value: "CLOUD_BASIC".
+     * Set <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+     * @param DiskType <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Specifies whether to create a cross-az instance. when the current parameter is true, zoneIds is required. 
-     * @return MultiZoneFlag Specifies whether to create a cross-az instance. when the current parameter is true, zoneIds is required.
+     * Get <p>Specifies whether to create a cross-availability zone instance. when the current parameter is true, zoneIds is required.</p>. 
+     * @return MultiZoneFlag <p>Specifies whether to create a cross-availability zone instance. when the current parameter is true, zoneIds is required.</p>.
      */
     public Boolean getMultiZoneFlag() {
         return this.MultiZoneFlag;
     }
 
     /**
-     * Set Specifies whether to create a cross-az instance. when the current parameter is true, zoneIds is required.
-     * @param MultiZoneFlag Specifies whether to create a cross-az instance. when the current parameter is true, zoneIds is required.
+     * Set <p>Specifies whether to create a cross-availability zone instance. when the current parameter is true, zoneIds is required.</p>.
+     * @param MultiZoneFlag <p>Specifies whether to create a cross-availability zone instance. when the current parameter is true, zoneIds is required.</p>.
      */
     public void setMultiZoneFlag(Boolean MultiZoneFlag) {
         this.MultiZoneFlag = MultiZoneFlag;
     }
 
     /**
-     * Get Availability zone list. required item when purchasing a multi-availability zone instance. 
-     * @return ZoneIds Availability zone list. required item when purchasing a multi-availability zone instance.
+     * Get <P>Availability zone list. required item when purchasing multi-availability zone instance.</p>. 
+     * @return ZoneIds <P>Availability zone list. required item when purchasing multi-availability zone instance.</p>.
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Availability zone list. required item when purchasing a multi-availability zone instance.
-     * @param ZoneIds Availability zone list. required item when purchasing a multi-availability zone instance.
+     * Set <P>Availability zone list. required item when purchasing multi-availability zone instance.</p>.
+     * @param ZoneIds <P>Availability zone list. required item when purchasing multi-availability zone instance.</p>.
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get Public network bandwidth size, in Mbps. the default is no free 3 Mbps bandwidth. for example, for a total of 3 Mbps public network bandwidth, pass 0 here; for a total of 6 Mbps public network bandwidth, pass 3 here. default value is 0. ensure the input parameter is a multiple of 3. 
-     * @return PublicNetworkMonthly Public network bandwidth size, in Mbps. the default is no free 3 Mbps bandwidth. for example, for a total of 3 Mbps public network bandwidth, pass 0 here; for a total of 6 Mbps public network bandwidth, pass 3 here. default value is 0. ensure the input parameter is a multiple of 3.
+     * Get <p>Specifies the public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. default value: 0. ensure the input parameter is a multiple of 3.</p>. 
+     * @return PublicNetworkMonthly <p>Specifies the public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. default value: 0. ensure the input parameter is a multiple of 3.</p>.
      */
     public Long getPublicNetworkMonthly() {
         return this.PublicNetworkMonthly;
     }
 
     /**
-     * Set Public network bandwidth size, in Mbps. the default is no free 3 Mbps bandwidth. for example, for a total of 3 Mbps public network bandwidth, pass 0 here; for a total of 6 Mbps public network bandwidth, pass 3 here. default value is 0. ensure the input parameter is a multiple of 3.
-     * @param PublicNetworkMonthly Public network bandwidth size, in Mbps. the default is no free 3 Mbps bandwidth. for example, for a total of 3 Mbps public network bandwidth, pass 0 here; for a total of 6 Mbps public network bandwidth, pass 3 here. default value is 0. ensure the input parameter is a multiple of 3.
+     * Set <p>Specifies the public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. default value: 0. ensure the input parameter is a multiple of 3.</p>.
+     * @param PublicNetworkMonthly <p>Specifies the public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. default value: 0. ensure the input parameter is a multiple of 3.</p>.
      */
     public void setPublicNetworkMonthly(Long PublicNetworkMonthly) {
         this.PublicNetworkMonthly = PublicNetworkMonthly;
     }
 
     /**
-     * Get Number of instances to purchase. optional. default value is 1. when you input this parameter, it enables the creation of multiple instances with case-sensitive suffixes added to instanceName. 
-     * @return InstanceNum Number of instances to purchase. optional. default value is 1. when you input this parameter, it enables the creation of multiple instances with case-sensitive suffixes added to instanceName.
+     * Get <p>Specifies the number of instances to purchase. optional. default value is 1. when input this parameter, it will create multiple instances with case-sensitive suffixes added to instanceName.</p>. 
+     * @return InstanceNum <p>Specifies the number of instances to purchase. optional. default value is 1. when input this parameter, it will create multiple instances with case-sensitive suffixes added to instanceName.</p>.
      */
     public Long getInstanceNum() {
         return this.InstanceNum;
     }
 
     /**
-     * Set Number of instances to purchase. optional. default value is 1. when you input this parameter, it enables the creation of multiple instances with case-sensitive suffixes added to instanceName.
-     * @param InstanceNum Number of instances to purchase. optional. default value is 1. when you input this parameter, it enables the creation of multiple instances with case-sensitive suffixes added to instanceName.
+     * Set <p>Specifies the number of instances to purchase. optional. default value is 1. when input this parameter, it will create multiple instances with case-sensitive suffixes added to instanceName.</p>.
+     * @param InstanceNum <p>Specifies the number of instances to purchase. optional. default value is 1. when input this parameter, it will create multiple instances with case-sensitive suffixes added to instanceName.</p>.
      */
     public void setInstanceNum(Long InstanceNum) {
         this.InstanceNum = InstanceNum;
     }
 
     /**
-     * Get Whether to automatically select a voucher. valid values: 1 (yes), 0 (no). default is 0. 
-     * @return AutoVoucher Whether to automatically select a voucher. valid values: 1 (yes), 0 (no). default is 0.
+     * Get <P>Specifies whether to automatically select voucher. valid values: 1-yes; 0-no. default is 0.</p>. 
+     * @return AutoVoucher <P>Specifies whether to automatically select voucher. valid values: 1-yes; 0-no. default is 0.</p>.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically select a voucher. valid values: 1 (yes), 0 (no). default is 0.
-     * @param AutoVoucher Whether to automatically select a voucher. valid values: 1 (yes), 0 (no). default is 0.
+     * Set <P>Specifies whether to automatically select voucher. valid values: 1-yes; 0-no. default is 0.</p>.
+     * @param AutoVoucher <P>Specifies whether to automatically select voucher. valid values: 1-yes; 0-no. default is 0.</p>.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get Elastic bandwidth switch. specifies whether to enable elastic bandwidth. valid values: 0 (not enabled, default), 1 (enabled). 
-     * @return ElasticBandwidthSwitch Elastic bandwidth switch. specifies whether to enable elastic bandwidth. valid values: 0 (not enabled, default), 1 (enabled).
+     * Get <P>Elastic bandwidth switch 0 disable 1 enable (0 default).</p>. 
+     * @return ElasticBandwidthSwitch <P>Elastic bandwidth switch 0 disable 1 enable (0 default).</p>.
      */
     public Long getElasticBandwidthSwitch() {
         return this.ElasticBandwidthSwitch;
     }
 
     /**
-     * Set Elastic bandwidth switch. specifies whether to enable elastic bandwidth. valid values: 0 (not enabled, default), 1 (enabled).
-     * @param ElasticBandwidthSwitch Elastic bandwidth switch. specifies whether to enable elastic bandwidth. valid values: 0 (not enabled, default), 1 (enabled).
+     * Set <P>Elastic bandwidth switch 0 disable 1 enable (0 default).</p>.
+     * @param ElasticBandwidthSwitch <P>Elastic bandwidth switch 0 disable 1 enable (0 default).</p>.
      */
     public void setElasticBandwidthSwitch(Long ElasticBandwidthSwitch) {
         this.ElasticBandwidthSwitch = ElasticBandwidthSwitch;
+    }
+
+    /**
+     * Get <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.comom/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>. 
+     * @return CustomSSLCertId <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.comom/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
+     */
+    public String getCustomSSLCertId() {
+        return this.CustomSSLCertId;
+    }
+
+    /**
+     * Set <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.comom/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
+     * @param CustomSSLCertId <p>Specifies the custom certificate Id. this parameter is valid only when SpecificationsType is profession. supports custom certificate capacity.</p><p>can be obtained through the <a href="https://www.tencentcloud.comom/document/product/400/41673?from_cn_redirect=1">DescribeCertificateDetail</a> api.</p>.
+     */
+    public void setCustomSSLCertId(String CustomSSLCertId) {
+        this.CustomSSLCertId = CustomSSLCertId;
     }
 
     public CreateInstancePreRequest() {
@@ -609,6 +632,9 @@ public class CreateInstancePreRequest extends AbstractModel {
         if (source.ElasticBandwidthSwitch != null) {
             this.ElasticBandwidthSwitch = new Long(source.ElasticBandwidthSwitch);
         }
+        if (source.CustomSSLCertId != null) {
+            this.CustomSSLCertId = new String(source.CustomSSLCertId);
+        }
     }
 
 
@@ -638,6 +664,7 @@ public class CreateInstancePreRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceNum", this.InstanceNum);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "ElasticBandwidthSwitch", this.ElasticBandwidthSwitch);
+        this.setParamSimple(map, prefix + "CustomSSLCertId", this.CustomSSLCertId);
 
     }
 }

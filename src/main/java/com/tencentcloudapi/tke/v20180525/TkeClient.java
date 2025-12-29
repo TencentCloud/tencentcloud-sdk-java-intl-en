@@ -776,6 +776,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query plug-in log collection settings.
+     * @param req DescribeControlPlaneLogsRequest
+     * @return DescribeControlPlaneLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeControlPlaneLogsResponse DescribeControlPlaneLogs(DescribeControlPlaneLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeControlPlaneLogs", DescribeControlPlaneLogsResponse.class);
+    }
+
+    /**
      *This API is used to obtain the ECM instance information.
      * @param req DescribeECMInstancesRequest
      * @return DescribeECMInstancesResponse
@@ -1106,6 +1117,17 @@ public class TkeClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete the log collection configuration of a plugin.
+     * @param req DisableControlPlaneLogsRequest
+     * @return DisableControlPlaneLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableControlPlaneLogsResponse DisableControlPlaneLogs(DisableControlPlaneLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableControlPlaneLogs", DisableControlPlaneLogsResponse.class);
+    }
+
+    /**
      *This API is used to disable encryption protection.
      * @param req DisableEncryptionProtectionRequest
      * @return DisableEncryptionProtectionResponse
@@ -1136,6 +1158,17 @@ public class TkeClient extends AbstractClient{
     public EnableClusterDeletionProtectionResponse EnableClusterDeletionProtection(EnableClusterDeletionProtectionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnableClusterDeletionProtection", EnableClusterDeletionProtectionResponse.class);
+    }
+
+    /**
+     *This API is used to create log collection settings for plugins.
+     * @param req EnableControlPlaneLogsRequest
+     * @return EnableControlPlaneLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableControlPlaneLogsResponse EnableControlPlaneLogs(EnableControlPlaneLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableControlPlaneLogs", EnableControlPlaneLogsResponse.class);
     }
 
     /**

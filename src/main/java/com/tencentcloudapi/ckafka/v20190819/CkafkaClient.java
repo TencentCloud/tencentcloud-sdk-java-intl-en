@@ -226,6 +226,17 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete topics subscribed by a consumption group. The consumption group status must be Empty.
+     * @param req DeleteGroupSubscribeTopicRequest
+     * @return DeleteGroupSubscribeTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteGroupSubscribeTopicResponse DeleteGroupSubscribeTopic(DeleteGroupSubscribeTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteGroupSubscribeTopic", DeleteGroupSubscribeTopicResponse.class);
+    }
+
+    /**
      *This API is used to delete post-payment instances. It directly performs instance termination by calling API deletion without associating connectors and tasks in pre-check.
      * @param req DeleteInstancePostRequest
      * @return DeleteInstancePostResponse
@@ -454,6 +465,17 @@ public class CkafkaClient extends AbstractClient{
     public DescribeInstancesDetailResponse DescribeInstancesDetail(DescribeInstancesDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstancesDetail", DescribeInstancesDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query instance specification change types.
+     * @param req DescribeModifyTypeRequest
+     * @return DescribeModifyTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeModifyTypeResponse DescribeModifyType(DescribeModifyTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeModifyType", DescribeModifyTypeResponse.class);
     }
 
     /**

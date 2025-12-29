@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreatePostPaidInstanceResponse extends AbstractModel {
 
     /**
-    * Returned result
+    * <P>Returned result.</p>.
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class CreatePostPaidInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Returned result 
-     * @return Result Returned result
+     * Get <P>Returned result.</p>. 
+     * @return Result <P>Returned result.</p>.
      */
     public CreateInstancePostResp getResult() {
         return this.Result;
     }
 
     /**
-     * Set Returned result
-     * @param Result Returned result
+     * Set <P>Returned result.</p>.
+     * @param Result <P>Returned result.</p>.
      */
     public void setResult(CreateInstancePostResp Result) {
         this.Result = Result;

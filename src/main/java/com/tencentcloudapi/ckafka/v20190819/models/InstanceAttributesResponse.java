@@ -24,1153 +24,1058 @@ import java.util.HashMap;
 public class InstanceAttributesResponse extends AbstractModel {
 
     /**
-    * The ckafka cluster instance Id.
+    * <p>ckafka cluster instance Id.</p>.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Specifies the Name of the ckafka cluster instance.
+    * <p>Specifies the Name of the ckafka cluster instance.</p>.
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * VIP list information of access point
+    * <p>Access point VIP list information.</p>.
     */
     @SerializedName("VipList")
     @Expose
     private VipEntity [] VipList;
 
     /**
-    * Virtual IP
+    * <p>Virtual IP.</p>.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Virtual port
+    * <P>Virtual port.</p>.
     */
     @SerializedName("Vport")
     @Expose
     private String Vport;
 
     /**
-    * Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+    * <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Instance bandwidth in Mbps
+    * <p>Instance bandwidth (unit: Mbps).</p>.
     */
     @SerializedName("Bandwidth")
     @Expose
     private Long Bandwidth;
 
     /**
-    * Instance storage capacity in GB
+    * <p>Specifies the instance storage size in GB.</p>.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * AZ
+    * <P>Specifies the availability zone.</p>.
     */
     @SerializedName("ZoneId")
     @Expose
     private Long ZoneId;
 
     /**
-    * VPC ID. If this parameter is empty, it means the basic network
+    * <p>VPC ID. being empty indicates a basic network.</p>.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID. If this parameter is empty, it means the basic network
+    * <p>Specifies the subnet ID. being empty indicates the basic network.</p>.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Instance health status. 1: healthy, 2: alarmed, 3: exceptional
+    * <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
     */
     @SerializedName("Healthy")
     @Expose
     private Long Healthy;
 
     /**
-    * Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
+    * <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
     */
     @SerializedName("HealthyMessage")
     @Expose
     private String HealthyMessage;
 
     /**
-    * Creation time
+    * <P>Creation time.</p>.
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Message retention period in minutes
+    * <P>Message retention period, in minutes.</p>.
     */
     @SerializedName("MsgRetentionTime")
     @Expose
     private Long MsgRetentionTime;
 
     /**
-    * Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
+    * <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
     */
     @SerializedName("Config")
     @Expose
     private InstanceConfigDO Config;
 
     /**
-    * Number of remaining creatable partitions
+    * <P>Number of remaining creatable partitions.</p>.
     */
     @SerializedName("RemainderPartitions")
     @Expose
     private Long RemainderPartitions;
 
     /**
-    * Number of remaining creatable topics
+    * <P>Number of remaining creatable topics.</p>.
     */
     @SerializedName("RemainderTopics")
     @Expose
     private Long RemainderTopics;
 
     /**
-    * Number of partitions already created
+    * <P>Specifies the current number of partitions created.</p>.
     */
     @SerializedName("CreatedPartitions")
     @Expose
     private Long CreatedPartitions;
 
     /**
-    * Number of topics already created
+    * <P>Specifies the current number of topics created.</p>.
     */
     @SerializedName("CreatedTopics")
     @Expose
     private Long CreatedTopics;
 
     /**
-    * Tag array
+    * <P>Tag array.</p>.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Expiration time
+    * <P>Specifies the expiration time.</p>.
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * Availability Zone List
+    * <P>Specifies the availability zone list.</p>.
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * Specifies the ckafka cluster instance version.
+    * <P>Specifies the ckafka cluster instance version.</p>.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Maximum number of groups.
+    * <P>Specifies the maximum number of groups.</p>.
     */
     @SerializedName("MaxGroupNum")
     @Expose
     private Long MaxGroupNum;
 
     /**
-    * Sale type. valid values: 0 (standard version), 1 (pro edition).
+    * <P>Sale type. 0: standard version; 1: pro edition.</p>.
     */
     @SerializedName("Cvm")
     @Expose
     private Long Cvm;
 
     /**
-    * Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
+    * <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+    * <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
     */
     @SerializedName("Features")
     @Expose
     private String [] Features;
 
     /**
-    * Dynamic message retention policy.
+    * <P>Dynamic message retention policy.</p>.
     */
     @SerializedName("RetentionTimeConfig")
     @Expose
     private DynamicRetentionTime RetentionTimeConfig;
 
     /**
-    * Maximum number of connections.
+    * <P>Maximum number of connections.</p>.
     */
     @SerializedName("MaxConnection")
     @Expose
     private Long MaxConnection;
 
     /**
-    * Public network bandwidth
+    * <P>Public network bandwidth.</p>.
     */
     @SerializedName("PublicNetwork")
     @Expose
     private Long PublicNetwork;
 
     /**
-    * Specifies the deprecated field with no actual meaning.
+    * <P>Deprecated. no actual meaning.</p>.
     */
     @SerializedName("DeleteRouteTimestamp")
     @Expose
     private String DeleteRouteTimestamp;
 
     /**
-    * Number of remaining creatable partitions.
+    * <P>Number of remaining creatable partitions.</p>.
     */
     @SerializedName("RemainingPartitions")
     @Expose
     private Long RemainingPartitions;
 
     /**
-    * Number of remaining creatable topics.
+    * <P>Number of remaining creatable topics.</p>.
     */
     @SerializedName("RemainingTopics")
     @Expose
     private Long RemainingTopics;
 
     /**
-    * Scaling policy for dynamic disk.
+    * <P>Dynamic disk expansion policy.</p>.
     */
     @SerializedName("DynamicDiskConfig")
     @Expose
     private DynamicDiskConfig DynamicDiskConfig;
 
     /**
-    * Specifies the system maintenance time.
+    * <P>Specifies the system maintenance time.</p>.
     */
     @SerializedName("SystemMaintenanceTime")
     @Expose
     private String SystemMaintenanceTime;
 
     /**
-    * Specifies the maximum size of messages at the instance level.
+    * <P>Specifies the maximum size of instance level messages.</p>.
     */
     @SerializedName("MaxMessageByte")
     @Expose
     private Long MaxMessageByte;
 
     /**
-    * Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+    * <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
+    * <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
     */
     @SerializedName("ElasticBandwidthSwitch")
     @Expose
     private Long ElasticBandwidthSwitch;
 
     /**
-    * Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
+    * <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
     */
     @SerializedName("ElasticBandwidthOpenStatus")
     @Expose
     private Long ElasticBandwidthOpenStatus;
 
     /**
-    * Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
+    * <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
     */
     @SerializedName("ClusterType")
     @Expose
     private String ClusterType;
 
     /**
-    * Number of free partitions.
+    * <P>Specifies the number of free partitions.</p>.
     */
     @SerializedName("FreePartitionNumber")
     @Expose
     private Long FreePartitionNumber;
 
     /**
-    * Specifies the elastic bandwidth upper limit.
+    * <P>Specifies the elastic bandwidth upper limit.</p>.
     */
     @SerializedName("ElasticFloatBandwidth")
     @Expose
     private Long ElasticFloatBandwidth;
 
     /**
-    * ssl custom certificate id. only returned for instance clusters with custom certificates.
+    * <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
     */
     @SerializedName("CustomCertId")
     @Expose
     private String CustomCertId;
 
     /**
-    * Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+    * <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
     */
     @SerializedName("UncleanLeaderElectionEnable")
     @Expose
     private Long UncleanLeaderElectionEnable;
 
     /**
-    * Instance deletion protection switch. 1: enabled; 0: disabled.
+    * <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
     */
     @SerializedName("DeleteProtectionEnable")
     @Expose
     private Long DeleteProtectionEnable;
 
     /**
-     * Get The ckafka cluster instance Id. 
-     * @return InstanceId The ckafka cluster instance Id.
+     * Get <p>ckafka cluster instance Id.</p>. 
+     * @return InstanceId <p>ckafka cluster instance Id.</p>.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id.
-     * @param InstanceId The ckafka cluster instance Id.
+     * Set <p>ckafka cluster instance Id.</p>.
+     * @param InstanceId <p>ckafka cluster instance Id.</p>.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Specifies the Name of the ckafka cluster instance. 
-     * @return InstanceName Specifies the Name of the ckafka cluster instance.
+     * Get <p>Specifies the Name of the ckafka cluster instance.</p>. 
+     * @return InstanceName <p>Specifies the Name of the ckafka cluster instance.</p>.
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Specifies the Name of the ckafka cluster instance.
-     * @param InstanceName Specifies the Name of the ckafka cluster instance.
+     * Set <p>Specifies the Name of the ckafka cluster instance.</p>.
+     * @param InstanceName <p>Specifies the Name of the ckafka cluster instance.</p>.
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get VIP list information of access point 
-     * @return VipList VIP list information of access point
+     * Get <p>Access point VIP list information.</p>. 
+     * @return VipList <p>Access point VIP list information.</p>.
      */
     public VipEntity [] getVipList() {
         return this.VipList;
     }
 
     /**
-     * Set VIP list information of access point
-     * @param VipList VIP list information of access point
+     * Set <p>Access point VIP list information.</p>.
+     * @param VipList <p>Access point VIP list information.</p>.
      */
     public void setVipList(VipEntity [] VipList) {
         this.VipList = VipList;
     }
 
     /**
-     * Get Virtual IP 
-     * @return Vip Virtual IP
+     * Get <p>Virtual IP.</p>. 
+     * @return Vip <p>Virtual IP.</p>.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set Virtual IP
-     * @param Vip Virtual IP
+     * Set <p>Virtual IP.</p>.
+     * @param Vip <p>Virtual IP.</p>.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Virtual port 
-     * @return Vport Virtual port
+     * Get <P>Virtual port.</p>. 
+     * @return Vport <P>Virtual port.</p>.
      */
     public String getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Virtual port
-     * @param Vport Virtual port
+     * Set <P>Virtual port.</p>.
+     * @param Vport <P>Virtual port.</p>.
      */
     public void setVport(String Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed. 
-     * @return Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+     * Get <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>. 
+     * @return Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
-     * @param Status Instance status. 0: creating, 1: running, 2: deleting, 3: deleted, 5: isolated, 7: upgrading, -1: creation failed.
+     * Set <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+     * @param Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Instance bandwidth in Mbps 
-     * @return Bandwidth Instance bandwidth in Mbps
+     * Get <p>Instance bandwidth (unit: Mbps).</p>. 
+     * @return Bandwidth <p>Instance bandwidth (unit: Mbps).</p>.
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set Instance bandwidth in Mbps
-     * @param Bandwidth Instance bandwidth in Mbps
+     * Set <p>Instance bandwidth (unit: Mbps).</p>.
+     * @param Bandwidth <p>Instance bandwidth (unit: Mbps).</p>.
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
     }
 
     /**
-     * Get Instance storage capacity in GB 
-     * @return DiskSize Instance storage capacity in GB
+     * Get <p>Specifies the instance storage size in GB.</p>. 
+     * @return DiskSize <p>Specifies the instance storage size in GB.</p>.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Instance storage capacity in GB
-     * @param DiskSize Instance storage capacity in GB
+     * Set <p>Specifies the instance storage size in GB.</p>.
+     * @param DiskSize <p>Specifies the instance storage size in GB.</p>.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get AZ 
-     * @return ZoneId AZ
+     * Get <P>Specifies the availability zone.</p>. 
+     * @return ZoneId <P>Specifies the availability zone.</p>.
      */
     public Long getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set AZ
-     * @param ZoneId AZ
+     * Set <P>Specifies the availability zone.</p>.
+     * @param ZoneId <P>Specifies the availability zone.</p>.
      */
     public void setZoneId(Long ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get VPC ID. If this parameter is empty, it means the basic network 
-     * @return VpcId VPC ID. If this parameter is empty, it means the basic network
+     * Get <p>VPC ID. being empty indicates a basic network.</p>. 
+     * @return VpcId <p>VPC ID. being empty indicates a basic network.</p>.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID. If this parameter is empty, it means the basic network
-     * @param VpcId VPC ID. If this parameter is empty, it means the basic network
+     * Set <p>VPC ID. being empty indicates a basic network.</p>.
+     * @param VpcId <p>VPC ID. being empty indicates a basic network.</p>.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID. If this parameter is empty, it means the basic network 
-     * @return SubnetId Subnet ID. If this parameter is empty, it means the basic network
+     * Get <p>Specifies the subnet ID. being empty indicates the basic network.</p>. 
+     * @return SubnetId <p>Specifies the subnet ID. being empty indicates the basic network.</p>.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID. If this parameter is empty, it means the basic network
-     * @param SubnetId Subnet ID. If this parameter is empty, it means the basic network
+     * Set <p>Specifies the subnet ID. being empty indicates the basic network.</p>.
+     * @param SubnetId <p>Specifies the subnet ID. being empty indicates the basic network.</p>.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Instance health status. 1: healthy, 2: alarmed, 3: exceptional 
-     * @return Healthy Instance health status. 1: healthy, 2: alarmed, 3: exceptional
+     * Get <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>. 
+     * @return Healthy <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
      */
     public Long getHealthy() {
         return this.Healthy;
     }
 
     /**
-     * Set Instance health status. 1: healthy, 2: alarmed, 3: exceptional
-     * @param Healthy Instance health status. 1: healthy, 2: alarmed, 3: exceptional
+     * Set <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
+     * @param Healthy <P>Specifies the instance health status. valid values: 1 (healthy), 2 (alarm), 3 (abnormal).</p>.
      */
     public void setHealthy(Long Healthy) {
         this.Healthy = Healthy;
     }
 
     /**
-     * Get Instance health information. Currently, the disk utilization is displayed with a maximum length of 256 
-     * @return HealthyMessage Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
+     * Get <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>. 
+     * @return HealthyMessage <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
      */
     public String getHealthyMessage() {
         return this.HealthyMessage;
     }
 
     /**
-     * Set Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
-     * @param HealthyMessage Instance health information. Currently, the disk utilization is displayed with a maximum length of 256
+     * Set <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
+     * @param HealthyMessage <P>Instance health information. currently shows disk utilization rate. maximum length is 256.</p>.
      */
     public void setHealthyMessage(String HealthyMessage) {
         this.HealthyMessage = HealthyMessage;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get <P>Creation time.</p>. 
+     * @return CreateTime <P>Creation time.</p>.
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set <P>Creation time.</p>.
+     * @param CreateTime <P>Creation time.</p>.
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Message retention period in minutes 
-     * @return MsgRetentionTime Message retention period in minutes
+     * Get <P>Message retention period, in minutes.</p>. 
+     * @return MsgRetentionTime <P>Message retention period, in minutes.</p>.
      */
     public Long getMsgRetentionTime() {
         return this.MsgRetentionTime;
     }
 
     /**
-     * Set Message retention period in minutes
-     * @param MsgRetentionTime Message retention period in minutes
+     * Set <P>Message retention period, in minutes.</p>.
+     * @param MsgRetentionTime <P>Message retention period, in minutes.</p>.
      */
     public void setMsgRetentionTime(Long MsgRetentionTime) {
         this.MsgRetentionTime = MsgRetentionTime;
     }
 
     /**
-     * Get Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled 
-     * @return Config Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
+     * Get <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>. 
+     * @return Config <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
      */
     public InstanceConfigDO getConfig() {
         return this.Config;
     }
 
     /**
-     * Set Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
-     * @param Config Configuration for automatic topic creation. If this field is empty, it means that automatic creation is not enabled
+     * Set <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
+     * @param Config <p>Automatic creation Topic configuration. if this field is empty, it indicates that automatic creation is not enabled.</p>.
      */
     public void setConfig(InstanceConfigDO Config) {
         this.Config = Config;
     }
 
     /**
-     * Get Number of remaining creatable partitions 
-     * @return RemainderPartitions Number of remaining creatable partitions
+     * Get <P>Number of remaining creatable partitions.</p>. 
+     * @return RemainderPartitions <P>Number of remaining creatable partitions.</p>.
      */
     public Long getRemainderPartitions() {
         return this.RemainderPartitions;
     }
 
     /**
-     * Set Number of remaining creatable partitions
-     * @param RemainderPartitions Number of remaining creatable partitions
+     * Set <P>Number of remaining creatable partitions.</p>.
+     * @param RemainderPartitions <P>Number of remaining creatable partitions.</p>.
      */
     public void setRemainderPartitions(Long RemainderPartitions) {
         this.RemainderPartitions = RemainderPartitions;
     }
 
     /**
-     * Get Number of remaining creatable topics 
-     * @return RemainderTopics Number of remaining creatable topics
+     * Get <P>Number of remaining creatable topics.</p>. 
+     * @return RemainderTopics <P>Number of remaining creatable topics.</p>.
      */
     public Long getRemainderTopics() {
         return this.RemainderTopics;
     }
 
     /**
-     * Set Number of remaining creatable topics
-     * @param RemainderTopics Number of remaining creatable topics
+     * Set <P>Number of remaining creatable topics.</p>.
+     * @param RemainderTopics <P>Number of remaining creatable topics.</p>.
      */
     public void setRemainderTopics(Long RemainderTopics) {
         this.RemainderTopics = RemainderTopics;
     }
 
     /**
-     * Get Number of partitions already created 
-     * @return CreatedPartitions Number of partitions already created
+     * Get <P>Specifies the current number of partitions created.</p>. 
+     * @return CreatedPartitions <P>Specifies the current number of partitions created.</p>.
      */
     public Long getCreatedPartitions() {
         return this.CreatedPartitions;
     }
 
     /**
-     * Set Number of partitions already created
-     * @param CreatedPartitions Number of partitions already created
+     * Set <P>Specifies the current number of partitions created.</p>.
+     * @param CreatedPartitions <P>Specifies the current number of partitions created.</p>.
      */
     public void setCreatedPartitions(Long CreatedPartitions) {
         this.CreatedPartitions = CreatedPartitions;
     }
 
     /**
-     * Get Number of topics already created 
-     * @return CreatedTopics Number of topics already created
+     * Get <P>Specifies the current number of topics created.</p>. 
+     * @return CreatedTopics <P>Specifies the current number of topics created.</p>.
      */
     public Long getCreatedTopics() {
         return this.CreatedTopics;
     }
 
     /**
-     * Set Number of topics already created
-     * @param CreatedTopics Number of topics already created
+     * Set <P>Specifies the current number of topics created.</p>.
+     * @param CreatedTopics <P>Specifies the current number of topics created.</p>.
      */
     public void setCreatedTopics(Long CreatedTopics) {
         this.CreatedTopics = CreatedTopics;
     }
 
     /**
-     * Get Tag array 
-     * @return Tags Tag array
+     * Get <P>Tag array.</p>. 
+     * @return Tags <P>Tag array.</p>.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag array
-     * @param Tags Tag array
+     * Set <P>Tag array.</p>.
+     * @param Tags <P>Tag array.</p>.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Expiration time 
-     * @return ExpireTime Expiration time
+     * Get <P>Specifies the expiration time.</p>. 
+     * @return ExpireTime <P>Specifies the expiration time.</p>.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Expiration time
-     * @param ExpireTime Expiration time
+     * Set <P>Specifies the expiration time.</p>.
+     * @param ExpireTime <P>Specifies the expiration time.</p>.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Availability Zone List 
-     * @return ZoneIds Availability Zone List
+     * Get <P>Specifies the availability zone list.</p>. 
+     * @return ZoneIds <P>Specifies the availability zone list.</p>.
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Availability Zone List
-     * @param ZoneIds Availability Zone List
+     * Set <P>Specifies the availability zone list.</p>.
+     * @param ZoneIds <P>Specifies the availability zone list.</p>.
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get Specifies the ckafka cluster instance version. 
-     * @return Version Specifies the ckafka cluster instance version.
+     * Get <P>Specifies the ckafka cluster instance version.</p>. 
+     * @return Version <P>Specifies the ckafka cluster instance version.</p>.
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set Specifies the ckafka cluster instance version.
-     * @param Version Specifies the ckafka cluster instance version.
+     * Set <P>Specifies the ckafka cluster instance version.</p>.
+     * @param Version <P>Specifies the ckafka cluster instance version.</p>.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Maximum number of groups. 
-     * @return MaxGroupNum Maximum number of groups.
+     * Get <P>Specifies the maximum number of groups.</p>. 
+     * @return MaxGroupNum <P>Specifies the maximum number of groups.</p>.
      */
     public Long getMaxGroupNum() {
         return this.MaxGroupNum;
     }
 
     /**
-     * Set Maximum number of groups.
-     * @param MaxGroupNum Maximum number of groups.
+     * Set <P>Specifies the maximum number of groups.</p>.
+     * @param MaxGroupNum <P>Specifies the maximum number of groups.</p>.
      */
     public void setMaxGroupNum(Long MaxGroupNum) {
         this.MaxGroupNum = MaxGroupNum;
     }
 
     /**
-     * Get Sale type. valid values: 0 (standard version), 1 (pro edition). 
-     * @return Cvm Sale type. valid values: 0 (standard version), 1 (pro edition).
+     * Get <P>Sale type. 0: standard version; 1: pro edition.</p>. 
+     * @return Cvm <P>Sale type. 0: standard version; 1: pro edition.</p>.
      */
     public Long getCvm() {
         return this.Cvm;
     }
 
     /**
-     * Set Sale type. valid values: 0 (standard version), 1 (pro edition).
-     * @param Cvm Sale type. valid values: 0 (standard version), 1 (pro edition).
+     * Set <P>Sale type. 0: standard version; 1: pro edition.</p>.
+     * @param Cvm <P>Sale type. 0: standard version; 1: pro edition.</p>.
      */
     public void setCvm(Long Cvm) {
         this.Cvm = Cvm;
     }
 
     /**
-     * Get Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version. 
-     * @return InstanceType Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
+     * Get <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>. 
+     * @return InstanceType <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
-     * @param InstanceType Instance type. valid values:. 
-Specifies the pro edition.    
-Standard version.
-premium. specifies the advanced edition.
-Specifies the serverless version.
+     * Set <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+     * @param InstanceType <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets. 
-     * @return Features Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+     * Get <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>. 
+     * @return Features <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
      */
     public String [] getFeatures() {
         return this.Features;
     }
 
     /**
-     * Set Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
-     * @param Features Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL means the policy support for configuring subnets.
+     * Set <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
+     * @param Features <p>Indicates the characteristics supported by the instance. FEATURE_SUBNET_ACL: indicates that the ACL policy supports setting subnets.</p>.
      */
     public void setFeatures(String [] Features) {
         this.Features = Features;
     }
 
     /**
-     * Get Dynamic message retention policy. 
-     * @return RetentionTimeConfig Dynamic message retention policy.
+     * Get <P>Dynamic message retention policy.</p>. 
+     * @return RetentionTimeConfig <P>Dynamic message retention policy.</p>.
      */
     public DynamicRetentionTime getRetentionTimeConfig() {
         return this.RetentionTimeConfig;
     }
 
     /**
-     * Set Dynamic message retention policy.
-     * @param RetentionTimeConfig Dynamic message retention policy.
+     * Set <P>Dynamic message retention policy.</p>.
+     * @param RetentionTimeConfig <P>Dynamic message retention policy.</p>.
      */
     public void setRetentionTimeConfig(DynamicRetentionTime RetentionTimeConfig) {
         this.RetentionTimeConfig = RetentionTimeConfig;
     }
 
     /**
-     * Get Maximum number of connections. 
-     * @return MaxConnection Maximum number of connections.
+     * Get <P>Maximum number of connections.</p>. 
+     * @return MaxConnection <P>Maximum number of connections.</p>.
      */
     public Long getMaxConnection() {
         return this.MaxConnection;
     }
 
     /**
-     * Set Maximum number of connections.
-     * @param MaxConnection Maximum number of connections.
+     * Set <P>Maximum number of connections.</p>.
+     * @param MaxConnection <P>Maximum number of connections.</p>.
      */
     public void setMaxConnection(Long MaxConnection) {
         this.MaxConnection = MaxConnection;
     }
 
     /**
-     * Get Public network bandwidth 
-     * @return PublicNetwork Public network bandwidth
+     * Get <P>Public network bandwidth.</p>. 
+     * @return PublicNetwork <P>Public network bandwidth.</p>.
      */
     public Long getPublicNetwork() {
         return this.PublicNetwork;
     }
 
     /**
-     * Set Public network bandwidth
-     * @param PublicNetwork Public network bandwidth
+     * Set <P>Public network bandwidth.</p>.
+     * @param PublicNetwork <P>Public network bandwidth.</p>.
      */
     public void setPublicNetwork(Long PublicNetwork) {
         this.PublicNetwork = PublicNetwork;
     }
 
     /**
-     * Get Specifies the deprecated field with no actual meaning. 
-     * @return DeleteRouteTimestamp Specifies the deprecated field with no actual meaning.
+     * Get <P>Deprecated. no actual meaning.</p>. 
+     * @return DeleteRouteTimestamp <P>Deprecated. no actual meaning.</p>.
      */
     public String getDeleteRouteTimestamp() {
         return this.DeleteRouteTimestamp;
     }
 
     /**
-     * Set Specifies the deprecated field with no actual meaning.
-     * @param DeleteRouteTimestamp Specifies the deprecated field with no actual meaning.
+     * Set <P>Deprecated. no actual meaning.</p>.
+     * @param DeleteRouteTimestamp <P>Deprecated. no actual meaning.</p>.
      */
     public void setDeleteRouteTimestamp(String DeleteRouteTimestamp) {
         this.DeleteRouteTimestamp = DeleteRouteTimestamp;
     }
 
     /**
-     * Get Number of remaining creatable partitions. 
-     * @return RemainingPartitions Number of remaining creatable partitions.
+     * Get <P>Number of remaining creatable partitions.</p>. 
+     * @return RemainingPartitions <P>Number of remaining creatable partitions.</p>.
      */
     public Long getRemainingPartitions() {
         return this.RemainingPartitions;
     }
 
     /**
-     * Set Number of remaining creatable partitions.
-     * @param RemainingPartitions Number of remaining creatable partitions.
+     * Set <P>Number of remaining creatable partitions.</p>.
+     * @param RemainingPartitions <P>Number of remaining creatable partitions.</p>.
      */
     public void setRemainingPartitions(Long RemainingPartitions) {
         this.RemainingPartitions = RemainingPartitions;
     }
 
     /**
-     * Get Number of remaining creatable topics. 
-     * @return RemainingTopics Number of remaining creatable topics.
+     * Get <P>Number of remaining creatable topics.</p>. 
+     * @return RemainingTopics <P>Number of remaining creatable topics.</p>.
      */
     public Long getRemainingTopics() {
         return this.RemainingTopics;
     }
 
     /**
-     * Set Number of remaining creatable topics.
-     * @param RemainingTopics Number of remaining creatable topics.
+     * Set <P>Number of remaining creatable topics.</p>.
+     * @param RemainingTopics <P>Number of remaining creatable topics.</p>.
      */
     public void setRemainingTopics(Long RemainingTopics) {
         this.RemainingTopics = RemainingTopics;
     }
 
     /**
-     * Get Scaling policy for dynamic disk. 
-     * @return DynamicDiskConfig Scaling policy for dynamic disk.
+     * Get <P>Dynamic disk expansion policy.</p>. 
+     * @return DynamicDiskConfig <P>Dynamic disk expansion policy.</p>.
      */
     public DynamicDiskConfig getDynamicDiskConfig() {
         return this.DynamicDiskConfig;
     }
 
     /**
-     * Set Scaling policy for dynamic disk.
-     * @param DynamicDiskConfig Scaling policy for dynamic disk.
+     * Set <P>Dynamic disk expansion policy.</p>.
+     * @param DynamicDiskConfig <P>Dynamic disk expansion policy.</p>.
      */
     public void setDynamicDiskConfig(DynamicDiskConfig DynamicDiskConfig) {
         this.DynamicDiskConfig = DynamicDiskConfig;
     }
 
     /**
-     * Get Specifies the system maintenance time. 
-     * @return SystemMaintenanceTime Specifies the system maintenance time.
+     * Get <P>Specifies the system maintenance time.</p>. 
+     * @return SystemMaintenanceTime <P>Specifies the system maintenance time.</p>.
      */
     public String getSystemMaintenanceTime() {
         return this.SystemMaintenanceTime;
     }
 
     /**
-     * Set Specifies the system maintenance time.
-     * @param SystemMaintenanceTime Specifies the system maintenance time.
+     * Set <P>Specifies the system maintenance time.</p>.
+     * @param SystemMaintenanceTime <P>Specifies the system maintenance time.</p>.
      */
     public void setSystemMaintenanceTime(String SystemMaintenanceTime) {
         this.SystemMaintenanceTime = SystemMaintenanceTime;
     }
 
     /**
-     * Get Specifies the maximum size of messages at the instance level. 
-     * @return MaxMessageByte Specifies the maximum size of messages at the instance level.
+     * Get <P>Specifies the maximum size of instance level messages.</p>. 
+     * @return MaxMessageByte <P>Specifies the maximum size of instance level messages.</p>.
      */
     public Long getMaxMessageByte() {
         return this.MaxMessageByte;
     }
 
     /**
-     * Set Specifies the maximum size of messages at the instance level.
-     * @param MaxMessageByte Specifies the maximum size of messages at the instance level.
+     * Set <P>Specifies the maximum size of instance level messages.</p>.
+     * @param MaxMessageByte <P>Specifies the maximum size of instance level messages.</p>.
      */
     public void setMaxMessageByte(Long MaxMessageByte) {
         this.MaxMessageByte = MaxMessageByte;
     }
 
     /**
-     * Get Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package. 
-     * @return InstanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+     * Get <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>. 
+     * @return InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
-     * @param InstanceChargeType Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.
+     * Set <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+     * @param InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled. 
-     * @return ElasticBandwidthSwitch Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
+     * Get <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>. 
+     * @return ElasticBandwidthSwitch <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
      */
     public Long getElasticBandwidthSwitch() {
         return this.ElasticBandwidthSwitch;
     }
 
     /**
-     * Set Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
-     * @param ElasticBandwidthSwitch Whether to enable the elastic bandwidth allowlist.   
-Indicates the allowlist feature with elastic bandwidth enabled.
-0: elastic bandwidth allowlist feature is disabled.
+     * Set <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+     * @param ElasticBandwidthSwitch <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
      */
     public void setElasticBandwidthSwitch(Long ElasticBandwidthSwitch) {
         this.ElasticBandwidthSwitch = ElasticBandwidthSwitch;
     }
 
     /**
-     * Get Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure. 
-     * @return ElasticBandwidthOpenStatus Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
+     * Get <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>. 
+     * @return ElasticBandwidthOpenStatus <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
      */
     public Long getElasticBandwidthOpenStatus() {
         return this.ElasticBandwidthOpenStatus;
     }
 
     /**
-     * Set Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
-     * @param ElasticBandwidthOpenStatus Indicates the elastic bandwidth activation status.
-1: indicates elastic bandwidth is disabled.
-Enable elastic bandwidth.
-Enable elastic bandwidth successfully.
-33: disabling elastic bandwidth.
-Indicates that the elastic bandwidth is successfully disabled.
-Enable elastic bandwidth failed.
-Bandwidth failure.
+     * Set <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+     * @param ElasticBandwidthOpenStatus <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
      */
     public void setElasticBandwidthOpenStatus(Long ElasticBandwidthOpenStatus) {
         this.ElasticBandwidthOpenStatus = ElasticBandwidthOpenStatus;
     }
 
     /**
-     * Get Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster. 
-     * @return ClusterType Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
+     * Get <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>. 
+     * @return ClusterType <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
      */
     public String getClusterType() {
         return this.ClusterType;
     }
 
     /**
-     * Set Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
-     * @param ClusterType Cluster type.  
-CLOUD_IDC idc cluster.
-CLOUD_CVM_SHARE shared cluster.
-CLOUD_CVM_YUNTI yunti cvm cluster.
-CLOUD_CVM. specifies the cvm cluster.
-CLOUD_CDC cdc cluster.
-CLOUD_EKS_TSE eks cluster.
+     * Set <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+     * @param ClusterType <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
      */
     public void setClusterType(String ClusterType) {
         this.ClusterType = ClusterType;
     }
 
     /**
-     * Get Number of free partitions. 
-     * @return FreePartitionNumber Number of free partitions.
+     * Get <P>Specifies the number of free partitions.</p>. 
+     * @return FreePartitionNumber <P>Specifies the number of free partitions.</p>.
      */
     public Long getFreePartitionNumber() {
         return this.FreePartitionNumber;
     }
 
     /**
-     * Set Number of free partitions.
-     * @param FreePartitionNumber Number of free partitions.
+     * Set <P>Specifies the number of free partitions.</p>.
+     * @param FreePartitionNumber <P>Specifies the number of free partitions.</p>.
      */
     public void setFreePartitionNumber(Long FreePartitionNumber) {
         this.FreePartitionNumber = FreePartitionNumber;
     }
 
     /**
-     * Get Specifies the elastic bandwidth upper limit. 
-     * @return ElasticFloatBandwidth Specifies the elastic bandwidth upper limit.
+     * Get <P>Specifies the elastic bandwidth upper limit.</p>. 
+     * @return ElasticFloatBandwidth <P>Specifies the elastic bandwidth upper limit.</p>.
      */
     public Long getElasticFloatBandwidth() {
         return this.ElasticFloatBandwidth;
     }
 
     /**
-     * Set Specifies the elastic bandwidth upper limit.
-     * @param ElasticFloatBandwidth Specifies the elastic bandwidth upper limit.
+     * Set <P>Specifies the elastic bandwidth upper limit.</p>.
+     * @param ElasticFloatBandwidth <P>Specifies the elastic bandwidth upper limit.</p>.
      */
     public void setElasticFloatBandwidth(Long ElasticFloatBandwidth) {
         this.ElasticFloatBandwidth = ElasticFloatBandwidth;
     }
 
     /**
-     * Get ssl custom certificate id. only returned for instance clusters with custom certificates. 
-     * @return CustomCertId ssl custom certificate id. only returned for instance clusters with custom certificates.
+     * Get <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>. 
+     * @return CustomCertId <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
      */
     public String getCustomCertId() {
         return this.CustomCertId;
     }
 
     /**
-     * Set ssl custom certificate id. only returned for instance clusters with custom certificates.
-     * @param CustomCertId ssl custom certificate id. only returned for instance clusters with custom certificates.
+     * Set <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
+     * @param CustomCertId <p>ssl custom certificate id. only returned for instance clusters with custom certificates.</p>.
      */
     public void setCustomCertId(String CustomCertId) {
         this.CustomCertId = CustomCertId;
     }
 
     /**
-     * Get Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable. 
-     * @return UncleanLeaderElectionEnable Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+     * Get <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>. 
+     * @return UncleanLeaderElectionEnable <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
      */
     public Long getUncleanLeaderElectionEnable() {
         return this.UncleanLeaderElectionEnable;
     }
 
     /**
-     * Set Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
-     * @param UncleanLeaderElectionEnable Default unclean.leader.election.enable configuration for cluster topic: 1 enable 0 disable.
+     * Set <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
+     * @param UncleanLeaderElectionEnable <P>Specifies the default unclean.leader.election.enable configuration for cluster topics. valid values: 1 (enable), 0 (disable).</p>.
      */
     public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
     }
 
     /**
-     * Get Instance deletion protection switch. 1: enabled; 0: disabled. 
-     * @return DeleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+     * Get <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>. 
+     * @return DeleteProtectionEnable <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
      */
     public Long getDeleteProtectionEnable() {
         return this.DeleteProtectionEnable;
     }
 
     /**
-     * Set Instance deletion protection switch. 1: enabled; 0: disabled.
-     * @param DeleteProtectionEnable Instance deletion protection switch. 1: enabled; 0: disabled.
+     * Set <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
+     * @param DeleteProtectionEnable <P>Specifies the instance deletion protection switch. valid values: 1 (enabled), 0 (disabled).</p>.
      */
     public void setDeleteProtectionEnable(Long DeleteProtectionEnable) {
         this.DeleteProtectionEnable = DeleteProtectionEnable;
