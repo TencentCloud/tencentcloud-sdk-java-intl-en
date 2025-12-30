@@ -1277,4 +1277,15 @@ HTTP callbacks are supported for live stream processing events. Notifications ca
         return this.internalRequest(req, "ResetWorkflow", ResetWorkflowResponse.class);
     }
 
+    /**
+     *This API is used to translate text.
+     * @param req TextTranslationRequest
+     * @return TextTranslationResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextTranslationResponse TextTranslation(TextTranslationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextTranslation", TextTranslationResponse.class);
+    }
+
 }

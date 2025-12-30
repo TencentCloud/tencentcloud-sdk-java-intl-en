@@ -28,6 +28,7 @@ public class SmartSubtitlesResult extends AbstractModel {
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
     */
     @SerializedName("Type")
     @Expose
@@ -61,14 +62,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private PureSubtitleTransResult PureSubtitleTransTask;
 
     /**
+    * Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OcrFullTextTask")
+    @Expose
+    private SmartSubtitleTaskFullTextResult OcrFullTextTask;
+
+    /**
      * Get Task type. Valid values:
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
-- PureSubtitleTrans: pure subtitle translation. 
+- PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction. 
      * @return Type Task type. Valid values:
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
      */
     public String getType() {
         return this.Type;
@@ -79,10 +91,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
      * @param Type Task type. Valid values:
 - AsrFullTextRecognition: full speech recognition.
 - TransTextRecognition: speech translation.
 - PureSubtitleTrans: pure subtitle translation.
+- OcrFullTextRecognition: text-based subtitle extraction.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -160,6 +174,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.PureSubtitleTransTask = PureSubtitleTransTask;
     }
 
+    /**
+     * Get Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return OcrFullTextTask Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public SmartSubtitleTaskFullTextResult getOcrFullTextTask() {
+        return this.OcrFullTextTask;
+    }
+
+    /**
+     * Set Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OcrFullTextTask Text-based subtitle extraction result. This field is valid when the value of Type is
+OcrFullTextRecognition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setOcrFullTextTask(SmartSubtitleTaskFullTextResult OcrFullTextTask) {
+        this.OcrFullTextTask = OcrFullTextTask;
+    }
+
     public SmartSubtitlesResult() {
     }
 
@@ -180,6 +218,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.PureSubtitleTransTask != null) {
             this.PureSubtitleTransTask = new PureSubtitleTransResult(source.PureSubtitleTransTask);
         }
+        if (source.OcrFullTextTask != null) {
+            this.OcrFullTextTask = new SmartSubtitleTaskFullTextResult(source.OcrFullTextTask);
+        }
     }
 
 
@@ -191,6 +232,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "AsrFullTextTask.", this.AsrFullTextTask);
         this.setParamObj(map, prefix + "TransTextTask.", this.TransTextTask);
         this.setParamObj(map, prefix + "PureSubtitleTransTask.", this.PureSubtitleTransTask);
+        this.setParamObj(map, prefix + "OcrFullTextTask.", this.OcrFullTextTask);
 
     }
 }

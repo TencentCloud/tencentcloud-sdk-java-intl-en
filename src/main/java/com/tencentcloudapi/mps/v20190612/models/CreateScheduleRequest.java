@@ -67,7 +67,7 @@ If you do not specify this, the file will be saved to the trigger directory.
     private TaskNotifyConfig TaskNotifyConfig;
 
     /**
-    * Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+    * Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
     */
     @SerializedName("ResourceId")
     @Expose
@@ -174,16 +174,16 @@ If you do not specify this, the file will be saved to the trigger directory.
     }
 
     /**
-     * Get Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID. 
-     * @return ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * Get Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account. 
+     * @return ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
-     * @param ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * Set Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+     * @param ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

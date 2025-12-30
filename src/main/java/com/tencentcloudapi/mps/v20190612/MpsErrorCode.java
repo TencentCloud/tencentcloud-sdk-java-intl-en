@@ -288,6 +288,9 @@ public enum MpsErrorCode {
      /* SourceLanguage parameter error. */
      INVALIDPARAMETERVALUE_SOURCELANGUAGE("InvalidParameterValue.SourceLanguage"),
      
+     /* A SourceText parameter error occurs. */
+     INVALIDPARAMETERVALUE_SOURCETEXT("InvalidParameterValue.SourceText"),
+     
      /* Source file error. */
      INVALIDPARAMETERVALUE_SRCFILE("InvalidParameterValue.SrcFile"),
      
@@ -329,6 +332,9 @@ public enum MpsErrorCode {
      
      /* Parameter error: text transparency. */
      INVALIDPARAMETERVALUE_TEXTALPHA("InvalidParameterValue.TextAlpha"),
+     
+     /* A TextContent parameter value error occurs. */
+     INVALIDPARAMETERVALUE_TEXTCONTENT("InvalidParameterValue.TextContent"),
      
      /* Parameter error: text template. */
      INVALIDPARAMETERVALUE_TEXTTEMPLATE("InvalidParameterValue.TextTemplate"),
@@ -402,11 +408,17 @@ public enum MpsErrorCode {
      /* The resource does not exist: the template does not exist. */
      RESOURCENOTFOUND_TEMPLATENOTEXIST("ResourceNotFound.TemplateNotExist"),
      
+     /* The user is not registered. */
+     RESOURCENOTFOUND_USERUNREGISTER("ResourceNotFound.UserUnregister"),
+     
      /* The resource does not exist: Keyword. */
      RESOURCENOTFOUND_WORD("ResourceNotFound.Word"),
      
      /* Unauthorized operation. */
-     UNAUTHORIZEDOPERATION("UnauthorizedOperation");
+     UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
+     
+     /* The text for a single request exceeds the length limit. */
+     UNSUPPORTEDOPERATION_TEXTTOOLONG("UnsupportedOperation.TextTooLong");
      
     private String value;
     private MpsErrorCode (String value){
