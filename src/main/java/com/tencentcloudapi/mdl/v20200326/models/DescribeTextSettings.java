@@ -38,14 +38,14 @@ public class DescribeTextSettings extends AbstractModel {
     private String Location;
 
     /**
-    * The watermark image’s horizontal distance from the origin as a percentage of the video width
+    * The watermark image's horizontal distance from the origin as a percentage of the video width
     */
     @SerializedName("XPos")
     @Expose
     private Long XPos;
 
     /**
-    * The watermark image’s vertical distance from the origin as a percentage of the video height
+    * The watermark image's vertical distance from the origin as a percentage of the video height
     */
     @SerializedName("YPos")
     @Expose
@@ -98,32 +98,32 @@ public class DescribeTextSettings extends AbstractModel {
     }
 
     /**
-     * Get The watermark image’s horizontal distance from the origin as a percentage of the video width 
-     * @return XPos The watermark image’s horizontal distance from the origin as a percentage of the video width
+     * Get The watermark image's horizontal distance from the origin as a percentage of the video width 
+     * @return XPos The watermark image's horizontal distance from the origin as a percentage of the video width
      */
     public Long getXPos() {
         return this.XPos;
     }
 
     /**
-     * Set The watermark image’s horizontal distance from the origin as a percentage of the video width
-     * @param XPos The watermark image’s horizontal distance from the origin as a percentage of the video width
+     * Set The watermark image's horizontal distance from the origin as a percentage of the video width
+     * @param XPos The watermark image's horizontal distance from the origin as a percentage of the video width
      */
     public void setXPos(Long XPos) {
         this.XPos = XPos;
     }
 
     /**
-     * Get The watermark image’s vertical distance from the origin as a percentage of the video height 
-     * @return YPos The watermark image’s vertical distance from the origin as a percentage of the video height
+     * Get The watermark image's vertical distance from the origin as a percentage of the video height 
+     * @return YPos The watermark image's vertical distance from the origin as a percentage of the video height
      */
     public Long getYPos() {
         return this.YPos;
     }
 
     /**
-     * Set The watermark image’s vertical distance from the origin as a percentage of the video height
-     * @param YPos The watermark image’s vertical distance from the origin as a percentage of the video height
+     * Set The watermark image's vertical distance from the origin as a percentage of the video height
+     * @param YPos The watermark image's vertical distance from the origin as a percentage of the video height
      */
     public void setYPos(Long YPos) {
         this.YPos = YPos;

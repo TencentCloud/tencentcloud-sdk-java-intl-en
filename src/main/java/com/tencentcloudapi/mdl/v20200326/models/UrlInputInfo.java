@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class UrlInputInfo extends AbstractModel {
 
     /**
-    * 
+    * Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get  
-     * @return Url 
+     * Get Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH) 
+     * @return Url Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
+     * @param Url Video URL, starting with http/https, supports up to 512 characters, currently only supports complete single file videos, does not support streaming formats based on playlists and segments (such as HLS or DASH)
      */
     public void setUrl(String Url) {
         this.Url = Url;

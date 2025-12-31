@@ -151,14 +151,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private VideoCodecDetail VideoCodecDetails;
 
     /**
-    * 
+    * Video enhancement switch, 1: on 0: off.
     */
     @SerializedName("VideoEnhanceEnabled")
     @Expose
     private Long VideoEnhanceEnabled;
 
     /**
-    * 
+    * Video enhancement parameter array.
     */
     @SerializedName("VideoEnhanceSettings")
     @Expose
@@ -170,6 +170,13 @@ Note: This field may return `null`, indicating that no valid value was found.
     @SerializedName("ColorSpaceSettings")
     @Expose
     private ColorSpaceSetting ColorSpaceSettings;
+
+    /**
+    * Traceability watermark.
+    */
+    @SerializedName("ForensicWatermarkIds")
+    @Expose
+    private String [] ForensicWatermarkIds;
 
     /**
      * Get Video transcoding template name, which can contain 1-20 letters and digits. 
@@ -464,32 +471,32 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return VideoEnhanceEnabled 
+     * Get Video enhancement switch, 1: on 0: off. 
+     * @return VideoEnhanceEnabled Video enhancement switch, 1: on 0: off.
      */
     public Long getVideoEnhanceEnabled() {
         return this.VideoEnhanceEnabled;
     }
 
     /**
-     * Set 
-     * @param VideoEnhanceEnabled 
+     * Set Video enhancement switch, 1: on 0: off.
+     * @param VideoEnhanceEnabled Video enhancement switch, 1: on 0: off.
      */
     public void setVideoEnhanceEnabled(Long VideoEnhanceEnabled) {
         this.VideoEnhanceEnabled = VideoEnhanceEnabled;
     }
 
     /**
-     * Get  
-     * @return VideoEnhanceSettings 
+     * Get Video enhancement parameter array. 
+     * @return VideoEnhanceSettings Video enhancement parameter array.
      */
     public VideoEnhanceSetting [] getVideoEnhanceSettings() {
         return this.VideoEnhanceSettings;
     }
 
     /**
-     * Set 
-     * @param VideoEnhanceSettings 
+     * Set Video enhancement parameter array.
+     * @param VideoEnhanceSettings Video enhancement parameter array.
      */
     public void setVideoEnhanceSettings(VideoEnhanceSetting [] VideoEnhanceSettings) {
         this.VideoEnhanceSettings = VideoEnhanceSettings;
@@ -509,6 +516,22 @@ Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setColorSpaceSettings(ColorSpaceSetting ColorSpaceSettings) {
         this.ColorSpaceSettings = ColorSpaceSettings;
+    }
+
+    /**
+     * Get Traceability watermark. 
+     * @return ForensicWatermarkIds Traceability watermark.
+     */
+    public String [] getForensicWatermarkIds() {
+        return this.ForensicWatermarkIds;
+    }
+
+    /**
+     * Set Traceability watermark.
+     * @param ForensicWatermarkIds Traceability watermark.
+     */
+    public void setForensicWatermarkIds(String [] ForensicWatermarkIds) {
+        this.ForensicWatermarkIds = ForensicWatermarkIds;
     }
 
     public VideoTemplateInfo() {
@@ -585,6 +608,12 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.ColorSpaceSettings != null) {
             this.ColorSpaceSettings = new ColorSpaceSetting(source.ColorSpaceSettings);
         }
+        if (source.ForensicWatermarkIds != null) {
+            this.ForensicWatermarkIds = new String[source.ForensicWatermarkIds.length];
+            for (int i = 0; i < source.ForensicWatermarkIds.length; i++) {
+                this.ForensicWatermarkIds[i] = new String(source.ForensicWatermarkIds[i]);
+            }
+        }
     }
 
 
@@ -613,6 +642,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "VideoEnhanceEnabled", this.VideoEnhanceEnabled);
         this.setParamArrayObj(map, prefix + "VideoEnhanceSettings.", this.VideoEnhanceSettings);
         this.setParamObj(map, prefix + "ColorSpaceSettings.", this.ColorSpaceSettings);
+        this.setParamArraySimple(map, prefix + "ForensicWatermarkIds.", this.ForensicWatermarkIds);
 
     }
 }

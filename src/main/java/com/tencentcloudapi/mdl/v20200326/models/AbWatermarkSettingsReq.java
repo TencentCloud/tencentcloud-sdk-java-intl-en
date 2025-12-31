@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AbWatermarkSettingsReq extends AbstractModel {
 
     /**
-    * 
+    * Optional values: A/B.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Optional values: A/B. 
+     * @return Type Optional values: A/B.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Optional values: A/B.
+     * @param Type Optional values: A/B.
      */
     public void setType(String Type) {
         this.Type = Type;

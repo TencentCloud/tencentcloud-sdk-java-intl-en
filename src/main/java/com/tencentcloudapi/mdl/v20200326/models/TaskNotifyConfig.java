@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class TaskNotifyConfig extends AbstractModel {
 
     /**
-    * 
+    * Notification type. Currently only supports URLs
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Callback URL. Starting with http/https, supporting a maximum of 512 characters
     */
     @SerializedName("NotifyUrl")
     @Expose
     private String NotifyUrl;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Notification type. Currently only supports URLs 
+     * @return Type Notification type. Currently only supports URLs
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Notification type. Currently only supports URLs
+     * @param Type Notification type. Currently only supports URLs
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return NotifyUrl 
+     * Get Callback URL. Starting with http/https, supporting a maximum of 512 characters 
+     * @return NotifyUrl Callback URL. Starting with http/https, supporting a maximum of 512 characters
      */
     public String getNotifyUrl() {
         return this.NotifyUrl;
     }
 
     /**
-     * Set 
-     * @param NotifyUrl 
+     * Set Callback URL. Starting with http/https, supporting a maximum of 512 characters
+     * @param NotifyUrl Callback URL. Starting with http/https, supporting a maximum of 512 characters
      */
     public void setNotifyUrl(String NotifyUrl) {
         this.NotifyUrl = NotifyUrl;

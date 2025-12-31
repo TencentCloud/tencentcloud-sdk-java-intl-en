@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class VideoEnhanceSetting extends AbstractModel {
 
     /**
-    * 
+    * Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Video enhancement intensity, 0-1.0, granularity 0.1
     */
     @SerializedName("Strength")
     @Expose
     private Float Strength;
 
     /**
-     * Get  
-     * @return Type 
+     * Get Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance" 
+     * @return Type Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
+     * @param Type Video enhancement types, optional: "GameEnhance", "ColorEnhance", "Debur", "Comprehensive", "Denoising", "SR", "OutdoorSportsCompetitions", "IndoorSportsCompetitions", "ShowEnhance"
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Strength 
+     * Get Video enhancement intensity, 0-1.0, granularity 0.1 
+     * @return Strength Video enhancement intensity, 0-1.0, granularity 0.1
      */
     public Float getStrength() {
         return this.Strength;
     }
 
     /**
-     * Set 
-     * @param Strength 
+     * Set Video enhancement intensity, 0-1.0, granularity 0.1
+     * @param Strength Video enhancement intensity, 0-1.0, granularity 0.1
      */
     public void setStrength(Float Strength) {
         this.Strength = Strength;

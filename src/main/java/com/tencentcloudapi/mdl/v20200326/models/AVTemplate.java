@@ -241,14 +241,14 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     private AudioTrackInfo [] AudioTracks;
 
     /**
-    * 
+    * Do you want to enable video enhancement? 1: Enable 0: Do not enable.
     */
     @SerializedName("VideoEnhanceEnabled")
     @Expose
     private Long VideoEnhanceEnabled;
 
     /**
-    * 
+    * Video enhancement configuration array.
     */
     @SerializedName("VideoEnhanceSettings")
     @Expose
@@ -274,6 +274,13 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     @SerializedName("ColorSpaceSettings")
     @Expose
     private ColorSpaceSetting ColorSpaceSettings;
+
+    /**
+    * Traceability watermark.
+    */
+    @SerializedName("ForensicWatermarkIds")
+    @Expose
+    private String [] ForensicWatermarkIds;
 
     /**
      * Get Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits 
@@ -784,32 +791,32 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     }
 
     /**
-     * Get  
-     * @return VideoEnhanceEnabled 
+     * Get Do you want to enable video enhancement? 1: Enable 0: Do not enable. 
+     * @return VideoEnhanceEnabled Do you want to enable video enhancement? 1: Enable 0: Do not enable.
      */
     public Long getVideoEnhanceEnabled() {
         return this.VideoEnhanceEnabled;
     }
 
     /**
-     * Set 
-     * @param VideoEnhanceEnabled 
+     * Set Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+     * @param VideoEnhanceEnabled Do you want to enable video enhancement? 1: Enable 0: Do not enable.
      */
     public void setVideoEnhanceEnabled(Long VideoEnhanceEnabled) {
         this.VideoEnhanceEnabled = VideoEnhanceEnabled;
     }
 
     /**
-     * Get  
-     * @return VideoEnhanceSettings 
+     * Get Video enhancement configuration array. 
+     * @return VideoEnhanceSettings Video enhancement configuration array.
      */
     public VideoEnhanceSetting [] getVideoEnhanceSettings() {
         return this.VideoEnhanceSettings;
     }
 
     /**
-     * Set 
-     * @param VideoEnhanceSettings 
+     * Set Video enhancement configuration array.
+     * @param VideoEnhanceSettings Video enhancement configuration array.
      */
     public void setVideoEnhanceSettings(VideoEnhanceSetting [] VideoEnhanceSettings) {
         this.VideoEnhanceSettings = VideoEnhanceSettings;
@@ -861,6 +868,22 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
      */
     public void setColorSpaceSettings(ColorSpaceSetting ColorSpaceSettings) {
         this.ColorSpaceSettings = ColorSpaceSettings;
+    }
+
+    /**
+     * Get Traceability watermark. 
+     * @return ForensicWatermarkIds Traceability watermark.
+     */
+    public String [] getForensicWatermarkIds() {
+        return this.ForensicWatermarkIds;
+    }
+
+    /**
+     * Set Traceability watermark.
+     * @param ForensicWatermarkIds Traceability watermark.
+     */
+    public void setForensicWatermarkIds(String [] ForensicWatermarkIds) {
+        this.ForensicWatermarkIds = ForensicWatermarkIds;
     }
 
     public AVTemplate() {
@@ -982,6 +1005,12 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         if (source.ColorSpaceSettings != null) {
             this.ColorSpaceSettings = new ColorSpaceSetting(source.ColorSpaceSettings);
         }
+        if (source.ForensicWatermarkIds != null) {
+            this.ForensicWatermarkIds = new String[source.ForensicWatermarkIds.length];
+            for (int i = 0; i < source.ForensicWatermarkIds.length; i++) {
+                this.ForensicWatermarkIds[i] = new String(source.ForensicWatermarkIds[i]);
+            }
+        }
     }
 
 
@@ -1024,6 +1053,7 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
         this.setParamSimple(map, prefix + "GopSize", this.GopSize);
         this.setParamSimple(map, prefix + "GopSizeUnits", this.GopSizeUnits);
         this.setParamObj(map, prefix + "ColorSpaceSettings.", this.ColorSpaceSettings);
+        this.setParamArraySimple(map, prefix + "ForensicWatermarkIds.", this.ForensicWatermarkIds);
 
     }
 }
