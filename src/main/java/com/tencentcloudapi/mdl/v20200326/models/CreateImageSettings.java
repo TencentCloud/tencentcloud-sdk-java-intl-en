@@ -45,21 +45,21 @@ public class CreateImageSettings extends AbstractModel {
     private String Location;
 
     /**
-    * The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+    * The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
     */
     @SerializedName("XPos")
     @Expose
     private Long XPos;
 
     /**
-    * The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+    * The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
     */
     @SerializedName("YPos")
     @Expose
     private Long YPos;
 
     /**
-    * The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+    * The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
     */
@@ -68,7 +68,7 @@ You cannot set both `Width` and `Height` to `0`.
     private Long Width;
 
     /**
-    * The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+    * The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
     */
@@ -125,42 +125,42 @@ You cannot set both `Width` and `Height` to `0`.
     }
 
     /**
-     * Get The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10. 
-     * @return XPos The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+     * Get The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10. 
+     * @return XPos The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
      */
     public Long getXPos() {
         return this.XPos;
     }
 
     /**
-     * Set The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
-     * @param XPos The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+     * Set The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+     * @param XPos The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
      */
     public void setXPos(Long XPos) {
         this.XPos = XPos;
     }
 
     /**
-     * Get The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10. 
-     * @return YPos The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+     * Get The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10. 
+     * @return YPos The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
      */
     public Long getYPos() {
         return this.YPos;
     }
 
     /**
-     * Set The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
-     * @param YPos The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+     * Set The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+     * @param YPos The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
      */
     public void setYPos(Long YPos) {
         this.YPos = YPos;
     }
 
     /**
-     * Get The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+     * Get The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`. 
-     * @return Width The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+     * @return Width The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
      */
@@ -169,10 +169,10 @@ You cannot set both `Width` and `Height` to `0`.
     }
 
     /**
-     * Set The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+     * Set The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
-     * @param Width The watermark image’s width as a percentage of the video width. Value range: 0-100. Default: 10.
+     * @param Width The watermark image's width as a percentage of the video width. Value range: 0-100. Default: 10.
 `0` means to scale the width proportionally to the height.
 You cannot set both `Width` and `Height` to `0`.
      */
@@ -181,10 +181,10 @@ You cannot set both `Width` and `Height` to `0`.
     }
 
     /**
-     * Get The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+     * Get The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`. 
-     * @return Height The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+     * @return Height The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
      */
@@ -193,10 +193,10 @@ You cannot set both `Width` and `Height` to `0`.
     }
 
     /**
-     * Set The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+     * Set The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
-     * @param Height The watermark image’s height as a percentage of the video height. Value range: 0-100. Default: 10.
+     * @param Height The watermark image's height as a percentage of the video height. Value range: 0-100. Default: 10.
 `0` means to scale the height proportionally to the width.
 You cannot set both `Width` and `Height` to `0`.
      */

@@ -56,6 +56,27 @@ For other inputs, the quantity is 1.
     private AudioPipelineInputStatistics [] Audio;
 
     /**
+    * Session ID
+    */
+    @SerializedName("SessionId")
+    @Expose
+    private String SessionId;
+
+    /**
+    * Rtt time, in milliseconds
+    */
+    @SerializedName("RTT")
+    @Expose
+    private Long RTT;
+
+    /**
+    * Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+    */
+    @SerializedName("NetworkValid")
+    @Expose
+    private Long NetworkValid;
+
+    /**
      * Get Data timestamp in seconds. 
      * @return Timestamp Data timestamp in seconds.
      */
@@ -135,6 +156,54 @@ For other inputs, the quantity is 1.
         this.Audio = Audio;
     }
 
+    /**
+     * Get Session ID 
+     * @return SessionId Session ID
+     */
+    public String getSessionId() {
+        return this.SessionId;
+    }
+
+    /**
+     * Set Session ID
+     * @param SessionId Session ID
+     */
+    public void setSessionId(String SessionId) {
+        this.SessionId = SessionId;
+    }
+
+    /**
+     * Get Rtt time, in milliseconds 
+     * @return RTT Rtt time, in milliseconds
+     */
+    public Long getRTT() {
+        return this.RTT;
+    }
+
+    /**
+     * Set Rtt time, in milliseconds
+     * @param RTT Rtt time, in milliseconds
+     */
+    public void setRTT(Long RTT) {
+        this.RTT = RTT;
+    }
+
+    /**
+     * Get Is the Network parameter valid? 0 indicates invalid, 1 indicates valid 
+     * @return NetworkValid Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+     */
+    public Long getNetworkValid() {
+        return this.NetworkValid;
+    }
+
+    /**
+     * Set Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+     * @param NetworkValid Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+     */
+    public void setNetworkValid(Long NetworkValid) {
+        this.NetworkValid = NetworkValid;
+    }
+
     public PipelineInputStatistics() {
     }
 
@@ -161,6 +230,15 @@ For other inputs, the quantity is 1.
                 this.Audio[i] = new AudioPipelineInputStatistics(source.Audio[i]);
             }
         }
+        if (source.SessionId != null) {
+            this.SessionId = new String(source.SessionId);
+        }
+        if (source.RTT != null) {
+            this.RTT = new Long(source.RTT);
+        }
+        if (source.NetworkValid != null) {
+            this.NetworkValid = new Long(source.NetworkValid);
+        }
     }
 
 
@@ -172,6 +250,9 @@ For other inputs, the quantity is 1.
         this.setParamSimple(map, prefix + "NetworkIn", this.NetworkIn);
         this.setParamArrayObj(map, prefix + "Video.", this.Video);
         this.setParamArrayObj(map, prefix + "Audio.", this.Audio);
+        this.setParamSimple(map, prefix + "SessionId", this.SessionId);
+        this.setParamSimple(map, prefix + "RTT", this.RTT);
+        this.setParamSimple(map, prefix + "NetworkValid", this.NetworkValid);
 
     }
 }

@@ -115,6 +115,13 @@ public class EventSettingsReq extends AbstractModel {
     private MotionGraphicsActivateSetting MotionGraphicsActivateSetting;
 
     /**
+    * Ad Settings
+    */
+    @SerializedName("AdBreakSetting")
+    @Expose
+    private AdBreakSetting AdBreakSetting;
+
+    /**
      * Get Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used. 
      * @return EventType Valid values: `INPUT_SWITCH`, `TIMED_RECORD`, `SCTE35_TIME_SIGNAL`, `SCTE35_SPLICE_INSERT`, `SCTE35_RETURN_TO_NETWORK`,`TIMED_METADATA `,`STATIC_IMAGE_ACTIVATE `,`STATIC_IMAGE_DEACTIVATE `. If it is not specified, `INPUT_SWITCH` will be used.
      */
@@ -322,6 +329,22 @@ public class EventSettingsReq extends AbstractModel {
         this.MotionGraphicsActivateSetting = MotionGraphicsActivateSetting;
     }
 
+    /**
+     * Get Ad Settings 
+     * @return AdBreakSetting Ad Settings
+     */
+    public AdBreakSetting getAdBreakSetting() {
+        return this.AdBreakSetting;
+    }
+
+    /**
+     * Set Ad Settings
+     * @param AdBreakSetting Ad Settings
+     */
+    public void setAdBreakSetting(AdBreakSetting AdBreakSetting) {
+        this.AdBreakSetting = AdBreakSetting;
+    }
+
     public EventSettingsReq() {
     }
 
@@ -375,6 +398,9 @@ public class EventSettingsReq extends AbstractModel {
         if (source.MotionGraphicsActivateSetting != null) {
             this.MotionGraphicsActivateSetting = new MotionGraphicsActivateSetting(source.MotionGraphicsActivateSetting);
         }
+        if (source.AdBreakSetting != null) {
+            this.AdBreakSetting = new AdBreakSetting(source.AdBreakSetting);
+        }
     }
 
 
@@ -395,6 +421,7 @@ public class EventSettingsReq extends AbstractModel {
         this.setParamObj(map, prefix + "StaticImageActivateSetting.", this.StaticImageActivateSetting);
         this.setParamObj(map, prefix + "StaticImageDeactivateSetting.", this.StaticImageDeactivateSetting);
         this.setParamObj(map, prefix + "MotionGraphicsActivateSetting.", this.MotionGraphicsActivateSetting);
+        this.setParamObj(map, prefix + "AdBreakSetting.", this.AdBreakSetting);
 
     }
 }

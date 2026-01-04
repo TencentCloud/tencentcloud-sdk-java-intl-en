@@ -77,6 +77,13 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String [] AttachedChannels;
 
     /**
+    * AB watermark configuration.
+    */
+    @SerializedName("AbWatermarkSettings")
+    @Expose
+    private AbWatermarkSettingsResp AbWatermarkSettings;
+
+    /**
      * Get Watermark ID 
      * @return Id Watermark ID
      */
@@ -204,6 +211,22 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.AttachedChannels = AttachedChannels;
     }
 
+    /**
+     * Get AB watermark configuration. 
+     * @return AbWatermarkSettings AB watermark configuration.
+     */
+    public AbWatermarkSettingsResp getAbWatermarkSettings() {
+        return this.AbWatermarkSettings;
+    }
+
+    /**
+     * Set AB watermark configuration.
+     * @param AbWatermarkSettings AB watermark configuration.
+     */
+    public void setAbWatermarkSettings(AbWatermarkSettingsResp AbWatermarkSettings) {
+        this.AbWatermarkSettings = AbWatermarkSettings;
+    }
+
     public DescribeWatermarkInfo() {
     }
 
@@ -236,6 +259,9 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.AttachedChannels[i] = new String(source.AttachedChannels[i]);
             }
         }
+        if (source.AbWatermarkSettings != null) {
+            this.AbWatermarkSettings = new AbWatermarkSettingsResp(source.AbWatermarkSettings);
+        }
     }
 
 
@@ -250,6 +276,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamObj(map, prefix + "TextSettings.", this.TextSettings);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamArraySimple(map, prefix + "AttachedChannels.", this.AttachedChannels);
+        this.setParamObj(map, prefix + "AbWatermarkSettings.", this.AbWatermarkSettings);
 
     }
 }

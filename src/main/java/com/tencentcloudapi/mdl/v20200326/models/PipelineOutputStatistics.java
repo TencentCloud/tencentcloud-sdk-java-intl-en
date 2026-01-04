@@ -39,6 +39,13 @@ In seconds, indicating data time.
     private Long NetworkOut;
 
     /**
+    * Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+    */
+    @SerializedName("NetworkValid")
+    @Expose
+    private Long NetworkValid;
+
+    /**
      * Get Timestamp.
 In seconds, indicating data time. 
      * @return Timestamp Timestamp.
@@ -74,6 +81,22 @@ In seconds, indicating data time.
         this.NetworkOut = NetworkOut;
     }
 
+    /**
+     * Get Is the Network parameter valid? 0 indicates invalid, 1 indicates valid 
+     * @return NetworkValid Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+     */
+    public Long getNetworkValid() {
+        return this.NetworkValid;
+    }
+
+    /**
+     * Set Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+     * @param NetworkValid Is the Network parameter valid? 0 indicates invalid, 1 indicates valid
+     */
+    public void setNetworkValid(Long NetworkValid) {
+        this.NetworkValid = NetworkValid;
+    }
+
     public PipelineOutputStatistics() {
     }
 
@@ -88,6 +111,9 @@ In seconds, indicating data time.
         if (source.NetworkOut != null) {
             this.NetworkOut = new Long(source.NetworkOut);
         }
+        if (source.NetworkValid != null) {
+            this.NetworkValid = new Long(source.NetworkValid);
+        }
     }
 
 
@@ -97,6 +123,7 @@ In seconds, indicating data time.
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);
         this.setParamSimple(map, prefix + "NetworkOut", this.NetworkOut);
+        this.setParamSimple(map, prefix + "NetworkValid", this.NetworkValid);
 
     }
 }

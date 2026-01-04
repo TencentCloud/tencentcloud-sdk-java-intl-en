@@ -84,6 +84,13 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String [] FrameCaptureTemplateNames;
 
     /**
+    * Name modification for sub m3u8.
+    */
+    @SerializedName("NameModifier")
+    @Expose
+    private String NameModifier;
+
+    /**
      * Get Output name. 
      * @return Name Output name.
      */
@@ -227,6 +234,22 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.FrameCaptureTemplateNames = FrameCaptureTemplateNames;
     }
 
+    /**
+     * Get Name modification for sub m3u8. 
+     * @return NameModifier Name modification for sub m3u8.
+     */
+    public String getNameModifier() {
+        return this.NameModifier;
+    }
+
+    /**
+     * Set Name modification for sub m3u8.
+     * @param NameModifier Name modification for sub m3u8.
+     */
+    public void setNameModifier(String NameModifier) {
+        this.NameModifier = NameModifier;
+    }
+
     public OutputInfo() {
     }
 
@@ -274,6 +297,9 @@ Note: this field may return `null`, indicating that no valid value was found.
                 this.FrameCaptureTemplateNames[i] = new String(source.FrameCaptureTemplateNames[i]);
             }
         }
+        if (source.NameModifier != null) {
+            this.NameModifier = new String(source.NameModifier);
+        }
     }
 
 
@@ -289,6 +315,7 @@ Note: this field may return `null`, indicating that no valid value was found.
         this.setParamArraySimple(map, prefix + "CaptionTemplateNames.", this.CaptionTemplateNames);
         this.setParamObj(map, prefix + "TimedMetadataSettings.", this.TimedMetadataSettings);
         this.setParamArraySimple(map, prefix + "FrameCaptureTemplateNames.", this.FrameCaptureTemplateNames);
+        this.setParamSimple(map, prefix + "NameModifier", this.NameModifier);
 
     }
 }

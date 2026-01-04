@@ -39,6 +39,17 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the generation task of a component.
+     * @param req QueryHunyuan3DPartJobRequest
+     * @return QueryHunyuan3DPartJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryHunyuan3DPartJobResponse QueryHunyuan3DPartJob(QueryHunyuan3DPartJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryHunyuan3DPartJob", QueryHunyuan3DPartJobResponse.class);
+    }
+
+    /**
      *This API is used to intelligently generate 3D content based on the HunYuan Large Model and input text descriptions/images.
 This API is used to provide 3 concurrent tasks by default, which can process 3 submitted tasks simultaneously. The next task can be processed only after the previous task is completed.
      * @param req QueryHunyuanTo3DProJobRequest
@@ -51,6 +62,29 @@ This API is used to provide 3 concurrent tasks by default, which can process 3 s
     }
 
     /**
+     *This API is used to intelligently generate 3D content based on the HunYuan Large Model with input text descriptions or images.
+This API is used to provide 1 concurrent task by default, which means only 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
+     * @param req QueryHunyuanTo3DRapidJobRequest
+     * @return QueryHunyuanTo3DRapidJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryHunyuanTo3DRapidJobResponse QueryHunyuanTo3DRapidJob(QueryHunyuanTo3DRapidJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryHunyuanTo3DRapidJob", QueryHunyuanTo3DRapidJobResponse.class);
+    }
+
+    /**
+     *This API is used to automatically perform component identification and generation based on the model structure after inputting a 3D model file.
+     * @param req SubmitHunyuan3DPartJobRequest
+     * @return SubmitHunyuan3DPartJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHunyuan3DPartJobResponse SubmitHunyuan3DPartJob(SubmitHunyuan3DPartJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHunyuan3DPartJob", SubmitHunyuan3DPartJobResponse.class);
+    }
+
+    /**
      *This API is used to intelligently generate 3D content based on the HunYuan Large Model and input text descriptions/images.
 This API is used to provide 3 concurrent tasks by default. Up to 3 submitted tasks can be processed simultaneously. A new task can be processed only after the previous one is completed.
      * @param req SubmitHunyuanTo3DProJobRequest
@@ -60,6 +94,18 @@ This API is used to provide 3 concurrent tasks by default. Up to 3 submitted tas
     public SubmitHunyuanTo3DProJobResponse SubmitHunyuanTo3DProJob(SubmitHunyuanTo3DProJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitHunyuanTo3DProJob", SubmitHunyuanTo3DProJobResponse.class);
+    }
+
+    /**
+     *This API is used to intelligently generate 3D content based on the HunYuan Large Model with input text descriptions or images.
+This API is used to provide 1 concurrent task by default, which means only 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
+     * @param req SubmitHunyuanTo3DRapidJobRequest
+     * @return SubmitHunyuanTo3DRapidJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHunyuanTo3DRapidJobResponse SubmitHunyuanTo3DRapidJob(SubmitHunyuanTo3DRapidJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHunyuanTo3DRapidJob", SubmitHunyuanTo3DRapidJobResponse.class);
     }
 
 }

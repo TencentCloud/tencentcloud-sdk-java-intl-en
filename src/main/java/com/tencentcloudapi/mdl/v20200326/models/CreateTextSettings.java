@@ -38,14 +38,14 @@ public class CreateTextSettings extends AbstractModel {
     private String Location;
 
     /**
-    * The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+    * The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
     */
     @SerializedName("XPos")
     @Expose
     private Long XPos;
 
     /**
-    * The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+    * The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
     */
     @SerializedName("YPos")
     @Expose
@@ -98,32 +98,32 @@ public class CreateTextSettings extends AbstractModel {
     }
 
     /**
-     * Get The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10. 
-     * @return XPos The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+     * Get The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10. 
+     * @return XPos The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
      */
     public Long getXPos() {
         return this.XPos;
     }
 
     /**
-     * Set The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
-     * @param XPos The watermark’s horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+     * Set The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
+     * @param XPos The watermark's horizontal distance from the origin as a percentage of the video width. Value range: 0-100. Default: 10.
      */
     public void setXPos(Long XPos) {
         this.XPos = XPos;
     }
 
     /**
-     * Get The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10. 
-     * @return YPos The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+     * Get The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10. 
+     * @return YPos The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
      */
     public Long getYPos() {
         return this.YPos;
     }
 
     /**
-     * Set The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
-     * @param YPos The watermark’s vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+     * Set The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
+     * @param YPos The watermark's vertical distance from the origin as a percentage of the video height. Value range: 0-100. Default: 10.
      */
     public void setYPos(Long YPos) {
         this.YPos = YPos;

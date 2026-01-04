@@ -73,7 +73,7 @@ public class SegmentationDescriptorInfo extends AbstractModel {
     private Long TypeID;
 
     /**
-    * Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
+    * Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
     */
     @SerializedName("Num")
     @Expose
@@ -213,16 +213,16 @@ public class SegmentationDescriptorInfo extends AbstractModel {
     }
 
     /**
-     * Get Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments. 
-     * @return Num Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
+     * Get Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments. 
+     * @return Num Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
      */
     public Long getNum() {
         return this.Num;
     }
 
     /**
-     * Set Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
-     * @param Num Corresponds to SCTE-35 segment_num。This field provides support for numbering segments within a given collection of segments.
+     * Set Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
+     * @param Num Corresponds to SCTE-35 segment_num. This field provides support for numbering segments within a given collection of segments.
      */
     public void setNum(Long Num) {
         this.Num = Num;
