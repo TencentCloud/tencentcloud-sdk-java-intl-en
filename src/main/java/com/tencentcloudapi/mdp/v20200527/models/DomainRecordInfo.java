@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DomainRecordInfo extends AbstractModel {
 
     /**
-    * 
+    * Associated playback domain name.
     */
     @SerializedName("CdnDomain")
     @Expose
     private String CdnDomain;
 
     /**
-    * 
+    * Belonging region.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 
+    * Channel ID.
     */
     @SerializedName("ChannelId")
     @Expose
     private String ChannelId;
 
     /**
-    * 
+    * The ID of a record
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-     * Get  
-     * @return CdnDomain 
+     * Get Associated playback domain name. 
+     * @return CdnDomain Associated playback domain name.
      */
     public String getCdnDomain() {
         return this.CdnDomain;
     }
 
     /**
-     * Set 
-     * @param CdnDomain 
+     * Set Associated playback domain name.
+     * @param CdnDomain Associated playback domain name.
      */
     public void setCdnDomain(String CdnDomain) {
         this.CdnDomain = CdnDomain;
     }
 
     /**
-     * Get  
-     * @return Region 
+     * Get Belonging region. 
+     * @return Region Belonging region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 
-     * @param Region 
+     * Set Belonging region.
+     * @param Region Belonging region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get  
-     * @return ChannelId 
+     * Get Channel ID. 
+     * @return ChannelId Channel ID.
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set 
-     * @param ChannelId 
+     * Set Channel ID.
+     * @param ChannelId Channel ID.
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get  
-     * @return Id 
+     * Get The ID of a record 
+     * @return Id The ID of a record
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set The ID of a record
+     * @param Id The ID of a record
      */
     public void setId(String Id) {
         this.Id = Id;

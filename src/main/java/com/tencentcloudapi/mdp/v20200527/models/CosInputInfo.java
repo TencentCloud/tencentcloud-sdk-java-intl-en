@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CosInputInfo extends AbstractModel {
 
     /**
-    * 
+    * COS bucket name
     */
     @SerializedName("Bucket")
     @Expose
     private String Bucket;
 
     /**
-    * 
+    * Region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 
+    * File object path
     */
     @SerializedName("Object")
     @Expose
     private String Object;
 
     /**
-     * Get  
-     * @return Bucket 
+     * Get COS bucket name 
+     * @return Bucket COS bucket name
      */
     public String getBucket() {
         return this.Bucket;
     }
 
     /**
-     * Set 
-     * @param Bucket 
+     * Set COS bucket name
+     * @param Bucket COS bucket name
      */
     public void setBucket(String Bucket) {
         this.Bucket = Bucket;
     }
 
     /**
-     * Get  
-     * @return Region 
+     * Get Region 
+     * @return Region Region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 
-     * @param Region 
+     * Set Region
+     * @param Region Region
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get  
-     * @return Object 
+     * Get File object path 
+     * @return Object File object path
      */
     public String getObject() {
         return this.Object;
     }
 
     /**
-     * Set 
-     * @param Object 
+     * Set File object path
+     * @param Object File object path
      */
     public void setObject(String Object) {
         this.Object = Object;

@@ -150,6 +150,83 @@ public class UsageDetail extends AbstractModel {
     private Float PreReplaceRate;
 
     /**
+    * Number of ad tags found in the list
+    */
+    @SerializedName("ADMarkerFound")
+    @Expose
+    private Long ADMarkerFound;
+
+    /**
+    * Request advertising frequency from ADS
+    */
+    @SerializedName("MakeAdsRequest")
+    @Expose
+    private Long MakeAdsRequest;
+
+    /**
+    * Received VAST returns from ADS
+    */
+    @SerializedName("VASTResponse")
+    @Expose
+    private Long VASTResponse;
+
+    /**
+    * Successfully filled the ad count
+    */
+    @SerializedName("FilledAvail")
+    @Expose
+    private Long FilledAvail;
+
+    /**
+    * The number of issues encountered during ad replacement execution
+    */
+    @SerializedName("WarningNoAd")
+    @Expose
+    private Long WarningNoAd;
+
+    /**
+    * The number of timeouts returned by ADS
+    */
+    @SerializedName("ErrorAdsTimeout")
+    @Expose
+    private Long ErrorAdsTimeout;
+
+    /**
+    * The number of empty VAST responses returned by ADS
+    */
+    @SerializedName("EmptyVASTResponse")
+    @Expose
+    private Long EmptyVASTResponse;
+
+    /**
+    * The number of empty VMAP responses returned by ADS
+    */
+    @SerializedName("EmptyVMAPResponse")
+    @Expose
+    private Long EmptyVMAPResponse;
+
+    /**
+    * Date
+    */
+    @SerializedName("Date")
+    @Expose
+    private String Date;
+
+    /**
+    * Start time
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * End time
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
+
+    /**
      * Get Ad insertion configuration uniq_id. 
      * @return UniqId Ad insertion configuration uniq_id.
      */
@@ -344,7 +421,9 @@ public class UsageDetail extends AbstractModel {
     /**
      * Get Advertising tag time. 
      * @return AdMarkerTime Advertising tag time.
+     * @deprecated
      */
+    @Deprecated
     public Float getAdMarkerTime() {
         return this.AdMarkerTime;
     }
@@ -352,7 +431,9 @@ public class UsageDetail extends AbstractModel {
     /**
      * Set Advertising tag time.
      * @param AdMarkerTime Advertising tag time.
+     * @deprecated
      */
+    @Deprecated
     public void setAdMarkerTime(Float AdMarkerTime) {
         this.AdMarkerTime = AdMarkerTime;
     }
@@ -360,7 +441,9 @@ public class UsageDetail extends AbstractModel {
     /**
      * Get Personalization replacement time. 
      * @return ReplacedTime Personalization replacement time.
+     * @deprecated
      */
+    @Deprecated
     public Float getReplacedTime() {
         return this.ReplacedTime;
     }
@@ -368,7 +451,9 @@ public class UsageDetail extends AbstractModel {
     /**
      * Set Personalization replacement time.
      * @param ReplacedTime Personalization replacement time.
+     * @deprecated
      */
+    @Deprecated
     public void setReplacedTime(Float ReplacedTime) {
         this.ReplacedTime = ReplacedTime;
     }
@@ -376,7 +461,9 @@ public class UsageDetail extends AbstractModel {
     /**
      * Get Fill factor for personalized ads. 
      * @return MidFillRate Fill factor for personalized ads.
+     * @deprecated
      */
+    @Deprecated
     public Float getMidFillRate() {
         return this.MidFillRate;
     }
@@ -384,7 +471,9 @@ public class UsageDetail extends AbstractModel {
     /**
      * Set Fill factor for personalized ads.
      * @param MidFillRate Fill factor for personalized ads.
+     * @deprecated
      */
+    @Deprecated
     public void setMidFillRate(Float MidFillRate) {
         this.MidFillRate = MidFillRate;
     }
@@ -392,7 +481,9 @@ public class UsageDetail extends AbstractModel {
     /**
      * Get Number of pre-roll ad requests. 
      * @return PreReqNum Number of pre-roll ad requests.
+     * @deprecated
      */
+    @Deprecated
     public Long getPreReqNum() {
         return this.PreReqNum;
     }
@@ -400,7 +491,9 @@ public class UsageDetail extends AbstractModel {
     /**
      * Set Number of pre-roll ad requests.
      * @param PreReqNum Number of pre-roll ad requests.
+     * @deprecated
      */
+    @Deprecated
     public void setPreReqNum(Long PreReqNum) {
         this.PreReqNum = PreReqNum;
     }
@@ -408,7 +501,9 @@ public class UsageDetail extends AbstractModel {
     /**
      * Get Number of pre-roll ad replacements. 
      * @return PreReplacedNum Number of pre-roll ad replacements.
+     * @deprecated
      */
+    @Deprecated
     public Long getPreReplacedNum() {
         return this.PreReplacedNum;
     }
@@ -416,7 +511,9 @@ public class UsageDetail extends AbstractModel {
     /**
      * Set Number of pre-roll ad replacements.
      * @param PreReplacedNum Number of pre-roll ad replacements.
+     * @deprecated
      */
+    @Deprecated
     public void setPreReplacedNum(Long PreReplacedNum) {
         this.PreReplacedNum = PreReplacedNum;
     }
@@ -424,7 +521,9 @@ public class UsageDetail extends AbstractModel {
     /**
      * Get Ad replacement rate. 
      * @return PreReplaceRate Ad replacement rate.
+     * @deprecated
      */
+    @Deprecated
     public Float getPreReplaceRate() {
         return this.PreReplaceRate;
     }
@@ -432,9 +531,187 @@ public class UsageDetail extends AbstractModel {
     /**
      * Set Ad replacement rate.
      * @param PreReplaceRate Ad replacement rate.
+     * @deprecated
      */
+    @Deprecated
     public void setPreReplaceRate(Float PreReplaceRate) {
         this.PreReplaceRate = PreReplaceRate;
+    }
+
+    /**
+     * Get Number of ad tags found in the list 
+     * @return ADMarkerFound Number of ad tags found in the list
+     */
+    public Long getADMarkerFound() {
+        return this.ADMarkerFound;
+    }
+
+    /**
+     * Set Number of ad tags found in the list
+     * @param ADMarkerFound Number of ad tags found in the list
+     */
+    public void setADMarkerFound(Long ADMarkerFound) {
+        this.ADMarkerFound = ADMarkerFound;
+    }
+
+    /**
+     * Get Request advertising frequency from ADS 
+     * @return MakeAdsRequest Request advertising frequency from ADS
+     */
+    public Long getMakeAdsRequest() {
+        return this.MakeAdsRequest;
+    }
+
+    /**
+     * Set Request advertising frequency from ADS
+     * @param MakeAdsRequest Request advertising frequency from ADS
+     */
+    public void setMakeAdsRequest(Long MakeAdsRequest) {
+        this.MakeAdsRequest = MakeAdsRequest;
+    }
+
+    /**
+     * Get Received VAST returns from ADS 
+     * @return VASTResponse Received VAST returns from ADS
+     */
+    public Long getVASTResponse() {
+        return this.VASTResponse;
+    }
+
+    /**
+     * Set Received VAST returns from ADS
+     * @param VASTResponse Received VAST returns from ADS
+     */
+    public void setVASTResponse(Long VASTResponse) {
+        this.VASTResponse = VASTResponse;
+    }
+
+    /**
+     * Get Successfully filled the ad count 
+     * @return FilledAvail Successfully filled the ad count
+     */
+    public Long getFilledAvail() {
+        return this.FilledAvail;
+    }
+
+    /**
+     * Set Successfully filled the ad count
+     * @param FilledAvail Successfully filled the ad count
+     */
+    public void setFilledAvail(Long FilledAvail) {
+        this.FilledAvail = FilledAvail;
+    }
+
+    /**
+     * Get The number of issues encountered during ad replacement execution 
+     * @return WarningNoAd The number of issues encountered during ad replacement execution
+     */
+    public Long getWarningNoAd() {
+        return this.WarningNoAd;
+    }
+
+    /**
+     * Set The number of issues encountered during ad replacement execution
+     * @param WarningNoAd The number of issues encountered during ad replacement execution
+     */
+    public void setWarningNoAd(Long WarningNoAd) {
+        this.WarningNoAd = WarningNoAd;
+    }
+
+    /**
+     * Get The number of timeouts returned by ADS 
+     * @return ErrorAdsTimeout The number of timeouts returned by ADS
+     */
+    public Long getErrorAdsTimeout() {
+        return this.ErrorAdsTimeout;
+    }
+
+    /**
+     * Set The number of timeouts returned by ADS
+     * @param ErrorAdsTimeout The number of timeouts returned by ADS
+     */
+    public void setErrorAdsTimeout(Long ErrorAdsTimeout) {
+        this.ErrorAdsTimeout = ErrorAdsTimeout;
+    }
+
+    /**
+     * Get The number of empty VAST responses returned by ADS 
+     * @return EmptyVASTResponse The number of empty VAST responses returned by ADS
+     */
+    public Long getEmptyVASTResponse() {
+        return this.EmptyVASTResponse;
+    }
+
+    /**
+     * Set The number of empty VAST responses returned by ADS
+     * @param EmptyVASTResponse The number of empty VAST responses returned by ADS
+     */
+    public void setEmptyVASTResponse(Long EmptyVASTResponse) {
+        this.EmptyVASTResponse = EmptyVASTResponse;
+    }
+
+    /**
+     * Get The number of empty VMAP responses returned by ADS 
+     * @return EmptyVMAPResponse The number of empty VMAP responses returned by ADS
+     */
+    public Long getEmptyVMAPResponse() {
+        return this.EmptyVMAPResponse;
+    }
+
+    /**
+     * Set The number of empty VMAP responses returned by ADS
+     * @param EmptyVMAPResponse The number of empty VMAP responses returned by ADS
+     */
+    public void setEmptyVMAPResponse(Long EmptyVMAPResponse) {
+        this.EmptyVMAPResponse = EmptyVMAPResponse;
+    }
+
+    /**
+     * Get Date 
+     * @return Date Date
+     */
+    public String getDate() {
+        return this.Date;
+    }
+
+    /**
+     * Set Date
+     * @param Date Date
+     */
+    public void setDate(String Date) {
+        this.Date = Date;
+    }
+
+    /**
+     * Get Start time 
+     * @return StartTime Start time
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set Start time
+     * @param StartTime Start time
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get End time 
+     * @return EndTime End time
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set End time
+     * @param EndTime End time
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
     }
 
     public UsageDetail() {
@@ -499,6 +776,39 @@ public class UsageDetail extends AbstractModel {
         if (source.PreReplaceRate != null) {
             this.PreReplaceRate = new Float(source.PreReplaceRate);
         }
+        if (source.ADMarkerFound != null) {
+            this.ADMarkerFound = new Long(source.ADMarkerFound);
+        }
+        if (source.MakeAdsRequest != null) {
+            this.MakeAdsRequest = new Long(source.MakeAdsRequest);
+        }
+        if (source.VASTResponse != null) {
+            this.VASTResponse = new Long(source.VASTResponse);
+        }
+        if (source.FilledAvail != null) {
+            this.FilledAvail = new Long(source.FilledAvail);
+        }
+        if (source.WarningNoAd != null) {
+            this.WarningNoAd = new Long(source.WarningNoAd);
+        }
+        if (source.ErrorAdsTimeout != null) {
+            this.ErrorAdsTimeout = new Long(source.ErrorAdsTimeout);
+        }
+        if (source.EmptyVASTResponse != null) {
+            this.EmptyVASTResponse = new Long(source.EmptyVASTResponse);
+        }
+        if (source.EmptyVMAPResponse != null) {
+            this.EmptyVMAPResponse = new Long(source.EmptyVMAPResponse);
+        }
+        if (source.Date != null) {
+            this.Date = new String(source.Date);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
+        }
     }
 
 
@@ -524,6 +834,17 @@ public class UsageDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "PreReqNum", this.PreReqNum);
         this.setParamSimple(map, prefix + "PreReplacedNum", this.PreReplacedNum);
         this.setParamSimple(map, prefix + "PreReplaceRate", this.PreReplaceRate);
+        this.setParamSimple(map, prefix + "ADMarkerFound", this.ADMarkerFound);
+        this.setParamSimple(map, prefix + "MakeAdsRequest", this.MakeAdsRequest);
+        this.setParamSimple(map, prefix + "VASTResponse", this.VASTResponse);
+        this.setParamSimple(map, prefix + "FilledAvail", this.FilledAvail);
+        this.setParamSimple(map, prefix + "WarningNoAd", this.WarningNoAd);
+        this.setParamSimple(map, prefix + "ErrorAdsTimeout", this.ErrorAdsTimeout);
+        this.setParamSimple(map, prefix + "EmptyVASTResponse", this.EmptyVASTResponse);
+        this.setParamSimple(map, prefix + "EmptyVMAPResponse", this.EmptyVMAPResponse);
+        this.setParamSimple(map, prefix + "Date", this.Date);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
 
     }
 }

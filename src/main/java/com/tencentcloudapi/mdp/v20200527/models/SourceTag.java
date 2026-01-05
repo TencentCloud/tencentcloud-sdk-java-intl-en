@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class SourceTag extends AbstractModel {
 
     /**
-    * 
+    * The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * 
+    * The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
+
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get  
-     * @return Key 
+     * Get The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits 
+     * @return Key The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set 
-     * @param Key 
+     * Set The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
+     * @param Key The key of the source tag supports capital letters, numbers, underscores, and dashes from 1 to 50 digits
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get  
-     * @return Value 
+     * Get The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
+ 
+     * @return Value The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
+
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set 
-     * @param Value 
+     * Set The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
+
+     * @param Value The value of the source tag supports letters, numbers, underscores, dashes, periods, and percent signs (%) ranging from 1 to 200 characters
+
      */
     public void setValue(String Value) {
         this.Value = Value;

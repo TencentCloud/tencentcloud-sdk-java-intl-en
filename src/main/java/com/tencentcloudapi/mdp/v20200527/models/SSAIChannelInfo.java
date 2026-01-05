@@ -66,6 +66,13 @@ public class SSAIChannelInfo extends AbstractModel {
     private String Region;
 
     /**
+    * Used for clickthrough addresses
+    */
+    @SerializedName("SessionInitPrefix")
+    @Expose
+    private String SessionInitPrefix;
+
+    /**
      * Get SSAI configuration ID, globally unique identifier 
      * @return ID SSAI configuration ID, globally unique identifier
      */
@@ -161,6 +168,22 @@ public class SSAIChannelInfo extends AbstractModel {
         this.Region = Region;
     }
 
+    /**
+     * Get Used for clickthrough addresses 
+     * @return SessionInitPrefix Used for clickthrough addresses
+     */
+    public String getSessionInitPrefix() {
+        return this.SessionInitPrefix;
+    }
+
+    /**
+     * Set Used for clickthrough addresses
+     * @param SessionInitPrefix Used for clickthrough addresses
+     */
+    public void setSessionInitPrefix(String SessionInitPrefix) {
+        this.SessionInitPrefix = SessionInitPrefix;
+    }
+
     public SSAIChannelInfo() {
     }
 
@@ -187,6 +210,9 @@ public class SSAIChannelInfo extends AbstractModel {
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.SessionInitPrefix != null) {
+            this.SessionInitPrefix = new String(source.SessionInitPrefix);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class SSAIChannelInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "PlaybackPrefix", this.PlaybackPrefix);
         this.setParamObj(map, prefix + "SSAIInfo.", this.SSAIInfo);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "SessionInitPrefix", this.SessionInitPrefix);
 
     }
 }

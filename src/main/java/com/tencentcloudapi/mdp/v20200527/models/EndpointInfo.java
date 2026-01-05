@@ -116,6 +116,13 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
     private DRMInfo DRMInfo;
 
     /**
+    * The switch of absolute path.
+    */
+    @SerializedName("AbsolutePathEnable")
+    @Expose
+    private Boolean AbsolutePathEnable;
+
+    /**
      * Get Endpoint name. 
      * @return Name Endpoint name.
      */
@@ -327,6 +334,22 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
         this.DRMInfo = DRMInfo;
     }
 
+    /**
+     * Get The switch of absolute path. 
+     * @return AbsolutePathEnable The switch of absolute path.
+     */
+    public Boolean getAbsolutePathEnable() {
+        return this.AbsolutePathEnable;
+    }
+
+    /**
+     * Set The switch of absolute path.
+     * @param AbsolutePathEnable The switch of absolute path.
+     */
+    public void setAbsolutePathEnable(Boolean AbsolutePathEnable) {
+        this.AbsolutePathEnable = AbsolutePathEnable;
+    }
+
     public EndpointInfo() {
     }
 
@@ -374,6 +397,9 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
         if (source.DRMInfo != null) {
             this.DRMInfo = new DRMInfo(source.DRMInfo);
         }
+        if (source.AbsolutePathEnable != null) {
+            this.AbsolutePathEnable = new Boolean(source.AbsolutePathEnable);
+        }
     }
 
 
@@ -394,6 +420,7 @@ The parameters can only contain digits, letters, underscores (_), and hyphens (-
         this.setParamSimple(map, prefix + "CustomUrlParam", this.CustomUrlParam);
         this.setParamSimple(map, prefix + "DRMEnabled", this.DRMEnabled);
         this.setParamObj(map, prefix + "DRMInfo.", this.DRMInfo);
+        this.setParamSimple(map, prefix + "AbsolutePathEnable", this.AbsolutePathEnable);
 
     }
 }

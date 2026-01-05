@@ -115,6 +115,13 @@ public class HarvestJobResp extends AbstractModel {
     private String Region;
 
     /**
+    * Callback URL after recording is completed
+    */
+    @SerializedName("CallbackURL")
+    @Expose
+    private String CallbackURL;
+
+    /**
      * Get HarvestJob ID, a globally unique identifier. 
      * @return ID HarvestJob ID, a globally unique identifier.
      */
@@ -322,6 +329,22 @@ public class HarvestJobResp extends AbstractModel {
         this.Region = Region;
     }
 
+    /**
+     * Get Callback URL after recording is completed 
+     * @return CallbackURL Callback URL after recording is completed
+     */
+    public String getCallbackURL() {
+        return this.CallbackURL;
+    }
+
+    /**
+     * Set Callback URL after recording is completed
+     * @param CallbackURL Callback URL after recording is completed
+     */
+    public void setCallbackURL(String CallbackURL) {
+        this.CallbackURL = CallbackURL;
+    }
+
     public HarvestJobResp() {
     }
 
@@ -369,6 +392,9 @@ public class HarvestJobResp extends AbstractModel {
         if (source.Region != null) {
             this.Region = new String(source.Region);
         }
+        if (source.CallbackURL != null) {
+            this.CallbackURL = new String(source.CallbackURL);
+        }
     }
 
 
@@ -389,6 +415,7 @@ public class HarvestJobResp extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "ChannelId", this.ChannelId);
         this.setParamSimple(map, prefix + "Region", this.Region);
+        this.setParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
 
     }
 }

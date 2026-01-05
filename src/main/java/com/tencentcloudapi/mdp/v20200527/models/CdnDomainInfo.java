@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CdnDomainInfo extends AbstractModel {
 
     /**
-    * 
+    * Total list size.
     */
     @SerializedName("TotalSize")
     @Expose
     private Long TotalSize;
 
     /**
-    * 
+    * List of associated domain name information.
     */
     @SerializedName("Records")
     @Expose
     private DomainRecordInfo [] Records;
 
     /**
-     * Get  
-     * @return TotalSize 
+     * Get Total list size. 
+     * @return TotalSize Total list size.
      */
     public Long getTotalSize() {
         return this.TotalSize;
     }
 
     /**
-     * Set 
-     * @param TotalSize 
+     * Set Total list size.
+     * @param TotalSize Total list size.
      */
     public void setTotalSize(Long TotalSize) {
         this.TotalSize = TotalSize;
     }
 
     /**
-     * Get  
-     * @return Records 
+     * Get List of associated domain name information. 
+     * @return Records List of associated domain name information.
      */
     public DomainRecordInfo [] getRecords() {
         return this.Records;
     }
 
     /**
-     * Set 
-     * @param Records 
+     * Set List of associated domain name information.
+     * @param Records List of associated domain name information.
      */
     public void setRecords(DomainRecordInfo [] Records) {
         this.Records = Records;

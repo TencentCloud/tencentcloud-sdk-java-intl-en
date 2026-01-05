@@ -38,6 +38,20 @@ public class ClipRangeInfo extends AbstractModel {
     private Long Offset;
 
     /**
+    * Start offset, Valid when the Type is SpecifyTimeRange.
+    */
+    @SerializedName("StartOffset")
+    @Expose
+    private Long StartOffset;
+
+    /**
+    * End offset, valid when Type is SpecifyTimeRange.
+    */
+    @SerializedName("EndOffset")
+    @Expose
+    private Long EndOffset;
+
+    /**
      * Get The vod type is valid, the content is valid starting time, Entire and SpecifyTimeRange are optional. 
      * @return Type The vod type is valid, the content is valid starting time, Entire and SpecifyTimeRange are optional.
      */
@@ -73,6 +87,38 @@ public class ClipRangeInfo extends AbstractModel {
         this.Offset = Offset;
     }
 
+    /**
+     * Get Start offset, Valid when the Type is SpecifyTimeRange. 
+     * @return StartOffset Start offset, Valid when the Type is SpecifyTimeRange.
+     */
+    public Long getStartOffset() {
+        return this.StartOffset;
+    }
+
+    /**
+     * Set Start offset, Valid when the Type is SpecifyTimeRange.
+     * @param StartOffset Start offset, Valid when the Type is SpecifyTimeRange.
+     */
+    public void setStartOffset(Long StartOffset) {
+        this.StartOffset = StartOffset;
+    }
+
+    /**
+     * Get End offset, valid when Type is SpecifyTimeRange. 
+     * @return EndOffset End offset, valid when Type is SpecifyTimeRange.
+     */
+    public Long getEndOffset() {
+        return this.EndOffset;
+    }
+
+    /**
+     * Set End offset, valid when Type is SpecifyTimeRange.
+     * @param EndOffset End offset, valid when Type is SpecifyTimeRange.
+     */
+    public void setEndOffset(Long EndOffset) {
+        this.EndOffset = EndOffset;
+    }
+
     public ClipRangeInfo() {
     }
 
@@ -87,6 +133,12 @@ public class ClipRangeInfo extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.StartOffset != null) {
+            this.StartOffset = new Long(source.StartOffset);
+        }
+        if (source.EndOffset != null) {
+            this.EndOffset = new Long(source.EndOffset);
+        }
     }
 
 
@@ -96,6 +148,8 @@ public class ClipRangeInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "StartOffset", this.StartOffset);
+        this.setParamSimple(map, prefix + "EndOffset", this.EndOffset);
 
     }
 }
