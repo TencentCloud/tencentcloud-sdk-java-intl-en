@@ -25,15 +25,13 @@ public class DescribeApplicationResp extends AbstractModel {
 
     /**
     * Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Product ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Product ID.
     */
     @SerializedName("AppIdentityId")
     @Expose
@@ -41,15 +39,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Application name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the application icon.
     */
     @SerializedName("Logo")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Remark")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Android package name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AndroidAppKey")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * iOS bundleId
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IosAppKey")
     @Expose
@@ -81,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creator
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateUser")
     @Expose
@@ -89,15 +81,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the updater.
     */
     @SerializedName("UpdateUser")
     @Expose
@@ -105,15 +95,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Application description
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Describes the application description.
     */
     @SerializedName("Intro")
     @Expose
@@ -121,7 +109,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamId")
     @Expose
@@ -129,15 +116,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Number of sensitive APIs
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of sensitive apis.
     */
     @SerializedName("SensitiveApiCount")
     @Expose
@@ -145,17 +130,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Application type. 1: Test; 2: Formal
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplicationType")
     @Expose
     private Long ApplicationType;
 
     /**
-     * Get Application ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+    * Specifies the application Scheme.
+    */
+    @SerializedName("Scheme")
+    @Expose
+    private String Scheme;
+
+    /**
+     * Get Application ID 
      * @return ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -163,39 +152,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Product ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AppIdentityId Product ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Product ID. 
+     * @return AppIdentityId Product ID.
      */
     public Long getAppIdentityId() {
         return this.AppIdentityId;
     }
 
     /**
-     * Set Product ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AppIdentityId Product ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Product ID.
+     * @param AppIdentityId Product ID.
      */
     public void setAppIdentityId(Long AppIdentityId) {
         this.AppIdentityId = AppIdentityId;
     }
 
     /**
-     * Get Application name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application name 
      * @return ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -203,39 +184,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Application icon
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Logo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the application icon. 
+     * @return Logo Specifies the application icon.
      */
     public String getLogo() {
         return this.Logo;
     }
 
     /**
-     * Set Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Logo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the application icon.
+     * @param Logo Specifies the application icon.
      */
     public void setLogo(String Logo) {
         this.Logo = Logo;
     }
 
     /**
-     * Get Remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Remarks 
      * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemark() {
         return this.Remark;
@@ -243,19 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Android package name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Android package name 
      * @return AndroidAppKey Android package name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAndroidAppKey() {
         return this.AndroidAppKey;
@@ -263,19 +232,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Android package name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param AndroidAppKey Android package name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAndroidAppKey(String AndroidAppKey) {
         this.AndroidAppKey = AndroidAppKey;
     }
 
     /**
-     * Get iOS bundleId
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get iOS bundleId 
      * @return IosAppKey iOS bundleId
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIosAppKey() {
         return this.IosAppKey;
@@ -283,19 +248,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set iOS bundleId
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IosAppKey iOS bundleId
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIosAppKey(String IosAppKey) {
         this.IosAppKey = IosAppKey;
     }
 
     /**
-     * Get Creator
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creator 
      * @return CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateUser() {
         return this.CreateUser;
@@ -303,19 +264,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -323,39 +280,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Updater
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateUser Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the updater. 
+     * @return UpdateUser Specifies the updater.
      */
     public String getUpdateUser() {
         return this.UpdateUser;
     }
 
     /**
-     * Set Updater
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateUser Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the updater.
+     * @param UpdateUser Specifies the updater.
      */
     public void setUpdateUser(String UpdateUser) {
         this.UpdateUser = UpdateUser;
     }
 
     /**
-     * Get Update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Update time 
      * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -363,39 +312,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Application description
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Intro Application description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Describes the application description. 
+     * @return Intro Describes the application description.
      */
     public String getIntro() {
         return this.Intro;
     }
 
     /**
-     * Set Application description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Intro Application description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Describes the application description.
+     * @param Intro Describes the application description.
      */
     public void setIntro(String Intro) {
         this.Intro = Intro;
     }
 
     /**
-     * Get Team ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team ID 
      * @return TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamId() {
         return this.TeamId;
@@ -403,19 +344,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team name 
      * @return TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamName() {
         return this.TeamName;
@@ -423,39 +360,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Number of sensitive APIs
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SensitiveApiCount Number of sensitive APIs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of sensitive apis. 
+     * @return SensitiveApiCount Number of sensitive apis.
      */
     public Long getSensitiveApiCount() {
         return this.SensitiveApiCount;
     }
 
     /**
-     * Set Number of sensitive APIs
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SensitiveApiCount Number of sensitive APIs
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of sensitive apis.
+     * @param SensitiveApiCount Number of sensitive apis.
      */
     public void setSensitiveApiCount(Long SensitiveApiCount) {
         this.SensitiveApiCount = SensitiveApiCount;
     }
 
     /**
-     * Get Application type. 1: Test; 2: Formal
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application type. 1: Test; 2: Formal 
      * @return ApplicationType Application type. 1: Test; 2: Formal
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getApplicationType() {
         return this.ApplicationType;
@@ -463,12 +392,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application type. 1: Test; 2: Formal
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplicationType Application type. 1: Test; 2: Formal
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplicationType(Long ApplicationType) {
         this.ApplicationType = ApplicationType;
+    }
+
+    /**
+     * Get Specifies the application Scheme. 
+     * @return Scheme Specifies the application Scheme.
+     */
+    public String getScheme() {
+        return this.Scheme;
+    }
+
+    /**
+     * Set Specifies the application Scheme.
+     * @param Scheme Specifies the application Scheme.
+     */
+    public void setScheme(String Scheme) {
+        this.Scheme = Scheme;
     }
 
     public DescribeApplicationResp() {
@@ -527,6 +470,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ApplicationType != null) {
             this.ApplicationType = new Long(source.ApplicationType);
         }
+        if (source.Scheme != null) {
+            this.Scheme = new String(source.Scheme);
+        }
     }
 
 
@@ -550,6 +496,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TeamName", this.TeamName);
         this.setParamSimple(map, prefix + "SensitiveApiCount", this.SensitiveApiCount);
         this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
+        this.setParamSimple(map, prefix + "Scheme", this.Scheme);
 
     }
 }

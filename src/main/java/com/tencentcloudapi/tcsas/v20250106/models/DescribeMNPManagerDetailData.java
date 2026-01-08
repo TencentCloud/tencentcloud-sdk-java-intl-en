@@ -25,7 +25,6 @@ public class DescribeMNPManagerDetailData extends AbstractModel {
 
     /**
     * Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPType")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPId")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPName")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPIcon")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPIntro")
     @Expose
@@ -65,15 +60,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPDesc")
     @Expose
     private String MNPDesc;
 
     /**
-    * Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Creation time, timestamp.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,23 +74,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creator
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Access status. 1: not connected; 2: connected.
     */
     @SerializedName("AccessStatus")
     @Expose
     private Long AccessStatus;
 
     /**
-    * The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name of the associated team
     */
     @SerializedName("TeamName")
     @Expose
@@ -105,25 +95,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program type  
      * @return MNPType Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPType() {
         return this.MNPType;
@@ -131,19 +117,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPType Mini program type 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program ID 
      * @return MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPId() {
         return this.MNPId;
@@ -151,19 +133,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program name 
      * @return MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPName() {
         return this.MNPName;
@@ -171,19 +149,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program icon 
      * @return MNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPIcon() {
         return this.MNPIcon;
@@ -191,19 +165,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program introduction 
      * @return MNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPIntro() {
         return this.MNPIntro;
@@ -211,19 +181,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get Mini program description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program description 
      * @return MNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPDesc() {
         return this.MNPDesc;
@@ -231,39 +197,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
     }
 
     /**
-     * Get Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Creation time, timestamp. 
+     * @return CreateTime Creation time, timestamp.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time, timestamp
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Creation time, timestamp.
+     * @param CreateTime Creation time, timestamp.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Creator
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creator 
      * @return CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateUser() {
         return this.CreateUser;
@@ -271,59 +229,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AccessStatus Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Access status. 1: not connected; 2: connected. 
+     * @return AccessStatus Access status. 1: not connected; 2: connected.
      */
     public Long getAccessStatus() {
         return this.AccessStatus;
     }
 
     /**
-     * Set Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccessStatus Connection status. 1: Not connected; 2: Connected
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Access status. 1: not connected; 2: connected.
+     * @param AccessStatus Access status. 1: not connected; 2: connected.
      */
     public void setAccessStatus(Long AccessStatus) {
         this.AccessStatus = AccessStatus;
     }
 
     /**
-     * Get The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TeamName The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name of the associated team 
+     * @return TeamName Name of the associated team
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TeamName The name of the associated team
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name of the associated team
+     * @param TeamName Name of the associated team
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Team ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team ID 
      * @return TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamId() {
         return this.TeamId;
@@ -331,29 +277,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed). 
+     * @return Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Mini program release status. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+     * @param Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
      */
     public void setStatus(Long Status) {
         this.Status = Status;

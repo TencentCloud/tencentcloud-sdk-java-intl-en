@@ -25,41 +25,35 @@ public class CreateGlobalDomainResp extends AbstractModel {
 
     /**
     * Result
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Result")
     @Expose
     private Boolean Result;
 
     /**
-    * List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Indicates the duplicate domain name.
     */
     @SerializedName("RepeatUrls")
     @Expose
     private String [] RepeatUrls;
 
     /**
-    * List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Lists allowed domain names.
     */
     @SerializedName("ExistsWhiteUrls")
     @Expose
     private String [] ExistsWhiteUrls;
 
     /**
-    * List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Indicates the domain name already exists in the blocklist.
     */
     @SerializedName("ExistsBlackUrls")
     @Expose
     private String [] ExistsBlackUrls;
 
     /**
-     * Get Result
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Result 
      * @return Result Result
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getResult() {
         return this.Result;
@@ -67,69 +61,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Result
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Result Result
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResult(Boolean Result) {
         this.Result = Result;
     }
 
     /**
-     * Get List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RepeatUrls List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Indicates the duplicate domain name. 
+     * @return RepeatUrls Indicates the duplicate domain name.
      */
     public String [] getRepeatUrls() {
         return this.RepeatUrls;
     }
 
     /**
-     * Set List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RepeatUrls List of duplicate domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Indicates the duplicate domain name.
+     * @param RepeatUrls Indicates the duplicate domain name.
      */
     public void setRepeatUrls(String [] RepeatUrls) {
         this.RepeatUrls = RepeatUrls;
     }
 
     /**
-     * Get List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExistsWhiteUrls List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Lists allowed domain names. 
+     * @return ExistsWhiteUrls Lists allowed domain names.
      */
     public String [] getExistsWhiteUrls() {
         return this.ExistsWhiteUrls;
     }
 
     /**
-     * Set List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExistsWhiteUrls List of allowed domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Lists allowed domain names.
+     * @param ExistsWhiteUrls Lists allowed domain names.
      */
     public void setExistsWhiteUrls(String [] ExistsWhiteUrls) {
         this.ExistsWhiteUrls = ExistsWhiteUrls;
     }
 
     /**
-     * Get List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExistsBlackUrls List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Indicates the domain name already exists in the blocklist. 
+     * @return ExistsBlackUrls Indicates the domain name already exists in the blocklist.
      */
     public String [] getExistsBlackUrls() {
         return this.ExistsBlackUrls;
     }
 
     /**
-     * Set List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExistsBlackUrls List of blocked domain names
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Indicates the domain name already exists in the blocklist.
+     * @param ExistsBlackUrls Indicates the domain name already exists in the blocklist.
      */
     public void setExistsBlackUrls(String [] ExistsBlackUrls) {
         this.ExistsBlackUrls = ExistsBlackUrls;

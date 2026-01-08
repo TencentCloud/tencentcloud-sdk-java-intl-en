@@ -25,7 +25,6 @@ public class DescribeGlobalDomainsListData extends AbstractModel {
 
     /**
     * Domain ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DomainId")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DomainUrl")
     @Expose
     private String DomainUrl;
 
     /**
-    * Type. 1: Allowed; 2: Blocked
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Type. 1: allowlist; 2: blocklist.
     */
     @SerializedName("DomainType")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creator
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateUser")
     @Expose
@@ -57,15 +53,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the updater.
     */
     @SerializedName("UpdateUser")
     @Expose
@@ -73,17 +67,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Domain ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Domain ID 
      * @return DomainId Domain ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDomainId() {
         return this.DomainId;
@@ -91,19 +82,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Domain ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DomainId Domain ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get Domain name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Domain name 
      * @return DomainUrl Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDomainUrl() {
         return this.DomainUrl;
@@ -111,39 +98,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DomainUrl Domain name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDomainUrl(String DomainUrl) {
         this.DomainUrl = DomainUrl;
     }
 
     /**
-     * Get Type. 1: Allowed; 2: Blocked
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DomainType Type. 1: Allowed; 2: Blocked
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Type. 1: allowlist; 2: blocklist. 
+     * @return DomainType Type. 1: allowlist; 2: blocklist.
      */
     public Long getDomainType() {
         return this.DomainType;
     }
 
     /**
-     * Set Type. 1: Allowed; 2: Blocked
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DomainType Type. 1: Allowed; 2: Blocked
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Type. 1: allowlist; 2: blocklist.
+     * @param DomainType Type. 1: allowlist; 2: blocklist.
      */
     public void setDomainType(Long DomainType) {
         this.DomainType = DomainType;
     }
 
     /**
-     * Get Creator
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creator 
      * @return CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateUser() {
         return this.CreateUser;
@@ -151,19 +130,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -171,39 +146,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Updater
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateUser Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the updater. 
+     * @return UpdateUser Specifies the updater.
      */
     public String getUpdateUser() {
         return this.UpdateUser;
     }
 
     /**
-     * Set Updater
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateUser Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the updater.
+     * @param UpdateUser Specifies the updater.
      */
     public void setUpdateUser(String UpdateUser) {
         this.UpdateUser = UpdateUser;
     }
 
     /**
-     * Get Update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Update time 
      * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -211,9 +178,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

@@ -80,6 +80,13 @@ public class ModifyApplicationRequest extends AbstractModel {
     private String Remark;
 
     /**
+    * Scheme
+    */
+    @SerializedName("Scheme")
+    @Expose
+    private String Scheme;
+
+    /**
      * Get Application ID 
      * @return ApplicationId Application ID
      */
@@ -162,7 +169,9 @@ public class ModifyApplicationRequest extends AbstractModel {
     /**
      * Get Android app package name 
      * @return AndroidAppKey Android app package name
+     * @deprecated
      */
+    @Deprecated
     public String getAndroidAppKey() {
         return this.AndroidAppKey;
     }
@@ -170,7 +179,9 @@ public class ModifyApplicationRequest extends AbstractModel {
     /**
      * Set Android app package name
      * @param AndroidAppKey Android app package name
+     * @deprecated
      */
+    @Deprecated
     public void setAndroidAppKey(String AndroidAppKey) {
         this.AndroidAppKey = AndroidAppKey;
     }
@@ -178,7 +189,9 @@ public class ModifyApplicationRequest extends AbstractModel {
     /**
      * Get iOS App bundleId 
      * @return IosAppKey iOS App bundleId
+     * @deprecated
      */
+    @Deprecated
     public String getIosAppKey() {
         return this.IosAppKey;
     }
@@ -186,7 +199,9 @@ public class ModifyApplicationRequest extends AbstractModel {
     /**
      * Set iOS App bundleId
      * @param IosAppKey iOS App bundleId
+     * @deprecated
      */
+    @Deprecated
     public void setIosAppKey(String IosAppKey) {
         this.IosAppKey = IosAppKey;
     }
@@ -194,7 +209,9 @@ public class ModifyApplicationRequest extends AbstractModel {
     /**
      * Get Remarks 
      * @return Remark Remarks
+     * @deprecated
      */
+    @Deprecated
     public String getRemark() {
         return this.Remark;
     }
@@ -202,9 +219,27 @@ public class ModifyApplicationRequest extends AbstractModel {
     /**
      * Set Remarks
      * @param Remark Remarks
+     * @deprecated
      */
+    @Deprecated
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get Scheme 
+     * @return Scheme Scheme
+     */
+    public String getScheme() {
+        return this.Scheme;
+    }
+
+    /**
+     * Set Scheme
+     * @param Scheme Scheme
+     */
+    public void setScheme(String Scheme) {
+        this.Scheme = Scheme;
     }
 
     public ModifyApplicationRequest() {
@@ -239,6 +274,9 @@ public class ModifyApplicationRequest extends AbstractModel {
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.Scheme != null) {
+            this.Scheme = new String(source.Scheme);
+        }
     }
 
 
@@ -254,6 +292,7 @@ public class ModifyApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AndroidAppKey", this.AndroidAppKey);
         this.setParamSimple(map, prefix + "IosAppKey", this.IosAppKey);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "Scheme", this.Scheme);
 
     }
 }

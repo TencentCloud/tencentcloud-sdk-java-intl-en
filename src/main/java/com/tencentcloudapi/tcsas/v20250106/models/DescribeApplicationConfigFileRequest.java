@@ -31,18 +31,18 @@ public class DescribeApplicationConfigFileRequest extends AbstractModel {
     private String ApplicationId;
 
     /**
-    * Application platform. 2: Android; 3: iOS
-    */
-    @SerializedName("AppType")
-    @Expose
-    private Long AppType;
-
-    /**
     * Platform ID
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
+
+    /**
+    * Application platform. 2: Android; 3: iOS
+    */
+    @SerializedName("AppType")
+    @Expose
+    private Long AppType;
 
     /**
      * Get Application ID 
@@ -61,22 +61,6 @@ public class DescribeApplicationConfigFileRequest extends AbstractModel {
     }
 
     /**
-     * Get Application platform. 2: Android; 3: iOS 
-     * @return AppType Application platform. 2: Android; 3: iOS
-     */
-    public Long getAppType() {
-        return this.AppType;
-    }
-
-    /**
-     * Set Application platform. 2: Android; 3: iOS
-     * @param AppType Application platform. 2: Android; 3: iOS
-     */
-    public void setAppType(Long AppType) {
-        this.AppType = AppType;
-    }
-
-    /**
      * Get Platform ID 
      * @return PlatformId Platform ID
      */
@@ -92,6 +76,26 @@ public class DescribeApplicationConfigFileRequest extends AbstractModel {
         this.PlatformId = PlatformId;
     }
 
+    /**
+     * Get Application platform. 2: Android; 3: iOS 
+     * @return AppType Application platform. 2: Android; 3: iOS
+     * @deprecated
+     */
+    @Deprecated
+    public Long getAppType() {
+        return this.AppType;
+    }
+
+    /**
+     * Set Application platform. 2: Android; 3: iOS
+     * @param AppType Application platform. 2: Android; 3: iOS
+     * @deprecated
+     */
+    @Deprecated
+    public void setAppType(Long AppType) {
+        this.AppType = AppType;
+    }
+
     public DescribeApplicationConfigFileRequest() {
     }
 
@@ -103,11 +107,11 @@ public class DescribeApplicationConfigFileRequest extends AbstractModel {
         if (source.ApplicationId != null) {
             this.ApplicationId = new String(source.ApplicationId);
         }
-        if (source.AppType != null) {
-            this.AppType = new Long(source.AppType);
-        }
         if (source.PlatformId != null) {
             this.PlatformId = new String(source.PlatformId);
+        }
+        if (source.AppType != null) {
+            this.AppType = new Long(source.AppType);
         }
     }
 
@@ -117,8 +121,8 @@ public class DescribeApplicationConfigFileRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-        this.setParamSimple(map, prefix + "AppType", this.AppType);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
+        this.setParamSimple(map, prefix + "AppType", this.AppType);
 
     }
 }

@@ -25,7 +25,6 @@ public class DescribeRoleListResp extends AbstractModel {
 
     /**
     * Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -33,17 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * List data
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataList")
     @Expose
     private DescribeRoleListData [] DataList;
 
     /**
-     * Get Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number of entries 
      * @return TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotalCount() {
         return this.TotalCount;
@@ -51,19 +47,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TotalCount Total number of entries
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List data
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List data 
      * @return DataList List data
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DescribeRoleListData [] getDataList() {
         return this.DataList;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List data
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DataList List data
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataList(DescribeRoleListData [] DataList) {
         this.DataList = DataList;

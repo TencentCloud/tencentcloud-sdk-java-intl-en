@@ -25,7 +25,6 @@ public class CreateApplicationSensitiveAPIReq extends AbstractModel {
 
     /**
     * API name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("APIName")
     @Expose
@@ -33,25 +32,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * API description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("APIDesc")
     @Expose
     private String APIDesc;
 
     /**
-    * API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+    * API type. 1: system; 2: custom.
     */
     @SerializedName("APIType")
     @Expose
     private Long APIType;
 
     /**
-     * Get API name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get API name 
      * @return APIName API name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAPIName() {
         return this.APIName;
@@ -59,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set API name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param APIName API name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAPIName(String APIName) {
         this.APIName = APIName;
     }
 
     /**
-     * Get API description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get API description 
      * @return APIDesc API description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAPIDesc() {
         return this.APIDesc;
@@ -79,29 +70,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set API description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param APIDesc API description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAPIDesc(String APIDesc) {
         this.APIDesc = APIDesc;
     }
 
     /**
-     * Get API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get API type. 1: system; 2: custom. 
+     * @return APIType API type. 1: system; 2: custom.
      */
     public Long getAPIType() {
         return this.APIType;
     }
 
     /**
-     * Set API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set API type. 1: system; 2: custom.
+     * @param APIType API type. 1: system; 2: custom.
      */
     public void setAPIType(Long APIType) {
         this.APIType = APIType;

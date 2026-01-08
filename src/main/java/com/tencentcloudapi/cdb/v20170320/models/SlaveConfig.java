@@ -31,7 +31,7 @@ public class SlaveConfig extends AbstractModel {
     private String ReplicationMode;
 
     /**
-    * AZ name of the secondary database, such as ap-shanghai-1
+    * AZ name of the secondary database, such as ap-shanghai-2
     */
     @SerializedName("Zone")
     @Expose
@@ -54,16 +54,16 @@ public class SlaveConfig extends AbstractModel {
     }
 
     /**
-     * Get AZ name of the secondary database, such as ap-shanghai-1 
-     * @return Zone AZ name of the secondary database, such as ap-shanghai-1
+     * Get AZ name of the secondary database, such as ap-shanghai-2 
+     * @return Zone AZ name of the secondary database, such as ap-shanghai-2
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ name of the secondary database, such as ap-shanghai-1
-     * @param Zone AZ name of the secondary database, such as ap-shanghai-1
+     * Set AZ name of the secondary database, such as ap-shanghai-2
+     * @param Zone AZ name of the secondary database, such as ap-shanghai-2
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

@@ -25,7 +25,6 @@ public class DescribeUserListResponse extends AbstractModel {
 
     /**
     * Response data
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Data")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Response data
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Response data 
      * @return Data Response data
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DescribeUserListResp getData() {
         return this.Data;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Response data
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Data Response data
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setData(DescribeUserListResp Data) {
         this.Data = Data;

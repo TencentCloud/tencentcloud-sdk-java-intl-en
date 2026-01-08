@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class CreateMNPVersionResp extends AbstractModel {
 
     /**
-    * ID of the task to create a mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the ID of the task to create a mini program version.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get ID of the task to create a mini program version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TaskId ID of the task to create a mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the ID of the task to create a mini program version. 
+     * @return TaskId Specifies the ID of the task to create a mini program version.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set ID of the task to create a mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TaskId ID of the task to create a mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the ID of the task to create a mini program version.
+     * @param TaskId Specifies the ID of the task to create a mini program version.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

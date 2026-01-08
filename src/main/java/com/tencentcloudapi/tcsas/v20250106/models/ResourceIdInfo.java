@@ -24,43 +24,38 @@ import java.util.HashMap;
 public class ResourceIdInfo extends AbstractModel {
 
     /**
-    * Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
     */
     @SerializedName("ResourceId")
     @Expose
     private Long ResourceId;
 
     /**
-     * Get Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResourceId Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user. 
+     * @return ResourceId Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
      */
     public Long getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourceId Resource ID
-0: No preview
-1. A preview is currently available and uploaded by the current user.
-2. A preview is currently available and uploaded by another user.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
+     * @param ResourceId Specifies the resource ID returned by the business.
+0: no trial version available.
+A trial version is currently available and uploaded by the current user.
+2: a trial version is currently available and uploaded by another user.
      */
     public void setResourceId(Long ResourceId) {
         this.ResourceId = ResourceId;

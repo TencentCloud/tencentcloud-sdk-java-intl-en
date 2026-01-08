@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class DescribeDomainInfoParam extends AbstractModel {
 
     /**
-    * Multiple domain separators ';'
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Multiple domain separators ';'.
     */
     @SerializedName("DomainUrl")
     @Expose
     private String DomainUrl;
 
     /**
-    * Domain type 1-requests domain 2-WebView load domain
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Domain type 1-requests domain 2-business domain.
     */
     @SerializedName("DomainType")
     @Expose
     private Long DomainType;
 
     /**
-     * Get Multiple domain separators ';'
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DomainUrl Multiple domain separators ';'
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Multiple domain separators ';'. 
+     * @return DomainUrl Multiple domain separators ';'.
      */
     public String getDomainUrl() {
         return this.DomainUrl;
     }
 
     /**
-     * Set Multiple domain separators ';'
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DomainUrl Multiple domain separators ';'
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Multiple domain separators ';'.
+     * @param DomainUrl Multiple domain separators ';'.
      */
     public void setDomainUrl(String DomainUrl) {
         this.DomainUrl = DomainUrl;
     }
 
     /**
-     * Get Domain type 1-requests domain 2-WebView load domain
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DomainType Domain type 1-requests domain 2-WebView load domain
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Domain type 1-requests domain 2-business domain. 
+     * @return DomainType Domain type 1-requests domain 2-business domain.
      */
     public Long getDomainType() {
         return this.DomainType;
     }
 
     /**
-     * Set Domain type 1-requests domain 2-WebView load domain
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DomainType Domain type 1-requests domain 2-WebView load domain
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Domain type 1-requests domain 2-business domain.
+     * @param DomainType Domain type 1-requests domain 2-business domain.
      */
     public void setDomainType(Long DomainType) {
         this.DomainType = DomainType;

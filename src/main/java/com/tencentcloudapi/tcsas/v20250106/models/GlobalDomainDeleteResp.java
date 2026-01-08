@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class GlobalDomainDeleteResp extends AbstractModel {
 
     /**
-    * Response result
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Result.
     */
     @SerializedName("Result")
     @Expose
     private Boolean Result;
 
     /**
-     * Get Response result
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Result Response result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Result. 
+     * @return Result Result.
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set Response result
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Result Response result
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Result.
+     * @param Result Result.
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

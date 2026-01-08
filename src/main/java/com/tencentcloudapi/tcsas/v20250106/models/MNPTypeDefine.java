@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class MNPTypeDefine extends AbstractModel {
 
     /**
-    * Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the mini program category name.
     */
     @SerializedName("TypeName")
     @Expose
     private String TypeName;
 
     /**
-    * Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mini program category value.
     */
     @SerializedName("TypeValue")
     @Expose
     private String [] TypeValue;
 
     /**
-    * Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Category ID.
     */
     @SerializedName("TypeId")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -57,85 +53,69 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creator
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Indicates whether it is a system category.
     */
     @SerializedName("IsSystem")
     @Expose
     private Boolean IsSystem;
 
     /**
-     * Get Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TypeName Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the mini program category name. 
+     * @return TypeName Specifies the mini program category name.
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TypeName Mini program category name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the mini program category name.
+     * @param TypeName Specifies the mini program category name.
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;
     }
 
     /**
-     * Get Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TypeValue Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mini program category value. 
+     * @return TypeValue Mini program category value.
      */
     public String [] getTypeValue() {
         return this.TypeValue;
     }
 
     /**
-     * Set Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TypeValue Mini program category value
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mini program category value.
+     * @param TypeValue Mini program category value.
      */
     public void setTypeValue(String [] TypeValue) {
         this.TypeValue = TypeValue;
     }
 
     /**
-     * Get Category ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TypeId Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Category ID. 
+     * @return TypeId Category ID.
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TypeId Category ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Category ID.
+     * @param TypeId Category ID.
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getCreateTime() {
         return this.CreateTime;
@@ -143,19 +123,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Creator
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creator 
      * @return CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateUser() {
         return this.CreateUser;
@@ -163,29 +139,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsSystem Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Indicates whether it is a system category. 
+     * @return IsSystem Indicates whether it is a system category.
      */
     public Boolean getIsSystem() {
         return this.IsSystem;
     }
 
     /**
-     * Set Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsSystem Whether it is a system category
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Indicates whether it is a system category.
+     * @param IsSystem Indicates whether it is a system category.
      */
     public void setIsSystem(Boolean IsSystem) {
         this.IsSystem = IsSystem;

@@ -84,6 +84,28 @@ Smart subtitle (full speech, speech hotword, and speech translation)
     }
 
     /**
+     *This API is used to create an AIGC image generation task.
+     * @param req CreateAigcImageTaskRequest
+     * @return CreateAigcImageTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcImageTaskResponse CreateAigcImageTask(CreateAigcImageTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcImageTask", CreateAigcImageTaskResponse.class);
+    }
+
+    /**
+     *This API is used to create an AIGC video generation task.
+     * @param req CreateAigcVideoTaskRequest
+     * @return CreateAigcVideoTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcVideoTaskResponse CreateAigcVideoTask(CreateAigcVideoTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcVideoTask", CreateAigcVideoTaskResponse.class);
+    }
+
+    /**
      *This API is used to create a custom animated image generating template. Up to 16 templates can be created.
      * @param req CreateAnimatedGraphicsTemplateRequest
      * @return CreateAnimatedGraphicsTemplateResponse
@@ -572,6 +594,28 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates", DescribeAdaptiveDynamicStreamingTemplatesResponse.class);
+    }
+
+    /**
+     *This API is used to query the details of the AIGC image task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+     * @param req DescribeAigcImageTaskRequest
+     * @return DescribeAigcImageTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcImageTaskResponse DescribeAigcImageTask(DescribeAigcImageTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcImageTask", DescribeAigcImageTaskResponse.class);
+    }
+
+    /**
+     *This API is used to query the details of the AIGC video task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+     * @param req DescribeAigcVideoTaskRequest
+     * @return DescribeAigcVideoTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcVideoTaskResponse DescribeAigcVideoTask(DescribeAigcVideoTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcVideoTask", DescribeAigcVideoTaskResponse.class);
     }
 
     /**

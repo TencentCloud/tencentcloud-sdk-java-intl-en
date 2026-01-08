@@ -25,31 +25,27 @@ public class QueryOnlineVersionResp extends AbstractModel {
 
     /**
     * Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Version number
     */
     @SerializedName("MNPVersion")
     @Expose
     private String MNPVersion;
 
     /**
-    * Version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Version ID.
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-    * Version note
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Version remarks.
     */
     @SerializedName("MNPVersionNote")
     @Expose
@@ -57,17 +53,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program ID 
      * @return MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPId() {
         return this.MNPId;
@@ -75,79 +68,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MNPVersion Version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Version number 
+     * @return MNPVersion Version number
      */
     public String getMNPVersion() {
         return this.MNPVersion;
     }
 
     /**
-     * Set Version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MNPVersion Version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Version number
+     * @param MNPVersion Version number
      */
     public void setMNPVersion(String MNPVersion) {
         this.MNPVersion = MNPVersion;
     }
 
     /**
-     * Get Version ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MNPVersionId Version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Version ID. 
+     * @return MNPVersionId Version ID.
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set Version ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MNPVersionId Version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Version ID.
+     * @param MNPVersionId Version ID.
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get Version note
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MNPVersionNote Version note
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Version remarks. 
+     * @return MNPVersionNote Version remarks.
      */
     public String getMNPVersionNote() {
         return this.MNPVersionNote;
     }
 
     /**
-     * Set Version note
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MNPVersionNote Version note
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Version remarks.
+     * @param MNPVersionNote Version remarks.
      */
     public void setMNPVersionNote(String MNPVersionNote) {
         this.MNPVersionNote = MNPVersionNote;
     }
 
     /**
-     * Get Update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Update time 
      * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -155,9 +132,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

@@ -25,7 +25,6 @@ public class DescribeMNPPreviewResp extends AbstractModel {
 
     /**
     * Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPId")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPName")
     @Expose
@@ -41,57 +39,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPDesc")
     @Expose
     private String MNPDesc;
 
     /**
-    * Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mini program version.
     */
     @SerializedName("MNPVersion")
     @Expose
     private String MNPVersion;
 
     /**
-    * Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Describes the mini program version.
     */
     @SerializedName("MNPVersionIntro")
     @Expose
     private String MNPVersionIntro;
 
     /**
-    * Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the mini program qr code.
     */
     @SerializedName("QRCodeUrl")
     @Expose
     private String QRCodeUrl;
 
     /**
-    * Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the path to the preview version.
     */
     @SerializedName("PreviewEntrancePath")
     @Expose
     private String PreviewEntrancePath;
 
     /**
-    * QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the qr code content.
     */
     @SerializedName("QRCodeContent")
     @Expose
     private String QRCodeContent;
 
     /**
-     * Get Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program ID 
      * @return MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPId() {
         return this.MNPId;
@@ -99,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program name 
      * @return MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPName() {
         return this.MNPName;
@@ -119,19 +105,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program description 
      * @return MNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPDesc() {
         return this.MNPDesc;
@@ -139,109 +121,87 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
     }
 
     /**
-     * Get Mini program version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mini program version. 
+     * @return MNPVersion Mini program version.
      */
     public String getMNPVersion() {
         return this.MNPVersion;
     }
 
     /**
-     * Set Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mini program version.
+     * @param MNPVersion Mini program version.
      */
     public void setMNPVersion(String MNPVersion) {
         this.MNPVersion = MNPVersion;
     }
 
     /**
-     * Get Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MNPVersionIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Describes the mini program version. 
+     * @return MNPVersionIntro Describes the mini program version.
      */
     public String getMNPVersionIntro() {
         return this.MNPVersionIntro;
     }
 
     /**
-     * Set Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MNPVersionIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Describes the mini program version.
+     * @param MNPVersionIntro Describes the mini program version.
      */
     public void setMNPVersionIntro(String MNPVersionIntro) {
         this.MNPVersionIntro = MNPVersionIntro;
     }
 
     /**
-     * Get Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QRCodeUrl Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the mini program qr code. 
+     * @return QRCodeUrl Specifies the mini program qr code.
      */
     public String getQRCodeUrl() {
         return this.QRCodeUrl;
     }
 
     /**
-     * Set Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QRCodeUrl Mini program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the mini program qr code.
+     * @param QRCodeUrl Specifies the mini program qr code.
      */
     public void setQRCodeUrl(String QRCodeUrl) {
         this.QRCodeUrl = QRCodeUrl;
     }
 
     /**
-     * Get Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PreviewEntrancePath Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the path to the preview version. 
+     * @return PreviewEntrancePath Specifies the path to the preview version.
      */
     public String getPreviewEntrancePath() {
         return this.PreviewEntrancePath;
     }
 
     /**
-     * Set Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PreviewEntrancePath Path to the preview
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the path to the preview version.
+     * @param PreviewEntrancePath Specifies the path to the preview version.
      */
     public void setPreviewEntrancePath(String PreviewEntrancePath) {
         this.PreviewEntrancePath = PreviewEntrancePath;
     }
 
     /**
-     * Get QR code content
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QRCodeContent QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the qr code content. 
+     * @return QRCodeContent Specifies the qr code content.
      */
     public String getQRCodeContent() {
         return this.QRCodeContent;
     }
 
     /**
-     * Set QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QRCodeContent QR code content
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the qr code content.
+     * @param QRCodeContent Specifies the qr code content.
      */
     public void setQRCodeContent(String QRCodeContent) {
         this.QRCodeContent = QRCodeContent;

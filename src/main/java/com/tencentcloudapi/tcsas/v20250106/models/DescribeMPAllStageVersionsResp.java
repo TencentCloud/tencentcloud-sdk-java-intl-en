@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeMPAllStageVersionsResp extends AbstractModel {
 
     /**
-    * Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mini program ID.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the mini program version primary key id.
     */
     @SerializedName("MNPVersionId")
     @Expose
@@ -41,15 +39,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the mini program avatar.
     */
     @SerializedName("MNPIcon")
     @Expose
@@ -57,7 +53,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPType")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPIntro")
     @Expose
@@ -73,146 +67,124 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPDesc")
     @Expose
     private String MNPDesc;
 
     /**
-    * Developer
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the developer.
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Developer creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mini program version.
     */
     @SerializedName("MNPVersion")
     @Expose
     private String MNPVersion;
 
     /**
-    * Version features
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Describes version features.
     */
     @SerializedName("MNPVersionIntro")
     @Expose
     private String MNPVersionIntro;
 
     /**
-    * Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Development Platform Online.
     */
     @SerializedName("Phase")
     @Expose
     private String Phase;
 
     /**
-    * 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+    * 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
     */
     @SerializedName("ApprovalStatus")
     @Expose
     private Long ApprovalStatus;
 
     /**
-    * Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Approval ticket ID
     */
     @SerializedName("ApprovalNo")
     @Expose
     private String ApprovalNo;
 
     /**
-    * Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
     */
     @SerializedName("ShowCase")
     @Expose
     private Long ShowCase;
 
     /**
-    * Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Version number to roll back to.
     */
     @SerializedName("RollbackVersion")
     @Expose
     private Long RollbackVersion;
 
     /**
-    * Release status
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Indicates the release status.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
     */
     @SerializedName("VersionCurrentStatus")
     @Expose
     private Long VersionCurrentStatus;
 
     /**
-     * Get Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mini program ID. 
+     * @return MNPId Mini program ID.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mini program ID.
+     * @param MNPId Mini program ID.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MNPVersionId Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the mini program version primary key id. 
+     * @return MNPVersionId Specifies the mini program version primary key id.
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MNPVersionId Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the mini program version primary key id.
+     * @param MNPVersionId Specifies the mini program version primary key id.
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get Mini program name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program name 
      * @return MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPName() {
         return this.MNPName;
@@ -220,39 +192,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the mini program avatar. 
+     * @return MNPIcon Specifies the mini program avatar.
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the mini program avatar.
+     * @param MNPIcon Specifies the mini program avatar.
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get Mini program type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program type 
      * @return MNPType Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPType() {
         return this.MNPType;
@@ -260,19 +224,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPType Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program introduction 
      * @return MNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPIntro() {
         return this.MNPIntro;
@@ -280,19 +240,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get Mini program description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program description 
      * @return MNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPDesc() {
         return this.MNPDesc;
@@ -300,233 +256,187 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPDesc Mini program description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
     }
 
     /**
-     * Get Developer
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateUser Developer
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the developer. 
+     * @return CreateUser Specifies the developer.
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Developer
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateUser Developer
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the developer.
+     * @param CreateUser Specifies the developer.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Developer creation time. 
+     * @return CreateTime Developer creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime The time when the developer created it
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Developer creation time.
+     * @param CreateTime Developer creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Mini program version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mini program version. 
+     * @return MNPVersion Mini program version.
      */
     public String getMNPVersion() {
         return this.MNPVersion;
     }
 
     /**
-     * Set Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mini program version.
+     * @param MNPVersion Mini program version.
      */
     public void setMNPVersion(String MNPVersion) {
         this.MNPVersion = MNPVersion;
     }
 
     /**
-     * Get Version features
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MNPVersionIntro Version features
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Describes version features. 
+     * @return MNPVersionIntro Describes version features.
      */
     public String getMNPVersionIntro() {
         return this.MNPVersionIntro;
     }
 
     /**
-     * Set Version features
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MNPVersionIntro Version features
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Describes version features.
+     * @param MNPVersionIntro Describes version features.
      */
     public void setMNPVersionIntro(String MNPVersionIntro) {
         this.MNPVersionIntro = MNPVersionIntro;
     }
 
     /**
-     * Get Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Phase Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Development Platform Online. 
+     * @return Phase Development Platform Online.
      */
     public String getPhase() {
         return this.Phase;
     }
 
     /**
-     * Set Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Phase Phase. Values: [Develop,Platform,Online]
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Development Platform Online.
+     * @param Phase Development Platform Online.
      */
     public void setPhase(String Phase) {
         this.Phase = Phase;
     }
 
     /**
-     * Get 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApprovalStatus 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation. 
+     * @return ApprovalStatus 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
      */
     public Long getApprovalStatus() {
         return this.ApprovalStatus;
     }
 
     /**
-     * Set 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApprovalStatus 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
+     * @param ApprovalStatus 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
      */
     public void setApprovalStatus(Long ApprovalStatus) {
         this.ApprovalStatus = ApprovalStatus;
     }
 
     /**
-     * Get Approval request number
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApprovalNo Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Approval ticket ID 
+     * @return ApprovalNo Approval ticket ID
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApprovalNo Approval request number
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Approval ticket ID
+     * @param ApprovalNo Approval ticket ID
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;
     }
 
     /**
-     * Get Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ShowCase Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version). 
+     * @return ShowCase Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
      */
     public Long getShowCase() {
         return this.ShowCase;
     }
 
     /**
-     * Set Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ShowCase Whether it is a preview
-0: Not a preview; 1: Preview
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
+     * @param ShowCase Specifies whether it is a trial version.
+Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
      */
     public void setShowCase(Long ShowCase) {
         this.ShowCase = ShowCase;
     }
 
     /**
-     * Get Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RollbackVersion Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Version number to roll back to. 
+     * @return RollbackVersion Version number to roll back to.
      */
     public Long getRollbackVersion() {
         return this.RollbackVersion;
     }
 
     /**
-     * Set Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RollbackVersion Version number to roll back to
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Version number to roll back to.
+     * @param RollbackVersion Version number to roll back to.
      */
     public void setRollbackVersion(Long RollbackVersion) {
         this.RollbackVersion = RollbackVersion;
     }
 
     /**
-     * Get Release status
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Release status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Indicates the release status. 
+     * @return Status Indicates the release status.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Release status
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Release status
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Indicates the release status.
+     * @param Status Indicates the release status.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VersionCurrentStatus Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation). 
+     * @return VersionCurrentStatus Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
      */
     public Long getVersionCurrentStatus() {
         return this.VersionCurrentStatus;
     }
 
     /**
-     * Set Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VersionCurrentStatus Version approval status. 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
+     * @param VersionCurrentStatus Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
      */
     public void setVersionCurrentStatus(Long VersionCurrentStatus) {
         this.VersionCurrentStatus = VersionCurrentStatus;

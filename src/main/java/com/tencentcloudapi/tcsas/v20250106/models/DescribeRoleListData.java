@@ -25,15 +25,13 @@ public class DescribeRoleListData extends AbstractModel {
 
     /**
     * Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RoleId")
     @Expose
     private Long RoleId;
 
     /**
-    * Role name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Role name.
     */
     @SerializedName("RoleName")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamName")
     @Expose
@@ -49,25 +46,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Role type 1-preset role 2-custom role.
     */
     @SerializedName("RoleType")
     @Expose
     private Long RoleType;
 
     /**
-     * Get Role ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Role ID 
      * @return RoleId Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRoleId() {
         return this.RoleId;
@@ -75,39 +68,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RoleId Role ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRoleId(Long RoleId) {
         this.RoleId = RoleId;
     }
 
     /**
-     * Get Role name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RoleName Role name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Role name. 
+     * @return RoleName Role name.
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set Role name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RoleName Role name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Role name.
+     * @param RoleName Role name.
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get Team name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team name 
      * @return TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamName() {
         return this.TeamName;
@@ -115,19 +100,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -135,29 +116,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RoleType Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Role type 1-preset role 2-custom role. 
+     * @return RoleType Role type 1-preset role 2-custom role.
      */
     public Long getRoleType() {
         return this.RoleType;
     }
 
     /**
-     * Set Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RoleType Role type 1-Preset role 2-Custom role
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Role type 1-preset role 2-custom role.
+     * @param RoleType Role type 1-preset role 2-custom role.
      */
     public void setRoleType(Long RoleType) {
         this.RoleType = RoleType;

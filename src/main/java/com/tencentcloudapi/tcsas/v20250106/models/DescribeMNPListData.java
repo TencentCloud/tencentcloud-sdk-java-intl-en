@@ -59,8 +59,7 @@ public class DescribeMNPListData extends AbstractModel {
     private String MNPType;
 
     /**
-    * Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
     */
     @SerializedName("Status")
     @Expose
@@ -68,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPIntro")
     @Expose
@@ -76,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creator
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateUser")
     @Expose
@@ -84,15 +81,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the updater.
     */
     @SerializedName("UpdateUser")
     @Expose
@@ -100,7 +95,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -108,31 +102,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Application name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
     */
     @SerializedName("EffectStatus")
     @Expose
     private Long EffectStatus;
 
     /**
-    * ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the ID of the application bound with the mini program.
     */
     @SerializedName("EffectMNPVersionId")
     @Expose
     private Long EffectMNPVersionId;
 
     /**
-    * Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the effective version number of the application bound to the mini program.
     */
     @SerializedName("EffectMNPVersion")
     @Expose
@@ -219,30 +209,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed). 
+     * @return Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Whether the mini program is released. 1: Released; 2: Removed
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+     * @param Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program introduction 
      * @return MNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPIntro() {
         return this.MNPIntro;
@@ -250,19 +234,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPIntro Mini program introduction
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get Creator
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creator 
      * @return CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateUser() {
         return this.CreateUser;
@@ -270,19 +250,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateUser Creator
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -290,39 +266,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Updater
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateUser Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the updater. 
+     * @return UpdateUser Specifies the updater.
      */
     public String getUpdateUser() {
         return this.UpdateUser;
     }
 
     /**
-     * Set Updater
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateUser Updater
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the updater.
+     * @param UpdateUser Specifies the updater.
      */
     public void setUpdateUser(String UpdateUser) {
         this.UpdateUser = UpdateUser;
     }
 
     /**
-     * Get Update time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Update time 
      * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -330,19 +298,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Application name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application name 
      * @return ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -350,69 +314,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EffectStatus Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Effective status of the bound application. valid values: 1 (not effective), 2 (effective). 
+     * @return EffectStatus Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
      */
     public Long getEffectStatus() {
         return this.EffectStatus;
     }
 
     /**
-     * Set Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EffectStatus Effective status of the bound application. 1: Not effective; 2: Effective
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+     * @param EffectStatus Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
      */
     public void setEffectStatus(Long EffectStatus) {
         this.EffectStatus = EffectStatus;
     }
 
     /**
-     * Get ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EffectMNPVersionId ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the ID of the application bound with the mini program. 
+     * @return EffectMNPVersionId Specifies the ID of the application bound with the mini program.
      */
     public Long getEffectMNPVersionId() {
         return this.EffectMNPVersionId;
     }
 
     /**
-     * Set ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EffectMNPVersionId ID of the application bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the ID of the application bound with the mini program.
+     * @param EffectMNPVersionId Specifies the ID of the application bound with the mini program.
      */
     public void setEffectMNPVersionId(Long EffectMNPVersionId) {
         this.EffectMNPVersionId = EffectMNPVersionId;
     }
 
     /**
-     * Get Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EffectMNPVersion Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the effective version number of the application bound to the mini program. 
+     * @return EffectMNPVersion Specifies the effective version number of the application bound to the mini program.
      */
     public String getEffectMNPVersion() {
         return this.EffectMNPVersion;
     }
 
     /**
-     * Set Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EffectMNPVersion Effective version number of the application that bound with the mini program
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the effective version number of the application bound to the mini program.
+     * @param EffectMNPVersion Specifies the effective version number of the application bound to the mini program.
      */
     public void setEffectMNPVersion(String EffectMNPVersion) {
         this.EffectMNPVersion = EffectMNPVersion;

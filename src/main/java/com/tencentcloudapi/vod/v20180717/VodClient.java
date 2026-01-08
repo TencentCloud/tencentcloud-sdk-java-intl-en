@@ -1435,6 +1435,17 @@ If event notification is used, the type of event notification is [Video editing 
     }
 
     /**
+     *This API is used to import AI analysis results into the knowledge base.
+     * @param req ImportMediaKnowledgeRequest
+     * @return ImportMediaKnowledgeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImportMediaKnowledgeResponse ImportMediaKnowledge(ImportMediaKnowledgeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImportMediaKnowledge", ImportMediaKnowledgeResponse.class);
+    }
+
+    /**
      *Initiate media quality inspection task.
      * @param req InspectMediaQualityRequest
      * @return InspectMediaQualityResponse
@@ -2108,6 +2119,17 @@ If event notifications are used, the event type is [ReviewAudioVideoComplete](ht
     public SearchMediaResponse SearchMedia(SearchMediaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchMedia", SearchMediaResponse.class);
+    }
+
+    /**
+     *This API is used to conduct semantic search on media using natural language.
+     * @param req SearchMediaBySemanticsRequest
+     * @return SearchMediaBySemanticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public SearchMediaBySemanticsResponse SearchMediaBySemantics(SearchMediaBySemanticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SearchMediaBySemantics", SearchMediaBySemanticsResponse.class);
     }
 
     /**

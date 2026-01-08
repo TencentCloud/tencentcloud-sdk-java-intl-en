@@ -38,7 +38,7 @@ public class DescribeDBInstanceConfigResponse extends AbstractModel {
     private Long DeployMode;
 
     /**
-    * Instance AZ information in the format of "ap-shanghai-1".
+    * Instance AZ information in the format of "ap-shanghai-2".
     */
     @SerializedName("Zone")
     @Expose
@@ -107,16 +107,16 @@ Note: `null` may be returned for this field, indicating that no valid values can
     }
 
     /**
-     * Get Instance AZ information in the format of "ap-shanghai-1". 
-     * @return Zone Instance AZ information in the format of "ap-shanghai-1".
+     * Get Instance AZ information in the format of "ap-shanghai-2". 
+     * @return Zone Instance AZ information in the format of "ap-shanghai-2".
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Instance AZ information in the format of "ap-shanghai-1".
-     * @param Zone Instance AZ information in the format of "ap-shanghai-1".
+     * Set Instance AZ information in the format of "ap-shanghai-2".
+     * @param Zone Instance AZ information in the format of "ap-shanghai-2".
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

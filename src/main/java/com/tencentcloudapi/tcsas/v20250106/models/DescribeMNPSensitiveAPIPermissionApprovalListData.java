@@ -94,16 +94,14 @@ public class DescribeMNPSensitiveAPIPermissionApprovalListData extends AbstractM
     private Long ApprovalStatus;
 
     /**
-    * Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the review user.
     */
     @SerializedName("ApprovalUser")
     @Expose
     private String ApprovalUser;
 
     /**
-    * Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Approval time.
     */
     @SerializedName("ApprovalTime")
     @Expose
@@ -111,7 +109,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApprovalNote")
     @Expose
@@ -119,7 +116,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -127,31 +123,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Application name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the application icon.
     */
     @SerializedName("ApplicationLogo")
     @Expose
     private String ApplicationLogo;
 
     /**
-    * API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+    * API type. 1: system; 2: custom.
     */
     @SerializedName("APIType")
     @Expose
     private Long APIType;
 
     /**
-    * API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+    * API feature description.
     */
     @SerializedName("APIDesc")
     @Expose
@@ -318,50 +310,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Approver
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApprovalUser Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the review user. 
+     * @return ApprovalUser Specifies the review user.
      */
     public String getApprovalUser() {
         return this.ApprovalUser;
     }
 
     /**
-     * Set Approver
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApprovalUser Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the review user.
+     * @param ApprovalUser Specifies the review user.
      */
     public void setApprovalUser(String ApprovalUser) {
         this.ApprovalUser = ApprovalUser;
     }
 
     /**
-     * Get Approval time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApprovalTime Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Approval time. 
+     * @return ApprovalTime Approval time.
      */
     public String getApprovalTime() {
         return this.ApprovalTime;
     }
 
     /**
-     * Set Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApprovalTime Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Approval time.
+     * @param ApprovalTime Approval time.
      */
     public void setApprovalTime(String ApprovalTime) {
         this.ApprovalTime = ApprovalTime;
     }
 
     /**
-     * Get Approval notes
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Approval notes 
      * @return ApprovalNote Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApprovalNote() {
         return this.ApprovalNote;
@@ -369,19 +351,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApprovalNote Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApprovalNote(String ApprovalNote) {
         this.ApprovalNote = ApprovalNote;
     }
 
     /**
-     * Get Application ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application ID 
      * @return ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -389,19 +367,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Application name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application name 
      * @return ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -409,69 +383,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Application icon
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApplicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the application icon. 
+     * @return ApplicationLogo Specifies the application icon.
      */
     public String getApplicationLogo() {
         return this.ApplicationLogo;
     }
 
     /**
-     * Set Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApplicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the application icon.
+     * @param ApplicationLogo Specifies the application icon.
      */
     public void setApplicationLogo(String ApplicationLogo) {
         this.ApplicationLogo = ApplicationLogo;
     }
 
     /**
-     * Get API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get API type. 1: system; 2: custom. 
+     * @return APIType API type. 1: system; 2: custom.
      */
     public Long getAPIType() {
         return this.APIType;
     }
 
     /**
-     * Set API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set API type. 1: system; 2: custom.
+     * @param APIType API type. 1: system; 2: custom.
      */
     public void setAPIType(Long APIType) {
         this.APIType = APIType;
     }
 
     /**
-     * Get API feature description
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return APIDesc API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get API feature description. 
+     * @return APIDesc API feature description.
      */
     public String getAPIDesc() {
         return this.APIDesc;
     }
 
     /**
-     * Set API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param APIDesc API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set API feature description.
+     * @param APIDesc API feature description.
      */
     public void setAPIDesc(String APIDesc) {
         this.APIDesc = APIDesc;

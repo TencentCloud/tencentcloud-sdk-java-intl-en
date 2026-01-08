@@ -46,7 +46,6 @@ public class DescribeApplicationSensitiveAPIListData extends AbstractModel {
 
     /**
     * API description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("APIDesc")
     @Expose
@@ -82,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -90,7 +88,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Application name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplicationName")
     @Expose
@@ -98,7 +95,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamId")
     @Expose
@@ -106,31 +102,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the application icon.
     */
     @SerializedName("ApplicationLogo")
     @Expose
     private String ApplicationLogo;
 
     /**
-    * API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+    * API type. 1: system; 2: custom.
     */
     @SerializedName("APIType")
     @Expose
     private Long APIType;
 
     /**
-    * API status. 0: Public; 1: Restricted
-Note: This field may return null, indicating that no valid values can be obtained.
+    * API status. 0: public; 1: restricted.
     */
     @SerializedName("Status")
     @Expose
@@ -185,10 +177,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get API description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get API description 
      * @return APIDesc API description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAPIDesc() {
         return this.APIDesc;
@@ -196,9 +186,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set API description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param APIDesc API description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAPIDesc(String APIDesc) {
         this.APIDesc = APIDesc;
@@ -269,10 +257,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Application ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application ID 
      * @return ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -280,19 +266,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Application name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application name 
      * @return ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -300,19 +282,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Team ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team ID 
      * @return TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamId() {
         return this.TeamId;
@@ -320,19 +298,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team name 
      * @return TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamName() {
         return this.TeamName;
@@ -340,69 +314,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Application icon
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApplicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the application icon. 
+     * @return ApplicationLogo Specifies the application icon.
      */
     public String getApplicationLogo() {
         return this.ApplicationLogo;
     }
 
     /**
-     * Set Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApplicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the application icon.
+     * @param ApplicationLogo Specifies the application icon.
      */
     public void setApplicationLogo(String ApplicationLogo) {
         this.ApplicationLogo = ApplicationLogo;
     }
 
     /**
-     * Get API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get API type. 1: system; 2: custom. 
+     * @return APIType API type. 1: system; 2: custom.
      */
     public Long getAPIType() {
         return this.APIType;
     }
 
     /**
-     * Set API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set API type. 1: system; 2: custom.
+     * @param APIType API type. 1: system; 2: custom.
      */
     public void setAPIType(Long APIType) {
         this.APIType = APIType;
     }
 
     /**
-     * Get API status. 0: Public; 1: Restricted
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status API status. 0: Public; 1: Restricted
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get API status. 0: public; 1: restricted. 
+     * @return Status API status. 0: public; 1: restricted.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set API status. 0: Public; 1: Restricted
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status API status. 0: Public; 1: Restricted
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set API status. 0: public; 1: restricted.
+     * @param Status API status. 0: public; 1: restricted.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

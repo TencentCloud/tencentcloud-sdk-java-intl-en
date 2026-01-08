@@ -25,65 +25,56 @@ public class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel
 
     /**
     * API ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("APIId")
     @Expose
     private String APIId;
 
     /**
-    * API request method
-Note: This field may return null, indicating that no valid values can be obtained.
+    * API method.
     */
     @SerializedName("APIMethod")
     @Expose
     private String APIMethod;
 
     /**
-    * Reason for the request
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reason for application
     */
     @SerializedName("ApplyReason")
     @Expose
     private String ApplyReason;
 
     /**
-    * Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reason for rejection.
     */
     @SerializedName("RejectReason")
     @Expose
     private String RejectReason;
 
     /**
-    * Approval status. 20: Rejected; 30: Approved
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Approval status. valid values: 20 (rejected), 30 (approved).
     */
     @SerializedName("ApprovalStatus")
     @Expose
     private Long ApprovalStatus;
 
     /**
-    * API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+    * API feature description.
     */
     @SerializedName("APIDesc")
     @Expose
     private String APIDesc;
 
     /**
-    * API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+    * API type. 1: system; 2: custom.
     */
     @SerializedName("APIType")
     @Expose
     private Long APIType;
 
     /**
-     * Get API ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get API ID 
      * @return APIId API ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAPIId() {
         return this.APIId;
@@ -91,129 +82,103 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set API ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param APIId API ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAPIId(String APIId) {
         this.APIId = APIId;
     }
 
     /**
-     * Get API request method
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return APIMethod API request method
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get API method. 
+     * @return APIMethod API method.
      */
     public String getAPIMethod() {
         return this.APIMethod;
     }
 
     /**
-     * Set API request method
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param APIMethod API request method
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set API method.
+     * @param APIMethod API method.
      */
     public void setAPIMethod(String APIMethod) {
         this.APIMethod = APIMethod;
     }
 
     /**
-     * Get Reason for the request
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApplyReason Reason for the request
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reason for application 
+     * @return ApplyReason Reason for application
      */
     public String getApplyReason() {
         return this.ApplyReason;
     }
 
     /**
-     * Set Reason for the request
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApplyReason Reason for the request
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reason for application
+     * @param ApplyReason Reason for application
      */
     public void setApplyReason(String ApplyReason) {
         this.ApplyReason = ApplyReason;
     }
 
     /**
-     * Get Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RejectReason Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reason for rejection. 
+     * @return RejectReason Reason for rejection.
      */
     public String getRejectReason() {
         return this.RejectReason;
     }
 
     /**
-     * Set Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RejectReason Reason for rejection
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reason for rejection.
+     * @param RejectReason Reason for rejection.
      */
     public void setRejectReason(String RejectReason) {
         this.RejectReason = RejectReason;
     }
 
     /**
-     * Get Approval status. 20: Rejected; 30: Approved
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApprovalStatus Approval status. 20: Rejected; 30: Approved
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Approval status. valid values: 20 (rejected), 30 (approved). 
+     * @return ApprovalStatus Approval status. valid values: 20 (rejected), 30 (approved).
      */
     public Long getApprovalStatus() {
         return this.ApprovalStatus;
     }
 
     /**
-     * Set Approval status. 20: Rejected; 30: Approved
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApprovalStatus Approval status. 20: Rejected; 30: Approved
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Approval status. valid values: 20 (rejected), 30 (approved).
+     * @param ApprovalStatus Approval status. valid values: 20 (rejected), 30 (approved).
      */
     public void setApprovalStatus(Long ApprovalStatus) {
         this.ApprovalStatus = ApprovalStatus;
     }
 
     /**
-     * Get API feature description
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return APIDesc API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get API feature description. 
+     * @return APIDesc API feature description.
      */
     public String getAPIDesc() {
         return this.APIDesc;
     }
 
     /**
-     * Set API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param APIDesc API feature description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set API feature description.
+     * @param APIDesc API feature description.
      */
     public void setAPIDesc(String APIDesc) {
         this.APIDesc = APIDesc;
     }
 
     /**
-     * Get API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get API type. 1: system; 2: custom. 
+     * @return APIType API type. 1: system; 2: custom.
      */
     public Long getAPIType() {
         return this.APIType;
     }
 
     /**
-     * Set API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param APIType API type. 1: System; 2: Custom
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set API type. 1: system; 2: custom.
+     * @param APIType API type. 1: system; 2: custom.
      */
     public void setAPIType(Long APIType) {
         this.APIType = APIType;

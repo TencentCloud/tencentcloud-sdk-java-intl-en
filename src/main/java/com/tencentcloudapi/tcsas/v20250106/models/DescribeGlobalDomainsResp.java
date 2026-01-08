@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class DescribeGlobalDomainsResp extends AbstractModel {
 
     /**
-    * Total number of results
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total number
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Domain name information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Describes the domain information.
     */
     @SerializedName("DataList")
     @Expose
     private DescribeGlobalDomainsListData [] DataList;
 
     /**
-     * Get Total number of results
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of results
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total number 
+     * @return TotalCount Total number
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of results
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of results
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total number
+     * @param TotalCount Total number
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Domain name information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataList Domain name information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Describes the domain information. 
+     * @return DataList Describes the domain information.
      */
     public DescribeGlobalDomainsListData [] getDataList() {
         return this.DataList;
     }
 
     /**
-     * Set Domain name information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataList Domain name information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Describes the domain information.
+     * @param DataList Describes the domain information.
      */
     public void setDataList(DescribeGlobalDomainsListData [] DataList) {
         this.DataList = DataList;

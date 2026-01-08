@@ -25,7 +25,6 @@ public class DescribeUserListData extends AbstractModel {
 
     /**
     * User ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserId")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * User account
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserAccount")
     @Expose
     private String UserAccount;
 
     /**
-    * Account type. 1: Super admin; 2: Platform admin; 3: Member
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
     */
     @SerializedName("AccountType")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * User name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserName")
     @Expose
@@ -57,15 +53,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Status. 1: Normal; 2: Disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Status. 1: normal; 2: disabled.
     */
     @SerializedName("Status")
     @Expose
@@ -73,17 +67,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-     * Get User ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User ID 
      * @return UserId User ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserId() {
         return this.UserId;
@@ -91,19 +82,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UserId User ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get User account
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User account 
      * @return UserAccount User account
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserAccount() {
         return this.UserAccount;
@@ -111,39 +98,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User account
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UserAccount User account
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserAccount(String UserAccount) {
         this.UserAccount = UserAccount;
     }
 
     /**
-     * Get Account type. 1: Super admin; 2: Platform admin; 3: Member
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AccountType Account type. 1: Super admin; 2: Platform admin; 3: Member
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Account type. 1: super administrator; 2: platform administrator; 3: ordinary member. 
+     * @return AccountType Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set Account type. 1: Super admin; 2: Platform admin; 3: Member
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AccountType Account type. 1: Super admin; 2: Platform admin; 3: Member
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
+     * @param AccountType Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get User name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User name 
      * @return UserName User name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserName() {
         return this.UserName;
@@ -151,19 +130,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UserName User name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -171,39 +146,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Status. 1: Normal; 2: Disabled
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Status. 1: Normal; 2: Disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status. 1: normal; 2: disabled. 
+     * @return Status Status. 1: normal; 2: disabled.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. 1: Normal; 2: Disabled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Status. 1: Normal; 2: Disabled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status. 1: normal; 2: disabled.
+     * @param Status Status. 1: normal; 2: disabled.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Team name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team name 
      * @return TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamName() {
         return this.TeamName;
@@ -211,9 +178,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;

@@ -52,18 +52,18 @@ public class CreateApplicationRequest extends AbstractModel {
     private String TeamId;
 
     /**
-    * Application type. 1: Test; 2: Formal
-    */
-    @SerializedName("ApplicationType")
-    @Expose
-    private Long ApplicationType;
-
-    /**
     * Introduction
     */
     @SerializedName("Intro")
     @Expose
     private String Intro;
+
+    /**
+    * Application type. 1: Test; 2: Formal
+    */
+    @SerializedName("ApplicationType")
+    @Expose
+    private Long ApplicationType;
 
     /**
     * Android app package name
@@ -85,6 +85,13 @@ public class CreateApplicationRequest extends AbstractModel {
     @SerializedName("Remark")
     @Expose
     private String Remark;
+
+    /**
+    * Scheme
+    */
+    @SerializedName("Scheme")
+    @Expose
+    private String Scheme;
 
     /**
      * Get Application name 
@@ -151,22 +158,6 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get Application type. 1: Test; 2: Formal 
-     * @return ApplicationType Application type. 1: Test; 2: Formal
-     */
-    public Long getApplicationType() {
-        return this.ApplicationType;
-    }
-
-    /**
-     * Set Application type. 1: Test; 2: Formal
-     * @param ApplicationType Application type. 1: Test; 2: Formal
-     */
-    public void setApplicationType(Long ApplicationType) {
-        this.ApplicationType = ApplicationType;
-    }
-
-    /**
      * Get Introduction 
      * @return Intro Introduction
      */
@@ -183,9 +174,31 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
+     * Get Application type. 1: Test; 2: Formal 
+     * @return ApplicationType Application type. 1: Test; 2: Formal
+     * @deprecated
+     */
+    @Deprecated
+    public Long getApplicationType() {
+        return this.ApplicationType;
+    }
+
+    /**
+     * Set Application type. 1: Test; 2: Formal
+     * @param ApplicationType Application type. 1: Test; 2: Formal
+     * @deprecated
+     */
+    @Deprecated
+    public void setApplicationType(Long ApplicationType) {
+        this.ApplicationType = ApplicationType;
+    }
+
+    /**
      * Get Android app package name 
      * @return AndroidAppKey Android app package name
+     * @deprecated
      */
+    @Deprecated
     public String getAndroidAppKey() {
         return this.AndroidAppKey;
     }
@@ -193,7 +206,9 @@ public class CreateApplicationRequest extends AbstractModel {
     /**
      * Set Android app package name
      * @param AndroidAppKey Android app package name
+     * @deprecated
      */
+    @Deprecated
     public void setAndroidAppKey(String AndroidAppKey) {
         this.AndroidAppKey = AndroidAppKey;
     }
@@ -201,7 +216,9 @@ public class CreateApplicationRequest extends AbstractModel {
     /**
      * Get iOS App bundleId 
      * @return IosAppKey iOS App bundleId
+     * @deprecated
      */
+    @Deprecated
     public String getIosAppKey() {
         return this.IosAppKey;
     }
@@ -209,7 +226,9 @@ public class CreateApplicationRequest extends AbstractModel {
     /**
      * Set iOS App bundleId
      * @param IosAppKey iOS App bundleId
+     * @deprecated
      */
+    @Deprecated
     public void setIosAppKey(String IosAppKey) {
         this.IosAppKey = IosAppKey;
     }
@@ -217,7 +236,9 @@ public class CreateApplicationRequest extends AbstractModel {
     /**
      * Get Remarks 
      * @return Remark Remarks
+     * @deprecated
      */
+    @Deprecated
     public String getRemark() {
         return this.Remark;
     }
@@ -225,9 +246,27 @@ public class CreateApplicationRequest extends AbstractModel {
     /**
      * Set Remarks
      * @param Remark Remarks
+     * @deprecated
      */
+    @Deprecated
     public void setRemark(String Remark) {
         this.Remark = Remark;
+    }
+
+    /**
+     * Get Scheme 
+     * @return Scheme Scheme
+     */
+    public String getScheme() {
+        return this.Scheme;
+    }
+
+    /**
+     * Set Scheme
+     * @param Scheme Scheme
+     */
+    public void setScheme(String Scheme) {
+        this.Scheme = Scheme;
     }
 
     public CreateApplicationRequest() {
@@ -250,11 +289,11 @@ public class CreateApplicationRequest extends AbstractModel {
         if (source.TeamId != null) {
             this.TeamId = new String(source.TeamId);
         }
-        if (source.ApplicationType != null) {
-            this.ApplicationType = new Long(source.ApplicationType);
-        }
         if (source.Intro != null) {
             this.Intro = new String(source.Intro);
+        }
+        if (source.ApplicationType != null) {
+            this.ApplicationType = new Long(source.ApplicationType);
         }
         if (source.AndroidAppKey != null) {
             this.AndroidAppKey = new String(source.AndroidAppKey);
@@ -264,6 +303,9 @@ public class CreateApplicationRequest extends AbstractModel {
         }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
+        }
+        if (source.Scheme != null) {
+            this.Scheme = new String(source.Scheme);
         }
     }
 
@@ -276,11 +318,12 @@ public class CreateApplicationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Logo", this.Logo);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
         this.setParamSimple(map, prefix + "TeamId", this.TeamId);
-        this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
         this.setParamSimple(map, prefix + "Intro", this.Intro);
+        this.setParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
         this.setParamSimple(map, prefix + "AndroidAppKey", this.AndroidAppKey);
         this.setParamSimple(map, prefix + "IosAppKey", this.IosAppKey);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "Scheme", this.Scheme);
 
     }
 }

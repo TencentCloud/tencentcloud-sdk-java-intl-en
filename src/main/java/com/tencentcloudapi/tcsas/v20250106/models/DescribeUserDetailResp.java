@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeUserDetailResp extends AbstractModel {
 
     /**
-    * User ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * User iD.
     */
     @SerializedName("UserId")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * User account
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserAccount")
     @Expose
@@ -41,8 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
     */
     @SerializedName("AccountType")
     @Expose
@@ -50,37 +47,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * User name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-     * Get User ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UserId User ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User iD. 
+     * @return UserId User iD.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UserId User ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User iD.
+     * @param UserId User iD.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get User account
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User account 
      * @return UserAccount User account
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserAccount() {
         return this.UserAccount;
@@ -88,9 +78,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User account
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UserAccount User account
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserAccount(String UserAccount) {
         this.UserAccount = UserAccount;
@@ -98,11 +86,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained. 
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all. 
      * @return AccountType User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
      */
     public Long getAccountType() {
         return this.AccountType;
@@ -110,21 +96,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
      * @param AccountType User account
-1 - Super admin 2 - Platform admin 3 - Member
-Note: This field may return null, indicating that no valid values can be obtained.
+1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get User name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User name 
      * @return UserName User name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserName() {
         return this.UserName;
@@ -132,9 +114,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UserName User name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

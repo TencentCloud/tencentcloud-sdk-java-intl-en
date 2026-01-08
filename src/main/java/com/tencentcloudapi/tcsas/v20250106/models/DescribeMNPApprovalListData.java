@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeMNPApprovalListData extends AbstractModel {
 
     /**
-    * Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Approval ticket ID
     */
     @SerializedName("ApprovalNo")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
     */
     @SerializedName("ApprovalStatus")
     @Expose
@@ -49,15 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mini program version.
     */
     @SerializedName("MNPVersion")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPVersionId")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplyUser")
     @Expose
@@ -81,7 +74,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Application time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplyTime")
     @Expose
@@ -89,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPName")
     @Expose
@@ -97,7 +88,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPIcon")
     @Expose
@@ -105,15 +95,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Application name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the application icon.
     */
     @SerializedName("ApplicationLogo")
     @Expose
@@ -121,7 +109,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamId")
     @Expose
@@ -129,15 +116,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Mini program review qr code.
     */
     @SerializedName("MNPQrCodeUrl")
     @Expose
@@ -145,23 +130,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the reviewer.
     */
     @SerializedName("ApprovalUser")
     @Expose
     private String ApprovalUser;
 
     /**
-    * Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Approval time.
     */
     @SerializedName("ApprovalTime")
     @Expose
@@ -169,37 +151,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ApprovalNote")
     @Expose
     private String ApprovalNote;
 
     /**
-     * Get Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApprovalNo Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Approval ticket ID 
+     * @return ApprovalNo Approval ticket ID
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApprovalNo Approval request ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Approval ticket ID
+     * @param ApprovalNo Approval ticket ID
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;
     }
 
     /**
-     * Get Application ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application ID 
      * @return ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApplicationId() {
         return this.ApplicationId;
@@ -207,39 +182,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplicationId Application ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApprovalStatus Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled). 
+     * @return ApprovalStatus Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
      */
     public Long getApprovalStatus() {
         return this.ApprovalStatus;
     }
 
     /**
-     * Set Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApprovalStatus Approval status : 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
+     * @param ApprovalStatus Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
      */
     public void setApprovalStatus(Long ApprovalStatus) {
         this.ApprovalStatus = ApprovalStatus;
     }
 
     /**
-     * Get Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program ID 
      * @return MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPId() {
         return this.MNPId;
@@ -247,39 +214,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPId Mini program ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program version
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mini program version. 
+     * @return MNPVersion Mini program version.
      */
     public String getMNPVersion() {
         return this.MNPVersion;
     }
 
     /**
-     * Set Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MNPVersion Mini program version
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mini program version.
+     * @param MNPVersion Mini program version.
      */
     public void setMNPVersion(String MNPVersion) {
         this.MNPVersion = MNPVersion;
     }
 
     /**
-     * Get Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program version ID 
      * @return MNPVersionId Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
@@ -287,19 +246,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPVersionId Mini program version ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get Applicant
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Applicant 
      * @return ApplyUser Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApplyUser() {
         return this.ApplyUser;
@@ -307,19 +262,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplyUser Applicant
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplyUser(String ApplyUser) {
         this.ApplyUser = ApplyUser;
     }
 
     /**
-     * Get Application time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application time 
      * @return ApplyTime Application time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApplyTime() {
         return this.ApplyTime;
@@ -327,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplyTime Application time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplyTime(String ApplyTime) {
         this.ApplyTime = ApplyTime;
     }
 
     /**
-     * Get Mini program name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program name 
      * @return MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPName() {
         return this.MNPName;
@@ -347,19 +294,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPName Mini program name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program icon 
      * @return MNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPIcon() {
         return this.MNPIcon;
@@ -367,19 +310,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPIcon Mini program icon
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get Application name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Application name 
      * @return ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApplicationName() {
         return this.ApplicationName;
@@ -387,39 +326,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApplicationName Application name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Application icon
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApplicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the application icon. 
+     * @return ApplicationLogo Specifies the application icon.
      */
     public String getApplicationLogo() {
         return this.ApplicationLogo;
     }
 
     /**
-     * Set Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApplicationLogo Application icon
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the application icon.
+     * @param ApplicationLogo Specifies the application icon.
      */
     public void setApplicationLogo(String ApplicationLogo) {
         this.ApplicationLogo = ApplicationLogo;
     }
 
     /**
-     * Get Team ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team ID 
      * @return TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamId() {
         return this.TeamId;
@@ -427,19 +358,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team name 
      * @return TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamName() {
         return this.TeamName;
@@ -447,39 +374,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MNPQrCodeUrl Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Mini program review qr code. 
+     * @return MNPQrCodeUrl Mini program review qr code.
      */
     public String getMNPQrCodeUrl() {
         return this.MNPQrCodeUrl;
     }
 
     /**
-     * Set Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MNPQrCodeUrl Mini Program QR code
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Mini program review qr code.
+     * @param MNPQrCodeUrl Mini program review qr code.
      */
     public void setMNPQrCodeUrl(String MNPQrCodeUrl) {
         this.MNPQrCodeUrl = MNPQrCodeUrl;
     }
 
     /**
-     * Get Mini program type
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Mini program type 
      * @return MNPType Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getMNPType() {
         return this.MNPType;
@@ -487,59 +406,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MNPType Mini program type
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get Approver
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApprovalUser Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the reviewer. 
+     * @return ApprovalUser Specifies the reviewer.
      */
     public String getApprovalUser() {
         return this.ApprovalUser;
     }
 
     /**
-     * Set Approver
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApprovalUser Approver
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the reviewer.
+     * @param ApprovalUser Specifies the reviewer.
      */
     public void setApprovalUser(String ApprovalUser) {
         this.ApprovalUser = ApprovalUser;
     }
 
     /**
-     * Get Approval time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ApprovalTime Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Approval time. 
+     * @return ApprovalTime Approval time.
      */
     public String getApprovalTime() {
         return this.ApprovalTime;
     }
 
     /**
-     * Set Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ApprovalTime Approval time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Approval time.
+     * @param ApprovalTime Approval time.
      */
     public void setApprovalTime(String ApprovalTime) {
         this.ApprovalTime = ApprovalTime;
     }
 
     /**
-     * Get Approval notes
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Approval notes 
      * @return ApprovalNote Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getApprovalNote() {
         return this.ApprovalNote;
@@ -547,9 +454,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ApprovalNote Approval notes
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setApprovalNote(String ApprovalNote) {
         this.ApprovalNote = ApprovalNote;

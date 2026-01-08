@@ -25,7 +25,6 @@ public class DescribeTeamMemberInfoResp extends AbstractModel {
 
     /**
     * User ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserId")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * User account
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserAccount")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * User name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UserName")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamId")
     @Expose
@@ -57,41 +53,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Team name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Team role name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the team role name.
     */
     @SerializedName("TeamRoleName")
     @Expose
     private String TeamRoleName;
 
     /**
-    * Team role ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the team role ID.
     */
     @SerializedName("TeamRoleId")
     @Expose
     private Long TeamRoleId;
 
     /**
-    * Editable or not
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it is editable
     */
     @SerializedName("CanEdit")
     @Expose
     private Boolean CanEdit;
 
     /**
-     * Get User ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User ID 
      * @return UserId User ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserId() {
         return this.UserId;
@@ -99,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UserId User ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get User account
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User account 
      * @return UserAccount User account
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserAccount() {
         return this.UserAccount;
@@ -119,19 +105,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User account
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UserAccount User account
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserAccount(String UserAccount) {
         this.UserAccount = UserAccount;
     }
 
     /**
-     * Get User name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get User name 
      * @return UserName User name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUserName() {
         return this.UserName;
@@ -139,19 +121,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set User name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UserName User name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Team ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team ID 
      * @return TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamId() {
         return this.TeamId;
@@ -159,19 +137,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamId Team ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Team name 
      * @return TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTeamName() {
         return this.TeamName;
@@ -179,69 +153,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TeamName Team name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Team role name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TeamRoleName Team role name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the team role name. 
+     * @return TeamRoleName Specifies the team role name.
      */
     public String getTeamRoleName() {
         return this.TeamRoleName;
     }
 
     /**
-     * Set Team role name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TeamRoleName Team role name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the team role name.
+     * @param TeamRoleName Specifies the team role name.
      */
     public void setTeamRoleName(String TeamRoleName) {
         this.TeamRoleName = TeamRoleName;
     }
 
     /**
-     * Get Team role ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TeamRoleId Team role ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the team role ID. 
+     * @return TeamRoleId Specifies the team role ID.
      */
     public Long getTeamRoleId() {
         return this.TeamRoleId;
     }
 
     /**
-     * Set Team role ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TeamRoleId Team role ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the team role ID.
+     * @param TeamRoleId Specifies the team role ID.
      */
     public void setTeamRoleId(Long TeamRoleId) {
         this.TeamRoleId = TeamRoleId;
     }
 
     /**
-     * Get Editable or not
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CanEdit Editable or not
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it is editable 
+     * @return CanEdit Whether it is editable
      */
     public Boolean getCanEdit() {
         return this.CanEdit;
     }
 
     /**
-     * Set Editable or not
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CanEdit Editable or not
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it is editable
+     * @param CanEdit Whether it is editable
      */
     public void setCanEdit(Boolean CanEdit) {
         this.CanEdit = CanEdit;

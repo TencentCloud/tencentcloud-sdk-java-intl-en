@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeMNPSensitiveAPIPermissionListResponse extends AbstractModel {
 
     /**
-    * Response parameters
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Response parameters.
     */
     @SerializedName("Data")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Response parameters
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Response parameters
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Response parameters. 
+     * @return Data Response parameters.
      */
     public DescribeMNPSensitiveAPIPermissionListResp getData() {
         return this.Data;
     }
 
     /**
-     * Set Response parameters
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Response parameters
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Response parameters.
+     * @param Data Response parameters.
      */
     public void setData(DescribeMNPSensitiveAPIPermissionListResp Data) {
         this.Data = Data;

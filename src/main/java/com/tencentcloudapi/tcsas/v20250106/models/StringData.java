@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class StringData extends AbstractModel {
 
     /**
-    * String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
+    * string type response data.
     */
     @SerializedName("Data")
     @Expose
     private String Data;
 
     /**
-     * Get String type response data
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get string type response data. 
+     * @return Data string type response data.
      */
     public String getData() {
         return this.Data;
     }
 
     /**
-     * Set String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data String type response data
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set string type response data.
+     * @param Data string type response data.
      */
     public void setData(String Data) {
         this.Data = Data;
