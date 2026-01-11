@@ -21,12 +21,12 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HDRInfo extends AbstractModel {
+public class AudioVolumeBalanceInfo extends AbstractModel {
 
     /**
-    * Whether to enable HDR. Valid values:
+    * Whether to enable volume equalization. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
     */
     @SerializedName("Switch")
@@ -34,26 +34,23 @@ Default value: `OFF`.
     private String Switch;
 
     /**
-    * The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-
-Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
+    * The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Whether to enable HDR. Valid values:
+     * Get Whether to enable volume equalization. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`. 
-     * @return Switch Whether to enable HDR. Valid values:
+     * @return Switch Whether to enable volume equalization. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
      */
     public String getSwitch() {
@@ -61,13 +58,13 @@ Default value: `OFF`.
     }
 
     /**
-     * Set Whether to enable HDR. Valid values:
+     * Set Whether to enable volume equalization. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
-     * @param Switch Whether to enable HDR. Valid values:
+     * @param Switch Whether to enable volume equalization. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
      */
     public void setSwitch(String Switch) {
@@ -75,53 +72,41 @@ Default value: `OFF`.
     }
 
     /**
-     * Get The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-
-Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li> 
-     * @return Type The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-
-Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
+     * Get The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`. 
+     * @return Type The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-
-Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
-     * @param Type The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-
-Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
+     * Set The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
+     * @param Type The type. Valid values:
+<li>`loudNorm`: Loudness normalization.</li>
+<li>`gainControl`: Volume leveling.</li>
+Default value: `loudNorm`.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
-    public HDRInfo() {
+    public AudioVolumeBalanceInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public HDRInfo(HDRInfo source) {
+    public AudioVolumeBalanceInfo(AudioVolumeBalanceInfo source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }

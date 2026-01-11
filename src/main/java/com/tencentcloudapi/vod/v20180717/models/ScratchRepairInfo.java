@@ -27,13 +27,14 @@ public class ScratchRepairInfo extends AbstractModel {
     * Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+    * The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
     */
     @SerializedName("Intensity")
@@ -52,10 +53,12 @@ Default value: `normal`.
     /**
      * Get Whether to enable banding removal. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li> 
+<li>`OFF`</li>
+Default value: `OFF`. 
      * @return Switch Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
      */
     public String getSwitch() {
         return this.Switch;
@@ -65,18 +68,20 @@ Default value: `normal`.
      * Set Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
      * @param Switch Whether to enable banding removal. Valid values:
 <li>`ON`</li>
 <li>`OFF`</li>
+Default value: `OFF`.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+     * Get The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`. 
-     * @return Intensity The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+     * @return Intensity The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
      */
     public Float getIntensity() {
@@ -84,9 +89,9 @@ Default value: `0.0`.
     }
 
     /**
-     * Set The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+     * Set The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
-     * @param Intensity The banding removal strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
+     * @param Intensity The banding removal strength. Value range: 0.0 - 1.0. This parameter is valid only if `Switch` is `ON`.
 Default value: `0.0`.
      */
     public void setIntensity(Float Intensity) {

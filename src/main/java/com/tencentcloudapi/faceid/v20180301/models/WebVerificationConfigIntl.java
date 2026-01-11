@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class WebVerificationConfigIntl extends AbstractModel {
 
     /**
-    * When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+    * When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
     */
     @SerializedName("AutoSkipStartPage")
     @Expose
@@ -32,7 +33,7 @@ public class WebVerificationConfigIntl extends AbstractModel {
 
     /**
     * When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
     */
     @SerializedName("AutoSkip")
     @Expose
@@ -45,14 +46,14 @@ Example value: false
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
+Example: 3
     */
     @SerializedName("CheckMode")
     @Expose
     private Long CheckMode;
 
     /**
-    * The type of lisence used for verification. The following types are supported.
+    * Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -73,48 +74,66 @@ Example: HKIDCard
 
     /**
     * Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+Example: false
     */
     @SerializedName("DisableCheckOcrWarnings")
     @Expose
     private Boolean DisableCheckOcrWarnings;
 
     /**
-    * Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
+    * Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
     */
     @SerializedName("SecurityLevel")
     @Expose
     private Long SecurityLevel;
 
     /**
-    * Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+    * Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
     */
     @SerializedName("SkipPrivacyPolicy")
     @Expose
     private Boolean SkipPrivacyPolicy;
 
     /**
-    * The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+    * whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
     */
     @SerializedName("IdCardCutReturn")
     @Expose
     private Boolean IdCardCutReturn;
 
     /**
-    * Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
+    * Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
     */
     @SerializedName("ThemeColor")
     @Expose
     private String ThemeColor;
 
     /**
-    * International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
+    * International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+    * Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
     */
     @SerializedName("AutoDowngrade")
     @Expose
@@ -122,15 +141,13 @@ Example: HKIDCard
 
     /**
     * This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
     */
     @SerializedName("ActionList")
     @Expose
@@ -138,6 +155,7 @@ The default value is blink. The different action types passed in this parameter 
 
     /**
     * Control liveness retry number.The value range is 1-99.
+The default value is 99.
     */
     @SerializedName("LivenessRetryLimit")
     @Expose
@@ -145,13 +163,21 @@ The default value is blink. The different action types passed in this parameter 
 
     /**
     * Specifies the liveness detection timeout period in seconds. value range: (0,600].
+The default value is 45.
     */
     @SerializedName("LivenessTimeout")
     @Expose
     private Long LivenessTimeout;
 
     /**
-    * Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+    * Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
     */
     @SerializedName("SelectedWarningCodes")
     @Expose
@@ -167,16 +193,20 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     private Boolean AllowExpiredDocument;
 
     /**
-     * Get When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered. 
-     * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+     * Get When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false 
+     * @return AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
      */
     public Boolean getAutoSkipStartPage() {
         return this.AutoSkipStartPage;
     }
 
     /**
-     * Set When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
-     * @param AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. The default is false. This configuration will not take effect if the downgrade policy is triggered.
+     * Set When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
+     * @param AutoSkipStartPage When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
+Example: false
      */
     public void setAutoSkipStartPage(Boolean AutoSkipStartPage) {
         this.AutoSkipStartPage = AutoSkipStartPage;
@@ -184,9 +214,9 @@ false : Expired HKID is rejected and cannot enter the liveness process.
 
     /**
      * Get When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false 
+Example: false 
      * @return AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
      */
     public Boolean getAutoSkip() {
         return this.AutoSkip;
@@ -194,9 +224,9 @@ Example value: false
 
     /**
      * Set When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
      * @param AutoSkip When the verification passed, whether to skip the result page and automatically jump to RedirectURL. The default value is false.
-Example value: false
+Example: false
      */
     public void setAutoSkip(Boolean AutoSkip) {
         this.AutoSkip = AutoSkip;
@@ -209,14 +239,14 @@ Example value: false
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3 
+Example: 3 
      * @return CheckMode Detection mode, parameter values are as follows:
 1: OCR+liveness detection & face comparison;
 2: Liveness detection & face comparison;
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
+Example: 3
      */
     public Long getCheckMode() {
         return this.CheckMode;
@@ -229,21 +259,21 @@ Example value: 3
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
+Example: 3
      * @param CheckMode Detection mode, parameter values are as follows:
 1: OCR+liveness detection & face comparison;
 2: Liveness detection & face comparison;
 3: Liveness detection;
 4: OCR;
 The default value is 2.
-Example value: 3
+Example: 3
      */
     public void setCheckMode(Long CheckMode) {
         this.CheckMode = CheckMode;
     }
 
     /**
-     * Get The type of lisence used for verification. The following types are supported.
+     * Get Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -257,7 +287,7 @@ Example value: 3
 11.SingaporelDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard 
-     * @return IDCardType The type of lisence used for verification. The following types are supported.
+     * @return IDCardType Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -277,7 +307,7 @@ Example: HKIDCard
     }
 
     /**
-     * Set The type of lisence used for verification. The following types are supported.
+     * Set Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -291,7 +321,7 @@ Example: HKIDCard
 11.SingaporelDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
-     * @param IDCardType The type of lisence used for verification. The following types are supported.
+     * @param IDCardType Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
 3.IndonesialDCard: Indonesia ID card
@@ -311,8 +341,10 @@ Example: HKIDCard
     }
 
     /**
-     * Get Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us. 
+     * Get Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+Example: false 
      * @return DisableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+Example: false
      */
     public Boolean getDisableCheckOcrWarnings() {
         return this.DisableCheckOcrWarnings;
@@ -320,103 +352,173 @@ Example: HKIDCard
 
     /**
      * Set Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+Example: false
      * @param DisableCheckOcrWarnings Whether to turn off document alarms, the default is false (the alarm detection function is turned on). When enabled, the identity authentication process will be intercepted based on the alarm status of the certificate. If you need to use the document authentication function, please contact us.
+Example: false
      */
     public void setDisableCheckOcrWarnings(Boolean DisableCheckOcrWarnings) {
         this.DisableCheckOcrWarnings = DisableCheckOcrWarnings;
     }
 
     /**
-     * Get Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3 
-     * @return SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
+     * Get Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4 
+     * @return SecurityLevel Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
      */
     public Long getSecurityLevel() {
         return this.SecurityLevel;
     }
 
     /**
-     * Set Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
-     * @param SecurityLevel Liveness security level: 1:Silent mode;2:Action mode;3:Lighting mode;4:Action+Lighting mode;5:Action+Lighting(High security) mode; default value is 3
+     * Set Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
+     * @param SecurityLevel Liveness security level, the default value is 3. The currently supported security level are as follows:
+1:Silent mode;
+2:Action mode;
+3:Lighting mode;
+4:Action+Lighting mode;
+5:Action+Lighting(High security) mode.
+Example: 4
      */
     public void setSecurityLevel(Long SecurityLevel) {
         this.SecurityLevel = SecurityLevel;
     }
 
     /**
-     * Get Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. 
-     * @return SkipPrivacyPolicy Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+     * Get Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false 
+     * @return SkipPrivacyPolicy Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
      */
     public Boolean getSkipPrivacyPolicy() {
         return this.SkipPrivacyPolicy;
     }
 
     /**
-     * Set Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
-     * @param SkipPrivacyPolicy Whether to skip the agreement page, the default is false. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page.
+     * Set Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
+     * @param SkipPrivacyPolicy Whether to skip the agreement page. When SkipPrivacyPolicy is false, the agreement page will be displayed and the privacy agreement needs to be checked; when SkipPrivacyPolicy is true, the agreement page will be skipped and the liveness process will be entered directly without checking the privacy agreement page. The default is false.
+Example: false
      */
     public void setSkipPrivacyPolicy(Boolean SkipPrivacyPolicy) {
         this.SkipPrivacyPolicy = SkipPrivacyPolicy;
     }
 
     /**
-     * Get The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed. 
-     * @return IdCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+     * Get whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false 
+     * @return IdCardCutReturn whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
      */
     public Boolean getIdCardCutReturn() {
         return this.IdCardCutReturn;
     }
 
     /**
-     * Set The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
-     * @param IdCardCutReturn The default value is false. If it is false, the original ID image will be displayed. If it is true, the cut ID image will be displayed.
+     * Set whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
+     * @param IdCardCutReturn whether to display the cropped ID card image. When set to false, the original ID card image is displayed. When set to true, the cropped version is displayed. The default value is false. 
+Example: false
      */
     public void setIdCardCutReturn(Boolean IdCardCutReturn) {
         this.IdCardCutReturn = IdCardCutReturn;
     }
 
     /**
-     * Get Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used.  
-     * @return ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
+     * Get Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1 
+     * @return ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
      */
     public String getThemeColor() {
         return this.ThemeColor;
     }
 
     /**
-     * Set Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
-     * @param ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. The default value is "#2d72f1". If the format is incorrect, the default value color will be used. 
+     * Set Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
+     * @param ThemeColor Front-end theme color, in the format of RGB hexadecimal color code. If the format is incorrect, the default value color will be used. The default value is "#2d72f1".
+Example: #2d72f1
      */
     public void setThemeColor(String ThemeColor) {
         this.ThemeColor = ThemeColor;
     }
 
     /**
-     * Get International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia. 
-     * @return Language International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
+     * Get International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia. 
+     * @return Language International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
-     * @param Language International language, the default value is en (English). Currently supported: th: Thai; en: English; zh-cn: Simplified Chinese; zh-tc: Tradionnal Chinese; id: Bahasa Indonesia.
+     * Set International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
+     * @param Language International language, the default value is en (English). The currently supported language are as follows: 
+th: Thai; 
+en: English; 
+zh-cn: Simplified Chinese; 
+zh-tc: Tradionnal Chinese; 
+id: Bahasa Indonesia.
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1. 
-     * @return AutoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+     * Get Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1. 
+     * @return AutoDowngrade Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
      */
     public Long getAutoDowngrade() {
         return this.AutoDowngrade;
     }
 
     /**
-     * Set Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
-     * @param AutoDowngrade Automatic downgrade mode, with the following parameter values: 1: Downgrade to silent live mode; 2: Disable downgrade mode. The default value is 1.
+     * Set Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
+     * @param AutoDowngrade Automatic downgrade mode, the following parameter are supported: 
+1: Downgrade to silent live mode; 
+2: Disable downgrade mode. 
+The default value is 1.
      */
     public void setAutoDowngrade(Long AutoDowngrade) {
         this.AutoDowngrade = AutoDowngrade;
@@ -424,25 +526,21 @@ Example: HKIDCard
 
     /**
      * Get This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error. 
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink. 
      * @return ActionList This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
      */
     public String getActionList() {
         return this.ActionList;
@@ -450,33 +548,31 @@ The default value is blink. The different action types passed in this parameter 
 
     /**
      * Set This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
      * @param ActionList This interface is used to control th action sequences.
-Action types are as follows:
-"blink"
-"mouth"
-"nod"
-"shake"
-You can choose 1-2 actions out of the four.
-Single action example: "blink"
-Multiple action example: "blink,mouth"
-The default value is blink. The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The supported action types are as follows:
+"blink";
+"mouth";
+"nod";
+"shake".
+You can choose 1-2 actions out of the four. Single action example: "blink". Multiple action example: "blink,mouth". The different action types passed in this parameter take effect only when the SecurityLevel is 2, 4, or 5; otherwise, the interface reports an error.
+The default value is blink.
      */
     public void setActionList(String ActionList) {
         this.ActionList = ActionList;
     }
 
     /**
-     * Get Control liveness retry number.The value range is 1-99. 
+     * Get Control liveness retry number.The value range is 1-99.
+The default value is 99. 
      * @return LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+The default value is 99.
      */
     public Long getLivenessRetryLimit() {
         return this.LivenessRetryLimit;
@@ -484,15 +580,19 @@ The default value is blink. The different action types passed in this parameter 
 
     /**
      * Set Control liveness retry number.The value range is 1-99.
+The default value is 99.
      * @param LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+The default value is 99.
      */
     public void setLivenessRetryLimit(Long LivenessRetryLimit) {
         this.LivenessRetryLimit = LivenessRetryLimit;
     }
 
     /**
-     * Get Specifies the liveness detection timeout period in seconds. value range: (0,600]. 
+     * Get Specifies the liveness detection timeout period in seconds. value range: (0,600].
+The default value is 45. 
      * @return LivenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+The default value is 45.
      */
     public Long getLivenessTimeout() {
         return this.LivenessTimeout;
@@ -500,23 +600,53 @@ The default value is blink. The different action types passed in this parameter 
 
     /**
      * Set Specifies the liveness detection timeout period in seconds. value range: (0,600].
+The default value is 45.
      * @param LivenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+The default value is 45.
      */
     public void setLivenessTimeout(Long LivenessTimeout) {
         this.LivenessTimeout = LivenessTimeout;
     }
 
     /**
-     * Get Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. 
-     * @return SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+     * Get Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated. 
+     * @return SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
      */
     public String getSelectedWarningCodes() {
         return this.SelectedWarningCodes;
     }
 
     /**
-     * Set Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
-     * @param SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective.
+     * Set Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
+     * @param SelectedWarningCodes Selects OCR alarms requiring attention. When an OCR Alarm occurs, the identity verification process will be interrupted. Default value is empty, indicating all alarms are monitored. This feature requires the parameter DisableCheckOcrWarnings=false. If the Alarm is disabled, this parameter will not be effective. The supported alarm types are as follows:
+-9101: Incomplete Border Alert;
+-9102: Copy Document Alert;
+-9103: Remediated Document Alert;
+-9104: PS-altered Document Alert;
+-9107: Glare Alert;
+-9108: Blurriness Alert;
+-9109: Alert Not Activated.
      */
     public void setSelectedWarningCodes(String SelectedWarningCodes) {
         this.SelectedWarningCodes = SelectedWarningCodes;

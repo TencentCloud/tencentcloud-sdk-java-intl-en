@@ -21,107 +21,97 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class HDRInfo extends AbstractModel {
+public class DiffusionEnhanceInfo extends AbstractModel {
 
     /**
-    * Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+    * Whether to enable LLM enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-
-Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
+    * The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: normal.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`. 
-     * @return Switch Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+     * Get Whether to enable LLM enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF. 
+     * @return Switch Whether to enable LLM enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
-     * @param Switch Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+     * Set Whether to enable LLM enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
+     * @param Switch Whether to enable LLM enhancement. Valid values:
+<li>ON</li>
+<li>OFF</li>
+Default value: OFF.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-
-Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li> 
-     * @return Type The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-
-Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
+     * Get The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: normal. 
+     * @return Type The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: normal.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-
-Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
-     * @param Type The HDR type. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-
-Note:
-<li>This parameter is valid only if `Switch` is `ON`.</li>
-<li>For audio/video remastering, this parameter is valid only if the output video codec is `libx264` or`libx265`.</li>
+     * Set The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: normal.
+     * @param Type The strength. Valid values:
+<li>weak</li>
+<li>normal</li>
+<li>strong</li>
+Default value: normal.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
-    public HDRInfo() {
+    public DiffusionEnhanceInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public HDRInfo(HDRInfo source) {
+    public DiffusionEnhanceInfo(DiffusionEnhanceInfo source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }

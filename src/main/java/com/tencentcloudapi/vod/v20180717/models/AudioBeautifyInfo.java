@@ -21,12 +21,12 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AudioDenoiseInfo extends AbstractModel {
+public class AudioBeautifyInfo extends AbstractModel {
 
     /**
-    * Whether to enable noise removal. Valid values:
+    * Whether to enable audio improvement. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
     */
     @SerializedName("Switch")
@@ -34,22 +34,23 @@ Default value: `OFF`.
     private String Switch;
 
     /**
-    * The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+    * The audio improvement options. You can specify multiple options. Valid values:
+<li>`declick`: Noise removal.</li>
+<li>`deesser`: De-essing.</li>
+Default: `declick`.
     */
-    @SerializedName("Type")
+    @SerializedName("Types")
     @Expose
-    private String Type;
+    private String [] Types;
 
     /**
-     * Get Whether to enable noise removal. Valid values:
+     * Get Whether to enable audio improvement. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`. 
-     * @return Switch Whether to enable noise removal. Valid values:
+     * @return Switch Whether to enable audio improvement. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
      */
     public String getSwitch() {
@@ -57,13 +58,13 @@ Default value: `OFF`.
     }
 
     /**
-     * Set Whether to enable noise removal. Valid values:
+     * Set Whether to enable audio improvement. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
-     * @param Switch Whether to enable noise removal. Valid values:
+     * @param Switch Whether to enable audio improvement. Valid values:
 <li>`ON`</li>
-<li>`OFF`</li>
+<li>`OFF` </li>
 Default value: `OFF`.
      */
     public void setSwitch(String Switch) {
@@ -71,42 +72,49 @@ Default value: `OFF`.
     }
 
     /**
-     * Get The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`. 
-     * @return Type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+     * Get The audio improvement options. You can specify multiple options. Valid values:
+<li>`declick`: Noise removal.</li>
+<li>`deesser`: De-essing.</li>
+Default: `declick`. 
+     * @return Types The audio improvement options. You can specify multiple options. Valid values:
+<li>`declick`: Noise removal.</li>
+<li>`deesser`: De-essing.</li>
+Default: `declick`.
      */
-    public String getType() {
-        return this.Type;
+    public String [] getTypes() {
+        return this.Types;
     }
 
     /**
-     * Set The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
-     * @param Type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+     * Set The audio improvement options. You can specify multiple options. Valid values:
+<li>`declick`: Noise removal.</li>
+<li>`deesser`: De-essing.</li>
+Default: `declick`.
+     * @param Types The audio improvement options. You can specify multiple options. Valid values:
+<li>`declick`: Noise removal.</li>
+<li>`deesser`: De-essing.</li>
+Default: `declick`.
      */
-    public void setType(String Type) {
-        this.Type = Type;
+    public void setTypes(String [] Types) {
+        this.Types = Types;
     }
 
-    public AudioDenoiseInfo() {
+    public AudioBeautifyInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AudioDenoiseInfo(AudioDenoiseInfo source) {
+    public AudioBeautifyInfo(AudioBeautifyInfo source) {
         if (source.Switch != null) {
             this.Switch = new String(source.Switch);
         }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
+        if (source.Types != null) {
+            this.Types = new String[source.Types.length];
+            for (int i = 0; i < source.Types.length; i++) {
+                this.Types[i] = new String(source.Types[i]);
+            }
         }
     }
 
@@ -116,7 +124,7 @@ Default value: `normal`.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Switch", this.Switch);
-        this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamArraySimple(map, prefix + "Types.", this.Types);
 
     }
 }

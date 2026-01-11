@@ -93,6 +93,13 @@ Default value: 0.
     private TEHDConfig TEHDConfig;
 
     /**
+    * Audio/Video enhancement parameter.
+    */
+    @SerializedName("EnhanceConfig")
+    @Expose
+    private EnhanceConfig EnhanceConfig;
+
+    /**
     * The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
 <li>ts: TS segment</li>
 <li>fmp4: fMP4 segment</li>
@@ -271,6 +278,22 @@ Default value: 0.
     }
 
     /**
+     * Get Audio/Video enhancement parameter. 
+     * @return EnhanceConfig Audio/Video enhancement parameter.
+     */
+    public EnhanceConfig getEnhanceConfig() {
+        return this.EnhanceConfig;
+    }
+
+    /**
+     * Set Audio/Video enhancement parameter.
+     * @param EnhanceConfig Audio/Video enhancement parameter.
+     */
+    public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
+        this.EnhanceConfig = EnhanceConfig;
+    }
+
+    /**
      * Get The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
 <li>ts: TS segment</li>
 <li>fmp4: fMP4 segment</li>
@@ -333,6 +356,9 @@ Default: ts
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
         }
+        if (source.EnhanceConfig != null) {
+            this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
+        }
         if (source.SegmentType != null) {
             this.SegmentType = new String(source.SegmentType);
         }
@@ -352,6 +378,7 @@ Default: ts
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
 
     }

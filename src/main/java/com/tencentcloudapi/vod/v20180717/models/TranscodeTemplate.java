@@ -105,6 +105,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private TEHDConfig TEHDConfig;
 
     /**
+    * Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EnhanceConfig")
+    @Expose
+    private EnhanceConfig EnhanceConfig;
+
+    /**
     * Container filter. Valid values:
 <li>Video: video container that can contain both video stream and audio stream;</li>
 <li>PureAudio: audio container that can contain only audio stream.</li>
@@ -339,6 +347,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public EnhanceConfig getEnhanceConfig() {
+        return this.EnhanceConfig;
+    }
+
+    /**
+     * Set Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
+        this.EnhanceConfig = EnhanceConfig;
+    }
+
+    /**
      * Get Container filter. Valid values:
 <li>Video: video container that can contain both video stream and audio stream;</li>
 <li>PureAudio: audio container that can contain only audio stream.</li> 
@@ -448,6 +476,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
         }
+        if (source.EnhanceConfig != null) {
+            this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
+        }
         if (source.ContainerType != null) {
             this.ContainerType = new String(source.ContainerType);
         }
@@ -477,6 +508,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
         this.setParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         this.setParamSimple(map, prefix + "ContainerType", this.ContainerType);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);

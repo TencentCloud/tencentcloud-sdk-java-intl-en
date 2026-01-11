@@ -28,6 +28,7 @@ public class SuperResolutionInfo extends AbstractModel {
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
     */
     @SerializedName("Switch")
     @Expose
@@ -55,11 +56,13 @@ Default value: `2`.
      * Get Whether to enable super resolution. Valid values:
 <li>ON</li>
 <li>`OFF`</li>
-If super resolution is enabled, the output resolution will double. 
+If super resolution is enabled, the output resolution will double.
+Default value: `OFF`. 
      * @return Switch Whether to enable super resolution. Valid values:
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
      */
     public String getSwitch() {
         return this.Switch;
@@ -70,10 +73,12 @@ If super resolution is enabled, the output resolution will double.
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
      * @param Switch Whether to enable super resolution. Valid values:
 <li>ON</li>
 <li>`OFF`</li>
 If super resolution is enabled, the output resolution will double.
+Default value: `OFF`.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

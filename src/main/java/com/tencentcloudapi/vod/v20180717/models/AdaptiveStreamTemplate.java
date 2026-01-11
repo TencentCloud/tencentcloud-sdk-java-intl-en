@@ -64,6 +64,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private TEHDConfig TEHDConfig;
 
     /**
+    * Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EnhanceConfig")
+    @Expose
+    private EnhanceConfig EnhanceConfig;
+
+    /**
      * Get Video parameter information. 
      * @return Video Video parameter information.
      */
@@ -163,6 +171,26 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.TEHDConfig = TEHDConfig;
     }
 
+    /**
+     * Get Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public EnhanceConfig getEnhanceConfig() {
+        return this.EnhanceConfig;
+    }
+
+    /**
+     * Set Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
+        this.EnhanceConfig = EnhanceConfig;
+    }
+
     public AdaptiveStreamTemplate() {
     }
 
@@ -186,6 +214,9 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (source.TEHDConfig != null) {
             this.TEHDConfig = new TEHDConfig(source.TEHDConfig);
         }
+        if (source.EnhanceConfig != null) {
+            this.EnhanceConfig = new EnhanceConfig(source.EnhanceConfig);
+        }
     }
 
 
@@ -198,6 +229,7 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
         this.setParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
         this.setParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+        this.setParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
 
     }
 }

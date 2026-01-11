@@ -3273,6 +3273,17 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API (ReplaceRoutes) modifies the specified routing policy (Route) based on the routing policy ID (RouteId), supporting batch modifications.
+     * @param req ReplaceRoutesWithRoutePolicyRequest
+     * @return ReplaceRoutesWithRoutePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ReplaceRoutesWithRoutePolicyResponse ReplaceRoutesWithRoutePolicy(ReplaceRoutesWithRoutePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ReplaceRoutesWithRoutePolicy", ReplaceRoutesWithRoutePolicyResponse.class);
+    }
+
+    /**
      *This API is used to batch modify security group policies.
 Policies to modify must be in the same direction. `PolicyIndex` must be specified.
      * @param req ReplaceSecurityGroupPoliciesRequest
