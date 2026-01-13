@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyImageSharePermissionRequest extends AbstractModel {
 
     /**
-    * Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
+    * Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
     */
     @SerializedName("ImageId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyImageSharePermissionRequest extends AbstractModel {
     private String Permission;
 
     /**
-     * Get Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API. 
-     * @return ImageId Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
+     * Get Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API. 
+     * @return ImageId Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
      */
     public String getImageId() {
         return this.ImageId;
     }
 
     /**
-     * Set Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
-     * @param ImageId Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.comom/document/api/213/15715?from_cn_redirect=1) API.
+     * Set Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
+     * @param ImageId Image ID, which can be obtained through the ImageId in the returned value of the [DescribeImages](https://www.tencentcloud.com/document/api/213/15715?from_cn_redirect=1) API.
      */
     public void setImageId(String ImageId) {
         this.ImageId = ImageId;

@@ -158,7 +158,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long [] ServiceNodeInfo;
 
     /**
-    * Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+    * Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SoftDeployInfo")
@@ -508,9 +508,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+     * Get Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SoftDeployInfo Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+     * @return SoftDeployInfo Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long [] getSoftDeployInfo() {
@@ -518,9 +518,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+     * Set Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SoftDeployInfo Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.comom/document/product/589/98760?from_cn_redirect=1).
+     * @param SoftDeployInfo Node deployment service list. Only HDFS and YARN should be specified in the deployment service list. For details, see [Mapping Table for Component Names](https://www.tencentcloud.com/document/product/589/98760?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSoftDeployInfo(Long [] SoftDeployInfo) {

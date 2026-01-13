@@ -76,7 +76,10 @@ The default value is blink. The different action types passed in this parameter 
     private String ActionList;
 
     /**
-    * BASIC: Basic Version (Default).
+    * BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
     */
     @SerializedName("SdkVersion")
     @Expose
@@ -231,16 +234,28 @@ The default value is blink. The different action types passed in this parameter 
     }
 
     /**
-     * Get BASIC: Basic Version (Default). 
-     * @return SdkVersion BASIC: Basic Version (Default).
+     * Get BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	 
+     * @return SdkVersion BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
      */
     public String getSdkVersion() {
         return this.SdkVersion;
     }
 
     /**
-     * Set BASIC: Basic Version (Default).
-     * @param SdkVersion BASIC: Basic Version (Default).
+     * Set BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
+     * @param SdkVersion BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
      */
     public void setSdkVersion(String SdkVersion) {
         this.SdkVersion = SdkVersion;

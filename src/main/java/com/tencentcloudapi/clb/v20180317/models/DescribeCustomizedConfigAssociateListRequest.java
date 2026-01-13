@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCustomizedConfigAssociateListRequest extends AbstractModel {
 
     /**
-    * Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
+    * Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/product/214/60009?from_cn_redirect=1) api.
     */
     @SerializedName("UconfigId")
     @Expose
@@ -45,23 +45,23 @@ public class DescribeCustomizedConfigAssociateListRequest extends AbstractModel 
     private Long Limit;
 
     /**
-    * Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
+    * Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/product/214/46916?from_cn_redirect=1) API return value.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-     * Get Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api. 
-     * @return UconfigId Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
+     * Get Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/product/214/60009?from_cn_redirect=1) api. 
+     * @return UconfigId Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/product/214/60009?from_cn_redirect=1) api.
      */
     public String getUconfigId() {
         return this.UconfigId;
     }
 
     /**
-     * Set Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
-     * @param UconfigId Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/product/214/60009?from_cn_redirect=1) api.
+     * Set Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/product/214/60009?from_cn_redirect=1) api.
+     * @param UconfigId Specifies the configuration ID, which can be obtained through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/product/214/60009?from_cn_redirect=1) api.
      */
     public void setUconfigId(String UconfigId) {
         this.UconfigId = UconfigId;
@@ -100,16 +100,16 @@ public class DescribeCustomizedConfigAssociateListRequest extends AbstractModel 
     }
 
     /**
-     * Get Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value. 
-     * @return Domain Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
+     * Get Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/product/214/46916?from_cn_redirect=1) API return value. 
+     * @return Domain Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/product/214/46916?from_cn_redirect=1) API return value.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
-     * @param Domain Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.comom/document/product/214/46916?from_cn_redirect=1) API return value.
+     * Set Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/product/214/46916?from_cn_redirect=1) API return value.
+     * @param Domain Search Domain. can be queried through the `Domain` field in the [DescribeLoadBalancersDetail](https://www.tencentcloud.com/document/product/214/46916?from_cn_redirect=1) API return value.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

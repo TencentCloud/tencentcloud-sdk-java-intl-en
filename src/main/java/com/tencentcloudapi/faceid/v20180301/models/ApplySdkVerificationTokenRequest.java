@@ -112,7 +112,10 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
     private String Extra;
 
     /**
-    * BASIC: Basic Version (default).
+    * BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
     */
     @SerializedName("SdkVersion")
     @Expose
@@ -392,16 +395,28 @@ Optional alarm codes are: -9101 (occlusion or incomplete border), -9102 (photoco
     }
 
     /**
-     * Get BASIC: Basic Version (default). 
-     * @return SdkVersion BASIC: Basic Version (default).
+     * Get BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	 
+     * @return SdkVersion BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
      */
     public String getSdkVersion() {
         return this.SdkVersion;
     }
 
     /**
-     * Set BASIC: Basic Version (default).
-     * @param SdkVersion BASIC: Basic Version (default).
+     * Set BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
+     * @param SdkVersion BASIC: Basic version (Default).
+ENHANCE: Enhance version, enable additional output of device risk level field.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
      */
     public void setSdkVersion(String SdkVersion) {
         this.SdkVersion = SdkVersion;

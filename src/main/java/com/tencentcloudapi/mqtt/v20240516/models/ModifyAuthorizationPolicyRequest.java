@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyAuthorizationPolicyRequest extends AbstractModel {
 
     /**
-    * Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.comom/document/product/1778/111074?from_cn_redirect=1).
+    * Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.com/document/product/1778/111074?from_cn_redirect=1).
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+    * tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
 
     */
     @SerializedName("InstanceId")
@@ -69,7 +69,7 @@ Denies.
     private String Effect;
 
     /**
-    * Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+    * Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
@@ -79,7 +79,7 @@ Sub. specifies the subscription.
     private String Actions;
 
     /**
-    * Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+    * Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
     */
     @SerializedName("Resources")
@@ -135,25 +135,25 @@ Minimum once.
     private String Remark;
 
     /**
-     * Get Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.comom/document/product/1778/111074?from_cn_redirect=1). 
-     * @return Id Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.comom/document/product/1778/111074?from_cn_redirect=1).
+     * Get Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.com/document/product/1778/111074?from_cn_redirect=1). 
+     * @return Id Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.com/document/product/1778/111074?from_cn_redirect=1).
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.comom/document/product/1778/111074?from_cn_redirect=1).
-     * @param Id Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.comom/document/product/1778/111074?from_cn_redirect=1).
+     * Set Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.com/document/product/1778/111074?from_cn_redirect=1).
+     * @param Id Specifies the authorization policy ID, which can be obtained from the query authorization policy API (https://www.tencentcloud.com/document/product/1778/111074?from_cn_redirect=1).
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * Get tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
  
-     * @return InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @return InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
 
      */
     public String getInstanceId() {
@@ -161,9 +161,9 @@ Minimum once.
     }
 
     /**
-     * Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
 
-     * @param InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @param InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
 
      */
     public void setInstanceId(String InstanceId) {
@@ -243,11 +243,11 @@ Denies.
     }
 
     /**
-     * Get Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Get Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription. 
-     * @return Actions Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @return Actions Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
@@ -257,11 +257,11 @@ Sub. specifies the subscription.
     }
 
     /**
-     * Set Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Set Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
-     * @param Actions Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @param Actions Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
@@ -271,9 +271,9 @@ Sub. specifies the subscription.
     }
 
     /**
-     * Get Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Get Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
  
-     * @return Resources Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @return Resources Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
      */
     public String getResources() {
@@ -281,9 +281,9 @@ Sub. specifies the subscription.
     }
 
     /**
-     * Set Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Set Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
-     * @param Resources Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @param Resources Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
      */
     public void setResources(String Resources) {

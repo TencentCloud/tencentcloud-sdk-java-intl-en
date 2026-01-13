@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyLoadBalancersProjectRequest extends AbstractModel {
 
     /**
-    * One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+    * One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
 Specifies the maximum length supported by the list is 20.
     */
     @SerializedName("LoadBalancerIds")
@@ -39,9 +39,9 @@ Specifies the maximum length supported by the list is 20.
     private Long ProjectId;
 
     /**
-     * Get One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+     * Get One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
 Specifies the maximum length supported by the list is 20. 
-     * @return LoadBalancerIds One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+     * @return LoadBalancerIds One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
 Specifies the maximum length supported by the list is 20.
      */
     public String [] getLoadBalancerIds() {
@@ -49,9 +49,9 @@ Specifies the maximum length supported by the list is 20.
     }
 
     /**
-     * Set One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+     * Set One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
 Specifies the maximum length supported by the list is 20.
-     * @param LoadBalancerIds One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
+     * @param LoadBalancerIds One or more load balancing instance ids to be operated. you can call the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) API to query the ids.
 Specifies the maximum length supported by the list is 20.
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {

@@ -73,7 +73,7 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     private Long BillingMode;
 
     /**
-    * ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+    * ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
     */
     @SerializedName("ZoneId")
@@ -106,7 +106,7 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     private Boolean ReplicasReadonly;
 
     /**
-    * Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+    * Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
     */
     @SerializedName("ZoneName")
@@ -260,9 +260,9 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     }
 
     /**
-     * Get ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+     * Get ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**. 
-     * @return ZoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+     * @return ZoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
      */
     public Long getZoneId() {
@@ -270,9 +270,9 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     }
 
     /**
-     * Set ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+     * Set ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
-     * @param ZoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+     * @param ZoneId ID of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
      */
     public void setZoneId(Long ZoneId) {
@@ -344,9 +344,9 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     }
 
     /**
-     * Get Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+     * Get Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**. 
-     * @return ZoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+     * @return ZoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
      */
     public String getZoneName() {
@@ -354,9 +354,9 @@ If `TypeId` indicates the standard architecture, `MemSize` indicates the total m
     }
 
     /**
-     * Set Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+     * Set Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
-     * @param ZoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.comom/document/product/239/4106?from_cn_redirect=1).
+     * @param ZoneName Name of the AZ to which the instance belongs. See [Regions and AZs](https://www.tencentcloud.com/document/product/239/4106?from_cn_redirect=1).
 **Note**: Specify at least one parameter from **ZoneId** and **ZoneName**.
      */
     public void setZoneName(String ZoneName) {

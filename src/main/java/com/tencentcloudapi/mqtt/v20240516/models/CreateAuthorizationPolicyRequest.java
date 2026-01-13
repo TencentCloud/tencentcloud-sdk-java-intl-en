@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAuthorizationPolicyRequest extends AbstractModel {
 
     /**
-    * tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+    * tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -45,7 +45,7 @@ public class CreateAuthorizationPolicyRequest extends AbstractModel {
     private Long PolicyVersion;
 
     /**
-    * Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+    * Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
     */
     @SerializedName("Priority")
     @Expose
@@ -55,14 +55,14 @@ public class CreateAuthorizationPolicyRequest extends AbstractModel {
     * Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
     */
     @SerializedName("Effect")
     @Expose
     private String Effect;
 
     /**
-    * Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+    * Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
@@ -72,7 +72,7 @@ Sub. specifies the subscription.
     private String Actions;
 
     /**
-    * Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+    * Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Matches message retention.
 Matches non-retention messages.
 3. match retained and non-retained messages.
@@ -86,14 +86,14 @@ Matches non-retention messages.
 0: at most once.
 Minimum once.
 2: exactly once.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
     */
     @SerializedName("Qos")
     @Expose
     private String Qos;
 
     /**
-    * Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+    * Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
     */
     @SerializedName("Resources")
@@ -115,7 +115,7 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
     private String ClientId;
 
     /**
-    * Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+    * Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
     */
     @SerializedName("Ip")
     @Expose
@@ -129,16 +129,16 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
     private String Remark;
 
     /**
-     * Get tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console. 
-     * @return InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * Get tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console. 
+     * @return InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
-     * @param InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.comom/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * @param InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -177,16 +177,16 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
     }
 
     /**
-     * Get Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1). 
-     * @return Priority Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Get Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1). 
+     * @return Priority Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-     * @param Priority Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Set Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+     * @param Priority Policy priority. a smaller value indicates higher priority and must be unique. a smaller priority ID means the policy takes effect with higher priority. see [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
@@ -196,11 +196,11 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
      * Get Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1). 
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1). 
      * @return Effect Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public String getEffect() {
         return this.Effect;
@@ -210,22 +210,22 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
      * Set Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      * @param Effect Specifies the decision.
 allow specifies permission for access requests from devices that match this policy.
 deny: denies access requests to the device that override the policy.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public void setEffect(String Effect) {
         this.Effect = Effect;
     }
 
     /**
-     * Get Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Get Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription. 
-     * @return Actions Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @return Actions Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
@@ -235,11 +235,11 @@ Sub. specifies the subscription.
     }
 
     /**
-     * Set Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Set Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
-     * @param Actions Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @param Actions Operation, supports multiple selections separated by commas. see the data plane policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Specifies the connection.
 Specifies the publish action.
 Sub. specifies the subscription.
@@ -249,11 +249,11 @@ Sub. specifies the subscription.
     }
 
     /**
-     * Get Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Get Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Matches message retention.
 Matches non-retention messages.
 3. match retained and non-retained messages. 
-     * @return Retain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @return Retain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Matches message retention.
 Matches non-retention messages.
 3. match retained and non-retained messages.
@@ -263,11 +263,11 @@ Matches non-retention messages.
     }
 
     /**
-     * Set Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Set Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Matches message retention.
 Matches non-retention messages.
 3. match retained and non-retained messages.
-     * @param Retain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @param Retain Condition - message retention. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 Matches message retention.
 Matches non-retention messages.
 3. match retained and non-retained messages.
@@ -281,12 +281,12 @@ Matches non-retention messages.
 0: at most once.
 Minimum once.
 2: exactly once.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1). 
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1). 
      * @return Qos Condition: specifies the service quality.
 0: at most once.
 Minimum once.
 2: exactly once.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public String getQos() {
         return this.Qos;
@@ -297,21 +297,21 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
 0: at most once.
 Minimum once.
 2: exactly once.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      * @param Qos Condition: specifies the service quality.
 0: at most once.
 Minimum once.
 2: exactly once.
-Refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+Refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public void setQos(String Qos) {
         this.Qos = Qos;
     }
 
     /**
-     * Get Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Get Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
  
-     * @return Resources Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @return Resources Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
      */
     public String getResources() {
@@ -319,9 +319,9 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
     }
 
     /**
-     * Set Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Set Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
-     * @param Resources Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * @param Resources Specifies the resource and subscription to match. supports configuration of multiple match rules, separated by commas. see the data plane authorization policy description (https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
 
      */
     public void setResources(String Resources) {
@@ -361,16 +361,16 @@ Refer to the [data plane authorization policy description](https://www.tencentcl
     }
 
     /**
-     * Get Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1). 
-     * @return Ip Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Get Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1). 
+     * @return Ip Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
-     * @param Ip Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.comom/document/product/1778/109715?from_cn_redirect=1).
+     * Set Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
+     * @param Ip Specifies the client IP address, supporting IP or CIDR. refer to the [data plane authorization policy description](https://www.tencentcloud.com/document/product/1778/109715?from_cn_redirect=1).
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

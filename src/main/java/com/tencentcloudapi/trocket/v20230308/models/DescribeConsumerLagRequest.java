@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeConsumerLagRequest extends AbstractModel {
 
     /**
-    * TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+    * TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or from the console.
+    * Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or from the console.
     */
     @SerializedName("ConsumerGroup")
     @Expose
     private String ConsumerGroup;
 
     /**
-    * Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.comom/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.comom/document/api/1179/63419?from_cn_redirect=1) or from the console.
+    * Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.com/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.com/document/api/1179/63419?from_cn_redirect=1) or from the console.
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
+    * Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
     */
     @SerializedName("SubscribeTopic")
     @Expose
     private String SubscribeTopic;
 
     /**
-     * Get TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console. 
-     * @return InstanceId TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+     * Get TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console. 
+     * @return InstanceId TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
-     * @param InstanceId TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.comom/document/api/1493/106745?from_cn_redirect=1) or the console.
+     * Set TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
+     * @param InstanceId TDMQ RocketMQ instance ID. It can be obtained from the API [DescribeFusionInstanceList](https://www.tencentcloud.com/document/api/1493/106745?from_cn_redirect=1) or the console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or from the console. 
-     * @return ConsumerGroup Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or from the console.
+     * Get Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or from the console. 
+     * @return ConsumerGroup Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or from the console.
      */
     public String getConsumerGroup() {
         return this.ConsumerGroup;
     }
 
     /**
-     * Set Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or from the console.
-     * @param ConsumerGroup Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.comom/document/api/1493/101535?from_cn_redirect=1) or from the console.
+     * Set Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or from the console.
+     * @param ConsumerGroup Consumer group name. It can be obtained from [ConsumeGroupItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#ConsumeGroupItem) returned by the API [DescribeConsumerGroupList](https://www.tencentcloud.com/document/api/1493/101535?from_cn_redirect=1) or from the console.
      */
     public void setConsumerGroup(String ConsumerGroup) {
         this.ConsumerGroup = ConsumerGroup;
     }
 
     /**
-     * Get Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.comom/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.comom/document/api/1179/63419?from_cn_redirect=1) or from the console. 
-     * @return Namespace Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.comom/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.comom/document/api/1179/63419?from_cn_redirect=1) or from the console.
+     * Get Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.com/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.com/document/api/1179/63419?from_cn_redirect=1) or from the console. 
+     * @return Namespace Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.com/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.com/document/api/1179/63419?from_cn_redirect=1) or from the console.
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.comom/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.comom/document/api/1179/63419?from_cn_redirect=1) or from the console.
-     * @param Namespace Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.comom/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.comom/document/api/1179/63419?from_cn_redirect=1) or from the console.
+     * Set Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.com/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.com/document/api/1179/63419?from_cn_redirect=1) or from the console.
+     * @param Namespace Namespace. It is required for 4.x clusters. The namespace can be obtained from [RocketMQNamespace](https://www.tencentcloud.com/document/api/1179/46089?from_cn_redirect=1#RocketMQNamespace) returned by the API [DescribeRocketMQNamespaces](https://www.tencentcloud.com/document/api/1179/63419?from_cn_redirect=1) or from the console.
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console. 
-     * @return SubscribeTopic Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
+     * Get Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console. 
+     * @return SubscribeTopic Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
      */
     public String getSubscribeTopic() {
         return this.SubscribeTopic;
     }
 
     /**
-     * Set Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
-     * @param SubscribeTopic Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.comom/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.comom/document/api/1493/96030?from_cn_redirect=1) or from the console.
+     * Set Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
+     * @param SubscribeTopic Subscribed topic. If it is not left blank, query heaped messages of consumer groups subscribing to the topic. The topic can be obtained from [TopicItem](https://www.tencentcloud.com/document/api/1493/96031?from_cn_redirect=1#TopicItem) returned by the API [DescribeTopicList](https://www.tencentcloud.com/document/api/1493/96030?from_cn_redirect=1) or from the console.
      */
     public void setSubscribeTopic(String SubscribeTopic) {
         this.SubscribeTopic = SubscribeTopic;

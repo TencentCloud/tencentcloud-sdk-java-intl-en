@@ -153,6 +153,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
+    * Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
+    */
+    @SerializedName("LivenessInfoTag")
+    @Expose
+    private String [] LivenessInfoTag;
+
+    /**
      * Get The final verification result code.
 0: Success.
 1001: Failed to call the liveness detection engine.
@@ -488,6 +508,74 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.RequestId = RequestId;
     }
 
+    /**
+     * Get Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack. 
+     * @return LivenessInfoTag Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
+     */
+    public String [] getLivenessInfoTag() {
+        return this.LivenessInfoTag;
+    }
+
+    /**
+     * Set Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
+     * @param LivenessInfoTag Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+01 - User kept eyes closed throughout the process.
+02 - User failed to complete the specified action.
+03 - Suspected photo replay attack.
+04 - Suspected synthetic image.
+05 - Suspected synthetic video.
+06 - Suspected synthetic action.
+07 - Suspected fraud template.
+08 - Suspected watermark existence.
+09 - Light verification failed.
+10 - Face verification failed.
+11 - Poor face quality.
+12 - Unqualified collection quality.
+13 - Suspected adversarial sample attack.
+     */
+    public void setLivenessInfoTag(String [] LivenessInfoTag) {
+        this.LivenessInfoTag = LivenessInfoTag;
+    }
+
     public CompareResult() {
     }
 
@@ -541,6 +629,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
+        if (source.LivenessInfoTag != null) {
+            this.LivenessInfoTag = new String[source.LivenessInfoTag.length];
+            for (int i = 0; i < source.LivenessInfoTag.length; i++) {
+                this.LivenessInfoTag[i] = new String(source.LivenessInfoTag[i]);
+            }
+        }
     }
 
 
@@ -563,6 +657,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsNeedCharge", this.IsNeedCharge);
         this.setParamObj(map, prefix + "CardInfoInputJson.", this.CardInfoInputJson);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
+        this.setParamArraySimple(map, prefix + "LivenessInfoTag.", this.LivenessInfoTag);
 
     }
 }

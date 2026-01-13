@@ -52,7 +52,7 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
     private String ConfigName;
 
     /**
-    * Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
+    * Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/api/214/60009?from_cn_redirect=1) api.
     */
     @SerializedName("UconfigIds")
     @Expose
@@ -64,12 +64,12 @@ public class DescribeCustomizedConfigListRequest extends AbstractModel {
 Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
 - vip
 Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
     */
     @SerializedName("Filters")
     @Expose
@@ -140,16 +140,16 @@ Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/doc
     }
 
     /**
-     * Get Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api. 
-     * @return UconfigIds Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
+     * Get Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/api/214/60009?from_cn_redirect=1) api. 
+     * @return UconfigIds Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/api/214/60009?from_cn_redirect=1) api.
      */
     public String [] getUconfigIds() {
         return this.UconfigIds;
     }
 
     /**
-     * Set Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
-     * @param UconfigIds Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.comom/document/api/214/60009?from_cn_redirect=1) api.
+     * Set Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/api/214/60009?from_cn_redirect=1) api.
+     * @param UconfigIds Configuration ID, can be accessed through the [DescribeCustomizedConfigList](https://www.tencentcloud.com/document/api/214/60009?from_cn_redirect=1) api.
      */
     public void setUconfigIds(String [] UconfigIds) {
         this.UconfigIds = UconfigIds;
@@ -161,23 +161,23 @@ Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/doc
 Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
 - vip
 Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1). 
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1). 
      * @return Filters Filter criteria as follows:.
 - loadbalancer-id
 Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
 - vip
 Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
      */
     public Filter [] getFilters() {
         return this.Filters;
@@ -189,23 +189,23 @@ Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/doc
 Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
 - vip
 Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
      * @param Filters Filter criteria as follows:.
 - loadbalancer-id
 Filter by [cloud load balancer ID]. instance billing mode such as lb-9vxezxza.
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
 - vip
 Filter by [clb VIP]. network billing mode such as "1.1.1.1", "2204::22:3".
 Type: String.
 Required: No
-Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1).
+Method for obtaining: [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1).
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

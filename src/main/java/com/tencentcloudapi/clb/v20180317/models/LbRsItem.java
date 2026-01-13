@@ -25,7 +25,7 @@ public class LbRsItem extends AbstractModel {
 
     /**
     * VPC ID in string format. Only string format is supported.
-Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api.
     */
     @SerializedName("VpcId")
     @Expose
@@ -33,7 +33,7 @@ Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/documen
 
     /**
     * Specifies the private IP address for backend querying, which can be CVM or eni.
-Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) api.
     */
     @SerializedName("PrivateIp")
     @Expose
@@ -41,9 +41,9 @@ Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/do
 
     /**
      * Get VPC ID in string format. Only string format is supported.
-Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api. 
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api. 
      * @return VpcId VPC ID in string format. Only string format is supported.
-Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api.
      */
     public String getVpcId() {
         return this.VpcId;
@@ -51,9 +51,9 @@ Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/documen
 
     /**
      * Set VPC ID in string format. Only string format is supported.
-Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api.
      * @param VpcId VPC ID in string format. Only string format is supported.
-Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api.
+Can be queried through the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -61,9 +61,9 @@ Can be queried through the [DescribeVpcs](https://www.tencentcloud.comom/documen
 
     /**
      * Get Specifies the private IP address for backend querying, which can be CVM or eni.
-Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api. 
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) api. 
      * @return PrivateIp Specifies the private IP address for backend querying, which can be CVM or eni.
-Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) api.
      */
     public String getPrivateIp() {
         return this.PrivateIp;
@@ -71,9 +71,9 @@ Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/do
 
     /**
      * Set Specifies the private IP address for backend querying, which can be CVM or eni.
-Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) api.
      * @param PrivateIp Specifies the private IP address for backend querying, which can be CVM or eni.
-Can be queried through the [DescribeAddresses](https://www.tencentcloud.comom/document/product/215/16702?from_cn_redirect=1) api.
+Can be queried through the [DescribeAddresses](https://www.tencentcloud.com/document/product/215/16702?from_cn_redirect=1) api.
      */
     public void setPrivateIp(String PrivateIp) {
         this.PrivateIp = PrivateIp;

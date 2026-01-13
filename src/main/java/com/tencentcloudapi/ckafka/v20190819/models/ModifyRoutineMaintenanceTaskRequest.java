@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyRoutineMaintenanceTaskRequest extends AbstractModel {
 
     /**
-    * Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+    * Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -101,16 +101,16 @@ public class ModifyRoutineMaintenanceTaskRequest extends AbstractModel {
     private String Week;
 
     /**
-     * Get Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api. 
-     * @return InstanceId Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * Get Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api. 
+     * @return InstanceId Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
-     * @param InstanceId Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * Set Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+     * @param InstanceId Specifies the ckafka cluster instance id. can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

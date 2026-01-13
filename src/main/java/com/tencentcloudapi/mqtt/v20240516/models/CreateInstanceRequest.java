@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateInstanceRequest extends AbstractModel {
 
     /**
-    * Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+    * Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
@@ -42,7 +42,7 @@ PLATINUM version.
     private String Name;
 
     /**
-    * Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+    * Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
     */
     @SerializedName("SkuCode")
     @Expose
@@ -112,12 +112,12 @@ PLATINUM version.
     private Long PayMode;
 
     /**
-     * Get Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+     * Get Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
  
-     * @return InstanceType Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+     * @return InstanceType Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
@@ -128,12 +128,12 @@ PLATINUM version.
     }
 
     /**
-     * Set Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+     * Set Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
 
-     * @param InstanceType Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api.
+     * @param InstanceType Instance type, which needs to correspond to SkuCode. for details, see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api.
 BASIC: basic edition.
 PRO edition.
 PLATINUM version.
@@ -160,16 +160,16 @@ PLATINUM version.
     }
 
     /**
-     * Get Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details. 
-     * @return SkuCode Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+     * Get Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details. 
+     * @return SkuCode Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
      */
     public String getSkuCode() {
         return this.SkuCode;
     }
 
     /**
-     * Set Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
-     * @param SkuCode Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.comom/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+     * Set Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
+     * @param SkuCode Product specification, which must correspond to InstanceType. see the [get MQTT product sales spec](https://www.tencentcloud.com/document/api/1778/116232?from_cn_redirect=1) api to obtain details.
      */
     public void setSkuCode(String SkuCode) {
         this.SkuCode = SkuCode;

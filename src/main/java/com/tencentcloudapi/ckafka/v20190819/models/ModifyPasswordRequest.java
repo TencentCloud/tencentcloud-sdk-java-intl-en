@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyPasswordRequest extends AbstractModel {
 
     /**
-    * Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+    * Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.comom/document/product/597/40855?from_cn_redirect=1) api.
+    * Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.com/document/product/597/40855?from_cn_redirect=1) api.
     */
     @SerializedName("Name")
     @Expose
@@ -52,32 +52,32 @@ public class ModifyPasswordRequest extends AbstractModel {
     private String PasswordNew;
 
     /**
-     * Get Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api. 
-     * @return InstanceId Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * Get Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api. 
+     * @return InstanceId Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
-     * @param InstanceId Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1) api.
+     * Set Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+     * @param InstanceId Instance Id. you can obtain it by calling the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.comom/document/product/597/40855?from_cn_redirect=1) api. 
-     * @return Name Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.comom/document/product/597/40855?from_cn_redirect=1) api.
+     * Get Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.com/document/product/597/40855?from_cn_redirect=1) api. 
+     * @return Name Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.com/document/product/597/40855?from_cn_redirect=1) api.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.comom/document/product/597/40855?from_cn_redirect=1) api.
-     * @param Name Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.comom/document/product/597/40855?from_cn_redirect=1) api.
+     * Set Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.com/document/product/597/40855?from_cn_redirect=1) api.
+     * @param Name Specifies the username, which can be obtained through the [DescribeUser](https://www.tencentcloud.com/document/product/597/40855?from_cn_redirect=1) api.
      */
     public void setName(String Name) {
         this.Name = Name;

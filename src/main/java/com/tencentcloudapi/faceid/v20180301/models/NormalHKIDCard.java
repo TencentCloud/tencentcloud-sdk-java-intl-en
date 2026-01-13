@@ -108,6 +108,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CurrentIssueDate;
 
     /**
+    * Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("HKIDVersion")
+    @Expose
+    private String HKIDVersion;
+
+    /**
      * Get Chinese name
 Note: This field may return null, indicating that no valid values can be obtained.
  
@@ -323,6 +331,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.CurrentIssueDate = CurrentIssueDate;
     }
 
+    /**
+     * Get Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HKIDVersion Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getHKIDVersion() {
+        return this.HKIDVersion;
+    }
+
+    /**
+     * Set Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HKIDVersion Hong kong identity card version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setHKIDVersion(String HKIDVersion) {
+        this.HKIDVersion = HKIDVersion;
+    }
+
     public NormalHKIDCard() {
     }
 
@@ -361,6 +389,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CurrentIssueDate != null) {
             this.CurrentIssueDate = new String(source.CurrentIssueDate);
         }
+        if (source.HKIDVersion != null) {
+            this.HKIDVersion = new String(source.HKIDVersion);
+        }
     }
 
 
@@ -378,6 +409,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Symbol", this.Symbol);
         this.setParamSimple(map, prefix + "IssuedDate", this.IssuedDate);
         this.setParamSimple(map, prefix + "CurrentIssueDate", this.CurrentIssueDate);
+        this.setParamSimple(map, prefix + "HKIDVersion", this.HKIDVersion);
 
     }
 }

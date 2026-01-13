@@ -25,7 +25,7 @@ public class SlaUpdateParam extends AbstractModel {
 
     /**
     * CLB instance ID.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
     */
     @SerializedName("LoadBalancerId")
     @Expose
@@ -40,9 +40,9 @@ Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.como
 
     /**
      * Get CLB instance ID.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api. 
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api. 
      * @return LoadBalancerId CLB instance ID.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
      */
     public String getLoadBalancerId() {
         return this.LoadBalancerId;
@@ -50,9 +50,9 @@ Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.como
 
     /**
      * Set CLB instance ID.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
      * @param LoadBalancerId CLB instance ID.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
      */
     public void setLoadBalancerId(String LoadBalancerId) {
         this.LoadBalancerId = LoadBalancerId;

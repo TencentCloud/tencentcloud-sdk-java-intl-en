@@ -31,21 +31,21 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
+    * Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+    * Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
     */
     @SerializedName("Volume")
     @Expose
     private Long Volume;
 
     /**
-    * Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+    * Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
 - Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
 - Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
 **Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
@@ -79,43 +79,43 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory. 
-     * @return Memory Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
+     * Get Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory. 
+     * @return Memory Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
-     * @param Memory Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
+     * Set Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
+     * @param Memory Instance memory size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for memory.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification. 
-     * @return Volume Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+     * Get Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification. 
+     * @return Volume Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
-     * @param Volume Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+     * Set Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
+     * @param Volume Instance disk size after configuration changes, in GB. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the maximum and minimum disk sizes corresponding to each CPU specification.
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
     }
 
     /**
-     * Get Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+     * Get Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
 - Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
 - Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
 **Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously. 
-     * @return NodeNum Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+     * @return NodeNum Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
 - Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
 - Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
 **Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
@@ -125,11 +125,11 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
     }
 
     /**
-     * Set Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+     * Set Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
 - Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
 - Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
 **Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.
-     * @param NodeNum Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.comom/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
+     * @param NodeNum Number of instance nodes. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the number of instance nodes.
 - Replica set instance, which refers to the number of primary and secondary nodes for the instance after configuration changes.
 - Sharded cluster instance, which refers to the number of primary and secondary nodes per shard for the instance after configuration changes.
 **Note**: Do not initiate tasks of adjusting the number of nodes and shards and the node specifications simultaneously.

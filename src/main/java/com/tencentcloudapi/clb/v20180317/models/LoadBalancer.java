@@ -39,7 +39,7 @@ public class LoadBalancer extends AbstractModel {
 
     /**
     * Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
     */
     @SerializedName("LoadBalancerType")
     @Expose
@@ -176,7 +176,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AddressIPVersion;
 
     /**
-    * Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+    * Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
     */
     @SerializedName("NumericalVpcId")
     @Expose
@@ -515,9 +515,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1). 
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1). 
      * @return LoadBalancerType Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
      */
     public String getLoadBalancerType() {
         return this.LoadBalancerType;
@@ -525,9 +525,9 @@ OPEN: public network attribute. INTERNAL: private network attribute. for a cloud
 
     /**
      * Set Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
      * @param LoadBalancerType Network type of the load balancing instance.
-OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.comom/document/product/215/16700?from_cn_redirect=1).
+OPEN: public network attribute. INTERNAL: private network attribute. for a cloud load balancer with private network attribute, you can bind an EIP for public network access. for details, see the EIP document on binding elastic IP (https://www.tencentcloud.com/document/product/215/16700?from_cn_redirect=1).
      */
     public void setLoadBalancerType(String LoadBalancerType) {
         this.LoadBalancerType = LoadBalancerType;
@@ -842,16 +842,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1). 
-     * @return NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+     * Get Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1). 
+     * @return NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
      */
     public Long getNumericalVpcId() {
         return this.NumericalVpcId;
     }
 
     /**
-     * Set Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
-     * @param NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+     * Set Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+     * @param NumericalVpcId Specifies the VPC ID in numerical form, obtainable through the DescribeVpcs API (https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
      */
     public void setNumericalVpcId(Long NumericalVpcId) {
         this.NumericalVpcId = NumericalVpcId;

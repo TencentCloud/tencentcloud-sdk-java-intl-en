@@ -31,7 +31,7 @@ public class EnableTransparentDataEncryptionRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    *  Region where the [Key Management Service (KMS)](https://www.tencentcloud.comom/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
+    *  Region where the [Key Management Service (KMS)](https://www.tencentcloud.com/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
     */
     @SerializedName("KmsRegion")
     @Expose
@@ -61,16 +61,16 @@ public class EnableTransparentDataEncryptionRequest extends AbstractModel {
     }
 
     /**
-     * Get  Region where the [Key Management Service (KMS)](https://www.tencentcloud.comom/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai. 
-     * @return KmsRegion  Region where the [Key Management Service (KMS)](https://www.tencentcloud.comom/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
+     * Get  Region where the [Key Management Service (KMS)](https://www.tencentcloud.com/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai. 
+     * @return KmsRegion  Region where the [Key Management Service (KMS)](https://www.tencentcloud.com/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
      */
     public String getKmsRegion() {
         return this.KmsRegion;
     }
 
     /**
-     * Set  Region where the [Key Management Service (KMS)](https://www.tencentcloud.comom/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
-     * @param KmsRegion  Region where the [Key Management Service (KMS)](https://www.tencentcloud.comom/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
+     * Set  Region where the [Key Management Service (KMS)](https://www.tencentcloud.com/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
+     * @param KmsRegion  Region where the [Key Management Service (KMS)](https://www.tencentcloud.com/document/product/573/18809?from_cn_redirect=1) instance is located. For example, ap-shanghai.
      */
     public void setKmsRegion(String KmsRegion) {
         this.KmsRegion = KmsRegion;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeSpecInfoRequest extends AbstractModel {
 
     /**
-    * AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+    * AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.com/document/product/240/3637?from_cn_redirect=1).
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-     * Get AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1). 
-     * @return Zone AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+     * Get AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.com/document/product/240/3637?from_cn_redirect=1). 
+     * @return Zone AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.com/document/product/240/3637?from_cn_redirect=1).
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
-     * @param Zone AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.comom/document/product/240/3637?from_cn_redirect=1).
+     * Set AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.com/document/product/240/3637?from_cn_redirect=1).
+     * @param Zone AZ to be queried. For currently supported AZs, see [Regions and AZs](https://www.tencentcloud.com/document/product/240/3637?from_cn_redirect=1).
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

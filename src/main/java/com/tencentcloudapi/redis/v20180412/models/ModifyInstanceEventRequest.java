@@ -31,7 +31,7 @@ public class ModifyInstanceEventRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
+    * Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.com/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
     */
     @SerializedName("EventId")
     @Expose
@@ -82,16 +82,16 @@ public class ModifyInstanceEventRequest extends AbstractModel {
     }
 
     /**
-     * Get Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified. 
-     * @return EventId Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
+     * Get Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.com/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified. 
+     * @return EventId Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.com/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
      */
     public Long getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
-     * @param EventId Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.comom/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
+     * Set Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.com/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
+     * @param EventId Event ID. Call the [DescribeInstanceEvents](https://www.tencentcloud.com/document/product/239/104779?from_cn_redirect=1) API to obtain the ID of the event to be modified.
      */
     public void setEventId(Long EventId) {
         this.EventId = EventId;

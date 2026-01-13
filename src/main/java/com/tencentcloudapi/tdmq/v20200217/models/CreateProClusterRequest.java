@@ -34,7 +34,7 @@ Single-AZ deployment selects an availability zone. example: [200002].
 
     /**
     * Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
     */
     @SerializedName("ProductName")
     @Expose
@@ -42,7 +42,7 @@ Refers to professional cluster specifications (https://www.tencentcloud.comom/do
 
     /**
     * Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
     */
     @SerializedName("StorageSize")
     @Expose
@@ -118,9 +118,9 @@ Single-AZ deployment selects an availability zone. example: [200002].
 
     /**
      * Get Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1). 
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1). 
      * @return ProductName Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      */
     public String getProductName() {
         return this.ProductName;
@@ -128,9 +128,9 @@ Refers to professional cluster specifications (https://www.tencentcloud.comom/do
 
     /**
      * Set Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      * @param ProductName Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
@@ -138,9 +138,9 @@ Refers to professional cluster specifications (https://www.tencentcloud.comom/do
 
     /**
      * Get Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1). 
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1). 
      * @return StorageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      */
     public Long getStorageSize() {
         return this.StorageSize;
@@ -148,9 +148,9 @@ Refers to professional cluster specifications (https://www.tencentcloud.comom/do
 
     /**
      * Set Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      * @param StorageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.comom/document/product/1179/83705?from_cn_redirect=1).
+Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
      */
     public void setStorageSize(Long StorageSize) {
         this.StorageSize = StorageSize;

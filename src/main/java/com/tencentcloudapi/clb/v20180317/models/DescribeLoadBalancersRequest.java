@@ -123,7 +123,7 @@ Defaults to CreateTime.
     private String SearchKey;
 
     /**
-    * Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+    * Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -137,7 +137,7 @@ Defaults to CreateTime.
     private Long WithRs;
 
     /**
-    * Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+    * Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api to obtain it.
 Searches for cloud load balancer of basic network type. allows input '0'.
     */
     @SerializedName("VpcId")
@@ -145,7 +145,7 @@ Searches for cloud load balancer of basic network type. allows input '0'.
     private String VpcId;
 
     /**
-    * Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+    * Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
     */
     @SerializedName("SecurityGroup")
     @Expose
@@ -415,16 +415,16 @@ Defaults to CreateTime.
     }
 
     /**
-     * Get Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed. 
-     * @return ProjectId Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+     * Get Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed. 
+     * @return ProjectId Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
-     * @param ProjectId Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+     * Set Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
+     * @param ProjectId Project ID of the cloud load balancer instance. you can call the [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1) api to obtain the ID. defaults to all projects if not passed.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -447,9 +447,9 @@ Defaults to CreateTime.
     }
 
     /**
-     * Get Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+     * Get Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api to obtain it.
 Searches for cloud load balancer of basic network type. allows input '0'. 
-     * @return VpcId Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+     * @return VpcId Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api to obtain it.
 Searches for cloud load balancer of basic network type. allows input '0'.
      */
     public String getVpcId() {
@@ -457,9 +457,9 @@ Searches for cloud load balancer of basic network type. allows input '0'.
     }
 
     /**
-     * Set Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+     * Set Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api to obtain it.
 Searches for cloud load balancer of basic network type. allows input '0'.
-     * @param VpcId Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.comom/document/api/215/15778?from_cn_redirect=1) api to obtain it.
+     * @param VpcId Specifies the unique vpc ID of the load balancing instance, such as vpc-bhqkbhdx. you can call the [DescribeVpcs](https://www.tencentcloud.com/document/api/215/15778?from_cn_redirect=1) api to obtain it.
 Searches for cloud load balancer of basic network type. allows input '0'.
      */
     public void setVpcId(String VpcId) {
@@ -467,16 +467,16 @@ Searches for cloud load balancer of basic network type. allows input '0'.
     }
 
     /**
-     * Get Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1). 
-     * @return SecurityGroup Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * Get Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1). 
+     * @return SecurityGroup Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
      */
     public String getSecurityGroup() {
         return this.SecurityGroup;
     }
 
     /**
-     * Set Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
-     * @param SecurityGroup Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * Set Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
+     * @param SecurityGroup Security group ID, such as sg-m1cc****, can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
      */
     public void setSecurityGroup(String SecurityGroup) {
         this.SecurityGroup = SecurityGroup;

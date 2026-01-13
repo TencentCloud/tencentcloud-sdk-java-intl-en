@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstancePreRequest extends AbstractModel {
 
     /**
-    * ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+    * ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
     */
     @SerializedName("InstanceId")
     @Expose
@@ -32,7 +32,7 @@ public class ModifyInstancePreRequest extends AbstractModel {
 
     /**
     * Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
 
     */
     @SerializedName("DiskSize")
@@ -41,7 +41,7 @@ Specification limits can be viewed through the following link: https://www.tence
 
     /**
     * Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
 
     */
     @SerializedName("BandWidth")
@@ -50,23 +50,23 @@ Specifies the specification limits and corresponding step length through the fol
 
     /**
     * Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-     * Get ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1). 
-     * @return InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * Get ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1). 
+     * @return InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
-     * @param InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.comom/document/product/597/40835?from_cn_redirect=1).
+     * Set ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
+     * @param InstanceId ckafka cluster instance Id. obtain through the API [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1).
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
@@ -74,10 +74,10 @@ Specifies the specifications and limits that can be viewed through the following
 
     /**
      * Get Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
  
      * @return DiskSize Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
 
      */
     public Long getDiskSize() {
@@ -86,10 +86,10 @@ Specification limits can be viewed through the following link: https://www.tence
 
     /**
      * Set Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
 
      * @param DiskSize Specifies the disk capacity in GB. value range: 100 to 500000 with a step length of 100.
-Specification limits can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122562.?from_cn_redirect=1
+Specification limits can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122562.?from_cn_redirect=1
 
      */
     public void setDiskSize(Long DiskSize) {
@@ -98,10 +98,10 @@ Specification limits can be viewed through the following link: https://www.tence
 
     /**
      * Get Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
  
      * @return BandWidth Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
 
      */
     public Long getBandWidth() {
@@ -110,10 +110,10 @@ Specifies the specification limits and corresponding step length through the fol
 
     /**
      * Set Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
 
      * @param BandWidth Peak bandwidth in MB/s.
-Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.comom/document/product/597/11745.?from_cn_redirect=1
+Specifies the specification limits and corresponding step length through the following link: https://www.tencentcloud.com/document/product/597/11745.?from_cn_redirect=1
 
      */
     public void setBandWidth(Long BandWidth) {
@@ -122,9 +122,9 @@ Specifies the specification limits and corresponding step length through the fol
 
     /**
      * Get Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1 
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1 
      * @return Partition Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
      */
     public Long getPartition() {
         return this.Partition;
@@ -132,9 +132,9 @@ Specifies the specifications and limits that can be viewed through the following
 
     /**
      * Set Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
      * @param Partition Partition upper bound. maximum value of 40000. step length of 100.
-Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.comom/document/product/597/122563.?from_cn_redirect=1
+Specifies the specifications and limits that can be viewed through the following link: https://www.tencentcloud.com/document/product/597/122563.?from_cn_redirect=1
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;

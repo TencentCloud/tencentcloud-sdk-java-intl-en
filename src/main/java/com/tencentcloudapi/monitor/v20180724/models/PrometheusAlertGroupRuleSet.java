@@ -60,7 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Duration;
 
     /**
-    * Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+    * Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Expr")
@@ -175,9 +175,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+     * Get Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Expr Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+     * @return Expr Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExpr() {
@@ -185,9 +185,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+     * Set Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Expr Alert expression. see <a href="https://www.tencentcloud.comom/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
+     * @param Expr Alert expression. see <a href="https://www.tencentcloud.com/document/product/1416/56008?from_cn_redirect=1">alert rule description</a>.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExpr(String Expr) {

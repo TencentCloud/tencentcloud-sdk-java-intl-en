@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AuthorizationPolicyPriority extends AbstractModel {
 
     /**
-    * Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1).
+    * Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1).
     */
     @SerializedName("Id")
     @Expose
@@ -38,16 +38,16 @@ public class AuthorizationPolicyPriority extends AbstractModel {
     private Long Priority;
 
     /**
-     * Get Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1). 
-     * @return Id Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1).
+     * Get Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1). 
+     * @return Id Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1).
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1).
-     * @param Id Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.comom/document/api/1778/111074?from_cn_redirect=1).
+     * Set Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1).
+     * @param Id Specifies the authorization policy rule id, which can be obtained from the DescribeAuthorizationPolicies api (https://www.tencentcloud.com/document/api/1778/111074?from_cn_redirect=1).
      */
     public void setId(Long Id) {
         this.Id = Id;

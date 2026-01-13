@@ -31,7 +31,7 @@ public class CreateBackupDownloadTaskRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Name of the backup file to be downloaded. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain it.
+    * Name of the backup file to be downloaded. The [DescribeDBBackups](https://www.tencentcloud.com/document/product/240/38574?from_cn_redirect=1) API can be called to obtain it.
     */
     @SerializedName("BackupName")
     @Expose
@@ -63,16 +63,16 @@ public class CreateBackupDownloadTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Name of the backup file to be downloaded. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain it. 
-     * @return BackupName Name of the backup file to be downloaded. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain it.
+     * Get Name of the backup file to be downloaded. The [DescribeDBBackups](https://www.tencentcloud.com/document/product/240/38574?from_cn_redirect=1) API can be called to obtain it. 
+     * @return BackupName Name of the backup file to be downloaded. The [DescribeDBBackups](https://www.tencentcloud.com/document/product/240/38574?from_cn_redirect=1) API can be called to obtain it.
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set Name of the backup file to be downloaded. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain it.
-     * @param BackupName Name of the backup file to be downloaded. The [DescribeDBBackups](https://www.tencentcloud.comom/document/product/240/38574?from_cn_redirect=1) API can be called to obtain it.
+     * Set Name of the backup file to be downloaded. The [DescribeDBBackups](https://www.tencentcloud.com/document/product/240/38574?from_cn_redirect=1) API can be called to obtain it.
+     * @param BackupName Name of the backup file to be downloaded. The [DescribeDBBackups](https://www.tencentcloud.com/document/product/240/38574?from_cn_redirect=1) API can be called to obtain it.
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;

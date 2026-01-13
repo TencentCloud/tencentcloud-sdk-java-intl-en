@@ -45,7 +45,7 @@ public class RegisterTargetsRequest extends AbstractModel {
     private Target [] Targets;
 
     /**
-    * Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
+    * Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
     */
     @SerializedName("LocationId")
     @Expose
@@ -114,16 +114,16 @@ public class RegisterTargetsRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule. 
-     * @return LocationId Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
+     * Get Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule. 
+     * @return LocationId Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
      */
     public String getLocationId() {
         return this.LocationId;
     }
 
     /**
-     * Set Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
-     * @param LocationId Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.comom/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
+     * Set Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
+     * @param LocationId Specifies the forwarding rule ID, which can be obtained through the DescribeListeners API (https://www.tencentcloud.com/document/product/214/30686?from_cn_redirect=1). you must provide this parameter or either Domain or Url when binding a backend service to a layer-7 forwarding rule.
      */
     public void setLocationId(String LocationId) {
         this.LocationId = LocationId;

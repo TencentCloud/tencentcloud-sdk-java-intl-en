@@ -44,7 +44,7 @@ public class SetCustomizedConfigForLoadBalancerRequest extends AbstractModel {
 
     /**
     * Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
     */
     @SerializedName("ConfigContent")
     @Expose
@@ -59,7 +59,7 @@ Specifies specific restrictions. view layer-7 personalized configuration (https:
 
     /**
     * CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
     */
     @SerializedName("LoadBalancerIds")
     @Expose
@@ -119,9 +119,9 @@ Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.como
 
     /**
      * Get Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1). 
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1). 
      * @return ConfigContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
      */
     public String getConfigContent() {
         return this.ConfigContent;
@@ -129,9 +129,9 @@ Specifies specific restrictions. view layer-7 personalized configuration (https:
 
     /**
      * Set Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
      * @param ConfigContent Specifies the personalized configuration content. this field is required when creating or modifying custom configuration.
-Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.comom/document/product/214/15171?from_cn_redirect=1).
+Specifies specific restrictions. view layer-7 personalized configuration (https://www.tencentcloud.com/document/product/214/15171?from_cn_redirect=1).
      */
     public void setConfigContent(String ConfigContent) {
         this.ConfigContent = ConfigContent;
@@ -155,9 +155,9 @@ Specifies specific restrictions. view layer-7 personalized configuration (https:
 
     /**
      * Get CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api. 
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api. 
      * @return LoadBalancerIds CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
      */
     public String [] getLoadBalancerIds() {
         return this.LoadBalancerIds;
@@ -165,9 +165,9 @@ Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.como
 
     /**
      * Set CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
      * @param LoadBalancerIds CLB instance ID. this field is required for bind/unbind operations.
-Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.comom/document/product/1108/48459?from_cn_redirect=1) api.
+Can be queried through the [DescribeLoadBalancers](https://www.tencentcloud.com/document/product/1108/48459?from_cn_redirect=1) api.
      */
     public void setLoadBalancerIds(String [] LoadBalancerIds) {
         this.LoadBalancerIds = LoadBalancerIds;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResizeDisksRequest extends AbstractModel {
 
     /**
-    * Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.comom/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
+    * Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
     */
     @SerializedName("DiskIds")
     @Expose
@@ -38,16 +38,16 @@ public class ResizeDisksRequest extends AbstractModel {
     private Long DiskSize;
 
     /**
-     * Get Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.comom/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15. 
-     * @return DiskIds Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.comom/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
+     * Get Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15. 
+     * @return DiskIds Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
      */
     public String [] getDiskIds() {
         return this.DiskIds;
     }
 
     /**
-     * Set Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.comom/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
-     * @param DiskIds Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.comom/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
+     * Set Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
+     * @param DiskIds Cloud disk ID list, which can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/1207/66093?from_cn_redirect=1) API. The maximum length of the list is 15.
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;

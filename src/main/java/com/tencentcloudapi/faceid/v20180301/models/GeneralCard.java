@@ -182,6 +182,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Address Address;
 
     /**
+    * Localized name.
+    */
+    @SerializedName("FullNameLocal")
+    @Expose
+    private String FullNameLocal;
+
+    /**
+    * Localization.
+    */
+    @SerializedName("FirstNameLocal")
+    @Expose
+    private String FirstNameLocal;
+
+    /**
+    * Localized surname.
+    */
+    @SerializedName("LastNameLocal")
+    @Expose
+    private String LastNameLocal;
+
+    /**
      * Get License number
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return LicenseNumber License number
@@ -585,6 +606,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Address = Address;
     }
 
+    /**
+     * Get Localized name. 
+     * @return FullNameLocal Localized name.
+     */
+    public String getFullNameLocal() {
+        return this.FullNameLocal;
+    }
+
+    /**
+     * Set Localized name.
+     * @param FullNameLocal Localized name.
+     */
+    public void setFullNameLocal(String FullNameLocal) {
+        this.FullNameLocal = FullNameLocal;
+    }
+
+    /**
+     * Get Localization. 
+     * @return FirstNameLocal Localization.
+     */
+    public String getFirstNameLocal() {
+        return this.FirstNameLocal;
+    }
+
+    /**
+     * Set Localization.
+     * @param FirstNameLocal Localization.
+     */
+    public void setFirstNameLocal(String FirstNameLocal) {
+        this.FirstNameLocal = FirstNameLocal;
+    }
+
+    /**
+     * Get Localized surname. 
+     * @return LastNameLocal Localized surname.
+     */
+    public String getLastNameLocal() {
+        return this.LastNameLocal;
+    }
+
+    /**
+     * Set Localized surname.
+     * @param LastNameLocal Localized surname.
+     */
+    public void setLastNameLocal(String LastNameLocal) {
+        this.LastNameLocal = LastNameLocal;
+    }
+
     public GeneralCard() {
     }
 
@@ -650,6 +719,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Address != null) {
             this.Address = new Address(source.Address);
         }
+        if (source.FullNameLocal != null) {
+            this.FullNameLocal = new String(source.FullNameLocal);
+        }
+        if (source.FirstNameLocal != null) {
+            this.FirstNameLocal = new String(source.FirstNameLocal);
+        }
+        if (source.LastNameLocal != null) {
+            this.LastNameLocal = new String(source.LastNameLocal);
+        }
     }
 
 
@@ -676,6 +754,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Nationality", this.Nationality);
         this.setParamSimple(map, prefix + "RegistrationNumber", this.RegistrationNumber);
         this.setParamObj(map, prefix + "Address.", this.Address);
+        this.setParamSimple(map, prefix + "FullNameLocal", this.FullNameLocal);
+        this.setParamSimple(map, prefix + "FirstNameLocal", this.FirstNameLocal);
+        this.setParamSimple(map, prefix + "LastNameLocal", this.LastNameLocal);
 
     }
 }
