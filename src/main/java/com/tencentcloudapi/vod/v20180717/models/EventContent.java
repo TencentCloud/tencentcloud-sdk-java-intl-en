@@ -245,6 +245,29 @@ Note: This field may return null, indicating that no valid value can be obtained
     private ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingCompleteEvent;
 
     /**
+    * 
+    */
+    @SerializedName("ProcessMediaByMPSCompleteEvent")
+    @Expose
+    private ProcessMediaByMPS ProcessMediaByMPSCompleteEvent;
+
+    /**
+    * AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("AigcImageCompleteEvent")
+    @Expose
+    private AigcImageTask AigcImageCompleteEvent;
+
+    /**
+    * AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+    */
+    @SerializedName("AigcVideoCompleteEvent")
+    @Expose
+    private AigcVideoTask AigcVideoCompleteEvent;
+
+    /**
      * Get Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again. 
      * @return EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
      */
@@ -780,6 +803,62 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.ComplexAdaptiveDynamicStreamingCompleteEvent = ComplexAdaptiveDynamicStreamingCompleteEvent;
     }
 
+    /**
+     * Get  
+     * @return ProcessMediaByMPSCompleteEvent 
+     */
+    public ProcessMediaByMPS getProcessMediaByMPSCompleteEvent() {
+        return this.ProcessMediaByMPSCompleteEvent;
+    }
+
+    /**
+     * Set 
+     * @param ProcessMediaByMPSCompleteEvent 
+     */
+    public void setProcessMediaByMPSCompleteEvent(ProcessMediaByMPS ProcessMediaByMPSCompleteEvent) {
+        this.ProcessMediaByMPSCompleteEvent = ProcessMediaByMPSCompleteEvent;
+    }
+
+    /**
+     * Get AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return AigcImageCompleteEvent AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public AigcImageTask getAigcImageCompleteEvent() {
+        return this.AigcImageCompleteEvent;
+    }
+
+    /**
+     * Set AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AigcImageCompleteEvent AIGC image task completion event, valid when the event type is AigcImageTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setAigcImageCompleteEvent(AigcImageTask AigcImageCompleteEvent) {
+        this.AigcImageCompleteEvent = AigcImageCompleteEvent;
+    }
+
+    /**
+     * Get AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained. 
+     * @return AigcVideoCompleteEvent AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public AigcVideoTask getAigcVideoCompleteEvent() {
+        return this.AigcVideoCompleteEvent;
+    }
+
+    /**
+     * Set AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param AigcVideoCompleteEvent AIGC video task completion event, valid when the event type is AigcVideoTaskComplete.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public void setAigcVideoCompleteEvent(AigcVideoTask AigcVideoCompleteEvent) {
+        this.AigcVideoCompleteEvent = AigcVideoCompleteEvent;
+    }
+
     public EventContent() {
     }
 
@@ -875,6 +954,15 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.ComplexAdaptiveDynamicStreamingCompleteEvent != null) {
             this.ComplexAdaptiveDynamicStreamingCompleteEvent = new ComplexAdaptiveDynamicStreamingTask(source.ComplexAdaptiveDynamicStreamingCompleteEvent);
         }
+        if (source.ProcessMediaByMPSCompleteEvent != null) {
+            this.ProcessMediaByMPSCompleteEvent = new ProcessMediaByMPS(source.ProcessMediaByMPSCompleteEvent);
+        }
+        if (source.AigcImageCompleteEvent != null) {
+            this.AigcImageCompleteEvent = new AigcImageTask(source.AigcImageCompleteEvent);
+        }
+        if (source.AigcVideoCompleteEvent != null) {
+            this.AigcVideoCompleteEvent = new AigcVideoTask(source.AigcVideoCompleteEvent);
+        }
     }
 
 
@@ -911,6 +999,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "MediaCastStatusChangedEvent.", this.MediaCastStatusChangedEvent);
         this.setParamObj(map, prefix + "PersistenceCompleteEvent.", this.PersistenceCompleteEvent);
         this.setParamObj(map, prefix + "ComplexAdaptiveDynamicStreamingCompleteEvent.", this.ComplexAdaptiveDynamicStreamingCompleteEvent);
+        this.setParamObj(map, prefix + "ProcessMediaByMPSCompleteEvent.", this.ProcessMediaByMPSCompleteEvent);
+        this.setParamObj(map, prefix + "AigcImageCompleteEvent.", this.AigcImageCompleteEvent);
+        this.setParamObj(map, prefix + "AigcVideoCompleteEvent.", this.AigcVideoCompleteEvent);
 
     }
 }

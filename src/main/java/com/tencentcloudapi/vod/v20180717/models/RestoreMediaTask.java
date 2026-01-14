@@ -170,7 +170,9 @@ public class RestoreMediaTask extends AbstractModel {
     /**
      * Get This field has been disused. 
      * @return Status This field has been disused.
+     * @deprecated
      */
+    @Deprecated
     public Long getStatus() {
         return this.Status;
     }
@@ -178,7 +180,9 @@ public class RestoreMediaTask extends AbstractModel {
     /**
      * Set This field has been disused.
      * @param Status This field has been disused.
+     * @deprecated
      */
+    @Deprecated
     public void setStatus(Long Status) {
         this.Status = Status;
     }
@@ -186,7 +190,9 @@ public class RestoreMediaTask extends AbstractModel {
     /**
      * Get This field has been disused. 
      * @return Message This field has been disused.
+     * @deprecated
      */
+    @Deprecated
     public String getMessage() {
         return this.Message;
     }
@@ -194,7 +200,9 @@ public class RestoreMediaTask extends AbstractModel {
     /**
      * Set This field has been disused.
      * @param Message This field has been disused.
+     * @deprecated
      */
+    @Deprecated
     public void setMessage(String Message) {
         this.Message = Message;
     }

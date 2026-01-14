@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class MPSSubTaskResult extends AbstractModel {
 
     /**
-    * 
+    * Task type. Specific subtask type in the MPS WorkflowTask structure. Value: <li>AiAnalysis.DeLogo: Intelligent erasure task.</li>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * 
+    * Task status. There are three types: PROCESSING, SUCCESS, and FAIL.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Error code. Returns 0 for success, other values for failure.
     */
     @SerializedName("ErrCode")
     @Expose
     private String ErrCode;
 
     /**
-    * 
+    * Error message.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * MPS media processing task input. This field corresponds to the Input result in the MPS task response and is returned in JSON format.
     */
     @SerializedName("Input")
     @Expose
     private String Input;
 
     /**
-    * 
+    * MPS media processing task output.
     */
     @SerializedName("Output")
     @Expose
     private MPSTaskOutput Output;
 
     /**
-     * Get  
-     * @return TaskType 
+     * Get Task type. Specific subtask type in the MPS WorkflowTask structure. Value: <li>AiAnalysis.DeLogo: Intelligent erasure task.</li> 
+     * @return TaskType Task type. Specific subtask type in the MPS WorkflowTask structure. Value: <li>AiAnalysis.DeLogo: Intelligent erasure task.</li>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set 
-     * @param TaskType 
+     * Set Task type. Specific subtask type in the MPS WorkflowTask structure. Value: <li>AiAnalysis.DeLogo: Intelligent erasure task.</li>
+     * @param TaskType Task type. Specific subtask type in the MPS WorkflowTask structure. Value: <li>AiAnalysis.DeLogo: Intelligent erasure task.</li>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Task status. There are three types: PROCESSING, SUCCESS, and FAIL. 
+     * @return Status Task status. There are three types: PROCESSING, SUCCESS, and FAIL.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Task status. There are three types: PROCESSING, SUCCESS, and FAIL.
+     * @param Status Task status. There are three types: PROCESSING, SUCCESS, and FAIL.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get Error code. Returns 0 for success, other values for failure. 
+     * @return ErrCode Error code. Returns 0 for success, other values for failure.
      */
     public String getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set Error code. Returns 0 for success, other values for failure.
+     * @param ErrCode Error code. Returns 0 for success, other values for failure.
      */
     public void setErrCode(String ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error message. 
+     * @return Message Error message.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error message.
+     * @param Message Error message.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return Input 
+     * Get MPS media processing task input. This field corresponds to the Input result in the MPS task response and is returned in JSON format. 
+     * @return Input MPS media processing task input. This field corresponds to the Input result in the MPS task response and is returned in JSON format.
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set MPS media processing task input. This field corresponds to the Input result in the MPS task response and is returned in JSON format.
+     * @param Input MPS media processing task input. This field corresponds to the Input result in the MPS task response and is returned in JSON format.
      */
     public void setInput(String Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get MPS media processing task output. 
+     * @return Output MPS media processing task output.
      */
     public MPSTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set MPS media processing task output.
+     * @param Output MPS media processing task output.
      */
     public void setOutput(MPSTaskOutput Output) {
         this.Output = Output;

@@ -152,6 +152,28 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     }
 
     /**
+     *This API is used to generate AIGC images. <b>The API is in beta. If needed, contact us. API calls will incur actual fees.</b>
+     * @param req CreateAigcImageTaskRequest
+     * @return CreateAigcImageTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcImageTaskResponse CreateAigcImageTask(CreateAigcImageTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcImageTask", CreateAigcImageTaskResponse.class);
+    }
+
+    /**
+     *This API is used to generate AIGC videos. <b>The API is in beta. If needed, contact us. API calls will incur actual fees.</b>
+     * @param req CreateAigcVideoTaskRequest
+     * @return CreateAigcVideoTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcVideoTaskResponse CreateAigcVideoTask(CreateAigcVideoTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcVideoTask", CreateAigcVideoTaskResponse.class);
+    }
+
+    /**
      *This API is used to create a custom animated image generating template. Up to 16 templates can be created.
      * @param req CreateAnimatedGraphicsTemplateRequest
      * @return CreateAnimatedGraphicsTemplateResponse
@@ -364,6 +386,17 @@ The files must be in HLS format. Preferably, they should have the same bitrate a
     public CreateSampleSnapshotTemplateResponse CreateSampleSnapshotTemplate(CreateSampleSnapshotTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateSampleSnapshotTemplate", CreateSampleSnapshotTemplateResponse.class);
+    }
+
+    /**
+     *This API is used to generate scenario-based AIGC images. <b>This interface is in beta. If you need to use it, please contact us. API calls will incur actual fees.</b>
+     * @param req CreateSceneAigcImageTaskRequest
+     * @return CreateSceneAigcImageTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSceneAigcImageTaskResponse CreateSceneAigcImageTask(CreateSceneAigcImageTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSceneAigcImageTask", CreateSceneAigcImageTaskResponse.class);
     }
 
     /**

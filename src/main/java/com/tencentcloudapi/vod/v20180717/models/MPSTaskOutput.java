@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class MPSTaskOutput extends AbstractModel {
 
     /**
-    * 
+    * The file type in the task's return result. For example, in a smart erase, the erased video file will be stored in the media asset and its FileId will be given in this field. The URL of the subtitle file extracted based on the image will also be given in this field.
     */
     @SerializedName("OutputFiles")
     @Expose
     private MPSOutputFile [] OutputFiles;
 
     /**
-     * Get  
-     * @return OutputFiles 
+     * Get The file type in the task's return result. For example, in a smart erase, the erased video file will be stored in the media asset and its FileId will be given in this field. The URL of the subtitle file extracted based on the image will also be given in this field. 
+     * @return OutputFiles The file type in the task's return result. For example, in a smart erase, the erased video file will be stored in the media asset and its FileId will be given in this field. The URL of the subtitle file extracted based on the image will also be given in this field.
      */
     public MPSOutputFile [] getOutputFiles() {
         return this.OutputFiles;
     }
 
     /**
-     * Set 
-     * @param OutputFiles 
+     * Set The file type in the task's return result. For example, in a smart erase, the erased video file will be stored in the media asset and its FileId will be given in this field. The URL of the subtitle file extracted based on the image will also be given in this field.
+     * @param OutputFiles The file type in the task's return result. For example, in a smart erase, the erased video file will be stored in the media asset and its FileId will be given in this field. The URL of the subtitle file extracted based on the image will also be given in this field.
      */
     public void setOutputFiles(MPSOutputFile [] OutputFiles) {
         this.OutputFiles = OutputFiles;
