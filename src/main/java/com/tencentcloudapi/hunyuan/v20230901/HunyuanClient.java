@@ -39,6 +39,17 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
+     *After inputting a 3D model file, the 3D model file format can be switched.
+     * @param req Convert3DFormatRequest
+     * @return Convert3DFormatResponse
+     * @throws TencentCloudSDKException
+     */
+    public Convert3DFormatResponse Convert3DFormat(Convert3DFormatRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "Convert3DFormat", Convert3DFormatResponse.class);
+    }
+
+    /**
      *This API is used to query the generation task of a component.
      * @param req QueryHunyuan3DPartJobRequest
      * @return QueryHunyuan3DPartJobResponse

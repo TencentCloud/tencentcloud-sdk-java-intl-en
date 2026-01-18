@@ -69,6 +69,9 @@ public enum TcsasErrorCode {
      /* FailedOperation.PackageAlreadyExpired */
      FAILEDOPERATION_PACKAGEALREADYEXPIRED("FailedOperation.PackageAlreadyExpired"),
      
+     /* Number of production superapp package name configurations exceeds the limit. */
+     FAILEDOPERATION_PRODAPPLICATIONCONFIGEXCEEDLIMIT("FailedOperation.ProdApplicationConfigExceedLimit"),
+     
      /* FailedOperation.RecordNotFound */
      FAILEDOPERATION_RECORDNOTFOUND("FailedOperation.RecordNotFound"),
      
@@ -84,8 +87,14 @@ public enum TcsasErrorCode {
      /* FailedOperation.SystemError */
      FAILEDOPERATION_SYSTEMERROR("FailedOperation.SystemError"),
      
+     /* Number of non-production superapp package names exceeds the limit. */
+     FAILEDOPERATION_TESTAPPLICATIONCONFIGEXCEEDLIMIT("FailedOperation.TestApplicationConfigExceedLimit"),
+     
      /* FailedOperation.UnableOperateAdminAccount */
      FAILEDOPERATION_UNABLEOPERATEADMINACCOUNT("FailedOperation.UnableOperateAdminAccount"),
+     
+     /* FailedOperation.UserNotFound */
+     FAILEDOPERATION_USERNOTFOUND("FailedOperation.UserNotFound"),
      
      /* Internal error. */
      INTERNALERROR("InternalError"),
@@ -93,11 +102,20 @@ public enum TcsasErrorCode {
      /* Incorrect parameter. */
      INVALIDPARAMETER("InvalidParameter"),
      
+     /* Duplicate superapp package names exist. */
+     INVALIDPARAMETER_INVALIDEXISTSAMEAPPKEY("InvalidParameter.InvalidExistSameAppKey"),
+     
      /* Invalid parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
+     /* Superapp package name length exceeds the limit. */
+     INVALIDPARAMETERVALUE_APPKEYLENGTHEXCEEDLIMIT("InvalidParameterValue.AppKeyLengthExceedLimit"),
+     
      /* InvalidParameterValue.AppPackageNameNotConfig */
      INVALIDPARAMETERVALUE_APPPACKAGENAMENOTCONFIG("InvalidParameterValue.AppPackageNameNotConfig"),
+     
+     /* Superapp URL length exceeds the limit. */
+     INVALIDPARAMETERVALUE_APPURLLENGTHEXCEEDLIMIT("InvalidParameterValue.AppURLLengthExceedLimit"),
      
      /* InvalidParameterValue.ExistMismatchParameterType */
      INVALIDPARAMETERVALUE_EXISTMISMATCHPARAMETERTYPE("InvalidParameterValue.ExistMismatchParameterType"),
@@ -113,6 +131,9 @@ public enum TcsasErrorCode {
      
      /* InvalidParameterValue.InvalidAppPackageNameLayout */
      INVALIDPARAMETERVALUE_INVALIDAPPPACKAGENAMELAYOUT("InvalidParameterValue.InvalidAppPackageNameLayout"),
+     
+     /* Invalid superapp type. */
+     INVALIDPARAMETERVALUE_INVALIDAPPTYPE("InvalidParameterValue.InvalidAppType"),
      
      /* InvalidParameterValue.InvalidApplicationId */
      INVALIDPARAMETERVALUE_INVALIDAPPLICATIONID("InvalidParameterValue.InvalidApplicationId"),

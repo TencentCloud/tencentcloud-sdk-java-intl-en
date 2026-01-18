@@ -72,6 +72,17 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create the configuration for a specified superapp.
+     * @param req CreateApplicationConfigRequest
+     * @return CreateApplicationConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateApplicationConfigResponse CreateApplicationConfig(CreateApplicationConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateApplicationConfig", CreateApplicationConfigResponse.class);
+    }
+
+    /**
      *This API is used to create a sensitive API of an application.
      * @param req CreateApplicationSensitiveAPIRequest
      * @return CreateApplicationSensitiveAPIResponse
@@ -259,6 +270,50 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to retrieve the line chart data for selected superapp metrics.
+     * @param req DescribeAPPDataDetailLineChartRequest
+     * @return DescribeAPPDataDetailLineChartResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAPPDataDetailLineChartResponse DescribeAPPDataDetailLineChart(DescribeAPPDataDetailLineChartRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAPPDataDetailLineChart", DescribeAPPDataDetailLineChartResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve an overview of the superapp data.
+     * @param req DescribeAPPDataOverviewRequest
+     * @return DescribeAPPDataOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAPPDataOverviewResponse DescribeAPPDataOverview(DescribeAPPDataOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAPPDataOverview", DescribeAPPDataOverviewResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the advertising line chart data for a mini program within a specified date range.
+     * @param req DescribeAdvertisingLineChartRequest
+     * @return DescribeAdvertisingLineChartResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAdvertisingLineChartResponse DescribeAdvertisingLineChart(DescribeAdvertisingLineChartRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAdvertisingLineChart", DescribeAdvertisingLineChartResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve an overview of mini program ad metrics within a specified date range.
+     * @param req DescribeAdvertisingOverviewRequest
+     * @return DescribeAdvertisingOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAdvertisingOverviewResponse DescribeAdvertisingOverview(DescribeAdvertisingOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAdvertisingOverview", DescribeAdvertisingOverviewResponse.class);
+    }
+
+    /**
      *This API is used to query the application details.
      * @param req DescribeApplicationRequest
      * @return DescribeApplicationResponse
@@ -278,6 +333,17 @@ public class TcsasClient extends AbstractClient{
     public DescribeApplicationConfigFileResponse DescribeApplicationConfigFile(DescribeApplicationConfigFileRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeApplicationConfigFile", DescribeApplicationConfigFileResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the configuration details for an superapp.
+     * @param req DescribeApplicationConfigInfosRequest
+     * @return DescribeApplicationConfigInfosResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeApplicationConfigInfosResponse DescribeApplicationConfigInfos(DescribeApplicationConfigInfosRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeApplicationConfigInfos", DescribeApplicationConfigInfosResponse.class);
     }
 
     /**
@@ -314,6 +380,193 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to retrieve a global overview summary of usage statistics.
+     * @param req DescribeGlobalOverviewDataSummaryRequest
+     * @return DescribeGlobalOverviewDataSummaryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalOverviewDataSummaryResponse DescribeGlobalOverviewDataSummary(DescribeGlobalOverviewDataSummaryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalOverviewDataSummary", DescribeGlobalOverviewDataSummaryResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the detailed report data for global overview within a specified date range.
+     * @param req DescribeGlobalOverviewReportDetailRequest
+     * @return DescribeGlobalOverviewReportDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGlobalOverviewReportDetailResponse DescribeGlobalOverviewReportDetail(DescribeGlobalOverviewReportDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGlobalOverviewReportDetail", DescribeGlobalOverviewReportDetailResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the detailed visit analysis data for a mini game within a specified date range.
+     * @param req DescribeMNGAccessAnalysisDetailRequest
+     * @return DescribeMNGAccessAnalysisDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGAccessAnalysisDetailResponse DescribeMNGAccessAnalysisDetail(DescribeMNGAccessAnalysisDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGAccessAnalysisDetail", DescribeMNGAccessAnalysisDetailResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve line chart analysis data for mini game visits.
+     * @param req DescribeMNGAccessAnalysisLineChartRequest
+     * @return DescribeMNGAccessAnalysisLineChartResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGAccessAnalysisLineChartResponse DescribeMNGAccessAnalysisLineChart(DescribeMNGAccessAnalysisLineChartRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGAccessAnalysisLineChart", DescribeMNGAccessAnalysisLineChartResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve an overview of visit analysis data for a mini game within a specified date range.
+     * @param req DescribeMNGAccessAnalysisOverviewRequest
+     * @return DescribeMNGAccessAnalysisOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGAccessAnalysisOverviewResponse DescribeMNGAccessAnalysisOverview(DescribeMNGAccessAnalysisOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGAccessAnalysisOverview", DescribeMNGAccessAnalysisOverviewResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the real-time active user statistics for a mini game.
+     * @param req DescribeMNGActiveUserRealTimeStatisticsRequest
+     * @return DescribeMNGActiveUserRealTimeStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGActiveUserRealTimeStatisticsResponse DescribeMNGActiveUserRealTimeStatistics(DescribeMNGActiveUserRealTimeStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGActiveUserRealTimeStatistics", DescribeMNGActiveUserRealTimeStatisticsResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the advertising detailed data for a mini game over a specified period.
+     * @param req DescribeMNGAdvertisingDetailRequest
+     * @return DescribeMNGAdvertisingDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGAdvertisingDetailResponse DescribeMNGAdvertisingDetail(DescribeMNGAdvertisingDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGAdvertisingDetail", DescribeMNGAdvertisingDetailResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve mini game advertising data in a line chart format.
+     * @param req DescribeMNGAdvertisingLineChartRequest
+     * @return DescribeMNGAdvertisingLineChartResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGAdvertisingLineChartResponse DescribeMNGAdvertisingLineChart(DescribeMNGAdvertisingLineChartRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGAdvertisingLineChart", DescribeMNGAdvertisingLineChartResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve an overview of mini game ad metrics within a specified date range.
+     * @param req DescribeMNGAdvertisingOverviewRequest
+     * @return DescribeMNGAdvertisingOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGAdvertisingOverviewResponse DescribeMNGAdvertisingOverview(DescribeMNGAdvertisingOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGAdvertisingOverview", DescribeMNGAdvertisingOverviewResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the detailed mini game monthly active user data.
+     * @param req DescribeMNGMAUDataDetailRequest
+     * @return DescribeMNGMAUDataDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGMAUDataDetailResponse DescribeMNGMAUDataDetail(DescribeMNGMAUDataDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGMAUDataDetail", DescribeMNGMAUDataDetailResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve mini game monthly active user data in a line chart format.
+     * @param req DescribeMNGMAULineChartRequest
+     * @return DescribeMNGMAULineChartResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGMAULineChartResponse DescribeMNGMAULineChart(DescribeMNGMAULineChartRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGMAULineChart", DescribeMNGMAULineChartResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve MAU comparison data for a mini game between two months.
+     * @param req DescribeMNGMAUMonthlyComparisonMetricCardRequest
+     * @return DescribeMNGMAUMonthlyComparisonMetricCardResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGMAUMonthlyComparisonMetricCardResponse DescribeMNGMAUMonthlyComparisonMetricCard(DescribeMNGMAUMonthlyComparisonMetricCardRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGMAUMonthlyComparisonMetricCard", DescribeMNGMAUMonthlyComparisonMetricCardResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the line chart data for mini game payment.
+     * @param req DescribeMNGPaymentLineChartRequest
+     * @return DescribeMNGPaymentLineChartResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGPaymentLineChartResponse DescribeMNGPaymentLineChart(DescribeMNGPaymentLineChartRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGPaymentLineChart", DescribeMNGPaymentLineChartResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve an overview of mini game payment data within a specified period.
+     * @param req DescribeMNGPaymentOverviewRequest
+     * @return DescribeMNGPaymentOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGPaymentOverviewResponse DescribeMNGPaymentOverview(DescribeMNGPaymentOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGPaymentOverview", DescribeMNGPaymentOverviewResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve a detailed payment report data for a mini game.
+     * @param req DescribeMNGPaymentReportDetailRequest
+     * @return DescribeMNGPaymentReportDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGPaymentReportDetailResponse DescribeMNGPaymentReportDetail(DescribeMNGPaymentReportDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGPaymentReportDetail", DescribeMNGPaymentReportDetailResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the mini game payment retention data.
+     * @param req DescribeMNGPaymentRetentionAnalysisRequest
+     * @return DescribeMNGPaymentRetentionAnalysisResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGPaymentRetentionAnalysisResponse DescribeMNGPaymentRetentionAnalysis(DescribeMNGPaymentRetentionAnalysisRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGPaymentRetentionAnalysis", DescribeMNGPaymentRetentionAnalysisResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve user retention data for a mini game within a specified date range.
+     * @param req DescribeMNGRetentionDataRequest
+     * @return DescribeMNGRetentionDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNGRetentionDataResponse DescribeMNGRetentionData(DescribeMNGRetentionDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNGRetentionData", DescribeMNGRetentionDataResponse.class);
+    }
+
+    /**
      *This API is used to query the mini program details.
      * @param req DescribeMNPRequest
      * @return DescribeMNPResponse
@@ -322,6 +575,39 @@ public class TcsasClient extends AbstractClient{
     public DescribeMNPResponse DescribeMNP(DescribeMNPRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMNP", DescribeMNPResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve an overview of visit analysis data for a mini program within a specified date range.
+     * @param req DescribeMNPAccessAnalysisOverviewRequest
+     * @return DescribeMNPAccessAnalysisOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPAccessAnalysisOverviewResponse DescribeMNPAccessAnalysisOverview(DescribeMNPAccessAnalysisOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPAccessAnalysisOverview", DescribeMNPAccessAnalysisOverviewResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the real-time active user statistics for a mini program.
+     * @param req DescribeMNPActiveUserRealTimeStatisticsRequest
+     * @return DescribeMNPActiveUserRealTimeStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPActiveUserRealTimeStatisticsResponse DescribeMNPActiveUserRealTimeStatistics(DescribeMNPActiveUserRealTimeStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPActiveUserRealTimeStatistics", DescribeMNPActiveUserRealTimeStatisticsResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the detailed advertising data for a mini program within a specified date range.
+     * @param req DescribeMNPAdvertisingDetailRequest
+     * @return DescribeMNPAdvertisingDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPAdvertisingDetailResponse DescribeMNPAdvertisingDetail(DescribeMNPAdvertisingDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPAdvertisingDetail", DescribeMNPAdvertisingDetailResponse.class);
     }
 
     /**
@@ -380,6 +666,39 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to retrieve the detailed mini program monthly active user data.
+     * @param req DescribeMNPMAUDataDetailRequest
+     * @return DescribeMNPMAUDataDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPMAUDataDetailResponse DescribeMNPMAUDataDetail(DescribeMNPMAUDataDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPMAUDataDetail", DescribeMNPMAUDataDetailResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve mini program monthly active user data in a line chart format.
+     * @param req DescribeMNPMAULineChartRequest
+     * @return DescribeMNPMAULineChartResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPMAULineChartResponse DescribeMNPMAULineChart(DescribeMNPMAULineChartRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPMAULineChart", DescribeMNPMAULineChartResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve MAU comparison data for a mini program between two months.
+     * @param req DescribeMNPMAUMetricCardRequest
+     * @return DescribeMNPMAUMetricCardResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPMAUMetricCardResponse DescribeMNPMAUMetricCard(DescribeMNPMAUMetricCardRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPMAUMetricCard", DescribeMNPMAUMetricCardResponse.class);
+    }
+
+    /**
      *DescribeMNPOfflinePackageURL
      * @param req DescribeMNPOfflinePackageURLRequest
      * @return DescribeMNPOfflinePackageURLResponse
@@ -388,6 +707,17 @@ public class TcsasClient extends AbstractClient{
     public DescribeMNPOfflinePackageURLResponse DescribeMNPOfflinePackageURL(DescribeMNPOfflinePackageURLRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMNPOfflinePackageURL", DescribeMNPOfflinePackageURLResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the detailed page visit data for a mini program over a specified period.
+     * @param req DescribeMNPPageAnalysisDetailRequest
+     * @return DescribeMNPPageAnalysisDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPPageAnalysisDetailResponse DescribeMNPPageAnalysisDetail(DescribeMNPPageAnalysisDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPPageAnalysisDetail", DescribeMNPPageAnalysisDetailResponse.class);
     }
 
     /**
@@ -410,6 +740,39 @@ public class TcsasClient extends AbstractClient{
     public DescribeMNPReleasedVersionHistoryResponse DescribeMNPReleasedVersionHistory(DescribeMNPReleasedVersionHistoryRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMNPReleasedVersionHistory", DescribeMNPReleasedVersionHistoryResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the line chart data for mini program visit analysis within a given date range.
+     * @param req DescribeMNPReportDataLineChartRequest
+     * @return DescribeMNPReportDataLineChartResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPReportDataLineChartResponse DescribeMNPReportDataLineChart(DescribeMNPReportDataLineChartRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPReportDataLineChart", DescribeMNPReportDataLineChartResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the detailed mini program visit analysis data.
+     * @param req DescribeMNPReportDetailRequest
+     * @return DescribeMNPReportDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPReportDetailResponse DescribeMNPReportDetail(DescribeMNPReportDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPReportDetail", DescribeMNPReportDetailResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve user retention data for a mini program within a specified date range.
+     * @param req DescribeMNPRetentionDataRequest
+     * @return DescribeMNPRetentionDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeMNPRetentionDataResponse DescribeMNPRetentionData(DescribeMNPRetentionDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeMNPRetentionData", DescribeMNPRetentionDataResponse.class);
     }
 
     /**
@@ -454,6 +817,39 @@ public class TcsasClient extends AbstractClient{
     public DescribeMNPVersionResponse DescribeMNPVersion(DescribeMNPVersionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMNPVersion", DescribeMNPVersionResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the detailed standard payment data for specified  mini programs within a specified date range.
+     * @param req DescribePaymentDataDetailRequest
+     * @return DescribePaymentDataDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePaymentDataDetailResponse DescribePaymentDataDetail(DescribePaymentDataDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePaymentDataDetail", DescribePaymentDataDetailResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the line chart data related to standard payment for a mini program within a specified date range.
+     * @param req DescribePaymentDataLineChartRequest
+     * @return DescribePaymentDataLineChartResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePaymentDataLineChartResponse DescribePaymentDataLineChart(DescribePaymentDataLineChartRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePaymentDataLineChart", DescribePaymentDataLineChartResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve an overview of mini program payment data within a specified date range.
+     * @param req DescribePaymentDataOverviewRequest
+     * @return DescribePaymentDataOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePaymentDataOverviewResponse DescribePaymentDataOverview(DescribePaymentDataOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePaymentDataOverview", DescribePaymentDataOverviewResponse.class);
     }
 
     /**
@@ -564,6 +960,17 @@ public class TcsasClient extends AbstractClient{
     public ModifyApplicationResponse ModifyApplication(ModifyApplicationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyApplication", ModifyApplicationResponse.class);
+    }
+
+    /**
+     *This API is used to edit the configuration of a superapp.
+     * @param req ModifyApplicationConfigRequest
+     * @return ModifyApplicationConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyApplicationConfigResponse ModifyApplicationConfig(ModifyApplicationConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyApplicationConfig", ModifyApplicationConfigResponse.class);
     }
 
     /**
