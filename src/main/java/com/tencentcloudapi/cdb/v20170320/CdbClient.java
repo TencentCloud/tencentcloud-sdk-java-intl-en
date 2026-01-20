@@ -105,6 +105,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable the audit service for an instance.
+     * @param req CloseAuditServiceRequest
+     * @return CloseAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseAuditServiceResponse CloseAuditService(CloseAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseAuditService", CloseAuditServiceResponse.class);
+    }
+
+    /**
      *This API is used to disable database proxy.
      * @param req CloseCDBProxyRequest
      * @return CloseCDBProxyResponse
@@ -149,6 +160,17 @@ public class CdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an audit log file for a TencentDB instance.
+     * @param req CreateAuditLogFileRequest
+     * @return CreateAuditLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditLogFileResponse CreateAuditLogFile(CreateAuditLogFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuditLogFile", CreateAuditLogFileResponse.class);
+    }
+
+    /**
      *This API is used to create an audit policy for a TencentDB instance by associating an audit rule with the TencentDB instance.
      * @param req CreateAuditPolicyRequest
      * @return CreateAuditPolicyResponse
@@ -157,6 +179,17 @@ public class CdbClient extends AbstractClient{
     public CreateAuditPolicyResponse CreateAuditPolicy(CreateAuditPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAuditPolicy", CreateAuditPolicyResponse.class);
+    }
+
+    /**
+     *This API is used to create an audit rule template.
+     * @param req CreateAuditRuleTemplateRequest
+     * @return CreateAuditRuleTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditRuleTemplateResponse CreateAuditRuleTemplate(CreateAuditRuleTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuditRuleTemplate", CreateAuditRuleTemplateResponse.class);
     }
 
     /**
@@ -289,6 +322,17 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     }
 
     /**
+     *This API is used to enable password rotation.
+     * @param req CreateRotationPasswordRequest
+     * @return CreateRotationPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRotationPasswordResponse CreateRotationPassword(CreateRotationPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRotationPassword", CreateRotationPasswordResponse.class);
+    }
+
+    /**
      *This API (DeleteAccounts) is used to delete TencentDB accounts.
      * @param req DeleteAccountsRequest
      * @return DeleteAccountsResponse
@@ -297,6 +341,39 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DeleteAccountsResponse DeleteAccounts(DeleteAccountsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAccounts", DeleteAccountsResponse.class);
+    }
+
+    /**
+     *This API is used to delete an audit log file of a TencentDB instance.
+     * @param req DeleteAuditLogFileRequest
+     * @return DeleteAuditLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditLogFileResponse DeleteAuditLogFile(DeleteAuditLogFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuditLogFile", DeleteAuditLogFileResponse.class);
+    }
+
+    /**
+     *This API is used to delete an audit policy.
+     * @param req DeleteAuditPolicyRequest
+     * @return DeleteAuditPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditPolicyResponse DeleteAuditPolicy(DeleteAuditPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuditPolicy", DeleteAuditPolicyResponse.class);
+    }
+
+    /**
+     *This API is used to delete audit rule templates.
+     * @param req DeleteAuditRuleTemplatesRequest
+     * @return DeleteAuditRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditRuleTemplatesResponse DeleteAuditRuleTemplates(DeleteAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuditRuleTemplates", DeleteAuditRuleTemplatesResponse.class);
     }
 
     /**
@@ -366,6 +443,39 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     }
 
     /**
+     *This API is used to query the service configurations for a TencentDB audit policy, including the audit log retention period.
+     * @param req DescribeAuditConfigRequest
+     * @return DescribeAuditConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditConfigResponse DescribeAuditConfig(DescribeAuditConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditConfig", DescribeAuditConfigResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of audit instances.
+     * @param req DescribeAuditInstanceListRequest
+     * @return DescribeAuditInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditInstanceListResponse DescribeAuditInstanceList(DescribeAuditInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditInstanceList", DescribeAuditInstanceListResponse.class);
+    }
+
+    /**
+     *This API is used to query the audit log files of a TencentDB instance.
+     * @param req DescribeAuditLogFilesRequest
+     * @return DescribeAuditLogFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogFilesResponse DescribeAuditLogFiles(DescribeAuditLogFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditLogFiles", DescribeAuditLogFilesResponse.class);
+    }
+
+    /**
      *This API is used to query a database audit log.
      * @param req DescribeAuditLogsRequest
      * @return DescribeAuditLogsResponse
@@ -385,6 +495,28 @@ This is an async API. You can also use the [DescribeDBInstances](https://intl.cl
     public DescribeAuditPoliciesResponse DescribeAuditPolicies(DescribeAuditPoliciesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAuditPolicies", DescribeAuditPoliciesResponse.class);
+    }
+
+    /**
+     *This API is used to query the change history of rule templates.
+     * @param req DescribeAuditRuleTemplateModifyHistoryRequest
+     * @return DescribeAuditRuleTemplateModifyHistoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditRuleTemplateModifyHistoryResponse DescribeAuditRuleTemplateModifyHistory(DescribeAuditRuleTemplateModifyHistoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditRuleTemplateModifyHistory", DescribeAuditRuleTemplateModifyHistoryResponse.class);
+    }
+
+    /**
+     *This API is used to query the information of audit rule templates.
+     * @param req DescribeAuditRuleTemplatesRequest
+     * @return DescribeAuditRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditRuleTemplatesResponse DescribeAuditRuleTemplates(DescribeAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditRuleTemplates", DescribeAuditRuleTemplatesResponse.class);
     }
 
     /**
@@ -1031,6 +1163,39 @@ Note that when modifying account permissions, you need to pass in the full permi
     public ModifyAccountPrivilegesResponse ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAccountPrivileges", ModifyAccountPrivilegesResponse.class);
+    }
+
+    /**
+     *This API is used to modify the service configurations for a TencentDB audit policy, including the audit log retention period.
+     * @param req ModifyAuditConfigRequest
+     * @return ModifyAuditConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditConfigResponse ModifyAuditConfig(ModifyAuditConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuditConfig", ModifyAuditConfigResponse.class);
+    }
+
+    /**
+     *This API is used to modify audit rule templates.
+     * @param req ModifyAuditRuleTemplatesRequest
+     * @return ModifyAuditRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditRuleTemplatesResponse ModifyAuditRuleTemplates(ModifyAuditRuleTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuditRuleTemplates", ModifyAuditRuleTemplatesResponse.class);
+    }
+
+    /**
+     *This API is used to modify the service configurations for a TencentDB instance, including the audit log retention period and the audit rules.
+     * @param req ModifyAuditServiceRequest
+     * @return ModifyAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditServiceResponse ModifyAuditService(ModifyAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuditService", ModifyAuditServiceResponse.class);
     }
 
     /**

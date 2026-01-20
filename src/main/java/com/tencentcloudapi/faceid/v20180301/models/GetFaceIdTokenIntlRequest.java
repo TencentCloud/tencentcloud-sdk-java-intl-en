@@ -78,6 +78,7 @@ The default value is blink. The different action types passed in this parameter 
     /**
     * BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
     */
@@ -236,10 +237,12 @@ The default value is blink. The different action types passed in this parameter 
     /**
      * Get BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	 
      * @return SdkVersion BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
      */
@@ -250,10 +253,12 @@ Please contact us to access enhance version & plus version.
     /**
      * Set BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
      * @param SdkVersion BASIC: Basic version (Default).
 ENHANCE: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
 PLUS: Plus version, enable additional output of device risk level and attack type fields.
 Please contact us to access enhance version & plus version.	
      */

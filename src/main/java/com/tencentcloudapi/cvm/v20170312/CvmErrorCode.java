@@ -462,7 +462,7 @@ public enum CvmErrorCode {
      /* The instance configuration is upgraded for free and cannot be downgraded within 3 months. */
      INVALIDPARAMETERVALUE_INVALIDINSTANCESOURCE("InvalidParameterValue.InvalidInstanceSource"),
      
-     /*  */
+     /* The model does not support the support cycle contract. */
      INVALIDPARAMETERVALUE_INVALIDINSTANCETYPEPERIODICCONTRACT("InvalidParameterValue.InvalidInstanceTypePeriodicContract"),
      
      /* The specified instance type does not support exclusive sales payment mode. */
@@ -1092,7 +1092,7 @@ public enum CvmErrorCode {
      /* The original instance type is invalid. */
      UNSUPPORTEDOPERATION_ORIGINALINSTANCETYPEINVALID("UnsupportedOperation.OriginalInstanceTypeInvalid"),
      
-     /*  */
+     /* This model is a periodic contract model and does not support manual renewal mode. */
      UNSUPPORTEDOPERATION_PERIODICCONTRACTNOTSUPPORTMANUALRENEW("UnsupportedOperation.PeriodicContractNotSupportManualRenew"),
      
      /* Image preheating is not supported under your account. */

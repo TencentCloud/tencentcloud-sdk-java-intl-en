@@ -21,44 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuditRuleFilters extends AbstractModel {
+public class DeleteAuditPolicyRequest extends AbstractModel {
 
     /**
-    * A single audit rule.
+    * Audit policy ID.
     */
-    @SerializedName("RuleFilters")
+    @SerializedName("PolicyId")
     @Expose
-    private RuleFilters [] RuleFilters;
+    private String PolicyId;
 
     /**
-     * Get A single audit rule. 
-     * @return RuleFilters A single audit rule.
+    * Instance ID.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+     * Get Audit policy ID. 
+     * @return PolicyId Audit policy ID.
      */
-    public RuleFilters [] getRuleFilters() {
-        return this.RuleFilters;
+    public String getPolicyId() {
+        return this.PolicyId;
     }
 
     /**
-     * Set A single audit rule.
-     * @param RuleFilters A single audit rule.
+     * Set Audit policy ID.
+     * @param PolicyId Audit policy ID.
      */
-    public void setRuleFilters(RuleFilters [] RuleFilters) {
-        this.RuleFilters = RuleFilters;
+    public void setPolicyId(String PolicyId) {
+        this.PolicyId = PolicyId;
     }
 
-    public AuditRuleFilters() {
+    /**
+     * Get Instance ID. 
+     * @return InstanceId Instance ID.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Instance ID.
+     * @param InstanceId Instance ID.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    public DeleteAuditPolicyRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AuditRuleFilters(AuditRuleFilters source) {
-        if (source.RuleFilters != null) {
-            this.RuleFilters = new RuleFilters[source.RuleFilters.length];
-            for (int i = 0; i < source.RuleFilters.length; i++) {
-                this.RuleFilters[i] = new RuleFilters(source.RuleFilters[i]);
-            }
+    public DeleteAuditPolicyRequest(DeleteAuditPolicyRequest source) {
+        if (source.PolicyId != null) {
+            this.PolicyId = new String(source.PolicyId);
+        }
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -67,7 +90,8 @@ public class AuditRuleFilters extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RuleFilters.", this.RuleFilters);
+        this.setParamSimple(map, prefix + "PolicyId", this.PolicyId);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

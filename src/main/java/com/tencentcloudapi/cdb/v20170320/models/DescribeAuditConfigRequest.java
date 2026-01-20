@@ -21,44 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AuditRuleFilters extends AbstractModel {
+public class DescribeAuditConfigRequest extends AbstractModel {
 
     /**
-    * A single audit rule.
+    * Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
     */
-    @SerializedName("RuleFilters")
+    @SerializedName("InstanceId")
     @Expose
-    private RuleFilters [] RuleFilters;
+    private String InstanceId;
 
     /**
-     * Get A single audit rule. 
-     * @return RuleFilters A single audit rule.
+     * Get Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console. 
+     * @return InstanceId Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
-    public RuleFilters [] getRuleFilters() {
-        return this.RuleFilters;
+    public String getInstanceId() {
+        return this.InstanceId;
     }
 
     /**
-     * Set A single audit rule.
-     * @param RuleFilters A single audit rule.
+     * Set Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
+     * @param InstanceId Instance ID, in the format such as cdb-c1nl9rpv or cdbro-c1nl9rpv. This matches the instance ID displayed on the TencentDB console.
      */
-    public void setRuleFilters(RuleFilters [] RuleFilters) {
-        this.RuleFilters = RuleFilters;
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
     }
 
-    public AuditRuleFilters() {
+    public DescribeAuditConfigRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AuditRuleFilters(AuditRuleFilters source) {
-        if (source.RuleFilters != null) {
-            this.RuleFilters = new RuleFilters[source.RuleFilters.length];
-            for (int i = 0; i < source.RuleFilters.length; i++) {
-                this.RuleFilters[i] = new RuleFilters(source.RuleFilters[i]);
-            }
+    public DescribeAuditConfigRequest(DescribeAuditConfigRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
         }
     }
 
@@ -67,7 +64,7 @@ public class AuditRuleFilters extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArrayObj(map, prefix + "RuleFilters.", this.RuleFilters);
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
 
     }
 }

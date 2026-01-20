@@ -30,6 +30,9 @@ public enum CdbErrorCode {
      /* Async task exception. */
      FAILEDOPERATION_ASYNCTASKSTATUSERROR("FailedOperation.AsyncTaskStatusError"),
      
+     /* Audit not found. */
+     FAILEDOPERATION_AUDITCONFIGNOTEXIST("FailedOperation.AuditConfigNotExist"),
+     
      /* Failed to lock the instance while performing exclusive operations. Please try again later. */
      FAILEDOPERATION_CDBINSTANCELOCKFAILERROR("FailedOperation.CdbInstanceLockFailError"),
      
@@ -38,6 +41,9 @@ public enum CdbErrorCode {
      
      /* Failed to create the audit rule. */
      FAILEDOPERATION_CREATEAUDITFAILERROR("FailedOperation.CreateAuditFailError"),
+     
+     /* Failed to create an audit log file. */
+     FAILEDOPERATION_CREATEAUDITLOGFILEERROR("FailedOperation.CreateAuditLogFileError"),
      
      /* Failed to assign an exclusive VIP to the read-only replica. */
      FAILEDOPERATION_CREATEROVIPERROR("FailedOperation.CreateRoVipError"),
@@ -129,11 +135,23 @@ public enum CdbErrorCode {
      /* An error occurred while querying async tasks. */
      INTERNALERROR_ASYNCREQUESTERROR("InternalError.AsyncRequestError"),
      
+     /* Error creating an audit log file. */
+     INTERNALERROR_AUDITCREATELOGFILEERROR("InternalError.AuditCreateLogFileError"),
+     
+     /* Error deleting the audit log. */
+     INTERNALERROR_AUDITDELETELOGFILEERROR("InternalError.AuditDeleteLogFileError"),
+     
+     /* Internal audit service error. */
+     INTERNALERROR_AUDITDELETEPOLICYERROR("InternalError.AuditDeletePolicyError"),
+     
      /* Failed to query the audit log */
      INTERNALERROR_AUDITDESCRIBELOGERROR("InternalError.AuditDescribeLogError"),
      
      /* An error occurred in the internal service of the audit service. */
      INTERNALERROR_AUDITERROR("InternalError.AuditError"),
+     
+     /* Failed to modify audit status. */
+     INTERNALERROR_AUDITMODIFYSTATUSERROR("InternalError.AuditModifyStatusError"),
      
      /* Internal exception of the audit service. */
      INTERNALERROR_AUDITOSSLOGICERROR("InternalError.AuditOssLogicError"),
@@ -255,6 +273,9 @@ public enum CdbErrorCode {
      /* Transaction system error. */
      INTERNALERROR_TRADEERROR("InternalError.TradeError"),
      
+     /* Failed to start the transaction. */
+     INTERNALERROR_TRANSACTIOBEGINERROR("InternalError.TransactioBeginError"),
+     
      /* Operation failed */
      INTERNALERROR_TRANSACTIONBEGINERROR("InternalError.TransactionBeginError"),
      
@@ -375,11 +396,23 @@ public enum CdbErrorCode {
      /* Unsupported operation. */
      OPERATIONDENIED_ACTIONNOTSUPPORT("OperationDenied.ActionNotSupport"),
      
+     /* Security audit is enabled. At least one full audit policy must be retained. */
+     OPERATIONDENIED_ATLEASTALLRULEAUDITPOLICYERROR("OperationDenied.AtLeastAllRuleAuditPolicyError"),
+     
+     /* At least one audit policy must be retained. */
+     OPERATIONDENIED_ATLEASTAUDITPOLICYERROR("OperationDenied.AtLeastAuditPolicyError"),
+     
+     /* Number of audit log files exceeds the maximum limit. */
+     OPERATIONDENIED_AUDITFILEOVERQUOTAERROR("OperationDenied.AuditFileOverQuotaError"),
+     
      /* The audit policies conflict. */
      OPERATIONDENIED_AUDITPOLICYCONFLICTERROR("OperationDenied.AuditPolicyConflictError"),
      
      /* The audit policy already exists. */
      OPERATIONDENIED_AUDITPOLICYEXISTERROR("OperationDenied.AuditPolicyExistError"),
+     
+     /* Audit policy not found. */
+     OPERATIONDENIED_AUDITPOLICYNOTEXISTERROR("OperationDenied.AuditPolicyNotExistError"),
      
      /* The number of audit policies exceeds the limit. */
      OPERATIONDENIED_AUDITPOLICYOVERQUOTAERROR("OperationDenied.AuditPolicyOverQuotaError"),
@@ -432,6 +465,9 @@ public enum CdbErrorCode {
      /* The instance does not support this operation. */
      OPERATIONDENIED_INSTANCEUNSUPPORTEDOPERATEERROR("OperationDenied.InstanceUnsupportedOperateError"),
      
+     /* Failed to modify audit status. */
+     OPERATIONDENIED_MODIFYAUDITSTATUSERROR("OperationDenied.ModifyAuditStatusError"),
+     
      /* Basic instances do not support this operation (feature). */
      OPERATIONDENIED_NOTSUPPORTBASIC("OperationDenied.NotSupportBasic"),
      
@@ -443,6 +479,9 @@ public enum CdbErrorCode {
      
      /* There are other orders being submitted. Please try again later. */
      OPERATIONDENIED_OTHERODERINPROCESS("OperationDenied.OtherOderInProcess"),
+     
+     /* Resource quota exceeded. */
+     OPERATIONDENIED_OVERQUOTA("OperationDenied.OverQuota"),
      
      /* The number of the proxy addresses exceeds the limit. */
      OPERATIONDENIED_PROXYADDRESSLIMITERROR("OperationDenied.ProxyAddressLimitError"),

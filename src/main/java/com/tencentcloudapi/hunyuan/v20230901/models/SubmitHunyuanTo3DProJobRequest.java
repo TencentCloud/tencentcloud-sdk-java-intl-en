@@ -24,6 +24,16 @@ import java.util.HashMap;
 public class SubmitHunyuanTo3DProJobRequest extends AbstractModel {
 
     /**
+    * Tencent HY 3D Global model version
+Defaults to 3.0, with optional choices: 3.0, 3.1
+When selecting version 3.1, the LowPoly parameter is unavailable
+Example value:3.0
+    */
+    @SerializedName("Model")
+    @Expose
+    private String Model;
+
+    /**
     * Generates 3D content, describes 3D content.
 Supports up to 1024 utf-8 characters.
 Text-To-3D. Specifies either ImageBase64/ImageUrl or Prompt is required. Prompt and ImageBase64/ImageUrl cannot coexist.
@@ -64,9 +74,13 @@ Specifies either ImageBase64/ImageUrl or Prompt is required. Prompt and ImageBas
 
     /**
     * Multi-Perspective model image. reference value for viewing angle:.
-left view.
-right view.
-back view.
+left: Left view;
+right: Right view;
+back: Rear view;
+top: Top view (only supported in Model 3.1);
+bottom: Bottom view (only supported in Model 3.1);
+left_front: Left front 45 degree view (only supported in Model 3.1);
+right_front: Right front 45 degree view (only supported in Model 3.1);
 
 Each perspective is limited to one image.
 Image size limit. the value must not exceed 8 mb after encoding.
@@ -113,6 +127,34 @@ quadrilateral: mix quadrangle and triangle faces to generate.
     @SerializedName("PolygonType")
     @Expose
     private String PolygonType;
+
+    /**
+     * Get Tencent HY 3D Global model version
+Defaults to 3.0, with optional choices: 3.0, 3.1
+When selecting version 3.1, the LowPoly parameter is unavailable
+Example value:3.0 
+     * @return Model Tencent HY 3D Global model version
+Defaults to 3.0, with optional choices: 3.0, 3.1
+When selecting version 3.1, the LowPoly parameter is unavailable
+Example value:3.0
+     */
+    public String getModel() {
+        return this.Model;
+    }
+
+    /**
+     * Set Tencent HY 3D Global model version
+Defaults to 3.0, with optional choices: 3.0, 3.1
+When selecting version 3.1, the LowPoly parameter is unavailable
+Example value:3.0
+     * @param Model Tencent HY 3D Global model version
+Defaults to 3.0, with optional choices: 3.0, 3.1
+When selecting version 3.1, the LowPoly parameter is unavailable
+Example value:3.0
+     */
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
 
     /**
      * Get Generates 3D content, describes 3D content.
@@ -236,18 +278,26 @@ Specifies either ImageBase64/ImageUrl or Prompt is required. Prompt and ImageBas
 
     /**
      * Get Multi-Perspective model image. reference value for viewing angle:.
-left view.
-right view.
-back view.
+left: Left view;
+right: Right view;
+back: Rear view;
+top: Top view (only supported in Model 3.1);
+bottom: Bottom view (only supported in Model 3.1);
+left_front: Left front 45 degree view (only supported in Model 3.1);
+right_front: Right front 45 degree view (only supported in Model 3.1);
 
 Each perspective is limited to one image.
 Image size limit. the value must not exceed 8 mb after encoding.
 Image resolution limitation: the unilateral resolution should be less than 5000 and greater than 128.
 Supported image format: JPG or PNG 
      * @return MultiViewImages Multi-Perspective model image. reference value for viewing angle:.
-left view.
-right view.
-back view.
+left: Left view;
+right: Right view;
+back: Rear view;
+top: Top view (only supported in Model 3.1);
+bottom: Bottom view (only supported in Model 3.1);
+left_front: Left front 45 degree view (only supported in Model 3.1);
+right_front: Right front 45 degree view (only supported in Model 3.1);
 
 Each perspective is limited to one image.
 Image size limit. the value must not exceed 8 mb after encoding.
@@ -260,18 +310,26 @@ Supported image format: JPG or PNG
 
     /**
      * Set Multi-Perspective model image. reference value for viewing angle:.
-left view.
-right view.
-back view.
+left: Left view;
+right: Right view;
+back: Rear view;
+top: Top view (only supported in Model 3.1);
+bottom: Bottom view (only supported in Model 3.1);
+left_front: Left front 45 degree view (only supported in Model 3.1);
+right_front: Right front 45 degree view (only supported in Model 3.1);
 
 Each perspective is limited to one image.
 Image size limit. the value must not exceed 8 mb after encoding.
 Image resolution limitation: the unilateral resolution should be less than 5000 and greater than 128.
 Supported image format: JPG or PNG
      * @param MultiViewImages Multi-Perspective model image. reference value for viewing angle:.
-left view.
-right view.
-back view.
+left: Left view;
+right: Right view;
+back: Rear view;
+top: Top view (only supported in Model 3.1);
+bottom: Bottom view (only supported in Model 3.1);
+left_front: Left front 45 degree view (only supported in Model 3.1);
+right_front: Right front 45 degree view (only supported in Model 3.1);
 
 Each perspective is limited to one image.
 Image size limit. the value must not exceed 8 mb after encoding.
@@ -390,6 +448,9 @@ quadrilateral: mix quadrangle and triangle faces to generate.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SubmitHunyuanTo3DProJobRequest(SubmitHunyuanTo3DProJobRequest source) {
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
         }
@@ -424,6 +485,7 @@ quadrilateral: mix quadrangle and triangle faces to generate.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Model", this.Model);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
