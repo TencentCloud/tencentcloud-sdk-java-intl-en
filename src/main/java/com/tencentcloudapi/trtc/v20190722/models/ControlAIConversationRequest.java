@@ -24,77 +24,95 @@ import java.util.HashMap;
 public class ControlAIConversationRequest extends AbstractModel {
 
     /**
-    * Unique ID of the task
+    * Task unique identifier.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Control commands, currently supported commands are as follows:
-- ServerPushText, the server sends text to the AI robot, and the AI robot will play the text
+    * Control command. currently supports the following commands: - ServerPushText: server sends text to the AI robot, and the AI robot will broadcast the text. - InvokeLLM: server sends text to the large model to trigger dialogue.
     */
     @SerializedName("Command")
     @Expose
     private String Command;
 
     /**
-    * The server sends a text broadcast command. This is required when Command is ServerPushText.
+    * Server-Sent broadcast text Command. required when Command is ServerPushText.
     */
     @SerializedName("ServerPushText")
     @Expose
     private ServerPushText ServerPushText;
 
     /**
-     * Get Unique ID of the task 
-     * @return TaskId Unique ID of the task
+    * The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
+    */
+    @SerializedName("InvokeLLM")
+    @Expose
+    private InvokeLLM InvokeLLM;
+
+    /**
+     * Get Task unique identifier. 
+     * @return TaskId Task unique identifier.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Unique ID of the task
-     * @param TaskId Unique ID of the task
+     * Set Task unique identifier.
+     * @param TaskId Task unique identifier.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Control commands, currently supported commands are as follows:
-- ServerPushText, the server sends text to the AI robot, and the AI robot will play the text 
-     * @return Command Control commands, currently supported commands are as follows:
-- ServerPushText, the server sends text to the AI robot, and the AI robot will play the text
+     * Get Control command. currently supports the following commands: - ServerPushText: server sends text to the AI robot, and the AI robot will broadcast the text. - InvokeLLM: server sends text to the large model to trigger dialogue. 
+     * @return Command Control command. currently supports the following commands: - ServerPushText: server sends text to the AI robot, and the AI robot will broadcast the text. - InvokeLLM: server sends text to the large model to trigger dialogue.
      */
     public String getCommand() {
         return this.Command;
     }
 
     /**
-     * Set Control commands, currently supported commands are as follows:
-- ServerPushText, the server sends text to the AI robot, and the AI robot will play the text
-     * @param Command Control commands, currently supported commands are as follows:
-- ServerPushText, the server sends text to the AI robot, and the AI robot will play the text
+     * Set Control command. currently supports the following commands: - ServerPushText: server sends text to the AI robot, and the AI robot will broadcast the text. - InvokeLLM: server sends text to the large model to trigger dialogue.
+     * @param Command Control command. currently supports the following commands: - ServerPushText: server sends text to the AI robot, and the AI robot will broadcast the text. - InvokeLLM: server sends text to the large model to trigger dialogue.
      */
     public void setCommand(String Command) {
         this.Command = Command;
     }
 
     /**
-     * Get The server sends a text broadcast command. This is required when Command is ServerPushText. 
-     * @return ServerPushText The server sends a text broadcast command. This is required when Command is ServerPushText.
+     * Get Server-Sent broadcast text Command. required when Command is ServerPushText. 
+     * @return ServerPushText Server-Sent broadcast text Command. required when Command is ServerPushText.
      */
     public ServerPushText getServerPushText() {
         return this.ServerPushText;
     }
 
     /**
-     * Set The server sends a text broadcast command. This is required when Command is ServerPushText.
-     * @param ServerPushText The server sends a text broadcast command. This is required when Command is ServerPushText.
+     * Set Server-Sent broadcast text Command. required when Command is ServerPushText.
+     * @param ServerPushText Server-Sent broadcast text Command. required when Command is ServerPushText.
      */
     public void setServerPushText(ServerPushText ServerPushText) {
         this.ServerPushText = ServerPushText;
+    }
+
+    /**
+     * Get The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header. 
+     * @return InvokeLLM The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
+     */
+    public InvokeLLM getInvokeLLM() {
+        return this.InvokeLLM;
+    }
+
+    /**
+     * Set The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
+     * @param InvokeLLM The server sends a Command to proactively request the large model. when Command is InvokeLLM, it sends the content request to the large model and adds X-Invoke-LLM="1" to the header.
+     */
+    public void setInvokeLLM(InvokeLLM InvokeLLM) {
+        this.InvokeLLM = InvokeLLM;
     }
 
     public ControlAIConversationRequest() {
@@ -114,6 +132,9 @@ public class ControlAIConversationRequest extends AbstractModel {
         if (source.ServerPushText != null) {
             this.ServerPushText = new ServerPushText(source.ServerPushText);
         }
+        if (source.InvokeLLM != null) {
+            this.InvokeLLM = new InvokeLLM(source.InvokeLLM);
+        }
     }
 
 
@@ -124,6 +145,7 @@ public class ControlAIConversationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamObj(map, prefix + "ServerPushText.", this.ServerPushText);
+        this.setParamObj(map, prefix + "InvokeLLM.", this.InvokeLLM);
 
     }
 }

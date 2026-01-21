@@ -24,72 +24,242 @@ import java.util.HashMap;
 public class ServerPushText extends AbstractModel {
 
     /**
-    * Server push broadcast text
+    * Server push broadcast text.
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * Allow this text to interrupt the robot
+    * Whether to allow the text to interrupt the robot's speaking.
     */
     @SerializedName("Interrupt")
     @Expose
     private Boolean Interrupt;
 
     /**
-    * After the text is finished, whether to automatically close the conversation task
+    * Broadcast the text and automatically close the dialogue task.
     */
     @SerializedName("StopAfterPlay")
     @Expose
     private Boolean StopAfterPlay;
 
     /**
-     * Get Server push broadcast text 
-     * @return Text Server push broadcast text
+    * Server push broadcast audio.
+Format description: audio must be mono, sampling rate must be consistent with the corresponding TTS sampling rate, and coded as a Base64 string.
+Input rule: when the Audio field is provided, the system will not accept user-submitted input in the Text field. the system will play the Audio content in the Audio field directly.
+    */
+    @SerializedName("Audio")
+    @Expose
+    private String Audio;
+
+    /**
+    * Defaults to 0. valid at that time only when Interrupt is false.
+-0 means drop messages with Interrupt set to false during the occurrence of interaction.
+-1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.
+
+Note: if DropMode is 1, multiple messages can be cached. if an interruption occurs subsequently, the cache of messages will be cleared.
+    */
+    @SerializedName("DropMode")
+    @Expose
+    private Long DropMode;
+
+    /**
+    * The message priority of ServerPushText. 0 means interruptible, 1 means not interruptible. currently only support 0. if you need to input 1, submit a ticket to contact us to grant permission.
+Note: after receiving a message with Priority=1, any other messages will be ignored (including messages with Priority=1) until the message processing of Priority=1 is complete. this field can be used together with the Interrupt and DropMode fields.
+Example:.
+-Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.
+-Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.
+
+    */
+    @SerializedName("Priority")
+    @Expose
+    private Long Priority;
+
+    /**
+    * Whether to add the text to the llm history context.
+    */
+    @SerializedName("AddHistory")
+    @Expose
+    private Boolean AddHistory;
+
+    /**
+    * If filled, it will be bound to the subtitle and sent to the terminal. note that the content must be a json string.
+    */
+    @SerializedName("MetaInfo")
+    @Expose
+    private String MetaInfo;
+
+    /**
+     * Get Server push broadcast text. 
+     * @return Text Server push broadcast text.
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Server push broadcast text
-     * @param Text Server push broadcast text
+     * Set Server push broadcast text.
+     * @param Text Server push broadcast text.
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get Allow this text to interrupt the robot 
-     * @return Interrupt Allow this text to interrupt the robot
+     * Get Whether to allow the text to interrupt the robot's speaking. 
+     * @return Interrupt Whether to allow the text to interrupt the robot's speaking.
      */
     public Boolean getInterrupt() {
         return this.Interrupt;
     }
 
     /**
-     * Set Allow this text to interrupt the robot
-     * @param Interrupt Allow this text to interrupt the robot
+     * Set Whether to allow the text to interrupt the robot's speaking.
+     * @param Interrupt Whether to allow the text to interrupt the robot's speaking.
      */
     public void setInterrupt(Boolean Interrupt) {
         this.Interrupt = Interrupt;
     }
 
     /**
-     * Get After the text is finished, whether to automatically close the conversation task 
-     * @return StopAfterPlay After the text is finished, whether to automatically close the conversation task
+     * Get Broadcast the text and automatically close the dialogue task. 
+     * @return StopAfterPlay Broadcast the text and automatically close the dialogue task.
      */
     public Boolean getStopAfterPlay() {
         return this.StopAfterPlay;
     }
 
     /**
-     * Set After the text is finished, whether to automatically close the conversation task
-     * @param StopAfterPlay After the text is finished, whether to automatically close the conversation task
+     * Set Broadcast the text and automatically close the dialogue task.
+     * @param StopAfterPlay Broadcast the text and automatically close the dialogue task.
      */
     public void setStopAfterPlay(Boolean StopAfterPlay) {
         this.StopAfterPlay = StopAfterPlay;
+    }
+
+    /**
+     * Get Server push broadcast audio.
+Format description: audio must be mono, sampling rate must be consistent with the corresponding TTS sampling rate, and coded as a Base64 string.
+Input rule: when the Audio field is provided, the system will not accept user-submitted input in the Text field. the system will play the Audio content in the Audio field directly. 
+     * @return Audio Server push broadcast audio.
+Format description: audio must be mono, sampling rate must be consistent with the corresponding TTS sampling rate, and coded as a Base64 string.
+Input rule: when the Audio field is provided, the system will not accept user-submitted input in the Text field. the system will play the Audio content in the Audio field directly.
+     */
+    public String getAudio() {
+        return this.Audio;
+    }
+
+    /**
+     * Set Server push broadcast audio.
+Format description: audio must be mono, sampling rate must be consistent with the corresponding TTS sampling rate, and coded as a Base64 string.
+Input rule: when the Audio field is provided, the system will not accept user-submitted input in the Text field. the system will play the Audio content in the Audio field directly.
+     * @param Audio Server push broadcast audio.
+Format description: audio must be mono, sampling rate must be consistent with the corresponding TTS sampling rate, and coded as a Base64 string.
+Input rule: when the Audio field is provided, the system will not accept user-submitted input in the Text field. the system will play the Audio content in the Audio field directly.
+     */
+    public void setAudio(String Audio) {
+        this.Audio = Audio;
+    }
+
+    /**
+     * Get Defaults to 0. valid at that time only when Interrupt is false.
+-0 means drop messages with Interrupt set to false during the occurrence of interaction.
+-1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.
+
+Note: if DropMode is 1, multiple messages can be cached. if an interruption occurs subsequently, the cache of messages will be cleared. 
+     * @return DropMode Defaults to 0. valid at that time only when Interrupt is false.
+-0 means drop messages with Interrupt set to false during the occurrence of interaction.
+-1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.
+
+Note: if DropMode is 1, multiple messages can be cached. if an interruption occurs subsequently, the cache of messages will be cleared.
+     */
+    public Long getDropMode() {
+        return this.DropMode;
+    }
+
+    /**
+     * Set Defaults to 0. valid at that time only when Interrupt is false.
+-0 means drop messages with Interrupt set to false during the occurrence of interaction.
+-1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.
+
+Note: if DropMode is 1, multiple messages can be cached. if an interruption occurs subsequently, the cache of messages will be cleared.
+     * @param DropMode Defaults to 0. valid at that time only when Interrupt is false.
+-0 means drop messages with Interrupt set to false during the occurrence of interaction.
+-1 indicates that during the occurrence of an interaction, messages with Interrupt as false will not be dropped but cached, waiting to be processed when finished.
+
+Note: if DropMode is 1, multiple messages can be cached. if an interruption occurs subsequently, the cache of messages will be cleared.
+     */
+    public void setDropMode(Long DropMode) {
+        this.DropMode = DropMode;
+    }
+
+    /**
+     * Get The message priority of ServerPushText. 0 means interruptible, 1 means not interruptible. currently only support 0. if you need to input 1, submit a ticket to contact us to grant permission.
+Note: after receiving a message with Priority=1, any other messages will be ignored (including messages with Priority=1) until the message processing of Priority=1 is complete. this field can be used together with the Interrupt and DropMode fields.
+Example:.
+-Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.
+-Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.
+ 
+     * @return Priority The message priority of ServerPushText. 0 means interruptible, 1 means not interruptible. currently only support 0. if you need to input 1, submit a ticket to contact us to grant permission.
+Note: after receiving a message with Priority=1, any other messages will be ignored (including messages with Priority=1) until the message processing of Priority=1 is complete. this field can be used together with the Interrupt and DropMode fields.
+Example:.
+-Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.
+-Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.
+
+     */
+    public Long getPriority() {
+        return this.Priority;
+    }
+
+    /**
+     * Set The message priority of ServerPushText. 0 means interruptible, 1 means not interruptible. currently only support 0. if you need to input 1, submit a ticket to contact us to grant permission.
+Note: after receiving a message with Priority=1, any other messages will be ignored (including messages with Priority=1) until the message processing of Priority=1 is complete. this field can be used together with the Interrupt and DropMode fields.
+Example:.
+-Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.
+-Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.
+
+     * @param Priority The message priority of ServerPushText. 0 means interruptible, 1 means not interruptible. currently only support 0. if you need to input 1, submit a ticket to contact us to grant permission.
+Note: after receiving a message with Priority=1, any other messages will be ignored (including messages with Priority=1) until the message processing of Priority=1 is complete. this field can be used together with the Interrupt and DropMode fields.
+Example:.
+-Priority=1, Interrupt=true, interrupts existing interaction and broadcasts immediately. the broadcast will not be interrupted during the process.
+-Priority=1, Interrupt=false, DropMode=1. wait for the current interaction to complete before broadcasting. the broadcast will not be interrupted during the process.
+
+     */
+    public void setPriority(Long Priority) {
+        this.Priority = Priority;
+    }
+
+    /**
+     * Get Whether to add the text to the llm history context. 
+     * @return AddHistory Whether to add the text to the llm history context.
+     */
+    public Boolean getAddHistory() {
+        return this.AddHistory;
+    }
+
+    /**
+     * Set Whether to add the text to the llm history context.
+     * @param AddHistory Whether to add the text to the llm history context.
+     */
+    public void setAddHistory(Boolean AddHistory) {
+        this.AddHistory = AddHistory;
+    }
+
+    /**
+     * Get If filled, it will be bound to the subtitle and sent to the terminal. note that the content must be a json string. 
+     * @return MetaInfo If filled, it will be bound to the subtitle and sent to the terminal. note that the content must be a json string.
+     */
+    public String getMetaInfo() {
+        return this.MetaInfo;
+    }
+
+    /**
+     * Set If filled, it will be bound to the subtitle and sent to the terminal. note that the content must be a json string.
+     * @param MetaInfo If filled, it will be bound to the subtitle and sent to the terminal. note that the content must be a json string.
+     */
+    public void setMetaInfo(String MetaInfo) {
+        this.MetaInfo = MetaInfo;
     }
 
     public ServerPushText() {
@@ -109,6 +279,21 @@ public class ServerPushText extends AbstractModel {
         if (source.StopAfterPlay != null) {
             this.StopAfterPlay = new Boolean(source.StopAfterPlay);
         }
+        if (source.Audio != null) {
+            this.Audio = new String(source.Audio);
+        }
+        if (source.DropMode != null) {
+            this.DropMode = new Long(source.DropMode);
+        }
+        if (source.Priority != null) {
+            this.Priority = new Long(source.Priority);
+        }
+        if (source.AddHistory != null) {
+            this.AddHistory = new Boolean(source.AddHistory);
+        }
+        if (source.MetaInfo != null) {
+            this.MetaInfo = new String(source.MetaInfo);
+        }
     }
 
 
@@ -119,6 +304,11 @@ public class ServerPushText extends AbstractModel {
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "Interrupt", this.Interrupt);
         this.setParamSimple(map, prefix + "StopAfterPlay", this.StopAfterPlay);
+        this.setParamSimple(map, prefix + "Audio", this.Audio);
+        this.setParamSimple(map, prefix + "DropMode", this.DropMode);
+        this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamSimple(map, prefix + "AddHistory", this.AddHistory);
+        this.setParamSimple(map, prefix + "MetaInfo", this.MetaInfo);
 
     }
 }

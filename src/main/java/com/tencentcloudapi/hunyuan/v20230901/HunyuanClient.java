@@ -50,6 +50,18 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
+     *The SmartTopoly API uses the Polygon 1.5 model. After manually inputting a 3D high-poly model, it can generate a neat 3D model with lower polygon count.
+1 concurrent is provided by default, which means 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
+     * @param req Describe3DSmartTopologyJobRequest
+     * @return Describe3DSmartTopologyJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public Describe3DSmartTopologyJobResponse Describe3DSmartTopologyJob(Describe3DSmartTopologyJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "Describe3DSmartTopologyJob", Describe3DSmartTopologyJobResponse.class);
+    }
+
+    /**
      *This API is used to query the generation task of a component.
      * @param req QueryHunyuan3DPartJobRequest
      * @return QueryHunyuan3DPartJobResponse
@@ -82,6 +94,18 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
     public QueryHunyuanTo3DRapidJobResponse QueryHunyuanTo3DRapidJob(QueryHunyuanTo3DRapidJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryHunyuanTo3DRapidJob", QueryHunyuanTo3DRapidJobResponse.class);
+    }
+
+    /**
+     *The SmartTopoly API uses the Polygon 1.5 model. After manually inputting a 3D high-poly model, it can generate a neat 3D model with lower polygon count.
+1 concurrent is provided by default, which means 1 submitted task can be processed simultaneously. The next task can be processed only after the previous task is completed.
+     * @param req Submit3DSmartTopologyJobRequest
+     * @return Submit3DSmartTopologyJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public Submit3DSmartTopologyJobResponse Submit3DSmartTopologyJob(Submit3DSmartTopologyJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "Submit3DSmartTopologyJob", Submit3DSmartTopologyJobResponse.class);
     }
 
     /**
