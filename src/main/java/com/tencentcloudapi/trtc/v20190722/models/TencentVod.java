@@ -24,212 +24,217 @@ import java.util.HashMap;
 public class TencentVod extends AbstractModel {
 
     /**
-    * The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
+    * Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
     */
     @SerializedName("Procedure")
     @Expose
     private String Procedure;
 
     /**
-    * The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
+    * Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * The storage region. Set this parameter if you have special requirements on the storage region.
+    * Specify the upload park, applicable only to the user with special requirement for upload region.
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
+    * Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+    * Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * The task flow context, which is passed through after the task is completed.
+    * Task flow context, passed through when task complete.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * The upload context, which is passed through after upload is completed.
+    * Upload context, passed through on upload completion callback.
     */
     @SerializedName("SourceContext")
     @Expose
     private String SourceContext;
 
     /**
-    * The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
+    * The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
     */
     @SerializedName("MediaType")
     @Expose
     private Long MediaType;
 
     /**
-    * The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+    * Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
     */
     @SerializedName("UserDefineRecordId")
     @Expose
     private String UserDefineRecordId;
 
     /**
-     * Get The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD. 
-     * @return Procedure The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
+     * Get Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming. 
+     * @return Procedure Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
      */
     public String getProcedure() {
         return this.Procedure;
     }
 
     /**
-     * Set The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
-     * @param Procedure The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
+     * Set Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
+     * @param Procedure Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
      */
     public void setProcedure(String Procedure) {
         this.Procedure = Procedure;
     }
 
     /**
-     * Get The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`. 
-     * @return ExpireTime The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
+     * Get Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation. 
+     * @return ExpireTime Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
-     * @param ExpireTime The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
+     * Set Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
+     * @param ExpireTime Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get The storage region. Set this parameter if you have special requirements on the storage region. 
-     * @return StorageRegion The storage region. Set this parameter if you have special requirements on the storage region.
+     * Get Specify the upload park, applicable only to the user with special requirement for upload region. 
+     * @return StorageRegion Specify the upload park, applicable only to the user with special requirement for upload region.
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set The storage region. Set this parameter if you have special requirements on the storage region.
-     * @param StorageRegion The storage region. Set this parameter if you have special requirements on the storage region.
+     * Set Specify the upload park, applicable only to the user with special requirement for upload region.
+     * @param StorageRegion Specify the upload park, applicable only to the user with special requirement for upload region.
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others. 
-     * @return ClassId The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
+     * Get Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories. 
+     * @return ClassId Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
-     * @param ClassId The category ID, which is returned after you create a category by calling an API. You can use categories to manage media files.
-The default value is `0`, which means others.
+     * Set Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
+     * @param ClassId Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty. 
-     * @return SubAppId The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+     * Get Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required. 
+     * @return SubAppId Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-     * @param SubAppId The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+     * Set Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
+     * @param SubAppId Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get The task flow context, which is passed through after the task is completed. 
-     * @return SessionContext The task flow context, which is passed through after the task is completed.
+     * Get Task flow context, passed through when task complete. 
+     * @return SessionContext Task flow context, passed through when task complete.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The task flow context, which is passed through after the task is completed.
-     * @param SessionContext The task flow context, which is passed through after the task is completed.
+     * Set Task flow context, passed through when task complete.
+     * @param SessionContext Task flow context, passed through when task complete.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get The upload context, which is passed through after upload is completed. 
-     * @return SourceContext The upload context, which is passed through after upload is completed.
+     * Get Upload context, passed through on upload completion callback. 
+     * @return SourceContext Upload context, passed through on upload completion callback.
      */
     public String getSourceContext() {
         return this.SourceContext;
     }
 
     /**
-     * Set The upload context, which is passed through after upload is completed.
-     * @param SourceContext The upload context, which is passed through after upload is completed.
+     * Set Upload context, passed through on upload completion callback.
+     * @param SourceContext Upload context, passed through on upload completion callback.
      */
     public void setSourceContext(String SourceContext) {
         this.SourceContext = SourceContext;
     }
 
     /**
-     * Get The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC. 
-     * @return MediaType The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
+     * Get The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording). 
+     * @return MediaType The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
      */
     public Long getMediaType() {
         return this.MediaType;
     }
 
     /**
-     * Set The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
-     * @param MediaType The format of recording files uploaded to VOD. `0` (default): MP4; `1`: HLS; `2`: AAC (valid only if `StreamType` is `1`); `3`: HLS+MP4; `4`: HLS+AAC.
+     * Set The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
+     * @param MediaType The recording file format type uploaded to the vod platform. valid values: 0: mp4 (default), 1: hls, 2: aac (valid at that time when StreamType=1 for audio-only recording).
+3: hls+mp4, 4: hls+aac (valid at that time when StreamType=1 is audio-only recording).
      */
     public void setMediaType(Long MediaType) {
         this.MediaType = MediaType;
     }
 
     /**
-     * Get The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`. 
-     * @return UserDefineRecordId The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+     * Get Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`. 
+     * @return UserDefineRecordId Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
      */
     public String getUserDefineRecordId() {
         return this.UserDefineRecordId;
     }
 
     /**
-     * Set The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
-     * @param UserDefineRecordId The custom prefix of recording files. This parameter is valid only if recording files are uploaded to VOD. It can contain letters, numbers, underscores, and hyphens and cannot exceed 64 bytes. This prefix and the automatically generated filename are connected with `__UserId_u_`.
+     * Set Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
+     * @param UserDefineRecordId Only supports API recording upload to vod. this parameter indicates you can customize the recording file name prefix. [length limit: 64 bytes, only allows a combination of uppercase and lowercase letters (a-zA-Z), numbers (0-9), underline, and hyphen]. the prefix is separated from the automatically generated recording file name by `__UserDefine_u_`.
      */
     public void setUserDefineRecordId(String UserDefineRecordId) {
         this.UserDefineRecordId = UserDefineRecordId;

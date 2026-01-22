@@ -24,15 +24,17 @@ import java.util.HashMap;
 public class Convert3DFormatRequest extends AbstractModel {
 
     /**
-    * 3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
+    * 3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
     */
     @SerializedName("File3D")
     @Expose
     private String File3D;
 
     /**
-    * Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+    * Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
     */
     @SerializedName("Format")
@@ -40,27 +42,33 @@ Example value: STL.
     private String Format;
 
     /**
-     * Get 3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input. 
-     * @return File3D 3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
+     * Get 3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input 
+     * @return File3D 3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
      */
     public String getFile3D() {
         return this.File3D;
     }
 
     /**
-     * Set 3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
-     * @param File3D 3D file url address. model file size ≤60 mb. supports fbx, obj, and glb format 3d file input.
+     * Set 3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
+     * @param File3D 3D file url address. model file size not greater than 60 mb
+Supports fbx, obj, and glb format 3d file input
      */
     public void setFile3D(String File3D) {
         this.File3D = File3D;
     }
 
     /**
-     * Get Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+     * Get Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL. 
-     * @return Format Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+     * @return Format Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
      */
     public String getFormat() {
@@ -68,11 +76,13 @@ Example value: STL.
     }
 
     /**
-     * Set Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+     * Set Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
-     * @param Format Returns the 3D file format. valid values: STL, USDZ, FBX, MP4, GIF.
-Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format.
+     * @param Format Returns the 3D file format. valid values: 
+STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
 Example value: STL.
      */
     public void setFormat(String Format) {

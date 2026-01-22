@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WaterMark extends AbstractModel {
 
     /**
-    * The watermark type. 0 (default): image; 1: text (not supported yet).
+    * The watermark type. 0 (default): image; 1: text; 2: timestamp.
     */
     @SerializedName("WaterMarkType")
     @Expose
@@ -52,16 +52,16 @@ public class WaterMark extends AbstractModel {
     private WaterMarkTimestamp WaterMarkTimestamp;
 
     /**
-     * Get The watermark type. 0 (default): image; 1: text (not supported yet). 
-     * @return WaterMarkType The watermark type. 0 (default): image; 1: text (not supported yet).
+     * Get The watermark type. 0 (default): image; 1: text; 2: timestamp. 
+     * @return WaterMarkType The watermark type. 0 (default): image; 1: text; 2: timestamp.
      */
     public Long getWaterMarkType() {
         return this.WaterMarkType;
     }
 
     /**
-     * Set The watermark type. 0 (default): image; 1: text (not supported yet).
-     * @param WaterMarkType The watermark type. 0 (default): image; 1: text (not supported yet).
+     * Set The watermark type. 0 (default): image; 1: text; 2: timestamp.
+     * @param WaterMarkType The watermark type. 0 (default): image; 1: text; 2: timestamp.
      */
     public void setWaterMarkType(Long WaterMarkType) {
         this.WaterMarkType = WaterMarkType;

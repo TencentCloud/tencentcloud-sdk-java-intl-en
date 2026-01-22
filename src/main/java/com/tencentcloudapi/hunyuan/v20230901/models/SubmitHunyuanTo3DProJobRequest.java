@@ -92,7 +92,7 @@ Supported image format: JPG or PNG
     private ViewImage [] MultiViewImages;
 
     /**
-    * Specifies whether PBR material generation is enabled. default false.
+    * Specifies whether PBR material generation is enabled. default false
     */
     @SerializedName("EnablePBR")
     @Expose
@@ -100,29 +100,29 @@ Supported image format: JPG or PNG
 
     /**
     * Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
+Specifies the supported face count generation range. value range: 40000-1500000
     */
     @SerializedName("FaceCount")
     @Expose
     private Long FaceCount;
 
     /**
-    * Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+    * Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
     */
     @SerializedName("GenerateType")
     @Expose
     private String GenerateType;
 
     /**
-    * This parameter only takes effect when LowPoly mode is selected from GenerateType.
+    * This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
     */
     @SerializedName("PolygonType")
     @Expose
@@ -341,16 +341,16 @@ Supported image format: JPG or PNG
     }
 
     /**
-     * Get Specifies whether PBR material generation is enabled. default false. 
-     * @return EnablePBR Specifies whether PBR material generation is enabled. default false.
+     * Get Specifies whether PBR material generation is enabled. default false 
+     * @return EnablePBR Specifies whether PBR material generation is enabled. default false
      */
     public Boolean getEnablePBR() {
         return this.EnablePBR;
     }
 
     /**
-     * Set Specifies whether PBR material generation is enabled. default false.
-     * @param EnablePBR Specifies whether PBR material generation is enabled. default false.
+     * Set Specifies whether PBR material generation is enabled. default false
+     * @param EnablePBR Specifies whether PBR material generation is enabled. default false
      */
     public void setEnablePBR(Boolean EnablePBR) {
         this.EnablePBR = EnablePBR;
@@ -358,9 +358,9 @@ Supported image format: JPG or PNG
 
     /**
      * Get Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000. 
+Specifies the supported face count generation range. value range: 40000-1500000 
      * @return FaceCount Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
+Specifies the supported face count generation range. value range: 40000-1500000
      */
     public Long getFaceCount() {
         return this.FaceCount;
@@ -368,73 +368,73 @@ Specifies the supported face count generation range. value range: 40000-1500000.
 
     /**
      * Set Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
+Specifies the supported face count generation range. value range: 40000-1500000
      * @param FaceCount Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000.
+Specifies the supported face count generation range. value range: 40000-1500000
      */
     public void setFaceCount(Long FaceCount) {
         this.FaceCount = FaceCount;
     }
 
     /**
-     * Get Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+     * Get Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together. 
-     * @return GenerateType Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together 
+     * @return GenerateType Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
      */
     public String getGenerateType() {
         return this.GenerateType;
     }
 
     /**
-     * Set Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+     * Set Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
-     * @param GenerateType Generation task type. default: Normal. valid values:.
-Normal: generates a geometric model with textures.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
+     * @param GenerateType Generation task type. default: Normal. valid values:
+Normal: generates a geometric model with textures
 LowPoly: specifies the model generated after intelligent polygon reduction.
-Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect.
-Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together.
+Geometry: specifies whether to generate a Geometry model without textures (white model). when this task is selected, the EnablePBR parameter does not take effect
+Specifies the Sketch for the generative model, allowing input of a Sketch or line drawing. in this mode, both prompt and ImageUrl/ImageBase64 can be entered together
      */
     public void setGenerateType(String GenerateType) {
         this.GenerateType = GenerateType;
     }
 
     /**
-     * Get This parameter only takes effect when LowPoly mode is selected from GenerateType.
+     * Get This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate. 
-     * @return PolygonType This parameter only takes effect when LowPoly mode is selected from GenerateType.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate 
+     * @return PolygonType This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
      */
     public String getPolygonType() {
         return this.PolygonType;
     }
 
     /**
-     * Set This parameter only takes effect when LowPoly mode is selected from GenerateType.
+     * Set This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
-     * @param PolygonType This parameter only takes effect when LowPoly mode is selected from GenerateType.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
+     * @param PolygonType This parameter only takes effect when LowPoly mode is selected from GenerateType
 
-Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:.
-triangle. specifies the triangular face.
-quadrilateral: mix quadrangle and triangle faces to generate.
+Polygon type, indicates the number of sides in the model's surface grid, defaults to triangle. valid values:
+triangle. specifies the triangular face
+quadrilateral: mix quadrangle and triangle faces to generate
      */
     public void setPolygonType(String PolygonType) {
         this.PolygonType = PolygonType;

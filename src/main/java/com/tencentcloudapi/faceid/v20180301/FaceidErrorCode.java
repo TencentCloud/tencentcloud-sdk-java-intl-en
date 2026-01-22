@@ -222,6 +222,9 @@ public enum FaceidErrorCode {
      /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
+     /*  */
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
+     
      /* The resource is unavailable. */
      RESOURCEUNAVAILABLE("ResourceUnavailable"),
      

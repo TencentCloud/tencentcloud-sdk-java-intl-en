@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class QueryHunyuan3DPartJobRequest extends AbstractModel {
 
     /**
-    * Task ID.	
+    * Task ID
     */
     @SerializedName("JobId")
     @Expose
     private String JobId;
 
     /**
-     * Get Task ID.	 
-     * @return JobId Task ID.	
+     * Get Task ID 
+     * @return JobId Task ID
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set Task ID.	
-     * @param JobId Task ID.	
+     * Set Task ID
+     * @param JobId Task ID
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

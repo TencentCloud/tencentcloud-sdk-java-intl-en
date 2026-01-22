@@ -26,7 +26,11 @@ public class AttackRiskDetail extends AbstractModel {
     /**
     * Suspected attack trace types
 SuspectedSpoofingAttack: Suspected spoofing attack
- SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedSynthesisImage: Suspected synthesis image
+SuspectedSynthesisVideo: Suspected synthesis video
+SuspectedeAnomalyAttack: Suspected anomaly attack
+SuspectedAdversarialAttack: Suspected adversarial attack 
+SuspectedBlackIndustry: Suspected batch generation attack
 SuspectedWatermark: Suspected watermark
     */
     @SerializedName("Type")
@@ -36,11 +40,19 @@ SuspectedWatermark: Suspected watermark
     /**
      * Get Suspected attack trace types
 SuspectedSpoofingAttack: Suspected spoofing attack
- SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedSynthesisImage: Suspected synthesis image
+SuspectedSynthesisVideo: Suspected synthesis video
+SuspectedeAnomalyAttack: Suspected anomaly attack
+SuspectedAdversarialAttack: Suspected adversarial attack 
+SuspectedBlackIndustry: Suspected batch generation attack
 SuspectedWatermark: Suspected watermark 
      * @return Type Suspected attack trace types
 SuspectedSpoofingAttack: Suspected spoofing attack
- SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedSynthesisImage: Suspected synthesis image
+SuspectedSynthesisVideo: Suspected synthesis video
+SuspectedeAnomalyAttack: Suspected anomaly attack
+SuspectedAdversarialAttack: Suspected adversarial attack 
+SuspectedBlackIndustry: Suspected batch generation attack
 SuspectedWatermark: Suspected watermark
      */
     public String getType() {
@@ -50,11 +62,19 @@ SuspectedWatermark: Suspected watermark
     /**
      * Set Suspected attack trace types
 SuspectedSpoofingAttack: Suspected spoofing attack
- SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedSynthesisImage: Suspected synthesis image
+SuspectedSynthesisVideo: Suspected synthesis video
+SuspectedeAnomalyAttack: Suspected anomaly attack
+SuspectedAdversarialAttack: Suspected adversarial attack 
+SuspectedBlackIndustry: Suspected batch generation attack
 SuspectedWatermark: Suspected watermark
      * @param Type Suspected attack trace types
 SuspectedSpoofingAttack: Suspected spoofing attack
- SuspectedSynthesisImage: Suspected synthesis image SuspectedSynthesisVideo: Suspected synthesis video SuspectedeAnomalyAttack: Suspected anomaly attack SuspectedAdversarialAttack: Suspected adversarial attack SuspectedBlackIndustry: Suspected batch generation attack
+SuspectedSynthesisImage: Suspected synthesis image
+SuspectedSynthesisVideo: Suspected synthesis video
+SuspectedeAnomalyAttack: Suspected anomaly attack
+SuspectedAdversarialAttack: Suspected adversarial attack 
+SuspectedBlackIndustry: Suspected batch generation attack
 SuspectedWatermark: Suspected watermark
      */
     public void setType(String Type) {

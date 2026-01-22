@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SubmitHunyuanTo3DRapidJobResponse extends AbstractModel {
 
     /**
-    * Task ID (valid period: 24 hours).	
+    * Task ID (valid period: 24 hours)
     */
     @SerializedName("JobId")
     @Expose
@@ -38,16 +38,16 @@ public class SubmitHunyuanTo3DRapidJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task ID (valid period: 24 hours).	 
-     * @return JobId Task ID (valid period: 24 hours).	
+     * Get Task ID (valid period: 24 hours) 
+     * @return JobId Task ID (valid period: 24 hours)
      */
     public String getJobId() {
         return this.JobId;
     }
 
     /**
-     * Set Task ID (valid period: 24 hours).	
-     * @param JobId Task ID (valid period: 24 hours).	
+     * Set Task ID (valid period: 24 hours)
+     * @param JobId Task ID (valid period: 24 hours)
      */
     public void setJobId(String JobId) {
         this.JobId = JobId;

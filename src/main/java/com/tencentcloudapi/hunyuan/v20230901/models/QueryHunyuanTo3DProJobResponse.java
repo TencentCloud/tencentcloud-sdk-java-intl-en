@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class QueryHunyuanTo3DProJobResponse extends AbstractModel {
 
     /**
-    * Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
+    * Task status:
+WAIT: waiting
+RUN: running; FAIL: failed
+DONE: successful
     */
     @SerializedName("Status")
     @Expose
@@ -45,7 +48,7 @@ public class QueryHunyuanTo3DProJobResponse extends AbstractModel {
     private String ErrorMessage;
 
     /**
-    * Describes the generated 3d file array.
+    * Describes the generated 3d file array
     */
     @SerializedName("ResultFile3Ds")
     @Expose
@@ -59,16 +62,28 @@ public class QueryHunyuanTo3DProJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful. 
-     * @return Status Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
+     * Get Task status:
+WAIT: waiting
+RUN: running; FAIL: failed
+DONE: successful 
+     * @return Status Task status:
+WAIT: waiting
+RUN: running; FAIL: failed
+DONE: successful
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
-     * @param Status Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
+     * Set Task status:
+WAIT: waiting
+RUN: running; FAIL: failed
+DONE: successful
+     * @param Status Task status:
+WAIT: waiting
+RUN: running; FAIL: failed
+DONE: successful
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -107,16 +122,16 @@ public class QueryHunyuanTo3DProJobResponse extends AbstractModel {
     }
 
     /**
-     * Get Describes the generated 3d file array. 
-     * @return ResultFile3Ds Describes the generated 3d file array.
+     * Get Describes the generated 3d file array 
+     * @return ResultFile3Ds Describes the generated 3d file array
      */
     public File3D [] getResultFile3Ds() {
         return this.ResultFile3Ds;
     }
 
     /**
-     * Set Describes the generated 3d file array.
-     * @param ResultFile3Ds Describes the generated 3d file array.
+     * Set Describes the generated 3d file array
+     * @param ResultFile3Ds Describes the generated 3d file array
      */
     public void setResultFile3Ds(File3D [] ResultFile3Ds) {
         this.ResultFile3Ds = ResultFile3Ds;

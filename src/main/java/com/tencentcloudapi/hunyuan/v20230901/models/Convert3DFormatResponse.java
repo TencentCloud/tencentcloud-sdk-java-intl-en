@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Convert3DFormatResponse extends AbstractModel {
 
     /**
-    * 3D file address.
+    * 3D file address
     */
     @SerializedName("ResultFile3D")
     @Expose
@@ -38,16 +38,16 @@ public class Convert3DFormatResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get 3D file address. 
-     * @return ResultFile3D 3D file address.
+     * Get 3D file address 
+     * @return ResultFile3D 3D file address
      */
     public String getResultFile3D() {
         return this.ResultFile3D;
     }
 
     /**
-     * Set 3D file address.
-     * @param ResultFile3D 3D file address.
+     * Set 3D file address
+     * @param ResultFile3D 3D file address
      */
     public void setResultFile3D(String ResultFile3D) {
         this.ResultFile3D = ResultFile3D;

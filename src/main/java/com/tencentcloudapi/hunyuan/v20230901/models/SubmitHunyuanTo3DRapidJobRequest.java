@@ -24,21 +24,29 @@ import java.util.HashMap;
 public class SubmitHunyuanTo3DRapidJobRequest extends AbstractModel {
 
     /**
-    * Text-To-3D, description of 3D content, forward Prompt content. supports up to 200 utf-8 characters. either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl.	
+    * Text-To-3D, description of 3D content, forward Prompt content
+Supports up to 200 utf-8 characters
+Either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * Input image Base64 data. size: unilateral resolution requirement not less than 128, not greater than 5000, size ≤6m (after encoding, size increases by approximately 30%). format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist.	
+    * Input image Base64 data
+Size: unilateral resolution requirement not less than 128, not greater than 5000, size not greater than 6mb (after encoding, size increases by approximately 30%). format:
+jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * Input image Url. size: unilateral resolution requirement not less than 128, not greater than 5000. size ≤8m. format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl.	
+    * Input image Url size: 
+Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
+Format: jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	
     */
     @SerializedName("ImageUrl")
     @Expose
@@ -52,55 +60,90 @@ public class SubmitHunyuanTo3DRapidJobRequest extends AbstractModel {
     private Boolean EnablePBR;
 
     /**
-    * Specifies whether to enable the single geometry generation option. when enabled, it generates a 3D model without textures (white model). enabled, the generative model does not support OBJ format. default model file format is GLB.	
+    * Specifies whether to enable the single geometry generation option
+When enabled, it generates a 3D model without textures (white model)
+When enabled, the generative model does not support OBJ format
+Default model file format is GLB
     */
     @SerializedName("EnableGeometry")
     @Expose
     private Boolean EnableGeometry;
 
     /**
-     * Get Text-To-3D, description of 3D content, forward Prompt content. supports up to 200 utf-8 characters. either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl.	 
-     * @return Prompt Text-To-3D, description of 3D content, forward Prompt content. supports up to 200 utf-8 characters. either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl.	
+     * Get Text-To-3D, description of 3D content, forward Prompt content
+Supports up to 200 utf-8 characters
+Either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl 
+     * @return Prompt Text-To-3D, description of 3D content, forward Prompt content
+Supports up to 200 utf-8 characters
+Either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set Text-To-3D, description of 3D content, forward Prompt content. supports up to 200 utf-8 characters. either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl.	
-     * @param Prompt Text-To-3D, description of 3D content, forward Prompt content. supports up to 200 utf-8 characters. either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl.	
+     * Set Text-To-3D, description of 3D content, forward Prompt content
+Supports up to 200 utf-8 characters
+Either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl
+     * @param Prompt Text-To-3D, description of 3D content, forward Prompt content
+Supports up to 200 utf-8 characters
+Either ImageBase64, ImageUrl, or Prompt is required, and Prompt cannot coexist with ImageBase64/ImageUrl
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get Input image Base64 data. size: unilateral resolution requirement not less than 128, not greater than 5000, size ≤6m (after encoding, size increases by approximately 30%). format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist.	 
-     * @return ImageBase64 Input image Base64 data. size: unilateral resolution requirement not less than 128, not greater than 5000, size ≤6m (after encoding, size increases by approximately 30%). format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist.	
+     * Get Input image Base64 data
+Size: unilateral resolution requirement not less than 128, not greater than 5000, size not greater than 6mb (after encoding, size increases by approximately 30%). format:
+jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist 
+     * @return ImageBase64 Input image Base64 data
+Size: unilateral resolution requirement not less than 128, not greater than 5000, size not greater than 6mb (after encoding, size increases by approximately 30%). format:
+jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set Input image Base64 data. size: unilateral resolution requirement not less than 128, not greater than 5000, size ≤6m (after encoding, size increases by approximately 30%). format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist.	
-     * @param ImageBase64 Input image Base64 data. size: unilateral resolution requirement not less than 128, not greater than 5000, size ≤6m (after encoding, size increases by approximately 30%). format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist.	
+     * Set Input image Base64 data
+Size: unilateral resolution requirement not less than 128, not greater than 5000, size not greater than 6mb (after encoding, size increases by approximately 30%). format:
+jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist
+     * @param ImageBase64 Input image Base64 data
+Size: unilateral resolution requirement not less than 128, not greater than 5000, size not greater than 6mb (after encoding, size increases by approximately 30%). format:
+jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, but Prompt and imagebase64/imageurl cannot coexist
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get Input image Url. size: unilateral resolution requirement not less than 128, not greater than 5000. size ≤8m. format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl.	 
-     * @return ImageUrl Input image Url. size: unilateral resolution requirement not less than 128, not greater than 5000. size ≤8m. format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl.	
+     * Get Input image Url size: 
+Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
+Format: jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	 
+     * @return ImageUrl Input image Url size: 
+Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
+Format: jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set Input image Url. size: unilateral resolution requirement not less than 128, not greater than 5000. size ≤8m. format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl.	
-     * @param ImageUrl Input image Url. size: unilateral resolution requirement not less than 128, not greater than 5000. size ≤8m. format: jpg, png, jpeg, webp. imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl.	
+     * Set Input image Url size: 
+Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
+Format: jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	
+     * @param ImageUrl Input image Url size: 
+Unilateral resolution requirement not less than 128, not greater than 5000. size not greater than 8mb
+Format: jpg, png, jpeg, webp
+Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with imagebase64/imageurl	
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
@@ -123,16 +166,28 @@ public class SubmitHunyuanTo3DRapidJobRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies whether to enable the single geometry generation option. when enabled, it generates a 3D model without textures (white model). enabled, the generative model does not support OBJ format. default model file format is GLB.	 
-     * @return EnableGeometry Specifies whether to enable the single geometry generation option. when enabled, it generates a 3D model without textures (white model). enabled, the generative model does not support OBJ format. default model file format is GLB.	
+     * Get Specifies whether to enable the single geometry generation option
+When enabled, it generates a 3D model without textures (white model)
+When enabled, the generative model does not support OBJ format
+Default model file format is GLB 
+     * @return EnableGeometry Specifies whether to enable the single geometry generation option
+When enabled, it generates a 3D model without textures (white model)
+When enabled, the generative model does not support OBJ format
+Default model file format is GLB
      */
     public Boolean getEnableGeometry() {
         return this.EnableGeometry;
     }
 
     /**
-     * Set Specifies whether to enable the single geometry generation option. when enabled, it generates a 3D model without textures (white model). enabled, the generative model does not support OBJ format. default model file format is GLB.	
-     * @param EnableGeometry Specifies whether to enable the single geometry generation option. when enabled, it generates a 3D model without textures (white model). enabled, the generative model does not support OBJ format. default model file format is GLB.	
+     * Set Specifies whether to enable the single geometry generation option
+When enabled, it generates a 3D model without textures (white model)
+When enabled, the generative model does not support OBJ format
+Default model file format is GLB
+     * @param EnableGeometry Specifies whether to enable the single geometry generation option
+When enabled, it generates a 3D model without textures (white model)
+When enabled, the generative model does not support OBJ format
+Default model file format is GLB
      */
     public void setEnableGeometry(Boolean EnableGeometry) {
         this.EnableGeometry = EnableGeometry;

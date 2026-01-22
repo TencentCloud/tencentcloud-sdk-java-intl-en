@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class WaterMarkImage extends AbstractModel {
 
     /**
-    * The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
+    * The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
     */
     @SerializedName("WaterMarkUrl")
     @Expose
@@ -59,16 +59,16 @@ public class WaterMarkImage extends AbstractModel {
     private Long Height;
 
     /**
-     * Get The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB. 
-     * @return WaterMarkUrl The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
+     * Get The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='. 
+     * @return WaterMarkUrl The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
      */
     public String getWaterMarkUrl() {
         return this.WaterMarkUrl;
     }
 
     /**
-     * Set The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
-     * @param WaterMarkUrl The download URLs of the watermark images, which must be in JPG or PNG format and cannot be larger than 5 MB.
+     * Set The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
+     * @param WaterMarkUrl The download url address supports only jpg, png, and jpeg with a size limit of no more than 5M. note that the url must carry the format extension and supports only specific strings within the range of a-z, a-z, 0-9, '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '='.
      */
     public void setWaterMarkUrl(String WaterMarkUrl) {
         this.WaterMarkUrl = WaterMarkUrl;

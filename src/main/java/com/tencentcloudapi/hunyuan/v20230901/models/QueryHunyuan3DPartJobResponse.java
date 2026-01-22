@@ -24,28 +24,33 @@ import java.util.HashMap;
 public class QueryHunyuan3DPartJobResponse extends AbstractModel {
 
     /**
-    * Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful. example value: RUN.	
+    * Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful
+Example value: RUN
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code.	
+    * Error code
     */
     @SerializedName("ErrorCode")
     @Expose
     private String ErrorCode;
 
     /**
-    * Error message.	
+    * Error message
     */
     @SerializedName("ErrorMessage")
     @Expose
     private String ErrorMessage;
 
     /**
-    * Generates the file URL with a valid period of 1 day.	
+    * Generates the file URL with a valid period of 1 day
     */
     @SerializedName("ResultFile3Ds")
     @Expose
@@ -59,64 +64,84 @@ public class QueryHunyuan3DPartJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful. example value: RUN.	 
-     * @return Status Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful. example value: RUN.	
+     * Get Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful
+Example value: RUN 
+     * @return Status Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful
+Example value: RUN
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful. example value: RUN.	
-     * @param Status Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful. example value: RUN.	
+     * Set Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful
+Example value: RUN
+     * @param Status Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful
+Example value: RUN
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code.	 
-     * @return ErrorCode Error code.	
+     * Get Error code 
+     * @return ErrorCode Error code
      */
     public String getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set Error code.	
-     * @param ErrorCode Error code.	
+     * Set Error code
+     * @param ErrorCode Error code
      */
     public void setErrorCode(String ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get Error message.	 
-     * @return ErrorMessage Error message.	
+     * Get Error message 
+     * @return ErrorMessage Error message
      */
     public String getErrorMessage() {
         return this.ErrorMessage;
     }
 
     /**
-     * Set Error message.	
-     * @param ErrorMessage Error message.	
+     * Set Error message
+     * @param ErrorMessage Error message
      */
     public void setErrorMessage(String ErrorMessage) {
         this.ErrorMessage = ErrorMessage;
     }
 
     /**
-     * Get Generates the file URL with a valid period of 1 day.	 
-     * @return ResultFile3Ds Generates the file URL with a valid period of 1 day.	
+     * Get Generates the file URL with a valid period of 1 day 
+     * @return ResultFile3Ds Generates the file URL with a valid period of 1 day
      */
     public File3D [] getResultFile3Ds() {
         return this.ResultFile3Ds;
     }
 
     /**
-     * Set Generates the file URL with a valid period of 1 day.	
-     * @param ResultFile3Ds Generates the file URL with a valid period of 1 day.	
+     * Set Generates the file URL with a valid period of 1 day
+     * @param ResultFile3Ds Generates the file URL with a valid period of 1 day
      */
     public void setResultFile3Ds(File3D [] ResultFile3Ds) {
         this.ResultFile3Ds = ResultFile3Ds;

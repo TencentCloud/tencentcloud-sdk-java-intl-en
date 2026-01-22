@@ -24,217 +24,308 @@ import java.util.HashMap;
 public class RecordParams extends AbstractModel {
 
     /**
-    * The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
+    * Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
     */
     @SerializedName("RecordMode")
     @Expose
     private Long RecordMode;
 
     /**
-    * The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
+    * Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
     */
     @SerializedName("MaxIdleTime")
     @Expose
     private Long MaxIdleTime;
 
     /**
-    * The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
+    * Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
     */
     @SerializedName("StreamType")
     @Expose
     private Long StreamType;
 
     /**
-    * The allowlist/blocklist for stream subscription.
+    * Specifies the allowlist or blocklist for the subscription stream.
     */
     @SerializedName("SubscribeStreamUserIds")
     @Expose
     private SubscribeStreamUserIds SubscribeStreamUserIds;
 
     /**
-    * The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+    * Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
     */
     @SerializedName("OutputFormat")
     @Expose
     private Long OutputFormat;
 
     /**
-    * Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+    * In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
     */
     @SerializedName("AvMerge")
     @Expose
     private Long AvMerge;
 
     /**
-    * The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
+    * If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
     */
     @SerializedName("MaxMediaFileDuration")
     @Expose
     private Long MaxMediaFileDuration;
 
     /**
-    * The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+    * Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
     */
     @SerializedName("MediaId")
     @Expose
     private Long MediaId;
 
     /**
-     * Get The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud. 
-     * @return RecordMode The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
+    * Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+    */
+    @SerializedName("FillType")
+    @Expose
+    private Long FillType;
+
+    /**
+    * Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
+    */
+    @SerializedName("SubscribeAbility")
+    @Expose
+    private Long SubscribeAbility;
+
+    /**
+     * Get Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage. 
+     * @return RecordMode Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
      */
     public Long getRecordMode() {
         return this.RecordMode;
     }
 
     /**
-     * Set The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
-     * @param RecordMode The recording mode.
-1: Single-stream recording. Records the audio and video of each subscribed user (`UserId`) in a room and saves the recording files to the cloud.
-2: Mixed-stream recording. Mixes the audios and videos of subscribed users (`UserId`) in a room, records the mixed stream, and saves the recording files to the cloud.
+     * Set Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
+     * @param RecordMode Recording mode:.
+1: single stream recording, record the audio and video of the subscribed UserId in the room separately, and upload the recording files to cloud storage.
+2: mixed-stream recording. mix the audio and video of the subscribed UserId in the room into an audio-video file and upload the recording file to cloud storage.
      */
     public void setRecordMode(Long RecordMode) {
         this.RecordMode = RecordMode;
     }
 
     /**
-     * Get The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30. 
-     * @return MaxIdleTime The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
+     * Get Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours). 
+     * @return MaxIdleTime Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
      */
     public Long getMaxIdleTime() {
         return this.MaxIdleTime;
     }
 
     /**
-     * Set The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
-     * @param MaxIdleTime The time period (seconds) to wait to automatically stop recording after there are no anchors (users who publish streams) in a room. Value range: 5-86400 (max 24 hours). Default value: 30.
+     * Set Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
+     * @param MaxIdleTime Recording stops automatically when there is no host inside the room for a duration exceeding MaxIdleTime. measurement unit: second. default value: 30 seconds. the value must be greater than or equal to 5 seconds and less than or equal to 86400 seconds (24 hours).
      */
     public void setMaxIdleTime(Long MaxIdleTime) {
         this.MaxIdleTime = MaxIdleTime;
     }
 
     /**
-     * Get The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only 
-     * @return StreamType The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
+     * Get Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only. 
+     * @return StreamType Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
      */
     public Long getStreamType() {
         return this.StreamType;
     }
 
     /**
-     * Set The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
-     * @param StreamType The media type of the streams to record.
-0: Audio and video streams (default)
-1: Audio streams only
-2: Video streams only
+     * Set Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
+     * @param StreamType Media stream type for recording.
+0: recording audio and video streams (default).
+1: record audio streams only.
+2: record video stream only.
      */
     public void setStreamType(Long StreamType) {
         this.StreamType = StreamType;
     }
 
     /**
-     * Get The allowlist/blocklist for stream subscription. 
-     * @return SubscribeStreamUserIds The allowlist/blocklist for stream subscription.
+     * Get Specifies the allowlist or blocklist for the subscription stream. 
+     * @return SubscribeStreamUserIds Specifies the allowlist or blocklist for the subscription stream.
      */
     public SubscribeStreamUserIds getSubscribeStreamUserIds() {
         return this.SubscribeStreamUserIds;
     }
 
     /**
-     * Set The allowlist/blocklist for stream subscription.
-     * @param SubscribeStreamUserIds The allowlist/blocklist for stream subscription.
+     * Set Specifies the allowlist or blocklist for the subscription stream.
+     * @param SubscribeStreamUserIds Specifies the allowlist or blocklist for the subscription stream.
      */
     public void setSubscribeStreamUserIds(SubscribeStreamUserIds SubscribeStreamUserIds) {
         this.SubscribeStreamUserIds = SubscribeStreamUserIds;
     }
 
     /**
-     * Get The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`. 
-     * @return OutputFormat The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+     * Get Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod). 
+     * @return OutputFormat Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
      */
     public Long getOutputFormat() {
         return this.OutputFormat;
     }
 
     /**
-     * Set The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
-     * @param OutputFormat The output format. `0` (default): HLS; `1`: HLS + MP4; `2`: HLS + AAC;  `3` : MP4,  `4` : AAC. This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+     * Set Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+     * @param OutputFormat Output file format (valid when stored in third-party storage such as COS). 0: (default) output file is in hls format. 1: output file format is hls+mp4. 2: output file format is hls+aac. 3: output file format is mp4. 4: output file format is aac.
+
+This parameter is invalid when storing in VOD. when storing in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
      */
     public void setOutputFormat(Long OutputFormat) {
         this.OutputFormat = OutputFormat;
     }
 
     /**
-     * Get Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default. 
-     * @return AvMerge Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+     * Get In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default. 
+     * @return AvMerge In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
      */
     public Long getAvMerge() {
         return this.AvMerge;
     }
 
     /**
-     * Set Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
-     * @param AvMerge Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+     * Set In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
+     * @param AvMerge In single-stream recording mode, determine whether to merge the user's audio and video. 0: do not merge the audio and video of a stream (default). 1: merge the audio and video of a stream into one ts. in mixed-stream recording, this parameter is not required, and the audio and video are merged by default.
      */
     public void setAvMerge(Long AvMerge) {
         this.AvMerge = AvMerge;
     }
 
     /**
-     * Get The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS. 
-     * @return MaxMediaFileDuration The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
+     * Get If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective. 
+     * @return MaxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
      */
     public Long getMaxMediaFileDuration() {
         return this.MaxMediaFileDuration;
     }
 
     /**
-     * Set The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
-     * @param MaxMediaFileDuration The maximum file duration allowed (minutes). If the output format is AAC or MP4, and the maximum file duration is exceeded, the file will be segmented. Value range: 1-1440. Default value: 1440 (24 hours). The maximum file size allowed is 2 GB. If the file size exceeds 2 GB, or the file duration exceeds 24 hours, the file will also be segmented.
-This parameter is invalid if the output format is HLS.
+     * Set If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+     * @param MaxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
      */
     public void setMaxMediaFileDuration(Long MaxMediaFileDuration) {
         this.MaxMediaFileDuration = MaxMediaFileDuration;
     }
 
     /**
-     * Get The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream. 
-     * @return MediaId The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+     * Get Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream. 
+     * @return MediaId Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
      */
     public Long getMediaId() {
         return this.MediaId;
     }
 
     /**
-     * Set The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
-     * @param MediaId The type of stream to record. `0` (default): The primary stream and substream; `1`: The primary stream; `2`: The substream.
+     * Set Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
+     * @param MediaId Specify recording streams. 0: mainstream + auxiliary stream (default); 1: mainstream; 2: auxiliary stream.
      */
     public void setMediaId(Long MediaId) {
         this.MediaId = MediaId;
+    }
+
+    /**
+     * Get Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames 
+     * @return FillType Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+     */
+    public Long getFillType() {
+        return this.FillType;
+    }
+
+    /**
+     * Set Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+     * @param FillType Specifies the type of frame to fill when the upstream video stream stops:
+- 0: Fill with the last frame (freeze the last video frame)
+- 1: Fill with black frames
+     */
+    public void setFillType(Long FillType) {
+        this.FillType = FillType;
+    }
+
+    /**
+     * Get Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file. 
+     * @return SubscribeAbility Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
+     */
+    public Long getSubscribeAbility() {
+        return this.SubscribeAbility;
+    }
+
+    /**
+     * Set Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
+     * @param SubscribeAbility Specifies whether the recording task subscribes to the stream published by the Mixed Stream Robot. 
+
+- 1: Subscribe. 
+- 0: Do not subscribe (default).
+> Note: 
+When this option is enabled, it is recommended to use the "Subscription Allowlist." Avoid subscribing to both the stream published by the Mixed Stream Robot and the streams published by the hosts simultaneously; otherwise, it will result in audio echoing (duplicate audio) in the recorded file.
+     */
+    public void setSubscribeAbility(Long SubscribeAbility) {
+        this.SubscribeAbility = SubscribeAbility;
     }
 
     public RecordParams() {
@@ -269,6 +360,12 @@ This parameter is invalid if the output format is HLS.
         if (source.MediaId != null) {
             this.MediaId = new Long(source.MediaId);
         }
+        if (source.FillType != null) {
+            this.FillType = new Long(source.FillType);
+        }
+        if (source.SubscribeAbility != null) {
+            this.SubscribeAbility = new Long(source.SubscribeAbility);
+        }
     }
 
 
@@ -284,6 +381,8 @@ This parameter is invalid if the output format is HLS.
         this.setParamSimple(map, prefix + "AvMerge", this.AvMerge);
         this.setParamSimple(map, prefix + "MaxMediaFileDuration", this.MaxMediaFileDuration);
         this.setParamSimple(map, prefix + "MediaId", this.MediaId);
+        this.setParamSimple(map, prefix + "FillType", this.FillType);
+        this.setParamSimple(map, prefix + "SubscribeAbility", this.SubscribeAbility);
 
     }
 }

@@ -24,7 +24,11 @@ import java.util.HashMap;
 public class QueryHunyuanTo3DRapidJobResponse extends AbstractModel {
 
     /**
-    * Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.	
+    * Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful	
     */
     @SerializedName("Status")
     @Expose
@@ -45,7 +49,7 @@ public class QueryHunyuanTo3DRapidJobResponse extends AbstractModel {
     private String ErrorMessage;
 
     /**
-    * Specifies the generated 3D file array.	
+    * Specifies the generated 3D file array
     */
     @SerializedName("ResultFile3Ds")
     @Expose
@@ -59,16 +63,32 @@ public class QueryHunyuanTo3DRapidJobResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.	 
-     * @return Status Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.	
+     * Get Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful	 
+     * @return Status Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful	
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.	
-     * @param Status Task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.	
+     * Set Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful	
+     * @param Status Task status:
+WAIT: waiting
+RUN: running
+FAIL: failed
+DONE: successful	
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -107,16 +127,16 @@ public class QueryHunyuanTo3DRapidJobResponse extends AbstractModel {
     }
 
     /**
-     * Get Specifies the generated 3D file array.	 
-     * @return ResultFile3Ds Specifies the generated 3D file array.	
+     * Get Specifies the generated 3D file array 
+     * @return ResultFile3Ds Specifies the generated 3D file array
      */
     public File3D [] getResultFile3Ds() {
         return this.ResultFile3Ds;
     }
 
     /**
-     * Set Specifies the generated 3D file array.	
-     * @param ResultFile3Ds Specifies the generated 3D file array.	
+     * Set Specifies the generated 3D file array
+     * @param ResultFile3Ds Specifies the generated 3D file array
      */
     public void setResultFile3Ds(File3D [] ResultFile3Ds) {
         this.ResultFile3Ds = ResultFile3Ds;
