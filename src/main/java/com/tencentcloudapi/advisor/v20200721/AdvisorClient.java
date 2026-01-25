@@ -39,6 +39,17 @@ public class AdvisorClient extends AbstractClient{
     }
 
     /**
+     *Enable Tencent Cloud Smart Advisor authorization. This will synchronously enable report interpretation and cloud architecture collaboration permissions.
+     * @param req CreateAdvisorAuthorizationRequest
+     * @return CreateAdvisorAuthorizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAdvisorAuthorizationResponse CreateAdvisorAuthorization(CreateAdvisorAuthorizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAdvisorAuthorization", CreateAdvisorAuthorizationResponse.class);
+    }
+
+    /**
      *This API is used to query information about assessment items.
      * @param req DescribeStrategiesRequest
      * @return DescribeStrategiesResponse

@@ -83,6 +83,18 @@ public class BillingClient extends AbstractClient{
     }
 
     /**
+     *Creating an instance resource will generate an order for the newly purchased instance resource and automatically complete the payment using the balance of the Tencent Cloud account. The account calling this API must be granted the finace:trade permission; otherwise, the payment will fail.
+Currently, the integrated and supported product for purchase includes: Cloud Firewall.
+     * @param req CreateInstanceRequest
+     * @return CreateInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateInstanceResponse CreateInstance(CreateInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateInstance", CreateInstanceResponse.class);
+    }
+
+    /**
      *Delete sharing rule interface.
      * @param req DeleteAllocationRuleRequest
      * @return DeleteAllocationRuleResponse
