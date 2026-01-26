@@ -516,4 +516,28 @@ Note: The API request may fail due to network instability or other exceptions. I
         return this.internalRequest(req, "PayDeals", PayDealsResponse.class);
     }
 
+    /**
+     *To unsubscribe from an unneeded instance, only the actual payment amount will be refunded, any used vouchers will not be returned. The refunded amount will be credited to your Tencent Cloud account balance by default.The account calling this API must be granted the finace:RefundInstance permission; otherwise, the refund process will fail.
+Currently, the integrated and supported product for this operation includes: Cloud Firewall.
+     * @param req RefundInstanceRequest
+     * @return RefundInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefundInstanceResponse RefundInstance(RefundInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RefundInstance", RefundInstanceResponse.class);
+    }
+
+    /**
+     *Renewing an instance: when calling this API to renew a server, ensure that your Tencent Cloud account has sufficient balance; otherwise, the renewal will fail. The account calling this API must be granted the finace:tradepermission; otherwise, the renewal will fail.
+Currently, the integrated and supported product for renewal includes: Cloud Firewall.
+     * @param req RenewInstanceRequest
+     * @return RenewInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewInstanceResponse RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewInstance", RenewInstanceResponse.class);
+    }
+
 }

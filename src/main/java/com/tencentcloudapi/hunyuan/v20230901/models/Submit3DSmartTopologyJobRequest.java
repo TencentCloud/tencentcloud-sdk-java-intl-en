@@ -38,7 +38,7 @@ Url: file size cannot exceed 200MB.
     * Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
     */
     @SerializedName("PolygonType")
     @Expose
@@ -88,11 +88,11 @@ Url: file size cannot exceed 200MB.
      * Get Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face 
+quadrilateral: triangular and quadrilateral mixed face 
      * @return PolygonType Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
      */
     public String getPolygonType() {
         return this.PolygonType;
@@ -102,11 +102,11 @@ quadrilateral: quadrangle face
      * Set Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
      * @param PolygonType Polygon type, indicates the model surface is composed of grid components, defaults to triangle
 Reference value:
 triangle: triangle face
-quadrilateral: quadrangle face
+quadrilateral: triangular and quadrilateral mixed face
      */
     public void setPolygonType(String PolygonType) {
         this.PolygonType = PolygonType;
