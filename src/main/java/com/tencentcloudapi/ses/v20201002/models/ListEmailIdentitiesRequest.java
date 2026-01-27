@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class ListEmailIdentitiesRequest extends AbstractModel {
 
+    /**
+    * tag.
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagList [] TagList;
+
+    /**
+    * Pagination limit.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * Paging offset.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+     * Get tag. 
+     * @return TagList tag.
+     */
+    public TagList [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set tag.
+     * @param TagList tag.
+     */
+    public void setTagList(TagList [] TagList) {
+        this.TagList = TagList;
+    }
+
+    /**
+     * Get Pagination limit. 
+     * @return Limit Pagination limit.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Pagination limit.
+     * @param Limit Pagination limit.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get Paging offset. 
+     * @return Offset Paging offset.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Paging offset.
+     * @param Offset Paging offset.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public ListEmailIdentitiesRequest() {
     }
 
@@ -31,6 +100,18 @@ public class ListEmailIdentitiesRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ListEmailIdentitiesRequest(ListEmailIdentitiesRequest source) {
+        if (source.TagList != null) {
+            this.TagList = new TagList[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagList(source.TagList[i]);
+            }
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
     }
 
 
@@ -38,6 +119,9 @@ public class ListEmailIdentitiesRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

@@ -59,6 +59,20 @@ public class EmailIdentity extends AbstractModel {
     private Long DailyQuota;
 
     /**
+    * Independent ip for domain configuration.
+    */
+    @SerializedName("SendIp")
+    @Expose
+    private String [] SendIp;
+
+    /**
+    * tag.
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagList [] TagList;
+
+    /**
      * Get Sender domain. 
      * @return IdentityName Sender domain.
      */
@@ -138,6 +152,38 @@ public class EmailIdentity extends AbstractModel {
         this.DailyQuota = DailyQuota;
     }
 
+    /**
+     * Get Independent ip for domain configuration. 
+     * @return SendIp Independent ip for domain configuration.
+     */
+    public String [] getSendIp() {
+        return this.SendIp;
+    }
+
+    /**
+     * Set Independent ip for domain configuration.
+     * @param SendIp Independent ip for domain configuration.
+     */
+    public void setSendIp(String [] SendIp) {
+        this.SendIp = SendIp;
+    }
+
+    /**
+     * Get tag. 
+     * @return TagList tag.
+     */
+    public TagList [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set tag.
+     * @param TagList tag.
+     */
+    public void setTagList(TagList [] TagList) {
+        this.TagList = TagList;
+    }
+
     public EmailIdentity() {
     }
 
@@ -161,6 +207,18 @@ public class EmailIdentity extends AbstractModel {
         if (source.DailyQuota != null) {
             this.DailyQuota = new Long(source.DailyQuota);
         }
+        if (source.SendIp != null) {
+            this.SendIp = new String[source.SendIp.length];
+            for (int i = 0; i < source.SendIp.length; i++) {
+                this.SendIp[i] = new String(source.SendIp[i]);
+            }
+        }
+        if (source.TagList != null) {
+            this.TagList = new TagList[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagList(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -173,6 +231,8 @@ public class EmailIdentity extends AbstractModel {
         this.setParamSimple(map, prefix + "SendingEnabled", this.SendingEnabled);
         this.setParamSimple(map, prefix + "CurrentReputationLevel", this.CurrentReputationLevel);
         this.setParamSimple(map, prefix + "DailyQuota", this.DailyQuota);
+        this.setParamArraySimple(map, prefix + "SendIp.", this.SendIp);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

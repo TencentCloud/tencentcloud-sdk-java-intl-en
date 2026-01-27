@@ -61,6 +61,17 @@ public class SesClient extends AbstractClient{
     }
 
     /**
+     *Add a custom blocklist.
+     * @param req CreateCustomBlacklistRequest
+     * @return CreateCustomBlacklistResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCustomBlacklistResponse CreateCustomBlacklist(CreateCustomBlacklistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCustomBlacklist", CreateCustomBlacklistResponse.class);
+    }
+
+    /**
      *After the sender domain is verified, you need a sender address to send emails. For example, if your sender domain is mail.qcloud.com, your sender address can be service@mail.qcloud.com. If you want to display your name (such as "Tencent Cloud") in the inbox list of the recipients, the sender address should be in the format of `Tencent Cloud <email address>`. Please note that there must be a space between your name and the first angle bracket.
      * @param req CreateEmailAddressRequest
      * @return CreateEmailAddressResponse
@@ -139,6 +150,17 @@ Note: Only an approved template can be used to send emails.
     }
 
     /**
+     *Delete a custom blocklist email address.
+     * @param req DeleteCustomBlackListRequest
+     * @return DeleteCustomBlackListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCustomBlackListResponse DeleteCustomBlackList(DeleteCustomBlackListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCustomBlackList", DeleteCustomBlackListResponse.class);
+    }
+
+    /**
      *This API is used to delete a sender address.
      * @param req DeleteEmailAddressRequest
      * @return DeleteEmailAddressResponse
@@ -205,8 +227,7 @@ Note: Only an approved template can be used to send emails.
     }
 
     /**
-     *This API is used to get email sending status. Only data within 30 days can be queried.
-Default API request rate limit: 1 request/sec.
+     *Search the email sending status. Only support querying data within 30 days.
      * @param req GetSendEmailStatusRequest
      * @return GetSendEmailStatusResponse
      * @throws TencentCloudSDKException
@@ -250,6 +271,17 @@ Default API request rate limit: 1 request/sec.
     }
 
     /**
+     *Retrieve the custom blocklist.
+     * @param req ListCustomBlacklistRequest
+     * @return ListCustomBlacklistResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListCustomBlacklistResponse ListCustomBlacklist(ListCustomBlacklistRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListCustomBlacklist", ListCustomBlacklistResponse.class);
+    }
+
+    /**
      *This API is used to get the list of sender addresses.
      * @param req ListEmailAddressRequest
      * @return ListEmailAddressResponse
@@ -280,6 +312,17 @@ Default API request rate limit: 1 request/sec.
     public ListEmailTemplatesResponse ListEmailTemplates(ListEmailTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListEmailTemplates", ListEmailTemplatesResponse.class);
+    }
+
+    /**
+     *Query ALL recipient email addresses in the recipient list based on the recipient list id with paging query. Filter queries can be based on the recipient email address.
+     * @param req ListReceiverDetailsRequest
+     * @return ListReceiverDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListReceiverDetailsResponse ListReceiverDetails(ListReceiverDetailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListReceiverDetails", ListReceiverDetailsResponse.class);
     }
 
     /**
@@ -324,6 +367,17 @@ Default API request rate limit: 1 request/sec.
     public UpdateAddressUnsubscribeConfigResponse UpdateAddressUnsubscribeConfig(UpdateAddressUnsubscribeConfigRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateAddressUnsubscribeConfig", UpdateAddressUnsubscribeConfigResponse.class);
+    }
+
+    /**
+     *Refresh custom blocklist.
+     * @param req UpdateCustomBlackListRequest
+     * @return UpdateCustomBlackListResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateCustomBlackListResponse UpdateCustomBlackList(UpdateCustomBlackListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateCustomBlackList", UpdateCustomBlackListResponse.class);
     }
 
     /**

@@ -25,7 +25,6 @@ public class Volume extends AbstractModel {
 
     /**
     * Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SendDate")
     @Expose
@@ -74,18 +73,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Long BounceCount;
 
     /**
-    * Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Number of users for unsubscription.
     */
     @SerializedName("UnsubscribeCount")
     @Expose
     private Long UnsubscribeCount;
 
     /**
-     * Get Date
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * Get Date 
      * @return SendDate Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSendDate() {
         return this.SendDate;
@@ -93,9 +89,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param SendDate Date
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSendDate(String SendDate) {
         this.SendDate = SendDate;
@@ -198,20 +192,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return UnsubscribeCount Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Number of users for unsubscription. 
+     * @return UnsubscribeCount Number of users for unsubscription.
      */
     public Long getUnsubscribeCount() {
         return this.UnsubscribeCount;
     }
 
     /**
-     * Set Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param UnsubscribeCount Number of users who canceled subscriptions.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Number of users for unsubscription.
+     * @param UnsubscribeCount Number of users for unsubscription.
      */
     public void setUnsubscribeCount(Long UnsubscribeCount) {
         this.UnsubscribeCount = UnsubscribeCount;

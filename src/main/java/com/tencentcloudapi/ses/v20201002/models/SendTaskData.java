@@ -101,8 +101,7 @@ public class SendTaskData extends AbstractModel {
     private String Subject;
 
     /**
-    * Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Template and template data.
     */
     @SerializedName("Template")
     @Expose
@@ -125,8 +124,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
     private TimedEmailParam TimedParam;
 
     /**
-    * Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Task exception information.
     */
     @SerializedName("ErrMsg")
     @Expose
@@ -316,20 +314,16 @@ Note: This field may return `null`, indicating that no valid value can be found.
     }
 
     /**
-     * Get Template and template data
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return Template Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Template and template data. 
+     * @return Template Template and template data.
      */
     public Template getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param Template Template and template data
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Template and template data.
+     * @param Template Template and template data.
      */
     public void setTemplate(Template Template) {
         this.Template = Template;
@@ -376,20 +370,16 @@ Note: This field may return `null`, indicating that no valid value can be found.
     }
 
     /**
-     * Get Task exception information
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return ErrMsg Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Task exception information. 
+     * @return ErrMsg Task exception information.
      */
     public String getErrMsg() {
         return this.ErrMsg;
     }
 
     /**
-     * Set Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param ErrMsg Task exception information
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Task exception information.
+     * @param ErrMsg Task exception information.
      */
     public void setErrMsg(String ErrMsg) {
         this.ErrMsg = ErrMsg;

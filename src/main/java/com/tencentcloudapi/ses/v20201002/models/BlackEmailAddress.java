@@ -38,6 +38,13 @@ public class BlackEmailAddress extends AbstractModel {
     private String EmailAddress;
 
     /**
+    * Reason for being blacklisted.
+    */
+    @SerializedName("IspDesc")
+    @Expose
+    private String IspDesc;
+
+    /**
      * Get Time when the email address is blocklisted. 
      * @return BounceTime Time when the email address is blocklisted.
      */
@@ -69,6 +76,22 @@ public class BlackEmailAddress extends AbstractModel {
         this.EmailAddress = EmailAddress;
     }
 
+    /**
+     * Get Reason for being blacklisted. 
+     * @return IspDesc Reason for being blacklisted.
+     */
+    public String getIspDesc() {
+        return this.IspDesc;
+    }
+
+    /**
+     * Set Reason for being blacklisted.
+     * @param IspDesc Reason for being blacklisted.
+     */
+    public void setIspDesc(String IspDesc) {
+        this.IspDesc = IspDesc;
+    }
+
     public BlackEmailAddress() {
     }
 
@@ -83,6 +106,9 @@ public class BlackEmailAddress extends AbstractModel {
         if (source.EmailAddress != null) {
             this.EmailAddress = new String(source.EmailAddress);
         }
+        if (source.IspDesc != null) {
+            this.IspDesc = new String(source.IspDesc);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class BlackEmailAddress extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "BounceTime", this.BounceTime);
         this.setParamSimple(map, prefix + "EmailAddress", this.EmailAddress);
+        this.setParamSimple(map, prefix + "IspDesc", this.IspDesc);
 
     }
 }

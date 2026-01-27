@@ -45,16 +45,14 @@ public class ReceiverData extends AbstractModel {
     private Long Count;
 
     /**
-    * Recipient group description
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Recipient list description.
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
-Note: This field may return `null`, indicating that no valid value can be found.
+    * List status (1 to be uploaded 2 uploading 3 upload complete).
     */
     @SerializedName("ReceiversStatus")
     @Expose
@@ -66,6 +64,13 @@ Note: This field may return `null`, indicating that no valid value can be found.
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
+
+    /**
+    * Invalid number of recipients.
+    */
+    @SerializedName("InvalidCount")
+    @Expose
+    private Long InvalidCount;
 
     /**
      * Get Recipient group ID 
@@ -116,40 +121,32 @@ Note: This field may return `null`, indicating that no valid value can be found.
     }
 
     /**
-     * Get Recipient group description
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return Desc Recipient group description
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Recipient list description. 
+     * @return Desc Recipient list description.
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set Recipient group description
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param Desc Recipient group description
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Recipient list description.
+     * @param Desc Recipient list description.
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return ReceiversStatus Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get List status (1 to be uploaded 2 uploading 3 upload complete). 
+     * @return ReceiversStatus List status (1 to be uploaded 2 uploading 3 upload complete).
      */
     public Long getReceiversStatus() {
         return this.ReceiversStatus;
     }
 
     /**
-     * Set Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param ReceiversStatus Group status (`1`: to be uploaded; `2` uploading; `3` uploaded)
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set List status (1 to be uploaded 2 uploading 3 upload complete).
+     * @param ReceiversStatus List status (1 to be uploaded 2 uploading 3 upload complete).
      */
     public void setReceiversStatus(Long ReceiversStatus) {
         this.ReceiversStatus = ReceiversStatus;
@@ -169,6 +166,22 @@ Note: This field may return `null`, indicating that no valid value can be found.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Invalid number of recipients. 
+     * @return InvalidCount Invalid number of recipients.
+     */
+    public Long getInvalidCount() {
+        return this.InvalidCount;
+    }
+
+    /**
+     * Set Invalid number of recipients.
+     * @param InvalidCount Invalid number of recipients.
+     */
+    public void setInvalidCount(Long InvalidCount) {
+        this.InvalidCount = InvalidCount;
     }
 
     public ReceiverData() {
@@ -197,6 +210,9 @@ Note: This field may return `null`, indicating that no valid value can be found.
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.InvalidCount != null) {
+            this.InvalidCount = new Long(source.InvalidCount);
+        }
     }
 
 
@@ -210,6 +226,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
         this.setParamSimple(map, prefix + "Desc", this.Desc);
         this.setParamSimple(map, prefix + "ReceiversStatus", this.ReceiversStatus);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "InvalidCount", this.InvalidCount);
 
     }
 }

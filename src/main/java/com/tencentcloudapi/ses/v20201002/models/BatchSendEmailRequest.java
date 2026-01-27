@@ -24,286 +24,291 @@ import java.util.HashMap;
 public class BatchSendEmailRequest extends AbstractModel {
 
     /**
-    * Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
-sender &lt;email address&gt;. For example:
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+    * Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
+Sender &lt;email address&gt; via fill in, such as:.
+Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
     */
     @SerializedName("FromEmailAddress")
     @Expose
     private String FromEmailAddress;
 
     /**
-    * Recipient group ID
+    * Recipient list ID.
     */
     @SerializedName("ReceiverId")
     @Expose
     private Long ReceiverId;
 
     /**
-    * Email subject
+    * Email subject.
     */
     @SerializedName("Subject")
     @Expose
     private String Subject;
 
     /**
-    * Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+    * Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+    * The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
     */
     @SerializedName("ReplyToAddresses")
     @Expose
     private String ReplyToAddresses;
 
     /**
-    * Template when emails are sent using a template
+    * When using a template to send, fill in the related parameters of the template.
+<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
     */
     @SerializedName("Template")
     @Expose
     private Template Template;
 
     /**
-    * Disused
+    * Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
     */
     @SerializedName("Simple")
     @Expose
     private Simple Simple;
 
     /**
-    * Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+    * Send attachment when required. fill in related parameters (not supported).
     */
     @SerializedName("Attachments")
     @Expose
     private Attachment [] Attachments;
 
     /**
-    * Parameter required for a recurring sending task
+    * Required parameter for sending tasks periodically.
     */
     @SerializedName("CycleParam")
     @Expose
     private CycleEmailParam CycleParam;
 
     /**
-    * Parameter required for a scheduled sending task
+    * Required parameter for scheduled task assignment.
     */
     @SerializedName("TimedParam")
     @Expose
     private TimedEmailParam TimedParam;
 
     /**
-    * Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+    * Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
     */
     @SerializedName("Unsubscribe")
     @Expose
     private String Unsubscribe;
 
     /**
-    * Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
+    * Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
     */
     @SerializedName("ADLocation")
     @Expose
     private Long ADLocation;
 
     /**
-     * Get Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
-sender &lt;email address&gt;. For example:
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt; 
-     * @return FromEmailAddress Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
-sender &lt;email address&gt;. For example:
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+     * Get Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
+Sender &lt;email address&gt; via fill in, such as:.
+Tencent cloud team &lt;noreply@mail.qcloud.com&gt;. 
+     * @return FromEmailAddress Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
+Sender &lt;email address&gt; via fill in, such as:.
+Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
      */
     public String getFromEmailAddress() {
         return this.FromEmailAddress;
     }
 
     /**
-     * Set Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
-sender &lt;email address&gt;. For example:
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
-     * @param FromEmailAddress Sender address. Enter a sender address such as `noreply@mail.qcloud.com`. To display the sender name, enter the address in the following format:
-sender &lt;email address&gt;. For example:
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+     * Set Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
+Sender &lt;email address&gt; via fill in, such as:.
+Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
+     * @param FromEmailAddress Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
+Sender &lt;email address&gt; via fill in, such as:.
+Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
      */
     public void setFromEmailAddress(String FromEmailAddress) {
         this.FromEmailAddress = FromEmailAddress;
     }
 
     /**
-     * Get Recipient group ID 
-     * @return ReceiverId Recipient group ID
+     * Get Recipient list ID. 
+     * @return ReceiverId Recipient list ID.
      */
     public Long getReceiverId() {
         return this.ReceiverId;
     }
 
     /**
-     * Set Recipient group ID
-     * @param ReceiverId Recipient group ID
+     * Set Recipient list ID.
+     * @param ReceiverId Recipient list ID.
      */
     public void setReceiverId(Long ReceiverId) {
         this.ReceiverId = ReceiverId;
     }
 
     /**
-     * Get Email subject 
-     * @return Subject Email subject
+     * Get Email subject. 
+     * @return Subject Email subject.
      */
     public String getSubject() {
         return this.Subject;
     }
 
     /**
-     * Set Email subject
-     * @param Subject Email subject
+     * Set Email subject.
+     * @param Subject Email subject.
      */
     public void setSubject(String Subject) {
         this.Subject = Subject;
     }
 
     /**
-     * Get Task type. `1`: immediate; `2`: scheduled; `3`: recurring 
-     * @return TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+     * Get Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending. 
+     * @return TaskType Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Task type. `1`: immediate; `2`: scheduled; `3`: recurring
-     * @param TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+     * Set Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
+     * @param TaskType Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent. 
-     * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+     * Get The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send. 
+     * @return ReplyToAddresses The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
      */
     public String getReplyToAddresses() {
         return this.ReplyToAddresses;
     }
 
     /**
-     * Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
-     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+     * Set The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+     * @param ReplyToAddresses The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
      */
     public void setReplyToAddresses(String ReplyToAddresses) {
         this.ReplyToAddresses = ReplyToAddresses;
     }
 
     /**
-     * Get Template when emails are sent using a template 
-     * @return Template Template when emails are sent using a template
+     * Get When using a template to send, fill in the related parameters of the template.
+<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>. 
+     * @return Template When using a template to send, fill in the related parameters of the template.
+<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
      */
     public Template getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set Template when emails are sent using a template
-     * @param Template Template when emails are sent using a template
+     * Set When using a template to send, fill in the related parameters of the template.
+<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+     * @param Template When using a template to send, fill in the related parameters of the template.
+<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
      */
     public void setTemplate(Template Template) {
         this.Template = Template;
     }
 
     /**
-     * Get Disused 
-     * @return Simple Disused
+     * Get Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>. 
+     * @return Simple Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
      */
     public Simple getSimple() {
         return this.Simple;
     }
 
     /**
-     * Set Disused
-     * @param Simple Disused
+     * Set Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+     * @param Simple Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
      */
     public void setSimple(Simple Simple) {
         this.Simple = Simple;
     }
 
     /**
-     * Get Attachment parameters to set when you need to send attachments. This parameter is currently unavailable. 
-     * @return Attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+     * Get Send attachment when required. fill in related parameters (not supported). 
+     * @return Attachments Send attachment when required. fill in related parameters (not supported).
      */
     public Attachment [] getAttachments() {
         return this.Attachments;
     }
 
     /**
-     * Set Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
-     * @param Attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+     * Set Send attachment when required. fill in related parameters (not supported).
+     * @param Attachments Send attachment when required. fill in related parameters (not supported).
      */
     public void setAttachments(Attachment [] Attachments) {
         this.Attachments = Attachments;
     }
 
     /**
-     * Get Parameter required for a recurring sending task 
-     * @return CycleParam Parameter required for a recurring sending task
+     * Get Required parameter for sending tasks periodically. 
+     * @return CycleParam Required parameter for sending tasks periodically.
      */
     public CycleEmailParam getCycleParam() {
         return this.CycleParam;
     }
 
     /**
-     * Set Parameter required for a recurring sending task
-     * @param CycleParam Parameter required for a recurring sending task
+     * Set Required parameter for sending tasks periodically.
+     * @param CycleParam Required parameter for sending tasks periodically.
      */
     public void setCycleParam(CycleEmailParam CycleParam) {
         this.CycleParam = CycleParam;
     }
 
     /**
-     * Get Parameter required for a scheduled sending task 
-     * @return TimedParam Parameter required for a scheduled sending task
+     * Get Required parameter for scheduled task assignment. 
+     * @return TimedParam Required parameter for scheduled task assignment.
      */
     public TimedEmailParam getTimedParam() {
         return this.TimedParam;
     }
 
     /**
-     * Set Parameter required for a scheduled sending task
-     * @param TimedParam Parameter required for a scheduled sending task
+     * Set Required parameter for scheduled task assignment.
+     * @param TimedParam Required parameter for scheduled task assignment.
      */
     public void setTimedParam(TimedEmailParam TimedParam) {
         this.TimedParam = TimedParam;
     }
 
     /**
-     * Get Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai 
-     * @return Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+     * Get Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 
+     * @return Unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
      */
     public String getUnsubscribe() {
         return this.Unsubscribe;
     }
 
     /**
-     * Set Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
-     * @param Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+     * Set Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+     * @param Unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
      */
     public void setUnsubscribe(String Unsubscribe) {
         this.Unsubscribe = Unsubscribe;
     }
 
     /**
-     * Get Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject. 
-     * @return ADLocation Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
+     * Get Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject). 
+     * @return ADLocation Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
      */
     public Long getADLocation() {
         return this.ADLocation;
     }
 
     /**
-     * Set Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
-     * @param ADLocation Whether to add an ad tag. `0`: Add no tag; `1`: Add before the subject; `2`: Add after the subject.
+     * Set Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
+     * @param ADLocation Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
      */
     public void setADLocation(Long ADLocation) {
         this.ADLocation = ADLocation;

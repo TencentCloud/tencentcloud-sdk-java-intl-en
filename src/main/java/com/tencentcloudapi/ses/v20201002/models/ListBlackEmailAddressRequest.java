@@ -59,7 +59,7 @@ public class ListBlackEmailAddressRequest extends AbstractModel {
     private String EmailAddress;
 
     /**
-    * You can specify a task ID to query.
+    * This parameter has been deprecated.
     */
     @SerializedName("TaskID")
     @Expose
@@ -146,16 +146,16 @@ public class ListBlackEmailAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get You can specify a task ID to query. 
-     * @return TaskID You can specify a task ID to query.
+     * Get This parameter has been deprecated. 
+     * @return TaskID This parameter has been deprecated.
      */
     public String getTaskID() {
         return this.TaskID;
     }
 
     /**
-     * Set You can specify a task ID to query.
-     * @param TaskID You can specify a task ID to query.
+     * Set This parameter has been deprecated.
+     * @param TaskID This parameter has been deprecated.
      */
     public void setTaskID(String TaskID) {
         this.TaskID = TaskID;

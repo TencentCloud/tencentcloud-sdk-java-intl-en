@@ -1,5 +1,8 @@
 package com.tencentcloudapi.ses.v20201002;
 public enum SesErrorCode {
+     /* CAM token authentication failure. */
+     AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
+     
      /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
@@ -24,6 +27,9 @@ public enum SesErrorCode {
      /* The email has been blocked temporarily due to high rejection rate. */
      FAILEDOPERATION_HIGHREJECTIONRATE("FailedOperation.HighRejectionRate"),
      
+     /* Mail contains non-compliant link. */
+     FAILEDOPERATION_ILLEGALURL("FailedOperation.IllegalURL"),
+     
      /* Incorrect email address. */
      FAILEDOPERATION_INCORRECTEMAIL("FailedOperation.IncorrectEmail"),
      
@@ -36,7 +42,7 @@ public enum SesErrorCode {
      /* Insufficient emails in plans. */
      FAILEDOPERATION_INSUFFICIENTQUOTA("FailedOperation.InsufficientQuota"),
      
-     /* Unsupported attachment name. Make sure it does not contain special characters. For details, see the attachment description. */
+     /* Unsupported attachment name. please check whether the attachment name contains special characters. for details, see the appendix attachment description (https://www.tencentcloud.comom/document/product/1288/51951?from_cn_redirect=1). */
      FAILEDOPERATION_INVALIDATTACHNAME("FailedOperation.InvalidAttachName"),
      
      /* Reached the query limit (100). */
@@ -75,7 +81,7 @@ public enum SesErrorCode {
      /* The template size is too large. Reduce the size. */
      FAILEDOPERATION_TEMPLATECONTENTTOOLARGE("FailedOperation.TemplateContentToolarge"),
      
-     /* The email has been blocked temporarily due to violations of rules. */
+     /* The email push platform will suspend sending emails to the service provider for 10 minutes due to the corresponding recipient service provider's limit. it will be automatically released after 10 minutes. */
      FAILEDOPERATION_TEMPORARYBLOCKED("FailedOperation.TemporaryBlocked"),
      
      /* Too many attachments. A single email supports up to 10 attachments. */
@@ -83,6 +89,9 @@ public enum SesErrorCode {
      
      /* Too many recipients. Set a maximum of 50 recipients at a time. */
      FAILEDOPERATION_TOOMANYRECIPIENTS("FailedOperation.TooManyRecipients"),
+     
+     /* Forbid users with low delivery rate to include URL webpage links in email content. */
+     FAILEDOPERATION_URLFORBIDDEN("FailedOperation.URLForbidden"),
      
      /* Unsupported email type. */
      FAILEDOPERATION_UNSUPPORTMAILTYPE("FailedOperation.UnsupportMailType"),
@@ -224,6 +233,9 @@ public enum SesErrorCode {
      
      /* The number of sender addresses exceeds the upper limit. */
      OPERATIONDENIED_EXCEEDSENDERLIMIT("OperationDenied.ExceedSenderLimit"),
+     
+     /* Domain name cannot be deleted. */
+     OPERATIONDENIED_NOTALLOWDELETE("OperationDenied.NotAllowDelete"),
      
      /* The recipient group is being uploaded. Try again later. */
      OPERATIONDENIED_RECEIVERISOPERATING("OperationDenied.ReceiverIsOperating"),

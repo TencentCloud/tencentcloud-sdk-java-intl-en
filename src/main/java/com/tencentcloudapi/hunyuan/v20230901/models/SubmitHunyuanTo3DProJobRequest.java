@@ -26,7 +26,7 @@ public class SubmitHunyuanTo3DProJobRequest extends AbstractModel {
     /**
     * Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
     */
     @SerializedName("Model")
@@ -131,11 +131,11 @@ quadrilateral: mix quadrangle and triangle faces to generate
     /**
      * Get Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0 
      * @return Model Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
      */
     public String getModel() {
@@ -145,11 +145,11 @@ Example value:3.0
     /**
      * Set Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
      * @param Model Tencent HY 3D Global model version
 Defaults to 3.0, with optional choices: 3.0, 3.1
-When selecting version 3.1, the LowPoly parameter is unavailable
+When selecting version 3.1, the [LowPoly] and [Sketch] parameter is unavailable
 Example value:3.0
      */
     public void setModel(String Model) {

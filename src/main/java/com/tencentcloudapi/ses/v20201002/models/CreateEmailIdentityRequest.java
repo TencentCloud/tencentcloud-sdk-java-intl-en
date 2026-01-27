@@ -31,6 +31,20 @@ public class CreateEmailIdentityRequest extends AbstractModel {
     private String EmailIdentity;
 
     /**
+    * Generated dkim key length. valid values: 0 (1024), 1 (2048).
+    */
+    @SerializedName("DKIMOption")
+    @Expose
+    private Long DKIMOption;
+
+    /**
+    * tag.
+    */
+    @SerializedName("TagList")
+    @Expose
+    private TagList [] TagList;
+
+    /**
      * Get Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com. 
      * @return EmailIdentity Your sender domain. You are advised to use a third-level domain, for example, mail.qcloud.com.
      */
@@ -46,6 +60,38 @@ public class CreateEmailIdentityRequest extends AbstractModel {
         this.EmailIdentity = EmailIdentity;
     }
 
+    /**
+     * Get Generated dkim key length. valid values: 0 (1024), 1 (2048). 
+     * @return DKIMOption Generated dkim key length. valid values: 0 (1024), 1 (2048).
+     */
+    public Long getDKIMOption() {
+        return this.DKIMOption;
+    }
+
+    /**
+     * Set Generated dkim key length. valid values: 0 (1024), 1 (2048).
+     * @param DKIMOption Generated dkim key length. valid values: 0 (1024), 1 (2048).
+     */
+    public void setDKIMOption(Long DKIMOption) {
+        this.DKIMOption = DKIMOption;
+    }
+
+    /**
+     * Get tag. 
+     * @return TagList tag.
+     */
+    public TagList [] getTagList() {
+        return this.TagList;
+    }
+
+    /**
+     * Set tag.
+     * @param TagList tag.
+     */
+    public void setTagList(TagList [] TagList) {
+        this.TagList = TagList;
+    }
+
     public CreateEmailIdentityRequest() {
     }
 
@@ -57,6 +103,15 @@ public class CreateEmailIdentityRequest extends AbstractModel {
         if (source.EmailIdentity != null) {
             this.EmailIdentity = new String(source.EmailIdentity);
         }
+        if (source.DKIMOption != null) {
+            this.DKIMOption = new Long(source.DKIMOption);
+        }
+        if (source.TagList != null) {
+            this.TagList = new TagList[source.TagList.length];
+            for (int i = 0; i < source.TagList.length; i++) {
+                this.TagList[i] = new TagList(source.TagList[i]);
+            }
+        }
     }
 
 
@@ -65,6 +120,8 @@ public class CreateEmailIdentityRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "EmailIdentity", this.EmailIdentity);
+        this.setParamSimple(map, prefix + "DKIMOption", this.DKIMOption);
+        this.setParamArrayObj(map, prefix + "TagList.", this.TagList);
 
     }
 }

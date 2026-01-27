@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class SendEmailRequest extends AbstractModel {
 
     /**
-    * Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
-To display the sender name, enter the address in the following format: 
-Sender <email address>
+    * Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
     */
     @SerializedName("FromEmailAddress")
     @Expose
     private String FromEmailAddress;
 
     /**
-    * Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+    * Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
     */
     @SerializedName("Destination")
     @Expose
@@ -47,96 +45,111 @@ Sender <email address>
     private String Subject;
 
     /**
-    * Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+    * The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
     */
     @SerializedName("ReplyToAddresses")
     @Expose
     private String ReplyToAddresses;
 
     /**
-    * 
+    * Cc recipient email address, supports up to 20 carbon copies.
     */
     @SerializedName("Cc")
     @Expose
     private String [] Cc;
 
     /**
-    * 
+    * Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
     */
     @SerializedName("Bcc")
     @Expose
     private String [] Bcc;
 
     /**
-    * Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
+    * Use template for sending and fill in related parameters.
+<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
     */
     @SerializedName("Template")
     @Expose
     private Template Template;
 
     /**
-    * Disused
+    * This parameter has been deprecated.
+<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
     */
     @SerializedName("Simple")
     @Expose
     private Simple Simple;
 
     /**
-    * Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+    * When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
     */
     @SerializedName("Attachments")
     @Expose
     private Attachment [] Attachments;
 
     /**
-    * Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+    * Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
     */
     @SerializedName("Unsubscribe")
     @Expose
     private String Unsubscribe;
 
     /**
-    * Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+    * Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
     */
     @SerializedName("TriggerType")
     @Expose
     private Long TriggerType;
 
     /**
-     * Get Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
-To display the sender name, enter the address in the following format: 
-Sender <email address> 
-     * @return FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
-To display the sender name, enter the address in the following format: 
-Sender <email address>
+    * Message-Id field in the smtp header.
+    */
+    @SerializedName("SmtpMessageId")
+    @Expose
+    private String SmtpMessageId;
+
+    /**
+    * Other fields that can be set in the smtp header.
+    */
+    @SerializedName("SmtpHeaders")
+    @Expose
+    private String SmtpHeaders;
+
+    /**
+    * from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+    */
+    @SerializedName("HeaderFrom")
+    @Expose
+    private String HeaderFrom;
+
+    /**
+     * Get Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:). 
+     * @return FromEmailAddress Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
      */
     public String getFromEmailAddress() {
         return this.FromEmailAddress;
     }
 
     /**
-     * Set Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
-To display the sender name, enter the address in the following format: 
-Sender <email address>
-     * @param FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
-To display the sender name, enter the address in the following format: 
-Sender <email address>
+     * Set Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
+     * @param FromEmailAddress Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
      */
     public void setFromEmailAddress(String FromEmailAddress) {
         this.FromEmailAddress = FromEmailAddress;
     }
 
     /**
-     * Get Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails. 
-     * @return Destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+     * Get Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send. 
+     * @return Destination Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
      */
     public String [] getDestination() {
         return this.Destination;
     }
 
     /**
-     * Set Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
-     * @param Destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+     * Set Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
+     * @param Destination Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
      */
     public void setDestination(String [] Destination) {
         this.Destination = Destination;
@@ -159,131 +172,187 @@ Sender <email address>
     }
 
     /**
-     * Get Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent. 
-     * @return ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+     * Get The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send. 
+     * @return ReplyToAddresses The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
      */
     public String getReplyToAddresses() {
         return this.ReplyToAddresses;
     }
 
     /**
-     * Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
-     * @param ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+     * Set The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+     * @param ReplyToAddresses The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
      */
     public void setReplyToAddresses(String ReplyToAddresses) {
         this.ReplyToAddresses = ReplyToAddresses;
     }
 
     /**
-     * Get  
-     * @return Cc 
+     * Get Cc recipient email address, supports up to 20 carbon copies. 
+     * @return Cc Cc recipient email address, supports up to 20 carbon copies.
      */
     public String [] getCc() {
         return this.Cc;
     }
 
     /**
-     * Set 
-     * @param Cc 
+     * Set Cc recipient email address, supports up to 20 carbon copies.
+     * @param Cc Cc recipient email address, supports up to 20 carbon copies.
      */
     public void setCc(String [] Cc) {
         this.Cc = Cc;
     }
 
     /**
-     * Get  
-     * @return Bcc 
+     * Get Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique. 
+     * @return Bcc Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
      */
     public String [] getBcc() {
         return this.Bcc;
     }
 
     /**
-     * Set 
-     * @param Bcc 
+     * Set Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
+     * @param Bcc Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
      */
     public void setBcc(String [] Bcc) {
         this.Bcc = Bcc;
     }
 
     /**
-     * Get Template parameters for template-based sending. As `Simple` has been disused, `Template` is required. 
-     * @return Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
+     * Get Use template for sending and fill in related parameters.
+<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>. 
+     * @return Template Use template for sending and fill in related parameters.
+<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
      */
     public Template getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
-     * @param Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
+     * Set Use template for sending and fill in related parameters.
+<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+     * @param Template Use template for sending and fill in related parameters.
+<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
      */
     public void setTemplate(Template Template) {
         this.Template = Template;
     }
 
     /**
-     * Get Disused 
-     * @return Simple Disused
+     * Get This parameter has been deprecated.
+<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>. 
+     * @return Simple This parameter has been deprecated.
+<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
      */
     public Simple getSimple() {
         return this.Simple;
     }
 
     /**
-     * Set Disused
-     * @param Simple Disused
+     * Set This parameter has been deprecated.
+<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+     * @param Simple This parameter has been deprecated.
+<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
      */
     public void setSimple(Simple Simple) {
         this.Simple = Simple;
     }
 
     /**
-     * Get Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error. 
-     * @return Attachments Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+     * Get When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M. 
+     * @return Attachments When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
      */
     public Attachment [] getAttachments() {
         return this.Attachments;
     }
 
     /**
-     * Set Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
-     * @param Attachments Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+     * Set When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
+     * @param Attachments When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
      */
     public void setAttachments(Attachment [] Attachments) {
         this.Attachments = Attachments;
     }
 
     /**
-     * Get Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai 
-     * @return Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+     * Get Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 
+     * @return Unsubscribe Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
      */
     public String getUnsubscribe() {
         return this.Unsubscribe;
     }
 
     /**
-     * Set Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
-     * @param Unsubscribe Unsubscribe link option. `0`: Do not add unsubscribe link; `1`: English `2`: Simplified Chinese; `3`: Traditional Chinese; `4`: Spanish; `5`: French; `6`: German; `7`: Japanese; `8`: Korean; `9`: Arabic; `10`: Thai
+     * Set Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+     * @param Unsubscribe Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
      */
     public void setUnsubscribe(String Unsubscribe) {
         this.Unsubscribe = Unsubscribe;
     }
 
     /**
-     * Get Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type. 
-     * @return TriggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+     * Get Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel. 
+     * @return TriggerType Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
      */
     public Long getTriggerType() {
         return this.TriggerType;
     }
 
     /**
-     * Set Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
-     * @param TriggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+     * Set Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
+     * @param TriggerType Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
      */
     public void setTriggerType(Long TriggerType) {
         this.TriggerType = TriggerType;
+    }
+
+    /**
+     * Get Message-Id field in the smtp header. 
+     * @return SmtpMessageId Message-Id field in the smtp header.
+     */
+    public String getSmtpMessageId() {
+        return this.SmtpMessageId;
+    }
+
+    /**
+     * Set Message-Id field in the smtp header.
+     * @param SmtpMessageId Message-Id field in the smtp header.
+     */
+    public void setSmtpMessageId(String SmtpMessageId) {
+        this.SmtpMessageId = SmtpMessageId;
+    }
+
+    /**
+     * Get Other fields that can be set in the smtp header. 
+     * @return SmtpHeaders Other fields that can be set in the smtp header.
+     */
+    public String getSmtpHeaders() {
+        return this.SmtpHeaders;
+    }
+
+    /**
+     * Set Other fields that can be set in the smtp header.
+     * @param SmtpHeaders Other fields that can be set in the smtp header.
+     */
+    public void setSmtpHeaders(String SmtpHeaders) {
+        this.SmtpHeaders = SmtpHeaders;
+    }
+
+    /**
+     * Get from field in the smtp header. the domain name should be consistent with FromEmailAddress. 
+     * @return HeaderFrom from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+     */
+    public String getHeaderFrom() {
+        return this.HeaderFrom;
+    }
+
+    /**
+     * Set from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+     * @param HeaderFrom from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+     */
+    public void setHeaderFrom(String HeaderFrom) {
+        this.HeaderFrom = HeaderFrom;
     }
 
     public SendEmailRequest() {
@@ -339,6 +408,15 @@ Sender <email address>
         if (source.TriggerType != null) {
             this.TriggerType = new Long(source.TriggerType);
         }
+        if (source.SmtpMessageId != null) {
+            this.SmtpMessageId = new String(source.SmtpMessageId);
+        }
+        if (source.SmtpHeaders != null) {
+            this.SmtpHeaders = new String(source.SmtpHeaders);
+        }
+        if (source.HeaderFrom != null) {
+            this.HeaderFrom = new String(source.HeaderFrom);
+        }
     }
 
 
@@ -357,6 +435,9 @@ Sender <email address>
         this.setParamArrayObj(map, prefix + "Attachments.", this.Attachments);
         this.setParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
         this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
+        this.setParamSimple(map, prefix + "SmtpMessageId", this.SmtpMessageId);
+        this.setParamSimple(map, prefix + "SmtpHeaders", this.SmtpHeaders);
+        this.setParamSimple(map, prefix + "HeaderFrom", this.HeaderFrom);
 
     }
 }

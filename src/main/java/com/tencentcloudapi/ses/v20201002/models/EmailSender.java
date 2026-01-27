@@ -31,8 +31,7 @@ public class EmailSender extends AbstractModel {
     private String EmailAddress;
 
     /**
-    * Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Sender alias.
     */
     @SerializedName("EmailSenderName")
     @Expose
@@ -40,11 +39,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
     */
     @SerializedName("CreatedTimestamp")
     @Expose
     private Long CreatedTimestamp;
+
+    /**
+    * smtp password type. 0=not set. 1=already set up.
+    */
+    @SerializedName("SmtpPwdType")
+    @Expose
+    private Long SmtpPwdType;
 
     /**
      * Get Sender address. 
@@ -63,20 +70,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return EmailSenderName Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Sender alias. 
+     * @return EmailSenderName Sender alias.
      */
     public String getEmailSenderName() {
         return this.EmailSenderName;
     }
 
     /**
-     * Set Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param EmailSenderName Sender name.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Sender alias.
+     * @param EmailSenderName Sender alias.
      */
     public void setEmailSenderName(String EmailSenderName) {
         this.EmailSenderName = EmailSenderName;
@@ -84,9 +87,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Get Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+
+ 
      * @return CreatedTimestamp Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
      */
     public Long getCreatedTimestamp() {
         return this.CreatedTimestamp;
@@ -94,12 +99,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
      * @param CreatedTimestamp Creation time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+
+
      */
     public void setCreatedTimestamp(Long CreatedTimestamp) {
         this.CreatedTimestamp = CreatedTimestamp;
+    }
+
+    /**
+     * Get smtp password type. 0=not set. 1=already set up. 
+     * @return SmtpPwdType smtp password type. 0=not set. 1=already set up.
+     */
+    public Long getSmtpPwdType() {
+        return this.SmtpPwdType;
+    }
+
+    /**
+     * Set smtp password type. 0=not set. 1=already set up.
+     * @param SmtpPwdType smtp password type. 0=not set. 1=already set up.
+     */
+    public void setSmtpPwdType(Long SmtpPwdType) {
+        this.SmtpPwdType = SmtpPwdType;
     }
 
     public EmailSender() {
@@ -119,6 +142,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.CreatedTimestamp != null) {
             this.CreatedTimestamp = new Long(source.CreatedTimestamp);
         }
+        if (source.SmtpPwdType != null) {
+            this.SmtpPwdType = new Long(source.SmtpPwdType);
+        }
     }
 
 
@@ -129,6 +155,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "EmailAddress", this.EmailAddress);
         this.setParamSimple(map, prefix + "EmailSenderName", this.EmailSenderName);
         this.setParamSimple(map, prefix + "CreatedTimestamp", this.CreatedTimestamp);
+        this.setParamSimple(map, prefix + "SmtpPwdType", this.SmtpPwdType);
 
     }
 }

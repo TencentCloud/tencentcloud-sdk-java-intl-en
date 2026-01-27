@@ -137,6 +137,13 @@ public class SendEmailStatus extends AbstractModel {
     private Boolean UserComplainted;
 
     /**
+    * Whether the user reports the sender.
+    */
+    @SerializedName("UserComplained")
+    @Expose
+    private Boolean UserComplained;
+
+    /**
      * Get The `MessageId` field returned by the `SendEmail` API 
      * @return MessageId The `MessageId` field returned by the `SendEmail` API
      */
@@ -431,7 +438,9 @@ public class SendEmailStatus extends AbstractModel {
     /**
      * Get Whether the recipient has reported the sender 
      * @return UserComplainted Whether the recipient has reported the sender
+     * @deprecated
      */
+    @Deprecated
     public Boolean getUserComplainted() {
         return this.UserComplainted;
     }
@@ -439,9 +448,27 @@ public class SendEmailStatus extends AbstractModel {
     /**
      * Set Whether the recipient has reported the sender
      * @param UserComplainted Whether the recipient has reported the sender
+     * @deprecated
      */
+    @Deprecated
     public void setUserComplainted(Boolean UserComplainted) {
         this.UserComplainted = UserComplainted;
+    }
+
+    /**
+     * Get Whether the user reports the sender. 
+     * @return UserComplained Whether the user reports the sender.
+     */
+    public Boolean getUserComplained() {
+        return this.UserComplained;
+    }
+
+    /**
+     * Set Whether the user reports the sender.
+     * @param UserComplained Whether the user reports the sender.
+     */
+    public void setUserComplained(Boolean UserComplained) {
+        this.UserComplained = UserComplained;
     }
 
     public SendEmailStatus() {
@@ -488,6 +515,9 @@ public class SendEmailStatus extends AbstractModel {
         if (source.UserComplainted != null) {
             this.UserComplainted = new Boolean(source.UserComplainted);
         }
+        if (source.UserComplained != null) {
+            this.UserComplained = new Boolean(source.UserComplained);
+        }
     }
 
 
@@ -507,6 +537,7 @@ public class SendEmailStatus extends AbstractModel {
         this.setParamSimple(map, prefix + "UserClicked", this.UserClicked);
         this.setParamSimple(map, prefix + "UserUnsubscribed", this.UserUnsubscribed);
         this.setParamSimple(map, prefix + "UserComplainted", this.UserComplainted);
+        this.setParamSimple(map, prefix + "UserComplained", this.UserComplained);
 
     }
 }
