@@ -21,7 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel {
+public class DescribeAccessKeyRiskRequest extends AbstractModel {
+
+    /**
+    * Filter.
+    */
+    @SerializedName("Filter")
+    @Expose
+    private Filter Filter;
 
     /**
     * Group Account Member ID
@@ -31,18 +38,34 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     private String [] MemberId;
 
     /**
-    * Filter conditions
+    * Access key ID.
     */
-    @SerializedName("Filter")
+    @SerializedName("AccessKeyID")
     @Expose
-    private Filter Filter;
+    private Long AccessKeyID;
 
     /**
-    * Asset tags
+    * Account UIN
     */
-    @SerializedName("Tags")
+    @SerializedName("SubUin")
     @Expose
-    private AssetTag [] Tags;
+    private String SubUin;
+
+    /**
+     * Get Filter. 
+     * @return Filter Filter.
+     */
+    public Filter getFilter() {
+        return this.Filter;
+    }
+
+    /**
+     * Set Filter.
+     * @param Filter Filter.
+     */
+    public void setFilter(Filter Filter) {
+        this.Filter = Filter;
+    }
 
     /**
      * Get Group Account Member ID 
@@ -61,59 +84,59 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     }
 
     /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
+     * Get Access key ID. 
+     * @return AccessKeyID Access key ID.
      */
-    public Filter getFilter() {
-        return this.Filter;
+    public Long getAccessKeyID() {
+        return this.AccessKeyID;
     }
 
     /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
+     * Set Access key ID.
+     * @param AccessKeyID Access key ID.
      */
-    public void setFilter(Filter Filter) {
-        this.Filter = Filter;
+    public void setAccessKeyID(Long AccessKeyID) {
+        this.AccessKeyID = AccessKeyID;
     }
 
     /**
-     * Get Asset tags 
-     * @return Tags Asset tags
+     * Get Account UIN 
+     * @return SubUin Account UIN
      */
-    public AssetTag [] getTags() {
-        return this.Tags;
+    public String getSubUin() {
+        return this.SubUin;
     }
 
     /**
-     * Set Asset tags
-     * @param Tags Asset tags
+     * Set Account UIN
+     * @param SubUin Account UIN
      */
-    public void setTags(AssetTag [] Tags) {
-        this.Tags = Tags;
+    public void setSubUin(String SubUin) {
+        this.SubUin = SubUin;
     }
 
-    public DescribeRiskCenterAssetViewVULRiskListRequest() {
+    public DescribeAccessKeyRiskRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskCenterAssetViewVULRiskListRequest(DescribeRiskCenterAssetViewVULRiskListRequest source) {
+    public DescribeAccessKeyRiskRequest(DescribeAccessKeyRiskRequest source) {
+        if (source.Filter != null) {
+            this.Filter = new Filter(source.Filter);
+        }
         if (source.MemberId != null) {
             this.MemberId = new String[source.MemberId.length];
             for (int i = 0; i < source.MemberId.length; i++) {
                 this.MemberId[i] = new String(source.MemberId[i]);
             }
         }
-        if (source.Filter != null) {
-            this.Filter = new Filter(source.Filter);
+        if (source.AccessKeyID != null) {
+            this.AccessKeyID = new Long(source.AccessKeyID);
         }
-        if (source.Tags != null) {
-            this.Tags = new AssetTag[source.Tags.length];
-            for (int i = 0; i < source.Tags.length; i++) {
-                this.Tags[i] = new AssetTag(source.Tags[i]);
-            }
+        if (source.SubUin != null) {
+            this.SubUin = new String(source.SubUin);
         }
     }
 
@@ -122,9 +145,10 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+        this.setParamSimple(map, prefix + "AccessKeyID", this.AccessKeyID);
+        this.setParamSimple(map, prefix + "SubUin", this.SubUin);
 
     }
 }

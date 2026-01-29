@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class AssetTag extends AbstractModel {
 
     /**
-    * Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Tag Key, can be letters, digits, and underscores.
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Tag Value, can be letters, digits, and underscores.
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-     * Get Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TagKey Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Tag Key, can be letters, digits, and underscores. 
+     * @return TagKey Tag Key, can be letters, digits, and underscores.
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TagKey Tag key. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Tag Key, can be letters, digits, and underscores.
+     * @param TagKey Tag Key, can be letters, digits, and underscores.
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return TagValue Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Tag Value, can be letters, digits, and underscores. 
+     * @return TagValue Tag Value, can be letters, digits, and underscores.
      */
     public String getTagValue() {
         return this.TagValue;
     }
 
     /**
-     * Set Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param TagValue Tag value. It supports alphanumeric characters and underscores (_).
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Tag Value, can be letters, digits, and underscores.
+     * @param TagValue Tag Value, can be letters, digits, and underscores.
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;

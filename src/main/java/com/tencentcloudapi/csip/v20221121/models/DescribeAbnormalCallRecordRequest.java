@@ -21,7 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel {
+public class DescribeAbnormalCallRecordRequest extends AbstractModel {
+
+    /**
+    * Alarm rule ID.
+    */
+    @SerializedName("AlarmRuleID")
+    @Expose
+    private Long AlarmRuleID;
 
     /**
     * Group Account Member ID
@@ -31,18 +38,41 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     private String [] MemberId;
 
     /**
-    * Filter conditions
+    * Access key.
+    */
+    @SerializedName("AccessKey")
+    @Expose
+    private String AccessKey;
+
+    /**
+    * Source IP of the call.
+    */
+    @SerializedName("SourceIP")
+    @Expose
+    private String SourceIP;
+
+    /**
+    * Filter.
     */
     @SerializedName("Filter")
     @Expose
     private Filter Filter;
 
     /**
-    * Asset tags
-    */
-    @SerializedName("Tags")
-    @Expose
-    private AssetTag [] Tags;
+     * Get Alarm rule ID. 
+     * @return AlarmRuleID Alarm rule ID.
+     */
+    public Long getAlarmRuleID() {
+        return this.AlarmRuleID;
+    }
+
+    /**
+     * Set Alarm rule ID.
+     * @param AlarmRuleID Alarm rule ID.
+     */
+    public void setAlarmRuleID(Long AlarmRuleID) {
+        this.AlarmRuleID = AlarmRuleID;
+    }
 
     /**
      * Get Group Account Member ID 
@@ -61,59 +91,78 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     }
 
     /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
+     * Get Access key. 
+     * @return AccessKey Access key.
+     */
+    public String getAccessKey() {
+        return this.AccessKey;
+    }
+
+    /**
+     * Set Access key.
+     * @param AccessKey Access key.
+     */
+    public void setAccessKey(String AccessKey) {
+        this.AccessKey = AccessKey;
+    }
+
+    /**
+     * Get Source IP of the call. 
+     * @return SourceIP Source IP of the call.
+     */
+    public String getSourceIP() {
+        return this.SourceIP;
+    }
+
+    /**
+     * Set Source IP of the call.
+     * @param SourceIP Source IP of the call.
+     */
+    public void setSourceIP(String SourceIP) {
+        this.SourceIP = SourceIP;
+    }
+
+    /**
+     * Get Filter. 
+     * @return Filter Filter.
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
+     * Set Filter.
+     * @param Filter Filter.
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;
     }
 
-    /**
-     * Get Asset tags 
-     * @return Tags Asset tags
-     */
-    public AssetTag [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set Asset tags
-     * @param Tags Asset tags
-     */
-    public void setTags(AssetTag [] Tags) {
-        this.Tags = Tags;
-    }
-
-    public DescribeRiskCenterAssetViewVULRiskListRequest() {
+    public DescribeAbnormalCallRecordRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskCenterAssetViewVULRiskListRequest(DescribeRiskCenterAssetViewVULRiskListRequest source) {
+    public DescribeAbnormalCallRecordRequest(DescribeAbnormalCallRecordRequest source) {
+        if (source.AlarmRuleID != null) {
+            this.AlarmRuleID = new Long(source.AlarmRuleID);
+        }
         if (source.MemberId != null) {
             this.MemberId = new String[source.MemberId.length];
             for (int i = 0; i < source.MemberId.length; i++) {
                 this.MemberId[i] = new String(source.MemberId[i]);
             }
         }
+        if (source.AccessKey != null) {
+            this.AccessKey = new String(source.AccessKey);
+        }
+        if (source.SourceIP != null) {
+            this.SourceIP = new String(source.SourceIP);
+        }
         if (source.Filter != null) {
             this.Filter = new Filter(source.Filter);
-        }
-        if (source.Tags != null) {
-            this.Tags = new AssetTag[source.Tags.length];
-            for (int i = 0; i < source.Tags.length; i++) {
-                this.Tags[i] = new AssetTag(source.Tags[i]);
-            }
         }
     }
 
@@ -122,9 +171,11 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "AlarmRuleID", this.AlarmRuleID);
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
+        this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
+        this.setParamSimple(map, prefix + "SourceIP", this.SourceIP);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

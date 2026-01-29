@@ -50,6 +50,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Detect AK async task.
+     * @param req CreateAccessKeyCheckTaskRequest
+     * @return CreateAccessKeyCheckTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccessKeyCheckTaskResponse CreateAccessKeyCheckTask(CreateAccessKeyCheckTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAccessKeyCheckTask", CreateAccessKeyCheckTaskResponse.class);
+    }
+
+    /**
+     *Trigger an AK asset sync task.
+     * @param req CreateAccessKeySyncTaskRequest
+     * @return CreateAccessKeySyncTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAccessKeySyncTaskResponse CreateAccessKeySyncTask(CreateAccessKeySyncTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAccessKeySyncTask", CreateAccessKeySyncTaskResponse.class);
+    }
+
+    /**
      *This API is used to create an asset with the specific domain/IP.
      * @param req CreateDomainAndIpRequest
      * @return CreateDomainAndIpResponse
@@ -94,6 +116,105 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Retrieve the call record list.
+     * @param req DescribeAbnormalCallRecordRequest
+     * @return DescribeAbnormalCallRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAbnormalCallRecordResponse DescribeAbnormalCallRecord(DescribeAbnormalCallRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAbnormalCallRecord", DescribeAbnormalCallRecordResponse.class);
+    }
+
+    /**
+     *List of alarm records for access keys.
+     * @param req DescribeAccessKeyAlarmRequest
+     * @return DescribeAccessKeyAlarmResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyAlarmResponse DescribeAccessKeyAlarm(DescribeAccessKeyAlarmRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyAlarm", DescribeAccessKeyAlarmResponse.class);
+    }
+
+    /**
+     *Alarm Record Details for Access Key.
+     * @param req DescribeAccessKeyAlarmDetailRequest
+     * @return DescribeAccessKeyAlarmDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyAlarmDetailResponse DescribeAccessKeyAlarmDetail(DescribeAccessKeyAlarmDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyAlarmDetail", DescribeAccessKeyAlarmDetailResponse.class);
+    }
+
+    /**
+     *Obtain user access key asset list.
+     * @param req DescribeAccessKeyAssetRequest
+     * @return DescribeAccessKeyAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyAssetResponse DescribeAccessKeyAsset(DescribeAccessKeyAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyAsset", DescribeAccessKeyAssetResponse.class);
+    }
+
+    /**
+     *Access key risk record list.
+     * @param req DescribeAccessKeyRiskRequest
+     * @return DescribeAccessKeyRiskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyRiskResponse DescribeAccessKeyRisk(DescribeAccessKeyRiskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyRisk", DescribeAccessKeyRiskResponse.class);
+    }
+
+    /**
+     *Access Key Risk Record Details.
+     * @param req DescribeAccessKeyRiskDetailRequest
+     * @return DescribeAccessKeyRiskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyRiskDetailResponse DescribeAccessKeyRiskDetail(DescribeAccessKeyRiskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyRiskDetail", DescribeAccessKeyRiskDetailResponse.class);
+    }
+
+    /**
+     *Query the user's account details.
+     * @param req DescribeAccessKeyUserDetailRequest
+     * @return DescribeAccessKeyUserDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyUserDetailResponse DescribeAccessKeyUserDetail(DescribeAccessKeyUserDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyUserDetail", DescribeAccessKeyUserDetailResponse.class);
+    }
+
+    /**
+     *Query the account list of a user.
+     * @param req DescribeAccessKeyUserListRequest
+     * @return DescribeAccessKeyUserListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessKeyUserListResponse DescribeAccessKeyUserList(DescribeAccessKeyUserListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessKeyUserList", DescribeAccessKeyUserListResponse.class);
+    }
+
+    /**
+     *Query the process list of host nodes under the exposed path in cloud boundary analysis.
+     * @param req DescribeAssetProcessListRequest
+     * @return DescribeAssetProcessListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAssetProcessListResponse DescribeAssetProcessList(DescribeAssetProcessListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAssetProcessList", DescribeAssetProcessListResponse.class);
+    }
+
+    /**
      *Cloud Defense Asset Center Statistics
      * @param req DescribeCFWAssetStatisticsRequest
      * @return DescribeCFWAssetStatisticsResponse
@@ -102,6 +223,17 @@ public class CsipClient extends AbstractClient{
     public DescribeCFWAssetStatisticsResponse DescribeCFWAssetStatistics(DescribeCFWAssetStatisticsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCFWAssetStatistics", DescribeCFWAssetStatisticsResponse.class);
+    }
+
+    /**
+     *Obtain risk center risk overview example.
+     * @param req DescribeCSIPRiskStatisticsRequest
+     * @return DescribeCSIPRiskStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCSIPRiskStatisticsResponse DescribeCSIPRiskStatistics(DescribeCSIPRiskStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCSIPRiskStatistics", DescribeCSIPRiskStatisticsResponse.class);
     }
 
     /**
@@ -124,6 +256,17 @@ public class CsipClient extends AbstractClient{
     public DescribeCVMAssetsResponse DescribeCVMAssets(DescribeCVMAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCVMAssets", DescribeCVMAssetsResponse.class);
+    }
+
+    /**
+     *Retrieve the call record list.
+     * @param req DescribeCallRecordRequest
+     * @return DescribeCallRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCallRecordResponse DescribeCallRecord(DescribeCallRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCallRecord", DescribeCallRecordResponse.class);
     }
 
     /**
@@ -182,6 +325,39 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Cloud boundary analysis asset category.
+     * @param req DescribeExposeAssetCategoryRequest
+     * @return DescribeExposeAssetCategoryResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExposeAssetCategoryResponse DescribeExposeAssetCategory(DescribeExposeAssetCategoryRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExposeAssetCategory", DescribeExposeAssetCategoryResponse.class);
+    }
+
+    /**
+     *Query the node of the cloud boundary analysis path.
+     * @param req DescribeExposePathRequest
+     * @return DescribeExposePathResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExposePathResponse DescribeExposePath(DescribeExposePathRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExposePath", DescribeExposePathResponse.class);
+    }
+
+    /**
+     *Cloud Boundary Analysis Asset List.
+     * @param req DescribeExposuresRequest
+     * @return DescribeExposuresResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeExposuresResponse DescribeExposures(DescribeExposuresRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeExposures", DescribeExposuresResponse.class);
+    }
+
+    /**
      *Obtain Gateway List
      * @param req DescribeGatewayAssetsRequest
      * @return DescribeGatewayAssetsResponse
@@ -190,6 +366,17 @@ public class CsipClient extends AbstractClient{
     public DescribeGatewayAssetsResponse DescribeGatewayAssets(DescribeGatewayAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeGatewayAssets", DescribeGatewayAssetsResponse.class);
+    }
+
+    /**
+     *Query the high-risk baseline risk list of host nodes under the exposed path in cloud boundary analysis.
+     * @param req DescribeHighBaseLineRiskListRequest
+     * @return DescribeHighBaseLineRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHighBaseLineRiskListResponse DescribeHighBaseLineRiskList(DescribeHighBaseLineRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHighBaseLineRiskList", DescribeHighBaseLineRiskListResponse.class);
     }
 
     /**
@@ -314,6 +501,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Obtain Configuration Risk List from Configuration's Perspective
+     * @param req DescribeRiskCenterCFGViewCFGRiskListRequest
+     * @return DescribeRiskCenterCFGViewCFGRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskCenterCFGViewCFGRiskListResponse DescribeRiskCenterCFGViewCFGRiskList(DescribeRiskCenterCFGViewCFGRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskCenterCFGViewCFGRiskList", DescribeRiskCenterCFGViewCFGRiskListResponse.class);
+    }
+
+    /**
      *This API is used to query the list of port risks by ports.
      * @param req DescribeRiskCenterPortViewPortRiskListRequest
      * @return DescribeRiskCenterPortViewPortRiskListResponse
@@ -369,6 +567,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Query the statistical information of cloud boundary analysis scanning results.
+     * @param req DescribeScanStatisticRequest
+     * @return DescribeScanStatisticResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScanStatisticResponse DescribeScanStatistic(DescribeScanStatisticRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScanStatistic", DescribeScanStatisticResponse.class);
+    }
+
+    /**
      *This API is used to get the list of scan tasks.
      * @param req DescribeScanTaskListRequest
      * @return DescribeScanTaskListResponse
@@ -388,6 +597,17 @@ public class CsipClient extends AbstractClient{
     public DescribeSearchBugInfoResponse DescribeSearchBugInfo(DescribeSearchBugInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeSearchBugInfo", DescribeSearchBugInfoResponse.class);
+    }
+
+    /**
+     *This API is used to obtain user access key asset list (source IP perspective).
+     * @param req DescribeSourceIPAssetRequest
+     * @return DescribeSourceIPAssetResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSourceIPAssetResponse DescribeSourceIPAsset(DescribeSourceIPAssetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSourceIPAsset", DescribeSourceIPAssetResponse.class);
     }
 
     /**
@@ -435,6 +655,28 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Obtain account call record list.
+     * @param req DescribeUserCallRecordRequest
+     * @return DescribeUserCallRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserCallRecordResponse DescribeUserCallRecord(DescribeUserCallRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserCallRecord", DescribeUserCallRecordResponse.class);
+    }
+
+    /**
+     *Security Center Risk Center - List of Vulnerabilities.
+     * @param req DescribeVULListRequest
+     * @return DescribeVULListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVULListResponse DescribeVULList(DescribeVULListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVULList", DescribeVULListResponse.class);
+    }
+
+    /**
      *This API is used to query the advanced configuration of vulnerability scan.
      * @param req DescribeVULRiskAdvanceCFGListRequest
      * @return DescribeVULRiskAdvanceCFGListResponse
@@ -446,6 +688,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Retrieve vulnerability details.
+     * @param req DescribeVULRiskDetailRequest
+     * @return DescribeVULRiskDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVULRiskDetailResponse DescribeVULRiskDetail(DescribeVULRiskDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVULRiskDetail", DescribeVULRiskDetailResponse.class);
+    }
+
+    /**
      *This API is used to get the list of VPCs.
      * @param req DescribeVpcAssetsRequest
      * @return DescribeVpcAssetsResponse
@@ -454,6 +707,28 @@ public class CsipClient extends AbstractClient{
     public DescribeVpcAssetsResponse DescribeVpcAssets(DescribeVpcAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVpcAssets", DescribeVpcAssetsResponse.class);
+    }
+
+    /**
+     *Query the list of vulnerabilities of host nodes under the exposed path in cloud boundary analysis.
+     * @param req DescribeVulRiskListRequest
+     * @return DescribeVulRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulRiskListResponse DescribeVulRiskList(DescribeVulRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulRiskList", DescribeVulRiskListResponse.class);
+    }
+
+    /**
+     *Obtain Vulnerability Risk List from Vulnerability's Perspective
+     * @param req DescribeVulViewVulRiskListRequest
+     * @return DescribeVulViewVulRiskListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVulViewVulRiskListResponse DescribeVulViewVulRiskList(DescribeVulViewVulRiskListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVulViewVulRiskList", DescribeVulViewVulRiskListResponse.class);
     }
 
     /**
@@ -479,6 +754,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Modify Risk Center Scan Task
+     * @param req ModifyRiskCenterScanTaskRequest
+     * @return ModifyRiskCenterScanTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRiskCenterScanTaskResponse ModifyRiskCenterScanTask(ModifyRiskCenterScanTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRiskCenterScanTask", ModifyRiskCenterScanTaskResponse.class);
+    }
+
+    /**
      *This API is used to stop a scan task. 
      * @param req StopRiskCenterTaskRequest
      * @return StopRiskCenterTaskResponse
@@ -487,6 +773,28 @@ public class CsipClient extends AbstractClient{
     public StopRiskCenterTaskResponse StopRiskCenterTask(StopRiskCenterTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "StopRiskCenterTask", StopRiskCenterTaskResponse.class);
+    }
+
+    /**
+     *Tag the risk or Alarm as processed/ignored.
+     * @param req UpdateAccessKeyAlarmStatusRequest
+     * @return UpdateAccessKeyAlarmStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAccessKeyAlarmStatusResponse UpdateAccessKeyAlarmStatus(UpdateAccessKeyAlarmStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAccessKeyAlarmStatus", UpdateAccessKeyAlarmStatusResponse.class);
+    }
+
+    /**
+     *Edit access key/Source IP remark.
+     * @param req UpdateAccessKeyRemarkRequest
+     * @return UpdateAccessKeyRemarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateAccessKeyRemarkResponse UpdateAccessKeyRemark(UpdateAccessKeyRemarkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateAccessKeyRemark", UpdateAccessKeyRemarkResponse.class);
     }
 
 }

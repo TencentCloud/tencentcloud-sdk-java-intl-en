@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class TaskAssetObject extends AbstractModel {
 
     /**
-    * Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Asset name.
     */
     @SerializedName("AssetName")
     @Expose
     private String AssetName;
 
     /**
-    * 	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Asset type.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Asset category.
     */
     @SerializedName("AssetType")
     @Expose
@@ -55,76 +52,62 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String Asset;
 
     /**
-    * Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Region.
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Unique ID of Multi-Cloud Assets
     */
     @SerializedName("Arn")
     @Expose
     private String Arn;
 
     /**
-     * Get Asset name
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Asset name. 
+     * @return AssetName Asset name.
      */
     public String getAssetName() {
         return this.AssetName;
     }
 
     /**
-     * Set Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AssetName Asset name
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Asset name.
+     * @param AssetName Asset name.
      */
     public void setAssetName(String AssetName) {
         this.AssetName = AssetName;
     }
 
     /**
-     * Get 	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return InstanceType 	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Asset type. 
+     * @return InstanceType Asset type.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param InstanceType 	Asset category
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Asset type.
+     * @param InstanceType Asset type.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return AssetType Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Asset category. 
+     * @return AssetType Asset category.
      */
     public String getAssetType() {
         return this.AssetType;
     }
 
     /**
-     * Set Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param AssetType Asset sub-category
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Asset category.
+     * @param AssetType Asset category.
      */
     public void setAssetType(String AssetType) {
         this.AssetType = AssetType;
@@ -147,40 +130,32 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Region
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return Region Region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Region Region
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Region.
+     * @param Region Region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Arn The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Unique ID of Multi-Cloud Assets 
+     * @return Arn Unique ID of Multi-Cloud Assets
      */
     public String getArn() {
         return this.Arn;
     }
 
     /**
-     * Set The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Arn The ID specific for an asset synched from another cloud platform
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Unique ID of Multi-Cloud Assets
+     * @param Arn Unique ID of Multi-Cloud Assets
      */
     public void setArn(String Arn) {
         this.Arn = Arn;

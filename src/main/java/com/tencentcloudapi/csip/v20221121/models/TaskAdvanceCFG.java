@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class TaskAdvanceCFG extends AbstractModel {
 
     /**
+    * Port Risk Advanced Configuration
+    */
+    @SerializedName("PortRisk")
+    @Expose
+    private PortRiskAdvanceCFGParamItem [] PortRisk;
+
+    /**
     * Advanced vulnerability scan configuration
     */
     @SerializedName("VulRisk")
@@ -43,6 +50,22 @@ public class TaskAdvanceCFG extends AbstractModel {
     @SerializedName("CFGRisk")
     @Expose
     private TaskCenterCFGRiskInputParam [] CFGRisk;
+
+    /**
+     * Get Port Risk Advanced Configuration 
+     * @return PortRisk Port Risk Advanced Configuration
+     */
+    public PortRiskAdvanceCFGParamItem [] getPortRisk() {
+        return this.PortRisk;
+    }
+
+    /**
+     * Set Port Risk Advanced Configuration
+     * @param PortRisk Port Risk Advanced Configuration
+     */
+    public void setPortRisk(PortRiskAdvanceCFGParamItem [] PortRisk) {
+        this.PortRisk = PortRisk;
+    }
 
     /**
      * Get Advanced vulnerability scan configuration 
@@ -100,6 +123,12 @@ public class TaskAdvanceCFG extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public TaskAdvanceCFG(TaskAdvanceCFG source) {
+        if (source.PortRisk != null) {
+            this.PortRisk = new PortRiskAdvanceCFGParamItem[source.PortRisk.length];
+            for (int i = 0; i < source.PortRisk.length; i++) {
+                this.PortRisk[i] = new PortRiskAdvanceCFGParamItem(source.PortRisk[i]);
+            }
+        }
         if (source.VulRisk != null) {
             this.VulRisk = new TaskCenterVulRiskInputParam[source.VulRisk.length];
             for (int i = 0; i < source.VulRisk.length; i++) {
@@ -125,6 +154,7 @@ public class TaskAdvanceCFG extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArrayObj(map, prefix + "PortRisk.", this.PortRisk);
         this.setParamArrayObj(map, prefix + "VulRisk.", this.VulRisk);
         this.setParamArrayObj(map, prefix + "WeakPwdRisk.", this.WeakPwdRisk);
         this.setParamArrayObj(map, prefix + "CFGRisk.", this.CFGRisk);

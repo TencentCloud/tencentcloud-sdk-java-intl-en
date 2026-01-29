@@ -21,7 +21,14 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel {
+public class DescribeAccessKeyUserDetailRequest extends AbstractModel {
+
+    /**
+    * Account uin itself.
+    */
+    @SerializedName("SubUin")
+    @Expose
+    private String SubUin;
 
     /**
     * Group Account Member ID
@@ -31,18 +38,20 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     private String [] MemberId;
 
     /**
-    * Filter conditions
-    */
-    @SerializedName("Filter")
-    @Expose
-    private Filter Filter;
+     * Get Account uin itself. 
+     * @return SubUin Account uin itself.
+     */
+    public String getSubUin() {
+        return this.SubUin;
+    }
 
     /**
-    * Asset tags
-    */
-    @SerializedName("Tags")
-    @Expose
-    private AssetTag [] Tags;
+     * Set Account uin itself.
+     * @param SubUin Account uin itself.
+     */
+    public void setSubUin(String SubUin) {
+        this.SubUin = SubUin;
+    }
 
     /**
      * Get Group Account Member ID 
@@ -60,59 +69,21 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
         this.MemberId = MemberId;
     }
 
-    /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
-     */
-    public Filter getFilter() {
-        return this.Filter;
-    }
-
-    /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
-     */
-    public void setFilter(Filter Filter) {
-        this.Filter = Filter;
-    }
-
-    /**
-     * Get Asset tags 
-     * @return Tags Asset tags
-     */
-    public AssetTag [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set Asset tags
-     * @param Tags Asset tags
-     */
-    public void setTags(AssetTag [] Tags) {
-        this.Tags = Tags;
-    }
-
-    public DescribeRiskCenterAssetViewVULRiskListRequest() {
+    public DescribeAccessKeyUserDetailRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskCenterAssetViewVULRiskListRequest(DescribeRiskCenterAssetViewVULRiskListRequest source) {
+    public DescribeAccessKeyUserDetailRequest(DescribeAccessKeyUserDetailRequest source) {
+        if (source.SubUin != null) {
+            this.SubUin = new String(source.SubUin);
+        }
         if (source.MemberId != null) {
             this.MemberId = new String[source.MemberId.length];
             for (int i = 0; i < source.MemberId.length; i++) {
                 this.MemberId[i] = new String(source.MemberId[i]);
-            }
-        }
-        if (source.Filter != null) {
-            this.Filter = new Filter(source.Filter);
-        }
-        if (source.Tags != null) {
-            this.Tags = new AssetTag[source.Tags.length];
-            for (int i = 0; i < source.Tags.length; i++) {
-                this.Tags[i] = new AssetTag(source.Tags[i]);
             }
         }
     }
@@ -122,9 +93,8 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SubUin", this.SubUin);
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
-        this.setParamObj(map, prefix + "Filter.", this.Filter);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

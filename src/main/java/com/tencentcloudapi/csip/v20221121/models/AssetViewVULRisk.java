@@ -31,7 +31,8 @@ public class AssetViewVULRisk extends AbstractModel {
     private String AffectAsset;
 
     /**
-    * Risk level
+    * Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+
     */
     @SerializedName("Level")
     @Expose
@@ -80,7 +81,7 @@ public class AssetViewVULRisk extends AbstractModel {
     private Long Status;
 
     /**
-    * Unique ID of the asset
+    * Risk ID
     */
     @SerializedName("Id")
     @Expose
@@ -115,16 +116,14 @@ public class AssetViewVULRisk extends AbstractModel {
     private String AppId;
 
     /**
-    * User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User Nickname
     */
     @SerializedName("Nick")
     @Expose
     private String Nick;
 
     /**
-    * User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * User UIN
     */
     @SerializedName("Uin")
     @Expose
@@ -145,35 +144,35 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String Port;
 
     /**
-    * Description
+    * Vulnerability description
     */
     @SerializedName("Describe")
     @Expose
     private String Describe;
 
     /**
-    * Components affected by the vulnerability 
+    * Vulnerability impact component.
     */
     @SerializedName("AppName")
     @Expose
     private String AppName;
 
     /**
-    * Reference information about the vulnerability
+    * Technology reference.
     */
     @SerializedName("References")
     @Expose
     private String References;
 
     /**
-    * Version
+    * Vulnerability impact version.
     */
     @SerializedName("AppVersion")
     @Expose
     private String AppVersion;
 
     /**
-    * Vulnerability URL
+    * Risks.
     */
     @SerializedName("VULURL")
     @Expose
@@ -194,7 +193,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String CVE;
 
     /**
-    * Fix suggestion
+    * Fixing solution
     */
     @SerializedName("Fix")
     @Expose
@@ -208,7 +207,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String POCId;
 
     /**
-    * Source of the task
+    * Scan Source
     */
     @SerializedName("From")
     @Expose
@@ -243,15 +242,14 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private String InstanceUUID;
 
     /**
-    * Pay load
+    * Payload
     */
     @SerializedName("Payload")
     @Expose
     private String Payload;
 
     /**
-    * Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+    * Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
     */
     @SerializedName("EMGCVulType")
     @Expose
@@ -274,16 +272,20 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Risk level 
-     * @return Level Risk level
+     * Get Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+ 
+     * @return Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Risk level
-     * @param Level Risk level
+     * Set Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+
+     * @param Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+
      */
     public void setLevel(String Level) {
         this.Level = Level;
@@ -386,16 +388,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Unique ID of the asset 
-     * @return Id Unique ID of the asset
+     * Get Risk ID 
+     * @return Id Risk ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Unique ID of the asset
-     * @param Id Unique ID of the asset
+     * Set Risk ID
+     * @param Id Risk ID
      */
     public void setId(String Id) {
         this.Id = Id;
@@ -466,40 +468,32 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get User name.
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User Nickname 
+     * @return Nick User Nickname
      */
     public String getNick() {
         return this.Nick;
     }
 
     /**
-     * Set User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Nick User name.
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User Nickname
+     * @param Nick User Nickname
      */
     public void setNick(String Nick) {
         this.Nick = Nick;
     }
 
     /**
-     * Get User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get User UIN 
+     * @return Uin User UIN
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param Uin User `uin`
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set User UIN
+     * @param Uin User UIN
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
@@ -538,80 +532,80 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Description 
-     * @return Describe Description
+     * Get Vulnerability description 
+     * @return Describe Vulnerability description
      */
     public String getDescribe() {
         return this.Describe;
     }
 
     /**
-     * Set Description
-     * @param Describe Description
+     * Set Vulnerability description
+     * @param Describe Vulnerability description
      */
     public void setDescribe(String Describe) {
         this.Describe = Describe;
     }
 
     /**
-     * Get Components affected by the vulnerability  
-     * @return AppName Components affected by the vulnerability 
+     * Get Vulnerability impact component. 
+     * @return AppName Vulnerability impact component.
      */
     public String getAppName() {
         return this.AppName;
     }
 
     /**
-     * Set Components affected by the vulnerability 
-     * @param AppName Components affected by the vulnerability 
+     * Set Vulnerability impact component.
+     * @param AppName Vulnerability impact component.
      */
     public void setAppName(String AppName) {
         this.AppName = AppName;
     }
 
     /**
-     * Get Reference information about the vulnerability 
-     * @return References Reference information about the vulnerability
+     * Get Technology reference. 
+     * @return References Technology reference.
      */
     public String getReferences() {
         return this.References;
     }
 
     /**
-     * Set Reference information about the vulnerability
-     * @param References Reference information about the vulnerability
+     * Set Technology reference.
+     * @param References Technology reference.
      */
     public void setReferences(String References) {
         this.References = References;
     }
 
     /**
-     * Get Version 
-     * @return AppVersion Version
+     * Get Vulnerability impact version. 
+     * @return AppVersion Vulnerability impact version.
      */
     public String getAppVersion() {
         return this.AppVersion;
     }
 
     /**
-     * Set Version
-     * @param AppVersion Version
+     * Set Vulnerability impact version.
+     * @param AppVersion Vulnerability impact version.
      */
     public void setAppVersion(String AppVersion) {
         this.AppVersion = AppVersion;
     }
 
     /**
-     * Get Vulnerability URL 
-     * @return VULURL Vulnerability URL
+     * Get Risks. 
+     * @return VULURL Risks.
      */
     public String getVULURL() {
         return this.VULURL;
     }
 
     /**
-     * Set Vulnerability URL
-     * @param VULURL Vulnerability URL
+     * Set Risks.
+     * @param VULURL Risks.
      */
     public void setVULURL(String VULURL) {
         this.VULURL = VULURL;
@@ -650,16 +644,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Fix suggestion 
-     * @return Fix Fix suggestion
+     * Get Fixing solution 
+     * @return Fix Fixing solution
      */
     public String getFix() {
         return this.Fix;
     }
 
     /**
-     * Set Fix suggestion
-     * @param Fix Fix suggestion
+     * Set Fixing solution
+     * @param Fix Fixing solution
      */
     public void setFix(String Fix) {
         this.Fix = Fix;
@@ -682,16 +676,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Source of the task 
-     * @return From Source of the task
+     * Get Scan Source 
+     * @return From Scan Source
      */
     public String getFrom() {
         return this.From;
     }
 
     /**
-     * Set Source of the task
-     * @param From Source of the task
+     * Set Scan Source
+     * @param From Scan Source
      */
     public void setFrom(String From) {
         this.From = From;
@@ -762,36 +756,32 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Pay load 
-     * @return Payload Pay load
+     * Get Payload 
+     * @return Payload Payload
      */
     public String getPayload() {
         return this.Payload;
     }
 
     /**
-     * Set Pay load
-     * @param Payload Pay load
+     * Set Payload
+     * @param Payload Payload
      */
     public void setPayload(String Payload) {
         this.Payload = Payload;
     }
 
     /**
-     * Get Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained. 
-     * @return EMGCVulType Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Get Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability. 
+     * @return EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
      */
     public Long getEMGCVulType() {
         return this.EMGCVulType;
     }
 
     /**
-     * Set Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
-     * @param EMGCVulType Whether it's an emergency vulnerability. Values: `1` (emergency vulnerability); `0` (non-emergency vulnerability
-Note: This field may return·null, indicating that no valid values can be obtained.
+     * Set Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
+     * @param EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
      */
     public void setEMGCVulType(Long EMGCVulType) {
         this.EMGCVulType = EMGCVulType;

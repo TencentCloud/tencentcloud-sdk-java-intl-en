@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel {
+public class DescribeScanStatisticRequest extends AbstractModel {
 
     /**
     * Group Account Member ID
@@ -31,18 +31,11 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     private String [] MemberId;
 
     /**
-    * Filter conditions
+    * Health check task id.
     */
-    @SerializedName("Filter")
+    @SerializedName("TaskLogId")
     @Expose
-    private Filter Filter;
-
-    /**
-    * Asset tags
-    */
-    @SerializedName("Tags")
-    @Expose
-    private AssetTag [] Tags;
+    private String TaskLogId;
 
     /**
      * Get Group Account Member ID 
@@ -61,59 +54,37 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     }
 
     /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
+     * Get Health check task id. 
+     * @return TaskLogId Health check task id.
      */
-    public Filter getFilter() {
-        return this.Filter;
+    public String getTaskLogId() {
+        return this.TaskLogId;
     }
 
     /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
+     * Set Health check task id.
+     * @param TaskLogId Health check task id.
      */
-    public void setFilter(Filter Filter) {
-        this.Filter = Filter;
+    public void setTaskLogId(String TaskLogId) {
+        this.TaskLogId = TaskLogId;
     }
 
-    /**
-     * Get Asset tags 
-     * @return Tags Asset tags
-     */
-    public AssetTag [] getTags() {
-        return this.Tags;
-    }
-
-    /**
-     * Set Asset tags
-     * @param Tags Asset tags
-     */
-    public void setTags(AssetTag [] Tags) {
-        this.Tags = Tags;
-    }
-
-    public DescribeRiskCenterAssetViewVULRiskListRequest() {
+    public DescribeScanStatisticRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskCenterAssetViewVULRiskListRequest(DescribeRiskCenterAssetViewVULRiskListRequest source) {
+    public DescribeScanStatisticRequest(DescribeScanStatisticRequest source) {
         if (source.MemberId != null) {
             this.MemberId = new String[source.MemberId.length];
             for (int i = 0; i < source.MemberId.length; i++) {
                 this.MemberId[i] = new String(source.MemberId[i]);
             }
         }
-        if (source.Filter != null) {
-            this.Filter = new Filter(source.Filter);
-        }
-        if (source.Tags != null) {
-            this.Tags = new AssetTag[source.Tags.length];
-            for (int i = 0; i < source.Tags.length; i++) {
-                this.Tags[i] = new AssetTag(source.Tags[i]);
-            }
+        if (source.TaskLogId != null) {
+            this.TaskLogId = new String(source.TaskLogId);
         }
     }
 
@@ -123,8 +94,7 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
-        this.setParamObj(map, prefix + "Filter.", this.Filter);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "TaskLogId", this.TaskLogId);
 
     }
 }

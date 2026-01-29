@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel {
+public class DescribeVulViewVulRiskListRequest extends AbstractModel {
 
     /**
     * Group Account Member ID
@@ -31,14 +31,14 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     private String [] MemberId;
 
     /**
-    * Filter conditions
+    * Filtered Content
     */
     @SerializedName("Filter")
     @Expose
     private Filter Filter;
 
     /**
-    * Asset tags
+    * Asset tag
     */
     @SerializedName("Tags")
     @Expose
@@ -61,45 +61,45 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     }
 
     /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
+     * Get Filtered Content 
+     * @return Filter Filtered Content
      */
     public Filter getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
+     * Set Filtered Content
+     * @param Filter Filtered Content
      */
     public void setFilter(Filter Filter) {
         this.Filter = Filter;
     }
 
     /**
-     * Get Asset tags 
-     * @return Tags Asset tags
+     * Get Asset tag 
+     * @return Tags Asset tag
      */
     public AssetTag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Asset tags
-     * @param Tags Asset tags
+     * Set Asset tag
+     * @param Tags Asset tag
      */
     public void setTags(AssetTag [] Tags) {
         this.Tags = Tags;
     }
 
-    public DescribeRiskCenterAssetViewVULRiskListRequest() {
+    public DescribeVulViewVulRiskListRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskCenterAssetViewVULRiskListRequest(DescribeRiskCenterAssetViewVULRiskListRequest source) {
+    public DescribeVulViewVulRiskListRequest(DescribeVulViewVulRiskListRequest source) {
         if (source.MemberId != null) {
             this.MemberId = new String[source.MemberId.length];
             for (int i = 0; i < source.MemberId.length; i++) {

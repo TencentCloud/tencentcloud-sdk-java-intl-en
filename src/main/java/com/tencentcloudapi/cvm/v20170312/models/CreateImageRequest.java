@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateImageRequest extends AbstractModel {
 
     /**
-    * Image name
+    * Image name.
     */
     @SerializedName("ImageName")
     @Expose
@@ -38,7 +38,7 @@ public class CreateImageRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Image description
+    * Image description.
     */
     @SerializedName("ImageDescription")
     @Expose
@@ -98,16 +98,16 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
     private String ImageFamily;
 
     /**
-     * Get Image name 
-     * @return ImageName Image name
+     * Get Image name. 
+     * @return ImageName Image name.
      */
     public String getImageName() {
         return this.ImageName;
     }
 
     /**
-     * Set Image name
-     * @param ImageName Image name
+     * Set Image name.
+     * @param ImageName Image name.
      */
     public void setImageName(String ImageName) {
         this.ImageName = ImageName;
@@ -130,16 +130,16 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
     }
 
     /**
-     * Get Image description 
-     * @return ImageDescription Image description
+     * Get Image description. 
+     * @return ImageDescription Image description.
      */
     public String getImageDescription() {
         return this.ImageDescription;
     }
 
     /**
-     * Set Image description
-     * @param ImageDescription Image description
+     * Set Image description.
+     * @param ImageDescription Image description.
      */
     public void setImageDescription(String ImageDescription) {
         this.ImageDescription = ImageDescription;

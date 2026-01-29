@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel {
+public class DescribeVULRiskDetailRequest extends AbstractModel {
 
     /**
     * Group Account Member ID
@@ -31,18 +31,18 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     private String [] MemberId;
 
     /**
-    * Filter conditions
+    * Risk id.
     */
-    @SerializedName("Filter")
+    @SerializedName("RiskId")
     @Expose
-    private Filter Filter;
+    private String RiskId;
 
     /**
-    * Asset tags
+    * pcMgrId
     */
-    @SerializedName("Tags")
+    @SerializedName("PCMGRId")
     @Expose
-    private AssetTag [] Tags;
+    private String PCMGRId;
 
     /**
      * Get Group Account Member ID 
@@ -61,59 +61,56 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     }
 
     /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
+     * Get Risk id. 
+     * @return RiskId Risk id.
      */
-    public Filter getFilter() {
-        return this.Filter;
+    public String getRiskId() {
+        return this.RiskId;
     }
 
     /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
+     * Set Risk id.
+     * @param RiskId Risk id.
      */
-    public void setFilter(Filter Filter) {
-        this.Filter = Filter;
+    public void setRiskId(String RiskId) {
+        this.RiskId = RiskId;
     }
 
     /**
-     * Get Asset tags 
-     * @return Tags Asset tags
+     * Get pcMgrId 
+     * @return PCMGRId pcMgrId
      */
-    public AssetTag [] getTags() {
-        return this.Tags;
+    public String getPCMGRId() {
+        return this.PCMGRId;
     }
 
     /**
-     * Set Asset tags
-     * @param Tags Asset tags
+     * Set pcMgrId
+     * @param PCMGRId pcMgrId
      */
-    public void setTags(AssetTag [] Tags) {
-        this.Tags = Tags;
+    public void setPCMGRId(String PCMGRId) {
+        this.PCMGRId = PCMGRId;
     }
 
-    public DescribeRiskCenterAssetViewVULRiskListRequest() {
+    public DescribeVULRiskDetailRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskCenterAssetViewVULRiskListRequest(DescribeRiskCenterAssetViewVULRiskListRequest source) {
+    public DescribeVULRiskDetailRequest(DescribeVULRiskDetailRequest source) {
         if (source.MemberId != null) {
             this.MemberId = new String[source.MemberId.length];
             for (int i = 0; i < source.MemberId.length; i++) {
                 this.MemberId[i] = new String(source.MemberId[i]);
             }
         }
-        if (source.Filter != null) {
-            this.Filter = new Filter(source.Filter);
+        if (source.RiskId != null) {
+            this.RiskId = new String(source.RiskId);
         }
-        if (source.Tags != null) {
-            this.Tags = new AssetTag[source.Tags.length];
-            for (int i = 0; i < source.Tags.length; i++) {
-                this.Tags[i] = new AssetTag(source.Tags[i]);
-            }
+        if (source.PCMGRId != null) {
+            this.PCMGRId = new String(source.PCMGRId);
         }
     }
 
@@ -123,8 +120,8 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
-        this.setParamObj(map, prefix + "Filter.", this.Filter);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "RiskId", this.RiskId);
+        this.setParamSimple(map, prefix + "PCMGRId", this.PCMGRId);
 
     }
 }

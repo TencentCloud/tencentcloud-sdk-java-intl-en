@@ -21,7 +21,7 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel {
+public class DescribeExposePathRequest extends AbstractModel {
 
     /**
     * Group Account Member ID
@@ -31,18 +31,32 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     private String [] MemberId;
 
     /**
-    * Filter conditions
+    * Asset ID.
     */
-    @SerializedName("Filter")
+    @SerializedName("AssetId")
     @Expose
-    private Filter Filter;
+    private String AssetId;
 
     /**
-    * Asset tags
+    * Asset IP.
     */
-    @SerializedName("Tags")
+    @SerializedName("Ip")
     @Expose
-    private AssetTag [] Tags;
+    private String Ip;
+
+    /**
+    * Asset domain name.
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * Port or port range.
+    */
+    @SerializedName("Port")
+    @Expose
+    private String Port;
 
     /**
      * Get Group Account Member ID 
@@ -61,59 +75,94 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
     }
 
     /**
-     * Get Filter conditions 
-     * @return Filter Filter conditions
+     * Get Asset ID. 
+     * @return AssetId Asset ID.
      */
-    public Filter getFilter() {
-        return this.Filter;
+    public String getAssetId() {
+        return this.AssetId;
     }
 
     /**
-     * Set Filter conditions
-     * @param Filter Filter conditions
+     * Set Asset ID.
+     * @param AssetId Asset ID.
      */
-    public void setFilter(Filter Filter) {
-        this.Filter = Filter;
+    public void setAssetId(String AssetId) {
+        this.AssetId = AssetId;
     }
 
     /**
-     * Get Asset tags 
-     * @return Tags Asset tags
+     * Get Asset IP. 
+     * @return Ip Asset IP.
      */
-    public AssetTag [] getTags() {
-        return this.Tags;
+    public String getIp() {
+        return this.Ip;
     }
 
     /**
-     * Set Asset tags
-     * @param Tags Asset tags
+     * Set Asset IP.
+     * @param Ip Asset IP.
      */
-    public void setTags(AssetTag [] Tags) {
-        this.Tags = Tags;
+    public void setIp(String Ip) {
+        this.Ip = Ip;
     }
 
-    public DescribeRiskCenterAssetViewVULRiskListRequest() {
+    /**
+     * Get Asset domain name. 
+     * @return Domain Asset domain name.
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set Asset domain name.
+     * @param Domain Asset domain name.
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get Port or port range. 
+     * @return Port Port or port range.
+     */
+    public String getPort() {
+        return this.Port;
+    }
+
+    /**
+     * Set Port or port range.
+     * @param Port Port or port range.
+     */
+    public void setPort(String Port) {
+        this.Port = Port;
+    }
+
+    public DescribeExposePathRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeRiskCenterAssetViewVULRiskListRequest(DescribeRiskCenterAssetViewVULRiskListRequest source) {
+    public DescribeExposePathRequest(DescribeExposePathRequest source) {
         if (source.MemberId != null) {
             this.MemberId = new String[source.MemberId.length];
             for (int i = 0; i < source.MemberId.length; i++) {
                 this.MemberId[i] = new String(source.MemberId[i]);
             }
         }
-        if (source.Filter != null) {
-            this.Filter = new Filter(source.Filter);
+        if (source.AssetId != null) {
+            this.AssetId = new String(source.AssetId);
         }
-        if (source.Tags != null) {
-            this.Tags = new AssetTag[source.Tags.length];
-            for (int i = 0; i < source.Tags.length; i++) {
-                this.Tags[i] = new AssetTag(source.Tags[i]);
-            }
+        if (source.Ip != null) {
+            this.Ip = new String(source.Ip);
+        }
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Port != null) {
+            this.Port = new String(source.Port);
         }
     }
 
@@ -123,8 +172,10 @@ public class DescribeRiskCenterAssetViewVULRiskListRequest extends AbstractModel
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
-        this.setParamObj(map, prefix + "Filter.", this.Filter);
-        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "AssetId", this.AssetId);
+        this.setParamSimple(map, prefix + "Ip", this.Ip);
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "Port", this.Port);
 
     }
 }
