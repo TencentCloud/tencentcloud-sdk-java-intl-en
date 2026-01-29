@@ -128,6 +128,17 @@ Note: Only an approved template can be used to send emails.
     }
 
     /**
+     *Add recipient addresses with Template parameters. Use this API to import Template parameters while adding recipient addresses, ensuring each recipient address uses Template variables with different values when sending emails. Users first call the CreateReceiver API to create a recipient list, then call this API to import recipient addresses and Template parameters for email sending, and finally use the BatchSendEmail API to complete batch email sending. Notably, after using this API, the Template parameter in the BatchSendEmail API does not need to be passed again. Users can also import recipient addresses, Template variables, and parameter values via the import file option in the console under Email Sending - Recipient List menu. This API limits the number of recipient addresses in a single request to 20,000 entries. It can also append recipient addresses to an already uploaded recipient list, but the total number of recipient addresses in the list must not exceed a certain limit, currently set at 50,000 entries. This API does not support removing duplicate recipient addresses. Users need to ensure uploaded and appended addresses are non-repeating and do not duplicate previously uploaded addresses.
+     * @param req CreateReceiverDetailWithDataRequest
+     * @return CreateReceiverDetailWithDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateReceiverDetailWithDataResponse CreateReceiverDetailWithData(CreateReceiverDetailWithDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateReceiverDetailWithData", CreateReceiverDetailWithDataResponse.class);
+    }
+
+    /**
      *Remove address-level unsubscribe configuration.
      * @param req DeleteAddressUnsubscribeConfigRequest
      * @return DeleteAddressUnsubscribeConfigResponse

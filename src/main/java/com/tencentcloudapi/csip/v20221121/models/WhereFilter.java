@@ -38,9 +38,9 @@ public class WhereFilter extends AbstractModel {
     private String [] Values;
 
     /**
-    *  
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+    * Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
 
     */
     @SerializedName("OperatorType")
@@ -80,13 +80,13 @@ public class WhereFilter extends AbstractModel {
     }
 
     /**
-     * Get  
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+     * Get Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
  
-     * @return OperatorType  
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+     * @return OperatorType Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
 
      */
     public Long getOperatorType() {
@@ -94,13 +94,13 @@ public class WhereFilter extends AbstractModel {
     }
 
     /**
-     * Set  
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+     * Set Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
 
-     * @param OperatorType  
-`1`: =; `2`: >; `3`: <; `4`: ≥; `5`: ≤; `6`: ≠;
-`7`: Exact match; `9`: Fuzzy match; `13`: Non-fuzzy match; `14`: AND
+     * @param OperatorType Central platform definition:.
+1 equal 2 larger than 3 less than 4 greater than or equal to 5 less than or equal to 6 not equal to 9 fuzzy matching 13 non-fuzzy matching 14 bitwise and.
+Exact match fills 7. fuzzy matching fills 9. 
 
      */
     public void setOperatorType(Long OperatorType) {

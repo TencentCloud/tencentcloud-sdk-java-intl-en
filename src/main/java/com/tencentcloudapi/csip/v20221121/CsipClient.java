@@ -94,6 +94,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Cloud Defense Asset Center Statistics
+     * @param req DescribeCFWAssetStatisticsRequest
+     * @return DescribeCFWAssetStatisticsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCFWAssetStatisticsResponse DescribeCFWAssetStatistics(DescribeCFWAssetStatisticsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCFWAssetStatistics", DescribeCFWAssetStatisticsResponse.class);
+    }
+
+    /**
      *This API is used to query details of CVM assets.
      * @param req DescribeCVMAssetInfoRequest
      * @return DescribeCVMAssetInfoResponse
@@ -113,6 +124,17 @@ public class CsipClient extends AbstractClient{
     public DescribeCVMAssetsResponse DescribeCVMAssets(DescribeCVMAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCVMAssets", DescribeCVMAssetsResponse.class);
+    }
+
+    /**
+     *This example shows you how to obtain the cluster list.
+     * @param req DescribeClusterAssetsRequest
+     * @return DescribeClusterAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeClusterAssetsResponse DescribeClusterAssets(DescribeClusterAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeClusterAssets", DescribeClusterAssetsResponse.class);
     }
 
     /**
@@ -160,6 +182,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Obtain Gateway List
+     * @param req DescribeGatewayAssetsRequest
+     * @return DescribeGatewayAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatewayAssetsResponse DescribeGatewayAssets(DescribeGatewayAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGatewayAssets", DescribeGatewayAssetsResponse.class);
+    }
+
+    /**
      *This API is used to query the list of TCP listeners.
      * @param req DescribeListenerListRequest
      * @return DescribeListenerListResponse
@@ -168,6 +201,17 @@ public class CsipClient extends AbstractClient{
     public DescribeListenerListResponse DescribeListenerList(DescribeListenerListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeListenerList", DescribeListenerListResponse.class);
+    }
+
+    /**
+     *Obtain Network Interface Card List
+     * @param req DescribeNICAssetsRequest
+     * @return DescribeNICAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeNICAssetsResponse DescribeNICAssets(DescribeNICAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeNICAssets", DescribeNICAssetsResponse.class);
     }
 
     /**
@@ -193,6 +237,17 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
+     *Asset list.
+     * @param req DescribeOtherCloudAssetsRequest
+     * @return DescribeOtherCloudAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOtherCloudAssetsResponse DescribeOtherCloudAssets(DescribeOtherCloudAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOtherCloudAssets", DescribeOtherCloudAssetsResponse.class);
+    }
+
+    /**
      *This API is used to query the list of public IP assets.
      * @param req DescribePublicIpAssetsRequest
      * @return DescribePublicIpAssetsResponse
@@ -201,6 +256,17 @@ public class CsipClient extends AbstractClient{
     public DescribePublicIpAssetsResponse DescribePublicIpAssets(DescribePublicIpAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribePublicIpAssets", DescribePublicIpAssetsResponse.class);
+    }
+
+    /**
+     *Repository Image List
+     * @param req DescribeRepositoryImageAssetsRequest
+     * @return DescribeRepositoryImageAssetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRepositoryImageAssetsResponse DescribeRepositoryImageAssets(DescribeRepositoryImageAssetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRepositoryImageAssets", DescribeRepositoryImageAssetsResponse.class);
     }
 
     /**
@@ -388,6 +454,17 @@ public class CsipClient extends AbstractClient{
     public DescribeVpcAssetsResponse DescribeVpcAssets(DescribeVpcAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeVpcAssets", DescribeVpcAssetsResponse.class);
+    }
+
+    /**
+     *Modify Group Account Status
+     * @param req ModifyOrganizationAccountStatusRequest
+     * @return ModifyOrganizationAccountStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyOrganizationAccountStatusResponse ModifyOrganizationAccountStatus(ModifyOrganizationAccountStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyOrganizationAccountStatus", ModifyOrganizationAccountStatusResponse.class);
     }
 
     /**
