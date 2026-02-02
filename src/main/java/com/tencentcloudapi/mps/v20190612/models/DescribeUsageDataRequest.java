@@ -24,34 +24,22 @@ import java.util.HashMap;
 public class DescribeUsageDataRequest extends AbstractModel {
 
     /**
-    * Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Queries the MPS task type. The transcoding task is queried by default.
-<li>Transcode: transcoding.</li>
-<li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
-<li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
-<li>AiQualityControl: media quality inspection.</li>
-<li>Evaluation: video assessment.</li>
-<li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: add a basic copyright digital watermark.</li>
-<li>AddNagraWatermark: add a NAGRA digital watermark.</li>
-<li>ExtractBlindWatermark: extract a basic copyright digital watermark.</li>
+    * Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
+<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
     */
     @SerializedName("Types")
     @Expose
@@ -71,7 +59,7 @@ public class DescribeUsageDataRequest extends AbstractModel {
 <li>na-siliconvalley: Silicon Valley.</li>
 <li>na-ashburn: Virginia.</li>
 <li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: São Paulo.</li>
+<li>sa-saopaulo: Sao Paulo.</li>
 <li>eu-frankfurt: Frankfurt.</li>
 <li>eu-moscow: Russia.</li>
 <li>aws: AWS.</li>
@@ -81,100 +69,52 @@ public class DescribeUsageDataRequest extends AbstractModel {
     private String [] ProcessRegions;
 
     /**
-     * Get Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return StartTime Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
+     * @return StartTime Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param StartTime Start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param StartTime Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return EndTime End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
+     * @return EndTime End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param EndTime End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param EndTime End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Queries the MPS task type. The transcoding task is queried by default.
-<li>Transcode: transcoding.</li>
-<li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
-<li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
-<li>AiQualityControl: media quality inspection.</li>
-<li>Evaluation: video assessment.</li>
-<li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: add a basic copyright digital watermark.</li>
-<li>AddNagraWatermark: add a NAGRA digital watermark.</li>
-<li>ExtractBlindWatermark: extract a basic copyright digital watermark.</li> 
-     * @return Types Queries the MPS task type. The transcoding task is queried by default.
-<li>Transcode: transcoding.</li>
-<li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
-<li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
-<li>AiQualityControl: media quality inspection.</li>
-<li>Evaluation: video assessment.</li>
-<li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: add a basic copyright digital watermark.</li>
-<li>AddNagraWatermark: add a NAGRA digital watermark.</li>
-<li>ExtractBlindWatermark: extract a basic copyright digital watermark.</li>
+     * Get Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
+<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li> 
+     * @return Types Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
+<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
      */
     public String [] getTypes() {
         return this.Types;
     }
 
     /**
-     * Set Queries the MPS task type. The transcoding task is queried by default.
-<li>Transcode: transcoding.</li>
-<li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
-<li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
-<li>AiQualityControl: media quality inspection.</li>
-<li>Evaluation: video assessment.</li>
-<li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: add a basic copyright digital watermark.</li>
-<li>AddNagraWatermark: add a NAGRA digital watermark.</li>
-<li>ExtractBlindWatermark: extract a basic copyright digital watermark.</li>
-     * @param Types Queries the MPS task type. The transcoding task is queried by default.
-<li>Transcode: transcoding.</li>
-<li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
-<li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
-<li>AiQualityControl: media quality inspection.</li>
-<li>Evaluation: video assessment.</li>
-<li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: add a basic copyright digital watermark.</li>
-<li>AddNagraWatermark: add a NAGRA digital watermark.</li>
-<li>ExtractBlindWatermark: extract a basic copyright digital watermark.</li>
+     * Set Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
+<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
+     * @param Types Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
+<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
      */
     public void setTypes(String [] Types) {
         this.Types = Types;
@@ -194,7 +134,7 @@ public class DescribeUsageDataRequest extends AbstractModel {
 <li>na-siliconvalley: Silicon Valley.</li>
 <li>na-ashburn: Virginia.</li>
 <li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: São Paulo.</li>
+<li>sa-saopaulo: Sao Paulo.</li>
 <li>eu-frankfurt: Frankfurt.</li>
 <li>eu-moscow: Russia.</li>
 <li>aws: AWS.</li> 
@@ -211,7 +151,7 @@ public class DescribeUsageDataRequest extends AbstractModel {
 <li>na-siliconvalley: Silicon Valley.</li>
 <li>na-ashburn: Virginia.</li>
 <li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: São Paulo.</li>
+<li>sa-saopaulo: Sao Paulo.</li>
 <li>eu-frankfurt: Frankfurt.</li>
 <li>eu-moscow: Russia.</li>
 <li>aws: AWS.</li>
@@ -234,7 +174,7 @@ public class DescribeUsageDataRequest extends AbstractModel {
 <li>na-siliconvalley: Silicon Valley.</li>
 <li>na-ashburn: Virginia.</li>
 <li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: São Paulo.</li>
+<li>sa-saopaulo: Sao Paulo.</li>
 <li>eu-frankfurt: Frankfurt.</li>
 <li>eu-moscow: Russia.</li>
 <li>aws: AWS.</li>
@@ -251,7 +191,7 @@ public class DescribeUsageDataRequest extends AbstractModel {
 <li>na-siliconvalley: Silicon Valley.</li>
 <li>na-ashburn: Virginia.</li>
 <li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: São Paulo.</li>
+<li>sa-saopaulo: Sao Paulo.</li>
 <li>eu-frankfurt: Frankfurt.</li>
 <li>eu-moscow: Russia.</li>
 <li>aws: AWS.</li>

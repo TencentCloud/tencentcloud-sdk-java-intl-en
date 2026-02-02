@@ -24,25 +24,21 @@ import java.util.HashMap;
 public class DescribeAigcVideoTaskResponse extends AbstractModel {
 
     /**
-    * Current task status:
-WAIT: Pending,
-RUN: In progress,
-FAIL: Task failed,
-DONE: Task completed successfully.
+    * Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * When the task status is DONE, the returned video URL list will be available for 12 hours. Please retrieve and utilize the video promptly.
+    * When the task status is DONE, the list of video URLs is returned. The videos are stored for 12 hours. Please retrieve them as soon as possible.
     */
     @SerializedName("VideoUrls")
     @Expose
     private String [] VideoUrls;
 
     /**
-    * The resolution of the output video. Example: 1080*720.
+    * Output video resolution. Example: 1080*720.
     */
     @SerializedName("Resolution")
     @Expose
@@ -63,64 +59,48 @@ DONE: Task completed successfully.
     private String RequestId;
 
     /**
-     * Get Current task status:
-WAIT: Pending,
-RUN: In progress,
-FAIL: Task failed,
-DONE: Task completed successfully. 
-     * @return Status Current task status:
-WAIT: Pending,
-RUN: In progress,
-FAIL: Task failed,
-DONE: Task completed successfully.
+     * Get Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful. 
+     * @return Status Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Current task status:
-WAIT: Pending,
-RUN: In progress,
-FAIL: Task failed,
-DONE: Task completed successfully.
-     * @param Status Current task status:
-WAIT: Pending,
-RUN: In progress,
-FAIL: Task failed,
-DONE: Task completed successfully.
+     * Set Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
+     * @param Status Current task status. WAIT: waiting; RUN: running; FAIL: failed; DONE: successful.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get When the task status is DONE, the returned video URL list will be available for 12 hours. Please retrieve and utilize the video promptly. 
-     * @return VideoUrls When the task status is DONE, the returned video URL list will be available for 12 hours. Please retrieve and utilize the video promptly.
+     * Get When the task status is DONE, the list of video URLs is returned. The videos are stored for 12 hours. Please retrieve them as soon as possible. 
+     * @return VideoUrls When the task status is DONE, the list of video URLs is returned. The videos are stored for 12 hours. Please retrieve them as soon as possible.
      */
     public String [] getVideoUrls() {
         return this.VideoUrls;
     }
 
     /**
-     * Set When the task status is DONE, the returned video URL list will be available for 12 hours. Please retrieve and utilize the video promptly.
-     * @param VideoUrls When the task status is DONE, the returned video URL list will be available for 12 hours. Please retrieve and utilize the video promptly.
+     * Set When the task status is DONE, the list of video URLs is returned. The videos are stored for 12 hours. Please retrieve them as soon as possible.
+     * @param VideoUrls When the task status is DONE, the list of video URLs is returned. The videos are stored for 12 hours. Please retrieve them as soon as possible.
      */
     public void setVideoUrls(String [] VideoUrls) {
         this.VideoUrls = VideoUrls;
     }
 
     /**
-     * Get The resolution of the output video. Example: 1080*720. 
-     * @return Resolution The resolution of the output video. Example: 1080*720.
+     * Get Output video resolution. Example: 1080*720. 
+     * @return Resolution Output video resolution. Example: 1080*720.
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set The resolution of the output video. Example: 1080*720.
-     * @param Resolution The resolution of the output video. Example: 1080*720.
+     * Set Output video resolution. Example: 1080*720.
+     * @param Resolution Output video resolution. Example: 1080*720.
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;

@@ -24,7 +24,8 @@ import java.util.HashMap;
 public class CreateAigcVideoTaskResponse extends AbstractModel {
 
     /**
-    * Upon successful task creation, the returned task ID can be used to invoke the query interface for polling task progress and retrieving generated results.
+    * ID of the successfully created task.
+The task progress and generation results can be obtained by calling the query API.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +39,20 @@ public class CreateAigcVideoTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Upon successful task creation, the returned task ID can be used to invoke the query interface for polling task progress and retrieving generated results. 
-     * @return TaskId Upon successful task creation, the returned task ID can be used to invoke the query interface for polling task progress and retrieving generated results.
+     * Get ID of the successfully created task.
+The task progress and generation results can be obtained by calling the query API. 
+     * @return TaskId ID of the successfully created task.
+The task progress and generation results can be obtained by calling the query API.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Upon successful task creation, the returned task ID can be used to invoke the query interface for polling task progress and retrieving generated results.
-     * @param TaskId Upon successful task creation, the returned task ID can be used to invoke the query interface for polling task progress and retrieving generated results.
+     * Set ID of the successfully created task.
+The task progress and generation results can be obtained by calling the query API.
+     * @param TaskId ID of the successfully created task.
+The task progress and generation results can be obtained by calling the query API.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

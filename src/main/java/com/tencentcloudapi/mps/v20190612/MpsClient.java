@@ -84,7 +84,7 @@ Smart subtitle (full speech, speech hotword, and speech translation)
     }
 
     /**
-     *This API is used to create an AIGC image generation task.
+     *This API is used to create AIGC image generation tasks.
      * @param req CreateAigcImageTaskRequest
      * @return CreateAigcImageTaskResponse
      * @throws TencentCloudSDKException
@@ -95,7 +95,7 @@ Smart subtitle (full speech, speech hotword, and speech translation)
     }
 
     /**
-     *This API is used to create an AIGC video generation task.
+     *This API is used to create AI video generation tasks.
      * @param req CreateAigcVideoTaskRequest
      * @return CreateAigcVideoTaskResponse
      * @throws TencentCloudSDKException
@@ -597,7 +597,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to query the details of the AIGC image task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+     *This API is used to query the progress of AIGC image generation tasks and obtain the generation results.
      * @param req DescribeAigcImageTaskRequest
      * @return DescribeAigcImageTaskResponse
      * @throws TencentCloudSDKException
@@ -608,7 +608,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
-     *This API is used to query the details of the AIGC video task execution status and results by task ID (tasks submitted within the last 7 days can be queried).
+     *This API is used to query the progress of AIGC video generation tasks and obtain the generation results.
      * @param req DescribeAigcVideoTaskRequest
      * @return DescribeAigcVideoTaskResponse
      * @throws TencentCloudSDKException
@@ -1308,6 +1308,17 @@ HTTP callbacks are supported for live stream processing events. Notifications ca
     public ProcessMediaResponse ProcessMedia(ProcessMediaRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ProcessMedia", ProcessMediaResponse.class);
+    }
+
+    /**
+     *This API is used to return the speech recognition results synchronously.
+     * @param req RecognizeAudioRequest
+     * @return RecognizeAudioResponse
+     * @throws TencentCloudSDKException
+     */
+    public RecognizeAudioResponse RecognizeAudio(RecognizeAudioRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RecognizeAudio", RecognizeAudioResponse.class);
     }
 
     /**

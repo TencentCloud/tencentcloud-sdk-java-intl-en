@@ -31,7 +31,7 @@ public class CheckCnameStatusRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * List of accelerated domain names.
+    * The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
     */
     @SerializedName("RecordNames")
     @Expose
@@ -54,16 +54,16 @@ public class CheckCnameStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get List of accelerated domain names. 
-     * @return RecordNames List of accelerated domain names.
+     * Get The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>. 
+     * @return RecordNames The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
      */
     public String [] getRecordNames() {
         return this.RecordNames;
     }
 
     /**
-     * Set List of accelerated domain names.
-     * @param RecordNames List of accelerated domain names.
+     * Set The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
+     * @param RecordNames The domain name list that need to detect CNAME configuration state can be: <li>acceleration domain name;</li><li>alias domain name.</li>.
      */
     public void setRecordNames(String [] RecordNames) {
         this.RecordNames = RecordNames;

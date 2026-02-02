@@ -61,6 +61,13 @@ Note: This field may return null, indicating that no valid value can be obtained
     private WordResult [] Wordlist;
 
     /**
+    * Speaker ID (if speaker recognition is enabled).
+    */
+    @SerializedName("SpeakerId")
+    @Expose
+    private String SpeakerId;
+
+    /**
      * Get Confidence of a recognized segment. Value range: 0-100. 
      * @return Confidence Confidence of a recognized segment. Value range: 0-100.
      */
@@ -148,6 +155,22 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.Wordlist = Wordlist;
     }
 
+    /**
+     * Get Speaker ID (if speaker recognition is enabled). 
+     * @return SpeakerId Speaker ID (if speaker recognition is enabled).
+     */
+    public String getSpeakerId() {
+        return this.SpeakerId;
+    }
+
+    /**
+     * Set Speaker ID (if speaker recognition is enabled).
+     * @param SpeakerId Speaker ID (if speaker recognition is enabled).
+     */
+    public void setSpeakerId(String SpeakerId) {
+        this.SpeakerId = SpeakerId;
+    }
+
     public SmartSubtitleTaskAsrFullTextSegmentItem() {
     }
 
@@ -174,6 +197,9 @@ Note: This field may return null, indicating that no valid value can be obtained
                 this.Wordlist[i] = new WordResult(source.Wordlist[i]);
             }
         }
+        if (source.SpeakerId != null) {
+            this.SpeakerId = new String(source.SpeakerId);
+        }
     }
 
 
@@ -186,6 +212,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamArrayObj(map, prefix + "Wordlist.", this.Wordlist);
+        this.setParamSimple(map, prefix + "SpeakerId", this.SpeakerId);
 
     }
 }

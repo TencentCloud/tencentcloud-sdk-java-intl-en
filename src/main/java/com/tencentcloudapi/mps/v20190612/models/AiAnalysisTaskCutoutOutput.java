@@ -21,103 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class ImageProcessTaskOutput extends AbstractModel {
+public class AiAnalysisTaskCutoutOutput extends AbstractModel {
 
     /**
-    * Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * File path for the intelligent video matting.
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Storage location for the intelligent video matting.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Processing result of the image-to-text task.
-    */
-    @SerializedName("Content")
-    @Expose
-    private String Content;
-
-    /**
-     * Get Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Path Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get File path for the intelligent video matting. 
+     * @return Path File path for the intelligent video matting.
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Path Path of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set File path for the intelligent video matting.
+     * @param Path File path for the intelligent video matting.
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return OutputStorage Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Storage location for the intelligent video matting. 
+     * @return OutputStorage Storage location for the intelligent video matting.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param OutputStorage Storage location of the output file.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Storage location for the intelligent video matting.
+     * @param OutputStorage Storage location for the intelligent video matting.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
-    /**
-     * Get Processing result of the image-to-text task. 
-     * @return Content Processing result of the image-to-text task.
-     */
-    public String getContent() {
-        return this.Content;
-    }
-
-    /**
-     * Set Processing result of the image-to-text task.
-     * @param Content Processing result of the image-to-text task.
-     */
-    public void setContent(String Content) {
-        this.Content = Content;
-    }
-
-    public ImageProcessTaskOutput() {
+    public AiAnalysisTaskCutoutOutput() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public ImageProcessTaskOutput(ImageProcessTaskOutput source) {
+    public AiAnalysisTaskCutoutOutput(AiAnalysisTaskCutoutOutput source) {
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
-        }
-        if (source.Content != null) {
-            this.Content = new String(source.Content);
         }
     }
 
@@ -128,7 +92,6 @@ Note: This field may return null, indicating that no valid value can be obtained
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
-        this.setParamSimple(map, prefix + "Content", this.Content);
 
     }
 }

@@ -424,7 +424,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *Asset list.
+     *Gets the list of other cloud assets
      * @param req DescribeOtherCloudAssetsRequest
      * @return DescribeOtherCloudAssetsResponse
      * @throws TencentCloudSDKException
@@ -454,6 +454,17 @@ public class CsipClient extends AbstractClient{
     public DescribeRepositoryImageAssetsResponse DescribeRepositoryImageAssets(DescribeRepositoryImageAssetsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRepositoryImageAssets", DescribeRepositoryImageAssetsResponse.class);
+    }
+
+    /**
+     *Retrieve risk call record list.
+     * @param req DescribeRiskCallRecordRequest
+     * @return DescribeRiskCallRecordResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRiskCallRecordResponse DescribeRiskCallRecord(DescribeRiskCallRecordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRiskCallRecord", DescribeRiskCallRecordResponse.class);
     }
 
     /**
@@ -732,7 +743,7 @@ public class CsipClient extends AbstractClient{
     }
 
     /**
-     *Modify Group Account Status
+     *Modify group account status
      * @param req ModifyOrganizationAccountStatusRequest
      * @return ModifyOrganizationAccountStatusResponse
      * @throws TencentCloudSDKException

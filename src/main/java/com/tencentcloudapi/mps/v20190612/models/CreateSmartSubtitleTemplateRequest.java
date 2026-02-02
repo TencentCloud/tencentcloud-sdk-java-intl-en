@@ -147,7 +147,7 @@ ASR recognition and pure subtitle translation currently support the following la
 `mr-IN`: Marathi (India).
 `mn-MN`: Mongolian (Mongolia).
 `ne-NP`: Nepali (Nepal).
-`no-NO`: Bokmål Norwegian (Norway).
+`no-NO`: Bokmal Norwegian (Norway).
 `fa-IR`: Persian (Iran).
 `pl-PL`: Polish (Poland).
 `pt-BR`: Portuguese (Brazil).
@@ -199,7 +199,6 @@ ASR recognition and pure subtitle translation currently support the following la
 `vi-VN`: Vietnamese (Vietnam).
 `xh-ZA`: Xhosa (South Africa).
 `zu-ZA`: Zulu (South Africa).
-
     */
     @SerializedName("VideoSrcLanguage")
     @Expose
@@ -264,200 +263,8 @@ Length limit: 256 characters.
 
     /**
     * Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON. List of translation languages:
-`ab`: Abkhaz language.
-`ace`: Acehnese.
-`ach`: Acholi.
-`af`: Afrikaans.
-`ak`: Twi (Akan).
-`am`: Amharic.
-`ar`: Arabic.
-`as`: Assamese.
-`ay`: Aymara.
-`az`: Azerbaijani.
-`ba`: Bashkir.
-`ban`: Balinese.
-`bbc`: Batak Toba.
-`bem`:Bemba.
-`bew`:Betawi.
-`bg`: Bulgarian.
-`bho`: Bhojpuri.
-`bik`:Bikol.
-`bm`: Bambara.
-`bn`: Bengali.
-`br`: Breton.
-`bs`: Bosnian.
-`btx`: Batak Karo.
-`bts`: Batak Simalungun.
-`bua`: Buryat language.
-`ca`: Catalan.
-`ceb`: Cebuano.
-`cgg`:Kiga.
-`chm`: Meadow Mari language.
-`ckb`: Kurdish (Sorani).
-`cnh`: Hakha Chin.
-`co`: Corsican.
-`crh`: Crimean Tatar.
-`crs`: Seychellois Creole.
-`cs`: Czech.
-`cv`: Chuvash.
-`cy`: Welsh.
-`da`: Danish.
-`de`: German.
-`din`: Dinka
-`doi`: Dogri.
-`dov`: Dombe.
-`dv`: Divehi.
-`dz`: Dzongkha.
-`ee`: Ewe.
-`el`: Greek.
-`en`: English.
-`eo`: Esperanto.
-`es`: Spanish.
-`et`: Estonian.
-`eu`: Basque.
-`fa`: Persian.
-`ff`: Fula.
-`fi`: Finnish.
-`fil`: Filipino (Tagalog).
-`fj`: Fijian.
-`fr`: French.
-`fr-CA`: French (Canada).
-`fr-FR`: French (France).
-`fy`: Frisian.
-`ga`: Irish.
-`gaa`: Ga.
-`gd`: Scottish Gaelic.
-`gl`: Galician.
-`gn`: Guaraní.
-`gom`: Goan Konkani.
-`gu`: Gujarati.
-`gv`: Manx.
-`ha`: Hausa.
-`haw`: Hawaiian.
-`he`: Hebrew.
-`hi`: Hindi.
-`hil`: Hiligaynon.
-`hmn`: Hmong.
-`hr`: Croatian.
-`hrx`: Hunsrik.
-`ht`: Haitian Creole.
-`hu`: Hungarian.
-`hy`: Armenian.
-`id`: Indonesian.
-`ig`: Igbo.
-`ilo`: Iloko.
-`is`: Icelandic.
-`it`: Italian.
-`iw`: Hebrew
-`ja`: Japanese.
-`jv`: Javanese.
-`jw`: Javanese.
-`ka`: Georgian.
-`kk`: Kazakh.
-`km`: Khmer.
-`kn`: Kannada.
-`ko`: Korean.
-`kri`: Krio.
-`ku`: Kurdish (Kurmanji).
-`ktu`: Kituba.
-`ky`: Kirghiz.
-`la`: Latin.
-`lb`: Luxembourgish.
-`lg`: Ganda (Luganda).
-`li`: Limburgish.
-`lij`: Ligurian.
-`lmo`: Lombard.
-`ln`: Lingala.
-`lo`: Lao.
-`lt`: Lithuanian.
-`ltg`: Latgalian.
-`luo`: Luo.
-`lus`: Mizo.
-`lv`: Latvian.
-`mai`: Maithili.
-`mak`: Makassar.
-`mg`: Malagasy.
-`mi`: Maori.
-`min`: Minangkabau.
-`mk`: Macedonian.
-`ml`: Malayalam.
-`mn`: Mongolian.
-`mr`: Marathi.
-`ms`: Malay.
-`mt`: Maltese.
-`my`: Burmese.
-`ne`: Nepali.
-`new`: Newar.
-`nl`: Dutch.
-`no`: Norwegian.
-`nr`: Ndebele (South).
-`nso`: Northern Sotho (Sepedi).
-`nus`: Nuer.
-`ny`: Chichewa (Nyanja).
-`oc`: Occitan.
-`om`: Oromo.
-`or`: Odia.
-`pa`: Punjabi.
-`pag`: Pangasinan.
-`pam`: Kapampangan.
-`pap`: Papiamento.
-`pl`: Polish.
-`ps`: Pashto.
-`pt`: Portuguese.
-`pt-BR`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`qu`: Quechuan.
-`ro`: Romanian.
-`rom`: Romani.
-`rn`: Rundi.
-`ru`: Russian.
-`rw`: Kinyarwanda.
-`sa`: Sanskrit.
-`scn`: Sicilian.
-`sd`: Sindhi.
-`sg`: Sango.
-`shn`: Shan.
-`si`: Sinhalese.
-`sk`: Slovak.
-`sl`: Slovene.
-`sm`: Samoan.
-`sn`: Shona.
-`so`: Somali.
-`sq`: Albanian.
-`sr`: Serbian.
-`ss`: Swati.
-`st`: Sesotho.
-`su`: Sundanese.
-`sv`: Swedish.
-`sw`: Swahili.
-`szl`: Silesian.
-`ta`: Tamil.
-`te`: Telugu.
-`tet`: Tetum.
-`tg`: Tajik.
-`th`: Thai.
-`ti`: Tigrinya.
-`tk`: Turkmen.
-`tl`: Filipino (Tagalog).
-`tn`: Tswana.
-`tr`: Turkish.
-`ts`: Tsonga.
-`tt`: Tatar.
-`ug`: Uyghur.
-`uk`: Ukrainian.
-`ur`: Urdu.
-`uz`: Uzbek.
-`vi`: Vietnamese.
-`xh`: Xhosa.
-`yi`: Yiddish.
-`yo`: Yoruba.
-`yua`: Yucatec Maya.
-`yue`: Cantonese.
-`zh`: Simplified Chinese.
-`zh-TW`: Chinese (Traditional).
-`zu`: Zulu.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+This parameter takes effect when the value of TranslateSwitch is ON. Valid translation languages:`ab`: Abkhazian.`ace`: Acehnese.`ach`: Acholi.`af`: Afrikaans.`ak`: Twi (Akan).`am`: Amharic.`ar`: Arabic.`as`: Assamese.`ay`: Aymara.`az`: Azerbaijani.`ba`: Bashkir.`ban`: Balinese.`bbc`: Batak toba.`bem`: Bemba.`bew`: Betawi.`bg`: Bulgarian.`bho`: Bhojpuri.`bik`: Bikol.`bm`: Bambara.`bn`: Bengali.`br`: Breton.`bs`: Bosnian.`btx`: Batak Karo.`bts`: Batak Simalungun.`bua`: Buryat.`ca`: Catalan.`ceb`: Cebuano.`cgg`: Kiga.`chm`: Meadow Mari.`ckb`: Kurdish (Sorani).`cnh`: Hakha Chin.`co`: Corsican.`crh`: Crimean Tatar.`crs`: Seychellois Creole.`cs`: Czech.`cv`: Chuvash.`cy`: Welsh.`da`: Danish.`de`: German.`din`: Dinka.`doi`: Dogri.`dov`: Dombe.`dv`: Dhivehi.`dz`: Dzongkha.`ee`: Ewe.`el`: Greek.`en`: English.`eo`: Esperanto.`es`: Spanish.`et`: Estonian.`eu`: Basque.`fa`: Persian.`ff`: Fulah.`fi`: Finnish.`fil`: Filipino (Tagalog).`fj`: Fijian.`fr`: French.`fr-CA`: French (Canada).`fr-FR`: French (France).`fy`: Frisian.`ga`: Irish.`gaa`: Ga.
+`gd`: Scottish Gaelic.`gl`: Galician.`gn`: Guarani.`gom`: Konkani.`gu`: Gujarati.`gv`: Manx.`ha`: Hausa.`haw`: Hawaiian.`he`: Hebrew.`hi`: Hindi.`hil`: Hiligaynon.`hmn`: Hmong.`hr`: Croatian.`hrx`: Hunsrik.`ht`: Haitian Creole.`hu`: Hungarian.`hy`: Armenian.`id`: Indonesian.`ig`: Igbo.`ilo`: Iloko.`is`: Icelandic.`it`: Italian.`iw`: Hebrew.`ja`: Japanese.`jv`: Javanese.`ka`: Georgian.`kk`: Kazakh.`km`: Khmer.`kn`: Kannada.`ko`: Korean.`kri`: Krio.`ku`: Kurdish (Kurmanji).`ktu`: Kituba.`ky`: Kyrgyz.`la`: Latin.`lb`: Luxembourgish.`lg`: Ganda (Luganda).`li`: Limburgish.`lij`: Ligurian.`lmo`: Lombard.`ln`: Lingala.`lo`: Lao.`lt`: Lithuanian.`ltg`: Latgalian.`luo`: Luo.`lus`: Mizo.`lv`: Latvian.`mai`: Maithili.`mak`: Makasar.`mg`: Malagasy.`mi`: Maori.`min`: Minangkabau.`mk`: Macedonian.`ml`: Malayalam.`mn`: Mongolian.`mr`: Marathi.`ms`: Malay.`mt`: Maltese.`my`: Burmese.`ne`: Nepali.`new`: Newari.`nl`: Dutch.`no`: Norwegian.`nr`: Southern Ndebele.`nso`: Northern Sotho (Sepedi).`nus`: Nuer.`ny`: Chichewa (Nyanja).`oc`: Occitan.`om`: Oromo.`or`: Odia.`pa`: Punjabi.`pag`: Pangasinan.`pam`: Kapampangan.`pap`: Papiamento.`pl`: Polish.`ps`: Pashto.`pt`: Portuguese.`pt-BR`: Portuguese (Brazil).`pt-PT`: Portuguese (Portugal).`qu`: Quechua.`ro`: Romanian.`rom`: Romani.`rn`: Rundi.`ru`: Russian.`rw`: Kinyarwanda.`sa`: Sanskrit.`scn`: Sicilian.`sd`: Sindhi.`sg`: Sango.`shn`: Shan.`si`: Sinhala.`sk`: Slovak.`sl`: Slovenian.`sm`: Samoan.`sn`: Shona.`so`: Somali.`sq`: Albanian.`sr`: Serbian.`ss`: Swazi.`st`: Southern Sotho.`su`: Sundanese.`sv`: Swedish.`sw`: Swahili.`szl`: Silesian.`ta`: Tamil.`te`: Telugu.`tet`: Tetum.`tg`: Tajik.`th`: Thai.`ti`: Tigrinya.`tk`: Turkmen.`tn`: Tswana.`tr`: Turkish.`ts`: Tsonga.`tt`: Tatar.`ug`: Uyghur.`uk`: Ukrainian.`ur`: Urdu.`uz`: Uzbek.`vi`: Vietnamese.`xh`: Xhosa.`yi`: Yiddish.`yo`: Yoruba.`yua`: Yucatec Maya.`yue`: Cantonese.`zh`: Chinese (Simplified).`zh-TW`: Chinese (Traditional).`zu`: Zulu.**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
     */
     @SerializedName("TranslateDstLanguage")
     @Expose
@@ -473,6 +280,13 @@ This field is valid when the value of TranslateSwitch is ON. List of translation
     @SerializedName("ProcessType")
     @Expose
     private Long ProcessType;
+
+    /**
+    * Area configurations for the subtitle OCR extraction box.
+    */
+    @SerializedName("SelectingSubtitleAreasConfig")
+    @Expose
+    private SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig;
 
     /**
      * Get Smart subtitle template name.
@@ -610,7 +424,7 @@ ASR recognition and pure subtitle translation currently support the following la
 `mr-IN`: Marathi (India).
 `mn-MN`: Mongolian (Mongolia).
 `ne-NP`: Nepali (Nepal).
-`no-NO`: Bokmål Norwegian (Norway).
+`no-NO`: Bokmal Norwegian (Norway).
 `fa-IR`: Persian (Iran).
 `pl-PL`: Polish (Poland).
 `pt-BR`: Portuguese (Brazil).
@@ -661,8 +475,7 @@ ASR recognition and pure subtitle translation currently support the following la
 `ve-ZA`: Venda (South Africa).
 `vi-VN`: Vietnamese (Vietnam).
 `xh-ZA`: Xhosa (South Africa).
-`zu-ZA`: Zulu (South Africa).
- 
+`zu-ZA`: Zulu (South Africa). 
      * @return VideoSrcLanguage Source language of the video with smart subtitles.
 OCR recognition only supports the following languages:
 `zh_en`: Chinese and English.
@@ -778,7 +591,7 @@ ASR recognition and pure subtitle translation currently support the following la
 `mr-IN`: Marathi (India).
 `mn-MN`: Mongolian (Mongolia).
 `ne-NP`: Nepali (Nepal).
-`no-NO`: Bokmål Norwegian (Norway).
+`no-NO`: Bokmal Norwegian (Norway).
 `fa-IR`: Persian (Iran).
 `pl-PL`: Polish (Poland).
 `pt-BR`: Portuguese (Brazil).
@@ -830,7 +643,6 @@ ASR recognition and pure subtitle translation currently support the following la
 `vi-VN`: Vietnamese (Vietnam).
 `xh-ZA`: Xhosa (South Africa).
 `zu-ZA`: Zulu (South Africa).
-
      */
     public String getVideoSrcLanguage() {
         return this.VideoSrcLanguage;
@@ -952,7 +764,7 @@ ASR recognition and pure subtitle translation currently support the following la
 `mr-IN`: Marathi (India).
 `mn-MN`: Mongolian (Mongolia).
 `ne-NP`: Nepali (Nepal).
-`no-NO`: Bokmål Norwegian (Norway).
+`no-NO`: Bokmal Norwegian (Norway).
 `fa-IR`: Persian (Iran).
 `pl-PL`: Polish (Poland).
 `pt-BR`: Portuguese (Brazil).
@@ -1004,7 +816,6 @@ ASR recognition and pure subtitle translation currently support the following la
 `vi-VN`: Vietnamese (Vietnam).
 `xh-ZA`: Xhosa (South Africa).
 `zu-ZA`: Zulu (South Africa).
-
      * @param VideoSrcLanguage Source language of the video with smart subtitles.
 OCR recognition only supports the following languages:
 `zh_en`: Chinese and English.
@@ -1120,7 +931,7 @@ ASR recognition and pure subtitle translation currently support the following la
 `mr-IN`: Marathi (India).
 `mn-MN`: Mongolian (Mongolia).
 `ne-NP`: Nepali (Nepal).
-`no-NO`: Bokmål Norwegian (Norway).
+`no-NO`: Bokmal Norwegian (Norway).
 `fa-IR`: Persian (Iran).
 `pl-PL`: Polish (Poland).
 `pt-BR`: Portuguese (Brazil).
@@ -1172,7 +983,6 @@ ASR recognition and pure subtitle translation currently support the following la
 `vi-VN`: Vietnamese (Vietnam).
 `xh-ZA`: Xhosa (South Africa).
 `zu-ZA`: Zulu (South Africa).
-
      */
     public void setVideoSrcLanguage(String VideoSrcLanguage) {
         this.VideoSrcLanguage = VideoSrcLanguage;
@@ -1348,395 +1158,11 @@ Length limit: 256 characters.
 
     /**
      * Get Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON. List of translation languages:
-`ab`: Abkhaz language.
-`ace`: Acehnese.
-`ach`: Acholi.
-`af`: Afrikaans.
-`ak`: Twi (Akan).
-`am`: Amharic.
-`ar`: Arabic.
-`as`: Assamese.
-`ay`: Aymara.
-`az`: Azerbaijani.
-`ba`: Bashkir.
-`ban`: Balinese.
-`bbc`: Batak Toba.
-`bem`:Bemba.
-`bew`:Betawi.
-`bg`: Bulgarian.
-`bho`: Bhojpuri.
-`bik`:Bikol.
-`bm`: Bambara.
-`bn`: Bengali.
-`br`: Breton.
-`bs`: Bosnian.
-`btx`: Batak Karo.
-`bts`: Batak Simalungun.
-`bua`: Buryat language.
-`ca`: Catalan.
-`ceb`: Cebuano.
-`cgg`:Kiga.
-`chm`: Meadow Mari language.
-`ckb`: Kurdish (Sorani).
-`cnh`: Hakha Chin.
-`co`: Corsican.
-`crh`: Crimean Tatar.
-`crs`: Seychellois Creole.
-`cs`: Czech.
-`cv`: Chuvash.
-`cy`: Welsh.
-`da`: Danish.
-`de`: German.
-`din`: Dinka
-`doi`: Dogri.
-`dov`: Dombe.
-`dv`: Divehi.
-`dz`: Dzongkha.
-`ee`: Ewe.
-`el`: Greek.
-`en`: English.
-`eo`: Esperanto.
-`es`: Spanish.
-`et`: Estonian.
-`eu`: Basque.
-`fa`: Persian.
-`ff`: Fula.
-`fi`: Finnish.
-`fil`: Filipino (Tagalog).
-`fj`: Fijian.
-`fr`: French.
-`fr-CA`: French (Canada).
-`fr-FR`: French (France).
-`fy`: Frisian.
-`ga`: Irish.
-`gaa`: Ga.
-`gd`: Scottish Gaelic.
-`gl`: Galician.
-`gn`: Guaraní.
-`gom`: Goan Konkani.
-`gu`: Gujarati.
-`gv`: Manx.
-`ha`: Hausa.
-`haw`: Hawaiian.
-`he`: Hebrew.
-`hi`: Hindi.
-`hil`: Hiligaynon.
-`hmn`: Hmong.
-`hr`: Croatian.
-`hrx`: Hunsrik.
-`ht`: Haitian Creole.
-`hu`: Hungarian.
-`hy`: Armenian.
-`id`: Indonesian.
-`ig`: Igbo.
-`ilo`: Iloko.
-`is`: Icelandic.
-`it`: Italian.
-`iw`: Hebrew
-`ja`: Japanese.
-`jv`: Javanese.
-`jw`: Javanese.
-`ka`: Georgian.
-`kk`: Kazakh.
-`km`: Khmer.
-`kn`: Kannada.
-`ko`: Korean.
-`kri`: Krio.
-`ku`: Kurdish (Kurmanji).
-`ktu`: Kituba.
-`ky`: Kirghiz.
-`la`: Latin.
-`lb`: Luxembourgish.
-`lg`: Ganda (Luganda).
-`li`: Limburgish.
-`lij`: Ligurian.
-`lmo`: Lombard.
-`ln`: Lingala.
-`lo`: Lao.
-`lt`: Lithuanian.
-`ltg`: Latgalian.
-`luo`: Luo.
-`lus`: Mizo.
-`lv`: Latvian.
-`mai`: Maithili.
-`mak`: Makassar.
-`mg`: Malagasy.
-`mi`: Maori.
-`min`: Minangkabau.
-`mk`: Macedonian.
-`ml`: Malayalam.
-`mn`: Mongolian.
-`mr`: Marathi.
-`ms`: Malay.
-`mt`: Maltese.
-`my`: Burmese.
-`ne`: Nepali.
-`new`: Newar.
-`nl`: Dutch.
-`no`: Norwegian.
-`nr`: Ndebele (South).
-`nso`: Northern Sotho (Sepedi).
-`nus`: Nuer.
-`ny`: Chichewa (Nyanja).
-`oc`: Occitan.
-`om`: Oromo.
-`or`: Odia.
-`pa`: Punjabi.
-`pag`: Pangasinan.
-`pam`: Kapampangan.
-`pap`: Papiamento.
-`pl`: Polish.
-`ps`: Pashto.
-`pt`: Portuguese.
-`pt-BR`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`qu`: Quechuan.
-`ro`: Romanian.
-`rom`: Romani.
-`rn`: Rundi.
-`ru`: Russian.
-`rw`: Kinyarwanda.
-`sa`: Sanskrit.
-`scn`: Sicilian.
-`sd`: Sindhi.
-`sg`: Sango.
-`shn`: Shan.
-`si`: Sinhalese.
-`sk`: Slovak.
-`sl`: Slovene.
-`sm`: Samoan.
-`sn`: Shona.
-`so`: Somali.
-`sq`: Albanian.
-`sr`: Serbian.
-`ss`: Swati.
-`st`: Sesotho.
-`su`: Sundanese.
-`sv`: Swedish.
-`sw`: Swahili.
-`szl`: Silesian.
-`ta`: Tamil.
-`te`: Telugu.
-`tet`: Tetum.
-`tg`: Tajik.
-`th`: Thai.
-`ti`: Tigrinya.
-`tk`: Turkmen.
-`tl`: Filipino (Tagalog).
-`tn`: Tswana.
-`tr`: Turkish.
-`ts`: Tsonga.
-`tt`: Tatar.
-`ug`: Uyghur.
-`uk`: Ukrainian.
-`ur`: Urdu.
-`uz`: Uzbek.
-`vi`: Vietnamese.
-`xh`: Xhosa.
-`yi`: Yiddish.
-`yo`: Yoruba.
-`yua`: Yucatec Maya.
-`yue`: Cantonese.
-`zh`: Simplified Chinese.
-`zh-TW`: Chinese (Traditional).
-`zu`: Zulu.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese. 
+This parameter takes effect when the value of TranslateSwitch is ON. Valid translation languages:`ab`: Abkhazian.`ace`: Acehnese.`ach`: Acholi.`af`: Afrikaans.`ak`: Twi (Akan).`am`: Amharic.`ar`: Arabic.`as`: Assamese.`ay`: Aymara.`az`: Azerbaijani.`ba`: Bashkir.`ban`: Balinese.`bbc`: Batak toba.`bem`: Bemba.`bew`: Betawi.`bg`: Bulgarian.`bho`: Bhojpuri.`bik`: Bikol.`bm`: Bambara.`bn`: Bengali.`br`: Breton.`bs`: Bosnian.`btx`: Batak Karo.`bts`: Batak Simalungun.`bua`: Buryat.`ca`: Catalan.`ceb`: Cebuano.`cgg`: Kiga.`chm`: Meadow Mari.`ckb`: Kurdish (Sorani).`cnh`: Hakha Chin.`co`: Corsican.`crh`: Crimean Tatar.`crs`: Seychellois Creole.`cs`: Czech.`cv`: Chuvash.`cy`: Welsh.`da`: Danish.`de`: German.`din`: Dinka.`doi`: Dogri.`dov`: Dombe.`dv`: Dhivehi.`dz`: Dzongkha.`ee`: Ewe.`el`: Greek.`en`: English.`eo`: Esperanto.`es`: Spanish.`et`: Estonian.`eu`: Basque.`fa`: Persian.`ff`: Fulah.`fi`: Finnish.`fil`: Filipino (Tagalog).`fj`: Fijian.`fr`: French.`fr-CA`: French (Canada).`fr-FR`: French (France).`fy`: Frisian.`ga`: Irish.`gaa`: Ga.
+`gd`: Scottish Gaelic.`gl`: Galician.`gn`: Guarani.`gom`: Konkani.`gu`: Gujarati.`gv`: Manx.`ha`: Hausa.`haw`: Hawaiian.`he`: Hebrew.`hi`: Hindi.`hil`: Hiligaynon.`hmn`: Hmong.`hr`: Croatian.`hrx`: Hunsrik.`ht`: Haitian Creole.`hu`: Hungarian.`hy`: Armenian.`id`: Indonesian.`ig`: Igbo.`ilo`: Iloko.`is`: Icelandic.`it`: Italian.`iw`: Hebrew.`ja`: Japanese.`jv`: Javanese.`ka`: Georgian.`kk`: Kazakh.`km`: Khmer.`kn`: Kannada.`ko`: Korean.`kri`: Krio.`ku`: Kurdish (Kurmanji).`ktu`: Kituba.`ky`: Kyrgyz.`la`: Latin.`lb`: Luxembourgish.`lg`: Ganda (Luganda).`li`: Limburgish.`lij`: Ligurian.`lmo`: Lombard.`ln`: Lingala.`lo`: Lao.`lt`: Lithuanian.`ltg`: Latgalian.`luo`: Luo.`lus`: Mizo.`lv`: Latvian.`mai`: Maithili.`mak`: Makasar.`mg`: Malagasy.`mi`: Maori.`min`: Minangkabau.`mk`: Macedonian.`ml`: Malayalam.`mn`: Mongolian.`mr`: Marathi.`ms`: Malay.`mt`: Maltese.`my`: Burmese.`ne`: Nepali.`new`: Newari.`nl`: Dutch.`no`: Norwegian.`nr`: Southern Ndebele.`nso`: Northern Sotho (Sepedi).`nus`: Nuer.`ny`: Chichewa (Nyanja).`oc`: Occitan.`om`: Oromo.`or`: Odia.`pa`: Punjabi.`pag`: Pangasinan.`pam`: Kapampangan.`pap`: Papiamento.`pl`: Polish.`ps`: Pashto.`pt`: Portuguese.`pt-BR`: Portuguese (Brazil).`pt-PT`: Portuguese (Portugal).`qu`: Quechua.`ro`: Romanian.`rom`: Romani.`rn`: Rundi.`ru`: Russian.`rw`: Kinyarwanda.`sa`: Sanskrit.`scn`: Sicilian.`sd`: Sindhi.`sg`: Sango.`shn`: Shan.`si`: Sinhala.`sk`: Slovak.`sl`: Slovenian.`sm`: Samoan.`sn`: Shona.`so`: Somali.`sq`: Albanian.`sr`: Serbian.`ss`: Swazi.`st`: Southern Sotho.`su`: Sundanese.`sv`: Swedish.`sw`: Swahili.`szl`: Silesian.`ta`: Tamil.`te`: Telugu.`tet`: Tetum.`tg`: Tajik.`th`: Thai.`ti`: Tigrinya.`tk`: Turkmen.`tn`: Tswana.`tr`: Turkish.`ts`: Tsonga.`tt`: Tatar.`ug`: Uyghur.`uk`: Ukrainian.`ur`: Urdu.`uz`: Uzbek.`vi`: Vietnamese.`xh`: Xhosa.`yi`: Yiddish.`yo`: Yoruba.`yua`: Yucatec Maya.`yue`: Cantonese.`zh`: Chinese (Simplified).`zh-TW`: Chinese (Traditional).`zu`: Zulu.**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese. 
      * @return TranslateDstLanguage Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON. List of translation languages:
-`ab`: Abkhaz language.
-`ace`: Acehnese.
-`ach`: Acholi.
-`af`: Afrikaans.
-`ak`: Twi (Akan).
-`am`: Amharic.
-`ar`: Arabic.
-`as`: Assamese.
-`ay`: Aymara.
-`az`: Azerbaijani.
-`ba`: Bashkir.
-`ban`: Balinese.
-`bbc`: Batak Toba.
-`bem`:Bemba.
-`bew`:Betawi.
-`bg`: Bulgarian.
-`bho`: Bhojpuri.
-`bik`:Bikol.
-`bm`: Bambara.
-`bn`: Bengali.
-`br`: Breton.
-`bs`: Bosnian.
-`btx`: Batak Karo.
-`bts`: Batak Simalungun.
-`bua`: Buryat language.
-`ca`: Catalan.
-`ceb`: Cebuano.
-`cgg`:Kiga.
-`chm`: Meadow Mari language.
-`ckb`: Kurdish (Sorani).
-`cnh`: Hakha Chin.
-`co`: Corsican.
-`crh`: Crimean Tatar.
-`crs`: Seychellois Creole.
-`cs`: Czech.
-`cv`: Chuvash.
-`cy`: Welsh.
-`da`: Danish.
-`de`: German.
-`din`: Dinka
-`doi`: Dogri.
-`dov`: Dombe.
-`dv`: Divehi.
-`dz`: Dzongkha.
-`ee`: Ewe.
-`el`: Greek.
-`en`: English.
-`eo`: Esperanto.
-`es`: Spanish.
-`et`: Estonian.
-`eu`: Basque.
-`fa`: Persian.
-`ff`: Fula.
-`fi`: Finnish.
-`fil`: Filipino (Tagalog).
-`fj`: Fijian.
-`fr`: French.
-`fr-CA`: French (Canada).
-`fr-FR`: French (France).
-`fy`: Frisian.
-`ga`: Irish.
-`gaa`: Ga.
-`gd`: Scottish Gaelic.
-`gl`: Galician.
-`gn`: Guaraní.
-`gom`: Goan Konkani.
-`gu`: Gujarati.
-`gv`: Manx.
-`ha`: Hausa.
-`haw`: Hawaiian.
-`he`: Hebrew.
-`hi`: Hindi.
-`hil`: Hiligaynon.
-`hmn`: Hmong.
-`hr`: Croatian.
-`hrx`: Hunsrik.
-`ht`: Haitian Creole.
-`hu`: Hungarian.
-`hy`: Armenian.
-`id`: Indonesian.
-`ig`: Igbo.
-`ilo`: Iloko.
-`is`: Icelandic.
-`it`: Italian.
-`iw`: Hebrew
-`ja`: Japanese.
-`jv`: Javanese.
-`jw`: Javanese.
-`ka`: Georgian.
-`kk`: Kazakh.
-`km`: Khmer.
-`kn`: Kannada.
-`ko`: Korean.
-`kri`: Krio.
-`ku`: Kurdish (Kurmanji).
-`ktu`: Kituba.
-`ky`: Kirghiz.
-`la`: Latin.
-`lb`: Luxembourgish.
-`lg`: Ganda (Luganda).
-`li`: Limburgish.
-`lij`: Ligurian.
-`lmo`: Lombard.
-`ln`: Lingala.
-`lo`: Lao.
-`lt`: Lithuanian.
-`ltg`: Latgalian.
-`luo`: Luo.
-`lus`: Mizo.
-`lv`: Latvian.
-`mai`: Maithili.
-`mak`: Makassar.
-`mg`: Malagasy.
-`mi`: Maori.
-`min`: Minangkabau.
-`mk`: Macedonian.
-`ml`: Malayalam.
-`mn`: Mongolian.
-`mr`: Marathi.
-`ms`: Malay.
-`mt`: Maltese.
-`my`: Burmese.
-`ne`: Nepali.
-`new`: Newar.
-`nl`: Dutch.
-`no`: Norwegian.
-`nr`: Ndebele (South).
-`nso`: Northern Sotho (Sepedi).
-`nus`: Nuer.
-`ny`: Chichewa (Nyanja).
-`oc`: Occitan.
-`om`: Oromo.
-`or`: Odia.
-`pa`: Punjabi.
-`pag`: Pangasinan.
-`pam`: Kapampangan.
-`pap`: Papiamento.
-`pl`: Polish.
-`ps`: Pashto.
-`pt`: Portuguese.
-`pt-BR`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`qu`: Quechuan.
-`ro`: Romanian.
-`rom`: Romani.
-`rn`: Rundi.
-`ru`: Russian.
-`rw`: Kinyarwanda.
-`sa`: Sanskrit.
-`scn`: Sicilian.
-`sd`: Sindhi.
-`sg`: Sango.
-`shn`: Shan.
-`si`: Sinhalese.
-`sk`: Slovak.
-`sl`: Slovene.
-`sm`: Samoan.
-`sn`: Shona.
-`so`: Somali.
-`sq`: Albanian.
-`sr`: Serbian.
-`ss`: Swati.
-`st`: Sesotho.
-`su`: Sundanese.
-`sv`: Swedish.
-`sw`: Swahili.
-`szl`: Silesian.
-`ta`: Tamil.
-`te`: Telugu.
-`tet`: Tetum.
-`tg`: Tajik.
-`th`: Thai.
-`ti`: Tigrinya.
-`tk`: Turkmen.
-`tl`: Filipino (Tagalog).
-`tn`: Tswana.
-`tr`: Turkish.
-`ts`: Tsonga.
-`tt`: Tatar.
-`ug`: Uyghur.
-`uk`: Ukrainian.
-`ur`: Urdu.
-`uz`: Uzbek.
-`vi`: Vietnamese.
-`xh`: Xhosa.
-`yi`: Yiddish.
-`yo`: Yoruba.
-`yua`: Yucatec Maya.
-`yue`: Cantonese.
-`zh`: Simplified Chinese.
-`zh-TW`: Chinese (Traditional).
-`zu`: Zulu.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+This parameter takes effect when the value of TranslateSwitch is ON. Valid translation languages:`ab`: Abkhazian.`ace`: Acehnese.`ach`: Acholi.`af`: Afrikaans.`ak`: Twi (Akan).`am`: Amharic.`ar`: Arabic.`as`: Assamese.`ay`: Aymara.`az`: Azerbaijani.`ba`: Bashkir.`ban`: Balinese.`bbc`: Batak toba.`bem`: Bemba.`bew`: Betawi.`bg`: Bulgarian.`bho`: Bhojpuri.`bik`: Bikol.`bm`: Bambara.`bn`: Bengali.`br`: Breton.`bs`: Bosnian.`btx`: Batak Karo.`bts`: Batak Simalungun.`bua`: Buryat.`ca`: Catalan.`ceb`: Cebuano.`cgg`: Kiga.`chm`: Meadow Mari.`ckb`: Kurdish (Sorani).`cnh`: Hakha Chin.`co`: Corsican.`crh`: Crimean Tatar.`crs`: Seychellois Creole.`cs`: Czech.`cv`: Chuvash.`cy`: Welsh.`da`: Danish.`de`: German.`din`: Dinka.`doi`: Dogri.`dov`: Dombe.`dv`: Dhivehi.`dz`: Dzongkha.`ee`: Ewe.`el`: Greek.`en`: English.`eo`: Esperanto.`es`: Spanish.`et`: Estonian.`eu`: Basque.`fa`: Persian.`ff`: Fulah.`fi`: Finnish.`fil`: Filipino (Tagalog).`fj`: Fijian.`fr`: French.`fr-CA`: French (Canada).`fr-FR`: French (France).`fy`: Frisian.`ga`: Irish.`gaa`: Ga.
+`gd`: Scottish Gaelic.`gl`: Galician.`gn`: Guarani.`gom`: Konkani.`gu`: Gujarati.`gv`: Manx.`ha`: Hausa.`haw`: Hawaiian.`he`: Hebrew.`hi`: Hindi.`hil`: Hiligaynon.`hmn`: Hmong.`hr`: Croatian.`hrx`: Hunsrik.`ht`: Haitian Creole.`hu`: Hungarian.`hy`: Armenian.`id`: Indonesian.`ig`: Igbo.`ilo`: Iloko.`is`: Icelandic.`it`: Italian.`iw`: Hebrew.`ja`: Japanese.`jv`: Javanese.`ka`: Georgian.`kk`: Kazakh.`km`: Khmer.`kn`: Kannada.`ko`: Korean.`kri`: Krio.`ku`: Kurdish (Kurmanji).`ktu`: Kituba.`ky`: Kyrgyz.`la`: Latin.`lb`: Luxembourgish.`lg`: Ganda (Luganda).`li`: Limburgish.`lij`: Ligurian.`lmo`: Lombard.`ln`: Lingala.`lo`: Lao.`lt`: Lithuanian.`ltg`: Latgalian.`luo`: Luo.`lus`: Mizo.`lv`: Latvian.`mai`: Maithili.`mak`: Makasar.`mg`: Malagasy.`mi`: Maori.`min`: Minangkabau.`mk`: Macedonian.`ml`: Malayalam.`mn`: Mongolian.`mr`: Marathi.`ms`: Malay.`mt`: Maltese.`my`: Burmese.`ne`: Nepali.`new`: Newari.`nl`: Dutch.`no`: Norwegian.`nr`: Southern Ndebele.`nso`: Northern Sotho (Sepedi).`nus`: Nuer.`ny`: Chichewa (Nyanja).`oc`: Occitan.`om`: Oromo.`or`: Odia.`pa`: Punjabi.`pag`: Pangasinan.`pam`: Kapampangan.`pap`: Papiamento.`pl`: Polish.`ps`: Pashto.`pt`: Portuguese.`pt-BR`: Portuguese (Brazil).`pt-PT`: Portuguese (Portugal).`qu`: Quechua.`ro`: Romanian.`rom`: Romani.`rn`: Rundi.`ru`: Russian.`rw`: Kinyarwanda.`sa`: Sanskrit.`scn`: Sicilian.`sd`: Sindhi.`sg`: Sango.`shn`: Shan.`si`: Sinhala.`sk`: Slovak.`sl`: Slovenian.`sm`: Samoan.`sn`: Shona.`so`: Somali.`sq`: Albanian.`sr`: Serbian.`ss`: Swazi.`st`: Southern Sotho.`su`: Sundanese.`sv`: Swedish.`sw`: Swahili.`szl`: Silesian.`ta`: Tamil.`te`: Telugu.`tet`: Tetum.`tg`: Tajik.`th`: Thai.`ti`: Tigrinya.`tk`: Turkmen.`tn`: Tswana.`tr`: Turkish.`ts`: Tsonga.`tt`: Tatar.`ug`: Uyghur.`uk`: Ukrainian.`ur`: Urdu.`uz`: Uzbek.`vi`: Vietnamese.`xh`: Xhosa.`yi`: Yiddish.`yo`: Yoruba.`yua`: Yucatec Maya.`yue`: Cantonese.`zh`: Chinese (Simplified).`zh-TW`: Chinese (Traditional).`zu`: Zulu.**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
      */
     public String getTranslateDstLanguage() {
         return this.TranslateDstLanguage;
@@ -1744,395 +1170,11 @@ This field is valid when the value of TranslateSwitch is ON. List of translation
 
     /**
      * Set Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON. List of translation languages:
-`ab`: Abkhaz language.
-`ace`: Acehnese.
-`ach`: Acholi.
-`af`: Afrikaans.
-`ak`: Twi (Akan).
-`am`: Amharic.
-`ar`: Arabic.
-`as`: Assamese.
-`ay`: Aymara.
-`az`: Azerbaijani.
-`ba`: Bashkir.
-`ban`: Balinese.
-`bbc`: Batak Toba.
-`bem`:Bemba.
-`bew`:Betawi.
-`bg`: Bulgarian.
-`bho`: Bhojpuri.
-`bik`:Bikol.
-`bm`: Bambara.
-`bn`: Bengali.
-`br`: Breton.
-`bs`: Bosnian.
-`btx`: Batak Karo.
-`bts`: Batak Simalungun.
-`bua`: Buryat language.
-`ca`: Catalan.
-`ceb`: Cebuano.
-`cgg`:Kiga.
-`chm`: Meadow Mari language.
-`ckb`: Kurdish (Sorani).
-`cnh`: Hakha Chin.
-`co`: Corsican.
-`crh`: Crimean Tatar.
-`crs`: Seychellois Creole.
-`cs`: Czech.
-`cv`: Chuvash.
-`cy`: Welsh.
-`da`: Danish.
-`de`: German.
-`din`: Dinka
-`doi`: Dogri.
-`dov`: Dombe.
-`dv`: Divehi.
-`dz`: Dzongkha.
-`ee`: Ewe.
-`el`: Greek.
-`en`: English.
-`eo`: Esperanto.
-`es`: Spanish.
-`et`: Estonian.
-`eu`: Basque.
-`fa`: Persian.
-`ff`: Fula.
-`fi`: Finnish.
-`fil`: Filipino (Tagalog).
-`fj`: Fijian.
-`fr`: French.
-`fr-CA`: French (Canada).
-`fr-FR`: French (France).
-`fy`: Frisian.
-`ga`: Irish.
-`gaa`: Ga.
-`gd`: Scottish Gaelic.
-`gl`: Galician.
-`gn`: Guaraní.
-`gom`: Goan Konkani.
-`gu`: Gujarati.
-`gv`: Manx.
-`ha`: Hausa.
-`haw`: Hawaiian.
-`he`: Hebrew.
-`hi`: Hindi.
-`hil`: Hiligaynon.
-`hmn`: Hmong.
-`hr`: Croatian.
-`hrx`: Hunsrik.
-`ht`: Haitian Creole.
-`hu`: Hungarian.
-`hy`: Armenian.
-`id`: Indonesian.
-`ig`: Igbo.
-`ilo`: Iloko.
-`is`: Icelandic.
-`it`: Italian.
-`iw`: Hebrew
-`ja`: Japanese.
-`jv`: Javanese.
-`jw`: Javanese.
-`ka`: Georgian.
-`kk`: Kazakh.
-`km`: Khmer.
-`kn`: Kannada.
-`ko`: Korean.
-`kri`: Krio.
-`ku`: Kurdish (Kurmanji).
-`ktu`: Kituba.
-`ky`: Kirghiz.
-`la`: Latin.
-`lb`: Luxembourgish.
-`lg`: Ganda (Luganda).
-`li`: Limburgish.
-`lij`: Ligurian.
-`lmo`: Lombard.
-`ln`: Lingala.
-`lo`: Lao.
-`lt`: Lithuanian.
-`ltg`: Latgalian.
-`luo`: Luo.
-`lus`: Mizo.
-`lv`: Latvian.
-`mai`: Maithili.
-`mak`: Makassar.
-`mg`: Malagasy.
-`mi`: Maori.
-`min`: Minangkabau.
-`mk`: Macedonian.
-`ml`: Malayalam.
-`mn`: Mongolian.
-`mr`: Marathi.
-`ms`: Malay.
-`mt`: Maltese.
-`my`: Burmese.
-`ne`: Nepali.
-`new`: Newar.
-`nl`: Dutch.
-`no`: Norwegian.
-`nr`: Ndebele (South).
-`nso`: Northern Sotho (Sepedi).
-`nus`: Nuer.
-`ny`: Chichewa (Nyanja).
-`oc`: Occitan.
-`om`: Oromo.
-`or`: Odia.
-`pa`: Punjabi.
-`pag`: Pangasinan.
-`pam`: Kapampangan.
-`pap`: Papiamento.
-`pl`: Polish.
-`ps`: Pashto.
-`pt`: Portuguese.
-`pt-BR`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`qu`: Quechuan.
-`ro`: Romanian.
-`rom`: Romani.
-`rn`: Rundi.
-`ru`: Russian.
-`rw`: Kinyarwanda.
-`sa`: Sanskrit.
-`scn`: Sicilian.
-`sd`: Sindhi.
-`sg`: Sango.
-`shn`: Shan.
-`si`: Sinhalese.
-`sk`: Slovak.
-`sl`: Slovene.
-`sm`: Samoan.
-`sn`: Shona.
-`so`: Somali.
-`sq`: Albanian.
-`sr`: Serbian.
-`ss`: Swati.
-`st`: Sesotho.
-`su`: Sundanese.
-`sv`: Swedish.
-`sw`: Swahili.
-`szl`: Silesian.
-`ta`: Tamil.
-`te`: Telugu.
-`tet`: Tetum.
-`tg`: Tajik.
-`th`: Thai.
-`ti`: Tigrinya.
-`tk`: Turkmen.
-`tl`: Filipino (Tagalog).
-`tn`: Tswana.
-`tr`: Turkish.
-`ts`: Tsonga.
-`tt`: Tatar.
-`ug`: Uyghur.
-`uk`: Ukrainian.
-`ur`: Urdu.
-`uz`: Uzbek.
-`vi`: Vietnamese.
-`xh`: Xhosa.
-`yi`: Yiddish.
-`yo`: Yoruba.
-`yua`: Yucatec Maya.
-`yue`: Cantonese.
-`zh`: Simplified Chinese.
-`zh-TW`: Chinese (Traditional).
-`zu`: Zulu.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+This parameter takes effect when the value of TranslateSwitch is ON. Valid translation languages:`ab`: Abkhazian.`ace`: Acehnese.`ach`: Acholi.`af`: Afrikaans.`ak`: Twi (Akan).`am`: Amharic.`ar`: Arabic.`as`: Assamese.`ay`: Aymara.`az`: Azerbaijani.`ba`: Bashkir.`ban`: Balinese.`bbc`: Batak toba.`bem`: Bemba.`bew`: Betawi.`bg`: Bulgarian.`bho`: Bhojpuri.`bik`: Bikol.`bm`: Bambara.`bn`: Bengali.`br`: Breton.`bs`: Bosnian.`btx`: Batak Karo.`bts`: Batak Simalungun.`bua`: Buryat.`ca`: Catalan.`ceb`: Cebuano.`cgg`: Kiga.`chm`: Meadow Mari.`ckb`: Kurdish (Sorani).`cnh`: Hakha Chin.`co`: Corsican.`crh`: Crimean Tatar.`crs`: Seychellois Creole.`cs`: Czech.`cv`: Chuvash.`cy`: Welsh.`da`: Danish.`de`: German.`din`: Dinka.`doi`: Dogri.`dov`: Dombe.`dv`: Dhivehi.`dz`: Dzongkha.`ee`: Ewe.`el`: Greek.`en`: English.`eo`: Esperanto.`es`: Spanish.`et`: Estonian.`eu`: Basque.`fa`: Persian.`ff`: Fulah.`fi`: Finnish.`fil`: Filipino (Tagalog).`fj`: Fijian.`fr`: French.`fr-CA`: French (Canada).`fr-FR`: French (France).`fy`: Frisian.`ga`: Irish.`gaa`: Ga.
+`gd`: Scottish Gaelic.`gl`: Galician.`gn`: Guarani.`gom`: Konkani.`gu`: Gujarati.`gv`: Manx.`ha`: Hausa.`haw`: Hawaiian.`he`: Hebrew.`hi`: Hindi.`hil`: Hiligaynon.`hmn`: Hmong.`hr`: Croatian.`hrx`: Hunsrik.`ht`: Haitian Creole.`hu`: Hungarian.`hy`: Armenian.`id`: Indonesian.`ig`: Igbo.`ilo`: Iloko.`is`: Icelandic.`it`: Italian.`iw`: Hebrew.`ja`: Japanese.`jv`: Javanese.`ka`: Georgian.`kk`: Kazakh.`km`: Khmer.`kn`: Kannada.`ko`: Korean.`kri`: Krio.`ku`: Kurdish (Kurmanji).`ktu`: Kituba.`ky`: Kyrgyz.`la`: Latin.`lb`: Luxembourgish.`lg`: Ganda (Luganda).`li`: Limburgish.`lij`: Ligurian.`lmo`: Lombard.`ln`: Lingala.`lo`: Lao.`lt`: Lithuanian.`ltg`: Latgalian.`luo`: Luo.`lus`: Mizo.`lv`: Latvian.`mai`: Maithili.`mak`: Makasar.`mg`: Malagasy.`mi`: Maori.`min`: Minangkabau.`mk`: Macedonian.`ml`: Malayalam.`mn`: Mongolian.`mr`: Marathi.`ms`: Malay.`mt`: Maltese.`my`: Burmese.`ne`: Nepali.`new`: Newari.`nl`: Dutch.`no`: Norwegian.`nr`: Southern Ndebele.`nso`: Northern Sotho (Sepedi).`nus`: Nuer.`ny`: Chichewa (Nyanja).`oc`: Occitan.`om`: Oromo.`or`: Odia.`pa`: Punjabi.`pag`: Pangasinan.`pam`: Kapampangan.`pap`: Papiamento.`pl`: Polish.`ps`: Pashto.`pt`: Portuguese.`pt-BR`: Portuguese (Brazil).`pt-PT`: Portuguese (Portugal).`qu`: Quechua.`ro`: Romanian.`rom`: Romani.`rn`: Rundi.`ru`: Russian.`rw`: Kinyarwanda.`sa`: Sanskrit.`scn`: Sicilian.`sd`: Sindhi.`sg`: Sango.`shn`: Shan.`si`: Sinhala.`sk`: Slovak.`sl`: Slovenian.`sm`: Samoan.`sn`: Shona.`so`: Somali.`sq`: Albanian.`sr`: Serbian.`ss`: Swazi.`st`: Southern Sotho.`su`: Sundanese.`sv`: Swedish.`sw`: Swahili.`szl`: Silesian.`ta`: Tamil.`te`: Telugu.`tet`: Tetum.`tg`: Tajik.`th`: Thai.`ti`: Tigrinya.`tk`: Turkmen.`tn`: Tswana.`tr`: Turkish.`ts`: Tsonga.`tt`: Tatar.`ug`: Uyghur.`uk`: Ukrainian.`ur`: Urdu.`uz`: Uzbek.`vi`: Vietnamese.`xh`: Xhosa.`yi`: Yiddish.`yo`: Yoruba.`yua`: Yucatec Maya.`yue`: Cantonese.`zh`: Chinese (Simplified).`zh-TW`: Chinese (Traditional).`zu`: Zulu.**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
      * @param TranslateDstLanguage Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON. List of translation languages:
-`ab`: Abkhaz language.
-`ace`: Acehnese.
-`ach`: Acholi.
-`af`: Afrikaans.
-`ak`: Twi (Akan).
-`am`: Amharic.
-`ar`: Arabic.
-`as`: Assamese.
-`ay`: Aymara.
-`az`: Azerbaijani.
-`ba`: Bashkir.
-`ban`: Balinese.
-`bbc`: Batak Toba.
-`bem`:Bemba.
-`bew`:Betawi.
-`bg`: Bulgarian.
-`bho`: Bhojpuri.
-`bik`:Bikol.
-`bm`: Bambara.
-`bn`: Bengali.
-`br`: Breton.
-`bs`: Bosnian.
-`btx`: Batak Karo.
-`bts`: Batak Simalungun.
-`bua`: Buryat language.
-`ca`: Catalan.
-`ceb`: Cebuano.
-`cgg`:Kiga.
-`chm`: Meadow Mari language.
-`ckb`: Kurdish (Sorani).
-`cnh`: Hakha Chin.
-`co`: Corsican.
-`crh`: Crimean Tatar.
-`crs`: Seychellois Creole.
-`cs`: Czech.
-`cv`: Chuvash.
-`cy`: Welsh.
-`da`: Danish.
-`de`: German.
-`din`: Dinka
-`doi`: Dogri.
-`dov`: Dombe.
-`dv`: Divehi.
-`dz`: Dzongkha.
-`ee`: Ewe.
-`el`: Greek.
-`en`: English.
-`eo`: Esperanto.
-`es`: Spanish.
-`et`: Estonian.
-`eu`: Basque.
-`fa`: Persian.
-`ff`: Fula.
-`fi`: Finnish.
-`fil`: Filipino (Tagalog).
-`fj`: Fijian.
-`fr`: French.
-`fr-CA`: French (Canada).
-`fr-FR`: French (France).
-`fy`: Frisian.
-`ga`: Irish.
-`gaa`: Ga.
-`gd`: Scottish Gaelic.
-`gl`: Galician.
-`gn`: Guaraní.
-`gom`: Goan Konkani.
-`gu`: Gujarati.
-`gv`: Manx.
-`ha`: Hausa.
-`haw`: Hawaiian.
-`he`: Hebrew.
-`hi`: Hindi.
-`hil`: Hiligaynon.
-`hmn`: Hmong.
-`hr`: Croatian.
-`hrx`: Hunsrik.
-`ht`: Haitian Creole.
-`hu`: Hungarian.
-`hy`: Armenian.
-`id`: Indonesian.
-`ig`: Igbo.
-`ilo`: Iloko.
-`is`: Icelandic.
-`it`: Italian.
-`iw`: Hebrew
-`ja`: Japanese.
-`jv`: Javanese.
-`jw`: Javanese.
-`ka`: Georgian.
-`kk`: Kazakh.
-`km`: Khmer.
-`kn`: Kannada.
-`ko`: Korean.
-`kri`: Krio.
-`ku`: Kurdish (Kurmanji).
-`ktu`: Kituba.
-`ky`: Kirghiz.
-`la`: Latin.
-`lb`: Luxembourgish.
-`lg`: Ganda (Luganda).
-`li`: Limburgish.
-`lij`: Ligurian.
-`lmo`: Lombard.
-`ln`: Lingala.
-`lo`: Lao.
-`lt`: Lithuanian.
-`ltg`: Latgalian.
-`luo`: Luo.
-`lus`: Mizo.
-`lv`: Latvian.
-`mai`: Maithili.
-`mak`: Makassar.
-`mg`: Malagasy.
-`mi`: Maori.
-`min`: Minangkabau.
-`mk`: Macedonian.
-`ml`: Malayalam.
-`mn`: Mongolian.
-`mr`: Marathi.
-`ms`: Malay.
-`mt`: Maltese.
-`my`: Burmese.
-`ne`: Nepali.
-`new`: Newar.
-`nl`: Dutch.
-`no`: Norwegian.
-`nr`: Ndebele (South).
-`nso`: Northern Sotho (Sepedi).
-`nus`: Nuer.
-`ny`: Chichewa (Nyanja).
-`oc`: Occitan.
-`om`: Oromo.
-`or`: Odia.
-`pa`: Punjabi.
-`pag`: Pangasinan.
-`pam`: Kapampangan.
-`pap`: Papiamento.
-`pl`: Polish.
-`ps`: Pashto.
-`pt`: Portuguese.
-`pt-BR`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`qu`: Quechuan.
-`ro`: Romanian.
-`rom`: Romani.
-`rn`: Rundi.
-`ru`: Russian.
-`rw`: Kinyarwanda.
-`sa`: Sanskrit.
-`scn`: Sicilian.
-`sd`: Sindhi.
-`sg`: Sango.
-`shn`: Shan.
-`si`: Sinhalese.
-`sk`: Slovak.
-`sl`: Slovene.
-`sm`: Samoan.
-`sn`: Shona.
-`so`: Somali.
-`sq`: Albanian.
-`sr`: Serbian.
-`ss`: Swati.
-`st`: Sesotho.
-`su`: Sundanese.
-`sv`: Swedish.
-`sw`: Swahili.
-`szl`: Silesian.
-`ta`: Tamil.
-`te`: Telugu.
-`tet`: Tetum.
-`tg`: Tajik.
-`th`: Thai.
-`ti`: Tigrinya.
-`tk`: Turkmen.
-`tl`: Filipino (Tagalog).
-`tn`: Tswana.
-`tr`: Turkish.
-`ts`: Tsonga.
-`tt`: Tatar.
-`ug`: Uyghur.
-`uk`: Ukrainian.
-`ur`: Urdu.
-`uz`: Uzbek.
-`vi`: Vietnamese.
-`xh`: Xhosa.
-`yi`: Yiddish.
-`yo`: Yoruba.
-`yua`: Yucatec Maya.
-`yue`: Cantonese.
-`zh`: Simplified Chinese.
-`zh-TW`: Chinese (Traditional).
-`zu`: Zulu.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+This parameter takes effect when the value of TranslateSwitch is ON. Valid translation languages:`ab`: Abkhazian.`ace`: Acehnese.`ach`: Acholi.`af`: Afrikaans.`ak`: Twi (Akan).`am`: Amharic.`ar`: Arabic.`as`: Assamese.`ay`: Aymara.`az`: Azerbaijani.`ba`: Bashkir.`ban`: Balinese.`bbc`: Batak toba.`bem`: Bemba.`bew`: Betawi.`bg`: Bulgarian.`bho`: Bhojpuri.`bik`: Bikol.`bm`: Bambara.`bn`: Bengali.`br`: Breton.`bs`: Bosnian.`btx`: Batak Karo.`bts`: Batak Simalungun.`bua`: Buryat.`ca`: Catalan.`ceb`: Cebuano.`cgg`: Kiga.`chm`: Meadow Mari.`ckb`: Kurdish (Sorani).`cnh`: Hakha Chin.`co`: Corsican.`crh`: Crimean Tatar.`crs`: Seychellois Creole.`cs`: Czech.`cv`: Chuvash.`cy`: Welsh.`da`: Danish.`de`: German.`din`: Dinka.`doi`: Dogri.`dov`: Dombe.`dv`: Dhivehi.`dz`: Dzongkha.`ee`: Ewe.`el`: Greek.`en`: English.`eo`: Esperanto.`es`: Spanish.`et`: Estonian.`eu`: Basque.`fa`: Persian.`ff`: Fulah.`fi`: Finnish.`fil`: Filipino (Tagalog).`fj`: Fijian.`fr`: French.`fr-CA`: French (Canada).`fr-FR`: French (France).`fy`: Frisian.`ga`: Irish.`gaa`: Ga.
+`gd`: Scottish Gaelic.`gl`: Galician.`gn`: Guarani.`gom`: Konkani.`gu`: Gujarati.`gv`: Manx.`ha`: Hausa.`haw`: Hawaiian.`he`: Hebrew.`hi`: Hindi.`hil`: Hiligaynon.`hmn`: Hmong.`hr`: Croatian.`hrx`: Hunsrik.`ht`: Haitian Creole.`hu`: Hungarian.`hy`: Armenian.`id`: Indonesian.`ig`: Igbo.`ilo`: Iloko.`is`: Icelandic.`it`: Italian.`iw`: Hebrew.`ja`: Japanese.`jv`: Javanese.`ka`: Georgian.`kk`: Kazakh.`km`: Khmer.`kn`: Kannada.`ko`: Korean.`kri`: Krio.`ku`: Kurdish (Kurmanji).`ktu`: Kituba.`ky`: Kyrgyz.`la`: Latin.`lb`: Luxembourgish.`lg`: Ganda (Luganda).`li`: Limburgish.`lij`: Ligurian.`lmo`: Lombard.`ln`: Lingala.`lo`: Lao.`lt`: Lithuanian.`ltg`: Latgalian.`luo`: Luo.`lus`: Mizo.`lv`: Latvian.`mai`: Maithili.`mak`: Makasar.`mg`: Malagasy.`mi`: Maori.`min`: Minangkabau.`mk`: Macedonian.`ml`: Malayalam.`mn`: Mongolian.`mr`: Marathi.`ms`: Malay.`mt`: Maltese.`my`: Burmese.`ne`: Nepali.`new`: Newari.`nl`: Dutch.`no`: Norwegian.`nr`: Southern Ndebele.`nso`: Northern Sotho (Sepedi).`nus`: Nuer.`ny`: Chichewa (Nyanja).`oc`: Occitan.`om`: Oromo.`or`: Odia.`pa`: Punjabi.`pag`: Pangasinan.`pam`: Kapampangan.`pap`: Papiamento.`pl`: Polish.`ps`: Pashto.`pt`: Portuguese.`pt-BR`: Portuguese (Brazil).`pt-PT`: Portuguese (Portugal).`qu`: Quechua.`ro`: Romanian.`rom`: Romani.`rn`: Rundi.`ru`: Russian.`rw`: Kinyarwanda.`sa`: Sanskrit.`scn`: Sicilian.`sd`: Sindhi.`sg`: Sango.`shn`: Shan.`si`: Sinhala.`sk`: Slovak.`sl`: Slovenian.`sm`: Samoan.`sn`: Shona.`so`: Somali.`sq`: Albanian.`sr`: Serbian.`ss`: Swazi.`st`: Southern Sotho.`su`: Sundanese.`sv`: Swedish.`sw`: Swahili.`szl`: Silesian.`ta`: Tamil.`te`: Telugu.`tet`: Tetum.`tg`: Tajik.`th`: Thai.`ti`: Tigrinya.`tk`: Turkmen.`tn`: Tswana.`tr`: Turkish.`ts`: Tsonga.`tt`: Tatar.`ug`: Uyghur.`uk`: Ukrainian.`ur`: Urdu.`uz`: Uzbek.`vi`: Vietnamese.`xh`: Xhosa.`yi`: Yiddish.`yo`: Yoruba.`yua`: Yucatec Maya.`yue`: Cantonese.`zh`: Chinese (Simplified).`zh-TW`: Chinese (Traditional).`zu`: Zulu.**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
      */
     public void setTranslateDstLanguage(String TranslateDstLanguage) {
         this.TranslateDstLanguage = TranslateDstLanguage;
@@ -2170,6 +1212,22 @@ This field is valid when the value of TranslateSwitch is ON. List of translation
         this.ProcessType = ProcessType;
     }
 
+    /**
+     * Get Area configurations for the subtitle OCR extraction box. 
+     * @return SelectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.
+     */
+    public SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() {
+        return this.SelectingSubtitleAreasConfig;
+    }
+
+    /**
+     * Set Area configurations for the subtitle OCR extraction box.
+     * @param SelectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.
+     */
+    public void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig) {
+        this.SelectingSubtitleAreasConfig = SelectingSubtitleAreasConfig;
+    }
+
     public CreateSmartSubtitleTemplateRequest() {
     }
 
@@ -2205,6 +1263,9 @@ This field is valid when the value of TranslateSwitch is ON. List of translation
         if (source.ProcessType != null) {
             this.ProcessType = new Long(source.ProcessType);
         }
+        if (source.SelectingSubtitleAreasConfig != null) {
+            this.SelectingSubtitleAreasConfig = new SelectingSubtitleAreasConfig(source.SelectingSubtitleAreasConfig);
+        }
     }
 
 
@@ -2221,6 +1282,7 @@ This field is valid when the value of TranslateSwitch is ON. List of translation
         this.setParamSimple(map, prefix + "TranslateSwitch", this.TranslateSwitch);
         this.setParamSimple(map, prefix + "TranslateDstLanguage", this.TranslateDstLanguage);
         this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
+        this.setParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
 
     }
 }

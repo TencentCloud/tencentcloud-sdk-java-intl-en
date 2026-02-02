@@ -34,10 +34,7 @@ Default value: ON.
     private String Switch;
 
     /**
-    * Type. Valid values:
-<li>standard: standard super-resolution.</li>
-<li>super: advanced super-resolution.</li>
-Default value: standard.
+    * Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
@@ -56,28 +53,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Mode;
 
     /**
-    * Magnification factor of super-resolution, which can be a decimal.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Percent")
     @Expose
     private Float Percent;
 
     /**
-    * Width of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Height of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
+
+    /**
+    * Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("LongSide")
+    @Expose
+    private Long LongSide;
+
+    /**
+    * Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ShortSide")
+    @Expose
+    private Long ShortSide;
 
     /**
      * Get Capability configuration switch. Valid values:
@@ -108,15 +116,9 @@ Default value: ON.
     }
 
     /**
-     * Get Type. Valid values:
-<li>standard: standard super-resolution.</li>
-<li>super: advanced super-resolution.</li>
-Default value: standard.
+     * Get Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Type Type. Valid values:
-<li>standard: standard super-resolution.</li>
-<li>super: advanced super-resolution.</li>
-Default value: standard.
+     * @return Type Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
@@ -124,15 +126,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Type. Valid values:
-<li>standard: standard super-resolution.</li>
-<li>super: advanced super-resolution.</li>
-Default value: standard.
+     * Set Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Type Type. Valid values:
-<li>standard: standard super-resolution.</li>
-<li>super: advanced super-resolution.</li>
-Default value: standard.
+     * @param Type Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
@@ -172,63 +168,83 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Magnification factor of super-resolution, which can be a decimal.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Percent Magnification factor of super-resolution, which can be a decimal.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Percent Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set Magnification factor of super-resolution, which can be a decimal.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Percent Magnification factor of super-resolution, which can be a decimal.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Percent Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPercent(Float Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get Width of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Width Width of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Width Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Width of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Width Width of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Width Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Height of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Height Height of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Height Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Height Height of the target image. The value cannot exceed 4096.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Height Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
+    }
+
+    /**
+     * Get Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LongSide Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getLongSide() {
+        return this.LongSide;
+    }
+
+    /**
+     * Set Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LongSide Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setLongSide(Long LongSide) {
+        this.LongSide = LongSide;
+    }
+
+    /**
+     * Get Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ShortSide Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getShortSide() {
+        return this.ShortSide;
+    }
+
+    /**
+     * Set Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ShortSide Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setShortSide(Long ShortSide) {
+        this.ShortSide = ShortSide;
     }
 
     public AdvancedSuperResolutionConfig() {
@@ -257,6 +273,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Height != null) {
             this.Height = new Long(source.Height);
         }
+        if (source.LongSide != null) {
+            this.LongSide = new Long(source.LongSide);
+        }
+        if (source.ShortSide != null) {
+            this.ShortSide = new Long(source.ShortSide);
+        }
     }
 
 
@@ -270,6 +292,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Percent", this.Percent);
         this.setParamSimple(map, prefix + "Width", this.Width);
         this.setParamSimple(map, prefix + "Height", this.Height);
+        this.setParamSimple(map, prefix + "LongSide", this.LongSide);
+        this.setParamSimple(map, prefix + "ShortSide", this.ShortSide);
 
     }
 }

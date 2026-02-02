@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AigcStoreCosParam extends AbstractModel {
 
     /**
-    * 
+    * Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
     */
     @SerializedName("CosBucketName")
     @Expose
     private String CosBucketName;
 
     /**
-    * 
+    * Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
     */
     @SerializedName("CosBucketRegion")
     @Expose
     private String CosBucketRegion;
 
     /**
-    * 
+    * Path of the COS bucket to store to.Optional.Example value: my_file.
     */
     @SerializedName("CosBucketPath")
     @Expose
     private String CosBucketPath;
 
     /**
-     * Get  
-     * @return CosBucketName 
+     * Get Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket. 
+     * @return CosBucketName Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
      */
     public String getCosBucketName() {
         return this.CosBucketName;
     }
 
     /**
-     * Set 
-     * @param CosBucketName 
+     * Set Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
+     * @param CosBucketName Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
      */
     public void setCosBucketName(String CosBucketName) {
         this.CosBucketName = CosBucketName;
     }
 
     /**
-     * Get  
-     * @return CosBucketRegion 
+     * Get Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou. 
+     * @return CosBucketRegion Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
      */
     public String getCosBucketRegion() {
         return this.CosBucketRegion;
     }
 
     /**
-     * Set 
-     * @param CosBucketRegion 
+     * Set Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
+     * @param CosBucketRegion Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
      */
     public void setCosBucketRegion(String CosBucketRegion) {
         this.CosBucketRegion = CosBucketRegion;
     }
 
     /**
-     * Get  
-     * @return CosBucketPath 
+     * Get Path of the COS bucket to store to.Optional.Example value: my_file. 
+     * @return CosBucketPath Path of the COS bucket to store to.Optional.Example value: my_file.
      */
     public String getCosBucketPath() {
         return this.CosBucketPath;
     }
 
     /**
-     * Set 
-     * @param CosBucketPath 
+     * Set Path of the COS bucket to store to.Optional.Example value: my_file.
+     * @param CosBucketPath Path of the COS bucket to store to.Optional.Example value: my_file.
      */
     public void setCosBucketPath(String CosBucketPath) {
         this.CosBucketPath = CosBucketPath;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeAigcImageTaskRequest extends AbstractModel {
 
     /**
-    * AIGC image task processing task ID.
+    * ID of the created AIGC image generation task.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get AIGC image task processing task ID. 
-     * @return TaskId AIGC image task processing task ID.
+     * Get ID of the created AIGC image generation task. 
+     * @return TaskId ID of the created AIGC image generation task.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set AIGC image task processing task ID.
-     * @param TaskId AIGC image task processing task ID.
+     * Set ID of the created AIGC image generation task.
+     * @param TaskId ID of the created AIGC image generation task.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class AigcVideoReferenceImageInfo extends AbstractModel {
 
     /**
-    * 
+    * Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-    * 
+    * Reference type.
+Note:1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
     */
     @SerializedName("ReferenceType")
     @Expose
     private String ReferenceType;
 
     /**
-     * Get  
-     * @return ImageUrl 
+     * Get Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers. 
+     * @return ImageUrl Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set 
-     * @param ImageUrl 
+     * Set Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
+     * @param ImageUrl Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
     }
 
     /**
-     * Get  
-     * @return ReferenceType 
+     * Get Reference type.
+Note:1. If the GV model is used, this serves as the reference method. Valid values are asset and style. 
+     * @return ReferenceType Reference type.
+Note:1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
      */
     public String getReferenceType() {
         return this.ReferenceType;
     }
 
     /**
-     * Set 
-     * @param ReferenceType 
+     * Set Reference type.
+Note:1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+     * @param ReferenceType Reference type.
+Note:1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
      */
     public void setReferenceType(String ReferenceType) {
         this.ReferenceType = ReferenceType;

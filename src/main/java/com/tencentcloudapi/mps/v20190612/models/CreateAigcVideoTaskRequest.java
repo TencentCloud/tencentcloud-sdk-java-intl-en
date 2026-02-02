@@ -24,459 +24,352 @@ import java.util.HashMap;
 public class CreateAigcVideoTaskRequest extends AbstractModel {
 
     /**
-    * Model Name. Currently supported models include: Hunyuan, Hailuo, Kling, Vidu, OS, GV
+    * Model name.
+Supported models:Hunyuan,
+Hailuo,
+Kling,
+Vidu,
+OS,
+GV.
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * Specify the version number of a particular model. By default, the system uses the currently supported stable version of the model.  
-1. Hailuo: Available options [02, 2.3].  
-2. Kling: Available options [2.0, 2.1, 2.5, O1, 2.6].  
-3. Vidu: Available options [q2, q2-pro, q2-turbo].  
-4. GV: Available option [3.1].  
-5. OS: Available option [2.0].
+    * Specific version number of the model. By default, the system uses the supported stable version of the model.1. Hailuo: [02 and 2.3].2. Kling: [2.0, 2.1, 2.5, O1, and 2.6].3. Vidu: [q2, q2-pro, and q2-turbo].4. GV: [3.1].5. OS: [2.0].
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * Generate video description. (Note: Maximum 2000 characters supported). This parameter is mandatory when no images are provided.
+    * Scenario for the generated video.Note: Not all models support scenarios.1. Kling supports motion control (motion_control).2. Mingmou supports landscape-to-portrait conversion (land2port).3. Vidu supports special effect templates (template_effect).
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private String SceneType;
+
+    /**
+    * Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
+    * Content you want to prevent the model from generating.Note: Not all models support this.For example:Top lighting and bright color.People and animals.Multiple vehicles and wind.
     */
     @SerializedName("NegativePrompt")
     @Expose
     private String NegativePrompt;
 
     /**
-    * The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
+    * The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
     */
     @SerializedName("EnhancePrompt")
     @Expose
     private Boolean EnhancePrompt;
 
     /**
-    * The URL of the image used to guide video generation, which must be publicly accessible via the internet.  
-Notes:  
-1. The recommended image size should not exceed 10MB, though size limitations may vary across different models.  
-2. Supported image formats: JPEG, PNG.  
-3. When using the OS model, the input image dimensions must be either 1280x720 or 720x1280.
+    * Image URL for video generation. The URL must be accessible from the public network.Note:1. The recommended image size is no more than 10 MB. Different models have different size limits.2. Supported image formats: JPEG and PNG.3. If the OS model is used, the input image dimension should be 1280x720 or 720x1280.
     */
     @SerializedName("ImageUrl")
     @Expose
     private String ImageUrl;
 
     /**
-    * The model will utilize the image provided via this parameter as the ending frame for video generation.  
-Supported models for this parameter:  
-1. GV: When an ending frame image is provided, the ImageUrl parameter must also be specified as the starting frame.  
-2. Kling: Under Resolution: 1080P, version 2.1 supports both start&end frames.  
-3. Vidu, q2-pro, q2-turbo: Support start&end frames. 
-Notes:  
-1. It is recommended that the image size does not exceed 10MB, though specific model limitations may vary.  
-2. Supported image formats: JPEG, PNG.
+    * The model will generate a video using the image of this parameter as the ending frame.Models that support this parameter:1. GV. If the ending frame image is specified, ImageUrl is required as the starting frame.2. Kling. Version 2.1 supports starting and ending frames with a resolution of 1080P.3. Vidu. q2-pro and q2-turbo support starting and ending frames.Note:1. The recommended image size is no more than 10 MB. Different models have different limits.2. Supported image formats: JPEG and PNG.
     */
     @SerializedName("LastImageUrl")
     @Expose
     private String LastImageUrl;
 
     /**
-    * A list comprising up to three material resource images, utilized to depict the reference images the model will employ for video generation.  
-Models supporting multi-image input:  
-1. GV: When utilizing multi-image input, neither ImageUrl nor LastImageUrl should be used.  
-2. Vidu: Supports video generation with multiple reference images. For model q2, 1-7 images can be provided, with the subject ID specified via ReferenceType within ImageInfos.
-Notes:  
-1. Each image must not exceed 10MB in size.  
-2. Supported image formats: JPEG, PNG.
+    * List of up to 3 asset images, used to describe the images the model should use for video generation.Model that supports multiple images:1. GV. If multiple images are specified, ImageUrl and LastImageUrl are unavailable.2. Vidu supports video generation with multiple reference images. The q2 model accepts 1 to 7 images. The ReferenceType in ImageInfos can be used to specify the subject ID for the input.Note:1. The image size cannot exceed 10 MB.2. Supported image formats: JPEG and PNG.
     */
     @SerializedName("ImageInfos")
     @Expose
     private AigcVideoReferenceImageInfo [] ImageInfos;
 
     /**
-    * Duration of generated videos.  
-Notes:  
-1. Kling supports 5 and 10 seconds. Default: 5 seconds.  
-2. Hailuo's standard mode supports 6 and 10 seconds, while other modes only support 6 seconds. Default: 6 seconds.  
-3. Vidu supports 1 to 10 seconds.  
-4. GV supports 8 seconds. Default: 8 seconds.  
-5. OS supports 4, 8, and 12 seconds. Default: 8 seconds.
+    * Duration of the generated video.Note:1. Kling supports 5 and 10 seconds. Default value: 5 seconds.2. The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.3. Vidu supports 1 to 10 seconds.4. GV supports 8 seconds. Default value: 8 seconds.5. OS supports 4, 8, and 12 seconds. Default value: 8 seconds.
     */
     @SerializedName("Duration")
     @Expose
     private Long Duration;
 
     /**
-    * Used to pass additional parameters.
+    * Additional parameters required.
     */
     @SerializedName("ExtraParameters")
     @Expose
     private AigcVideoExtraParam ExtraParameters;
 
     /**
-    * The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
+    * COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
     */
     @SerializedName("StoreCosParam")
     @Expose
     private AigcStoreCosParam StoreCosParam;
 
     /**
-    * 
-Used to pass specific scenario parameters required by the model, serialized into a JSON format string. Example: {"camera_control":{"type":"simple"}}
+    * Special scenario parameters required by the model, formatted as a JSON serialized string.Example:{\"camera_control\":{\"type\":\"simple\"}}
     */
     @SerializedName("AdditionalParameters")
     @Expose
     private String AdditionalParameters;
 
     /**
-    * Interface operator name.
+    * API operator name.
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get Model Name. Currently supported models include: Hunyuan, Hailuo, Kling, Vidu, OS, GV 
-     * @return ModelName Model Name. Currently supported models include: Hunyuan, Hailuo, Kling, Vidu, OS, GV
+     * Get Model name.
+Supported models:Hunyuan,
+Hailuo,
+Kling,
+Vidu,
+OS,
+GV. 
+     * @return ModelName Model name.
+Supported models:Hunyuan,
+Hailuo,
+Kling,
+Vidu,
+OS,
+GV.
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set Model Name. Currently supported models include: Hunyuan, Hailuo, Kling, Vidu, OS, GV
-     * @param ModelName Model Name. Currently supported models include: Hunyuan, Hailuo, Kling, Vidu, OS, GV
+     * Set Model name.
+Supported models:Hunyuan,
+Hailuo,
+Kling,
+Vidu,
+OS,
+GV.
+     * @param ModelName Model name.
+Supported models:Hunyuan,
+Hailuo,
+Kling,
+Vidu,
+OS,
+GV.
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get Specify the version number of a particular model. By default, the system uses the currently supported stable version of the model.  
-1. Hailuo: Available options [02, 2.3].  
-2. Kling: Available options [2.0, 2.1, 2.5, O1, 2.6].  
-3. Vidu: Available options [q2, q2-pro, q2-turbo].  
-4. GV: Available option [3.1].  
-5. OS: Available option [2.0]. 
-     * @return ModelVersion Specify the version number of a particular model. By default, the system uses the currently supported stable version of the model.  
-1. Hailuo: Available options [02, 2.3].  
-2. Kling: Available options [2.0, 2.1, 2.5, O1, 2.6].  
-3. Vidu: Available options [q2, q2-pro, q2-turbo].  
-4. GV: Available option [3.1].  
-5. OS: Available option [2.0].
+     * Get Specific version number of the model. By default, the system uses the supported stable version of the model.1. Hailuo: [02 and 2.3].2. Kling: [2.0, 2.1, 2.5, O1, and 2.6].3. Vidu: [q2, q2-pro, and q2-turbo].4. GV: [3.1].5. OS: [2.0]. 
+     * @return ModelVersion Specific version number of the model. By default, the system uses the supported stable version of the model.1. Hailuo: [02 and 2.3].2. Kling: [2.0, 2.1, 2.5, O1, and 2.6].3. Vidu: [q2, q2-pro, and q2-turbo].4. GV: [3.1].5. OS: [2.0].
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set Specify the version number of a particular model. By default, the system uses the currently supported stable version of the model.  
-1. Hailuo: Available options [02, 2.3].  
-2. Kling: Available options [2.0, 2.1, 2.5, O1, 2.6].  
-3. Vidu: Available options [q2, q2-pro, q2-turbo].  
-4. GV: Available option [3.1].  
-5. OS: Available option [2.0].
-     * @param ModelVersion Specify the version number of a particular model. By default, the system uses the currently supported stable version of the model.  
-1. Hailuo: Available options [02, 2.3].  
-2. Kling: Available options [2.0, 2.1, 2.5, O1, 2.6].  
-3. Vidu: Available options [q2, q2-pro, q2-turbo].  
-4. GV: Available option [3.1].  
-5. OS: Available option [2.0].
+     * Set Specific version number of the model. By default, the system uses the supported stable version of the model.1. Hailuo: [02 and 2.3].2. Kling: [2.0, 2.1, 2.5, O1, and 2.6].3. Vidu: [q2, q2-pro, and q2-turbo].4. GV: [3.1].5. OS: [2.0].
+     * @param ModelVersion Specific version number of the model. By default, the system uses the supported stable version of the model.1. Hailuo: [02 and 2.3].2. Kling: [2.0, 2.1, 2.5, O1, and 2.6].3. Vidu: [q2, q2-pro, and q2-turbo].4. GV: [3.1].5. OS: [2.0].
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get Generate video description. (Note: Maximum 2000 characters supported). This parameter is mandatory when no images are provided. 
-     * @return Prompt Generate video description. (Note: Maximum 2000 characters supported). This parameter is mandatory when no images are provided.
+     * Get Scenario for the generated video.Note: Not all models support scenarios.1. Kling supports motion control (motion_control).2. Mingmou supports landscape-to-portrait conversion (land2port).3. Vidu supports special effect templates (template_effect). 
+     * @return SceneType Scenario for the generated video.Note: Not all models support scenarios.1. Kling supports motion control (motion_control).2. Mingmou supports landscape-to-portrait conversion (land2port).3. Vidu supports special effect templates (template_effect).
+     */
+    public String getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set Scenario for the generated video.Note: Not all models support scenarios.1. Kling supports motion control (motion_control).2. Mingmou supports landscape-to-portrait conversion (land2port).3. Vidu supports special effect templates (template_effect).
+     * @param SceneType Scenario for the generated video.Note: Not all models support scenarios.1. Kling supports motion control (motion_control).2. Mingmou supports landscape-to-portrait conversion (land2port).3. Vidu supports special effect templates (template_effect).
+     */
+    public void setSceneType(String SceneType) {
+        this.SceneType = SceneType;
+    }
+
+    /**
+     * Get Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified. 
+     * @return Prompt Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set Generate video description. (Note: Maximum 2000 characters supported). This parameter is mandatory when no images are provided.
-     * @param Prompt Generate video description. (Note: Maximum 2000 characters supported). This parameter is mandatory when no images are provided.
+     * Set Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.
+     * @param Prompt Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind 
-     * @return NegativePrompt Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
+     * Get Content you want to prevent the model from generating.Note: Not all models support this.For example:Top lighting and bright color.People and animals.Multiple vehicles and wind. 
+     * @return NegativePrompt Content you want to prevent the model from generating.Note: Not all models support this.For example:Top lighting and bright color.People and animals.Multiple vehicles and wind.
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
-     * @param NegativePrompt Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
+     * Set Content you want to prevent the model from generating.Note: Not all models support this.For example:Top lighting and bright color.People and animals.Multiple vehicles and wind.
+     * @param NegativePrompt Content you want to prevent the model from generating.Note: Not all models support this.For example:Top lighting and bright color.People and animals.Multiple vehicles and wind.
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
     }
 
     /**
-     * Get The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality. 
-     * @return EnhancePrompt The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
+     * Get The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality. 
+     * @return EnhancePrompt The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
      */
     public Boolean getEnhancePrompt() {
         return this.EnhancePrompt;
     }
 
     /**
-     * Set The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
-     * @param EnhancePrompt The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
+     * Set The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
+     * @param EnhancePrompt The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
      */
     public void setEnhancePrompt(Boolean EnhancePrompt) {
         this.EnhancePrompt = EnhancePrompt;
     }
 
     /**
-     * Get The URL of the image used to guide video generation, which must be publicly accessible via the internet.  
-Notes:  
-1. The recommended image size should not exceed 10MB, though size limitations may vary across different models.  
-2. Supported image formats: JPEG, PNG.  
-3. When using the OS model, the input image dimensions must be either 1280x720 or 720x1280. 
-     * @return ImageUrl The URL of the image used to guide video generation, which must be publicly accessible via the internet.  
-Notes:  
-1. The recommended image size should not exceed 10MB, though size limitations may vary across different models.  
-2. Supported image formats: JPEG, PNG.  
-3. When using the OS model, the input image dimensions must be either 1280x720 or 720x1280.
+     * Get Image URL for video generation. The URL must be accessible from the public network.Note:1. The recommended image size is no more than 10 MB. Different models have different size limits.2. Supported image formats: JPEG and PNG.3. If the OS model is used, the input image dimension should be 1280x720 or 720x1280. 
+     * @return ImageUrl Image URL for video generation. The URL must be accessible from the public network.Note:1. The recommended image size is no more than 10 MB. Different models have different size limits.2. Supported image formats: JPEG and PNG.3. If the OS model is used, the input image dimension should be 1280x720 or 720x1280.
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set The URL of the image used to guide video generation, which must be publicly accessible via the internet.  
-Notes:  
-1. The recommended image size should not exceed 10MB, though size limitations may vary across different models.  
-2. Supported image formats: JPEG, PNG.  
-3. When using the OS model, the input image dimensions must be either 1280x720 or 720x1280.
-     * @param ImageUrl The URL of the image used to guide video generation, which must be publicly accessible via the internet.  
-Notes:  
-1. The recommended image size should not exceed 10MB, though size limitations may vary across different models.  
-2. Supported image formats: JPEG, PNG.  
-3. When using the OS model, the input image dimensions must be either 1280x720 or 720x1280.
+     * Set Image URL for video generation. The URL must be accessible from the public network.Note:1. The recommended image size is no more than 10 MB. Different models have different size limits.2. Supported image formats: JPEG and PNG.3. If the OS model is used, the input image dimension should be 1280x720 or 720x1280.
+     * @param ImageUrl Image URL for video generation. The URL must be accessible from the public network.Note:1. The recommended image size is no more than 10 MB. Different models have different size limits.2. Supported image formats: JPEG and PNG.3. If the OS model is used, the input image dimension should be 1280x720 or 720x1280.
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;
     }
 
     /**
-     * Get The model will utilize the image provided via this parameter as the ending frame for video generation.  
-Supported models for this parameter:  
-1. GV: When an ending frame image is provided, the ImageUrl parameter must also be specified as the starting frame.  
-2. Kling: Under Resolution: 1080P, version 2.1 supports both start&end frames.  
-3. Vidu, q2-pro, q2-turbo: Support start&end frames. 
-Notes:  
-1. It is recommended that the image size does not exceed 10MB, though specific model limitations may vary.  
-2. Supported image formats: JPEG, PNG. 
-     * @return LastImageUrl The model will utilize the image provided via this parameter as the ending frame for video generation.  
-Supported models for this parameter:  
-1. GV: When an ending frame image is provided, the ImageUrl parameter must also be specified as the starting frame.  
-2. Kling: Under Resolution: 1080P, version 2.1 supports both start&end frames.  
-3. Vidu, q2-pro, q2-turbo: Support start&end frames. 
-Notes:  
-1. It is recommended that the image size does not exceed 10MB, though specific model limitations may vary.  
-2. Supported image formats: JPEG, PNG.
+     * Get The model will generate a video using the image of this parameter as the ending frame.Models that support this parameter:1. GV. If the ending frame image is specified, ImageUrl is required as the starting frame.2. Kling. Version 2.1 supports starting and ending frames with a resolution of 1080P.3. Vidu. q2-pro and q2-turbo support starting and ending frames.Note:1. The recommended image size is no more than 10 MB. Different models have different limits.2. Supported image formats: JPEG and PNG. 
+     * @return LastImageUrl The model will generate a video using the image of this parameter as the ending frame.Models that support this parameter:1. GV. If the ending frame image is specified, ImageUrl is required as the starting frame.2. Kling. Version 2.1 supports starting and ending frames with a resolution of 1080P.3. Vidu. q2-pro and q2-turbo support starting and ending frames.Note:1. The recommended image size is no more than 10 MB. Different models have different limits.2. Supported image formats: JPEG and PNG.
      */
     public String getLastImageUrl() {
         return this.LastImageUrl;
     }
 
     /**
-     * Set The model will utilize the image provided via this parameter as the ending frame for video generation.  
-Supported models for this parameter:  
-1. GV: When an ending frame image is provided, the ImageUrl parameter must also be specified as the starting frame.  
-2. Kling: Under Resolution: 1080P, version 2.1 supports both start&end frames.  
-3. Vidu, q2-pro, q2-turbo: Support start&end frames. 
-Notes:  
-1. It is recommended that the image size does not exceed 10MB, though specific model limitations may vary.  
-2. Supported image formats: JPEG, PNG.
-     * @param LastImageUrl The model will utilize the image provided via this parameter as the ending frame for video generation.  
-Supported models for this parameter:  
-1. GV: When an ending frame image is provided, the ImageUrl parameter must also be specified as the starting frame.  
-2. Kling: Under Resolution: 1080P, version 2.1 supports both start&end frames.  
-3. Vidu, q2-pro, q2-turbo: Support start&end frames. 
-Notes:  
-1. It is recommended that the image size does not exceed 10MB, though specific model limitations may vary.  
-2. Supported image formats: JPEG, PNG.
+     * Set The model will generate a video using the image of this parameter as the ending frame.Models that support this parameter:1. GV. If the ending frame image is specified, ImageUrl is required as the starting frame.2. Kling. Version 2.1 supports starting and ending frames with a resolution of 1080P.3. Vidu. q2-pro and q2-turbo support starting and ending frames.Note:1. The recommended image size is no more than 10 MB. Different models have different limits.2. Supported image formats: JPEG and PNG.
+     * @param LastImageUrl The model will generate a video using the image of this parameter as the ending frame.Models that support this parameter:1. GV. If the ending frame image is specified, ImageUrl is required as the starting frame.2. Kling. Version 2.1 supports starting and ending frames with a resolution of 1080P.3. Vidu. q2-pro and q2-turbo support starting and ending frames.Note:1. The recommended image size is no more than 10 MB. Different models have different limits.2. Supported image formats: JPEG and PNG.
      */
     public void setLastImageUrl(String LastImageUrl) {
         this.LastImageUrl = LastImageUrl;
     }
 
     /**
-     * Get A list comprising up to three material resource images, utilized to depict the reference images the model will employ for video generation.  
-Models supporting multi-image input:  
-1. GV: When utilizing multi-image input, neither ImageUrl nor LastImageUrl should be used.  
-2. Vidu: Supports video generation with multiple reference images. For model q2, 1-7 images can be provided, with the subject ID specified via ReferenceType within ImageInfos.
-Notes:  
-1. Each image must not exceed 10MB in size.  
-2. Supported image formats: JPEG, PNG. 
-     * @return ImageInfos A list comprising up to three material resource images, utilized to depict the reference images the model will employ for video generation.  
-Models supporting multi-image input:  
-1. GV: When utilizing multi-image input, neither ImageUrl nor LastImageUrl should be used.  
-2. Vidu: Supports video generation with multiple reference images. For model q2, 1-7 images can be provided, with the subject ID specified via ReferenceType within ImageInfos.
-Notes:  
-1. Each image must not exceed 10MB in size.  
-2. Supported image formats: JPEG, PNG.
+     * Get List of up to 3 asset images, used to describe the images the model should use for video generation.Model that supports multiple images:1. GV. If multiple images are specified, ImageUrl and LastImageUrl are unavailable.2. Vidu supports video generation with multiple reference images. The q2 model accepts 1 to 7 images. The ReferenceType in ImageInfos can be used to specify the subject ID for the input.Note:1. The image size cannot exceed 10 MB.2. Supported image formats: JPEG and PNG. 
+     * @return ImageInfos List of up to 3 asset images, used to describe the images the model should use for video generation.Model that supports multiple images:1. GV. If multiple images are specified, ImageUrl and LastImageUrl are unavailable.2. Vidu supports video generation with multiple reference images. The q2 model accepts 1 to 7 images. The ReferenceType in ImageInfos can be used to specify the subject ID for the input.Note:1. The image size cannot exceed 10 MB.2. Supported image formats: JPEG and PNG.
      */
     public AigcVideoReferenceImageInfo [] getImageInfos() {
         return this.ImageInfos;
     }
 
     /**
-     * Set A list comprising up to three material resource images, utilized to depict the reference images the model will employ for video generation.  
-Models supporting multi-image input:  
-1. GV: When utilizing multi-image input, neither ImageUrl nor LastImageUrl should be used.  
-2. Vidu: Supports video generation with multiple reference images. For model q2, 1-7 images can be provided, with the subject ID specified via ReferenceType within ImageInfos.
-Notes:  
-1. Each image must not exceed 10MB in size.  
-2. Supported image formats: JPEG, PNG.
-     * @param ImageInfos A list comprising up to three material resource images, utilized to depict the reference images the model will employ for video generation.  
-Models supporting multi-image input:  
-1. GV: When utilizing multi-image input, neither ImageUrl nor LastImageUrl should be used.  
-2. Vidu: Supports video generation with multiple reference images. For model q2, 1-7 images can be provided, with the subject ID specified via ReferenceType within ImageInfos.
-Notes:  
-1. Each image must not exceed 10MB in size.  
-2. Supported image formats: JPEG, PNG.
+     * Set List of up to 3 asset images, used to describe the images the model should use for video generation.Model that supports multiple images:1. GV. If multiple images are specified, ImageUrl and LastImageUrl are unavailable.2. Vidu supports video generation with multiple reference images. The q2 model accepts 1 to 7 images. The ReferenceType in ImageInfos can be used to specify the subject ID for the input.Note:1. The image size cannot exceed 10 MB.2. Supported image formats: JPEG and PNG.
+     * @param ImageInfos List of up to 3 asset images, used to describe the images the model should use for video generation.Model that supports multiple images:1. GV. If multiple images are specified, ImageUrl and LastImageUrl are unavailable.2. Vidu supports video generation with multiple reference images. The q2 model accepts 1 to 7 images. The ReferenceType in ImageInfos can be used to specify the subject ID for the input.Note:1. The image size cannot exceed 10 MB.2. Supported image formats: JPEG and PNG.
      */
     public void setImageInfos(AigcVideoReferenceImageInfo [] ImageInfos) {
         this.ImageInfos = ImageInfos;
     }
 
     /**
-     * Get Duration of generated videos.  
-Notes:  
-1. Kling supports 5 and 10 seconds. Default: 5 seconds.  
-2. Hailuo's standard mode supports 6 and 10 seconds, while other modes only support 6 seconds. Default: 6 seconds.  
-3. Vidu supports 1 to 10 seconds.  
-4. GV supports 8 seconds. Default: 8 seconds.  
-5. OS supports 4, 8, and 12 seconds. Default: 8 seconds. 
-     * @return Duration Duration of generated videos.  
-Notes:  
-1. Kling supports 5 and 10 seconds. Default: 5 seconds.  
-2. Hailuo's standard mode supports 6 and 10 seconds, while other modes only support 6 seconds. Default: 6 seconds.  
-3. Vidu supports 1 to 10 seconds.  
-4. GV supports 8 seconds. Default: 8 seconds.  
-5. OS supports 4, 8, and 12 seconds. Default: 8 seconds.
+     * Get Duration of the generated video.Note:1. Kling supports 5 and 10 seconds. Default value: 5 seconds.2. The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.3. Vidu supports 1 to 10 seconds.4. GV supports 8 seconds. Default value: 8 seconds.5. OS supports 4, 8, and 12 seconds. Default value: 8 seconds. 
+     * @return Duration Duration of the generated video.Note:1. Kling supports 5 and 10 seconds. Default value: 5 seconds.2. The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.3. Vidu supports 1 to 10 seconds.4. GV supports 8 seconds. Default value: 8 seconds.5. OS supports 4, 8, and 12 seconds. Default value: 8 seconds.
      */
     public Long getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Duration of generated videos.  
-Notes:  
-1. Kling supports 5 and 10 seconds. Default: 5 seconds.  
-2. Hailuo's standard mode supports 6 and 10 seconds, while other modes only support 6 seconds. Default: 6 seconds.  
-3. Vidu supports 1 to 10 seconds.  
-4. GV supports 8 seconds. Default: 8 seconds.  
-5. OS supports 4, 8, and 12 seconds. Default: 8 seconds.
-     * @param Duration Duration of generated videos.  
-Notes:  
-1. Kling supports 5 and 10 seconds. Default: 5 seconds.  
-2. Hailuo's standard mode supports 6 and 10 seconds, while other modes only support 6 seconds. Default: 6 seconds.  
-3. Vidu supports 1 to 10 seconds.  
-4. GV supports 8 seconds. Default: 8 seconds.  
-5. OS supports 4, 8, and 12 seconds. Default: 8 seconds.
+     * Set Duration of the generated video.Note:1. Kling supports 5 and 10 seconds. Default value: 5 seconds.2. The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.3. Vidu supports 1 to 10 seconds.4. GV supports 8 seconds. Default value: 8 seconds.5. OS supports 4, 8, and 12 seconds. Default value: 8 seconds.
+     * @param Duration Duration of the generated video.Note:1. Kling supports 5 and 10 seconds. Default value: 5 seconds.2. The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.3. Vidu supports 1 to 10 seconds.4. GV supports 8 seconds. Default value: 8 seconds.5. OS supports 4, 8, and 12 seconds. Default value: 8 seconds.
      */
     public void setDuration(Long Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Used to pass additional parameters. 
-     * @return ExtraParameters Used to pass additional parameters.
+     * Get Additional parameters required. 
+     * @return ExtraParameters Additional parameters required.
      */
     public AigcVideoExtraParam getExtraParameters() {
         return this.ExtraParameters;
     }
 
     /**
-     * Set Used to pass additional parameters.
-     * @param ExtraParameters Used to pass additional parameters.
+     * Set Additional parameters required.
+     * @param ExtraParameters Additional parameters required.
      */
     public void setExtraParameters(AigcVideoExtraParam ExtraParameters) {
         this.ExtraParameters = ExtraParameters;
     }
 
     /**
-     * Get The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized. 
-     * @return StoreCosParam The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
+     * Get COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized. 
+     * @return StoreCosParam COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
      */
     public AigcStoreCosParam getStoreCosParam() {
         return this.StoreCosParam;
     }
 
     /**
-     * Set The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
-     * @param StoreCosParam The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
+     * Set COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+     * @param StoreCosParam COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
      */
     public void setStoreCosParam(AigcStoreCosParam StoreCosParam) {
         this.StoreCosParam = StoreCosParam;
     }
 
     /**
-     * Get 
-Used to pass specific scenario parameters required by the model, serialized into a JSON format string. Example: {"camera_control":{"type":"simple"}} 
-     * @return AdditionalParameters 
-Used to pass specific scenario parameters required by the model, serialized into a JSON format string. Example: {"camera_control":{"type":"simple"}}
+     * Get Special scenario parameters required by the model, formatted as a JSON serialized string.Example:{\"camera_control\":{\"type\":\"simple\"}} 
+     * @return AdditionalParameters Special scenario parameters required by the model, formatted as a JSON serialized string.Example:{\"camera_control\":{\"type\":\"simple\"}}
      */
     public String getAdditionalParameters() {
         return this.AdditionalParameters;
     }
 
     /**
-     * Set 
-Used to pass specific scenario parameters required by the model, serialized into a JSON format string. Example: {"camera_control":{"type":"simple"}}
-     * @param AdditionalParameters 
-Used to pass specific scenario parameters required by the model, serialized into a JSON format string. Example: {"camera_control":{"type":"simple"}}
+     * Set Special scenario parameters required by the model, formatted as a JSON serialized string.Example:{\"camera_control\":{\"type\":\"simple\"}}
+     * @param AdditionalParameters Special scenario parameters required by the model, formatted as a JSON serialized string.Example:{\"camera_control\":{\"type\":\"simple\"}}
      */
     public void setAdditionalParameters(String AdditionalParameters) {
         this.AdditionalParameters = AdditionalParameters;
     }
 
     /**
-     * Get Interface operator name. 
-     * @return Operator Interface operator name.
+     * Get API operator name. 
+     * @return Operator API operator name.
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set Interface operator name.
-     * @param Operator Interface operator name.
+     * Set API operator name.
+     * @param Operator API operator name.
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
@@ -495,6 +388,9 @@ Used to pass specific scenario parameters required by the model, serialized into
         }
         if (source.ModelVersion != null) {
             this.ModelVersion = new String(source.ModelVersion);
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
         }
         if (source.Prompt != null) {
             this.Prompt = new String(source.Prompt);
@@ -541,6 +437,7 @@ Used to pass specific scenario parameters required by the model, serialized into
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
         this.setParamSimple(map, prefix + "ModelVersion", this.ModelVersion);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "NegativePrompt", this.NegativePrompt);
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);

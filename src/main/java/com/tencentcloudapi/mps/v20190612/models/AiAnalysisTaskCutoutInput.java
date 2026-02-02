@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeAigcVideoTaskRequest extends AbstractModel {
+public class AiAnalysisTaskCutoutInput extends AbstractModel {
 
     /**
-    * Task ID returned when the AIGC video generation task is created.
+    * ID of the intelligent video matting template.
     */
-    @SerializedName("TaskId")
+    @SerializedName("Definition")
     @Expose
-    private String TaskId;
+    private Long Definition;
 
     /**
-     * Get Task ID returned when the AIGC video generation task is created. 
-     * @return TaskId Task ID returned when the AIGC video generation task is created.
+     * Get ID of the intelligent video matting template. 
+     * @return Definition ID of the intelligent video matting template.
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public Long getDefinition() {
+        return this.Definition;
     }
 
     /**
-     * Set Task ID returned when the AIGC video generation task is created.
-     * @param TaskId Task ID returned when the AIGC video generation task is created.
+     * Set ID of the intelligent video matting template.
+     * @param Definition ID of the intelligent video matting template.
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
     }
 
-    public DescribeAigcVideoTaskRequest() {
+    public AiAnalysisTaskCutoutInput() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeAigcVideoTaskRequest(DescribeAigcVideoTaskRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public AiAnalysisTaskCutoutInput(AiAnalysisTaskCutoutInput source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
         }
     }
 
@@ -64,7 +64,7 @@ public class DescribeAigcVideoTaskRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
 
     }
 }

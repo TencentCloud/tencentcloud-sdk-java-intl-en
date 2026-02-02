@@ -21,17 +21,17 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class SmartEraseTaskResult extends AbstractModel {
+public class AiAnalysisTaskCutoutResult extends AbstractModel {
 
     /**
-    * Task status, including PROCESSING, SUCCESS, and FAIL.
+    * Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+    * Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
     */
     @SerializedName("ErrCodeExt")
     @Expose
@@ -45,69 +45,67 @@ public class SmartEraseTaskResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Input of the video matting task.
     */
     @SerializedName("Input")
     @Expose
-    private SmartEraseTaskInput Input;
+    private AiAnalysisTaskCutoutInput Input;
 
     /**
-    * Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Output")
     @Expose
-    private AiAnalysisTaskDelLogoOutput Output;
+    private AiAnalysisTaskCutoutOutput Output;
 
     /**
-    * Task progress.		
+    * Task progress.
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Task execution start time in ISO datetime format.
+    * Task start time, in ISO date and time format.
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * Task execution completion time in ISO datetime format.
+    * Task completion time, in ISO date and time format.
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-     * Get Task status, including PROCESSING, SUCCESS, and FAIL. 
-     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * Get Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`. 
+     * @return Status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * Set Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+     * @param Status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
-     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Get Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
+     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Set Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * @param ErrCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.comom/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
@@ -130,101 +128,93 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Input Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Input of the video matting task. 
+     * @return Input Input of the video matting task.
      */
-    public SmartEraseTaskInput getInput() {
+    public AiAnalysisTaskCutoutInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Input Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Input of the video matting task.
+     * @param Input Input of the video matting task.
      */
-    public void setInput(SmartEraseTaskInput Input) {
+    public void setInput(AiAnalysisTaskCutoutInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Output Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Output Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public AiAnalysisTaskDelLogoOutput getOutput() {
+    public AiAnalysisTaskCutoutOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Output Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Output Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setOutput(AiAnalysisTaskDelLogoOutput Output) {
+    public void setOutput(AiAnalysisTaskCutoutOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Task progress.		 
-     * @return Progress Task progress.		
+     * Get Task progress. 
+     * @return Progress Task progress.
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress.		
-     * @param Progress Task progress.		
+     * Set Task progress.
+     * @param Progress Task progress.
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Task execution start time in ISO datetime format. 
-     * @return BeginProcessTime Task execution start time in ISO datetime format.
+     * Get Task start time, in ISO date and time format. 
+     * @return BeginProcessTime Task start time, in ISO date and time format.
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Task execution start time in ISO datetime format.
-     * @param BeginProcessTime Task execution start time in ISO datetime format.
+     * Set Task start time, in ISO date and time format.
+     * @param BeginProcessTime Task start time, in ISO date and time format.
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get Task execution completion time in ISO datetime format. 
-     * @return FinishTime Task execution completion time in ISO datetime format.
+     * Get Task completion time, in ISO date and time format. 
+     * @return FinishTime Task completion time, in ISO date and time format.
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set Task execution completion time in ISO datetime format.
-     * @param FinishTime Task execution completion time in ISO datetime format.
+     * Set Task completion time, in ISO date and time format.
+     * @param FinishTime Task completion time, in ISO date and time format.
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
-    public SmartEraseTaskResult() {
+    public AiAnalysisTaskCutoutResult() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public SmartEraseTaskResult(SmartEraseTaskResult source) {
+    public AiAnalysisTaskCutoutResult(AiAnalysisTaskCutoutResult source) {
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
@@ -235,10 +225,10 @@ Note: This field may return null, indicating that no valid value can be obtained
             this.Message = new String(source.Message);
         }
         if (source.Input != null) {
-            this.Input = new SmartEraseTaskInput(source.Input);
+            this.Input = new AiAnalysisTaskCutoutInput(source.Input);
         }
         if (source.Output != null) {
-            this.Output = new AiAnalysisTaskDelLogoOutput(source.Output);
+            this.Output = new AiAnalysisTaskCutoutOutput(source.Output);
         }
         if (source.Progress != null) {
             this.Progress = new Long(source.Progress);

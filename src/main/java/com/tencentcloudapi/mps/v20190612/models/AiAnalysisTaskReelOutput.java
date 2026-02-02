@@ -21,121 +21,95 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class AiAnalysisTaskDubbingOutput extends AbstractModel {
+public class AiAnalysisTaskReelOutput extends AbstractModel {
 
     /**
-    * Specifies the video path for translation.
+    * Path of the edited video.
     */
     @SerializedName("VideoPath")
     @Expose
     private String VideoPath;
 
     /**
-    * Specifies the file path of the tag.
+    * Script file path.
 
     */
-    @SerializedName("SpeakerPath")
+    @SerializedName("ScriptPath")
     @Expose
-    private String SpeakerPath;
+    private String ScriptPath;
 
     /**
-    * Voice type ID.
-    */
-    @SerializedName("VoiceId")
-    @Expose
-    private String VoiceId;
-
-    /**
-    * Specifies the storage location of the transcoded video.
+    * Storage location of the edited video.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get Specifies the video path for translation. 
-     * @return VideoPath Specifies the video path for translation.
+     * Get Path of the edited video. 
+     * @return VideoPath Path of the edited video.
      */
     public String getVideoPath() {
         return this.VideoPath;
     }
 
     /**
-     * Set Specifies the video path for translation.
-     * @param VideoPath Specifies the video path for translation.
+     * Set Path of the edited video.
+     * @param VideoPath Path of the edited video.
      */
     public void setVideoPath(String VideoPath) {
         this.VideoPath = VideoPath;
     }
 
     /**
-     * Get Specifies the file path of the tag.
+     * Get Script file path.
  
-     * @return SpeakerPath Specifies the file path of the tag.
+     * @return ScriptPath Script file path.
 
      */
-    public String getSpeakerPath() {
-        return this.SpeakerPath;
+    public String getScriptPath() {
+        return this.ScriptPath;
     }
 
     /**
-     * Set Specifies the file path of the tag.
+     * Set Script file path.
 
-     * @param SpeakerPath Specifies the file path of the tag.
+     * @param ScriptPath Script file path.
 
      */
-    public void setSpeakerPath(String SpeakerPath) {
-        this.SpeakerPath = SpeakerPath;
+    public void setScriptPath(String ScriptPath) {
+        this.ScriptPath = ScriptPath;
     }
 
     /**
-     * Get Voice type ID. 
-     * @return VoiceId Voice type ID.
-     */
-    public String getVoiceId() {
-        return this.VoiceId;
-    }
-
-    /**
-     * Set Voice type ID.
-     * @param VoiceId Voice type ID.
-     */
-    public void setVoiceId(String VoiceId) {
-        this.VoiceId = VoiceId;
-    }
-
-    /**
-     * Get Specifies the storage location of the transcoded video. 
-     * @return OutputStorage Specifies the storage location of the transcoded video.
+     * Get Storage location of the edited video. 
+     * @return OutputStorage Storage location of the edited video.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Specifies the storage location of the transcoded video.
-     * @param OutputStorage Specifies the storage location of the transcoded video.
+     * Set Storage location of the edited video.
+     * @param OutputStorage Storage location of the edited video.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
-    public AiAnalysisTaskDubbingOutput() {
+    public AiAnalysisTaskReelOutput() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public AiAnalysisTaskDubbingOutput(AiAnalysisTaskDubbingOutput source) {
+    public AiAnalysisTaskReelOutput(AiAnalysisTaskReelOutput source) {
         if (source.VideoPath != null) {
             this.VideoPath = new String(source.VideoPath);
         }
-        if (source.SpeakerPath != null) {
-            this.SpeakerPath = new String(source.SpeakerPath);
-        }
-        if (source.VoiceId != null) {
-            this.VoiceId = new String(source.VoiceId);
+        if (source.ScriptPath != null) {
+            this.ScriptPath = new String(source.ScriptPath);
         }
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
@@ -148,8 +122,7 @@ public class AiAnalysisTaskDubbingOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VideoPath", this.VideoPath);
-        this.setParamSimple(map, prefix + "SpeakerPath", this.SpeakerPath);
-        this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
+        this.setParamSimple(map, prefix + "ScriptPath", this.ScriptPath);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 
     }

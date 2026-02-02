@@ -106,12 +106,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String VideoSrcLanguage;
 
     /**
-    * Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubtitleFormat")
     @Expose
@@ -190,13 +186,18 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String AliasName;
 
     /**
-    * Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
+    * Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
     */
     @SerializedName("ProcessType")
     @Expose
     private Long ProcessType;
+
+    /**
+    * Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SelectingSubtitleAreasConfig")
+    @Expose
+    private SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig;
 
     /**
      * Get Unique identifier of the smart subtitle template. 
@@ -443,36 +444,20 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubtitleFormat Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubtitleFormat Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubtitleFormat() {
         return this.SubtitleFormat;
     }
 
     /**
-     * Set Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubtitleFormat Smart subtitle file format:
-- vtt: WebVTT format.
-- srt: SRT format.
-- original: consistent with the source subtitle file (it is used for the pure subtitle translation template).
-- If this field is unspecified or left blank, no subtitle file will be generated.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubtitleFormat Smart subtitle file format.
+- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubtitleFormat(String SubtitleFormat) {
         this.SubtitleFormat = SubtitleFormat;
@@ -695,27 +680,35 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation. 
-     * @return ProcessType Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
+     * Get Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition. 
+     * @return ProcessType Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
      */
     public Long getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
-     * @param ProcessType Subtitle processing type.
-- 0: ASR recognition subtitle.
-- 1: pure subtitle translation.
+     * Set Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+     * @param ProcessType Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
      */
     public void setProcessType(Long ProcessType) {
         this.ProcessType = ProcessType;
+    }
+
+    /**
+     * Get Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SelectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() {
+        return this.SelectingSubtitleAreasConfig;
+    }
+
+    /**
+     * Set Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SelectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig) {
+        this.SelectingSubtitleAreasConfig = SelectingSubtitleAreasConfig;
     }
 
     public SmartSubtitleTemplateItem() {
@@ -771,6 +764,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.ProcessType != null) {
             this.ProcessType = new Long(source.ProcessType);
         }
+        if (source.SelectingSubtitleAreasConfig != null) {
+            this.SelectingSubtitleAreasConfig = new SelectingSubtitleAreasConfig(source.SelectingSubtitleAreasConfig);
+        }
     }
 
 
@@ -793,6 +789,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "AliasName", this.AliasName);
         this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
+        this.setParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
 
     }
 }

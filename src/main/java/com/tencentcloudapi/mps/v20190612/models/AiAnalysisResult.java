@@ -24,17 +24,8 @@ import java.util.HashMap;
 public class AiAnalysisResult extends AbstractModel {
 
     /**
-    * Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
+    * Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -141,56 +132,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AiAnalysisTaskVideoComprehensionResult VideoComprehensionTask;
 
     /**
-     * Get Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li> 
-     * @return Type Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
+    * Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CutoutTask")
+    @Expose
+    private AiAnalysisTaskCutoutResult CutoutTask;
+
+    /**
+    * Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ReelTask")
+    @Expose
+    private AiAnalysisTaskReelResult ReelTask;
+
+    /**
+     * Get Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li> 
+     * @return Type Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
-     * @param Type Task type. Valid values:
-<li>Classification: smart classification.</li>
-<li>Cover: smart cover.</li>
-<li>Tag: smart tag.</li>
-<li>FrameTag: smart frame tag.</li>
-<li>Highlight: smart highlights.</li>
-<li>DeLogo: smart erasing.</li>
-<li>Description: LLM summary.</li>
-<li>Dubbing: smart dubbing.</li>
-<li>VideoRemake: video deduplication.</li>
-<li>VideoComprehension: video (audio) recognition.</li>
+     * Set Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
+     * @param Type Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -440,6 +409,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.VideoComprehensionTask = VideoComprehensionTask;
     }
 
+    /**
+     * Get Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CutoutTask Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AiAnalysisTaskCutoutResult getCutoutTask() {
+        return this.CutoutTask;
+    }
+
+    /**
+     * Set Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CutoutTask Query result of a video matting task for video analysis, which is valid if the task type is Cutout.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCutoutTask(AiAnalysisTaskCutoutResult CutoutTask) {
+        this.CutoutTask = CutoutTask;
+    }
+
+    /**
+     * Get Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReelTask Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public AiAnalysisTaskReelResult getReelTask() {
+        return this.ReelTask;
+    }
+
+    /**
+     * Set Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReelTask Query result of a video editing task for video analysis, which is valid if the task type is Reel.Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setReelTask(AiAnalysisTaskReelResult ReelTask) {
+        this.ReelTask = ReelTask;
+    }
+
     public AiAnalysisResult() {
     }
 
@@ -490,6 +491,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.VideoComprehensionTask != null) {
             this.VideoComprehensionTask = new AiAnalysisTaskVideoComprehensionResult(source.VideoComprehensionTask);
         }
+        if (source.CutoutTask != null) {
+            this.CutoutTask = new AiAnalysisTaskCutoutResult(source.CutoutTask);
+        }
+        if (source.ReelTask != null) {
+            this.ReelTask = new AiAnalysisTaskReelResult(source.ReelTask);
+        }
     }
 
 
@@ -511,6 +518,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "DubbingTask.", this.DubbingTask);
         this.setParamObj(map, prefix + "VideoRemakeTask.", this.VideoRemakeTask);
         this.setParamObj(map, prefix + "VideoComprehensionTask.", this.VideoComprehensionTask);
+        this.setParamObj(map, prefix + "CutoutTask.", this.CutoutTask);
+        this.setParamObj(map, prefix + "ReelTask.", this.ReelTask);
 
     }
 }

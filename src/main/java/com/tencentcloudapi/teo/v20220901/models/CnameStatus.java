@@ -24,84 +24,84 @@ import java.util.HashMap;
 public class CnameStatus extends AbstractModel {
 
     /**
-    * The domain name.
+    * Domain name.
     */
     @SerializedName("RecordName")
     @Expose
     private String RecordName;
 
     /**
-    * The CNAME address.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * EdgeOne is assigned to the CNAME of the domain name.
     */
     @SerializedName("Cname")
     @Expose
     private String Cname;
 
     /**
-    * CNAME status. valid values:.
-<li>`active`: activated</li>.
-<li>`moved`: not effective;</li>.
+    * CNAME configuration status verification result. valid values:.
+<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
+<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
+<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get The domain name. 
-     * @return RecordName The domain name.
+     * Get Domain name. 
+     * @return RecordName Domain name.
      */
     public String getRecordName() {
         return this.RecordName;
     }
 
     /**
-     * Set The domain name.
-     * @param RecordName The domain name.
+     * Set Domain name.
+     * @param RecordName Domain name.
      */
     public void setRecordName(String RecordName) {
         this.RecordName = RecordName;
     }
 
     /**
-     * Get The CNAME address.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Cname The CNAME address.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get EdgeOne is assigned to the CNAME of the domain name. 
+     * @return Cname EdgeOne is assigned to the CNAME of the domain name.
      */
     public String getCname() {
         return this.Cname;
     }
 
     /**
-     * Set The CNAME address.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Cname The CNAME address.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set EdgeOne is assigned to the CNAME of the domain name.
+     * @param Cname EdgeOne is assigned to the CNAME of the domain name.
      */
     public void setCname(String Cname) {
         this.Cname = Cname;
     }
 
     /**
-     * Get CNAME status. valid values:.
-<li>`active`: activated</li>.
-<li>`moved`: not effective;</li>. 
-     * @return Status CNAME status. valid values:.
-<li>`active`: activated</li>.
-<li>`moved`: not effective;</li>.
+     * Get CNAME configuration status verification result. valid values:.
+<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
+<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
+<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>. 
+     * @return Status CNAME configuration status verification result. valid values:.
+<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
+<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
+<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set CNAME status. valid values:.
-<li>`active`: activated</li>.
-<li>`moved`: not effective;</li>.
-     * @param Status CNAME status. valid values:.
-<li>`active`: activated</li>.
-<li>`moved`: not effective;</li>.
+     * Set CNAME configuration status verification result. valid values:.
+<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
+<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
+<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
+     * @param Status CNAME configuration status verification result. valid values:.
+<li>active: indicates that the domain name is correctly configured to the designated CNAME assigned by EdgeOne.</li>.
+<li>moved: indicates the domain name is not configured to the designated CNAME assigned by EdgeOne;</li>.
+<li>invalid: indicates the CNAME in the access domain configuration is assigned by EdgeOne to another domain, which can cause service exception. change it to the CNAME provided by EdgeOne for this domain. you can get the CNAME provided by EdgeOne for this domain from the CNAME field in this struct.</li>.
      */
     public void setStatus(String Status) {
         this.Status = Status;

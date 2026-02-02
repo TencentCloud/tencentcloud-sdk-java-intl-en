@@ -36,6 +36,9 @@ public enum MpsErrorCode {
      /* Internal error: failed to generate template ID. */
      INTERNALERROR_GENDEFINITION("InternalError.GenDefinition"),
      
+     /* Recognition error. */
+     INTERNALERROR_RECOGNITIONERROR("InternalError.RecognitionError"),
+     
      /* Internal error: failed to upload watermark image. */
      INTERNALERROR_UPLOADWATERMARKERROR("InternalError.UploadWatermarkError"),
      
@@ -68,6 +71,15 @@ public enum MpsErrorCode {
      
      /* Parameter error: audio stream codec. */
      INVALIDPARAMETERVALUE_AUDIOCODEC("InvalidParameterValue.AudioCodec"),
+     
+     /* Invalid audio data. */
+     INVALIDPARAMETERVALUE_AUDIODATA("InvalidParameterValue.AudioData"),
+     
+     /* The audio data is too long. */
+     INVALIDPARAMETERVALUE_AUDIODATATOOLONG("InvalidParameterValue.AudioDataTooLong"),
+     
+     /* Unsupported audio data format. */
+     INVALIDPARAMETERVALUE_AUDIOFORMAT("InvalidParameterValue.AudioFormat"),
      
      /* Parameter error: audio stream sample rate. */
      INVALIDPARAMETERVALUE_AUDIOSAMPLERATE("InvalidParameterValue.AudioSampleRate"),

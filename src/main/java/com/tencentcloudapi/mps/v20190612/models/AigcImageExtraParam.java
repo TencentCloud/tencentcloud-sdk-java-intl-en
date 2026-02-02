@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AigcImageExtraParam extends AbstractModel {
 
     /**
-    * 
+    * The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
     */
     @SerializedName("AspectRatio")
     @Expose
     private String AspectRatio;
 
     /**
-    * 
+    * Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
     */
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
 
     /**
-     * Get  
-     * @return AspectRatio 
+     * Get The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website. 
+     * @return AspectRatio The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set 
-     * @param AspectRatio 
+     * Set The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
+     * @param AspectRatio The aspect ratio of the generated video.Supported aspect ratios for different models:1. GEM: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, and 21:9.Note: For more information about the aspect ratios of specific models, see the model website.
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
     }
 
     /**
-     * Get  
-     * @return Resolution 
+     * Get Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K. 
+     * @return Resolution Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set 
-     * @param Resolution 
+     * Set Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
+     * @param Resolution Output resolution of the image.Models that support this parameter:Valid values: 720P, 1080P, 2K, and 4K.
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;

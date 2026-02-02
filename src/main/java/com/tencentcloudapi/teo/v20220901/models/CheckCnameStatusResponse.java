@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CheckCnameStatusResponse extends AbstractModel {
 
     /**
-    * CNAME status of accelerated domain names.
+    * Integration of the CNAME of the domain name configuration status information list.
     */
     @SerializedName("CnameStatus")
     @Expose
@@ -38,16 +38,16 @@ public class CheckCnameStatusResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get CNAME status of accelerated domain names. 
-     * @return CnameStatus CNAME status of accelerated domain names.
+     * Get Integration of the CNAME of the domain name configuration status information list. 
+     * @return CnameStatus Integration of the CNAME of the domain name configuration status information list.
      */
     public CnameStatus [] getCnameStatus() {
         return this.CnameStatus;
     }
 
     /**
-     * Set CNAME status of accelerated domain names.
-     * @param CnameStatus CNAME status of accelerated domain names.
+     * Set Integration of the CNAME of the domain name configuration status information list.
+     * @param CnameStatus Integration of the CNAME of the domain name configuration status information list.
      */
     public void setCnameStatus(CnameStatus [] CnameStatus) {
         this.CnameStatus = CnameStatus;

@@ -24,262 +24,222 @@ import java.util.HashMap;
 public class CreateAigcImageTaskRequest extends AbstractModel {
 
     /**
-    * Model Name. Currently supported models include: Hunyuan,GEM,Qwen.
+    * Model name.
+Supported models:Hunyuan,
+GEM,
+Qwen.
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * Specify the version number of a particular model. By default, the system utilizes the currently supported stable version of the model.  
-1. GEM, available options [2.5, 3.0].
-
+    * Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * 
-Generate a description of the image. (Note: The maximum supported length is 1000 characters.) This parameter is mandatory when no reference image is provided.
-
+    * Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
+    * Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
     */
     @SerializedName("NegativePrompt")
     @Expose
     private String NegativePrompt;
 
     /**
-    * The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
-
+    * The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
     */
     @SerializedName("EnhancePrompt")
     @Expose
     private Boolean EnhancePrompt;
 
     /**
-    * 
-Supports single image input by default. Models supporting multi-image input include GEM (up to 3 images).  
-Recommended image size should be under 7MB, with support for JPEG, PNG, and WebP formats.
-
+    * Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
     */
     @SerializedName("ImageInfos")
     @Expose
     private AigcImageInfo [] ImageInfos;
 
     /**
-    * Used to pass additional parameters.
+    * Additional parameters required for the model.
     */
     @SerializedName("ExtraParameters")
     @Expose
     private AigcImageExtraParam ExtraParameters;
 
     /**
-    * The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
+    * COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
     */
     @SerializedName("StoreCosParam")
     @Expose
     private AigcStoreCosParam StoreCosParam;
 
     /**
-    * Interface operator name.
+    * API operator name.
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-     * Get Model Name. Currently supported models include: Hunyuan,GEM,Qwen. 
-     * @return ModelName Model Name. Currently supported models include: Hunyuan,GEM,Qwen.
+     * Get Model name.
+Supported models:Hunyuan,
+GEM,
+Qwen. 
+     * @return ModelName Model name.
+Supported models:Hunyuan,
+GEM,
+Qwen.
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set Model Name. Currently supported models include: Hunyuan,GEM,Qwen.
-     * @param ModelName Model Name. Currently supported models include: Hunyuan,GEM,Qwen.
+     * Set Model name.
+Supported models:Hunyuan,
+GEM,
+Qwen.
+     * @param ModelName Model name.
+Supported models:Hunyuan,
+GEM,
+Qwen.
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get Specify the version number of a particular model. By default, the system utilizes the currently supported stable version of the model.  
-1. GEM, available options [2.5, 3.0].
- 
-     * @return ModelVersion Specify the version number of a particular model. By default, the system utilizes the currently supported stable version of the model.  
-1. GEM, available options [2.5, 3.0].
-
+     * Get Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0]. 
+     * @return ModelVersion Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set Specify the version number of a particular model. By default, the system utilizes the currently supported stable version of the model.  
-1. GEM, available options [2.5, 3.0].
-
-     * @param ModelVersion Specify the version number of a particular model. By default, the system utilizes the currently supported stable version of the model.  
-1. GEM, available options [2.5, 3.0].
-
+     * Set Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
+     * @param ModelVersion Specific version number of the model. By default, the system uses the supported stable version of the model.1. GEM: [2.5 and 3.0].
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get 
-Generate a description of the image. (Note: The maximum supported length is 1000 characters.) This parameter is mandatory when no reference image is provided.
- 
-     * @return Prompt 
-Generate a description of the image. (Note: The maximum supported length is 1000 characters.) This parameter is mandatory when no reference image is provided.
-
+     * Get Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified. 
+     * @return Prompt Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set 
-Generate a description of the image. (Note: The maximum supported length is 1000 characters.) This parameter is mandatory when no reference image is provided.
-
-     * @param Prompt 
-Generate a description of the image. (Note: The maximum supported length is 1000 characters.) This parameter is mandatory when no reference image is provided.
-
+     * Set Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
+     * @param Prompt Description of the generated image. (Note: A maximum of 1000 characters is supported.) This parameter is required when no reference image is specified.
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind 
-     * @return NegativePrompt Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
+     * Get Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind. 
+     * @return NegativePrompt Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
-     * @param NegativePrompt Used to specify the content you wish to prevent the model from generating.Note: Supported by select models.Examples:  
-Overhead lighting, vibrant colors  
-Human figures, animals  
-Multiple vehicles, wind
+     * Set Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
+     * @param NegativePrompt Specifies the content you want to prevent the model from generating. Note: Not all models support this. For example: top lighting, bright colors, people, animals, multiple vehicles, and wind.
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
     }
 
     /**
-     * Get The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
- 
-     * @return EnhancePrompt The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
-
+     * Get The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality. 
+     * @return EnhancePrompt The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
      */
     public Boolean getEnhancePrompt() {
         return this.EnhancePrompt;
     }
 
     /**
-     * Set The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
-
-     * @param EnhancePrompt The default value is False, where the model strictly adheres to instructions. For optimal results with more refined prompts, setting this parameter to True will automatically optimize the input prompt to enhance generation quality.
-
+     * Set The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
+     * @param EnhancePrompt The default value is False, meaning the model follows instructions strictly. For better results with more nuanced prompts, set this parameter to True to automatically optimize the input prompt and improve generation quality.
      */
     public void setEnhancePrompt(Boolean EnhancePrompt) {
         this.EnhancePrompt = EnhancePrompt;
     }
 
     /**
-     * Get 
-Supports single image input by default. Models supporting multi-image input include GEM (up to 3 images).  
-Recommended image size should be under 7MB, with support for JPEG, PNG, and WebP formats.
- 
-     * @return ImageInfos 
-Supports single image input by default. Models supporting multi-image input include GEM (up to 3 images).  
-Recommended image size should be under 7MB, with support for JPEG, PNG, and WebP formats.
-
+     * Get Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP. 
+     * @return ImageInfos Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
      */
     public AigcImageInfo [] getImageInfos() {
         return this.ImageInfos;
     }
 
     /**
-     * Set 
-Supports single image input by default. Models supporting multi-image input include GEM (up to 3 images).  
-Recommended image size should be under 7MB, with support for JPEG, PNG, and WebP formats.
-
-     * @param ImageInfos 
-Supports single image input by default. Models supporting multi-image input include GEM (up to 3 images).  
-Recommended image size should be under 7MB, with support for JPEG, PNG, and WebP formats.
-
+     * Set Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
+     * @param ImageInfos Reference resource images. By default, one image can be specified.Model that supports multiple images:1. GEM supports up to 3 resource images.Note:1. The recommended image size is less than 7 MB. Different models have different limits.2. Supported image format: JPEG, PNG, and WebP.
      */
     public void setImageInfos(AigcImageInfo [] ImageInfos) {
         this.ImageInfos = ImageInfos;
     }
 
     /**
-     * Get Used to pass additional parameters. 
-     * @return ExtraParameters Used to pass additional parameters.
+     * Get Additional parameters required for the model. 
+     * @return ExtraParameters Additional parameters required for the model.
      */
     public AigcImageExtraParam getExtraParameters() {
         return this.ExtraParameters;
     }
 
     /**
-     * Set Used to pass additional parameters.
-     * @param ExtraParameters Used to pass additional parameters.
+     * Set Additional parameters required for the model.
+     * @param ExtraParameters Additional parameters required for the model.
      */
     public void setExtraParameters(AigcImageExtraParam ExtraParameters) {
         this.ExtraParameters = ExtraParameters;
     }
 
     /**
-     * Get The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized. 
-     * @return StoreCosParam The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
+     * Get COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized. 
+     * @return StoreCosParam COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
      */
     public AigcStoreCosParam getStoreCosParam() {
         return this.StoreCosParam;
     }
 
     /**
-     * Set The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
-     * @param StoreCosParam The output files will be stored in the specified COS bucket. Note: COS service must be activated, and the MPS_QcsRole needs to be created and properly authorized.
+     * Set COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
+     * @param StoreCosParam COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.
      */
     public void setStoreCosParam(AigcStoreCosParam StoreCosParam) {
         this.StoreCosParam = StoreCosParam;
     }
 
     /**
-     * Get Interface operator name. 
-     * @return Operator Interface operator name.
+     * Get API operator name. 
+     * @return Operator API operator name.
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set Interface operator name.
-     * @param Operator Interface operator name.
+     * Set API operator name.
+     * @param Operator API operator name.
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
