@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class DescribeRiskCenterAssetViewCFGRiskListRequest extends AbstractModel {
 
     /**
+    * Group account member ID
+    */
+    @SerializedName("MemberId")
+    @Expose
+    private String [] MemberId;
+
+    /**
     * Filter conditions
     */
     @SerializedName("Filter")
@@ -36,6 +43,22 @@ public class DescribeRiskCenterAssetViewCFGRiskListRequest extends AbstractModel
     @SerializedName("Tags")
     @Expose
     private AssetTag [] Tags;
+
+    /**
+     * Get Group account member ID 
+     * @return MemberId Group account member ID
+     */
+    public String [] getMemberId() {
+        return this.MemberId;
+    }
+
+    /**
+     * Set Group account member ID
+     * @param MemberId Group account member ID
+     */
+    public void setMemberId(String [] MemberId) {
+        this.MemberId = MemberId;
+    }
 
     /**
      * Get Filter conditions 
@@ -77,6 +100,12 @@ public class DescribeRiskCenterAssetViewCFGRiskListRequest extends AbstractModel
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeRiskCenterAssetViewCFGRiskListRequest(DescribeRiskCenterAssetViewCFGRiskListRequest source) {
+        if (source.MemberId != null) {
+            this.MemberId = new String[source.MemberId.length];
+            for (int i = 0; i < source.MemberId.length; i++) {
+                this.MemberId[i] = new String(source.MemberId[i]);
+            }
+        }
         if (source.Filter != null) {
             this.Filter = new Filter(source.Filter);
         }
@@ -93,6 +122,7 @@ public class DescribeRiskCenterAssetViewCFGRiskListRequest extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "MemberId.", this.MemberId);
         this.setParamObj(map, prefix + "Filter.", this.Filter);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 

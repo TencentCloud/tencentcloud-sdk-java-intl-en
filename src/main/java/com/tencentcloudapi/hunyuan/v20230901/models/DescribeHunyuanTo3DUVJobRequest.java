@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mdl.v20200326.models;
+package com.tencentcloudapi.hunyuan.v20230901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryInputStreamStateRequest extends AbstractModel {
+public class DescribeHunyuanTo3DUVJobRequest extends AbstractModel {
 
     /**
-    * The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+    * Task ID
     */
-    @SerializedName("Id")
+    @SerializedName("JobId")
     @Expose
-    private String Id;
+    private String JobId;
 
     /**
-     * Get The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported 
-     * @return Id The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+     * Get Task ID 
+     * @return JobId Task ID
      */
-    public String getId() {
-        return this.Id;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
-     * @param Id The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+     * Set Task ID
+     * @param JobId Task ID
      */
-    public void setId(String Id) {
-        this.Id = Id;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
-    public QueryInputStreamStateRequest() {
+    public DescribeHunyuanTo3DUVJobRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryInputStreamStateRequest(QueryInputStreamStateRequest source) {
-        if (source.Id != null) {
-            this.Id = new String(source.Id);
+    public DescribeHunyuanTo3DUVJobRequest(DescribeHunyuanTo3DUVJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
     }
 
@@ -64,7 +64,7 @@ public class QueryInputStreamStateRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }

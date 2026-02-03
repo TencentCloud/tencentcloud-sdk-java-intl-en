@@ -78,6 +78,17 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
+     *Query component splitting tasks.
+     * @param req DescribeHunyuanTo3DUVJobRequest
+     * @return DescribeHunyuanTo3DUVJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeHunyuanTo3DUVJobResponse DescribeHunyuanTo3DUVJob(DescribeHunyuanTo3DUVJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeHunyuanTo3DUVJob", DescribeHunyuanTo3DUVJobResponse.class);
+    }
+
+    /**
      *This API is used to query the generation task of a component.
      * @param req QueryHunyuan3DPartJobRequest
      * @return QueryHunyuan3DPartJobResponse
@@ -110,6 +121,17 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
     public QueryHunyuanTo3DRapidJobResponse QueryHunyuanTo3DRapidJob(QueryHunyuanTo3DRapidJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "QueryHunyuanTo3DRapidJob", QueryHunyuanTo3DRapidJobResponse.class);
+    }
+
+    /**
+     *Query 3D texture edit tasks.
+     * @param req QueryHunyuanTo3DTextureEditJobRequest
+     * @return QueryHunyuanTo3DTextureEditJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryHunyuanTo3DTextureEditJobResponse QueryHunyuanTo3DTextureEditJob(QueryHunyuanTo3DTextureEditJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryHunyuanTo3DTextureEditJob", QueryHunyuanTo3DTextureEditJobResponse.class);
     }
 
     /**
@@ -157,6 +179,28 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
     public SubmitHunyuanTo3DRapidJobResponse SubmitHunyuanTo3DRapidJob(SubmitHunyuanTo3DRapidJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SubmitHunyuanTo3DRapidJob", SubmitHunyuanTo3DRapidJobResponse.class);
+    }
+
+    /**
+     *After inputting the 3D model, perform 3D model texture redrawing based on semantics or images.
+     * @param req SubmitHunyuanTo3DTextureEditJobRequest
+     * @return SubmitHunyuanTo3DTextureEditJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHunyuanTo3DTextureEditJobResponse SubmitHunyuanTo3DTextureEditJob(SubmitHunyuanTo3DTextureEditJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHunyuanTo3DTextureEditJob", SubmitHunyuanTo3DTextureEditJobResponse.class);
+    }
+
+    /**
+     *After inputting the model, UV unfolding can be performed based on the model texture to output the corresponding UV texture
+     * @param req SubmitHunyuanTo3DUVJobRequest
+     * @return SubmitHunyuanTo3DUVJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitHunyuanTo3DUVJobResponse SubmitHunyuanTo3DUVJob(SubmitHunyuanTo3DUVJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitHunyuanTo3DUVJob", SubmitHunyuanTo3DUVJobResponse.class);
     }
 
 }

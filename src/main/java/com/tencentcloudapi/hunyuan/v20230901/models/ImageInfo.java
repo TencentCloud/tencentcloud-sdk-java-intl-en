@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mdl.v20200326.models;
+package com.tencentcloudapi.hunyuan.v20230901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryInputStreamStateRequest extends AbstractModel {
+public class ImageInfo extends AbstractModel {
 
     /**
-    * The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+    * Image Url.
     */
-    @SerializedName("Id")
+    @SerializedName("Url")
     @Expose
-    private String Id;
+    private String Url;
 
     /**
-     * Get The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported 
-     * @return Id The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+    * Image Base64.
+    */
+    @SerializedName("Base64")
+    @Expose
+    private String Base64;
+
+    /**
+     * Get Image Url. 
+     * @return Url Image Url.
      */
-    public String getId() {
-        return this.Id;
+    public String getUrl() {
+        return this.Url;
     }
 
     /**
-     * Set The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
-     * @param Id The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+     * Set Image Url.
+     * @param Url Image Url.
      */
-    public void setId(String Id) {
-        this.Id = Id;
+    public void setUrl(String Url) {
+        this.Url = Url;
     }
 
-    public QueryInputStreamStateRequest() {
+    /**
+     * Get Image Base64. 
+     * @return Base64 Image Base64.
+     */
+    public String getBase64() {
+        return this.Base64;
+    }
+
+    /**
+     * Set Image Base64.
+     * @param Base64 Image Base64.
+     */
+    public void setBase64(String Base64) {
+        this.Base64 = Base64;
+    }
+
+    public ImageInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryInputStreamStateRequest(QueryInputStreamStateRequest source) {
-        if (source.Id != null) {
-            this.Id = new String(source.Id);
+    public ImageInfo(ImageInfo source) {
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
+        if (source.Base64 != null) {
+            this.Base64 = new String(source.Base64);
         }
     }
 
@@ -64,7 +90,8 @@ public class QueryInputStreamStateRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "Url", this.Url);
+        this.setParamSimple(map, prefix + "Base64", this.Base64);
 
     }
 }

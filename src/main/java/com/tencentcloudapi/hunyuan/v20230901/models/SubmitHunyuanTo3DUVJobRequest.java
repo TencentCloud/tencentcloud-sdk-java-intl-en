@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mdl.v20200326.models;
+package com.tencentcloudapi.hunyuan.v20230901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,51 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class QueryInputStreamStateRequest extends AbstractModel {
+public class SubmitHunyuanTo3DUVJobRequest extends AbstractModel {
 
     /**
-    * The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+    * File URL of the 3D model requiring UV unfold
+Supported formats: FBX, OBJ, GLB
+3D model limit: less than 30000 faces
     */
-    @SerializedName("Id")
+    @SerializedName("File")
     @Expose
-    private String Id;
+    private InputFile3D File;
 
     /**
-     * Get The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported 
-     * @return Id The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+     * Get File URL of the 3D model requiring UV unfold
+Supported formats: FBX, OBJ, GLB
+3D model limit: less than 30000 faces 
+     * @return File File URL of the 3D model requiring UV unfold
+Supported formats: FBX, OBJ, GLB
+3D model limit: less than 30000 faces
      */
-    public String getId() {
-        return this.Id;
+    public InputFile3D getFile() {
+        return this.File;
     }
 
     /**
-     * Set The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
-     * @param Id The StreamLive input ID.Currently, only RTMP_PUSH and RTMPS_PUSH are supported
+     * Set File URL of the 3D model requiring UV unfold
+Supported formats: FBX, OBJ, GLB
+3D model limit: less than 30000 faces
+     * @param File File URL of the 3D model requiring UV unfold
+Supported formats: FBX, OBJ, GLB
+3D model limit: less than 30000 faces
      */
-    public void setId(String Id) {
-        this.Id = Id;
+    public void setFile(InputFile3D File) {
+        this.File = File;
     }
 
-    public QueryInputStreamStateRequest() {
+    public SubmitHunyuanTo3DUVJobRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public QueryInputStreamStateRequest(QueryInputStreamStateRequest source) {
-        if (source.Id != null) {
-            this.Id = new String(source.Id);
+    public SubmitHunyuanTo3DUVJobRequest(SubmitHunyuanTo3DUVJobRequest source) {
+        if (source.File != null) {
+            this.File = new InputFile3D(source.File);
         }
     }
 
@@ -64,7 +74,7 @@ public class QueryInputStreamStateRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamObj(map, prefix + "File.", this.File);
 
     }
 }
