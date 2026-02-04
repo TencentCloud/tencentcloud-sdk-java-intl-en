@@ -353,6 +353,17 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to check the collector and receiver for traffic mirroring (public IP address type).
+     * @param req CheckTrafficMirrorRequest
+     * @return CheckTrafficMirrorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckTrafficMirrorResponse CheckTrafficMirror(CheckTrafficMirrorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckTrafficMirror", CheckTrafficMirrorResponse.class);
+    }
+
+    /**
      *This API is used to create a security group with the same rule configurations as an existing security group. The cloning only copies the security group and its rules, but not the security group tags.
      * @param req CloneSecurityGroupRequest
      * @return CloneSecurityGroupResponse
@@ -810,6 +821,17 @@ Description:
     }
 
     /**
+     *This API is used to create a traffic mirroring instance.
+     * @param req CreateTrafficMirrorRequest
+     * @return CreateTrafficMirrorResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTrafficMirrorResponse CreateTrafficMirror(CreateTrafficMirrorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTrafficMirror", CreateTrafficMirrorResponse.class);
+    }
+
+    /**
      *This API is used to create a VPC instance.
 * The subnet mask of the smallest IP address range that can be created is 28 (16 IP addresses), that of the largest IP address ranges 10.0.0.0/12 and 172.16.0.0/12 is 12 (1,048,576 IP addresses), and that of the largest IP address range 192.168.0.0/16 is 16 (65,536 IP addresses). For more information on how to plan VPC IP ranges, see [Network Planning](https://intl.cloud.tencent.com/document/product/215/30313?from_cn_redirect=1).
 * The number of VPC instances that can be created in a region is limited. For more information, see <a href="https://intl.cloud.tencent.com/doc/product/215/537?from_cn_redirect=1" title="VPC Use Limits">VPC Use Limits</a>. To request more resources, [submit a ticket](https://console.cloud.tencent.com/workorder/category).
@@ -1247,6 +1269,17 @@ This API is completed asynchronously. If you need to query the execution result 
     public DeleteTemplateMemberResponse DeleteTemplateMember(DeleteTemplateMemberRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteTemplateMember", DeleteTemplateMemberResponse.class);
+    }
+
+    /**
+     *This API is used to delete a traffic mirroring instance.
+     * @param req DeleteTrafficMirrorRequest
+     * @return DeleteTrafficMirrorResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTrafficMirrorResponse DeleteTrafficMirror(DeleteTrafficMirrorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTrafficMirror", DeleteTrafficMirrorResponse.class);
     }
 
     /**
@@ -1978,6 +2011,17 @@ This API is used to check the jumbo frame status before and after instance migra
     public DescribeTaskResultResponse DescribeTaskResult(DescribeTaskResultRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeTaskResult", DescribeTaskResultResponse.class);
+    }
+
+    /**
+     *This API is used to query the information of a traffic mirroring instance.
+     * @param req DescribeTrafficMirrorsRequest
+     * @return DescribeTrafficMirrorsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTrafficMirrorsResponse DescribeTrafficMirrors(DescribeTrafficMirrorsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTrafficMirrors", DescribeTrafficMirrorsResponse.class);
     }
 
     /**
@@ -3030,6 +3074,18 @@ This API is completed asynchronously. If you need to query the execution result 
     }
 
     /**
+     *This API is used to modify the attributes of a traffic mirroring instance.
+Note: Only the name and description can be modified.
+     * @param req ModifyTrafficMirrorAttributeRequest
+     * @return ModifyTrafficMirrorAttributeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyTrafficMirrorAttributeResponse ModifyTrafficMirrorAttribute(ModifyTrafficMirrorAttributeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyTrafficMirrorAttribute", ModifyTrafficMirrorAttributeResponse.class);
+    }
+
+    /**
      *This API (ModifyVpcAttribute) is used to modify VPC attributes.
      * @param req ModifyVpcAttributeRequest
      * @return ModifyVpcAttributeResponse
@@ -3364,6 +3420,40 @@ Note: When this API is called, all routing policies in the current route table a
     }
 
     /**
+     *This API is used to update a traffic mirroring instance filter rule.
+Note: A traffic mirroring instance cannot simultaneously support filtering based on NAT gateway and five tuple rules.
+     * @param req ResetTrafficMirrorFilterRequest
+     * @return ResetTrafficMirrorFilterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetTrafficMirrorFilterResponse ResetTrafficMirrorFilter(ResetTrafficMirrorFilterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetTrafficMirrorFilter", ResetTrafficMirrorFilterResponse.class);
+    }
+
+    /**
+     *This API is used to reset the collection object of a traffic mirroring instance.
+     * @param req ResetTrafficMirrorSrcsRequest
+     * @return ResetTrafficMirrorSrcsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetTrafficMirrorSrcsResponse ResetTrafficMirrorSrcs(ResetTrafficMirrorSrcsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetTrafficMirrorSrcs", ResetTrafficMirrorSrcsResponse.class);
+    }
+
+    /**
+     *This API is used to update the receiving destination information of a traffic mirroring instance.
+     * @param req ResetTrafficMirrorTargetRequest
+     * @return ResetTrafficMirrorTargetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetTrafficMirrorTargetResponse ResetTrafficMirrorTarget(ResetTrafficMirrorTargetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetTrafficMirrorTarget", ResetTrafficMirrorTargetResponse.class);
+    }
+
+    /**
      *The API is used to reset a VPN tunnel.
      * @param req ResetVpnConnectionRequest
      * @return ResetVpnConnectionResponse
@@ -3431,6 +3521,28 @@ Note: Starting from Dec 15, 2022, CAM authorization is required for a sub-accoun
     }
 
     /**
+     *This API is used to start a traffic mirroring instance.
+     * @param req StartTrafficMirrorRequest
+     * @return StartTrafficMirrorResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartTrafficMirrorResponse StartTrafficMirror(StartTrafficMirrorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartTrafficMirror", StartTrafficMirrorResponse.class);
+    }
+
+    /**
+     *This API is used to stop a traffic mirroring instance.
+     * @param req StopTrafficMirrorRequest
+     * @return StopTrafficMirrorResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopTrafficMirrorResponse StopTrafficMirror(StopTrafficMirrorRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopTrafficMirror", StopTrafficMirrorResponse.class);
+    }
+
+    /**
      *This API is used to convert a common public IP into an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
 * Tencent Cloud limits the number of times that a user can unbind EIPs and reassign public IPs in each region per day. For more information, see product introduction of [Elastic IP](https://intl.cloud.tencent.com/document/product/213/5733?from_cn_redirect=1). The preceding quota can be obtained through the API [DescribeAddressQuota](https://intl.cloud.tencent.com/document/product/215/16701).
      * @param req TransformAddressRequest
@@ -3490,6 +3602,28 @@ This API is completed asynchronously. If you need to query the execution result 
     public UnassignPrivateIpAddressesResponse UnassignPrivateIpAddresses(UnassignPrivateIpAddressesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnassignPrivateIpAddresses", UnassignPrivateIpAddressesResponse.class);
+    }
+
+    /**
+     *This API is used to update the filter rule or collection object of a traffic mirroring instance.
+     * @param req UpdateTrafficMirrorAllFilterRequest
+     * @return UpdateTrafficMirrorAllFilterResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTrafficMirrorAllFilterResponse UpdateTrafficMirrorAllFilter(UpdateTrafficMirrorAllFilterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTrafficMirrorAllFilter", UpdateTrafficMirrorAllFilterResponse.class);
+    }
+
+    /**
+     *This API is used to update the collection direction of a traffic mirroring instance.
+     * @param req UpdateTrafficMirrorDirectionRequest
+     * @return UpdateTrafficMirrorDirectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTrafficMirrorDirectionResponse UpdateTrafficMirrorDirection(UpdateTrafficMirrorDirectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTrafficMirrorDirection", UpdateTrafficMirrorDirectionResponse.class);
     }
 
     /**

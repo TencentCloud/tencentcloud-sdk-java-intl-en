@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.mdp.v20200527.models;
+package com.tencentcloudapi.vpc.v20170312.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteStreamPackageSourceRequest extends AbstractModel {
+public class DeleteTrafficMirrorRequest extends AbstractModel {
 
     /**
-    * Source Id.
+    * Traffic mirroring instance ID.
     */
-    @SerializedName("Id")
+    @SerializedName("TrafficMirrorId")
     @Expose
-    private String Id;
+    private String TrafficMirrorId;
 
     /**
-     * Get Source Id. 
-     * @return Id Source Id.
+     * Get Traffic mirroring instance ID. 
+     * @return TrafficMirrorId Traffic mirroring instance ID.
      */
-    public String getId() {
-        return this.Id;
+    public String getTrafficMirrorId() {
+        return this.TrafficMirrorId;
     }
 
     /**
-     * Set Source Id.
-     * @param Id Source Id.
+     * Set Traffic mirroring instance ID.
+     * @param TrafficMirrorId Traffic mirroring instance ID.
      */
-    public void setId(String Id) {
-        this.Id = Id;
+    public void setTrafficMirrorId(String TrafficMirrorId) {
+        this.TrafficMirrorId = TrafficMirrorId;
     }
 
-    public DeleteStreamPackageSourceRequest() {
+    public DeleteTrafficMirrorRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteStreamPackageSourceRequest(DeleteStreamPackageSourceRequest source) {
-        if (source.Id != null) {
-            this.Id = new String(source.Id);
+    public DeleteTrafficMirrorRequest(DeleteTrafficMirrorRequest source) {
+        if (source.TrafficMirrorId != null) {
+            this.TrafficMirrorId = new String(source.TrafficMirrorId);
         }
     }
 
@@ -64,7 +64,7 @@ public class DeleteStreamPackageSourceRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Id", this.Id);
+        this.setParamSimple(map, prefix + "TrafficMirrorId", this.TrafficMirrorId);
 
     }
 }

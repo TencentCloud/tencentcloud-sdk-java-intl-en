@@ -38,14 +38,15 @@ public class ApplySnapshotRequest extends AbstractModel {
     private String DiskId;
 
     /**
-    * Specifies whether to shut down a CVM automatically before a rollback
+    * Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
     */
     @SerializedName("AutoStopInstance")
     @Expose
     private Boolean AutoStopInstance;
 
     /**
-    * Specifies whether to start up a CVM automatically after a rollback
+    * Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
     */
     @SerializedName("AutoStartInstance")
     @Expose
@@ -84,32 +85,36 @@ public class ApplySnapshotRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies whether to shut down a CVM automatically before a rollback 
-     * @return AutoStopInstance Specifies whether to shut down a CVM automatically before a rollback
+     * Get Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true. 
+     * @return AutoStopInstance Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
      */
     public Boolean getAutoStopInstance() {
         return this.AutoStopInstance;
     }
 
     /**
-     * Set Specifies whether to shut down a CVM automatically before a rollback
-     * @param AutoStopInstance Specifies whether to shut down a CVM automatically before a rollback
+     * Set Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
+     * @param AutoStopInstance Specifies whether to perform automatic shutdown before rolling back. only supports rolling back snapshots to mounted cbs.
+Specifies whether AutoStartInstance can be set to true when this parameter is true.
      */
     public void setAutoStopInstance(Boolean AutoStopInstance) {
         this.AutoStopInstance = AutoStopInstance;
     }
 
     /**
-     * Get Specifies whether to start up a CVM automatically after a rollback 
-     * @return AutoStartInstance Specifies whether to start up a CVM automatically after a rollback
+     * Get Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance. 
+     * @return AutoStartInstance Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
      */
     public Boolean getAutoStartInstance() {
         return this.AutoStartInstance;
     }
 
     /**
-     * Set Specifies whether to start up a CVM automatically after a rollback
-     * @param AutoStartInstance Specifies whether to start up a CVM automatically after a rollback
+     * Set Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
+     * @param AutoStartInstance Specifies whether to automatically start after completion. only supports rolling back snapshots to mounted cbs. this parameter requires simultaneous parameter passing of AutoStopInstance.
      */
     public void setAutoStartInstance(Boolean AutoStartInstance) {
         this.AutoStartInstance = AutoStartInstance;

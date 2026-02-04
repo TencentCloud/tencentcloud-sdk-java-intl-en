@@ -128,7 +128,9 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found. 
      * @return CacheInfo Cache configuration
 Note: this field may return `null`, indicating that no valid value was found.
+     * @deprecated
      */
+    @Deprecated
     public CacheInfo getCacheInfo() {
         return this.CacheInfo;
     }
@@ -138,7 +140,9 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param CacheInfo Cache configuration
 Note: this field may return `null`, indicating that no valid value was found.
+     * @deprecated
      */
+    @Deprecated
     public void setCacheInfo(CacheInfo CacheInfo) {
         this.CacheInfo = CacheInfo;
     }

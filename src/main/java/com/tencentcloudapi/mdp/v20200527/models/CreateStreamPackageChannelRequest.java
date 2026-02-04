@@ -79,7 +79,9 @@ public class CreateStreamPackageChannelRequest extends AbstractModel {
     /**
      * Get Cache configuration. 
      * @return CacheInfo Cache configuration.
+     * @deprecated
      */
+    @Deprecated
     public CacheInfo getCacheInfo() {
         return this.CacheInfo;
     }
@@ -87,7 +89,9 @@ public class CreateStreamPackageChannelRequest extends AbstractModel {
     /**
      * Set Cache configuration.
      * @param CacheInfo Cache configuration.
+     * @deprecated
      */
+    @Deprecated
     public void setCacheInfo(CacheInfo CacheInfo) {
         this.CacheInfo = CacheInfo;
     }
