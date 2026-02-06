@@ -25,7 +25,7 @@ public class SubmitHunyuanTo3DTextureEditJobRequest extends AbstractModel {
 
     /**
     * File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
     */
     @SerializedName("File3D")
@@ -62,10 +62,10 @@ Example value: true
 
     /**
      * Get File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces 
      * @return File3D File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
      */
     public InputFile3D getFile3D() {
@@ -74,10 +74,10 @@ Supported formats: FBX, OBJ, GLB
 
     /**
      * Set File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
      * @param File3D File URL of the 3D model file that requires texture edit
-Supported formats: FBX, OBJ, GLB
+Supported formats: FBX
 3D model limit: less than 100000 faces
      */
     public void setFile3D(InputFile3D File3D) {
