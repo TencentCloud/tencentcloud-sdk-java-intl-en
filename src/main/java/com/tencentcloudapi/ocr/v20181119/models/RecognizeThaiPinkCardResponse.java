@@ -129,8 +129,7 @@ public class RecognizeThaiPinkCardResponse extends AbstractModel {
     private String RefNumber;
 
     /**
-    * Field confidence:
- { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } }
+    * This field is deprecated and will always return "1". Usage is not recommended.
     */
     @SerializedName("AdvancedInfo")
     @Expose
@@ -405,21 +404,21 @@ public class RecognizeThaiPinkCardResponse extends AbstractModel {
     }
 
     /**
-     * Get Field confidence:
- { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } } 
-     * @return AdvancedInfo Field confidence:
- { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } }
+     * Get This field is deprecated and will always return "1". Usage is not recommended. 
+     * @return AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
+     * @deprecated
      */
+    @Deprecated
     public String getAdvancedInfo() {
         return this.AdvancedInfo;
     }
 
     /**
-     * Set Field confidence:
- { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } }
-     * @param AdvancedInfo Field confidence:
- { "ID": { "Confidence": 0.9999 }, "ThaiName": { "Confidence": 0.9996 } }
+     * Set This field is deprecated and will always return "1". Usage is not recommended.
+     * @param AdvancedInfo This field is deprecated and will always return "1". Usage is not recommended.
+     * @deprecated
      */
+    @Deprecated
     public void setAdvancedInfo(String AdvancedInfo) {
         this.AdvancedInfo = AdvancedInfo;
     }
