@@ -31,18 +31,19 @@ public class SendEmailRequest extends AbstractModel {
     private String FromEmailAddress;
 
     /**
-    * Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
-    */
-    @SerializedName("Destination")
-    @Expose
-    private String [] Destination;
-
-    /**
     * Email subject.
     */
     @SerializedName("Subject")
     @Expose
     private String Subject;
+
+    /**
+    * Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+    */
+    @SerializedName("Destination")
+    @Expose
+    private String [] Destination;
 
     /**
     * The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
@@ -140,22 +141,6 @@ public class SendEmailRequest extends AbstractModel {
     }
 
     /**
-     * Get Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send. 
-     * @return Destination Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
-     */
-    public String [] getDestination() {
-        return this.Destination;
-    }
-
-    /**
-     * Set Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
-     * @param Destination Recipient email address, supports up to 50 recipients in mass sending. note: the email content displays all recipient addresses. for non-mass sending, call the API multiple times to send.
-     */
-    public void setDestination(String [] Destination) {
-        this.Destination = Destination;
-    }
-
-    /**
      * Get Email subject. 
      * @return Subject Email subject.
      */
@@ -169,6 +154,26 @@ public class SendEmailRequest extends AbstractModel {
      */
     public void setSubject(String Subject) {
         this.Subject = Subject;
+    }
+
+    /**
+     * Get Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist. 
+     * @return Destination Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+     */
+    public String [] getDestination() {
+        return this.Destination;
+    }
+
+    /**
+     * Set Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+     * @param Destination Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
+Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+     */
+    public void setDestination(String [] Destination) {
+        this.Destination = Destination;
     }
 
     /**
@@ -366,14 +371,14 @@ public class SendEmailRequest extends AbstractModel {
         if (source.FromEmailAddress != null) {
             this.FromEmailAddress = new String(source.FromEmailAddress);
         }
+        if (source.Subject != null) {
+            this.Subject = new String(source.Subject);
+        }
         if (source.Destination != null) {
             this.Destination = new String[source.Destination.length];
             for (int i = 0; i < source.Destination.length; i++) {
                 this.Destination[i] = new String(source.Destination[i]);
             }
-        }
-        if (source.Subject != null) {
-            this.Subject = new String(source.Subject);
         }
         if (source.ReplyToAddresses != null) {
             this.ReplyToAddresses = new String(source.ReplyToAddresses);
@@ -425,8 +430,8 @@ public class SendEmailRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FromEmailAddress", this.FromEmailAddress);
-        this.setParamArraySimple(map, prefix + "Destination.", this.Destination);
         this.setParamSimple(map, prefix + "Subject", this.Subject);
+        this.setParamArraySimple(map, prefix + "Destination.", this.Destination);
         this.setParamSimple(map, prefix + "ReplyToAddresses", this.ReplyToAddresses);
         this.setParamArraySimple(map, prefix + "Cc.", this.Cc);
         this.setParamArraySimple(map, prefix + "Bcc.", this.Bcc);

@@ -111,6 +111,15 @@ such as "kghy_0101"
     private String Extended;
 
     /**
+    * For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
+    */
+    @SerializedName("CustomerName")
+    @Expose
+    private String CustomerName;
+
+    /**
      * Get Account type of a new customer.
 Valid values: `personal`, `company`. 
      * @return AccountType Account type of a new customer.
@@ -326,6 +335,30 @@ such as "kghy_0101"
         this.Extended = Extended;
     }
 
+    /**
+     * Get For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers 
+     * @return CustomerName For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
+     */
+    public String getCustomerName() {
+        return this.CustomerName;
+    }
+
+    /**
+     * Set For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
+     * @param CustomerName For individual customers, fill in the name. for corporate customers, fill in the full company name.Constraints:
+1. Length: 2~200 characters
+2. Customer name cannot be pure numbers
+     */
+    public void setCustomerName(String CustomerName) {
+        this.CustomerName = CustomerName;
+    }
+
     public CreateAccountRequest() {
     }
 
@@ -367,6 +400,9 @@ such as "kghy_0101"
         if (source.Extended != null) {
             this.Extended = new String(source.Extended);
         }
+        if (source.CustomerName != null) {
+            this.CustomerName = new String(source.CustomerName);
+        }
     }
 
 
@@ -385,6 +421,7 @@ such as "kghy_0101"
         this.setParamSimple(map, prefix + "TradeOne", this.TradeOne);
         this.setParamSimple(map, prefix + "TradeTwo", this.TradeTwo);
         this.setParamSimple(map, prefix + "Extended", this.Extended);
+        this.setParamSimple(map, prefix + "CustomerName", this.CustomerName);
 
     }
 }
