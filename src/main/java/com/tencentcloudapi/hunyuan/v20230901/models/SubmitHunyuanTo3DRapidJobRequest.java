@@ -53,6 +53,16 @@ Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with i
     private String ImageUrl;
 
     /**
+    * Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
+    */
+    @SerializedName("ResultFormat")
+    @Expose
+    private String ResultFormat;
+
+    /**
     * Specifies whether PBR material generation is enabled, false by default.	
     */
     @SerializedName("EnablePBR")
@@ -150,6 +160,34 @@ Imagebase64, imageurl, and Prompt are required, and Prompt cannot coexist with i
     }
 
     /**
+     * Get Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL 
+     * @return ResultFormat Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
+     */
+    public String getResultFormat() {
+        return this.ResultFormat;
+    }
+
+    /**
+     * Set Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
+     * @param ResultFormat Returns the 3D file format. valid values:
+OBJ, GLB, STL, USDZ, FBX, MP4, GIF
+Recommended input models below 50W, may timeout when selecting USDZ, MP4, or GIF format
+Example value: STL
+     */
+    public void setResultFormat(String ResultFormat) {
+        this.ResultFormat = ResultFormat;
+    }
+
+    /**
      * Get Specifies whether PBR material generation is enabled, false by default.	 
      * @return EnablePBR Specifies whether PBR material generation is enabled, false by default.	
      */
@@ -210,6 +248,9 @@ Default model file format is GLB
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
+        if (source.ResultFormat != null) {
+            this.ResultFormat = new String(source.ResultFormat);
+        }
         if (source.EnablePBR != null) {
             this.EnablePBR = new Boolean(source.EnablePBR);
         }
@@ -226,6 +267,7 @@ Default model file format is GLB
         this.setParamSimple(map, prefix + "Prompt", this.Prompt);
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+        this.setParamSimple(map, prefix + "ResultFormat", this.ResultFormat);
         this.setParamSimple(map, prefix + "EnablePBR", this.EnablePBR);
         this.setParamSimple(map, prefix + "EnableGeometry", this.EnableGeometry);
 

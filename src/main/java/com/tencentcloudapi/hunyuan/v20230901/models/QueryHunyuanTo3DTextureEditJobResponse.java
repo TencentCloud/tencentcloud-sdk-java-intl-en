@@ -50,7 +50,7 @@ Example value: RUN
     private String ErrorMessage;
 
     /**
-    * Generate the file URL with a valid period of 1 day
+    * The URL address for generating texture files is valid for 1 day.
     */
     @SerializedName("ResultFile3Ds")
     @Expose
@@ -132,16 +132,16 @@ Example value: RUN
     }
 
     /**
-     * Get Generate the file URL with a valid period of 1 day 
-     * @return ResultFile3Ds Generate the file URL with a valid period of 1 day
+     * Get The URL address for generating texture files is valid for 1 day. 
+     * @return ResultFile3Ds The URL address for generating texture files is valid for 1 day.
      */
     public File3D [] getResultFile3Ds() {
         return this.ResultFile3Ds;
     }
 
     /**
-     * Set Generate the file URL with a valid period of 1 day
-     * @param ResultFile3Ds Generate the file URL with a valid period of 1 day
+     * Set The URL address for generating texture files is valid for 1 day.
+     * @param ResultFile3Ds The URL address for generating texture files is valid for 1 day.
      */
     public void setResultFile3Ds(File3D [] ResultFile3Ds) {
         this.ResultFile3Ds = ResultFile3Ds;

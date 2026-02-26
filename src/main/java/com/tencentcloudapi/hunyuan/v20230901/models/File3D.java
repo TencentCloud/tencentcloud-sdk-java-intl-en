@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class File3D extends AbstractModel {
 
     /**
-    * 3D file format. valid values: GIF, OBJ.
+    * 3D model or texture. valid values: GIF or OBJ or Image.
     */
     @SerializedName("Type")
     @Expose
@@ -45,16 +45,16 @@ public class File3D extends AbstractModel {
     private String PreviewImageUrl;
 
     /**
-     * Get 3D file format. valid values: GIF, OBJ. 
-     * @return Type 3D file format. valid values: GIF, OBJ.
+     * Get 3D model or texture. valid values: GIF or OBJ or Image. 
+     * @return Type 3D model or texture. valid values: GIF or OBJ or Image.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 3D file format. valid values: GIF, OBJ.
-     * @param Type 3D file format. valid values: GIF, OBJ.
+     * Set 3D model or texture. valid values: GIF or OBJ or Image.
+     * @param Type 3D model or texture. valid values: GIF or OBJ or Image.
      */
     public void setType(String Type) {
         this.Type = Type;

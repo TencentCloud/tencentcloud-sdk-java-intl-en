@@ -38,14 +38,14 @@ public class AuditInstanceInfo extends AbstractModel {
     private TagInfoUnit [] TagList;
 
     /**
-    * Database engine type.
+    * Database kernel type.
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * Database engine version.
+    * Database kernel version.
     */
     @SerializedName("DbVersion")
     @Expose
@@ -84,32 +84,32 @@ public class AuditInstanceInfo extends AbstractModel {
     }
 
     /**
-     * Get Database engine type. 
-     * @return DbType Database engine type.
+     * Get Database kernel type. 
+     * @return DbType Database kernel type.
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Database engine type.
-     * @param DbType Database engine type.
+     * Set Database kernel type.
+     * @param DbType Database kernel type.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get Database engine version. 
-     * @return DbVersion Database engine version.
+     * Get Database kernel version. 
+     * @return DbVersion Database kernel version.
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set Database engine version.
-     * @param DbVersion Database engine version.
+     * Set Database kernel version.
+     * @param DbVersion Database kernel version.
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;

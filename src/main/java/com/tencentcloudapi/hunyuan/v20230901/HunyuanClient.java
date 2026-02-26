@@ -124,7 +124,7 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
     }
 
     /**
-     *Query 3D texture edit tasks.
+     *Query 3D texture edit tasks, redraw the texture of the 3D model based on semantics or images, and output a redrawn texture image.
      * @param req QueryHunyuanTo3DTextureEditJobRequest
      * @return QueryHunyuanTo3DTextureEditJobResponse
      * @throws TencentCloudSDKException
@@ -182,7 +182,7 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
     }
 
     /**
-     *After inputting the 3D model, perform 3D model texture redrawing based on semantics or images.
+     *After inputting the 3D model, redraw the texture of the 3D model based on semantics or images, and output a redrawn texture image.
      * @param req SubmitHunyuanTo3DTextureEditJobRequest
      * @return SubmitHunyuanTo3DTextureEditJobResponse
      * @throws TencentCloudSDKException
