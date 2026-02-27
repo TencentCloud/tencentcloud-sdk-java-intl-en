@@ -216,6 +216,17 @@ Note: Only an approved template can be used to send emails.
     }
 
     /**
+     *Retrieve reported spam data.
+     * @param req GetAbuseReportRequest
+     * @return GetAbuseReportResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetAbuseReportResponse GetAbuseReport(GetAbuseReportRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetAbuseReport", GetAbuseReportResponse.class);
+    }
+
+    /**
      *This API is used to get the configuration details of a sender domain.
      * @param req GetEmailIdentityRequest
      * @return GetEmailIdentityResponse
