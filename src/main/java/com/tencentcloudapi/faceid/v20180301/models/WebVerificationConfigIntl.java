@@ -154,7 +154,7 @@ The default value is blink.
     private String ActionList;
 
     /**
-    * Control liveness retry number.The value range is 1-99.
+    * Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
     */
     @SerializedName("LivenessRetryLimit")
@@ -162,7 +162,7 @@ The default value is 99.
     private Long LivenessRetryLimit;
 
     /**
-    * Specifies the liveness detection timeout period in seconds. value range: (0,600].
+    * Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
     */
     @SerializedName("LivenessTimeout")
@@ -569,9 +569,9 @@ The default value is blink.
     }
 
     /**
-     * Get Control liveness retry number.The value range is 1-99.
+     * Get Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99. 
-     * @return LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+     * @return LivenessRetryLimit Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
      */
     public Long getLivenessRetryLimit() {
@@ -579,9 +579,9 @@ The default value is 99.
     }
 
     /**
-     * Set Control liveness retry number.The value range is 1-99.
+     * Set Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
-     * @param LivenessRetryLimit Control liveness retry number.The value range is 1-99.
+     * @param LivenessRetryLimit Maximum liveness verification attempts. Valid range: [1,99].
 The default value is 99.
      */
     public void setLivenessRetryLimit(Long LivenessRetryLimit) {
@@ -589,9 +589,9 @@ The default value is 99.
     }
 
     /**
-     * Get Specifies the liveness detection timeout period in seconds. value range: (0,600].
+     * Get Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45. 
-     * @return LivenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+     * @return LivenessTimeout Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
      */
     public Long getLivenessTimeout() {
@@ -599,9 +599,9 @@ The default value is 45.
     }
 
     /**
-     * Set Specifies the liveness detection timeout period in seconds. value range: (0,600].
+     * Set Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
-     * @param LivenessTimeout Specifies the liveness detection timeout period in seconds. value range: (0,600].
+     * @param LivenessTimeout Specifies the liveness detection timeout period in seconds. Value range: (0,600].
 The default value is 45.
      */
     public void setLivenessTimeout(Long LivenessTimeout) {

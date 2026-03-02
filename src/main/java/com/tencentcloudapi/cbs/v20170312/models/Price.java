@@ -24,12 +24,12 @@ import java.util.HashMap;
 public class Price extends AbstractModel {
 
     /**
-    * Original price of a monthly-subscribed cloud disk, in USD.
+    * Discount unit price of a pay-as-you-go cloud disk, in USD.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("OriginalPrice")
+    @SerializedName("UnitPriceDiscount")
     @Expose
-    private Float OriginalPrice;
+    private Float UnitPriceDiscount;
 
     /**
     * Discounted price of a monthly-subscribed cloud disk, in USD.
@@ -48,20 +48,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Float UnitPrice;
 
     /**
-    * Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
-Note: This field may return null, indicating that no valid value was found.
-    */
-    @SerializedName("ChargeUnit")
-    @Expose
-    private String ChargeUnit;
-
-    /**
-    * Discount unit price of a pay-as-you-go cloud disk, in USD.
+    * Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
-    @SerializedName("UnitPriceDiscount")
+    @SerializedName("UnitPriceHigh")
     @Expose
-    private Float UnitPriceDiscount;
+    private String UnitPriceHigh;
 
     /**
     * Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
@@ -72,20 +64,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String OriginalPriceHigh;
 
     /**
+    * Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+    */
+    @SerializedName("OriginalPrice")
+    @Expose
+    private Float OriginalPrice;
+
+    /**
     * Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("DiscountPriceHigh")
     @Expose
     private String DiscountPriceHigh;
-
-    /**
-    * Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-    */
-    @SerializedName("UnitPriceHigh")
-    @Expose
-    private String UnitPriceHigh;
 
     /**
     * Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
@@ -96,23 +88,31 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String UnitPriceDiscountHigh;
 
     /**
-     * Get Original price of a monthly-subscribed cloud disk, in USD.
+    * Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ChargeUnit")
+    @Expose
+    private String ChargeUnit;
+
+    /**
+     * Get Discount unit price of a pay-as-you-go cloud disk, in USD.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return OriginalPrice Original price of a monthly-subscribed cloud disk, in USD.
+     * @return UnitPriceDiscount Discount unit price of a pay-as-you-go cloud disk, in USD.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public Float getOriginalPrice() {
-        return this.OriginalPrice;
+    public Float getUnitPriceDiscount() {
+        return this.UnitPriceDiscount;
     }
 
     /**
-     * Set Original price of a monthly-subscribed cloud disk, in USD.
+     * Set Discount unit price of a pay-as-you-go cloud disk, in USD.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OriginalPrice Original price of a monthly-subscribed cloud disk, in USD.
+     * @param UnitPriceDiscount Discount unit price of a pay-as-you-go cloud disk, in USD.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setOriginalPrice(Float OriginalPrice) {
-        this.OriginalPrice = OriginalPrice;
+    public void setUnitPriceDiscount(Float UnitPriceDiscount) {
+        this.UnitPriceDiscount = UnitPriceDiscount;
     }
 
     /**
@@ -156,43 +156,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return ChargeUnit Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
-Note: This field may return null, indicating that no valid value was found.
-     */
-    public String getChargeUnit() {
-        return this.ChargeUnit;
-    }
-
-    /**
-     * Set Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
-Note: This field may return null, indicating that no valid value was found.
-     * @param ChargeUnit Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
-Note: This field may return null, indicating that no valid value was found.
-     */
-    public void setChargeUnit(String ChargeUnit) {
-        this.ChargeUnit = ChargeUnit;
-    }
-
-    /**
-     * Get Discount unit price of a pay-as-you-go cloud disk, in USD.
+     * Get Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return UnitPriceDiscount Discount unit price of a pay-as-you-go cloud disk, in USD.
+     * @return UnitPriceHigh Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public Float getUnitPriceDiscount() {
-        return this.UnitPriceDiscount;
+    public String getUnitPriceHigh() {
+        return this.UnitPriceHigh;
     }
 
     /**
-     * Set Discount unit price of a pay-as-you-go cloud disk, in USD.
+     * Set Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param UnitPriceDiscount Discount unit price of a pay-as-you-go cloud disk, in USD.
+     * @param UnitPriceHigh Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setUnitPriceDiscount(Float UnitPriceDiscount) {
-        this.UnitPriceDiscount = UnitPriceDiscount;
+    public void setUnitPriceHigh(String UnitPriceHigh) {
+        this.UnitPriceHigh = UnitPriceHigh;
     }
 
     /**
@@ -216,6 +196,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * @return OriginalPrice Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public Float getOriginalPrice() {
+        return this.OriginalPrice;
+    }
+
+    /**
+     * Set Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OriginalPrice Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public void setOriginalPrice(Float OriginalPrice) {
+        this.OriginalPrice = OriginalPrice;
+    }
+
+    /**
      * Get Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained. 
      * @return DiscountPriceHigh Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
@@ -233,26 +233,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      */
     public void setDiscountPriceHigh(String DiscountPriceHigh) {
         this.DiscountPriceHigh = DiscountPriceHigh;
-    }
-
-    /**
-     * Get Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return UnitPriceHigh Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public String getUnitPriceHigh() {
-        return this.UnitPriceHigh;
-    }
-
-    /**
-     * Set Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param UnitPriceHigh Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public void setUnitPriceHigh(String UnitPriceHigh) {
-        this.UnitPriceHigh = UnitPriceHigh;
     }
 
     /**
@@ -275,6 +255,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.UnitPriceDiscountHigh = UnitPriceDiscountHigh;
     }
 
+    /**
+     * Get Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ChargeUnit Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getChargeUnit() {
+        return this.ChargeUnit;
+    }
+
+    /**
+     * Set Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ChargeUnit Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setChargeUnit(String ChargeUnit) {
+        this.ChargeUnit = ChargeUnit;
+    }
+
     public Price() {
     }
 
@@ -283,8 +283,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Price(Price source) {
-        if (source.OriginalPrice != null) {
-            this.OriginalPrice = new Float(source.OriginalPrice);
+        if (source.UnitPriceDiscount != null) {
+            this.UnitPriceDiscount = new Float(source.UnitPriceDiscount);
         }
         if (source.DiscountPrice != null) {
             this.DiscountPrice = new Float(source.DiscountPrice);
@@ -292,23 +292,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.UnitPrice != null) {
             this.UnitPrice = new Float(source.UnitPrice);
         }
-        if (source.ChargeUnit != null) {
-            this.ChargeUnit = new String(source.ChargeUnit);
-        }
-        if (source.UnitPriceDiscount != null) {
-            this.UnitPriceDiscount = new Float(source.UnitPriceDiscount);
+        if (source.UnitPriceHigh != null) {
+            this.UnitPriceHigh = new String(source.UnitPriceHigh);
         }
         if (source.OriginalPriceHigh != null) {
             this.OriginalPriceHigh = new String(source.OriginalPriceHigh);
         }
+        if (source.OriginalPrice != null) {
+            this.OriginalPrice = new Float(source.OriginalPrice);
+        }
         if (source.DiscountPriceHigh != null) {
             this.DiscountPriceHigh = new String(source.DiscountPriceHigh);
         }
-        if (source.UnitPriceHigh != null) {
-            this.UnitPriceHigh = new String(source.UnitPriceHigh);
-        }
         if (source.UnitPriceDiscountHigh != null) {
             this.UnitPriceDiscountHigh = new String(source.UnitPriceDiscountHigh);
+        }
+        if (source.ChargeUnit != null) {
+            this.ChargeUnit = new String(source.ChargeUnit);
         }
     }
 
@@ -317,15 +317,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+        this.setParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
         this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
         this.setParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
-        this.setParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
-        this.setParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
-        this.setParamSimple(map, prefix + "OriginalPriceHigh", this.OriginalPriceHigh);
-        this.setParamSimple(map, prefix + "DiscountPriceHigh", this.DiscountPriceHigh);
         this.setParamSimple(map, prefix + "UnitPriceHigh", this.UnitPriceHigh);
+        this.setParamSimple(map, prefix + "OriginalPriceHigh", this.OriginalPriceHigh);
+        this.setParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+        this.setParamSimple(map, prefix + "DiscountPriceHigh", this.DiscountPriceHigh);
         this.setParamSimple(map, prefix + "UnitPriceDiscountHigh", this.UnitPriceDiscountHigh);
+        this.setParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
 
     }
 }

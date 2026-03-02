@@ -24,49 +24,51 @@ import java.util.HashMap;
 public class InquiryPriceCreateDisksRequest extends AbstractModel {
 
     /**
-    * Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+    * Cloud disk billing mode. <br>
+<li>PREPAID: Prepaid by month.</li>
+<li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.</li>
     */
     @SerializedName("DiskChargeType")
     @Expose
     private String DiskChargeType;
 
     /**
-    * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
+    * Hard disk media type. valid values: <ul> <li>CLOUD_PREMIUM: high-performance CLOUD block storage</li> <li>CLOUD_SSD: SSD CLOUD disk</li> <li>CLOUD_HSSD: enhanced SSD CLOUD disk</li> <li>CLOUD_TSSD: ultra-fast SSD cbs</li> </ul>.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+    * Specifies the disk capacity in GiB. for the cloud disk size range, please refer to the product type of cloud block storage (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * ID of the project to which the cloud disk belongs.
+    * cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1). default to the default project.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+    * Specifies the number of cloud block storage (cbs) disks to purchase. defaults to 1 if left blank.
     */
     @SerializedName("DiskCount")
     @Expose
     private Long DiskCount;
 
     /**
-    * Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
+    * Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
     */
     @SerializedName("ThroughputPerformance")
     @Expose
     private Long ThroughputPerformance;
 
     /**
-    * Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
+    * Prepaid mode, that is, the settings for the monthly subscription-related parameters. through this parameter, you can specify the purchase duration of the monthly subscribed cloud disk, whether to enable auto-renewal, and other attributes. this parameter is required for creating a prepaid cloud disk, but no need to specify it when creating an hourly postpaid cloud disk.
     */
     @SerializedName("DiskChargePrepaid")
     @Expose
@@ -80,112 +82,120 @@ public class InquiryPriceCreateDisksRequest extends AbstractModel {
     private Long DiskBackupQuota;
 
     /**
-     * Get Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go. 
-     * @return DiskChargeType Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+     * Get Cloud disk billing mode. <br>
+<li>PREPAID: Prepaid by month.</li>
+<li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.</li> 
+     * @return DiskChargeType Cloud disk billing mode. <br>
+<li>PREPAID: Prepaid by month.</li>
+<li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.</li>
      */
     public String getDiskChargeType() {
         return this.DiskChargeType;
     }
 
     /**
-     * Set Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
-     * @param DiskChargeType Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+     * Set Cloud disk billing mode. <br>
+<li>PREPAID: Prepaid by month.</li>
+<li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.</li>
+     * @param DiskChargeType Cloud disk billing mode. <br>
+<li>PREPAID: Prepaid by month.</li>
+<li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.</li>
      */
     public void setDiskChargeType(String DiskChargeType) {
         this.DiskChargeType = DiskChargeType;
     }
 
     /**
-     * Get Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD. 
-     * @return DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
+     * Get Hard disk media type. valid values: <ul> <li>CLOUD_PREMIUM: high-performance CLOUD block storage</li> <li>CLOUD_SSD: SSD CLOUD disk</li> <li>CLOUD_HSSD: enhanced SSD CLOUD disk</li> <li>CLOUD_TSSD: ultra-fast SSD cbs</li> </ul>. 
+     * @return DiskType Hard disk media type. valid values: <ul> <li>CLOUD_PREMIUM: high-performance CLOUD block storage</li> <li>CLOUD_SSD: SSD CLOUD disk</li> <li>CLOUD_HSSD: enhanced SSD CLOUD disk</li> <li>CLOUD_TSSD: ultra-fast SSD cbs</li> </ul>.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
-     * @param DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
+     * Set Hard disk media type. valid values: <ul> <li>CLOUD_PREMIUM: high-performance CLOUD block storage</li> <li>CLOUD_SSD: SSD CLOUD disk</li> <li>CLOUD_HSSD: enhanced SSD CLOUD disk</li> <li>CLOUD_TSSD: ultra-fast SSD cbs</li> </ul>.
+     * @param DiskType Hard disk media type. valid values: <ul> <li>CLOUD_PREMIUM: high-performance CLOUD block storage</li> <li>CLOUD_SSD: SSD CLOUD disk</li> <li>CLOUD_HSSD: enhanced SSD CLOUD disk</li> <li>CLOUD_TSSD: ultra-fast SSD cbs</li> </ul>.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). 
-     * @return DiskSize Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+     * Get Specifies the disk capacity in GiB. for the cloud disk size range, please refer to the product type of cloud block storage (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1). 
+     * @return DiskSize Specifies the disk capacity in GiB. for the cloud disk size range, please refer to the product type of cloud block storage (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
-     * @param DiskSize Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+     * Set Specifies the disk capacity in GiB. for the cloud disk size range, please refer to the product type of cloud block storage (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
+     * @param DiskSize Specifies the disk capacity in GiB. for the cloud disk size range, please refer to the product type of cloud block storage (https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1).
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get ID of the project to which the cloud disk belongs. 
-     * @return ProjectId ID of the project to which the cloud disk belongs.
+     * Get cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1). default to the default project. 
+     * @return ProjectId cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1). default to the default project.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set ID of the project to which the cloud disk belongs.
-     * @param ProjectId ID of the project to which the cloud disk belongs.
+     * Set cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1). default to the default project.
+     * @param ProjectId cloud disk project ID. obtain this parameter by calling the projectId field in the return value of [DescribeProject](https://www.tencentcloud.comom/document/api/651/78725?from_cn_redirect=1). default to the default project.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Number of cloud disks to be purchased. If it is not specified, `1` will be used by default. 
-     * @return DiskCount Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+     * Get Specifies the number of cloud block storage (cbs) disks to purchase. defaults to 1 if left blank. 
+     * @return DiskCount Specifies the number of cloud block storage (cbs) disks to purchase. defaults to 1 if left blank.
      */
     public Long getDiskCount() {
         return this.DiskCount;
     }
 
     /**
-     * Set Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
-     * @param DiskCount Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+     * Set Specifies the number of cloud block storage (cbs) disks to purchase. defaults to 1 if left blank.
+     * @param DiskCount Specifies the number of cloud block storage (cbs) disks to purchase. defaults to 1 if left blank.
      */
     public void setDiskCount(Long DiskCount) {
         this.DiskCount = DiskCount;
     }
 
     /**
-     * Get Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD). 
-     * @return ThroughputPerformance Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
+     * Get Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size. 
+     * @return ThroughputPerformance Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
      */
     public Long getThroughputPerformance() {
         return this.ThroughputPerformance;
     }
 
     /**
-     * Set Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
-     * @param ThroughputPerformance Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
+     * Set Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+     * @param ThroughputPerformance Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
      */
     public void setThroughputPerformance(Long ThroughputPerformance) {
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
     /**
-     * Get Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
-     * @return DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
+     * Get Prepaid mode, that is, the settings for the monthly subscription-related parameters. through this parameter, you can specify the purchase duration of the monthly subscribed cloud disk, whether to enable auto-renewal, and other attributes. this parameter is required for creating a prepaid cloud disk, but no need to specify it when creating an hourly postpaid cloud disk. 
+     * @return DiskChargePrepaid Prepaid mode, that is, the settings for the monthly subscription-related parameters. through this parameter, you can specify the purchase duration of the monthly subscribed cloud disk, whether to enable auto-renewal, and other attributes. this parameter is required for creating a prepaid cloud disk, but no need to specify it when creating an hourly postpaid cloud disk.
      */
     public DiskChargePrepaid getDiskChargePrepaid() {
         return this.DiskChargePrepaid;
     }
 
     /**
-     * Set Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
-     * @param DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
+     * Set Prepaid mode, that is, the settings for the monthly subscription-related parameters. through this parameter, you can specify the purchase duration of the monthly subscribed cloud disk, whether to enable auto-renewal, and other attributes. this parameter is required for creating a prepaid cloud disk, but no need to specify it when creating an hourly postpaid cloud disk.
+     * @param DiskChargePrepaid Prepaid mode, that is, the settings for the monthly subscription-related parameters. through this parameter, you can specify the purchase duration of the monthly subscribed cloud disk, whether to enable auto-renewal, and other attributes. this parameter is required for creating a prepaid cloud disk, but no need to specify it when creating an hourly postpaid cloud disk.
      */
     public void setDiskChargePrepaid(DiskChargePrepaid DiskChargePrepaid) {
         this.DiskChargePrepaid = DiskChargePrepaid;

@@ -31,7 +31,7 @@ public class Encryption extends AbstractModel {
     private String [] EncryptList;
 
     /**
-    * Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://cloud.tencent.com/document/product/1007/47180">Data Encryption</a> document.
+    * Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://www.tencentcloud.com/document/product/1061/77849?lang=en&pg=">Data Encryption</a> document.
     */
     @SerializedName("CiphertextBlob")
     @Expose
@@ -75,16 +75,16 @@ public class Encryption extends AbstractModel {
     }
 
     /**
-     * Get Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://cloud.tencent.com/document/product/1007/47180">Data Encryption</a> document. 
-     * @return CiphertextBlob Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://cloud.tencent.com/document/product/1007/47180">Data Encryption</a> document.
+     * Get Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://www.tencentcloud.com/document/product/1061/77849?lang=en&pg=">Data Encryption</a> document. 
+     * @return CiphertextBlob Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://www.tencentcloud.com/document/product/1061/77849?lang=en&pg=">Data Encryption</a> document.
      */
     public String getCiphertextBlob() {
         return this.CiphertextBlob;
     }
 
     /**
-     * Set Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://cloud.tencent.com/document/product/1007/47180">Data Encryption</a> document.
-     * @param CiphertextBlob Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://cloud.tencent.com/document/product/1007/47180">Data Encryption</a> document.
+     * Set Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://www.tencentcloud.com/document/product/1061/77849?lang=en&pg=">Data Encryption</a> document.
+     * @param CiphertextBlob Symmetric key after encryption. For the generation and usage of the key, please refer to the <a href="https://www.tencentcloud.com/document/product/1061/77849?lang=en&pg=">Data Encryption</a> document.
      */
     public void setCiphertextBlob(String CiphertextBlob) {
         this.CiphertextBlob = CiphertextBlob;
