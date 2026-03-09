@@ -42,14 +42,26 @@ public class InstanceNameSettings extends AbstractModel {
     private String InstanceNameStyle;
 
     /**
-    * CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
-
-Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+    * CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceNameSuffix")
     @Expose
     private String InstanceNameSuffix;
+
+    /**
+    * Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
+- dot (.)
+-  hyphen (-)
+- empty string.
+Delimiter used for concatenating instance name, index, and suffix. Assuming instance name is testGpu4090, index is 0007, and suffix is server.
+-The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+-Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+-Delimiter is an empty string, finally concatenated as testGpu4090007server.
+    */
+    @SerializedName("InstanceNameDelimiter")
+    @Expose
+    private String InstanceNameDelimiter;
 
     /**
      * Get CVM instance name. Value range: 2-108. 
@@ -100,13 +112,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
-
-Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+     * Get CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceNameSuffix CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
-
-Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+     * @return InstanceNameSuffix CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceNameSuffix() {
@@ -114,17 +122,57 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
-
-Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+     * Set CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceNameSuffix CVM instance name suffix. The length of the character is within the range of [1, 105], and the combined length with InstanceName should not exceed 107.
-
-Assume the suffix name is suffix and the original instance name is test.0, then the final instance name is test.0.suffix.
+     * @param InstanceNameSuffix CVM instance name suffix. The suffix for a CVM instance name must be 1 to 105 characters in length. Additionally, the combined character count of the base instance name and the suffix must not exceed 107 characters.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceNameSuffix(String InstanceNameSuffix) {
         this.InstanceNameSuffix = InstanceNameSuffix;
+    }
+
+    /**
+     * Get Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
+- dot (.)
+-  hyphen (-)
+- empty string.
+Delimiter used for concatenating instance name, index, and suffix. Assuming instance name is testGpu4090, index is 0007, and suffix is server.
+-The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+-Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+-Delimiter is an empty string, finally concatenated as testGpu4090007server. 
+     * @return InstanceNameDelimiter Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
+- dot (.)
+-  hyphen (-)
+- empty string.
+Delimiter used for concatenating instance name, index, and suffix. Assuming instance name is testGpu4090, index is 0007, and suffix is server.
+-The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+-Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+-Delimiter is an empty string, finally concatenated as testGpu4090007server.
+     */
+    public String getInstanceNameDelimiter() {
+        return this.InstanceNameDelimiter;
+    }
+
+    /**
+     * Set Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
+- dot (.)
+-  hyphen (-)
+- empty string.
+Delimiter used for concatenating instance name, index, and suffix. Assuming instance name is testGpu4090, index is 0007, and suffix is server.
+-The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+-Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+-Delimiter is an empty string, finally concatenated as testGpu4090007server.
+     * @param InstanceNameDelimiter Specifies the delimiter for the CVM instance name. The default delimiter is a dot (.). Valid values: 
+- dot (.)
+-  hyphen (-)
+- empty string.
+Delimiter used for concatenating instance name, index, and suffix. Assuming instance name is testGpu4090, index is 0007, and suffix is server.
+-The delimiter is a period (.), and the final concatenation is testGpu4090.007.server.
+-Specifies the delimiter as a hyphen (-), with the final concatenation as testGpu4090-007-server.
+-Delimiter is an empty string, finally concatenated as testGpu4090007server.
+     */
+    public void setInstanceNameDelimiter(String InstanceNameDelimiter) {
+        this.InstanceNameDelimiter = InstanceNameDelimiter;
     }
 
     public InstanceNameSettings() {
@@ -144,6 +192,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.InstanceNameSuffix != null) {
             this.InstanceNameSuffix = new String(source.InstanceNameSuffix);
         }
+        if (source.InstanceNameDelimiter != null) {
+            this.InstanceNameDelimiter = new String(source.InstanceNameDelimiter);
+        }
     }
 
 
@@ -154,6 +205,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
         this.setParamSimple(map, prefix + "InstanceNameStyle", this.InstanceNameStyle);
         this.setParamSimple(map, prefix + "InstanceNameSuffix", this.InstanceNameSuffix);
+        this.setParamSimple(map, prefix + "InstanceNameDelimiter", this.InstanceNameDelimiter);
 
     }
 }
