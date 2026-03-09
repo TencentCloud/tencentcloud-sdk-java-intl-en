@@ -39,10 +39,10 @@ public class TatClient extends AbstractClient{
     }
 
     /**
-     *This API is used to cancel the command executed on one or more CVM instances.
+     *Cancel the executed command on one or multiple instances.
 
-* If the command has not been delivered to the TAT agent, the task status is `PENDING`, `DELIVERING`, or `DELIVER_DELAYED`, and will be `CANCELLED` after the command is canceled.
-* If the command has been delivered to the TAT agent, the task status is `RUNNING`, and will be `TERMINATED` after the command is canceled.
+* If the command is not delivered to the agent and the task status is in PENDING, DELIVERING, or DELIVER_DELAYED, the state of a task is CANCELLED after cancellation.
+* If the command is sent to the agent and the task status is RUNNING, the task status is TERMINATED after cancellation.
      * @param req CancelInvocationRequest
      * @return CancelInvocationResponse
      * @throws TencentCloudSDKException
@@ -75,6 +75,17 @@ public class TatClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a registration code.
+     * @param req CreateRegisterCodeRequest
+     * @return CreateRegisterCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRegisterCodeResponse CreateRegisterCode(CreateRegisterCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRegisterCode", CreateRegisterCodeResponse.class);
+    }
+
+    /**
      *This API is used to delete a command.
 Commands bound to an invoker cannot be deleted.
      * @param req DeleteCommandRequest
@@ -87,6 +98,17 @@ Commands bound to an invoker cannot be deleted.
     }
 
     /**
+     *This API is used to execute batch deletion commands.
+     * @param req DeleteCommandsRequest
+     * @return DeleteCommandsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCommandsResponse DeleteCommands(DeleteCommandsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCommands", DeleteCommandsResponse.class);
+    }
+
+    /**
      *This API is used to delete an invoker.
      * @param req DeleteInvokerRequest
      * @return DeleteInvokerResponse
@@ -95,6 +117,28 @@ Commands bound to an invoker cannot be deleted.
     public DeleteInvokerResponse DeleteInvoker(DeleteInvokerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteInvoker", DeleteInvokerResponse.class);
+    }
+
+    /**
+     *This API is used to delete registration codes in batches.
+     * @param req DeleteRegisterCodesRequest
+     * @return DeleteRegisterCodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRegisterCodesResponse DeleteRegisterCodes(DeleteRegisterCodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRegisterCodes", DeleteRegisterCodesResponse.class);
+    }
+
+    /**
+     *This API is used to delete managed instances.
+     * @param req DeleteRegisterInstanceRequest
+     * @return DeleteRegisterInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteRegisterInstanceResponse DeleteRegisterInstance(DeleteRegisterInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteRegisterInstance", DeleteRegisterInstanceResponse.class);
     }
 
     /**
@@ -164,6 +208,17 @@ Commands bound to an invoker cannot be deleted.
     }
 
     /**
+     *This API is used to obtain quota information.
+     * @param req DescribeQuotasRequest
+     * @return DescribeQuotasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeQuotasResponse DescribeQuotas(DescribeQuotasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeQuotas", DescribeQuotasResponse.class);
+    }
+
+    /**
      *This API is used to query the list of regions that supports TAT.
 If the `RegionState` is `AVAILABLE`, it means that TAT is available in the region. If no value is returned, TAT is not available in the region.
      * @param req DescribeRegionsRequest
@@ -176,6 +231,39 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
     }
 
     /**
+     *This API is used to query registration code info.
+     * @param req DescribeRegisterCodesRequest
+     * @return DescribeRegisterCodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegisterCodesResponse DescribeRegisterCodes(DescribeRegisterCodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRegisterCodes", DescribeRegisterCodesResponse.class);
+    }
+
+    /**
+     *This API is used to query managed instance information.
+     * @param req DescribeRegisterInstancesRequest
+     * @return DescribeRegisterInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRegisterInstancesResponse DescribeRegisterInstances(DescribeRegisterInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRegisterInstances", DescribeRegisterInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to query scenario details.
+     * @param req DescribeScenesRequest
+     * @return DescribeScenesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScenesResponse DescribeScenes(DescribeScenesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScenes", DescribeScenesResponse.class);
+    }
+
+    /**
      *This API is used to disable an invoker.
      * @param req DisableInvokerRequest
      * @return DisableInvokerResponse
@@ -184,6 +272,17 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
     public DisableInvokerResponse DisableInvoker(DisableInvokerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DisableInvoker", DisableInvokerResponse.class);
+    }
+
+    /**
+     *This API is used to bulk disable registration codes.
+     * @param req DisableRegisterCodesRequest
+     * @return DisableRegisterCodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableRegisterCodesResponse DisableRegisterCodes(DisableRegisterCodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableRegisterCodes", DisableRegisterCodesResponse.class);
     }
 
     /**
@@ -234,6 +333,17 @@ If the `RegionState` is `AVAILABLE`, it means that TAT is available in the regio
     public ModifyInvokerResponse ModifyInvoker(ModifyInvokerRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInvoker", ModifyInvokerResponse.class);
+    }
+
+    /**
+     *This API is used to modify managed instance information.
+     * @param req ModifyRegisterInstanceRequest
+     * @return ModifyRegisterInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyRegisterInstanceResponse ModifyRegisterInstance(ModifyRegisterInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyRegisterInstance", ModifyRegisterInstanceResponse.class);
     }
 
     /**

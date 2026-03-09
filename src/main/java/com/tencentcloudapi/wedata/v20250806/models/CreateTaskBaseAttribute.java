@@ -88,6 +88,18 @@ public class CreateTaskBaseAttribute extends AbstractModel {
     private String TaskDescription;
 
     /**
+    * Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" classification, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
+
+    */
+    @SerializedName("TaskFolderPath")
+    @Expose
+    private String TaskFolderPath;
+
+    /**
      * Get Task name. 
      * @return TaskName Task name.
      */
@@ -283,6 +295,42 @@ public class CreateTaskBaseAttribute extends AbstractModel {
         this.TaskDescription = TaskDescription;
     }
 
+    /**
+     * Get Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" classification, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
+ 
+     * @return TaskFolderPath Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" classification, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
+
+     */
+    public String getTaskFolderPath() {
+        return this.TaskFolderPath;
+    }
+
+    /**
+     * Set Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" classification, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
+
+     * @param TaskFolderPath Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" classification, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for the operation to succeed.
+
+     */
+    public void setTaskFolderPath(String TaskFolderPath) {
+        this.TaskFolderPath = TaskFolderPath;
+    }
+
     public CreateTaskBaseAttribute() {
     }
 
@@ -306,6 +354,9 @@ public class CreateTaskBaseAttribute extends AbstractModel {
         if (source.TaskDescription != null) {
             this.TaskDescription = new String(source.TaskDescription);
         }
+        if (source.TaskFolderPath != null) {
+            this.TaskFolderPath = new String(source.TaskFolderPath);
+        }
     }
 
 
@@ -318,6 +369,7 @@ public class CreateTaskBaseAttribute extends AbstractModel {
         this.setParamSimple(map, prefix + "WorkflowId", this.WorkflowId);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "TaskDescription", this.TaskDescription);
+        this.setParamSimple(map, prefix + "TaskFolderPath", this.TaskFolderPath);
 
     }
 }

@@ -31,16 +31,18 @@ public class DescribeCommandsRequest extends AbstractModel {
     private String [] CommandIds;
 
     /**
-    * Filter conditions.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `command-name` - String - Required: No - (Filter condition) Filter by the command name.
-<li> `command-type` - String - Required: No - (Filter condition) Filter by the command type. Valid values: `SHELL` or `POWERSHELL`.
-<li> `created-by` - String - Required: No - (Filter condition) Filter by the creator. Valid values: `TAT` (public commands) or `USER` (custom commands).
-<li> `tag-key` - String - Required: No - (Filter condition) Filter by the tag key.</li>
-<li> `tag-value` - String - Required: No - (Filter condition) Filter by the tag value.</li>
-<li> `tag:tag-key` - String - Required: No - (Filter) Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key. For detailed usage, see sample 4.</li>
+    * Filter criteria
 
-Up to 10 `Filters` are allowed in one request. Each filter can have up to 5 `Filter.Values`. `CommandIds` and `Filters` cannot be specified at the same time.
+- command-id - String - required: no - (filter condition) filter by the command id.
+- command-name - String - required: no - (filter condition) filter by the command name.
+-command-type - String - required: no - (filtering conditions) filters by command type. valid values: SHELL, POWERSHELL, BAT.
+-scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.comom/document/api/1340/109968?from_cn_redirect=1) api.
+-created-by - String - required: no - (filter condition) filter by command creator, value is TAT or USER. TAT represents public command, USER represents USER created command.
+- tag-key - String - required: no - (filter condition) filter by the tag key.
+- tag-value - String - required: no - (filter condition) filter by the tag value.
+- tag:tag-key - String - required: no - (filter condition) filter by the tag-key - value pair. replace tag-key with a specific tag key. for usage, see example 4.
+
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `CommandIds` and `Filters` parameters cannot be specified at the same time.
     */
     @SerializedName("Filters")
     @Expose
@@ -77,52 +79,60 @@ Up to 10 `Filters` are allowed in one request. Each filter can have up to 5 `Fil
     }
 
     /**
-     * Get Filter conditions.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `command-name` - String - Required: No - (Filter condition) Filter by the command name.
-<li> `command-type` - String - Required: No - (Filter condition) Filter by the command type. Valid values: `SHELL` or `POWERSHELL`.
-<li> `created-by` - String - Required: No - (Filter condition) Filter by the creator. Valid values: `TAT` (public commands) or `USER` (custom commands).
-<li> `tag-key` - String - Required: No - (Filter condition) Filter by the tag key.</li>
-<li> `tag-value` - String - Required: No - (Filter condition) Filter by the tag value.</li>
-<li> `tag:tag-key` - String - Required: No - (Filter) Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key. For detailed usage, see sample 4.</li>
+     * Get Filter criteria
 
-Up to 10 `Filters` are allowed in one request. Each filter can have up to 5 `Filter.Values`. `CommandIds` and `Filters` cannot be specified at the same time. 
-     * @return Filters Filter conditions.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `command-name` - String - Required: No - (Filter condition) Filter by the command name.
-<li> `command-type` - String - Required: No - (Filter condition) Filter by the command type. Valid values: `SHELL` or `POWERSHELL`.
-<li> `created-by` - String - Required: No - (Filter condition) Filter by the creator. Valid values: `TAT` (public commands) or `USER` (custom commands).
-<li> `tag-key` - String - Required: No - (Filter condition) Filter by the tag key.</li>
-<li> `tag-value` - String - Required: No - (Filter condition) Filter by the tag value.</li>
-<li> `tag:tag-key` - String - Required: No - (Filter) Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key. For detailed usage, see sample 4.</li>
+- command-id - String - required: no - (filter condition) filter by the command id.
+- command-name - String - required: no - (filter condition) filter by the command name.
+-command-type - String - required: no - (filtering conditions) filters by command type. valid values: SHELL, POWERSHELL, BAT.
+-scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.comom/document/api/1340/109968?from_cn_redirect=1) api.
+-created-by - String - required: no - (filter condition) filter by command creator, value is TAT or USER. TAT represents public command, USER represents USER created command.
+- tag-key - String - required: no - (filter condition) filter by the tag key.
+- tag-value - String - required: no - (filter condition) filter by the tag value.
+- tag:tag-key - String - required: no - (filter condition) filter by the tag-key - value pair. replace tag-key with a specific tag key. for usage, see example 4.
 
-Up to 10 `Filters` are allowed in one request. Each filter can have up to 5 `Filter.Values`. `CommandIds` and `Filters` cannot be specified at the same time.
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `CommandIds` and `Filters` parameters cannot be specified at the same time. 
+     * @return Filters Filter criteria
+
+- command-id - String - required: no - (filter condition) filter by the command id.
+- command-name - String - required: no - (filter condition) filter by the command name.
+-command-type - String - required: no - (filtering conditions) filters by command type. valid values: SHELL, POWERSHELL, BAT.
+-scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.comom/document/api/1340/109968?from_cn_redirect=1) api.
+-created-by - String - required: no - (filter condition) filter by command creator, value is TAT or USER. TAT represents public command, USER represents USER created command.
+- tag-key - String - required: no - (filter condition) filter by the tag key.
+- tag-value - String - required: no - (filter condition) filter by the tag value.
+- tag:tag-key - String - required: no - (filter condition) filter by the tag-key - value pair. replace tag-key with a specific tag key. for usage, see example 4.
+
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `CommandIds` and `Filters` parameters cannot be specified at the same time.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter conditions.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `command-name` - String - Required: No - (Filter condition) Filter by the command name.
-<li> `command-type` - String - Required: No - (Filter condition) Filter by the command type. Valid values: `SHELL` or `POWERSHELL`.
-<li> `created-by` - String - Required: No - (Filter condition) Filter by the creator. Valid values: `TAT` (public commands) or `USER` (custom commands).
-<li> `tag-key` - String - Required: No - (Filter condition) Filter by the tag key.</li>
-<li> `tag-value` - String - Required: No - (Filter condition) Filter by the tag value.</li>
-<li> `tag:tag-key` - String - Required: No - (Filter) Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key. For detailed usage, see sample 4.</li>
+     * Set Filter criteria
 
-Up to 10 `Filters` are allowed in one request. Each filter can have up to 5 `Filter.Values`. `CommandIds` and `Filters` cannot be specified at the same time.
-     * @param Filters Filter conditions.
-<li> `command-id` - String - Required: No - (Filter condition) Filter by the command ID.
-<li> `command-name` - String - Required: No - (Filter condition) Filter by the command name.
-<li> `command-type` - String - Required: No - (Filter condition) Filter by the command type. Valid values: `SHELL` or `POWERSHELL`.
-<li> `created-by` - String - Required: No - (Filter condition) Filter by the creator. Valid values: `TAT` (public commands) or `USER` (custom commands).
-<li> `tag-key` - String - Required: No - (Filter condition) Filter by the tag key.</li>
-<li> `tag-value` - String - Required: No - (Filter condition) Filter by the tag value.</li>
-<li> `tag:tag-key` - String - Required: No - (Filter) Filter by the tag key-value pair. The tag-key should be replaced with a specified tag key. For detailed usage, see sample 4.</li>
+- command-id - String - required: no - (filter condition) filter by the command id.
+- command-name - String - required: no - (filter condition) filter by the command name.
+-command-type - String - required: no - (filtering conditions) filters by command type. valid values: SHELL, POWERSHELL, BAT.
+-scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.comom/document/api/1340/109968?from_cn_redirect=1) api.
+-created-by - String - required: no - (filter condition) filter by command creator, value is TAT or USER. TAT represents public command, USER represents USER created command.
+- tag-key - String - required: no - (filter condition) filter by the tag key.
+- tag-value - String - required: no - (filter condition) filter by the tag value.
+- tag:tag-key - String - required: no - (filter condition) filter by the tag-key - value pair. replace tag-key with a specific tag key. for usage, see example 4.
 
-Up to 10 `Filters` are allowed in one request. Each filter can have up to 5 `Filter.Values`. `CommandIds` and `Filters` cannot be specified at the same time.
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `CommandIds` and `Filters` parameters cannot be specified at the same time.
+     * @param Filters Filter criteria
+
+- command-id - String - required: no - (filter condition) filter by the command id.
+- command-name - String - required: no - (filter condition) filter by the command name.
+-command-type - String - required: no - (filtering conditions) filters by command type. valid values: SHELL, POWERSHELL, BAT.
+-scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.comom/document/api/1340/109968?from_cn_redirect=1) api.
+-created-by - String - required: no - (filter condition) filter by command creator, value is TAT or USER. TAT represents public command, USER represents USER created command.
+- tag-key - String - required: no - (filter condition) filter by the tag key.
+- tag-value - String - required: no - (filter condition) filter by the tag value.
+- tag:tag-key - String - required: no - (filter condition) filter by the tag-key - value pair. replace tag-key with a specific tag key. for usage, see example 4.
+
+The maximum number of `Filters` per request is 10, and that of `Filter.Values` is 5. the `CommandIds` and `Filters` parameters cannot be specified at the same time.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

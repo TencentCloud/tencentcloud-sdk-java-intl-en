@@ -159,14 +159,8 @@ public enum FaceidErrorCode {
      /* The video is too short. Please capture a video longer than 2 seconds. */
      FAILEDOPERATION_SILENTTOOSHORT("FailedOperation.SilentTooShort"),
      
-     /* Unknown error. */
-     FAILEDOPERATION_UNKNOWERROR("FailedOperation.UnKnowError"),
-     
      /* Unknown internal error. */
      FAILEDOPERATION_UNKNOWN("FailedOperation.UnKnown"),
-     
-     /* The service is not activated. */
-     FAILEDOPERATION_UNOPENERROR("FailedOperation.UnOpenError"),
      
      /* Video decoding abnormality */
      FAILEDOPERATION_VIDEODECODEFAILED("FailedOperation.VideoDecodeFailed"),
@@ -201,9 +195,6 @@ public enum FaceidErrorCode {
      /* Invalid parameter. */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* Image decoding failed. */
-     INVALIDPARAMETER_ENGINEIMAGEDECODEFAILED("InvalidParameter.EngineImageDecodeFailed"),
-     
      /* Incorrect parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
@@ -213,29 +204,11 @@ public enum FaceidErrorCode {
      /* Invalid BizToken. */
      INVALIDPARAMETERVALUE_BIZTOKENILLEGAL("InvalidParameterValue.BizTokenIllegal"),
      
-     /* The image file content size is abnormal. */
-     INVALIDPARAMETERVALUE_INVALIDFILECONTENTSIZE("InvalidParameterValue.InvalidFileContentSize"),
-     
-     /* Parameter value is wrong. */
-     INVALIDPARAMETERVALUE_INVALIDPARAMETERVALUELIMIT("InvalidParameterValue.InvalidParameterValueLimit"),
-     
      /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
      /*  */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
-     
-     /* The resource is unavailable. */
-     RESOURCEUNAVAILABLE("ResourceUnavailable"),
-     
-     /* Image file download failed. */
-     RESOURCEUNAVAILABLE_IMAGEDOWNLOADERROR("ResourceUnavailable.ImageDownloadError"),
-     
-     /* The account is in arrears. */
-     RESOURCEUNAVAILABLE_INARREARS("ResourceUnavailable.InArrears"),
-     
-     /* The account has exhausted the resource package for this service. */
-     RESOURCEUNAVAILABLE_RESOURCEPACKAGERUNOUT("ResourceUnavailable.ResourcePackageRunOut"),
      
      /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),

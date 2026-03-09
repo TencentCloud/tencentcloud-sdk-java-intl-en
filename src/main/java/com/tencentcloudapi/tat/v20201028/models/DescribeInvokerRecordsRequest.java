@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class DescribeInvokerRecordsRequest extends AbstractModel {
 
     /**
-    * List of invoker IDs. Up to 100 IDs are allowed.
+    * Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
     */
     @SerializedName("InvokerIds")
     @Expose
@@ -45,16 +47,24 @@ public class DescribeInvokerRecordsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-     * Get List of invoker IDs. Up to 100 IDs are allowed. 
-     * @return InvokerIds List of invoker IDs. Up to 100 IDs are allowed.
+     * Get Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution. 
+     * @return InvokerIds Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public String [] getInvokerIds() {
         return this.InvokerIds;
     }
 
     /**
-     * Set List of invoker IDs. Up to 100 IDs are allowed.
-     * @param InvokerIds List of invoker IDs. Up to 100 IDs are allowed.
+     * Set Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+     * @param InvokerIds Executor ID list. the list has a cap of 100.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public void setInvokerIds(String [] InvokerIds) {
         this.InvokerIds = InvokerIds;

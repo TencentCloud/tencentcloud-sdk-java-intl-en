@@ -24,25 +24,31 @@ import java.util.HashMap;
 public class InvokeCommandRequest extends AbstractModel {
 
     /**
-    * ID of the command to be triggered.
+    * Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
     */
     @SerializedName("CommandId")
     @Expose
     private String CommandId;
 
     /**
-    * IDs of instances about to execute commands. At most 100 IDs are allowed.
+    * Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+    * Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
     */
     @SerializedName("Parameters")
     @Expose
@@ -88,64 +94,88 @@ The principle of the least privilege is the best practice for permission managem
     private String OutputCOSKeyPrefix;
 
     /**
-     * Get ID of the command to be triggered. 
-     * @return CommandId ID of the command to be triggered.
+     * Get Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details. 
+     * @return CommandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public String getCommandId() {
         return this.CommandId;
     }
 
     /**
-     * Set ID of the command to be triggered.
-     * @param CommandId ID of the command to be triggered.
+     * Set Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+     * @param CommandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
     }
 
     /**
-     * Get IDs of instances about to execute commands. At most 100 IDs are allowed. 
-     * @return InstanceIds IDs of instances about to execute commands. At most 100 IDs are allowed.
+     * Get Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance. 
+     * @return InstanceIds Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set IDs of instances about to execute commands. At most 100 IDs are allowed.
-     * @param InstanceIds IDs of instances about to execute commands. At most 100 IDs are allowed.
+     * Set Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
+     * @param InstanceIds Instance ID list for the command to be executed, with a cap of 200.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+-TAT register instance.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_]. 
-     * @return Parameters Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+     * Get Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_]. 
+     * @return Parameters Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
      */
     public String getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-     * @param Parameters Custom parameters of the command. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided, the DefaultParameters of the command is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+     * Set Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+     * @param Parameters Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;

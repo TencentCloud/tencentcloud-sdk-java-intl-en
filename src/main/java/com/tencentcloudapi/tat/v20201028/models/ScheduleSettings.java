@@ -24,9 +24,10 @@ import java.util.HashMap;
 public class ScheduleSettings extends AbstractModel {
 
     /**
-    * Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
+    * Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
     */
     @SerializedName("Policy")
     @Expose
@@ -40,31 +41,37 @@ public class ScheduleSettings extends AbstractModel {
     private String Recurrence;
 
     /**
-    * The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+    * Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
     */
     @SerializedName("InvokeTime")
     @Expose
     private String InvokeTime;
 
     /**
-     * Get Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly 
-     * @return Policy Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
+     * Get Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically. 
+     * @return Policy Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
      */
     public String getPolicy() {
         return this.Policy;
     }
 
     /**
-     * Set Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
-     * @param Policy Execution policy:
-<br><li>`ONCE`: Execute once
-<br><li>`RECURRENCE`: Execute repeatedly
+     * Set Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
+     * @param Policy Execution policy.
+
+-ONCE: one-time execution.
+-RECURRENCE: execute periodically.
      */
     public void setPolicy(String Policy) {
         this.Policy = Policy;
@@ -87,16 +94,24 @@ public class ScheduleSettings extends AbstractModel {
     }
 
     /**
-     * Get The next execution time of the invoker. This field is required if `Policy` is `ONCE`. 
-     * @return InvokeTime The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+     * Get Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ. 
+     * @return InvokeTime Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
      */
     public String getInvokeTime() {
         return this.InvokeTime;
     }
 
     /**
-     * Set The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
-     * @param InvokeTime The next execution time of the invoker. This field is required if `Policy` is `ONCE`.
+     * Set Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
+     * @param InvokeTime Next execution time of the executor. this field requires specifying when Policy is ONCE.
+
+The time format is YYYY-MM-DDThh:MM:ssZ.
      */
     public void setInvokeTime(String InvokeTime) {
         this.InvokeTime = InvokeTime;

@@ -24,184 +24,264 @@ import java.util.HashMap;
 public class ModifyInvokerRequest extends AbstractModel {
 
     /**
-    * ID of the invoker to be modified.
+    * Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
     */
     @SerializedName("InvokerId")
     @Expose
     private String InvokerId;
 
     /**
-    * Name of the invoker to be modified.
+    * Executor name to be modified. length not exceeding 120 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Invoker type. It can only be `SCHEDULE` (recurring invokers).
+    * Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * ID of the command to be modified.
+    * Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
     */
     @SerializedName("CommandId")
     @Expose
     private String CommandId;
 
     /**
-    * The username to be modified.
+    * Username to be modified. length not exceeding 256 characters.
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * Custom parameters to be modified.
+    * Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
     */
     @SerializedName("Parameters")
     @Expose
     private String Parameters;
 
     /**
-    * List of instance IDs to be modified. Up to 100 IDs are allowed.
+    * List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * Scheduled invoker settings to be modified.
+    * Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
     */
     @SerializedName("ScheduleSettings")
     @Expose
     private ScheduleSettings ScheduleSettings;
 
     /**
-     * Get ID of the invoker to be modified. 
-     * @return InvokerId ID of the invoker to be modified.
+     * Get Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution. 
+     * @return InvokerId Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public String getInvokerId() {
         return this.InvokerId;
     }
 
     /**
-     * Set ID of the invoker to be modified.
-     * @param InvokerId ID of the invoker to be modified.
+     * Set Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+     * @param InvokerId Executor ID to be modified.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public void setInvokerId(String InvokerId) {
         this.InvokerId = InvokerId;
     }
 
     /**
-     * Get Name of the invoker to be modified. 
-     * @return Name Name of the invoker to be modified.
+     * Get Executor name to be modified. length not exceeding 120 characters. 
+     * @return Name Executor name to be modified. length not exceeding 120 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of the invoker to be modified.
-     * @param Name Name of the invoker to be modified.
+     * Set Executor name to be modified. length not exceeding 120 characters.
+     * @param Name Executor name to be modified. length not exceeding 120 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Invoker type. It can only be `SCHEDULE` (recurring invokers). 
-     * @return Type Invoker type. It can only be `SCHEDULE` (recurring invokers).
+     * Get Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor. 
+     * @return Type Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Invoker type. It can only be `SCHEDULE` (recurring invokers).
-     * @param Type Invoker type. It can only be `SCHEDULE` (recurring invokers).
+     * Set Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
+     * @param Type Executor type to be modified.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get ID of the command to be modified. 
-     * @return CommandId ID of the command to be modified.
+     * Get Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details. 
+     * @return CommandId Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public String getCommandId() {
         return this.CommandId;
     }
 
     /**
-     * Set ID of the command to be modified.
-     * @param CommandId ID of the command to be modified.
+     * Set Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+     * @param CommandId Command ID to be modified.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
     }
 
     /**
-     * Get The username to be modified. 
-     * @return Username The username to be modified.
+     * Get Username to be modified. length not exceeding 256 characters. 
+     * @return Username Username to be modified. length not exceeding 256 characters.
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set The username to be modified.
-     * @param Username The username to be modified.
+     * Set Username to be modified. length not exceeding 256 characters.
+     * @param Username Username to be modified. length not exceeding 256 characters.
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get Custom parameters to be modified. 
-     * @return Parameters Custom parameters to be modified.
+     * Get Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api. 
+     * @return Parameters Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
      */
     public String getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set Custom parameters to be modified.
-     * @param Parameters Custom parameters to be modified.
+     * Set Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+     * @param Parameters Custom parameters to be modified. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;
     }
 
     /**
-     * Get List of instance IDs to be modified. Up to 100 IDs are allowed. 
-     * @return InstanceIds List of instance IDs to be modified. Up to 100 IDs are allowed.
+     * Get List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api. 
+     * @return InstanceIds List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of instance IDs to be modified. Up to 100 IDs are allowed.
-     * @param InstanceIds List of instance IDs to be modified. Up to 100 IDs are allowed.
+     * Set List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
+     * @param InstanceIds List of instance ids to be modified. list length limit 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get Scheduled invoker settings to be modified. 
-     * @return ScheduleSettings Scheduled invoker settings to be modified.
+     * Get Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter. 
+     * @return ScheduleSettings Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
      */
     public ScheduleSettings getScheduleSettings() {
         return this.ScheduleSettings;
     }
 
     /**
-     * Set Scheduled invoker settings to be modified.
-     * @param ScheduleSettings Scheduled invoker settings to be modified.
+     * Set Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
+     * @param ScheduleSettings Recurring invoker settings to be modified.
+
+Change the executor type to `SCHEDULE` and specify this parameter.
      */
     public void setScheduleSettings(ScheduleSettings ScheduleSettings) {
         this.ScheduleSettings = ScheduleSettings;

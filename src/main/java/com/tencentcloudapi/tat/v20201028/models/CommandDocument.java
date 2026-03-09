@@ -31,14 +31,14 @@ public class CommandDocument extends AbstractModel {
     private String Content;
 
     /**
-    * Command type.
+    * Command type. value is one of SHELL, POWERSHELL, BAT.
     */
     @SerializedName("CommandType")
     @Expose
     private String CommandType;
 
     /**
-    * Timeout period.
+    * Timeout period. unit: seconds.
     */
     @SerializedName("Timeout")
     @Expose
@@ -89,32 +89,32 @@ public class CommandDocument extends AbstractModel {
     }
 
     /**
-     * Get Command type. 
-     * @return CommandType Command type.
+     * Get Command type. value is one of SHELL, POWERSHELL, BAT. 
+     * @return CommandType Command type. value is one of SHELL, POWERSHELL, BAT.
      */
     public String getCommandType() {
         return this.CommandType;
     }
 
     /**
-     * Set Command type.
-     * @param CommandType Command type.
+     * Set Command type. value is one of SHELL, POWERSHELL, BAT.
+     * @param CommandType Command type. value is one of SHELL, POWERSHELL, BAT.
      */
     public void setCommandType(String CommandType) {
         this.CommandType = CommandType;
     }
 
     /**
-     * Get Timeout period. 
-     * @return Timeout Timeout period.
+     * Get Timeout period. unit: seconds. 
+     * @return Timeout Timeout period. unit: seconds.
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set Timeout period.
-     * @param Timeout Timeout period.
+     * Set Timeout period. unit: seconds.
+     * @param Timeout Timeout period. unit: seconds.
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;

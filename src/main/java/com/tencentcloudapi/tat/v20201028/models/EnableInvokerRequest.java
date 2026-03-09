@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class EnableInvokerRequest extends AbstractModel {
 
     /**
-    * ID of the invoker to be enabled.
+    * Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
     */
     @SerializedName("InvokerId")
     @Expose
     private String InvokerId;
 
     /**
-     * Get ID of the invoker to be enabled. 
-     * @return InvokerId ID of the invoker to be enabled.
+     * Get Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution. 
+     * @return InvokerId Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public String getInvokerId() {
         return this.InvokerId;
     }
 
     /**
-     * Set ID of the invoker to be enabled.
-     * @param InvokerId ID of the invoker to be enabled.
+     * Set Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+     * @param InvokerId Executor ID to be enabled.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public void setInvokerId(String InvokerId) {
         this.InvokerId = InvokerId;

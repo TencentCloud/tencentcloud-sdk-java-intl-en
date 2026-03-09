@@ -38,7 +38,7 @@ public class RegionInfo extends AbstractModel {
     private String RegionName;
 
     /**
-    * Region status. `AVAILABLE` indicates the region is available.
+    * Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
     */
     @SerializedName("RegionState")
     @Expose
@@ -77,16 +77,16 @@ public class RegionInfo extends AbstractModel {
     }
 
     /**
-     * Get Region status. `AVAILABLE` indicates the region is available. 
-     * @return RegionState Region status. `AVAILABLE` indicates the region is available.
+     * Get Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE. 
+     * @return RegionState Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
      */
     public String getRegionState() {
         return this.RegionState;
     }
 
     /**
-     * Set Region status. `AVAILABLE` indicates the region is available.
-     * @param RegionState Region status. `AVAILABLE` indicates the region is available.
+     * Set Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
+     * @param RegionState Region availability status. AVAILABLE indicates the region is AVAILABLE. UNAVAILABLE indicates the region is UNAVAILABLE.
      */
     public void setRegionState(String RegionState) {
         this.RegionState = RegionState;

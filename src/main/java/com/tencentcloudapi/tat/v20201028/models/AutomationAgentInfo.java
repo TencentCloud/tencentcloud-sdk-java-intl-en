@@ -45,18 +45,16 @@ public class AutomationAgentInfo extends AbstractModel {
     private String LastHeartbeatTime;
 
     /**
-    * Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
+    * Agent status. valid values:.
+Online: Online, Offline: Offline.
+
     */
     @SerializedName("AgentStatus")
     @Expose
     private String AgentStatus;
 
     /**
-    * Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
+    * Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
     */
     @SerializedName("Environment")
     @Expose
@@ -118,48 +116,40 @@ public class AutomationAgentInfo extends AbstractModel {
     }
 
     /**
-     * Get Agent status. Valid values:
-<li> `Online`
-<li> `Offline` 
-     * @return AgentStatus Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
+     * Get Agent status. valid values:.
+Online: Online, Offline: Offline.
+ 
+     * @return AgentStatus Agent status. valid values:.
+Online: Online, Offline: Offline.
+
      */
     public String getAgentStatus() {
         return this.AgentStatus;
     }
 
     /**
-     * Set Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
-     * @param AgentStatus Agent status. Valid values:
-<li> `Online`
-<li> `Offline`
+     * Set Agent status. valid values:.
+Online: Online, Offline: Offline.
+
+     * @param AgentStatus Agent status. valid values:.
+Online: Online, Offline: Offline.
+
      */
     public void setAgentStatus(String AgentStatus) {
         this.AgentStatus = AgentStatus;
     }
 
     /**
-     * Get Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance 
-     * @return Environment Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
+     * Get Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance. 
+     * @return Environment Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
      */
     public String getEnvironment() {
         return this.Environment;
     }
 
     /**
-     * Set Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
-     * @param Environment Agent runtime environment. Valid values:
-<li> `Linux`: Linux instance
-<li> `Windows`: Windows instance
+     * Set Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
+     * @param Environment Agent execution environment. valid values: Linux: Linux instance. Windows: Windows instance.
      */
     public void setEnvironment(String Environment) {
         this.Environment = Environment;

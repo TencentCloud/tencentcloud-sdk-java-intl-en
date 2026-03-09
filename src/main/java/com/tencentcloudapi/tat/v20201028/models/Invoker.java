@@ -38,7 +38,7 @@ public class Invoker extends AbstractModel {
     private String Name;
 
     /**
-    * Invoker type.
+    * Executor type. currently only support SCHEDULE.
     */
     @SerializedName("Type")
     @Expose
@@ -80,22 +80,21 @@ public class Invoker extends AbstractModel {
     private Boolean Enable;
 
     /**
-    * Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Executor periodic schedule. recurring invoker will return this field.
     */
     @SerializedName("ScheduleSettings")
     @Expose
     private ScheduleSettings ScheduleSettings;
 
     /**
-    * Creation time.
+    * Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * Modification time.
+    * Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -134,16 +133,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Invoker type. 
-     * @return Type Invoker type.
+     * Get Executor type. currently only support SCHEDULE. 
+     * @return Type Executor type. currently only support SCHEDULE.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Invoker type.
-     * @param Type Invoker type.
+     * Set Executor type. currently only support SCHEDULE.
+     * @param Type Executor type. currently only support SCHEDULE.
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -230,52 +229,48 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return ScheduleSettings Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Executor periodic schedule. recurring invoker will return this field. 
+     * @return ScheduleSettings Executor periodic schedule. recurring invoker will return this field.
      */
     public ScheduleSettings getScheduleSettings() {
         return this.ScheduleSettings;
     }
 
     /**
-     * Set Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param ScheduleSettings Execution schedule of the invoker. This field is returned for recurring invokers.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Executor periodic schedule. recurring invoker will return this field.
+     * @param ScheduleSettings Executor periodic schedule. recurring invoker will return this field.
      */
     public void setScheduleSettings(ScheduleSettings ScheduleSettings) {
         this.ScheduleSettings = ScheduleSettings;
     }
 
     /**
-     * Get Creation time. 
-     * @return CreatedTime Creation time.
+     * Get Creation time. the format is YYYY-MM-DDThh:MM:ssZ. 
+     * @return CreatedTime Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Creation time.
-     * @param CreatedTime Creation time.
+     * Set Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
+     * @param CreatedTime Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get Modification time. 
-     * @return UpdatedTime Modification time.
+     * Get Last modified. the format is YYYY-MM-DDThh:MM:ssZ. 
+     * @return UpdatedTime Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set Modification time.
-     * @param UpdatedTime Modification time.
+     * Set Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
+     * @param UpdatedTime Last modified. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;

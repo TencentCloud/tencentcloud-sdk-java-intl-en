@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DiscountDetail extends AbstractModel {
 
     /**
-    * Billing duration.
+    * <P>Billing duration.</p>.
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * Billing unit.
+    * <P>Time unit.<br>value is:</p><ul><li>m - month</li><li>d - day</li></ul>.
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Total price.
+    * <P>Total price.</p><p>unit: usd</p>.
     */
     @SerializedName("TotalCost")
     @Expose
     private Float TotalCost;
 
     /**
-    * Discounted total price.
+    * <P>Discounted total price.</p><p>unit: usd</p>.
     */
     @SerializedName("RealTotalCost")
     @Expose
     private Float RealTotalCost;
 
     /**
-    * Discount.
+    * <p>Discount.</p>.
     */
     @SerializedName("Discount")
     @Expose
-    private Long Discount;
+    private Float Discount;
 
     /**
-    * Discount details.
+    * <P>Specific discount details.</p>.
     */
     @SerializedName("PolicyDetail")
     @Expose
     private PolicyDetail PolicyDetail;
 
     /**
-     * Get Billing duration. 
-     * @return TimeSpan Billing duration.
+     * Get <P>Billing duration.</p>. 
+     * @return TimeSpan <P>Billing duration.</p>.
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Billing duration.
-     * @param TimeSpan Billing duration.
+     * Set <P>Billing duration.</p>.
+     * @param TimeSpan <P>Billing duration.</p>.
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Billing unit. 
-     * @return TimeUnit Billing unit.
+     * Get <P>Time unit.<br>value is:</p><ul><li>m - month</li><li>d - day</li></ul>. 
+     * @return TimeUnit <P>Time unit.<br>value is:</p><ul><li>m - month</li><li>d - day</li></ul>.
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Billing unit.
-     * @param TimeUnit Billing unit.
+     * Set <P>Time unit.<br>value is:</p><ul><li>m - month</li><li>d - day</li></ul>.
+     * @param TimeUnit <P>Time unit.<br>value is:</p><ul><li>m - month</li><li>d - day</li></ul>.
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Total price. 
-     * @return TotalCost Total price.
+     * Get <P>Total price.</p><p>unit: usd</p>. 
+     * @return TotalCost <P>Total price.</p><p>unit: usd</p>.
      */
     public Float getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set Total price.
-     * @param TotalCost Total price.
+     * Set <P>Total price.</p><p>unit: usd</p>.
+     * @param TotalCost <P>Total price.</p><p>unit: usd</p>.
      */
     public void setTotalCost(Float TotalCost) {
         this.TotalCost = TotalCost;
     }
 
     /**
-     * Get Discounted total price. 
-     * @return RealTotalCost Discounted total price.
+     * Get <P>Discounted total price.</p><p>unit: usd</p>. 
+     * @return RealTotalCost <P>Discounted total price.</p><p>unit: usd</p>.
      */
     public Float getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set Discounted total price.
-     * @param RealTotalCost Discounted total price.
+     * Set <P>Discounted total price.</p><p>unit: usd</p>.
+     * @param RealTotalCost <P>Discounted total price.</p><p>unit: usd</p>.
      */
     public void setRealTotalCost(Float RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get Discount. 
-     * @return Discount Discount.
+     * Get <p>Discount.</p>. 
+     * @return Discount <p>Discount.</p>.
      */
-    public Long getDiscount() {
+    public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Discount.
-     * @param Discount Discount.
+     * Set <p>Discount.</p>.
+     * @param Discount <p>Discount.</p>.
      */
-    public void setDiscount(Long Discount) {
+    public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get Discount details. 
-     * @return PolicyDetail Discount details.
+     * Get <P>Specific discount details.</p>. 
+     * @return PolicyDetail <P>Specific discount details.</p>.
      */
     public PolicyDetail getPolicyDetail() {
         return this.PolicyDetail;
     }
 
     /**
-     * Set Discount details.
-     * @param PolicyDetail Discount details.
+     * Set <P>Specific discount details.</p>.
+     * @param PolicyDetail <P>Specific discount details.</p>.
      */
     public void setPolicyDetail(PolicyDetail PolicyDetail) {
         this.PolicyDetail = PolicyDetail;
@@ -182,7 +182,7 @@ public class DiscountDetail extends AbstractModel {
             this.RealTotalCost = new Float(source.RealTotalCost);
         }
         if (source.Discount != null) {
-            this.Discount = new Long(source.Discount);
+            this.Discount = new Float(source.Discount);
         }
         if (source.PolicyDetail != null) {
             this.PolicyDetail = new PolicyDetail(source.PolicyDetail);

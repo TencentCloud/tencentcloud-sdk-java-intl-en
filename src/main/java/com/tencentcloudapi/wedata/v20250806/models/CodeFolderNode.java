@@ -107,6 +107,14 @@ public class CodeFolderNode extends AbstractModel {
     private CodeFolderNode [] Children;
 
     /**
+    * Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ParentFolderPath")
+    @Expose
+    private String ParentFolderPath;
+
+    /**
      * Get Unique identifier 
      * @return Id Unique identifier
      */
@@ -306,6 +314,26 @@ public class CodeFolderNode extends AbstractModel {
         this.Children = Children;
     }
 
+    /**
+     * Get Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ParentFolderPath Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getParentFolderPath() {
+        return this.ParentFolderPath;
+    }
+
+    /**
+     * Set Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ParentFolderPath Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setParentFolderPath(String ParentFolderPath) {
+        this.ParentFolderPath = ParentFolderPath;
+    }
+
     public CodeFolderNode() {
     }
 
@@ -350,6 +378,9 @@ public class CodeFolderNode extends AbstractModel {
                 this.Children[i] = new CodeFolderNode(source.Children[i]);
             }
         }
+        if (source.ParentFolderPath != null) {
+            this.ParentFolderPath = new String(source.ParentFolderPath);
+        }
     }
 
 
@@ -368,6 +399,7 @@ public class CodeFolderNode extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateUserUin", this.CreateUserUin);
         this.setParamSimple(map, prefix + "NodePermission", this.NodePermission);
         this.setParamArrayObj(map, prefix + "Children.", this.Children);
+        this.setParamSimple(map, prefix + "ParentFolderPath", this.ParentFolderPath);
 
     }
 }

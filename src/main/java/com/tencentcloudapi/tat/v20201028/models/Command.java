@@ -24,391 +24,437 @@ import java.util.HashMap;
 public class Command extends AbstractModel {
 
     /**
-    * Command ID.
+    * <p>Command ID.</p>.
     */
     @SerializedName("CommandId")
     @Expose
     private String CommandId;
 
     /**
-    * Command name.
+    * <P>Command name.</p>.
     */
     @SerializedName("CommandName")
     @Expose
     private String CommandName;
 
     /**
-    * Command description.
+    * <P>Command description.</p>.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Base64-encoded command.
+    * <p>The Base64-encoded command content.</p>.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * Command type.
+    * <p>Command type. value is one of SHELL, POWERSHELL, BAT.</p>.
     */
     @SerializedName("CommandType")
     @Expose
     private String CommandType;
 
     /**
-    * Command execution path.
+    * <P>Command execution path.</p>.
     */
     @SerializedName("WorkingDirectory")
     @Expose
     private String WorkingDirectory;
 
     /**
-    * Command timeout period.
+    * <p>Command timeout time.</p><p>unit: seconds.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * Command creation time.
+    * <p>Command creation time. the format is YYYY-MM-DDThh:MM:ssZ.</p>.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * Command update time.
+    * <p>Command last update time. format: YYYY-MM-DDThh:MM:ssZ.</p>.
     */
     @SerializedName("UpdatedTime")
     @Expose
     private String UpdatedTime;
 
     /**
-    * Whether to enable the custom parameter feature.
+    * <P>Whether to enable the custom parameter feature.</p>.
     */
     @SerializedName("EnableParameter")
     @Expose
     private Boolean EnableParameter;
 
     /**
-    * Default custom parameter value.
+    * <P>Default value of custom parameter.</p>.
     */
     @SerializedName("DefaultParameters")
     @Expose
     private String DefaultParameters;
 
     /**
-    * Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
+    * <P>Default value of custom parameters.</p>.
+    */
+    @SerializedName("DefaultParameterConfs")
+    @Expose
+    private DefaultParameterConf [] DefaultParameterConfs;
+
+    /**
+    * <P>Command association scenarios</p>.
+    */
+    @SerializedName("Scenes")
+    @Expose
+    private String [] Scenes;
+
+    /**
+    * <P>Structured description of the command. public commands have values, and user commands are empty strings.</p>.
     */
     @SerializedName("FormattedDescription")
     @Expose
     private String FormattedDescription;
 
     /**
-    * Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
+    * <p>Command creator.</p><p>enumeration value:</p><ul><li>TAT: public command</li><li>USER: personal creation command</li></ul>.
     */
     @SerializedName("CreatedBy")
     @Expose
     private String CreatedBy;
 
     /**
-    * The list of tags bound to the command.
+    * <P>Tag list associated with the command.</p>.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * The user who executes the command on the instance.
+    * <P>Username to run command on the instance.</p>.
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * The COS bucket URL for uploading logs.
+    * <P>The cos bucket address for log upload.</p>.
     */
     @SerializedName("OutputCOSBucketUrl")
     @Expose
     private String OutputCOSBucketUrl;
 
     /**
-    * The COS bucket directory where the logs are saved.
+    * <P>Directory of logs in the cos bucket.</p>.
     */
     @SerializedName("OutputCOSKeyPrefix")
     @Expose
     private String OutputCOSKeyPrefix;
 
     /**
-     * Get Command ID. 
-     * @return CommandId Command ID.
+     * Get <p>Command ID.</p>. 
+     * @return CommandId <p>Command ID.</p>.
      */
     public String getCommandId() {
         return this.CommandId;
     }
 
     /**
-     * Set Command ID.
-     * @param CommandId Command ID.
+     * Set <p>Command ID.</p>.
+     * @param CommandId <p>Command ID.</p>.
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
     }
 
     /**
-     * Get Command name. 
-     * @return CommandName Command name.
+     * Get <P>Command name.</p>. 
+     * @return CommandName <P>Command name.</p>.
      */
     public String getCommandName() {
         return this.CommandName;
     }
 
     /**
-     * Set Command name.
-     * @param CommandName Command name.
+     * Set <P>Command name.</p>.
+     * @param CommandName <P>Command name.</p>.
      */
     public void setCommandName(String CommandName) {
         this.CommandName = CommandName;
     }
 
     /**
-     * Get Command description. 
-     * @return Description Command description.
+     * Get <P>Command description.</p>. 
+     * @return Description <P>Command description.</p>.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Command description.
-     * @param Description Command description.
+     * Set <P>Command description.</p>.
+     * @param Description <P>Command description.</p>.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Base64-encoded command. 
-     * @return Content Base64-encoded command.
+     * Get <p>The Base64-encoded command content.</p>. 
+     * @return Content <p>The Base64-encoded command content.</p>.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Base64-encoded command.
-     * @param Content Base64-encoded command.
+     * Set <p>The Base64-encoded command content.</p>.
+     * @param Content <p>The Base64-encoded command content.</p>.
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get Command type. 
-     * @return CommandType Command type.
+     * Get <p>Command type. value is one of SHELL, POWERSHELL, BAT.</p>. 
+     * @return CommandType <p>Command type. value is one of SHELL, POWERSHELL, BAT.</p>.
      */
     public String getCommandType() {
         return this.CommandType;
     }
 
     /**
-     * Set Command type.
-     * @param CommandType Command type.
+     * Set <p>Command type. value is one of SHELL, POWERSHELL, BAT.</p>.
+     * @param CommandType <p>Command type. value is one of SHELL, POWERSHELL, BAT.</p>.
      */
     public void setCommandType(String CommandType) {
         this.CommandType = CommandType;
     }
 
     /**
-     * Get Command execution path. 
-     * @return WorkingDirectory Command execution path.
+     * Get <P>Command execution path.</p>. 
+     * @return WorkingDirectory <P>Command execution path.</p>.
      */
     public String getWorkingDirectory() {
         return this.WorkingDirectory;
     }
 
     /**
-     * Set Command execution path.
-     * @param WorkingDirectory Command execution path.
+     * Set <P>Command execution path.</p>.
+     * @param WorkingDirectory <P>Command execution path.</p>.
      */
     public void setWorkingDirectory(String WorkingDirectory) {
         this.WorkingDirectory = WorkingDirectory;
     }
 
     /**
-     * Get Command timeout period. 
-     * @return Timeout Command timeout period.
+     * Get <p>Command timeout time.</p><p>unit: seconds.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>. 
+     * @return Timeout <p>Command timeout time.</p><p>unit: seconds.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set Command timeout period.
-     * @param Timeout Command timeout period.
+     * Set <p>Command timeout time.</p><p>unit: seconds.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
+     * @param Timeout <p>Command timeout time.</p><p>unit: seconds.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get Command creation time. 
-     * @return CreatedTime Command creation time.
+     * Get <p>Command creation time. the format is YYYY-MM-DDThh:MM:ssZ.</p>. 
+     * @return CreatedTime <p>Command creation time. the format is YYYY-MM-DDThh:MM:ssZ.</p>.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Command creation time.
-     * @param CreatedTime Command creation time.
+     * Set <p>Command creation time. the format is YYYY-MM-DDThh:MM:ssZ.</p>.
+     * @param CreatedTime <p>Command creation time. the format is YYYY-MM-DDThh:MM:ssZ.</p>.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get Command update time. 
-     * @return UpdatedTime Command update time.
+     * Get <p>Command last update time. format: YYYY-MM-DDThh:MM:ssZ.</p>. 
+     * @return UpdatedTime <p>Command last update time. format: YYYY-MM-DDThh:MM:ssZ.</p>.
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set Command update time.
-     * @param UpdatedTime Command update time.
+     * Set <p>Command last update time. format: YYYY-MM-DDThh:MM:ssZ.</p>.
+     * @param UpdatedTime <p>Command last update time. format: YYYY-MM-DDThh:MM:ssZ.</p>.
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
     }
 
     /**
-     * Get Whether to enable the custom parameter feature. 
-     * @return EnableParameter Whether to enable the custom parameter feature.
+     * Get <P>Whether to enable the custom parameter feature.</p>. 
+     * @return EnableParameter <P>Whether to enable the custom parameter feature.</p>.
      */
     public Boolean getEnableParameter() {
         return this.EnableParameter;
     }
 
     /**
-     * Set Whether to enable the custom parameter feature.
-     * @param EnableParameter Whether to enable the custom parameter feature.
+     * Set <P>Whether to enable the custom parameter feature.</p>.
+     * @param EnableParameter <P>Whether to enable the custom parameter feature.</p>.
      */
     public void setEnableParameter(Boolean EnableParameter) {
         this.EnableParameter = EnableParameter;
     }
 
     /**
-     * Get Default custom parameter value. 
-     * @return DefaultParameters Default custom parameter value.
+     * Get <P>Default value of custom parameter.</p>. 
+     * @return DefaultParameters <P>Default value of custom parameter.</p>.
      */
     public String getDefaultParameters() {
         return this.DefaultParameters;
     }
 
     /**
-     * Set Default custom parameter value.
-     * @param DefaultParameters Default custom parameter value.
+     * Set <P>Default value of custom parameter.</p>.
+     * @param DefaultParameters <P>Default value of custom parameter.</p>.
      */
     public void setDefaultParameters(String DefaultParameters) {
         this.DefaultParameters = DefaultParameters;
     }
 
     /**
-     * Get Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands. 
-     * @return FormattedDescription Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
+     * Get <P>Default value of custom parameters.</p>. 
+     * @return DefaultParameterConfs <P>Default value of custom parameters.</p>.
+     */
+    public DefaultParameterConf [] getDefaultParameterConfs() {
+        return this.DefaultParameterConfs;
+    }
+
+    /**
+     * Set <P>Default value of custom parameters.</p>.
+     * @param DefaultParameterConfs <P>Default value of custom parameters.</p>.
+     */
+    public void setDefaultParameterConfs(DefaultParameterConf [] DefaultParameterConfs) {
+        this.DefaultParameterConfs = DefaultParameterConfs;
+    }
+
+    /**
+     * Get <P>Command association scenarios</p>. 
+     * @return Scenes <P>Command association scenarios</p>.
+     */
+    public String [] getScenes() {
+        return this.Scenes;
+    }
+
+    /**
+     * Set <P>Command association scenarios</p>.
+     * @param Scenes <P>Command association scenarios</p>.
+     */
+    public void setScenes(String [] Scenes) {
+        this.Scenes = Scenes;
+    }
+
+    /**
+     * Get <P>Structured description of the command. public commands have values, and user commands are empty strings.</p>. 
+     * @return FormattedDescription <P>Structured description of the command. public commands have values, and user commands are empty strings.</p>.
      */
     public String getFormattedDescription() {
         return this.FormattedDescription;
     }
 
     /**
-     * Set Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
-     * @param FormattedDescription Formatted description of the command. This parameter is an empty string for user commands and contains values for public commands.
+     * Set <P>Structured description of the command. public commands have values, and user commands are empty strings.</p>.
+     * @param FormattedDescription <P>Structured description of the command. public commands have values, and user commands are empty strings.</p>.
      */
     public void setFormattedDescription(String FormattedDescription) {
         this.FormattedDescription = FormattedDescription;
     }
 
     /**
-     * Get Command creator. `TAT` indicates a public command and `USER` indicates a personal command. 
-     * @return CreatedBy Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
+     * Get <p>Command creator.</p><p>enumeration value:</p><ul><li>TAT: public command</li><li>USER: personal creation command</li></ul>. 
+     * @return CreatedBy <p>Command creator.</p><p>enumeration value:</p><ul><li>TAT: public command</li><li>USER: personal creation command</li></ul>.
      */
     public String getCreatedBy() {
         return this.CreatedBy;
     }
 
     /**
-     * Set Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
-     * @param CreatedBy Command creator. `TAT` indicates a public command and `USER` indicates a personal command.
+     * Set <p>Command creator.</p><p>enumeration value:</p><ul><li>TAT: public command</li><li>USER: personal creation command</li></ul>.
+     * @param CreatedBy <p>Command creator.</p><p>enumeration value:</p><ul><li>TAT: public command</li><li>USER: personal creation command</li></ul>.
      */
     public void setCreatedBy(String CreatedBy) {
         this.CreatedBy = CreatedBy;
     }
 
     /**
-     * Get The list of tags bound to the command. 
-     * @return Tags The list of tags bound to the command.
+     * Get <P>Tag list associated with the command.</p>. 
+     * @return Tags <P>Tag list associated with the command.</p>.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set The list of tags bound to the command.
-     * @param Tags The list of tags bound to the command.
+     * Set <P>Tag list associated with the command.</p>.
+     * @param Tags <P>Tag list associated with the command.</p>.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get The user who executes the command on the instance. 
-     * @return Username The user who executes the command on the instance.
+     * Get <P>Username to run command on the instance.</p>. 
+     * @return Username <P>Username to run command on the instance.</p>.
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set The user who executes the command on the instance.
-     * @param Username The user who executes the command on the instance.
+     * Set <P>Username to run command on the instance.</p>.
+     * @param Username <P>Username to run command on the instance.</p>.
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get The COS bucket URL for uploading logs. 
-     * @return OutputCOSBucketUrl The COS bucket URL for uploading logs.
+     * Get <P>The cos bucket address for log upload.</p>. 
+     * @return OutputCOSBucketUrl <P>The cos bucket address for log upload.</p>.
      */
     public String getOutputCOSBucketUrl() {
         return this.OutputCOSBucketUrl;
     }
 
     /**
-     * Set The COS bucket URL for uploading logs.
-     * @param OutputCOSBucketUrl The COS bucket URL for uploading logs.
+     * Set <P>The cos bucket address for log upload.</p>.
+     * @param OutputCOSBucketUrl <P>The cos bucket address for log upload.</p>.
      */
     public void setOutputCOSBucketUrl(String OutputCOSBucketUrl) {
         this.OutputCOSBucketUrl = OutputCOSBucketUrl;
     }
 
     /**
-     * Get The COS bucket directory where the logs are saved. 
-     * @return OutputCOSKeyPrefix The COS bucket directory where the logs are saved.
+     * Get <P>Directory of logs in the cos bucket.</p>. 
+     * @return OutputCOSKeyPrefix <P>Directory of logs in the cos bucket.</p>.
      */
     public String getOutputCOSKeyPrefix() {
         return this.OutputCOSKeyPrefix;
     }
 
     /**
-     * Set The COS bucket directory where the logs are saved.
-     * @param OutputCOSKeyPrefix The COS bucket directory where the logs are saved.
+     * Set <P>Directory of logs in the cos bucket.</p>.
+     * @param OutputCOSKeyPrefix <P>Directory of logs in the cos bucket.</p>.
      */
     public void setOutputCOSKeyPrefix(String OutputCOSKeyPrefix) {
         this.OutputCOSKeyPrefix = OutputCOSKeyPrefix;
@@ -455,6 +501,18 @@ public class Command extends AbstractModel {
         if (source.DefaultParameters != null) {
             this.DefaultParameters = new String(source.DefaultParameters);
         }
+        if (source.DefaultParameterConfs != null) {
+            this.DefaultParameterConfs = new DefaultParameterConf[source.DefaultParameterConfs.length];
+            for (int i = 0; i < source.DefaultParameterConfs.length; i++) {
+                this.DefaultParameterConfs[i] = new DefaultParameterConf(source.DefaultParameterConfs[i]);
+            }
+        }
+        if (source.Scenes != null) {
+            this.Scenes = new String[source.Scenes.length];
+            for (int i = 0; i < source.Scenes.length; i++) {
+                this.Scenes[i] = new String(source.Scenes[i]);
+            }
+        }
         if (source.FormattedDescription != null) {
             this.FormattedDescription = new String(source.FormattedDescription);
         }
@@ -494,6 +552,8 @@ public class Command extends AbstractModel {
         this.setParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
         this.setParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+        this.setParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
+        this.setParamArraySimple(map, prefix + "Scenes.", this.Scenes);
         this.setParamSimple(map, prefix + "FormattedDescription", this.FormattedDescription);
         this.setParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);

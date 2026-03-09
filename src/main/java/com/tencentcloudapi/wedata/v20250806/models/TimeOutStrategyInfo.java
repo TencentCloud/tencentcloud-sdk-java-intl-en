@@ -72,6 +72,32 @@ Cycle-Incomplete Timeout - The task was expected to complete within its schedule
     private String ScheduleTimeZone;
 
     /**
+    * Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Second")
+    @Expose
+    private Long Second;
+
+    /**
+    * Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Times")
+    @Expose
+    private Long Times;
+
+    /**
+    * Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("AlarmTriggerFrequency")
+    @Expose
+    private Long AlarmTriggerFrequency;
+
+    /**
      * Get Timeout Alarm Configuration
 
 Expected Execution Duration Timeout - The actual runtime exceeds the estimated execution duration.
@@ -203,6 +229,74 @@ Cycle-Incomplete Timeout - The task was expected to complete within its schedule
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
+    /**
+     * Get Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Second Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getSecond() {
+        return this.Second;
+    }
+
+    /**
+     * Set Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Second Seconds (for Spark Streaming policy).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSecond(Long Second) {
+        this.Second = Second;
+    }
+
+    /**
+     * Get Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Times Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getTimes() {
+        return this.Times;
+    }
+
+    /**
+     * Set Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Times Count (for Spark Streaming retry count limit policy, ruleType=10).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTimes(Long Times) {
+        this.Times = Times;
+    }
+
+    /**
+     * Get Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AlarmTriggerFrequency Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getAlarmTriggerFrequency() {
+        return this.AlarmTriggerFrequency;
+    }
+
+    /**
+     * Set Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AlarmTriggerFrequency Alarm trigger frequency (for Spark Streaming policy ruleType=8/9/10).
+Unit: minute. value range: 5-1440.
+After an Alarm is triggered, pause detection during this period to avoid an Alarm storm.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setAlarmTriggerFrequency(Long AlarmTriggerFrequency) {
+        this.AlarmTriggerFrequency = AlarmTriggerFrequency;
+    }
+
     public TimeOutStrategyInfo() {
     }
 
@@ -226,6 +320,15 @@ Cycle-Incomplete Timeout - The task was expected to complete within its schedule
         if (source.ScheduleTimeZone != null) {
             this.ScheduleTimeZone = new String(source.ScheduleTimeZone);
         }
+        if (source.Second != null) {
+            this.Second = new Long(source.Second);
+        }
+        if (source.Times != null) {
+            this.Times = new Long(source.Times);
+        }
+        if (source.AlarmTriggerFrequency != null) {
+            this.AlarmTriggerFrequency = new Long(source.AlarmTriggerFrequency);
+        }
     }
 
 
@@ -238,6 +341,9 @@ Cycle-Incomplete Timeout - The task was expected to complete within its schedule
         this.setParamSimple(map, prefix + "Hour", this.Hour);
         this.setParamSimple(map, prefix + "Min", this.Min);
         this.setParamSimple(map, prefix + "ScheduleTimeZone", this.ScheduleTimeZone);
+        this.setParamSimple(map, prefix + "Second", this.Second);
+        this.setParamSimple(map, prefix + "Times", this.Times);
+        this.setParamSimple(map, prefix + "AlarmTriggerFrequency", this.AlarmTriggerFrequency);
 
     }
 }

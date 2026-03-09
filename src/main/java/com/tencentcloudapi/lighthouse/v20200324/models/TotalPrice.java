@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class TotalPrice extends AbstractModel {
 
     /**
-    * Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * <P>Original total price.</p><p>unit: usd</p>.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * <P>Total price after discount.</p><p>unit: usd</p>.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-     * Get Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return OriginalPrice Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get <P>Original total price.</p><p>unit: usd</p>. 
+     * @return OriginalPrice <P>Original total price.</p><p>unit: usd</p>.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param OriginalPrice Total original price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set <P>Original total price.</p><p>unit: usd</p>.
+     * @param OriginalPrice <P>Original total price.</p><p>unit: usd</p>.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return DiscountPrice Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get <P>Total price after discount.</p><p>unit: usd</p>. 
+     * @return DiscountPrice <P>Total price after discount.</p><p>unit: usd</p>.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param DiscountPrice Total discounted price
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set <P>Total price after discount.</p><p>unit: usd</p>.
+     * @param DiscountPrice <P>Total price after discount.</p><p>unit: usd</p>.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;

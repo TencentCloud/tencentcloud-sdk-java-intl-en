@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class DeleteInvokerRequest extends AbstractModel {
 
     /**
-    * ID of the invoker to be deleted.
+    * Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
     */
     @SerializedName("InvokerId")
     @Expose
     private String InvokerId;
 
     /**
-     * Get ID of the invoker to be deleted. 
-     * @return InvokerId ID of the invoker to be deleted.
+     * Get Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution. 
+     * @return InvokerId Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public String getInvokerId() {
         return this.InvokerId;
     }
 
     /**
-     * Set ID of the invoker to be deleted.
-     * @param InvokerId ID of the invoker to be deleted.
+     * Set Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+     * @param InvokerId Pending deletion executor ID.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public void setInvokerId(String InvokerId) {
         this.InvokerId = InvokerId;

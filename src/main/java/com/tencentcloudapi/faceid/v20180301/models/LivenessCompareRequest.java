@@ -65,7 +65,7 @@ Silent mode: do not pass in this parameter.
     /**
     * Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
     */
     @SerializedName("Optional")
@@ -205,11 +205,11 @@ Silent mode: do not pass in this parameter.
     /**
      * Get Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 } 
      * @return Optional Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
      */
     public String getOptional() {
@@ -219,11 +219,11 @@ Silent mode: do not pass in this parameter.
     /**
      * Set Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
      * @param Optional Optional configuration (a JSON string)
 {
-"BestFrameNum": 2  // Return multiple best screenshots. Value range: 2−10
+"BestFrameNum": 2  // Return multiple best screenshots. Value range: [2 10]
 }
      */
     public void setOptional(String Optional) {

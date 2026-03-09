@@ -38,10 +38,9 @@ public class UpdateResourceFileRequest extends AbstractModel {
     private String ResourceId;
 
     /**
-    * -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The hand-filled value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID and requires a specific value. parentFolderPath is the parent folder path. name is the file name. 
-Hand-filled value example:.
-   /datastudio/resource/projectId/parentFolderPath/name 
+    * -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example for manually entered value:.
+     /datastudio/resource/projectId/parentFolderPath/name 
 
     */
     @SerializedName("ResourceFile")
@@ -102,15 +101,13 @@ Hand-filled value example:.
     }
 
     /**
-     * Get -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The hand-filled value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID and requires a specific value. parentFolderPath is the parent folder path. name is the file name. 
-Hand-filled value example:.
-   /datastudio/resource/projectId/parentFolderPath/name 
+     * Get -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example for manually entered value:.
+     /datastudio/resource/projectId/parentFolderPath/name 
  
-     * @return ResourceFile -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The hand-filled value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID and requires a specific value. parentFolderPath is the parent folder path. name is the file name. 
-Hand-filled value example:.
-   /datastudio/resource/projectId/parentFolderPath/name 
+     * @return ResourceFile -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example for manually entered value:.
+     /datastudio/resource/projectId/parentFolderPath/name 
 
      */
     public String getResourceFile() {
@@ -118,15 +115,13 @@ Hand-filled value example:.
     }
 
     /**
-     * Set -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The hand-filled value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID and requires a specific value. parentFolderPath is the parent folder path. name is the file name. 
-Hand-filled value example:.
-   /datastudio/resource/projectId/parentFolderPath/name 
+     * Set -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example for manually entered value:.
+     /datastudio/resource/projectId/parentFolderPath/name 
 
-     * @param ResourceFile -Upload file and manual entry are two methods, choose one. if both are provided, the sequence is file > manual entry.
--The hand-filled value must be an existing cos path. /datastudio/resource/ is the fixed prefix. projectId is the project ID and requires a specific value. parentFolderPath is the parent folder path. name is the file name. 
-Hand-filled value example:.
-   /datastudio/resource/projectId/parentFolderPath/name 
+     * @param ResourceFile -Upload file or manually enter value. only select one method. if both are provided, the sequence is file > manually entered value.
+-Manually entered value must be existing cos path. parentFolderPath specifies the parent folder path. name specifies the file name. value example for manually entered value:.
+     /datastudio/resource/projectId/parentFolderPath/name 
 
      */
     public void setResourceFile(String ResourceFile) {

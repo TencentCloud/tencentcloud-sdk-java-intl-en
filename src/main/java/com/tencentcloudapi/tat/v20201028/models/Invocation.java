@@ -38,13 +38,24 @@ public class Invocation extends AbstractModel {
     private String CommandId;
 
     /**
-    * Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
+    * Name of the executed command.
+    */
+    @SerializedName("CommandName")
+    @Expose
+    private String CommandName;
+
+    /**
+    * Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
     */
     @SerializedName("InvocationStatus")
     @Expose
@@ -65,28 +76,29 @@ public class Invocation extends AbstractModel {
     private String Description;
 
     /**
-    * Start time of the execution activity.
+    * Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the execution activity.
+    * Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Time when the execution activity is created.
+    * Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * Time when the execution activity is updated.
+    * Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -122,6 +134,9 @@ public class Invocation extends AbstractModel {
 
     /**
     * Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
     */
     @SerializedName("InvocationSource")
     @Expose
@@ -202,40 +217,72 @@ public class Invocation extends AbstractModel {
     }
 
     /**
-     * Get Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure 
-     * @return InvocationStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
+     * Get Name of the executed command. 
+     * @return CommandName Name of the executed command.
+     */
+    public String getCommandName() {
+        return this.CommandName;
+    }
+
+    /**
+     * Set Name of the executed command.
+     * @param CommandName Name of the executed command.
+     */
+    public void setCommandName(String CommandName) {
+        this.CommandName = CommandName;
+    }
+
+    /**
+     * Get Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled. 
+     * @return InvocationStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
      */
     public String getInvocationStatus() {
         return this.InvocationStatus;
     }
 
     /**
-     * Set Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
-     * @param InvocationStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed
-<li> TIMEOUT: Command timed out
-<li> PARTIAL_FAILED: Partial failure
+     * Set Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
+     * @param InvocationStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+- RUNNING: command RUNNING.
+-Canceling.
+-SUCCESS: command success.
+-TIMEOUT: command timeout.
+- FAILED: command FAILED.
+-CANCELLED: all commands canceled.
+-PARTIAL_FAILED: the command partially failed.
+-PARTIAL_CANCELLED: the command is partially canceled.
      */
     public void setInvocationStatus(String InvocationStatus) {
         this.InvocationStatus = InvocationStatus;
@@ -274,64 +321,68 @@ public class Invocation extends AbstractModel {
     }
 
     /**
-     * Get Start time of the execution activity. 
-     * @return StartTime Start time of the execution activity.
+     * Get Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ. 
+     * @return StartTime Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the execution activity.
-     * @param StartTime Start time of the execution activity.
+     * Set Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
+     * @param StartTime Execute the activity start time. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the execution activity. 
-     * @return EndTime End time of the execution activity.
+     * Get Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EndTime Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the execution activity.
-     * @param EndTime End time of the execution activity.
+     * Set Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EndTime Execute activity end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Time when the execution activity is created. 
-     * @return CreatedTime Time when the execution activity is created.
+     * Get Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ. 
+     * @return CreatedTime Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Time when the execution activity is created.
-     * @param CreatedTime Time when the execution activity is created.
+     * Set Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
+     * @param CreatedTime Execution activity createtime. format: YYYY-MM-DDThh:MM:ssZ.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get Time when the execution activity is updated. 
-     * @return UpdatedTime Time when the execution activity is updated.
+     * Get Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ. 
+     * @return UpdatedTime Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set Time when the execution activity is updated.
-     * @param UpdatedTime Time when the execution activity is updated.
+     * Set Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
+     * @param UpdatedTime Update time of the execution activity. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
@@ -402,8 +453,14 @@ public class Invocation extends AbstractModel {
     }
 
     /**
-     * Get Invocation source. 
+     * Get Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution. 
      * @return InvocationSource Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
      */
     public String getInvocationSource() {
         return this.InvocationSource;
@@ -411,7 +468,13 @@ public class Invocation extends AbstractModel {
 
     /**
      * Set Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
      * @param InvocationSource Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
      */
     public void setInvocationSource(String InvocationSource) {
         this.InvocationSource = InvocationSource;
@@ -527,6 +590,9 @@ public class Invocation extends AbstractModel {
         if (source.CommandId != null) {
             this.CommandId = new String(source.CommandId);
         }
+        if (source.CommandName != null) {
+            this.CommandName = new String(source.CommandName);
+        }
         if (source.InvocationStatus != null) {
             this.InvocationStatus = new String(source.InvocationStatus);
         }
@@ -593,6 +659,7 @@ public class Invocation extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InvocationId", this.InvocationId);
         this.setParamSimple(map, prefix + "CommandId", this.CommandId);
+        this.setParamSimple(map, prefix + "CommandName", this.CommandName);
         this.setParamSimple(map, prefix + "InvocationStatus", this.InvocationStatus);
         this.setParamArrayObj(map, prefix + "InvocationTaskBasicInfoSet.", this.InvocationTaskBasicInfoSet);
         this.setParamSimple(map, prefix + "Description", this.Description);

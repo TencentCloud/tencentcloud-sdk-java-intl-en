@@ -198,6 +198,18 @@ public class TaskBaseAttribute extends AbstractModel {
     private String CreateUserUin;
 
     /**
+    * Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("TaskFolderPath")
+    @Expose
+    private String TaskFolderPath;
+
+    /**
      * Get Task ID
  
      * @return TaskId Task ID
@@ -677,6 +689,42 @@ public class TaskBaseAttribute extends AbstractModel {
         this.CreateUserUin = CreateUserUin;
     }
 
+    /**
+     * Get Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TaskFolderPath Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getTaskFolderPath() {
+        return this.TaskFolderPath;
+    }
+
+    /**
+     * Set Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TaskFolderPath Task folder path.
+
+Note:.
+-Do not fill in the task node type in the path. for example, in a workflow named wf01, under the "common" category, if you want to create a new shell task under the tf_01 folder in this classification, just fill in /tf_01.
+-If the tf_01 folder does not exist, first create this folder (use the CreateTaskFolder api) for a successful operation.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setTaskFolderPath(String TaskFolderPath) {
+        this.TaskFolderPath = TaskFolderPath;
+    }
+
     public TaskBaseAttribute() {
     }
 
@@ -739,6 +787,9 @@ public class TaskBaseAttribute extends AbstractModel {
         if (source.CreateUserUin != null) {
             this.CreateUserUin = new String(source.CreateUserUin);
         }
+        if (source.TaskFolderPath != null) {
+            this.TaskFolderPath = new String(source.TaskFolderPath);
+        }
     }
 
 
@@ -764,6 +815,7 @@ public class TaskBaseAttribute extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskDescription", this.TaskDescription);
         this.setParamSimple(map, prefix + "UpdateUserUin", this.UpdateUserUin);
         this.setParamSimple(map, prefix + "CreateUserUin", this.CreateUserUin);
+        this.setParamSimple(map, prefix + "TaskFolderPath", this.TaskFolderPath);
 
     }
 }

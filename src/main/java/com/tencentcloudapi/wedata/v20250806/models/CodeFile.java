@@ -114,6 +114,14 @@ Note: This field may return null, indicating that no valid
     private String Path;
 
     /**
+    * Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ParentFolderPath")
+    @Expose
+    private String ParentFolderPath;
+
+    /**
      * Get Script ID
 
  
@@ -341,6 +349,26 @@ Note: This field may return null, indicating that no valid
         this.Path = Path;
     }
 
+    /**
+     * Get Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ParentFolderPath Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getParentFolderPath() {
+        return this.ParentFolderPath;
+    }
+
+    /**
+     * Set Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ParentFolderPath Parent folder path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setParentFolderPath(String ParentFolderPath) {
+        this.ParentFolderPath = ParentFolderPath;
+    }
+
     public CodeFile() {
     }
 
@@ -382,6 +410,9 @@ Note: This field may return null, indicating that no valid
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
+        if (source.ParentFolderPath != null) {
+            this.ParentFolderPath = new String(source.ParentFolderPath);
+        }
     }
 
 
@@ -400,6 +431,7 @@ Note: This field may return null, indicating that no valid
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "AccessScope", this.AccessScope);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "ParentFolderPath", this.ParentFolderPath);
 
     }
 }

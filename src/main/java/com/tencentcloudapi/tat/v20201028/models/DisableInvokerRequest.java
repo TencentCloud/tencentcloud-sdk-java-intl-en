@@ -24,23 +24,33 @@ import java.util.HashMap;
 public class DisableInvokerRequest extends AbstractModel {
 
     /**
-    * ID of the invoker to be disabled.
+    * ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
     */
     @SerializedName("InvokerId")
     @Expose
     private String InvokerId;
 
     /**
-     * Get ID of the invoker to be disabled. 
-     * @return InvokerId ID of the invoker to be disabled.
+     * Get ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution. 
+     * @return InvokerId ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public String getInvokerId() {
         return this.InvokerId;
     }
 
     /**
-     * Set ID of the invoker to be disabled.
-     * @param InvokerId ID of the invoker to be disabled.
+     * Set ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+     * @param InvokerId ID of the executor to terminate.
+
+Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public void setInvokerId(String InvokerId) {
         this.InvokerId = InvokerId;

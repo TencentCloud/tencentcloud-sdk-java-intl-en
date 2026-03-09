@@ -31,20 +31,21 @@ public class InvocationTaskBasicInfo extends AbstractModel {
     private String InvocationTaskId;
 
     /**
-    * Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+    * Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -74,68 +75,72 @@ public class InvocationTaskBasicInfo extends AbstractModel {
     }
 
     /**
-     * Get Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution) 
-     * @return TaskStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+     * Get Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution). 
+     * @return TaskStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
-     * @param TaskStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+     * Set Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
+     * @param TaskStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;

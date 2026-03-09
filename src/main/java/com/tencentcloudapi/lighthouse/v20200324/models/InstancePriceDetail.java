@@ -25,33 +25,28 @@ public class InstancePriceDetail extends AbstractModel {
 
     /**
     * Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
+    * Price inquiry information.
     */
     @SerializedName("InstancePrice")
     @Expose
     private InstancePrice InstancePrice;
 
     /**
-    * Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
     */
     @SerializedName("DiscountDetail")
     @Expose
     private DiscountDetail [] DiscountDetail;
 
     /**
-     * Get Instance ID.
-Note: This field may return `null`, indicating that no valid value was found. 
+     * Get Instance ID. 
      * @return InstanceId Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -59,49 +54,39 @@ Note: This field may return `null`, indicating that no valid value was found.
 
     /**
      * Set Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
      * @param InstanceId Instance ID.
-Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Price query information.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return InstancePrice Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Price inquiry information. 
+     * @return InstancePrice Price inquiry information.
      */
     public InstancePrice getInstancePrice() {
         return this.InstancePrice;
     }
 
     /**
-     * Set Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param InstancePrice Price query information.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Price inquiry information.
+     * @param InstancePrice Price inquiry information.
      */
     public void setInstancePrice(InstancePrice InstancePrice) {
         this.InstancePrice = InstancePrice;
     }
 
     /**
-     * Get Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return DiscountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount). 
+     * @return DiscountDetail Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
      */
     public DiscountDetail [] getDiscountDetail() {
         return this.DiscountDetail;
     }
 
     /**
-     * Set Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param DiscountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
+     * @param DiscountDetail Discount gradient details. each gradient includes duration, discount percentage, total price, discount price, and discount details (user discount, official website discount, final discount).
      */
     public void setDiscountDetail(DiscountDetail [] DiscountDetail) {
         this.DiscountDetail = DiscountDetail;

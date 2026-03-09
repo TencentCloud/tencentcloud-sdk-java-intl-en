@@ -38,14 +38,16 @@ public class TaskResult extends AbstractModel {
     private String Output;
 
     /**
-    * Time when the execution is started.
+    * Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExecStartTime")
     @Expose
     private String ExecStartTime;
 
     /**
-    * Time when the execution is ended.
+    * Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExecEndTime")
     @Expose
@@ -105,32 +107,40 @@ public class TaskResult extends AbstractModel {
     }
 
     /**
-     * Get Time when the execution is started. 
-     * @return ExecStartTime Time when the execution is started.
+     * Get Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExecStartTime Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExecStartTime() {
         return this.ExecStartTime;
     }
 
     /**
-     * Set Time when the execution is started.
-     * @param ExecStartTime Time when the execution is started.
+     * Set Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExecStartTime Command execution start time. the format is YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExecStartTime(String ExecStartTime) {
         this.ExecStartTime = ExecStartTime;
     }
 
     /**
-     * Get Time when the execution is ended. 
-     * @return ExecEndTime Time when the execution is ended.
+     * Get Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExecEndTime Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExecEndTime() {
         return this.ExecEndTime;
     }
 
     /**
-     * Set Time when the execution is ended.
-     * @param ExecEndTime Time when the execution is ended.
+     * Set Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExecEndTime Execution end time of the command. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExecEndTime(String ExecEndTime) {
         this.ExecEndTime = ExecEndTime;

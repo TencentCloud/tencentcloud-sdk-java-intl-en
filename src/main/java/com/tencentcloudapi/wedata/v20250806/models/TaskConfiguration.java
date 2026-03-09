@@ -65,7 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String YarnQueue;
 
     /**
-    * Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+    * Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SourceServiceId")
@@ -73,7 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SourceServiceId;
 
     /**
-    * Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+    * Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SourceServiceType")
@@ -81,7 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SourceServiceType;
 
     /**
-    * Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+    * Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SourceServiceName")
@@ -89,7 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SourceServiceName;
 
     /**
-    * TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+    * Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TargetServiceId")
@@ -97,7 +97,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TargetServiceId;
 
     /**
-    * Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+    * Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TargetServiceType")
@@ -105,7 +105,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TargetServiceType;
 
     /**
-    * Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+    * Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TargetServiceName")
@@ -257,9 +257,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+     * Get Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SourceServiceId Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+     * @return SourceServiceId Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSourceServiceId() {
@@ -267,9 +267,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+     * Set Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SourceServiceId Source data source ID, separated by;, obtained through DescribeDataSourceWithoutInfo.
+     * @param SourceServiceId Source data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSourceServiceId(String SourceServiceId) {
@@ -277,9 +277,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * Get Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SourceServiceType Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @return SourceServiceType Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSourceServiceType() {
@@ -287,9 +287,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * Set Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SourceServiceType Data source type. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @param SourceServiceType Data source type, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSourceServiceType(String SourceServiceType) {
@@ -297,9 +297,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * Get Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SourceServiceName Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @return SourceServiceName Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSourceServiceName() {
@@ -307,9 +307,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * Set Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SourceServiceName Data source name. use semicolons to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @param SourceServiceName Data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSourceServiceName(String SourceServiceName) {
@@ -317,9 +317,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * Get Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TargetServiceId TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @return TargetServiceId Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTargetServiceId() {
@@ -327,9 +327,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * Set Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TargetServiceId TargetTarget data source ID, separated by semicolons. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @param TargetServiceId Target data source ID, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTargetServiceId(String TargetServiceId) {
@@ -337,9 +337,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+     * Get Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TargetServiceType Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+     * @return TargetServiceType Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTargetServiceType() {
@@ -347,9 +347,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+     * Set Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TargetServiceType Target data source type. uses ; for separation. needs to pass through DescribeDataSourceWithoutInfo for retrieval.
+     * @param TargetServiceType Target data source type. need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTargetServiceType(String TargetServiceType) {
@@ -357,9 +357,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * Get Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TargetServiceName Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @return TargetServiceName Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTargetServiceName() {
@@ -367,9 +367,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * Set Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TargetServiceName Target data source name. use semicolon to separate. need to pass through DescribeDataSourceWithoutInfo to obtain.
+     * @param TargetServiceName Target data source name, need to pass through DescribeDataSourceWithoutInfo to obtain.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTargetServiceName(String TargetServiceName) {

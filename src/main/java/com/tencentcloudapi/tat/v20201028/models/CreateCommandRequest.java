@@ -45,7 +45,7 @@ public class CreateCommandRequest extends AbstractModel {
     private String Description;
 
     /**
-    * Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+    * Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
     */
     @SerializedName("CommandType")
     @Expose
@@ -75,15 +75,28 @@ Default value: `false`.
     private Boolean EnableParameter;
 
     /**
-    * The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+    * Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
     */
     @SerializedName("DefaultParameters")
     @Expose
     private String DefaultParameters;
+
+    /**
+    * Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+    */
+    @SerializedName("DefaultParameterConfs")
+    @Expose
+    private DefaultParameterConf [] DefaultParameterConfs;
 
     /**
     * Tags bound to the command. At most 10 tags are allowed.
@@ -166,16 +179,16 @@ The principle of least privilege is the best practice for permission management.
     }
 
     /**
-     * Get Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`. 
-     * @return CommandType Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+     * Get Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL. 
+     * @return CommandType Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
      */
     public String getCommandType() {
         return this.CommandType;
     }
 
     /**
-     * Set Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
-     * @param CommandType Command type. `SHELL` and `POWERSHELL` are supported. The default value is `SHELL`.
+     * Set Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
+     * @param CommandType Command type. currently supports SHELL, POWERSHELL, BAT. default: SHELL.
      */
     public void setCommandType(String CommandType) {
         this.CommandType = CommandType;
@@ -238,35 +251,75 @@ Default value: `false`.
     }
 
     /**
-     * Get The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_]. 
-     * @return DefaultParameters The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+     * Get Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_]. 
+     * @return DefaultParameters Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
      */
     public String getDefaultParameters() {
         return this.DefaultParameters;
     }
 
     /**
-     * Set The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-     * @param DefaultParameters The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-If no parameter value is provided in the `InvokeCommand` API, the default value is used.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+     * Set Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
+     * @param DefaultParameters Enable the custom parameter feature. default value of the custom parameter. field type is json encoded string. for example: {"varA": "222"}.
+The key is the custom parameter name, and the value is the default. both kv are string-type.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
      */
     public void setDefaultParameters(String DefaultParameters) {
         this.DefaultParameters = DefaultParameters;
+    }
+
+    /**
+     * Get Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20. 
+     * @return DefaultParameterConfs Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+     */
+    public DefaultParameterConf [] getDefaultParameterConfs() {
+        return this.DefaultParameterConfs;
+    }
+
+    /**
+     * Set Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+     * @param DefaultParameterConfs Custom parameter array.
+If no parameter value is provided when invoking the command, the default value here will be used to replace it.
+Parameters must not be specified simultaneously `DefaultParameters` and `DefaultParameterConfs`.
+Allow settings only when the EnableParameter parameter is true.
+Custom parameters can be up to 20.
+     */
+    public void setDefaultParameterConfs(DefaultParameterConf [] DefaultParameterConfs) {
+        this.DefaultParameterConfs = DefaultParameterConfs;
     }
 
     /**
@@ -381,6 +434,12 @@ The principle of least privilege is the best practice for permission management.
         if (source.DefaultParameters != null) {
             this.DefaultParameters = new String(source.DefaultParameters);
         }
+        if (source.DefaultParameterConfs != null) {
+            this.DefaultParameterConfs = new DefaultParameterConf[source.DefaultParameterConfs.length];
+            for (int i = 0; i < source.DefaultParameterConfs.length; i++) {
+                this.DefaultParameterConfs[i] = new DefaultParameterConf(source.DefaultParameterConfs[i]);
+            }
+        }
         if (source.Tags != null) {
             this.Tags = new Tag[source.Tags.length];
             for (int i = 0; i < source.Tags.length; i++) {
@@ -411,6 +470,7 @@ The principle of least privilege is the best practice for permission management.
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+        this.setParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);

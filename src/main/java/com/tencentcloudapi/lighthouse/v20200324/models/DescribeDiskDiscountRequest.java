@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeDiskDiscountRequest extends AbstractModel {
 
     /**
-    * Cloud disk type. Valid values: "CLOUD_PREMIUM".
+    * CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Cloud disk size.
+    * CBS disk capacity, unit: GB.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+    * Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
     */
     @SerializedName("DiskBackupQuota")
     @Expose
     private Long DiskBackupQuota;
 
     /**
-     * Get Cloud disk type. Valid values: "CLOUD_PREMIUM". 
-     * @return DiskType Cloud disk type. Valid values: "CLOUD_PREMIUM".
+     * Get CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk. 
+     * @return DiskType CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Cloud disk type. Valid values: "CLOUD_PREMIUM".
-     * @param DiskType Cloud disk type. Valid values: "CLOUD_PREMIUM".
+     * Set CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
+     * @param DiskType CLOUD disk type. valid values: CLOUD_PREMIUM: high-performance CLOUD block storage, CLOUD_SSD: SSD CLOUD disk.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Cloud disk size. 
-     * @return DiskSize Cloud disk size.
+     * Get CBS disk capacity, unit: GB. 
+     * @return DiskSize CBS disk capacity, unit: GB.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Cloud disk size.
-     * @param DiskSize Cloud disk size.
+     * Set CBS disk capacity, unit: GB.
+     * @param DiskSize CBS disk capacity, unit: GB.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed. 
-     * @return DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     * Get Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500]. 
+     * @return DiskBackupQuota Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
      */
     public Long getDiskBackupQuota() {
         return this.DiskBackupQuota;
     }
 
     /**
-     * Set Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
-     * @param DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     * Set Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
+     * @param DiskBackupQuota Specify the cloud disk backup point quota. by default, no backup point quota is set if not specified. currently only support setting no quota or a cloud disk backup point quota within [0 - 500].
      */
     public void setDiskBackupQuota(Long DiskBackupQuota) {
         this.DiskBackupQuota = DiskBackupQuota;

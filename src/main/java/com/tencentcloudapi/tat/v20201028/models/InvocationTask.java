@@ -45,20 +45,21 @@ public class InvocationTask extends AbstractModel {
     private String CommandId;
 
     /**
-    * Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+    * Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -79,28 +80,30 @@ public class InvocationTask extends AbstractModel {
     private TaskResult TaskResult;
 
     /**
-    * Start time of the execution task.
+    * Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the execution task.
+    * Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Creation time.
+    * Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
     */
     @SerializedName("CreatedTime")
     @Expose
     private String CreatedTime;
 
     /**
-    * Update time.
+    * Update time. the format is YYYY-MM-DDThh:MM:ssZ.
     */
     @SerializedName("UpdatedTime")
     @Expose
@@ -122,10 +125,20 @@ public class InvocationTask extends AbstractModel {
 
     /**
     * Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
     */
     @SerializedName("InvocationSource")
     @Expose
     private String InvocationSource;
+
+    /**
+    * Name of the executed command.
+    */
+    @SerializedName("CommandName")
+    @Expose
+    private String CommandName;
 
     /**
      * Get Execution activity ID. 
@@ -176,68 +189,72 @@ public class InvocationTask extends AbstractModel {
     }
 
     /**
-     * Get Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution) 
-     * @return TaskStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+     * Get Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution). 
+     * @return TaskStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
      */
     public String getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
-     * @param TaskStatus Execution task status. Valid values:
-<li> PENDING: Pending 
-<li> DELIVERING: Delivering
-<li> DELIVER_DELAYED: Delivery delayed 
-<li> DELIVER_FAILED: Delivery failed
-<li> START_FAILED: Failed to start the command
-<li> RUNNING: Running
-<li> SUCCESS: Success
-<li> FAILED: Failed to execute the command. The exit code is not 0 after execution.
-<li> TIMEOUT: Command timed out
-<li> TASK_TIMEOUT: Task timed out
-<li> CANCELLING: Canceling
-<li> CANCELLED: Canceled (canceled before execution)
-<li> TERMINATED: Terminated (canceled during execution)
+     * Set Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
+     * @param TaskStatus Execution task status. valid values:.
+
+-PENDING: waiting for distribution.
+-DELIVERING: distributing.
+-DELIVER_DELAYED: delivery delay.
+-DELIVER_FAILED: delivery fail.
+-START_FAILED: command start failed.
+- RUNNING: command RUNNING.
+-SUCCESS: command success.
+-FAILED: command execution failed, exit code not 0.
+-TIMEOUT: command timeout.
+-TASK_TIMEOUT: client no response.
+-Canceling.
+- CANCELLED: canceled (command canceled before startup).
+-TERMINATED: suspended (canceled during command execution).
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;
@@ -276,64 +293,72 @@ public class InvocationTask extends AbstractModel {
     }
 
     /**
-     * Get Start time of the execution task. 
-     * @return StartTime Start time of the execution task.
+     * Get Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return StartTime Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the execution task.
-     * @param StartTime Start time of the execution task.
+     * Set Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param StartTime Task start time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the execution task. 
-     * @return EndTime End time of the execution task.
+     * Get Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EndTime Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the execution task.
-     * @param EndTime End time of the execution task.
+     * Set Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EndTime Task end time. format: YYYY-MM-DDThh:MM:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Creation time. 
-     * @return CreatedTime Creation time.
+     * Get Creation time. the format is YYYY-MM-DDThh:MM:ssZ. 
+     * @return CreatedTime Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public String getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Creation time.
-     * @param CreatedTime Creation time.
+     * Set Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
+     * @param CreatedTime Creation time. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public void setCreatedTime(String CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get Update time. 
-     * @return UpdatedTime Update time.
+     * Get Update time. the format is YYYY-MM-DDThh:MM:ssZ. 
+     * @return UpdatedTime Update time. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public String getUpdatedTime() {
         return this.UpdatedTime;
     }
 
     /**
-     * Set Update time.
-     * @param UpdatedTime Update time.
+     * Set Update time. the format is YYYY-MM-DDThh:MM:ssZ.
+     * @param UpdatedTime Update time. the format is YYYY-MM-DDThh:MM:ssZ.
      */
     public void setUpdatedTime(String UpdatedTime) {
         this.UpdatedTime = UpdatedTime;
@@ -372,8 +397,14 @@ public class InvocationTask extends AbstractModel {
     }
 
     /**
-     * Get Invocation source. 
+     * Get Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution. 
      * @return InvocationSource Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
      */
     public String getInvocationSource() {
         return this.InvocationSource;
@@ -381,10 +412,32 @@ public class InvocationTask extends AbstractModel {
 
     /**
      * Set Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
      * @param InvocationSource Invocation source.
+
+-USER: originate from user invocation.
+-INVOKER: originate from scheduled execution.
      */
     public void setInvocationSource(String InvocationSource) {
         this.InvocationSource = InvocationSource;
+    }
+
+    /**
+     * Get Name of the executed command. 
+     * @return CommandName Name of the executed command.
+     */
+    public String getCommandName() {
+        return this.CommandName;
+    }
+
+    /**
+     * Set Name of the executed command.
+     * @param CommandName Name of the executed command.
+     */
+    public void setCommandName(String CommandName) {
+        this.CommandName = CommandName;
     }
 
     public InvocationTask() {
@@ -434,6 +487,9 @@ public class InvocationTask extends AbstractModel {
         if (source.InvocationSource != null) {
             this.InvocationSource = new String(source.InvocationSource);
         }
+        if (source.CommandName != null) {
+            this.CommandName = new String(source.CommandName);
+        }
     }
 
 
@@ -454,6 +510,7 @@ public class InvocationTask extends AbstractModel {
         this.setParamObj(map, prefix + "CommandDocument.", this.CommandDocument);
         this.setParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
         this.setParamSimple(map, prefix + "InvocationSource", this.InvocationSource);
+        this.setParamSimple(map, prefix + "CommandName", this.CommandName);
 
     }
 }

@@ -39,6 +39,50 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Associate a project cluster.
+     * @param req AddCalcEnginesToProjectRequest
+     * @return AddCalcEnginesToProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddCalcEnginesToProjectResponse AddCalcEnginesToProject(AddCalcEnginesToProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddCalcEnginesToProject", AddCalcEnginesToProjectResponse.class);
+    }
+
+    /**
+     *This API is used to bind the designated execution resource group to the project.
+     * @param req AssociateResourceGroupToProjectRequest
+     * @return AssociateResourceGroupToProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateResourceGroupToProjectResponse AssociateResourceGroupToProject(AssociateResourceGroupToProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateResourceGroupToProject", AssociateResourceGroupToProjectResponse.class);
+    }
+
+    /**
+     *Authorize a data source.
+     * @param req AuthorizeDataSourceRequest
+     * @return AuthorizeDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public AuthorizeDataSourceResponse AuthorizeDataSource(AuthorizeDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AuthorizeDataSource", AuthorizeDataSourceResponse.class);
+    }
+
+    /**
+     *Authorization in Catalog mode.
+     * @param req AuthorizePrivilegesRequest
+     * @return AuthorizePrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AuthorizePrivilegesResponse AuthorizePrivileges(AuthorizePrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AuthorizePrivileges", AuthorizePrivilegesResponse.class);
+    }
+
+    /**
      *This API is used to create a code file.
      * @param req CreateCodeFileRequest
      * @return CreateCodeFileResponse
@@ -61,6 +105,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Configure CodeStudio entity permission.
+     * @param req CreateCodePermissionsRequest
+     * @return CreateCodePermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCodePermissionsResponse CreateCodePermissions(CreateCodePermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCodePermissions", CreateCodePermissionsResponse.class);
+    }
+
+    /**
      *This API is used to create a data backfill plan.
      * @param req CreateDataBackfillPlanRequest
      * @return CreateDataBackfillPlanResponse
@@ -72,6 +127,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a data source in the designated project.
+     * @param req CreateDataSourceRequest
+     * @return CreateDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataSourceResponse CreateDataSource(CreateDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDataSource", CreateDataSourceResponse.class);
+    }
+
+    /**
      *This API is used to set alarm rules.
      * @param req CreateOpsAlarmRuleRequest
      * @return CreateOpsAlarmRuleResponse
@@ -80,6 +146,28 @@ public class WedataClient extends AbstractClient{
     public CreateOpsAlarmRuleResponse CreateOpsAlarmRule(CreateOpsAlarmRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateOpsAlarmRule", CreateOpsAlarmRuleResponse.class);
+    }
+
+    /**
+     *Create a project with cluster information upon creation.
+     * @param req CreateProjectRequest
+     * @return CreateProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProject", CreateProjectResponse.class);
+    }
+
+    /**
+     *Add project user role.
+     * @param req CreateProjectMemberRequest
+     * @return CreateProjectMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProjectMemberResponse CreateProjectMember(CreateProjectMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProjectMember", CreateProjectMemberResponse.class);
     }
 
     /**
@@ -102,6 +190,17 @@ public class WedataClient extends AbstractClient{
     public CreateResourceFolderResponse CreateResourceFolder(CreateResourceFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateResourceFolder", CreateResourceFolderResponse.class);
+    }
+
+    /**
+     *This API is used to purchase resources.
+     * @param req CreateResourceGroupRequest
+     * @return CreateResourceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateResourceGroupResponse CreateResourceGroup(CreateResourceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateResourceGroup", CreateResourceGroupResponse.class);
     }
 
     /**
@@ -138,6 +237,39 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Create a folder.
+     * @param req CreateTaskFolderRequest
+     * @return CreateTaskFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTaskFolderResponse CreateTaskFolder(CreateTaskFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTaskFolder", CreateTaskFolderResponse.class);
+    }
+
+    /**
+     *This API is used to create a task.
+     * @param req CreateTriggerTaskRequest
+     * @return CreateTriggerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTriggerTaskResponse CreateTriggerTask(CreateTriggerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTriggerTask", CreateTriggerTaskResponse.class);
+    }
+
+    /**
+     *create workflow.
+     * @param req CreateTriggerWorkflowRequest
+     * @return CreateTriggerWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTriggerWorkflowResponse CreateTriggerWorkflow(CreateTriggerWorkflowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTriggerWorkflow", CreateTriggerWorkflowResponse.class);
+    }
+
+    /**
      *This API is used to create workflow.
      * @param req CreateWorkflowRequest
      * @return CreateWorkflowResponse
@@ -157,6 +289,17 @@ public class WedataClient extends AbstractClient{
     public CreateWorkflowFolderResponse CreateWorkflowFolder(CreateWorkflowFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateWorkflowFolder", CreateWorkflowFolderResponse.class);
+    }
+
+    /**
+     *This API is used to configure data development permissions.
+     * @param req CreateWorkflowPermissionsRequest
+     * @return CreateWorkflowPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateWorkflowPermissionsResponse CreateWorkflowPermissions(CreateWorkflowPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateWorkflowPermissions", CreateWorkflowPermissionsResponse.class);
     }
 
     /**
@@ -182,6 +325,50 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Delete CodeStudio entity permission.
+     * @param req DeleteCodePermissionsRequest
+     * @return DeleteCodePermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCodePermissionsResponse DeleteCodePermissions(DeleteCodePermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCodePermissions", DeleteCodePermissionsResponse.class);
+    }
+
+    /**
+     *Delete a replenishment plan.
+     * @param req DeleteDataBackfillPlanAsyncRequest
+     * @return DeleteDataBackfillPlanAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataBackfillPlanAsyncResponse DeleteDataBackfillPlanAsync(DeleteDataBackfillPlanAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDataBackfillPlanAsync", DeleteDataBackfillPlanAsyncResponse.class);
+    }
+
+    /**
+     *This API is used to delete a data source.
+     * @param req DeleteDataSourceRequest
+     * @return DeleteDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataSourceResponse DeleteDataSource(DeleteDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDataSource", DeleteDataSourceResponse.class);
+    }
+
+    /**
+     *RegisterLineage
+     * @param req DeleteLineageRequest
+     * @return DeleteLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLineageResponse DeleteLineage(DeleteLineageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLineage", DeleteLineageResponse.class);
+    }
+
+    /**
      *Deletes alarm rules
      * @param req DeleteOpsAlarmRuleRequest
      * @return DeleteOpsAlarmRuleResponse
@@ -190,6 +377,28 @@ public class WedataClient extends AbstractClient{
     public DeleteOpsAlarmRuleResponse DeleteOpsAlarmRule(DeleteOpsAlarmRuleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteOpsAlarmRule", DeleteOpsAlarmRuleResponse.class);
+    }
+
+    /**
+     *This API is used to delete a project.
+     * @param req DeleteProjectRequest
+     * @return DeleteProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProjectResponse DeleteProject(DeleteProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProject", DeleteProjectResponse.class);
+    }
+
+    /**
+     *This API is used to delete project users.
+     * @param req DeleteProjectMemberRequest
+     * @return DeleteProjectMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProjectMemberResponse DeleteProjectMember(DeleteProjectMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProjectMember", DeleteProjectMemberResponse.class);
     }
 
     /**
@@ -212,6 +421,17 @@ public class WedataClient extends AbstractClient{
     public DeleteResourceFolderResponse DeleteResourceFolder(DeleteResourceFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteResourceFolder", DeleteResourceFolderResponse.class);
+    }
+
+    /**
+     *This API is used to destroy resources.
+     * @param req DeleteResourceGroupRequest
+     * @return DeleteResourceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteResourceGroupResponse DeleteResourceGroup(DeleteResourceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteResourceGroup", DeleteResourceGroupResponse.class);
     }
 
     /**
@@ -248,6 +468,39 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Delete a data development task folder.
+     * @param req DeleteTaskFolderRequest
+     * @return DeleteTaskFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTaskFolderResponse DeleteTaskFolder(DeleteTaskFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTaskFolder", DeleteTaskFolderResponse.class);
+    }
+
+    /**
+     *Delete a workflow scheduling task.
+     * @param req DeleteTriggerTaskRequest
+     * @return DeleteTriggerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTriggerTaskResponse DeleteTriggerTask(DeleteTriggerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTriggerTask", DeleteTriggerTaskResponse.class);
+    }
+
+    /**
+     *Deletes a workflow
+     * @param req DeleteTriggerWorkflowRequest
+     * @return DeleteTriggerWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteTriggerWorkflowResponse DeleteTriggerWorkflow(DeleteTriggerWorkflowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteTriggerWorkflow", DeleteTriggerWorkflowResponse.class);
+    }
+
+    /**
      *Deletes a workflow
      * @param req DeleteWorkflowRequest
      * @return DeleteWorkflowResponse
@@ -270,6 +523,61 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to delete workflow folder permissions.
+     * @param req DeleteWorkflowPermissionsRequest
+     * @return DeleteWorkflowPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteWorkflowPermissionsResponse DeleteWorkflowPermissions(DeleteWorkflowPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteWorkflowPermissions", DeleteWorkflowPermissionsResponse.class);
+    }
+
+    /**
+     *View Data Source Permission.
+     * @param req DescribeDataSourceAuthorityRequest
+     * @return DescribeDataSourceAuthorityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataSourceAuthorityResponse DescribeDataSourceAuthority(DescribeDataSourceAuthorityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataSourceAuthority", DescribeDataSourceAuthorityResponse.class);
+    }
+
+    /**
+     *Disable a project.
+     * @param req DisableProjectRequest
+     * @return DisableProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableProjectResponse DisableProject(DisableProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableProject", DisableProjectResponse.class);
+    }
+
+    /**
+     *This API is used to unbind the designated execution resource group from the project.
+     * @param req DissociateResourceGroupFromProjectRequest
+     * @return DissociateResourceGroupFromProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DissociateResourceGroupFromProjectResponse DissociateResourceGroupFromProject(DissociateResourceGroupFromProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DissociateResourceGroupFromProject", DissociateResourceGroupFromProjectResponse.class);
+    }
+
+    /**
+     *Enable a project.
+     * @param req EnableProjectRequest
+     * @return EnableProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableProjectResponse EnableProject(EnableProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableProject", EnableProjectResponse.class);
+    }
+
+    /**
      *This API is used to query alert information details.
      * @param req GetAlarmMessageRequest
      * @return GetAlarmMessageResponse
@@ -289,6 +597,72 @@ public class WedataClient extends AbstractClient{
     public GetCodeFileResponse GetCodeFile(GetCodeFileRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetCodeFile", GetCodeFileResponse.class);
+    }
+
+    /**
+     *Retrieve sql folder details.
+     * @param req GetCodeFolderRequest
+     * @return GetCodeFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetCodeFolderResponse GetCodeFolder(GetCodeFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetCodeFolder", GetCodeFolderResponse.class);
+    }
+
+    /**
+     *Retrieve supplementary plan details.
+     * @param req GetDataBackfillPlanRequest
+     * @return GetDataBackfillPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDataBackfillPlanResponse GetDataBackfillPlan(GetDataBackfillPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDataBackfillPlan", GetDataBackfillPlanResponse.class);
+    }
+
+    /**
+     *This API is used to view detailed information of the specified data source.
+     * @param req GetDataSourceRequest
+     * @return GetDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDataSourceResponse GetDataSource(GetDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDataSource", GetDataSourceResponse.class);
+    }
+
+    /**
+     *Query the associated task details of a data source.
+     * @param req GetDataSourceRelatedTasksRequest
+     * @return GetDataSourceRelatedTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetDataSourceRelatedTasksResponse GetDataSourceRelatedTasks(GetDataSourceRelatedTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetDataSourceRelatedTasks", GetDataSourceRelatedTasksResponse.class);
+    }
+
+    /**
+     *View the current user's maximum permission scope for the CodeStudio entity.
+     * @param req GetMyCodeMaxPermissionRequest
+     * @return GetMyCodeMaxPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetMyCodeMaxPermissionResponse GetMyCodeMaxPermission(GetMyCodeMaxPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetMyCodeMaxPermission", GetMyCodeMaxPermissionResponse.class);
+    }
+
+    /**
+     *Check the current user's maximum permission scope for the workflow folder recursively.
+     * @param req GetMyWorkflowMaxPermissionRequest
+     * @return GetMyWorkflowMaxPermissionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetMyWorkflowMaxPermissionResponse GetMyWorkflowMaxPermission(GetMyWorkflowMaxPermissionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetMyWorkflowMaxPermission", GetMyWorkflowMaxPermissionResponse.class);
     }
 
     /**
@@ -336,6 +710,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Query workflow task details.
+     * @param req GetOpsTriggerWorkflowRequest
+     * @return GetOpsTriggerWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetOpsTriggerWorkflowResponse GetOpsTriggerWorkflow(GetOpsTriggerWorkflowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetOpsTriggerWorkflow", GetOpsTriggerWorkflowResponse.class);
+    }
+
+    /**
      *This API is used to obtain workflow scheduling details based on the workflow id.
      * @param req GetOpsWorkflowRequest
      * @return GetOpsWorkflowResponse
@@ -344,6 +729,17 @@ public class WedataClient extends AbstractClient{
     public GetOpsWorkflowResponse GetOpsWorkflow(GetOpsWorkflowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetOpsWorkflow", GetOpsWorkflowResponse.class);
+    }
+
+    /**
+     *This API is used to get project information.
+     * @param req GetProjectRequest
+     * @return GetProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetProjectResponse GetProject(GetProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetProject", GetProjectResponse.class);
     }
 
     /**
@@ -358,6 +754,39 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Query a resource file folder details.
+     * @param req GetResourceFolderRequest
+     * @return GetResourceFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetResourceFolderResponse GetResourceFolder(GetResourceFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetResourceFolder", GetResourceFolderResponse.class);
+    }
+
+    /**
+     *This API is used to view specified execution resource group monitoring metrics.
+     * @param req GetResourceGroupMetricsRequest
+     * @return GetResourceGroupMetricsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetResourceGroupMetricsResponse GetResourceGroupMetrics(GetResourceGroupMetricsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetResourceGroupMetrics", GetResourceGroupMetricsResponse.class);
+    }
+
+    /**
+     *Retrieve sql folder details.
+     * @param req GetSQLFolderRequest
+     * @return GetSQLFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetSQLFolderResponse GetSQLFolder(GetSQLFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetSQLFolder", GetSQLFolderResponse.class);
+    }
+
+    /**
      *This API is used to query script details.
      * @param req GetSQLScriptRequest
      * @return GetSQLScriptResponse
@@ -366,6 +795,28 @@ public class WedataClient extends AbstractClient{
     public GetSQLScriptResponse GetSQLScript(GetSQLScriptRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetSQLScript", GetSQLScriptResponse.class);
+    }
+
+    /**
+     *Query table details.
+     * @param req GetTableRequest
+     * @return GetTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTableResponse GetTable(GetTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTable", GetTableResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of all fields in a table.
+     * @param req GetTableColumnsRequest
+     * @return GetTableColumnsResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTableColumnsResponse GetTableColumns(GetTableColumnsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTableColumns", GetTableColumnsResponse.class);
     }
 
     /**
@@ -388,6 +839,17 @@ public class WedataClient extends AbstractClient{
     public GetTaskCodeResponse GetTaskCode(GetTaskCodeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetTaskCode", GetTaskCodeResponse.class);
+    }
+
+    /**
+     *Query Task Folder Details.
+     * @param req GetTaskFolderRequest
+     * @return GetTaskFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTaskFolderResponse GetTaskFolder(GetTaskFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTaskFolder", GetTaskFolderResponse.class);
     }
 
     /**
@@ -424,6 +886,72 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to retrieve task details.
+     * @param req GetTriggerTaskRequest
+     * @return GetTriggerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTriggerTaskResponse GetTriggerTask(GetTriggerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTriggerTask", GetTriggerTaskResponse.class);
+    }
+
+    /**
+     *Retrieve workflow scheduling task code.
+     * @param req GetTriggerTaskCodeRequest
+     * @return GetTriggerTaskCodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTriggerTaskCodeResponse GetTriggerTaskCode(GetTriggerTaskCodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTriggerTaskCode", GetTriggerTaskCodeResponse.class);
+    }
+
+    /**
+     *Query task execution details.
+     * @param req GetTriggerTaskRunRequest
+     * @return GetTriggerTaskRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTriggerTaskRunResponse GetTriggerTaskRun(GetTriggerTaskRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTriggerTaskRun", GetTriggerTaskRunResponse.class);
+    }
+
+    /**
+     *Get task version list.
+     * @param req GetTriggerTaskVersionRequest
+     * @return GetTriggerTaskVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTriggerTaskVersionResponse GetTriggerTaskVersion(GetTriggerTaskVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTriggerTaskVersion", GetTriggerTaskVersionResponse.class);
+    }
+
+    /**
+     *Retrieve workflow information.
+     * @param req GetTriggerWorkflowRequest
+     * @return GetTriggerWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTriggerWorkflowResponse GetTriggerWorkflow(GetTriggerWorkflowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTriggerWorkflow", GetTriggerWorkflowResponse.class);
+    }
+
+    /**
+     *Query workflow task details.
+     * @param req GetTriggerWorkflowRunRequest
+     * @return GetTriggerWorkflowRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetTriggerWorkflowRunResponse GetTriggerWorkflowRun(GetTriggerWorkflowRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetTriggerWorkflowRun", GetTriggerWorkflowRunResponse.class);
+    }
+
+    /**
      *This API is used to retrieve workflow information.
      * @param req GetWorkflowRequest
      * @return GetWorkflowResponse
@@ -432,6 +960,28 @@ public class WedataClient extends AbstractClient{
     public GetWorkflowResponse GetWorkflow(GetWorkflowRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetWorkflow", GetWorkflowResponse.class);
+    }
+
+    /**
+     *Query folder details.
+     * @param req GetWorkflowFolderRequest
+     * @return GetWorkflowFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetWorkflowFolderResponse GetWorkflowFolder(GetWorkflowFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetWorkflowFolder", GetWorkflowFolderResponse.class);
+    }
+
+    /**
+     *Modify project user roles.
+     * @param req GrantMemberProjectRoleRequest
+     * @return GrantMemberProjectRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public GrantMemberProjectRoleResponse GrantMemberProjectRole(GrantMemberProjectRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GrantMemberProjectRole", GrantMemberProjectRoleResponse.class);
     }
 
     /**
@@ -446,6 +996,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Terminate running.
+     * @param req KillTriggerWorkflowRunsRequest
+     * @return KillTriggerWorkflowRunsResponse
+     * @throws TencentCloudSDKException
+     */
+    public KillTriggerWorkflowRunsResponse KillTriggerWorkflowRuns(KillTriggerWorkflowRunsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "KillTriggerWorkflowRuns", KillTriggerWorkflowRunsResponse.class);
+    }
+
+    /**
      *This API is used to search the alarm information list.
      * @param req ListAlarmMessagesRequest
      * @return ListAlarmMessagesResponse
@@ -454,6 +1015,17 @@ public class WedataClient extends AbstractClient{
     public ListAlarmMessagesResponse ListAlarmMessages(ListAlarmMessagesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListAlarmMessages", ListAlarmMessagesResponse.class);
+    }
+
+    /**
+     *Retrieve asset catalog info.
+     * @param req ListCatalogRequest
+     * @return ListCatalogResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListCatalogResponse ListCatalog(ListCatalogRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListCatalog", ListCatalogResponse.class);
     }
 
     /**
@@ -468,6 +1040,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *View CodeStudio entity permission.
+     * @param req ListCodePermissionsRequest
+     * @return ListCodePermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListCodePermissionsResponse ListCodePermissions(ListCodePermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListCodePermissions", ListCodePermissionsResponse.class);
+    }
+
+    /**
+     *This API is used to obtain table field lineage information.
+     * @param req ListColumnLineageRequest
+     * @return ListColumnLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListColumnLineageResponse ListColumnLineage(ListColumnLineageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListColumnLineage", ListColumnLineageResponse.class);
+    }
+
+    /**
      *This API is used to retrieve all instances of a single backfill.
      * @param req ListDataBackfillInstancesRequest
      * @return ListDataBackfillInstancesResponse
@@ -476,6 +1070,28 @@ public class WedataClient extends AbstractClient{
     public ListDataBackfillInstancesResponse ListDataBackfillInstances(ListDataBackfillInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListDataBackfillInstances", ListDataBackfillInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to query the data source list in the designated project.
+     * @param req ListDataSourcesRequest
+     * @return ListDataSourcesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDataSourcesResponse ListDataSources(ListDataSourcesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDataSources", ListDataSourcesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain asset database info.
+     * @param req ListDatabaseRequest
+     * @return ListDatabaseResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDatabaseResponse ListDatabase(ListDatabaseRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDatabase", ListDatabaseResponse.class);
     }
 
     /**
@@ -512,6 +1128,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to retrieve direct downstream task details.
+     * @param req ListDownstreamTriggerTasksRequest
+     * @return ListDownstreamTriggerTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListDownstreamTriggerTasksResponse ListDownstreamTriggerTasks(ListDownstreamTriggerTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListDownstreamTriggerTasks", ListDownstreamTriggerTasksResponse.class);
+    }
+
+    /**
+     *This API is used to obtain asset lineage information.
+     * @param req ListLineageRequest
+     * @return ListLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListLineageResponse ListLineage(ListLineageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListLineage", ListLineageResponse.class);
+    }
+
+    /**
      *This API is used to query the alarm rule list.
      * @param req ListOpsAlarmRulesRequest
      * @return ListOpsAlarmRulesResponse
@@ -534,6 +1172,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of workflows.
+     * @param req ListOpsTriggerWorkflowsRequest
+     * @return ListOpsTriggerWorkflowsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListOpsTriggerWorkflowsResponse ListOpsTriggerWorkflows(ListOpsTriggerWorkflowsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListOpsTriggerWorkflows", ListOpsTriggerWorkflowsResponse.class);
+    }
+
+    /**
      *Get Workflows under a Project by Project ID.
      * @param req ListOpsWorkflowsRequest
      * @return ListOpsWorkflowsResponse
@@ -542,6 +1191,72 @@ public class WedataClient extends AbstractClient{
     public ListOpsWorkflowsResponse ListOpsWorkflows(ListOpsWorkflowsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListOpsWorkflows", ListOpsWorkflowsResponse.class);
+    }
+
+    /**
+     *Retrieve authorizable permission details.
+     * @param req ListPermissionsRequest
+     * @return ListPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPermissionsResponse ListPermissions(ListPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListPermissions", ListPermissionsResponse.class);
+    }
+
+    /**
+     *This API is used to obtain asset lineage information.
+     * @param req ListProcessLineageRequest
+     * @return ListProcessLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListProcessLineageResponse ListProcessLineage(ListProcessLineageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListProcessLineage", ListProcessLineageResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the user under the project with pagination return.
+     * @param req ListProjectMembersRequest
+     * @return ListProjectMembersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListProjectMembersResponse ListProjectMembers(ListProjectMembersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListProjectMembers", ListProjectMembersResponse.class);
+    }
+
+    /**
+     *Get role list info.
+     * @param req ListProjectRolesRequest
+     * @return ListProjectRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListProjectRolesResponse ListProjectRoles(ListProjectRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListProjectRoles", ListProjectRolesResponse.class);
+    }
+
+    /**
+     *The project list in the tenant's global scope is irrelevant to the user's viewing range.
+     * @param req ListProjectsRequest
+     * @return ListProjectsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListProjectsResponse ListProjects(ListProjectsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListProjects", ListProjectsResponse.class);
+    }
+
+    /**
+     *[Filter criteria] {template Name, query usage with Keyword fuzzy matching} {template type, 1. system template 2. custom template} {quality detection dimensions (QualityDims), 1. accuracy 2. uniqueness 3. integrity 4. consistency 5. timeliness 6. validity} [Sorting field] {citation sorting type, sort ASC or DESC based on the number of references}.
+     * @param req ListQualityRuleTemplatesRequest
+     * @return ListQualityRuleTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListQualityRuleTemplatesResponse ListQualityRuleTemplates(ListQualityRuleTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListQualityRuleTemplates", ListQualityRuleTemplatesResponse.class);
     }
 
     /**
@@ -567,6 +1282,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the execution resource group list.
+     * @param req ListResourceGroupsRequest
+     * @return ListResourceGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListResourceGroupsResponse ListResourceGroups(ListResourceGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListResourceGroups", ListResourceGroupsResponse.class);
+    }
+
+    /**
      *This API is used to retrieve the content list of an sql folder
      * @param req ListSQLFolderContentsRequest
      * @return ListSQLFolderContentsResponse
@@ -586,6 +1312,39 @@ public class WedataClient extends AbstractClient{
     public ListSQLScriptRunsResponse ListSQLScriptRuns(ListSQLScriptRunsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListSQLScriptRuns", ListSQLScriptRunsResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the asset database Schema information.
+     * @param req ListSchemaRequest
+     * @return ListSchemaResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListSchemaResponse ListSchema(ListSchemaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListSchema", ListSchemaResponse.class);
+    }
+
+    /**
+     *This API is used to obtain table information of assets.
+     * @param req ListTableRequest
+     * @return ListTableResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTableResponse ListTable(ListTableRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTable", ListTableResponse.class);
+    }
+
+    /**
+     *Query Task Folder List.
+     * @param req ListTaskFoldersRequest
+     * @return ListTaskFoldersResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTaskFoldersResponse ListTaskFolders(ListTaskFoldersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTaskFolders", ListTaskFoldersResponse.class);
     }
 
     /**
@@ -633,6 +1392,61 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Get the role list of all root accounts.
+     * @param req ListTenantRolesRequest
+     * @return ListTenantRolesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTenantRolesResponse ListTenantRoles(ListTenantRolesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTenantRoles", ListTenantRolesResponse.class);
+    }
+
+    /**
+     *Task save version list.
+     * @param req ListTriggerTaskVersionsRequest
+     * @return ListTriggerTaskVersionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTriggerTaskVersionsResponse ListTriggerTaskVersions(ListTriggerTaskVersionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTriggerTaskVersions", ListTriggerTaskVersionsResponse.class);
+    }
+
+    /**
+     *Query job pagination information.
+     * @param req ListTriggerTasksRequest
+     * @return ListTriggerTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTriggerTasksResponse ListTriggerTasks(ListTriggerTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTriggerTasks", ListTriggerTasksResponse.class);
+    }
+
+    /**
+     *Query workflow operation.
+     * @param req ListTriggerWorkflowRunsRequest
+     * @return ListTriggerWorkflowRunsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTriggerWorkflowRunsResponse ListTriggerWorkflowRuns(ListTriggerWorkflowRunsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTriggerWorkflowRuns", ListTriggerWorkflowRunsResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of workflows.
+     * @param req ListTriggerWorkflowsRequest
+     * @return ListTriggerWorkflowsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTriggerWorkflowsResponse ListTriggerWorkflows(ListTriggerWorkflowsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTriggerWorkflows", ListTriggerWorkflowsResponse.class);
+    }
+
+    /**
      *This API is used to retrieve task direct upstream.
      * @param req ListUpstreamOpsTasksRequest
      * @return ListUpstreamOpsTasksResponse
@@ -666,6 +1480,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *This API is used to retrieve direct upstream tasks.
+     * @param req ListUpstreamTriggerTasksRequest
+     * @return ListUpstreamTriggerTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListUpstreamTriggerTasksResponse ListUpstreamTriggerTasks(ListUpstreamTriggerTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListUpstreamTriggerTasks", ListUpstreamTriggerTasksResponse.class);
+    }
+
+    /**
      *This API is used to query the folder list.
      * @param req ListWorkflowFoldersRequest
      * @return ListWorkflowFoldersResponse
@@ -674,6 +1499,17 @@ public class WedataClient extends AbstractClient{
     public ListWorkflowFoldersResponse ListWorkflowFolders(ListWorkflowFoldersRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListWorkflowFolders", ListWorkflowFoldersResponse.class);
+    }
+
+    /**
+     *Query workflow authorization permissions.
+     * @param req ListWorkflowPermissionsRequest
+     * @return ListWorkflowPermissionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListWorkflowPermissionsResponse ListWorkflowPermissions(ListWorkflowPermissionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListWorkflowPermissions", ListWorkflowPermissionsResponse.class);
     }
 
     /**
@@ -699,6 +1535,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *RegisterLineage
+     * @param req RegisterLineageRequest
+     * @return RegisterLineageResponse
+     * @throws TencentCloudSDKException
+     */
+    public RegisterLineageResponse RegisterLineage(RegisterLineageRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RegisterLineage", RegisterLineageResponse.class);
+    }
+
+    /**
+     *Delete project user roles.
+     * @param req RemoveMemberProjectRoleRequest
+     * @return RemoveMemberProjectRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public RemoveMemberProjectRoleResponse RemoveMemberProjectRole(RemoveMemberProjectRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RemoveMemberProjectRole", RemoveMemberProjectRoleResponse.class);
+    }
+
+    /**
      *This API is used to batch rerun instances asynchronously.
      * @param req RerunTaskInstancesAsyncRequest
      * @return RerunTaskInstancesAsyncResponse
@@ -707,6 +1565,39 @@ public class WedataClient extends AbstractClient{
     public RerunTaskInstancesAsyncResponse RerunTaskInstancesAsync(RerunTaskInstancesAsyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RerunTaskInstancesAsync", RerunTaskInstancesAsyncResponse.class);
+    }
+
+    /**
+     *Rerun an operation.
+     * @param req RerunTriggerWorkflowRunAsyncRequest
+     * @return RerunTriggerWorkflowRunAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public RerunTriggerWorkflowRunAsyncResponse RerunTriggerWorkflowRunAsync(RerunTriggerWorkflowRunAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RerunTriggerWorkflowRunAsync", RerunTriggerWorkflowRunAsyncResponse.class);
+    }
+
+    /**
+     *Revoke data source permission.
+     * @param req RevokeDataSourceAuthorizationRequest
+     * @return RevokeDataSourceAuthorizationResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokeDataSourceAuthorizationResponse RevokeDataSourceAuthorization(RevokeDataSourceAuthorizationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RevokeDataSourceAuthorization", RevokeDataSourceAuthorizationResponse.class);
+    }
+
+    /**
+     *Authorization Revoked in Catalog mode.
+     * @param req RevokePrivilegesRequest
+     * @return RevokePrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokePrivilegesResponse RevokePrivileges(RevokePrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RevokePrivileges", RevokePrivilegesResponse.class);
     }
 
     /**
@@ -729,6 +1620,17 @@ public class WedataClient extends AbstractClient{
     public SetSuccessTaskInstancesAsyncResponse SetSuccessTaskInstancesAsync(SetSuccessTaskInstancesAsyncRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SetSuccessTaskInstancesAsync", SetSuccessTaskInstancesAsyncResponse.class);
+    }
+
+    /**
+     *Start tasks asynchronously in batch.
+     * @param req StartOpsTasksRequest
+     * @return StartOpsTasksResponse
+     * @throws TencentCloudSDKException
+     */
+    public StartOpsTasksResponse StartOpsTasks(StartOpsTasksRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StartOpsTasks", StartOpsTasksResponse.class);
     }
 
     /**
@@ -765,6 +1667,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Submit a workflow scheduling task.
+     * @param req SubmitTriggerTaskRequest
+     * @return SubmitTriggerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitTriggerTaskResponse SubmitTriggerTask(SubmitTriggerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitTriggerTask", SubmitTriggerTaskResponse.class);
+    }
+
+    /**
      *This API is used to update a code file.
      * @param req UpdateCodeFileRequest
      * @return UpdateCodeFileResponse
@@ -784,6 +1697,17 @@ public class WedataClient extends AbstractClient{
     public UpdateCodeFolderResponse UpdateCodeFolder(UpdateCodeFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateCodeFolder", UpdateCodeFolderResponse.class);
+    }
+
+    /**
+     *This API is used to update a data source.
+     * @param req UpdateDataSourceRequest
+     * @return UpdateDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateDataSourceResponse UpdateDataSource(UpdateDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateDataSource", UpdateDataSourceResponse.class);
     }
 
     /**
@@ -809,6 +1733,28 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Query task execution details.
+     * @param req UpdateOpsTriggerTasksOwnerRequest
+     * @return UpdateOpsTriggerTasksOwnerResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOpsTriggerTasksOwnerResponse UpdateOpsTriggerTasksOwner(UpdateOpsTriggerTasksOwnerRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOpsTriggerTasksOwner", UpdateOpsTriggerTasksOwnerResponse.class);
+    }
+
+    /**
+     *This API is used to modify project basic information.
+     * @param req UpdateProjectRequest
+     * @return UpdateProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProjectResponse UpdateProject(UpdateProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateProject", UpdateProjectResponse.class);
+    }
+
+    /**
      *This API is used to update a resource file.
      * @param req UpdateResourceFileRequest
      * @return UpdateResourceFileResponse
@@ -820,7 +1766,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *This API is used to update a resource folder.
+     *Update resource folder.
      * @param req UpdateResourceFolderRequest
      * @return UpdateResourceFolderResponse
      * @throws TencentCloudSDKException
@@ -828,6 +1774,17 @@ public class WedataClient extends AbstractClient{
     public UpdateResourceFolderResponse UpdateResourceFolder(UpdateResourceFolderRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateResourceFolder", UpdateResourceFolderResponse.class);
+    }
+
+    /**
+     *This API is used to modify configurations or renew resources.
+     * @param req UpdateResourceGroupRequest
+     * @return UpdateResourceGroupResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateResourceGroupResponse UpdateResourceGroup(UpdateResourceGroupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateResourceGroup", UpdateResourceGroupResponse.class);
     }
 
     /**
@@ -864,6 +1821,72 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Update a task folder.
+     * @param req UpdateTaskFolderRequest
+     * @return UpdateTaskFolderResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTaskFolderResponse UpdateTaskFolder(UpdateTaskFolderRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTaskFolder", UpdateTaskFolderResponse.class);
+    }
+
+    /**
+     *This API is used to update a task.
+     * @param req UpdateTaskPartiallyRequest
+     * @return UpdateTaskPartiallyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTaskPartiallyResponse UpdateTaskPartially(UpdateTaskPartiallyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTaskPartially", UpdateTaskPartiallyResponse.class);
+    }
+
+    /**
+     *This API is used to update a task.
+     * @param req UpdateTriggerTaskRequest
+     * @return UpdateTriggerTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTriggerTaskResponse UpdateTriggerTask(UpdateTriggerTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTriggerTask", UpdateTriggerTaskResponse.class);
+    }
+
+    /**
+     *This API is used to update a task.
+     * @param req UpdateTriggerTaskPartiallyRequest
+     * @return UpdateTriggerTaskPartiallyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTriggerTaskPartiallyResponse UpdateTriggerTaskPartially(UpdateTriggerTaskPartiallyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTriggerTaskPartially", UpdateTriggerTaskPartiallyResponse.class);
+    }
+
+    /**
+     *This API is used to update workflow, including basic information and workflow parameters.
+     * @param req UpdateTriggerWorkflowRequest
+     * @return UpdateTriggerWorkflowResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTriggerWorkflowResponse UpdateTriggerWorkflow(UpdateTriggerWorkflowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTriggerWorkflow", UpdateTriggerWorkflowResponse.class);
+    }
+
+    /**
+     *Update workflow (including basic info and workflow parameters).
+     * @param req UpdateTriggerWorkflowPartiallyRequest
+     * @return UpdateTriggerWorkflowPartiallyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateTriggerWorkflowPartiallyResponse UpdateTriggerWorkflowPartially(UpdateTriggerWorkflowPartiallyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateTriggerWorkflowPartially", UpdateTriggerWorkflowPartiallyResponse.class);
+    }
+
+    /**
      *This API is used to update a workflow including basic information and workflow parameters.
      * @param req UpdateWorkflowRequest
      * @return UpdateWorkflowResponse
@@ -875,7 +1898,7 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
-     *This API is used to update a workflow folder
+     *Refresh workflow folder.
      * @param req UpdateWorkflowFolderRequest
      * @return UpdateWorkflowFolderResponse
      * @throws TencentCloudSDKException

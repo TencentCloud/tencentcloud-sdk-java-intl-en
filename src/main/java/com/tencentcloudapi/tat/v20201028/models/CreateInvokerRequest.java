@@ -24,14 +24,18 @@ import java.util.HashMap;
 public class CreateInvokerRequest extends AbstractModel {
 
     /**
-    * Invoker name.
+    * Executor name. length not exceeding 120 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Invoker type. It can only be `SCHEDULE` (recurring invokers).
+    * Executor type.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
     */
     @SerializedName("Type")
     @Expose
@@ -39,74 +43,111 @@ public class CreateInvokerRequest extends AbstractModel {
 
     /**
     * Remote command ID.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
     */
     @SerializedName("CommandId")
     @Expose
     private String CommandId;
 
     /**
-    * ID of the instance bound to the trigger. Up to 100 IDs are allowed.
+    * Trigger associated instance ID. list cap 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * The user who executes the command.
+    * Command execution user. length not exceeding 256 characters.
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * Custom parameters of the command.
+    * Command custom parameter. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
     */
     @SerializedName("Parameters")
     @Expose
     private String Parameters;
 
     /**
-    * Settings required for a recurring invoker.
+    * Recurring invoker settings.
+
+When the executor type is `SCHEDULE`, specify this parameter.
     */
     @SerializedName("ScheduleSettings")
     @Expose
     private ScheduleSettings ScheduleSettings;
 
     /**
-     * Get Invoker name. 
-     * @return Name Invoker name.
+    * Tag associated with the command. list length not exceeding 10.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+     * Get Executor name. length not exceeding 120 characters. 
+     * @return Name Executor name. length not exceeding 120 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Invoker name.
-     * @param Name Invoker name.
+     * Set Executor name. length not exceeding 120 characters.
+     * @param Name Executor name. length not exceeding 120 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Invoker type. It can only be `SCHEDULE` (recurring invokers). 
-     * @return Type Invoker type. It can only be `SCHEDULE` (recurring invokers).
+     * Get Executor type.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor. 
+     * @return Type Executor type.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Invoker type. It can only be `SCHEDULE` (recurring invokers).
-     * @param Type Invoker type. It can only be `SCHEDULE` (recurring invokers).
+     * Set Executor type.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
+     * @param Type Executor type.
+
+Selectable values (currently only support one):.
+
+-`SCHEDULE`: period type executor.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Remote command ID. 
+     * Get Remote command ID.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details. 
      * @return CommandId Remote command ID.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public String getCommandId() {
         return this.CommandId;
@@ -114,74 +155,126 @@ public class CreateInvokerRequest extends AbstractModel {
 
     /**
      * Set Remote command ID.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      * @param CommandId Remote command ID.
+
+Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
     }
 
     /**
-     * Get ID of the instance bound to the trigger. Up to 100 IDs are allowed. 
-     * @return InstanceIds ID of the instance bound to the trigger. Up to 100 IDs are allowed.
+     * Get Trigger associated instance ID. list cap 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api. 
+     * @return InstanceIds Trigger associated instance ID. list cap 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set ID of the instance bound to the trigger. Up to 100 IDs are allowed.
-     * @param InstanceIds ID of the instance bound to the trigger. Up to 100 IDs are allowed.
+     * Set Trigger associated instance ID. list cap 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
+     * @param InstanceIds Trigger associated instance ID. list cap 100.
+
+You can get the instance ID through the query instance interface of corresponding cloud services. currently supports instance types: CVM, Lighthouse, and TAT managed instances.
+
+The instance needs to have the TAT client installed, and the client must be in Online status. you can query client status via the [DescribeAutomationAgentStatus](https://www.tencentcloud.comom/document/api/1340/52682?from_cn_redirect=1) api.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get The user who executes the command. 
-     * @return Username The user who executes the command.
+     * Get Command execution user. length not exceeding 256 characters. 
+     * @return Username Command execution user. length not exceeding 256 characters.
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set The user who executes the command.
-     * @param Username The user who executes the command.
+     * Set Command execution user. length not exceeding 256 characters.
+     * @param Username Command execution user. length not exceeding 256 characters.
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get Custom parameters of the command. 
-     * @return Parameters Custom parameters of the command.
+     * Get Command custom parameter. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api. 
+     * @return Parameters Command custom parameter. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
      */
     public String getParameters() {
         return this.Parameters;
     }
 
     /**
-     * Set Custom parameters of the command.
-     * @param Parameters Custom parameters of the command.
+     * Set Command custom parameter. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+     * @param Parameters Command custom parameter. field type is JSON encode string.
+
+This parameter can be set only when EnableParameter of the command specified by CommandId is true. obtain the EnableParameter settings through the [DescribeCommands (query command details)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
      */
     public void setParameters(String Parameters) {
         this.Parameters = Parameters;
     }
 
     /**
-     * Get Settings required for a recurring invoker. 
-     * @return ScheduleSettings Settings required for a recurring invoker.
+     * Get Recurring invoker settings.
+
+When the executor type is `SCHEDULE`, specify this parameter. 
+     * @return ScheduleSettings Recurring invoker settings.
+
+When the executor type is `SCHEDULE`, specify this parameter.
      */
     public ScheduleSettings getScheduleSettings() {
         return this.ScheduleSettings;
     }
 
     /**
-     * Set Settings required for a recurring invoker.
-     * @param ScheduleSettings Settings required for a recurring invoker.
+     * Set Recurring invoker settings.
+
+When the executor type is `SCHEDULE`, specify this parameter.
+     * @param ScheduleSettings Recurring invoker settings.
+
+When the executor type is `SCHEDULE`, specify this parameter.
      */
     public void setScheduleSettings(ScheduleSettings ScheduleSettings) {
         this.ScheduleSettings = ScheduleSettings;
+    }
+
+    /**
+     * Get Tag associated with the command. list length not exceeding 10. 
+     * @return Tags Tag associated with the command. list length not exceeding 10.
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag associated with the command. list length not exceeding 10.
+     * @param Tags Tag associated with the command. list length not exceeding 10.
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateInvokerRequest() {
@@ -216,6 +309,12 @@ public class CreateInvokerRequest extends AbstractModel {
         if (source.ScheduleSettings != null) {
             this.ScheduleSettings = new ScheduleSettings(source.ScheduleSettings);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -230,6 +329,7 @@ public class CreateInvokerRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "Parameters", this.Parameters);
         this.setParamObj(map, prefix + "ScheduleSettings.", this.ScheduleSettings);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

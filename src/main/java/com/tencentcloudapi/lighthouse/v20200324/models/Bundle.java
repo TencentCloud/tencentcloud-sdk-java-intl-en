@@ -110,24 +110,23 @@ Values:
     private String BundleSalesState;
 
     /**
-    * Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
+    * Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
     */
     @SerializedName("BundleType")
     @Expose
     private String BundleType;
 
     /**
-    * Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
+    * Package type description.
     */
     @SerializedName("BundleTypeDescription")
     @Expose
@@ -143,6 +142,13 @@ Valid values:
     @SerializedName("BundleDisplayLabel")
     @Expose
     private String BundleDisplayLabel;
+
+    /**
+    * Whether the traffic volume is unlimited.
+    */
+    @SerializedName("TrafficUnlimited")
+    @Expose
+    private Boolean TrafficUnlimited;
 
     /**
      * Get Package ID. 
@@ -345,72 +351,68 @@ Values:
     }
 
     /**
-     * Get Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li> 
-     * @return BundleType Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
+     * Get Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>. 
+     * @return BundleType Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
      */
     public String getBundleType() {
         return this.BundleType;
     }
 
     /**
-     * Set Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
-     * @param BundleType Bundle type. 
-Valid values: 
-<li>STARTER_BUNDLE: Starter bundle</li>
-<li>GENERAL_BUNDLE: General bundle</li>
-<li>ENTERPRISE_BUNDLE: Enterprise bundle</li>
-<li>STORAGE_BUNDLE: Storage-optimized bundle</li>
-<li>EXCLUSIVE_BUNDLE: Dedicated bundle</li>
-<li>HK_EXCLUSIVE_BUNDLE: Hong Kong-dedicated bundle </li>
-<li>CAREFREE_BUNDLE: Lighthouse Care bundle</li>
-<li>BEFAST_BUNDLE: BeFast bundle </li>
+     * Set Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
+     * @param BundleType Package type.
+Value range:.
+<Li>GENERAL_BUNDLE: general.</li>.
+<Li>STORAGE_BUNDLE: storage type</li>.
+<Li>ENTERPRISE_BUNDLE: enterprise type</li>.
+<Li>EXCLUSIVE_BUNDLE: exclusive</li>.
+<Li>BEFAST_BUNDLE: beefast bundle</li>.
+<Li>STARTER_BUNDLE: entry-level.</li>.
+<Li>CAREFREE_BUNDLE: carefree</li>.
+<Li>RAZOR_SPEED_BUNDLE: razor speed bundle</li>.
      */
     public void setBundleType(String BundleType) {
         this.BundleType = BundleType;
     }
 
     /**
-     * Get Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained. 
-     * @return BundleTypeDescription Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
+     * Get Package type description. 
+     * @return BundleTypeDescription Package type description.
      */
     public String getBundleTypeDescription() {
         return this.BundleTypeDescription;
     }
 
     /**
-     * Set Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
-     * @param BundleTypeDescription Bundle type description 
-Note: This parameter may return null, indicating that no valid values can be obtained.
+     * Set Package type description.
+     * @param BundleTypeDescription Package type description.
      */
     public void setBundleTypeDescription(String BundleTypeDescription) {
         this.BundleTypeDescription = BundleTypeDescription;
@@ -446,6 +448,22 @@ Valid values:
      */
     public void setBundleDisplayLabel(String BundleDisplayLabel) {
         this.BundleDisplayLabel = BundleDisplayLabel;
+    }
+
+    /**
+     * Get Whether the traffic volume is unlimited. 
+     * @return TrafficUnlimited Whether the traffic volume is unlimited.
+     */
+    public Boolean getTrafficUnlimited() {
+        return this.TrafficUnlimited;
+    }
+
+    /**
+     * Set Whether the traffic volume is unlimited.
+     * @param TrafficUnlimited Whether the traffic volume is unlimited.
+     */
+    public void setTrafficUnlimited(Boolean TrafficUnlimited) {
+        this.TrafficUnlimited = TrafficUnlimited;
     }
 
     public Bundle() {
@@ -501,6 +519,9 @@ Valid values:
         if (source.BundleDisplayLabel != null) {
             this.BundleDisplayLabel = new String(source.BundleDisplayLabel);
         }
+        if (source.TrafficUnlimited != null) {
+            this.TrafficUnlimited = new Boolean(source.TrafficUnlimited);
+        }
     }
 
 
@@ -523,6 +544,7 @@ Valid values:
         this.setParamSimple(map, prefix + "BundleType", this.BundleType);
         this.setParamSimple(map, prefix + "BundleTypeDescription", this.BundleTypeDescription);
         this.setParamSimple(map, prefix + "BundleDisplayLabel", this.BundleDisplayLabel);
+        this.setParamSimple(map, prefix + "TrafficUnlimited", this.TrafficUnlimited);
 
     }
 }

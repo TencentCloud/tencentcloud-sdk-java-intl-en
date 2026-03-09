@@ -84,13 +84,6 @@ CRONTAB_CYCLE: specifies the crontab expression type.
     private String ExecutionEndTime;
 
     /**
-    * Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
-    */
-    @SerializedName("ScheduleRunType")
-    @Expose
-    private String ScheduleRunType;
-
-    /**
     * Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
     */
     @SerializedName("CalendarOpen")
@@ -124,41 +117,6 @@ CRONTAB_CYCLE: specifies the crontab expression type.
     @SerializedName("EventListenerList")
     @Expose
     private EventListener [] EventListenerList;
-
-    /**
-    * Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
-    */
-    @SerializedName("RunPriority")
-    @Expose
-    private String RunPriority;
-
-    /**
-    * Retry Policy: Retry Wait Time (in minutes): Default 5
-    */
-    @SerializedName("RetryWait")
-    @Expose
-    private String RetryWait;
-
-    /**
-    * Retry Policy: maximum attempts. Default: 4.
-    */
-    @SerializedName("MaxRetryAttempts")
-    @Expose
-    private String MaxRetryAttempts;
-
-    /**
-    * Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-    */
-    @SerializedName("ExecutionTTL")
-    @Expose
-    private String ExecutionTTL;
-
-    /**
-    * Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-    */
-    @SerializedName("WaitExecutionTotalTTL")
-    @Expose
-    private String WaitExecutionTotalTTL;
 
     /**
     * Rerun & Refill Configuration: Default: ALL;
@@ -202,6 +160,90 @@ T_PLUS_1: specifies t+1 generation.
     @SerializedName("InitStrategy")
     @Expose
     private String InitStrategy;
+
+    /**
+    * Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
+    */
+    @SerializedName("ScheduleRunType")
+    @Expose
+    private String ScheduleRunType;
+
+    /**
+    * Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
+    */
+    @SerializedName("RunPriority")
+    @Expose
+    private String RunPriority;
+
+    /**
+    * Retry Policy: Retry Wait Time (in minutes): Default 5
+    */
+    @SerializedName("RetryWait")
+    @Expose
+    private String RetryWait;
+
+    /**
+    * Retry Policy: maximum attempts. Default: 4.
+    */
+    @SerializedName("MaxRetryAttempts")
+    @Expose
+    private String MaxRetryAttempts;
+
+    /**
+    * Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+    */
+    @SerializedName("ExecutionTTL")
+    @Expose
+    private String ExecutionTTL;
+
+    /**
+    * Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+    */
+    @SerializedName("WaitExecutionTotalTTL")
+    @Expose
+    private String WaitExecutionTotalTTL;
+
+    /**
+    * Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+    */
+    @SerializedName("ScheduleType")
+    @Expose
+    private Long ScheduleType;
+
+    /**
+    * Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+    */
+    @SerializedName("RunPriorityType")
+    @Expose
+    private Long RunPriorityType;
+
+    /**
+    * Retry policy retry wait time, in minutes: default: 5.
+    */
+    @SerializedName("RetryWaitMinute")
+    @Expose
+    private Long RetryWaitMinute;
+
+    /**
+    * Maximum attempts of the retry policy. default: 4.
+    */
+    @SerializedName("MaxRetryNumber")
+    @Expose
+    private Long MaxRetryNumber;
+
+    /**
+    * Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+    */
+    @SerializedName("ExecutionTTLMinute")
+    @Expose
+    private Long ExecutionTTLMinute;
+
+    /**
+    * Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+    */
+    @SerializedName("WaitExecutionTotalTTLMinute")
+    @Expose
+    private Long WaitExecutionTotalTTLMinute;
 
     /**
      * Get Period type: defaults to DAY_CYCLE.
@@ -360,22 +402,6 @@ CRONTAB_CYCLE: specifies the crontab expression type.
     }
 
     /**
-     * Get Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0. 
-     * @return ScheduleRunType Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
-     */
-    public String getScheduleRunType() {
-        return this.ScheduleRunType;
-    }
-
-    /**
-     * Set Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
-     * @param ScheduleRunType Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
-     */
-    public void setScheduleRunType(String ScheduleRunType) {
-        this.ScheduleRunType = ScheduleRunType;
-    }
-
-    /**
      * Get Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0. 
      * @return CalendarOpen Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
      */
@@ -453,86 +479,6 @@ CRONTAB_CYCLE: specifies the crontab expression type.
      */
     public void setEventListenerList(EventListener [] EventListenerList) {
         this.EventListenerList = EventListenerList;
-    }
-
-    /**
-     * Get Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6. 
-     * @return RunPriority Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
-     */
-    public String getRunPriority() {
-        return this.RunPriority;
-    }
-
-    /**
-     * Set Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
-     * @param RunPriority Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
-     */
-    public void setRunPriority(String RunPriority) {
-        this.RunPriority = RunPriority;
-    }
-
-    /**
-     * Get Retry Policy: Retry Wait Time (in minutes): Default 5 
-     * @return RetryWait Retry Policy: Retry Wait Time (in minutes): Default 5
-     */
-    public String getRetryWait() {
-        return this.RetryWait;
-    }
-
-    /**
-     * Set Retry Policy: Retry Wait Time (in minutes): Default 5
-     * @param RetryWait Retry Policy: Retry Wait Time (in minutes): Default 5
-     */
-    public void setRetryWait(String RetryWait) {
-        this.RetryWait = RetryWait;
-    }
-
-    /**
-     * Get Retry Policy: maximum attempts. Default: 4. 
-     * @return MaxRetryAttempts Retry Policy: maximum attempts. Default: 4.
-     */
-    public String getMaxRetryAttempts() {
-        return this.MaxRetryAttempts;
-    }
-
-    /**
-     * Set Retry Policy: maximum attempts. Default: 4.
-     * @param MaxRetryAttempts Retry Policy: maximum attempts. Default: 4.
-     */
-    public void setMaxRetryAttempts(String MaxRetryAttempts) {
-        this.MaxRetryAttempts = MaxRetryAttempts;
-    }
-
-    /**
-     * Get Timeout Handling Policy: Execution Timeout (in minutes), default: -1 
-     * @return ExecutionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-     */
-    public String getExecutionTTL() {
-        return this.ExecutionTTL;
-    }
-
-    /**
-     * Set Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-     * @param ExecutionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-     */
-    public void setExecutionTTL(String ExecutionTTL) {
-        this.ExecutionTTL = ExecutionTTL;
-    }
-
-    /**
-     * Get Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1 
-     * @return WaitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-     */
-    public String getWaitExecutionTotalTTL() {
-        return this.WaitExecutionTotalTTL;
-    }
-
-    /**
-     * Set Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-     * @param WaitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-     */
-    public void setWaitExecutionTotalTTL(String WaitExecutionTotalTTL) {
-        this.WaitExecutionTotalTTL = WaitExecutionTotalTTL;
     }
 
     /**
@@ -647,6 +593,222 @@ T_PLUS_1: specifies t+1 generation.
         this.InitStrategy = InitStrategy;
     }
 
+    /**
+     * Get Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0. 
+     * @return ScheduleRunType Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
+     * @deprecated
+     */
+    @Deprecated
+    public String getScheduleRunType() {
+        return this.ScheduleRunType;
+    }
+
+    /**
+     * Set Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
+     * @param ScheduleRunType Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
+     * @deprecated
+     */
+    @Deprecated
+    public void setScheduleRunType(String ScheduleRunType) {
+        this.ScheduleRunType = ScheduleRunType;
+    }
+
+    /**
+     * Get Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6. 
+     * @return RunPriority Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
+     * @deprecated
+     */
+    @Deprecated
+    public String getRunPriority() {
+        return this.RunPriority;
+    }
+
+    /**
+     * Set Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
+     * @param RunPriority Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
+     * @deprecated
+     */
+    @Deprecated
+    public void setRunPriority(String RunPriority) {
+        this.RunPriority = RunPriority;
+    }
+
+    /**
+     * Get Retry Policy: Retry Wait Time (in minutes): Default 5 
+     * @return RetryWait Retry Policy: Retry Wait Time (in minutes): Default 5
+     * @deprecated
+     */
+    @Deprecated
+    public String getRetryWait() {
+        return this.RetryWait;
+    }
+
+    /**
+     * Set Retry Policy: Retry Wait Time (in minutes): Default 5
+     * @param RetryWait Retry Policy: Retry Wait Time (in minutes): Default 5
+     * @deprecated
+     */
+    @Deprecated
+    public void setRetryWait(String RetryWait) {
+        this.RetryWait = RetryWait;
+    }
+
+    /**
+     * Get Retry Policy: maximum attempts. Default: 4. 
+     * @return MaxRetryAttempts Retry Policy: maximum attempts. Default: 4.
+     * @deprecated
+     */
+    @Deprecated
+    public String getMaxRetryAttempts() {
+        return this.MaxRetryAttempts;
+    }
+
+    /**
+     * Set Retry Policy: maximum attempts. Default: 4.
+     * @param MaxRetryAttempts Retry Policy: maximum attempts. Default: 4.
+     * @deprecated
+     */
+    @Deprecated
+    public void setMaxRetryAttempts(String MaxRetryAttempts) {
+        this.MaxRetryAttempts = MaxRetryAttempts;
+    }
+
+    /**
+     * Get Timeout Handling Policy: Execution Timeout (in minutes), default: -1 
+     * @return ExecutionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+     * @deprecated
+     */
+    @Deprecated
+    public String getExecutionTTL() {
+        return this.ExecutionTTL;
+    }
+
+    /**
+     * Set Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+     * @param ExecutionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+     * @deprecated
+     */
+    @Deprecated
+    public void setExecutionTTL(String ExecutionTTL) {
+        this.ExecutionTTL = ExecutionTTL;
+    }
+
+    /**
+     * Get Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1 
+     * @return WaitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+     * @deprecated
+     */
+    @Deprecated
+    public String getWaitExecutionTotalTTL() {
+        return this.WaitExecutionTotalTTL;
+    }
+
+    /**
+     * Set Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+     * @param WaitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+     * @deprecated
+     */
+    @Deprecated
+    public void setWaitExecutionTotalTTL(String WaitExecutionTotalTTL) {
+        this.WaitExecutionTotalTTL = WaitExecutionTotalTTL;
+    }
+
+    /**
+     * Get Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0. 
+     * @return ScheduleType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+     */
+    public Long getScheduleType() {
+        return this.ScheduleType;
+    }
+
+    /**
+     * Set Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+     * @param ScheduleType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+     */
+    public void setScheduleType(Long ScheduleType) {
+        this.ScheduleType = ScheduleType;
+    }
+
+    /**
+     * Get Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6. 
+     * @return RunPriorityType Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+     */
+    public Long getRunPriorityType() {
+        return this.RunPriorityType;
+    }
+
+    /**
+     * Set Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+     * @param RunPriorityType Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+     */
+    public void setRunPriorityType(Long RunPriorityType) {
+        this.RunPriorityType = RunPriorityType;
+    }
+
+    /**
+     * Get Retry policy retry wait time, in minutes: default: 5. 
+     * @return RetryWaitMinute Retry policy retry wait time, in minutes: default: 5.
+     */
+    public Long getRetryWaitMinute() {
+        return this.RetryWaitMinute;
+    }
+
+    /**
+     * Set Retry policy retry wait time, in minutes: default: 5.
+     * @param RetryWaitMinute Retry policy retry wait time, in minutes: default: 5.
+     */
+    public void setRetryWaitMinute(Long RetryWaitMinute) {
+        this.RetryWaitMinute = RetryWaitMinute;
+    }
+
+    /**
+     * Get Maximum attempts of the retry policy. default: 4. 
+     * @return MaxRetryNumber Maximum attempts of the retry policy. default: 4.
+     */
+    public Long getMaxRetryNumber() {
+        return this.MaxRetryNumber;
+    }
+
+    /**
+     * Set Maximum attempts of the retry policy. default: 4.
+     * @param MaxRetryNumber Maximum attempts of the retry policy. default: 4.
+     */
+    public void setMaxRetryNumber(Long MaxRetryNumber) {
+        this.MaxRetryNumber = MaxRetryNumber;
+    }
+
+    /**
+     * Get Timeout handling strategy runtime timeout (unit: minutes) defaults to -1. 
+     * @return ExecutionTTLMinute Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+     */
+    public Long getExecutionTTLMinute() {
+        return this.ExecutionTTLMinute;
+    }
+
+    /**
+     * Set Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+     * @param ExecutionTTLMinute Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+     */
+    public void setExecutionTTLMinute(Long ExecutionTTLMinute) {
+        this.ExecutionTTLMinute = ExecutionTTLMinute;
+    }
+
+    /**
+     * Get Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1. 
+     * @return WaitExecutionTotalTTLMinute Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+     */
+    public Long getWaitExecutionTotalTTLMinute() {
+        return this.WaitExecutionTotalTTLMinute;
+    }
+
+    /**
+     * Set Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+     * @param WaitExecutionTotalTTLMinute Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+     */
+    public void setWaitExecutionTotalTTLMinute(Long WaitExecutionTotalTTLMinute) {
+        this.WaitExecutionTotalTTLMinute = WaitExecutionTotalTTLMinute;
+    }
+
     public CreateTaskSchedulerConfiguration() {
     }
 
@@ -676,9 +838,6 @@ T_PLUS_1: specifies t+1 generation.
         if (source.ExecutionEndTime != null) {
             this.ExecutionEndTime = new String(source.ExecutionEndTime);
         }
-        if (source.ScheduleRunType != null) {
-            this.ScheduleRunType = new String(source.ScheduleRunType);
-        }
         if (source.CalendarOpen != null) {
             this.CalendarOpen = new String(source.CalendarOpen);
         }
@@ -699,21 +858,6 @@ T_PLUS_1: specifies t+1 generation.
             for (int i = 0; i < source.EventListenerList.length; i++) {
                 this.EventListenerList[i] = new EventListener(source.EventListenerList[i]);
             }
-        }
-        if (source.RunPriority != null) {
-            this.RunPriority = new String(source.RunPriority);
-        }
-        if (source.RetryWait != null) {
-            this.RetryWait = new String(source.RetryWait);
-        }
-        if (source.MaxRetryAttempts != null) {
-            this.MaxRetryAttempts = new String(source.MaxRetryAttempts);
-        }
-        if (source.ExecutionTTL != null) {
-            this.ExecutionTTL = new String(source.ExecutionTTL);
-        }
-        if (source.WaitExecutionTotalTTL != null) {
-            this.WaitExecutionTotalTTL = new String(source.WaitExecutionTotalTTL);
         }
         if (source.AllowRedoType != null) {
             this.AllowRedoType = new String(source.AllowRedoType);
@@ -739,6 +883,42 @@ T_PLUS_1: specifies t+1 generation.
         if (source.InitStrategy != null) {
             this.InitStrategy = new String(source.InitStrategy);
         }
+        if (source.ScheduleRunType != null) {
+            this.ScheduleRunType = new String(source.ScheduleRunType);
+        }
+        if (source.RunPriority != null) {
+            this.RunPriority = new String(source.RunPriority);
+        }
+        if (source.RetryWait != null) {
+            this.RetryWait = new String(source.RetryWait);
+        }
+        if (source.MaxRetryAttempts != null) {
+            this.MaxRetryAttempts = new String(source.MaxRetryAttempts);
+        }
+        if (source.ExecutionTTL != null) {
+            this.ExecutionTTL = new String(source.ExecutionTTL);
+        }
+        if (source.WaitExecutionTotalTTL != null) {
+            this.WaitExecutionTotalTTL = new String(source.WaitExecutionTotalTTL);
+        }
+        if (source.ScheduleType != null) {
+            this.ScheduleType = new Long(source.ScheduleType);
+        }
+        if (source.RunPriorityType != null) {
+            this.RunPriorityType = new Long(source.RunPriorityType);
+        }
+        if (source.RetryWaitMinute != null) {
+            this.RetryWaitMinute = new Long(source.RetryWaitMinute);
+        }
+        if (source.MaxRetryNumber != null) {
+            this.MaxRetryNumber = new Long(source.MaxRetryNumber);
+        }
+        if (source.ExecutionTTLMinute != null) {
+            this.ExecutionTTLMinute = new Long(source.ExecutionTTLMinute);
+        }
+        if (source.WaitExecutionTotalTTLMinute != null) {
+            this.WaitExecutionTotalTTLMinute = new Long(source.WaitExecutionTotalTTLMinute);
+        }
     }
 
 
@@ -753,22 +933,28 @@ T_PLUS_1: specifies t+1 generation.
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "ExecutionStartTime", this.ExecutionStartTime);
         this.setParamSimple(map, prefix + "ExecutionEndTime", this.ExecutionEndTime);
-        this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
         this.setParamSimple(map, prefix + "CalendarOpen", this.CalendarOpen);
         this.setParamSimple(map, prefix + "CalendarId", this.CalendarId);
         this.setParamSimple(map, prefix + "SelfDepend", this.SelfDepend);
         this.setParamArrayObj(map, prefix + "UpstreamDependencyConfigList.", this.UpstreamDependencyConfigList);
         this.setParamArrayObj(map, prefix + "EventListenerList.", this.EventListenerList);
-        this.setParamSimple(map, prefix + "RunPriority", this.RunPriority);
-        this.setParamSimple(map, prefix + "RetryWait", this.RetryWait);
-        this.setParamSimple(map, prefix + "MaxRetryAttempts", this.MaxRetryAttempts);
-        this.setParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
-        this.setParamSimple(map, prefix + "WaitExecutionTotalTTL", this.WaitExecutionTotalTTL);
         this.setParamSimple(map, prefix + "AllowRedoType", this.AllowRedoType);
         this.setParamArrayObj(map, prefix + "ParamTaskOutList.", this.ParamTaskOutList);
         this.setParamArrayObj(map, prefix + "ParamTaskInList.", this.ParamTaskInList);
         this.setParamArrayObj(map, prefix + "TaskOutputRegistryList.", this.TaskOutputRegistryList);
         this.setParamSimple(map, prefix + "InitStrategy", this.InitStrategy);
+        this.setParamSimple(map, prefix + "ScheduleRunType", this.ScheduleRunType);
+        this.setParamSimple(map, prefix + "RunPriority", this.RunPriority);
+        this.setParamSimple(map, prefix + "RetryWait", this.RetryWait);
+        this.setParamSimple(map, prefix + "MaxRetryAttempts", this.MaxRetryAttempts);
+        this.setParamSimple(map, prefix + "ExecutionTTL", this.ExecutionTTL);
+        this.setParamSimple(map, prefix + "WaitExecutionTotalTTL", this.WaitExecutionTotalTTL);
+        this.setParamSimple(map, prefix + "ScheduleType", this.ScheduleType);
+        this.setParamSimple(map, prefix + "RunPriorityType", this.RunPriorityType);
+        this.setParamSimple(map, prefix + "RetryWaitMinute", this.RetryWaitMinute);
+        this.setParamSimple(map, prefix + "MaxRetryNumber", this.MaxRetryNumber);
+        this.setParamSimple(map, prefix + "ExecutionTTLMinute", this.ExecutionTTLMinute);
+        this.setParamSimple(map, prefix + "WaitExecutionTotalTTLMinute", this.WaitExecutionTotalTTLMinute);
 
     }
 }

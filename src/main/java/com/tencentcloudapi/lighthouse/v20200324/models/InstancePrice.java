@@ -24,123 +24,141 @@ import java.util.HashMap;
 public class InstancePrice extends AbstractModel {
 
     /**
-    * Original package unit price.
+    * <P>Unit price of the package.</p><p>unit: usd</p>.
     */
     @SerializedName("OriginalBundlePrice")
     @Expose
     private Float OriginalBundlePrice;
 
     /**
-    * Original price.
+    * <P>Original price.</p><p>unit: usd</p>.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * Discount.
+    * <p>Discount.</p>.
     */
     @SerializedName("Discount")
     @Expose
-    private Long Discount;
+    private Float Discount;
 
     /**
-    * Discounted price.
+    * <P>Discounted price.</p><p>unit: usd</p>.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-    * Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * <p>Price currency unit. valid values: USD.</p>.
     */
     @SerializedName("Currency")
     @Expose
     private String Currency;
 
     /**
-     * Get Original package unit price. 
-     * @return OriginalBundlePrice Original package unit price.
+    * <P>Billing item detail.</p>.
+    */
+    @SerializedName("DetailPrices")
+    @Expose
+    private DetailPrice [] DetailPrices;
+
+    /**
+     * Get <P>Unit price of the package.</p><p>unit: usd</p>. 
+     * @return OriginalBundlePrice <P>Unit price of the package.</p><p>unit: usd</p>.
      */
     public Float getOriginalBundlePrice() {
         return this.OriginalBundlePrice;
     }
 
     /**
-     * Set Original package unit price.
-     * @param OriginalBundlePrice Original package unit price.
+     * Set <P>Unit price of the package.</p><p>unit: usd</p>.
+     * @param OriginalBundlePrice <P>Unit price of the package.</p><p>unit: usd</p>.
      */
     public void setOriginalBundlePrice(Float OriginalBundlePrice) {
         this.OriginalBundlePrice = OriginalBundlePrice;
     }
 
     /**
-     * Get Original price. 
-     * @return OriginalPrice Original price.
+     * Get <P>Original price.</p><p>unit: usd</p>. 
+     * @return OriginalPrice <P>Original price.</p><p>unit: usd</p>.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Original price.
-     * @param OriginalPrice Original price.
+     * Set <P>Original price.</p><p>unit: usd</p>.
+     * @param OriginalPrice <P>Original price.</p><p>unit: usd</p>.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discount. 
-     * @return Discount Discount.
+     * Get <p>Discount.</p>. 
+     * @return Discount <p>Discount.</p>.
      */
-    public Long getDiscount() {
+    public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Discount.
-     * @param Discount Discount.
+     * Set <p>Discount.</p>.
+     * @param Discount <p>Discount.</p>.
      */
-    public void setDiscount(Long Discount) {
+    public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get Discounted price. 
-     * @return DiscountPrice Discounted price.
+     * Get <P>Discounted price.</p><p>unit: usd</p>. 
+     * @return DiscountPrice <P>Discounted price.</p><p>unit: usd</p>.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Discounted price.
-     * @param DiscountPrice Discounted price.
+     * Set <P>Discounted price.</p><p>unit: usd</p>.
+     * @param DiscountPrice <P>Discounted price.</p><p>unit: usd</p>.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Currency Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>Price currency unit. valid values: USD.</p>. 
+     * @return Currency <p>Price currency unit. valid values: USD.</p>.
      */
     public String getCurrency() {
         return this.Currency;
     }
 
     /**
-     * Set Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Currency Currency unit. Valid values: `CNY` and `USD`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>Price currency unit. valid values: USD.</p>.
+     * @param Currency <p>Price currency unit. valid values: USD.</p>.
      */
     public void setCurrency(String Currency) {
         this.Currency = Currency;
+    }
+
+    /**
+     * Get <P>Billing item detail.</p>. 
+     * @return DetailPrices <P>Billing item detail.</p>.
+     */
+    public DetailPrice [] getDetailPrices() {
+        return this.DetailPrices;
+    }
+
+    /**
+     * Set <P>Billing item detail.</p>.
+     * @param DetailPrices <P>Billing item detail.</p>.
+     */
+    public void setDetailPrices(DetailPrice [] DetailPrices) {
+        this.DetailPrices = DetailPrices;
     }
 
     public InstancePrice() {
@@ -158,13 +176,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
             this.OriginalPrice = new Float(source.OriginalPrice);
         }
         if (source.Discount != null) {
-            this.Discount = new Long(source.Discount);
+            this.Discount = new Float(source.Discount);
         }
         if (source.DiscountPrice != null) {
             this.DiscountPrice = new Float(source.DiscountPrice);
         }
         if (source.Currency != null) {
             this.Currency = new String(source.Currency);
+        }
+        if (source.DetailPrices != null) {
+            this.DetailPrices = new DetailPrice[source.DetailPrices.length];
+            for (int i = 0; i < source.DetailPrices.length; i++) {
+                this.DetailPrices[i] = new DetailPrice(source.DetailPrices[i]);
+            }
         }
     }
 
@@ -178,6 +202,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "Discount", this.Discount);
         this.setParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
         this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamArrayObj(map, prefix + "DetailPrices.", this.DetailPrices);
 
     }
 }

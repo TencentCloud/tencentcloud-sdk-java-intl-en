@@ -24,56 +24,81 @@ import java.util.HashMap;
 public class CancelInvocationRequest extends AbstractModel {
 
     /**
-    * Execution activity ID
+    * Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
     */
     @SerializedName("InvocationId")
     @Expose
     private String InvocationId;
 
     /**
-    * Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
+    * Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-     * Get Execution activity ID 
-     * @return InvocationId Execution activity ID
+     * Get Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution. 
+     * @return InvocationId Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
      */
     public String getInvocationId() {
         return this.InvocationId;
     }
 
     /**
-     * Set Execution activity ID
-     * @param InvocationId Execution activity ID
+     * Set Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+     * @param InvocationId Execution activity ID.
+
+Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
      */
     public void setInvocationId(String InvocationId) {
         this.InvocationId = InvocationId;
     }
 
     /**
-     * Get Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE` 
-     * @return InstanceIds Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
+     * Get Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance. 
+     * @return InstanceIds Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
-     * @param InstanceIds Instance ID list. A maximum of 100 IDs are allowed. Supported instance types:
-<li> `CVM`
-<li> `LIGHTHOUSE`
+     * Set Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
+     * @param InstanceIds Instance ID list. upper limit: 100.
+
+Instance ID can be obtained through the query instance interface of corresponding cloud services. currently supported instance types:.
+- CVM
+- Lighthouse
+- TAT Register instance.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;

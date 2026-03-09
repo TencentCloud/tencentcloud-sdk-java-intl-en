@@ -28,21 +28,21 @@ public class PolicyDetail extends AbstractModel {
     */
     @SerializedName("UserDiscount")
     @Expose
-    private Long UserDiscount;
+    private Float UserDiscount;
 
     /**
     * Public discount.
     */
     @SerializedName("CommonDiscount")
     @Expose
-    private Long CommonDiscount;
+    private Float CommonDiscount;
 
     /**
     * Final discount.
     */
     @SerializedName("FinalDiscount")
     @Expose
-    private Long FinalDiscount;
+    private Float FinalDiscount;
 
     /**
     * Activity discount. The value `null` indicates no discount.
@@ -65,7 +65,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * Get User discount. 
      * @return UserDiscount User discount.
      */
-    public Long getUserDiscount() {
+    public Float getUserDiscount() {
         return this.UserDiscount;
     }
 
@@ -73,7 +73,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * Set User discount.
      * @param UserDiscount User discount.
      */
-    public void setUserDiscount(Long UserDiscount) {
+    public void setUserDiscount(Float UserDiscount) {
         this.UserDiscount = UserDiscount;
     }
 
@@ -81,7 +81,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * Get Public discount. 
      * @return CommonDiscount Public discount.
      */
-    public Long getCommonDiscount() {
+    public Float getCommonDiscount() {
         return this.CommonDiscount;
     }
 
@@ -89,7 +89,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * Set Public discount.
      * @param CommonDiscount Public discount.
      */
-    public void setCommonDiscount(Long CommonDiscount) {
+    public void setCommonDiscount(Float CommonDiscount) {
         this.CommonDiscount = CommonDiscount;
     }
 
@@ -97,7 +97,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * Get Final discount. 
      * @return FinalDiscount Final discount.
      */
-    public Long getFinalDiscount() {
+    public Float getFinalDiscount() {
         return this.FinalDiscount;
     }
 
@@ -105,7 +105,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * Set Final discount.
      * @param FinalDiscount Final discount.
      */
-    public void setFinalDiscount(Long FinalDiscount) {
+    public void setFinalDiscount(Float FinalDiscount) {
         this.FinalDiscount = FinalDiscount;
     }
 
@@ -162,13 +162,13 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      */
     public PolicyDetail(PolicyDetail source) {
         if (source.UserDiscount != null) {
-            this.UserDiscount = new Long(source.UserDiscount);
+            this.UserDiscount = new Float(source.UserDiscount);
         }
         if (source.CommonDiscount != null) {
-            this.CommonDiscount = new Long(source.CommonDiscount);
+            this.CommonDiscount = new Float(source.CommonDiscount);
         }
         if (source.FinalDiscount != null) {
-            this.FinalDiscount = new Long(source.FinalDiscount);
+            this.FinalDiscount = new Float(source.FinalDiscount);
         }
         if (source.ActivityDiscount != null) {
             this.ActivityDiscount = new Float(source.ActivityDiscount);

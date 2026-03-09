@@ -24,298 +24,276 @@ import java.util.HashMap;
 public class ModifyCommandRequest extends AbstractModel {
 
     /**
-    * Command ID.
+    * <p>Command ID. call the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands</a> api to query command details.</p>.
     */
     @SerializedName("CommandId")
     @Expose
     private String CommandId;
 
     /**
-    * Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
+    * <p>Command name. name only supports chinese, english, digits, underscore, separator "-", and decimal point. the maximum length cannot exceed 60 bytes.</p>.
     */
     @SerializedName("CommandName")
     @Expose
     private String CommandName;
 
     /**
-    * Command description. The maximum length is 120 characters.
+    * <P>Command description. no more than 120 characters.</p>.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Base64-encoded command. The maximum length is 64 KB.
+    * <p>The Base64-encoded command content, length cannot exceed 64KB.</p>.
     */
     @SerializedName("Content")
     @Expose
     private String Content;
 
     /**
-    * Command type. `SHELL` and `POWERSHELL` are supported.
+    * <p>Command type. currently supports SHELL, POWERSHELL, BAT.</p>.
     */
     @SerializedName("CommandType")
     @Expose
     private String CommandType;
 
     /**
-    * Command execution path.
+    * <P>Command execution path.</p>.
     */
     @SerializedName("WorkingDirectory")
     @Expose
     private String WorkingDirectory;
 
     /**
-    * Command timeout period. Value range: [1, 86400].
+    * <p>Command timeout time.</p><p>value range: [1, 86400].</p><p>unit: seconds.</p><p>default value: 60.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
     */
     @SerializedName("Timeout")
     @Expose
     private Long Timeout;
 
     /**
-    * The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-All parameters are overwritten. All default values are required for modification.
-Modification is only allowed when `EnableParameter` is `true`.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+    * <p>The default value of custom parameters when the custom parameter feature is enabled. the field type is a json-encoded string, for example: {"varA": "222"}.<br>parameters must not be specified simultaneously for <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>a comprehensive modification is applied, meaning all new default values must be provided when modifying.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings of the command through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>the key is the custom parameter name, and the value is the default value of this parameter. both key and value are string-type.<br>there is an upper limit of 20 custom parameters.<br>custom parameter names must meet the following requirements: the upper limit of character quantity is 64, and the optional range is [a-zA-Z0-9-_].</p>.
     */
     @SerializedName("DefaultParameters")
     @Expose
     private String DefaultParameters;
 
     /**
-    * The username used to execute the command on the CVM or Lighthouse instance.
-The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user.
+    * <p>Custom parameter array. if no parameter value is provided when invoking the command, the default value here will be used to replace it.<br>parameters do not support specifying both <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>up to 20 custom parameters are allowed.</p>.
+    */
+    @SerializedName("DefaultParameterConfs")
+    @Expose
+    private DefaultParameterConf [] DefaultParameterConfs;
+
+    /**
+    * <p>The username to run commands in a CVM or Lighthouse instance.<br>using minimum permission to execute commands is the best practice for permission management. we recommend running cloud assistant commands as a regular user identity.</p>.
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+    * <p>Specifies the cos bucket address for the uploaded log, which must start with https, such as https://BucketName-123454321.cos.ap-beijing.myqcloud.com.</p>.
     */
     @SerializedName("OutputCOSBucketUrl")
     @Expose
     private String OutputCOSBucketUrl;
 
     /**
-    * The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
-1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
-2. Use a slash (/) to create a subdirectory.
-3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
+    * <P>Specify the directory for logs in the cos bucket. the directory naming has the following rules:</p><ol><li>use a combination of numbers, chinese and english, and visible characters, with a maximum length of 60.</li><li>use / to split the path and quickly create subdirectories.</li><li>consecutive / are not allowed; cannot start with /; cannot use .. as the folder name.</li></ol>.
     */
     @SerializedName("OutputCOSKeyPrefix")
     @Expose
     private String OutputCOSKeyPrefix;
 
     /**
-     * Get Command ID. 
-     * @return CommandId Command ID.
+     * Get <p>Command ID. call the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands</a> api to query command details.</p>. 
+     * @return CommandId <p>Command ID. call the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands</a> api to query command details.</p>.
      */
     public String getCommandId() {
         return this.CommandId;
     }
 
     /**
-     * Set Command ID.
-     * @param CommandId Command ID.
+     * Set <p>Command ID. call the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands</a> api to query command details.</p>.
+     * @param CommandId <p>Command ID. call the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands</a> api to query command details.</p>.
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
     }
 
     /**
-     * Get Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.]. 
-     * @return CommandName Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
+     * Get <p>Command name. name only supports chinese, english, digits, underscore, separator "-", and decimal point. the maximum length cannot exceed 60 bytes.</p>. 
+     * @return CommandName <p>Command name. name only supports chinese, english, digits, underscore, separator "-", and decimal point. the maximum length cannot exceed 60 bytes.</p>.
      */
     public String getCommandName() {
         return this.CommandName;
     }
 
     /**
-     * Set Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
-     * @param CommandName Command name. The name can be up to 60 bytes, and contain [a-z], [A-Z], [0-9] and [_-.].
+     * Set <p>Command name. name only supports chinese, english, digits, underscore, separator "-", and decimal point. the maximum length cannot exceed 60 bytes.</p>.
+     * @param CommandName <p>Command name. name only supports chinese, english, digits, underscore, separator "-", and decimal point. the maximum length cannot exceed 60 bytes.</p>.
      */
     public void setCommandName(String CommandName) {
         this.CommandName = CommandName;
     }
 
     /**
-     * Get Command description. The maximum length is 120 characters. 
-     * @return Description Command description. The maximum length is 120 characters.
+     * Get <P>Command description. no more than 120 characters.</p>. 
+     * @return Description <P>Command description. no more than 120 characters.</p>.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Command description. The maximum length is 120 characters.
-     * @param Description Command description. The maximum length is 120 characters.
+     * Set <P>Command description. no more than 120 characters.</p>.
+     * @param Description <P>Command description. no more than 120 characters.</p>.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Base64-encoded command. The maximum length is 64 KB. 
-     * @return Content Base64-encoded command. The maximum length is 64 KB.
+     * Get <p>The Base64-encoded command content, length cannot exceed 64KB.</p>. 
+     * @return Content <p>The Base64-encoded command content, length cannot exceed 64KB.</p>.
      */
     public String getContent() {
         return this.Content;
     }
 
     /**
-     * Set Base64-encoded command. The maximum length is 64 KB.
-     * @param Content Base64-encoded command. The maximum length is 64 KB.
+     * Set <p>The Base64-encoded command content, length cannot exceed 64KB.</p>.
+     * @param Content <p>The Base64-encoded command content, length cannot exceed 64KB.</p>.
      */
     public void setContent(String Content) {
         this.Content = Content;
     }
 
     /**
-     * Get Command type. `SHELL` and `POWERSHELL` are supported. 
-     * @return CommandType Command type. `SHELL` and `POWERSHELL` are supported.
+     * Get <p>Command type. currently supports SHELL, POWERSHELL, BAT.</p>. 
+     * @return CommandType <p>Command type. currently supports SHELL, POWERSHELL, BAT.</p>.
      */
     public String getCommandType() {
         return this.CommandType;
     }
 
     /**
-     * Set Command type. `SHELL` and `POWERSHELL` are supported.
-     * @param CommandType Command type. `SHELL` and `POWERSHELL` are supported.
+     * Set <p>Command type. currently supports SHELL, POWERSHELL, BAT.</p>.
+     * @param CommandType <p>Command type. currently supports SHELL, POWERSHELL, BAT.</p>.
      */
     public void setCommandType(String CommandType) {
         this.CommandType = CommandType;
     }
 
     /**
-     * Get Command execution path. 
-     * @return WorkingDirectory Command execution path.
+     * Get <P>Command execution path.</p>. 
+     * @return WorkingDirectory <P>Command execution path.</p>.
      */
     public String getWorkingDirectory() {
         return this.WorkingDirectory;
     }
 
     /**
-     * Set Command execution path.
-     * @param WorkingDirectory Command execution path.
+     * Set <P>Command execution path.</p>.
+     * @param WorkingDirectory <P>Command execution path.</p>.
      */
     public void setWorkingDirectory(String WorkingDirectory) {
         this.WorkingDirectory = WorkingDirectory;
     }
 
     /**
-     * Get Command timeout period. Value range: [1, 86400]. 
-     * @return Timeout Command timeout period. Value range: [1, 86400].
+     * Get <p>Command timeout time.</p><p>value range: [1, 86400].</p><p>unit: seconds.</p><p>default value: 60.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>. 
+     * @return Timeout <p>Command timeout time.</p><p>value range: [1, 86400].</p><p>unit: seconds.</p><p>default value: 60.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
      */
     public Long getTimeout() {
         return this.Timeout;
     }
 
     /**
-     * Set Command timeout period. Value range: [1, 86400].
-     * @param Timeout Command timeout period. Value range: [1, 86400].
+     * Set <p>Command timeout time.</p><p>value range: [1, 86400].</p><p>unit: seconds.</p><p>default value: 60.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
+     * @param Timeout <p>Command timeout time.</p><p>value range: [1, 86400].</p><p>unit: seconds.</p><p>default value: 60.</p><p>when specifying the OutputCOSBucketUrl parameter, the timeout period includes the time taken to upload command output to COS.</p>.
      */
     public void setTimeout(Long Timeout) {
         this.Timeout = Timeout;
     }
 
     /**
-     * Get The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-All parameters are overwritten. All default values are required for modification.
-Modification is only allowed when `EnableParameter` is `true`.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_]. 
-     * @return DefaultParameters The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-All parameters are overwritten. All default values are required for modification.
-Modification is only allowed when `EnableParameter` is `true`.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+     * Get <p>The default value of custom parameters when the custom parameter feature is enabled. the field type is a json-encoded string, for example: {"varA": "222"}.<br>parameters must not be specified simultaneously for <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>a comprehensive modification is applied, meaning all new default values must be provided when modifying.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings of the command through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>the key is the custom parameter name, and the value is the default value of this parameter. both key and value are string-type.<br>there is an upper limit of 20 custom parameters.<br>custom parameter names must meet the following requirements: the upper limit of character quantity is 64, and the optional range is [a-zA-Z0-9-_].</p>. 
+     * @return DefaultParameters <p>The default value of custom parameters when the custom parameter feature is enabled. the field type is a json-encoded string, for example: {"varA": "222"}.<br>parameters must not be specified simultaneously for <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>a comprehensive modification is applied, meaning all new default values must be provided when modifying.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings of the command through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>the key is the custom parameter name, and the value is the default value of this parameter. both key and value are string-type.<br>there is an upper limit of 20 custom parameters.<br>custom parameter names must meet the following requirements: the upper limit of character quantity is 64, and the optional range is [a-zA-Z0-9-_].</p>.
      */
     public String getDefaultParameters() {
         return this.DefaultParameters;
     }
 
     /**
-     * Set The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-All parameters are overwritten. All default values are required for modification.
-Modification is only allowed when `EnableParameter` is `true`.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
-     * @param DefaultParameters The default value of the custom parameter value when it is enabled. The field type is JSON encoded string. For example, {\"varA\": \"222\"}.
-All parameters are overwritten. All default values are required for modification.
-Modification is only allowed when `EnableParameter` is `true`.
-`key` is the name of the custom parameter and `value` is the default value. Both `key` and `value` are strings.
-Up to 20 custom parameters are supported.
-The name of the custom parameter cannot exceed 64 characters and can contain [a-z], [A-Z], [0-9] and [-_].
+     * Set <p>The default value of custom parameters when the custom parameter feature is enabled. the field type is a json-encoded string, for example: {"varA": "222"}.<br>parameters must not be specified simultaneously for <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>a comprehensive modification is applied, meaning all new default values must be provided when modifying.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings of the command through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>the key is the custom parameter name, and the value is the default value of this parameter. both key and value are string-type.<br>there is an upper limit of 20 custom parameters.<br>custom parameter names must meet the following requirements: the upper limit of character quantity is 64, and the optional range is [a-zA-Z0-9-_].</p>.
+     * @param DefaultParameters <p>The default value of custom parameters when the custom parameter feature is enabled. the field type is a json-encoded string, for example: {"varA": "222"}.<br>parameters must not be specified simultaneously for <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>a comprehensive modification is applied, meaning all new default values must be provided when modifying.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings of the command through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>the key is the custom parameter name, and the value is the default value of this parameter. both key and value are string-type.<br>there is an upper limit of 20 custom parameters.<br>custom parameter names must meet the following requirements: the upper limit of character quantity is 64, and the optional range is [a-zA-Z0-9-_].</p>.
      */
     public void setDefaultParameters(String DefaultParameters) {
         this.DefaultParameters = DefaultParameters;
     }
 
     /**
-     * Get The username used to execute the command on the CVM or Lighthouse instance.
-The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user. 
-     * @return Username The username used to execute the command on the CVM or Lighthouse instance.
-The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user.
+     * Get <p>Custom parameter array. if no parameter value is provided when invoking the command, the default value here will be used to replace it.<br>parameters do not support specifying both <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>up to 20 custom parameters are allowed.</p>. 
+     * @return DefaultParameterConfs <p>Custom parameter array. if no parameter value is provided when invoking the command, the default value here will be used to replace it.<br>parameters do not support specifying both <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>up to 20 custom parameters are allowed.</p>.
+     */
+    public DefaultParameterConf [] getDefaultParameterConfs() {
+        return this.DefaultParameterConfs;
+    }
+
+    /**
+     * Set <p>Custom parameter array. if no parameter value is provided when invoking the command, the default value here will be used to replace it.<br>parameters do not support specifying both <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>up to 20 custom parameters are allowed.</p>.
+     * @param DefaultParameterConfs <p>Custom parameter array. if no parameter value is provided when invoking the command, the default value here will be used to replace it.<br>parameters do not support specifying both <code>DefaultParameters</code> and <code>DefaultParameterConfs</code>.<br>this parameter can be modified only when EnableParameter of the command is true. obtain the EnableParameter settings through the <a href="https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1">DescribeCommands (query command details)</a> api.<br>up to 20 custom parameters are allowed.</p>.
+     */
+    public void setDefaultParameterConfs(DefaultParameterConf [] DefaultParameterConfs) {
+        this.DefaultParameterConfs = DefaultParameterConfs;
+    }
+
+    /**
+     * Get <p>The username to run commands in a CVM or Lighthouse instance.<br>using minimum permission to execute commands is the best practice for permission management. we recommend running cloud assistant commands as a regular user identity.</p>. 
+     * @return Username <p>The username to run commands in a CVM or Lighthouse instance.<br>using minimum permission to execute commands is the best practice for permission management. we recommend running cloud assistant commands as a regular user identity.</p>.
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set The username used to execute the command on the CVM or Lighthouse instance.
-The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user.
-     * @param Username The username used to execute the command on the CVM or Lighthouse instance.
-The principle of least privilege is the best practice for permission management. We recommend you execute TAT commands as a general user.
+     * Set <p>The username to run commands in a CVM or Lighthouse instance.<br>using minimum permission to execute commands is the best practice for permission management. we recommend running cloud assistant commands as a regular user identity.</p>.
+     * @param Username <p>The username to run commands in a CVM or Lighthouse instance.<br>using minimum permission to execute commands is the best practice for permission management. we recommend running cloud assistant commands as a regular user identity.</p>.
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`. 
-     * @return OutputCOSBucketUrl The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+     * Get <p>Specifies the cos bucket address for the uploaded log, which must start with https, such as https://BucketName-123454321.cos.ap-beijing.myqcloud.com.</p>. 
+     * @return OutputCOSBucketUrl <p>Specifies the cos bucket address for the uploaded log, which must start with https, such as https://BucketName-123454321.cos.ap-beijing.myqcloud.com.</p>.
      */
     public String getOutputCOSBucketUrl() {
         return this.OutputCOSBucketUrl;
     }
 
     /**
-     * Set The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
-     * @param OutputCOSBucketUrl The COS bucket URL for uploading logs. The URL must start with `https`, such as `https://BucketName-123454321.cos.ap-beijing.myqcloud.com`.
+     * Set <p>Specifies the cos bucket address for the uploaded log, which must start with https, such as https://BucketName-123454321.cos.ap-beijing.myqcloud.com.</p>.
+     * @param OutputCOSBucketUrl <p>Specifies the cos bucket address for the uploaded log, which must start with https, such as https://BucketName-123454321.cos.ap-beijing.myqcloud.com.</p>.
      */
     public void setOutputCOSBucketUrl(String OutputCOSBucketUrl) {
         this.OutputCOSBucketUrl = OutputCOSBucketUrl;
     }
 
     /**
-     * Get The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
-1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
-2. Use a slash (/) to create a subdirectory.
-3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes. 
-     * @return OutputCOSKeyPrefix The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
-1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
-2. Use a slash (/) to create a subdirectory.
-3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
+     * Get <P>Specify the directory for logs in the cos bucket. the directory naming has the following rules:</p><ol><li>use a combination of numbers, chinese and english, and visible characters, with a maximum length of 60.</li><li>use / to split the path and quickly create subdirectories.</li><li>consecutive / are not allowed; cannot start with /; cannot use .. as the folder name.</li></ol>. 
+     * @return OutputCOSKeyPrefix <P>Specify the directory for logs in the cos bucket. the directory naming has the following rules:</p><ol><li>use a combination of numbers, chinese and english, and visible characters, with a maximum length of 60.</li><li>use / to split the path and quickly create subdirectories.</li><li>consecutive / are not allowed; cannot start with /; cannot use .. as the folder name.</li></ol>.
      */
     public String getOutputCOSKeyPrefix() {
         return this.OutputCOSKeyPrefix;
     }
 
     /**
-     * Set The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
-1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
-2. Use a slash (/) to create a subdirectory.
-3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
-     * @param OutputCOSKeyPrefix The COS bucket directory where the logs are saved. Check below for the rules of the directory name. 
-1. It must be a combination of number, letters, and visible characters. Up to 60 characters are allowed.
-2. Use a slash (/) to create a subdirectory.
-3. ".." can not be used as the folder name. It cannot start with a slash (/), and cannot contain consecutive slashes.
+     * Set <P>Specify the directory for logs in the cos bucket. the directory naming has the following rules:</p><ol><li>use a combination of numbers, chinese and english, and visible characters, with a maximum length of 60.</li><li>use / to split the path and quickly create subdirectories.</li><li>consecutive / are not allowed; cannot start with /; cannot use .. as the folder name.</li></ol>.
+     * @param OutputCOSKeyPrefix <P>Specify the directory for logs in the cos bucket. the directory naming has the following rules:</p><ol><li>use a combination of numbers, chinese and english, and visible characters, with a maximum length of 60.</li><li>use / to split the path and quickly create subdirectories.</li><li>consecutive / are not allowed; cannot start with /; cannot use .. as the folder name.</li></ol>.
      */
     public void setOutputCOSKeyPrefix(String OutputCOSKeyPrefix) {
         this.OutputCOSKeyPrefix = OutputCOSKeyPrefix;
@@ -353,6 +331,12 @@ The principle of least privilege is the best practice for permission management.
         if (source.DefaultParameters != null) {
             this.DefaultParameters = new String(source.DefaultParameters);
         }
+        if (source.DefaultParameterConfs != null) {
+            this.DefaultParameterConfs = new DefaultParameterConf[source.DefaultParameterConfs.length];
+            for (int i = 0; i < source.DefaultParameterConfs.length; i++) {
+                this.DefaultParameterConfs[i] = new DefaultParameterConf(source.DefaultParameterConfs[i]);
+            }
+        }
         if (source.Username != null) {
             this.Username = new String(source.Username);
         }
@@ -377,6 +361,7 @@ The principle of least privilege is the best practice for permission management.
         this.setParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
         this.setParamSimple(map, prefix + "Timeout", this.Timeout);
         this.setParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+        this.setParamArrayObj(map, prefix + "DefaultParameterConfs.", this.DefaultParameterConfs);
         this.setParamSimple(map, prefix + "Username", this.Username);
         this.setParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);
         this.setParamSimple(map, prefix + "OutputCOSKeyPrefix", this.OutputCOSKeyPrefix);

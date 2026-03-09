@@ -24,125 +24,115 @@ import java.util.HashMap;
 public class DetailPrice extends AbstractModel {
 
     /**
-    * Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
+    * <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
     */
     @SerializedName("PriceName")
     @Expose
     private String PriceName;
 
     /**
-    * Official unit price of the billable item
+    * <P>Unit price per billing item dimension.</p><p>unit: usd</p>.
     */
     @SerializedName("OriginUnitPrice")
     @Expose
     private Float OriginUnitPrice;
 
     /**
-    * Official total price of the billable item
+    * <P>Total price of billing item dimension.</p><p>unit: usd</p>.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * Discount of the billable item
+    * <P>Dimensional discount for billing items.</p>.
     */
     @SerializedName("Discount")
     @Expose
     private Float Discount;
 
     /**
-    * Discounted total price of the billable item
+    * <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-     * Get Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li> 
-     * @return PriceName Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
+     * Get <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>. 
+     * @return PriceName <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
      */
     public String getPriceName() {
         return this.PriceName;
     }
 
     /**
-     * Set Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
-     * @param PriceName Values: 
-<li>"DiskSpace": Cloud disk space</li>
-<li>"DiskBackupQuota": Cloud disk backups</li>
+     * Set <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
+     * @param PriceName <p>Name of a billable item, current parameter.</p><li>"DiskSpace" represents the CBS space charge item.</li><li>"DiskBackupQuota" represents the data disk backup point quota charge item.</li><li>"Instance" represents the Instance charge item.</li><li>"SystemDiskBackupQuota" represents the system disk backup point quota charge item.</li>.
      */
     public void setPriceName(String PriceName) {
         this.PriceName = PriceName;
     }
 
     /**
-     * Get Official unit price of the billable item 
-     * @return OriginUnitPrice Official unit price of the billable item
+     * Get <P>Unit price per billing item dimension.</p><p>unit: usd</p>. 
+     * @return OriginUnitPrice <P>Unit price per billing item dimension.</p><p>unit: usd</p>.
      */
     public Float getOriginUnitPrice() {
         return this.OriginUnitPrice;
     }
 
     /**
-     * Set Official unit price of the billable item
-     * @param OriginUnitPrice Official unit price of the billable item
+     * Set <P>Unit price per billing item dimension.</p><p>unit: usd</p>.
+     * @param OriginUnitPrice <P>Unit price per billing item dimension.</p><p>unit: usd</p>.
      */
     public void setOriginUnitPrice(Float OriginUnitPrice) {
         this.OriginUnitPrice = OriginUnitPrice;
     }
 
     /**
-     * Get Official total price of the billable item 
-     * @return OriginalPrice Official total price of the billable item
+     * Get <P>Total price of billing item dimension.</p><p>unit: usd</p>. 
+     * @return OriginalPrice <P>Total price of billing item dimension.</p><p>unit: usd</p>.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Official total price of the billable item
-     * @param OriginalPrice Official total price of the billable item
+     * Set <P>Total price of billing item dimension.</p><p>unit: usd</p>.
+     * @param OriginalPrice <P>Total price of billing item dimension.</p><p>unit: usd</p>.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discount of the billable item 
-     * @return Discount Discount of the billable item
+     * Get <P>Dimensional discount for billing items.</p>. 
+     * @return Discount <P>Dimensional discount for billing items.</p>.
      */
     public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Discount of the billable item
-     * @param Discount Discount of the billable item
+     * Set <P>Dimensional discount for billing items.</p>.
+     * @param Discount <P>Dimensional discount for billing items.</p>.
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get Discounted total price of the billable item 
-     * @return DiscountPrice Discounted total price of the billable item
+     * Get <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>. 
+     * @return DiscountPrice <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Discounted total price of the billable item
-     * @param DiscountPrice Discounted total price of the billable item
+     * Set <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
+     * @param DiscountPrice <P>Discounted total price by billing item dimension.</p><p>unit: usd</p>.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;

@@ -24,143 +24,138 @@ import java.util.HashMap;
 public class DataDiskPrice extends AbstractModel {
 
     /**
-    * Cloud disk ID.
+    * <p>Cloud disk ID.</p>.
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * Cloud disk unit price.
+    * <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
     */
     @SerializedName("OriginalDiskPrice")
     @Expose
     private Float OriginalDiskPrice;
 
     /**
-    * Total price of cloud disk
+    * <P>Total CBS price.</p><p>unit: usd</p>.
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Float OriginalPrice;
 
     /**
-    * Discount.
+    * <p>Discount.</p>.
     */
     @SerializedName("Discount")
     @Expose
     private Float Discount;
 
     /**
-    * Discounted total price.
+    * <P>Discounted total price.</p><p>unit: usd</p>.
     */
     @SerializedName("DiscountPrice")
     @Expose
     private Float DiscountPrice;
 
     /**
-    * ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Instance ID for data disk mounting.</p>.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Cloud disk ID. 
-     * @return DiskId Cloud disk ID.
+     * Get <p>Cloud disk ID.</p>. 
+     * @return DiskId <p>Cloud disk ID.</p>.
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set Cloud disk ID.
-     * @param DiskId Cloud disk ID.
+     * Set <p>Cloud disk ID.</p>.
+     * @param DiskId <p>Cloud disk ID.</p>.
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get Cloud disk unit price. 
-     * @return OriginalDiskPrice Cloud disk unit price.
+     * Get <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>. 
+     * @return OriginalDiskPrice <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
      */
     public Float getOriginalDiskPrice() {
         return this.OriginalDiskPrice;
     }
 
     /**
-     * Set Cloud disk unit price.
-     * @param OriginalDiskPrice Cloud disk unit price.
+     * Set <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
+     * @param OriginalDiskPrice <P>Cloud block storage (cbs) unit price.</p><p>unit: usd</p>.
      */
     public void setOriginalDiskPrice(Float OriginalDiskPrice) {
         this.OriginalDiskPrice = OriginalDiskPrice;
     }
 
     /**
-     * Get Total price of cloud disk 
-     * @return OriginalPrice Total price of cloud disk
+     * Get <P>Total CBS price.</p><p>unit: usd</p>. 
+     * @return OriginalPrice <P>Total CBS price.</p><p>unit: usd</p>.
      */
     public Float getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Total price of cloud disk
-     * @param OriginalPrice Total price of cloud disk
+     * Set <P>Total CBS price.</p><p>unit: usd</p>.
+     * @param OriginalPrice <P>Total CBS price.</p><p>unit: usd</p>.
      */
     public void setOriginalPrice(Float OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discount. 
-     * @return Discount Discount.
+     * Get <p>Discount.</p>. 
+     * @return Discount <p>Discount.</p>.
      */
     public Float getDiscount() {
         return this.Discount;
     }
 
     /**
-     * Set Discount.
-     * @param Discount Discount.
+     * Set <p>Discount.</p>.
+     * @param Discount <p>Discount.</p>.
      */
     public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
     /**
-     * Get Discounted total price. 
-     * @return DiscountPrice Discounted total price.
+     * Get <P>Discounted total price.</p><p>unit: usd</p>. 
+     * @return DiscountPrice <P>Discounted total price.</p><p>unit: usd</p>.
      */
     public Float getDiscountPrice() {
         return this.DiscountPrice;
     }
 
     /**
-     * Set Discounted total price.
-     * @param DiscountPrice Discounted total price.
+     * Set <P>Discounted total price.</p><p>unit: usd</p>.
+     * @param DiscountPrice <P>Discounted total price.</p><p>unit: usd</p>.
      */
     public void setDiscountPrice(Float DiscountPrice) {
         this.DiscountPrice = DiscountPrice;
     }
 
     /**
-     * Get ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return InstanceId ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Instance ID for data disk mounting.</p>. 
+     * @return InstanceId <p>Instance ID for data disk mounting.</p>.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param InstanceId ID of the instance to which the data disk is mounted.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Instance ID for data disk mounting.</p>.
+     * @param InstanceId <p>Instance ID for data disk mounting.</p>.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

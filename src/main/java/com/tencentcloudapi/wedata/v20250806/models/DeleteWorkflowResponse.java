@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteWorkflowResponse extends AbstractModel {
 
     /**
-    * Returns the count of successfully deleted workflow tasks, number of failures, and total number of tasks.
+    * Whether deletion succeeded.
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteWorkflowResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Returns the count of successfully deleted workflow tasks, number of failures, and total number of tasks. 
-     * @return Data Returns the count of successfully deleted workflow tasks, number of failures, and total number of tasks.
+     * Get Whether deletion succeeded. 
+     * @return Data Whether deletion succeeded.
      */
     public DeleteWorkflowResult getData() {
         return this.Data;
     }
 
     /**
-     * Set Returns the count of successfully deleted workflow tasks, number of failures, and total number of tasks.
-     * @param Data Returns the count of successfully deleted workflow tasks, number of failures, and total number of tasks.
+     * Set Whether deletion succeeded.
+     * @param Data Whether deletion succeeded.
      */
     public void setData(DeleteWorkflowResult Data) {
         this.Data = Data;
