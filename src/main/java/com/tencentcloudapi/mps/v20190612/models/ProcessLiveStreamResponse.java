@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProcessLiveStreamResponse extends AbstractModel {
 
     /**
-    * Task ID
+    * <p>Task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class ProcessLiveStreamResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task ID 
-     * @return TaskId Task ID
+     * Get <p>Task ID.</p> 
+     * @return TaskId <p>Task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID
-     * @param TaskId Task ID
+     * Set <p>Task ID.</p>
+     * @param TaskId <p>Task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

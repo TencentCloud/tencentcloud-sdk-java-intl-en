@@ -73,6 +73,16 @@ public class BlindWatermarkTemplate extends AbstractModel {
     private String UpdateTime;
 
     /**
+    * Digital watermark strength. 
+default: default, balance between hd video quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
+    */
+    @SerializedName("Strength")
+    @Expose
+    private String Strength;
+
+    /**
      * Get Unique identifier of the digital watermark template. 
      * @return Definition Unique identifier of the digital watermark template.
      */
@@ -184,6 +194,34 @@ public class BlindWatermarkTemplate extends AbstractModel {
         this.UpdateTime = UpdateTime;
     }
 
+    /**
+     * Get Digital watermark strength. 
+default: default, balance between hd video quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience. 
+     * @return Strength Digital watermark strength. 
+default: default, balance between hd video quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
+     */
+    public String getStrength() {
+        return this.Strength;
+    }
+
+    /**
+     * Set Digital watermark strength. 
+default: default, balance between hd video quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
+     * @param Strength Digital watermark strength. 
+default: default, balance between hd video quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
+     */
+    public void setStrength(String Strength) {
+        this.Strength = Strength;
+    }
+
     public BlindWatermarkTemplate() {
     }
 
@@ -213,6 +251,9 @@ public class BlindWatermarkTemplate extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.Strength != null) {
+            this.Strength = new String(source.Strength);
+        }
     }
 
 
@@ -227,6 +268,7 @@ public class BlindWatermarkTemplate extends AbstractModel {
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "Strength", this.Strength);
 
     }
 }

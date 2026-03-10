@@ -31,8 +31,8 @@ public class BatchProcessMediaRequest extends AbstractModel {
     private MediaInputInfo [] InputInfo;
 
     /**
-    * Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
+    * Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
     */
     @SerializedName("OutputStorage")
     @Expose
@@ -75,7 +75,7 @@ If left blank, it indicates that the directory is the same as the one where the 
     private String SessionContext;
 
     /**
-    * Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+    * Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
     */
     @SerializedName("ResourceId")
     @Expose
@@ -108,20 +108,20 @@ Default value: 0
     }
 
     /**
-     * Get Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required. 
-     * @return OutputStorage Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
+     * Get Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output. 
+     * @return OutputStorage Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
-     * @param OutputStorage Storage bucket for the output file. If it is left blank, the storage location in InputInfo will be inherited.
-Note: When InputInfo.Type is URL, this parameter is required.
+     * Set Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
+     * @param OutputStorage Specifies the target storage for the output file of media processing service (mps). if left empty, it inherits the storage location in InputInfo.
+Note: when InputInfo.Type is URL, this parameter is required. currently only support COS output.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -212,16 +212,16 @@ If left blank, it indicates that the directory is the same as the one where the 
     }
 
     /**
-     * Get Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID. 
-     * @return ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * Get Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account. 
+     * @return ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
-     * @param ResourceId Resource ID. Ensure the corresponding resource is in the enabled state. The default value is an account's primary resource ID.
+     * Set Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
+     * @param ResourceId Resource ID. Ensure that the corresponding resource is enabled. The default value is the primary resource ID of the account.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;

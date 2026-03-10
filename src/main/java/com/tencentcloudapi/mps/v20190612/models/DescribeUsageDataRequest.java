@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUsageDataRequest extends AbstractModel {
 
     /**
-    * Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Start date. use ISO date format.
     */
     @SerializedName("StartTime")
     @Expose
@@ -69,16 +69,16 @@ public class DescribeUsageDataRequest extends AbstractModel {
     private String [] ProcessRegions;
 
     /**
-     * Get Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return StartTime Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get Start date. use ISO date format. 
+     * @return StartTime Start date. use ISO date format.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param StartTime Start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set Start date. use ISO date format.
+     * @param StartTime Start date. use ISO date format.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;

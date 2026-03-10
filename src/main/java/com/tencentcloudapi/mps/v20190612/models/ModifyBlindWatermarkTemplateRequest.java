@@ -52,6 +52,16 @@ public class ModifyBlindWatermarkTemplateRequest extends AbstractModel {
     private String TextContent;
 
     /**
+    * Digital watermark strength. 
+default: default, balance between high-definition quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
+    */
+    @SerializedName("Strength")
+    @Expose
+    private String Strength;
+
+    /**
      * Get Unique identifier of the digital watermark template. 
      * @return Definition Unique identifier of the digital watermark template.
      */
@@ -115,6 +125,34 @@ public class ModifyBlindWatermarkTemplateRequest extends AbstractModel {
         this.TextContent = TextContent;
     }
 
+    /**
+     * Get Digital watermark strength. 
+default: default, balance between high-definition quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience. 
+     * @return Strength Digital watermark strength. 
+default: default, balance between high-definition quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
+     */
+    public String getStrength() {
+        return this.Strength;
+    }
+
+    /**
+     * Set Digital watermark strength. 
+default: default, balance between high-definition quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
+     * @param Strength Digital watermark strength. 
+default: default, balance between high-definition quality and resilience. 
+stronger: clear image quality, strong resilience. 
+strongest: normal video quality, strongest resilience.
+     */
+    public void setStrength(String Strength) {
+        this.Strength = Strength;
+    }
+
     public ModifyBlindWatermarkTemplateRequest() {
     }
 
@@ -135,6 +173,9 @@ public class ModifyBlindWatermarkTemplateRequest extends AbstractModel {
         if (source.TextContent != null) {
             this.TextContent = new String(source.TextContent);
         }
+        if (source.Strength != null) {
+            this.Strength = new String(source.Strength);
+        }
     }
 
 
@@ -146,6 +187,7 @@ public class ModifyBlindWatermarkTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
         this.setParamSimple(map, prefix + "TextContent", this.TextContent);
+        this.setParamSimple(map, prefix + "Strength", this.Strength);
 
     }
 }

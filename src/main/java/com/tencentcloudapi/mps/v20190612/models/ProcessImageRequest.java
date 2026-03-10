@@ -83,6 +83,13 @@ The image template feature is in beta testing. If you want to use it, submit a t
     private ImageTaskInput ImageTask;
 
     /**
+    * Extended parameters for image processing.
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
      * Get File input information for image processing. 
      * @return InputInfo File input information for image processing.
      */
@@ -234,6 +241,22 @@ The image template feature is in beta testing. If you want to use it, submit a t
         this.ImageTask = ImageTask;
     }
 
+    /**
+     * Get Extended parameters for image processing. 
+     * @return StdExtInfo Extended parameters for image processing.
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set Extended parameters for image processing.
+     * @param StdExtInfo Extended parameters for image processing.
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
+    }
+
     public ProcessImageRequest() {
     }
 
@@ -263,6 +286,9 @@ The image template feature is in beta testing. If you want to use it, submit a t
         if (source.ImageTask != null) {
             this.ImageTask = new ImageTaskInput(source.ImageTask);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -277,6 +303,7 @@ The image template feature is in beta testing. If you want to use it, submit a t
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
         this.setParamObj(map, prefix + "ImageTask.", this.ImageTask);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

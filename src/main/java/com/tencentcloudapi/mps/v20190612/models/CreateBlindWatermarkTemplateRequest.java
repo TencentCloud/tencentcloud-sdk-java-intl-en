@@ -52,6 +52,16 @@ public class CreateBlindWatermarkTemplateRequest extends AbstractModel {
     private String Comment;
 
     /**
+    * Digital watermark strength.
+default: default, balance between high-definition quality and resilience.
+stronger: clear image quality, strong resilience.
+strongest: normal video quality, highest resilience.
+    */
+    @SerializedName("Strength")
+    @Expose
+    private String Strength;
+
+    /**
      * Get Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA watermark.</li> 
      * @return Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA watermark.</li>
      */
@@ -115,6 +125,34 @@ public class CreateBlindWatermarkTemplateRequest extends AbstractModel {
         this.Comment = Comment;
     }
 
+    /**
+     * Get Digital watermark strength.
+default: default, balance between high-definition quality and resilience.
+stronger: clear image quality, strong resilience.
+strongest: normal video quality, highest resilience. 
+     * @return Strength Digital watermark strength.
+default: default, balance between high-definition quality and resilience.
+stronger: clear image quality, strong resilience.
+strongest: normal video quality, highest resilience.
+     */
+    public String getStrength() {
+        return this.Strength;
+    }
+
+    /**
+     * Set Digital watermark strength.
+default: default, balance between high-definition quality and resilience.
+stronger: clear image quality, strong resilience.
+strongest: normal video quality, highest resilience.
+     * @param Strength Digital watermark strength.
+default: default, balance between high-definition quality and resilience.
+stronger: clear image quality, strong resilience.
+strongest: normal video quality, highest resilience.
+     */
+    public void setStrength(String Strength) {
+        this.Strength = Strength;
+    }
+
     public CreateBlindWatermarkTemplateRequest() {
     }
 
@@ -135,6 +173,9 @@ public class CreateBlindWatermarkTemplateRequest extends AbstractModel {
         if (source.Comment != null) {
             this.Comment = new String(source.Comment);
         }
+        if (source.Strength != null) {
+            this.Strength = new String(source.Strength);
+        }
     }
 
 
@@ -146,6 +187,7 @@ public class CreateBlindWatermarkTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TextContent", this.TextContent);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Comment", this.Comment);
+        this.setParamSimple(map, prefix + "Strength", this.Strength);
 
     }
 }

@@ -24,12 +24,13 @@ import java.util.HashMap;
 public class ParseLiveStreamProcessNotificationResponse extends AbstractModel {
 
     /**
-    * Live stream processing result type. Valid values:
-<li>AiReviewResult: content review result.</li>
-<li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live streaming recording result.</li>
-<li>AiQualityControlResult: media live quality control result.</li>
-<li>AiAnalysisResult: content analysis result.</li>
+    * Live stream processing result type, including:.
+<Li>AiReviewResult: content moderation result;</li>.
+<Li>AiRecognitionResult: content recognition result;</li>.
+<Li>LiveRecordResult: live streaming result;</li>.
+<Li>AiQualityControlResult: media quality inspection result.</li>.
+<Li>AiAnalysisResult: content analysis result.</li>.
+<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
 <li>ProcessEof: end of live stream processing.</li>
     */
     @SerializedName("NotificationType")
@@ -89,6 +90,13 @@ Note: when this field return null, means no valid values can be obtained.
     private LiveStreamRecordResultInfo LiveRecordResultInfo;
 
     /**
+    * Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+    */
+    @SerializedName("AiSmartSubtitleResultInfo")
+    @Expose
+    private LiveStreamAiSmartSubtitleResultInfo AiSmartSubtitleResultInfo;
+
+    /**
     * The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
     */
     @SerializedName("SessionId")
@@ -124,19 +132,21 @@ Note: when this field return null, means no valid values can be obtained.
     private String RequestId;
 
     /**
-     * Get Live stream processing result type. Valid values:
-<li>AiReviewResult: content review result.</li>
-<li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live streaming recording result.</li>
-<li>AiQualityControlResult: media live quality control result.</li>
-<li>AiAnalysisResult: content analysis result.</li>
+     * Get Live stream processing result type, including:.
+<Li>AiReviewResult: content moderation result;</li>.
+<Li>AiRecognitionResult: content recognition result;</li>.
+<Li>LiveRecordResult: live streaming result;</li>.
+<Li>AiQualityControlResult: media quality inspection result.</li>.
+<Li>AiAnalysisResult: content analysis result.</li>.
+<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
 <li>ProcessEof: end of live stream processing.</li> 
-     * @return NotificationType Live stream processing result type. Valid values:
-<li>AiReviewResult: content review result.</li>
-<li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live streaming recording result.</li>
-<li>AiQualityControlResult: media live quality control result.</li>
-<li>AiAnalysisResult: content analysis result.</li>
+     * @return NotificationType Live stream processing result type, including:.
+<Li>AiReviewResult: content moderation result;</li>.
+<Li>AiRecognitionResult: content recognition result;</li>.
+<Li>LiveRecordResult: live streaming result;</li>.
+<Li>AiQualityControlResult: media quality inspection result.</li>.
+<Li>AiAnalysisResult: content analysis result.</li>.
+<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
 <li>ProcessEof: end of live stream processing.</li>
      */
     public String getNotificationType() {
@@ -144,19 +154,21 @@ Note: when this field return null, means no valid values can be obtained.
     }
 
     /**
-     * Set Live stream processing result type. Valid values:
-<li>AiReviewResult: content review result.</li>
-<li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live streaming recording result.</li>
-<li>AiQualityControlResult: media live quality control result.</li>
-<li>AiAnalysisResult: content analysis result.</li>
+     * Set Live stream processing result type, including:.
+<Li>AiReviewResult: content moderation result;</li>.
+<Li>AiRecognitionResult: content recognition result;</li>.
+<Li>LiveRecordResult: live streaming result;</li>.
+<Li>AiQualityControlResult: media quality inspection result.</li>.
+<Li>AiAnalysisResult: content analysis result.</li>.
+<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
 <li>ProcessEof: end of live stream processing.</li>
-     * @param NotificationType Live stream processing result type. Valid values:
-<li>AiReviewResult: content review result.</li>
-<li>AiRecognitionResult: content recognition result.</li>
-<li>LiveRecordResult: live streaming recording result.</li>
-<li>AiQualityControlResult: media live quality control result.</li>
-<li>AiAnalysisResult: content analysis result.</li>
+     * @param NotificationType Live stream processing result type, including:.
+<Li>AiReviewResult: content moderation result;</li>.
+<Li>AiRecognitionResult: content recognition result;</li>.
+<Li>LiveRecordResult: live streaming result;</li>.
+<Li>AiQualityControlResult: media quality inspection result.</li>.
+<Li>AiAnalysisResult: content analysis result.</li>.
+<Li>AiSmartSubtitleResult: smart subtitle result.</li>.
 <li>ProcessEof: end of live stream processing.</li>
      */
     public void setNotificationType(String NotificationType) {
@@ -288,6 +300,22 @@ Note: when this field return null, means no valid values can be obtained.
     }
 
     /**
+     * Get Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult. 
+     * @return AiSmartSubtitleResultInfo Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+     */
+    public LiveStreamAiSmartSubtitleResultInfo getAiSmartSubtitleResultInfo() {
+        return this.AiSmartSubtitleResultInfo;
+    }
+
+    /**
+     * Set Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+     * @param AiSmartSubtitleResultInfo Smart subtitle result. valid when NotificationType is AiSmartSubtitleResult.
+     */
+    public void setAiSmartSubtitleResultInfo(LiveStreamAiSmartSubtitleResultInfo AiSmartSubtitleResultInfo) {
+        this.AiSmartSubtitleResultInfo = AiSmartSubtitleResultInfo;
+    }
+
+    /**
      * Get The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed. 
      * @return SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      */
@@ -399,6 +427,9 @@ Note: when this field return null, means no valid values can be obtained.
         if (source.LiveRecordResultInfo != null) {
             this.LiveRecordResultInfo = new LiveStreamRecordResultInfo(source.LiveRecordResultInfo);
         }
+        if (source.AiSmartSubtitleResultInfo != null) {
+            this.AiSmartSubtitleResultInfo = new LiveStreamAiSmartSubtitleResultInfo(source.AiSmartSubtitleResultInfo);
+        }
         if (source.SessionId != null) {
             this.SessionId = new String(source.SessionId);
         }
@@ -429,6 +460,7 @@ Note: when this field return null, means no valid values can be obtained.
         this.setParamObj(map, prefix + "AiAnalysisResultInfo.", this.AiAnalysisResultInfo);
         this.setParamObj(map, prefix + "AiQualityControlResultInfo.", this.AiQualityControlResultInfo);
         this.setParamObj(map, prefix + "LiveRecordResultInfo.", this.LiveRecordResultInfo);
+        this.setParamObj(map, prefix + "AiSmartSubtitleResultInfo.", this.AiSmartSubtitleResultInfo);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "Timestamp", this.Timestamp);

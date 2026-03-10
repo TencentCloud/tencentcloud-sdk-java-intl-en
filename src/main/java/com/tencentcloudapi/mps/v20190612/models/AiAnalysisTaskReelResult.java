@@ -45,14 +45,15 @@ public class AiAnalysisTaskReelResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input of the intelligent video editing task.
+    * AI narration and video re-creation task input.
     */
     @SerializedName("Input")
     @Expose
     private AiAnalysisTaskReelInput Input;
 
     /**
-    * Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
+    * AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Output")
     @Expose
@@ -137,32 +138,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input of the intelligent video editing task. 
-     * @return Input Input of the intelligent video editing task.
+     * Get AI narration and video re-creation task input. 
+     * @return Input AI narration and video re-creation task input.
      */
     public AiAnalysisTaskReelInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of the intelligent video editing task.
-     * @param Input Input of the intelligent video editing task.
+     * Set AI narration and video re-creation task input.
+     * @param Input AI narration and video re-creation task input.
      */
     public void setInput(AiAnalysisTaskReelInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Output AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AiAnalysisTaskReelOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of the intelligent video editing task.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Output AI narration and video re-creation task output.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOutput(AiAnalysisTaskReelOutput Output) {
         this.Output = Output;

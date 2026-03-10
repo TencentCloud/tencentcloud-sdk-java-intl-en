@@ -24,11 +24,22 @@ import java.util.HashMap;
 public class AiAnalysisTaskReelOutput extends AbstractModel {
 
     /**
-    * Path of the edited video.
+    * Path of the output video.
     */
     @SerializedName("VideoPath")
     @Expose
     private String VideoPath;
+
+    /**
+    * Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+    */
+    @SerializedName("VideoPaths")
+    @Expose
+    private String [] VideoPaths;
 
     /**
     * Script file path.
@@ -39,26 +50,58 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
     private String ScriptPath;
 
     /**
-    * Storage location of the edited video.
+    * Storage location of the output video.
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get Path of the edited video. 
-     * @return VideoPath Path of the edited video.
+     * Get Path of the output video. 
+     * @return VideoPath Path of the output video.
      */
     public String getVideoPath() {
         return this.VideoPath;
     }
 
     /**
-     * Set Path of the edited video.
-     * @param VideoPath Path of the edited video.
+     * Set Path of the output video.
+     * @param VideoPath Path of the output video.
      */
     public void setVideoPath(String VideoPath) {
         this.VideoPath = VideoPath;
+    }
+
+    /**
+     * Get Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list. 
+     * @return VideoPaths Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+     */
+    public String [] getVideoPaths() {
+        return this.VideoPaths;
+    }
+
+    /**
+     * Set Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+     * @param VideoPaths Path list of the output videos.
+
+**Note**:.
+1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
+2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+     */
+    public void setVideoPaths(String [] VideoPaths) {
+        this.VideoPaths = VideoPaths;
     }
 
     /**
@@ -82,16 +125,16 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
     }
 
     /**
-     * Get Storage location of the edited video. 
-     * @return OutputStorage Storage location of the edited video.
+     * Get Storage location of the output video. 
+     * @return OutputStorage Storage location of the output video.
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Storage location of the edited video.
-     * @param OutputStorage Storage location of the edited video.
+     * Set Storage location of the output video.
+     * @param OutputStorage Storage location of the output video.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -108,6 +151,12 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
         if (source.VideoPath != null) {
             this.VideoPath = new String(source.VideoPath);
         }
+        if (source.VideoPaths != null) {
+            this.VideoPaths = new String[source.VideoPaths.length];
+            for (int i = 0; i < source.VideoPaths.length; i++) {
+                this.VideoPaths[i] = new String(source.VideoPaths[i]);
+            }
+        }
         if (source.ScriptPath != null) {
             this.ScriptPath = new String(source.ScriptPath);
         }
@@ -122,6 +171,7 @@ public class AiAnalysisTaskReelOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VideoPath", this.VideoPath);
+        this.setParamArraySimple(map, prefix + "VideoPaths.", this.VideoPaths);
         this.setParamSimple(map, prefix + "ScriptPath", this.ScriptPath);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 

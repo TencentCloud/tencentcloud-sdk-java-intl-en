@@ -66,6 +66,13 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
     private QualityControlData Output;
 
     /**
+    * Task execution progress.
+    */
+    @SerializedName("Progress")
+    @Expose
+    private Long Progress;
+
+    /**
      * Get The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`. 
      * @return Status The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
      */
@@ -161,6 +168,22 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
         this.Output = Output;
     }
 
+    /**
+     * Get Task execution progress. 
+     * @return Progress Task execution progress.
+     */
+    public Long getProgress() {
+        return this.Progress;
+    }
+
+    /**
+     * Set Task execution progress.
+     * @param Progress Task execution progress.
+     */
+    public void setProgress(Long Progress) {
+        this.Progress = Progress;
+    }
+
     public ScheduleQualityControlTaskResult() {
     }
 
@@ -187,6 +210,9 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
         if (source.Output != null) {
             this.Output = new QualityControlData(source.Output);
         }
+        if (source.Progress != null) {
+            this.Progress = new Long(source.Progress);
+        }
     }
 
 
@@ -200,6 +226,7 @@ public class ScheduleQualityControlTaskResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamObj(map, prefix + "Input.", this.Input);
         this.setParamObj(map, prefix + "Output.", this.Output);
+        this.setParamSimple(map, prefix + "Progress", this.Progress);
 
     }
 }

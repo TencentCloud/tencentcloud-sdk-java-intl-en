@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EditMediaResponse extends AbstractModel {
 
     /**
-    * Video editing task ID, which can be used to query the status of an editing task.
+    * <p>Video editing task ID. This can be used to query the task status.</p>
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class EditMediaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Video editing task ID, which can be used to query the status of an editing task. 
-     * @return TaskId Video editing task ID, which can be used to query the status of an editing task.
+     * Get <p>Video editing task ID. This can be used to query the task status.</p> 
+     * @return TaskId <p>Video editing task ID. This can be used to query the task status.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Video editing task ID, which can be used to query the status of an editing task.
-     * @param TaskId Video editing task ID, which can be used to query the status of an editing task.
+     * Set <p>Video editing task ID. This can be used to query the task status.</p>
+     * @param TaskId <p>Video editing task ID. This can be used to query the task status.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

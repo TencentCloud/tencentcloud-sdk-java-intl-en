@@ -31,6 +31,20 @@ public class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel {
     private String VideoComprehensionAnalysisResult;
 
     /**
+    * Video (audio) extended information.
+    */
+    @SerializedName("VideoComprehensionExtInfo")
+    @Expose
+    private String VideoComprehensionExtInfo;
+
+    /**
+    * Video shot understanding result.
+    */
+    @SerializedName("VideoComprehensionResultList")
+    @Expose
+    private VideoComprehensionResultItem [] VideoComprehensionResultList;
+
+    /**
      * Get Details of the video (audio) recognition output content. 
      * @return VideoComprehensionAnalysisResult Details of the video (audio) recognition output content.
      */
@@ -46,6 +60,38 @@ public class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel {
         this.VideoComprehensionAnalysisResult = VideoComprehensionAnalysisResult;
     }
 
+    /**
+     * Get Video (audio) extended information. 
+     * @return VideoComprehensionExtInfo Video (audio) extended information.
+     */
+    public String getVideoComprehensionExtInfo() {
+        return this.VideoComprehensionExtInfo;
+    }
+
+    /**
+     * Set Video (audio) extended information.
+     * @param VideoComprehensionExtInfo Video (audio) extended information.
+     */
+    public void setVideoComprehensionExtInfo(String VideoComprehensionExtInfo) {
+        this.VideoComprehensionExtInfo = VideoComprehensionExtInfo;
+    }
+
+    /**
+     * Get Video shot understanding result. 
+     * @return VideoComprehensionResultList Video shot understanding result.
+     */
+    public VideoComprehensionResultItem [] getVideoComprehensionResultList() {
+        return this.VideoComprehensionResultList;
+    }
+
+    /**
+     * Set Video shot understanding result.
+     * @param VideoComprehensionResultList Video shot understanding result.
+     */
+    public void setVideoComprehensionResultList(VideoComprehensionResultItem [] VideoComprehensionResultList) {
+        this.VideoComprehensionResultList = VideoComprehensionResultList;
+    }
+
     public AiAnalysisTaskVideoComprehensionOutput() {
     }
 
@@ -57,6 +103,15 @@ public class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel {
         if (source.VideoComprehensionAnalysisResult != null) {
             this.VideoComprehensionAnalysisResult = new String(source.VideoComprehensionAnalysisResult);
         }
+        if (source.VideoComprehensionExtInfo != null) {
+            this.VideoComprehensionExtInfo = new String(source.VideoComprehensionExtInfo);
+        }
+        if (source.VideoComprehensionResultList != null) {
+            this.VideoComprehensionResultList = new VideoComprehensionResultItem[source.VideoComprehensionResultList.length];
+            for (int i = 0; i < source.VideoComprehensionResultList.length; i++) {
+                this.VideoComprehensionResultList[i] = new VideoComprehensionResultItem(source.VideoComprehensionResultList[i]);
+            }
+        }
     }
 
 
@@ -65,6 +120,8 @@ public class AiAnalysisTaskVideoComprehensionOutput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VideoComprehensionAnalysisResult", this.VideoComprehensionAnalysisResult);
+        this.setParamSimple(map, prefix + "VideoComprehensionExtInfo", this.VideoComprehensionExtInfo);
+        this.setParamArrayObj(map, prefix + "VideoComprehensionResultList.", this.VideoComprehensionResultList);
 
     }
 }
