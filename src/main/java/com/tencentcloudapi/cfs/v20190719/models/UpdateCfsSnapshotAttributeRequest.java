@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class UpdateCfsSnapshotAttributeRequest extends AbstractModel {
 
     /**
-    * File system snapshot ID
+    * Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * File system snapshot name
+    * File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
     */
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
 
     /**
-    * File system snapshot retention period in days
+    * File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
     */
     @SerializedName("AliveDays")
     @Expose
     private Long AliveDays;
 
     /**
-     * Get File system snapshot ID 
-     * @return SnapshotId File system snapshot ID
+     * Get Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api. 
+     * @return SnapshotId Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set File system snapshot ID
-     * @param SnapshotId File system snapshot ID
+     * Set Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
+     * @param SnapshotId Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get File system snapshot name 
-     * @return SnapshotName File system snapshot name
+     * Get File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -. 
+     * @return SnapshotName File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set File system snapshot name
-     * @param SnapshotName File system snapshot name
+     * Set File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+     * @param SnapshotName File system snapshot name, must fill in either this or AliveDays. snapshot name supports no more than 64 characters in length, supports chinese, numbers, _, and -.
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get File system snapshot retention period in days 
-     * @return AliveDays File system snapshot retention period in days
+     * Get File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity. 
+     * @return AliveDays File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
      */
     public Long getAliveDays() {
         return this.AliveDays;
     }
 
     /**
-     * Set File system snapshot retention period in days
-     * @param AliveDays File system snapshot retention period in days
+     * Set File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
+     * @param AliveDays File system snapshot retention days. either this or SnapshotName must be specified. if the original setting has permanent retention attribute, it is not allowed to be modified to short-term validity.
      */
     public void setAliveDays(Long AliveDays) {
         this.AliveDays = AliveDays;

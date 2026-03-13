@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class UnbindAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * List of IDs of the file systems to be unbound, separated by comma
+    * List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
     */
     @SerializedName("FileSystemIds")
     @Expose
     private String FileSystemIds;
 
     /**
-    * ID of the snapshot to be unbound
+    * Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-     * Get List of IDs of the file systems to be unbound, separated by comma 
-     * @return FileSystemIds List of IDs of the file systems to be unbound, separated by comma
+     * Get List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api. 
+     * @return FileSystemIds List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
      */
     public String getFileSystemIds() {
         return this.FileSystemIds;
     }
 
     /**
-     * Set List of IDs of the file systems to be unbound, separated by comma
-     * @param FileSystemIds List of IDs of the file systems to be unbound, separated by comma
+     * Set List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+     * @param FileSystemIds List of file system ids to be unbound, separated by ",". file system ids can be obtained by querying the file system list through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
      */
     public void setFileSystemIds(String FileSystemIds) {
         this.FileSystemIds = FileSystemIds;
     }
 
     /**
-     * Get ID of the snapshot to be unbound 
-     * @return AutoSnapshotPolicyId ID of the snapshot to be unbound
+     * Get Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api. 
+     * @return AutoSnapshotPolicyId Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set ID of the snapshot to be unbound
-     * @param AutoSnapshotPolicyId ID of the snapshot to be unbound
+     * Set Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
+     * @param AutoSnapshotPolicyId Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;

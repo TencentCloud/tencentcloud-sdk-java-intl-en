@@ -24,161 +24,196 @@ import java.util.HashMap;
 public class DescribeCfsSnapshotsRequest extends AbstractModel {
 
     /**
-    * File system ID
+    * File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * Snapshot ID
+    * Snapshot ID.
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * The starting position of paging
+    * Paging start position, defaults to 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Page length
+    * Page length. default value 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filters
+    * Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Order field
+    * Sort by creation time to obtain value.
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
 
     /**
-    * Sorting order (ascending or descending)
+    * Sorting order; ascending or descending order.
     */
     @SerializedName("Order")
     @Expose
     private String Order;
 
     /**
-     * Get File system ID 
-     * @return FileSystemId File system ID
+     * Get File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api. 
+     * @return FileSystemId File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID
-     * @param FileSystemId File system ID
+     * Set File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+     * @param FileSystemId File system ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get Snapshot ID 
-     * @return SnapshotId Snapshot ID
+     * Get Snapshot ID. 
+     * @return SnapshotId Snapshot ID.
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set Snapshot ID
-     * @param SnapshotId Snapshot ID
+     * Set Snapshot ID.
+     * @param SnapshotId Snapshot ID.
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get The starting position of paging 
-     * @return Offset The starting position of paging
+     * Get Paging start position, defaults to 0. 
+     * @return Offset Paging start position, defaults to 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The starting position of paging
-     * @param Offset The starting position of paging
+     * Set Paging start position, defaults to 0.
+     * @param Offset Paging start position, defaults to 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Page length 
-     * @return Limit Page length
+     * Get Page length. default value 20. 
+     * @return Limit Page length. default value 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Page length
-     * @param Limit Page length
+     * Set Page length. default value 20.
+     * @param Limit Page length. default value 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filters 
-     * @return Filters Filters
+     * Get Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key. 
+     * @return Filters Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filters
-     * @param Filters Filters
+     * Set Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
+     * @param Filters Filter criteria
+SnapshotId - Array of String - required: no - (filter condition) filter by snapshot ID.
+<br>SnapshotName - Array of String - required: no - (filter condition) filter by snapshot name.
+<br>FileSystemId - Array of String - required: no - (filter condition) filter by file system ID.
+<br>FsName - Array of String - required: no - (filtering conditions) filters file system names.
+<br>Status - Array of String - required: no - (filter criteria) filter by snapshot Status. Status classification: creating: under creation | available: running | deleting: deleting | rollbacking_new: being created for new file system | create-failed: creation failed.
+<br>tag-key - Array of String - required: no - (filter condition) filter by tag key.
+<br>tag:tag-key - Array of String - required: no - (filter condition) filter by tag key-value pair. replace tag-key with a specific tag key.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Order field 
-     * @return OrderField Order field
+     * Get Sort by creation time to obtain value. 
+     * @return OrderField Sort by creation time to obtain value.
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set Order field
-     * @param OrderField Order field
+     * Set Sort by creation time to obtain value.
+     * @param OrderField Sort by creation time to obtain value.
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
     }
 
     /**
-     * Get Sorting order (ascending or descending) 
-     * @return Order Sorting order (ascending or descending)
+     * Get Sorting order; ascending or descending order. 
+     * @return Order Sorting order; ascending or descending order.
      */
     public String getOrder() {
         return this.Order;
     }
 
     /**
-     * Set Sorting order (ascending or descending)
-     * @param Order Sorting order (ascending or descending)
+     * Set Sorting order; ascending or descending order.
+     * @param Order Sorting order; ascending or descending order.
      */
     public void setOrder(String Order) {
         this.Order = Order;

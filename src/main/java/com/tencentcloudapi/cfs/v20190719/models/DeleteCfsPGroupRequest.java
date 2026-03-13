@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteCfsPGroupRequest extends AbstractModel {
 
     /**
-    * Permission group ID
+    * Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
     */
     @SerializedName("PGroupId")
     @Expose
     private String PGroupId;
 
     /**
-     * Get Permission group ID 
-     * @return PGroupId Permission group ID
+     * Get Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1). 
+     * @return PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set Permission group ID
-     * @param PGroupId Permission group ID
+     * Set Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+     * @param PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;

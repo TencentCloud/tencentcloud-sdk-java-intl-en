@@ -31,7 +31,7 @@ public class AvailableType extends AbstractModel {
     private AvailableProtoStatus [] Protocols;
 
     /**
-    * Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+    * Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
     */
     @SerializedName("Type")
     @Expose
@@ -61,16 +61,16 @@ public class AvailableType extends AbstractModel {
     }
 
     /**
-     * Get Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage) 
-     * @return Type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+     * Get Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo. 
+     * @return Type Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
-     * @param Type Storage class. Valid values: `SD` (standard storage) and `HP` (high-performance storage)
+     * Set Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
+     * @param Type Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
      */
     public void setType(String Type) {
         this.Type = Type;

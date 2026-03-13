@@ -31,7 +31,7 @@ public class AvailableProtoStatus extends AbstractModel {
     private String SaleStatus;
 
     /**
-    * Protocol type. Valid values: NFS, CIFS
+    * Protocol type. optional values: NFS, CIFS, and TURBO.
     */
     @SerializedName("Protocol")
     @Expose
@@ -54,16 +54,16 @@ public class AvailableProtoStatus extends AbstractModel {
     }
 
     /**
-     * Get Protocol type. Valid values: NFS, CIFS 
-     * @return Protocol Protocol type. Valid values: NFS, CIFS
+     * Get Protocol type. optional values: NFS, CIFS, and TURBO. 
+     * @return Protocol Protocol type. optional values: NFS, CIFS, and TURBO.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Protocol type. Valid values: NFS, CIFS
-     * @param Protocol Protocol type. Valid values: NFS, CIFS
+     * Set Protocol type. optional values: NFS, CIFS, and TURBO.
+     * @param Protocol Protocol type. optional values: NFS, CIFS, and TURBO.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

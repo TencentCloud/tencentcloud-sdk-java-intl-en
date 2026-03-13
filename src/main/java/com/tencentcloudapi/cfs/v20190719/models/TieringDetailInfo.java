@@ -24,31 +24,49 @@ import java.util.HashMap;
 public class TieringDetailInfo extends AbstractModel {
 
     /**
-    * STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
     */
     @SerializedName("TieringSizeInBytes")
     @Expose
     private Long TieringSizeInBytes;
 
     /**
-     * Get STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TieringSizeInBytes STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+    */
+    @SerializedName("SecondaryTieringSizeInBytes")
+    @Expose
+    private Long SecondaryTieringSizeInBytes;
+
+    /**
+     * Get <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>. 
+     * @return TieringSizeInBytes <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
      */
     public Long getTieringSizeInBytes() {
         return this.TieringSizeInBytes;
     }
 
     /**
-     * Set STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TieringSizeInBytes STANDARD_IA storage usage
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+     * @param TieringSizeInBytes <p>Infrequent access storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
      */
     public void setTieringSizeInBytes(Long TieringSizeInBytes) {
         this.TieringSizeInBytes = TieringSizeInBytes;
+    }
+
+    /**
+     * Get <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>. 
+     * @return SecondaryTieringSizeInBytes <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+     */
+    public Long getSecondaryTieringSizeInBytes() {
+        return this.SecondaryTieringSizeInBytes;
+    }
+
+    /**
+     * Set <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+     * @param SecondaryTieringSizeInBytes <p>Cold storage capacity</p><p>measurement unit: Byte, B, Byte</p>.
+     */
+    public void setSecondaryTieringSizeInBytes(Long SecondaryTieringSizeInBytes) {
+        this.SecondaryTieringSizeInBytes = SecondaryTieringSizeInBytes;
     }
 
     public TieringDetailInfo() {
@@ -62,6 +80,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TieringSizeInBytes != null) {
             this.TieringSizeInBytes = new Long(source.TieringSizeInBytes);
         }
+        if (source.SecondaryTieringSizeInBytes != null) {
+            this.SecondaryTieringSizeInBytes = new Long(source.SecondaryTieringSizeInBytes);
+        }
     }
 
 
@@ -70,6 +91,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TieringSizeInBytes", this.TieringSizeInBytes);
+        this.setParamSimple(map, prefix + "SecondaryTieringSizeInBytes", this.SecondaryTieringSizeInBytes);
 
     }
 }

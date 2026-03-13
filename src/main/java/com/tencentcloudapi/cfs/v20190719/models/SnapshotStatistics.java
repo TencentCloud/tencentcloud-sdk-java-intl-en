@@ -38,7 +38,7 @@ public class SnapshotStatistics extends AbstractModel {
     private Long SnapshotNumber;
 
     /**
-    * Total snapshot size
+    * Total snapshot capacity in MiB.
     */
     @SerializedName("SnapshotSize")
     @Expose
@@ -77,16 +77,16 @@ public class SnapshotStatistics extends AbstractModel {
     }
 
     /**
-     * Get Total snapshot size 
-     * @return SnapshotSize Total snapshot size
+     * Get Total snapshot capacity in MiB. 
+     * @return SnapshotSize Total snapshot capacity in MiB.
      */
     public Long getSnapshotSize() {
         return this.SnapshotSize;
     }
 
     /**
-     * Set Total snapshot size
-     * @param SnapshotSize Total snapshot size
+     * Set Total snapshot capacity in MiB.
+     * @param SnapshotSize Total snapshot capacity in MiB.
      */
     public void setSnapshotSize(Long SnapshotSize) {
         this.SnapshotSize = SnapshotSize;

@@ -52,40 +52,35 @@ public class MigrationTaskInfo extends AbstractModel {
     private Long MigrationMode;
 
     /**
-    * Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Data source bucket name.
     */
     @SerializedName("BucketName")
     @Expose
     private String BucketName;
 
     /**
-    * Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Source bucket region.
     */
     @SerializedName("BucketRegion")
     @Expose
     private String BucketRegion;
 
     /**
-    * Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Data source bucket address.
     */
     @SerializedName("BucketAddress")
     @Expose
     private String BucketAddress;
 
     /**
-    * List address
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Checklist address.
     */
     @SerializedName("ListAddress")
     @Expose
     private String ListAddress;
 
     /**
-    * File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File system instance name.
     */
     @SerializedName("FsName")
     @Expose
@@ -120,99 +115,95 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long CreateTime;
 
     /**
-    * End time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Completion/Termination time.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
+    * Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of files.
     */
     @SerializedName("FileTotalCount")
     @Expose
     private Long FileTotalCount;
 
     /**
-    * Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of migrated files.
     */
     @SerializedName("FileMigratedCount")
     @Expose
     private Long FileMigratedCount;
 
     /**
-    * Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of failed files in migration.
     */
     @SerializedName("FileFailedCount")
     @Expose
     private Long FileFailedCount;
 
     /**
-    * File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File capacity, in Byte.
     */
     @SerializedName("FileTotalSize")
     @Expose
     private Long FileTotalSize;
 
     /**
-    * Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Migrated file capacity in Byte.
     */
     @SerializedName("FileMigratedSize")
     @Expose
     private Long FileMigratedSize;
 
     /**
-    * Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Capacity of failed migration files, in Byte.
     */
     @SerializedName("FileFailedSize")
     @Expose
     private Long FileFailedSize;
 
     /**
-    * List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total inventory.
     */
     @SerializedName("FileTotalList")
     @Expose
     private String FileTotalList;
 
     /**
-    * List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+    * File list completed.
     */
     @SerializedName("FileCompletedList")
     @Expose
     private String FileCompletedList;
 
     /**
-    * List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Failed file list.
     */
     @SerializedName("FileFailedList")
     @Expose
     private String FileFailedList;
 
     /**
-    * Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Source bucket path.
     */
     @SerializedName("BucketPath")
     @Expose
     private String BucketPath;
+
+    /**
+    * Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+    */
+    @SerializedName("Direction")
+    @Expose
+    private Long Direction;
 
     /**
      * Get Migration task name 
@@ -279,100 +270,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BucketName Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Data source bucket name. 
+     * @return BucketName Data source bucket name.
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BucketName Data source bucket name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Data source bucket name.
+     * @param BucketName Data source bucket name.
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
     }
 
     /**
-     * Get Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BucketRegion Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Source bucket region. 
+     * @return BucketRegion Source bucket region.
      */
     public String getBucketRegion() {
         return this.BucketRegion;
     }
 
     /**
-     * Set Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BucketRegion Data source bucket region
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Source bucket region.
+     * @param BucketRegion Source bucket region.
      */
     public void setBucketRegion(String BucketRegion) {
         this.BucketRegion = BucketRegion;
     }
 
     /**
-     * Get Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BucketAddress Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Data source bucket address. 
+     * @return BucketAddress Data source bucket address.
      */
     public String getBucketAddress() {
         return this.BucketAddress;
     }
 
     /**
-     * Set Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BucketAddress Data source bucket address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Data source bucket address.
+     * @param BucketAddress Data source bucket address.
      */
     public void setBucketAddress(String BucketAddress) {
         this.BucketAddress = BucketAddress;
     }
 
     /**
-     * Get List address
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ListAddress List address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Checklist address. 
+     * @return ListAddress Checklist address.
      */
     public String getListAddress() {
         return this.ListAddress;
     }
 
     /**
-     * Set List address
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ListAddress List address
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Checklist address.
+     * @param ListAddress Checklist address.
      */
     public void setListAddress(String ListAddress) {
         this.ListAddress = ListAddress;
     }
 
     /**
-     * Get File system instance name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FsName File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File system instance name. 
+     * @return FsName File system instance name.
      */
     public String getFsName() {
         return this.FsName;
     }
 
     /**
-     * Set File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FsName File system instance name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File system instance name.
+     * @param FsName File system instance name.
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;
@@ -443,239 +414,211 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get End time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EndTime End time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Completion/Termination time. 
+     * @return EndTime Completion/Termination time.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EndTime End time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Completion/Termination time.
+     * @param EndTime Completion/Termination time.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped). 
-     * @return Status Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
+     * Get Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting. 
+     * @return Status Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
-     * @param Status Migration status. Valid values: `0` (completed), `1` (in progress), and `2` (stopped).
+     * Set Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
+     * @param Status Migration status. 0: completed; 1: creating; 2: running; 3: terminating; 4: terminated; 5: creation failed; 6: running failure; 7: ending; 8: deleting; 9: waiting.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Number of files
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileTotalCount Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of files. 
+     * @return FileTotalCount Number of files.
      */
     public Long getFileTotalCount() {
         return this.FileTotalCount;
     }
 
     /**
-     * Set Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileTotalCount Number of files
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of files.
+     * @param FileTotalCount Number of files.
      */
     public void setFileTotalCount(Long FileTotalCount) {
         this.FileTotalCount = FileTotalCount;
     }
 
     /**
-     * Get Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileMigratedCount Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of migrated files. 
+     * @return FileMigratedCount Number of migrated files.
      */
     public Long getFileMigratedCount() {
         return this.FileMigratedCount;
     }
 
     /**
-     * Set Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileMigratedCount Number of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of migrated files.
+     * @param FileMigratedCount Number of migrated files.
      */
     public void setFileMigratedCount(Long FileMigratedCount) {
         this.FileMigratedCount = FileMigratedCount;
     }
 
     /**
-     * Get Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileFailedCount Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of failed files in migration. 
+     * @return FileFailedCount Number of failed files in migration.
      */
     public Long getFileFailedCount() {
         return this.FileFailedCount;
     }
 
     /**
-     * Set Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileFailedCount Number of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of failed files in migration.
+     * @param FileFailedCount Number of failed files in migration.
      */
     public void setFileFailedCount(Long FileFailedCount) {
         this.FileFailedCount = FileFailedCount;
     }
 
     /**
-     * Get File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileTotalSize File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File capacity, in Byte. 
+     * @return FileTotalSize File capacity, in Byte.
      */
     public Long getFileTotalSize() {
         return this.FileTotalSize;
     }
 
     /**
-     * Set File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileTotalSize File size, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File capacity, in Byte.
+     * @param FileTotalSize File capacity, in Byte.
      */
     public void setFileTotalSize(Long FileTotalSize) {
         this.FileTotalSize = FileTotalSize;
     }
 
     /**
-     * Get Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileMigratedSize Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Migrated file capacity in Byte. 
+     * @return FileMigratedSize Migrated file capacity in Byte.
      */
     public Long getFileMigratedSize() {
         return this.FileMigratedSize;
     }
 
     /**
-     * Set Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileMigratedSize Size of migrated files, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Migrated file capacity in Byte.
+     * @param FileMigratedSize Migrated file capacity in Byte.
      */
     public void setFileMigratedSize(Long FileMigratedSize) {
         this.FileMigratedSize = FileMigratedSize;
     }
 
     /**
-     * Get Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileFailedSize Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Capacity of failed migration files, in Byte. 
+     * @return FileFailedSize Capacity of failed migration files, in Byte.
      */
     public Long getFileFailedSize() {
         return this.FileFailedSize;
     }
 
     /**
-     * Set Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileFailedSize Size of files that failed to be migrated, in bytes
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Capacity of failed migration files, in Byte.
+     * @param FileFailedSize Capacity of failed migration files, in Byte.
      */
     public void setFileFailedSize(Long FileFailedSize) {
         this.FileFailedSize = FileFailedSize;
     }
 
     /**
-     * Get List of all files
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileTotalList List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total inventory. 
+     * @return FileTotalList Total inventory.
      */
     public String getFileTotalList() {
         return this.FileTotalList;
     }
 
     /**
-     * Set List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileTotalList List of all files
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total inventory.
+     * @param FileTotalList Total inventory.
      */
     public void setFileTotalList(String FileTotalList) {
         this.FileTotalList = FileTotalList;
     }
 
     /**
-     * Get List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileCompletedList List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get File list completed. 
+     * @return FileCompletedList File list completed.
      */
     public String getFileCompletedList() {
         return this.FileCompletedList;
     }
 
     /**
-     * Set List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileCompletedList List of migrated files
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set File list completed.
+     * @param FileCompletedList File list completed.
      */
     public void setFileCompletedList(String FileCompletedList) {
         this.FileCompletedList = FileCompletedList;
     }
 
     /**
-     * Get List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FileFailedList List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Failed file list. 
+     * @return FileFailedList Failed file list.
      */
     public String getFileFailedList() {
         return this.FileFailedList;
     }
 
     /**
-     * Set List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileFailedList List of files that failed to be migrated
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Failed file list.
+     * @param FileFailedList Failed file list.
      */
     public void setFileFailedList(String FileFailedList) {
         this.FileFailedList = FileFailedList;
     }
 
     /**
-     * Get Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BucketPath Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Source bucket path. 
+     * @return BucketPath Source bucket path.
      */
     public String getBucketPath() {
         return this.BucketPath;
     }
 
     /**
-     * Set Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BucketPath Source bucket path
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Source bucket path.
+     * @param BucketPath Source bucket path.
      */
     public void setBucketPath(String BucketPath) {
         this.BucketPath = BucketPath;
+    }
+
+    /**
+     * Get Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0. 
+     * @return Direction Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+     */
+    public Long getDirection() {
+        return this.Direction;
+    }
+
+    /**
+     * Set Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+     * @param Direction Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+     */
+    public void setDirection(Long Direction) {
+        this.Direction = Direction;
     }
 
     public MigrationTaskInfo() {
@@ -761,6 +704,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.BucketPath != null) {
             this.BucketPath = new String(source.BucketPath);
         }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
     }
 
 
@@ -793,6 +739,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "FileCompletedList", this.FileCompletedList);
         this.setParamSimple(map, prefix + "FileFailedList", this.FileFailedList);
         this.setParamSimple(map, prefix + "BucketPath", this.BucketPath);
+        this.setParamSimple(map, prefix + "Direction", this.Direction);
 
     }
 }

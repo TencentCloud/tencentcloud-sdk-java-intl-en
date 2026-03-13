@@ -58,14 +58,14 @@ public class FileSystemInfo extends AbstractModel {
     private String LifeCycleState;
 
     /**
-    * Used file system capacity
+    * Used capacity of the file system, in Byte.
     */
     @SerializedName("SizeByte")
     @Expose
     private Long SizeByte;
 
     /**
-    * Maximum storage limit of a file system
+    * File system space limit, in GiB.
     */
     @SerializedName("SizeLimit")
     @Expose
@@ -86,14 +86,14 @@ public class FileSystemInfo extends AbstractModel {
     private String Zone;
 
     /**
-    * File system protocol type
+    * File system protocol type. Valid values: NFS, CIFS, and TURBO.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * File system storage class
+    * Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
     */
     @SerializedName("StorageType")
     @Expose
@@ -128,7 +128,7 @@ public class FileSystemInfo extends AbstractModel {
     private String FsName;
 
     /**
-    * Whether a file system is encrypted
+    * Is the file system encrypted. true: encrypted. false: non-encrypted.
     */
     @SerializedName("Encrypted")
     @Expose
@@ -149,28 +149,29 @@ public class FileSystemInfo extends AbstractModel {
     private Long AppId;
 
     /**
-    * The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+    * Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
     */
     @SerializedName("BandwidthLimit")
     @Expose
     private Float BandwidthLimit;
 
     /**
-    * 
+    * Snapshot policy associated with the file system.
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-    * 
+    * File system processes snapshot status, snapping: in snapshot, normal: in normal status.
     */
     @SerializedName("SnapStatus")
     @Expose
     private String SnapStatus;
 
     /**
-    * Total capacity of the file system
+    * Upper limit of file system capacity.
+Unit: GiB.
     */
     @SerializedName("Capacity")
     @Expose
@@ -184,26 +185,50 @@ public class FileSystemInfo extends AbstractModel {
     private TagInfo [] Tags;
 
     /**
-    * The lifecycle management status of a file system.
+    * Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
     */
     @SerializedName("TieringState")
     @Expose
     private String TieringState;
 
     /**
-    * The details about tiered storage.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Layered storage detail.
     */
     @SerializedName("TieringDetail")
     @Expose
     private TieringDetailInfo TieringDetail;
 
     /**
-    * 
+    * File system auto scale-out policy.
     */
     @SerializedName("AutoScaleUpRule")
     @Expose
     private AutoScaleUpRule AutoScaleUpRule;
+
+    /**
+    * File System Version
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+    * Additional performance info.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ExstraPerformanceInfo")
+    @Expose
+    private ExstraPerformanceInfo [] ExstraPerformanceInfo;
+
+    /**
+    * basic: standard version metadata type.
+enhanced: additional metadata type.
+    */
+    @SerializedName("MetaType")
+    @Expose
+    private String MetaType;
 
     /**
      * Get Creation time 
@@ -294,32 +319,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Used file system capacity 
-     * @return SizeByte Used file system capacity
+     * Get Used capacity of the file system, in Byte. 
+     * @return SizeByte Used capacity of the file system, in Byte.
      */
     public Long getSizeByte() {
         return this.SizeByte;
     }
 
     /**
-     * Set Used file system capacity
-     * @param SizeByte Used file system capacity
+     * Set Used capacity of the file system, in Byte.
+     * @param SizeByte Used capacity of the file system, in Byte.
      */
     public void setSizeByte(Long SizeByte) {
         this.SizeByte = SizeByte;
     }
 
     /**
-     * Get Maximum storage limit of a file system 
-     * @return SizeLimit Maximum storage limit of a file system
+     * Get File system space limit, in GiB. 
+     * @return SizeLimit File system space limit, in GiB.
      */
     public Long getSizeLimit() {
         return this.SizeLimit;
     }
 
     /**
-     * Set Maximum storage limit of a file system
-     * @param SizeLimit Maximum storage limit of a file system
+     * Set File system space limit, in GiB.
+     * @param SizeLimit File system space limit, in GiB.
      */
     public void setSizeLimit(Long SizeLimit) {
         this.SizeLimit = SizeLimit;
@@ -358,32 +383,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get File system protocol type 
-     * @return Protocol File system protocol type
+     * Get File system protocol type. Valid values: NFS, CIFS, and TURBO. 
+     * @return Protocol File system protocol type. Valid values: NFS, CIFS, and TURBO.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set File system protocol type
-     * @param Protocol File system protocol type
+     * Set File system protocol type. Valid values: NFS, CIFS, and TURBO.
+     * @param Protocol File system protocol type. Valid values: NFS, CIFS, and TURBO.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get File system storage class 
-     * @return StorageType File system storage class
+     * Get Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput. 
+     * @return StorageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set File system storage class
-     * @param StorageType File system storage class
+     * Set Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+     * @param StorageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
@@ -454,16 +479,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether a file system is encrypted 
-     * @return Encrypted Whether a file system is encrypted
+     * Get Is the file system encrypted. true: encrypted. false: non-encrypted. 
+     * @return Encrypted Is the file system encrypted. true: encrypted. false: non-encrypted.
      */
     public Boolean getEncrypted() {
         return this.Encrypted;
     }
 
     /**
-     * Set Whether a file system is encrypted
-     * @param Encrypted Whether a file system is encrypted
+     * Set Is the file system encrypted. true: encrypted. false: non-encrypted.
+     * @param Encrypted Is the file system encrypted. true: encrypted. false: non-encrypted.
      */
     public void setEncrypted(Boolean Encrypted) {
         this.Encrypted = Encrypted;
@@ -502,64 +527,68 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput 
-     * @return BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+     * Get Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages. 
+     * @return BandwidthLimit Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
      */
     public Float getBandwidthLimit() {
         return this.BandwidthLimit;
     }
 
     /**
-     * Set The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
-     * @param BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+     * Set Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
+     * @param BandwidthLimit Upper limit of the file system throughput, in MiB/s. The upper limit is determined based on the current storage used of the file system, bound storage resource packages, and throughput resource packages.
      */
     public void setBandwidthLimit(Float BandwidthLimit) {
         this.BandwidthLimit = BandwidthLimit;
     }
 
     /**
-     * Get  
-     * @return AutoSnapshotPolicyId 
+     * Get Snapshot policy associated with the file system. 
+     * @return AutoSnapshotPolicyId Snapshot policy associated with the file system.
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set 
-     * @param AutoSnapshotPolicyId 
+     * Set Snapshot policy associated with the file system.
+     * @param AutoSnapshotPolicyId Snapshot policy associated with the file system.
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
     /**
-     * Get  
-     * @return SnapStatus 
+     * Get File system processes snapshot status, snapping: in snapshot, normal: in normal status. 
+     * @return SnapStatus File system processes snapshot status, snapping: in snapshot, normal: in normal status.
      */
     public String getSnapStatus() {
         return this.SnapStatus;
     }
 
     /**
-     * Set 
-     * @param SnapStatus 
+     * Set File system processes snapshot status, snapping: in snapshot, normal: in normal status.
+     * @param SnapStatus File system processes snapshot status, snapping: in snapshot, normal: in normal status.
      */
     public void setSnapStatus(String SnapStatus) {
         this.SnapStatus = SnapStatus;
     }
 
     /**
-     * Get Total capacity of the file system 
-     * @return Capacity Total capacity of the file system
+     * Get Upper limit of file system capacity.
+Unit: GiB. 
+     * @return Capacity Upper limit of file system capacity.
+Unit: GiB.
      */
     public Long getCapacity() {
         return this.Capacity;
     }
 
     /**
-     * Set Total capacity of the file system
-     * @param Capacity Total capacity of the file system
+     * Set Upper limit of file system capacity.
+Unit: GiB.
+     * @param Capacity Upper limit of file system capacity.
+Unit: GiB.
      */
     public void setCapacity(Long Capacity) {
         this.Capacity = Capacity;
@@ -582,55 +611,115 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The lifecycle management status of a file system. 
-     * @return TieringState The lifecycle management status of a file system.
+     * Get Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available. 
+     * @return TieringState Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
      */
     public String getTieringState() {
         return this.TieringState;
     }
 
     /**
-     * Set The lifecycle management status of a file system.
-     * @param TieringState The lifecycle management status of a file system.
+     * Set Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
+     * @param TieringState Status of file system lifecycle management.
+NotAvailable: unavailable.
+Available.
      */
     public void setTieringState(String TieringState) {
         this.TieringState = TieringState;
     }
 
     /**
-     * Get The details about tiered storage.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TieringDetail The details about tiered storage.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Layered storage detail. 
+     * @return TieringDetail Layered storage detail.
      */
     public TieringDetailInfo getTieringDetail() {
         return this.TieringDetail;
     }
 
     /**
-     * Set The details about tiered storage.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TieringDetail The details about tiered storage.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Layered storage detail.
+     * @param TieringDetail Layered storage detail.
      */
     public void setTieringDetail(TieringDetailInfo TieringDetail) {
         this.TieringDetail = TieringDetail;
     }
 
     /**
-     * Get  
-     * @return AutoScaleUpRule 
+     * Get File system auto scale-out policy. 
+     * @return AutoScaleUpRule File system auto scale-out policy.
      */
     public AutoScaleUpRule getAutoScaleUpRule() {
         return this.AutoScaleUpRule;
     }
 
     /**
-     * Set 
-     * @param AutoScaleUpRule 
+     * Set File system auto scale-out policy.
+     * @param AutoScaleUpRule File system auto scale-out policy.
      */
     public void setAutoScaleUpRule(AutoScaleUpRule AutoScaleUpRule) {
         this.AutoScaleUpRule = AutoScaleUpRule;
+    }
+
+    /**
+     * Get File System Version 
+     * @return Version File System Version
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set File System Version
+     * @param Version File System Version
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
+    /**
+     * Get Additional performance info.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExstraPerformanceInfo Additional performance info.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public ExstraPerformanceInfo [] getExstraPerformanceInfo() {
+        return this.ExstraPerformanceInfo;
+    }
+
+    /**
+     * Set Additional performance info.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExstraPerformanceInfo Additional performance info.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setExstraPerformanceInfo(ExstraPerformanceInfo [] ExstraPerformanceInfo) {
+        this.ExstraPerformanceInfo = ExstraPerformanceInfo;
+    }
+
+    /**
+     * Get basic: standard version metadata type.
+enhanced: additional metadata type. 
+     * @return MetaType basic: standard version metadata type.
+enhanced: additional metadata type.
+     */
+    public String getMetaType() {
+        return this.MetaType;
+    }
+
+    /**
+     * Set basic: standard version metadata type.
+enhanced: additional metadata type.
+     * @param MetaType basic: standard version metadata type.
+enhanced: additional metadata type.
+     */
+    public void setMetaType(String MetaType) {
+        this.MetaType = MetaType;
     }
 
     public FileSystemInfo() {
@@ -719,6 +808,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AutoScaleUpRule != null) {
             this.AutoScaleUpRule = new AutoScaleUpRule(source.AutoScaleUpRule);
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
+        if (source.ExstraPerformanceInfo != null) {
+            this.ExstraPerformanceInfo = new ExstraPerformanceInfo[source.ExstraPerformanceInfo.length];
+            for (int i = 0; i < source.ExstraPerformanceInfo.length; i++) {
+                this.ExstraPerformanceInfo[i] = new ExstraPerformanceInfo(source.ExstraPerformanceInfo[i]);
+            }
+        }
+        if (source.MetaType != null) {
+            this.MetaType = new String(source.MetaType);
+        }
     }
 
 
@@ -751,6 +852,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TieringState", this.TieringState);
         this.setParamObj(map, prefix + "TieringDetail.", this.TieringDetail);
         this.setParamObj(map, prefix + "AutoScaleUpRule.", this.AutoScaleUpRule);
+        this.setParamSimple(map, prefix + "Version", this.Version);
+        this.setParamArrayObj(map, prefix + "ExstraPerformanceInfo.", this.ExstraPerformanceInfo);
+        this.setParamSimple(map, prefix + "MetaType", this.MetaType);
 
     }
 }

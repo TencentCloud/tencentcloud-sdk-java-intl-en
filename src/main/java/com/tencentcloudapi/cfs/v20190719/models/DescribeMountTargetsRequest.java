@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeMountTargetsRequest extends AbstractModel {
 
     /**
-    * File system ID
+    * File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-     * Get File system ID 
-     * @return FileSystemId File system ID
+     * Get File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api. 
+     * @return FileSystemId File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID
-     * @param FileSystemId File system ID
+     * Set File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
+     * @param FileSystemId File system ID. you can obtain the ID by querying the file system list through the [describecfsfilesystems](https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1) api.
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;

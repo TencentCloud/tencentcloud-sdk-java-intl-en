@@ -31,7 +31,7 @@ public class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel {
     private Long FsLimit;
 
     /**
-    * File system ID. Currently, only Standard file systems are supported.
+    * File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -54,16 +54,16 @@ public class UpdateCfsFileSystemSizeLimitRequest extends AbstractModel {
     }
 
     /**
-     * Get File system ID. Currently, only Standard file systems are supported. 
-     * @return FileSystemId File system ID. Currently, only Standard file systems are supported.
+     * Get File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1). 
+     * @return FileSystemId File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID. Currently, only Standard file systems are supported.
-     * @param FileSystemId File system ID. Currently, only Standard file systems are supported.
+     * Set File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+     * @param FileSystemId File system ID. this feature requires allowlist for usage. please [submit a ticket](https://console.cloud.tencent.com/workorder/category?from=ticket-tab) to apply. currently only common standard file system supports setting the storage capacity limit. this parameter can be obtained by [querying the file system](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;

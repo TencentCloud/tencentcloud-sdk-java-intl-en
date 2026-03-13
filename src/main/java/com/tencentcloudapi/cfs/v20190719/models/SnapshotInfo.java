@@ -24,98 +24,98 @@ import java.util.HashMap;
 public class SnapshotInfo extends AbstractModel {
 
     /**
-    * Snapshot creation time
+    * <P>Snapshot creation time</p>.
     */
     @SerializedName("CreationTime")
     @Expose
     private String CreationTime;
 
     /**
-    * Snapshot name
+    * <P>Snapshot name</p>.
     */
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
 
     /**
-    * Snapshot ID
+    * <p>Snapshot ID.</p>.
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * Snapshot status
+    * <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Region name
+    * <P>Region name</p>.
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-    * File system ID
+    * <p>File system ID</p>.
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * Snapshot size
+    * <p>Snapshot size</p><p>unit: MiB</p>.
     */
     @SerializedName("Size")
     @Expose
     private Long Size;
 
     /**
-    * Retention period in days
+    * <P>Retention duration days</p>.
     */
     @SerializedName("AliveDay")
     @Expose
     private Long AliveDay;
 
     /**
-    * Snapshot progress
+    * <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
     */
     @SerializedName("Percent")
     @Expose
     private Long Percent;
 
     /**
-    * Account ID
+    * <p>Account ID.</p>.
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Snapshot deletion time
+    * <P>Snapshot deletion time</p>.
     */
     @SerializedName("DeleteTime")
     @Expose
     private String DeleteTime;
 
     /**
-    * File system name
+    * <P>File system name</p>.
     */
     @SerializedName("FsName")
     @Expose
     private String FsName;
 
     /**
-    * Snapshot tag
+    * <P>Snapshot tag.</p>.
     */
     @SerializedName("Tags")
     @Expose
     private TagInfo [] Tags;
 
     /**
-    * Snapshot type
+    * <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SnapshotType")
@@ -123,217 +123,225 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String SnapshotType;
 
     /**
-     * Get Snapshot creation time 
-     * @return CreationTime Snapshot creation time
+    * <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SnapshotTime")
+    @Expose
+    private String SnapshotTime;
+
+    /**
+     * Get <P>Snapshot creation time</p>. 
+     * @return CreationTime <P>Snapshot creation time</p>.
      */
     public String getCreationTime() {
         return this.CreationTime;
     }
 
     /**
-     * Set Snapshot creation time
-     * @param CreationTime Snapshot creation time
+     * Set <P>Snapshot creation time</p>.
+     * @param CreationTime <P>Snapshot creation time</p>.
      */
     public void setCreationTime(String CreationTime) {
         this.CreationTime = CreationTime;
     }
 
     /**
-     * Get Snapshot name 
-     * @return SnapshotName Snapshot name
+     * Get <P>Snapshot name</p>. 
+     * @return SnapshotName <P>Snapshot name</p>.
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set Snapshot name
-     * @param SnapshotName Snapshot name
+     * Set <P>Snapshot name</p>.
+     * @param SnapshotName <P>Snapshot name</p>.
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;
     }
 
     /**
-     * Get Snapshot ID 
-     * @return SnapshotId Snapshot ID
+     * Get <p>Snapshot ID.</p>. 
+     * @return SnapshotId <p>Snapshot ID.</p>.
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set Snapshot ID
-     * @param SnapshotId Snapshot ID
+     * Set <p>Snapshot ID.</p>.
+     * @param SnapshotId <p>Snapshot ID.</p>.
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get Snapshot status 
-     * @return Status Snapshot status
+     * Get <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>. 
+     * @return Status <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Snapshot status
-     * @param Status Snapshot status
+     * Set <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
+     * @param Status <P>Snapshot status: creating - creating; available - running; deleting - deleting; rollbacking-new - creating new file system; create-failed - creation failed.</p>.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Region name 
-     * @return RegionName Region name
+     * Get <P>Region name</p>. 
+     * @return RegionName <P>Region name</p>.
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set Region name
-     * @param RegionName Region name
+     * Set <P>Region name</p>.
+     * @param RegionName <P>Region name</p>.
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
     }
 
     /**
-     * Get File system ID 
-     * @return FileSystemId File system ID
+     * Get <p>File system ID</p>. 
+     * @return FileSystemId <p>File system ID</p>.
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID
-     * @param FileSystemId File system ID
+     * Set <p>File system ID</p>.
+     * @param FileSystemId <p>File system ID</p>.
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get Snapshot size 
-     * @return Size Snapshot size
+     * Get <p>Snapshot size</p><p>unit: MiB</p>. 
+     * @return Size <p>Snapshot size</p><p>unit: MiB</p>.
      */
     public Long getSize() {
         return this.Size;
     }
 
     /**
-     * Set Snapshot size
-     * @param Size Snapshot size
+     * Set <p>Snapshot size</p><p>unit: MiB</p>.
+     * @param Size <p>Snapshot size</p><p>unit: MiB</p>.
      */
     public void setSize(Long Size) {
         this.Size = Size;
     }
 
     /**
-     * Get Retention period in days 
-     * @return AliveDay Retention period in days
+     * Get <P>Retention duration days</p>. 
+     * @return AliveDay <P>Retention duration days</p>.
      */
     public Long getAliveDay() {
         return this.AliveDay;
     }
 
     /**
-     * Set Retention period in days
-     * @param AliveDay Retention period in days
+     * Set <P>Retention duration days</p>.
+     * @param AliveDay <P>Retention duration days</p>.
      */
     public void setAliveDay(Long AliveDay) {
         this.AliveDay = AliveDay;
     }
 
     /**
-     * Get Snapshot progress 
-     * @return Percent Snapshot progress
+     * Get <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>. 
+     * @return Percent <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set Snapshot progress
-     * @param Percent Snapshot progress
+     * Set <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
+     * @param Percent <P>Snapshot progress percentage. 1 means 1%. value range: 1-100.</p>.
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get Account ID 
-     * @return AppId Account ID
+     * Get <p>Account ID.</p>. 
+     * @return AppId <p>Account ID.</p>.
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Account ID
-     * @param AppId Account ID
+     * Set <p>Account ID.</p>.
+     * @param AppId <p>Account ID.</p>.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Snapshot deletion time 
-     * @return DeleteTime Snapshot deletion time
+     * Get <P>Snapshot deletion time</p>. 
+     * @return DeleteTime <P>Snapshot deletion time</p>.
      */
     public String getDeleteTime() {
         return this.DeleteTime;
     }
 
     /**
-     * Set Snapshot deletion time
-     * @param DeleteTime Snapshot deletion time
+     * Set <P>Snapshot deletion time</p>.
+     * @param DeleteTime <P>Snapshot deletion time</p>.
      */
     public void setDeleteTime(String DeleteTime) {
         this.DeleteTime = DeleteTime;
     }
 
     /**
-     * Get File system name 
-     * @return FsName File system name
+     * Get <P>File system name</p>. 
+     * @return FsName <P>File system name</p>.
      */
     public String getFsName() {
         return this.FsName;
     }
 
     /**
-     * Set File system name
-     * @param FsName File system name
+     * Set <P>File system name</p>.
+     * @param FsName <P>File system name</p>.
      */
     public void setFsName(String FsName) {
         this.FsName = FsName;
     }
 
     /**
-     * Get Snapshot tag 
-     * @return Tags Snapshot tag
+     * Get <P>Snapshot tag.</p>. 
+     * @return Tags <P>Snapshot tag.</p>.
      */
     public TagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Snapshot tag
-     * @param Tags Snapshot tag
+     * Set <P>Snapshot tag.</p>.
+     * @param Tags <P>Snapshot tag.</p>.
      */
     public void setTags(TagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Snapshot type
+     * Get <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SnapshotType Snapshot type
+     * @return SnapshotType <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSnapshotType() {
@@ -341,13 +349,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Snapshot type
+     * Set <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SnapshotType Snapshot type
+     * @param SnapshotType <p>Snapshot type. general indicates a snapshot of the general series. turbo indicates a snapshot of the turbo series.</p>.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSnapshotType(String SnapshotType) {
         this.SnapshotType = SnapshotType;
+    }
+
+    /**
+     * Get <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SnapshotTime <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSnapshotTime() {
+        return this.SnapshotTime;
+    }
+
+    /**
+     * Set <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SnapshotTime <P>Snapshot time reflects the data of the corresponding file system at a certain moment.</p>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSnapshotTime(String SnapshotTime) {
+        this.SnapshotTime = SnapshotTime;
     }
 
     public SnapshotInfo() {
@@ -403,6 +431,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SnapshotType != null) {
             this.SnapshotType = new String(source.SnapshotType);
         }
+        if (source.SnapshotTime != null) {
+            this.SnapshotTime = new String(source.SnapshotTime);
+        }
     }
 
 
@@ -424,6 +455,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "FsName", this.FsName);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "SnapshotType", this.SnapshotType);
+        this.setParamSimple(map, prefix + "SnapshotTime", this.SnapshotTime);
 
     }
 }

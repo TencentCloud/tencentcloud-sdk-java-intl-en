@@ -39,6 +39,17 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *Configure the directory list associated with the lifecycle policy.
+     * @param req ApplyPathLifecyclePolicyRequest
+     * @return ApplyPathLifecyclePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ApplyPathLifecyclePolicyResponse ApplyPathLifecyclePolicy(ApplyPathLifecyclePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ApplyPathLifecyclePolicy", ApplyPathLifecyclePolicyResponse.class);
+    }
+
+    /**
      *This API is used to bind one or multiple file systems to a snapshot policy. A file system can be bound to only one policy.
      * @param req BindAutoSnapshotPolicyRequest
      * @return BindAutoSnapshotPolicyResponse
@@ -105,8 +116,51 @@ public class CfsClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a data flow.
+     * @param req CreateDataFlowRequest
+     * @return CreateDataFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDataFlowResponse CreateDataFlow(CreateDataFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDataFlow", CreateDataFlowResponse.class);
+    }
+
+    /**
+     *Support proactive settlement/preheat API.
+     * @param req CreateLifecycleDataTaskRequest
+     * @return CreateLifecycleDataTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLifecycleDataTaskResponse CreateLifecycleDataTask(CreateLifecycleDataTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLifecycleDataTask", CreateLifecycleDataTaskResponse.class);
+    }
+
+    /**
+     *This API is used to create a file storage lifecycle policy.
+     * @param req CreateLifecyclePolicyRequest
+     * @return CreateLifecyclePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLifecyclePolicyResponse CreateLifecyclePolicy(CreateLifecyclePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLifecyclePolicy", CreateLifecyclePolicyResponse.class);
+    }
+
+    /**
+     *Download the file list in a lifecycle task.
+     * @param req CreateLifecyclePolicyDownloadTaskRequest
+     * @return CreateLifecyclePolicyDownloadTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLifecyclePolicyDownloadTaskResponse CreateLifecyclePolicyDownloadTask(CreateLifecyclePolicyDownloadTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLifecyclePolicyDownloadTask", CreateLifecyclePolicyDownloadTaskResponse.class);
+    }
+
+    /**
      *This API is used to create a migration task.
-To use this API, submit a ticket for us to add you to the allowlist.
      * @param req CreateMigrationTaskRequest
      * @return CreateMigrationTaskResponse
      * @throws TencentCloudSDKException
@@ -139,7 +193,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     }
 
     /**
-     *This API is used to delete a permission group.
+     *This API is used to delete a permission group. Only permission groups not bound to a file system can be deleted by this API.
      * @param req DeleteCfsPGroupRequest
      * @return DeleteCfsPGroupResponse
      * @throws TencentCloudSDKException
@@ -172,8 +226,29 @@ To use this API, submit a ticket for us to add you to the allowlist.
     }
 
     /**
-     *This API is used to delete a migration task.
-To use this API, submit a ticket for us to add you to the allowlist.
+     *Delete a data flow.
+     * @param req DeleteDataFlowRequest
+     * @return DeleteDataFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDataFlowResponse DeleteDataFlow(DeleteDataFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDataFlow", DeleteDataFlowResponse.class);
+    }
+
+    /**
+     *Delete a lifecycle management policy.
+     * @param req DeleteLifecyclePolicyRequest
+     * @return DeleteLifecyclePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLifecyclePolicyResponse DeleteLifecyclePolicy(DeleteLifecyclePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLifecyclePolicy", DeleteLifecyclePolicyResponse.class);
+    }
+
+    /**
+     *This API is used to delete migration tasks. Deletion is not supported for tasks in the status of Waiting, creating, running, canceling, or terminating.
      * @param req DeleteMigrationTaskRequest
      * @return DeleteMigrationTaskResponse
      * @throws TencentCloudSDKException
@@ -181,17 +256,6 @@ To use this API, submit a ticket for us to add you to the allowlist.
     public DeleteMigrationTaskResponse DeleteMigrationTask(DeleteMigrationTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteMigrationTask", DeleteMigrationTaskResponse.class);
-    }
-
-    /**
-     *This API is used to delete a mount target.
-     * @param req DeleteMountTargetRequest
-     * @return DeleteMountTargetResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteMountTargetResponse DeleteMountTarget(DeleteMountTargetRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteMountTarget", DeleteMountTargetResponse.class);
     }
 
     /**
@@ -217,8 +281,7 @@ To use this API, submit a ticket for us to add you to the allowlist.
     }
 
     /**
-     *This API is used to get the list of data source buckets.
-To use this API, submit a ticket for us to add you to the allowlist.
+     *To obtain the list of data source buckets.
      * @param req DescribeBucketListRequest
      * @return DescribeBucketListResponse
      * @throws TencentCloudSDKException
@@ -306,6 +369,39 @@ To use this API, submit a ticket for us to add you to the allowlist.
     }
 
     /**
+     *This API is used to query data flow information.
+     * @param req DescribeDataFlowRequest
+     * @return DescribeDataFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataFlowResponse DescribeDataFlow(DescribeDataFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataFlow", DescribeDataFlowResponse.class);
+    }
+
+    /**
+     *This API is used to query the lifecycle task. It only supports querying task data within 3 months.
+     * @param req DescribeLifecycleDataTaskRequest
+     * @return DescribeLifecycleDataTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLifecycleDataTaskResponse DescribeLifecycleDataTask(DescribeLifecycleDataTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLifecycleDataTask", DescribeLifecycleDataTaskResponse.class);
+    }
+
+    /**
+     *Query lifecycle management policies.
+     * @param req DescribeLifecyclePoliciesRequest
+     * @return DescribeLifecyclePoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLifecyclePoliciesResponse DescribeLifecyclePolicies(DescribeLifecyclePoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLifecyclePolicies", DescribeLifecyclePoliciesResponse.class);
+    }
+
+    /**
      *This API is used to get the list of migration tasks.
 To use this API, submit a ticket for us to add you to the allowlist.
      * @param req DescribeMigrationTasksRequest
@@ -340,7 +436,29 @@ To use this API, submit a ticket for us to add you to the allowlist.
     }
 
     /**
-     *This API is used to modify the scaling policy of a file system.
+     *File system directory operation API. Currently, only the Turbo series file system supports calling this API to perform directory operations. The Universal Series file system (including the enhanced version) does not support calling.
+     * @param req DoDirectoryOperationRequest
+     * @return DoDirectoryOperationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DoDirectoryOperationResponse DoDirectoryOperation(DoDirectoryOperationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DoDirectoryOperation", DoDirectoryOperationResponse.class);
+    }
+
+    /**
+     *Modify data flow parameters.
+     * @param req ModifyDataFlowRequest
+     * @return ModifyDataFlowResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDataFlowResponse ModifyDataFlow(ModifyDataFlowRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDataFlow", ModifyDataFlowResponse.class);
+    }
+
+    /**
+     *This API is used to set the file system scaling policy. It supports only the turbo file system.
      * @param req ModifyFileSystemAutoScaleUpRuleRequest
      * @return ModifyFileSystemAutoScaleUpRuleResponse
      * @throws TencentCloudSDKException
@@ -351,7 +469,18 @@ To use this API, submit a ticket for us to add you to the allowlist.
     }
 
     /**
-     *This API is used to scale up a Turbo file system.
+     *Update a file storage lifecycle policy.
+     * @param req ModifyLifecyclePolicyRequest
+     * @return ModifyLifecyclePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLifecyclePolicyResponse ModifyLifecyclePolicy(ModifyLifecyclePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLifecyclePolicy", ModifyLifecyclePolicyResponse.class);
+    }
+
+    /**
+     *This API is used to expand the turbo file system. It only supports expansion and does not support scale-down. The scaling increment for the turbo standard type is 10240 GIB, and for the turbo performance type, it is 5120 GIB.
      * @param req ScaleUpFileSystemRequest
      * @return ScaleUpFileSystemResponse
      * @throws TencentCloudSDKException
@@ -373,8 +502,18 @@ To use this API, submit a ticket for us to add you to the allowlist.
     }
 
     /**
-     *This API is used to stop a migration task.
-To use this API, submit a ticket for us to add you to the allowlist.
+     *This API is used to terminate a lifecycle task.
+     * @param req StopLifecycleDataTaskRequest
+     * @return StopLifecycleDataTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public StopLifecycleDataTaskResponse StopLifecycleDataTask(StopLifecycleDataTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "StopLifecycleDataTask", StopLifecycleDataTaskResponse.class);
+    }
+
+    /**
+     *This API is used to terminate a migration task, including tasks in the Waiting or Running status.
      * @param req StopMigrationTaskRequest
      * @return StopMigrationTaskResponse
      * @throws TencentCloudSDKException

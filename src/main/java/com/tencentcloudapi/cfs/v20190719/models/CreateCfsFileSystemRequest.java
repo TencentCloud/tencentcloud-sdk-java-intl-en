@@ -38,14 +38,14 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private String NetInterface;
 
     /**
-    * Permission group ID
+    * Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
     */
     @SerializedName("PGroupId")
     @Expose
     private String PGroupId;
 
     /**
-    * File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
+    * File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
     */
     @SerializedName("Protocol")
     @Expose
@@ -59,14 +59,16 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private String StorageType;
 
     /**
-    * VPC ID. This field is required if network type is VPC.
+    * Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
+[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID. This field is required if network type is VPC.
+    * Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
+[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
     */
     @SerializedName("SubnetId")
     @Expose
@@ -101,7 +103,9 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-    * CCN instance ID (required if the network type is CCN)
+    * Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
+[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
+
     */
     @SerializedName("CcnId")
     @Expose
@@ -115,11 +119,52 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     private String CidrBlock;
 
     /**
-    * File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+    * File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
     */
     @SerializedName("Capacity")
     @Expose
     private Long Capacity;
+
+    /**
+    * File system snapshot ID. this parameter can be obtained by querying the snapshot list.
+[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+    */
+    @SerializedName("SnapshotId")
+    @Expose
+    private String SnapshotId;
+
+    /**
+    * Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
+[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+    */
+    @SerializedName("AutoSnapshotPolicyId")
+    @Expose
+    private String AutoSnapshotPolicyId;
+
+    /**
+    * Whether default expansion is enabled. only turbo file storage supports this feature.
+    */
+    @SerializedName("EnableAutoScaleUp")
+    @Expose
+    private Boolean EnableAutoScaleUp;
+
+    /**
+    * v1.5: create a standard edition general file system.
+v3.1: create an enhanced general file system.
+Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+    */
+    @SerializedName("CfsVersion")
+    @Expose
+    private String CfsVersion;
+
+    /**
+    * turbo file system metadata attribute.
+basic: creates metadata of the standard type.
+Enhanced: creates enhanced metadata.
+    */
+    @SerializedName("MetaType")
+    @Expose
+    private String MetaType;
 
     /**
      * Get AZ name, such as "ap-beijing-1". For the list of regions and AZs, please see [Overview](https://intl.cloud.tencent.com/document/product/582/13225?from_cn_redirect=1) 
@@ -154,32 +199,32 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     }
 
     /**
-     * Get Permission group ID 
-     * @return PGroupId Permission group ID
+     * Get Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list. 
+     * @return PGroupId Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set Permission group ID
-     * @param PGroupId Permission group ID
+     * Set Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
+     * @param PGroupId Permission group ID. pgroupbasic is the default permission group. obtain through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) to query the permission group list.
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
     }
 
     /**
-     * Get File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`. 
-     * @return Protocol File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
+     * Get File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported. 
+     * @return Protocol File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
-     * @param Protocol File system protocol. Valid values: `NFS`, `CIFS`, `TURBO`. If this parameter is left empty, `NFS` is used by default. For the Turbo series, you must set this parameter to `TURBO`.
+     * Set File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
+     * @param Protocol File system protocol type. valid values: NFS, CIFS, and TURBO. if left blank, NFS by default. the TURBO series must select TURBO. NFS and CIFS are not supported.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
@@ -202,32 +247,40 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     }
 
     /**
-     * Get VPC ID. This field is required if network type is VPC. 
-     * @return VpcId VPC ID. This field is required if network type is VPC.
+     * Get Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
+[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1) 
+     * @return VpcId Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
+[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID. This field is required if network type is VPC.
-     * @param VpcId VPC ID. This field is required if network type is VPC.
+     * Set Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
+[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
+     * @param VpcId Private network (VPC) ID. if the network type is VPC, this field must be specified. obtain it by querying the private network interface.
+[DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1)
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID. This field is required if network type is VPC. 
-     * @return SubnetId Subnet ID. This field is required if network type is VPC.
+     * Get Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
+[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) 
+     * @return SubnetId Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
+[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID. This field is required if network type is VPC.
-     * @param SubnetId Subnet ID. This field is required if network type is VPC.
+     * Set Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
+[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
+     * @param SubnetId Subnet ID. this field must be specified if the network type is VPC. obtain through the api for querying subnets.
+[DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1)
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -298,16 +351,24 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     }
 
     /**
-     * Get CCN instance ID (required if the network type is CCN) 
-     * @return CcnId CCN instance ID (required if the network type is CCN)
+     * Get Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
+[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
+ 
+     * @return CcnId Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
+[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
+
      */
     public String getCcnId() {
         return this.CcnId;
     }
 
     /**
-     * Set CCN instance ID (required if the network type is CCN)
-     * @param CcnId CCN instance ID (required if the network type is CCN)
+     * Set Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
+[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
+
+     * @param CcnId Cloud connect network ID. this field must be specified if the network type is CCN. obtain it by querying the CCN list through the api.
+[DescribeCcns](https://www.tencentcloud.com/document/product/215/19199?from_cn_redirect=1)
+
      */
     public void setCcnId(String CcnId) {
         this.CcnId = CcnId;
@@ -330,19 +391,123 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
     }
 
     /**
-     * Get File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB). 
-     * @return Capacity File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+     * Get File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB). 
+     * @return Capacity File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
      */
     public Long getCapacity() {
         return this.Capacity;
     }
 
     /**
-     * Set File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
-     * @param Capacity File system capacity, in GiB (required for the Turbo series). For Standard Turbo, the minimum purchase required is 40,960 GiB (40 TiB) and the expansion increment is 20,480 GiB (20 TiB). For High-Performance Turbo, the minimum purchase required is 20,480 GiB (20 TiB) and the expansion increment is 10,240 GiB (10 TiB).
+     * Set File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
+     * @param Capacity File system capacity, required for the turbo series, in GiB. turbo standard type in GB, starting from 20 TiB (20480 GiB); scaling increment 10 TiB (10240 GiB). turbo performance type starts from 10 TiB (10240 GiB); capacity expansion step 10 TiB (10240 GiB).
      */
     public void setCapacity(Long Capacity) {
         this.Capacity = Capacity;
+    }
+
+    /**
+     * Get File system snapshot ID. this parameter can be obtained by querying the snapshot list.
+[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1) 
+     * @return SnapshotId File system snapshot ID. this parameter can be obtained by querying the snapshot list.
+[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+     */
+    public String getSnapshotId() {
+        return this.SnapshotId;
+    }
+
+    /**
+     * Set File system snapshot ID. this parameter can be obtained by querying the snapshot list.
+[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+     * @param SnapshotId File system snapshot ID. this parameter can be obtained by querying the snapshot list.
+[DescribeCfsSnapshots](https://www.tencentcloud.com/document/product/582/80206?from_cn_redirect=1)
+     */
+    public void setSnapshotId(String SnapshotId) {
+        this.SnapshotId = SnapshotId;
+    }
+
+    /**
+     * Get Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
+[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1) 
+     * @return AutoSnapshotPolicyId Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
+[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+     */
+    public String getAutoSnapshotPolicyId() {
+        return this.AutoSnapshotPolicyId;
+    }
+
+    /**
+     * Set Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
+[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+     * @param AutoSnapshotPolicyId Scheduled snapshot policy ID, which can be obtained by querying the snapshot policy information.
+[DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/product/582/38157?from_cn_redirect=1)
+     */
+    public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
+        this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
+    }
+
+    /**
+     * Get Whether default expansion is enabled. only turbo file storage supports this feature. 
+     * @return EnableAutoScaleUp Whether default expansion is enabled. only turbo file storage supports this feature.
+     */
+    public Boolean getEnableAutoScaleUp() {
+        return this.EnableAutoScaleUp;
+    }
+
+    /**
+     * Set Whether default expansion is enabled. only turbo file storage supports this feature.
+     * @param EnableAutoScaleUp Whether default expansion is enabled. only turbo file storage supports this feature.
+     */
+    public void setEnableAutoScaleUp(Boolean EnableAutoScaleUp) {
+        this.EnableAutoScaleUp = EnableAutoScaleUp;
+    }
+
+    /**
+     * Get v1.5: create a standard edition general file system.
+v3.1: create an enhanced general file system.
+Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us. 
+     * @return CfsVersion v1.5: create a standard edition general file system.
+v3.1: create an enhanced general file system.
+Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+     */
+    public String getCfsVersion() {
+        return this.CfsVersion;
+    }
+
+    /**
+     * Set v1.5: create a standard edition general file system.
+v3.1: create an enhanced general file system.
+Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+     * @param CfsVersion v1.5: create a standard edition general file system.
+v3.1: create an enhanced general file system.
+Description: the enhanced universal system requires enabling the allowlist to use. if needed, submit a ticket to contact us.
+     */
+    public void setCfsVersion(String CfsVersion) {
+        this.CfsVersion = CfsVersion;
+    }
+
+    /**
+     * Get turbo file system metadata attribute.
+basic: creates metadata of the standard type.
+Enhanced: creates enhanced metadata. 
+     * @return MetaType turbo file system metadata attribute.
+basic: creates metadata of the standard type.
+Enhanced: creates enhanced metadata.
+     */
+    public String getMetaType() {
+        return this.MetaType;
+    }
+
+    /**
+     * Set turbo file system metadata attribute.
+basic: creates metadata of the standard type.
+Enhanced: creates enhanced metadata.
+     * @param MetaType turbo file system metadata attribute.
+basic: creates metadata of the standard type.
+Enhanced: creates enhanced metadata.
+     */
+    public void setMetaType(String MetaType) {
+        this.MetaType = MetaType;
     }
 
     public CreateCfsFileSystemRequest() {
@@ -398,6 +563,21 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
         if (source.Capacity != null) {
             this.Capacity = new Long(source.Capacity);
         }
+        if (source.SnapshotId != null) {
+            this.SnapshotId = new String(source.SnapshotId);
+        }
+        if (source.AutoSnapshotPolicyId != null) {
+            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
+        }
+        if (source.EnableAutoScaleUp != null) {
+            this.EnableAutoScaleUp = new Boolean(source.EnableAutoScaleUp);
+        }
+        if (source.CfsVersion != null) {
+            this.CfsVersion = new String(source.CfsVersion);
+        }
+        if (source.MetaType != null) {
+            this.MetaType = new String(source.MetaType);
+        }
     }
 
 
@@ -419,6 +599,11 @@ public class CreateCfsFileSystemRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CcnId", this.CcnId);
         this.setParamSimple(map, prefix + "CidrBlock", this.CidrBlock);
         this.setParamSimple(map, prefix + "Capacity", this.Capacity);
+        this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+        this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+        this.setParamSimple(map, prefix + "EnableAutoScaleUp", this.EnableAutoScaleUp);
+        this.setParamSimple(map, prefix + "CfsVersion", this.CfsVersion);
+        this.setParamSimple(map, prefix + "MetaType", this.MetaType);
 
     }
 }

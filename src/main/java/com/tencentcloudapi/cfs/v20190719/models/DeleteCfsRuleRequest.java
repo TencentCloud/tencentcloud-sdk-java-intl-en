@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteCfsRuleRequest extends AbstractModel {
 
     /**
-    * Permission group ID
+    * Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
     */
     @SerializedName("PGroupId")
     @Expose
     private String PGroupId;
 
     /**
-    * Rule ID
+    * Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
     */
     @SerializedName("RuleId")
     @Expose
     private String RuleId;
 
     /**
-     * Get Permission group ID 
-     * @return PGroupId Permission group ID
+     * Get Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1). 
+     * @return PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set Permission group ID
-     * @param PGroupId Permission group ID
+     * Set Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+     * @param PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
     }
 
     /**
-     * Get Rule ID 
-     * @return RuleId Rule ID
+     * Get Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api. 
+     * @return RuleId Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Rule ID
-     * @param RuleId Rule ID
+     * Set Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
+     * @param RuleId Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;

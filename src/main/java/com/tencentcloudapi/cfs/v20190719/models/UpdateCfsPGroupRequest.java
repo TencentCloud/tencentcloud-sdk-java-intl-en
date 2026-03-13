@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpdateCfsPGroupRequest extends AbstractModel {
 
     /**
-    * Permission group ID
+    * Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
     */
     @SerializedName("PGroupId")
     @Expose
@@ -38,23 +38,23 @@ public class UpdateCfsPGroupRequest extends AbstractModel {
     private String Name;
 
     /**
-    * Permission group description, which can contain 1-255 characters
+    * Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
     */
     @SerializedName("DescInfo")
     @Expose
     private String DescInfo;
 
     /**
-     * Get Permission group ID 
-     * @return PGroupId Permission group ID
+     * Get Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1). 
+     * @return PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set Permission group ID
-     * @param PGroupId Permission group ID
+     * Set Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+     * @param PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
@@ -77,16 +77,16 @@ public class UpdateCfsPGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Permission group description, which can contain 1-255 characters 
-     * @return DescInfo Permission group description, which can contain 1-255 characters
+     * Get Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time. 
+     * @return DescInfo Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
      */
     public String getDescInfo() {
         return this.DescInfo;
     }
 
     /**
-     * Set Permission group description, which can contain 1-255 characters
-     * @param DescInfo Permission group description, which can contain 1-255 characters
+     * Set Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
+     * @param DescInfo Permission group description, 1-255 characters. Name and Descinfo cannot be empty at the same time.
      */
     public void setDescInfo(String DescInfo) {
         this.DescInfo = DescInfo;

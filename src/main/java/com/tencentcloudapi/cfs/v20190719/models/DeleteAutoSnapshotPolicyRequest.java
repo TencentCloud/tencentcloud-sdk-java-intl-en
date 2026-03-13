@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * Snapshot policy ID
+    * Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-     * Get Snapshot policy ID 
-     * @return AutoSnapshotPolicyId Snapshot policy ID
+     * Get Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api. 
+     * @return AutoSnapshotPolicyId Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set Snapshot policy ID
-     * @param AutoSnapshotPolicyId Snapshot policy ID
+     * Set Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
+     * @param AutoSnapshotPolicyId Snapshot policy ID, which can be obtained by querying the snapshot policy interface through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;

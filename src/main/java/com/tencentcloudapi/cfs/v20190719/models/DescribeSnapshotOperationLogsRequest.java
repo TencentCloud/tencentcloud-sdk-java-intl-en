@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeSnapshotOperationLogsRequest extends AbstractModel {
 
     /**
-    * File system snapshot ID
+    * Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * Start time
+    * Start time, format "YYYY-MM-DD hh:MM:ss".
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time
+    * End time, format "YYYY-MM-DD hh:MM:ss".
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get File system snapshot ID 
-     * @return SnapshotId File system snapshot ID
+     * Get Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api. 
+     * @return SnapshotId Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set File system snapshot ID
-     * @param SnapshotId File system snapshot ID
+     * Set Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
+     * @param SnapshotId Snapshot ID, which can be obtained by querying through the [DescribeCfsSnapshots](https://www.tencentcloud.com/document/api/582/80206?from_cn_redirect=1) api.
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get Start time 
-     * @return StartTime Start time
+     * Get Start time, format "YYYY-MM-DD hh:MM:ss". 
+     * @return StartTime Start time, format "YYYY-MM-DD hh:MM:ss".
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time
-     * @param StartTime Start time
+     * Set Start time, format "YYYY-MM-DD hh:MM:ss".
+     * @param StartTime Start time, format "YYYY-MM-DD hh:MM:ss".
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time 
-     * @return EndTime End time
+     * Get End time, format "YYYY-MM-DD hh:MM:ss". 
+     * @return EndTime End time, format "YYYY-MM-DD hh:MM:ss".
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time
-     * @param EndTime End time
+     * Set End time, format "YYYY-MM-DD hh:MM:ss".
+     * @param EndTime End time, format "YYYY-MM-DD hh:MM:ss".
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

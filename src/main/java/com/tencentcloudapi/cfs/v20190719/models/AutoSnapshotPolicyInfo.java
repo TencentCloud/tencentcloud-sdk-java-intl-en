@@ -31,7 +31,7 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
     private String AutoSnapshotPolicyId;
 
     /**
-    * Snapshot policy name
+    * Snapshot policy name.
     */
     @SerializedName("PolicyName")
     @Expose
@@ -66,7 +66,7 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
     private String Hour;
 
     /**
-    * Whether to activate the scheduled snapshot feature
+    * Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
     */
     @SerializedName("IsActivated")
     @Expose
@@ -80,14 +80,14 @@ public class AutoSnapshotPolicyInfo extends AbstractModel {
     private String NextActiveTime;
 
     /**
-    * Snapshot policy status
+    * Snapshot policy status. available represents normal status. only status here.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Account ID
+    * Account ID.
     */
     @SerializedName("AppId")
     @Expose
@@ -131,6 +131,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IntervalDays;
 
     /**
+    * Snapshot retention time for cross-region replication, in days.
+    */
+    @SerializedName("CrossRegionsAliveDays")
+    @Expose
+    private Long CrossRegionsAliveDays;
+
+    /**
+    * Snapshot policy tag.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
      * Get Snapshot policy ID 
      * @return AutoSnapshotPolicyId Snapshot policy ID
      */
@@ -147,16 +161,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Snapshot policy name 
-     * @return PolicyName Snapshot policy name
+     * Get Snapshot policy name. 
+     * @return PolicyName Snapshot policy name.
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set Snapshot policy name
-     * @param PolicyName Snapshot policy name
+     * Set Snapshot policy name.
+     * @param PolicyName Snapshot policy name.
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
@@ -227,16 +241,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to activate the scheduled snapshot feature 
-     * @return IsActivated Whether to activate the scheduled snapshot feature
+     * Get Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive. 
+     * @return IsActivated Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
      */
     public Long getIsActivated() {
         return this.IsActivated;
     }
 
     /**
-     * Set Whether to activate the scheduled snapshot feature
-     * @param IsActivated Whether to activate the scheduled snapshot feature
+     * Set Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
+     * @param IsActivated Whether the periodic snapshot function is activated; 1 indicates activated, 0 indicates inactive.
      */
     public void setIsActivated(Long IsActivated) {
         this.IsActivated = IsActivated;
@@ -259,32 +273,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Snapshot policy status 
-     * @return Status Snapshot policy status
+     * Get Snapshot policy status. available represents normal status. only status here. 
+     * @return Status Snapshot policy status. available represents normal status. only status here.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Snapshot policy status
-     * @param Status Snapshot policy status
+     * Set Snapshot policy status. available represents normal status. only status here.
+     * @param Status Snapshot policy status. available represents normal status. only status here.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Account ID 
-     * @return AppId Account ID
+     * Get Account ID. 
+     * @return AppId Account ID.
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Account ID
-     * @param AppId Account ID
+     * Set Account ID.
+     * @param AppId Account ID.
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
@@ -378,6 +392,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.IntervalDays = IntervalDays;
     }
 
+    /**
+     * Get Snapshot retention time for cross-region replication, in days. 
+     * @return CrossRegionsAliveDays Snapshot retention time for cross-region replication, in days.
+     */
+    public Long getCrossRegionsAliveDays() {
+        return this.CrossRegionsAliveDays;
+    }
+
+    /**
+     * Set Snapshot retention time for cross-region replication, in days.
+     * @param CrossRegionsAliveDays Snapshot retention time for cross-region replication, in days.
+     */
+    public void setCrossRegionsAliveDays(Long CrossRegionsAliveDays) {
+        this.CrossRegionsAliveDays = CrossRegionsAliveDays;
+    }
+
+    /**
+     * Get Snapshot policy tag. 
+     * @return Tags Snapshot policy tag.
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Snapshot policy tag.
+     * @param Tags Snapshot policy tag.
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
     public AutoSnapshotPolicyInfo() {
     }
 
@@ -434,6 +480,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.IntervalDays != null) {
             this.IntervalDays = new Long(source.IntervalDays);
         }
+        if (source.CrossRegionsAliveDays != null) {
+            this.CrossRegionsAliveDays = new Long(source.CrossRegionsAliveDays);
+        }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -456,6 +511,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "FileSystems.", this.FileSystems);
         this.setParamSimple(map, prefix + "DayOfMonth", this.DayOfMonth);
         this.setParamSimple(map, prefix + "IntervalDays", this.IntervalDays);
+        this.setParamSimple(map, prefix + "CrossRegionsAliveDays", this.CrossRegionsAliveDays);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

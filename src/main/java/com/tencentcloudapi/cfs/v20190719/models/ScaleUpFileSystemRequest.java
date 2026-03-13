@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ScaleUpFileSystemRequest extends AbstractModel {
 
     /**
-    * File system ID
+    * File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * Target capacity after scaling
+    * Target capacity after scale-out (unit GiB).
     */
     @SerializedName("TargetCapacity")
     @Expose
     private Long TargetCapacity;
 
     /**
-     * Get File system ID 
-     * @return FileSystemId File system ID
+     * Get File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1). 
+     * @return FileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID
-     * @param FileSystemId File system ID
+     * Set File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+     * @param FileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get Target capacity after scaling 
-     * @return TargetCapacity Target capacity after scaling
+     * Get Target capacity after scale-out (unit GiB). 
+     * @return TargetCapacity Target capacity after scale-out (unit GiB).
      */
     public Long getTargetCapacity() {
         return this.TargetCapacity;
     }
 
     /**
-     * Set Target capacity after scaling
-     * @param TargetCapacity Target capacity after scaling
+     * Set Target capacity after scale-out (unit GiB).
+     * @param TargetCapacity Target capacity after scale-out (unit GiB).
      */
     public void setTargetCapacity(Long TargetCapacity) {
         this.TargetCapacity = TargetCapacity;

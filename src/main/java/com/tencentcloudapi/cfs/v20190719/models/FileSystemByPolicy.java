@@ -38,21 +38,21 @@ public class FileSystemByPolicy extends AbstractModel {
     private String FileSystemId;
 
     /**
-    * File system size
+    * File system size, in Byte.
     */
     @SerializedName("SizeByte")
     @Expose
     private Long SizeByte;
 
     /**
-    * Storage class
+    * Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * Total snapshot size
+    * Total snapshot size in GiB.
     */
     @SerializedName("TotalSnapshotSize")
     @Expose
@@ -105,48 +105,48 @@ public class FileSystemByPolicy extends AbstractModel {
     }
 
     /**
-     * Get File system size 
-     * @return SizeByte File system size
+     * Get File system size, in Byte. 
+     * @return SizeByte File system size, in Byte.
      */
     public Long getSizeByte() {
         return this.SizeByte;
     }
 
     /**
-     * Set File system size
-     * @param SizeByte File system size
+     * Set File system size, in Byte.
+     * @param SizeByte File system size, in Byte.
      */
     public void setSizeByte(Long SizeByte) {
         this.SizeByte = SizeByte;
     }
 
     /**
-     * Get Storage class 
-     * @return StorageType Storage class
+     * Get Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput. 
+     * @return StorageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Storage class
-     * @param StorageType Storage class
+     * Set Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
+     * @param StorageType Storage type. HP: high-performance; SD: standard; TP: high-performance Turbo; TB: standard Turbo; THP: throughput.
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get Total snapshot size 
-     * @return TotalSnapshotSize Total snapshot size
+     * Get Total snapshot size in GiB. 
+     * @return TotalSnapshotSize Total snapshot size in GiB.
      */
     public Long getTotalSnapshotSize() {
         return this.TotalSnapshotSize;
     }
 
     /**
-     * Set Total snapshot size
-     * @param TotalSnapshotSize Total snapshot size
+     * Set Total snapshot size in GiB.
+     * @param TotalSnapshotSize Total snapshot size in GiB.
      */
     public void setTotalSnapshotSize(Long TotalSnapshotSize) {
         this.TotalSnapshotSize = TotalSnapshotSize;

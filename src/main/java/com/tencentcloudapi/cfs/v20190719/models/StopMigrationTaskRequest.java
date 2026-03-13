@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class StopMigrationTaskRequest extends AbstractModel {
 
     /**
-    * Migration task name
+    * Migration task Id.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get Migration task name 
-     * @return TaskId Migration task name
+     * Get Migration task Id. 
+     * @return TaskId Migration task Id.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Migration task name
-     * @param TaskId Migration task name
+     * Set Migration task Id.
+     * @param TaskId Migration task Id.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

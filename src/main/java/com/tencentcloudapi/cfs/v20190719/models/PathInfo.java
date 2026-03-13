@@ -21,67 +21,93 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteMountTargetRequest extends AbstractModel {
+public class PathInfo extends AbstractModel {
 
     /**
-    * File system ID
+    * File system ID.
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * Mount target ID
+    * Directory absolute path.
     */
-    @SerializedName("MountTargetId")
+    @SerializedName("Path")
     @Expose
-    private String MountTargetId;
+    private String Path;
 
     /**
-     * Get File system ID 
-     * @return FileSystemId File system ID
+    * Data flow Id.
+    */
+    @SerializedName("DataFlowId")
+    @Expose
+    private String DataFlowId;
+
+    /**
+     * Get File system ID. 
+     * @return FileSystemId File system ID.
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID
-     * @param FileSystemId File system ID
+     * Set File system ID.
+     * @param FileSystemId File system ID.
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get Mount target ID 
-     * @return MountTargetId Mount target ID
+     * Get Directory absolute path. 
+     * @return Path Directory absolute path.
      */
-    public String getMountTargetId() {
-        return this.MountTargetId;
+    public String getPath() {
+        return this.Path;
     }
 
     /**
-     * Set Mount target ID
-     * @param MountTargetId Mount target ID
+     * Set Directory absolute path.
+     * @param Path Directory absolute path.
      */
-    public void setMountTargetId(String MountTargetId) {
-        this.MountTargetId = MountTargetId;
+    public void setPath(String Path) {
+        this.Path = Path;
     }
 
-    public DeleteMountTargetRequest() {
+    /**
+     * Get Data flow Id. 
+     * @return DataFlowId Data flow Id.
+     */
+    public String getDataFlowId() {
+        return this.DataFlowId;
+    }
+
+    /**
+     * Set Data flow Id.
+     * @param DataFlowId Data flow Id.
+     */
+    public void setDataFlowId(String DataFlowId) {
+        this.DataFlowId = DataFlowId;
+    }
+
+    public PathInfo() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteMountTargetRequest(DeleteMountTargetRequest source) {
+    public PathInfo(PathInfo source) {
         if (source.FileSystemId != null) {
             this.FileSystemId = new String(source.FileSystemId);
         }
-        if (source.MountTargetId != null) {
-            this.MountTargetId = new String(source.MountTargetId);
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
+        if (source.DataFlowId != null) {
+            this.DataFlowId = new String(source.DataFlowId);
         }
     }
 
@@ -91,7 +117,8 @@ public class DeleteMountTargetRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
-        this.setParamSimple(map, prefix + "MountTargetId", this.MountTargetId);
+        this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "DataFlowId", this.DataFlowId);
 
     }
 }

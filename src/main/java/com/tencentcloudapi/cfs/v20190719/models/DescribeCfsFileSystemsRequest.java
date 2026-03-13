@@ -45,21 +45,21 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
     private String SubnetId;
 
     /**
-    * 
+    * Offset paging number. default 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * Limit page size. default value 10.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 
+    * User-defined name
     */
     @SerializedName("CreationToken")
     @Expose
@@ -114,48 +114,48 @@ public class DescribeCfsFileSystemsRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get Offset paging number. default 0. 
+     * @return Offset Offset paging number. default 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set Offset paging number. default 0.
+     * @param Offset Offset paging number. default 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get Limit page size. default value 10. 
+     * @return Limit Limit page size. default value 10.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set Limit page size. default value 10.
+     * @param Limit Limit page size. default value 10.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get  
-     * @return CreationToken 
+     * Get User-defined name 
+     * @return CreationToken User-defined name
      */
     public String getCreationToken() {
         return this.CreationToken;
     }
 
     /**
-     * Set 
-     * @param CreationToken 
+     * Set User-defined name
+     * @param CreationToken User-defined name
      */
     public void setCreationToken(String CreationToken) {
         this.CreationToken = CreationToken;

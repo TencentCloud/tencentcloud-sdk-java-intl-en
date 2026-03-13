@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class UpdateAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * Snapshot policy ID
+    * Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-    * Snapshot policy name
+    * Snapshot policy name, no more than 64 characters.
     */
     @SerializedName("PolicyName")
     @Expose
     private String PolicyName;
 
     /**
-    * The day of the week on which to regularly back up the snapshot
+    * Snapshot periodic backup, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
     */
     @SerializedName("DayOfWeek")
     @Expose
@@ -52,76 +52,76 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel {
     private String Hour;
 
     /**
-    * Snapshot retention period
+    * Snapshot retention days.
     */
     @SerializedName("AliveDays")
     @Expose
     private Long AliveDays;
 
     /**
-    * Whether to activate the scheduled snapshot feature
+    * Whether the periodic snapshot function is activated; 1 indicates activate, 0 indicates inactive.
     */
     @SerializedName("IsActivated")
     @Expose
     private Long IsActivated;
 
     /**
-    * The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+    * Scheduled snapshot creates a snapshot on the day of the month. this parameter is used in combination with DayOfWeek and IntervalDays. choose one of the three.
     */
     @SerializedName("DayOfMonth")
     @Expose
     private String DayOfMonth;
 
     /**
-    * The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+    * Periodically execute snapshots at interval days. this parameter is used in combination with DayOfWeek and DayOfMonth. choose one of the three.
     */
     @SerializedName("IntervalDays")
     @Expose
     private Long IntervalDays;
 
     /**
-     * Get Snapshot policy ID 
-     * @return AutoSnapshotPolicyId Snapshot policy ID
+     * Get Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api. 
+     * @return AutoSnapshotPolicyId Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set Snapshot policy ID
-     * @param AutoSnapshotPolicyId Snapshot policy ID
+     * Set Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
+     * @param AutoSnapshotPolicyId Unbound snapshot policy ID, which can be obtained by querying through the [DescribeAutoSnapshotPolicies](https://www.tencentcloud.com/document/api/582/80208?from_cn_redirect=1) api.
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
     /**
-     * Get Snapshot policy name 
-     * @return PolicyName Snapshot policy name
+     * Get Snapshot policy name, no more than 64 characters. 
+     * @return PolicyName Snapshot policy name, no more than 64 characters.
      */
     public String getPolicyName() {
         return this.PolicyName;
     }
 
     /**
-     * Set Snapshot policy name
-     * @param PolicyName Snapshot policy name
+     * Set Snapshot policy name, no more than 64 characters.
+     * @param PolicyName Snapshot policy name, no more than 64 characters.
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get The day of the week on which to regularly back up the snapshot 
-     * @return DayOfWeek The day of the week on which to regularly back up the snapshot
+     * Get Snapshot periodic backup, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays. 
+     * @return DayOfWeek Snapshot periodic backup, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
      */
     public String getDayOfWeek() {
         return this.DayOfWeek;
     }
 
     /**
-     * Set The day of the week on which to regularly back up the snapshot
-     * @param DayOfWeek The day of the week on which to regularly back up the snapshot
+     * Set Snapshot periodic backup, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
+     * @param DayOfWeek Snapshot periodic backup, monday to sunday. 1 represents monday, 7 represents sunday. choose one from three: DayOfMonth, IntervalDays.
      */
     public void setDayOfWeek(String DayOfWeek) {
         this.DayOfWeek = DayOfWeek;
@@ -144,64 +144,64 @@ public class UpdateAutoSnapshotPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get Snapshot retention period 
-     * @return AliveDays Snapshot retention period
+     * Get Snapshot retention days. 
+     * @return AliveDays Snapshot retention days.
      */
     public Long getAliveDays() {
         return this.AliveDays;
     }
 
     /**
-     * Set Snapshot retention period
-     * @param AliveDays Snapshot retention period
+     * Set Snapshot retention days.
+     * @param AliveDays Snapshot retention days.
      */
     public void setAliveDays(Long AliveDays) {
         this.AliveDays = AliveDays;
     }
 
     /**
-     * Get Whether to activate the scheduled snapshot feature 
-     * @return IsActivated Whether to activate the scheduled snapshot feature
+     * Get Whether the periodic snapshot function is activated; 1 indicates activate, 0 indicates inactive. 
+     * @return IsActivated Whether the periodic snapshot function is activated; 1 indicates activate, 0 indicates inactive.
      */
     public Long getIsActivated() {
         return this.IsActivated;
     }
 
     /**
-     * Set Whether to activate the scheduled snapshot feature
-     * @param IsActivated Whether to activate the scheduled snapshot feature
+     * Set Whether the periodic snapshot function is activated; 1 indicates activate, 0 indicates inactive.
+     * @param IsActivated Whether the periodic snapshot function is activated; 1 indicates activate, 0 indicates inactive.
      */
     public void setIsActivated(Long IsActivated) {
         this.IsActivated = IsActivated;
     }
 
     /**
-     * Get The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`. 
-     * @return DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+     * Get Scheduled snapshot creates a snapshot on the day of the month. this parameter is used in combination with DayOfWeek and IntervalDays. choose one of the three. 
+     * @return DayOfMonth Scheduled snapshot creates a snapshot on the day of the month. this parameter is used in combination with DayOfWeek and IntervalDays. choose one of the three.
      */
     public String getDayOfMonth() {
         return this.DayOfMonth;
     }
 
     /**
-     * Set The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
-     * @param DayOfMonth The specific day of the month on which to create a snapshot. This parameter is mutually exclusive with `DayOfWeek`.
+     * Set Scheduled snapshot creates a snapshot on the day of the month. this parameter is used in combination with DayOfWeek and IntervalDays. choose one of the three.
+     * @param DayOfMonth Scheduled snapshot creates a snapshot on the day of the month. this parameter is used in combination with DayOfWeek and IntervalDays. choose one of the three.
      */
     public void setDayOfMonth(String DayOfMonth) {
         this.DayOfMonth = DayOfMonth;
     }
 
     /**
-     * Get The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`. 
-     * @return IntervalDays The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+     * Get Periodically execute snapshots at interval days. this parameter is used in combination with DayOfWeek and DayOfMonth. choose one of the three. 
+     * @return IntervalDays Periodically execute snapshots at interval days. this parameter is used in combination with DayOfWeek and DayOfMonth. choose one of the three.
      */
     public Long getIntervalDays() {
         return this.IntervalDays;
     }
 
     /**
-     * Set The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
-     * @param IntervalDays The snapshot interval. This parameter is mutually exclusive with `DayOfWeek` and `DayOfMonth`.
+     * Set Periodically execute snapshots at interval days. this parameter is used in combination with DayOfWeek and DayOfMonth. choose one of the three.
+     * @param IntervalDays Periodically execute snapshots at interval days. this parameter is used in combination with DayOfWeek and DayOfMonth. choose one of the three.
      */
     public void setIntervalDays(Long IntervalDays) {
         this.IntervalDays = IntervalDays;

@@ -31,7 +31,7 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     private String TaskName;
 
     /**
-    * Migration type. Valid values: `0` (bucket) and `1` (list). Default value: `0`.
+    * Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
     */
     @SerializedName("MigrationType")
     @Expose
@@ -45,21 +45,21 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     private Long MigrationMode;
 
     /**
-    * SecretId of the data source account
+    * SecretId of the data source account.
     */
     @SerializedName("SrcSecretId")
     @Expose
     private String SrcSecretId;
 
     /**
-    * SecretKey of the data source account
+    * SecretKey of the data source account.
     */
     @SerializedName("SrcSecretKey")
     @Expose
     private String SrcSecretKey;
 
     /**
-    * File system instance ID
+    * File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -80,14 +80,14 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     private Long CoverType;
 
     /**
-    * Data source service provider. Valid values: `COS` (Tencent Cloud COS), `OSS` (Alibaba Cloud OSS), and `OBS` (Huawei Cloud OBS).
+    * Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
     */
     @SerializedName("SrcService")
     @Expose
     private String SrcService;
 
     /**
-    * Data source bucket name. Specify at least one of the bucket name or address.
+    * Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
     */
     @SerializedName("BucketName")
     @Expose
@@ -101,7 +101,7 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     private String BucketRegion;
 
     /**
-    * Data source bucket address. Specify at least one of the bucket name or address.
+    * Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
     */
     @SerializedName("BucketAddress")
     @Expose
@@ -122,11 +122,18 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     private String FsName;
 
     /**
-    * Source bucket path, which defaults to `/`
+    * Source bucket path, defaults to /.
     */
     @SerializedName("BucketPath")
     @Expose
     private String BucketPath;
+
+    /**
+    * Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+    */
+    @SerializedName("Direction")
+    @Expose
+    private Long Direction;
 
     /**
      * Get Migration task name 
@@ -145,16 +152,16 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Migration type. Valid values: `0` (bucket) and `1` (list). Default value: `0`. 
-     * @return MigrationType Migration type. Valid values: `0` (bucket) and `1` (list). Default value: `0`.
+     * Get Migration method flags, default is 0. 0: bucket migration; 1: inventory migration. 
+     * @return MigrationType Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
      */
     public Long getMigrationType() {
         return this.MigrationType;
     }
 
     /**
-     * Set Migration type. Valid values: `0` (bucket) and `1` (list). Default value: `0`.
-     * @param MigrationType Migration type. Valid values: `0` (bucket) and `1` (list). Default value: `0`.
+     * Set Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
+     * @param MigrationType Migration method flags, default is 0. 0: bucket migration; 1: inventory migration.
      */
     public void setMigrationType(Long MigrationType) {
         this.MigrationType = MigrationType;
@@ -177,48 +184,48 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get SecretId of the data source account 
-     * @return SrcSecretId SecretId of the data source account
+     * Get SecretId of the data source account. 
+     * @return SrcSecretId SecretId of the data source account.
      */
     public String getSrcSecretId() {
         return this.SrcSecretId;
     }
 
     /**
-     * Set SecretId of the data source account
-     * @param SrcSecretId SecretId of the data source account
+     * Set SecretId of the data source account.
+     * @param SrcSecretId SecretId of the data source account.
      */
     public void setSrcSecretId(String SrcSecretId) {
         this.SrcSecretId = SrcSecretId;
     }
 
     /**
-     * Get SecretKey of the data source account 
-     * @return SrcSecretKey SecretKey of the data source account
+     * Get SecretKey of the data source account. 
+     * @return SrcSecretKey SecretKey of the data source account.
      */
     public String getSrcSecretKey() {
         return this.SrcSecretKey;
     }
 
     /**
-     * Set SecretKey of the data source account
-     * @param SrcSecretKey SecretKey of the data source account
+     * Set SecretKey of the data source account.
+     * @param SrcSecretKey SecretKey of the data source account.
      */
     public void setSrcSecretKey(String SrcSecretKey) {
         this.SrcSecretKey = SrcSecretKey;
     }
 
     /**
-     * Get File system instance ID 
-     * @return FileSystemId File system instance ID
+     * Get File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api. 
+     * @return FileSystemId File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system instance ID
-     * @param FileSystemId File system instance ID
+     * Set File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
+     * @param FileSystemId File system instance ID, which can be obtained by querying the file system through the [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1) api.
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
@@ -257,32 +264,32 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Data source service provider. Valid values: `COS` (Tencent Cloud COS), `OSS` (Alibaba Cloud OSS), and `OBS` (Huawei Cloud OBS). 
-     * @return SrcService Data source service provider. Valid values: `COS` (Tencent Cloud COS), `OSS` (Alibaba Cloud OSS), and `OBS` (Huawei Cloud OBS).
+     * Get Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS. 
+     * @return SrcService Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
      */
     public String getSrcService() {
         return this.SrcService;
     }
 
     /**
-     * Set Data source service provider. Valid values: `COS` (Tencent Cloud COS), `OSS` (Alibaba Cloud OSS), and `OBS` (Huawei Cloud OBS).
-     * @param SrcService Data source service provider. Valid values: `COS` (Tencent Cloud COS), `OSS` (Alibaba Cloud OSS), and `OBS` (Huawei Cloud OBS).
+     * Set Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
+     * @param SrcService Data source service providers. COS: tencent cloud COS, OSS: alibaba cloud OSS, OBS: huawei cloud OBS.
      */
     public void setSrcService(String SrcService) {
         this.SrcService = SrcService;
     }
 
     /**
-     * Get Data source bucket name. Specify at least one of the bucket name or address. 
-     * @return BucketName Data source bucket name. Specify at least one of the bucket name or address.
+     * Get Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration. 
+     * @return BucketName Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
      */
     public String getBucketName() {
         return this.BucketName;
     }
 
     /**
-     * Set Data source bucket name. Specify at least one of the bucket name or address.
-     * @param BucketName Data source bucket name. Specify at least one of the bucket name or address.
+     * Set Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
+     * @param BucketName Data source bucket name. specifies the bucket name for migration. either BucketName or BucketAddress is required for bucket migration. this parameter is not required for inventory migration.
      */
     public void setBucketName(String BucketName) {
         this.BucketName = BucketName;
@@ -305,16 +312,16 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Data source bucket address. Specify at least one of the bucket name or address. 
-     * @return BucketAddress Data source bucket address. Specify at least one of the bucket name or address.
+     * Get Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration. 
+     * @return BucketAddress Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
      */
     public String getBucketAddress() {
         return this.BucketAddress;
     }
 
     /**
-     * Set Data source bucket address. Specify at least one of the bucket name or address.
-     * @param BucketAddress Data source bucket address. Specify at least one of the bucket name or address.
+     * Set Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
+     * @param BucketAddress Source bucket address. specifies the bucket address of the data source. for bucket migration, either BucketName or BucketAddress is required. this parameter is not required for inventory migration.
      */
     public void setBucketAddress(String BucketAddress) {
         this.BucketAddress = BucketAddress;
@@ -353,19 +360,35 @@ public class CreateMigrationTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Source bucket path, which defaults to `/` 
-     * @return BucketPath Source bucket path, which defaults to `/`
+     * Get Source bucket path, defaults to /. 
+     * @return BucketPath Source bucket path, defaults to /.
      */
     public String getBucketPath() {
         return this.BucketPath;
     }
 
     /**
-     * Set Source bucket path, which defaults to `/`
-     * @param BucketPath Source bucket path, which defaults to `/`
+     * Set Source bucket path, defaults to /.
+     * @param BucketPath Source bucket path, defaults to /.
      */
     public void setBucketPath(String BucketPath) {
         this.BucketPath = BucketPath;
+    }
+
+    /**
+     * Get Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0. 
+     * @return Direction Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+     */
+    public Long getDirection() {
+        return this.Direction;
+    }
+
+    /**
+     * Set Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+     * @param Direction Migration direction. valid values: 0 (cos migration to file system), 1 (file system migration to cos). default is 0.
+     */
+    public void setDirection(Long Direction) {
+        this.Direction = Direction;
     }
 
     public CreateMigrationTaskRequest() {
@@ -421,6 +444,9 @@ public class CreateMigrationTaskRequest extends AbstractModel {
         if (source.BucketPath != null) {
             this.BucketPath = new String(source.BucketPath);
         }
+        if (source.Direction != null) {
+            this.Direction = new Long(source.Direction);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class CreateMigrationTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ListAddress", this.ListAddress);
         this.setParamSimple(map, prefix + "FsName", this.FsName);
         this.setParamSimple(map, prefix + "BucketPath", this.BucketPath);
+        this.setParamSimple(map, prefix + "Direction", this.Direction);
 
     }
 }

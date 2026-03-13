@@ -25,6 +25,10 @@ public class SnapshotOperateLog extends AbstractModel {
 
     /**
     * Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
     */
     @SerializedName("Action")
     @Expose
@@ -38,29 +42,41 @@ public class SnapshotOperateLog extends AbstractModel {
     private String ActionTime;
 
     /**
-    * Operation name
+    * Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
     */
     @SerializedName("ActionName")
     @Expose
     private String ActionName;
 
     /**
-    * Operator
+    * Operator uin.
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * Result
+    * 1- task in progress; 2- task success; 3- task failure.
     */
     @SerializedName("Result")
     @Expose
     private Long Result;
 
     /**
-     * Get Operation type 
+     * Get Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot. 
      * @return Action Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
      */
     public String getAction() {
         return this.Action;
@@ -68,7 +84,15 @@ public class SnapshotOperateLog extends AbstractModel {
 
     /**
      * Set Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
      * @param Action Operation type
+CreateCfsSnapshot: create a snapshot.
+DeleteCfsSnapshot: delete snapshot.
+CreateCfsFileSystem: create a file system.
+UpdateCfsSnapshotAttribute: update snapshot.
      */
     public void setAction(String Action) {
         this.Action = Action;
@@ -91,48 +115,64 @@ public class SnapshotOperateLog extends AbstractModel {
     }
 
     /**
-     * Get Operation name 
-     * @return ActionName Operation name
+     * Get Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute 
+     * @return ActionName Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
      */
     public String getActionName() {
         return this.ActionName;
     }
 
     /**
-     * Set Operation name
-     * @param ActionName Operation name
+     * Set Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
+     * @param ActionName Operation name.
+CreateCfsSnapshot
+DeleteCfsSnapshot
+CreateCfsFileSystem
+UpdateCfsSnapshotAttribute
      */
     public void setActionName(String ActionName) {
         this.ActionName = ActionName;
     }
 
     /**
-     * Get Operator 
-     * @return Operator Operator
+     * Get Operator uin. 
+     * @return Operator Operator uin.
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set Operator
-     * @param Operator Operator
+     * Set Operator uin.
+     * @param Operator Operator uin.
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get Result 
-     * @return Result Result
+     * Get 1- task in progress; 2- task success; 3- task failure. 
+     * @return Result 1- task in progress; 2- task success; 3- task failure.
      */
     public Long getResult() {
         return this.Result;
     }
 
     /**
-     * Set Result
-     * @param Result Result
+     * Set 1- task in progress; 2- task success; 3- task failure.
+     * @param Result 1- task in progress; 2- task success; 3- task failure.
      */
     public void setResult(Long Result) {
         this.Result = Result;

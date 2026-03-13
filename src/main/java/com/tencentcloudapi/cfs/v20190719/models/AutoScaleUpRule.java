@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AutoScaleUpRule extends AbstractModel {
 
     /**
-    * 
+    * Enable auto scale-out policy, disable.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
     */
     @SerializedName("ScaleThreshold")
     @Expose
     private Long ScaleThreshold;
 
     /**
-    * 
+    * Used capacity to total clusters ratio after expansion. value range: [10-90].
     */
     @SerializedName("TargetThreshold")
     @Expose
     private Long TargetThreshold;
 
     /**
-     * Get  
-     * @return Status 
+     * Get Enable auto scale-out policy, disable. 
+     * @return Status Enable auto scale-out policy, disable.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Enable auto scale-out policy, disable.
+     * @param Status Enable auto scale-out policy, disable.
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return ScaleThreshold 
+     * Get Cluster usage percentage. start expansion when reaching this value. value range: [10-90]. 
+     * @return ScaleThreshold Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
      */
     public Long getScaleThreshold() {
         return this.ScaleThreshold;
     }
 
     /**
-     * Set 
-     * @param ScaleThreshold 
+     * Set Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
+     * @param ScaleThreshold Cluster usage percentage. start expansion when reaching this value. value range: [10-90].
      */
     public void setScaleThreshold(Long ScaleThreshold) {
         this.ScaleThreshold = ScaleThreshold;
     }
 
     /**
-     * Get  
-     * @return TargetThreshold 
+     * Get Used capacity to total clusters ratio after expansion. value range: [10-90]. 
+     * @return TargetThreshold Used capacity to total clusters ratio after expansion. value range: [10-90].
      */
     public Long getTargetThreshold() {
         return this.TargetThreshold;
     }
 
     /**
-     * Set 
-     * @param TargetThreshold 
+     * Set Used capacity to total clusters ratio after expansion. value range: [10-90].
+     * @param TargetThreshold Used capacity to total clusters ratio after expansion. value range: [10-90].
      */
     public void setTargetThreshold(Long TargetThreshold) {
         this.TargetThreshold = TargetThreshold;

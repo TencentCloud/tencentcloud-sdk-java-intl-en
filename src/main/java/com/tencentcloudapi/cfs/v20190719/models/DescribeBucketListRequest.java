@@ -31,8 +31,7 @@ public class DescribeBucketListRequest extends AbstractModel {
     private String SrcService;
 
     /**
-    * SecretId of the data source account
-
+    * SecretId of the data source account.
     */
     @SerializedName("SrcSecretId")
     @Expose
@@ -62,20 +61,16 @@ public class DescribeBucketListRequest extends AbstractModel {
     }
 
     /**
-     * Get SecretId of the data source account
- 
-     * @return SrcSecretId SecretId of the data source account
-
+     * Get SecretId of the data source account. 
+     * @return SrcSecretId SecretId of the data source account.
      */
     public String getSrcSecretId() {
         return this.SrcSecretId;
     }
 
     /**
-     * Set SecretId of the data source account
-
-     * @param SrcSecretId SecretId of the data source account
-
+     * Set SecretId of the data source account.
+     * @param SrcSecretId SecretId of the data source account.
      */
     public void setSrcSecretId(String SrcSecretId) {
         this.SrcSecretId = SrcSecretId;

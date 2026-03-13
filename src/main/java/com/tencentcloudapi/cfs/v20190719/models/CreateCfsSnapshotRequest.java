@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateCfsSnapshotRequest extends AbstractModel {
 
     /**
-    * File system ID
+    * File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-    * Snapshot name
+    * Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
     */
     @SerializedName("SnapshotName")
     @Expose
@@ -45,32 +45,32 @@ public class CreateCfsSnapshotRequest extends AbstractModel {
     private TagInfo [] ResourceTags;
 
     /**
-     * Get File system ID 
-     * @return FileSystemId File system ID
+     * Get File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1). 
+     * @return FileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID
-     * @param FileSystemId File system ID
+     * Set File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+     * @param FileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
     }
 
     /**
-     * Get Snapshot name 
-     * @return SnapshotName Snapshot name
+     * Get Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -. 
+     * @return SnapshotName Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set Snapshot name
-     * @param SnapshotName Snapshot name
+     * Set Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
+     * @param SnapshotName Snapshot name, supports no more than 64 characters in length, supports chinese, numbers, _, and -.
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;

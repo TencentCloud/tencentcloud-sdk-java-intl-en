@@ -52,14 +52,16 @@ public class MountInfo extends AbstractModel {
     private String FSID;
 
     /**
-    * Mount target status
+    * Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
     */
     @SerializedName("LifeCycleState")
     @Expose
     private String LifeCycleState;
 
     /**
-    * Network type
+    * Network type, including VPC, CCN.
     */
     @SerializedName("NetworkInterface")
     @Expose
@@ -172,32 +174,40 @@ public class MountInfo extends AbstractModel {
     }
 
     /**
-     * Get Mount target status 
-     * @return LifeCycleState Mount target status
+     * Get Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed. 
+     * @return LifeCycleState Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
      */
     public String getLifeCycleState() {
         return this.LifeCycleState;
     }
 
     /**
-     * Set Mount target status
-     * @param LifeCycleState Mount target status
+     * Set Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
+     * @param LifeCycleState Mount point status, including creating: under creation; available: running.
+Deleting: deleting.
+Creation failed.
      */
     public void setLifeCycleState(String LifeCycleState) {
         this.LifeCycleState = LifeCycleState;
     }
 
     /**
-     * Get Network type 
-     * @return NetworkInterface Network type
+     * Get Network type, including VPC, CCN. 
+     * @return NetworkInterface Network type, including VPC, CCN.
      */
     public String getNetworkInterface() {
         return this.NetworkInterface;
     }
 
     /**
-     * Set Network type
-     * @param NetworkInterface Network type
+     * Set Network type, including VPC, CCN.
+     * @param NetworkInterface Network type, including VPC, CCN.
      */
     public void setNetworkInterface(String NetworkInterface) {
         this.NetworkInterface = NetworkInterface;

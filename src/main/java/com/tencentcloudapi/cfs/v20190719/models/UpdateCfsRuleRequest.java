@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpdateCfsRuleRequest extends AbstractModel {
 
     /**
-    * Permission group ID
+    * Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
     */
     @SerializedName("PGroupId")
     @Expose
     private String PGroupId;
 
     /**
-    * Rule ID
+    * Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
     */
     @SerializedName("RuleId")
     @Expose
@@ -52,46 +52,51 @@ public class UpdateCfsRuleRequest extends AbstractModel {
     private String RWPermission;
 
     /**
-    * User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
+    * User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
     */
     @SerializedName("UserPermission")
     @Expose
     private String UserPermission;
 
     /**
-    * Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+    * Rule priority. value range: 1-100. among them, 1 is the highest and 100 is the minimum. default value: 100.
     */
     @SerializedName("Priority")
     @Expose
     private Long Priority;
 
     /**
-     * Get Permission group ID 
-     * @return PGroupId Permission group ID
+     * Get Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1). 
+     * @return PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     public String getPGroupId() {
         return this.PGroupId;
     }
 
     /**
-     * Set Permission group ID
-     * @param PGroupId Permission group ID
+     * Set Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
+     * @param PGroupId Permission group ID, which can be obtained through the api [DescribeCfsPGroups](https://www.tencentcloud.com/document/api/582/38157?from_cn_redirect=1).
      */
     public void setPGroupId(String PGroupId) {
         this.PGroupId = PGroupId;
     }
 
     /**
-     * Get Rule ID 
-     * @return RuleId Rule ID
+     * Get Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api. 
+     * @return RuleId Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
      */
     public String getRuleId() {
         return this.RuleId;
     }
 
     /**
-     * Set Rule ID
-     * @param RuleId Rule ID
+     * Set Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
+     * @param RuleId Rule ID, which can be obtained through the [DescribeCfsRules](https://www.tencentcloud.com/document/api/582/38156?from_cn_redirect=1) api.
      */
     public void setRuleId(String RuleId) {
         this.RuleId = RuleId;
@@ -130,32 +135,52 @@ public class UpdateCfsRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash. 
-     * @return UserPermission User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
+     * Get User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+ 
+     * @return UserPermission User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
      */
     public String getUserPermission() {
         return this.UserPermission;
     }
 
     /**
-     * Set User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
-     * @param UserPermission User permission. Valid values: all_squash, no_all_squash, root_squash, no_root_squash. Specifically, all_squash: any visiting user will be mapped to an anonymous user or user group; no_all_squash: a visiting user will be first matched with a local user, and if the match fails, it will be mapped to an anonymous user or user group; root_squash: a visiting root user will be mapped to an anonymous user or user group; no_root_squash: a visiting root user will be allowed to maintain root account permissions. Default value: root_squash.
+     * Set User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
+     * @param UserPermission User permission. valid values: all_squash, no_all_squash, root_squash, no_root_squash. default value: root_squash.
+All_squash: all accessing users (including the root user) will be mapped to anonymous users or groups.
+no_all_squash: all accessing users (including the root user) retain original UID/GID information.
+root_squash: maps visiting root user to anonymous user or user group. non-root user keeps original UID/GID information.
+no_root_squash: has the same effect as no_all_squash. all accessing users (including the root user) retain their original UID/GID information.
+
      */
     public void setUserPermission(String UserPermission) {
         this.UserPermission = UserPermission;
     }
 
     /**
-     * Get Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest 
-     * @return Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+     * Get Rule priority. value range: 1-100. among them, 1 is the highest and 100 is the minimum. default value: 100. 
+     * @return Priority Rule priority. value range: 1-100. among them, 1 is the highest and 100 is the minimum. default value: 100.
      */
     public Long getPriority() {
         return this.Priority;
     }
 
     /**
-     * Set Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
-     * @param Priority Rule priority. Value range: 1-100. 1 represents the highest priority, while 100 the lowest
+     * Set Rule priority. value range: 1-100. among them, 1 is the highest and 100 is the minimum. default value: 100.
+     * @param Priority Rule priority. value range: 1-100. among them, 1 is the highest and 100 is the minimum. default value: 100.
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;

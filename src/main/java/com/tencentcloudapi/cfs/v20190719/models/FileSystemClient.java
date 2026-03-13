@@ -45,7 +45,7 @@ public class FileSystemClient extends AbstractModel {
     private String VpcId;
 
     /**
-    * Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
+    * Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.comom/document/api/582/38144?from_cn_redirect=1).
     */
     @SerializedName("Zone")
     @Expose
@@ -114,16 +114,16 @@ public class FileSystemClient extends AbstractModel {
     }
 
     /**
-     * Get Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document 
-     * @return Zone Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
+     * Get Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.comom/document/api/582/38144?from_cn_redirect=1). 
+     * @return Zone Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.comom/document/api/582/38144?from_cn_redirect=1).
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
-     * @param Zone Name of the availability zone, e.g. ap-beijing-1. For more information, see regions and availability zones in the Overview document
+     * Set Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.comom/document/api/582/38144?from_cn_redirect=1).
+     * @param Zone Availability zone name, such as ap-beijing-1. see the region and availability zone list in the description document (https://www.tencentcloud.comom/document/api/582/38144?from_cn_redirect=1).
      */
     public void setZone(String Zone) {
         this.Zone = Zone;

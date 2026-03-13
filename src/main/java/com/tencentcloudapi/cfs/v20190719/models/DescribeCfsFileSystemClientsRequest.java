@@ -24,26 +24,72 @@ import java.util.HashMap;
 public class DescribeCfsFileSystemClientsRequest extends AbstractModel {
 
     /**
-    * File system ID
+    * File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
     */
     @SerializedName("FileSystemId")
     @Expose
     private String FileSystemId;
 
     /**
-     * Get File system ID 
-     * @return FileSystemId File system ID
+    * Offset paging number, defaults to 0.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * Limit page size. default value 10. maximum value 100.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+     * Get File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1). 
+     * @return FileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID
-     * @param FileSystemId File system ID
+     * Set File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+     * @param FileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
+    }
+
+    /**
+     * Get Offset paging number, defaults to 0. 
+     * @return Offset Offset paging number, defaults to 0.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Offset paging number, defaults to 0.
+     * @param Offset Offset paging number, defaults to 0.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get Limit page size. default value 10. maximum value 100. 
+     * @return Limit Limit page size. default value 10. maximum value 100.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Limit page size. default value 10. maximum value 100.
+     * @param Limit Limit page size. default value 10. maximum value 100.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
     }
 
     public DescribeCfsFileSystemClientsRequest() {
@@ -57,6 +103,12 @@ public class DescribeCfsFileSystemClientsRequest extends AbstractModel {
         if (source.FileSystemId != null) {
             this.FileSystemId = new String(source.FileSystemId);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DescribeCfsFileSystemClientsRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileSystemId", this.FileSystemId);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
 
     }
 }

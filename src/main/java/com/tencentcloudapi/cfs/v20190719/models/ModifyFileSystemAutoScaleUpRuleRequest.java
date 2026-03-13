@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel {
 
     /**
-    * File system ID
+    * File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
     */
     @SerializedName("FileSystemId")
     @Expose
@@ -38,31 +38,30 @@ public class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel {
     private Long ScaleUpThreshold;
 
     /**
-    * Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
+    * Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
     */
     @SerializedName("TargetThreshold")
     @Expose
     private Long TargetThreshold;
 
     /**
-    * Rule status. Valid values: `0` (disabled) and `1` (enabled).
-
+    * Rule status 0: turn off, 1: turn on; keep the original status if not specified.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get File system ID 
-     * @return FileSystemId File system ID
+     * Get File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1). 
+     * @return FileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     public String getFileSystemId() {
         return this.FileSystemId;
     }
 
     /**
-     * Set File system ID
-     * @param FileSystemId File system ID
+     * Set File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
+     * @param FileSystemId File system ID, which can be obtained by querying the file system list; [DescribeCfsFileSystems](https://www.tencentcloud.com/document/product/582/38170?from_cn_redirect=1).
      */
     public void setFileSystemId(String FileSystemId) {
         this.FileSystemId = FileSystemId;
@@ -85,36 +84,32 @@ public class ModifyFileSystemAutoScaleUpRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`. 
-     * @return TargetThreshold Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
+     * Get Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold. 
+     * @return TargetThreshold Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
      */
     public Long getTargetThreshold() {
         return this.TargetThreshold;
     }
 
     /**
-     * Set Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
-     * @param TargetThreshold Target threshold after scaling. Value range: 10-90. The value of this parameter must be smaller than that of `ScaleUpThreshold`.
+     * Set Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
+     * @param TargetThreshold Target threshold after expansion. value range: 10-90. the value must be less than ScaleUpThreshold.
      */
     public void setTargetThreshold(Long TargetThreshold) {
         this.TargetThreshold = TargetThreshold;
     }
 
     /**
-     * Get Rule status. Valid values: `0` (disabled) and `1` (enabled).
- 
-     * @return Status Rule status. Valid values: `0` (disabled) and `1` (enabled).
-
+     * Get Rule status 0: turn off, 1: turn on; keep the original status if not specified. 
+     * @return Status Rule status 0: turn off, 1: turn on; keep the original status if not specified.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Rule status. Valid values: `0` (disabled) and `1` (enabled).
-
-     * @param Status Rule status. Valid values: `0` (disabled) and `1` (enabled).
-
+     * Set Rule status 0: turn off, 1: turn on; keep the original status if not specified.
+     * @param Status Rule status 0: turn off, 1: turn on; keep the original status if not specified.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
