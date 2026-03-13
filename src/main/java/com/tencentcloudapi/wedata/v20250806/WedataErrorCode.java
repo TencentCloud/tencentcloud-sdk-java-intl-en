@@ -18,6 +18,9 @@ public enum WedataErrorCode {
      /* Missing required parameters or invalid parameters. */
      INTERNALERROR_INVALIDPARAMETER("InternalError.InvalidParameter"),
      
+     /* Unknown error. */
+     INTERNALERROR_UNKNOWNERROR("InternalError.UnknownError"),
+     
      /* Parameter error. */
      INVALIDPARAMETER("InvalidParameter"),
      
@@ -44,6 +47,9 @@ public enum WedataErrorCode {
      
      /* Parameter value error. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+     /* Invalid parameter. */
+     INVALIDPARAMETERVALUE_PARAMILLEGALERROR("InvalidParameterValue.ParamIllegalError"),
      
      /* Alarm rule name is duplicate. */
      INVALIDPARAMETERVALUE_RULENAMEREPEATED("InvalidParameterValue.RuleNameRepeated"),

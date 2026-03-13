@@ -270,6 +270,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Run workflow under workflow scheduling model.
+     * @param req CreateTriggerWorkflowRunRequest
+     * @return CreateTriggerWorkflowRunResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateTriggerWorkflowRunResponse CreateTriggerWorkflowRun(CreateTriggerWorkflowRunRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateTriggerWorkflowRun", CreateTriggerWorkflowRunResponse.class);
+    }
+
+    /**
      *This API is used to create workflow.
      * @param req CreateWorkflowRequest
      * @return CreateWorkflowResponse
