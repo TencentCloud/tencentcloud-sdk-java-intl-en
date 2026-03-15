@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyAutoRenewFlagRequest extends AbstractModel {
 
     /**
-    * Instance list that needs to be modified.
+    * <P>Instance list that needs to be modified</p>.
     */
     @SerializedName("InstanceIds")
     @Expose
     private String [] InstanceIds;
 
     /**
-    * 1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
+    * <P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-     * Get Instance list that needs to be modified. 
-     * @return InstanceIds Instance list that needs to be modified.
+     * Get <P>Instance list that needs to be modified</p>. 
+     * @return InstanceIds <P>Instance list that needs to be modified</p>.
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set Instance list that needs to be modified.
-     * @param InstanceIds Instance list that needs to be modified.
+     * Set <P>Instance list that needs to be modified</p>.
+     * @param InstanceIds <P>Instance list that needs to be modified</p>.
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
     }
 
     /**
-     * Get 1 indicates enable automatic renewal, 0 indicates disable automatic renewal. 
-     * @return AutoRenewFlag 1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
+     * Get <P>1 enables automatic renewal, 0 disables automatic renewal.</p>. 
+     * @return AutoRenewFlag <P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set 1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
-     * @param AutoRenewFlag 1 indicates enable automatic renewal, 0 indicates disable automatic renewal.
+     * Set <P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
+     * @param AutoRenewFlag <P>1 enables automatic renewal, 0 disables automatic renewal.</p>.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

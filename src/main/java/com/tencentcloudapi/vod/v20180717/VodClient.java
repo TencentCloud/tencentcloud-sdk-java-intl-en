@@ -152,6 +152,17 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     }
 
     /**
+     *This API is used to create a Token for invoking AIGC API. After creation, there is a delay in data sync. It becomes queryable or deletable after about 30 seconds.
+     * @param req CreateAigcApiTokenRequest
+     * @return CreateAigcApiTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAigcApiTokenResponse CreateAigcApiToken(CreateAigcApiTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAigcApiToken", CreateAigcApiTokenResponse.class);
+    }
+
+    /**
      *This API is used to generate AIGC images. <b>The API is in beta. If needed, contact us. API calls will incur actual fees.</b>
      * @param req CreateAigcImageTaskRequest
      * @return CreateAigcImageTaskResponse
@@ -527,6 +538,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *Delete an AIGC API Token.
+     * @param req DeleteAigcApiTokenRequest
+     * @return DeleteAigcApiTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAigcApiTokenResponse DeleteAigcApiToken(DeleteAigcApiTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAigcApiToken", DeleteAigcApiTokenResponse.class);
+    }
+
+    /**
      *This API is used to delete a custom animated image generating template.
      * @param req DeleteAnimatedGraphicsTemplateRequest
      * @return DeleteAnimatedGraphicsTemplateResponse
@@ -818,6 +840,17 @@ This API is used to delete a player configuration.
     public DescribeAdaptiveDynamicStreamingTemplatesResponse DescribeAdaptiveDynamicStreamingTemplates(DescribeAdaptiveDynamicStreamingTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAdaptiveDynamicStreamingTemplates", DescribeAdaptiveDynamicStreamingTemplatesResponse.class);
+    }
+
+    /**
+     *Query the AIGC API Token list. There is a delay in data sync after creation or deletion. The latest data is queryable after about 30 seconds.
+     * @param req DescribeAigcApiTokensRequest
+     * @return DescribeAigcApiTokensResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcApiTokensResponse DescribeAigcApiTokens(DescribeAigcApiTokensRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcApiTokens", DescribeAigcApiTokensResponse.class);
     }
 
     /**

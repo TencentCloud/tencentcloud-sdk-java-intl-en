@@ -72,19 +72,6 @@ public class TdmysqlClient extends AbstractClient{
     }
 
     /**
-     *No place to call.
-
-This API is used to query whether billing is enabled.
-     * @param req DescribeBillingEnableRequest
-     * @return DescribeBillingEnableResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeBillingEnableResponse DescribeBillingEnable(DescribeBillingEnableRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeBillingEnable", DescribeBillingEnableResponse.class);
-    }
-
-    /**
      *This API is used to obtain the current parameter settings of the instance.
      * @param req DescribeDBParametersRequest
      * @return DescribeDBParametersResponse
@@ -140,19 +127,6 @@ This API is used to query whether billing is enabled.
     }
 
     /**
-     *Redundant API, no API calls.
-
-This API is used to query table information of a cloud database instance.
-     * @param req DescribeDatabaseTableRequest
-     * @return DescribeDatabaseTableResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDatabaseTableResponse DescribeDatabaseTable(DescribeDatabaseTableRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDatabaseTable", DescribeDatabaseTableResponse.class);
-    }
-
-    /**
      *This API is used to query the process status of an asynchronous task.
      * @param req DescribeFlowRequest
      * @return DescribeFlowResponse
@@ -194,19 +168,6 @@ This API is used to query table information of a cloud database instance.
     public ModifyAutoRenewFlagResponse ModifyAutoRenewFlag(ModifyAutoRenewFlagRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAutoRenewFlag", ModifyAutoRenewFlagResponse.class);
-    }
-
-    /**
-     *This API is used to entirely overwrite the API feature of ModifyInstanceCdc.
-
-Modify the binlog status.
-     * @param req ModifyBinlogStatusRequest
-     * @return ModifyBinlogStatusResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyBinlogStatusResponse ModifyBinlogStatus(ModifyBinlogStatusRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyBinlogStatus", ModifyBinlogStatusResponse.class);
     }
 
     /**

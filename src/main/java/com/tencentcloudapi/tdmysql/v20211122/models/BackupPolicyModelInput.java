@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class BackupPolicyModelInput extends AbstractModel {
 
     /**
-    * <P>Backup end time.</p>.
+    * <P>Backup end time.</p>
     */
     @SerializedName("BackupEndTime")
     @Expose
     private String BackupEndTime;
 
     /**
-    * <P>Backup method: physical physical backup, snapshot snapshot backup</p>.
+    * <P>Backup method: physical physical backup, snapshot snapshot backup</p>
     */
     @SerializedName("BackupMethod")
     @Expose
     private String BackupMethod;
 
     /**
-    * <P>Backup start time</p>.
+    * <P>Backup start time</p>
     */
     @SerializedName("BackupStartTime")
     @Expose
     private String BackupStartTime;
 
     /**
-    * <P>Whether full backup is enabled</p>.
+    * <P>Whether full backup is enabled</p>
     */
     @SerializedName("EnableFull")
     @Expose
     private Long EnableFull;
 
     /**
-    * <P>Whether to enable log backup</p>.
+    * <P>Whether to enable log backup</p>
     */
     @SerializedName("EnableLog")
     @Expose
     private Long EnableLog;
 
     /**
-    * <P>Full backup retention time can currently only be set to 7 days.</p>.
+    * <P>Full backup retention time can currently only be set to 7 days.</p>
     */
     @SerializedName("FullRetentionPeriod")
     @Expose
     private Long FullRetentionPeriod;
 
     /**
-    * <p>Instance ID.</p>.
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * <P>Log retention days. currently, can only set retention to 7 days.</p>.
+    * <P>Log retention days. currently, can only set retention to 7 days.</p>
     */
     @SerializedName("LogRetentionPeriod")
     @Expose
     private Long LogRetentionPeriod;
 
     /**
-    * <P>Days of the week to perform backup.</p>.
+    * <P>Days of the week to perform backup.</p>
     */
     @SerializedName("PeriodTime")
     @Expose
     private String PeriodTime;
 
     /**
-    * <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
+    * <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-     * Get <P>Backup end time.</p>. 
-     * @return BackupEndTime <P>Backup end time.</p>.
+     * Get <P>Backup end time.</p> 
+     * @return BackupEndTime <P>Backup end time.</p>
      */
     public String getBackupEndTime() {
         return this.BackupEndTime;
     }
 
     /**
-     * Set <P>Backup end time.</p>.
-     * @param BackupEndTime <P>Backup end time.</p>.
+     * Set <P>Backup end time.</p>
+     * @param BackupEndTime <P>Backup end time.</p>
      */
     public void setBackupEndTime(String BackupEndTime) {
         this.BackupEndTime = BackupEndTime;
     }
 
     /**
-     * Get <P>Backup method: physical physical backup, snapshot snapshot backup</p>. 
-     * @return BackupMethod <P>Backup method: physical physical backup, snapshot snapshot backup</p>.
+     * Get <P>Backup method: physical physical backup, snapshot snapshot backup</p> 
+     * @return BackupMethod <P>Backup method: physical physical backup, snapshot snapshot backup</p>
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set <P>Backup method: physical physical backup, snapshot snapshot backup</p>.
-     * @param BackupMethod <P>Backup method: physical physical backup, snapshot snapshot backup</p>.
+     * Set <P>Backup method: physical physical backup, snapshot snapshot backup</p>
+     * @param BackupMethod <P>Backup method: physical physical backup, snapshot snapshot backup</p>
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get <P>Backup start time</p>. 
-     * @return BackupStartTime <P>Backup start time</p>.
+     * Get <P>Backup start time</p> 
+     * @return BackupStartTime <P>Backup start time</p>
      */
     public String getBackupStartTime() {
         return this.BackupStartTime;
     }
 
     /**
-     * Set <P>Backup start time</p>.
-     * @param BackupStartTime <P>Backup start time</p>.
+     * Set <P>Backup start time</p>
+     * @param BackupStartTime <P>Backup start time</p>
      */
     public void setBackupStartTime(String BackupStartTime) {
         this.BackupStartTime = BackupStartTime;
     }
 
     /**
-     * Get <P>Whether full backup is enabled</p>. 
-     * @return EnableFull <P>Whether full backup is enabled</p>.
+     * Get <P>Whether full backup is enabled</p> 
+     * @return EnableFull <P>Whether full backup is enabled</p>
      */
     public Long getEnableFull() {
         return this.EnableFull;
     }
 
     /**
-     * Set <P>Whether full backup is enabled</p>.
-     * @param EnableFull <P>Whether full backup is enabled</p>.
+     * Set <P>Whether full backup is enabled</p>
+     * @param EnableFull <P>Whether full backup is enabled</p>
      */
     public void setEnableFull(Long EnableFull) {
         this.EnableFull = EnableFull;
     }
 
     /**
-     * Get <P>Whether to enable log backup</p>. 
-     * @return EnableLog <P>Whether to enable log backup</p>.
+     * Get <P>Whether to enable log backup</p> 
+     * @return EnableLog <P>Whether to enable log backup</p>
      */
     public Long getEnableLog() {
         return this.EnableLog;
     }
 
     /**
-     * Set <P>Whether to enable log backup</p>.
-     * @param EnableLog <P>Whether to enable log backup</p>.
+     * Set <P>Whether to enable log backup</p>
+     * @param EnableLog <P>Whether to enable log backup</p>
      */
     public void setEnableLog(Long EnableLog) {
         this.EnableLog = EnableLog;
     }
 
     /**
-     * Get <P>Full backup retention time can currently only be set to 7 days.</p>. 
-     * @return FullRetentionPeriod <P>Full backup retention time can currently only be set to 7 days.</p>.
+     * Get <P>Full backup retention time can currently only be set to 7 days.</p> 
+     * @return FullRetentionPeriod <P>Full backup retention time can currently only be set to 7 days.</p>
      */
     public Long getFullRetentionPeriod() {
         return this.FullRetentionPeriod;
     }
 
     /**
-     * Set <P>Full backup retention time can currently only be set to 7 days.</p>.
-     * @param FullRetentionPeriod <P>Full backup retention time can currently only be set to 7 days.</p>.
+     * Set <P>Full backup retention time can currently only be set to 7 days.</p>
+     * @param FullRetentionPeriod <P>Full backup retention time can currently only be set to 7 days.</p>
      */
     public void setFullRetentionPeriod(Long FullRetentionPeriod) {
         this.FullRetentionPeriod = FullRetentionPeriod;
     }
 
     /**
-     * Get <p>Instance ID.</p>. 
-     * @return InstanceId <p>Instance ID.</p>.
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set <p>Instance ID.</p>.
-     * @param InstanceId <p>Instance ID.</p>.
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get <P>Log retention days. currently, can only set retention to 7 days.</p>. 
-     * @return LogRetentionPeriod <P>Log retention days. currently, can only set retention to 7 days.</p>.
+     * Get <P>Log retention days. currently, can only set retention to 7 days.</p> 
+     * @return LogRetentionPeriod <P>Log retention days. currently, can only set retention to 7 days.</p>
      */
     public Long getLogRetentionPeriod() {
         return this.LogRetentionPeriod;
     }
 
     /**
-     * Set <P>Log retention days. currently, can only set retention to 7 days.</p>.
-     * @param LogRetentionPeriod <P>Log retention days. currently, can only set retention to 7 days.</p>.
+     * Set <P>Log retention days. currently, can only set retention to 7 days.</p>
+     * @param LogRetentionPeriod <P>Log retention days. currently, can only set retention to 7 days.</p>
      */
     public void setLogRetentionPeriod(Long LogRetentionPeriod) {
         this.LogRetentionPeriod = LogRetentionPeriod;
     }
 
     /**
-     * Get <P>Days of the week to perform backup.</p>. 
-     * @return PeriodTime <P>Days of the week to perform backup.</p>.
+     * Get <P>Days of the week to perform backup.</p> 
+     * @return PeriodTime <P>Days of the week to perform backup.</p>
      */
     public String getPeriodTime() {
         return this.PeriodTime;
     }
 
     /**
-     * Set <P>Days of the week to perform backup.</p>.
-     * @param PeriodTime <P>Days of the week to perform backup.</p>.
+     * Set <P>Days of the week to perform backup.</p>
+     * @param PeriodTime <P>Days of the week to perform backup.</p>
      */
     public void setPeriodTime(String PeriodTime) {
         this.PeriodTime = PeriodTime;
     }
 
     /**
-     * Get <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>. 
-     * @return StorageType <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
+     * Get <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul> 
+     * @return StorageType <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
-     * @param StorageType <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>.
+     * Set <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
+     * @param StorageType <p>Storage type: COS, SNAPSHOT</p>valid values: <ul><li> COS: COS storage</li><li> SNAPSHOT: cloud disk SNAPSHOT</li></ul>
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
