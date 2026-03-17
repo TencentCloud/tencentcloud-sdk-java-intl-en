@@ -31,7 +31,7 @@ public class ActionSummaryOverviewItem extends AbstractModel {
     private String ActionType;
 
     /**
-    * Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+    * Transaction type, which can be yearly/monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
     */
     @SerializedName("ActionTypeName")
     @Expose
@@ -52,14 +52,14 @@ public class ActionSummaryOverviewItem extends AbstractModel {
     private String RealTotalCost;
 
     /**
-    * Cash credit: The amount paid from the user’s cash account
+    * Cash credit: The amount paid from the user's cash account
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Free credit: The amount paid with the user’s free credit
+    * Free credit: The amount paid with the user's free credit
     */
     @SerializedName("IncentivePayAmount")
     @Expose
@@ -73,7 +73,7 @@ public class ActionSummaryOverviewItem extends AbstractModel {
     private String VoucherPayAmount;
 
     /**
-    * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+    * Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -110,16 +110,16 @@ public class ActionSummaryOverviewItem extends AbstractModel {
     }
 
     /**
-     * Get Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction. 
-     * @return ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * Get Transaction type, which can be yearly/monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction. 
+     * @return ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
-     * @param ActionTypeName Transaction type, which can be monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * Set Transaction type, which can be yearly/monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
+     * @param ActionTypeName Transaction type, which can be yearly/monthly subscription purchase, monthly subscription renewal, or pay-as-you-go deduction.
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
@@ -158,32 +158,32 @@ public class ActionSummaryOverviewItem extends AbstractModel {
     }
 
     /**
-     * Get Cash credit: The amount paid from the user’s cash account 
-     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account
+     * Get Cash credit: The amount paid from the user's cash account 
+     * @return CashPayAmount Cash credit: The amount paid from the user's cash account
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash credit: The amount paid from the user’s cash account
-     * @param CashPayAmount Cash credit: The amount paid from the user’s cash account
+     * Set Cash credit: The amount paid from the user's cash account
+     * @param CashPayAmount Cash credit: The amount paid from the user's cash account
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Free credit: The amount paid with the user’s free credit 
-     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit
+     * Get Free credit: The amount paid with the user's free credit 
+     * @return IncentivePayAmount Free credit: The amount paid with the user's free credit
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Free credit: The amount paid with the user’s free credit
-     * @param IncentivePayAmount Free credit: The amount paid with the user’s free credit
+     * Set Free credit: The amount paid with the user's free credit
+     * @param IncentivePayAmount Free credit: The amount paid with the user's free credit
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
@@ -206,16 +206,16 @@ public class ActionSummaryOverviewItem extends AbstractModel {
     }
 
     /**
-     * Get Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;

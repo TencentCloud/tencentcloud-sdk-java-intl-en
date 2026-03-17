@@ -74,7 +74,7 @@ Valid values: `1` (required), `0` (not required).
     private Long NeedRecordNum;
 
     /**
-    * Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
+    * Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
     */
     @SerializedName("PayMode")
     @Expose
@@ -89,10 +89,10 @@ Valid values: `1` (required), `0` (not required).
 
     /**
     * Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -108,13 +108,13 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
     */
@@ -265,16 +265,16 @@ Valid values: `1` (required), `0` (not required).
     }
 
     /**
-     * Get Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go). 
-     * @return PayMode Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
+     * Get Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go). 
+     * @return PayMode Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
-     * @param PayMode Billing mode, which can be `prePay` (monthly subscription) or `postPay` (pay-as-you-go).
+     * Set Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
+     * @param PayMode Billing mode, which can be `prePay` (yearly/monthly subscription) or `postPay` (pay-as-you-go).
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
@@ -298,10 +298,10 @@ Valid values: `1` (required), `0` (not required).
 
     /**
      * Get Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -317,20 +317,20 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee 
      * @return ActionType Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -346,13 +346,13 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
      */
@@ -362,10 +362,10 @@ Hourly savings plan fee
 
     /**
      * Set Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -381,20 +381,20 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
      * @param ActionType Transaction type. This parameter needs to be input using the `ActionTypeName` value. Valid values:
-Monthly subscription purchase
-Monthly subscription renewal
-Monthly subscription upgrade/downgrade
-Monthly subscription refund 
+Yearly/monthly subscription purchase
+Yearly/monthly subscription renewal
+Yearly/monthly subscription upgrade/downgrade
+Yearly/monthly subscription refund 
 Pay-as-you-go deduction 
 Offline project deduction 
 Offline product deduction 
@@ -410,13 +410,13 @@ Offer deduction
 Offer compensation 
 Pay-as-you-go resource migration in 
 Pay-as-you-go resource migration out 
-Monthly subscription resource migration in 
-Monthly subscription resource migration out 
+Yearly/monthly subscription resource migration in 
+Yearly/monthly subscription resource migration out 
 Prepaid 
 Hourly 
 RI refund 
 Pay-as-you-go reversal 
-Monthly subscription to pay-as-you-go 
+Yearly/monthly subscription to pay-as-you-go 
 Minimum spend deduction 
 Hourly savings plan fee
      */

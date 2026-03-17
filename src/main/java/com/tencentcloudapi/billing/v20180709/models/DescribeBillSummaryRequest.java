@@ -45,6 +45,20 @@ public class DescribeBillSummaryRequest extends AbstractModel {
     private String [] TagKey;
 
     /**
+    * 
+    */
+    @SerializedName("OperateUin")
+    @Expose
+    private String OperateUin;
+
+    /**
+    * 
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
+
+    /**
      * Get Bill month in the format of "yyyy-mm" 
      * @return Month Bill month in the format of "yyyy-mm"
      */
@@ -92,6 +106,38 @@ public class DescribeBillSummaryRequest extends AbstractModel {
         this.TagKey = TagKey;
     }
 
+    /**
+     * Get  
+     * @return OperateUin 
+     */
+    public String getOperateUin() {
+        return this.OperateUin;
+    }
+
+    /**
+     * Set 
+     * @param OperateUin 
+     */
+    public void setOperateUin(String OperateUin) {
+        this.OperateUin = OperateUin;
+    }
+
+    /**
+     * Get  
+     * @return PayerUin 
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * Set 
+     * @param PayerUin 
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
+    }
+
     public DescribeBillSummaryRequest() {
     }
 
@@ -112,6 +158,12 @@ public class DescribeBillSummaryRequest extends AbstractModel {
                 this.TagKey[i] = new String(source.TagKey[i]);
             }
         }
+        if (source.OperateUin != null) {
+            this.OperateUin = new String(source.OperateUin);
+        }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
     }
 
 
@@ -122,6 +174,8 @@ public class DescribeBillSummaryRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Month", this.Month);
         this.setParamSimple(map, prefix + "GroupType", this.GroupType);
         this.setParamArraySimple(map, prefix + "TagKey.", this.TagKey);
+        this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
 
     }
 }

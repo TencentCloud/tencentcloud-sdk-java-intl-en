@@ -45,18 +45,18 @@ public class DescribeMNGMAULineChartRequest extends AbstractModel {
     private String ApplicationId;
 
     /**
-    * Mini program team ID
-    */
-    @SerializedName("MNPTeamId")
-    @Expose
-    private Long MNPTeamId;
-
-    /**
     * Mini program appid, required. When provided, the query is performed based on the mini program.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
+
+    /**
+    * Mini program team ID
+    */
+    @SerializedName("MNPTeamId")
+    @Expose
+    private Long MNPTeamId;
 
     /**
      * Get Type: 0 Non-production data, 1 Production data  
@@ -107,22 +107,6 @@ public class DescribeMNGMAULineChartRequest extends AbstractModel {
     }
 
     /**
-     * Get Mini program team ID 
-     * @return MNPTeamId Mini program team ID
-     */
-    public Long getMNPTeamId() {
-        return this.MNPTeamId;
-    }
-
-    /**
-     * Set Mini program team ID
-     * @param MNPTeamId Mini program team ID
-     */
-    public void setMNPTeamId(Long MNPTeamId) {
-        this.MNPTeamId = MNPTeamId;
-    }
-
-    /**
      * Get Mini program appid, required. When provided, the query is performed based on the mini program. 
      * @return MNPId Mini program appid, required. When provided, the query is performed based on the mini program.
      */
@@ -136,6 +120,22 @@ public class DescribeMNGMAULineChartRequest extends AbstractModel {
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
+    }
+
+    /**
+     * Get Mini program team ID 
+     * @return MNPTeamId Mini program team ID
+     */
+    public Long getMNPTeamId() {
+        return this.MNPTeamId;
+    }
+
+    /**
+     * Set Mini program team ID
+     * @param MNPTeamId Mini program team ID
+     */
+    public void setMNPTeamId(Long MNPTeamId) {
+        this.MNPTeamId = MNPTeamId;
     }
 
     public DescribeMNGMAULineChartRequest() {
@@ -155,11 +155,11 @@ public class DescribeMNGMAULineChartRequest extends AbstractModel {
         if (source.ApplicationId != null) {
             this.ApplicationId = new String(source.ApplicationId);
         }
-        if (source.MNPTeamId != null) {
-            this.MNPTeamId = new Long(source.MNPTeamId);
-        }
         if (source.MNPId != null) {
             this.MNPId = new String(source.MNPId);
+        }
+        if (source.MNPTeamId != null) {
+            this.MNPTeamId = new Long(source.MNPTeamId);
         }
     }
 
@@ -171,8 +171,8 @@ public class DescribeMNGMAULineChartRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataType", this.DataType);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
         this.setParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-        this.setParamSimple(map, prefix + "MNPTeamId", this.MNPTeamId);
         this.setParamSimple(map, prefix + "MNPId", this.MNPId);
+        this.setParamSimple(map, prefix + "MNPTeamId", this.MNPTeamId);
 
     }
 }
