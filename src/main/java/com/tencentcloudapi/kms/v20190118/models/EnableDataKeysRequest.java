@@ -31,6 +31,13 @@ public class EnableDataKeysRequest extends AbstractModel {
     private String [] DataKeyIds;
 
     /**
+    * Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+    */
+    @SerializedName("MemberAccount")
+    @Expose
+    private MemberAccount MemberAccount;
+
+    /**
      * Get The Id list of datakeys that need to be batch enabled supports a maximum of 100 data keys. 
      * @return DataKeyIds The Id list of datakeys that need to be batch enabled supports a maximum of 100 data keys.
      */
@@ -44,6 +51,22 @@ public class EnableDataKeysRequest extends AbstractModel {
      */
     public void setDataKeyIds(String [] DataKeyIds) {
         this.DataKeyIds = DataKeyIds;
+    }
+
+    /**
+     * Get Trusted service member account information. valid at that time when the current account is admin or delegated admin. 
+     * @return MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public MemberAccount getMemberAccount() {
+        return this.MemberAccount;
+    }
+
+    /**
+     * Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     * @param MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public void setMemberAccount(MemberAccount MemberAccount) {
+        this.MemberAccount = MemberAccount;
     }
 
     public EnableDataKeysRequest() {
@@ -60,6 +83,9 @@ public class EnableDataKeysRequest extends AbstractModel {
                 this.DataKeyIds[i] = new String(source.DataKeyIds[i]);
             }
         }
+        if (source.MemberAccount != null) {
+            this.MemberAccount = new MemberAccount(source.MemberAccount);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class EnableDataKeysRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "DataKeyIds.", this.DataKeyIds);
+        this.setParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
 
     }
 }

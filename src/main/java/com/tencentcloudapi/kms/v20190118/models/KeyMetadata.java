@@ -199,6 +199,27 @@ public class KeyMetadata extends AbstractModel {
     private String SourceHsmClusterId;
 
     /**
+    * Member account appId.
+    */
+    @SerializedName("AccountAppId")
+    @Expose
+    private Long AccountAppId;
+
+    /**
+    * Member account UIN
+    */
+    @SerializedName("AccountUin")
+    @Expose
+    private Long AccountUin;
+
+    /**
+    * Member account name.
+    */
+    @SerializedName("AccountName")
+    @Expose
+    private String AccountName;
+
+    /**
      * Get Globally unique CMK ID 
      * @return KeyId Globally unique CMK ID
      */
@@ -598,6 +619,54 @@ public class KeyMetadata extends AbstractModel {
         this.SourceHsmClusterId = SourceHsmClusterId;
     }
 
+    /**
+     * Get Member account appId. 
+     * @return AccountAppId Member account appId.
+     */
+    public Long getAccountAppId() {
+        return this.AccountAppId;
+    }
+
+    /**
+     * Set Member account appId.
+     * @param AccountAppId Member account appId.
+     */
+    public void setAccountAppId(Long AccountAppId) {
+        this.AccountAppId = AccountAppId;
+    }
+
+    /**
+     * Get Member account UIN 
+     * @return AccountUin Member account UIN
+     */
+    public Long getAccountUin() {
+        return this.AccountUin;
+    }
+
+    /**
+     * Set Member account UIN
+     * @param AccountUin Member account UIN
+     */
+    public void setAccountUin(Long AccountUin) {
+        this.AccountUin = AccountUin;
+    }
+
+    /**
+     * Get Member account name. 
+     * @return AccountName Member account name.
+     */
+    public String getAccountName() {
+        return this.AccountName;
+    }
+
+    /**
+     * Set Member account name.
+     * @param AccountName Member account name.
+     */
+    public void setAccountName(String AccountName) {
+        this.AccountName = AccountName;
+    }
+
     public KeyMetadata() {
     }
 
@@ -681,6 +750,15 @@ public class KeyMetadata extends AbstractModel {
         if (source.SourceHsmClusterId != null) {
             this.SourceHsmClusterId = new String(source.SourceHsmClusterId);
         }
+        if (source.AccountAppId != null) {
+            this.AccountAppId = new Long(source.AccountAppId);
+        }
+        if (source.AccountUin != null) {
+            this.AccountUin = new Long(source.AccountUin);
+        }
+        if (source.AccountName != null) {
+            this.AccountName = new String(source.AccountName);
+        }
     }
 
 
@@ -713,6 +791,9 @@ public class KeyMetadata extends AbstractModel {
         this.setParamSimple(map, prefix + "SyncStartTime", this.SyncStartTime);
         this.setParamSimple(map, prefix + "SyncEndTime", this.SyncEndTime);
         this.setParamSimple(map, prefix + "SourceHsmClusterId", this.SourceHsmClusterId);
+        this.setParamSimple(map, prefix + "AccountAppId", this.AccountAppId);
+        this.setParamSimple(map, prefix + "AccountUin", this.AccountUin);
+        this.setParamSimple(map, prefix + "AccountName", this.AccountName);
 
     }
 }

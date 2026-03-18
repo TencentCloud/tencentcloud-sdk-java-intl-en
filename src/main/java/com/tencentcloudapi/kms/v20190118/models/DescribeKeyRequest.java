@@ -31,6 +31,13 @@ public class DescribeKeyRequest extends AbstractModel {
     private String KeyId;
 
     /**
+    * Trusted service member account information.
+    */
+    @SerializedName("MemberAccount")
+    @Expose
+    private MemberAccount MemberAccount;
+
+    /**
      * Get Globally unique CMK ID 
      * @return KeyId Globally unique CMK ID
      */
@@ -46,6 +53,22 @@ public class DescribeKeyRequest extends AbstractModel {
         this.KeyId = KeyId;
     }
 
+    /**
+     * Get Trusted service member account information. 
+     * @return MemberAccount Trusted service member account information.
+     */
+    public MemberAccount getMemberAccount() {
+        return this.MemberAccount;
+    }
+
+    /**
+     * Set Trusted service member account information.
+     * @param MemberAccount Trusted service member account information.
+     */
+    public void setMemberAccount(MemberAccount MemberAccount) {
+        this.MemberAccount = MemberAccount;
+    }
+
     public DescribeKeyRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DescribeKeyRequest extends AbstractModel {
         if (source.KeyId != null) {
             this.KeyId = new String(source.KeyId);
         }
+        if (source.MemberAccount != null) {
+            this.MemberAccount = new MemberAccount(source.MemberAccount);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DescribeKeyRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
+        this.setParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
 
     }
 }

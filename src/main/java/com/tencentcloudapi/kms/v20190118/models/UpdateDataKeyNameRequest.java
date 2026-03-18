@@ -38,6 +38,13 @@ public class UpdateDataKeyNameRequest extends AbstractModel {
     private String DataKeyName;
 
     /**
+    * Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+    */
+    @SerializedName("MemberAccount")
+    @Expose
+    private MemberAccount MemberAccount;
+
+    /**
      * Get Unique identifier of a data key. 
      * @return DataKeyId Unique identifier of a data key.
      */
@@ -69,6 +76,22 @@ public class UpdateDataKeyNameRequest extends AbstractModel {
         this.DataKeyName = DataKeyName;
     }
 
+    /**
+     * Get Trusted service member account information. valid at that time when the current account is admin or delegated admin. 
+     * @return MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public MemberAccount getMemberAccount() {
+        return this.MemberAccount;
+    }
+
+    /**
+     * Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     * @param MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public void setMemberAccount(MemberAccount MemberAccount) {
+        this.MemberAccount = MemberAccount;
+    }
+
     public UpdateDataKeyNameRequest() {
     }
 
@@ -83,6 +106,9 @@ public class UpdateDataKeyNameRequest extends AbstractModel {
         if (source.DataKeyName != null) {
             this.DataKeyName = new String(source.DataKeyName);
         }
+        if (source.MemberAccount != null) {
+            this.MemberAccount = new MemberAccount(source.MemberAccount);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class UpdateDataKeyNameRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DataKeyId", this.DataKeyId);
         this.setParamSimple(map, prefix + "DataKeyName", this.DataKeyName);
+        this.setParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
 
     }
 }

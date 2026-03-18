@@ -31,6 +31,13 @@ public class DisableDataKeyRequest extends AbstractModel {
     private String DataKeyId;
 
     /**
+    * Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+    */
+    @SerializedName("MemberAccount")
+    @Expose
+    private MemberAccount MemberAccount;
+
+    /**
      * Get Specifies the unique identifier of the data key. 
      * @return DataKeyId Specifies the unique identifier of the data key.
      */
@@ -46,6 +53,22 @@ public class DisableDataKeyRequest extends AbstractModel {
         this.DataKeyId = DataKeyId;
     }
 
+    /**
+     * Get Trusted service member account information. valid at that time when the current account is admin or delegated admin. 
+     * @return MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public MemberAccount getMemberAccount() {
+        return this.MemberAccount;
+    }
+
+    /**
+     * Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     * @param MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public void setMemberAccount(MemberAccount MemberAccount) {
+        this.MemberAccount = MemberAccount;
+    }
+
     public DisableDataKeyRequest() {
     }
 
@@ -57,6 +80,9 @@ public class DisableDataKeyRequest extends AbstractModel {
         if (source.DataKeyId != null) {
             this.DataKeyId = new String(source.DataKeyId);
         }
+        if (source.MemberAccount != null) {
+            this.MemberAccount = new MemberAccount(source.MemberAccount);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class DisableDataKeyRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DataKeyId", this.DataKeyId);
+        this.setParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
 
     }
 }

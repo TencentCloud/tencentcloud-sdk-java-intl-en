@@ -24,9 +24,7 @@ import java.util.HashMap;
 public class GeneralAccurateOCRRequest extends AbstractModel {
 
     /**
-    * Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+    * The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
     */
     @SerializedName("ImageBase64")
     @Expose
@@ -42,14 +40,7 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     private String ImageUrl;
 
     /**
-    * Whether to return the character information. Default value: `false`
-    */
-    @SerializedName("IsWords")
-    @Expose
-    private Boolean IsWords;
-
-    /**
-    * Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+    * Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
     */
     @SerializedName("EnableDetectSplit")
     @Expose
@@ -70,24 +61,30 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     private Long PdfPageNumber;
 
     /**
-     * Get Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used. 
-     * @return ImageBase64 Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+    * Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+    */
+    @SerializedName("EnableDetectText")
+    @Expose
+    private Boolean EnableDetectText;
+
+    /**
+    * Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
+    */
+    @SerializedName("ConfigID")
+    @Expose
+    private String ConfigID;
+
+    /**
+     * Get The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used. 
+     * @return ImageBase64 The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
-     * @param ImageBase64 Base64-encoded value of image.
-The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
-Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+     * Set The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
+     * @param ImageBase64 The Base64 value of an image/PDF. the image must be no more than 10M after encoding, with a resolution of 600*800 or higher recommended. supported formats include PNG, JPG, JPEG, BMP, and PDF. either ImageUrl or ImageBase64 must be provided. if both are provided, only ImageUrl will be used.
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
@@ -118,32 +115,16 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     }
 
     /**
-     * Get Whether to return the character information. Default value: `false` 
-     * @return IsWords Whether to return the character information. Default value: `false`
-     */
-    public Boolean getIsWords() {
-        return this.IsWords;
-    }
-
-    /**
-     * Set Whether to return the character information. Default value: `false`
-     * @param IsWords Whether to return the character information. Default value: `false`
-     */
-    public void setIsWords(Boolean IsWords) {
-        this.IsWords = IsWords;
-    }
-
-    /**
-     * Get Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default. 
-     * @return EnableDetectSplit Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+     * Get Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR. 
+     * @return EnableDetectSplit Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
      */
     public Boolean getEnableDetectSplit() {
         return this.EnableDetectSplit;
     }
 
     /**
-     * Set Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
-     * @param EnableDetectSplit Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+     * Set Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
+     * @param EnableDetectSplit Whether to enable original image slicing detection. once enabled, it improves recognition accuracy in scenarios where "the overall image area is large but the single character area is small" (for example: exam paper). default: disabled. note: only supported when ConfigID is configured as OCR.
      */
     public void setEnableDetectSplit(Boolean EnableDetectSplit) {
         this.EnableDetectSplit = EnableDetectSplit;
@@ -181,6 +162,38 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
         this.PdfPageNumber = PdfPageNumber;
     }
 
+    /**
+     * Get Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text. 
+     * @return EnableDetectText Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+     */
+    public Boolean getEnableDetectText() {
+        return this.EnableDetectText;
+    }
+
+    /**
+     * Set Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+     * @param EnableDetectText Text detection switch, default is true. set to false to directly perform single-line text recognition, suitable for image scenarios containing only forward single-line text.
+     */
+    public void setEnableDetectText(Boolean EnableDetectText) {
+        this.EnableDetectText = EnableDetectText;
+    }
+
+    /**
+     * Get Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR. 
+     * @return ConfigID Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
+     */
+    public String getConfigID() {
+        return this.ConfigID;
+    }
+
+    /**
+     * Set Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
+     * @param ConfigID Configuration ID supports: OCR - general scenario MulOCR - multilingual scenario. default value is OCR.
+     */
+    public void setConfigID(String ConfigID) {
+        this.ConfigID = ConfigID;
+    }
+
     public GeneralAccurateOCRRequest() {
     }
 
@@ -195,9 +208,6 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
         if (source.ImageUrl != null) {
             this.ImageUrl = new String(source.ImageUrl);
         }
-        if (source.IsWords != null) {
-            this.IsWords = new Boolean(source.IsWords);
-        }
         if (source.EnableDetectSplit != null) {
             this.EnableDetectSplit = new Boolean(source.EnableDetectSplit);
         }
@@ -206,6 +216,12 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
         }
         if (source.PdfPageNumber != null) {
             this.PdfPageNumber = new Long(source.PdfPageNumber);
+        }
+        if (source.EnableDetectText != null) {
+            this.EnableDetectText = new Boolean(source.EnableDetectText);
+        }
+        if (source.ConfigID != null) {
+            this.ConfigID = new String(source.ConfigID);
         }
     }
 
@@ -216,10 +232,11 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
         this.setParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
-        this.setParamSimple(map, prefix + "IsWords", this.IsWords);
         this.setParamSimple(map, prefix + "EnableDetectSplit", this.EnableDetectSplit);
         this.setParamSimple(map, prefix + "IsPdf", this.IsPdf);
         this.setParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+        this.setParamSimple(map, prefix + "EnableDetectText", this.EnableDetectText);
+        this.setParamSimple(map, prefix + "ConfigID", this.ConfigID);
 
     }
 }

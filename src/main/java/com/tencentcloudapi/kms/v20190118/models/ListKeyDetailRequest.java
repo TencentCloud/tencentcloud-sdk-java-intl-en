@@ -94,6 +94,13 @@ public class ListKeyDetailRequest extends AbstractModel {
     private String HsmClusterId;
 
     /**
+    * Array of trusted service member account information.
+    */
+    @SerializedName("MemberAccounts")
+    @Expose
+    private MemberAccount [] MemberAccounts;
+
+    /**
      * Get This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0. 
      * @return Offset This parameter has the same meaning of the `Offset` in an SQL query, indicating that this acquisition starts from the "No. Offset value" element of the array arranged in a certain order. The default value is 0.
      */
@@ -253,6 +260,22 @@ public class ListKeyDetailRequest extends AbstractModel {
         this.HsmClusterId = HsmClusterId;
     }
 
+    /**
+     * Get Array of trusted service member account information. 
+     * @return MemberAccounts Array of trusted service member account information.
+     */
+    public MemberAccount [] getMemberAccounts() {
+        return this.MemberAccounts;
+    }
+
+    /**
+     * Set Array of trusted service member account information.
+     * @param MemberAccounts Array of trusted service member account information.
+     */
+    public void setMemberAccounts(MemberAccount [] MemberAccounts) {
+        this.MemberAccounts = MemberAccounts;
+    }
+
     public ListKeyDetailRequest() {
     }
 
@@ -294,6 +317,12 @@ public class ListKeyDetailRequest extends AbstractModel {
         if (source.HsmClusterId != null) {
             this.HsmClusterId = new String(source.HsmClusterId);
         }
+        if (source.MemberAccounts != null) {
+            this.MemberAccounts = new MemberAccount[source.MemberAccounts.length];
+            for (int i = 0; i < source.MemberAccounts.length; i++) {
+                this.MemberAccounts[i] = new MemberAccount(source.MemberAccounts[i]);
+            }
+        }
     }
 
 
@@ -311,6 +340,7 @@ public class ListKeyDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         this.setParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
+        this.setParamArrayObj(map, prefix + "MemberAccounts.", this.MemberAccounts);
 
     }
 }

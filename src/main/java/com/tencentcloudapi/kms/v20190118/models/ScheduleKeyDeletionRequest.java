@@ -38,6 +38,13 @@ public class ScheduleKeyDeletionRequest extends AbstractModel {
     private Long PendingWindowInDays;
 
     /**
+    * Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+    */
+    @SerializedName("MemberAccount")
+    @Expose
+    private MemberAccount MemberAccount;
+
+    /**
      * Get Unique CMK ID 
      * @return KeyId Unique CMK ID
      */
@@ -69,6 +76,22 @@ public class ScheduleKeyDeletionRequest extends AbstractModel {
         this.PendingWindowInDays = PendingWindowInDays;
     }
 
+    /**
+     * Get Trusted service member account information. valid at that time when the current account is admin or delegated admin. 
+     * @return MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public MemberAccount getMemberAccount() {
+        return this.MemberAccount;
+    }
+
+    /**
+     * Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     * @param MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public void setMemberAccount(MemberAccount MemberAccount) {
+        this.MemberAccount = MemberAccount;
+    }
+
     public ScheduleKeyDeletionRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ScheduleKeyDeletionRequest extends AbstractModel {
         if (source.PendingWindowInDays != null) {
             this.PendingWindowInDays = new Long(source.PendingWindowInDays);
         }
+        if (source.MemberAccount != null) {
+            this.MemberAccount = new MemberAccount(source.MemberAccount);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ScheduleKeyDeletionRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "PendingWindowInDays", this.PendingWindowInDays);
+        this.setParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
 
     }
 }

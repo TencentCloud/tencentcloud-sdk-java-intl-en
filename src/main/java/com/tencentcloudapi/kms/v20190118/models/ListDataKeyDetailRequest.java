@@ -101,6 +101,13 @@ public class ListDataKeyDetailRequest extends AbstractModel {
     private TagFilter [] TagFilters;
 
     /**
+    * Array of member account information.
+    */
+    @SerializedName("MemberAccounts")
+    @Expose
+    private MemberAccount [] MemberAccounts;
+
+    /**
      * Get Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0. 
      * @return Offset Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
      */
@@ -276,6 +283,22 @@ public class ListDataKeyDetailRequest extends AbstractModel {
         this.TagFilters = TagFilters;
     }
 
+    /**
+     * Get Array of member account information. 
+     * @return MemberAccounts Array of member account information.
+     */
+    public MemberAccount [] getMemberAccounts() {
+        return this.MemberAccounts;
+    }
+
+    /**
+     * Set Array of member account information.
+     * @param MemberAccounts Array of member account information.
+     */
+    public void setMemberAccounts(MemberAccount [] MemberAccounts) {
+        this.MemberAccounts = MemberAccounts;
+    }
+
     public ListDataKeyDetailRequest() {
     }
 
@@ -320,6 +343,12 @@ public class ListDataKeyDetailRequest extends AbstractModel {
                 this.TagFilters[i] = new TagFilter(source.TagFilters[i]);
             }
         }
+        if (source.MemberAccounts != null) {
+            this.MemberAccounts = new MemberAccount[source.MemberAccounts.length];
+            for (int i = 0; i < source.MemberAccounts.length; i++) {
+                this.MemberAccounts[i] = new MemberAccount(source.MemberAccounts[i]);
+            }
+        }
     }
 
 
@@ -338,6 +367,7 @@ public class ListDataKeyDetailRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "DataKeyLen", this.DataKeyLen);
         this.setParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+        this.setParamArrayObj(map, prefix + "MemberAccounts.", this.MemberAccounts);
 
     }
 }

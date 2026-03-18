@@ -31,6 +31,13 @@ public class DescribeKeysRequest extends AbstractModel {
     private String [] KeyIds;
 
     /**
+    * Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+    */
+    @SerializedName("MemberAccount")
+    @Expose
+    private MemberAccount MemberAccount;
+
+    /**
      * Get List of IDs of the CMKs to be queried in batches. Up to 100 `KeyId` values are supported in one query. 
      * @return KeyIds List of IDs of the CMKs to be queried in batches. Up to 100 `KeyId` values are supported in one query.
      */
@@ -44,6 +51,22 @@ public class DescribeKeysRequest extends AbstractModel {
      */
     public void setKeyIds(String [] KeyIds) {
         this.KeyIds = KeyIds;
+    }
+
+    /**
+     * Get Trusted service member account information. valid at that time when the current account is admin or delegated admin. 
+     * @return MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public MemberAccount getMemberAccount() {
+        return this.MemberAccount;
+    }
+
+    /**
+     * Set Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     * @param MemberAccount Trusted service member account information. valid at that time when the current account is admin or delegated admin.
+     */
+    public void setMemberAccount(MemberAccount MemberAccount) {
+        this.MemberAccount = MemberAccount;
     }
 
     public DescribeKeysRequest() {
@@ -60,6 +83,9 @@ public class DescribeKeysRequest extends AbstractModel {
                 this.KeyIds[i] = new String(source.KeyIds[i]);
             }
         }
+        if (source.MemberAccount != null) {
+            this.MemberAccount = new MemberAccount(source.MemberAccount);
+        }
     }
 
 
@@ -68,6 +94,7 @@ public class DescribeKeysRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+        this.setParamObj(map, prefix + "MemberAccount.", this.MemberAccount);
 
     }
 }
