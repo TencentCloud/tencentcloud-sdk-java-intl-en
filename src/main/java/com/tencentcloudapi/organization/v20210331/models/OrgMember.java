@@ -24,64 +24,56 @@ import java.util.HashMap;
 public class OrgMember extends AbstractModel {
 
     /**
-    * Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Member UIN.
     */
     @SerializedName("MemberUin")
     @Expose
     private Long MemberUin;
 
     /**
-    * Member name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Member name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Member type. Valid values: `Invite` (invited); `Create` (created).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Member type. Invite: invited, Create: created.
     */
     @SerializedName("MemberType")
     @Expose
     private String MemberType;
 
     /**
-    * Relationship policy type
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Relationship policy type.
     */
     @SerializedName("OrgPolicyType")
     @Expose
     private String OrgPolicyType;
 
     /**
-    * Relationship policy name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Relational policy name.
     */
     @SerializedName("OrgPolicyName")
     @Expose
     private String OrgPolicyName;
 
     /**
-    * Relationship policy permission
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Relationship policy permission.
     */
     @SerializedName("OrgPermission")
     @Expose
     private OrgPermission [] OrgPermission;
 
     /**
-    * Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Node ID.
     */
     @SerializedName("NodeId")
     @Expose
     private Long NodeId;
 
     /**
-    * Node name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Node name.
     */
     @SerializedName("NodeName")
     @Expose
@@ -89,7 +81,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Remark")
     @Expose
@@ -97,63 +88,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Update date
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to allow a member to exit. Valid values: Allow, Denied.
     */
     @SerializedName("IsAllowQuit")
     @Expose
     private String IsAllowQuit;
 
     /**
-    * Payer UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Proxy payer UIN.
     */
     @SerializedName("PayUin")
     @Expose
     private String PayUin;
 
     /**
-    * Payer name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Proxy payer name.
     */
     @SerializedName("PayName")
     @Expose
     private String PayName;
 
     /**
-    * Management identity
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Admin identity.
     */
     @SerializedName("OrgIdentity")
     @Expose
     private MemberIdentity [] OrgIdentity;
 
     /**
-    * Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Security information binding status  Unbound: Unbound, to be activated: Valid, binding succeeded: Success, binding Failed: Failed.
     */
     @SerializedName("BindStatus")
     @Expose
     private String BindStatus;
 
     /**
-    * Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Member's permission status. Valid values: Confirmed, UnConfirmed.
     */
     @SerializedName("PermissionStatus")
     @Expose
@@ -161,177 +144,149 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get Member UIN
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MemberUin Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Tencent cloud nickname.
+    */
+    @SerializedName("NickName")
+    @Expose
+    private String NickName;
+
+    /**
+     * Get Member UIN. 
+     * @return MemberUin Member UIN.
      */
     public Long getMemberUin() {
         return this.MemberUin;
     }
 
     /**
-     * Set Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MemberUin Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Member UIN.
+     * @param MemberUin Member UIN.
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
     }
 
     /**
-     * Get Member name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Member name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Member name. 
+     * @return Name Member name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Member name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Member name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Member name.
+     * @param Name Member name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Member type. Valid values: `Invite` (invited); `Create` (created).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MemberType Member type. Valid values: `Invite` (invited); `Create` (created).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Member type. Invite: invited, Create: created. 
+     * @return MemberType Member type. Invite: invited, Create: created.
      */
     public String getMemberType() {
         return this.MemberType;
     }
 
     /**
-     * Set Member type. Valid values: `Invite` (invited); `Create` (created).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MemberType Member type. Valid values: `Invite` (invited); `Create` (created).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Member type. Invite: invited, Create: created.
+     * @param MemberType Member type. Invite: invited, Create: created.
      */
     public void setMemberType(String MemberType) {
         this.MemberType = MemberType;
     }
 
     /**
-     * Get Relationship policy type
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrgPolicyType Relationship policy type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Relationship policy type. 
+     * @return OrgPolicyType Relationship policy type.
      */
     public String getOrgPolicyType() {
         return this.OrgPolicyType;
     }
 
     /**
-     * Set Relationship policy type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrgPolicyType Relationship policy type
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Relationship policy type.
+     * @param OrgPolicyType Relationship policy type.
      */
     public void setOrgPolicyType(String OrgPolicyType) {
         this.OrgPolicyType = OrgPolicyType;
     }
 
     /**
-     * Get Relationship policy name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrgPolicyName Relationship policy name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Relational policy name. 
+     * @return OrgPolicyName Relational policy name.
      */
     public String getOrgPolicyName() {
         return this.OrgPolicyName;
     }
 
     /**
-     * Set Relationship policy name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrgPolicyName Relationship policy name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Relational policy name.
+     * @param OrgPolicyName Relational policy name.
      */
     public void setOrgPolicyName(String OrgPolicyName) {
         this.OrgPolicyName = OrgPolicyName;
     }
 
     /**
-     * Get Relationship policy permission
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrgPermission Relationship policy permission
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Relationship policy permission. 
+     * @return OrgPermission Relationship policy permission.
      */
     public OrgPermission [] getOrgPermission() {
         return this.OrgPermission;
     }
 
     /**
-     * Set Relationship policy permission
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrgPermission Relationship policy permission
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Relationship policy permission.
+     * @param OrgPermission Relationship policy permission.
      */
     public void setOrgPermission(OrgPermission [] OrgPermission) {
         this.OrgPermission = OrgPermission;
     }
 
     /**
-     * Get Node ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NodeId Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Node ID. 
+     * @return NodeId Node ID.
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NodeId Node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Node ID.
+     * @param NodeId Node ID.
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get Node name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NodeName Node name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Node name. 
+     * @return NodeName Node name.
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set Node name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NodeName Node name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Node name.
+     * @param NodeName Node name.
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get Remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Remarks 
      * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemark() {
         return this.Remark;
@@ -339,19 +294,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -359,159 +310,127 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Update date 
+     * @return UpdateTime Update date
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Update date
+     * @param UpdateTime Update date
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsAllowQuit Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to allow a member to exit. Valid values: Allow, Denied. 
+     * @return IsAllowQuit Whether to allow a member to exit. Valid values: Allow, Denied.
      */
     public String getIsAllowQuit() {
         return this.IsAllowQuit;
     }
 
     /**
-     * Set Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsAllowQuit Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to allow a member to exit. Valid values: Allow, Denied.
+     * @param IsAllowQuit Whether to allow a member to exit. Valid values: Allow, Denied.
      */
     public void setIsAllowQuit(String IsAllowQuit) {
         this.IsAllowQuit = IsAllowQuit;
     }
 
     /**
-     * Get Payer UIN
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayUin Payer UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Proxy payer UIN. 
+     * @return PayUin Proxy payer UIN.
      */
     public String getPayUin() {
         return this.PayUin;
     }
 
     /**
-     * Set Payer UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PayUin Payer UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Proxy payer UIN.
+     * @param PayUin Proxy payer UIN.
      */
     public void setPayUin(String PayUin) {
         this.PayUin = PayUin;
     }
 
     /**
-     * Get Payer name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayName Payer name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Proxy payer name. 
+     * @return PayName Proxy payer name.
      */
     public String getPayName() {
         return this.PayName;
     }
 
     /**
-     * Set Payer name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PayName Payer name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Proxy payer name.
+     * @param PayName Proxy payer name.
      */
     public void setPayName(String PayName) {
         this.PayName = PayName;
     }
 
     /**
-     * Get Management identity
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrgIdentity Management identity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Admin identity. 
+     * @return OrgIdentity Admin identity.
      */
     public MemberIdentity [] getOrgIdentity() {
         return this.OrgIdentity;
     }
 
     /**
-     * Set Management identity
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrgIdentity Management identity
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Admin identity.
+     * @param OrgIdentity Admin identity.
      */
     public void setOrgIdentity(MemberIdentity [] OrgIdentity) {
         this.OrgIdentity = OrgIdentity;
     }
 
     /**
-     * Get Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BindStatus Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Security information binding status  Unbound: Unbound, to be activated: Valid, binding succeeded: Success, binding Failed: Failed. 
+     * @return BindStatus Security information binding status  Unbound: Unbound, to be activated: Valid, binding succeeded: Success, binding Failed: Failed.
      */
     public String getBindStatus() {
         return this.BindStatus;
     }
 
     /**
-     * Set Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BindStatus Security information binding status. Valid values: `Unbound`, `Valid`, `Success`, `Failed`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Security information binding status  Unbound: Unbound, to be activated: Valid, binding succeeded: Success, binding Failed: Failed.
+     * @param BindStatus Security information binding status  Unbound: Unbound, to be activated: Valid, binding succeeded: Success, binding Failed: Failed.
      */
     public void setBindStatus(String BindStatus) {
         this.BindStatus = BindStatus;
     }
 
     /**
-     * Get Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PermissionStatus Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Member's permission status. Valid values: Confirmed, UnConfirmed. 
+     * @return PermissionStatus Member's permission status. Valid values: Confirmed, UnConfirmed.
      */
     public String getPermissionStatus() {
         return this.PermissionStatus;
     }
 
     /**
-     * Set Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PermissionStatus Member permission status. Valid values: `Confirmed`, `UnConfirmed`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Member's permission status. Valid values: Confirmed, UnConfirmed.
+     * @param PermissionStatus Member's permission status. Valid values: Confirmed, UnConfirmed.
      */
     public void setPermissionStatus(String PermissionStatus) {
         this.PermissionStatus = PermissionStatus;
     }
 
     /**
-     * Get Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Member tag list. 
      * @return Tags Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -519,12 +438,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tags Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get Tencent cloud nickname. 
+     * @return NickName Tencent cloud nickname.
+     */
+    public String getNickName() {
+        return this.NickName;
+    }
+
+    /**
+     * Set Tencent cloud nickname.
+     * @param NickName Tencent cloud nickname.
+     */
+    public void setNickName(String NickName) {
+        this.NickName = NickName;
     }
 
     public OrgMember() {
@@ -598,6 +531,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.NickName != null) {
+            this.NickName = new String(source.NickName);
+        }
     }
 
 
@@ -623,6 +559,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BindStatus", this.BindStatus);
         this.setParamSimple(map, prefix + "PermissionStatus", this.PermissionStatus);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "NickName", this.NickName);
 
     }
 }

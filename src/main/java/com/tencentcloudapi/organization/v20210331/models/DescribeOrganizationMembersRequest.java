@@ -73,6 +73,20 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
+    * Organizational unit ID.
+    */
+    @SerializedName("NodeId")
+    @Expose
+    private Long NodeId;
+
+    /**
+    * Organizational unit name.
+    */
+    @SerializedName("NodeName")
+    @Expose
+    private String NodeName;
+
+    /**
      * Get Offset, which is an integer multiple of the value of `Limit`. Default value: `0`. 
      * @return Offset Offset, which is an integer multiple of the value of `Limit`. Default value: `0`.
      */
@@ -184,6 +198,38 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get Organizational unit ID. 
+     * @return NodeId Organizational unit ID.
+     */
+    public Long getNodeId() {
+        return this.NodeId;
+    }
+
+    /**
+     * Set Organizational unit ID.
+     * @param NodeId Organizational unit ID.
+     */
+    public void setNodeId(Long NodeId) {
+        this.NodeId = NodeId;
+    }
+
+    /**
+     * Get Organizational unit name. 
+     * @return NodeName Organizational unit name.
+     */
+    public String getNodeName() {
+        return this.NodeName;
+    }
+
+    /**
+     * Set Organizational unit name.
+     * @param NodeName Organizational unit name.
+     */
+    public void setNodeName(String NodeName) {
+        this.NodeName = NodeName;
+    }
+
     public DescribeOrganizationMembersRequest() {
     }
 
@@ -216,6 +262,12 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.NodeId != null) {
+            this.NodeId = new Long(source.NodeId);
+        }
+        if (source.NodeName != null) {
+            this.NodeName = new String(source.NodeName);
+        }
     }
 
 
@@ -230,6 +282,8 @@ public class DescribeOrganizationMembersRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AuthName", this.AuthName);
         this.setParamSimple(map, prefix + "Product", this.Product);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "NodeId", this.NodeId);
+        this.setParamSimple(map, prefix + "NodeName", this.NodeName);
 
     }
 }

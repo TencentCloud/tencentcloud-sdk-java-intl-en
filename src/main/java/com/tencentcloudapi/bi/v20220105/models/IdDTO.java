@@ -57,6 +57,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TranStatus")
@@ -145,8 +149,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return TranStatus Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTranStatus() {
@@ -155,8 +167,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param TranStatus Transaction status.
+Value range:.
+Processing.
+2: processing is successful.
+3: processing failure.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTranStatus(Long TranStatus) {

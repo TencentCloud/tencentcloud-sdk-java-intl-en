@@ -25,8 +25,6 @@ public class Tag extends AbstractModel {
 
     /**
     * Tag key
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TagKey")
     @Expose
@@ -34,20 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Tag value
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-     * Get Tag key
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Tag key 
      * @return TagKey Tag key
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTagKey() {
         return this.TagKey;
@@ -55,23 +47,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Tag key
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TagKey Tag key
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get Tag value
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Tag value 
      * @return TagValue Tag value
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTagValue() {
         return this.TagValue;
@@ -79,11 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Tag value
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TagValue Tag value
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeOrganizationNodesResponse extends AbstractModel {
 
     /**
-    * Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total quantity.
     */
     @SerializedName("Total")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * List details.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Items")
     @Expose
@@ -47,30 +45,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Total Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total quantity. 
+     * @return Total Total quantity.
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Total Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total quantity.
+     * @param Total Total quantity.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get List details.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List details. 
      * @return Items List details.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public OrgNode [] getItems() {
         return this.Items;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List details.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Items List details.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItems(OrgNode [] Items) {
         this.Items = Items;

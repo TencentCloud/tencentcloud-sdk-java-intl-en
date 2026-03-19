@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeOrganizationMemberPoliciesResponse extends AbstractModel {
 
     /**
-    * List.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Member access policy list.
     */
     @SerializedName("Items")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Total")
     @Expose
@@ -47,30 +45,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Items List.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Member access policy list. 
+     * @return Items Member access policy list.
      */
     public OrgMemberPolicy [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set List.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Items List.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Member access policy list.
+     * @param Items Member access policy list.
      */
     public void setItems(OrgMemberPolicy [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get Total number.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number. 
      * @return Total Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Total Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotal(Long Total) {
         this.Total = Total;

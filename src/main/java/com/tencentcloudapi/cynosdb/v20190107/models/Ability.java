@@ -80,6 +80,34 @@ public class Ability extends AbstractModel {
     private String IsSupportManualLogic;
 
     /**
+    * Enable global encryption.
+    */
+    @SerializedName("IsSupportGlobalEncryption")
+    @Expose
+    private String IsSupportGlobalEncryption;
+
+    /**
+    * The causes for unsupported global encryption.
+    */
+    @SerializedName("NoSupportGlobalEncryptionReason")
+    @Expose
+    private String NoSupportGlobalEncryptionReason;
+
+    /**
+    * Status code for unsupported tde reason.
+    */
+    @SerializedName("NoSupportTransparentDataEncryptionReasonCode")
+    @Expose
+    private String NoSupportTransparentDataEncryptionReasonCode;
+
+    /**
+    * Status code for unsupported global encryption.
+    */
+    @SerializedName("NoSupportGlobalEncryptionReasonCode")
+    @Expose
+    private String NoSupportGlobalEncryptionReasonCode;
+
+    /**
      * Get Whether secondary AZ is supported 
      * @return IsSupportSlaveZone Whether secondary AZ is supported
      */
@@ -207,6 +235,70 @@ public class Ability extends AbstractModel {
         this.IsSupportManualLogic = IsSupportManualLogic;
     }
 
+    /**
+     * Get Enable global encryption. 
+     * @return IsSupportGlobalEncryption Enable global encryption.
+     */
+    public String getIsSupportGlobalEncryption() {
+        return this.IsSupportGlobalEncryption;
+    }
+
+    /**
+     * Set Enable global encryption.
+     * @param IsSupportGlobalEncryption Enable global encryption.
+     */
+    public void setIsSupportGlobalEncryption(String IsSupportGlobalEncryption) {
+        this.IsSupportGlobalEncryption = IsSupportGlobalEncryption;
+    }
+
+    /**
+     * Get The causes for unsupported global encryption. 
+     * @return NoSupportGlobalEncryptionReason The causes for unsupported global encryption.
+     */
+    public String getNoSupportGlobalEncryptionReason() {
+        return this.NoSupportGlobalEncryptionReason;
+    }
+
+    /**
+     * Set The causes for unsupported global encryption.
+     * @param NoSupportGlobalEncryptionReason The causes for unsupported global encryption.
+     */
+    public void setNoSupportGlobalEncryptionReason(String NoSupportGlobalEncryptionReason) {
+        this.NoSupportGlobalEncryptionReason = NoSupportGlobalEncryptionReason;
+    }
+
+    /**
+     * Get Status code for unsupported tde reason. 
+     * @return NoSupportTransparentDataEncryptionReasonCode Status code for unsupported tde reason.
+     */
+    public String getNoSupportTransparentDataEncryptionReasonCode() {
+        return this.NoSupportTransparentDataEncryptionReasonCode;
+    }
+
+    /**
+     * Set Status code for unsupported tde reason.
+     * @param NoSupportTransparentDataEncryptionReasonCode Status code for unsupported tde reason.
+     */
+    public void setNoSupportTransparentDataEncryptionReasonCode(String NoSupportTransparentDataEncryptionReasonCode) {
+        this.NoSupportTransparentDataEncryptionReasonCode = NoSupportTransparentDataEncryptionReasonCode;
+    }
+
+    /**
+     * Get Status code for unsupported global encryption. 
+     * @return NoSupportGlobalEncryptionReasonCode Status code for unsupported global encryption.
+     */
+    public String getNoSupportGlobalEncryptionReasonCode() {
+        return this.NoSupportGlobalEncryptionReasonCode;
+    }
+
+    /**
+     * Set Status code for unsupported global encryption.
+     * @param NoSupportGlobalEncryptionReasonCode Status code for unsupported global encryption.
+     */
+    public void setNoSupportGlobalEncryptionReasonCode(String NoSupportGlobalEncryptionReasonCode) {
+        this.NoSupportGlobalEncryptionReasonCode = NoSupportGlobalEncryptionReasonCode;
+    }
+
     public Ability() {
     }
 
@@ -239,6 +331,18 @@ public class Ability extends AbstractModel {
         if (source.IsSupportManualLogic != null) {
             this.IsSupportManualLogic = new String(source.IsSupportManualLogic);
         }
+        if (source.IsSupportGlobalEncryption != null) {
+            this.IsSupportGlobalEncryption = new String(source.IsSupportGlobalEncryption);
+        }
+        if (source.NoSupportGlobalEncryptionReason != null) {
+            this.NoSupportGlobalEncryptionReason = new String(source.NoSupportGlobalEncryptionReason);
+        }
+        if (source.NoSupportTransparentDataEncryptionReasonCode != null) {
+            this.NoSupportTransparentDataEncryptionReasonCode = new String(source.NoSupportTransparentDataEncryptionReasonCode);
+        }
+        if (source.NoSupportGlobalEncryptionReasonCode != null) {
+            this.NoSupportGlobalEncryptionReasonCode = new String(source.NoSupportGlobalEncryptionReasonCode);
+        }
     }
 
 
@@ -254,6 +358,10 @@ public class Ability extends AbstractModel {
         this.setParamSimple(map, prefix + "IsSupportTransparentDataEncryption", this.IsSupportTransparentDataEncryption);
         this.setParamSimple(map, prefix + "NoSupportTransparentDataEncryptionReason", this.NoSupportTransparentDataEncryptionReason);
         this.setParamSimple(map, prefix + "IsSupportManualLogic", this.IsSupportManualLogic);
+        this.setParamSimple(map, prefix + "IsSupportGlobalEncryption", this.IsSupportGlobalEncryption);
+        this.setParamSimple(map, prefix + "NoSupportGlobalEncryptionReason", this.NoSupportGlobalEncryptionReason);
+        this.setParamSimple(map, prefix + "NoSupportTransparentDataEncryptionReasonCode", this.NoSupportTransparentDataEncryptionReasonCode);
+        this.setParamSimple(map, prefix + "NoSupportGlobalEncryptionReasonCode", this.NoSupportGlobalEncryptionReasonCode);
 
     }
 }

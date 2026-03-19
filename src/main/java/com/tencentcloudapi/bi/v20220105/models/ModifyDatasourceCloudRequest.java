@@ -32,6 +32,12 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
 
     /**
     * Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
     */
     @SerializedName("DbType")
     @Expose
@@ -171,6 +177,20 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
     private String ClusterId;
 
     /**
+    * Database schema.
+    */
+    @SerializedName("Schema")
+    @Expose
+    private String Schema;
+
+    /**
+    * Database version.
+    */
+    @SerializedName("DbVersion")
+    @Expose
+    private String DbVersion;
+
+    /**
      * Get The backend provides dictionaries: domain type. 1: Tencent Cloud; 2: local. 
      * @return ServiceType The backend provides dictionaries: domain type. 1: Tencent Cloud; 2: local.
      */
@@ -187,8 +207,20 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
     }
 
     /**
-     * Get Drive. 
+     * Get Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database. 
      * @return DbType Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      */
     public String getDbType() {
         return this.DbType;
@@ -196,7 +228,19 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
 
     /**
      * Set Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      * @param DbType Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
@@ -506,6 +550,38 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get Database schema. 
+     * @return Schema Database schema.
+     */
+    public String getSchema() {
+        return this.Schema;
+    }
+
+    /**
+     * Set Database schema.
+     * @param Schema Database schema.
+     */
+    public void setSchema(String Schema) {
+        this.Schema = Schema;
+    }
+
+    /**
+     * Get Database version. 
+     * @return DbVersion Database version.
+     */
+    public String getDbVersion() {
+        return this.DbVersion;
+    }
+
+    /**
+     * Set Database version.
+     * @param DbVersion Database version.
+     */
+    public void setDbVersion(String DbVersion) {
+        this.DbVersion = DbVersion;
+    }
+
     public ModifyDatasourceCloudRequest() {
     }
 
@@ -577,6 +653,12 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
+        }
+        if (source.DbVersion != null) {
+            this.DbVersion = new String(source.DbVersion);
+        }
     }
 
 
@@ -605,6 +687,8 @@ public class ModifyDatasourceCloudRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "DataOriginProjectId", this.DataOriginProjectId);
         this.setParamSimple(map, prefix + "DataOriginDatasourceId", this.DataOriginDatasourceId);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "Schema", this.Schema);
+        this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
 
     }
 }

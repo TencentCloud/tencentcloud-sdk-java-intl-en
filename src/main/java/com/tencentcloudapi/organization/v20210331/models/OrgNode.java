@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class OrgNode extends AbstractModel {
 
     /**
-    * Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Organization node ID.
     */
     @SerializedName("NodeId")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parent Node ID
     */
     @SerializedName("ParentNodeId")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Remark")
     @Expose
@@ -57,15 +53,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Update date
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -73,37 +67,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NodeId Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Organization node ID. 
+     * @return NodeId Organization node ID.
      */
     public Long getNodeId() {
         return this.NodeId;
     }
 
     /**
-     * Set Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NodeId Organization node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Organization node ID.
+     * @param NodeId Organization node ID.
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get Name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Name 
      * @return Name Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -111,39 +98,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ParentNodeId Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parent Node ID 
+     * @return ParentNodeId Parent Node ID
      */
     public Long getParentNodeId() {
         return this.ParentNodeId;
     }
 
     /**
-     * Set Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ParentNodeId Parent node ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parent Node ID
+     * @param ParentNodeId Parent Node ID
      */
     public void setParentNodeId(Long ParentNodeId) {
         this.ParentNodeId = ParentNodeId;
     }
 
     /**
-     * Get Remarks
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Remarks 
      * @return Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemark() {
         return this.Remark;
@@ -151,19 +130,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Remark Remarks
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Creation time
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time 
      * @return CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -171,39 +146,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Update date 
+     * @return UpdateTime Update date
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Update date
+     * @param UpdateTime Update date
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Member tag list. 
      * @return Tags Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -211,9 +178,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tags Member tag list.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

@@ -123,6 +123,8 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
     */
     @SerializedName("InstanceDeviceType")
     @Expose
@@ -130,6 +132,7 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
     */
     @SerializedName("InstanceStorageType")
     @Expose
@@ -144,6 +147,7 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
     * Node list
+Description: this parameter returns a value only when querying LibraDB resources.
     */
     @SerializedName("NodeList")
     @Expose
@@ -374,8 +378,12 @@ public class ClusterInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get Instance machine type. 
+     * Get Instance machine type.
+1. common: general.
+2. exclusive, dedicated. 
      * @return InstanceDeviceType Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
      */
     public String getInstanceDeviceType() {
         return this.InstanceDeviceType;
@@ -383,15 +391,21 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
      * @param InstanceDeviceType Instance machine type.
+1. common: general.
+2. exclusive, dedicated.
      */
     public void setInstanceDeviceType(String InstanceDeviceType) {
         this.InstanceDeviceType = InstanceDeviceType;
     }
 
     /**
-     * Get Instance storage type. 
+     * Get Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB. 
      * @return InstanceStorageType Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
      */
     public String getInstanceStorageType() {
         return this.InstanceStorageType;
@@ -399,7 +413,9 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
      * @param InstanceStorageType Instance storage type.
+Description: this parameter returns a value only when querying resources belonging to LibraDB.
      */
     public void setInstanceStorageType(String InstanceStorageType) {
         this.InstanceStorageType = InstanceStorageType;
@@ -422,8 +438,10 @@ public class ClusterInstanceDetail extends AbstractModel {
     }
 
     /**
-     * Get Node list 
+     * Get Node list
+Description: this parameter returns a value only when querying LibraDB resources. 
      * @return NodeList Node list
+Description: this parameter returns a value only when querying LibraDB resources.
      */
     public String [] getNodeList() {
         return this.NodeList;
@@ -431,7 +449,9 @@ public class ClusterInstanceDetail extends AbstractModel {
 
     /**
      * Set Node list
+Description: this parameter returns a value only when querying LibraDB resources.
      * @param NodeList Node list
+Description: this parameter returns a value only when querying LibraDB resources.
      */
     public void setNodeList(String [] NodeList) {
         this.NodeList = NodeList;

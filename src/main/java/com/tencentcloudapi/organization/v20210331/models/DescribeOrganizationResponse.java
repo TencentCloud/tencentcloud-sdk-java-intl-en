@@ -25,7 +25,6 @@ public class DescribeOrganizationResponse extends AbstractModel {
 
     /**
     * Organization ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OrgId")
     @Expose
@@ -33,39 +32,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HostUin")
     @Expose
     private Long HostUin;
 
     /**
-    * Creator name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Creator'S nickname.
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * Organization type.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Enterprise organization type.
     */
     @SerializedName("OrgType")
     @Expose
     private Long OrgType;
 
     /**
-    * Whether the member is the organization admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether the organization admin. valid values: true, false.
     */
     @SerializedName("IsManager")
     @Expose
     private Boolean IsManager;
 
     /**
-    * Policy type. Valid values: `Financial` (finance management).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Policy type. Financial: financial management.
     */
     @SerializedName("OrgPolicyType")
     @Expose
@@ -73,23 +67,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OrgPolicyName")
     @Expose
     private String OrgPolicyName;
 
     /**
-    * List of member financial permissions.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Member financial permission list.
     */
     @SerializedName("OrgPermission")
     @Expose
     private OrgPermission [] OrgPermission;
 
     /**
-    * Organization root node ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Root node ID of the organization.
     */
     @SerializedName("RootNodeId")
     @Expose
@@ -97,31 +88,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Organization creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Member joining time.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Member join time.
     */
     @SerializedName("JoinTime")
     @Expose
     private String JoinTime;
 
     /**
-    * Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to allow a member to exit. Valid values: Allow, Denied.
     */
     @SerializedName("IsAllowQuit")
     @Expose
     private String IsAllowQuit;
 
     /**
-    * Payer UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Proxy payer UIN.
     */
     @SerializedName("PayUin")
     @Expose
@@ -129,23 +116,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Payer name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PayName")
     @Expose
     private String PayName;
 
     /**
-    * Whether the member is the trusted service admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies whether an account belongs to a trusted service administrator. true: yes; false: no.
     */
     @SerializedName("IsAssignManager")
     @Expose
     private Boolean IsAssignManager;
 
     /**
-    * Whether the member is the verified entity admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies whether an account belongs to a real-name entity administrator. true: yes; false: no.
     */
     @SerializedName("IsAuthManager")
     @Expose
@@ -159,10 +143,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Organization ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Organization ID. 
      * @return OrgId Organization ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getOrgId() {
         return this.OrgId;
@@ -170,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Organization ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param OrgId Organization ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOrgId(Long OrgId) {
         this.OrgId = OrgId;
     }
 
     /**
-     * Get Creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creator UIN. 
      * @return HostUin Creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getHostUin() {
         return this.HostUin;
@@ -190,99 +168,79 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param HostUin Creator UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHostUin(Long HostUin) {
         this.HostUin = HostUin;
     }
 
     /**
-     * Get Creator name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NickName Creator name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Creator'S nickname. 
+     * @return NickName Creator'S nickname.
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set Creator name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NickName Creator name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Creator'S nickname.
+     * @param NickName Creator'S nickname.
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get Organization type.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrgType Organization type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Enterprise organization type. 
+     * @return OrgType Enterprise organization type.
      */
     public Long getOrgType() {
         return this.OrgType;
     }
 
     /**
-     * Set Organization type.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrgType Organization type.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Enterprise organization type.
+     * @param OrgType Enterprise organization type.
      */
     public void setOrgType(Long OrgType) {
         this.OrgType = OrgType;
     }
 
     /**
-     * Get Whether the member is the organization admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsManager Whether the member is the organization admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether the organization admin. valid values: true, false. 
+     * @return IsManager Whether the organization admin. valid values: true, false.
      */
     public Boolean getIsManager() {
         return this.IsManager;
     }
 
     /**
-     * Set Whether the member is the organization admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsManager Whether the member is the organization admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether the organization admin. valid values: true, false.
+     * @param IsManager Whether the organization admin. valid values: true, false.
      */
     public void setIsManager(Boolean IsManager) {
         this.IsManager = IsManager;
     }
 
     /**
-     * Get Policy type. Valid values: `Financial` (finance management).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrgPolicyType Policy type. Valid values: `Financial` (finance management).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Policy type. Financial: financial management. 
+     * @return OrgPolicyType Policy type. Financial: financial management.
      */
     public String getOrgPolicyType() {
         return this.OrgPolicyType;
     }
 
     /**
-     * Set Policy type. Valid values: `Financial` (finance management).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrgPolicyType Policy type. Valid values: `Financial` (finance management).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Policy type. Financial: financial management.
+     * @param OrgPolicyType Policy type. Financial: financial management.
      */
     public void setOrgPolicyType(String OrgPolicyType) {
         this.OrgPolicyType = OrgPolicyType;
     }
 
     /**
-     * Get Policy name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy name. 
      * @return OrgPolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getOrgPolicyName() {
         return this.OrgPolicyName;
@@ -290,59 +248,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param OrgPolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOrgPolicyName(String OrgPolicyName) {
         this.OrgPolicyName = OrgPolicyName;
     }
 
     /**
-     * Get List of member financial permissions.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrgPermission List of member financial permissions.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Member financial permission list. 
+     * @return OrgPermission Member financial permission list.
      */
     public OrgPermission [] getOrgPermission() {
         return this.OrgPermission;
     }
 
     /**
-     * Set List of member financial permissions.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrgPermission List of member financial permissions.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Member financial permission list.
+     * @param OrgPermission Member financial permission list.
      */
     public void setOrgPermission(OrgPermission [] OrgPermission) {
         this.OrgPermission = OrgPermission;
     }
 
     /**
-     * Get Organization root node ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RootNodeId Organization root node ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Root node ID of the organization. 
+     * @return RootNodeId Root node ID of the organization.
      */
     public Long getRootNodeId() {
         return this.RootNodeId;
     }
 
     /**
-     * Set Organization root node ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RootNodeId Organization root node ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Root node ID of the organization.
+     * @param RootNodeId Root node ID of the organization.
      */
     public void setRootNodeId(Long RootNodeId) {
         this.RootNodeId = RootNodeId;
     }
 
     /**
-     * Get Organization creation time.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Organization creation time. 
      * @return CreateTime Organization creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -350,79 +296,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Organization creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Organization creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Member joining time.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return JoinTime Member joining time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Member join time. 
+     * @return JoinTime Member join time.
      */
     public String getJoinTime() {
         return this.JoinTime;
     }
 
     /**
-     * Set Member joining time.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param JoinTime Member joining time.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Member join time.
+     * @param JoinTime Member join time.
      */
     public void setJoinTime(String JoinTime) {
         this.JoinTime = JoinTime;
     }
 
     /**
-     * Get Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsAllowQuit Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to allow a member to exit. Valid values: Allow, Denied. 
+     * @return IsAllowQuit Whether to allow a member to exit. Valid values: Allow, Denied.
      */
     public String getIsAllowQuit() {
         return this.IsAllowQuit;
     }
 
     /**
-     * Set Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsAllowQuit Whether the member is allowed to leave. Valid values: `Allow`, `Denied`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to allow a member to exit. Valid values: Allow, Denied.
+     * @param IsAllowQuit Whether to allow a member to exit. Valid values: Allow, Denied.
      */
     public void setIsAllowQuit(String IsAllowQuit) {
         this.IsAllowQuit = IsAllowQuit;
     }
 
     /**
-     * Get Payer UIN.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayUin Payer UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Proxy payer UIN. 
+     * @return PayUin Proxy payer UIN.
      */
     public String getPayUin() {
         return this.PayUin;
     }
 
     /**
-     * Set Payer UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PayUin Payer UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Proxy payer UIN.
+     * @param PayUin Proxy payer UIN.
      */
     public void setPayUin(String PayUin) {
         this.PayUin = PayUin;
     }
 
     /**
-     * Get Payer name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Payer name. 
      * @return PayName Payer name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPayName() {
         return this.PayName;
@@ -430,49 +360,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Payer name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PayName Payer name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPayName(String PayName) {
         this.PayName = PayName;
     }
 
     /**
-     * Get Whether the member is the trusted service admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsAssignManager Whether the member is the trusted service admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether an account belongs to a trusted service administrator. true: yes; false: no. 
+     * @return IsAssignManager Specifies whether an account belongs to a trusted service administrator. true: yes; false: no.
      */
     public Boolean getIsAssignManager() {
         return this.IsAssignManager;
     }
 
     /**
-     * Set Whether the member is the trusted service admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsAssignManager Whether the member is the trusted service admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether an account belongs to a trusted service administrator. true: yes; false: no.
+     * @param IsAssignManager Specifies whether an account belongs to a trusted service administrator. true: yes; false: no.
      */
     public void setIsAssignManager(Boolean IsAssignManager) {
         this.IsAssignManager = IsAssignManager;
     }
 
     /**
-     * Get Whether the member is the verified entity admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsAuthManager Whether the member is the verified entity admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether an account belongs to a real-name entity administrator. true: yes; false: no. 
+     * @return IsAuthManager Specifies whether an account belongs to a real-name entity administrator. true: yes; false: no.
      */
     public Boolean getIsAuthManager() {
         return this.IsAuthManager;
     }
 
     /**
-     * Set Whether the member is the verified entity admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsAuthManager Whether the member is the verified entity admin. Valid values: `true` (yes); `false` (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether an account belongs to a real-name entity administrator. true: yes; false: no.
+     * @param IsAuthManager Specifies whether an account belongs to a real-name entity administrator. true: yes; false: no.
      */
     public void setIsAuthManager(Boolean IsAuthManager) {
         this.IsAuthManager = IsAuthManager;

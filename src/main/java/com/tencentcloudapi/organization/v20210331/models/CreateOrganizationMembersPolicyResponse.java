@@ -25,8 +25,6 @@ public class CreateOrganizationMembersPolicyResponse extends AbstractModel {
 
     /**
     * Policy ID.
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolicyId")
     @Expose
@@ -40,12 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Policy ID.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy ID. 
      * @return PolicyId Policy ID.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPolicyId() {
         return this.PolicyId;
@@ -53,11 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy ID.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PolicyId Policy ID.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;

@@ -59,7 +59,16 @@ public class CynosdbClusterDetail extends AbstractModel {
     private String PhysicalZone;
 
     /**
-    * Status
+    * Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
     */
     @SerializedName("Status")
     @Expose
@@ -112,7 +121,7 @@ pausing
     private Long MinStorageSize;
 
     /**
-    * Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
+    * Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
     */
     @SerializedName("StoragePayMode")
     @Expose
@@ -210,7 +219,7 @@ pausing
     private Long Vport;
 
     /**
-    * VIP and vport of the read-only instance in a cluster
+    * VIP and vport of the read-only instance in a cluster.
     */
     @SerializedName("RoAddr")
     @Expose
@@ -385,6 +394,51 @@ pausing
     private String CynosVersionTag;
 
     /**
+    * Global database network unique id.
+    */
+    @SerializedName("GdnId")
+    @Expose
+    private String GdnId;
+
+    /**
+    * The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+    */
+    @SerializedName("GdnRole")
+    @Expose
+    private String GdnRole;
+
+    /**
+    * Secondary storage usage, unit: G.
+    */
+    @SerializedName("UsedArchiveStorage")
+    @Expose
+    private Long UsedArchiveStorage;
+
+    /**
+    * Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+    */
+    @SerializedName("ArchiveStatus")
+    @Expose
+    private String ArchiveStatus;
+
+    /**
+    * Archive progress, percentage.
+    */
+    @SerializedName("ArchiveProgress")
+    @Expose
+    private Long ArchiveProgress;
+
+    /**
+    * Whether transparent encryption is enabled.
+    */
+    @SerializedName("IsOpenTDE")
+    @Expose
+    private Boolean IsOpenTDE;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -465,16 +519,52 @@ pausing
     }
 
     /**
-     * Get Status 
-     * @return Status Status
+     * Get Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted. 
+     * @return Status Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status
-     * @param Status Status
+     * Set Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
+     * @param Status Status. supported values are as follows:.
+-Creating: creating.
+- running: running.
+-isolating.
+-Isolated: isolated.
+-activating: restore from recycle bin.
+-offlining: offline.
+-offlined: offline.
+- deleting: deleting.
+- deleted: deleted.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -593,16 +683,16 @@ pausing
     }
 
     /**
-     * Get Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go. 
-     * @return StoragePayMode Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
+     * Get Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go. 
+     * @return StoragePayMode Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
-     * @param StoragePayMode Storage billing type. 1 indicates monthly subscription, and 0 indicates pay-as-you-go.
+     * Set Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
+     * @param StoragePayMode Storage billing type. 1 indicates yearly/monthly subscription, and 0 indicates pay-as-you-go.
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
@@ -817,16 +907,16 @@ pausing
     }
 
     /**
-     * Get VIP and vport of the read-only instance in a cluster 
-     * @return RoAddr VIP and vport of the read-only instance in a cluster
+     * Get VIP and vport of the read-only instance in a cluster. 
+     * @return RoAddr VIP and vport of the read-only instance in a cluster.
      */
     public Addr [] getRoAddr() {
         return this.RoAddr;
     }
 
     /**
-     * Set VIP and vport of the read-only instance in a cluster
-     * @param RoAddr VIP and vport of the read-only instance in a cluster
+     * Set VIP and vport of the read-only instance in a cluster.
+     * @param RoAddr VIP and vport of the read-only instance in a cluster.
      */
     public void setRoAddr(Addr [] RoAddr) {
         this.RoAddr = RoAddr;
@@ -1216,6 +1306,114 @@ pausing
         this.CynosVersionTag = CynosVersionTag;
     }
 
+    /**
+     * Get Global database network unique id. 
+     * @return GdnId Global database network unique id.
+     */
+    public String getGdnId() {
+        return this.GdnId;
+    }
+
+    /**
+     * Set Global database network unique id.
+     * @param GdnId Global database network unique id.
+     */
+    public void setGdnId(String GdnId) {
+        this.GdnId = GdnId;
+    }
+
+    /**
+     * Get The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid. 
+     * @return GdnRole The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+     */
+    public String getGdnRole() {
+        return this.GdnRole;
+    }
+
+    /**
+     * Set The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+     * @param GdnRole The role of clusters in the global data network.
+primary cluster.
+Slave cluster - standby.
+If empty, the field is invalid.
+     */
+    public void setGdnRole(String GdnRole) {
+        this.GdnRole = GdnRole;
+    }
+
+    /**
+     * Get Secondary storage usage, unit: G. 
+     * @return UsedArchiveStorage Secondary storage usage, unit: G.
+     */
+    public Long getUsedArchiveStorage() {
+        return this.UsedArchiveStorage;
+    }
+
+    /**
+     * Set Secondary storage usage, unit: G.
+     * @param UsedArchiveStorage Secondary storage usage, unit: G.
+     */
+    public void setUsedArchiveStorage(Long UsedArchiveStorage) {
+        this.UsedArchiveStorage = UsedArchiveStorage;
+    }
+
+    /**
+     * Get Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>. 
+     * @return ArchiveStatus Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+     */
+    public String getArchiveStatus() {
+        return this.ArchiveStatus;
+    }
+
+    /**
+     * Set Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+     * @param ArchiveStatus Archiving status, enumeration value <li>normal: normal</li><li>archiving: archiving</li><li>resuming: recovering</li><li>archived: archived</li>.
+     */
+    public void setArchiveStatus(String ArchiveStatus) {
+        this.ArchiveStatus = ArchiveStatus;
+    }
+
+    /**
+     * Get Archive progress, percentage. 
+     * @return ArchiveProgress Archive progress, percentage.
+     */
+    public Long getArchiveProgress() {
+        return this.ArchiveProgress;
+    }
+
+    /**
+     * Set Archive progress, percentage.
+     * @param ArchiveProgress Archive progress, percentage.
+     */
+    public void setArchiveProgress(Long ArchiveProgress) {
+        this.ArchiveProgress = ArchiveProgress;
+    }
+
+    /**
+     * Get Whether transparent encryption is enabled. 
+     * @return IsOpenTDE Whether transparent encryption is enabled.
+     */
+    public Boolean getIsOpenTDE() {
+        return this.IsOpenTDE;
+    }
+
+    /**
+     * Set Whether transparent encryption is enabled.
+     * @param IsOpenTDE Whether transparent encryption is enabled.
+     */
+    public void setIsOpenTDE(Boolean IsOpenTDE) {
+        this.IsOpenTDE = IsOpenTDE;
+    }
+
     public CynosdbClusterDetail() {
     }
 
@@ -1398,6 +1596,24 @@ pausing
         if (source.CynosVersionTag != null) {
             this.CynosVersionTag = new String(source.CynosVersionTag);
         }
+        if (source.GdnId != null) {
+            this.GdnId = new String(source.GdnId);
+        }
+        if (source.GdnRole != null) {
+            this.GdnRole = new String(source.GdnRole);
+        }
+        if (source.UsedArchiveStorage != null) {
+            this.UsedArchiveStorage = new Long(source.UsedArchiveStorage);
+        }
+        if (source.ArchiveStatus != null) {
+            this.ArchiveStatus = new String(source.ArchiveStatus);
+        }
+        if (source.ArchiveProgress != null) {
+            this.ArchiveProgress = new Long(source.ArchiveProgress);
+        }
+        if (source.IsOpenTDE != null) {
+            this.IsOpenTDE = new Boolean(source.IsOpenTDE);
+        }
     }
 
 
@@ -1456,6 +1672,12 @@ pausing
         this.setParamSimple(map, prefix + "NetworkType", this.NetworkType);
         this.setParamArrayObj(map, prefix + "SlaveZoneAttr.", this.SlaveZoneAttr);
         this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
+        this.setParamSimple(map, prefix + "GdnId", this.GdnId);
+        this.setParamSimple(map, prefix + "GdnRole", this.GdnRole);
+        this.setParamSimple(map, prefix + "UsedArchiveStorage", this.UsedArchiveStorage);
+        this.setParamSimple(map, prefix + "ArchiveStatus", this.ArchiveStatus);
+        this.setParamSimple(map, prefix + "ArchiveProgress", this.ArchiveProgress);
+        this.setParamSimple(map, prefix + "IsOpenTDE", this.IsOpenTDE);
 
     }
 }

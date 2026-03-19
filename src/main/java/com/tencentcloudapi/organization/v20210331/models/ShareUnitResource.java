@@ -39,8 +39,6 @@ public class ShareUnitResource extends AbstractModel {
 
     /**
     * Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -54,24 +52,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ProductResourceId;
 
     /**
-    * The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of members in a sharing unit.
     */
     @SerializedName("SharedMemberNum")
     @Expose
     private Long SharedMemberNum;
 
     /**
-    * The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of members using shared resources.
     */
     @SerializedName("SharedMemberUseNum")
     @Expose
     private Long SharedMemberUseNum;
 
     /**
-    * Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Sharing unit administrator.
     */
     @SerializedName("ShareManagerUin")
     @Expose
@@ -110,12 +105,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time. 
      * @return CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -123,11 +114,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -150,60 +137,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SharedMemberNum The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of members in a sharing unit. 
+     * @return SharedMemberNum Number of members in a sharing unit.
      */
     public Long getSharedMemberNum() {
         return this.SharedMemberNum;
     }
 
     /**
-     * Set The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SharedMemberNum The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of members in a sharing unit.
+     * @param SharedMemberNum Number of members in a sharing unit.
      */
     public void setSharedMemberNum(Long SharedMemberNum) {
         this.SharedMemberNum = SharedMemberNum;
     }
 
     /**
-     * Get The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SharedMemberUseNum The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of members using shared resources. 
+     * @return SharedMemberUseNum Number of members using shared resources.
      */
     public Long getSharedMemberUseNum() {
         return this.SharedMemberUseNum;
     }
 
     /**
-     * Set The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SharedMemberUseNum The number of shared unit members in use.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of members using shared resources.
+     * @param SharedMemberUseNum Number of members using shared resources.
      */
     public void setSharedMemberUseNum(Long SharedMemberUseNum) {
         this.SharedMemberUseNum = SharedMemberUseNum;
     }
 
     /**
-     * Get Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ShareManagerUin Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sharing unit administrator. 
+     * @return ShareManagerUin Sharing unit administrator.
      */
     public Long getShareManagerUin() {
         return this.ShareManagerUin;
     }
 
     /**
-     * Set Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ShareManagerUin Shared administrator OwnerUin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sharing unit administrator.
+     * @param ShareManagerUin Sharing unit administrator.
      */
     public void setShareManagerUin(Long ShareManagerUin) {
         this.ShareManagerUin = ShareManagerUin;

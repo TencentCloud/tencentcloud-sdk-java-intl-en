@@ -46,6 +46,12 @@ public class CreateDatasourceRequest extends AbstractModel {
 
     /**
     * Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
     */
     @SerializedName("DbType")
     @Expose
@@ -178,6 +184,20 @@ public class CreateDatasourceRequest extends AbstractModel {
     private String RegionId;
 
     /**
+    * Database schema.
+    */
+    @SerializedName("Schema")
+    @Expose
+    private String Schema;
+
+    /**
+    * Database version.
+    */
+    @SerializedName("DbVersion")
+    @Expose
+    private String DbVersion;
+
+    /**
      * Get HOST 
      * @return DbHost HOST
      */
@@ -226,8 +246,20 @@ public class CreateDatasourceRequest extends AbstractModel {
     }
 
     /**
-     * Get Drive. 
+     * Get Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database. 
      * @return DbType Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      */
     public String getDbType() {
         return this.DbType;
@@ -235,7 +267,19 @@ public class CreateDatasourceRequest extends AbstractModel {
 
     /**
      * Set Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      * @param DbType Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
@@ -529,6 +573,38 @@ public class CreateDatasourceRequest extends AbstractModel {
         this.RegionId = RegionId;
     }
 
+    /**
+     * Get Database schema. 
+     * @return Schema Database schema.
+     */
+    public String getSchema() {
+        return this.Schema;
+    }
+
+    /**
+     * Set Database schema.
+     * @param Schema Database schema.
+     */
+    public void setSchema(String Schema) {
+        this.Schema = Schema;
+    }
+
+    /**
+     * Get Database version. 
+     * @return DbVersion Database version.
+     */
+    public String getDbVersion() {
+        return this.DbVersion;
+    }
+
+    /**
+     * Set Database version.
+     * @param DbVersion Database version.
+     */
+    public void setDbVersion(String DbVersion) {
+        this.DbVersion = DbVersion;
+    }
+
     public CreateDatasourceRequest() {
     }
 
@@ -606,6 +682,12 @@ public class CreateDatasourceRequest extends AbstractModel {
         if (source.RegionId != null) {
             this.RegionId = new String(source.RegionId);
         }
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
+        }
+        if (source.DbVersion != null) {
+            this.DbVersion = new String(source.DbVersion);
+        }
     }
 
 
@@ -635,6 +717,8 @@ public class CreateDatasourceRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OperationAuthLimit.", this.OperationAuthLimit);
         this.setParamSimple(map, prefix + "UseVPC", this.UseVPC);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "Schema", this.Schema);
+        this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
 
     }
 }

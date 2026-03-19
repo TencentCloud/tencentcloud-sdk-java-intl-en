@@ -38,16 +38,14 @@ public class IdentityPolicy extends AbstractModel {
     private String PolicyName;
 
     /**
-    * Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
     */
     @SerializedName("PolicyType")
     @Expose
     private Long PolicyType;
 
     /**
-    * Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
     */
     @SerializedName("PolicyDocument")
     @Expose
@@ -86,40 +84,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PolicyType Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2. 
+     * @return PolicyType Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
      */
     public Long getPolicyType() {
         return this.PolicyType;
     }
 
     /**
-     * Set Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PolicyType Policy type. Valid values: 1 (custom policy), 2 (preset policy). The default is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
+     * @param PolicyType Policy type. Valid values: 1: custom policy; 2: preset policy. The default value is 2.
      */
     public void setPolicyType(Long PolicyType) {
         this.PolicyType = PolicyType;
     }
 
     /**
-     * Get Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PolicyDocument Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy. 
+     * @return PolicyDocument Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
      */
     public String getPolicyDocument() {
         return this.PolicyDocument;
     }
 
     /**
-     * Set Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PolicyDocument Custom policy content, which follows the CAM policy syntax. It is valid and required when PolicyType is a custom policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
+     * @param PolicyDocument Custom policy content, which follows the CAM policy syntax. It is valid and mandatory when PolicyType is a custom policy.
      */
     public void setPolicyDocument(String PolicyDocument) {
         this.PolicyDocument = PolicyDocument;

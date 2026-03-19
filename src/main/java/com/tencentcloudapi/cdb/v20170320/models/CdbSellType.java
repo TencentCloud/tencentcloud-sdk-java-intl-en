@@ -24,7 +24,13 @@ import java.util.HashMap;
 public class CdbSellType extends AbstractModel {
 
     /**
-    * Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+    * Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
     */
     @SerializedName("TypeName")
     @Expose
@@ -45,16 +51,40 @@ public class CdbSellType extends AbstractModel {
     private Long [] ConfigIds;
 
     /**
-     * Get Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`). 
-     * @return TypeName Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+     * Get Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical. 
+     * @return TypeName Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
-     * @param TypeName Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+     * Set Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
+     * @param TypeName Purchasable instance name.
+Z3: High-availability, corresponds to the specified specification DeviceType, including UNIVERSAL and EXCLUSIVE.
+CVM: It is a basic edition type, and the DeviceType in the corresponding specifications is BASIC (Offline).
+TKE: It is the basic version v2 type, and the DeviceType in the corresponding specifications is BASIC_V2.
+CLOUD_NATIVE_CLUSTER: Represents the standard type of cloud disk edition.
+CLOUD_NATIVE_CLUSTER_EXCLUSIVE: Indicates the enhanced cloud disk edition.
+ECONOMICAL: Means economical.
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;

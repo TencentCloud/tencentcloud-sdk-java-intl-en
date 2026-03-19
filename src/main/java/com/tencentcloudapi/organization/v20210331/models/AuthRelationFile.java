@@ -25,7 +25,6 @@ public class AuthRelationFile extends AbstractModel {
 
     /**
     * File name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -33,18 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get File name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get File name. 
      * @return Name File name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -52,21 +47,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set File name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name File name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get File path.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get File path. 
      * @return Url File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUrl() {
         return this.Url;
@@ -74,11 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Url File path.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUrl(String Url) {
         this.Url = Url;

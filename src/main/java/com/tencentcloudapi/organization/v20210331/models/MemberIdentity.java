@@ -25,7 +25,6 @@ public class MemberIdentity extends AbstractModel {
 
     /**
     * Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityId")
     @Expose
@@ -33,17 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityAliasName")
     @Expose
     private String IdentityAliasName;
 
     /**
-     * Get Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Identity ID. 
      * @return IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIdentityId() {
         return this.IdentityId;
@@ -51,19 +47,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;
     }
 
     /**
-     * Get Identity name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Identity name. 
      * @return IdentityAliasName Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIdentityAliasName() {
         return this.IdentityAliasName;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IdentityAliasName Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityAliasName(String IdentityAliasName) {
         this.IdentityAliasName = IdentityAliasName;

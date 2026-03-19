@@ -73,7 +73,7 @@ public class ListGroupsRequest extends AbstractModel {
     private String SortField;
 
     /**
-    * Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+    * Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
     */
     @SerializedName("SortType")
     @Expose
@@ -199,16 +199,16 @@ public class ListGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField. 
-     * @return SortType Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+     * Get Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField. 
+     * @return SortType Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
      */
     public String getSortType() {
         return this.SortType;
     }
 
     /**
-     * Set Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
-     * @param SortType Sorting type. Desc: descending order; Asc: ascending order. It should be set along with SortField.
+     * Set Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
+     * @param SortType Sorting order. Desc: descending order; Asc: ascending order. It should be set together with SortField.
      */
     public void setSortType(String SortType) {
         this.SortType = SortType;

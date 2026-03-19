@@ -116,6 +116,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *Add a shared unit department.
+     * @param req AddShareUnitNodeRequest
+     * @return AddShareUnitNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddShareUnitNodeResponse AddShareUnitNode(AddShareUnitNodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddShareUnitNode", AddShareUnitNodeResponse.class);
+    }
+
+    /**
      *This API is used to add resources to a shared unit.
      * @param req AddShareUnitResourcesRequest
      * @return AddShareUnitResourcesResponse
@@ -138,6 +149,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *Bind a policy.
+     * @param req AttachPolicyRequest
+     * @return AttachPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public AttachPolicyResponse AttachPolicy(AttachPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AttachPolicy", AttachPolicyResponse.class);
+    }
+
+    /**
      *This API is used to bind an organization member to a sub-account of the organization admin.
      * @param req BindOrganizationMemberAuthAccountRequest
      * @return BindOrganizationMemberAuthAccountResponse
@@ -149,6 +171,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to bind member access authorization policies to the sub-accounts of the organization administrator.
+     * @param req BindOrganizationPolicySubAccountRequest
+     * @return BindOrganizationPolicySubAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public BindOrganizationPolicySubAccountResponse BindOrganizationPolicySubAccount(BindOrganizationPolicySubAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BindOrganizationPolicySubAccount", BindOrganizationPolicySubAccountResponse.class);
+    }
+
+    /**
      *This API is used to unbind an organization member from a sub-account of the organization admin.
      * @param req CancelOrganizationMemberAuthAccountRequest
      * @return CancelOrganizationMemberAuthAccountResponse
@@ -157,6 +190,17 @@ public class OrganizationClient extends AbstractClient{
     public CancelOrganizationMemberAuthAccountResponse CancelOrganizationMemberAuthAccount(CancelOrganizationMemberAuthAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CancelOrganizationMemberAuthAccount", CancelOrganizationMemberAuthAccountResponse.class);
+    }
+
+    /**
+     *This API is used to unbind member access authorization policies from the sub-accounts of the organization administrator.
+     * @param req CancelOrganizationPolicySubAccountRequest
+     * @return CancelOrganizationPolicySubAccountResponse
+     * @throws TencentCloudSDKException
+     */
+    public CancelOrganizationPolicySubAccountResponse CancelOrganizationPolicySubAccount(CancelOrganizationPolicySubAccountRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CancelOrganizationPolicySubAccount", CancelOrganizationPolicySubAccountResponse.class);
     }
 
     /**
@@ -256,6 +300,17 @@ public class OrganizationClient extends AbstractClient{
     public CreateOrganizationMembersPolicyResponse CreateOrganizationMembersPolicy(CreateOrganizationMembersPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateOrganizationMembersPolicy", CreateOrganizationMembersPolicyResponse.class);
+    }
+
+    /**
+     *This API is used to create a special type of policy that can be attached to the enterprise organization Root node, enterprise department nodes, or enterprise member accounts.
+     * @param req CreatePolicyRequest
+     * @return CreatePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreatePolicyResponse CreatePolicy(CreatePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreatePolicy", CreatePolicyResponse.class);
     }
 
     /**
@@ -402,6 +457,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *Deleting a Policy
+     * @param req DeletePolicyRequest
+     * @return DeletePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeletePolicyResponse DeletePolicy(DeletePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeletePolicy", DeletePolicyResponse.class);
+    }
+
+    /**
      *This API is used to remove authorizations on member accounts.
      * @param req DeleteRoleAssignmentRequest
      * @return DeleteRoleAssignmentResponse
@@ -457,6 +523,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *Delete a shared unit department.
+     * @param req DeleteShareUnitNodeRequest
+     * @return DeleteShareUnitNodeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteShareUnitNodeResponse DeleteShareUnitNode(DeleteShareUnitNodeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteShareUnitNode", DeleteShareUnitNodeResponse.class);
+    }
+
+    /**
      *This API is used to delete shared unit resources.
      * @param req DeleteShareUnitResourcesRequest
      * @return DeleteShareUnitResourcesResponse
@@ -487,6 +564,17 @@ public class OrganizationClient extends AbstractClient{
     public DeleteUserSyncProvisioningResponse DeleteUserSyncProvisioning(DeleteUserSyncProvisioningRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteUserSyncProvisioning", DeleteUserSyncProvisioningResponse.class);
+    }
+
+    /**
+     *This API is used to query the valid policy associated with the target.
+     * @param req DescribeEffectivePolicyRequest
+     * @return DescribeEffectivePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEffectivePolicyResponse DescribeEffectivePolicy(DescribeEffectivePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEffectivePolicy", DescribeEffectivePolicyResponse.class);
     }
 
     /**
@@ -567,6 +655,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of organization member access policies.
+     * @param req DescribeOrganizationMembersAuthPolicyRequest
+     * @return DescribeOrganizationMembersAuthPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeOrganizationMembersAuthPolicyResponse DescribeOrganizationMembersAuthPolicy(DescribeOrganizationMembersAuthPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeOrganizationMembersAuthPolicy", DescribeOrganizationMembersAuthPolicyResponse.class);
+    }
+
+    /**
      *This API is used to get the list of organization nodes.
      * @param req DescribeOrganizationNodesRequest
      * @return DescribeOrganizationNodesResponse
@@ -575,6 +674,39 @@ public class OrganizationClient extends AbstractClient{
     public DescribeOrganizationNodesResponse DescribeOrganizationNodes(DescribeOrganizationNodesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeOrganizationNodes", DescribeOrganizationNodesResponse.class);
+    }
+
+    /**
+     *This API is used to query policy details.
+     * @param req DescribePolicyRequest
+     * @return DescribePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyResponse DescribePolicy(DescribePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePolicy", DescribePolicyResponse.class);
+    }
+
+    /**
+     *This API is used to query enterprise organization policy configurations.
+     * @param req DescribePolicyConfigRequest
+     * @return DescribePolicyConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePolicyConfigResponse DescribePolicyConfig(DescribePolicyConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePolicyConfig", DescribePolicyConfigResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the list of resources shared with me.
+     * @param req DescribeResourceToShareMemberRequest
+     * @return DescribeResourceToShareMemberResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeResourceToShareMemberResponse DescribeResourceToShareMember(DescribeResourceToShareMemberRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeResourceToShareMember", DescribeResourceToShareMemberResponse.class);
     }
 
     /**
@@ -600,6 +732,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain a list of shared unit departments.
+     * @param req DescribeShareUnitNodesRequest
+     * @return DescribeShareUnitNodesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeShareUnitNodesResponse DescribeShareUnitNodes(DescribeShareUnitNodesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeShareUnitNodes", DescribeShareUnitNodesResponse.class);
+    }
+
+    /**
      *This API is used to obtain the resource list of a shared unit.
      * @param req DescribeShareUnitResourcesRequest
      * @return DescribeShareUnitResourcesResponse
@@ -622,6 +765,28 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *Unbind a policy.
+     * @param req DetachPolicyRequest
+     * @return DetachPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public DetachPolicyResponse DetachPolicy(DetachPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DetachPolicy", DetachPolicyResponse.class);
+    }
+
+    /**
+     *This API is used to disable a policy type.
+     * @param req DisablePolicyTypeRequest
+     * @return DisablePolicyTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisablePolicyTypeResponse DisablePolicyType(DisablePolicyTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisablePolicyType", DisablePolicyTypeResponse.class);
+    }
+
+    /**
      *This API is used to undeploy permission configurations on member accounts.
      * @param req DismantleRoleConfigurationRequest
      * @return DismantleRoleConfigurationResponse
@@ -630,6 +795,17 @@ public class OrganizationClient extends AbstractClient{
     public DismantleRoleConfigurationResponse DismantleRoleConfiguration(DismantleRoleConfigurationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DismantleRoleConfiguration", DismantleRoleConfigurationResponse.class);
+    }
+
+    /**
+     *This API is used to enable a policy type.
+     * @param req EnablePolicyTypeRequest
+     * @return EnablePolicyTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnablePolicyTypeResponse EnablePolicyType(EnablePolicyTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnablePolicyType", EnablePolicyTypeResponse.class);
     }
 
     /**
@@ -798,6 +974,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain the list of non-compliant resources detected by member tags.
+     * @param req ListNonCompliantResourceRequest
+     * @return ListNonCompliantResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListNonCompliantResourceResponse ListNonCompliantResource(ListNonCompliantResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListNonCompliantResource", ListNonCompliantResourceResponse.class);
+    }
+
+    /**
      *This API is used to obtain the list of delegated admins of the organization service.
      * @param req ListOrgServiceAssignMemberRequest
      * @return ListOrgServiceAssignMemberResponse
@@ -842,6 +1029,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the list of policies associated with a target.
+     * @param req ListPoliciesForTargetRequest
+     * @return ListPoliciesForTargetResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPoliciesForTargetResponse ListPoliciesForTarget(ListPoliciesForTargetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListPoliciesForTarget", ListPoliciesForTargetResponse.class);
+    }
+
+    /**
      *This API is used to query the authorization list.
      * @param req ListRoleAssignmentsRequest
      * @return ListRoleAssignmentsResponse
@@ -883,6 +1081,17 @@ public class OrganizationClient extends AbstractClient{
     public ListSCIMCredentialsResponse ListSCIMCredentials(ListSCIMCredentialsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListSCIMCredentials", ListSCIMCredentialsResponse.class);
+    }
+
+    /**
+     *This API is used to query the list of targets associated with a specified policy.
+     * @param req ListTargetsForPolicyRequest
+     * @return ListTargetsForPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTargetsForPolicyResponse ListTargetsForPolicy(ListTargetsForPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTargetsForPolicy", ListTargetsForPolicyResponse.class);
     }
 
     /**
@@ -1084,6 +1293,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify an organization's member access policies.
+     * @param req UpdateOrganizationMembersPolicyRequest
+     * @return UpdateOrganizationMembersPolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateOrganizationMembersPolicyResponse UpdateOrganizationMembersPolicy(UpdateOrganizationMembersPolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateOrganizationMembersPolicy", UpdateOrganizationMembersPolicyResponse.class);
+    }
+
+    /**
      *This API is used to update an organization node.
      * @param req UpdateOrganizationNodeRequest
      * @return UpdateOrganizationNodeResponse
@@ -1092,6 +1312,17 @@ public class OrganizationClient extends AbstractClient{
     public UpdateOrganizationNodeResponse UpdateOrganizationNode(UpdateOrganizationNodeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateOrganizationNode", UpdateOrganizationNodeResponse.class);
+    }
+
+    /**
+     *Edit policy.
+     * @param req UpdatePolicyRequest
+     * @return UpdatePolicyResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdatePolicyResponse UpdatePolicy(UpdatePolicyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdatePolicy", UpdatePolicyResponse.class);
     }
 
     /**

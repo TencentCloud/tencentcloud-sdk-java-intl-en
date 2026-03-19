@@ -38,11 +38,18 @@ public class ListOrgServiceAssignMemberRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+    * Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
     */
     @SerializedName("ServiceId")
     @Expose
     private Long ServiceId;
+
+    /**
+    * Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+    */
+    @SerializedName("Product")
+    @Expose
+    private String Product;
 
     /**
      * Get Offset. Its value must be an integer multiple of the limit. Default value: 0. 
@@ -77,19 +84,35 @@ public class ListOrgServiceAssignMemberRequest extends AbstractModel {
     }
 
     /**
-     * Get Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1). 
-     * @return ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+     * Get Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1). 
+     * @return ServiceId Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
      */
     public Long getServiceId() {
         return this.ServiceId;
     }
 
     /**
-     * Set Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
-     * @param ServiceId Organization service ID, which can be obtained through [ListOrganizationService](https://intl.cloud.tencent.com/document/product/850/109561?from_cn_redirect=1).
+     * Set Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+     * @param ServiceId Group service ID. either this or group service product identifier is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
      */
     public void setServiceId(Long ServiceId) {
         this.ServiceId = ServiceId;
+    }
+
+    /**
+     * Get Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1). 
+     * @return Product Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+     */
+    public String getProduct() {
+        return this.Product;
+    }
+
+    /**
+     * Set Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+     * @param Product Group service product identifier. either this or group service ID is required. can be obtained through ListOrganizationService (https://www.tencentcloud.com/document/product/850/109561?from_cn_redirect=1).
+     */
+    public void setProduct(String Product) {
+        this.Product = Product;
     }
 
     public ListOrgServiceAssignMemberRequest() {
@@ -109,6 +132,9 @@ public class ListOrgServiceAssignMemberRequest extends AbstractModel {
         if (source.ServiceId != null) {
             this.ServiceId = new Long(source.ServiceId);
         }
+        if (source.Product != null) {
+            this.Product = new String(source.Product);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class ListOrgServiceAssignMemberRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "ServiceId", this.ServiceId);
+        this.setParamSimple(map, prefix + "Product", this.Product);
 
     }
 }

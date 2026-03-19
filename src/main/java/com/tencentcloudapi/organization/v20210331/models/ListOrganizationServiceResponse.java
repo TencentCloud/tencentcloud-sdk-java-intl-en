@@ -25,15 +25,13 @@ public class ListOrganizationServiceResponse extends AbstractModel {
 
     /**
     * Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * Organization service list.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Group service list.
     */
     @SerializedName("Items")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total quantity. 
      * @return Total Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotal() {
         return this.Total;
@@ -58,29 +54,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Total Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get Organization service list.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Items Organization service list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Group service list. 
+     * @return Items Group service list.
      */
     public OrganizationServiceAssign [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set Organization service list.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Items Organization service list.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Group service list.
+     * @param Items Group service list.
      */
     public void setItems(OrganizationServiceAssign [] Items) {
         this.Items = Items;

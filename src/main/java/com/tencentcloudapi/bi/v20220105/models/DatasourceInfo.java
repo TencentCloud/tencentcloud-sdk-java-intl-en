@@ -327,6 +327,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String OwnerName;
 
     /**
+    * Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Schema")
+    @Expose
+    private String Schema;
+
+    /**
+    * Database version.
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DbVersion")
+    @Expose
+    private String DbVersion;
+
+    /**
      * Get Database ID. 
      * @return Id Database ID.
      */
@@ -1070,6 +1086,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.OwnerName = OwnerName;
     }
 
+    /**
+     * Get Database schema.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Schema Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getSchema() {
+        return this.Schema;
+    }
+
+    /**
+     * Set Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Schema Database schema.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setSchema(String Schema) {
+        this.Schema = Schema;
+    }
+
+    /**
+     * Get Database version.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DbVersion Database version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDbVersion() {
+        return this.DbVersion;
+    }
+
+    /**
+     * Set Database version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DbVersion Database version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDbVersion(String DbVersion) {
+        this.DbVersion = DbVersion;
+    }
+
     public DatasourceInfo() {
     }
 
@@ -1201,6 +1257,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.OwnerName != null) {
             this.OwnerName = new String(source.OwnerName);
         }
+        if (source.Schema != null) {
+            this.Schema = new String(source.Schema);
+        }
+        if (source.DbVersion != null) {
+            this.DbVersion = new String(source.DbVersion);
+        }
     }
 
 
@@ -1247,6 +1309,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UseVPC", this.UseVPC);
         this.setParamSimple(map, prefix + "Owner", this.Owner);
         this.setParamSimple(map, prefix + "OwnerName", this.OwnerName);
+        this.setParamSimple(map, prefix + "Schema", this.Schema);
+        this.setParamSimple(map, prefix + "DbVersion", this.DbVersion);
 
     }
 }

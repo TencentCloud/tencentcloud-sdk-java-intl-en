@@ -80,6 +80,15 @@ public class InstanceInitInfo extends AbstractModel {
     private Float MaxRoCpu;
 
     /**
+    * Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
      * Get Instance CPU 
      * @return Cpu Instance CPU
      */
@@ -207,6 +216,30 @@ public class InstanceInitInfo extends AbstractModel {
         this.MaxRoCpu = MaxRoCpu;
     }
 
+    /**
+     * Get Instance machine type.
+1. common: general.
+2. exclusive: exclusive. 
+     * @return DeviceType Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
+     * @param DeviceType Instance machine type.
+1. common: general.
+2. exclusive: exclusive.
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
     public InstanceInitInfo() {
     }
 
@@ -239,6 +272,9 @@ public class InstanceInitInfo extends AbstractModel {
         if (source.MaxRoCpu != null) {
             this.MaxRoCpu = new Float(source.MaxRoCpu);
         }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
     }
 
 
@@ -254,6 +290,7 @@ public class InstanceInitInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxRoCount", this.MaxRoCount);
         this.setParamSimple(map, prefix + "MinRoCpu", this.MinRoCpu);
         this.setParamSimple(map, prefix + "MaxRoCpu", this.MaxRoCpu);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
 
     }
 }

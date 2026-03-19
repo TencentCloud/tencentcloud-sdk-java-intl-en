@@ -73,6 +73,13 @@ public class UpdateUserRequest extends AbstractModel {
     private String NewEmail;
 
     /**
+    * Whether password reset is required.
+    */
+    @SerializedName("NeedResetPassword")
+    @Expose
+    private Boolean NeedResetPassword;
+
+    /**
      * Get Space ID. 
      * @return ZoneId Space ID.
      */
@@ -184,6 +191,22 @@ public class UpdateUserRequest extends AbstractModel {
         this.NewEmail = NewEmail;
     }
 
+    /**
+     * Get Whether password reset is required. 
+     * @return NeedResetPassword Whether password reset is required.
+     */
+    public Boolean getNeedResetPassword() {
+        return this.NeedResetPassword;
+    }
+
+    /**
+     * Set Whether password reset is required.
+     * @param NeedResetPassword Whether password reset is required.
+     */
+    public void setNeedResetPassword(Boolean NeedResetPassword) {
+        this.NeedResetPassword = NeedResetPassword;
+    }
+
     public UpdateUserRequest() {
     }
 
@@ -213,6 +236,9 @@ public class UpdateUserRequest extends AbstractModel {
         if (source.NewEmail != null) {
             this.NewEmail = new String(source.NewEmail);
         }
+        if (source.NeedResetPassword != null) {
+            this.NeedResetPassword = new Boolean(source.NeedResetPassword);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class UpdateUserRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "NewDisplayName", this.NewDisplayName);
         this.setParamSimple(map, prefix + "NewDescription", this.NewDescription);
         this.setParamSimple(map, prefix + "NewEmail", this.NewEmail);
+        this.setParamSimple(map, prefix + "NeedResetPassword", this.NeedResetPassword);
 
     }
 }

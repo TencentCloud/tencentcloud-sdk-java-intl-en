@@ -32,6 +32,12 @@ public class CreateDatasourceCloudRequest extends AbstractModel {
 
     /**
     * Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
     */
     @SerializedName("DbType")
     @Expose
@@ -164,14 +170,14 @@ public class CreateDatasourceCloudRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 
+    * Database schema.
     */
     @SerializedName("Schema")
     @Expose
     private String Schema;
 
     /**
-    * 
+    * Database version.
     */
     @SerializedName("DbVersion")
     @Expose
@@ -194,8 +200,20 @@ public class CreateDatasourceCloudRequest extends AbstractModel {
     }
 
     /**
-     * Get Drive. 
+     * Get Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database. 
      * @return DbType Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      */
     public String getDbType() {
         return this.DbType;
@@ -203,7 +221,19 @@ public class CreateDatasourceCloudRequest extends AbstractModel {
 
     /**
      * Set Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      * @param DbType Drive.
+Value range:.
+MYSQL: MYSQL database.
+PRESTO: presto database.
+POSTGRE: PostgreSQL database.
+DLC: dlc database.
+MSSQL: microsoft SQL Server database.
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
@@ -498,32 +528,32 @@ public class CreateDatasourceCloudRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Schema 
+     * Get Database schema. 
+     * @return Schema Database schema.
      */
     public String getSchema() {
         return this.Schema;
     }
 
     /**
-     * Set 
-     * @param Schema 
+     * Set Database schema.
+     * @param Schema Database schema.
      */
     public void setSchema(String Schema) {
         this.Schema = Schema;
     }
 
     /**
-     * Get  
-     * @return DbVersion 
+     * Get Database version. 
+     * @return DbVersion Database version.
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set 
-     * @param DbVersion 
+     * Set Database version.
+     * @param DbVersion Database version.
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;

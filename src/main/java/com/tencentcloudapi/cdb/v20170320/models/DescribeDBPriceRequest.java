@@ -45,14 +45,14 @@ public class DescribeDBPriceRequest extends AbstractModel {
     private Long GoodsNum;
 
     /**
-    * Instance memory size in MB. This parameter is required when `InstanceId` is empty.
+    * Instance memory size, unit: MB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable instance memory size range.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Instance disk size in GB. This parameter is required when `InstanceId` is empty.
+    * Instance disk size, unit: GB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable disk size range.
     */
     @SerializedName("Volume")
     @Expose
@@ -66,7 +66,7 @@ public class DescribeDBPriceRequest extends AbstractModel {
     private String InstanceRole;
 
     /**
-    * Billing mode. Valid values: `PRE_PAID` (monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
+    * Billing mode. Valid values: `PRE_PAID` (yearly/monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
     */
     @SerializedName("PayType")
     @Expose
@@ -80,7 +80,7 @@ public class DescribeDBPriceRequest extends AbstractModel {
     private Long ProtectMode;
 
     /**
-    * Instance isolation types Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.  Default value: `UNIVERSAL`.
+    * Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - single-node instance of cloud disk edition, "CLOUD_NATIVE_CLUSTER" - cluster version standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - cluster version enhanced. Default to general-purpose instance if not specified.
     */
     @SerializedName("DeviceType")
     @Expose
@@ -115,7 +115,7 @@ public class DescribeDBPriceRequest extends AbstractModel {
     private Long Ladder;
 
     /**
-    * 
+    * Disk Type. Specify this parameter when querying the price of a cluster edition or single-node instance of cloud disk edition. Supported values include "CLOUD_SSD" - SSD cloud disk, "CLOUD_HSSD" - enhanced SSD cloud disk. Default is SSD cloud disk.
     */
     @SerializedName("DiskType")
     @Expose
@@ -170,32 +170,32 @@ public class DescribeDBPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance memory size in MB. This parameter is required when `InstanceId` is empty. 
-     * @return Memory Instance memory size in MB. This parameter is required when `InstanceId` is empty.
+     * Get Instance memory size, unit: MB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable instance memory size range. 
+     * @return Memory Instance memory size, unit: MB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable instance memory size range.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Instance memory size in MB. This parameter is required when `InstanceId` is empty.
-     * @param Memory Instance memory size in MB. This parameter is required when `InstanceId` is empty.
+     * Set Instance memory size, unit: MB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable instance memory size range.
+     * @param Memory Instance memory size, unit: MB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable instance memory size range.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Instance disk size in GB. This parameter is required when `InstanceId` is empty. 
-     * @return Volume Instance disk size in GB. This parameter is required when `InstanceId` is empty.
+     * Get Instance disk size, unit: GB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable disk size range. 
+     * @return Volume Instance disk size, unit: GB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable disk size range.
      */
     public Long getVolume() {
         return this.Volume;
     }
 
     /**
-     * Set Instance disk size in GB. This parameter is required when `InstanceId` is empty.
-     * @param Volume Instance disk size in GB. This parameter is required when `InstanceId` is empty.
+     * Set Instance disk size, unit: GB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable disk size range.
+     * @param Volume Instance disk size, unit: GB. This parameter is required when InstanceId is empty. To ensure the input value is valid, please use the [obtain the purchasable specifications of cloud databases](https://www.tencentcloud.com/document/product/236/17229?from_cn_redirect=1) API to get the saleable disk size range.
      */
     public void setVolume(Long Volume) {
         this.Volume = Volume;
@@ -218,16 +218,16 @@ public class DescribeDBPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get Billing mode. Valid values: `PRE_PAID` (monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty. 
-     * @return PayType Billing mode. Valid values: `PRE_PAID` (monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
+     * Get Billing mode. Valid values: `PRE_PAID` (yearly/monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty. 
+     * @return PayType Billing mode. Valid values: `PRE_PAID` (yearly/monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
      */
     public String getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set Billing mode. Valid values: `PRE_PAID` (monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
-     * @param PayType Billing mode. Valid values: `PRE_PAID` (monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
+     * Set Billing mode. Valid values: `PRE_PAID` (yearly/monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
+     * @param PayType Billing mode. Valid values: `PRE_PAID` (yearly/monthly subscribed), `HOUR_PAID` (pay-as-you-go). This parameter is required when `InstanceId` is empty.
      */
     public void setPayType(String PayType) {
         this.PayType = PayType;
@@ -250,16 +250,16 @@ public class DescribeDBPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance isolation types Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.  Default value: `UNIVERSAL`. 
-     * @return DeviceType Instance isolation types Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.  Default value: `UNIVERSAL`.
+     * Get Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - single-node instance of cloud disk edition, "CLOUD_NATIVE_CLUSTER" - cluster version standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - cluster version enhanced. Default to general-purpose instance if not specified. 
+     * @return DeviceType Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - single-node instance of cloud disk edition, "CLOUD_NATIVE_CLUSTER" - cluster version standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - cluster version enhanced. Default to general-purpose instance if not specified.
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance isolation types Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.  Default value: `UNIVERSAL`.
-     * @param DeviceType Instance isolation types Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance). Default value: `UNIVERSAL`.  Default value: `UNIVERSAL`.
+     * Set Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - single-node instance of cloud disk edition, "CLOUD_NATIVE_CLUSTER" - cluster version standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - cluster version enhanced. Default to general-purpose instance if not specified.
+     * @param DeviceType Instance isolation type. Supported values include: "UNIVERSAL" - general-purpose instance, "EXCLUSIVE" - dedicated instance, "BASIC_V2" - single-node instance of cloud disk edition, "CLOUD_NATIVE_CLUSTER" - cluster version standard type, "CLOUD_NATIVE_CLUSTER_EXCLUSIVE" - cluster version enhanced. Default to general-purpose instance if not specified.
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
@@ -330,16 +330,16 @@ public class DescribeDBPriceRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return DiskType 
+     * Get Disk Type. Specify this parameter when querying the price of a cluster edition or single-node instance of cloud disk edition. Supported values include "CLOUD_SSD" - SSD cloud disk, "CLOUD_HSSD" - enhanced SSD cloud disk. Default is SSD cloud disk. 
+     * @return DiskType Disk Type. Specify this parameter when querying the price of a cluster edition or single-node instance of cloud disk edition. Supported values include "CLOUD_SSD" - SSD cloud disk, "CLOUD_HSSD" - enhanced SSD cloud disk. Default is SSD cloud disk.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set 
-     * @param DiskType 
+     * Set Disk Type. Specify this parameter when querying the price of a cluster edition or single-node instance of cloud disk edition. Supported values include "CLOUD_SSD" - SSD cloud disk, "CLOUD_HSSD" - enhanced SSD cloud disk. Default is SSD cloud disk.
+     * @param DiskType Disk Type. Specify this parameter when querying the price of a cluster edition or single-node instance of cloud disk edition. Supported values include "CLOUD_SSD" - SSD cloud disk, "CLOUD_HSSD" - enhanced SSD cloud disk. Default is SSD cloud disk.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;

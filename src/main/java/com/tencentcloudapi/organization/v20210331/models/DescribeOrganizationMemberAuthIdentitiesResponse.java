@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeOrganizationMemberAuthIdentitiesResponse extends AbstractModel {
 
     /**
-    * List of authorizable identities
-Note: This field may return null, indicating that no valid values can be obtained.
+    * List of authorized identities.
     */
     @SerializedName("Items")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Total")
     @Expose
@@ -47,30 +45,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List of authorizable identities
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Items List of authorizable identities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get List of authorized identities. 
+     * @return Items List of authorized identities.
      */
     public OrgMemberAuthIdentity [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set List of authorizable identities
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Items List of authorizable identities
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set List of authorized identities.
+     * @param Items List of authorized identities.
      */
     public void setItems(OrgMemberAuthIdentity [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get Total number.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number. 
      * @return Total Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Total Total number.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotal(Long Total) {
         this.Total = Total;

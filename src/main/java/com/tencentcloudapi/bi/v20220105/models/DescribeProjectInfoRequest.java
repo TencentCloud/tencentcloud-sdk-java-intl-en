@@ -32,6 +32,9 @@ public class DescribeProjectInfoRequest extends AbstractModel {
 
     /**
     * Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
     */
     @SerializedName("DefaultPanelType")
     @Expose
@@ -54,8 +57,14 @@ public class DescribeProjectInfoRequest extends AbstractModel {
     }
 
     /**
-     * Get Default dashboard. 
+     * Get Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard. 
      * @return DefaultPanelType Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
      */
     public Long getDefaultPanelType() {
         return this.DefaultPanelType;
@@ -63,7 +72,13 @@ public class DescribeProjectInfoRequest extends AbstractModel {
 
     /**
      * Set Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
      * @param DefaultPanelType Default dashboard.
+Value range:.
+1: project dashboard. 
+2: my dashboard.
      */
     public void setDefaultPanelType(Long DefaultPanelType) {
         this.DefaultPanelType = DefaultPanelType;

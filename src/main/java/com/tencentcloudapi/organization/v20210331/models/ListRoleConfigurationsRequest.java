@@ -45,7 +45,7 @@ public class ListRoleConfigurationsRequest extends AbstractModel {
     private Long MaxResults;
 
     /**
-    * Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
+    * Text for filtering, which is case insensitive. Currently, values of RoleConfigurationName and Description are supported. For example, if Filter is set to test, permission configurations whose name or description contains test are queried.
     */
     @SerializedName("Filter")
     @Expose
@@ -114,16 +114,16 @@ public class ListRoleConfigurationsRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration. 
-     * @return Filter Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
+     * Get Text for filtering, which is case insensitive. Currently, values of RoleConfigurationName and Description are supported. For example, if Filter is set to test, permission configurations whose name or description contains test are queried. 
+     * @return Filter Text for filtering, which is case insensitive. Currently, values of RoleConfigurationName and Description are supported. For example, if Filter is set to test, permission configurations whose name or description contains test are queried.
      */
     public String getFilter() {
         return this.Filter;
     }
 
     /**
-     * Set Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
-     * @param Filter Filter criteria, which are case insensitive. Currently, only RoleConfigurationName is supported and only eq (Equals) and sw (Start With) are supported. Example: Filter = "RoleConfigurationName, only sw test" means querying all permission configurations starting with test. Filter = "RoleConfigurationName, only eq TestRoleConfiguration" means querying the permission configuration named TestRoleConfiguration.
+     * Set Text for filtering, which is case insensitive. Currently, values of RoleConfigurationName and Description are supported. For example, if Filter is set to test, permission configurations whose name or description contains test are queried.
+     * @param Filter Text for filtering, which is case insensitive. Currently, values of RoleConfigurationName and Description are supported. For example, if Filter is set to test, permission configurations whose name or description contains test are queried.
      */
     public void setFilter(String Filter) {
         this.Filter = Filter;

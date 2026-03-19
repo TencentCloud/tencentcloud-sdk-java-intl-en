@@ -66,6 +66,13 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
     private String CustomPolicyDocument;
 
     /**
+    * List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
+    */
+    @SerializedName("CustomPolicyDocuments")
+    @Expose
+    private String [] CustomPolicyDocuments;
+
+    /**
      * Get Space ID. 
      * @return ZoneId Space ID.
      */
@@ -161,6 +168,22 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
         this.CustomPolicyDocument = CustomPolicyDocument;
     }
 
+    /**
+     * Get List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.) 
+     * @return CustomPolicyDocuments List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
+     */
+    public String [] getCustomPolicyDocuments() {
+        return this.CustomPolicyDocuments;
+    }
+
+    /**
+     * Set List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
+     * @param CustomPolicyDocuments List of custom policy content. (The number of custom policies in this list is the same as that specified by RolePolicyNames.)
+     */
+    public void setCustomPolicyDocuments(String [] CustomPolicyDocuments) {
+        this.CustomPolicyDocuments = CustomPolicyDocuments;
+    }
+
     public AddPermissionPolicyToRoleConfigurationRequest() {
     }
 
@@ -193,6 +216,12 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
         if (source.CustomPolicyDocument != null) {
             this.CustomPolicyDocument = new String(source.CustomPolicyDocument);
         }
+        if (source.CustomPolicyDocuments != null) {
+            this.CustomPolicyDocuments = new String[source.CustomPolicyDocuments.length];
+            for (int i = 0; i < source.CustomPolicyDocuments.length; i++) {
+                this.CustomPolicyDocuments[i] = new String(source.CustomPolicyDocuments[i]);
+            }
+        }
     }
 
 
@@ -206,6 +235,7 @@ public class AddPermissionPolicyToRoleConfigurationRequest extends AbstractModel
         this.setParamArraySimple(map, prefix + "RolePolicyNames.", this.RolePolicyNames);
         this.setParamArrayObj(map, prefix + "RolePolicies.", this.RolePolicies);
         this.setParamSimple(map, prefix + "CustomPolicyDocument", this.CustomPolicyDocument);
+        this.setParamArraySimple(map, prefix + "CustomPolicyDocuments.", this.CustomPolicyDocuments);
 
     }
 }

@@ -62,7 +62,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String LastLogin;
 
     /**
-    * Enabled/Disabled status.
+    * User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
@@ -70,7 +77,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Status;
 
     /**
-    * Whether to change the password during the first-time login.
+    * Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FirstModify")
@@ -126,7 +133,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UpdatedAt;
 
     /**
-    * Global role.
+    * System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GlobalUserName")
@@ -134,7 +141,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String GlobalUserName;
 
     /**
-    * Global role code.
+    * System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("GlobalUserCode")
@@ -299,9 +306,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Enabled/Disabled status.
+     * Get User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Enabled/Disabled status.
+     * @return Status User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
@@ -309,9 +330,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Enabled/Disabled status.
+     * Set User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Enabled/Disabled status.
+     * @param Status User status.
+Valid values:.
+
+-Enable.
+-0: disabled.
+
+The default value is 1.
+Example value: 1.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
@@ -319,9 +354,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to change the password during the first-time login.
+     * Get Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FirstModify Whether to change the password during the first-time login.
+     * @return FirstModify Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFirstModify() {
@@ -329,9 +364,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to change the password during the first-time login.
+     * Set Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FirstModify Whether to change the password during the first-time login.
+     * @param FirstModify Whether to change password on first login.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFirstModify(Long FirstModify) {
@@ -459,9 +494,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Global role.
+     * Get System global role.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GlobalUserName Global role.
+     * @return GlobalUserName System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getGlobalUserName() {
@@ -469,9 +504,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Global role.
+     * Set System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GlobalUserName Global role.
+     * @param GlobalUserName System global role.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGlobalUserName(String GlobalUserName) {
@@ -479,9 +514,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Global role code.
+     * Get System global role code.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GlobalUserCode Global role code.
+     * @return GlobalUserCode System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getGlobalUserCode() {
@@ -489,9 +524,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Global role code.
+     * Set System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GlobalUserCode Global role code.
+     * @param GlobalUserCode System global role code.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setGlobalUserCode(String GlobalUserCode) {

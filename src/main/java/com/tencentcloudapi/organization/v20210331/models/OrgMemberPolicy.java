@@ -25,7 +25,6 @@ public class OrgMemberPolicy extends AbstractModel {
 
     /**
     * Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolicyId")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolicyName")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityId")
     @Expose
@@ -49,15 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityRoleName")
     @Expose
     private String IdentityRoleName;
 
     /**
-    * Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Role alias of an identity.
     */
     @SerializedName("IdentityRoleAliasName")
     @Expose
@@ -65,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Description.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,17 +74,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy ID. 
      * @return PolicyId Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPolicyId() {
         return this.PolicyId;
@@ -99,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PolicyId Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get Policy name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy name. 
      * @return PolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -119,19 +105,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Identity ID. 
      * @return IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIdentityId() {
         return this.IdentityId;
@@ -139,19 +121,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;
     }
 
     /**
-     * Get Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Identity role name. 
      * @return IdentityRoleName Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIdentityRoleName() {
         return this.IdentityRoleName;
@@ -159,39 +137,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IdentityRoleName Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityRoleName(String IdentityRoleName) {
         this.IdentityRoleName = IdentityRoleName;
     }
 
     /**
-     * Get Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IdentityRoleAliasName Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Role alias of an identity. 
+     * @return IdentityRoleAliasName Role alias of an identity.
      */
     public String getIdentityRoleAliasName() {
         return this.IdentityRoleAliasName;
     }
 
     /**
-     * Set Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IdentityRoleAliasName Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Role alias of an identity.
+     * @param IdentityRoleAliasName Role alias of an identity.
      */
     public void setIdentityRoleAliasName(String IdentityRoleAliasName) {
         this.IdentityRoleAliasName = IdentityRoleAliasName;
     }
 
     /**
-     * Get Description.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Description. 
      * @return Description Description.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -199,19 +169,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Description.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Description Description.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Creation time.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time. 
      * @return CreateTime Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -219,19 +185,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Update time. 
      * @return UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -239,9 +201,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

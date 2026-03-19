@@ -38,6 +38,13 @@ public class SlaveZoneAttrItem extends AbstractModel {
     private String BinlogSyncWay;
 
     /**
+    * Semi-Sync timeout period in milliseconds.
+    */
+    @SerializedName("SemiSyncTimeout")
+    @Expose
+    private Long SemiSyncTimeout;
+
+    /**
      * Get Availability zone 
      * @return Zone Availability zone
      */
@@ -69,6 +76,22 @@ public class SlaveZoneAttrItem extends AbstractModel {
         this.BinlogSyncWay = BinlogSyncWay;
     }
 
+    /**
+     * Get Semi-Sync timeout period in milliseconds. 
+     * @return SemiSyncTimeout Semi-Sync timeout period in milliseconds.
+     */
+    public Long getSemiSyncTimeout() {
+        return this.SemiSyncTimeout;
+    }
+
+    /**
+     * Set Semi-Sync timeout period in milliseconds.
+     * @param SemiSyncTimeout Semi-Sync timeout period in milliseconds.
+     */
+    public void setSemiSyncTimeout(Long SemiSyncTimeout) {
+        this.SemiSyncTimeout = SemiSyncTimeout;
+    }
+
     public SlaveZoneAttrItem() {
     }
 
@@ -83,6 +106,9 @@ public class SlaveZoneAttrItem extends AbstractModel {
         if (source.BinlogSyncWay != null) {
             this.BinlogSyncWay = new String(source.BinlogSyncWay);
         }
+        if (source.SemiSyncTimeout != null) {
+            this.SemiSyncTimeout = new Long(source.SemiSyncTimeout);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class SlaveZoneAttrItem extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "BinlogSyncWay", this.BinlogSyncWay);
+        this.setParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
 
     }
 }

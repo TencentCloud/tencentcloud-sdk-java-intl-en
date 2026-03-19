@@ -32,7 +32,6 @@ public class PolicyDetail extends AbstractModel {
 
     /**
     * Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolicyName")
     @Expose
@@ -55,10 +54,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Policy name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy name. 
      * @return PolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -66,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;

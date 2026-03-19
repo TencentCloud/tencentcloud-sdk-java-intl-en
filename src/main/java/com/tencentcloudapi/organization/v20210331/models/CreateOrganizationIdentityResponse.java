@@ -25,7 +25,6 @@ public class CreateOrganizationIdentityResponse extends AbstractModel {
 
     /**
     * Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityId")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Identity ID. 
      * @return IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIdentityId() {
         return this.IdentityId;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;

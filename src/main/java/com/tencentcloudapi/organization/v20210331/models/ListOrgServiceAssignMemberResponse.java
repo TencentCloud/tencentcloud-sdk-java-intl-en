@@ -25,15 +25,13 @@ public class ListOrgServiceAssignMemberResponse extends AbstractModel {
 
     /**
     * Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * List of the delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Delegated administrator list.
     */
     @SerializedName("Items")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total quantity. 
      * @return Total Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotal() {
         return this.Total;
@@ -58,29 +54,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Total Total quantity.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get List of the delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Items List of the delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Delegated administrator list. 
+     * @return Items Delegated administrator list.
      */
     public OrganizationServiceAssignMember [] getItems() {
         return this.Items;
     }
 
     /**
-     * Set List of the delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Items List of the delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Delegated administrator list.
+     * @param Items Delegated administrator list.
      */
     public void setItems(OrganizationServiceAssignMember [] Items) {
         this.Items = Items;

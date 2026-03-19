@@ -25,7 +25,6 @@ public class OrganizationServiceAssignMember extends AbstractModel {
 
     /**
     * Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProductName")
     @Expose
@@ -41,23 +39,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Uin of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MemberUin")
     @Expose
     private Long MemberUin;
 
     /**
-    * Name of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Delegated administrator name.
     */
     @SerializedName("MemberName")
     @Expose
     private String MemberName;
 
     /**
-    * Activation status. Valid values: 0 (the service has no activation status), 1 (activated), 2 (not activated).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Activation status. Valid values: 0: not applicable to the service; 1: activated; 2: not activated.
     */
     @SerializedName("UsageStatus")
     @Expose
@@ -65,41 +60,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Delegation time.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Management scope of the delegated administrator. Valid values: 1: all members; 2 some members.
     */
     @SerializedName("ManagementScope")
     @Expose
     private Long ManagementScope;
 
     /**
-    * Uin list of managed members. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * UIN list of the managed members. This parameter is valid when the value of ManagementScope is 2.
     */
     @SerializedName("ManagementScopeMembers")
     @Expose
     private MemberMainInfo [] ManagementScopeMembers;
 
     /**
-    * ID list of the managed departments. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * ID list of the departments under management. This parameter is valid when the value of ManagementScope is 2.
     */
     @SerializedName("ManagementScopeNodes")
     @Expose
     private NodeMainInfo [] ManagementScopeNodes;
 
     /**
-     * Get Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Organization service ID. 
      * @return ServiceId Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getServiceId() {
         return this.ServiceId;
@@ -107,19 +96,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ServiceId Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceId(Long ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Organization service product name. 
      * @return ProductName Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProductName() {
         return this.ProductName;
@@ -127,19 +112,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProductName Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get Uin of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Uin of the delegated admin. 
      * @return MemberUin Uin of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMemberUin() {
         return this.MemberUin;
@@ -147,59 +128,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Uin of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MemberUin Uin of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
     }
 
     /**
-     * Get Name of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MemberName Name of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Delegated administrator name. 
+     * @return MemberName Delegated administrator name.
      */
     public String getMemberName() {
         return this.MemberName;
     }
 
     /**
-     * Set Name of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MemberName Name of the delegated admin.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Delegated administrator name.
+     * @param MemberName Delegated administrator name.
      */
     public void setMemberName(String MemberName) {
         this.MemberName = MemberName;
     }
 
     /**
-     * Get Activation status. Valid values: 0 (the service has no activation status), 1 (activated), 2 (not activated).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UsageStatus Activation status. Valid values: 0 (the service has no activation status), 1 (activated), 2 (not activated).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Activation status. Valid values: 0: not applicable to the service; 1: activated; 2: not activated. 
+     * @return UsageStatus Activation status. Valid values: 0: not applicable to the service; 1: activated; 2: not activated.
      */
     public Long getUsageStatus() {
         return this.UsageStatus;
     }
 
     /**
-     * Set Activation status. Valid values: 0 (the service has no activation status), 1 (activated), 2 (not activated).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UsageStatus Activation status. Valid values: 0 (the service has no activation status), 1 (activated), 2 (not activated).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Activation status. Valid values: 0: not applicable to the service; 1: activated; 2: not activated.
+     * @param UsageStatus Activation status. Valid values: 0: not applicable to the service; 1: activated; 2: not activated.
      */
     public void setUsageStatus(Long UsageStatus) {
         this.UsageStatus = UsageStatus;
     }
 
     /**
-     * Get Delegation time.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Delegation time. 
      * @return CreateTime Delegation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -207,69 +176,55 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Delegation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Delegation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ManagementScope Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Management scope of the delegated administrator. Valid values: 1: all members; 2 some members. 
+     * @return ManagementScope Management scope of the delegated administrator. Valid values: 1: all members; 2 some members.
      */
     public Long getManagementScope() {
         return this.ManagementScope;
     }
 
     /**
-     * Set Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ManagementScope Management scope of the delegated admin. Valid values: 1 (all members), 2 (partial members).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Management scope of the delegated administrator. Valid values: 1: all members; 2 some members.
+     * @param ManagementScope Management scope of the delegated administrator. Valid values: 1: all members; 2 some members.
      */
     public void setManagementScope(Long ManagementScope) {
         this.ManagementScope = ManagementScope;
     }
 
     /**
-     * Get Uin list of managed members. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ManagementScopeMembers Uin list of managed members. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get UIN list of the managed members. This parameter is valid when the value of ManagementScope is 2. 
+     * @return ManagementScopeMembers UIN list of the managed members. This parameter is valid when the value of ManagementScope is 2.
      */
     public MemberMainInfo [] getManagementScopeMembers() {
         return this.ManagementScopeMembers;
     }
 
     /**
-     * Set Uin list of managed members. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ManagementScopeMembers Uin list of managed members. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set UIN list of the managed members. This parameter is valid when the value of ManagementScope is 2.
+     * @param ManagementScopeMembers UIN list of the managed members. This parameter is valid when the value of ManagementScope is 2.
      */
     public void setManagementScopeMembers(MemberMainInfo [] ManagementScopeMembers) {
         this.ManagementScopeMembers = ManagementScopeMembers;
     }
 
     /**
-     * Get ID list of the managed departments. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ManagementScopeNodes ID list of the managed departments. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ID list of the departments under management. This parameter is valid when the value of ManagementScope is 2. 
+     * @return ManagementScopeNodes ID list of the departments under management. This parameter is valid when the value of ManagementScope is 2.
      */
     public NodeMainInfo [] getManagementScopeNodes() {
         return this.ManagementScopeNodes;
     }
 
     /**
-     * Set ID list of the managed departments. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ManagementScopeNodes ID list of the managed departments. This parameter is valid when ManagementScope is 2.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ID list of the departments under management. This parameter is valid when the value of ManagementScope is 2.
+     * @param ManagementScopeNodes ID list of the departments under management. This parameter is valid when the value of ManagementScope is 2.
      */
     public void setManagementScopeNodes(NodeMainInfo [] ManagementScopeNodes) {
         this.ManagementScopeNodes = ManagementScopeNodes;

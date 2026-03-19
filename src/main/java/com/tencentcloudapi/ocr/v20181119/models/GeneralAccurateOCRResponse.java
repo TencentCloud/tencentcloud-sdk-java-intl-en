@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class GeneralAccurateOCRResponse extends AbstractModel {
 
     /**
-    * Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+    * <p>Detected text information, including row content, confidence degree, text line coordinate, and rotation corrected coordinate. For specific content, please click the left-side link.</p>
     */
     @SerializedName("TextDetections")
     @Expose
     private TextDetection [] TextDetections;
 
     /**
-    * Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+    * Image rotation angle in degrees. Zero degrees: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
     */
     @SerializedName("Angel")
     @Expose
     private Float Angel;
 
     /**
-    * Image rotation angle (angle system). the text's horizontal direction is 0°. clockwise is positive, counterclockwise is negative. click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">how to correct tilt text</a>.
+    * <p>Image rotation angle (angle system), the text's horizontal direction is Zero degrees; clockwise is positive, counterclockwise is negative. Click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">How to correct tilt text</a></p>
     */
     @SerializedName("Angle")
     @Expose
@@ -52,24 +52,24 @@ public class GeneralAccurateOCRResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left. 
-     * @return TextDetections Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+     * Get <p>Detected text information, including row content, confidence degree, text line coordinate, and rotation corrected coordinate. For specific content, please click the left-side link.</p> 
+     * @return TextDetections <p>Detected text information, including row content, confidence degree, text line coordinate, and rotation corrected coordinate. For specific content, please click the left-side link.</p>
      */
     public TextDetection [] getTextDetections() {
         return this.TextDetections;
     }
 
     /**
-     * Set Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
-     * @param TextDetections Information on recognized text, including the text line content, confidence, text line coordinates, and text line coordinates after rotation correction. For more information, please click the link on the left.
+     * Set <p>Detected text information, including row content, confidence degree, text line coordinate, and rotation corrected coordinate. For specific content, please click the left-side link.</p>
+     * @param TextDetections <p>Detected text information, including row content, confidence degree, text line coordinate, and rotation corrected coordinate. For specific content, please click the left-side link.</p>
      */
     public void setTextDetections(TextDetection [] TextDetections) {
         this.TextDetections = TextDetections;
     }
 
     /**
-     * Get Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise. 
-     * @return Angel Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+     * Get Image rotation angle in degrees. Zero degrees: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise. 
+     * @return Angel Image rotation angle in degrees. Zero degrees: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
      * @deprecated
      */
     @Deprecated
@@ -78,8 +78,8 @@ public class GeneralAccurateOCRResponse extends AbstractModel {
     }
 
     /**
-     * Set Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
-     * @param Angel Image rotation angle in degrees. 0°: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+     * Set Image rotation angle in degrees. Zero degrees: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
+     * @param Angel Image rotation angle in degrees. Zero degrees: The horizontal direction of the text on the image; a positive value: rotate clockwise; a negative value: rotate counterclockwise.
      * @deprecated
      */
     @Deprecated
@@ -88,16 +88,16 @@ public class GeneralAccurateOCRResponse extends AbstractModel {
     }
 
     /**
-     * Get Image rotation angle (angle system). the text's horizontal direction is 0°. clockwise is positive, counterclockwise is negative. click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">how to correct tilt text</a>. 
-     * @return Angle Image rotation angle (angle system). the text's horizontal direction is 0°. clockwise is positive, counterclockwise is negative. click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">how to correct tilt text</a>.
+     * Get <p>Image rotation angle (angle system), the text's horizontal direction is Zero degrees; clockwise is positive, counterclockwise is negative. Click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">How to correct tilt text</a></p> 
+     * @return Angle <p>Image rotation angle (angle system), the text's horizontal direction is Zero degrees; clockwise is positive, counterclockwise is negative. Click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">How to correct tilt text</a></p>
      */
     public Float getAngle() {
         return this.Angle;
     }
 
     /**
-     * Set Image rotation angle (angle system). the text's horizontal direction is 0°. clockwise is positive, counterclockwise is negative. click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">how to correct tilt text</a>.
-     * @param Angle Image rotation angle (angle system). the text's horizontal direction is 0°. clockwise is positive, counterclockwise is negative. click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">how to correct tilt text</a>.
+     * Set <p>Image rotation angle (angle system), the text's horizontal direction is Zero degrees; clockwise is positive, counterclockwise is negative. Click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">How to correct tilt text</a></p>
+     * @param Angle <p>Image rotation angle (angle system), the text's horizontal direction is Zero degrees; clockwise is positive, counterclockwise is negative. Click to view <a href="https://www.tencentcloud.com/document/product/866/45139?from_cn_redirect=1">How to correct tilt text</a></p>
      */
     public void setAngle(Float Angle) {
         this.Angle = Angle;

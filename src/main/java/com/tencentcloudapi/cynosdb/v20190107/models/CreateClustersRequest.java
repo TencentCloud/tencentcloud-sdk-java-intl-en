@@ -120,7 +120,9 @@ Storage capacity in GB
     private Long Port;
 
     /**
-    * Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
+    * Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
     */
     @SerializedName("PayMode")
     @Expose
@@ -174,28 +176,28 @@ Specified allowed time range for time point rollback
 
     /**
     * Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * Purchase duration of monthly subscription plan
+    * Purchase duration of yearly/monthly subscription plan
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
+    * Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+    * Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
     */
     @SerializedName("AutoRenewFlag")
@@ -275,9 +277,9 @@ Default value: `600`
     private Long AutoPauseDelay;
 
     /**
-    * The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+    * The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
     */
     @SerializedName("StoragePayMode")
     @Expose
@@ -298,7 +300,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     private String [] AlarmPolicyIds;
 
     /**
-    * Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+    * Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
     */
     @SerializedName("ClusterParams")
     @Expose
@@ -312,7 +314,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     private Long DealMode;
 
     /**
-    * Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
+    * Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
     */
     @SerializedName("ParamTemplateId")
     @Expose
@@ -331,6 +333,41 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     @SerializedName("InstanceInitInfos")
     @Expose
     private InstanceInitInfo [] InstanceInitInfos;
+
+    /**
+    * Global database unique identifier.
+    */
+    @SerializedName("GdnId")
+    @Expose
+    private String GdnId;
+
+    /**
+    * Database proxy configuration.
+    */
+    @SerializedName("ProxyConfig")
+    @Expose
+    private ProxyConfig ProxyConfig;
+
+    /**
+    * Automatically archive.
+    */
+    @SerializedName("AutoArchive")
+    @Expose
+    private String AutoArchive;
+
+    /**
+    * Archiving processing time after pausing.
+    */
+    @SerializedName("AutoArchiveDelayHours")
+    @Expose
+    private Long AutoArchiveDelayHours;
+
+    /**
+    * Kernel minor version number.
+    */
+    @SerializedName("CynosVersion")
+    @Expose
+    private String CynosVersion;
 
     /**
      * Get AZ 
@@ -561,16 +598,24 @@ Storage capacity in GB
     }
 
     /**
-     * Get Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0` 
-     * @return PayMode Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
+     * Get Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription. 
+     * @return PayMode Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
-     * @param PayMode Billing mode. `0`: pay-as-you-go; `1`: monthly subscription. Default value: `0`
+     * Set Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
+     * @param PayMode Billing mode. supported values: 0 and 1. default value: 0.
+Value is 0, indicating pay-as-you-go billing.
+Value is 1, which means yearly/monthly subscription.
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -690,9 +735,9 @@ Specified allowed time range for time point rollback
 
     /**
      * Get Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications. 
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications. 
      * @return StorageLimit Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
@@ -700,50 +745,50 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
 
     /**
      * Set Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
      * @param StorageLimit Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the parameter value can’t exceed the maximum storage corresponding to the CPU and memory specifications.
+If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get Purchase duration of monthly subscription plan 
-     * @return TimeSpan Purchase duration of monthly subscription plan
+     * Get Purchase duration of yearly/monthly subscription plan 
+     * @return TimeSpan Purchase duration of yearly/monthly subscription plan
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Purchase duration of monthly subscription plan
-     * @param TimeSpan Purchase duration of monthly subscription plan
+     * Set Purchase duration of yearly/monthly subscription plan
+     * @param TimeSpan Purchase duration of yearly/monthly subscription plan
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y` 
-     * @return TimeUnit Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
+     * Get Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y` 
+     * @return TimeUnit Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
-     * @param TimeUnit Duration unit of monthly subscription. Valid values: `s`, `d`, `m`, `y`
+     * Set Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
+     * @param TimeUnit Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+     * Get Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal. 
-     * @return AutoRenewFlag Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+     * @return AutoRenewFlag Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
      */
     public Long getAutoRenewFlag() {
@@ -751,9 +796,9 @@ If `DbType` is `MYSQL` and the storage billing mode is monthly subscription, the
     }
 
     /**
-     * Set Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+     * Set Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
-     * @param AutoRenewFlag Specifies whether the annual/monthly subscription is auto-renewed. the default value is 0.
+     * @param AutoRenewFlag Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
 0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
@@ -941,24 +986,24 @@ Default value: `600`
     }
 
     /**
-     * Get The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+     * Get The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back. 
-     * @return StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back. 
+     * @return StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+     * Set The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
-     * @param StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription). Default value: `0`.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
+     * @param StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
+Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
@@ -997,16 +1042,16 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     }
 
     /**
-     * Get Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive). 
-     * @return ClusterParams Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+     * Get Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive). 
+     * @return ClusterParams Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
      */
     public ParamItem [] getClusterParams() {
         return this.ClusterParams;
     }
 
     /**
-     * Set Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
-     * @param ClusterParams Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+     * Set Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+     * @param ClusterParams Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
      */
     public void setClusterParams(ParamItem [] ClusterParams) {
         this.ClusterParams = ClusterParams;
@@ -1029,16 +1074,16 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     }
 
     /**
-     * Get Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates” 
-     * @return ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
+     * Get Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates" 
+     * @return ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
-     * @param ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
+     * Set Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
+     * @param ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
@@ -1074,6 +1119,86 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
      */
     public void setInstanceInitInfos(InstanceInitInfo [] InstanceInitInfos) {
         this.InstanceInitInfos = InstanceInitInfos;
+    }
+
+    /**
+     * Get Global database unique identifier. 
+     * @return GdnId Global database unique identifier.
+     */
+    public String getGdnId() {
+        return this.GdnId;
+    }
+
+    /**
+     * Set Global database unique identifier.
+     * @param GdnId Global database unique identifier.
+     */
+    public void setGdnId(String GdnId) {
+        this.GdnId = GdnId;
+    }
+
+    /**
+     * Get Database proxy configuration. 
+     * @return ProxyConfig Database proxy configuration.
+     */
+    public ProxyConfig getProxyConfig() {
+        return this.ProxyConfig;
+    }
+
+    /**
+     * Set Database proxy configuration.
+     * @param ProxyConfig Database proxy configuration.
+     */
+    public void setProxyConfig(ProxyConfig ProxyConfig) {
+        this.ProxyConfig = ProxyConfig;
+    }
+
+    /**
+     * Get Automatically archive. 
+     * @return AutoArchive Automatically archive.
+     */
+    public String getAutoArchive() {
+        return this.AutoArchive;
+    }
+
+    /**
+     * Set Automatically archive.
+     * @param AutoArchive Automatically archive.
+     */
+    public void setAutoArchive(String AutoArchive) {
+        this.AutoArchive = AutoArchive;
+    }
+
+    /**
+     * Get Archiving processing time after pausing. 
+     * @return AutoArchiveDelayHours Archiving processing time after pausing.
+     */
+    public Long getAutoArchiveDelayHours() {
+        return this.AutoArchiveDelayHours;
+    }
+
+    /**
+     * Set Archiving processing time after pausing.
+     * @param AutoArchiveDelayHours Archiving processing time after pausing.
+     */
+    public void setAutoArchiveDelayHours(Long AutoArchiveDelayHours) {
+        this.AutoArchiveDelayHours = AutoArchiveDelayHours;
+    }
+
+    /**
+     * Get Kernel minor version number. 
+     * @return CynosVersion Kernel minor version number.
+     */
+    public String getCynosVersion() {
+        return this.CynosVersion;
+    }
+
+    /**
+     * Set Kernel minor version number.
+     * @param CynosVersion Kernel minor version number.
+     */
+    public void setCynosVersion(String CynosVersion) {
+        this.CynosVersion = CynosVersion;
     }
 
     public CreateClustersRequest() {
@@ -1222,6 +1347,21 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
                 this.InstanceInitInfos[i] = new InstanceInitInfo(source.InstanceInitInfos[i]);
             }
         }
+        if (source.GdnId != null) {
+            this.GdnId = new String(source.GdnId);
+        }
+        if (source.ProxyConfig != null) {
+            this.ProxyConfig = new ProxyConfig(source.ProxyConfig);
+        }
+        if (source.AutoArchive != null) {
+            this.AutoArchive = new String(source.AutoArchive);
+        }
+        if (source.AutoArchiveDelayHours != null) {
+            this.AutoArchiveDelayHours = new Long(source.AutoArchiveDelayHours);
+        }
+        if (source.CynosVersion != null) {
+            this.CynosVersion = new String(source.CynosVersion);
+        }
     }
 
 
@@ -1270,6 +1410,11 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         this.setParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
         this.setParamArrayObj(map, prefix + "InstanceInitInfos.", this.InstanceInitInfos);
+        this.setParamSimple(map, prefix + "GdnId", this.GdnId);
+        this.setParamObj(map, prefix + "ProxyConfig.", this.ProxyConfig);
+        this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
+        this.setParamSimple(map, prefix + "AutoArchiveDelayHours", this.AutoArchiveDelayHours);
+        this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
 
     }
 }

@@ -25,7 +25,6 @@ public class NodeMainInfo extends AbstractModel {
 
     /**
     * Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NodeId")
     @Expose
@@ -33,17 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-     * Get Department ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Department ID 
      * @return NodeId Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getNodeId() {
         return this.NodeId;
@@ -51,19 +47,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NodeId Department ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNodeId(Long NodeId) {
         this.NodeId = NodeId;
     }
 
     /**
-     * Get Department name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Department name. 
      * @return NodeName Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNodeName() {
         return this.NodeName;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param NodeName Department name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;

@@ -25,7 +25,6 @@ public class AddOrganizationMemberEmailResponse extends AbstractModel {
 
     /**
     * Bound ID.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BindId")
     @Expose
@@ -39,10 +38,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Bound ID.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Bound ID. 
      * @return BindId Bound ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public Long getBindId() {
         return this.BindId;
@@ -50,9 +47,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Bound ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param BindId Bound ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setBindId(Long BindId) {
         this.BindId = BindId;

@@ -25,7 +25,6 @@ public class RolePolicie extends AbstractModel {
 
     /**
     * Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RolePolicyId")
     @Expose
@@ -60,10 +59,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AddTime;
 
     /**
-     * Get Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy ID. 
      * @return RolePolicyId Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRolePolicyId() {
         return this.RolePolicyId;
@@ -71,9 +68,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RolePolicyId Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRolePolicyId(Long RolePolicyId) {
         this.RolePolicyId = RolePolicyId;

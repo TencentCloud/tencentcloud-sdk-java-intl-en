@@ -53,7 +53,6 @@ public class RoleProvisioningsTask extends AbstractModel {
 
     /**
     * Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TargetType")
     @Expose
@@ -61,7 +60,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskType")
     @Expose
@@ -69,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskStatus")
     @Expose
@@ -140,10 +137,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account. 
      * @return TargetType Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTargetType() {
         return this.TargetType;
@@ -151,19 +146,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TargetType Type of the synchronized target account of the Tencent Cloud Organization. ManagerUin: admin account; MemberUin: member account.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTargetType(String TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get Task type.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Task type. 
      * @return TaskType Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskType() {
         return this.TaskType;
@@ -171,19 +162,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskType Task type.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded. 
      * @return TaskStatus Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTaskStatus() {
         return this.TaskStatus;
@@ -191,9 +178,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskStatus Task status. InProgress: The task is in progress; Failed: The task failed; Success: The task succeeded.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskStatus(String TaskStatus) {
         this.TaskStatus = TaskStatus;

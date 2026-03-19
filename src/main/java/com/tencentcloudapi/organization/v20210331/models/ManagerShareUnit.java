@@ -24,268 +24,256 @@ import java.util.HashMap;
 public class ManagerShareUnit extends AbstractModel {
 
     /**
-    * Shared unit ID.
+    * <p>Shared unit ID.</p>.
     */
     @SerializedName("UnitId")
     @Expose
     private String UnitId;
 
     /**
-    * Shared unit name.
+    * <P>Shared unit name.</p>.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Shared unit administrator UIN.
+    * <p>Shared unit administrator Uin.</p>.
     */
     @SerializedName("Uin")
     @Expose
     private Long Uin;
 
     /**
-    * Shared unit administrator OwnerUin.
+    * <p>Shared unit administrator OwnerUin.</p>.
     */
     @SerializedName("OwnerUin")
     @Expose
     private Long OwnerUin;
 
     /**
-    * Shared unit region.
+    * <P>Shared unit region.</p>.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-    * Description.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <P>Description.</P>.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <P>Creation time.</p>.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * The number of resources in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <P>The number of resources in a shared unit.</p>.
     */
     @SerializedName("ShareResourceNum")
     @Expose
     private Long ShareResourceNum;
 
     /**
-    * The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <P>The number of members in a shared unit.</p>.
     */
     @SerializedName("ShareMemberNum")
     @Expose
     private Long ShareMemberNum;
 
     /**
-    * Sharing scope. Valid values: 1: Only sharing within a group organization is allowed; 2: Sharing with any account is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <P>Sharing scope. valid values: 1: only sharing within a group organization is allowed; 2: sharing with any account is allowed.</p>.
     */
     @SerializedName("ShareScope")
     @Expose
     private Long ShareScope;
 
     /**
-     * Get Shared unit ID. 
-     * @return UnitId Shared unit ID.
+    * <P>The number of departments in a shared unit.</p>.
+    */
+    @SerializedName("ShareNodeNum")
+    @Expose
+    private Long ShareNodeNum;
+
+    /**
+     * Get <p>Shared unit ID.</p>. 
+     * @return UnitId <p>Shared unit ID.</p>.
      */
     public String getUnitId() {
         return this.UnitId;
     }
 
     /**
-     * Set Shared unit ID.
-     * @param UnitId Shared unit ID.
+     * Set <p>Shared unit ID.</p>.
+     * @param UnitId <p>Shared unit ID.</p>.
      */
     public void setUnitId(String UnitId) {
         this.UnitId = UnitId;
     }
 
     /**
-     * Get Shared unit name. 
-     * @return Name Shared unit name.
+     * Get <P>Shared unit name.</p>. 
+     * @return Name <P>Shared unit name.</p>.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Shared unit name.
-     * @param Name Shared unit name.
+     * Set <P>Shared unit name.</p>.
+     * @param Name <P>Shared unit name.</p>.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Shared unit administrator UIN. 
-     * @return Uin Shared unit administrator UIN.
+     * Get <p>Shared unit administrator Uin.</p>. 
+     * @return Uin <p>Shared unit administrator Uin.</p>.
      */
     public Long getUin() {
         return this.Uin;
     }
 
     /**
-     * Set Shared unit administrator UIN.
-     * @param Uin Shared unit administrator UIN.
+     * Set <p>Shared unit administrator Uin.</p>.
+     * @param Uin <p>Shared unit administrator Uin.</p>.
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get Shared unit administrator OwnerUin. 
-     * @return OwnerUin Shared unit administrator OwnerUin.
+     * Get <p>Shared unit administrator OwnerUin.</p>. 
+     * @return OwnerUin <p>Shared unit administrator OwnerUin.</p>.
      */
     public Long getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set Shared unit administrator OwnerUin.
-     * @param OwnerUin Shared unit administrator OwnerUin.
+     * Set <p>Shared unit administrator OwnerUin.</p>.
+     * @param OwnerUin <p>Shared unit administrator OwnerUin.</p>.
      */
     public void setOwnerUin(Long OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get Shared unit region. 
-     * @return Area Shared unit region.
+     * Get <P>Shared unit region.</p>. 
+     * @return Area <P>Shared unit region.</p>.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Shared unit region.
-     * @param Area Shared unit region.
+     * Set <P>Shared unit region.</p>.
+     * @param Area <P>Shared unit region.</p>.
      */
     public void setArea(String Area) {
         this.Area = Area;
     }
 
     /**
-     * Get Description.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Description Description.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <P>Description.</P>. 
+     * @return Description <P>Description.</P>.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Description Description.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <P>Description.</P>.
+     * @param Description <P>Description.</P>.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <P>Creation time.</p>. 
+     * @return CreateTime <P>Creation time.</p>.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <P>Creation time.</p>.
+     * @param CreateTime <P>Creation time.</p>.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get The number of resources in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ShareResourceNum The number of resources in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <P>The number of resources in a shared unit.</p>. 
+     * @return ShareResourceNum <P>The number of resources in a shared unit.</p>.
      */
     public Long getShareResourceNum() {
         return this.ShareResourceNum;
     }
 
     /**
-     * Set The number of resources in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ShareResourceNum The number of resources in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <P>The number of resources in a shared unit.</p>.
+     * @param ShareResourceNum <P>The number of resources in a shared unit.</p>.
      */
     public void setShareResourceNum(Long ShareResourceNum) {
         this.ShareResourceNum = ShareResourceNum;
     }
 
     /**
-     * Get The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ShareMemberNum The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <P>The number of members in a shared unit.</p>. 
+     * @return ShareMemberNum <P>The number of members in a shared unit.</p>.
      */
     public Long getShareMemberNum() {
         return this.ShareMemberNum;
     }
 
     /**
-     * Set The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ShareMemberNum The number of members in a shared unit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <P>The number of members in a shared unit.</p>.
+     * @param ShareMemberNum <P>The number of members in a shared unit.</p>.
      */
     public void setShareMemberNum(Long ShareMemberNum) {
         this.ShareMemberNum = ShareMemberNum;
     }
 
     /**
-     * Get Sharing scope. Valid values: 1: Only sharing within a group organization is allowed; 2: Sharing with any account is allowed.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ShareScope Sharing scope. Valid values: 1: Only sharing within a group organization is allowed; 2: Sharing with any account is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <P>Sharing scope. valid values: 1: only sharing within a group organization is allowed; 2: sharing with any account is allowed.</p>. 
+     * @return ShareScope <P>Sharing scope. valid values: 1: only sharing within a group organization is allowed; 2: sharing with any account is allowed.</p>.
      */
     public Long getShareScope() {
         return this.ShareScope;
     }
 
     /**
-     * Set Sharing scope. Valid values: 1: Only sharing within a group organization is allowed; 2: Sharing with any account is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ShareScope Sharing scope. Valid values: 1: Only sharing within a group organization is allowed; 2: Sharing with any account is allowed.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <P>Sharing scope. valid values: 1: only sharing within a group organization is allowed; 2: sharing with any account is allowed.</p>.
+     * @param ShareScope <P>Sharing scope. valid values: 1: only sharing within a group organization is allowed; 2: sharing with any account is allowed.</p>.
      */
     public void setShareScope(Long ShareScope) {
         this.ShareScope = ShareScope;
+    }
+
+    /**
+     * Get <P>The number of departments in a shared unit.</p>. 
+     * @return ShareNodeNum <P>The number of departments in a shared unit.</p>.
+     */
+    public Long getShareNodeNum() {
+        return this.ShareNodeNum;
+    }
+
+    /**
+     * Set <P>The number of departments in a shared unit.</p>.
+     * @param ShareNodeNum <P>The number of departments in a shared unit.</p>.
+     */
+    public void setShareNodeNum(Long ShareNodeNum) {
+        this.ShareNodeNum = ShareNodeNum;
     }
 
     public ManagerShareUnit() {
@@ -326,6 +314,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ShareScope != null) {
             this.ShareScope = new Long(source.ShareScope);
         }
+        if (source.ShareNodeNum != null) {
+            this.ShareNodeNum = new Long(source.ShareNodeNum);
+        }
     }
 
 
@@ -343,6 +334,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ShareResourceNum", this.ShareResourceNum);
         this.setParamSimple(map, prefix + "ShareMemberNum", this.ShareMemberNum);
         this.setParamSimple(map, prefix + "ShareScope", this.ShareScope);
+        this.setParamSimple(map, prefix + "ShareNodeNum", this.ShareNodeNum);
 
     }
 }

@@ -32,7 +32,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ModuleId;
 
     /**
-    * Visible/Available.
+    * Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IncludeType")
@@ -84,9 +93,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Visible/Available.
+     * Get Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IncludeType Visible/Available.
+     * @return IncludeType Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIncludeType() {
@@ -94,9 +121,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Visible/Available.
+     * Set Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IncludeType Visible/Available.
+     * @param IncludeType Availability.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIncludeType(String IncludeType) {

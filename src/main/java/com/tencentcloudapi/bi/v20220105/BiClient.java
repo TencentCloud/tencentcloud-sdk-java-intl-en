@@ -50,6 +50,17 @@ public class BiClient extends AbstractClient{
     }
 
     /**
+     *Clean strong authentication tokens. Only enterprise admins can call this API.
+     * @param req ClearEmbedTokenRequest
+     * @return ClearEmbedTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public ClearEmbedTokenResponse ClearEmbedToken(ClearEmbedTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ClearEmbedToken", ClearEmbedTokenResponse.class);
+    }
+
+    /**
      *This API is used to create a data source.
      * @param req CreateDatasourceRequest
      * @return CreateDatasourceResponse

@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ErrorInfo ErrorInfo;
 
     /**
-    * Success No.
+    * None.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Data")
@@ -83,9 +83,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Success No.
+     * Get None.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Success No.
+     * @return Data None.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getData() {
@@ -93,9 +93,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Success No.
+     * Set None.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Success No.
+     * @param Data None.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setData(String Data) {

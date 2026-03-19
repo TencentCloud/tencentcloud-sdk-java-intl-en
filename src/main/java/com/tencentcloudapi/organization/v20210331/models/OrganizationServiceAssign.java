@@ -25,7 +25,6 @@ public class OrganizationServiceAssign extends AbstractModel {
 
     /**
     * Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceId")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
     */
     @SerializedName("IsAssign")
     @Expose
@@ -49,15 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of delegated administrators.
     */
     @SerializedName("MemberNum")
     @Expose
@@ -65,74 +60,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Document")
     @Expose
     private String Document;
 
     /**
-    * Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Path to the console for organization service products.
     */
     @SerializedName("ConsoleUrl")
     @Expose
     private String ConsoleUrl;
 
     /**
-    * Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether to access the usage status. valid values: 1 (yes). 
+2: no.
     */
     @SerializedName("IsUsageStatus")
     @Expose
     private Long IsUsageStatus;
 
     /**
-    * Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Limit on the number of delegated administrators.
     */
     @SerializedName("CanAssignCount")
     @Expose
     private Long CanAssignCount;
 
     /**
-    * Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Organization service product ID.
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
     */
     @SerializedName("ServiceGrant")
     @Expose
     private Long ServiceGrant;
 
     /**
-    * Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
     */
     @SerializedName("GrantStatus")
     @Expose
     private String GrantStatus;
 
     /**
-    * Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
     */
     @SerializedName("IsSetManagementScope")
     @Expose
     private Long IsSetManagementScope;
 
     /**
-     * Get Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Organization service ID. 
      * @return ServiceId Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getServiceId() {
         return this.ServiceId;
@@ -140,19 +125,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ServiceId Organization service ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceId(Long ServiceId) {
         this.ServiceId = ServiceId;
     }
 
     /**
-     * Get Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Organization service product name. 
      * @return ProductName Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProductName() {
         return this.ProductName;
@@ -160,39 +141,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProductName Organization service product name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsAssign Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether delegation is supported. Valid values: 1: yes; 2: no. 
+     * @return IsAssign Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
      */
     public Long getIsAssign() {
         return this.IsAssign;
     }
 
     /**
-     * Set Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsAssign Whether to support delegation. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
+     * @param IsAssign Specifies whether delegation is supported. Valid values: 1: yes; 2: no.
      */
     public void setIsAssign(Long IsAssign) {
         this.IsAssign = IsAssign;
     }
 
     /**
-     * Get Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Organization service description. 
      * @return Description Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -200,39 +173,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Description Organization service description.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MemberNum Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of delegated administrators. 
+     * @return MemberNum Number of delegated administrators.
      */
     public String getMemberNum() {
         return this.MemberNum;
     }
 
     /**
-     * Set Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MemberNum Number of the current delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of delegated administrators.
+     * @param MemberNum Number of delegated administrators.
      */
     public void setMemberNum(String MemberNum) {
         this.MemberNum = MemberNum;
     }
 
     /**
-     * Get Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Help documentation. 
      * @return Document Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDocument() {
         return this.Document;
@@ -240,153 +205,123 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Document Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDocument(String Document) {
         this.Document = Document;
     }
 
     /**
-     * Get Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConsoleUrl Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Path to the console for organization service products. 
+     * @return ConsoleUrl Path to the console for organization service products.
      */
     public String getConsoleUrl() {
         return this.ConsoleUrl;
     }
 
     /**
-     * Set Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConsoleUrl Console path of the organization service product.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Path to the console for organization service products.
+     * @param ConsoleUrl Path to the console for organization service products.
      */
     public void setConsoleUrl(String ConsoleUrl) {
         this.ConsoleUrl = ConsoleUrl;
     }
 
     /**
-     * Get Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsUsageStatus Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether to access the usage status. valid values: 1 (yes). 
+2: no. 
+     * @return IsUsageStatus Whether to access the usage status. valid values: 1 (yes). 
+2: no.
      */
     public Long getIsUsageStatus() {
         return this.IsUsageStatus;
     }
 
     /**
-     * Set Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsUsageStatus Whether to access the usage status. Valid values: 1 (yes), 
- 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether to access the usage status. valid values: 1 (yes). 
+2: no.
+     * @param IsUsageStatus Whether to access the usage status. valid values: 1 (yes). 
+2: no.
      */
     public void setIsUsageStatus(Long IsUsageStatus) {
         this.IsUsageStatus = IsUsageStatus;
     }
 
     /**
-     * Get Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CanAssignCount Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Limit on the number of delegated administrators. 
+     * @return CanAssignCount Limit on the number of delegated administrators.
      */
     public Long getCanAssignCount() {
         return this.CanAssignCount;
     }
 
     /**
-     * Set Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CanAssignCount Limit for the number of delegated admins.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Limit on the number of delegated administrators.
+     * @param CanAssignCount Limit on the number of delegated administrators.
      */
     public void setCanAssignCount(Long CanAssignCount) {
         this.CanAssignCount = CanAssignCount;
     }
 
     /**
-     * Get Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Product Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Organization service product ID. 
+     * @return Product Organization service product ID.
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Product Organization service product identifier.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Organization service product ID.
+     * @param Product Organization service product ID.
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceGrant Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no. 
+     * @return ServiceGrant Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
      */
     public Long getServiceGrant() {
         return this.ServiceGrant;
     }
 
     /**
-     * Set Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServiceGrant Whether to support organization service authorization. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
+     * @param ServiceGrant Specifies whether organization service authorization is supported. Valid values: 1: yes; 2: no.
      */
     public void setServiceGrant(Long ServiceGrant) {
         this.ServiceGrant = ServiceGrant;
     }
 
     /**
-     * Get Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GrantStatus Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized.  
+     * @return GrantStatus Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
      */
     public String getGrantStatus() {
         return this.GrantStatus;
     }
 
     /**
-     * Set Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GrantStatus Enabling status of organization service authorization. This field is valid when ServiceGrant is 1. Valid values: Enabled, Disabled. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
+     * @param GrantStatus Specifies whether organization services are authorized. This field is valid when the value of ServiceGrant is 1. Valid values: Enabled: authorized; Disabled: not authorized. 
      */
     public void setGrantStatus(String GrantStatus) {
         this.GrantStatus = GrantStatus;
     }
 
     /**
-     * Get Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsSetManagementScope Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no. 
+     * @return IsSetManagementScope Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
      */
     public Long getIsSetManagementScope() {
         return this.IsSetManagementScope;
     }
 
     /**
-     * Set Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsSetManagementScope Whether to support setting the delegated management scope. Valid values: 1 (yes), 2 (no).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
+     * @param IsSetManagementScope Specifies whether the scope of delegated management can be set. Valid values: 1: yes; 2 no.
      */
     public void setIsSetManagementScope(Long IsSetManagementScope) {
         this.IsSetManagementScope = IsSetManagementScope;

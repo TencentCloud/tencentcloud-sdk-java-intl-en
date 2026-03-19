@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class OrgMemberAuthAccount extends AbstractModel {
 
     /**
-    * Organization sub-account UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Organization sub-account Uin.
     */
     @SerializedName("OrgSubAccountUin")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolicyId")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PolicyName")
     @Expose
@@ -49,7 +46,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityId")
     @Expose
@@ -57,15 +53,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityRoleName")
     @Expose
     private String IdentityRoleName;
 
     /**
-    * Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Role alias of an identity.
     */
     @SerializedName("IdentityRoleAliasName")
     @Expose
@@ -73,7 +67,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -81,45 +74,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Sub-account name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Sub-Account.
     */
     @SerializedName("OrgSubAccountName")
     @Expose
     private String OrgSubAccountName;
 
     /**
-     * Get Organization sub-account UIN.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrgSubAccountUin Organization sub-account UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Organization sub-account Uin. 
+     * @return OrgSubAccountUin Organization sub-account Uin.
      */
     public Long getOrgSubAccountUin() {
         return this.OrgSubAccountUin;
     }
 
     /**
-     * Set Organization sub-account UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrgSubAccountUin Organization sub-account UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Organization sub-account Uin.
+     * @param OrgSubAccountUin Organization sub-account Uin.
      */
     public void setOrgSubAccountUin(Long OrgSubAccountUin) {
         this.OrgSubAccountUin = OrgSubAccountUin;
     }
 
     /**
-     * Get Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy ID. 
      * @return PolicyId Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPolicyId() {
         return this.PolicyId;
@@ -127,19 +112,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PolicyId Policy ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPolicyId(Long PolicyId) {
         this.PolicyId = PolicyId;
     }
 
     /**
-     * Get Policy name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Policy name. 
      * @return PolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPolicyName() {
         return this.PolicyName;
@@ -147,19 +128,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param PolicyName Policy name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPolicyName(String PolicyName) {
         this.PolicyName = PolicyName;
     }
 
     /**
-     * Get Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Identity ID. 
      * @return IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIdentityId() {
         return this.IdentityId;
@@ -167,19 +144,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;
     }
 
     /**
-     * Get Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Identity role name. 
      * @return IdentityRoleName Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIdentityRoleName() {
         return this.IdentityRoleName;
@@ -187,39 +160,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IdentityRoleName Identity role name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityRoleName(String IdentityRoleName) {
         this.IdentityRoleName = IdentityRoleName;
     }
 
     /**
-     * Get Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IdentityRoleAliasName Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Role alias of an identity. 
+     * @return IdentityRoleAliasName Role alias of an identity.
      */
     public String getIdentityRoleAliasName() {
         return this.IdentityRoleAliasName;
     }
 
     /**
-     * Set Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IdentityRoleAliasName Identity role alias.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Role alias of an identity.
+     * @param IdentityRoleAliasName Role alias of an identity.
      */
     public void setIdentityRoleAliasName(String IdentityRoleAliasName) {
         this.IdentityRoleAliasName = IdentityRoleAliasName;
     }
 
     /**
-     * Get Creation time.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time. 
      * @return CreateTime Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -227,19 +192,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Update time. 
      * @return UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -247,29 +208,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Sub-account name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrgSubAccountName Sub-account name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Sub-Account. 
+     * @return OrgSubAccountName Sub-Account.
      */
     public String getOrgSubAccountName() {
         return this.OrgSubAccountName;
     }
 
     /**
-     * Set Sub-account name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrgSubAccountName Sub-account name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Sub-Account.
+     * @param OrgSubAccountName Sub-Account.
      */
     public void setOrgSubAccountName(String OrgSubAccountName) {
         this.OrgSubAccountName = OrgSubAccountName;

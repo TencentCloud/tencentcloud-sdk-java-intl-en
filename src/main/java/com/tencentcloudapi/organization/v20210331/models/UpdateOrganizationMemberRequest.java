@@ -52,8 +52,8 @@ public class UpdateOrganizationMemberRequest extends AbstractModel {
     private String PolicyType;
 
     /**
-    * List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
+    * List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
     */
     @SerializedName("PermissionIds")
     @Expose
@@ -72,6 +72,13 @@ Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate 
     @SerializedName("PayUin")
     @Expose
     private String PayUin;
+
+    /**
+    * Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
+    */
+    @SerializedName("IsModifyNickName")
+    @Expose
+    private Long IsModifyNickName;
 
     /**
      * Get Member UIN. 
@@ -138,20 +145,20 @@ Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate 
     }
 
     /**
-     * Get List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default. 
-     * @return PermissionIds List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
+     * Get List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default. 
+     * @return PermissionIds List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
      */
     public Long [] getPermissionIds() {
         return this.PermissionIds;
     }
 
     /**
-     * Set List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
-     * @param PermissionIds List of member financial permission IDs. When PermissionIds is not empty, PolicyType cannot be empty.
-Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate bills. 5: Issue invoices. 6: Inherit discounts. 7: Pay on behalf. 8: Analyze costs. 1 and 2 are required by default.
+     * Set List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
+     * @param PermissionIds List of member financial permission ids. when PermissionIds is not empty, PolicyType cannot be empty.
+Valid values: 1: view bills. 2: view balance. 3: allocate funds (contact your business manager to enable fund transfer permission internally). 4: consolidate bills. 5: issue invoices. 6: inherit discounts. 7: pay on behalf. 8: analyze costs. 9: budget management. 10: credit limit setting (contact your business manager to enable credit limit setting privilege internally). 1 and 2 are required by default.
      */
     public void setPermissionIds(Long [] PermissionIds) {
         this.PermissionIds = PermissionIds;
@@ -189,6 +196,22 @@ Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate 
         this.PayUin = PayUin;
     }
 
+    /**
+     * Get Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized. 
+     * @return IsModifyNickName Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
+     */
+    public Long getIsModifyNickName() {
+        return this.IsModifyNickName;
+    }
+
+    /**
+     * Set Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
+     * @param IsModifyNickName Whether to synchronize organization member names to account nicknames. valid values: 1-synchronize 0-not synchronized.
+     */
+    public void setIsModifyNickName(Long IsModifyNickName) {
+        this.IsModifyNickName = IsModifyNickName;
+    }
+
     public UpdateOrganizationMemberRequest() {
     }
 
@@ -221,6 +244,9 @@ Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate 
         if (source.PayUin != null) {
             this.PayUin = new String(source.PayUin);
         }
+        if (source.IsModifyNickName != null) {
+            this.IsModifyNickName = new Long(source.IsModifyNickName);
+        }
     }
 
 
@@ -235,6 +261,7 @@ Valid values: 1: View bills. 2: View balance. 3: Allocate funds. 4: Consolidate 
         this.setParamArraySimple(map, prefix + "PermissionIds.", this.PermissionIds);
         this.setParamSimple(map, prefix + "IsAllowQuit", this.IsAllowQuit);
         this.setParamSimple(map, prefix + "PayUin", this.PayUin);
+        this.setParamSimple(map, prefix + "IsModifyNickName", this.IsModifyNickName);
 
     }
 }

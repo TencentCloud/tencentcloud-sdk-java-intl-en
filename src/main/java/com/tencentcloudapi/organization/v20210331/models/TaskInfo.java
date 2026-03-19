@@ -87,8 +87,7 @@ public class TaskInfo extends AbstractModel {
     private String Status;
 
     /**
-    * Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reason for failure
     */
     @SerializedName("FailureReason")
     @Expose
@@ -239,20 +238,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FailureReason Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reason for failure 
+     * @return FailureReason Reason for failure
      */
     public String getFailureReason() {
         return this.FailureReason;
     }
 
     /**
-     * Set Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FailureReason Cause of the failure.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reason for failure
+     * @param FailureReason Reason for failure
      */
     public void setFailureReason(String FailureReason) {
         this.FailureReason = FailureReason;

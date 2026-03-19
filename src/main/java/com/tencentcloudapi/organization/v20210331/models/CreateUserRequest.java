@@ -87,6 +87,13 @@ public class CreateUserRequest extends AbstractModel {
     private String UserType;
 
     /**
+    * Whether password reset is required. valid values: true (need to reset), false (not required to reset password). default value: false.
+    */
+    @SerializedName("NeedResetPassword")
+    @Expose
+    private Boolean NeedResetPassword;
+
+    /**
      * Get Space ID. 
      * @return ZoneId Space ID.
      */
@@ -230,6 +237,22 @@ public class CreateUserRequest extends AbstractModel {
         this.UserType = UserType;
     }
 
+    /**
+     * Get Whether password reset is required. valid values: true (need to reset), false (not required to reset password). default value: false. 
+     * @return NeedResetPassword Whether password reset is required. valid values: true (need to reset), false (not required to reset password). default value: false.
+     */
+    public Boolean getNeedResetPassword() {
+        return this.NeedResetPassword;
+    }
+
+    /**
+     * Set Whether password reset is required. valid values: true (need to reset), false (not required to reset password). default value: false.
+     * @param NeedResetPassword Whether password reset is required. valid values: true (need to reset), false (not required to reset password). default value: false.
+     */
+    public void setNeedResetPassword(Boolean NeedResetPassword) {
+        this.NeedResetPassword = NeedResetPassword;
+    }
+
     public CreateUserRequest() {
     }
 
@@ -265,6 +288,9 @@ public class CreateUserRequest extends AbstractModel {
         if (source.UserType != null) {
             this.UserType = new String(source.UserType);
         }
+        if (source.NeedResetPassword != null) {
+            this.NeedResetPassword = new Boolean(source.NeedResetPassword);
+        }
     }
 
 
@@ -281,6 +307,7 @@ public class CreateUserRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Email", this.Email);
         this.setParamSimple(map, prefix + "UserStatus", this.UserStatus);
         this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "NeedResetPassword", this.NeedResetPassword);
 
     }
 }

@@ -108,6 +108,20 @@ public class UserInfo extends AbstractModel {
     private Boolean IsSelected;
 
     /**
+    * User password.
+    */
+    @SerializedName("Password")
+    @Expose
+    private String Password;
+
+    /**
+    * Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
+    */
+    @SerializedName("NeedResetPassword")
+    @Expose
+    private Boolean NeedResetPassword;
+
+    /**
      * Get Queried username. 
      * @return UserName Queried username.
      */
@@ -299,6 +313,38 @@ public class UserInfo extends AbstractModel {
         this.IsSelected = IsSelected;
     }
 
+    /**
+     * Get User password. 
+     * @return Password User password.
+     */
+    public String getPassword() {
+        return this.Password;
+    }
+
+    /**
+     * Set User password.
+     * @param Password User password.
+     */
+    public void setPassword(String Password) {
+        this.Password = Password;
+    }
+
+    /**
+     * Get Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password). 
+     * @return NeedResetPassword Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
+     */
+    public Boolean getNeedResetPassword() {
+        return this.NeedResetPassword;
+    }
+
+    /**
+     * Set Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
+     * @param NeedResetPassword Whether password reset is required next time. valid values: true (password reset required), false (not required to reset password).
+     */
+    public void setNeedResetPassword(Boolean NeedResetPassword) {
+        this.NeedResetPassword = NeedResetPassword;
+    }
+
     public UserInfo() {
     }
 
@@ -343,6 +389,12 @@ public class UserInfo extends AbstractModel {
         if (source.IsSelected != null) {
             this.IsSelected = new Boolean(source.IsSelected);
         }
+        if (source.Password != null) {
+            this.Password = new String(source.Password);
+        }
+        if (source.NeedResetPassword != null) {
+            this.NeedResetPassword = new Boolean(source.NeedResetPassword);
+        }
     }
 
 
@@ -362,6 +414,8 @@ public class UserInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "IsSelected", this.IsSelected);
+        this.setParamSimple(map, prefix + "Password", this.Password);
+        this.setParamSimple(map, prefix + "NeedResetPassword", this.NeedResetPassword);
 
     }
 }

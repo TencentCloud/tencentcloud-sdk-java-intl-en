@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApplyEmbedIntervalRequest extends AbstractModel {
 
     /**
-    * Shares the project ID. Required.
+    * Shares the project ID.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -69,16 +69,16 @@ project, during ChatBI embedding.
     private String Scope;
 
     /**
-     * Get Shares the project ID. Required. 
-     * @return ProjectId Shares the project ID. Required.
+     * Get Shares the project ID. 
+     * @return ProjectId Shares the project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Shares the project ID. Required.
-     * @param ProjectId Shares the project ID. Required.
+     * Set Shares the project ID.
+     * @param ProjectId Shares the project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;

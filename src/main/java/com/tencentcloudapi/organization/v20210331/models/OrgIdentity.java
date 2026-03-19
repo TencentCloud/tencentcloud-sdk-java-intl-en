@@ -25,7 +25,6 @@ public class OrgIdentity extends AbstractModel {
 
     /**
     * Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityId")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityAliasName")
     @Expose
@@ -41,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Description.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Description")
     @Expose
@@ -49,15 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IdentityPolicy")
     @Expose
     private IdentityPolicy [] IdentityPolicy;
 
     /**
-    * Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Identity type. 1: preset; 2: custom.
     */
     @SerializedName("IdentityType")
     @Expose
@@ -65,17 +60,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Identity ID. 
      * @return IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIdentityId() {
         return this.IdentityId;
@@ -83,19 +75,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IdentityId Identity ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityId(Long IdentityId) {
         this.IdentityId = IdentityId;
     }
 
     /**
-     * Get Identity name.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Identity name. 
      * @return IdentityAliasName Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIdentityAliasName() {
         return this.IdentityAliasName;
@@ -103,19 +91,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IdentityAliasName Identity name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityAliasName(String IdentityAliasName) {
         this.IdentityAliasName = IdentityAliasName;
     }
 
     /**
-     * Get Description.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Description. 
      * @return Description Description.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDescription() {
         return this.Description;
@@ -123,19 +107,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Description.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Description Description.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Identity policy. 
      * @return IdentityPolicy Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public IdentityPolicy [] getIdentityPolicy() {
         return this.IdentityPolicy;
@@ -143,39 +123,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IdentityPolicy Identity policy.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIdentityPolicy(IdentityPolicy [] IdentityPolicy) {
         this.IdentityPolicy = IdentityPolicy;
     }
 
     /**
-     * Get Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IdentityType Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Identity type. 1: preset; 2: custom. 
+     * @return IdentityType Identity type. 1: preset; 2: custom.
      */
     public Long getIdentityType() {
         return this.IdentityType;
     }
 
     /**
-     * Set Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IdentityType Identity type. Valid values: `1` (preset); `2` (custom).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Identity type. 1: preset; 2: custom.
+     * @param IdentityType Identity type. 1: preset; 2: custom.
      */
     public void setIdentityType(Long IdentityType) {
         this.IdentityType = IdentityType;
     }
 
     /**
-     * Get Update time.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Update time. 
      * @return UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
@@ -183,9 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param UpdateTime Update time.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

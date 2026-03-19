@@ -25,7 +25,6 @@ public class DescribeOrganizationMemberAuthAccountsResponse extends AbstractMode
 
     /**
     * List
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Items")
     @Expose
@@ -33,7 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Total number
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Total")
     @Expose
@@ -47,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get List
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get List 
      * @return Items List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public OrgMemberAuthAccount [] getItems() {
         return this.Items;
@@ -58,19 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set List
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Items List
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setItems(OrgMemberAuthAccount [] Items) {
         this.Items = Items;
     }
 
     /**
-     * Get Total number
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Total number 
      * @return Total Total number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTotal() {
         return this.Total;
@@ -78,9 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Total number
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Total Total number
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotal(Long Total) {
         this.Total = Total;

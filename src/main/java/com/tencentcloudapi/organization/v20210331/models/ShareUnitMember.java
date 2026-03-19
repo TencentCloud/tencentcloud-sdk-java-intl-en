@@ -32,8 +32,6 @@ public class ShareUnitMember extends AbstractModel {
 
     /**
     * Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -56,12 +54,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Creation time. 
      * @return CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateTime() {
         return this.CreateTime;
@@ -69,11 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CreateTime Creation time.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;

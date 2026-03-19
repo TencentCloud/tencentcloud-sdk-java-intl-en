@@ -25,7 +25,6 @@ public class CreateOrganizationMemberResponse extends AbstractModel {
 
     /**
     * Member UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Uin")
     @Expose
@@ -39,10 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Member UIN.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Member UIN. 
      * @return Uin Member UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getUin() {
         return this.Uin;
@@ -50,9 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Member UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Uin Member UIN.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUin(Long Uin) {
         this.Uin = Uin;

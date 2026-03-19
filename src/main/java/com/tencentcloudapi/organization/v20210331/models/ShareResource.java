@@ -32,7 +32,6 @@ public class ShareResource extends AbstractModel {
 
     /**
     * Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProductResourceId")
     @Expose
@@ -59,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Product resource ID. 
      * @return ProductResourceId Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProductResourceId() {
         return this.ProductResourceId;
@@ -70,9 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProductResourceId Product resource ID.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProductResourceId(String ProductResourceId) {
         this.ProductResourceId = ProductResourceId;

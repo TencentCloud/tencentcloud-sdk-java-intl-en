@@ -80,8 +80,7 @@ public class CdbSellConfig extends AbstractModel {
     private Long Status;
 
     /**
-    * Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance type, possible value ranges from UNIVERSAL (universal type), EXCLUSIVE (exclusive), BASIC (basic), to BASIC_V2 (basic v2).
     */
     @SerializedName("DeviceType")
     @Expose
@@ -230,20 +229,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DeviceType Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance type, possible value ranges from UNIVERSAL (universal type), EXCLUSIVE (exclusive), BASIC (basic), to BASIC_V2 (basic v2). 
+     * @return DeviceType Instance type, possible value ranges from UNIVERSAL (universal type), EXCLUSIVE (exclusive), BASIC (basic), to BASIC_V2 (basic v2).
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DeviceType Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance type, possible value ranges from UNIVERSAL (universal type), EXCLUSIVE (exclusive), BASIC (basic), to BASIC_V2 (basic v2).
+     * @param DeviceType Instance type, possible value ranges from UNIVERSAL (universal type), EXCLUSIVE (exclusive), BASIC (basic), to BASIC_V2 (basic v2).
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

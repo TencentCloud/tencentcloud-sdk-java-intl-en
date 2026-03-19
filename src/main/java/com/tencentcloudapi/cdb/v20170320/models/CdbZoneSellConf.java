@@ -80,7 +80,7 @@ public class CdbZoneSellConf extends AbstractModel {
     private Boolean IsBm;
 
     /**
-    * Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+    * Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
     */
     @SerializedName("PayType")
     @Expose
@@ -176,6 +176,20 @@ public class CdbZoneSellConf extends AbstractModel {
     @SerializedName("EngineType")
     @Expose
     private String [] EngineType;
+
+    /**
+    * Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+    */
+    @SerializedName("CloudNativeClusterStatus")
+    @Expose
+    private Long CloudNativeClusterStatus;
+
+    /**
+    * Cloud disk edition or single-node basic edition supported disk type.
+    */
+    @SerializedName("DiskTypeConf")
+    @Expose
+    private DiskTypeConfigItem [] DiskTypeConf;
 
     /**
      * Get AZ status, which is used to indicate whether instances are purchasable. Valid values: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed) 
@@ -306,16 +320,16 @@ public class CdbZoneSellConf extends AbstractModel {
     }
 
     /**
-     * Get Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go) 
-     * @return PayType Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+     * Get Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go) 
+     * @return PayType Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
      */
     public String [] getPayType() {
         return this.PayType;
     }
 
     /**
-     * Set Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
-     * @param PayType Supported billing method. Valid values: `0` (monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+     * Set Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
+     * @param PayType Supported billing method. Valid values: `0` (yearly/monthly subscribed), `1` (hourly billed), `2` (pay-as-you-go)
      */
     public void setPayType(String [] PayType) {
         this.PayType = PayType;
@@ -529,6 +543,38 @@ public class CdbZoneSellConf extends AbstractModel {
         this.EngineType = EngineType;
     }
 
+    /**
+     * Get Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed. 
+     * @return CloudNativeClusterStatus Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+     */
+    public Long getCloudNativeClusterStatus() {
+        return this.CloudNativeClusterStatus;
+    }
+
+    /**
+     * Set Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+     * @param CloudNativeClusterStatus Sales status of the cloud disk edition instance in the current availability zone. Possible returned values: 1-launched; 3-not available for sale; 4-not displayed.
+     */
+    public void setCloudNativeClusterStatus(Long CloudNativeClusterStatus) {
+        this.CloudNativeClusterStatus = CloudNativeClusterStatus;
+    }
+
+    /**
+     * Get Cloud disk edition or single-node basic edition supported disk type. 
+     * @return DiskTypeConf Cloud disk edition or single-node basic edition supported disk type.
+     */
+    public DiskTypeConfigItem [] getDiskTypeConf() {
+        return this.DiskTypeConf;
+    }
+
+    /**
+     * Set Cloud disk edition or single-node basic edition supported disk type.
+     * @param DiskTypeConf Cloud disk edition or single-node basic edition supported disk type.
+     */
+    public void setDiskTypeConf(DiskTypeConfigItem [] DiskTypeConf) {
+        this.DiskTypeConf = DiskTypeConf;
+    }
+
     public CdbZoneSellConf() {
     }
 
@@ -624,6 +670,15 @@ public class CdbZoneSellConf extends AbstractModel {
                 this.EngineType[i] = new String(source.EngineType[i]);
             }
         }
+        if (source.CloudNativeClusterStatus != null) {
+            this.CloudNativeClusterStatus = new Long(source.CloudNativeClusterStatus);
+        }
+        if (source.DiskTypeConf != null) {
+            this.DiskTypeConf = new DiskTypeConfigItem[source.DiskTypeConf.length];
+            for (int i = 0; i < source.DiskTypeConf.length; i++) {
+                this.DiskTypeConf[i] = new DiskTypeConfigItem(source.DiskTypeConf[i]);
+            }
+        }
     }
 
 
@@ -653,6 +708,8 @@ public class CdbZoneSellConf extends AbstractModel {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "IsSupportIpv6", this.IsSupportIpv6);
         this.setParamArraySimple(map, prefix + "EngineType.", this.EngineType);
+        this.setParamSimple(map, prefix + "CloudNativeClusterStatus", this.CloudNativeClusterStatus);
+        this.setParamArrayObj(map, prefix + "DiskTypeConf.", this.DiskTypeConf);
 
     }
 }

@@ -31,6 +31,13 @@ public class CreateSCIMCredentialRequest extends AbstractModel {
     private String ZoneId;
 
     /**
+    * Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
+    */
+    @SerializedName("ExpireDuration")
+    @Expose
+    private Long ExpireDuration;
+
+    /**
      * Get Space ID, which starts with the z- prefix, followed by 12 random digits/lowercase letters. 
      * @return ZoneId Space ID, which starts with the z- prefix, followed by 12 random digits/lowercase letters.
      */
@@ -46,6 +53,22 @@ public class CreateSCIMCredentialRequest extends AbstractModel {
         this.ZoneId = ZoneId;
     }
 
+    /**
+     * Get Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default. 
+     * @return ExpireDuration Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
+     */
+    public Long getExpireDuration() {
+        return this.ExpireDuration;
+    }
+
+    /**
+     * Set Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
+     * @param ExpireDuration Expiration time (in seconds), with a minimum value of 1 hour and a maximum value of 99 years. if not provided, it expires in 1 year by default.
+     */
+    public void setExpireDuration(Long ExpireDuration) {
+        this.ExpireDuration = ExpireDuration;
+    }
+
     public CreateSCIMCredentialRequest() {
     }
 
@@ -57,6 +80,9 @@ public class CreateSCIMCredentialRequest extends AbstractModel {
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
+        if (source.ExpireDuration != null) {
+            this.ExpireDuration = new Long(source.ExpireDuration);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class CreateSCIMCredentialRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "ExpireDuration", this.ExpireDuration);
 
     }
 }

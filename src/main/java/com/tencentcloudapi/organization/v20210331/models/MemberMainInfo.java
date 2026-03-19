@@ -25,25 +25,21 @@ public class MemberMainInfo extends AbstractModel {
 
     /**
     * Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MemberUin")
     @Expose
     private Long MemberUin;
 
     /**
-    * Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Member name.
     */
     @SerializedName("MemberName")
     @Expose
     private String MemberName;
 
     /**
-     * Get Member UIN
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Member UIN 
      * @return MemberUin Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMemberUin() {
         return this.MemberUin;
@@ -51,29 +47,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param MemberUin Member UIN
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMemberUin(Long MemberUin) {
         this.MemberUin = MemberUin;
     }
 
     /**
-     * Get Member name j.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MemberName Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Member name. 
+     * @return MemberName Member name.
      */
     public String getMemberName() {
         return this.MemberName;
     }
 
     /**
-     * Set Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MemberName Member name j.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Member name.
+     * @param MemberName Member name.
      */
     public void setMemberName(String MemberName) {
         this.MemberName = MemberName;

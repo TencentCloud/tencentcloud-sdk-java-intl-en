@@ -124,7 +124,7 @@ deleted
     private String CreateTime;
 
     /**
-    * Payment mode. 0: pay-as-you-go; 1: monthly subscription.
+    * Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
     */
     @SerializedName("PayMode")
     @Expose
@@ -178,6 +178,13 @@ deleted
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
+
+    /**
+    * cynos version tag.
+    */
+    @SerializedName("CynosVersionTag")
+    @Expose
+    private String CynosVersionTag;
 
     /**
     * Specifies the storage capacity.
@@ -245,7 +252,7 @@ pause
     private String StorageId;
 
     /**
-    * Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
+    * Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
     */
     @SerializedName("StoragePayMode")
     @Expose
@@ -334,6 +341,20 @@ pause
     @SerializedName("ResourcePackages")
     @Expose
     private ResourcePackage [] ResourcePackages;
+
+    /**
+    * Global database unique Id.
+    */
+    @SerializedName("GdnId")
+    @Expose
+    private String GdnId;
+
+    /**
+    * Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+    */
+    @SerializedName("GdnRole")
+    @Expose
+    private String GdnRole;
 
     /**
      * Get Cluster status. Valid values are as follows:
@@ -580,16 +601,16 @@ deleted
     }
 
     /**
-     * Get Payment mode. 0: pay-as-you-go; 1: monthly subscription. 
-     * @return PayMode Payment mode. 0: pay-as-you-go; 1: monthly subscription.
+     * Get Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription. 
+     * @return PayMode Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Payment mode. 0: pay-as-you-go; 1: monthly subscription.
-     * @param PayMode Payment mode. 0: pay-as-you-go; 1: monthly subscription.
+     * Set Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+     * @param PayMode Payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
@@ -705,6 +726,22 @@ deleted
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
+    }
+
+    /**
+     * Get cynos version tag. 
+     * @return CynosVersionTag cynos version tag.
+     */
+    public String getCynosVersionTag() {
+        return this.CynosVersionTag;
+    }
+
+    /**
+     * Set cynos version tag.
+     * @param CynosVersionTag cynos version tag.
+     */
+    public void setCynosVersionTag(String CynosVersionTag) {
+        this.CynosVersionTag = CynosVersionTag;
     }
 
     /**
@@ -860,16 +897,16 @@ pause
     }
 
     /**
-     * Get Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription. 
-     * @return StoragePayMode Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
+     * Get Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription. 
+     * @return StoragePayMode Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
-     * @param StoragePayMode Cluster storage payment mode. 0: pay-as-you-go; 1: monthly subscription.
+     * Set Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
+     * @param StoragePayMode Cluster storage payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription.
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
@@ -1067,6 +1104,38 @@ pause
         this.ResourcePackages = ResourcePackages;
     }
 
+    /**
+     * Get Global database unique Id. 
+     * @return GdnId Global database unique Id.
+     */
+    public String getGdnId() {
+        return this.GdnId;
+    }
+
+    /**
+     * Set Global database unique Id.
+     * @param GdnId Global database unique Id.
+     */
+    public void setGdnId(String GdnId) {
+        this.GdnId = GdnId;
+    }
+
+    /**
+     * Get Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid. 
+     * @return GdnRole Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+     */
+    public String getGdnRole() {
+        return this.GdnRole;
+    }
+
+    /**
+     * Set Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+     * @param GdnRole Cluster role. primary cluster - primary, slave cluster - standby. if GdnId is empty, the field is invalid.
+     */
+    public void setGdnRole(String GdnRole) {
+        this.GdnRole = GdnRole;
+    }
+
     public CynosdbCluster() {
     }
 
@@ -1137,6 +1206,9 @@ pause
         }
         if (source.CynosVersion != null) {
             this.CynosVersion = new String(source.CynosVersion);
+        }
+        if (source.CynosVersionTag != null) {
+            this.CynosVersionTag = new String(source.CynosVersionTag);
         }
         if (source.StorageLimit != null) {
             this.StorageLimit = new Long(source.StorageLimit);
@@ -1219,6 +1291,12 @@ pause
                 this.ResourcePackages[i] = new ResourcePackage(source.ResourcePackages[i]);
             }
         }
+        if (source.GdnId != null) {
+            this.GdnId = new String(source.GdnId);
+        }
+        if (source.GdnRole != null) {
+            this.GdnRole = new String(source.GdnRole);
+        }
     }
 
 
@@ -1247,6 +1325,7 @@ pause
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
         this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
+        this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
         this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
         this.setParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
         this.setParamSimple(map, prefix + "ProcessingTask", this.ProcessingTask);
@@ -1269,6 +1348,8 @@ pause
         this.setParamSimple(map, prefix + "OrderSource", this.OrderSource);
         this.setParamObj(map, prefix + "Ability.", this.Ability);
         this.setParamArrayObj(map, prefix + "ResourcePackages.", this.ResourcePackages);
+        this.setParamSimple(map, prefix + "GdnId", this.GdnId);
+        this.setParamSimple(map, prefix + "GdnRole", this.GdnRole);
 
     }
 }

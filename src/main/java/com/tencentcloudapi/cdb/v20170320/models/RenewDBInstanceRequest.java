@@ -38,11 +38,18 @@ public class RenewDBInstanceRequest extends AbstractModel {
     private Long TimeSpan;
 
     /**
-    * To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
+    * To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
     */
     @SerializedName("ModifyPayType")
     @Expose
     private String ModifyPayType;
+
+    /**
+    * Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
+    */
+    @SerializedName("AutoRenew")
+    @Expose
+    private Long AutoRenew;
 
     /**
      * Get ID of the instance to be renewed in the format of cdb-c1nl9rpv, which is the same as the instance ID displayed in the TencentDB console. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID. 
@@ -77,19 +84,35 @@ public class RenewDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`. 
-     * @return ModifyPayType To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
+     * Get To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`. 
+     * @return ModifyPayType To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
      */
     public String getModifyPayType() {
         return this.ModifyPayType;
     }
 
     /**
-     * Set To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
-     * @param ModifyPayType To renew a pay-as-you-go instance to a monthly subscribed one, you need to set this parameter to `PREPAID`.
+     * Set To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
+     * @param ModifyPayType To renew a pay-as-you-go instance to a yearly/monthly subscribed one, you need to set this parameter to `PREPAID`.
      */
     public void setModifyPayType(String ModifyPayType) {
         this.ModifyPayType = ModifyPayType;
+    }
+
+    /**
+     * Get Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal. 
+     * @return AutoRenew Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
+     */
+    public Long getAutoRenew() {
+        return this.AutoRenew;
+    }
+
+    /**
+     * Set Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
+     * @param AutoRenew Auto-renewal flag. 0 means no auto-renewal, 1 means auto-renewal.
+     */
+    public void setAutoRenew(Long AutoRenew) {
+        this.AutoRenew = AutoRenew;
     }
 
     public RenewDBInstanceRequest() {
@@ -109,6 +132,9 @@ public class RenewDBInstanceRequest extends AbstractModel {
         if (source.ModifyPayType != null) {
             this.ModifyPayType = new String(source.ModifyPayType);
         }
+        if (source.AutoRenew != null) {
+            this.AutoRenew = new Long(source.AutoRenew);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class RenewDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         this.setParamSimple(map, prefix + "ModifyPayType", this.ModifyPayType);
+        this.setParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
 
     }
 }

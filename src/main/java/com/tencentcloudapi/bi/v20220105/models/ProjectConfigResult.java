@@ -33,6 +33,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IncludeType")
@@ -69,8 +78,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return IncludeType Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIncludeType() {
@@ -79,8 +106,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param IncludeType Configuration mode.
+Valid values:.
+
+-usable.
+-visible.
+-disabled: unavailable.
+-hidden: hide.
+
+Default value: disabled.
+Example value: disabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIncludeType(String IncludeType) {

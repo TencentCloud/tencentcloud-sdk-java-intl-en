@@ -24,373 +24,368 @@ import java.util.HashMap;
 public class RoGroup extends AbstractModel {
 
     /**
-    * Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used).
+    * <p>Read-only group mode. Available values are: alone-automatic allocation by the system; allinone-create a read-only group; join-use an existing read-only group.</p>
     */
     @SerializedName("RoGroupMode")
     @Expose
     private String RoGroupMode;
 
     /**
-    * Read-only group ID.
-Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
+    * <p>Read-only group ID.<br>Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.</p>
     */
     @SerializedName("RoGroupId")
     @Expose
     private String RoGroupId;
 
     /**
-    * Read-only group name.
+    * <p>Read-only group name.</p>
     */
     @SerializedName("RoGroupName")
     @Expose
     private String RoGroupName;
 
     /**
-    * Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
+    * <p>Whether to enable the feature to isolate an instance that exceeds the latency threshold. After enabling this feature, if the delay between a read-only instance and the primary instance exceeds the delay threshold, the read-only instance will be isolated. Available values: 1-enable; 0-disable.</p>
     */
     @SerializedName("RoOfflineDelay")
     @Expose
     private Long RoOfflineDelay;
 
     /**
-    * Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
+    * <p>Delay threshold, in seconds. Value range: 1–10000. The value is an integer.</p>
     */
     @SerializedName("RoMaxDelayTime")
     @Expose
     private Long RoMaxDelayTime;
 
     /**
-    * Minimum number of instances to be retained. If the number of the purchased read-only instances is smaller than the set value, they will not be removed.
+    * <p>Minimum number of instances to retain. If the number of read-only instances purchased is less than the set number, removal will not occur.</p>
     */
     @SerializedName("MinRoInGroup")
     @Expose
     private Long MinRoInGroup;
 
     /**
-    * Read/write weight distribution mode. Valid values: `system` (weights are assigned by the system automatically), `custom` (weights are customized)
+    * <p>Read-write weight allocation mode. Available values: system-automatic allocation by the system; custom-customization.</p>
     */
     @SerializedName("WeightMode")
     @Expose
     private String WeightMode;
 
     /**
-    * This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
+    * <p>This field is deprecated and meaningless. To view the weight of a read-only instance, check the Weight value in the RoInstances field.</p>
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * Details of read-only instances in read-only group
+    * <p>Details of read-only instances in the read-only group.</p>
     */
     @SerializedName("RoInstances")
     @Expose
     private RoInstanceInfo [] RoInstances;
 
     /**
-    * Private IP of read-only group.
+    * <p>Private IP address of the read-only group.</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Private network port number of read-only group.
+    * <p>Private network port number of the read-only group.</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * Virtual Private Cloud (VPC) ID.
+    * <p>VPC ID.</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * Subnet ID.
+    * <p>Subnet ID.</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * Region of the read-only group.
+    * <p>Region of the read-only group.</p>
     */
     @SerializedName("RoGroupRegion")
     @Expose
     private String RoGroupRegion;
 
     /**
-    * AZ of the read-only group.
+    * <p>AZ of the read-only group.</p>
     */
     @SerializedName("RoGroupZone")
     @Expose
     private String RoGroupZone;
 
     /**
-    * Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
+    * <p>Replication delay time, in seconds. Value range: 1–259200. The value is an integer.</p>
     */
     @SerializedName("DelayReplicationTime")
     @Expose
     private Long DelayReplicationTime;
 
     /**
-     * Get Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used). 
-     * @return RoGroupMode Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used).
+     * Get <p>Read-only group mode. Available values are: alone-automatic allocation by the system; allinone-create a read-only group; join-use an existing read-only group.</p> 
+     * @return RoGroupMode <p>Read-only group mode. Available values are: alone-automatic allocation by the system; allinone-create a read-only group; join-use an existing read-only group.</p>
      */
     public String getRoGroupMode() {
         return this.RoGroupMode;
     }
 
     /**
-     * Set Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used).
-     * @param RoGroupMode Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used).
+     * Set <p>Read-only group mode. Available values are: alone-automatic allocation by the system; allinone-create a read-only group; join-use an existing read-only group.</p>
+     * @param RoGroupMode <p>Read-only group mode. Available values are: alone-automatic allocation by the system; allinone-create a read-only group; join-use an existing read-only group.</p>
      */
     public void setRoGroupMode(String RoGroupMode) {
         this.RoGroupMode = RoGroupMode;
     }
 
     /**
-     * Get Read-only group ID.
-Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join. 
-     * @return RoGroupId Read-only group ID.
-Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
+     * Get <p>Read-only group ID.<br>Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.</p> 
+     * @return RoGroupId <p>Read-only group ID.<br>Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.</p>
      */
     public String getRoGroupId() {
         return this.RoGroupId;
     }
 
     /**
-     * Set Read-only group ID.
-Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
-     * @param RoGroupId Read-only group ID.
-Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.
+     * Set <p>Read-only group ID.<br>Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.</p>
+     * @param RoGroupId <p>Read-only group ID.<br>Note: If the data structure is used during instance purchase, this item is required only when the read-only group mode is set to join.</p>
      */
     public void setRoGroupId(String RoGroupId) {
         this.RoGroupId = RoGroupId;
     }
 
     /**
-     * Get Read-only group name. 
-     * @return RoGroupName Read-only group name.
+     * Get <p>Read-only group name.</p> 
+     * @return RoGroupName <p>Read-only group name.</p>
      */
     public String getRoGroupName() {
         return this.RoGroupName;
     }
 
     /**
-     * Set Read-only group name.
-     * @param RoGroupName Read-only group name.
+     * Set <p>Read-only group name.</p>
+     * @param RoGroupName <p>Read-only group name.</p>
      */
     public void setRoGroupName(String RoGroupName) {
         this.RoGroupName = RoGroupName;
     }
 
     /**
-     * Get Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled) 
-     * @return RoOfflineDelay Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
+     * Get <p>Whether to enable the feature to isolate an instance that exceeds the latency threshold. After enabling this feature, if the delay between a read-only instance and the primary instance exceeds the delay threshold, the read-only instance will be isolated. Available values: 1-enable; 0-disable.</p> 
+     * @return RoOfflineDelay <p>Whether to enable the feature to isolate an instance that exceeds the latency threshold. After enabling this feature, if the delay between a read-only instance and the primary instance exceeds the delay threshold, the read-only instance will be isolated. Available values: 1-enable; 0-disable.</p>
      */
     public Long getRoOfflineDelay() {
         return this.RoOfflineDelay;
     }
 
     /**
-     * Set Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
-     * @param RoOfflineDelay Whether to enable the function of isolating an instance that exceeds the latency threshold. If it is enabled, when the latency between the read-only instance and the primary instance exceeds the latency threshold, the read-only instance will be isolated. Valid values: 1 (enabled), 0 (not enabled)
+     * Set <p>Whether to enable the feature to isolate an instance that exceeds the latency threshold. After enabling this feature, if the delay between a read-only instance and the primary instance exceeds the delay threshold, the read-only instance will be isolated. Available values: 1-enable; 0-disable.</p>
+     * @param RoOfflineDelay <p>Whether to enable the feature to isolate an instance that exceeds the latency threshold. After enabling this feature, if the delay between a read-only instance and the primary instance exceeds the delay threshold, the read-only instance will be isolated. Available values: 1-enable; 0-disable.</p>
      */
     public void setRoOfflineDelay(Long RoOfflineDelay) {
         this.RoOfflineDelay = RoOfflineDelay;
     }
 
     /**
-     * Get Delay threshold, in seconds. Value range: 1–10000. The value is an integer. 
-     * @return RoMaxDelayTime Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
+     * Get <p>Delay threshold, in seconds. Value range: 1–10000. The value is an integer.</p> 
+     * @return RoMaxDelayTime <p>Delay threshold, in seconds. Value range: 1–10000. The value is an integer.</p>
      */
     public Long getRoMaxDelayTime() {
         return this.RoMaxDelayTime;
     }
 
     /**
-     * Set Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
-     * @param RoMaxDelayTime Delay threshold, in seconds. Value range: 1–10000. The value is an integer.
+     * Set <p>Delay threshold, in seconds. Value range: 1–10000. The value is an integer.</p>
+     * @param RoMaxDelayTime <p>Delay threshold, in seconds. Value range: 1–10000. The value is an integer.</p>
      */
     public void setRoMaxDelayTime(Long RoMaxDelayTime) {
         this.RoMaxDelayTime = RoMaxDelayTime;
     }
 
     /**
-     * Get Minimum number of instances to be retained. If the number of the purchased read-only instances is smaller than the set value, they will not be removed. 
-     * @return MinRoInGroup Minimum number of instances to be retained. If the number of the purchased read-only instances is smaller than the set value, they will not be removed.
+     * Get <p>Minimum number of instances to retain. If the number of read-only instances purchased is less than the set number, removal will not occur.</p> 
+     * @return MinRoInGroup <p>Minimum number of instances to retain. If the number of read-only instances purchased is less than the set number, removal will not occur.</p>
      */
     public Long getMinRoInGroup() {
         return this.MinRoInGroup;
     }
 
     /**
-     * Set Minimum number of instances to be retained. If the number of the purchased read-only instances is smaller than the set value, they will not be removed.
-     * @param MinRoInGroup Minimum number of instances to be retained. If the number of the purchased read-only instances is smaller than the set value, they will not be removed.
+     * Set <p>Minimum number of instances to retain. If the number of read-only instances purchased is less than the set number, removal will not occur.</p>
+     * @param MinRoInGroup <p>Minimum number of instances to retain. If the number of read-only instances purchased is less than the set number, removal will not occur.</p>
      */
     public void setMinRoInGroup(Long MinRoInGroup) {
         this.MinRoInGroup = MinRoInGroup;
     }
 
     /**
-     * Get Read/write weight distribution mode. Valid values: `system` (weights are assigned by the system automatically), `custom` (weights are customized) 
-     * @return WeightMode Read/write weight distribution mode. Valid values: `system` (weights are assigned by the system automatically), `custom` (weights are customized)
+     * Get <p>Read-write weight allocation mode. Available values: system-automatic allocation by the system; custom-customization.</p> 
+     * @return WeightMode <p>Read-write weight allocation mode. Available values: system-automatic allocation by the system; custom-customization.</p>
      */
     public String getWeightMode() {
         return this.WeightMode;
     }
 
     /**
-     * Set Read/write weight distribution mode. Valid values: `system` (weights are assigned by the system automatically), `custom` (weights are customized)
-     * @param WeightMode Read/write weight distribution mode. Valid values: `system` (weights are assigned by the system automatically), `custom` (weights are customized)
+     * Set <p>Read-write weight allocation mode. Available values: system-automatic allocation by the system; custom-customization.</p>
+     * @param WeightMode <p>Read-write weight allocation mode. Available values: system-automatic allocation by the system; custom-customization.</p>
      */
     public void setWeightMode(String WeightMode) {
         this.WeightMode = WeightMode;
     }
 
     /**
-     * Get This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field. 
-     * @return Weight This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
+     * Get <p>This field is deprecated and meaningless. To view the weight of a read-only instance, check the Weight value in the RoInstances field.</p> 
+     * @return Weight <p>This field is deprecated and meaningless. To view the weight of a read-only instance, check the Weight value in the RoInstances field.</p>
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
-     * @param Weight This field has been disused. To view the weight of a read-only instance, check the `Weight` value in the `RoInstances` field.
+     * Set <p>This field is deprecated and meaningless. To view the weight of a read-only instance, check the Weight value in the RoInstances field.</p>
+     * @param Weight <p>This field is deprecated and meaningless. To view the weight of a read-only instance, check the Weight value in the RoInstances field.</p>
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get Details of read-only instances in read-only group 
-     * @return RoInstances Details of read-only instances in read-only group
+     * Get <p>Details of read-only instances in the read-only group.</p> 
+     * @return RoInstances <p>Details of read-only instances in the read-only group.</p>
      */
     public RoInstanceInfo [] getRoInstances() {
         return this.RoInstances;
     }
 
     /**
-     * Set Details of read-only instances in read-only group
-     * @param RoInstances Details of read-only instances in read-only group
+     * Set <p>Details of read-only instances in the read-only group.</p>
+     * @param RoInstances <p>Details of read-only instances in the read-only group.</p>
      */
     public void setRoInstances(RoInstanceInfo [] RoInstances) {
         this.RoInstances = RoInstances;
     }
 
     /**
-     * Get Private IP of read-only group. 
-     * @return Vip Private IP of read-only group.
+     * Get <p>Private IP address of the read-only group.</p> 
+     * @return Vip <p>Private IP address of the read-only group.</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set Private IP of read-only group.
-     * @param Vip Private IP of read-only group.
+     * Set <p>Private IP address of the read-only group.</p>
+     * @param Vip <p>Private IP address of the read-only group.</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Private network port number of read-only group. 
-     * @return Vport Private network port number of read-only group.
+     * Get <p>Private network port number of the read-only group.</p> 
+     * @return Vport <p>Private network port number of the read-only group.</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Private network port number of read-only group.
-     * @param Vport Private network port number of read-only group.
+     * Set <p>Private network port number of the read-only group.</p>
+     * @param Vport <p>Private network port number of the read-only group.</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Virtual Private Cloud (VPC) ID. 
-     * @return UniqVpcId Virtual Private Cloud (VPC) ID.
+     * Get <p>VPC ID.</p> 
+     * @return UniqVpcId <p>VPC ID.</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set Virtual Private Cloud (VPC) ID.
-     * @param UniqVpcId Virtual Private Cloud (VPC) ID.
+     * Set <p>VPC ID.</p>
+     * @param UniqVpcId <p>VPC ID.</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get Subnet ID. 
-     * @return UniqSubnetId Subnet ID.
+     * Get <p>Subnet ID.</p> 
+     * @return UniqSubnetId <p>Subnet ID.</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set Subnet ID.
-     * @param UniqSubnetId Subnet ID.
+     * Set <p>Subnet ID.</p>
+     * @param UniqSubnetId <p>Subnet ID.</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get Region of the read-only group. 
-     * @return RoGroupRegion Region of the read-only group.
+     * Get <p>Region of the read-only group.</p> 
+     * @return RoGroupRegion <p>Region of the read-only group.</p>
      */
     public String getRoGroupRegion() {
         return this.RoGroupRegion;
     }
 
     /**
-     * Set Region of the read-only group.
-     * @param RoGroupRegion Region of the read-only group.
+     * Set <p>Region of the read-only group.</p>
+     * @param RoGroupRegion <p>Region of the read-only group.</p>
      */
     public void setRoGroupRegion(String RoGroupRegion) {
         this.RoGroupRegion = RoGroupRegion;
     }
 
     /**
-     * Get AZ of the read-only group. 
-     * @return RoGroupZone AZ of the read-only group.
+     * Get <p>AZ of the read-only group.</p> 
+     * @return RoGroupZone <p>AZ of the read-only group.</p>
      */
     public String getRoGroupZone() {
         return this.RoGroupZone;
     }
 
     /**
-     * Set AZ of the read-only group.
-     * @param RoGroupZone AZ of the read-only group.
+     * Set <p>AZ of the read-only group.</p>
+     * @param RoGroupZone <p>AZ of the read-only group.</p>
      */
     public void setRoGroupZone(String RoGroupZone) {
         this.RoGroupZone = RoGroupZone;
     }
 
     /**
-     * Get Replication delay time, in seconds. Value range: 1–259200. The value is an integer. 
-     * @return DelayReplicationTime Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
+     * Get <p>Replication delay time, in seconds. Value range: 1–259200. The value is an integer.</p> 
+     * @return DelayReplicationTime <p>Replication delay time, in seconds. Value range: 1–259200. The value is an integer.</p>
      */
     public Long getDelayReplicationTime() {
         return this.DelayReplicationTime;
     }
 
     /**
-     * Set Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
-     * @param DelayReplicationTime Replication delay time, in seconds. Value range: 1–259200. The value is an integer.
+     * Set <p>Replication delay time, in seconds. Value range: 1–259200. The value is an integer.</p>
+     * @param DelayReplicationTime <p>Replication delay time, in seconds. Value range: 1–259200. The value is an integer.</p>
      */
     public void setDelayReplicationTime(Long DelayReplicationTime) {
         this.DelayReplicationTime = DelayReplicationTime;
