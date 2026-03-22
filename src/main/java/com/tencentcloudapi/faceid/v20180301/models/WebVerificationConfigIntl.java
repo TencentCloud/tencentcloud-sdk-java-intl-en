@@ -56,15 +56,15 @@ Example: 3
     * Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesialDCard: Indonesia ID card
+3.IndonesiaIDCard: Indonesia ID card
 4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.ThailandIDCard: Thailand ID card
-11.SingaporelDCard: Singapore ID card
+11.SingaporeIDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
     */
@@ -276,29 +276,29 @@ Example: 3
      * Get Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesialDCard: Indonesia ID card
+3.IndonesiaIDCard: Indonesia ID card
 4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.ThailandIDCard: Thailand ID card
-11.SingaporelDCard: Singapore ID card
+11.SingaporeIDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard 
      * @return IDCardType Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesialDCard: Indonesia ID card
+3.IndonesiaIDCard: Indonesia ID card
 4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.ThailandIDCard: Thailand ID card
-11.SingaporelDCard: Singapore ID card
+11.SingaporeIDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
      */
@@ -310,29 +310,29 @@ Example: HKIDCard
      * Set Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesialDCard: Indonesia ID card
+3.IndonesiaIDCard: Indonesia ID card
 4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.ThailandIDCard: Thailand ID card
-11.SingaporelDCard: Singapore ID card
+11.SingaporeIDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
      * @param IDCardType Card Type for verification. The following types are supported:
 1.HKIDCard: Hong Kong (China) ID card
 2.MLIDCard: Malaysia ID card
-3.IndonesialDCard: Indonesia ID card
+3.IndonesiaIDCard: Indonesia ID card
 4.PhilippinesVoteID: Philippines Vote lD card
 5.PhilippinesDrivingLicense: Philippines driving license
 6.PhilippinesTinID: Philippines TinID card
 7.PhilippinesSSSID: Philippines SSSID card
 8.PhilippinesUMID: Philippines UMID card
-9.InternationallDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+9.InternationalIDPassport: ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
 10.ThailandIDCard: Thailand ID card
-11.SingaporelDCard: Singapore ID card
+11.SingaporeIDCard: Singapore ID card
 12.MainlandIDCard: Mainland (China) ID card
 Example: HKIDCard
      */

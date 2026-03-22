@@ -854,6 +854,20 @@ This API is used to delete a player configuration.
     }
 
     /**
+     *This API is used to return statistical information of AIGC within a specified time range.
+1. AIGC stats from the last 365 days can be queried.
+   2. The query time span should not exceed 90 days.
+3. If the query time span exceeds 1 day, return data with day-level granularity. Otherwise, return data with 5-minute granularity.
+     * @param req DescribeAigcUsageDataRequest
+     * @return DescribeAigcUsageDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAigcUsageDataResponse DescribeAigcUsageData(DescribeAigcUsageDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAigcUsageData", DescribeAigcUsageDataResponse.class);
+    }
+
+    /**
      ** This API is used to get the information of all categories.
      * @param req DescribeAllClassRequest
      * @return DescribeAllClassResponse

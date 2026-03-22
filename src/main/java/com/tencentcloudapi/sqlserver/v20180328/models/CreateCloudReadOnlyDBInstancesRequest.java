@@ -115,7 +115,7 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel {
     private Long ReadOnlyGroupMinInGroup;
 
     /**
-    * Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+    * Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -407,16 +407,16 @@ public class CreateCloudReadOnlyDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go). 
-     * @return InstanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+     * Get Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go). 
+     * @return InstanceChargeType Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
-     * @param InstanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+     * Set Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
+     * @param InstanceChargeType Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;

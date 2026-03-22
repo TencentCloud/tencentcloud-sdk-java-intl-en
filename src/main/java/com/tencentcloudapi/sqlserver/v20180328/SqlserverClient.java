@@ -1029,7 +1029,7 @@ public class SqlserverClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the upgrade prices of a monthly subscribed instance.
+     *This API is used to query the upgrade prices of a yearly/monthly subscribed instance.
 .
      * @param req InquiryPriceUpgradeDBInstanceRequest
      * @return InquiryPriceUpgradeDBInstanceResponse
