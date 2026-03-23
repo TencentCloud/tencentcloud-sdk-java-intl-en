@@ -182,6 +182,20 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
     private String [] SecurityGroupIds;
 
     /**
+    * 
+    */
+    @SerializedName("DcnSyncMode")
+    @Expose
+    private Long DcnSyncMode;
+
+    /**
+    * 
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
      * Get AZs to deploy shard nodes. You can specify up to two AZs. When the shard specification is 1-source-2-replica, two of the nodes are deployed in the first AZ.
 The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API. 
      * @return Zones AZs to deploy shard nodes. You can specify up to two AZs. When the shard specification is 1-source-2-replica, two of the nodes are deployed in the first AZ.
@@ -549,6 +563,38 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get  
+     * @return DcnSyncMode 
+     */
+    public Long getDcnSyncMode() {
+        return this.DcnSyncMode;
+    }
+
+    /**
+     * Set 
+     * @param DcnSyncMode 
+     */
+    public void setDcnSyncMode(Long DcnSyncMode) {
+        this.DcnSyncMode = DcnSyncMode;
+    }
+
+    /**
+     * Get  
+     * @return CpuType 
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set 
+     * @param CpuType 
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
     public CreateDCDBInstanceRequest() {
     }
 
@@ -638,6 +684,12 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.DcnSyncMode != null) {
+            this.DcnSyncMode = new Long(source.DcnSyncMode);
+        }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
     }
 
 
@@ -667,6 +719,8 @@ The current purchasable AZ needs be pulled through `DescribeDCDBSaleInfo` API.
         this.setParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
         this.setParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
 
     }
 }

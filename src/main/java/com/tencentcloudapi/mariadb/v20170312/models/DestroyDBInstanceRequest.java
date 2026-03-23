@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DestroyDBInstanceRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+    * Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console. 
-     * @return InstanceId Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+     * Get Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console. 
+     * @return InstanceId Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
-     * @param InstanceId Instance ID in the format of “tdsqlshard-c1nl9rpv”. It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+     * Set Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
+     * @param InstanceId Instance ID in the format of "tdsqlshard-c1nl9rpv". It is the same as the instance ID displayed in the TencentDB for MariaDB console.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

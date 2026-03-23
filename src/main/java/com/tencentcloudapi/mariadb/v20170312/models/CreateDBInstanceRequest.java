@@ -167,6 +167,20 @@ public class CreateDBInstanceRequest extends AbstractModel {
     private String DcnInstanceId;
 
     /**
+    * 
+    */
+    @SerializedName("DcnSyncMode")
+    @Expose
+    private Long DcnSyncMode;
+
+    /**
+    * 
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
      * Get AZs to deploy instance nodes. You can specify up to two AZs (one as primary AZ and another as replica AZ). When the shard specification is 1-primary-2-replica, the primary and one of the replicas are deployed in the primary AZ. 
      * @return Zones AZs to deploy instance nodes. You can specify up to two AZs (one as primary AZ and another as replica AZ). When the shard specification is 1-primary-2-replica, the primary and one of the replicas are deployed in the primary AZ.
      */
@@ -498,6 +512,38 @@ public class CreateDBInstanceRequest extends AbstractModel {
         this.DcnInstanceId = DcnInstanceId;
     }
 
+    /**
+     * Get  
+     * @return DcnSyncMode 
+     */
+    public Long getDcnSyncMode() {
+        return this.DcnSyncMode;
+    }
+
+    /**
+     * Set 
+     * @param DcnSyncMode 
+     */
+    public void setDcnSyncMode(Long DcnSyncMode) {
+        this.DcnSyncMode = DcnSyncMode;
+    }
+
+    /**
+     * Get  
+     * @return CpuType 
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set 
+     * @param CpuType 
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
     public CreateDBInstanceRequest() {
     }
 
@@ -581,6 +627,12 @@ public class CreateDBInstanceRequest extends AbstractModel {
         if (source.DcnInstanceId != null) {
             this.DcnInstanceId = new String(source.DcnInstanceId);
         }
+        if (source.DcnSyncMode != null) {
+            this.DcnSyncMode = new Long(source.DcnSyncMode);
+        }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
     }
 
 
@@ -608,6 +660,8 @@ public class CreateDBInstanceRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "InitParams.", this.InitParams);
         this.setParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
         this.setParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
+        this.setParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
 
     }
 }

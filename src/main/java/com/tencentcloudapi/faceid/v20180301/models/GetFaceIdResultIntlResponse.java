@@ -25,19 +25,19 @@ public class GetFaceIdResultIntlResponse extends AbstractModel {
 
     /**
     * The return code of the verification result.
-0: Succeeded.
+0: Success.
 1001: Failed to call the liveness engine.
-1002:Suspected spoofed recording.
-1004: Selfie verification comparison failed.
-1005:Liveness detection failed.
-1201:Lighting is too dark or overexposed.
+1002: Suspected spoofed recording.
+1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
 2004: The image passed in is too large or too small.
 2012: Multiple faces detected.
 2013: No face was detected, or the face detected was incomplete.
 2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
 2016: The similarity did not reach the standard passing threshold.
-2017:Facial occlusion detected.
+2017: Facial occlusion detected.
 -999: The verification process wasn't finished.
     */
     @SerializedName("Result")
@@ -102,7 +102,7 @@ Only returned for the Enhance and Plus version, with the default value being emp
     private String DeviceInfoLevel;
 
     /**
-    * Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+    * Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS or PRO. Details are as follows:
 01 - User kept eyes closed throughout the process.
 02 - User failed to complete the specified action.
 03 - Suspected photo replay attack.
@@ -130,34 +130,34 @@ Only returned for the Enhance and Plus version, with the default value being emp
 
     /**
      * Get The return code of the verification result.
-0: Succeeded.
+0: Success.
 1001: Failed to call the liveness engine.
-1002:Suspected spoofed recording.
-1004: Selfie verification comparison failed.
-1005:Liveness detection failed.
-1201:Lighting is too dark or overexposed.
+1002: Suspected spoofed recording.
+1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
 2004: The image passed in is too large or too small.
 2012: Multiple faces detected.
 2013: No face was detected, or the face detected was incomplete.
 2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
 2016: The similarity did not reach the standard passing threshold.
-2017:Facial occlusion detected.
+2017: Facial occlusion detected.
 -999: The verification process wasn't finished. 
      * @return Result The return code of the verification result.
-0: Succeeded.
+0: Success.
 1001: Failed to call the liveness engine.
-1002:Suspected spoofed recording.
-1004: Selfie verification comparison failed.
-1005:Liveness detection failed.
-1201:Lighting is too dark or overexposed.
+1002: Suspected spoofed recording.
+1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
 2004: The image passed in is too large or too small.
 2012: Multiple faces detected.
 2013: No face was detected, or the face detected was incomplete.
 2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
 2016: The similarity did not reach the standard passing threshold.
-2017:Facial occlusion detected.
+2017: Facial occlusion detected.
 -999: The verification process wasn't finished.
      */
     public String getResult() {
@@ -166,34 +166,34 @@ Only returned for the Enhance and Plus version, with the default value being emp
 
     /**
      * Set The return code of the verification result.
-0: Succeeded.
+0: Success.
 1001: Failed to call the liveness engine.
-1002:Suspected spoofed recording.
-1004: Selfie verification comparison failed.
-1005:Liveness detection failed.
-1201:Lighting is too dark or overexposed.
+1002: Suspected spoofed recording.
+1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
 2004: The image passed in is too large or too small.
 2012: Multiple faces detected.
 2013: No face was detected, or the face detected was incomplete.
 2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
 2016: The similarity did not reach the standard passing threshold.
-2017:Facial occlusion detected.
+2017: Facial occlusion detected.
 -999: The verification process wasn't finished.
      * @param Result The return code of the verification result.
-0: Succeeded.
+0: Success.
 1001: Failed to call the liveness engine.
-1002:Suspected spoofed recording.
-1004: Selfie verification comparison failed.
-1005:Liveness detection failed.
-1201:Lighting is too dark or overexposed.
+1002: Suspected spoofed recording.
+1004: Face detection failed.
+1005: Liveness detection failed.
+1201: Lighting is too dark or overexposed.
 2004: The image passed in is too large or too small.
 2012: Multiple faces detected.
 2013: No face was detected, or the face detected was incomplete.
 2014: The image resolution is too low or the quality does not meet the requirements.
 2015: Face comparison failed.
 2016: The similarity did not reach the standard passing threshold.
-2017:Facial occlusion detected.
+2017: Facial occlusion detected.
 -999: The verification process wasn't finished.
      */
     public void setResult(String Result) {
@@ -345,7 +345,7 @@ Only returned for the Enhance and Plus version, with the default value being emp
     }
 
     /**
-     * Get Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+     * Get Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS or PRO. Details are as follows:
 01 - User kept eyes closed throughout the process.
 02 - User failed to complete the specified action.
 03 - Suspected photo replay attack.
@@ -359,7 +359,7 @@ Only returned for the Enhance and Plus version, with the default value being emp
 11 - Poor face quality.
 12 - Unqualified collection quality.
 13 - Suspected adversarial sample attack. 
-     * @return LivenessInfoTag Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+     * @return LivenessInfoTag Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS or PRO. Details are as follows:
 01 - User kept eyes closed throughout the process.
 02 - User failed to complete the specified action.
 03 - Suspected photo replay attack.
@@ -379,7 +379,7 @@ Only returned for the Enhance and Plus version, with the default value being emp
     }
 
     /**
-     * Set Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+     * Set Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS or PRO. Details are as follows:
 01 - User kept eyes closed throughout the process.
 02 - User failed to complete the specified action.
 03 - Suspected photo replay attack.
@@ -393,7 +393,7 @@ Only returned for the Enhance and Plus version, with the default value being emp
 11 - Poor face quality.
 12 - Unqualified collection quality.
 13 - Suspected adversarial sample attack.
-     * @param LivenessInfoTag Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS. Details are as follows:
+     * @param LivenessInfoTag Describes the detailed reason for the current liveness detection failure. Output only when SdkVersion is PLUS or PRO. Details are as follows:
 01 - User kept eyes closed throughout the process.
 02 - User failed to complete the specified action.
 03 - Suspected photo replay attack.

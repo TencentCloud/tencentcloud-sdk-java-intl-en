@@ -175,6 +175,20 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
+    * 
+    */
+    @SerializedName("DcnSyncMode")
+    @Expose
+    private Long DcnSyncMode;
+
+    /**
+    * 
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
+
+    /**
      * Get Shard memory in GB, which can be obtained through the `DescribeShardSpec` API.
    
      * @return ShardMemory Shard memory in GB, which can be obtained through the `DescribeShardSpec` API.
@@ -526,6 +540,38 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
+    /**
+     * Get  
+     * @return DcnSyncMode 
+     */
+    public Long getDcnSyncMode() {
+        return this.DcnSyncMode;
+    }
+
+    /**
+     * Set 
+     * @param DcnSyncMode 
+     */
+    public void setDcnSyncMode(Long DcnSyncMode) {
+        this.DcnSyncMode = DcnSyncMode;
+    }
+
+    /**
+     * Get  
+     * @return CpuType 
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set 
+     * @param CpuType 
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
+    }
+
     public CreateHourDCDBInstanceRequest() {
     }
 
@@ -609,6 +655,12 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.DcnSyncMode != null) {
+            this.DcnSyncMode = new Long(source.DcnSyncMode);
+        }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
     }
 
 
@@ -637,6 +689,8 @@ public class CreateHourDCDBInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RollbackInstanceId", this.RollbackInstanceId);
         this.setParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamSimple(map, prefix + "DcnSyncMode", this.DcnSyncMode);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
 
     }
 }

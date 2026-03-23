@@ -27,11 +27,11 @@ public class DescribeLicenseListRequest extends AbstractModel {
     * Take the intersection when filtering with multiple conditions.
 <li> LicenseStatus authorization status information: 0 - not used; 1 - partially used; 2 - used up; 3 - unavailable; 4 - available</li>
 <li> BuyTime: time of purchase</li>
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>DeadlineStatus expiration status: NotExpired -not expired; expire - expired (including terminated); nearexpiry - about to expire</li>
 <li>ResourceId resource ID</li>
 <li>Keywords IP filtering</li>
-<li>PayMode payment mode. 0: pay-as-you-go; 1: monthly subscription</li>
+<li>PayMode payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription</li>
 <li>OrderStatus order status. 1: normal; 2: isolated; 3: terminated</li>
 <li>DealNames sub-order number, with a maximum length of 10, exceeding this will result in a failure.</li>
     */
@@ -61,24 +61,38 @@ public class DescribeLicenseListRequest extends AbstractModel {
     private Tags [] Tags;
 
     /**
+    * 
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
+
+    /**
+    * 
+    */
+    @SerializedName("By")
+    @Expose
+    private String By;
+
+    /**
      * Get Take the intersection when filtering with multiple conditions.
 <li> LicenseStatus authorization status information: 0 - not used; 1 - partially used; 2 - used up; 3 - unavailable; 4 - available</li>
 <li> BuyTime: time of purchase</li>
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>DeadlineStatus expiration status: NotExpired -not expired; expire - expired (including terminated); nearexpiry - about to expire</li>
 <li>ResourceId resource ID</li>
 <li>Keywords IP filtering</li>
-<li>PayMode payment mode. 0: pay-as-you-go; 1: monthly subscription</li>
+<li>PayMode payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription</li>
 <li>OrderStatus order status. 1: normal; 2: isolated; 3: terminated</li>
 <li>DealNames sub-order number, with a maximum length of 10, exceeding this will result in a failure.</li> 
      * @return Filters Take the intersection when filtering with multiple conditions.
 <li> LicenseStatus authorization status information: 0 - not used; 1 - partially used; 2 - used up; 3 - unavailable; 4 - available</li>
 <li> BuyTime: time of purchase</li>
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>DeadlineStatus expiration status: NotExpired -not expired; expire - expired (including terminated); nearexpiry - about to expire</li>
 <li>ResourceId resource ID</li>
 <li>Keywords IP filtering</li>
-<li>PayMode payment mode. 0: pay-as-you-go; 1: monthly subscription</li>
+<li>PayMode payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription</li>
 <li>OrderStatus order status. 1: normal; 2: isolated; 3: terminated</li>
 <li>DealNames sub-order number, with a maximum length of 10, exceeding this will result in a failure.</li>
      */
@@ -90,21 +104,21 @@ public class DescribeLicenseListRequest extends AbstractModel {
      * Set Take the intersection when filtering with multiple conditions.
 <li> LicenseStatus authorization status information: 0 - not used; 1 - partially used; 2 - used up; 3 - unavailable; 4 - available</li>
 <li> BuyTime: time of purchase</li>
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>DeadlineStatus expiration status: NotExpired -not expired; expire - expired (including terminated); nearexpiry - about to expire</li>
 <li>ResourceId resource ID</li>
 <li>Keywords IP filtering</li>
-<li>PayMode payment mode. 0: pay-as-you-go; 1: monthly subscription</li>
+<li>PayMode payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription</li>
 <li>OrderStatus order status. 1: normal; 2: isolated; 3: terminated</li>
 <li>DealNames sub-order number, with a maximum length of 10, exceeding this will result in a failure.</li>
      * @param Filters Take the intersection when filtering with multiple conditions.
 <li> LicenseStatus authorization status information: 0 - not used; 1 - partially used; 2 - used up; 3 - unavailable; 4 - available</li>
 <li> BuyTime: time of purchase</li>
-<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription</li>
+<li> LicenseType authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription</li>
 <li>DeadlineStatus expiration status: NotExpired -not expired; expire - expired (including terminated); nearexpiry - about to expire</li>
 <li>ResourceId resource ID</li>
 <li>Keywords IP filtering</li>
-<li>PayMode payment mode. 0: pay-as-you-go; 1: monthly subscription</li>
+<li>PayMode payment mode. 0: pay-as-you-go; 1: yearly/monthly subscription</li>
 <li>OrderStatus order status. 1: normal; 2: isolated; 3: terminated</li>
 <li>DealNames sub-order number, with a maximum length of 10, exceeding this will result in a failure.</li>
      */
@@ -160,6 +174,38 @@ public class DescribeLicenseListRequest extends AbstractModel {
         this.Tags = Tags;
     }
 
+    /**
+     * Get  
+     * @return Order 
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set 
+     * @param Order 
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
+    /**
+     * Get  
+     * @return By 
+     */
+    public String getBy() {
+        return this.By;
+    }
+
+    /**
+     * Set 
+     * @param By 
+     */
+    public void setBy(String By) {
+        this.By = By;
+    }
+
     public DescribeLicenseListRequest() {
     }
 
@@ -186,6 +232,12 @@ public class DescribeLicenseListRequest extends AbstractModel {
                 this.Tags[i] = new Tags(source.Tags[i]);
             }
         }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
+        }
+        if (source.By != null) {
+            this.By = new String(source.By);
+        }
     }
 
 
@@ -197,6 +249,8 @@ public class DescribeLicenseListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "Order", this.Order);
+        this.setParamSimple(map, prefix + "By", this.By);
 
     }
 }

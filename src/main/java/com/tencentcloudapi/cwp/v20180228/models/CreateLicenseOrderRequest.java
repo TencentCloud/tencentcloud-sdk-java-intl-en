@@ -31,7 +31,7 @@ public class CreateLicenseOrderRequest extends AbstractModel {
     private Tags [] Tags;
 
     /**
-    * Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
+    * Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
     */
     @SerializedName("LicenseType")
     @Expose
@@ -71,7 +71,7 @@ This parameter is only valid for monthly subscription.
 
     /**
     * Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -108,16 +108,16 @@ This parameter is only valid for monthly subscription.
     }
 
     /**
-     * Get Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0. 
-     * @return LicenseType Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
+     * Get Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0. 
+     * @return LicenseType Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
-     * @param LicenseType Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-monthly subscription; 2 - Ultimate Edition-monthly subscriptionThe default is 0.
+     * Set Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
+     * @param LicenseType Authorization type. 0: Pro Edition-pay-as-you-go; 1: Pro Edition-yearly/monthly subscription; 2 - Ultimate Edition-yearly/monthly subscription default is 0.
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;
@@ -205,9 +205,9 @@ This parameter is only valid for monthly subscription.
 
     /**
      * Get Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription. 
+This parameter is only valid for yearly/monthly subscription. 
      * @return AutoRenewFlag Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
      */
     public Boolean getAutoRenewFlag() {
         return this.AutoRenewFlag;
@@ -215,9 +215,9 @@ This parameter is only valid for monthly subscription.
 
     /**
      * Set Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
      * @param AutoRenewFlag Whether to auto-renew. The default is not to auto-renew.
-This parameter is only valid for monthly subscription.
+This parameter is only valid for yearly/monthly subscription.
      */
     public void setAutoRenewFlag(Boolean AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;

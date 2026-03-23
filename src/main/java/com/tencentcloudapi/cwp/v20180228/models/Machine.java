@@ -49,6 +49,20 @@ public class Machine extends AbstractModel {
     private String MachineStatus;
 
     /**
+    * 
+    */
+    @SerializedName("AgentStatus")
+    @Expose
+    private String AgentStatus;
+
+    /**
+    * 
+    */
+    @SerializedName("InstanceStatus")
+    @Expose
+    private String InstanceStatus;
+
+    /**
     * Yunjing client UUID. If the client is offline for a long time, an empty string is returned.
     */
     @SerializedName("Uuid")
@@ -95,7 +109,7 @@ public class Machine extends AbstractModel {
     /**
     * Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
     */
     @SerializedName("PayMode")
     @Expose
@@ -258,6 +272,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Remark;
 
     /**
+    * 
+    */
+    @SerializedName("AgentVersion")
+    @Expose
+    private String AgentVersion;
+
+    /**
      * Get Host name. 
      * @return MachineName Host name.
      */
@@ -319,6 +340,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void setMachineStatus(String MachineStatus) {
         this.MachineStatus = MachineStatus;
+    }
+
+    /**
+     * Get  
+     * @return AgentStatus 
+     */
+    public String getAgentStatus() {
+        return this.AgentStatus;
+    }
+
+    /**
+     * Set 
+     * @param AgentStatus 
+     */
+    public void setAgentStatus(String AgentStatus) {
+        this.AgentStatus = AgentStatus;
+    }
+
+    /**
+     * Get  
+     * @return InstanceStatus 
+     */
+    public String getInstanceStatus() {
+        return this.InstanceStatus;
+    }
+
+    /**
+     * Set 
+     * @param InstanceStatus 
+     */
+    public void setInstanceStatus(String InstanceStatus) {
+        this.InstanceStatus = InstanceStatus;
     }
 
     /**
@@ -428,10 +481,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li> 
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li> 
      * @return PayMode Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
      */
     public String getPayMode() {
         return this.PayMode;
@@ -440,10 +493,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
      * @param PayMode Host status
 <li>POSTPAY: postpaid, indicating pay-as-you-go mode  </li>
-<li>PREPAY: prepaid, indicating monthly subscription mode</li>
+<li>PREPAY: prepaid, indicating yearly/monthly subscription mode</li>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
@@ -821,6 +874,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Remark = Remark;
     }
 
+    /**
+     * Get  
+     * @return AgentVersion 
+     */
+    public String getAgentVersion() {
+        return this.AgentVersion;
+    }
+
+    /**
+     * Set 
+     * @param AgentVersion 
+     */
+    public void setAgentVersion(String AgentVersion) {
+        this.AgentVersion = AgentVersion;
+    }
+
     public Machine() {
     }
 
@@ -837,6 +906,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.MachineStatus != null) {
             this.MachineStatus = new String(source.MachineStatus);
+        }
+        if (source.AgentStatus != null) {
+            this.AgentStatus = new String(source.AgentStatus);
+        }
+        if (source.InstanceStatus != null) {
+            this.InstanceStatus = new String(source.InstanceStatus);
         }
         if (source.Uuid != null) {
             this.Uuid = new String(source.Uuid);
@@ -928,6 +1003,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
         }
+        if (source.AgentVersion != null) {
+            this.AgentVersion = new String(source.AgentVersion);
+        }
     }
 
 
@@ -938,6 +1016,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MachineName", this.MachineName);
         this.setParamSimple(map, prefix + "MachineOs", this.MachineOs);
         this.setParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
+        this.setParamSimple(map, prefix + "AgentStatus", this.AgentStatus);
+        this.setParamSimple(map, prefix + "InstanceStatus", this.InstanceStatus);
         this.setParamSimple(map, prefix + "Uuid", this.Uuid);
         this.setParamSimple(map, prefix + "Quuid", this.Quuid);
         this.setParamSimple(map, prefix + "VulNum", this.VulNum);
@@ -966,6 +1046,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "MachineExtraInfo.", this.MachineExtraInfo);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
 
     }
 }

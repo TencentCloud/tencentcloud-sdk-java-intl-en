@@ -29,7 +29,7 @@ CVM: Cloud Virtual Machine
 BM: BM
 ECM: Edge Computing Machine
 LH: Lighthouse
-Other: Hybrid Cloud Zone
+Other: Hybrid Cloud Zone
     */
     @SerializedName("MachineType")
     @Expose
@@ -59,7 +59,7 @@ Other: Hybrid Cloud Zone
     /**
     * Filtering criteria
 <li>Keywords - String - required: no - keywords for querying </li>
-<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in monthly subscription mode)</li>
+<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in yearly/monthly subscription mode)</li>
 <li>TagId - String - required: no - tag ID </li>
     */
     @SerializedName("Filters")
@@ -79,13 +79,13 @@ CVM: Cloud Virtual Machine
 BM: BM
 ECM: Edge Computing Machine
 LH: Lighthouse
-Other: Hybrid Cloud Zone 
+Other: Hybrid Cloud Zone 
      * @return MachineType Type of the machine's zone
 CVM: Cloud Virtual Machine
 BM: BM
 ECM: Edge Computing Machine
 LH: Lighthouse
-Other: Hybrid Cloud Zone
+Other: Hybrid Cloud Zone
      */
     public String getMachineType() {
         return this.MachineType;
@@ -97,13 +97,13 @@ CVM: Cloud Virtual Machine
 BM: BM
 ECM: Edge Computing Machine
 LH: Lighthouse
-Other: Hybrid Cloud Zone
+Other: Hybrid Cloud Zone
      * @param MachineType Type of the machine's zone
 CVM: Cloud Virtual Machine
 BM: BM
 ECM: Edge Computing Machine
 LH: Lighthouse
-Other: Hybrid Cloud Zone
+Other: Hybrid Cloud Zone
      */
     public void setMachineType(String MachineType) {
         this.MachineType = MachineType;
@@ -160,11 +160,11 @@ Other: Hybrid Cloud Zone
     /**
      * Get Filtering criteria
 <li>Keywords - String - required: no - keywords for querying </li>
-<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in monthly subscription mode)</li>
+<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in yearly/monthly subscription mode)</li>
 <li>TagId - String - required: no - tag ID </li> 
      * @return Filters Filtering criteria
 <li>Keywords - String - required: no - keywords for querying </li>
-<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in monthly subscription mode)</li>
+<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in yearly/monthly subscription mode)</li>
 <li>TagId - String - required: no - tag ID </li>
      */
     public Filter [] getFilters() {
@@ -174,11 +174,11 @@ Other: Hybrid Cloud Zone
     /**
      * Set Filtering criteria
 <li>Keywords - String - required: no - keywords for querying </li>
-<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in monthly subscription mode)</li>
+<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in yearly/monthly subscription mode)</li>
 <li>TagId - String - required: no - tag ID </li>
      * @param Filters Filtering criteria
 <li>Keywords - String - required: no - keywords for querying </li>
-<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in monthly subscription mode)</li>
+<li>Version - String required: no - current protection edition ( PRO_VERSION: Pro Edition | BASIC_VERSION: Basic Edition | Flagship: Ultimate Edition | ProtectedMachines: Pro + Ultimate Editions | UnFlagship: Non-Ultimate Edition | PRO_POST_PAY: Pro Edition in pay-as-you-go mode | PRO_PRE_PAY: Pro Edition in yearly/monthly subscription mode)</li>
 <li>TagId - String - required: no - tag ID </li>
      */
     public void setFilters(Filter [] Filters) {

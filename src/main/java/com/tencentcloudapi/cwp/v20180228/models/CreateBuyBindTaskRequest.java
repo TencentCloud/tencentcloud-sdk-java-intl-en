@@ -31,7 +31,7 @@ public class CreateBuyBindTaskRequest extends AbstractModel {
     private String DealName;
 
     /**
-    * Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
+    * Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
     */
     @SerializedName("LicenseType")
     @Expose
@@ -68,16 +68,16 @@ public class CreateBuyBindTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription 
-     * @return LicenseType Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
+     * Get Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription 
+     * @return LicenseType Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
      */
     public Long getLicenseType() {
         return this.LicenseType;
     }
 
     /**
-     * Set Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
-     * @param LicenseType Optional parameters. 1: Pro Edition-monthly subscription; 2: Ultimate Edition-monthly subscription
+     * Set Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
+     * @param LicenseType Optional parameters. 1: Pro Edition-yearly/monthly subscription; 2: Ultimate Edition-yearly/monthly subscription
      */
     public void setLicenseType(Long LicenseType) {
         this.LicenseType = LicenseType;

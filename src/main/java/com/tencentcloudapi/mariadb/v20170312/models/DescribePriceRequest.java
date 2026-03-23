@@ -69,7 +69,7 @@ public class DescribePriceRequest extends AbstractModel {
     private Long Count;
 
     /**
-    * Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+    * Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
     */
     @SerializedName("Paymode")
     @Expose
@@ -83,6 +83,13 @@ public class DescribePriceRequest extends AbstractModel {
     @SerializedName("AmountUnit")
     @Expose
     private String AmountUnit;
+
+    /**
+    * 
+    */
+    @SerializedName("CpuType")
+    @Expose
+    private String CpuType;
 
     /**
      * Get AZ ID of the purchased instance. 
@@ -193,16 +200,16 @@ public class DescribePriceRequest extends AbstractModel {
     }
 
     /**
-     * Get Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription). 
-     * @return Paymode Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+     * Get Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription). 
+     * @return Paymode Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
      */
     public String getPaymode() {
         return this.Paymode;
     }
 
     /**
-     * Set Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
-     * @param Paymode Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (monthly subscription).
+     * Set Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
+     * @param Paymode Billing type. Valid values: `postpaid` (pay-as-you-go), `prepaid` (yearly/monthly subscription).
      */
     public void setPaymode(String Paymode) {
         this.Paymode = Paymode;
@@ -230,6 +237,22 @@ public class DescribePriceRequest extends AbstractModel {
      */
     public void setAmountUnit(String AmountUnit) {
         this.AmountUnit = AmountUnit;
+    }
+
+    /**
+     * Get  
+     * @return CpuType 
+     */
+    public String getCpuType() {
+        return this.CpuType;
+    }
+
+    /**
+     * Set 
+     * @param CpuType 
+     */
+    public void setCpuType(String CpuType) {
+        this.CpuType = CpuType;
     }
 
     public DescribePriceRequest() {
@@ -264,6 +287,9 @@ public class DescribePriceRequest extends AbstractModel {
         if (source.AmountUnit != null) {
             this.AmountUnit = new String(source.AmountUnit);
         }
+        if (source.CpuType != null) {
+            this.CpuType = new String(source.CpuType);
+        }
     }
 
 
@@ -279,6 +305,7 @@ public class DescribePriceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Count", this.Count);
         this.setParamSimple(map, prefix + "Paymode", this.Paymode);
         this.setParamSimple(map, prefix + "AmountUnit", this.AmountUnit);
+        this.setParamSimple(map, prefix + "CpuType", this.CpuType);
 
     }
 }
