@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeAvailableZoneInfoResponse extends AbstractModel {
 
     /**
-    * Information such as resource availability in each AZ and the supported storage classes and protocols
+    * <p>Resource sale status in each availability zone as well as supported storage types, storage protocol, etc.</p>
     */
     @SerializedName("RegionZones")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeAvailableZoneInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Information such as resource availability in each AZ and the supported storage classes and protocols 
-     * @return RegionZones Information such as resource availability in each AZ and the supported storage classes and protocols
+     * Get <p>Resource sale status in each availability zone as well as supported storage types, storage protocol, etc.</p> 
+     * @return RegionZones <p>Resource sale status in each availability zone as well as supported storage types, storage protocol, etc.</p>
      */
     public AvailableRegion [] getRegionZones() {
         return this.RegionZones;
     }
 
     /**
-     * Set Information such as resource availability in each AZ and the supported storage classes and protocols
-     * @param RegionZones Information such as resource availability in each AZ and the supported storage classes and protocols
+     * Set <p>Resource sale status in each availability zone as well as supported storage types, storage protocol, etc.</p>
+     * @param RegionZones <p>Resource sale status in each availability zone as well as supported storage types, storage protocol, etc.</p>
      */
     public void setRegionZones(AvailableRegion [] RegionZones) {
         this.RegionZones = RegionZones;

@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class AvailableType extends AbstractModel {
 
     /**
-    * Protocol and sale details
+    * <p>Protocol and sale details</p>
     */
     @SerializedName("Protocols")
     @Expose
     private AvailableProtoStatus [] Protocols;
 
     /**
-    * Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
+    * <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Indicates whether prepaid is supported. `true`: yes; `false`: no
+    * <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
     */
     @SerializedName("Prepayment")
     @Expose
     private Boolean Prepayment;
 
     /**
-     * Get Protocol and sale details 
-     * @return Protocols Protocol and sale details
+    * <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
+
+    /**
+     * Get <p>Protocol and sale details</p> 
+     * @return Protocols <p>Protocol and sale details</p>
      */
     public AvailableProtoStatus [] getProtocols() {
         return this.Protocols;
     }
 
     /**
-     * Set Protocol and sale details
-     * @param Protocols Protocol and sale details
+     * Set <p>Protocol and sale details</p>
+     * @param Protocols <p>Protocol and sale details</p>
      */
     public void setProtocols(AvailableProtoStatus [] Protocols) {
         this.Protocols = Protocols;
     }
 
     /**
-     * Get Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo. 
-     * @return Type Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
+     * Get <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p> 
+     * @return Type <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
-     * @param Type Storage type. the return value SD indicates general standard storage, HP indicates general performance storage, TB indicates Turbo standard, and TP indicates high-performance Turbo.
+     * Set <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
+     * @param Type <p>Storage type. In the return value, SD indicates General Standard Storage, HP indicates General Performance Storage, TB indicates Standard Turbo, and TP indicates High-Performance Turbo.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Indicates whether prepaid is supported. `true`: yes; `false`: no 
-     * @return Prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
+     * Get <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p> 
+     * @return Prepayment <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
      */
     public Boolean getPrepayment() {
         return this.Prepayment;
     }
 
     /**
-     * Set Indicates whether prepaid is supported. `true`: yes; `false`: no
-     * @param Prepayment Indicates whether prepaid is supported. `true`: yes; `false`: no
+     * Set <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
+     * @param Prepayment <p>Support for prepaid. In the return value, true means supported and false means unsupported.</p>
      */
     public void setPrepayment(Boolean Prepayment) {
         this.Prepayment = Prepayment;
+    }
+
+    /**
+     * Get <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul> 
+     * @return Version <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
+     * @param Version <p>File system version</p><p>Enumeration value:</p><ul><li>v1.5: Universal Series</li><li>v3.1: Universal Series (enhanced)</li><li>v4.0: Turbo series</li></ul>
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
     }
 
     public AvailableType() {
@@ -112,6 +135,9 @@ public class AvailableType extends AbstractModel {
         if (source.Prepayment != null) {
             this.Prepayment = new Boolean(source.Prepayment);
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class AvailableType extends AbstractModel {
         this.setParamArrayObj(map, prefix + "Protocols.", this.Protocols);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "Prepayment", this.Prepayment);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }
