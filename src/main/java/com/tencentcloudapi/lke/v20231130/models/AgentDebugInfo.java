@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AgentDebugInfo extends AbstractModel {
 
     /**
-    * 
+    * Input Information for Tools and Large Models, json
     */
     @SerializedName("Input")
     @Expose
     private String Input;
 
     /**
-    * 
+    * Output Information for Tools and Large Models, json
     */
     @SerializedName("Output")
     @Expose
     private String Output;
 
     /**
-     * Get  
-     * @return Input 
+     * Get Input Information for Tools and Large Models, json 
+     * @return Input Input Information for Tools and Large Models, json
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set Input Information for Tools and Large Models, json
+     * @param Input Input Information for Tools and Large Models, json
      */
     public void setInput(String Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get Output Information for Tools and Large Models, json 
+     * @return Output Output Information for Tools and Large Models, json
      */
     public String getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set Output Information for Tools and Large Models, json
+     * @param Output Output Information for Tools and Large Models, json
      */
     public void setOutput(String Output) {
         this.Output = Output;

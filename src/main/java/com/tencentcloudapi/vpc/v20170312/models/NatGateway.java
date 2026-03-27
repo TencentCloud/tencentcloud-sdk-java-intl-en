@@ -174,7 +174,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long NatProductVersion;
 
     /**
-    * 
+    * Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
     */
     @SerializedName("SmartScheduleMode")
     @Expose
@@ -541,16 +541,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return SmartScheduleMode 
+     * Get Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment. 
+     * @return SmartScheduleMode Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
      */
     public Boolean getSmartScheduleMode() {
         return this.SmartScheduleMode;
     }
 
     /**
-     * Set 
-     * @param SmartScheduleMode 
+     * Set Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
+     * @param SmartScheduleMode Whether to enable the feature of selecting EIPs for SNAT based on the destination network segment.
      */
     public void setSmartScheduleMode(Boolean SmartScheduleMode) {
         this.SmartScheduleMode = SmartScheduleMode;

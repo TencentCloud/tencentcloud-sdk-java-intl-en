@@ -38,14 +38,14 @@ public class UserInfoForUserManager extends AbstractModel {
     private String UserGroup;
 
     /**
-    * 
+    * Password
     */
     @SerializedName("PassWord")
     @Expose
     private String PassWord;
 
     /**
-    * 
+    * Remarks
     */
     @SerializedName("ReMark")
     @Expose
@@ -91,32 +91,32 @@ public class UserInfoForUserManager extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return PassWord 
+     * Get Password 
+     * @return PassWord Password
      */
     public String getPassWord() {
         return this.PassWord;
     }
 
     /**
-     * Set 
-     * @param PassWord 
+     * Set Password
+     * @param PassWord Password
      */
     public void setPassWord(String PassWord) {
         this.PassWord = PassWord;
     }
 
     /**
-     * Get  
-     * @return ReMark 
+     * Get Remarks 
+     * @return ReMark Remarks
      */
     public String getReMark() {
         return this.ReMark;
     }
 
     /**
-     * Set 
-     * @param ReMark 
+     * Set Remarks
+     * @param ReMark Remarks
      */
     public void setReMark(String ReMark) {
         this.ReMark = ReMark;

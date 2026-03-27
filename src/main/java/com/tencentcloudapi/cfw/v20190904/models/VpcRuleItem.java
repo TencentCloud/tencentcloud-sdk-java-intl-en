@@ -24,575 +24,785 @@ import java.util.HashMap;
 public class VpcRuleItem extends AbstractModel {
 
     /**
-    * 
+    * Access source example:
+
+net: IP/CIDR (192.168.0.2)
     */
     @SerializedName("SourceContent")
     @Expose
     private String SourceContent;
 
     /**
-    * 
+    * Access source type, which can be: net
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * 
+    * Access destination example:
+
+net: IP/CIDR (192.168.0.2)
+
+domain: domain name rules, for example *.qq.com
     */
     @SerializedName("DestContent")
     @Expose
     private String DestContent;
 
     /**
-    * 
+    * Access destination type, which can be: net, domain, dnsparse
     */
     @SerializedName("DestType")
     @Expose
     private String DestType;
 
     /**
-    * 
+    * Protocol, optional values:
+
+TCP
+
+UDP
+
+ICMP
+
+ANY
+
+HTTP
+
+HTTPS
+
+HTTP/HTTPS
+
+SMTP
+
+SMTPS
+
+SMTP/SMTPS
+
+FTP
+
+DNS
+
+TLS/SSL
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-    * 
+    * How traffic set in the access control policy passes through CFW. Values:
+
+accept: allow
+
+drop: deny
+
+log: observe
     */
     @SerializedName("RuleAction")
     @Expose
     private String RuleAction;
 
     /**
-    * 
+    * Access control policy ports. Values:
+
+-1/-1: all ports
+
+80: port 80
     */
     @SerializedName("Port")
     @Expose
     private String Port;
 
     /**
-    * 
+    * Description
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 
+    * Rule order, where -1 indicates the lowest and 1 indicates the highest.
     */
     @SerializedName("OrderIndex")
     @Expose
     private Long OrderIndex;
 
     /**
-    * 
+    * Rule status, where true indicates enabled and false indicates disabled.
     */
     @SerializedName("Enable")
     @Expose
     private String Enable;
 
     /**
-    * 
+    * The scope of effect for the rule, specifying whether it applies between a specific pair of VPCs or across all VPCs.
     */
     @SerializedName("EdgeId")
     @Expose
     private String EdgeId;
 
     /**
-    * 
+    * The unique id corresponding to the rule. This field is ignored when adding a rule; when modifying the rule, the Uuid needs to be filled in. This parameter will be returned in query results.
     */
     @SerializedName("Uuid")
     @Expose
     private Long Uuid;
 
     /**
-    * 
+    * The hit count of the rule. This parameter does not need to be passed during CRUD operations and is mainly used for returning query result data.
     */
     @SerializedName("DetectedTimes")
     @Expose
     private Long DetectedTimes;
 
     /**
-    * 
+    * Description of the firewall between the pair of VPCs corresponding to EdgeId
     */
     @SerializedName("EdgeName")
     @Expose
     private String EdgeName;
 
     /**
-    * 
+    * Internal-use uuid, generally not used
     */
     @SerializedName("InternalUuid")
     @Expose
     private Long InternalUuid;
 
     /**
-    * 
+    * Rule deletion status: 1 indicates deleted; 0 indicates not deleted
     */
     @SerializedName("Deleted")
     @Expose
     private Long Deleted;
 
     /**
-    * 
+    * The firewall instance ID where the rule takes effect
     */
     @SerializedName("FwGroupId")
     @Expose
     private String FwGroupId;
 
     /**
-    * 
+    * Firewall name
     */
     @SerializedName("FwGroupName")
     @Expose
     private String FwGroupName;
 
     /**
-    * 
+    * beta task details
     */
     @SerializedName("BetaList")
     @Expose
     private BetaInfoByACL [] BetaList;
 
     /**
-    * 
+    * Port Protocol Group ID
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private String ParamTemplateId;
 
     /**
-    * 
+    * Port Protocol Group Name
     */
     @SerializedName("ParamTemplateName")
     @Expose
     private String ParamTemplateName;
 
     /**
-    * 
+    * Access destination name
     */
     @SerializedName("TargetName")
     @Expose
     private String TargetName;
 
     /**
-    * 
+    * Access source name
     */
     @SerializedName("SourceName")
     @Expose
     private String SourceName;
 
     /**
-    * 
+    * Ip version, 0: IPv4, 1: IPv6, default is IPv4
     */
     @SerializedName("IpVersion")
     @Expose
     private Long IpVersion;
 
     /**
-    * 
+    * Whether the rule is invalid, where 0 indicates a valid rule and 1 indicates an invalid rule, used in output parameters.
     */
     @SerializedName("Invalid")
     @Expose
     private Long Invalid;
 
     /**
-     * Get  
-     * @return SourceContent 
+     * Get Access source example:
+
+net: IP/CIDR (192.168.0.2) 
+     * @return SourceContent Access source example:
+
+net: IP/CIDR (192.168.0.2)
      */
     public String getSourceContent() {
         return this.SourceContent;
     }
 
     /**
-     * Set 
-     * @param SourceContent 
+     * Set Access source example:
+
+net: IP/CIDR (192.168.0.2)
+     * @param SourceContent Access source example:
+
+net: IP/CIDR (192.168.0.2)
      */
     public void setSourceContent(String SourceContent) {
         this.SourceContent = SourceContent;
     }
 
     /**
-     * Get  
-     * @return SourceType 
+     * Get Access source type, which can be: net 
+     * @return SourceType Access source type, which can be: net
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set 
-     * @param SourceType 
+     * Set Access source type, which can be: net
+     * @param SourceType Access source type, which can be: net
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get  
-     * @return DestContent 
+     * Get Access destination example:
+
+net: IP/CIDR (192.168.0.2)
+
+domain: domain name rules, for example *.qq.com 
+     * @return DestContent Access destination example:
+
+net: IP/CIDR (192.168.0.2)
+
+domain: domain name rules, for example *.qq.com
      */
     public String getDestContent() {
         return this.DestContent;
     }
 
     /**
-     * Set 
-     * @param DestContent 
+     * Set Access destination example:
+
+net: IP/CIDR (192.168.0.2)
+
+domain: domain name rules, for example *.qq.com
+     * @param DestContent Access destination example:
+
+net: IP/CIDR (192.168.0.2)
+
+domain: domain name rules, for example *.qq.com
      */
     public void setDestContent(String DestContent) {
         this.DestContent = DestContent;
     }
 
     /**
-     * Get  
-     * @return DestType 
+     * Get Access destination type, which can be: net, domain, dnsparse 
+     * @return DestType Access destination type, which can be: net, domain, dnsparse
      */
     public String getDestType() {
         return this.DestType;
     }
 
     /**
-     * Set 
-     * @param DestType 
+     * Set Access destination type, which can be: net, domain, dnsparse
+     * @param DestType Access destination type, which can be: net, domain, dnsparse
      */
     public void setDestType(String DestType) {
         this.DestType = DestType;
     }
 
     /**
-     * Get  
-     * @return Protocol 
+     * Get Protocol, optional values:
+
+TCP
+
+UDP
+
+ICMP
+
+ANY
+
+HTTP
+
+HTTPS
+
+HTTP/HTTPS
+
+SMTP
+
+SMTPS
+
+SMTP/SMTPS
+
+FTP
+
+DNS
+
+TLS/SSL 
+     * @return Protocol Protocol, optional values:
+
+TCP
+
+UDP
+
+ICMP
+
+ANY
+
+HTTP
+
+HTTPS
+
+HTTP/HTTPS
+
+SMTP
+
+SMTPS
+
+SMTP/SMTPS
+
+FTP
+
+DNS
+
+TLS/SSL
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 
-     * @param Protocol 
+     * Set Protocol, optional values:
+
+TCP
+
+UDP
+
+ICMP
+
+ANY
+
+HTTP
+
+HTTPS
+
+HTTP/HTTPS
+
+SMTP
+
+SMTPS
+
+SMTP/SMTPS
+
+FTP
+
+DNS
+
+TLS/SSL
+     * @param Protocol Protocol, optional values:
+
+TCP
+
+UDP
+
+ICMP
+
+ANY
+
+HTTP
+
+HTTPS
+
+HTTP/HTTPS
+
+SMTP
+
+SMTPS
+
+SMTP/SMTPS
+
+FTP
+
+DNS
+
+TLS/SSL
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;
     }
 
     /**
-     * Get  
-     * @return RuleAction 
+     * Get How traffic set in the access control policy passes through CFW. Values:
+
+accept: allow
+
+drop: deny
+
+log: observe 
+     * @return RuleAction How traffic set in the access control policy passes through CFW. Values:
+
+accept: allow
+
+drop: deny
+
+log: observe
      */
     public String getRuleAction() {
         return this.RuleAction;
     }
 
     /**
-     * Set 
-     * @param RuleAction 
+     * Set How traffic set in the access control policy passes through CFW. Values:
+
+accept: allow
+
+drop: deny
+
+log: observe
+     * @param RuleAction How traffic set in the access control policy passes through CFW. Values:
+
+accept: allow
+
+drop: deny
+
+log: observe
      */
     public void setRuleAction(String RuleAction) {
         this.RuleAction = RuleAction;
     }
 
     /**
-     * Get  
-     * @return Port 
+     * Get Access control policy ports. Values:
+
+-1/-1: all ports
+
+80: port 80 
+     * @return Port Access control policy ports. Values:
+
+-1/-1: all ports
+
+80: port 80
      */
     public String getPort() {
         return this.Port;
     }
 
     /**
-     * Set 
-     * @param Port 
+     * Set Access control policy ports. Values:
+
+-1/-1: all ports
+
+80: port 80
+     * @param Port Access control policy ports. Values:
+
+-1/-1: all ports
+
+80: port 80
      */
     public void setPort(String Port) {
         this.Port = Port;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get Description 
+     * @return Description Description
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set Description
+     * @param Description Description
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  
-     * @return OrderIndex 
+     * Get Rule order, where -1 indicates the lowest and 1 indicates the highest. 
+     * @return OrderIndex Rule order, where -1 indicates the lowest and 1 indicates the highest.
      */
     public Long getOrderIndex() {
         return this.OrderIndex;
     }
 
     /**
-     * Set 
-     * @param OrderIndex 
+     * Set Rule order, where -1 indicates the lowest and 1 indicates the highest.
+     * @param OrderIndex Rule order, where -1 indicates the lowest and 1 indicates the highest.
      */
     public void setOrderIndex(Long OrderIndex) {
         this.OrderIndex = OrderIndex;
     }
 
     /**
-     * Get  
-     * @return Enable 
+     * Get Rule status, where true indicates enabled and false indicates disabled. 
+     * @return Enable Rule status, where true indicates enabled and false indicates disabled.
      */
     public String getEnable() {
         return this.Enable;
     }
 
     /**
-     * Set 
-     * @param Enable 
+     * Set Rule status, where true indicates enabled and false indicates disabled.
+     * @param Enable Rule status, where true indicates enabled and false indicates disabled.
      */
     public void setEnable(String Enable) {
         this.Enable = Enable;
     }
 
     /**
-     * Get  
-     * @return EdgeId 
+     * Get The scope of effect for the rule, specifying whether it applies between a specific pair of VPCs or across all VPCs. 
+     * @return EdgeId The scope of effect for the rule, specifying whether it applies between a specific pair of VPCs or across all VPCs.
      */
     public String getEdgeId() {
         return this.EdgeId;
     }
 
     /**
-     * Set 
-     * @param EdgeId 
+     * Set The scope of effect for the rule, specifying whether it applies between a specific pair of VPCs or across all VPCs.
+     * @param EdgeId The scope of effect for the rule, specifying whether it applies between a specific pair of VPCs or across all VPCs.
      */
     public void setEdgeId(String EdgeId) {
         this.EdgeId = EdgeId;
     }
 
     /**
-     * Get  
-     * @return Uuid 
+     * Get The unique id corresponding to the rule. This field is ignored when adding a rule; when modifying the rule, the Uuid needs to be filled in. This parameter will be returned in query results. 
+     * @return Uuid The unique id corresponding to the rule. This field is ignored when adding a rule; when modifying the rule, the Uuid needs to be filled in. This parameter will be returned in query results.
      */
     public Long getUuid() {
         return this.Uuid;
     }
 
     /**
-     * Set 
-     * @param Uuid 
+     * Set The unique id corresponding to the rule. This field is ignored when adding a rule; when modifying the rule, the Uuid needs to be filled in. This parameter will be returned in query results.
+     * @param Uuid The unique id corresponding to the rule. This field is ignored when adding a rule; when modifying the rule, the Uuid needs to be filled in. This parameter will be returned in query results.
      */
     public void setUuid(Long Uuid) {
         this.Uuid = Uuid;
     }
 
     /**
-     * Get  
-     * @return DetectedTimes 
+     * Get The hit count of the rule. This parameter does not need to be passed during CRUD operations and is mainly used for returning query result data. 
+     * @return DetectedTimes The hit count of the rule. This parameter does not need to be passed during CRUD operations and is mainly used for returning query result data.
      */
     public Long getDetectedTimes() {
         return this.DetectedTimes;
     }
 
     /**
-     * Set 
-     * @param DetectedTimes 
+     * Set The hit count of the rule. This parameter does not need to be passed during CRUD operations and is mainly used for returning query result data.
+     * @param DetectedTimes The hit count of the rule. This parameter does not need to be passed during CRUD operations and is mainly used for returning query result data.
      */
     public void setDetectedTimes(Long DetectedTimes) {
         this.DetectedTimes = DetectedTimes;
     }
 
     /**
-     * Get  
-     * @return EdgeName 
+     * Get Description of the firewall between the pair of VPCs corresponding to EdgeId 
+     * @return EdgeName Description of the firewall between the pair of VPCs corresponding to EdgeId
      */
     public String getEdgeName() {
         return this.EdgeName;
     }
 
     /**
-     * Set 
-     * @param EdgeName 
+     * Set Description of the firewall between the pair of VPCs corresponding to EdgeId
+     * @param EdgeName Description of the firewall between the pair of VPCs corresponding to EdgeId
      */
     public void setEdgeName(String EdgeName) {
         this.EdgeName = EdgeName;
     }
 
     /**
-     * Get  
-     * @return InternalUuid 
+     * Get Internal-use uuid, generally not used 
+     * @return InternalUuid Internal-use uuid, generally not used
      */
     public Long getInternalUuid() {
         return this.InternalUuid;
     }
 
     /**
-     * Set 
-     * @param InternalUuid 
+     * Set Internal-use uuid, generally not used
+     * @param InternalUuid Internal-use uuid, generally not used
      */
     public void setInternalUuid(Long InternalUuid) {
         this.InternalUuid = InternalUuid;
     }
 
     /**
-     * Get  
-     * @return Deleted 
+     * Get Rule deletion status: 1 indicates deleted; 0 indicates not deleted 
+     * @return Deleted Rule deletion status: 1 indicates deleted; 0 indicates not deleted
      */
     public Long getDeleted() {
         return this.Deleted;
     }
 
     /**
-     * Set 
-     * @param Deleted 
+     * Set Rule deletion status: 1 indicates deleted; 0 indicates not deleted
+     * @param Deleted Rule deletion status: 1 indicates deleted; 0 indicates not deleted
      */
     public void setDeleted(Long Deleted) {
         this.Deleted = Deleted;
     }
 
     /**
-     * Get  
-     * @return FwGroupId 
+     * Get The firewall instance ID where the rule takes effect 
+     * @return FwGroupId The firewall instance ID where the rule takes effect
      */
     public String getFwGroupId() {
         return this.FwGroupId;
     }
 
     /**
-     * Set 
-     * @param FwGroupId 
+     * Set The firewall instance ID where the rule takes effect
+     * @param FwGroupId The firewall instance ID where the rule takes effect
      */
     public void setFwGroupId(String FwGroupId) {
         this.FwGroupId = FwGroupId;
     }
 
     /**
-     * Get  
-     * @return FwGroupName 
+     * Get Firewall name 
+     * @return FwGroupName Firewall name
      */
     public String getFwGroupName() {
         return this.FwGroupName;
     }
 
     /**
-     * Set 
-     * @param FwGroupName 
+     * Set Firewall name
+     * @param FwGroupName Firewall name
      */
     public void setFwGroupName(String FwGroupName) {
         this.FwGroupName = FwGroupName;
     }
 
     /**
-     * Get  
-     * @return BetaList 
+     * Get beta task details 
+     * @return BetaList beta task details
      */
     public BetaInfoByACL [] getBetaList() {
         return this.BetaList;
     }
 
     /**
-     * Set 
-     * @param BetaList 
+     * Set beta task details
+     * @param BetaList beta task details
      */
     public void setBetaList(BetaInfoByACL [] BetaList) {
         this.BetaList = BetaList;
     }
 
     /**
-     * Get  
-     * @return ParamTemplateId 
+     * Get Port Protocol Group ID 
+     * @return ParamTemplateId Port Protocol Group ID
      */
     public String getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set 
-     * @param ParamTemplateId 
+     * Set Port Protocol Group ID
+     * @param ParamTemplateId Port Protocol Group ID
      */
     public void setParamTemplateId(String ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get  
-     * @return ParamTemplateName 
+     * Get Port Protocol Group Name 
+     * @return ParamTemplateName Port Protocol Group Name
      */
     public String getParamTemplateName() {
         return this.ParamTemplateName;
     }
 
     /**
-     * Set 
-     * @param ParamTemplateName 
+     * Set Port Protocol Group Name
+     * @param ParamTemplateName Port Protocol Group Name
      */
     public void setParamTemplateName(String ParamTemplateName) {
         this.ParamTemplateName = ParamTemplateName;
     }
 
     /**
-     * Get  
-     * @return TargetName 
+     * Get Access destination name 
+     * @return TargetName Access destination name
      */
     public String getTargetName() {
         return this.TargetName;
     }
 
     /**
-     * Set 
-     * @param TargetName 
+     * Set Access destination name
+     * @param TargetName Access destination name
      */
     public void setTargetName(String TargetName) {
         this.TargetName = TargetName;
     }
 
     /**
-     * Get  
-     * @return SourceName 
+     * Get Access source name 
+     * @return SourceName Access source name
      */
     public String getSourceName() {
         return this.SourceName;
     }
 
     /**
-     * Set 
-     * @param SourceName 
+     * Set Access source name
+     * @param SourceName Access source name
      */
     public void setSourceName(String SourceName) {
         this.SourceName = SourceName;
     }
 
     /**
-     * Get  
-     * @return IpVersion 
+     * Get Ip version, 0: IPv4, 1: IPv6, default is IPv4 
+     * @return IpVersion Ip version, 0: IPv4, 1: IPv6, default is IPv4
      */
     public Long getIpVersion() {
         return this.IpVersion;
     }
 
     /**
-     * Set 
-     * @param IpVersion 
+     * Set Ip version, 0: IPv4, 1: IPv6, default is IPv4
+     * @param IpVersion Ip version, 0: IPv4, 1: IPv6, default is IPv4
      */
     public void setIpVersion(Long IpVersion) {
         this.IpVersion = IpVersion;
     }
 
     /**
-     * Get  
-     * @return Invalid 
+     * Get Whether the rule is invalid, where 0 indicates a valid rule and 1 indicates an invalid rule, used in output parameters. 
+     * @return Invalid Whether the rule is invalid, where 0 indicates a valid rule and 1 indicates an invalid rule, used in output parameters.
      */
     public Long getInvalid() {
         return this.Invalid;
     }
 
     /**
-     * Set 
-     * @param Invalid 
+     * Set Whether the rule is invalid, where 0 indicates a valid rule and 1 indicates an invalid rule, used in output parameters.
+     * @param Invalid Whether the rule is invalid, where 0 indicates a valid rule and 1 indicates an invalid rule, used in output parameters.
      */
     public void setInvalid(Long Invalid) {
         this.Invalid = Invalid;

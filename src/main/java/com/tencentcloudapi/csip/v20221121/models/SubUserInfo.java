@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class SubUserInfo extends AbstractModel {
 
     /**
-    * 
+    * Primary key ID, which has no business meaning and serves solely as a unique identifier
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * 
+    * sub-account Appid
     */
     @SerializedName("AppID")
     @Expose
     private String AppID;
 
     /**
-    * 
+    * sub-account UIn
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * 
+    * Sub-account name
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * 
+    * master account Appid
     */
     @SerializedName("OwnerAppID")
     @Expose
     private String OwnerAppID;
 
     /**
-    * 
+    * master account Uin
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * 
+    * master account name
     */
     @SerializedName("OwnerNickName")
     @Expose
     private String OwnerNickName;
 
     /**
-    * 
+    * master account's memberId information
     */
     @SerializedName("OwnerMemberID")
     @Expose
     private String OwnerMemberID;
 
     /**
-    * 
+    * Account type: 0 for Tencent Cloud account, 1 for AWS account
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-    * 
+    * Accessible services count
     */
     @SerializedName("ServiceCount")
     @Expose
     private Long ServiceCount;
 
     /**
-    * 
+    * Accessible API count
     */
     @SerializedName("InterfaceCount")
     @Expose
     private Long InterfaceCount;
 
     /**
-    * 
+    * Accessible resources count
     */
     @SerializedName("AssetCount")
     @Expose
     private Long AssetCount;
 
     /**
-    * 
+    * Access/Behavior Logs Count
     */
     @SerializedName("LogCount")
     @Expose
     private Long LogCount;
 
     /**
-    * 
+    * Permissions configuration risk
     */
     @SerializedName("ConfigRiskCount")
     @Expose
     private Long ConfigRiskCount;
 
     /**
-    * 
+    * Dangerous behavior alarm
     */
     @SerializedName("ActionRiskCount")
     @Expose
     private Long ActionRiskCount;
 
     /**
-    * 
+    * whether to enable CloudAudit logs
     */
     @SerializedName("IsAccessCloudAudit")
     @Expose
     private Boolean IsAccessCloudAudit;
 
     /**
-    * 
+    * whether risk configuration security assessment
     */
     @SerializedName("IsAccessCheck")
     @Expose
     private Boolean IsAccessCheck;
 
     /**
-    * 
+    * whether to configure user behavior management policies
     */
     @SerializedName("IsAccessUeba")
     @Expose
     private Boolean IsAccessUeba;
 
     /**
-     * Get  
-     * @return ID 
+     * Get Primary key ID, which has no business meaning and serves solely as a unique identifier 
+     * @return ID Primary key ID, which has no business meaning and serves solely as a unique identifier
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set 
-     * @param ID 
+     * Set Primary key ID, which has no business meaning and serves solely as a unique identifier
+     * @param ID Primary key ID, which has no business meaning and serves solely as a unique identifier
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get  
-     * @return AppID 
+     * Get sub-account Appid 
+     * @return AppID sub-account Appid
      */
     public String getAppID() {
         return this.AppID;
     }
 
     /**
-     * Set 
-     * @param AppID 
+     * Set sub-account Appid
+     * @param AppID sub-account Appid
      */
     public void setAppID(String AppID) {
         this.AppID = AppID;
     }
 
     /**
-     * Get  
-     * @return Uin 
+     * Get sub-account UIn 
+     * @return Uin sub-account UIn
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set 
-     * @param Uin 
+     * Set sub-account UIn
+     * @param Uin sub-account UIn
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get  
-     * @return NickName 
+     * Get Sub-account name 
+     * @return NickName Sub-account name
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set 
-     * @param NickName 
+     * Set Sub-account name
+     * @param NickName Sub-account name
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get  
-     * @return OwnerAppID 
+     * Get master account Appid 
+     * @return OwnerAppID master account Appid
      */
     public String getOwnerAppID() {
         return this.OwnerAppID;
     }
 
     /**
-     * Set 
-     * @param OwnerAppID 
+     * Set master account Appid
+     * @param OwnerAppID master account Appid
      */
     public void setOwnerAppID(String OwnerAppID) {
         this.OwnerAppID = OwnerAppID;
     }
 
     /**
-     * Get  
-     * @return OwnerUin 
+     * Get master account Uin 
+     * @return OwnerUin master account Uin
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set 
-     * @param OwnerUin 
+     * Set master account Uin
+     * @param OwnerUin master account Uin
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get  
-     * @return OwnerNickName 
+     * Get master account name 
+     * @return OwnerNickName master account name
      */
     public String getOwnerNickName() {
         return this.OwnerNickName;
     }
 
     /**
-     * Set 
-     * @param OwnerNickName 
+     * Set master account name
+     * @param OwnerNickName master account name
      */
     public void setOwnerNickName(String OwnerNickName) {
         this.OwnerNickName = OwnerNickName;
     }
 
     /**
-     * Get  
-     * @return OwnerMemberID 
+     * Get master account's memberId information 
+     * @return OwnerMemberID master account's memberId information
      */
     public String getOwnerMemberID() {
         return this.OwnerMemberID;
     }
 
     /**
-     * Set 
-     * @param OwnerMemberID 
+     * Set master account's memberId information
+     * @param OwnerMemberID master account's memberId information
      */
     public void setOwnerMemberID(String OwnerMemberID) {
         this.OwnerMemberID = OwnerMemberID;
     }
 
     /**
-     * Get  
-     * @return CloudType 
+     * Get Account type: 0 for Tencent Cloud account, 1 for AWS account 
+     * @return CloudType Account type: 0 for Tencent Cloud account, 1 for AWS account
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set 
-     * @param CloudType 
+     * Set Account type: 0 for Tencent Cloud account, 1 for AWS account
+     * @param CloudType Account type: 0 for Tencent Cloud account, 1 for AWS account
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get  
-     * @return ServiceCount 
+     * Get Accessible services count 
+     * @return ServiceCount Accessible services count
      */
     public Long getServiceCount() {
         return this.ServiceCount;
     }
 
     /**
-     * Set 
-     * @param ServiceCount 
+     * Set Accessible services count
+     * @param ServiceCount Accessible services count
      */
     public void setServiceCount(Long ServiceCount) {
         this.ServiceCount = ServiceCount;
     }
 
     /**
-     * Get  
-     * @return InterfaceCount 
+     * Get Accessible API count 
+     * @return InterfaceCount Accessible API count
      */
     public Long getInterfaceCount() {
         return this.InterfaceCount;
     }
 
     /**
-     * Set 
-     * @param InterfaceCount 
+     * Set Accessible API count
+     * @param InterfaceCount Accessible API count
      */
     public void setInterfaceCount(Long InterfaceCount) {
         this.InterfaceCount = InterfaceCount;
     }
 
     /**
-     * Get  
-     * @return AssetCount 
+     * Get Accessible resources count 
+     * @return AssetCount Accessible resources count
      */
     public Long getAssetCount() {
         return this.AssetCount;
     }
 
     /**
-     * Set 
-     * @param AssetCount 
+     * Set Accessible resources count
+     * @param AssetCount Accessible resources count
      */
     public void setAssetCount(Long AssetCount) {
         this.AssetCount = AssetCount;
     }
 
     /**
-     * Get  
-     * @return LogCount 
+     * Get Access/Behavior Logs Count 
+     * @return LogCount Access/Behavior Logs Count
      */
     public Long getLogCount() {
         return this.LogCount;
     }
 
     /**
-     * Set 
-     * @param LogCount 
+     * Set Access/Behavior Logs Count
+     * @param LogCount Access/Behavior Logs Count
      */
     public void setLogCount(Long LogCount) {
         this.LogCount = LogCount;
     }
 
     /**
-     * Get  
-     * @return ConfigRiskCount 
+     * Get Permissions configuration risk 
+     * @return ConfigRiskCount Permissions configuration risk
      */
     public Long getConfigRiskCount() {
         return this.ConfigRiskCount;
     }
 
     /**
-     * Set 
-     * @param ConfigRiskCount 
+     * Set Permissions configuration risk
+     * @param ConfigRiskCount Permissions configuration risk
      */
     public void setConfigRiskCount(Long ConfigRiskCount) {
         this.ConfigRiskCount = ConfigRiskCount;
     }
 
     /**
-     * Get  
-     * @return ActionRiskCount 
+     * Get Dangerous behavior alarm 
+     * @return ActionRiskCount Dangerous behavior alarm
      */
     public Long getActionRiskCount() {
         return this.ActionRiskCount;
     }
 
     /**
-     * Set 
-     * @param ActionRiskCount 
+     * Set Dangerous behavior alarm
+     * @param ActionRiskCount Dangerous behavior alarm
      */
     public void setActionRiskCount(Long ActionRiskCount) {
         this.ActionRiskCount = ActionRiskCount;
     }
 
     /**
-     * Get  
-     * @return IsAccessCloudAudit 
+     * Get whether to enable CloudAudit logs 
+     * @return IsAccessCloudAudit whether to enable CloudAudit logs
      */
     public Boolean getIsAccessCloudAudit() {
         return this.IsAccessCloudAudit;
     }
 
     /**
-     * Set 
-     * @param IsAccessCloudAudit 
+     * Set whether to enable CloudAudit logs
+     * @param IsAccessCloudAudit whether to enable CloudAudit logs
      */
     public void setIsAccessCloudAudit(Boolean IsAccessCloudAudit) {
         this.IsAccessCloudAudit = IsAccessCloudAudit;
     }
 
     /**
-     * Get  
-     * @return IsAccessCheck 
+     * Get whether risk configuration security assessment 
+     * @return IsAccessCheck whether risk configuration security assessment
      */
     public Boolean getIsAccessCheck() {
         return this.IsAccessCheck;
     }
 
     /**
-     * Set 
-     * @param IsAccessCheck 
+     * Set whether risk configuration security assessment
+     * @param IsAccessCheck whether risk configuration security assessment
      */
     public void setIsAccessCheck(Boolean IsAccessCheck) {
         this.IsAccessCheck = IsAccessCheck;
     }
 
     /**
-     * Get  
-     * @return IsAccessUeba 
+     * Get whether to configure user behavior management policies 
+     * @return IsAccessUeba whether to configure user behavior management policies
      */
     public Boolean getIsAccessUeba() {
         return this.IsAccessUeba;
     }
 
     /**
-     * Set 
-     * @param IsAccessUeba 
+     * Set whether to configure user behavior management policies
+     * @param IsAccessUeba whether to configure user behavior management policies
      */
     public void setIsAccessUeba(Boolean IsAccessUeba) {
         this.IsAccessUeba = IsAccessUeba;

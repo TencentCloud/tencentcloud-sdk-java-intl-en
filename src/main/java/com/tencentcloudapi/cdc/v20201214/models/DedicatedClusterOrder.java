@@ -173,49 +173,49 @@ Note: The returned value of this field may be null, indicating that no valid val
     private String OrderType;
 
     /**
-    * 
+    * Acceptance Status
     */
     @SerializedName("CheckStatus")
     @Expose
     private String CheckStatus;
 
     /**
-    * 
+    * Expected Delivery Time
     */
     @SerializedName("DeliverExpectTime")
     @Expose
     private String DeliverExpectTime;
 
     /**
-    * 
+    * Actual Delivery Completion Time
     */
     @SerializedName("DeliverFinishTime")
     @Expose
     private String DeliverFinishTime;
 
     /**
-    * 
+    * Expected Acceptance Time
     */
     @SerializedName("CheckExpectTime")
     @Expose
     private String CheckExpectTime;
 
     /**
-    * 
+    * Actual Acceptance Completion Time
     */
     @SerializedName("CheckFinishTime")
     @Expose
     private String CheckFinishTime;
 
     /**
-    * 
+    * Order SLA
     */
     @SerializedName("OrderSLA")
     @Expose
     private String OrderSLA;
 
     /**
-    * 
+    * Order Payment Plan
     */
     @SerializedName("OrderPayPlan")
     @Expose
@@ -578,112 +578,112 @@ Note: The returned value of this field may be null, indicating that no valid val
     }
 
     /**
-     * Get  
-     * @return CheckStatus 
+     * Get Acceptance Status 
+     * @return CheckStatus Acceptance Status
      */
     public String getCheckStatus() {
         return this.CheckStatus;
     }
 
     /**
-     * Set 
-     * @param CheckStatus 
+     * Set Acceptance Status
+     * @param CheckStatus Acceptance Status
      */
     public void setCheckStatus(String CheckStatus) {
         this.CheckStatus = CheckStatus;
     }
 
     /**
-     * Get  
-     * @return DeliverExpectTime 
+     * Get Expected Delivery Time 
+     * @return DeliverExpectTime Expected Delivery Time
      */
     public String getDeliverExpectTime() {
         return this.DeliverExpectTime;
     }
 
     /**
-     * Set 
-     * @param DeliverExpectTime 
+     * Set Expected Delivery Time
+     * @param DeliverExpectTime Expected Delivery Time
      */
     public void setDeliverExpectTime(String DeliverExpectTime) {
         this.DeliverExpectTime = DeliverExpectTime;
     }
 
     /**
-     * Get  
-     * @return DeliverFinishTime 
+     * Get Actual Delivery Completion Time 
+     * @return DeliverFinishTime Actual Delivery Completion Time
      */
     public String getDeliverFinishTime() {
         return this.DeliverFinishTime;
     }
 
     /**
-     * Set 
-     * @param DeliverFinishTime 
+     * Set Actual Delivery Completion Time
+     * @param DeliverFinishTime Actual Delivery Completion Time
      */
     public void setDeliverFinishTime(String DeliverFinishTime) {
         this.DeliverFinishTime = DeliverFinishTime;
     }
 
     /**
-     * Get  
-     * @return CheckExpectTime 
+     * Get Expected Acceptance Time 
+     * @return CheckExpectTime Expected Acceptance Time
      */
     public String getCheckExpectTime() {
         return this.CheckExpectTime;
     }
 
     /**
-     * Set 
-     * @param CheckExpectTime 
+     * Set Expected Acceptance Time
+     * @param CheckExpectTime Expected Acceptance Time
      */
     public void setCheckExpectTime(String CheckExpectTime) {
         this.CheckExpectTime = CheckExpectTime;
     }
 
     /**
-     * Get  
-     * @return CheckFinishTime 
+     * Get Actual Acceptance Completion Time 
+     * @return CheckFinishTime Actual Acceptance Completion Time
      */
     public String getCheckFinishTime() {
         return this.CheckFinishTime;
     }
 
     /**
-     * Set 
-     * @param CheckFinishTime 
+     * Set Actual Acceptance Completion Time
+     * @param CheckFinishTime Actual Acceptance Completion Time
      */
     public void setCheckFinishTime(String CheckFinishTime) {
         this.CheckFinishTime = CheckFinishTime;
     }
 
     /**
-     * Get  
-     * @return OrderSLA 
+     * Get Order SLA 
+     * @return OrderSLA Order SLA
      */
     public String getOrderSLA() {
         return this.OrderSLA;
     }
 
     /**
-     * Set 
-     * @param OrderSLA 
+     * Set Order SLA
+     * @param OrderSLA Order SLA
      */
     public void setOrderSLA(String OrderSLA) {
         this.OrderSLA = OrderSLA;
     }
 
     /**
-     * Get  
-     * @return OrderPayPlan 
+     * Get Order Payment Plan 
+     * @return OrderPayPlan Order Payment Plan
      */
     public String getOrderPayPlan() {
         return this.OrderPayPlan;
     }
 
     /**
-     * Set 
-     * @param OrderPayPlan 
+     * Set Order Payment Plan
+     * @param OrderPayPlan Order Payment Plan
      */
     public void setOrderPayPlan(String OrderPayPlan) {
         this.OrderPayPlan = OrderPayPlan;

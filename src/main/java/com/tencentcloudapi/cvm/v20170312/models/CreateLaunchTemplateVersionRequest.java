@@ -226,7 +226,7 @@ If the dry run succeeds, the RequestId will be returned.
     private Boolean DisableApiTermination;
 
     /**
-    * 
+    * Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
     */
     @SerializedName("EnableJumboFrame")
     @Expose
@@ -724,16 +724,16 @@ If the dry run succeeds, the RequestId will be returned.
     }
 
     /**
-     * Get  
-     * @return EnableJumboFrame 
+     * Get Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518) 
+     * @return EnableJumboFrame Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
      */
     public Boolean getEnableJumboFrame() {
         return this.EnableJumboFrame;
     }
 
     /**
-     * Set 
-     * @param EnableJumboFrame 
+     * Set Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
+     * @param EnableJumboFrame Whether jumbo frames are enabled for the instance. Valid values: <br><li/> true: Jumbo frames are enabled. Only instance types that support jumbo frames can be set to true.<br><li/>false: Jumbo frames are disabled. Only instance types that support jumbo frames can be set to false.<br> Supported instance types: [Instance Types](https://cloud.tencent.com/document/product/213/11518)
      */
     public void setEnableJumboFrame(Boolean EnableJumboFrame) {
         this.EnableJumboFrame = EnableJumboFrame;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DisableTeamDomainRequest extends AbstractModel {
 
     /**
-    * 
+    * Domain Name ID
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-    * 
+    * Platform ID
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get  
-     * @return DomainId 
+     * Get Domain Name ID 
+     * @return DomainId Domain Name ID
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set 
-     * @param DomainId 
+     * Set Domain Name ID
+     * @param DomainId Domain Name ID
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get  
-     * @return PlatformId 
+     * Get Platform ID 
+     * @return PlatformId Platform ID
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set 
-     * @param PlatformId 
+     * Set Platform ID
+     * @param PlatformId Platform ID
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

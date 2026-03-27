@@ -94,7 +94,7 @@ public class NodePool extends AbstractModel {
     private NodeCountSummary NodeCountSummary;
 
     /**
-    * 
+    * Status information
     */
     @SerializedName("AutoscalingGroupStatus")
     @Expose
@@ -399,16 +399,16 @@ Note: This field may return "null", indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return AutoscalingGroupStatus 
+     * Get Status information 
+     * @return AutoscalingGroupStatus Status information
      */
     public String getAutoscalingGroupStatus() {
         return this.AutoscalingGroupStatus;
     }
 
     /**
-     * Set 
-     * @param AutoscalingGroupStatus 
+     * Set Status information
+     * @param AutoscalingGroupStatus Status information
      */
     public void setAutoscalingGroupStatus(String AutoscalingGroupStatus) {
         this.AutoscalingGroupStatus = AutoscalingGroupStatus;

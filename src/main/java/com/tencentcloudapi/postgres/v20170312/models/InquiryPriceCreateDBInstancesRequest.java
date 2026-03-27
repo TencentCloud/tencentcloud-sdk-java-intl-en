@@ -82,7 +82,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel {
     private String InstanceType;
 
     /**
-    * 
+    * <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
     */
     @SerializedName("DBEngine")
     @Expose
@@ -225,16 +225,16 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return DBEngine 
+     * Get <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p> 
+     * @return DBEngine <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
      */
     public String getDBEngine() {
         return this.DBEngine;
     }
 
     /**
-     * Set 
-     * @param DBEngine 
+     * Set <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
+     * @param DBEngine <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
      */
     public void setDBEngine(String DBEngine) {
         this.DBEngine = DBEngine;

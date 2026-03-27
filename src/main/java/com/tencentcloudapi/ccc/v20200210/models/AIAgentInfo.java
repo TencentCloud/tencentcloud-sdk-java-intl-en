@@ -38,6 +38,13 @@ public class AIAgentInfo extends AbstractModel {
     private String AIAgentName;
 
     /**
+    * List of intelligent agent variable names.
+    */
+    @SerializedName("VariableNames")
+    @Expose
+    private String [] VariableNames;
+
+    /**
      * Get Intelligent agent ID. 
      * @return AIAgentId Intelligent agent ID.
      */
@@ -69,6 +76,22 @@ public class AIAgentInfo extends AbstractModel {
         this.AIAgentName = AIAgentName;
     }
 
+    /**
+     * Get List of intelligent agent variable names. 
+     * @return VariableNames List of intelligent agent variable names.
+     */
+    public String [] getVariableNames() {
+        return this.VariableNames;
+    }
+
+    /**
+     * Set List of intelligent agent variable names.
+     * @param VariableNames List of intelligent agent variable names.
+     */
+    public void setVariableNames(String [] VariableNames) {
+        this.VariableNames = VariableNames;
+    }
+
     public AIAgentInfo() {
     }
 
@@ -83,6 +106,12 @@ public class AIAgentInfo extends AbstractModel {
         if (source.AIAgentName != null) {
             this.AIAgentName = new String(source.AIAgentName);
         }
+        if (source.VariableNames != null) {
+            this.VariableNames = new String[source.VariableNames.length];
+            for (int i = 0; i < source.VariableNames.length; i++) {
+                this.VariableNames[i] = new String(source.VariableNames[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class AIAgentInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
         this.setParamSimple(map, prefix + "AIAgentName", this.AIAgentName);
+        this.setParamArraySimple(map, prefix + "VariableNames.", this.VariableNames);
 
     }
 }

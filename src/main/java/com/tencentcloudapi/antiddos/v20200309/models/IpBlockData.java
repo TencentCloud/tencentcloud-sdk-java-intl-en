@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class IpBlockData extends AbstractModel {
 
     /**
-    * 
+    * Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * Resource IP
     */
     @SerializedName("Ip")
     @Expose
     private String Ip;
 
     /**
-    * 
+    * Blocking Time
     */
     @SerializedName("BlockTime")
     @Expose
     private String BlockTime;
 
     /**
-    * 
+    * Unblock Time (Estimated Unblock Time)
     */
     @SerializedName("UnBlockTime")
     @Expose
     private String UnBlockTime;
 
     /**
-    * 
+    * Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * 
+    * Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
     */
     @SerializedName("ProtectFlag")
     @Expose
     private Long ProtectFlag;
 
     /**
-     * Get  
-     * @return Status 
+     * Get Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed) 
+     * @return Status Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
+     * @param Status Status (Blocked: Blocked; UnBlocking: Unblocking; UnBlockFailed: Unblock failed)
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return Ip 
+     * Get Resource IP 
+     * @return Ip Resource IP
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 
-     * @param Ip 
+     * Set Resource IP
+     * @param Ip Resource IP
      */
     public void setIp(String Ip) {
         this.Ip = Ip;
     }
 
     /**
-     * Get  
-     * @return BlockTime 
+     * Get Blocking Time 
+     * @return BlockTime Blocking Time
      */
     public String getBlockTime() {
         return this.BlockTime;
     }
 
     /**
-     * Set 
-     * @param BlockTime 
+     * Set Blocking Time
+     * @param BlockTime Blocking Time
      */
     public void setBlockTime(String BlockTime) {
         this.BlockTime = BlockTime;
     }
 
     /**
-     * Get  
-     * @return UnBlockTime 
+     * Get Unblock Time (Estimated Unblock Time) 
+     * @return UnBlockTime Unblock Time (Estimated Unblock Time)
      */
     public String getUnBlockTime() {
         return this.UnBlockTime;
     }
 
     /**
-     * Set 
-     * @param UnBlockTime 
+     * Set Unblock Time (Estimated Unblock Time)
+     * @param UnBlockTime Unblock Time (Estimated Unblock Time)
      */
     public void setUnBlockTime(String UnBlockTime) {
         this.UnBlockTime = UnBlockTime;
     }
 
     /**
-     * Get  
-     * @return ActionType 
+     * Get Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking) 
+     * @return ActionType Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 
-     * @param ActionType 
+     * Set Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
+     * @param ActionType Unblock type (user: self-service unblocking; auto: automatic unblocking; update: upgrade unblocking; bind: Anti-DDoS Pro binding unblocking)
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get  
-     * @return ProtectFlag 
+     * Get Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS 
+     * @return ProtectFlag Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
      */
     public Long getProtectFlag() {
         return this.ProtectFlag;
     }
 
     /**
-     * Set 
-     * @param ProtectFlag 
+     * Set Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
+     * @param ProtectFlag Anti-DDoS flag, 0: non-Anti-DDoS, 1: Anti-DDoS
      */
     public void setProtectFlag(Long ProtectFlag) {
         this.ProtectFlag = ProtectFlag;

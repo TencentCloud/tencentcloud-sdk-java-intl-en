@@ -24,322 +24,372 @@ import java.util.HashMap;
 public class SummaryDetailRes extends AbstractModel {
 
     /**
-    * 
+    * Region Identifier
     */
     @SerializedName("RegionId")
     @Expose
     private Long RegionId;
 
     /**
-    * 
+    * Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 
+    * Instance ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 
+    * Instance Name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Backup Space
     */
     @SerializedName("ActualUsedSpace")
     @Expose
     private Long ActualUsedSpace;
 
     /**
-    * 
+    * Data Backup Space
     */
     @SerializedName("DataBackupSpace")
     @Expose
     private Long DataBackupSpace;
 
     /**
-    * 
+    * Data Backup Total File Count
     */
     @SerializedName("DataBackupCount")
     @Expose
     private Long DataBackupCount;
 
     /**
-    * 
+    * Log Backup Space
     */
     @SerializedName("LogBackupSpace")
     @Expose
     private Long LogBackupSpace;
 
     /**
-    * 
+    * Log Backup Total File Count
     */
     @SerializedName("LogBackupCount")
     @Expose
     private Long LogBackupCount;
 
     /**
-    * 
+    * Automatic Backup Space
     */
     @SerializedName("AutoBackupSpace")
     @Expose
     private Long AutoBackupSpace;
 
     /**
-    * 
+    * Automatic Backup Total File Count
     */
     @SerializedName("AutoBackupCount")
     @Expose
     private Long AutoBackupCount;
 
     /**
-    * 
+    * Manual Backup Space
     */
     @SerializedName("ManualBackupSpace")
     @Expose
     private Long ManualBackupSpace;
 
     /**
-    * 
+    * Manual Backup Total File Count
     */
     @SerializedName("ManualBackupCount")
     @Expose
     private Long ManualBackupCount;
 
     /**
-    * 
+    * Instance Region Code
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-     * Get  
-     * @return RegionId 
+     * Get Region Identifier 
+     * @return RegionId Region Identifier
      */
     public Long getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 
-     * @param RegionId 
+     * Set Region Identifier
+     * @param RegionId Region Identifier
      */
     public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating 
+     * @return Status Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+     * @param Status Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (performing instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get Instance ID 
+     * @return InstanceId Instance ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set Instance ID
+     * @param InstanceId Instance ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Instance Name 
+     * @return Name Instance Name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Instance Name
+     * @param Name Instance Name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return ActualUsedSpace 
+     * Get Backup Space 
+     * @return ActualUsedSpace Backup Space
      */
     public Long getActualUsedSpace() {
         return this.ActualUsedSpace;
     }
 
     /**
-     * Set 
-     * @param ActualUsedSpace 
+     * Set Backup Space
+     * @param ActualUsedSpace Backup Space
      */
     public void setActualUsedSpace(Long ActualUsedSpace) {
         this.ActualUsedSpace = ActualUsedSpace;
     }
 
     /**
-     * Get  
-     * @return DataBackupSpace 
+     * Get Data Backup Space 
+     * @return DataBackupSpace Data Backup Space
      */
     public Long getDataBackupSpace() {
         return this.DataBackupSpace;
     }
 
     /**
-     * Set 
-     * @param DataBackupSpace 
+     * Set Data Backup Space
+     * @param DataBackupSpace Data Backup Space
      */
     public void setDataBackupSpace(Long DataBackupSpace) {
         this.DataBackupSpace = DataBackupSpace;
     }
 
     /**
-     * Get  
-     * @return DataBackupCount 
+     * Get Data Backup Total File Count 
+     * @return DataBackupCount Data Backup Total File Count
      */
     public Long getDataBackupCount() {
         return this.DataBackupCount;
     }
 
     /**
-     * Set 
-     * @param DataBackupCount 
+     * Set Data Backup Total File Count
+     * @param DataBackupCount Data Backup Total File Count
      */
     public void setDataBackupCount(Long DataBackupCount) {
         this.DataBackupCount = DataBackupCount;
     }
 
     /**
-     * Get  
-     * @return LogBackupSpace 
+     * Get Log Backup Space 
+     * @return LogBackupSpace Log Backup Space
      */
     public Long getLogBackupSpace() {
         return this.LogBackupSpace;
     }
 
     /**
-     * Set 
-     * @param LogBackupSpace 
+     * Set Log Backup Space
+     * @param LogBackupSpace Log Backup Space
      */
     public void setLogBackupSpace(Long LogBackupSpace) {
         this.LogBackupSpace = LogBackupSpace;
     }
 
     /**
-     * Get  
-     * @return LogBackupCount 
+     * Get Log Backup Total File Count 
+     * @return LogBackupCount Log Backup Total File Count
      */
     public Long getLogBackupCount() {
         return this.LogBackupCount;
     }
 
     /**
-     * Set 
-     * @param LogBackupCount 
+     * Set Log Backup Total File Count
+     * @param LogBackupCount Log Backup Total File Count
      */
     public void setLogBackupCount(Long LogBackupCount) {
         this.LogBackupCount = LogBackupCount;
     }
 
     /**
-     * Get  
-     * @return AutoBackupSpace 
+     * Get Automatic Backup Space 
+     * @return AutoBackupSpace Automatic Backup Space
      */
     public Long getAutoBackupSpace() {
         return this.AutoBackupSpace;
     }
 
     /**
-     * Set 
-     * @param AutoBackupSpace 
+     * Set Automatic Backup Space
+     * @param AutoBackupSpace Automatic Backup Space
      */
     public void setAutoBackupSpace(Long AutoBackupSpace) {
         this.AutoBackupSpace = AutoBackupSpace;
     }
 
     /**
-     * Get  
-     * @return AutoBackupCount 
+     * Get Automatic Backup Total File Count 
+     * @return AutoBackupCount Automatic Backup Total File Count
      */
     public Long getAutoBackupCount() {
         return this.AutoBackupCount;
     }
 
     /**
-     * Set 
-     * @param AutoBackupCount 
+     * Set Automatic Backup Total File Count
+     * @param AutoBackupCount Automatic Backup Total File Count
      */
     public void setAutoBackupCount(Long AutoBackupCount) {
         this.AutoBackupCount = AutoBackupCount;
     }
 
     /**
-     * Get  
-     * @return ManualBackupSpace 
+     * Get Manual Backup Space 
+     * @return ManualBackupSpace Manual Backup Space
      */
     public Long getManualBackupSpace() {
         return this.ManualBackupSpace;
     }
 
     /**
-     * Set 
-     * @param ManualBackupSpace 
+     * Set Manual Backup Space
+     * @param ManualBackupSpace Manual Backup Space
      */
     public void setManualBackupSpace(Long ManualBackupSpace) {
         this.ManualBackupSpace = ManualBackupSpace;
     }
 
     /**
-     * Get  
-     * @return ManualBackupCount 
+     * Get Manual Backup Total File Count 
+     * @return ManualBackupCount Manual Backup Total File Count
      */
     public Long getManualBackupCount() {
         return this.ManualBackupCount;
     }
 
     /**
-     * Set 
-     * @param ManualBackupCount 
+     * Set Manual Backup Total File Count
+     * @param ManualBackupCount Manual Backup Total File Count
      */
     public void setManualBackupCount(Long ManualBackupCount) {
         this.ManualBackupCount = ManualBackupCount;
     }
 
     /**
-     * Get  
-     * @return Region 
+     * Get Instance Region Code 
+     * @return Region Instance Region Code
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 
-     * @param Region 
+     * Set Instance Region Code
+     * @param Region Instance Region Code
      */
     public void setRegion(String Region) {
         this.Region = Region;

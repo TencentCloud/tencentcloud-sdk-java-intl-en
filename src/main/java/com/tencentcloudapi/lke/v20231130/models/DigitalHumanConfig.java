@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DigitalHumanConfig extends AbstractModel {
 
     /**
-    * 
+    * Digital Human Asset key
     */
     @SerializedName("AssetKey")
     @Expose
     private String AssetKey;
 
     /**
-    * 
+    * Digital Human Name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Image
     */
     @SerializedName("Avatar")
     @Expose
     private String Avatar;
 
     /**
-     * Get  
-     * @return AssetKey 
+     * Get Digital Human Asset key 
+     * @return AssetKey Digital Human Asset key
      */
     public String getAssetKey() {
         return this.AssetKey;
     }
 
     /**
-     * Set 
-     * @param AssetKey 
+     * Set Digital Human Asset key
+     * @param AssetKey Digital Human Asset key
      */
     public void setAssetKey(String AssetKey) {
         this.AssetKey = AssetKey;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Digital Human Name 
+     * @return Name Digital Human Name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Digital Human Name
+     * @param Name Digital Human Name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Avatar 
+     * Get Image 
+     * @return Avatar Image
      */
     public String getAvatar() {
         return this.Avatar;
     }
 
     /**
-     * Set 
-     * @param Avatar 
+     * Set Image
+     * @param Avatar Image
      */
     public void setAvatar(String Avatar) {
         this.Avatar = Avatar;

@@ -116,21 +116,21 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String [] AllowIpList;
 
     /**
-    * 
+    * Output RTSP pull stream configuration.
     */
     @SerializedName("RTSPPullSettings")
     @Expose
     private DescribeOutputRTSPPullSettings RTSPPullSettings;
 
     /**
-    * 
+    * Output HLS pull stream configuration.
     */
     @SerializedName("HLSPullSettings")
     @Expose
     private DescribeOutputHLSPullSettings HLSPullSettings;
 
     /**
-    * 
+    * Maximum pull stream concurrency, maximum 4, default 4.
     */
     @SerializedName("MaxConcurrent")
     @Expose
@@ -368,48 +368,48 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return RTSPPullSettings 
+     * Get Output RTSP pull stream configuration. 
+     * @return RTSPPullSettings Output RTSP pull stream configuration.
      */
     public DescribeOutputRTSPPullSettings getRTSPPullSettings() {
         return this.RTSPPullSettings;
     }
 
     /**
-     * Set 
-     * @param RTSPPullSettings 
+     * Set Output RTSP pull stream configuration.
+     * @param RTSPPullSettings Output RTSP pull stream configuration.
      */
     public void setRTSPPullSettings(DescribeOutputRTSPPullSettings RTSPPullSettings) {
         this.RTSPPullSettings = RTSPPullSettings;
     }
 
     /**
-     * Get  
-     * @return HLSPullSettings 
+     * Get Output HLS pull stream configuration. 
+     * @return HLSPullSettings Output HLS pull stream configuration.
      */
     public DescribeOutputHLSPullSettings getHLSPullSettings() {
         return this.HLSPullSettings;
     }
 
     /**
-     * Set 
-     * @param HLSPullSettings 
+     * Set Output HLS pull stream configuration.
+     * @param HLSPullSettings Output HLS pull stream configuration.
      */
     public void setHLSPullSettings(DescribeOutputHLSPullSettings HLSPullSettings) {
         this.HLSPullSettings = HLSPullSettings;
     }
 
     /**
-     * Get  
-     * @return MaxConcurrent 
+     * Get Maximum pull stream concurrency, maximum 4, default 4. 
+     * @return MaxConcurrent Maximum pull stream concurrency, maximum 4, default 4.
      */
     public Long getMaxConcurrent() {
         return this.MaxConcurrent;
     }
 
     /**
-     * Set 
-     * @param MaxConcurrent 
+     * Set Maximum pull stream concurrency, maximum 4, default 4.
+     * @param MaxConcurrent Maximum pull stream concurrency, maximum 4, default 4.
      */
     public void setMaxConcurrent(Long MaxConcurrent) {
         this.MaxConcurrent = MaxConcurrent;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DataBasePrivilegeModifyInfo extends AbstractModel {
 
     /**
-    * 
+    * Database Name
     */
     @SerializedName("DataBaseName")
     @Expose
     private String DataBaseName;
 
     /**
-    * 
+    * Database Permission Modification Information
     */
     @SerializedName("AccountPrivileges")
     @Expose
     private AccountPrivilege [] AccountPrivileges;
 
     /**
-     * Get  
-     * @return DataBaseName 
+     * Get Database Name 
+     * @return DataBaseName Database Name
      */
     public String getDataBaseName() {
         return this.DataBaseName;
     }
 
     /**
-     * Set 
-     * @param DataBaseName 
+     * Set Database Name
+     * @param DataBaseName Database Name
      */
     public void setDataBaseName(String DataBaseName) {
         this.DataBaseName = DataBaseName;
     }
 
     /**
-     * Get  
-     * @return AccountPrivileges 
+     * Get Database Permission Modification Information 
+     * @return AccountPrivileges Database Permission Modification Information
      */
     public AccountPrivilege [] getAccountPrivileges() {
         return this.AccountPrivileges;
     }
 
     /**
-     * Set 
-     * @param AccountPrivileges 
+     * Set Database Permission Modification Information
+     * @param AccountPrivileges Database Permission Modification Information
      */
     public void setAccountPrivileges(AccountPrivilege [] AccountPrivileges) {
         this.AccountPrivileges = AccountPrivileges;

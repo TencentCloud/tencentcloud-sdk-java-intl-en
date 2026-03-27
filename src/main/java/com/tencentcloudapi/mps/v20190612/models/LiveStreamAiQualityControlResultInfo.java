@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private QualityControlResult [] QualityControlResults;
 
     /**
-    * 
+    * Format diagnostic results list.
     */
     @SerializedName("DiagnoseResults")
     @Expose
@@ -79,8 +79,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return DiagnoseResults 
+     * Get Format diagnostic results list. 
+     * @return DiagnoseResults Format diagnostic results list.
      * @deprecated
      */
     @Deprecated
@@ -89,8 +89,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set 
-     * @param DiagnoseResults 
+     * Set Format diagnostic results list.
+     * @param DiagnoseResults Format diagnostic results list.
      * @deprecated
      */
     @Deprecated

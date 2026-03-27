@@ -31,7 +31,9 @@ public class MediaAiAnalysisFrameTagItem extends AbstractModel {
     private String Tag;
 
     /**
-    * 
+    * Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
+
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
     */
     @SerializedName("CategorySet")
     @Expose
@@ -61,16 +63,24 @@ public class MediaAiAnalysisFrameTagItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return CategorySet 
+     * Get Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
+
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture". 
+     * @return CategorySet Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
+
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
      */
     public String [] getCategorySet() {
         return this.CategorySet;
     }
 
     /**
-     * Set 
-     * @param CategorySet 
+     * Set Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
+
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
+     * @param CategorySet Classification list of frame-level tags, where CategorySet.N represents the (N+1)th level classification.
+
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scene" and CategorySet.1 is "architecture", indicating the frame-level tag is "tower" with Level 1 classification as "scene" and Level 2 classification as "architecture".
      */
     public void setCategorySet(String [] CategorySet) {
         this.CategorySet = CategorySet;

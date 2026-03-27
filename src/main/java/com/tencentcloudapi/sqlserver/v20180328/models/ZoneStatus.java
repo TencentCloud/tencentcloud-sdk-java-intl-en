@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ZoneStatus extends AbstractModel {
 
     /**
-    * 
+    * Specification AZ
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * 
+    * Specification Region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 
+    * Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get  
-     * @return Zone 
+     * Get Specification AZ 
+     * @return Zone Specification AZ
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set 
-     * @param Zone 
+     * Set Specification AZ
+     * @param Zone Specification AZ
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get  
-     * @return Region 
+     * Get Specification Region 
+     * @return Region Specification Region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 
-     * @param Region 
+     * Set Specification Region
+     * @param Region Specification Region
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled. 
+     * @return Status Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
+     * @param Status Specification Sale Status in the AZ: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

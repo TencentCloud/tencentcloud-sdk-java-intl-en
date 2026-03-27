@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeInstanceOperationsRequest extends AbstractModel {
 
     /**
-    * 
+    * Cluster ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 
+    * Pagination parameter, offset, starting from 0
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * 
+    * Pagination parameter, page size, default 10
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * 
+    * Start Time
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * End Time
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get Cluster ID 
+     * @return InstanceId Cluster ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set Cluster ID
+     * @param InstanceId Cluster ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get  
-     * @return Offset 
+     * Get Pagination parameter, offset, starting from 0 
+     * @return Offset Pagination parameter, offset, starting from 0
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set 
-     * @param Offset 
+     * Set Pagination parameter, offset, starting from 0
+     * @param Offset Pagination parameter, offset, starting from 0
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get  
-     * @return Limit 
+     * Get Pagination parameter, page size, default 10 
+     * @return Limit Pagination parameter, page size, default 10
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set 
-     * @param Limit 
+     * Set Pagination parameter, page size, default 10
+     * @param Limit Pagination parameter, page size, default 10
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Start Time 
+     * @return StartTime Start Time
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Start Time
+     * @param StartTime Start Time
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get End Time 
+     * @return EndTime End Time
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set End Time
+     * @param EndTime End Time
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

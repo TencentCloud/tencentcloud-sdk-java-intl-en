@@ -37,7 +37,7 @@ public class IPLineInfo extends AbstractModel {
     private String Type;
 
     /**
-    * 
+    * line IP
     */
     @SerializedName("Eip")
     @Expose
@@ -98,16 +98,16 @@ public class IPLineInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Eip 
+     * Get line IP 
+     * @return Eip line IP
      */
     public String getEip() {
         return this.Eip;
     }
 
     /**
-     * Set 
-     * @param Eip 
+     * Set line IP
+     * @param Eip line IP
      */
     public void setEip(String Eip) {
         this.Eip = Eip;

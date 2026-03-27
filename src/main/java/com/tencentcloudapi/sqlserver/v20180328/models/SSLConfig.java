@@ -24,69 +24,99 @@ import java.util.HashMap;
 public class SSLConfig extends AbstractModel {
 
     /**
-    * 
+    * SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
     */
     @SerializedName("Encryption")
     @Expose
     private String Encryption;
 
     /**
-    * 
+    * SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
     */
     @SerializedName("SSLValidityPeriod")
     @Expose
     private String SSLValidityPeriod;
 
     /**
-    * 
+    * SSL Certificates Validity: 0 - Invalid, 1 - Valid
     */
     @SerializedName("SSLValidity")
     @Expose
     private Long SSLValidity;
 
     /**
-     * Get  
-     * @return Encryption 
+     * Get SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window 
+     * @return Encryption SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
      */
     public String getEncryption() {
         return this.Encryption;
     }
 
     /**
-     * Set 
-     * @param Encryption 
+     * Set SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
+     * @param Encryption SSL Encryption Status
+enable - Enabled
+disable - Disabled
+enable_doing - Enabling
+disable_doing - Disabling
+renew_doing - Updating
+wait_doing - Waiting to be executed during maintenance window
      */
     public void setEncryption(String Encryption) {
         this.Encryption = Encryption;
     }
 
     /**
-     * Get  
-     * @return SSLValidityPeriod 
+     * Get SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS 
+     * @return SSLValidityPeriod SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
      */
     public String getSSLValidityPeriod() {
         return this.SSLValidityPeriod;
     }
 
     /**
-     * Set 
-     * @param SSLValidityPeriod 
+     * Set SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
+     * @param SSLValidityPeriod SSL Certificates Validity Period, Time Format YYYY-MM-DD HH:MM:SS
      */
     public void setSSLValidityPeriod(String SSLValidityPeriod) {
         this.SSLValidityPeriod = SSLValidityPeriod;
     }
 
     /**
-     * Get  
-     * @return SSLValidity 
+     * Get SSL Certificates Validity: 0 - Invalid, 1 - Valid 
+     * @return SSLValidity SSL Certificates Validity: 0 - Invalid, 1 - Valid
      */
     public Long getSSLValidity() {
         return this.SSLValidity;
     }
 
     /**
-     * Set 
-     * @param SSLValidity 
+     * Set SSL Certificates Validity: 0 - Invalid, 1 - Valid
+     * @param SSLValidity SSL Certificates Validity: 0 - Invalid, 1 - Valid
      */
     public void setSSLValidity(Long SSLValidity) {
         this.SSLValidity = SSLValidity;

@@ -138,7 +138,7 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
     private ExternalService [] ExternalService;
 
     /**
-    * 
+    * The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
     */
     @SerializedName("VersionID")
     @Expose
@@ -428,16 +428,16 @@ public class InquiryPriceCreateInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return VersionID 
+     * Get The current default value is 0. After cross-AZ feature support is enabled, it becomes 1. 
+     * @return VersionID The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
      */
     public Long getVersionID() {
         return this.VersionID;
     }
 
     /**
-     * Set 
-     * @param VersionID 
+     * Set The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
+     * @param VersionID The current default value is 0. After cross-AZ feature support is enabled, it becomes 1.
      */
     public void setVersionID(Long VersionID) {
         this.VersionID = VersionID;

@@ -78,7 +78,7 @@ Note: This field may return null, indicating that no valid value is found.
     private String CreateTime;
 
     /**
-    * 
+    * placement group affinity
     */
     @SerializedName("Affinity")
     @Expose
@@ -224,16 +224,16 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get  
-     * @return Affinity 
+     * Get placement group affinity 
+     * @return Affinity placement group affinity
      */
     public Long getAffinity() {
         return this.Affinity;
     }
 
     /**
-     * Set 
-     * @param Affinity 
+     * Set placement group affinity
+     * @param Affinity placement group affinity
      */
     public void setAffinity(Long Affinity) {
         this.Affinity = Affinity;

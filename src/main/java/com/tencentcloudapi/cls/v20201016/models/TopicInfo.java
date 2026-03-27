@@ -159,7 +159,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean IsWebTracking;
 
     /**
-    * 
+    * Log topic extended information
     */
     @SerializedName("Extends")
     @Expose
@@ -490,16 +490,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Extends 
+     * Get Log topic extended information 
+     * @return Extends Log topic extended information
      */
     public TopicExtendInfo getExtends() {
         return this.Extends;
     }
 
     /**
-     * Set 
-     * @param Extends 
+     * Set Log topic extended information
+     * @param Extends Log topic extended information
      */
     public void setExtends(TopicExtendInfo Extends) {
         this.Extends = Extends;

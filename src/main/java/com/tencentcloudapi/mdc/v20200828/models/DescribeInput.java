@@ -105,28 +105,28 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String FailOver;
 
     /**
-    * 
+    * Input RTMP_PULL configuration.
     */
     @SerializedName("RTMPPullSettings")
     @Expose
     private DescribeInputRTMPPullSettings RTMPPullSettings;
 
     /**
-    * 
+    * Input RTSP_PULL configuration.
     */
     @SerializedName("RTSPPullSettings")
     @Expose
     private DescribeInputRTSPPullSettings RTSPPullSettings;
 
     /**
-    * 
+    * Input HLS_PULL configuration.
     */
     @SerializedName("HLSPullSettings")
     @Expose
     private DescribeInputHLSPullSettings HLSPullSettings;
 
     /**
-    * 
+    * Delayed broadcast smooth stream delivery configuration.
     */
     @SerializedName("ResilientStream")
     @Expose
@@ -332,64 +332,64 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return RTMPPullSettings 
+     * Get Input RTMP_PULL configuration. 
+     * @return RTMPPullSettings Input RTMP_PULL configuration.
      */
     public DescribeInputRTMPPullSettings getRTMPPullSettings() {
         return this.RTMPPullSettings;
     }
 
     /**
-     * Set 
-     * @param RTMPPullSettings 
+     * Set Input RTMP_PULL configuration.
+     * @param RTMPPullSettings Input RTMP_PULL configuration.
      */
     public void setRTMPPullSettings(DescribeInputRTMPPullSettings RTMPPullSettings) {
         this.RTMPPullSettings = RTMPPullSettings;
     }
 
     /**
-     * Get  
-     * @return RTSPPullSettings 
+     * Get Input RTSP_PULL configuration. 
+     * @return RTSPPullSettings Input RTSP_PULL configuration.
      */
     public DescribeInputRTSPPullSettings getRTSPPullSettings() {
         return this.RTSPPullSettings;
     }
 
     /**
-     * Set 
-     * @param RTSPPullSettings 
+     * Set Input RTSP_PULL configuration.
+     * @param RTSPPullSettings Input RTSP_PULL configuration.
      */
     public void setRTSPPullSettings(DescribeInputRTSPPullSettings RTSPPullSettings) {
         this.RTSPPullSettings = RTSPPullSettings;
     }
 
     /**
-     * Get  
-     * @return HLSPullSettings 
+     * Get Input HLS_PULL configuration. 
+     * @return HLSPullSettings Input HLS_PULL configuration.
      */
     public DescribeInputHLSPullSettings getHLSPullSettings() {
         return this.HLSPullSettings;
     }
 
     /**
-     * Set 
-     * @param HLSPullSettings 
+     * Set Input HLS_PULL configuration.
+     * @param HLSPullSettings Input HLS_PULL configuration.
      */
     public void setHLSPullSettings(DescribeInputHLSPullSettings HLSPullSettings) {
         this.HLSPullSettings = HLSPullSettings;
     }
 
     /**
-     * Get  
-     * @return ResilientStream 
+     * Get Delayed broadcast smooth stream delivery configuration. 
+     * @return ResilientStream Delayed broadcast smooth stream delivery configuration.
      */
     public ResilientStreamConf getResilientStream() {
         return this.ResilientStream;
     }
 
     /**
-     * Set 
-     * @param ResilientStream 
+     * Set Delayed broadcast smooth stream delivery configuration.
+     * @param ResilientStream Delayed broadcast smooth stream delivery configuration.
      */
     public void setResilientStream(ResilientStreamConf ResilientStream) {
         this.ResilientStream = ResilientStream;

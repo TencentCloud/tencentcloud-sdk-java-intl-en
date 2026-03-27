@@ -82,7 +82,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String Metric;
 
     /**
-    * 
+    * Detection Cycle, Unit: Minutes, 60 or 1440
     */
     @SerializedName("Cycle")
     @Expose
@@ -247,16 +247,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return Cycle 
+     * Get Detection Cycle, Unit: Minutes, 60 or 1440 
+     * @return Cycle Detection Cycle, Unit: Minutes, 60 or 1440
      */
     public Long getCycle() {
         return this.Cycle;
     }
 
     /**
-     * Set 
-     * @param Cycle 
+     * Set Detection Cycle, Unit: Minutes, 60 or 1440
+     * @param Cycle Detection Cycle, Unit: Minutes, 60 or 1440
      */
     public void setCycle(Long Cycle) {
         this.Cycle = Cycle;

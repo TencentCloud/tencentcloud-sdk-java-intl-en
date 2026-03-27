@@ -144,7 +144,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Country;
 
     /**
-    * 
+    * Remarks
     */
     @SerializedName("Comment")
     @Expose
@@ -451,16 +451,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Remarks 
+     * @return Comment Remarks
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Remarks
+     * @param Comment Remarks
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

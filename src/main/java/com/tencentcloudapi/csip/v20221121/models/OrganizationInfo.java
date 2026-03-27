@@ -24,154 +24,154 @@ import java.util.HashMap;
 public class OrganizationInfo extends AbstractModel {
 
     /**
-    * 
+    * Member account name
     */
     @SerializedName("NickName")
     @Expose
     private String NickName;
 
     /**
-    * 
+    * Department node name, department of account
     */
     @SerializedName("NodeName")
     @Expose
     private String NodeName;
 
     /**
-    * 
+    * Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
     */
     @SerializedName("Role")
     @Expose
     private String Role;
 
     /**
-    * 
+    * Member account id
     */
     @SerializedName("MemberId")
     @Expose
     private String MemberId;
 
     /**
-    * 
+    * account joining method,create/invite
     */
     @SerializedName("JoinType")
     @Expose
     private String JoinType;
 
     /**
-    * 
+    * Group name
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * 
+    * Admin account name
     */
     @SerializedName("AdminName")
     @Expose
     private String AdminName;
 
     /**
-    * 
+    * Admin Uin
     */
     @SerializedName("AdminUin")
     @Expose
     private String AdminUin;
 
     /**
-    * 
+    * Creation Time
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * Number of departments
     */
     @SerializedName("NodeCount")
     @Expose
     private Long NodeCount;
 
     /**
-    * 
+    * Number of members
     */
     @SerializedName("MemberCount")
     @Expose
     private Long MemberCount;
 
     /**
-    * 
+    * Sub-account count
     */
     @SerializedName("SubAccountCount")
     @Expose
     private Long SubAccountCount;
 
     /**
-    * 
+    * Abnormal sub-account quantity
     */
     @SerializedName("AbnormalSubUserCount")
     @Expose
     private Long AbnormalSubUserCount;
 
     /**
-    * 
+    * Organization Relationship Policy Permissions
     */
     @SerializedName("GroupPermission")
     @Expose
     private String [] GroupPermission;
 
     /**
-    * 
+    * Membership Policy Permissions
     */
     @SerializedName("MemberPermission")
     @Expose
     private String [] MemberPermission;
 
     /**
-    * 
+    * Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
     */
     @SerializedName("GroupPayMode")
     @Expose
     private Long GroupPayMode;
 
     /**
-    * 
+    * Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
     */
     @SerializedName("MemberPayMode")
     @Expose
     private Long MemberPayMode;
 
     /**
-    * 
+    * If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
     */
     @SerializedName("CFWProtect")
     @Expose
     private String CFWProtect;
 
     /**
-    * 
+    * If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
     */
     @SerializedName("WAFProtect")
     @Expose
     private String WAFProtect;
 
     /**
-    * 
+    * If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
     */
     @SerializedName("CWPProtect")
     @Expose
     private String CWPProtect;
 
     /**
-    * 
+    * Array of all departments
     */
     @SerializedName("Departments")
     @Expose
     private String [] Departments;
 
     /**
-    * 
+    * Member Creation Time
     */
     @SerializedName("MemberCreateTime")
     @Expose
@@ -185,380 +185,380 @@ public class OrganizationInfo extends AbstractModel {
     private String CSIPProtect;
 
     /**
-    * 
+    * 1 indicates the quota consumer
     */
     @SerializedName("QuotaConsumer")
     @Expose
     private Long QuotaConsumer;
 
     /**
-    * 
+    * Number of enabled Admin/Delegated Admin accounts
     */
     @SerializedName("EnableAdminCount")
     @Expose
     private Long EnableAdminCount;
 
     /**
-    * 
+    * Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
     */
     @SerializedName("CloudCountDesc")
     @Expose
     private CloudCountDesc [] CloudCountDesc;
 
     /**
-    * 
+    * Total Number of Admin/Delegated Admin Accounts
     */
     @SerializedName("AdminCount")
     @Expose
     private Long AdminCount;
 
     /**
-     * Get  
-     * @return NickName 
+     * Get Member account name 
+     * @return NickName Member account name
      */
     public String getNickName() {
         return this.NickName;
     }
 
     /**
-     * Set 
-     * @param NickName 
+     * Set Member account name
+     * @param NickName Member account name
      */
     public void setNickName(String NickName) {
         this.NickName = NickName;
     }
 
     /**
-     * Get  
-     * @return NodeName 
+     * Get Department node name, department of account 
+     * @return NodeName Department node name, department of account
      */
     public String getNodeName() {
         return this.NodeName;
     }
 
     /**
-     * Set 
-     * @param NodeName 
+     * Set Department node name, department of account
+     * @param NodeName Department node name, department of account
      */
     public void setNodeName(String NodeName) {
         this.NodeName = NodeName;
     }
 
     /**
-     * Get  
-     * @return Role 
+     * Get Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin 
+     * @return Role Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
      */
     public String getRole() {
         return this.Role;
     }
 
     /**
-     * Set 
-     * @param Role 
+     * Set Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
+     * @param Role Member/Admin/DelegatedAdmin/EntityAdmin; Member/Admin/DelegatedAdmin/EntityAdmin
      */
     public void setRole(String Role) {
         this.Role = Role;
     }
 
     /**
-     * Get  
-     * @return MemberId 
+     * Get Member account id 
+     * @return MemberId Member account id
      */
     public String getMemberId() {
         return this.MemberId;
     }
 
     /**
-     * Set 
-     * @param MemberId 
+     * Set Member account id
+     * @param MemberId Member account id
      */
     public void setMemberId(String MemberId) {
         this.MemberId = MemberId;
     }
 
     /**
-     * Get  
-     * @return JoinType 
+     * Get account joining method,create/invite 
+     * @return JoinType account joining method,create/invite
      */
     public String getJoinType() {
         return this.JoinType;
     }
 
     /**
-     * Set 
-     * @param JoinType 
+     * Set account joining method,create/invite
+     * @param JoinType account joining method,create/invite
      */
     public void setJoinType(String JoinType) {
         this.JoinType = JoinType;
     }
 
     /**
-     * Get  
-     * @return GroupName 
+     * Get Group name 
+     * @return GroupName Group name
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set 
-     * @param GroupName 
+     * Set Group name
+     * @param GroupName Group name
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get  
-     * @return AdminName 
+     * Get Admin account name 
+     * @return AdminName Admin account name
      */
     public String getAdminName() {
         return this.AdminName;
     }
 
     /**
-     * Set 
-     * @param AdminName 
+     * Set Admin account name
+     * @param AdminName Admin account name
      */
     public void setAdminName(String AdminName) {
         this.AdminName = AdminName;
     }
 
     /**
-     * Get  
-     * @return AdminUin 
+     * Get Admin Uin 
+     * @return AdminUin Admin Uin
      */
     public String getAdminUin() {
         return this.AdminUin;
     }
 
     /**
-     * Set 
-     * @param AdminUin 
+     * Set Admin Uin
+     * @param AdminUin Admin Uin
      */
     public void setAdminUin(String AdminUin) {
         this.AdminUin = AdminUin;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Creation Time 
+     * @return CreateTime Creation Time
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Creation Time
+     * @param CreateTime Creation Time
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return NodeCount 
+     * Get Number of departments 
+     * @return NodeCount Number of departments
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set 
-     * @param NodeCount 
+     * Set Number of departments
+     * @param NodeCount Number of departments
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
     }
 
     /**
-     * Get  
-     * @return MemberCount 
+     * Get Number of members 
+     * @return MemberCount Number of members
      */
     public Long getMemberCount() {
         return this.MemberCount;
     }
 
     /**
-     * Set 
-     * @param MemberCount 
+     * Set Number of members
+     * @param MemberCount Number of members
      */
     public void setMemberCount(Long MemberCount) {
         this.MemberCount = MemberCount;
     }
 
     /**
-     * Get  
-     * @return SubAccountCount 
+     * Get Sub-account count 
+     * @return SubAccountCount Sub-account count
      */
     public Long getSubAccountCount() {
         return this.SubAccountCount;
     }
 
     /**
-     * Set 
-     * @param SubAccountCount 
+     * Set Sub-account count
+     * @param SubAccountCount Sub-account count
      */
     public void setSubAccountCount(Long SubAccountCount) {
         this.SubAccountCount = SubAccountCount;
     }
 
     /**
-     * Get  
-     * @return AbnormalSubUserCount 
+     * Get Abnormal sub-account quantity 
+     * @return AbnormalSubUserCount Abnormal sub-account quantity
      */
     public Long getAbnormalSubUserCount() {
         return this.AbnormalSubUserCount;
     }
 
     /**
-     * Set 
-     * @param AbnormalSubUserCount 
+     * Set Abnormal sub-account quantity
+     * @param AbnormalSubUserCount Abnormal sub-account quantity
      */
     public void setAbnormalSubUserCount(Long AbnormalSubUserCount) {
         this.AbnormalSubUserCount = AbnormalSubUserCount;
     }
 
     /**
-     * Get  
-     * @return GroupPermission 
+     * Get Organization Relationship Policy Permissions 
+     * @return GroupPermission Organization Relationship Policy Permissions
      */
     public String [] getGroupPermission() {
         return this.GroupPermission;
     }
 
     /**
-     * Set 
-     * @param GroupPermission 
+     * Set Organization Relationship Policy Permissions
+     * @param GroupPermission Organization Relationship Policy Permissions
      */
     public void setGroupPermission(String [] GroupPermission) {
         this.GroupPermission = GroupPermission;
     }
 
     /**
-     * Get  
-     * @return MemberPermission 
+     * Get Membership Policy Permissions 
+     * @return MemberPermission Membership Policy Permissions
      */
     public String [] getMemberPermission() {
         return this.MemberPermission;
     }
 
     /**
-     * Set 
-     * @param MemberPermission 
+     * Set Membership Policy Permissions
+     * @param MemberPermission Membership Policy Permissions
      */
     public void setMemberPermission(String [] MemberPermission) {
         this.MemberPermission = MemberPermission;
     }
 
     /**
-     * Get  
-     * @return GroupPayMode 
+     * Get Organization Billing Mode; 0/Self-paid, 1/Proxy-paid 
+     * @return GroupPayMode Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
      */
     public Long getGroupPayMode() {
         return this.GroupPayMode;
     }
 
     /**
-     * Set 
-     * @param GroupPayMode 
+     * Set Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
+     * @param GroupPayMode Organization Billing Mode; 0/Self-paid, 1/Proxy-paid
      */
     public void setGroupPayMode(Long GroupPayMode) {
         this.GroupPayMode = GroupPayMode;
     }
 
     /**
-     * Get  
-     * @return MemberPayMode 
+     * Get Personal Billing Mode; 0/Self-paid, 1/Proxy-paid 
+     * @return MemberPayMode Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
      */
     public Long getMemberPayMode() {
         return this.MemberPayMode;
     }
 
     /**
-     * Set 
-     * @param MemberPayMode 
+     * Set Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
+     * @param MemberPayMode Personal Billing Mode; 0/Self-paid, 1/Proxy-paid
      */
     public void setMemberPayMode(Long MemberPayMode) {
         this.MemberPayMode = MemberPayMode;
     }
 
     /**
-     * Get  
-     * @return CFWProtect 
+     * Get If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific. 
+     * @return CFWProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
      */
     public String getCFWProtect() {
         return this.CFWProtect;
     }
 
     /**
-     * Set 
-     * @param CFWProtect 
+     * Set If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * @param CFWProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
      */
     public void setCFWProtect(String CFWProtect) {
         this.CFWProtect = CFWProtect;
     }
 
     /**
-     * Get  
-     * @return WAFProtect 
+     * Get If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific. 
+     * @return WAFProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
      */
     public String getWAFProtect() {
         return this.WAFProtect;
     }
 
     /**
-     * Set 
-     * @param WAFProtect 
+     * Set If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * @param WAFProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
      */
     public void setWAFProtect(String WAFProtect) {
         this.WAFProtect = WAFProtect;
     }
 
     /**
-     * Get  
-     * @return CWPProtect 
+     * Get If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific. 
+     * @return CWPProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
      */
     public String getCWPProtect() {
         return this.CWPProtect;
     }
 
     /**
-     * Set 
-     * @param CWPProtect 
+     * Set If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
+     * @param CWPProtect If empty, it is not enabled; otherwise, different strings correspond to different versions, with 'common' being general and not version-specific.
      */
     public void setCWPProtect(String CWPProtect) {
         this.CWPProtect = CWPProtect;
     }
 
     /**
-     * Get  
-     * @return Departments 
+     * Get Array of all departments 
+     * @return Departments Array of all departments
      */
     public String [] getDepartments() {
         return this.Departments;
     }
 
     /**
-     * Set 
-     * @param Departments 
+     * Set Array of all departments
+     * @param Departments Array of all departments
      */
     public void setDepartments(String [] Departments) {
         this.Departments = Departments;
     }
 
     /**
-     * Get  
-     * @return MemberCreateTime 
+     * Get Member Creation Time 
+     * @return MemberCreateTime Member Creation Time
      */
     public String getMemberCreateTime() {
         return this.MemberCreateTime;
     }
 
     /**
-     * Set 
-     * @param MemberCreateTime 
+     * Set Member Creation Time
+     * @param MemberCreateTime Member Creation Time
      */
     public void setMemberCreateTime(String MemberCreateTime) {
         this.MemberCreateTime = MemberCreateTime;
@@ -581,64 +581,64 @@ public class OrganizationInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return QuotaConsumer 
+     * Get 1 indicates the quota consumer 
+     * @return QuotaConsumer 1 indicates the quota consumer
      */
     public Long getQuotaConsumer() {
         return this.QuotaConsumer;
     }
 
     /**
-     * Set 
-     * @param QuotaConsumer 
+     * Set 1 indicates the quota consumer
+     * @param QuotaConsumer 1 indicates the quota consumer
      */
     public void setQuotaConsumer(Long QuotaConsumer) {
         this.QuotaConsumer = QuotaConsumer;
     }
 
     /**
-     * Get  
-     * @return EnableAdminCount 
+     * Get Number of enabled Admin/Delegated Admin accounts 
+     * @return EnableAdminCount Number of enabled Admin/Delegated Admin accounts
      */
     public Long getEnableAdminCount() {
         return this.EnableAdminCount;
     }
 
     /**
-     * Set 
-     * @param EnableAdminCount 
+     * Set Number of enabled Admin/Delegated Admin accounts
+     * @param EnableAdminCount Number of enabled Admin/Delegated Admin accounts
      */
     public void setEnableAdminCount(Long EnableAdminCount) {
         this.EnableAdminCount = EnableAdminCount;
     }
 
     /**
-     * Get  
-     * @return CloudCountDesc 
+     * Get Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details. 
+     * @return CloudCountDesc Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
      */
     public CloudCountDesc [] getCloudCountDesc() {
         return this.CloudCountDesc;
     }
 
     /**
-     * Set 
-     * @param CloudCountDesc 
+     * Set Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
+     * @param CloudCountDesc Multi-cloud account statistics in array format. Refer to the CloudCountDesc description for details.
      */
     public void setCloudCountDesc(CloudCountDesc [] CloudCountDesc) {
         this.CloudCountDesc = CloudCountDesc;
     }
 
     /**
-     * Get  
-     * @return AdminCount 
+     * Get Total Number of Admin/Delegated Admin Accounts 
+     * @return AdminCount Total Number of Admin/Delegated Admin Accounts
      */
     public Long getAdminCount() {
         return this.AdminCount;
     }
 
     /**
-     * Set 
-     * @param AdminCount 
+     * Set Total Number of Admin/Delegated Admin Accounts
+     * @param AdminCount Total Number of Admin/Delegated Admin Accounts
      */
     public void setAdminCount(Long AdminCount) {
         this.AdminCount = AdminCount;

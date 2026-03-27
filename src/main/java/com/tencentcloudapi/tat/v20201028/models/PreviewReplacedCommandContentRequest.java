@@ -25,7 +25,7 @@ public class PreviewReplacedCommandContentRequest extends AbstractModel {
 
     /**
     * The preview uses custom parameters. field type is json encoded string, for example: {"varA": "222"}.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If DefaultParameters or DefaultParameterConfs has set, it will overlay with Parameters and prioritize the value of Parameters.
 
 key specifies the custom parameter name, and value specifies the parameter. both kv are string-type.
@@ -39,7 +39,7 @@ If the previewed CommandId has DefaultParameters set, this parameter can be empt
 
     /**
     * Perform the replace preview command.
-Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+Call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
 CommandId and Content, you must provide one and can only provide one.
     */
     @SerializedName("CommandId")
@@ -56,7 +56,7 @@ CommandId or Content must be specified.
 
     /**
      * Get The preview uses custom parameters. field type is json encoded string, for example: {"varA": "222"}.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If DefaultParameters or DefaultParameterConfs has set, it will overlay with Parameters and prioritize the value of Parameters.
 
 key specifies the custom parameter name, and value specifies the parameter. both kv are string-type.
@@ -64,7 +64,7 @@ Custom parameters are limited to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
 If the previewed CommandId has DefaultParameters set, this parameter can be empty. 
      * @return Parameters The preview uses custom parameters. field type is json encoded string, for example: {"varA": "222"}.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If DefaultParameters or DefaultParameterConfs has set, it will overlay with Parameters and prioritize the value of Parameters.
 
 key specifies the custom parameter name, and value specifies the parameter. both kv are string-type.
@@ -78,7 +78,7 @@ If the previewed CommandId has DefaultParameters set, this parameter can be empt
 
     /**
      * Set The preview uses custom parameters. field type is json encoded string, for example: {"varA": "222"}.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If DefaultParameters or DefaultParameterConfs has set, it will overlay with Parameters and prioritize the value of Parameters.
 
 key specifies the custom parameter name, and value specifies the parameter. both kv are string-type.
@@ -86,7 +86,7 @@ Custom parameters are limited to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
 If the previewed CommandId has DefaultParameters set, this parameter can be empty.
      * @param Parameters The preview uses custom parameters. field type is json encoded string, for example: {"varA": "222"}.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If DefaultParameters or DefaultParameterConfs has set, it will overlay with Parameters and prioritize the value of Parameters.
 
 key specifies the custom parameter name, and value specifies the parameter. both kv are string-type.
@@ -100,10 +100,10 @@ If the previewed CommandId has DefaultParameters set, this parameter can be empt
 
     /**
      * Get Perform the replace preview command.
-Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+Call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
 CommandId and Content, you must provide one and can only provide one. 
      * @return CommandId Perform the replace preview command.
-Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+Call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
 CommandId and Content, you must provide one and can only provide one.
      */
     public String getCommandId() {
@@ -112,10 +112,10 @@ CommandId and Content, you must provide one and can only provide one.
 
     /**
      * Set Perform the replace preview command.
-Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+Call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
 CommandId and Content, you must provide one and can only provide one.
      * @param CommandId Perform the replace preview command.
-Call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+Call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
 CommandId and Content, you must provide one and can only provide one.
      */
     public void setCommandId(String CommandId) {

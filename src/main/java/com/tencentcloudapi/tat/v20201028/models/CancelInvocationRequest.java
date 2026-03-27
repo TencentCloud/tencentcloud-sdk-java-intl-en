@@ -26,7 +26,7 @@ public class CancelInvocationRequest extends AbstractModel {
     /**
     * Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
     */
     @SerializedName("InvocationId")
     @Expose
@@ -47,10 +47,10 @@ Instance ID can be obtained through the query instance interface of correspondin
     /**
      * Get Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution. 
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution. 
      * @return InvocationId Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
      */
     public String getInvocationId() {
         return this.InvocationId;
@@ -59,10 +59,10 @@ Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/
     /**
      * Set Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
      * @param InvocationId Execution activity ID.
 
-Call the [DescribeInvocations](https://www.tencentcloud.comom/document/api/1340/52679?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvocations](https://www.tencentcloud.com/document/api/1340/52679?from_cn_redirect=1) api to query execution.
      */
     public void setInvocationId(String InvocationId) {
         this.InvocationId = InvocationId;

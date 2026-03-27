@@ -24,276 +24,336 @@ import java.util.HashMap;
 public class RestoreTask extends AbstractModel {
 
     /**
-    * 
+    * Target Instance ID
     */
     @SerializedName("TargetInstanceId")
     @Expose
     private String TargetInstanceId;
 
     /**
-    * 
+    * Target Instance Name
     */
     @SerializedName("TargetInstanceName")
     @Expose
     private String TargetInstanceName;
 
     /**
-    * 
+    * Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
     */
     @SerializedName("TargetInstanceStatus")
     @Expose
     private Long TargetInstanceStatus;
 
     /**
-    * 
+    * Target Instance Region
     */
     @SerializedName("TargetRegion")
     @Expose
     private String TargetRegion;
 
     /**
-    * 
+    * Rollback Record ID
     */
     @SerializedName("RestoreId")
     @Expose
     private Long RestoreId;
 
     /**
-    * 
+    * Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
     */
     @SerializedName("TargetType")
     @Expose
     private Long TargetType;
 
     /**
-    * 
+    * Rollback method: 0 - by point-in-time, 1 - by backup set
     */
     @SerializedName("RestoreType")
     @Expose
     private Long RestoreType;
 
     /**
-    * 
+    * Rollback Target Time
     */
     @SerializedName("RestoreTime")
     @Expose
     private String RestoreTime;
 
     /**
-    * 
+    * Start Time
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * End Time
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 
+    * Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 
+    * Rollback Asynchronous Task ID
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-     * Get  
-     * @return TargetInstanceId 
+     * Get Target Instance ID 
+     * @return TargetInstanceId Target Instance ID
      */
     public String getTargetInstanceId() {
         return this.TargetInstanceId;
     }
 
     /**
-     * Set 
-     * @param TargetInstanceId 
+     * Set Target Instance ID
+     * @param TargetInstanceId Target Instance ID
      */
     public void setTargetInstanceId(String TargetInstanceId) {
         this.TargetInstanceId = TargetInstanceId;
     }
 
     /**
-     * Get  
-     * @return TargetInstanceName 
+     * Get Target Instance Name 
+     * @return TargetInstanceName Target Instance Name
      */
     public String getTargetInstanceName() {
         return this.TargetInstanceName;
     }
 
     /**
-     * Set 
-     * @param TargetInstanceName 
+     * Set Target Instance Name
+     * @param TargetInstanceName Target Instance Name
      */
     public void setTargetInstanceName(String TargetInstanceName) {
         this.TargetInstanceName = TargetInstanceName;
     }
 
     /**
-     * Get  
-     * @return TargetInstanceStatus 
+     * Get Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting 
+     * @return TargetInstanceStatus Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
      */
     public Long getTargetInstanceStatus() {
         return this.TargetInstanceStatus;
     }
 
     /**
-     * Set 
-     * @param TargetInstanceStatus 
+     * Set Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
+     * @param TargetInstanceStatus Target Instance Status. Valid values:
+1: Creating
+2: Running
+3: Restricted Running (primary/secondary switching)
+4: Isolated
+5: Recycling
+6: Recycled
+7: Task Executing (instance backup, rollback, etc.)
+8: Offline
+9: Instance Scaling
+10: Instance Migrating
+11: Read-Only
+12: Restarting
      */
     public void setTargetInstanceStatus(Long TargetInstanceStatus) {
         this.TargetInstanceStatus = TargetInstanceStatus;
     }
 
     /**
-     * Get  
-     * @return TargetRegion 
+     * Get Target Instance Region 
+     * @return TargetRegion Target Instance Region
      */
     public String getTargetRegion() {
         return this.TargetRegion;
     }
 
     /**
-     * Set 
-     * @param TargetRegion 
+     * Set Target Instance Region
+     * @param TargetRegion Target Instance Region
      */
     public void setTargetRegion(String TargetRegion) {
         this.TargetRegion = TargetRegion;
     }
 
     /**
-     * Get  
-     * @return RestoreId 
+     * Get Rollback Record ID 
+     * @return RestoreId Rollback Record ID
      */
     public Long getRestoreId() {
         return this.RestoreId;
     }
 
     /**
-     * Set 
-     * @param RestoreId 
+     * Set Rollback Record ID
+     * @param RestoreId Rollback Record ID
      */
     public void setRestoreId(Long RestoreId) {
         this.RestoreId = RestoreId;
     }
 
     /**
-     * Get  
-     * @return TargetType 
+     * Get Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance 
+     * @return TargetType Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
      */
     public Long getTargetType() {
         return this.TargetType;
     }
 
     /**
-     * Set 
-     * @param TargetType 
+     * Set Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
+     * @param TargetType Restoration target instance type: 0 - current instance, 1 - existing instance, 2 - new instance
      */
     public void setTargetType(Long TargetType) {
         this.TargetType = TargetType;
     }
 
     /**
-     * Get  
-     * @return RestoreType 
+     * Get Rollback method: 0 - by point-in-time, 1 - by backup set 
+     * @return RestoreType Rollback method: 0 - by point-in-time, 1 - by backup set
      */
     public Long getRestoreType() {
         return this.RestoreType;
     }
 
     /**
-     * Set 
-     * @param RestoreType 
+     * Set Rollback method: 0 - by point-in-time, 1 - by backup set
+     * @param RestoreType Rollback method: 0 - by point-in-time, 1 - by backup set
      */
     public void setRestoreType(Long RestoreType) {
         this.RestoreType = RestoreType;
     }
 
     /**
-     * Get  
-     * @return RestoreTime 
+     * Get Rollback Target Time 
+     * @return RestoreTime Rollback Target Time
      */
     public String getRestoreTime() {
         return this.RestoreTime;
     }
 
     /**
-     * Set 
-     * @param RestoreTime 
+     * Set Rollback Target Time
+     * @param RestoreTime Rollback Target Time
      */
     public void setRestoreTime(String RestoreTime) {
         this.RestoreTime = RestoreTime;
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Start Time 
+     * @return StartTime Start Time
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Start Time
+     * @param StartTime Start Time
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get End Time 
+     * @return EndTime End Time
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set End Time
+     * @param EndTime End Time
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure 
+     * @return Status Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
+     * @param Status Rollback status: 0 - Initialization, 1 - Running, 2 - Success, 3 - Failure
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return FlowId 
+     * Get Rollback Asynchronous Task ID 
+     * @return FlowId Rollback Asynchronous Task ID
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 
-     * @param FlowId 
+     * Set Rollback Asynchronous Task ID
+     * @param FlowId Rollback Asynchronous Task ID
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

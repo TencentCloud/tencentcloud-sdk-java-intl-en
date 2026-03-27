@@ -45,7 +45,7 @@ public class CcGeoIpPolicyNew extends AbstractModel {
     private String Ip;
 
     /**
-    * 
+    * domain name
     */
     @SerializedName("Domain")
     @Expose
@@ -142,16 +142,16 @@ public class CcGeoIpPolicyNew extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Domain 
+     * Get domain name 
+     * @return Domain domain name
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set 
-     * @param Domain 
+     * Set domain name
+     * @param Domain domain name
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

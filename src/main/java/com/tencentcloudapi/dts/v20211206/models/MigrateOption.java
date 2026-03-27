@@ -81,7 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private KeyValuePairOption [] ExtraAttr;
 
     /**
-    * 
+    * PostgreSQL migration types: logical (logical migration), physical (physical migration)
     */
     @SerializedName("MigrateWay")
     @Expose
@@ -232,16 +232,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return MigrateWay 
+     * Get PostgreSQL migration types: logical (logical migration), physical (physical migration) 
+     * @return MigrateWay PostgreSQL migration types: logical (logical migration), physical (physical migration)
      */
     public String getMigrateWay() {
         return this.MigrateWay;
     }
 
     /**
-     * Set 
-     * @param MigrateWay 
+     * Set PostgreSQL migration types: logical (logical migration), physical (physical migration)
+     * @param MigrateWay PostgreSQL migration types: logical (logical migration), physical (physical migration)
      */
     public void setMigrateWay(String MigrateWay) {
         this.MigrateWay = MigrateWay;

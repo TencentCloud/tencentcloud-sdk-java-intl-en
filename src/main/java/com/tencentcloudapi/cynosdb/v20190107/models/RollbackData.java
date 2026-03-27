@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class RollbackData extends AbstractModel {
 
     /**
-    * 
+    * Instance CPU
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 
+    * Instance Memory
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 
+    * Cluster storage limit
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * 
+    * Original Cluster id
     */
     @SerializedName("OriginalClusterId")
     @Expose
     private String OriginalClusterId;
 
     /**
-    * 
+    * Original Cluster Name
     */
     @SerializedName("OriginalClusterName")
     @Expose
     private String OriginalClusterName;
 
     /**
-    * 
+    * Rollback Method
     */
     @SerializedName("RollbackStrategy")
     @Expose
     private String RollbackStrategy;
 
     /**
-    * 
+    * Snapshot Time
     */
     @SerializedName("SnapshotTime")
     @Expose
@@ -94,14 +94,14 @@ public class RollbackData extends AbstractModel {
     private Long SnapShotId;
 
     /**
-    * 
+    * Rollback Database
     */
     @SerializedName("RollbackDatabases")
     @Expose
     private RollbackDatabase [] RollbackDatabases;
 
     /**
-    * 
+    * Rollback Data Table
     */
     @SerializedName("RollbackTables")
     @Expose
@@ -122,112 +122,112 @@ public class RollbackData extends AbstractModel {
     private RollbackProcessInfo RollbackProcess;
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get Instance CPU 
+     * @return Cpu Instance CPU
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set Instance CPU
+     * @param Cpu Instance CPU
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get  
-     * @return Memory 
+     * Get Instance Memory 
+     * @return Memory Instance Memory
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 
-     * @param Memory 
+     * Set Instance Memory
+     * @param Memory Instance Memory
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  
-     * @return StorageLimit 
+     * Get Cluster storage limit 
+     * @return StorageLimit Cluster storage limit
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set 
-     * @param StorageLimit 
+     * Set Cluster storage limit
+     * @param StorageLimit Cluster storage limit
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get  
-     * @return OriginalClusterId 
+     * Get Original Cluster id 
+     * @return OriginalClusterId Original Cluster id
      */
     public String getOriginalClusterId() {
         return this.OriginalClusterId;
     }
 
     /**
-     * Set 
-     * @param OriginalClusterId 
+     * Set Original Cluster id
+     * @param OriginalClusterId Original Cluster id
      */
     public void setOriginalClusterId(String OriginalClusterId) {
         this.OriginalClusterId = OriginalClusterId;
     }
 
     /**
-     * Get  
-     * @return OriginalClusterName 
+     * Get Original Cluster Name 
+     * @return OriginalClusterName Original Cluster Name
      */
     public String getOriginalClusterName() {
         return this.OriginalClusterName;
     }
 
     /**
-     * Set 
-     * @param OriginalClusterName 
+     * Set Original Cluster Name
+     * @param OriginalClusterName Original Cluster Name
      */
     public void setOriginalClusterName(String OriginalClusterName) {
         this.OriginalClusterName = OriginalClusterName;
     }
 
     /**
-     * Get  
-     * @return RollbackStrategy 
+     * Get Rollback Method 
+     * @return RollbackStrategy Rollback Method
      */
     public String getRollbackStrategy() {
         return this.RollbackStrategy;
     }
 
     /**
-     * Set 
-     * @param RollbackStrategy 
+     * Set Rollback Method
+     * @param RollbackStrategy Rollback Method
      */
     public void setRollbackStrategy(String RollbackStrategy) {
         this.RollbackStrategy = RollbackStrategy;
     }
 
     /**
-     * Get  
-     * @return SnapshotTime 
+     * Get Snapshot Time 
+     * @return SnapshotTime Snapshot Time
      */
     public String getSnapshotTime() {
         return this.SnapshotTime;
     }
 
     /**
-     * Set 
-     * @param SnapshotTime 
+     * Set Snapshot Time
+     * @param SnapshotTime Snapshot Time
      */
     public void setSnapshotTime(String SnapshotTime) {
         this.SnapshotTime = SnapshotTime;
@@ -282,32 +282,32 @@ public class RollbackData extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return RollbackDatabases 
+     * Get Rollback Database 
+     * @return RollbackDatabases Rollback Database
      */
     public RollbackDatabase [] getRollbackDatabases() {
         return this.RollbackDatabases;
     }
 
     /**
-     * Set 
-     * @param RollbackDatabases 
+     * Set Rollback Database
+     * @param RollbackDatabases Rollback Database
      */
     public void setRollbackDatabases(RollbackDatabase [] RollbackDatabases) {
         this.RollbackDatabases = RollbackDatabases;
     }
 
     /**
-     * Get  
-     * @return RollbackTables 
+     * Get Rollback Data Table 
+     * @return RollbackTables Rollback Data Table
      */
     public RollbackTable [] getRollbackTables() {
         return this.RollbackTables;
     }
 
     /**
-     * Set 
-     * @param RollbackTables 
+     * Set Rollback Data Table
+     * @param RollbackTables Rollback Data Table
      */
     public void setRollbackTables(RollbackTable [] RollbackTables) {
         this.RollbackTables = RollbackTables;

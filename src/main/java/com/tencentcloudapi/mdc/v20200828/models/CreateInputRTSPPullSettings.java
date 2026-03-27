@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CreateInputRTSPPullSettings extends AbstractModel {
 
     /**
-    * 
+    * The origin server address for the RTSP origin server. There can be only one.
     */
     @SerializedName("SourceAddresses")
     @Expose
     private RTSPPullSourceAddress [] SourceAddresses;
 
     /**
-     * Get  
-     * @return SourceAddresses 
+     * Get The origin server address for the RTSP origin server. There can be only one. 
+     * @return SourceAddresses The origin server address for the RTSP origin server. There can be only one.
      */
     public RTSPPullSourceAddress [] getSourceAddresses() {
         return this.SourceAddresses;
     }
 
     /**
-     * Set 
-     * @param SourceAddresses 
+     * Set The origin server address for the RTSP origin server. There can be only one.
+     * @param SourceAddresses The origin server address for the RTSP origin server. There can be only one.
      */
     public void setSourceAddresses(RTSPPullSourceAddress [] SourceAddresses) {
         this.SourceAddresses = SourceAddresses;

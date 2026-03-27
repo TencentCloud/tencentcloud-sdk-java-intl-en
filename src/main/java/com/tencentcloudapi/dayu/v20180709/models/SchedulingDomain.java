@@ -80,7 +80,7 @@ public class SchedulingDomain extends AbstractModel {
     private String CreateTime;
 
     /**
-    * 
+    * ttl
     */
     @SerializedName("TTL")
     @Expose
@@ -229,16 +229,16 @@ public class SchedulingDomain extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return TTL 
+     * Get ttl 
+     * @return TTL ttl
      */
     public Long getTTL() {
         return this.TTL;
     }
 
     /**
-     * Set 
-     * @param TTL 
+     * Set ttl
+     * @param TTL ttl
      */
     public void setTTL(Long TTL) {
         this.TTL = TTL;

@@ -91,7 +91,11 @@ public class Resource extends AbstractModel {
     private String PlanId;
 
     /**
-    * 
+    * Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
     */
     @SerializedName("Area")
     @Expose
@@ -258,16 +262,32 @@ public class Resource extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Area 
+     * Get Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li> 
+     * @return Area Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 
-     * @param Area 
+     * Set Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
+     * @param Area Region, with values:
+
+<li>mainland: Chinese mainland;</li>
+
+<li>overseas: Overseas.</li>
      */
     public void setArea(String Area) {
         this.Area = Area;

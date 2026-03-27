@@ -129,6 +129,20 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     private Long AIAgentId;
 
     /**
+    * Retry interval for task failure. value range: 600-86400 seconds.
+    */
+    @SerializedName("RetryInterval")
+    @Expose
+    private Long RetryInterval;
+
+    /**
+    * Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+    */
+    @SerializedName("MaxRingTimeoutSecond")
+    @Expose
+    private Long MaxRingTimeoutSecond;
+
+    /**
      * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
      * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
@@ -368,6 +382,38 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.AIAgentId = AIAgentId;
     }
 
+    /**
+     * Get Retry interval for task failure. value range: 600-86400 seconds. 
+     * @return RetryInterval Retry interval for task failure. value range: 600-86400 seconds.
+     */
+    public Long getRetryInterval() {
+        return this.RetryInterval;
+    }
+
+    /**
+     * Set Retry interval for task failure. value range: 600-86400 seconds.
+     * @param RetryInterval Retry interval for task failure. value range: 600-86400 seconds.
+     */
+    public void setRetryInterval(Long RetryInterval) {
+        this.RetryInterval = RetryInterval;
+    }
+
+    /**
+     * Get Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter. 
+     * @return MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     */
+    public Long getMaxRingTimeoutSecond() {
+        return this.MaxRingTimeoutSecond;
+    }
+
+    /**
+     * Set Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     * @param MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     */
+    public void setMaxRingTimeoutSecond(Long MaxRingTimeoutSecond) {
+        this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
+    }
+
     public CreateAutoCalloutTaskRequest() {
     }
 
@@ -436,6 +482,12 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         if (source.AIAgentId != null) {
             this.AIAgentId = new Long(source.AIAgentId);
         }
+        if (source.RetryInterval != null) {
+            this.RetryInterval = new Long(source.RetryInterval);
+        }
+        if (source.MaxRingTimeoutSecond != null) {
+            this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
+        }
     }
 
 
@@ -458,6 +510,8 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
         this.setParamArrayObj(map, prefix + "AvailableTime.", this.AvailableTime);
         this.setParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
+        this.setParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
+        this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
 
     }
 }

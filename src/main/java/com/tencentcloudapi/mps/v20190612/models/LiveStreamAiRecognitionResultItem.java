@@ -94,7 +94,7 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
     private LiveStreamObjectRecognitionResult [] ObjectRecognitionResultSet;
 
     /**
-    * 
+    * Tagging results are valid when Type is TagRecognition.
     */
     @SerializedName("TagRecognitionResultSet")
     @Expose
@@ -285,16 +285,16 @@ public class LiveStreamAiRecognitionResultItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return TagRecognitionResultSet 
+     * Get Tagging results are valid when Type is TagRecognition. 
+     * @return TagRecognitionResultSet Tagging results are valid when Type is TagRecognition.
      */
     public LiveStreamTagRecognitionResult [] getTagRecognitionResultSet() {
         return this.TagRecognitionResultSet;
     }
 
     /**
-     * Set 
-     * @param TagRecognitionResultSet 
+     * Set Tagging results are valid when Type is TagRecognition.
+     * @param TagRecognitionResultSet Tagging results are valid when Type is TagRecognition.
      */
     public void setTagRecognitionResultSet(LiveStreamTagRecognitionResult [] TagRecognitionResultSet) {
         this.TagRecognitionResultSet = TagRecognitionResultSet;

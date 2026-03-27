@@ -45,14 +45,14 @@ public class RabbitMQClusterWhiteListInfo extends AbstractModel {
     private String PublicDataStreamWhiteList;
 
     /**
-    * 
+    * Public Network Management Console Allowlist Status
     */
     @SerializedName("PublicControlConsoleWhiteListStatus")
     @Expose
     private String PublicControlConsoleWhiteListStatus;
 
     /**
-    * 
+    * Public Network Data Flow Allowlist Status
     */
     @SerializedName("PublicDataStreamWhiteListStatus")
     @Expose
@@ -107,32 +107,32 @@ public class RabbitMQClusterWhiteListInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return PublicControlConsoleWhiteListStatus 
+     * Get Public Network Management Console Allowlist Status 
+     * @return PublicControlConsoleWhiteListStatus Public Network Management Console Allowlist Status
      */
     public String getPublicControlConsoleWhiteListStatus() {
         return this.PublicControlConsoleWhiteListStatus;
     }
 
     /**
-     * Set 
-     * @param PublicControlConsoleWhiteListStatus 
+     * Set Public Network Management Console Allowlist Status
+     * @param PublicControlConsoleWhiteListStatus Public Network Management Console Allowlist Status
      */
     public void setPublicControlConsoleWhiteListStatus(String PublicControlConsoleWhiteListStatus) {
         this.PublicControlConsoleWhiteListStatus = PublicControlConsoleWhiteListStatus;
     }
 
     /**
-     * Get  
-     * @return PublicDataStreamWhiteListStatus 
+     * Get Public Network Data Flow Allowlist Status 
+     * @return PublicDataStreamWhiteListStatus Public Network Data Flow Allowlist Status
      */
     public String getPublicDataStreamWhiteListStatus() {
         return this.PublicDataStreamWhiteListStatus;
     }
 
     /**
-     * Set 
-     * @param PublicDataStreamWhiteListStatus 
+     * Set Public Network Data Flow Allowlist Status
+     * @param PublicDataStreamWhiteListStatus Public Network Data Flow Allowlist Status
      */
     public void setPublicDataStreamWhiteListStatus(String PublicDataStreamWhiteListStatus) {
         this.PublicDataStreamWhiteListStatus = PublicDataStreamWhiteListStatus;

@@ -89,7 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DomainQUICConfig QUICConfig;
 
     /**
-    * 
+    * IP access limit configuration information.
     */
     @SerializedName("IPFilterPolicy")
     @Expose
@@ -268,16 +268,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return IPFilterPolicy 
+     * Get IP access limit configuration information. 
+     * @return IPFilterPolicy IP access limit configuration information.
      */
     public IPFilterPolicy getIPFilterPolicy() {
         return this.IPFilterPolicy;
     }
 
     /**
-     * Set 
-     * @param IPFilterPolicy 
+     * Set IP access limit configuration information.
+     * @param IPFilterPolicy IP access limit configuration information.
      */
     public void setIPFilterPolicy(IPFilterPolicy IPFilterPolicy) {
         this.IPFilterPolicy = IPFilterPolicy;

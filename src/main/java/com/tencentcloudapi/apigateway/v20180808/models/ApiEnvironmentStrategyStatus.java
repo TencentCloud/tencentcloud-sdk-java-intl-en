@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ApiEnvironmentStrategyStatus extends AbstractModel {
 
     /**
-    * 
+    * The quantity of rate limiting policies bound to APIs.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * API Binding Rate Limiting Policy List.
     */
     @SerializedName("ApiEnvironmentStrategySet")
     @Expose
     private ApiEnvironmentStrategy [] ApiEnvironmentStrategySet;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get The quantity of rate limiting policies bound to APIs. 
+     * @return TotalCount The quantity of rate limiting policies bound to APIs.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set The quantity of rate limiting policies bound to APIs.
+     * @param TotalCount The quantity of rate limiting policies bound to APIs.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return ApiEnvironmentStrategySet 
+     * Get API Binding Rate Limiting Policy List. 
+     * @return ApiEnvironmentStrategySet API Binding Rate Limiting Policy List.
      */
     public ApiEnvironmentStrategy [] getApiEnvironmentStrategySet() {
         return this.ApiEnvironmentStrategySet;
     }
 
     /**
-     * Set 
-     * @param ApiEnvironmentStrategySet 
+     * Set API Binding Rate Limiting Policy List.
+     * @param ApiEnvironmentStrategySet API Binding Rate Limiting Policy List.
      */
     public void setApiEnvironmentStrategySet(ApiEnvironmentStrategy [] ApiEnvironmentStrategySet) {
         this.ApiEnvironmentStrategySet = ApiEnvironmentStrategySet;

@@ -45,7 +45,7 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-    * 
+    * The affinity of the placement group. Instances in the placement group are distributed according to this affinity. The affinity value range is: 1-10, and defaults to 1.
     */
     @SerializedName("Affinity")
     @Expose
@@ -107,16 +107,16 @@ public class CreateDisasterRecoverGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Affinity 
+     * Get The affinity of the placement group. Instances in the placement group are distributed according to this affinity. The affinity value range is: 1-10, and defaults to 1. 
+     * @return Affinity The affinity of the placement group. Instances in the placement group are distributed according to this affinity. The affinity value range is: 1-10, and defaults to 1.
      */
     public Long getAffinity() {
         return this.Affinity;
     }
 
     /**
-     * Set 
-     * @param Affinity 
+     * Set The affinity of the placement group. Instances in the placement group are distributed according to this affinity. The affinity value range is: 1-10, and defaults to 1.
+     * @param Affinity The affinity of the placement group. Instances in the placement group are distributed according to this affinity. The affinity value range is: 1-10, and defaults to 1.
      */
     public void setAffinity(Long Affinity) {
         this.Affinity = Affinity;

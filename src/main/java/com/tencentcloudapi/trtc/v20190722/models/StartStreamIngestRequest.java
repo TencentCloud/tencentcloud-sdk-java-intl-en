@@ -95,7 +95,7 @@ Source URL. Example value: https://a.b/test.mp4
     private String [] SourceUrl;
 
     /**
-    * 
+    * Specify that the video plays from a specific second timestamp.
     */
     @SerializedName("SeekSecond")
     @Expose
@@ -306,16 +306,16 @@ Source URL. Example value: https://a.b/test.mp4
     }
 
     /**
-     * Get  
-     * @return SeekSecond 
+     * Get Specify that the video plays from a specific second timestamp. 
+     * @return SeekSecond Specify that the video plays from a specific second timestamp.
      */
     public Long getSeekSecond() {
         return this.SeekSecond;
     }
 
     /**
-     * Set 
-     * @param SeekSecond 
+     * Set Specify that the video plays from a specific second timestamp.
+     * @param SeekSecond Specify that the video plays from a specific second timestamp.
      */
     public void setSeekSecond(Long SeekSecond) {
         this.SeekSecond = SeekSecond;

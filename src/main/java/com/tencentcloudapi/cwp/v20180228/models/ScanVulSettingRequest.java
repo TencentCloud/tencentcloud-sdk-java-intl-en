@@ -87,7 +87,7 @@ public class ScanVulSettingRequest extends AbstractModel {
     private String [] Uuids;
 
     /**
-    * 
+    * 0 version comparison, 2 version comparison + poc
     */
     @SerializedName("ScanMethod")
     @Expose
@@ -238,16 +238,16 @@ public class ScanVulSettingRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ScanMethod 
+     * Get 0 version comparison, 2 version comparison + poc 
+     * @return ScanMethod 0 version comparison, 2 version comparison + poc
      */
     public Long getScanMethod() {
         return this.ScanMethod;
     }
 
     /**
-     * Set 
-     * @param ScanMethod 
+     * Set 0 version comparison, 2 version comparison + poc
+     * @param ScanMethod 0 version comparison, 2 version comparison + poc
      */
     public void setScanMethod(Long ScanMethod) {
         this.ScanMethod = ScanMethod;

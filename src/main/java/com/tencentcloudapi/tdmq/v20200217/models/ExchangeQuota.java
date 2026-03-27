@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExchangeQuota extends AbstractModel {
 
     /**
-    * 
+    * Maximum number of creatable exchanges
     */
     @SerializedName("MaxExchange")
     @Expose
@@ -38,16 +38,16 @@ public class ExchangeQuota extends AbstractModel {
     private Long UsedExchange;
 
     /**
-     * Get  
-     * @return MaxExchange 
+     * Get Maximum number of creatable exchanges 
+     * @return MaxExchange Maximum number of creatable exchanges
      */
     public Long getMaxExchange() {
         return this.MaxExchange;
     }
 
     /**
-     * Set 
-     * @param MaxExchange 
+     * Set Maximum number of creatable exchanges
+     * @param MaxExchange Maximum number of creatable exchanges
      */
     public void setMaxExchange(Long MaxExchange) {
         this.MaxExchange = MaxExchange;

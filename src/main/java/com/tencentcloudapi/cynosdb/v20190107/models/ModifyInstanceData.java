@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class ModifyInstanceData extends AbstractModel {
 
     /**
-    * 
+    * CPU After Resizing
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 
+    * Memory After Resizing
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 
+    * Storage Limit After Resizing
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * 
+    * CPU Before Resizing
     */
     @SerializedName("OldCpu")
     @Expose
     private Long OldCpu;
 
     /**
-    * 
+    * Memory Before Resizing
     */
     @SerializedName("OldMemory")
     @Expose
     private Long OldMemory;
 
     /**
-    * 
+    * Storage Limit Before Resizing
     */
     @SerializedName("OldStorageLimit")
     @Expose
@@ -80,7 +80,7 @@ public class ModifyInstanceData extends AbstractModel {
     private String DeviceType;
 
     /**
-    * 
+    * Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
     */
     @SerializedName("UpgradeType")
     @Expose
@@ -101,96 +101,96 @@ public class ModifyInstanceData extends AbstractModel {
     private Long OldLibraNodeCount;
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get CPU After Resizing 
+     * @return Cpu CPU After Resizing
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set CPU After Resizing
+     * @param Cpu CPU After Resizing
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get  
-     * @return Memory 
+     * Get Memory After Resizing 
+     * @return Memory Memory After Resizing
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 
-     * @param Memory 
+     * Set Memory After Resizing
+     * @param Memory Memory After Resizing
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  
-     * @return StorageLimit 
+     * Get Storage Limit After Resizing 
+     * @return StorageLimit Storage Limit After Resizing
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set 
-     * @param StorageLimit 
+     * Set Storage Limit After Resizing
+     * @param StorageLimit Storage Limit After Resizing
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get  
-     * @return OldCpu 
+     * Get CPU Before Resizing 
+     * @return OldCpu CPU Before Resizing
      */
     public Long getOldCpu() {
         return this.OldCpu;
     }
 
     /**
-     * Set 
-     * @param OldCpu 
+     * Set CPU Before Resizing
+     * @param OldCpu CPU Before Resizing
      */
     public void setOldCpu(Long OldCpu) {
         this.OldCpu = OldCpu;
     }
 
     /**
-     * Get  
-     * @return OldMemory 
+     * Get Memory Before Resizing 
+     * @return OldMemory Memory Before Resizing
      */
     public Long getOldMemory() {
         return this.OldMemory;
     }
 
     /**
-     * Set 
-     * @param OldMemory 
+     * Set Memory Before Resizing
+     * @param OldMemory Memory Before Resizing
      */
     public void setOldMemory(Long OldMemory) {
         this.OldMemory = OldMemory;
     }
 
     /**
-     * Get  
-     * @return OldStorageLimit 
+     * Get Storage Limit Before Resizing 
+     * @return OldStorageLimit Storage Limit Before Resizing
      */
     public Long getOldStorageLimit() {
         return this.OldStorageLimit;
     }
 
     /**
-     * Set 
-     * @param OldStorageLimit 
+     * Set Storage Limit Before Resizing
+     * @param OldStorageLimit Storage Limit Before Resizing
      */
     public void setOldStorageLimit(Long OldStorageLimit) {
         this.OldStorageLimit = OldStorageLimit;
@@ -229,16 +229,16 @@ public class ModifyInstanceData extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return UpgradeType 
+     * Get Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows 
+     * @return UpgradeType Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 
-     * @param UpgradeType 
+     * Set Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
+     * @param UpgradeType Upgrade Method. Switchover is performed after upgrade completion or during maintenance windows
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;

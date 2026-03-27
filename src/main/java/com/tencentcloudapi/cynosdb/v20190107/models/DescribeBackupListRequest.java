@@ -74,7 +74,7 @@ public class DescribeBackupListRequest extends AbstractModel {
     private String BackupMethod;
 
     /**
-    * 
+    * Snapshot type. Optional values: full, full backup; increment, incremental backup
     */
     @SerializedName("SnapShotType")
     @Expose
@@ -95,7 +95,7 @@ public class DescribeBackupListRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * 
+    * Backup file name, fuzzy search
     */
     @SerializedName("FileNames")
     @Expose
@@ -232,16 +232,16 @@ public class DescribeBackupListRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return SnapShotType 
+     * Get Snapshot type. Optional values: full, full backup; increment, incremental backup 
+     * @return SnapShotType Snapshot type. Optional values: full, full backup; increment, incremental backup
      */
     public String getSnapShotType() {
         return this.SnapShotType;
     }
 
     /**
-     * Set 
-     * @param SnapShotType 
+     * Set Snapshot type. Optional values: full, full backup; increment, incremental backup
+     * @param SnapShotType Snapshot type. Optional values: full, full backup; increment, incremental backup
      */
     public void setSnapShotType(String SnapShotType) {
         this.SnapShotType = SnapShotType;
@@ -280,16 +280,16 @@ public class DescribeBackupListRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return FileNames 
+     * Get Backup file name, fuzzy search 
+     * @return FileNames Backup file name, fuzzy search
      */
     public String [] getFileNames() {
         return this.FileNames;
     }
 
     /**
-     * Set 
-     * @param FileNames 
+     * Set Backup file name, fuzzy search
+     * @param FileNames Backup file name, fuzzy search
      */
     public void setFileNames(String [] FileNames) {
         this.FileNames = FileNames;

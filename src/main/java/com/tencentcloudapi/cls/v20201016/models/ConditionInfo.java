@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ConditionInfo extends AbstractModel {
 
     /**
-    * 
+    * Condition attribute, currently supports only VpcID
     */
     @SerializedName("Attributes")
     @Expose
     private String Attributes;
 
     /**
-    * 
+    * Condition rule, 1: equal to, 2: not equal to
     */
     @SerializedName("Rule")
     @Expose
     private Long Rule;
 
     /**
-    * 
+    * Value of the corresponding condition attribute
     */
     @SerializedName("ConditionValue")
     @Expose
     private String ConditionValue;
 
     /**
-     * Get  
-     * @return Attributes 
+     * Get Condition attribute, currently supports only VpcID 
+     * @return Attributes Condition attribute, currently supports only VpcID
      */
     public String getAttributes() {
         return this.Attributes;
     }
 
     /**
-     * Set 
-     * @param Attributes 
+     * Set Condition attribute, currently supports only VpcID
+     * @param Attributes Condition attribute, currently supports only VpcID
      */
     public void setAttributes(String Attributes) {
         this.Attributes = Attributes;
     }
 
     /**
-     * Get  
-     * @return Rule 
+     * Get Condition rule, 1: equal to, 2: not equal to 
+     * @return Rule Condition rule, 1: equal to, 2: not equal to
      */
     public Long getRule() {
         return this.Rule;
     }
 
     /**
-     * Set 
-     * @param Rule 
+     * Set Condition rule, 1: equal to, 2: not equal to
+     * @param Rule Condition rule, 1: equal to, 2: not equal to
      */
     public void setRule(Long Rule) {
         this.Rule = Rule;
     }
 
     /**
-     * Get  
-     * @return ConditionValue 
+     * Get Value of the corresponding condition attribute 
+     * @return ConditionValue Value of the corresponding condition attribute
      */
     public String getConditionValue() {
         return this.ConditionValue;
     }
 
     /**
-     * Set 
-     * @param ConditionValue 
+     * Set Value of the corresponding condition attribute
+     * @param ConditionValue Value of the corresponding condition attribute
      */
     public void setConditionValue(String ConditionValue) {
         this.ConditionValue = ConditionValue;

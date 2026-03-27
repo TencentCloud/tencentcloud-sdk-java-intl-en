@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DBTDEEncrypt extends AbstractModel {
 
     /**
-    * 
+    * Database Name
     */
     @SerializedName("DBName")
     @Expose
@@ -38,16 +38,16 @@ public class DBTDEEncrypt extends AbstractModel {
     private String Encryption;
 
     /**
-     * Get  
-     * @return DBName 
+     * Get Database Name 
+     * @return DBName Database Name
      */
     public String getDBName() {
         return this.DBName;
     }
 
     /**
-     * Set 
-     * @param DBName 
+     * Set Database Name
+     * @param DBName Database Name
      */
     public void setDBName(String DBName) {
         this.DBName = DBName;

@@ -187,7 +187,10 @@ Note: This field may return "null", indicating that no valid value can be obtain
     private String OsImage;
 
     /**
-    * 
+    * **Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
     */
     @SerializedName("InstanceId")
     @Expose
@@ -582,16 +585,28 @@ Note: This field may return "null", indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get **Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance 
+     * @return InstanceId **Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set **Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
+     * @param InstanceId **Instance ID corresponding to the native node**
+
+- ins-q47ofw6 indicates that this instance is a CVM instance
+- eks-f8mvyaep indicates that this instance is a CXM instance
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

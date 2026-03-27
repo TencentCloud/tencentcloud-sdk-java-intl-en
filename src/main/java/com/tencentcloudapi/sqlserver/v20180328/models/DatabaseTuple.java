@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DatabaseTuple extends AbstractModel {
 
     /**
-    * 
+    * Publish Database Name
     */
     @SerializedName("PublishDatabase")
     @Expose
     private String PublishDatabase;
 
     /**
-    * 
+    * Subscription Database Name
     */
     @SerializedName("SubscribeDatabase")
     @Expose
     private String SubscribeDatabase;
 
     /**
-     * Get  
-     * @return PublishDatabase 
+     * Get Publish Database Name 
+     * @return PublishDatabase Publish Database Name
      */
     public String getPublishDatabase() {
         return this.PublishDatabase;
     }
 
     /**
-     * Set 
-     * @param PublishDatabase 
+     * Set Publish Database Name
+     * @param PublishDatabase Publish Database Name
      */
     public void setPublishDatabase(String PublishDatabase) {
         this.PublishDatabase = PublishDatabase;
     }
 
     /**
-     * Get  
-     * @return SubscribeDatabase 
+     * Get Subscription Database Name 
+     * @return SubscribeDatabase Subscription Database Name
      */
     public String getSubscribeDatabase() {
         return this.SubscribeDatabase;
     }
 
     /**
-     * Set 
-     * @param SubscribeDatabase 
+     * Set Subscription Database Name
+     * @param SubscribeDatabase Subscription Database Name
      */
     public void setSubscribeDatabase(String SubscribeDatabase) {
         this.SubscribeDatabase = SubscribeDatabase;

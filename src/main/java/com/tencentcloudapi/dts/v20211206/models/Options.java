@@ -104,14 +104,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long AutoRetryTimeRangeMinutes;
 
     /**
-    * 
+    * Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
     */
     @SerializedName("FilterBeginCommit")
     @Expose
     private Boolean FilterBeginCommit;
 
     /**
-    * 
+    * Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
     */
     @SerializedName("FilterCheckpoint")
     @Expose
@@ -318,32 +318,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return FilterBeginCommit 
+     * Get Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links. 
+     * @return FilterBeginCommit Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
      */
     public Boolean getFilterBeginCommit() {
         return this.FilterBeginCommit;
     }
 
     /**
-     * Set 
-     * @param FilterBeginCommit 
+     * Set Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+     * @param FilterBeginCommit Whether to filter out begin and commit messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
      */
     public void setFilterBeginCommit(Boolean FilterBeginCommit) {
         this.FilterBeginCommit = FilterBeginCommit;
     }
 
     /**
-     * Get  
-     * @return FilterCheckpoint 
+     * Get Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links. 
+     * @return FilterCheckpoint Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
      */
     public Boolean getFilterCheckpoint() {
         return this.FilterCheckpoint;
     }
 
     /**
-     * Set 
-     * @param FilterCheckpoint 
+     * Set Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
+     * @param FilterCheckpoint Whether to filter out checkpoint messages when synchronizing to the kafka link. Currently only supported for MySQL-to-kafka links.
      */
     public void setFilterCheckpoint(Boolean FilterCheckpoint) {
         this.FilterCheckpoint = FilterCheckpoint;

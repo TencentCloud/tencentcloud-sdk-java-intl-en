@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SentimentDetail extends AbstractModel {
 
     /**
-    * 
+    * Positive score, ranging from 0 to 100
     */
     @SerializedName("Positive")
     @Expose
     private Long Positive;
 
     /**
-    * 
+    * Negative score, ranging from 0 to 100
     */
     @SerializedName("Negative")
     @Expose
     private Long Negative;
 
     /**
-     * Get  
-     * @return Positive 
+     * Get Positive score, ranging from 0 to 100 
+     * @return Positive Positive score, ranging from 0 to 100
      */
     public Long getPositive() {
         return this.Positive;
     }
 
     /**
-     * Set 
-     * @param Positive 
+     * Set Positive score, ranging from 0 to 100
+     * @param Positive Positive score, ranging from 0 to 100
      */
     public void setPositive(Long Positive) {
         this.Positive = Positive;
     }
 
     /**
-     * Get  
-     * @return Negative 
+     * Get Negative score, ranging from 0 to 100 
+     * @return Negative Negative score, ranging from 0 to 100
      */
     public Long getNegative() {
         return this.Negative;
     }
 
     /**
-     * Set 
-     * @param Negative 
+     * Set Negative score, ranging from 0 to 100
+     * @param Negative Negative score, ranging from 0 to 100
      */
     public void setNegative(Long Negative) {
         this.Negative = Negative;

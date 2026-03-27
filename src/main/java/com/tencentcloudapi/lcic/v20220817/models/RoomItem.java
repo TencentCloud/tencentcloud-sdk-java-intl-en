@@ -130,21 +130,21 @@ Note: This field may return null, indicating that no valid value was found.
     private Long EnableDirectControl;
 
     /**
-    * 
+    * Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
     */
     @SerializedName("InteractionMode")
     @Expose
     private Long InteractionMode;
 
     /**
-    * 
+    * Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
     */
     @SerializedName("VideoOrientation")
     @Expose
     private Long VideoOrientation;
 
     /**
-    * 
+    * Enable post-class evaluation. 0: Disable (default) 1: Enable
     */
     @SerializedName("IsGradingRequiredPostClass")
     @Expose
@@ -158,49 +158,49 @@ Note: This field may return null, indicating that no valid value was found.
     private Long RoomType;
 
     /**
-    * 
+    * Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
     */
     @SerializedName("EndDelayTime")
     @Expose
     private Long EndDelayTime;
 
     /**
-    * 
+    * Live Streaming Type: 0: Regular (default) 1: Simulated Live
     */
     @SerializedName("LiveType")
     @Expose
     private Long LiveType;
 
     /**
-    * 
+    * Simulated Live Playback Link
     */
     @SerializedName("RecordLiveUrl")
     @Expose
     private String RecordLiveUrl;
 
     /**
-    * 
+    * Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
     */
     @SerializedName("EnableAutoStart")
     @Expose
     private Long EnableAutoStart;
 
     /**
-    * 
+    * Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
     */
     @SerializedName("RecordBackground")
     @Expose
     private String RecordBackground;
 
     /**
-    * 
+    * Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
     */
     @SerializedName("RecordScene")
     @Expose
     private String RecordScene;
 
     /**
-    * 
+    * Recording custom language. This parameter is valid only when recordlayout=9.
     */
     @SerializedName("RecordLang")
     @Expose
@@ -475,48 +475,48 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return InteractionMode 
+     * Get Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA 
+     * @return InteractionMode Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
      */
     public Long getInteractionMode() {
         return this.InteractionMode;
     }
 
     /**
-     * Set 
-     * @param InteractionMode 
+     * Set Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
+     * @param InteractionMode Enable Focus Mode. 0: View all participants (default) 1: View only teacher and TA
      */
     public void setInteractionMode(Long InteractionMode) {
         this.InteractionMode = InteractionMode;
     }
 
     /**
-     * Get  
-     * @return VideoOrientation 
+     * Get Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices. 
+     * @return VideoOrientation Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
      */
     public Long getVideoOrientation() {
         return this.VideoOrientation;
     }
 
     /**
-     * Set 
-     * @param VideoOrientation 
+     * Set Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
+     * @param VideoOrientation Landscape/Portrait. 0: Landscape broadcast (default); 1: Portrait broadcast. Currently supported only for video-only type on mobile devices.
      */
     public void setVideoOrientation(Long VideoOrientation) {
         this.VideoOrientation = VideoOrientation;
     }
 
     /**
-     * Get  
-     * @return IsGradingRequiredPostClass 
+     * Get Enable post-class evaluation. 0: Disable (default) 1: Enable 
+     * @return IsGradingRequiredPostClass Enable post-class evaluation. 0: Disable (default) 1: Enable
      */
     public Long getIsGradingRequiredPostClass() {
         return this.IsGradingRequiredPostClass;
     }
 
     /**
-     * Set 
-     * @param IsGradingRequiredPostClass 
+     * Set Enable post-class evaluation. 0: Disable (default) 1: Enable
+     * @param IsGradingRequiredPostClass Enable post-class evaluation. 0: Disable (default) 1: Enable
      */
     public void setIsGradingRequiredPostClass(Long IsGradingRequiredPostClass) {
         this.IsGradingRequiredPostClass = IsGradingRequiredPostClass;
@@ -539,112 +539,112 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return EndDelayTime 
+     * Get Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes 
+     * @return EndDelayTime Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
      */
     public Long getEndDelayTime() {
         return this.EndDelayTime;
     }
 
     /**
-     * Set 
-     * @param EndDelayTime 
+     * Set Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
+     * @param EndDelayTime Overtime duration: Unit in minutes. 0: No limitation (default); -1: Overtime prohibited; Values >0: Overtime duration in minutes, maximum 120 minutes
      */
     public void setEndDelayTime(Long EndDelayTime) {
         this.EndDelayTime = EndDelayTime;
     }
 
     /**
-     * Get  
-     * @return LiveType 
+     * Get Live Streaming Type: 0: Regular (default) 1: Simulated Live 
+     * @return LiveType Live Streaming Type: 0: Regular (default) 1: Simulated Live
      */
     public Long getLiveType() {
         return this.LiveType;
     }
 
     /**
-     * Set 
-     * @param LiveType 
+     * Set Live Streaming Type: 0: Regular (default) 1: Simulated Live
+     * @param LiveType Live Streaming Type: 0: Regular (default) 1: Simulated Live
      */
     public void setLiveType(Long LiveType) {
         this.LiveType = LiveType;
     }
 
     /**
-     * Get  
-     * @return RecordLiveUrl 
+     * Get Simulated Live Playback Link 
+     * @return RecordLiveUrl Simulated Live Playback Link
      */
     public String getRecordLiveUrl() {
         return this.RecordLiveUrl;
     }
 
     /**
-     * Set 
-     * @param RecordLiveUrl 
+     * Set Simulated Live Playback Link
+     * @param RecordLiveUrl Simulated Live Playback Link
      */
     public void setRecordLiveUrl(String RecordLiveUrl) {
         this.RecordLiveUrl = RecordLiveUrl;
     }
 
     /**
-     * Get  
-     * @return EnableAutoStart 
+     * Get Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1 
+     * @return EnableAutoStart Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
      */
     public Long getEnableAutoStart() {
         return this.EnableAutoStart;
     }
 
     /**
-     * Set 
-     * @param EnableAutoStart 
+     * Set Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
+     * @param EnableAutoStart Whether to auto-start class: 0: Do not auto-start (default) 1: Auto-start. Effective when live_type=1
      */
     public void setEnableAutoStart(Long EnableAutoStart) {
         this.EnableAutoStart = EnableAutoStart;
     }
 
     /**
-     * Get  
-     * @return RecordBackground 
+     * Get Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported. 
+     * @return RecordBackground Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
      */
     public String getRecordBackground() {
         return this.RecordBackground;
     }
 
     /**
-     * Set 
-     * @param RecordBackground 
+     * Set Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
+     * @param RecordBackground Background image for recording files, supports png, jpg, jpeg, bmp formats. Alpha channel is currently not supported.
      */
     public void setRecordBackground(String RecordBackground) {
         this.RecordBackground = RecordBackground;
     }
 
     /**
-     * Get  
-     * @return RecordScene 
+     * Get Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type. 
+     * @return RecordScene Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
      */
     public String getRecordScene() {
         return this.RecordScene;
     }
 
     /**
-     * Set 
-     * @param RecordScene 
+     * Set Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
+     * @param RecordScene Recording custom scenes. This parameter is valid only when recordlayout=9. The data content consists of user-defined scene parameters in json key-value pair format, where the value is of string type.
      */
     public void setRecordScene(String RecordScene) {
         this.RecordScene = RecordScene;
     }
 
     /**
-     * Get  
-     * @return RecordLang 
+     * Get Recording custom language. This parameter is valid only when recordlayout=9. 
+     * @return RecordLang Recording custom language. This parameter is valid only when recordlayout=9.
      */
     public String getRecordLang() {
         return this.RecordLang;
     }
 
     /**
-     * Set 
-     * @param RecordLang 
+     * Set Recording custom language. This parameter is valid only when recordlayout=9.
+     * @param RecordLang Recording custom language. This parameter is valid only when recordlayout=9.
      */
     public void setRecordLang(String RecordLang) {
         this.RecordLang = RecordLang;

@@ -261,14 +261,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String HostID;
 
     /**
-    * 
+    * Namespace
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 
+    * WorkloadType
     */
     @SerializedName("WorkloadType")
     @Expose
@@ -875,32 +875,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Namespace 
+     * Get Namespace 
+     * @return Namespace Namespace
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 
-     * @param Namespace 
+     * Set Namespace
+     * @param Namespace Namespace
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get  
-     * @return WorkloadType 
+     * Get WorkloadType 
+     * @return WorkloadType WorkloadType
      */
     public String getWorkloadType() {
         return this.WorkloadType;
     }
 
     /**
-     * Set 
-     * @param WorkloadType 
+     * Set WorkloadType
+     * @param WorkloadType WorkloadType
      */
     public void setWorkloadType(String WorkloadType) {
         this.WorkloadType = WorkloadType;

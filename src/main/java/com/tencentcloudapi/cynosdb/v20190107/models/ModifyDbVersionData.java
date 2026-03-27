@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyDbVersionData extends AbstractModel {
 
     /**
-    * 
+    * pre-modification version
     */
     @SerializedName("OldVersion")
     @Expose
     private String OldVersion;
 
     /**
-    * 
+    * Post-modification Version
     */
     @SerializedName("NewVersion")
     @Expose
     private String NewVersion;
 
     /**
-    * 
+    * Upgrade Method
     */
     @SerializedName("UpgradeType")
     @Expose
     private String UpgradeType;
 
     /**
-     * Get  
-     * @return OldVersion 
+     * Get pre-modification version 
+     * @return OldVersion pre-modification version
      */
     public String getOldVersion() {
         return this.OldVersion;
     }
 
     /**
-     * Set 
-     * @param OldVersion 
+     * Set pre-modification version
+     * @param OldVersion pre-modification version
      */
     public void setOldVersion(String OldVersion) {
         this.OldVersion = OldVersion;
     }
 
     /**
-     * Get  
-     * @return NewVersion 
+     * Get Post-modification Version 
+     * @return NewVersion Post-modification Version
      */
     public String getNewVersion() {
         return this.NewVersion;
     }
 
     /**
-     * Set 
-     * @param NewVersion 
+     * Set Post-modification Version
+     * @param NewVersion Post-modification Version
      */
     public void setNewVersion(String NewVersion) {
         this.NewVersion = NewVersion;
     }
 
     /**
-     * Get  
-     * @return UpgradeType 
+     * Get Upgrade Method 
+     * @return UpgradeType Upgrade Method
      */
     public String getUpgradeType() {
         return this.UpgradeType;
     }
 
     /**
-     * Set 
-     * @param UpgradeType 
+     * Set Upgrade Method
+     * @param UpgradeType Upgrade Method
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;

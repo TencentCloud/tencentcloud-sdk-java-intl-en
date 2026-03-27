@@ -24,253 +24,258 @@ import java.util.HashMap;
 public class SpecSellStatus extends AbstractModel {
 
     /**
-    * 
+    * Sellable Specification Unique ID
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * 
+    * Instance Type ID
     */
     @SerializedName("SpecId")
     @Expose
     private Long SpecId;
 
     /**
-    * 
+    * Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
     */
     @SerializedName("PayModeStatus")
     @Expose
     private String PayModeStatus;
 
     /**
-    * 
+    * Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * 
+    * Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
     */
     @SerializedName("MultiZonesStatus")
     @Expose
     private String MultiZonesStatus;
 
     /**
-    * 
+    * Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
     */
     @SerializedName("Architecture")
     @Expose
     private String Architecture;
 
     /**
-    * 
+    * Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
     */
     @SerializedName("Style")
     @Expose
     private String Style;
 
     /**
-    * 
+    * Database Version Information
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 
+    * Sellable Status Set Per AZ
     */
     @SerializedName("ZoneStatusSet")
     @Expose
     private ZoneStatus [] ZoneStatusSet;
 
     /**
-    * 
+    * Reference price for specifications. The actual price is subject to the quotation API.
     */
     @SerializedName("Price")
     @Expose
     private Price Price;
 
     /**
-    * 
+    * Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get  
-     * @return Id 
+     * Get Sellable Specification Unique ID 
+     * @return Id Sellable Specification Unique ID
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set Sellable Specification Unique ID
+     * @param Id Sellable Specification Unique ID
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get  
-     * @return SpecId 
+     * Get Instance Type ID 
+     * @return SpecId Instance Type ID
      */
     public Long getSpecId() {
         return this.SpecId;
     }
 
     /**
-     * Set 
-     * @param SpecId 
+     * Set Instance Type ID
+     * @param SpecId Instance Type ID
      */
     public void setSpecId(Long SpecId) {
         this.SpecId = SpecId;
     }
 
     /**
-     * Get  
-     * @return PayModeStatus 
+     * Get Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all. 
+     * @return PayModeStatus Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
      */
     public String getPayModeStatus() {
         return this.PayModeStatus;
     }
 
     /**
-     * Set 
-     * @param PayModeStatus 
+     * Set Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
+     * @param PayModeStatus Supported payment modes for this specification: POST - only supports pay-as-you-go, PRE - only supports yearly/monthly subscription, ALL - supports all.
      */
     public void setPayModeStatus(String PayModeStatus) {
         this.PayModeStatus = PayModeStatus;
     }
 
     /**
-     * Get  
-     * @return InstanceType 
+     * Get Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node. 
+     * @return InstanceType Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set 
-     * @param InstanceType 
+     * Set Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
+     * @param InstanceType Product type. Types of instances for purchase: HA - Local Disk High Availability (including dual-node high availability, alwaysOn cluster), RO - Local Disk Read-Only Replica, SI - Cloud Disk Edition Single Node, BI - Business Intelligence Service, cvmHA - Cloud Disk Edition High Availability, cvmRO - Cloud Disk Edition Read-Only Replica, MultiHA - Multi-node, cvmMultiHA - Cloud Disk Multi-node.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get  
-     * @return MultiZonesStatus 
+     * Get Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all. 
+     * @return MultiZonesStatus Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
      */
     public String getMultiZonesStatus() {
         return this.MultiZonesStatus;
     }
 
     /**
-     * Set 
-     * @param MultiZonesStatus 
+     * Set Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
+     * @param MultiZonesStatus Whether this specification supports cross-AZ deployment: MultiZones - only supports cross-AZ, SameZones - only supports same-AZ, ALL - supports all.
      */
     public void setMultiZonesStatus(String MultiZonesStatus) {
         this.MultiZonesStatus = MultiZonesStatus;
     }
 
     /**
-     * Get  
-     * @return Architecture 
+     * Get Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE 
+     * @return Architecture Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
      */
     public String getArchitecture() {
         return this.Architecture;
     }
 
     /**
-     * Set 
-     * @param Architecture 
+     * Set Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
+     * @param Architecture Architecture Type, SINGLE - single node, DOUBLE - dual node, TRIPLE - three-node, MULTI - multi-node
+Example value: SINGLE
      */
     public void setArchitecture(String Architecture) {
         this.Architecture = Architecture;
     }
 
     /**
-     * Get  
-     * @return Style 
+     * Get Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared 
+     * @return Style Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
      */
     public String getStyle() {
         return this.Style;
     }
 
     /**
-     * Set 
-     * @param Style 
+     * Set Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
+     * @param Style Type identifier, EXCLUSIVE - Dedicated, SHARED - Shared
      */
     public void setStyle(String Style) {
         this.Style = Style;
     }
 
     /**
-     * Get  
-     * @return Version 
+     * Get Database Version Information 
+     * @return Version Database Version Information
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 
-     * @param Version 
+     * Set Database Version Information
+     * @param Version Database Version Information
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get  
-     * @return ZoneStatusSet 
+     * Get Sellable Status Set Per AZ 
+     * @return ZoneStatusSet Sellable Status Set Per AZ
      */
     public ZoneStatus [] getZoneStatusSet() {
         return this.ZoneStatusSet;
     }
 
     /**
-     * Set 
-     * @param ZoneStatusSet 
+     * Set Sellable Status Set Per AZ
+     * @param ZoneStatusSet Sellable Status Set Per AZ
      */
     public void setZoneStatusSet(ZoneStatus [] ZoneStatusSet) {
         this.ZoneStatusSet = ZoneStatusSet;
     }
 
     /**
-     * Get  
-     * @return Price 
+     * Get Reference price for specifications. The actual price is subject to the quotation API. 
+     * @return Price Reference price for specifications. The actual price is subject to the quotation API.
      */
     public Price getPrice() {
         return this.Price;
     }
 
     /**
-     * Set 
-     * @param Price 
+     * Set Reference price for specifications. The actual price is subject to the quotation API.
+     * @param Price Reference price for specifications. The actual price is subject to the quotation API.
      */
     public void setPrice(Price Price) {
         this.Price = Price;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled. 
+     * @return Status Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
+     * @param Status Specification Sale Status: 1 - Normal, 2 - Sale disabled but upgradable, 3 - Sale completely disabled.
      */
     public void setStatus(Long Status) {
         this.Status = Status;

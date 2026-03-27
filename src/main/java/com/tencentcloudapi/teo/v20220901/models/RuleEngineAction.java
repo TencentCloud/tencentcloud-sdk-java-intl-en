@@ -195,7 +195,7 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     private ForceRedirectHTTPSParameters ForceRedirectHTTPSParameters;
 
     /**
-    * 
+    * Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
     */
     @SerializedName("OriginPullProtocolParameters")
     @Expose
@@ -834,16 +834,16 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get  
-     * @return OriginPullProtocolParameters 
+     * Get Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required. 
+     * @return OriginPullProtocolParameters Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
      */
     public OriginPullProtocolParameters getOriginPullProtocolParameters() {
         return this.OriginPullProtocolParameters;
     }
 
     /**
-     * Set 
-     * @param OriginPullProtocolParameters 
+     * Set Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
+     * @param OriginPullProtocolParameters Origin HTTPS configuration parameters. When Name is set to OriginPullProtocol, this parameter is required.
      */
     public void setOriginPullProtocolParameters(OriginPullProtocolParameters OriginPullProtocolParameters) {
         this.OriginPullProtocolParameters = OriginPullProtocolParameters;

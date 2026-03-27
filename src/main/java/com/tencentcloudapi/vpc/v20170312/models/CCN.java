@@ -119,7 +119,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Boolean RouteTableFlag;
 
     /**
-    * 
+    * `true`: instance is blocked, traffic is blocked, `false`: unblocked.
     */
     @SerializedName("IsSecurityLock")
     @Expose
@@ -358,16 +358,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return IsSecurityLock 
+     * Get `true`: instance is blocked, traffic is blocked, `false`: unblocked. 
+     * @return IsSecurityLock `true`: instance is blocked, traffic is blocked, `false`: unblocked.
      */
     public Boolean getIsSecurityLock() {
         return this.IsSecurityLock;
     }
 
     /**
-     * Set 
-     * @param IsSecurityLock 
+     * Set `true`: instance is blocked, traffic is blocked, `false`: unblocked.
+     * @param IsSecurityLock `true`: instance is blocked, traffic is blocked, `false`: unblocked.
      */
     public void setIsSecurityLock(Boolean IsSecurityLock) {
         this.IsSecurityLock = IsSecurityLock;

@@ -66,14 +66,14 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     private String BackupType;
 
     /**
-    * 
+    * Logical Backup Configuration
     */
     @SerializedName("LogicBackupConfig")
     @Expose
     private LogicBackupConfigInfo LogicBackupConfig;
 
     /**
-    * 
+    * Whether to delete the automatic logical backup
     */
     @SerializedName("DeleteAutoLogicBackup")
     @Expose
@@ -176,32 +176,32 @@ public class ModifyBackupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return LogicBackupConfig 
+     * Get Logical Backup Configuration 
+     * @return LogicBackupConfig Logical Backup Configuration
      */
     public LogicBackupConfigInfo getLogicBackupConfig() {
         return this.LogicBackupConfig;
     }
 
     /**
-     * Set 
-     * @param LogicBackupConfig 
+     * Set Logical Backup Configuration
+     * @param LogicBackupConfig Logical Backup Configuration
      */
     public void setLogicBackupConfig(LogicBackupConfigInfo LogicBackupConfig) {
         this.LogicBackupConfig = LogicBackupConfig;
     }
 
     /**
-     * Get  
-     * @return DeleteAutoLogicBackup 
+     * Get Whether to delete the automatic logical backup 
+     * @return DeleteAutoLogicBackup Whether to delete the automatic logical backup
      */
     public Boolean getDeleteAutoLogicBackup() {
         return this.DeleteAutoLogicBackup;
     }
 
     /**
-     * Set 
-     * @param DeleteAutoLogicBackup 
+     * Set Whether to delete the automatic logical backup
+     * @param DeleteAutoLogicBackup Whether to delete the automatic logical backup
      */
     public void setDeleteAutoLogicBackup(Boolean DeleteAutoLogicBackup) {
         this.DeleteAutoLogicBackup = DeleteAutoLogicBackup;

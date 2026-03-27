@@ -34,7 +34,8 @@ public class LiveStreamAiAnalysisResultItem extends AbstractModel {
     private String Type;
 
     /**
-    * 
+    * Segmentation results are valid when Type is
+SegmentRecognition.
     */
     @SerializedName("SegmentResultSet")
     @Expose
@@ -84,16 +85,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return SegmentResultSet 
+     * Get Segmentation results are valid when Type is
+SegmentRecognition. 
+     * @return SegmentResultSet Segmentation results are valid when Type is
+SegmentRecognition.
      */
     public SegmentRecognitionItem [] getSegmentResultSet() {
         return this.SegmentResultSet;
     }
 
     /**
-     * Set 
-     * @param SegmentResultSet 
+     * Set Segmentation results are valid when Type is
+SegmentRecognition.
+     * @param SegmentResultSet Segmentation results are valid when Type is
+SegmentRecognition.
      */
     public void setSegmentResultSet(SegmentRecognitionItem [] SegmentResultSet) {
         this.SegmentResultSet = SegmentResultSet;

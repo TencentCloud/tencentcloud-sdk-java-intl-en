@@ -66,14 +66,14 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     private String [] AppBizIds;
 
     /**
-    * 
+    * Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
     */
     @SerializedName("AppType")
     @Expose
     private String AppType;
 
     /**
-    * 
+    * Filter Sub-scenarios
     */
     @SerializedName("SubScenes")
     @Expose
@@ -176,32 +176,32 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AppType 
+     * Get Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types. 
+     * @return AppType Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 
-     * @param AppType 
+     * Set Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+     * @param AppType Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;
     }
 
     /**
-     * Get  
-     * @return SubScenes 
+     * Get Filter Sub-scenarios 
+     * @return SubScenes Filter Sub-scenarios
      */
     public String [] getSubScenes() {
         return this.SubScenes;
     }
 
     /**
-     * Set 
-     * @param SubScenes 
+     * Set Filter Sub-scenarios
+     * @param SubScenes Filter Sub-scenarios
      */
     public void setSubScenes(String [] SubScenes) {
         this.SubScenes = SubScenes;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CatalogPermission extends AbstractModel {
 
     /**
-    * 
+    * catalog Name
     */
     @SerializedName("CatalogName")
     @Expose
     private String CatalogName;
 
     /**
-    * 
+    * catalog permission
     */
     @SerializedName("Permissions")
     @Expose
     private String [] Permissions;
 
     /**
-     * Get  
-     * @return CatalogName 
+     * Get catalog Name 
+     * @return CatalogName catalog Name
      */
     public String getCatalogName() {
         return this.CatalogName;
     }
 
     /**
-     * Set 
-     * @param CatalogName 
+     * Set catalog Name
+     * @param CatalogName catalog Name
      */
     public void setCatalogName(String CatalogName) {
         this.CatalogName = CatalogName;
     }
 
     /**
-     * Get  
-     * @return Permissions 
+     * Get catalog permission 
+     * @return Permissions catalog permission
      */
     public String [] getPermissions() {
         return this.Permissions;
     }
 
     /**
-     * Set 
-     * @param Permissions 
+     * Set catalog permission
+     * @param Permissions catalog permission
      */
     public void setPermissions(String [] Permissions) {
         this.Permissions = Permissions;

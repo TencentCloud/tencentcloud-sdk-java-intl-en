@@ -58,7 +58,7 @@ If this parameter is left empty, edge server information will be returned by def
     private Boolean Segment;
 
     /**
-    * 
+    * whether to query node IPV6 information.
     */
     @SerializedName("ShowIpv6")
     @Expose
@@ -160,16 +160,16 @@ If this parameter is left empty, edge server information will be returned by def
     }
 
     /**
-     * Get  
-     * @return ShowIpv6 
+     * Get whether to query node IPV6 information. 
+     * @return ShowIpv6 whether to query node IPV6 information.
      */
     public Boolean getShowIpv6() {
         return this.ShowIpv6;
     }
 
     /**
-     * Set 
-     * @param ShowIpv6 
+     * Set whether to query node IPV6 information.
+     * @param ShowIpv6 whether to query node IPV6 information.
      */
     public void setShowIpv6(Boolean ShowIpv6) {
         this.ShowIpv6 = ShowIpv6;

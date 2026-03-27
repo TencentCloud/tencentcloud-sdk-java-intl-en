@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeInputRTMPPullSettings extends AbstractModel {
 
     /**
-    * 
+    * The address information of the RTMP origin server.
     */
     @SerializedName("SourceAddresses")
     @Expose
     private DescribeRTMPPullSourceAddress [] SourceAddresses;
 
     /**
-     * Get  
-     * @return SourceAddresses 
+     * Get The address information of the RTMP origin server. 
+     * @return SourceAddresses The address information of the RTMP origin server.
      */
     public DescribeRTMPPullSourceAddress [] getSourceAddresses() {
         return this.SourceAddresses;
     }
 
     /**
-     * Set 
-     * @param SourceAddresses 
+     * Set The address information of the RTMP origin server.
+     * @param SourceAddresses The address information of the RTMP origin server.
      */
     public void setSourceAddresses(DescribeRTMPPullSourceAddress [] SourceAddresses) {
         this.SourceAddresses = SourceAddresses;

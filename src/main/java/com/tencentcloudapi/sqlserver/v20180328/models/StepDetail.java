@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class StepDetail extends AbstractModel {
 
     /**
-    * 
+    * Detailed Steps Return Information
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-    * 
+    * Current Step Status, 0 Success, -2 Not Started
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 
+    * Step Name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get  
-     * @return Msg 
+     * Get Detailed Steps Return Information 
+     * @return Msg Detailed Steps Return Information
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 
-     * @param Msg 
+     * Set Detailed Steps Return Information
+     * @param Msg Detailed Steps Return Information
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Current Step Status, 0 Success, -2 Not Started 
+     * @return Status Current Step Status, 0 Success, -2 Not Started
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Current Step Status, 0 Success, -2 Not Started
+     * @param Status Current Step Status, 0 Success, -2 Not Started
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Step Name 
+     * @return Name Step Name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Step Name
+     * @param Name Step Name
      */
     public void setName(String Name) {
         this.Name = Name;

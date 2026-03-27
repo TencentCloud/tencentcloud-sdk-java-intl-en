@@ -31,7 +31,7 @@ public class AddLabelRequest extends AbstractModel {
     private Long LabelId;
 
     /**
-    * 
+    * tdid
     */
     @SerializedName("Did")
     @Expose
@@ -54,16 +54,16 @@ public class AddLabelRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Did 
+     * Get tdid 
+     * @return Did tdid
      */
     public String getDid() {
         return this.Did;
     }
 
     /**
-     * Set 
-     * @param Did 
+     * Set tdid
+     * @param Did tdid
      */
     public void setDid(String Did) {
         this.Did = Did;

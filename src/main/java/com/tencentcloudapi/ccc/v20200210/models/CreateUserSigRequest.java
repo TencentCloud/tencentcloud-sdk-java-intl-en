@@ -38,18 +38,18 @@ public class CreateUserSigRequest extends AbstractModel {
     private String Uid;
 
     /**
-    * Valid period, in seconds, no more than 1 hr.
-    */
-    @SerializedName("ExpiredTime")
-    @Expose
-    private Long ExpiredTime;
-
-    /**
     * Signature data of the user. required field. standard JSON format.
     */
     @SerializedName("ClientData")
     @Expose
     private String ClientData;
+
+    /**
+    * Valid period, in seconds, no more than 1 hr.
+    */
+    @SerializedName("ExpiredTime")
+    @Expose
+    private Long ExpiredTime;
 
     /**
      * Get App ID (required). can be used to view https://console.cloud.tencent.com/ccc. 
@@ -84,22 +84,6 @@ public class CreateUserSigRequest extends AbstractModel {
     }
 
     /**
-     * Get Valid period, in seconds, no more than 1 hr. 
-     * @return ExpiredTime Valid period, in seconds, no more than 1 hr.
-     */
-    public Long getExpiredTime() {
-        return this.ExpiredTime;
-    }
-
-    /**
-     * Set Valid period, in seconds, no more than 1 hr.
-     * @param ExpiredTime Valid period, in seconds, no more than 1 hr.
-     */
-    public void setExpiredTime(Long ExpiredTime) {
-        this.ExpiredTime = ExpiredTime;
-    }
-
-    /**
      * Get Signature data of the user. required field. standard JSON format. 
      * @return ClientData Signature data of the user. required field. standard JSON format.
      */
@@ -113,6 +97,22 @@ public class CreateUserSigRequest extends AbstractModel {
      */
     public void setClientData(String ClientData) {
         this.ClientData = ClientData;
+    }
+
+    /**
+     * Get Valid period, in seconds, no more than 1 hr. 
+     * @return ExpiredTime Valid period, in seconds, no more than 1 hr.
+     */
+    public Long getExpiredTime() {
+        return this.ExpiredTime;
+    }
+
+    /**
+     * Set Valid period, in seconds, no more than 1 hr.
+     * @param ExpiredTime Valid period, in seconds, no more than 1 hr.
+     */
+    public void setExpiredTime(Long ExpiredTime) {
+        this.ExpiredTime = ExpiredTime;
     }
 
     public CreateUserSigRequest() {
@@ -129,11 +129,11 @@ public class CreateUserSigRequest extends AbstractModel {
         if (source.Uid != null) {
             this.Uid = new String(source.Uid);
         }
-        if (source.ExpiredTime != null) {
-            this.ExpiredTime = new Long(source.ExpiredTime);
-        }
         if (source.ClientData != null) {
             this.ClientData = new String(source.ClientData);
+        }
+        if (source.ExpiredTime != null) {
+            this.ExpiredTime = new Long(source.ExpiredTime);
         }
     }
 
@@ -144,8 +144,8 @@ public class CreateUserSigRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
         this.setParamSimple(map, prefix + "Uid", this.Uid);
-        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
         this.setParamSimple(map, prefix + "ClientData", this.ClientData);
+        this.setParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
 
     }
 }

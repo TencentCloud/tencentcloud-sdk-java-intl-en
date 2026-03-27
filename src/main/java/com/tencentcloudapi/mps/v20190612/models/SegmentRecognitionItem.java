@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class SegmentRecognitionItem extends AbstractModel {
 
     /**
-    * 
+    * Confidence.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Segment start time offset.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * 
+    * Segment end time offset.
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -101,48 +101,48 @@ public class SegmentRecognitionItem extends AbstractModel {
     private String PersonId;
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence. 
+     * @return Confidence Confidence.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence.
+     * @param Confidence Confidence.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return StartTimeOffset 
+     * Get Segment start time offset. 
+     * @return StartTimeOffset Segment start time offset.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set 
-     * @param StartTimeOffset 
+     * Set Segment start time offset.
+     * @param StartTimeOffset Segment start time offset.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get  
-     * @return EndTimeOffset 
+     * Get Segment end time offset. 
+     * @return EndTimeOffset Segment end time offset.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set 
-     * @param EndTimeOffset 
+     * Set Segment end time offset.
+     * @param EndTimeOffset Segment end time offset.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class IntentAchievement extends AbstractModel {
 
     /**
-    * 
+    * Intent Implementation Approach, qa: Q&A response, doc: document-based response, workflow: workflow-based response, llm: LLM response
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Intent Implementation Approach Description
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-     * Get  
-     * @return Name 
+     * Get Intent Implementation Approach, qa: Q&A response, doc: document-based response, workflow: workflow-based response, llm: LLM response 
+     * @return Name Intent Implementation Approach, qa: Q&A response, doc: document-based response, workflow: workflow-based response, llm: LLM response
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Intent Implementation Approach, qa: Q&A response, doc: document-based response, workflow: workflow-based response, llm: LLM response
+     * @param Name Intent Implementation Approach, qa: Q&A response, doc: document-based response, workflow: workflow-based response, llm: LLM response
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Desc 
+     * Get Intent Implementation Approach Description 
+     * @return Desc Intent Implementation Approach Description
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set 
-     * @param Desc 
+     * Set Intent Implementation Approach Description
+     * @param Desc Intent Implementation Approach Description
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;

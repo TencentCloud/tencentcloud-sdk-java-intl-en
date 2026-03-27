@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class VoiceConfig extends AbstractModel {
 
     /**
-    * 
+    * Public Cloud Timbre ID
     */
     @SerializedName("VoiceType")
     @Expose
     private Long VoiceType;
 
     /**
-    * 
+    * Timbre Key
     */
     @SerializedName("TimbreKey")
     @Expose
     private String TimbreKey;
 
     /**
-    * 
+    * Timbre Name
     */
     @SerializedName("VoiceName")
     @Expose
     private String VoiceName;
 
     /**
-     * Get  
-     * @return VoiceType 
+     * Get Public Cloud Timbre ID 
+     * @return VoiceType Public Cloud Timbre ID
      */
     public Long getVoiceType() {
         return this.VoiceType;
     }
 
     /**
-     * Set 
-     * @param VoiceType 
+     * Set Public Cloud Timbre ID
+     * @param VoiceType Public Cloud Timbre ID
      */
     public void setVoiceType(Long VoiceType) {
         this.VoiceType = VoiceType;
     }
 
     /**
-     * Get  
-     * @return TimbreKey 
+     * Get Timbre Key 
+     * @return TimbreKey Timbre Key
      */
     public String getTimbreKey() {
         return this.TimbreKey;
     }
 
     /**
-     * Set 
-     * @param TimbreKey 
+     * Set Timbre Key
+     * @param TimbreKey Timbre Key
      */
     public void setTimbreKey(String TimbreKey) {
         this.TimbreKey = TimbreKey;
     }
 
     /**
-     * Get  
-     * @return VoiceName 
+     * Get Timbre Name 
+     * @return VoiceName Timbre Name
      */
     public String getVoiceName() {
         return this.VoiceName;
     }
 
     /**
-     * Set 
-     * @param VoiceName 
+     * Set Timbre Name
+     * @param VoiceName Timbre Name
      */
     public void setVoiceName(String VoiceName) {
         this.VoiceName = VoiceName;

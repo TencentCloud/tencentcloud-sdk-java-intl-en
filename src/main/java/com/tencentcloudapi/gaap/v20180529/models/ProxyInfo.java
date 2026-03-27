@@ -271,7 +271,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     private String BanStatus;
 
     /**
-    * 
+    * IP List
     */
     @SerializedName("IPList")
     @Expose
@@ -931,16 +931,16 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return IPList 
+     * Get IP List 
+     * @return IPList IP List
      */
     public IPDetail [] getIPList() {
         return this.IPList;
     }
 
     /**
-     * Set 
-     * @param IPList 
+     * Set IP List
+     * @param IPList IP List
      */
     public void setIPList(IPDetail [] IPList) {
         this.IPList = IPList;

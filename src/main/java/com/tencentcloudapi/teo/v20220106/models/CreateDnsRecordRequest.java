@@ -59,7 +59,7 @@ public class CreateDnsRecordRequest extends AbstractModel {
     private String Mode;
 
     /**
-    * 
+    * Time to Live Value
     */
     @SerializedName("Ttl")
     @Expose
@@ -153,16 +153,16 @@ public class CreateDnsRecordRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Ttl 
+     * Get Time to Live Value 
+     * @return Ttl Time to Live Value
      */
     public Long getTtl() {
         return this.Ttl;
     }
 
     /**
-     * Set 
-     * @param Ttl 
+     * Set Time to Live Value
+     * @param Ttl Time to Live Value
      */
     public void setTtl(Long Ttl) {
         this.Ttl = Ttl;

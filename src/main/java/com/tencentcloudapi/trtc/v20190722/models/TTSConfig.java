@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class TTSConfig extends AbstractModel {
 
     /**
-    * 
+    * Voice ID
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-     * Get  
-     * @return VoiceId 
+     * Get Voice ID 
+     * @return VoiceId Voice ID
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set 
-     * @param VoiceId 
+     * Set Voice ID
+     * @param VoiceId Voice ID
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;

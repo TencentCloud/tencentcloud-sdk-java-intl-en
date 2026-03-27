@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateClustersData extends AbstractModel {
 
     /**
-    * 
+    * Instance CPU
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 
+    * Instance Memory
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 
+    * Cluster storage limit
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get Instance CPU 
+     * @return Cpu Instance CPU
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set Instance CPU
+     * @param Cpu Instance CPU
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get  
-     * @return Memory 
+     * Get Instance Memory 
+     * @return Memory Instance Memory
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 
-     * @param Memory 
+     * Set Instance Memory
+     * @param Memory Instance Memory
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  
-     * @return StorageLimit 
+     * Get Cluster storage limit 
+     * @return StorageLimit Cluster storage limit
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set 
-     * @param StorageLimit 
+     * Set Cluster storage limit
+     * @param StorageLimit Cluster storage limit
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;

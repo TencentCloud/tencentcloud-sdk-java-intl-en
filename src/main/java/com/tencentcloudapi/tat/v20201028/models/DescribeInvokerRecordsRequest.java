@@ -26,7 +26,7 @@ public class DescribeInvokerRecordsRequest extends AbstractModel {
     /**
     * Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
     */
     @SerializedName("InvokerIds")
     @Expose
@@ -49,10 +49,10 @@ Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/617
     /**
      * Get Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution. 
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution. 
      * @return InvokerIds Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public String [] getInvokerIds() {
         return this.InvokerIds;
@@ -61,10 +61,10 @@ Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/617
     /**
      * Set Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      * @param InvokerIds Executor ID list. the list has a cap of 100.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public void setInvokerIds(String [] InvokerIds) {
         this.InvokerIds = InvokerIds;

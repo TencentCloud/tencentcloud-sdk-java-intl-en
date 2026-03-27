@@ -105,9 +105,9 @@ public class CccClient extends AbstractClient{
     }
 
     /**
-     *This API is used to initiate outbound calls using an AI model, limited to owned phone numbers only. Currently, a limited-time free trial of Advanced Agents is available.
+     *Used to create one-time Intelligent Agent outbound calls. You can create a voice Intelligent Agent in the management console - Intelligent Agent Management and perform dialogue process configuration (https://www.tencentcloud.comom/document/product/679/119796?from_cn_redirect=1). This API is used to initiate a single outbound call task with a configured Intelligent Agent. To create batch Intelligent Agent outbound call tasks, refer to the documentation for creating automatic outbound call tasks (https://www.tencentcloud.comom/document/product/679/69194?from_cn_redirect=1).
 
-Before initiating a call, please ensure your AI model is compatible with OpenAI, Azure, or Minimax protocols, and visit the model provider's website to obtain relevant authentication information. For detailed feature descriptions, please refer to the documentation [Tencent Cloud Contact Center AI Call Platform](https://www.tencentcloud.com/document/product/1229/70681).
+The feature requires purchase of the Intelligent Agent call package and is only available for own telephone number. For details, refer to the [Intelligent Agent Call Purchase Guide](https://www.tencentcloud.comom/document/product/679/125953?from_cn_redirect=1).
      * @param req CreateAIAgentCallRequest
      * @return CreateAIAgentCallResponse
      * @throws TencentCloudSDKException
@@ -153,7 +153,9 @@ The feature requires purchase of the Intelligent Agent call package and is only 
     }
 
     /**
-     *This API is used to create the automatic outbound call task.
+     *This API is used to create bulk automatic outbound calls. The system will automatically initiate outbound calls to the designated called number list based on task configuration. This API can call the configured Intelligent Agent to perform batch outbound call tasks. You can create a voice Intelligent Agent in the management console-Intelligent Agent Management and configure the dialogue process (https://www.tencentcloud.comom/document/product/679/119796?from_cn_redirect=1). To create a single Intelligent Agent outbound call task, refer to the documentation (https://www.tencentcloud.comom/document/product/679/115681?from_cn_redirect=1).
+
+The feature requires purchase of the Intelligent Agent call package and is only available for own telephone number. For details, refer to the [Intelligent Agent Call Purchase Guide](https://www.tencentcloud.comom/document/product/679/125953?from_cn_redirect=1).
      * @param req CreateAutoCalloutTaskRequest
      * @return CreateAutoCalloutTaskResponse
      * @throws TencentCloudSDKException
@@ -311,7 +313,7 @@ This API is used to make calls. Currently, the agent side can only call the user
     }
 
     /**
-     *This API is used to get the list of Intelligent Agents.
+     *This API is used to query the information list of configured Intelligent Agents under a specified instance (SdkAppId) by paging, including basic information such as Intelligent Agent ID and name.
      * @param req DescribeAIAgentInfoListRequest
      * @return DescribeAIAgentInfoListResponse
      * @throws TencentCloudSDKException
@@ -333,7 +335,7 @@ This API is used to make calls. Currently, the agent side can only call the user
     }
 
     /**
-     *Obtain AI call content extraction result
+     *This API is used to query specified session's post-call Tag results by Session ID after the Intelligent Agent call session ends. Related post-call Tags need to be configured in advance in the management console. For details, please refer to post-call Tags (https://www.tencentcloud.comom/document/product/679/119800?from_cn_redirect=1).
      * @param req DescribeAICallExtractResultRequest
      * @return DescribeAICallExtractResultResponse
      * @throws TencentCloudSDKException
@@ -344,7 +346,11 @@ This API is used to make calls. Currently, the agent side can only call the user
     }
 
     /**
-     *This API is used to obtain AI latency information.
+     *Call this API to query the processing latency detail and stats of specified Session by Session ID within a specific time period. The latency info includes:.
+-End-to-end (ETE) delay: Statistics of the overall duration from user voice input to AI returning a complete response.
+-ASR latency: statistics of the processing time consumption required for voice input to be recognized as text.
+-LLM latency: Statistics of inference latency for AI model to generate text content.
+-Text To Speech (TTS) latency: Statistics of text conversion to speech audio synthesis duration.
      * @param req DescribeAILatencyRequest
      * @return DescribeAILatencyResponse
      * @throws TencentCloudSDKException
@@ -366,7 +372,8 @@ This API is used to make calls. Currently, the agent side can only call the user
     }
 
     /**
-     *This API is used to query automatic outbound call task details.
+     *This API is used to query detailed information of an automatic outbound call task by TaskId, including basic configuration, start and end time, name list, execution status, and call status.
+This API is usually used together with Create Bulk Automatic Outbound Call Task (https://www.tencentcloud.comom/document/product/679/69194?from_cn_redirect=1) to check whether the task configuration takes effect, the current task status, and real-time progress during execution once created.
      * @param req DescribeAutoCalloutTaskRequest
      * @return DescribeAutoCalloutTaskResponse
      * @throws TencentCloudSDKException
@@ -509,7 +516,7 @@ This API is used to make calls. Currently, the agent side can only call the user
     }
 
     /**
-     *This API is used to query call detail.
+     *This API is used to query call details for a single call by session id and timestamp after call ends, including caller and contact information, voice recording.
      * @param req DescribeSessionDetailRequest
      * @return DescribeSessionDetailResponse
      * @throws TencentCloudSDKException
@@ -685,6 +692,18 @@ This API is used to make calls. Currently, the agent side can only call the user
     }
 
     /**
+     *This API is used to suspend an ongoing automatic outbound call task by TaskId. After calling this API, the task will be temporarily interrupted and no longer initiate new outbound call requests; initiated calls are not affected.
+A paused task can continue execution via the [Restore Suspended Automatic Outbound Call Task](https://www.tencentcloud.comom/document/product/679/125356?from_cn_redirect=1) API. If needed, refer to [Stop Automatic Outbound Call Task](https://www.tencentcloud.comom/document/product/679/69192?from_cn_redirect=1) to permanently terminate the task.
+     * @param req PauseAutoCalloutTaskRequest
+     * @return PauseAutoCalloutTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public PauseAutoCalloutTaskResponse PauseAutoCalloutTask(PauseAutoCalloutTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PauseAutoCalloutTask", PauseAutoCalloutTaskResponse.class);
+    }
+
+    /**
      *This API is used to pause the predictive outbound call task.
      * @param req PausePredictiveDialingCampaignRequest
      * @return PausePredictiveDialingCampaignResponse
@@ -693,6 +712,17 @@ This API is used to make calls. Currently, the agent side can only call the user
     public PausePredictiveDialingCampaignResponse PausePredictiveDialingCampaign(PausePredictiveDialingCampaignRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "PausePredictiveDialingCampaign", PausePredictiveDialingCampaignResponse.class);
+    }
+
+    /**
+     *This API is used to perform playback for a session in a call with an agent.
+     * @param req PlaySoundCallRequest
+     * @return PlaySoundCallResponse
+     * @throws TencentCloudSDKException
+     */
+    public PlaySoundCallResponse PlaySoundCall(PlaySoundCallRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PlaySoundCall", PlaySoundCallResponse.class);
     }
 
     /**
@@ -715,6 +745,17 @@ This API is used to make calls. Currently, the agent side can only call the user
     public RestoreMemberOnlineResponse RestoreMemberOnline(RestoreMemberOnlineRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RestoreMemberOnline", RestoreMemberOnlineResponse.class);
+    }
+
+    /**
+     *This API is used to restore a paused automatic outbound call task by TaskId. This API is suitable for scenarios where you need to continue execution of the remaining outbound call plan after calling Suspend Automatic Outbound Call Task. After a successful call, the task will resume from the paused state and re-initiate incomplete outbound requests.
+     * @param req ResumeAutoCalloutTaskRequest
+     * @return ResumeAutoCalloutTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResumeAutoCalloutTaskResponse ResumeAutoCalloutTask(ResumeAutoCalloutTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResumeAutoCalloutTask", ResumeAutoCalloutTaskResponse.class);
     }
 
     /**

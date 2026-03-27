@@ -31,21 +31,21 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel {
     private String [] IpList;
 
     /**
-    * 
+    * Pass id for domain-bound resources
     */
     @SerializedName("IdList")
     @Expose
     private String [] IdList;
 
     /**
-    * 
+    * region name
     */
     @SerializedName("FilterRegion")
     @Expose
     private Long FilterRegion;
 
     /**
-    * 
+    * CNAME WAF resource
     */
     @SerializedName("CnameWafIdList")
     @Expose
@@ -68,48 +68,48 @@ public class DescribeBasicDeviceStatusRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return IdList 
+     * Get Pass id for domain-bound resources 
+     * @return IdList Pass id for domain-bound resources
      */
     public String [] getIdList() {
         return this.IdList;
     }
 
     /**
-     * Set 
-     * @param IdList 
+     * Set Pass id for domain-bound resources
+     * @param IdList Pass id for domain-bound resources
      */
     public void setIdList(String [] IdList) {
         this.IdList = IdList;
     }
 
     /**
-     * Get  
-     * @return FilterRegion 
+     * Get region name 
+     * @return FilterRegion region name
      */
     public Long getFilterRegion() {
         return this.FilterRegion;
     }
 
     /**
-     * Set 
-     * @param FilterRegion 
+     * Set region name
+     * @param FilterRegion region name
      */
     public void setFilterRegion(Long FilterRegion) {
         this.FilterRegion = FilterRegion;
     }
 
     /**
-     * Get  
-     * @return CnameWafIdList 
+     * Get CNAME WAF resource 
+     * @return CnameWafIdList CNAME WAF resource
      */
     public String [] getCnameWafIdList() {
         return this.CnameWafIdList;
     }
 
     /**
-     * Set 
-     * @param CnameWafIdList 
+     * Set CNAME WAF resource
+     * @param CnameWafIdList CNAME WAF resource
      */
     public void setCnameWafIdList(String [] CnameWafIdList) {
         this.CnameWafIdList = CnameWafIdList;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTKEEdgeClusterRequest extends AbstractModel {
 
     /**
-    * 
+    * k8s version number
     */
     @SerializedName("K8SVersion")
     @Expose
@@ -129,16 +129,16 @@ public class CreateTKEEdgeClusterRequest extends AbstractModel {
     private TagSpecification TagSpecification;
 
     /**
-     * Get  
-     * @return K8SVersion 
+     * Get k8s version number 
+     * @return K8SVersion k8s version number
      */
     public String getK8SVersion() {
         return this.K8SVersion;
     }
 
     /**
-     * Set 
-     * @param K8SVersion 
+     * Set k8s version number
+     * @param K8SVersion k8s version number
      */
     public void setK8SVersion(String K8SVersion) {
         this.K8SVersion = K8SVersion;

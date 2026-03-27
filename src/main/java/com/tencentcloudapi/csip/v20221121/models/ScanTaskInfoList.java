@@ -216,7 +216,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long CWPBlProcess;
 
     /**
-    * 
+    * Exception status codes
     */
     @SerializedName("ErrorCode")
     @Expose
@@ -823,16 +823,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return ErrorCode 
+     * Get Exception status codes 
+     * @return ErrorCode Exception status codes
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set 
-     * @param ErrorCode 
+     * Set Exception status codes
+     * @param ErrorCode Exception status codes
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;

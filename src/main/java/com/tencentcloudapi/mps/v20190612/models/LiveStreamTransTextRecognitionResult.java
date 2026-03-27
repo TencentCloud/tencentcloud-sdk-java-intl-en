@@ -59,21 +59,21 @@ public class LiveStreamTransTextRecognitionResult extends AbstractModel {
     private String Trans;
 
     /**
-    * 
+    * Translation start UTC time.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * Translation end UTC time.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 
+    * Steady state marker.
     */
     @SerializedName("SteadyState")
     @Expose
@@ -168,48 +168,48 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Translation start UTC time. 
+     * @return StartTime Translation start UTC time.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Translation start UTC time.
+     * @param StartTime Translation start UTC time.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get Translation end UTC time. 
+     * @return EndTime Translation end UTC time.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set Translation end UTC time.
+     * @param EndTime Translation end UTC time.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get  
-     * @return SteadyState 
+     * Get Steady state marker. 
+     * @return SteadyState Steady state marker.
      */
     public Boolean getSteadyState() {
         return this.SteadyState;
     }
 
     /**
-     * Set 
-     * @param SteadyState 
+     * Set Steady state marker.
+     * @param SteadyState Steady state marker.
      */
     public void setSteadyState(Boolean SteadyState) {
         this.SteadyState = SteadyState;

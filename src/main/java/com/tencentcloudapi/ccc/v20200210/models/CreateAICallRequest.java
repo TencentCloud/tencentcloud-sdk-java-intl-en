@@ -110,7 +110,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 4. Tell Cindy to not eat or drink that day before the checkup. Also tell Cindy to give you a callback if there's any changes in health condition.
 5. Ask Cindy if she has any questions, and if so, answer them until there are no questions.
   - If user asks something you do not know, let them know you don't have the answer. Ask them if they have any other questions.
-  - If user do not have any questions, call function end_call to hang up.
+  - If user do not have any questions, call function call_end to hang up.
     */
     @SerializedName("SystemPrompt")
     @Expose
@@ -303,56 +303,56 @@ Currently, the supported languages are as follows. The English name of the langu
     private Long NotifyMaxCount;
 
     /**
-    * <p>Either the VoiceType field or a custom TTS is required. this uses your own custom TTS, while VoiceType provides some built-in voice types.</p>.
+    * <p>Either the VoiceType field or a custom TTS is required. this uses your own custom TTS, while VoiceType provides some built-in voice types.</p>
 <ul>
 <li>Tencent TTS<br>
-For configuration, see <a href="https://www.tencentcloud.comom/document/product/1073/92668?from_cn_redirect=1#55924b56-1a73-4663-a7a1-a8dd82d6e823" target="_blank">tencent cloud TTS documentation link</a></li>.
+For configuration, see <a href="https://www.tencentcloud.comom/document/product/1073/92668?from_cn_redirect=1#55924b56-1a73-4663-a7a1-a8dd82d6e823" target="_blank">tencent cloud TTS documentation link</a></li>
 </ul>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{ 
 "TTSType": "tencent", // String TTS type. currently supports "tencent" and "minixmax". the rest manufacturers are under support.
-  "AppId": "your application ID", // String required.
-  "SecretId": "your key ID", // String required.
-  "SecretKey": "your Key", // String required.
-  "VoiceType": 101001, // Integer  required. the voice ID, including standard timbre and premium timbre. premium timbre has higher fidelity and different pricing from standard timbre. please refer to the text to speech billing overview. for the complete supported timbre list, see the text to speech timbre list.
-  "Speed": 1.25, // Integer optional, speaking rate, value range: [-2,6], respectively represent different speaking rates: -2: 0.6x -1: 0.8x 0: 1.0x (default) 1: 1.2x 2: 1.5x 6: 2.5x. if more refined speaking rates are needed, up to 2 decimal places can be retained, such as 0.5, 1.25, or 2.81. for parameter value to actual speech Speed conversion, refer to speech Speed switch.
-  "Volume": 5, // Integer optional. specifies the Volume level. value range: [0,10], corresponding to 11 severity levels respectively. default value: 0, which represents normal Volume.
-  "PrimaryLanguage": 1, // Integer option primary language 1-chinese (default) 2-english 3-japanese.
-"FastVoiceType": "xxxx"   //  optional parameter. parameters for quick voice clone. 
-  }
+"AppId": "your application ID", // String required.
+"SecretId": "your key ID", // String required.
+"SecretKey": "your Key", // String required.
+"VoiceType": 101001, // Integer required. the voice ID, including standard timbre and premium timbre. premium timbre has higher fidelity and different pricing from standard timbre. please refer to the text to speech billing overview. for the complete supported timbre list, see the text to speech timbre list.
+ "Speed": 1.25, // Integer optional, speaking rate, value range: [-2,6], respectively represent different speaking rates: -2: 0.6x -1: 0.8x 0: 1.0x (default) 1: 1.2x 2: 1.5x 6: 2.5x. if more refined speaking rates are needed, up to 2 decimal places can be retained, such as 0.5, 1.25, or 2.81. for parameter value to actual speech Speed conversion, refer to speech Speed switch.
+ "Volume": 5, // Integer optional. specifies the Volume level. value range: [0,10], corresponding to 11 severity levels respectively. default value: 0, which represents normal Volume.
+ "PrimaryLanguage": 1, // Integer option primary language 1-chinese (default) 2-english 3-japanese.
+"FastVoiceType": "xxxx"   // optional parameter. parameters for quick voice clone. 
+ }
 </code></pre>
  </div><ul>
 <li>Minimax TTS<br>
-For configuration, refer to the <a href="https://platform.minimaxi.com/document/T2a%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. note that Minimax TTS has frequency limits. overfrequency may result in response delays. see the <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit documentation link</a>.</li>.
+For configuration, refer to the <a href="https://platform.minimaxi.com/document/T2a%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. note that Minimax TTS has frequency limits. overfrequency may result in response delays. see the <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit documentation link</a>.</li>
 </ul>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "minimax",  // String TTS type. 
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
-        &quot;Speed&quot;: 1.2
+"Model": "speech-01-turbo",
+"APIUrl": "https://api.minimax.chat/v1/t2a_v2",
+"APIKey": "eyxxxx",
+"GroupId": "181000000000000",
+"VoiceType":"female-tianmei",
+"Speed": 1.2
 }
 </code></pre>
 </div><ul>
-<li>Volcano TTS</li>.
+<li>Volcano TTS</li>
 </ul>
-<p>Configure the timbre type. see <a href="https://www.volcengine.com/docs/6561/162929" target="_blank">volcano TTS documentation link</a><br>.
+<p>Configure the timbre type. see <a href="https://www.volcengine.com/docs/6561/162929" target="_blank">volcano TTS documentation link</a><br>
 Text to speech timbre list - voice technology - volcano engine.
-Large model TTS timbre list - voice technology - volcano engine</p>.
+Large model TTS timbre list - voice technology - volcano engine</p>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "volcengine",  // required: String TTS type.
 "AppId": "xxxxxxxx",   // required: String AppId assigned by volcano engine.
 "Token": "TY9d4sQXHxxxxxxx", // required: String type, access Token for volcano engine.
-"Speed": 1.0,            // optional parameter. speaking rate, defaults to 1.0.
-"Volume": 1.0,            // optional parameter, Volume, defaults to 1.0.
+"Speed": 1.0,  // optional parameter. speaking rate, defaults to 1.0.
+"Volume": 1.0,  // optional parameter, Volume, defaults to 1.0.
 "Cluster": "volcano_tts", // optional parameter, business Cluster, is selected by default.
 "VoiceType": "zh_male_aojiaobazong_moon_bigtts" // timbre type, defaults to the TTS voice type of the large model. if using ordinary text to speech, you need to fill in the corresponding voice type. input errors in voice type can cause no sound.
 }
 </code></pre>
 </div><ul>
 <li>Azure TTS<br>
-For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services/speech-service/speech-synthesis-markup-voice" target="_blank">AzureTTS documentation link</a></li>.
+For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services/speech-service/speech-synthesis-markup-voice" target="_blank">AzureTTS documentation link</a></li>
 </ul>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "azure", // required: String TTS type.
@@ -360,13 +360,13 @@ For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services
 "Region": "chinanorth3",  // required: String the Region to subscribe to.
 "VoiceName": "zh-CN-XiaoxiaoNeural", // required: String specifies the required VoiceName.
 "Language": "zh-CN", // required: String specifies the synthesis Language.  
-"Rate": 1 // optional: float, speech speed. value range: 0.5–2. default is 1.
+"Rate": 1 // optional: float, speech speed. value range: 0.5-2. default is 1.
 }
 </code></pre>
 </div><ul>
-<li>Custom TTS</li>.
+<li>Custom TTS</li>
 </ul>
-<p>For the specific protocol specification, refer to <a href="https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo5a1xajYANQAiAbdAFw" target="_blank">tencent documentation</a></p>.
+<p>For the specific protocol specification, refer to <a href="https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo5a1xajYANQAiAbdAFw " target="_blank">tencent documentation</a></p>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "custom", // String required.
 "APIKey": "APIKey", // String required. be used to authenticate.
@@ -377,6 +377,7 @@ For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services
 }
 </code></pre>
 </div>
+
     */
     @SerializedName("CustomTTSConfig")
     @Expose
@@ -487,6 +488,22 @@ Our side fully acknowledges and understands that according to the laws and regul
     @SerializedName("MaxRingTimeoutSecond")
     @Expose
     private Long MaxRingTimeoutSecond;
+
+    /**
+    * Ambient sound scenario. if so, leave it blank.
+Coffee_shops: chat in the coffee shop communication environment with background.
+busy_office: customer service center.
+    */
+    @SerializedName("AmbientSoundType")
+    @Expose
+    private String AmbientSoundType;
+
+    /**
+    * Ambient sound volume. if AmbientSoundType is empty, this field is left blank. value ranges from [0,2]. the lower the value, the softer the ambient sound; the higher the value, the louder the ambient sound. if not set, use the default value 1.
+    */
+    @SerializedName("AmbientSoundVolume")
+    @Expose
+    private Float AmbientSoundVolume;
 
     /**
      * Get Application ID (required) can be found at https://console.cloud.tencent.com/ccc. 
@@ -683,7 +700,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 4. Tell Cindy to not eat or drink that day before the checkup. Also tell Cindy to give you a callback if there's any changes in health condition.
 5. Ask Cindy if she has any questions, and if so, answer them until there are no questions.
   - If user asks something you do not know, let them know you don't have the answer. Ask them if they have any other questions.
-  - If user do not have any questions, call function end_call to hang up. 
+  - If user do not have any questions, call function call_end to hang up. 
      * @return SystemPrompt ## Identity
 You are Kate from the appointment department at Retell Health calling Cindy over the phone to prepare for the annual checkup coming up. You are a pleasant and friendly receptionist caring deeply for the user. You don't provide medical advice but would use the medical knowledge to understand user responses.
 
@@ -714,7 +731,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 4. Tell Cindy to not eat or drink that day before the checkup. Also tell Cindy to give you a callback if there's any changes in health condition.
 5. Ask Cindy if she has any questions, and if so, answer them until there are no questions.
   - If user asks something you do not know, let them know you don't have the answer. Ask them if they have any other questions.
-  - If user do not have any questions, call function end_call to hang up.
+  - If user do not have any questions, call function call_end to hang up.
      */
     public String getSystemPrompt() {
         return this.SystemPrompt;
@@ -751,7 +768,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 4. Tell Cindy to not eat or drink that day before the checkup. Also tell Cindy to give you a callback if there's any changes in health condition.
 5. Ask Cindy if she has any questions, and if so, answer them until there are no questions.
   - If user asks something you do not know, let them know you don't have the answer. Ask them if they have any other questions.
-  - If user do not have any questions, call function end_call to hang up.
+  - If user do not have any questions, call function call_end to hang up.
      * @param SystemPrompt ## Identity
 You are Kate from the appointment department at Retell Health calling Cindy over the phone to prepare for the annual checkup coming up. You are a pleasant and friendly receptionist caring deeply for the user. You don't provide medical advice but would use the medical knowledge to understand user responses.
 
@@ -782,7 +799,7 @@ If at any time the user showed anger or wanted a human agent, call transfer_call
 4. Tell Cindy to not eat or drink that day before the checkup. Also tell Cindy to give you a callback if there's any changes in health condition.
 5. Ask Cindy if she has any questions, and if so, answer them until there are no questions.
   - If user asks something you do not know, let them know you don't have the answer. Ask them if they have any other questions.
-  - If user do not have any questions, call function end_call to hang up.
+  - If user do not have any questions, call function call_end to hang up.
      */
     public void setSystemPrompt(String SystemPrompt) {
         this.SystemPrompt = SystemPrompt;
@@ -1329,56 +1346,56 @@ Currently, the supported languages are as follows. The English name of the langu
     }
 
     /**
-     * Get <p>Either the VoiceType field or a custom TTS is required. this uses your own custom TTS, while VoiceType provides some built-in voice types.</p>.
+     * Get <p>Either the VoiceType field or a custom TTS is required. this uses your own custom TTS, while VoiceType provides some built-in voice types.</p>
 <ul>
 <li>Tencent TTS<br>
-For configuration, see <a href="https://www.tencentcloud.comom/document/product/1073/92668?from_cn_redirect=1#55924b56-1a73-4663-a7a1-a8dd82d6e823" target="_blank">tencent cloud TTS documentation link</a></li>.
+For configuration, see <a href="https://www.tencentcloud.comom/document/product/1073/92668?from_cn_redirect=1#55924b56-1a73-4663-a7a1-a8dd82d6e823" target="_blank">tencent cloud TTS documentation link</a></li>
 </ul>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{ 
 "TTSType": "tencent", // String TTS type. currently supports "tencent" and "minixmax". the rest manufacturers are under support.
-  "AppId": "your application ID", // String required.
-  "SecretId": "your key ID", // String required.
-  "SecretKey": "your Key", // String required.
-  "VoiceType": 101001, // Integer  required. the voice ID, including standard timbre and premium timbre. premium timbre has higher fidelity and different pricing from standard timbre. please refer to the text to speech billing overview. for the complete supported timbre list, see the text to speech timbre list.
-  "Speed": 1.25, // Integer optional, speaking rate, value range: [-2,6], respectively represent different speaking rates: -2: 0.6x -1: 0.8x 0: 1.0x (default) 1: 1.2x 2: 1.5x 6: 2.5x. if more refined speaking rates are needed, up to 2 decimal places can be retained, such as 0.5, 1.25, or 2.81. for parameter value to actual speech Speed conversion, refer to speech Speed switch.
-  "Volume": 5, // Integer optional. specifies the Volume level. value range: [0,10], corresponding to 11 severity levels respectively. default value: 0, which represents normal Volume.
-  "PrimaryLanguage": 1, // Integer option primary language 1-chinese (default) 2-english 3-japanese.
-"FastVoiceType": "xxxx"   //  optional parameter. parameters for quick voice clone. 
-  }
+"AppId": "your application ID", // String required.
+"SecretId": "your key ID", // String required.
+"SecretKey": "your Key", // String required.
+"VoiceType": 101001, // Integer required. the voice ID, including standard timbre and premium timbre. premium timbre has higher fidelity and different pricing from standard timbre. please refer to the text to speech billing overview. for the complete supported timbre list, see the text to speech timbre list.
+ "Speed": 1.25, // Integer optional, speaking rate, value range: [-2,6], respectively represent different speaking rates: -2: 0.6x -1: 0.8x 0: 1.0x (default) 1: 1.2x 2: 1.5x 6: 2.5x. if more refined speaking rates are needed, up to 2 decimal places can be retained, such as 0.5, 1.25, or 2.81. for parameter value to actual speech Speed conversion, refer to speech Speed switch.
+ "Volume": 5, // Integer optional. specifies the Volume level. value range: [0,10], corresponding to 11 severity levels respectively. default value: 0, which represents normal Volume.
+ "PrimaryLanguage": 1, // Integer option primary language 1-chinese (default) 2-english 3-japanese.
+"FastVoiceType": "xxxx"   // optional parameter. parameters for quick voice clone. 
+ }
 </code></pre>
  </div><ul>
 <li>Minimax TTS<br>
-For configuration, refer to the <a href="https://platform.minimaxi.com/document/T2a%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. note that Minimax TTS has frequency limits. overfrequency may result in response delays. see the <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit documentation link</a>.</li>.
+For configuration, refer to the <a href="https://platform.minimaxi.com/document/T2a%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. note that Minimax TTS has frequency limits. overfrequency may result in response delays. see the <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit documentation link</a>.</li>
 </ul>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "minimax",  // String TTS type. 
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
-        &quot;Speed&quot;: 1.2
+"Model": "speech-01-turbo",
+"APIUrl": "https://api.minimax.chat/v1/t2a_v2",
+"APIKey": "eyxxxx",
+"GroupId": "181000000000000",
+"VoiceType":"female-tianmei",
+"Speed": 1.2
 }
 </code></pre>
 </div><ul>
-<li>Volcano TTS</li>.
+<li>Volcano TTS</li>
 </ul>
-<p>Configure the timbre type. see <a href="https://www.volcengine.com/docs/6561/162929" target="_blank">volcano TTS documentation link</a><br>.
+<p>Configure the timbre type. see <a href="https://www.volcengine.com/docs/6561/162929" target="_blank">volcano TTS documentation link</a><br>
 Text to speech timbre list - voice technology - volcano engine.
-Large model TTS timbre list - voice technology - volcano engine</p>.
+Large model TTS timbre list - voice technology - volcano engine</p>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "volcengine",  // required: String TTS type.
 "AppId": "xxxxxxxx",   // required: String AppId assigned by volcano engine.
 "Token": "TY9d4sQXHxxxxxxx", // required: String type, access Token for volcano engine.
-"Speed": 1.0,            // optional parameter. speaking rate, defaults to 1.0.
-"Volume": 1.0,            // optional parameter, Volume, defaults to 1.0.
+"Speed": 1.0,  // optional parameter. speaking rate, defaults to 1.0.
+"Volume": 1.0,  // optional parameter, Volume, defaults to 1.0.
 "Cluster": "volcano_tts", // optional parameter, business Cluster, is selected by default.
 "VoiceType": "zh_male_aojiaobazong_moon_bigtts" // timbre type, defaults to the TTS voice type of the large model. if using ordinary text to speech, you need to fill in the corresponding voice type. input errors in voice type can cause no sound.
 }
 </code></pre>
 </div><ul>
 <li>Azure TTS<br>
-For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services/speech-service/speech-synthesis-markup-voice" target="_blank">AzureTTS documentation link</a></li>.
+For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services/speech-service/speech-synthesis-markup-voice" target="_blank">AzureTTS documentation link</a></li>
 </ul>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "azure", // required: String TTS type.
@@ -1386,87 +1403,13 @@ For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services
 "Region": "chinanorth3",  // required: String the Region to subscribe to.
 "VoiceName": "zh-CN-XiaoxiaoNeural", // required: String specifies the required VoiceName.
 "Language": "zh-CN", // required: String specifies the synthesis Language.  
-"Rate": 1 // optional: float, speech speed. value range: 0.5–2. default is 1.
+"Rate": 1 // optional: float, speech speed. value range: 0.5-2. default is 1.
 }
 </code></pre>
 </div><ul>
-<li>Custom TTS</li>.
+<li>Custom TTS</li>
 </ul>
-<p>For the specific protocol specification, refer to <a href="https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo5a1xajYANQAiAbdAFw" target="_blank">tencent documentation</a></p>.
-<div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-"TTSType": "custom", // String required.
-"APIKey": "APIKey", // String required. be used to authenticate.
-"APIUrl": "http://0.0.0.0:8080/stream-audio" // String, required, TTS API URL.
-"AudioFormat": "wav", // String, optional, specifies the desired audio format, such as mp3, ogg_opus, pcm, wav. defaults to wav. currently only support pcm and wav.
-"SampleRate": 16000,  // Integer, optional, audio sample rate, defaults to 16000 (16k), recommended value is 16000.
-"AudioChannel": 1,    // Integer, optional, audio channel quantity. valid values: 1 or 2. default is 1.  
-}
-</code></pre>
-</div> 
-     * @return CustomTTSConfig <p>Either the VoiceType field or a custom TTS is required. this uses your own custom TTS, while VoiceType provides some built-in voice types.</p>.
-<ul>
-<li>Tencent TTS<br>
-For configuration, see <a href="https://www.tencentcloud.comom/document/product/1073/92668?from_cn_redirect=1#55924b56-1a73-4663-a7a1-a8dd82d6e823" target="_blank">tencent cloud TTS documentation link</a></li>.
-</ul>
-<div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{ 
-"TTSType": "tencent", // String TTS type. currently supports "tencent" and "minixmax". the rest manufacturers are under support.
-  "AppId": "your application ID", // String required.
-  "SecretId": "your key ID", // String required.
-  "SecretKey": "your Key", // String required.
-  "VoiceType": 101001, // Integer  required. the voice ID, including standard timbre and premium timbre. premium timbre has higher fidelity and different pricing from standard timbre. please refer to the text to speech billing overview. for the complete supported timbre list, see the text to speech timbre list.
-  "Speed": 1.25, // Integer optional, speaking rate, value range: [-2,6], respectively represent different speaking rates: -2: 0.6x -1: 0.8x 0: 1.0x (default) 1: 1.2x 2: 1.5x 6: 2.5x. if more refined speaking rates are needed, up to 2 decimal places can be retained, such as 0.5, 1.25, or 2.81. for parameter value to actual speech Speed conversion, refer to speech Speed switch.
-  "Volume": 5, // Integer optional. specifies the Volume level. value range: [0,10], corresponding to 11 severity levels respectively. default value: 0, which represents normal Volume.
-  "PrimaryLanguage": 1, // Integer option primary language 1-chinese (default) 2-english 3-japanese.
-"FastVoiceType": "xxxx"   //  optional parameter. parameters for quick voice clone. 
-  }
-</code></pre>
- </div><ul>
-<li>Minimax TTS<br>
-For configuration, refer to the <a href="https://platform.minimaxi.com/document/T2a%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. note that Minimax TTS has frequency limits. overfrequency may result in response delays. see the <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit documentation link</a>.</li>.
-</ul>
-<div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-"TTSType": "minimax",  // String TTS type. 
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
-        &quot;Speed&quot;: 1.2
-}
-</code></pre>
-</div><ul>
-<li>Volcano TTS</li>.
-</ul>
-<p>Configure the timbre type. see <a href="https://www.volcengine.com/docs/6561/162929" target="_blank">volcano TTS documentation link</a><br>.
-Text to speech timbre list - voice technology - volcano engine.
-Large model TTS timbre list - voice technology - volcano engine</p>.
-<div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-"TTSType": "volcengine",  // required: String TTS type.
-"AppId": "xxxxxxxx",   // required: String AppId assigned by volcano engine.
-"Token": "TY9d4sQXHxxxxxxx", // required: String type, access Token for volcano engine.
-"Speed": 1.0,            // optional parameter. speaking rate, defaults to 1.0.
-"Volume": 1.0,            // optional parameter, Volume, defaults to 1.0.
-"Cluster": "volcano_tts", // optional parameter, business Cluster, is selected by default.
-"VoiceType": "zh_male_aojiaobazong_moon_bigtts" // timbre type, defaults to the TTS voice type of the large model. if using ordinary text to speech, you need to fill in the corresponding voice type. input errors in voice type can cause no sound.
-}
-</code></pre>
-</div><ul>
-<li>Azure TTS<br>
-For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services/speech-service/speech-synthesis-markup-voice" target="_blank">AzureTTS documentation link</a></li>.
-</ul>
-<div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
-"TTSType": "azure", // required: String TTS type.
-"SubscriptionKey": "xxxxxxxx", // required: String subscription Key.
-"Region": "chinanorth3",  // required: String the Region to subscribe to.
-"VoiceName": "zh-CN-XiaoxiaoNeural", // required: String specifies the required VoiceName.
-"Language": "zh-CN", // required: String specifies the synthesis Language.  
-"Rate": 1 // optional: float, speech speed. value range: 0.5–2. default is 1.
-}
-</code></pre>
-</div><ul>
-<li>Custom TTS</li>.
-</ul>
-<p>For the specific protocol specification, refer to <a href="https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo5a1xajYANQAiAbdAFw" target="_blank">tencent documentation</a></p>.
+<p>For the specific protocol specification, refer to <a href="https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo5a1xajYANQAiAbdAFw " target="_blank">tencent documentation</a></p>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "custom", // String required.
 "APIKey": "APIKey", // String required. be used to authenticate.
@@ -1477,62 +1420,138 @@ For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services
 }
 </code></pre>
 </div>
+ 
+     * @return CustomTTSConfig <p>Either the VoiceType field or a custom TTS is required. this uses your own custom TTS, while VoiceType provides some built-in voice types.</p>
+<ul>
+<li>Tencent TTS<br>
+For configuration, see <a href="https://www.tencentcloud.comom/document/product/1073/92668?from_cn_redirect=1#55924b56-1a73-4663-a7a1-a8dd82d6e823" target="_blank">tencent cloud TTS documentation link</a></li>
+</ul>
+<div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{ 
+"TTSType": "tencent", // String TTS type. currently supports "tencent" and "minixmax". the rest manufacturers are under support.
+"AppId": "your application ID", // String required.
+"SecretId": "your key ID", // String required.
+"SecretKey": "your Key", // String required.
+"VoiceType": 101001, // Integer required. the voice ID, including standard timbre and premium timbre. premium timbre has higher fidelity and different pricing from standard timbre. please refer to the text to speech billing overview. for the complete supported timbre list, see the text to speech timbre list.
+ "Speed": 1.25, // Integer optional, speaking rate, value range: [-2,6], respectively represent different speaking rates: -2: 0.6x -1: 0.8x 0: 1.0x (default) 1: 1.2x 2: 1.5x 6: 2.5x. if more refined speaking rates are needed, up to 2 decimal places can be retained, such as 0.5, 1.25, or 2.81. for parameter value to actual speech Speed conversion, refer to speech Speed switch.
+ "Volume": 5, // Integer optional. specifies the Volume level. value range: [0,10], corresponding to 11 severity levels respectively. default value: 0, which represents normal Volume.
+ "PrimaryLanguage": 1, // Integer option primary language 1-chinese (default) 2-english 3-japanese.
+"FastVoiceType": "xxxx"   // optional parameter. parameters for quick voice clone. 
+ }
+</code></pre>
+ </div><ul>
+<li>Minimax TTS<br>
+For configuration, refer to the <a href="https://platform.minimaxi.com/document/T2a%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. note that Minimax TTS has frequency limits. overfrequency may result in response delays. see the <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit documentation link</a>.</li>
+</ul>
+<div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
+"TTSType": "minimax",  // String TTS type. 
+"Model": "speech-01-turbo",
+"APIUrl": "https://api.minimax.chat/v1/t2a_v2",
+"APIKey": "eyxxxx",
+"GroupId": "181000000000000",
+"VoiceType":"female-tianmei",
+"Speed": 1.2
+}
+</code></pre>
+</div><ul>
+<li>Volcano TTS</li>
+</ul>
+<p>Configure the timbre type. see <a href="https://www.volcengine.com/docs/6561/162929" target="_blank">volcano TTS documentation link</a><br>
+Text to speech timbre list - voice technology - volcano engine.
+Large model TTS timbre list - voice technology - volcano engine</p>
+<div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
+"TTSType": "volcengine",  // required: String TTS type.
+"AppId": "xxxxxxxx",   // required: String AppId assigned by volcano engine.
+"Token": "TY9d4sQXHxxxxxxx", // required: String type, access Token for volcano engine.
+"Speed": 1.0,  // optional parameter. speaking rate, defaults to 1.0.
+"Volume": 1.0,  // optional parameter, Volume, defaults to 1.0.
+"Cluster": "volcano_tts", // optional parameter, business Cluster, is selected by default.
+"VoiceType": "zh_male_aojiaobazong_moon_bigtts" // timbre type, defaults to the TTS voice type of the large model. if using ordinary text to speech, you need to fill in the corresponding voice type. input errors in voice type can cause no sound.
+}
+</code></pre>
+</div><ul>
+<li>Azure TTS<br>
+For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services/speech-service/speech-synthesis-markup-voice" target="_blank">AzureTTS documentation link</a></li>
+</ul>
+<div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
+"TTSType": "azure", // required: String TTS type.
+"SubscriptionKey": "xxxxxxxx", // required: String subscription Key.
+"Region": "chinanorth3",  // required: String the Region to subscribe to.
+"VoiceName": "zh-CN-XiaoxiaoNeural", // required: String specifies the required VoiceName.
+"Language": "zh-CN", // required: String specifies the synthesis Language.  
+"Rate": 1 // optional: float, speech speed. value range: 0.5-2. default is 1.
+}
+</code></pre>
+</div><ul>
+<li>Custom TTS</li>
+</ul>
+<p>For the specific protocol specification, refer to <a href="https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo5a1xajYANQAiAbdAFw " target="_blank">tencent documentation</a></p>
+<div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
+"TTSType": "custom", // String required.
+"APIKey": "APIKey", // String required. be used to authenticate.
+"APIUrl": "http://0.0.0.0:8080/stream-audio" // String, required, TTS API URL.
+"AudioFormat": "wav", // String, optional, specifies the desired audio format, such as mp3, ogg_opus, pcm, wav. defaults to wav. currently only support pcm and wav.
+"SampleRate": 16000,  // Integer, optional, audio sample rate, defaults to 16000 (16k), recommended value is 16000.
+"AudioChannel": 1,    // Integer, optional, audio channel quantity. valid values: 1 or 2. default is 1.  
+}
+</code></pre>
+</div>
+
      */
     public String getCustomTTSConfig() {
         return this.CustomTTSConfig;
     }
 
     /**
-     * Set <p>Either the VoiceType field or a custom TTS is required. this uses your own custom TTS, while VoiceType provides some built-in voice types.</p>.
+     * Set <p>Either the VoiceType field or a custom TTS is required. this uses your own custom TTS, while VoiceType provides some built-in voice types.</p>
 <ul>
 <li>Tencent TTS<br>
-For configuration, see <a href="https://www.tencentcloud.comom/document/product/1073/92668?from_cn_redirect=1#55924b56-1a73-4663-a7a1-a8dd82d6e823" target="_blank">tencent cloud TTS documentation link</a></li>.
+For configuration, see <a href="https://www.tencentcloud.comom/document/product/1073/92668?from_cn_redirect=1#55924b56-1a73-4663-a7a1-a8dd82d6e823" target="_blank">tencent cloud TTS documentation link</a></li>
 </ul>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{ 
 "TTSType": "tencent", // String TTS type. currently supports "tencent" and "minixmax". the rest manufacturers are under support.
-  "AppId": "your application ID", // String required.
-  "SecretId": "your key ID", // String required.
-  "SecretKey": "your Key", // String required.
-  "VoiceType": 101001, // Integer  required. the voice ID, including standard timbre and premium timbre. premium timbre has higher fidelity and different pricing from standard timbre. please refer to the text to speech billing overview. for the complete supported timbre list, see the text to speech timbre list.
-  "Speed": 1.25, // Integer optional, speaking rate, value range: [-2,6], respectively represent different speaking rates: -2: 0.6x -1: 0.8x 0: 1.0x (default) 1: 1.2x 2: 1.5x 6: 2.5x. if more refined speaking rates are needed, up to 2 decimal places can be retained, such as 0.5, 1.25, or 2.81. for parameter value to actual speech Speed conversion, refer to speech Speed switch.
-  "Volume": 5, // Integer optional. specifies the Volume level. value range: [0,10], corresponding to 11 severity levels respectively. default value: 0, which represents normal Volume.
-  "PrimaryLanguage": 1, // Integer option primary language 1-chinese (default) 2-english 3-japanese.
-"FastVoiceType": "xxxx"   //  optional parameter. parameters for quick voice clone. 
-  }
+"AppId": "your application ID", // String required.
+"SecretId": "your key ID", // String required.
+"SecretKey": "your Key", // String required.
+"VoiceType": 101001, // Integer required. the voice ID, including standard timbre and premium timbre. premium timbre has higher fidelity and different pricing from standard timbre. please refer to the text to speech billing overview. for the complete supported timbre list, see the text to speech timbre list.
+ "Speed": 1.25, // Integer optional, speaking rate, value range: [-2,6], respectively represent different speaking rates: -2: 0.6x -1: 0.8x 0: 1.0x (default) 1: 1.2x 2: 1.5x 6: 2.5x. if more refined speaking rates are needed, up to 2 decimal places can be retained, such as 0.5, 1.25, or 2.81. for parameter value to actual speech Speed conversion, refer to speech Speed switch.
+ "Volume": 5, // Integer optional. specifies the Volume level. value range: [0,10], corresponding to 11 severity levels respectively. default value: 0, which represents normal Volume.
+ "PrimaryLanguage": 1, // Integer option primary language 1-chinese (default) 2-english 3-japanese.
+"FastVoiceType": "xxxx"   // optional parameter. parameters for quick voice clone. 
+ }
 </code></pre>
  </div><ul>
 <li>Minimax TTS<br>
-For configuration, refer to the <a href="https://platform.minimaxi.com/document/T2a%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. note that Minimax TTS has frequency limits. overfrequency may result in response delays. see the <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit documentation link</a>.</li>.
+For configuration, refer to the <a href="https://platform.minimaxi.com/document/T2a%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. note that Minimax TTS has frequency limits. overfrequency may result in response delays. see the <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit documentation link</a>.</li>
 </ul>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "minimax",  // String TTS type. 
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
-        &quot;Speed&quot;: 1.2
+"Model": "speech-01-turbo",
+"APIUrl": "https://api.minimax.chat/v1/t2a_v2",
+"APIKey": "eyxxxx",
+"GroupId": "181000000000000",
+"VoiceType":"female-tianmei",
+"Speed": 1.2
 }
 </code></pre>
 </div><ul>
-<li>Volcano TTS</li>.
+<li>Volcano TTS</li>
 </ul>
-<p>Configure the timbre type. see <a href="https://www.volcengine.com/docs/6561/162929" target="_blank">volcano TTS documentation link</a><br>.
+<p>Configure the timbre type. see <a href="https://www.volcengine.com/docs/6561/162929" target="_blank">volcano TTS documentation link</a><br>
 Text to speech timbre list - voice technology - volcano engine.
-Large model TTS timbre list - voice technology - volcano engine</p>.
+Large model TTS timbre list - voice technology - volcano engine</p>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "volcengine",  // required: String TTS type.
 "AppId": "xxxxxxxx",   // required: String AppId assigned by volcano engine.
 "Token": "TY9d4sQXHxxxxxxx", // required: String type, access Token for volcano engine.
-"Speed": 1.0,            // optional parameter. speaking rate, defaults to 1.0.
-"Volume": 1.0,            // optional parameter, Volume, defaults to 1.0.
+"Speed": 1.0,  // optional parameter. speaking rate, defaults to 1.0.
+"Volume": 1.0,  // optional parameter, Volume, defaults to 1.0.
 "Cluster": "volcano_tts", // optional parameter, business Cluster, is selected by default.
 "VoiceType": "zh_male_aojiaobazong_moon_bigtts" // timbre type, defaults to the TTS voice type of the large model. if using ordinary text to speech, you need to fill in the corresponding voice type. input errors in voice type can cause no sound.
 }
 </code></pre>
 </div><ul>
 <li>Azure TTS<br>
-For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services/speech-service/speech-synthesis-markup-voice" target="_blank">AzureTTS documentation link</a></li>.
+For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services/speech-service/speech-synthesis-markup-voice" target="_blank">AzureTTS documentation link</a></li>
 </ul>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "azure", // required: String TTS type.
@@ -1540,13 +1559,13 @@ For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services
 "Region": "chinanorth3",  // required: String the Region to subscribe to.
 "VoiceName": "zh-CN-XiaoxiaoNeural", // required: String specifies the required VoiceName.
 "Language": "zh-CN", // required: String specifies the synthesis Language.  
-"Rate": 1 // optional: float, speech speed. value range: 0.5–2. default is 1.
+"Rate": 1 // optional: float, speech speed. value range: 0.5-2. default is 1.
 }
 </code></pre>
 </div><ul>
-<li>Custom TTS</li>.
+<li>Custom TTS</li>
 </ul>
-<p>For the specific protocol specification, refer to <a href="https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo5a1xajYANQAiAbdAFw" target="_blank">tencent documentation</a></p>.
+<p>For the specific protocol specification, refer to <a href="https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo5a1xajYANQAiAbdAFw " target="_blank">tencent documentation</a></p>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "custom", // String required.
 "APIKey": "APIKey", // String required. be used to authenticate.
@@ -1557,56 +1576,57 @@ For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services
 }
 </code></pre>
 </div>
-     * @param CustomTTSConfig <p>Either the VoiceType field or a custom TTS is required. this uses your own custom TTS, while VoiceType provides some built-in voice types.</p>.
+
+     * @param CustomTTSConfig <p>Either the VoiceType field or a custom TTS is required. this uses your own custom TTS, while VoiceType provides some built-in voice types.</p>
 <ul>
 <li>Tencent TTS<br>
-For configuration, see <a href="https://www.tencentcloud.comom/document/product/1073/92668?from_cn_redirect=1#55924b56-1a73-4663-a7a1-a8dd82d6e823" target="_blank">tencent cloud TTS documentation link</a></li>.
+For configuration, see <a href="https://www.tencentcloud.comom/document/product/1073/92668?from_cn_redirect=1#55924b56-1a73-4663-a7a1-a8dd82d6e823" target="_blank">tencent cloud TTS documentation link</a></li>
 </ul>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{ 
 "TTSType": "tencent", // String TTS type. currently supports "tencent" and "minixmax". the rest manufacturers are under support.
-  "AppId": "your application ID", // String required.
-  "SecretId": "your key ID", // String required.
-  "SecretKey": "your Key", // String required.
-  "VoiceType": 101001, // Integer  required. the voice ID, including standard timbre and premium timbre. premium timbre has higher fidelity and different pricing from standard timbre. please refer to the text to speech billing overview. for the complete supported timbre list, see the text to speech timbre list.
-  "Speed": 1.25, // Integer optional, speaking rate, value range: [-2,6], respectively represent different speaking rates: -2: 0.6x -1: 0.8x 0: 1.0x (default) 1: 1.2x 2: 1.5x 6: 2.5x. if more refined speaking rates are needed, up to 2 decimal places can be retained, such as 0.5, 1.25, or 2.81. for parameter value to actual speech Speed conversion, refer to speech Speed switch.
-  "Volume": 5, // Integer optional. specifies the Volume level. value range: [0,10], corresponding to 11 severity levels respectively. default value: 0, which represents normal Volume.
-  "PrimaryLanguage": 1, // Integer option primary language 1-chinese (default) 2-english 3-japanese.
-"FastVoiceType": "xxxx"   //  optional parameter. parameters for quick voice clone. 
-  }
+"AppId": "your application ID", // String required.
+"SecretId": "your key ID", // String required.
+"SecretKey": "your Key", // String required.
+"VoiceType": 101001, // Integer required. the voice ID, including standard timbre and premium timbre. premium timbre has higher fidelity and different pricing from standard timbre. please refer to the text to speech billing overview. for the complete supported timbre list, see the text to speech timbre list.
+ "Speed": 1.25, // Integer optional, speaking rate, value range: [-2,6], respectively represent different speaking rates: -2: 0.6x -1: 0.8x 0: 1.0x (default) 1: 1.2x 2: 1.5x 6: 2.5x. if more refined speaking rates are needed, up to 2 decimal places can be retained, such as 0.5, 1.25, or 2.81. for parameter value to actual speech Speed conversion, refer to speech Speed switch.
+ "Volume": 5, // Integer optional. specifies the Volume level. value range: [0,10], corresponding to 11 severity levels respectively. default value: 0, which represents normal Volume.
+ "PrimaryLanguage": 1, // Integer option primary language 1-chinese (default) 2-english 3-japanese.
+"FastVoiceType": "xxxx"   // optional parameter. parameters for quick voice clone. 
+ }
 </code></pre>
  </div><ul>
 <li>Minimax TTS<br>
-For configuration, refer to the <a href="https://platform.minimaxi.com/document/T2a%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. note that Minimax TTS has frequency limits. overfrequency may result in response delays. see the <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit documentation link</a>.</li>.
+For configuration, refer to the <a href="https://platform.minimaxi.com/document/T2a%20V2?key=66719005a427f0c8a5701643" target="_blank">Minimax TTS documentation link</a>. note that Minimax TTS has frequency limits. overfrequency may result in response delays. see the <a href="https://platform.minimaxi.com/document/Rate%20limits?key=66b19417290299a26b234572" target="_blank">Minimax TTS frequency limit documentation link</a>.</li>
 </ul>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "minimax",  // String TTS type. 
-        &quot;Model&quot;: &quot;speech-01-turbo&quot;,
-        &quot;APIUrl&quot;: &quot;https://api.minimax.chat/v1/t2a_v2&quot;,
-        &quot;APIKey&quot;: &quot;eyxxxx&quot;,
-        &quot;GroupId&quot;: &quot;181000000000000&quot;,
-        &quot;VoiceType&quot;:&quot;female-tianmei&quot;,
-        &quot;Speed&quot;: 1.2
+"Model": "speech-01-turbo",
+"APIUrl": "https://api.minimax.chat/v1/t2a_v2",
+"APIKey": "eyxxxx",
+"GroupId": "181000000000000",
+"VoiceType":"female-tianmei",
+"Speed": 1.2
 }
 </code></pre>
 </div><ul>
-<li>Volcano TTS</li>.
+<li>Volcano TTS</li>
 </ul>
-<p>Configure the timbre type. see <a href="https://www.volcengine.com/docs/6561/162929" target="_blank">volcano TTS documentation link</a><br>.
+<p>Configure the timbre type. see <a href="https://www.volcengine.com/docs/6561/162929" target="_blank">volcano TTS documentation link</a><br>
 Text to speech timbre list - voice technology - volcano engine.
-Large model TTS timbre list - voice technology - volcano engine</p>.
+Large model TTS timbre list - voice technology - volcano engine</p>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "volcengine",  // required: String TTS type.
 "AppId": "xxxxxxxx",   // required: String AppId assigned by volcano engine.
 "Token": "TY9d4sQXHxxxxxxx", // required: String type, access Token for volcano engine.
-"Speed": 1.0,            // optional parameter. speaking rate, defaults to 1.0.
-"Volume": 1.0,            // optional parameter, Volume, defaults to 1.0.
+"Speed": 1.0,  // optional parameter. speaking rate, defaults to 1.0.
+"Volume": 1.0,  // optional parameter, Volume, defaults to 1.0.
 "Cluster": "volcano_tts", // optional parameter, business Cluster, is selected by default.
 "VoiceType": "zh_male_aojiaobazong_moon_bigtts" // timbre type, defaults to the TTS voice type of the large model. if using ordinary text to speech, you need to fill in the corresponding voice type. input errors in voice type can cause no sound.
 }
 </code></pre>
 </div><ul>
 <li>Azure TTS<br>
-For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services/speech-service/speech-synthesis-markup-voice" target="_blank">AzureTTS documentation link</a></li>.
+For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services/speech-service/speech-synthesis-markup-voice" target="_blank">AzureTTS documentation link</a></li>
 </ul>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "azure", // required: String TTS type.
@@ -1614,13 +1634,13 @@ For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services
 "Region": "chinanorth3",  // required: String the Region to subscribe to.
 "VoiceName": "zh-CN-XiaoxiaoNeural", // required: String specifies the required VoiceName.
 "Language": "zh-CN", // required: String specifies the synthesis Language.  
-"Rate": 1 // optional: float, speech speed. value range: 0.5–2. default is 1.
+"Rate": 1 // optional: float, speech speed. value range: 0.5-2. default is 1.
 }
 </code></pre>
 </div><ul>
-<li>Custom TTS</li>.
+<li>Custom TTS</li>
 </ul>
-<p>For the specific protocol specification, refer to <a href="https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo5a1xajYANQAiAbdAFw" target="_blank">tencent documentation</a></p>.
+<p>For the specific protocol specification, refer to <a href="https://doc.weixin.qq.com/doc/w3_ANQAiAbdAFwHILbJBmtSqSbV1WZ3L?scode=AJEAIQdfAAo5a1xajYANQAiAbdAFw " target="_blank">tencent documentation</a></p>
 <div class="v-md-pre-wrapper copy-code-mode v-md-pre-wrapper- extra-class"><pre class="v-md-prism-"><code>{
 "TTSType": "custom", // String required.
 "APIKey": "APIKey", // String required. be used to authenticate.
@@ -1631,6 +1651,7 @@ For configuration, refer to the <a href="https://docs.azure.cn/zh-cn/ai-services
 }
 </code></pre>
 </div>
+
      */
     public void setCustomTTSConfig(String CustomTTSConfig) {
         this.CustomTTSConfig = CustomTTSConfig;
@@ -1896,6 +1917,46 @@ Our side fully acknowledges and understands that according to the laws and regul
         this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
     }
 
+    /**
+     * Get Ambient sound scenario. if so, leave it blank.
+Coffee_shops: chat in the coffee shop communication environment with background.
+busy_office: customer service center. 
+     * @return AmbientSoundType Ambient sound scenario. if so, leave it blank.
+Coffee_shops: chat in the coffee shop communication environment with background.
+busy_office: customer service center.
+     */
+    public String getAmbientSoundType() {
+        return this.AmbientSoundType;
+    }
+
+    /**
+     * Set Ambient sound scenario. if so, leave it blank.
+Coffee_shops: chat in the coffee shop communication environment with background.
+busy_office: customer service center.
+     * @param AmbientSoundType Ambient sound scenario. if so, leave it blank.
+Coffee_shops: chat in the coffee shop communication environment with background.
+busy_office: customer service center.
+     */
+    public void setAmbientSoundType(String AmbientSoundType) {
+        this.AmbientSoundType = AmbientSoundType;
+    }
+
+    /**
+     * Get Ambient sound volume. if AmbientSoundType is empty, this field is left blank. value ranges from [0,2]. the lower the value, the softer the ambient sound; the higher the value, the louder the ambient sound. if not set, use the default value 1. 
+     * @return AmbientSoundVolume Ambient sound volume. if AmbientSoundType is empty, this field is left blank. value ranges from [0,2]. the lower the value, the softer the ambient sound; the higher the value, the louder the ambient sound. if not set, use the default value 1.
+     */
+    public Float getAmbientSoundVolume() {
+        return this.AmbientSoundVolume;
+    }
+
+    /**
+     * Set Ambient sound volume. if AmbientSoundType is empty, this field is left blank. value ranges from [0,2]. the lower the value, the softer the ambient sound; the higher the value, the louder the ambient sound. if not set, use the default value 1.
+     * @param AmbientSoundVolume Ambient sound volume. if AmbientSoundType is empty, this field is left blank. value ranges from [0,2]. the lower the value, the softer the ambient sound; the higher the value, the louder the ambient sound. if not set, use the default value 1.
+     */
+    public void setAmbientSoundVolume(Float AmbientSoundVolume) {
+        this.AmbientSoundVolume = AmbientSoundVolume;
+    }
+
     public CreateAICallRequest() {
     }
 
@@ -2036,6 +2097,12 @@ Our side fully acknowledges and understands that according to the laws and regul
         if (source.MaxRingTimeoutSecond != null) {
             this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
         }
+        if (source.AmbientSoundType != null) {
+            this.AmbientSoundType = new String(source.AmbientSoundType);
+        }
+        if (source.AmbientSoundVolume != null) {
+            this.AmbientSoundVolume = new Float(source.AmbientSoundVolume);
+        }
     }
 
 
@@ -2081,6 +2148,8 @@ Our side fully acknowledges and understands that according to the laws and regul
         this.setParamSimple(map, prefix + "LLMExtraBody", this.LLMExtraBody);
         this.setParamSimple(map, prefix + "MaxCallDurationMs", this.MaxCallDurationMs);
         this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
+        this.setParamSimple(map, prefix + "AmbientSoundType", this.AmbientSoundType);
+        this.setParamSimple(map, prefix + "AmbientSoundVolume", this.AmbientSoundVolume);
 
     }
 }

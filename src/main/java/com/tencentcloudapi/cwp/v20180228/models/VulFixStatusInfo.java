@@ -71,7 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long FixSuccessCnt;
 
     /**
-    * 
+    * Repair method: 0 component update or patch installation, 1 disable service
     */
     @SerializedName("FixMethod")
     @Expose
@@ -194,16 +194,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return FixMethod 
+     * Get Repair method: 0 component update or patch installation, 1 disable service 
+     * @return FixMethod Repair method: 0 component update or patch installation, 1 disable service
      */
     public Long getFixMethod() {
         return this.FixMethod;
     }
 
     /**
-     * Set 
-     * @param FixMethod 
+     * Set Repair method: 0 component update or patch installation, 1 disable service
+     * @param FixMethod Repair method: 0 component update or patch installation, 1 disable service
      */
     public void setFixMethod(Long FixMethod) {
         this.FixMethod = FixMethod;

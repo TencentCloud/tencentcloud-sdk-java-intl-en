@@ -31,14 +31,14 @@ public class DescribeDataEngineImageVersionsRequest extends AbstractModel {
     private String EngineType;
 
     /**
-    * 
+    * Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
     */
     @SerializedName("Sort")
     @Expose
     private String Sort;
 
     /**
-    * 
+    * Sort order: false (descending, default), true (ascending)
     */
     @SerializedName("Asc")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeDataEngineImageVersionsRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Sort 
+     * Get Sort field: InsertTime (Insertion time, default), UpdateTime (Update time) 
+     * @return Sort Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
      */
     public String getSort() {
         return this.Sort;
     }
 
     /**
-     * Set 
-     * @param Sort 
+     * Set Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
+     * @param Sort Sort field: InsertTime (Insertion time, default), UpdateTime (Update time)
      */
     public void setSort(String Sort) {
         this.Sort = Sort;
     }
 
     /**
-     * Get  
-     * @return Asc 
+     * Get Sort order: false (descending, default), true (ascending) 
+     * @return Asc Sort order: false (descending, default), true (ascending)
      */
     public Boolean getAsc() {
         return this.Asc;
     }
 
     /**
-     * Set 
-     * @param Asc 
+     * Set Sort order: false (descending, default), true (ascending)
+     * @param Asc Sort order: false (descending, default), true (ascending)
      */
     public void setAsc(Boolean Asc) {
         this.Asc = Asc;

@@ -96,21 +96,21 @@ This parameter is valid only if `IsPersistence` is `1`.
     private String SessionContext;
 
     /**
-    * 
+    * This field is deprecated.
     */
     @SerializedName("Precision")
     @Expose
     private String Precision;
 
     /**
-    * 
+    * Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
     */
     @SerializedName("OutputMediaType")
     @Expose
     private String OutputMediaType;
 
     /**
-    * 
+    * Reserved field, used for special purposes. Example value: ""
     */
     @SerializedName("ExtInfo")
     @Expose
@@ -285,48 +285,48 @@ This parameter is valid only if `IsPersistence` is `1`.
     }
 
     /**
-     * Get  
-     * @return Precision 
+     * Get This field is deprecated. 
+     * @return Precision This field is deprecated.
      */
     public String getPrecision() {
         return this.Precision;
     }
 
     /**
-     * Set 
-     * @param Precision 
+     * Set This field is deprecated.
+     * @param Precision This field is deprecated.
      */
     public void setPrecision(String Precision) {
         this.Precision = Precision;
     }
 
     /**
-     * Get  
-     * @return OutputMediaType 
+     * Get Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls. 
+     * @return OutputMediaType Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
      */
     public String getOutputMediaType() {
         return this.OutputMediaType;
     }
 
     /**
-     * Set 
-     * @param OutputMediaType 
+     * Set Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
+     * @param OutputMediaType Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
      */
     public void setOutputMediaType(String OutputMediaType) {
         this.OutputMediaType = OutputMediaType;
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get Reserved field, used for special purposes. Example value: "" 
+     * @return ExtInfo Reserved field, used for special purposes. Example value: ""
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set Reserved field, used for special purposes. Example value: ""
+     * @param ExtInfo Reserved field, used for special purposes. Example value: ""
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

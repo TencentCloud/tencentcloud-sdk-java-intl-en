@@ -24,552 +24,692 @@ import java.util.HashMap;
 public class ReadOnlyInstance extends AbstractModel {
 
     /**
-    * 
+    * Read-Only Replica ID, in the format of: mssqlro-3l3fgqn7
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 
+    * Read-Only Replica Name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Read-Only Replica Unique UID
     */
     @SerializedName("Uid")
     @Expose
     private String Uid;
 
     /**
-    * 
+    * Read-Only Replica Project ID
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * 
+    * Read-Only Replica Status: 1: Creating, 2: Running, 3: Delayed Removal, 4: Isolated, 5: Recycling, 6: Recycled, 7: Task Executing, 8: Offline, 9: Instance Scaling, 10: Instance Migrating, 12: Restarting
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 
+    * Read-Only Replica Creation Time
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * 
+    * Read-Only Replica Update Time
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * 
+    * Read-Only Replica Memory Size (Unit: GB)
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * 
+    * Read-Only Replica Storage Space Size (Unit: GB)
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * 
+    * Read-Only Replica cpu Core Count
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * 
+    * Read-Only Replica Codenames
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * 
+    * Host Machine Code
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Read-Only Replica Mode, 2-Standalone
     */
     @SerializedName("Model")
     @Expose
     private Long Model;
 
     /**
-    * 
+    * Read-Only Replica Billing Mode, 1-yearly/monthly subscription, 0-pay-as-you-go
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * 
+    * Read-Only Replica Weight
     */
     @SerializedName("Weight")
     @Expose
     private Long Weight;
 
     /**
-    * 
+    * Read-Only Replica Latency Time (Unit: seconds)
     */
     @SerializedName("DelayTime")
     @Expose
     private String DelayTime;
 
     /**
-    * 
+    * Synchronization status between the read-only replica and the primary instance.
+
+Init: Initializing
+
+DeployReadOnlyInPorgress: Deploying replica in progress
+
+DeployReadOnlySuccess: Replica deployment succeeded
+
+DeployReadOnlyFail: Replica deployment failed
+
+DeployMasterDBInPorgress: Adding replica database to primary node in progress
+
+DeployMasterDBSuccess: Successfully added replica database to primary node
+
+DeployMasterDBFail: Failed to add replica database to primary node
+
+DeployReadOnlyDBInPorgress: Replica restoration and database joining started
+
+DeployReadOnlyDBSuccess: Replica restoration and database joining succeeded
+
+DeployReadOnlyDBFail: Replica restoration and database joining failed
+
+SyncDelay: Synchronization delayed
+
+SyncFail: Synchronization failed
+
+SyncExcluded: Removed from read-only group
+
+SyncNormal: Normal
     */
     @SerializedName("SynStatus")
     @Expose
     private String SynStatus;
 
     /**
-    * 
+    * Databases not synchronized between the read-only replica and the primary instance
     */
     @SerializedName("DatabaseDifference")
     @Expose
     private String DatabaseDifference;
 
     /**
-    * 
+    * Accounts not synchronized between the read-only replica and the primary instance
     */
     @SerializedName("AccountDifference")
     @Expose
     private String AccountDifference;
 
     /**
-    * 
+    * Read-Only Replica Billing Start Time
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * Read-Only Replica Billing End Time
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 
+    * Read-Only Replica Isolation Time
     */
     @SerializedName("IsolateTime")
     @Expose
     private String IsolateTime;
 
     /**
-    * 
+    * Read-Only Replica Region Location
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * 
+    * Read-Only Replica AZ Location
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get Read-Only Replica ID, in the format of: mssqlro-3l3fgqn7 
+     * @return InstanceId Read-Only Replica ID, in the format of: mssqlro-3l3fgqn7
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set Read-Only Replica ID, in the format of: mssqlro-3l3fgqn7
+     * @param InstanceId Read-Only Replica ID, in the format of: mssqlro-3l3fgqn7
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Read-Only Replica Name 
+     * @return Name Read-Only Replica Name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Read-Only Replica Name
+     * @param Name Read-Only Replica Name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Uid 
+     * Get Read-Only Replica Unique UID 
+     * @return Uid Read-Only Replica Unique UID
      */
     public String getUid() {
         return this.Uid;
     }
 
     /**
-     * Set 
-     * @param Uid 
+     * Set Read-Only Replica Unique UID
+     * @param Uid Read-Only Replica Unique UID
      */
     public void setUid(String Uid) {
         this.Uid = Uid;
     }
 
     /**
-     * Get  
-     * @return ProjectId 
+     * Get Read-Only Replica Project ID 
+     * @return ProjectId Read-Only Replica Project ID
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set 
-     * @param ProjectId 
+     * Set Read-Only Replica Project ID
+     * @param ProjectId Read-Only Replica Project ID
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Read-Only Replica Status: 1: Creating, 2: Running, 3: Delayed Removal, 4: Isolated, 5: Recycling, 6: Recycled, 7: Task Executing, 8: Offline, 9: Instance Scaling, 10: Instance Migrating, 12: Restarting 
+     * @return Status Read-Only Replica Status: 1: Creating, 2: Running, 3: Delayed Removal, 4: Isolated, 5: Recycling, 6: Recycled, 7: Task Executing, 8: Offline, 9: Instance Scaling, 10: Instance Migrating, 12: Restarting
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Read-Only Replica Status: 1: Creating, 2: Running, 3: Delayed Removal, 4: Isolated, 5: Recycling, 6: Recycled, 7: Task Executing, 8: Offline, 9: Instance Scaling, 10: Instance Migrating, 12: Restarting
+     * @param Status Read-Only Replica Status: 1: Creating, 2: Running, 3: Delayed Removal, 4: Isolated, 5: Recycling, 6: Recycled, 7: Task Executing, 8: Offline, 9: Instance Scaling, 10: Instance Migrating, 12: Restarting
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return CreateTime 
+     * Get Read-Only Replica Creation Time 
+     * @return CreateTime Read-Only Replica Creation Time
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set 
-     * @param CreateTime 
+     * Set Read-Only Replica Creation Time
+     * @param CreateTime Read-Only Replica Creation Time
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get  
-     * @return UpdateTime 
+     * Get Read-Only Replica Update Time 
+     * @return UpdateTime Read-Only Replica Update Time
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set 
-     * @param UpdateTime 
+     * Set Read-Only Replica Update Time
+     * @param UpdateTime Read-Only Replica Update Time
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get  
-     * @return Memory 
+     * Get Read-Only Replica Memory Size (Unit: GB) 
+     * @return Memory Read-Only Replica Memory Size (Unit: GB)
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set 
-     * @param Memory 
+     * Set Read-Only Replica Memory Size (Unit: GB)
+     * @param Memory Read-Only Replica Memory Size (Unit: GB)
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get  
-     * @return Storage 
+     * Get Read-Only Replica Storage Space Size (Unit: GB) 
+     * @return Storage Read-Only Replica Storage Space Size (Unit: GB)
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set 
-     * @param Storage 
+     * Set Read-Only Replica Storage Space Size (Unit: GB)
+     * @param Storage Read-Only Replica Storage Space Size (Unit: GB)
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get  
-     * @return Cpu 
+     * Get Read-Only Replica cpu Core Count 
+     * @return Cpu Read-Only Replica cpu Core Count
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set 
-     * @param Cpu 
+     * Set Read-Only Replica cpu Core Count
+     * @param Cpu Read-Only Replica cpu Core Count
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get  
-     * @return Version 
+     * Get Read-Only Replica Codenames 
+     * @return Version Read-Only Replica Codenames
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set 
-     * @param Version 
+     * Set Read-Only Replica Codenames
+     * @param Version Read-Only Replica Codenames
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Host Machine Code 
+     * @return Type Host Machine Code
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Host Machine Code
+     * @param Type Host Machine Code
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Model 
+     * Get Read-Only Replica Mode, 2-Standalone 
+     * @return Model Read-Only Replica Mode, 2-Standalone
      */
     public Long getModel() {
         return this.Model;
     }
 
     /**
-     * Set 
-     * @param Model 
+     * Set Read-Only Replica Mode, 2-Standalone
+     * @param Model Read-Only Replica Mode, 2-Standalone
      */
     public void setModel(Long Model) {
         this.Model = Model;
     }
 
     /**
-     * Get  
-     * @return PayMode 
+     * Get Read-Only Replica Billing Mode, 1-yearly/monthly subscription, 0-pay-as-you-go 
+     * @return PayMode Read-Only Replica Billing Mode, 1-yearly/monthly subscription, 0-pay-as-you-go
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 
-     * @param PayMode 
+     * Set Read-Only Replica Billing Mode, 1-yearly/monthly subscription, 0-pay-as-you-go
+     * @param PayMode Read-Only Replica Billing Mode, 1-yearly/monthly subscription, 0-pay-as-you-go
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get  
-     * @return Weight 
+     * Get Read-Only Replica Weight 
+     * @return Weight Read-Only Replica Weight
      */
     public Long getWeight() {
         return this.Weight;
     }
 
     /**
-     * Set 
-     * @param Weight 
+     * Set Read-Only Replica Weight
+     * @param Weight Read-Only Replica Weight
      */
     public void setWeight(Long Weight) {
         this.Weight = Weight;
     }
 
     /**
-     * Get  
-     * @return DelayTime 
+     * Get Read-Only Replica Latency Time (Unit: seconds) 
+     * @return DelayTime Read-Only Replica Latency Time (Unit: seconds)
      */
     public String getDelayTime() {
         return this.DelayTime;
     }
 
     /**
-     * Set 
-     * @param DelayTime 
+     * Set Read-Only Replica Latency Time (Unit: seconds)
+     * @param DelayTime Read-Only Replica Latency Time (Unit: seconds)
      */
     public void setDelayTime(String DelayTime) {
         this.DelayTime = DelayTime;
     }
 
     /**
-     * Get  
-     * @return SynStatus 
+     * Get Synchronization status between the read-only replica and the primary instance.
+
+Init: Initializing
+
+DeployReadOnlyInPorgress: Deploying replica in progress
+
+DeployReadOnlySuccess: Replica deployment succeeded
+
+DeployReadOnlyFail: Replica deployment failed
+
+DeployMasterDBInPorgress: Adding replica database to primary node in progress
+
+DeployMasterDBSuccess: Successfully added replica database to primary node
+
+DeployMasterDBFail: Failed to add replica database to primary node
+
+DeployReadOnlyDBInPorgress: Replica restoration and database joining started
+
+DeployReadOnlyDBSuccess: Replica restoration and database joining succeeded
+
+DeployReadOnlyDBFail: Replica restoration and database joining failed
+
+SyncDelay: Synchronization delayed
+
+SyncFail: Synchronization failed
+
+SyncExcluded: Removed from read-only group
+
+SyncNormal: Normal 
+     * @return SynStatus Synchronization status between the read-only replica and the primary instance.
+
+Init: Initializing
+
+DeployReadOnlyInPorgress: Deploying replica in progress
+
+DeployReadOnlySuccess: Replica deployment succeeded
+
+DeployReadOnlyFail: Replica deployment failed
+
+DeployMasterDBInPorgress: Adding replica database to primary node in progress
+
+DeployMasterDBSuccess: Successfully added replica database to primary node
+
+DeployMasterDBFail: Failed to add replica database to primary node
+
+DeployReadOnlyDBInPorgress: Replica restoration and database joining started
+
+DeployReadOnlyDBSuccess: Replica restoration and database joining succeeded
+
+DeployReadOnlyDBFail: Replica restoration and database joining failed
+
+SyncDelay: Synchronization delayed
+
+SyncFail: Synchronization failed
+
+SyncExcluded: Removed from read-only group
+
+SyncNormal: Normal
      */
     public String getSynStatus() {
         return this.SynStatus;
     }
 
     /**
-     * Set 
-     * @param SynStatus 
+     * Set Synchronization status between the read-only replica and the primary instance.
+
+Init: Initializing
+
+DeployReadOnlyInPorgress: Deploying replica in progress
+
+DeployReadOnlySuccess: Replica deployment succeeded
+
+DeployReadOnlyFail: Replica deployment failed
+
+DeployMasterDBInPorgress: Adding replica database to primary node in progress
+
+DeployMasterDBSuccess: Successfully added replica database to primary node
+
+DeployMasterDBFail: Failed to add replica database to primary node
+
+DeployReadOnlyDBInPorgress: Replica restoration and database joining started
+
+DeployReadOnlyDBSuccess: Replica restoration and database joining succeeded
+
+DeployReadOnlyDBFail: Replica restoration and database joining failed
+
+SyncDelay: Synchronization delayed
+
+SyncFail: Synchronization failed
+
+SyncExcluded: Removed from read-only group
+
+SyncNormal: Normal
+     * @param SynStatus Synchronization status between the read-only replica and the primary instance.
+
+Init: Initializing
+
+DeployReadOnlyInPorgress: Deploying replica in progress
+
+DeployReadOnlySuccess: Replica deployment succeeded
+
+DeployReadOnlyFail: Replica deployment failed
+
+DeployMasterDBInPorgress: Adding replica database to primary node in progress
+
+DeployMasterDBSuccess: Successfully added replica database to primary node
+
+DeployMasterDBFail: Failed to add replica database to primary node
+
+DeployReadOnlyDBInPorgress: Replica restoration and database joining started
+
+DeployReadOnlyDBSuccess: Replica restoration and database joining succeeded
+
+DeployReadOnlyDBFail: Replica restoration and database joining failed
+
+SyncDelay: Synchronization delayed
+
+SyncFail: Synchronization failed
+
+SyncExcluded: Removed from read-only group
+
+SyncNormal: Normal
      */
     public void setSynStatus(String SynStatus) {
         this.SynStatus = SynStatus;
     }
 
     /**
-     * Get  
-     * @return DatabaseDifference 
+     * Get Databases not synchronized between the read-only replica and the primary instance 
+     * @return DatabaseDifference Databases not synchronized between the read-only replica and the primary instance
      */
     public String getDatabaseDifference() {
         return this.DatabaseDifference;
     }
 
     /**
-     * Set 
-     * @param DatabaseDifference 
+     * Set Databases not synchronized between the read-only replica and the primary instance
+     * @param DatabaseDifference Databases not synchronized between the read-only replica and the primary instance
      */
     public void setDatabaseDifference(String DatabaseDifference) {
         this.DatabaseDifference = DatabaseDifference;
     }
 
     /**
-     * Get  
-     * @return AccountDifference 
+     * Get Accounts not synchronized between the read-only replica and the primary instance 
+     * @return AccountDifference Accounts not synchronized between the read-only replica and the primary instance
      */
     public String getAccountDifference() {
         return this.AccountDifference;
     }
 
     /**
-     * Set 
-     * @param AccountDifference 
+     * Set Accounts not synchronized between the read-only replica and the primary instance
+     * @param AccountDifference Accounts not synchronized between the read-only replica and the primary instance
      */
     public void setAccountDifference(String AccountDifference) {
         this.AccountDifference = AccountDifference;
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Read-Only Replica Billing Start Time 
+     * @return StartTime Read-Only Replica Billing Start Time
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Read-Only Replica Billing Start Time
+     * @param StartTime Read-Only Replica Billing Start Time
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get Read-Only Replica Billing End Time 
+     * @return EndTime Read-Only Replica Billing End Time
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set Read-Only Replica Billing End Time
+     * @param EndTime Read-Only Replica Billing End Time
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get  
-     * @return IsolateTime 
+     * Get Read-Only Replica Isolation Time 
+     * @return IsolateTime Read-Only Replica Isolation Time
      */
     public String getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set 
-     * @param IsolateTime 
+     * Set Read-Only Replica Isolation Time
+     * @param IsolateTime Read-Only Replica Isolation Time
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get  
-     * @return RegionId 
+     * Get Read-Only Replica Region Location 
+     * @return RegionId Read-Only Replica Region Location
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 
-     * @param RegionId 
+     * Set Read-Only Replica Region Location
+     * @param RegionId Read-Only Replica Region Location
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get  
-     * @return ZoneId 
+     * Get Read-Only Replica AZ Location 
+     * @return ZoneId Read-Only Replica AZ Location
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 
-     * @param ZoneId 
+     * Set Read-Only Replica AZ Location
+     * @param ZoneId Read-Only Replica AZ Location
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ReadOnlyInstanceWeightPair extends AbstractModel {
 
     /**
-    * 
+    * Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
     */
     @SerializedName("ReadOnlyInstanceId")
     @Expose
     private String ReadOnlyInstanceId;
 
     /**
-    * 
+    * Read-Only Instance Weight, in the range of 0-100
     */
     @SerializedName("ReadOnlyWeight")
     @Expose
     private Long ReadOnlyWeight;
 
     /**
-     * Get  
-     * @return ReadOnlyInstanceId 
+     * Get Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7 
+     * @return ReadOnlyInstanceId Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
      */
     public String getReadOnlyInstanceId() {
         return this.ReadOnlyInstanceId;
     }
 
     /**
-     * Set 
-     * @param ReadOnlyInstanceId 
+     * Set Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
+     * @param ReadOnlyInstanceId Read-Only Instance ID, in the format of: mssqlro-3l3fgqn7
      */
     public void setReadOnlyInstanceId(String ReadOnlyInstanceId) {
         this.ReadOnlyInstanceId = ReadOnlyInstanceId;
     }
 
     /**
-     * Get  
-     * @return ReadOnlyWeight 
+     * Get Read-Only Instance Weight, in the range of 0-100 
+     * @return ReadOnlyWeight Read-Only Instance Weight, in the range of 0-100
      */
     public Long getReadOnlyWeight() {
         return this.ReadOnlyWeight;
     }
 
     /**
-     * Set 
-     * @param ReadOnlyWeight 
+     * Set Read-Only Instance Weight, in the range of 0-100
+     * @param ReadOnlyWeight Read-Only Instance Weight, in the range of 0-100
      */
     public void setReadOnlyWeight(Long ReadOnlyWeight) {
         this.ReadOnlyWeight = ReadOnlyWeight;

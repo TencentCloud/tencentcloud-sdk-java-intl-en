@@ -133,7 +133,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TimeConsuming;
 
     /**
-    * 
+    * id, for frontend
     */
     @SerializedName("Id")
     @Expose
@@ -396,16 +396,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Id 
+     * Get id, for frontend 
+     * @return Id id, for frontend
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set id, for frontend
+     * @param Id id, for frontend
      */
     public void setId(Long Id) {
         this.Id = Id;

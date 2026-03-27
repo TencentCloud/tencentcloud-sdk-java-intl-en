@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class MediaCastEvent extends AbstractModel {
 
     /**
-    * 
+    * Media relay ID.
     */
     @SerializedName("CastId")
     @Expose
     private String CastId;
 
     /**
-    * 
+    * Relay status. Valid values:
+<li>Working: Running;</li>
+<li>Scheduled: To be started after the scheduled time arrives;</li>
+<li>Stopped: Relay stopped;</li>
+<li>Idle: Idle.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get  
-     * @return CastId 
+     * Get Media relay ID. 
+     * @return CastId Media relay ID.
      */
     public String getCastId() {
         return this.CastId;
     }
 
     /**
-     * Set 
-     * @param CastId 
+     * Set Media relay ID.
+     * @param CastId Media relay ID.
      */
     public void setCastId(String CastId) {
         this.CastId = CastId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Relay status. Valid values:
+<li>Working: Running;</li>
+<li>Scheduled: To be started after the scheduled time arrives;</li>
+<li>Stopped: Relay stopped;</li>
+<li>Idle: Idle.</li> 
+     * @return Status Relay status. Valid values:
+<li>Working: Running;</li>
+<li>Scheduled: To be started after the scheduled time arrives;</li>
+<li>Stopped: Relay stopped;</li>
+<li>Idle: Idle.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Relay status. Valid values:
+<li>Working: Running;</li>
+<li>Scheduled: To be started after the scheduled time arrives;</li>
+<li>Stopped: Relay stopped;</li>
+<li>Idle: Idle.</li>
+     * @param Status Relay status. Valid values:
+<li>Working: Running;</li>
+<li>Scheduled: To be started after the scheduled time arrives;</li>
+<li>Stopped: Relay stopped;</li>
+<li>Idle: Idle.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

@@ -60,7 +60,11 @@ public class ImageWatermarkTemplate extends AbstractModel {
     private String RepeatType;
 
     /**
-    * 
+    * Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent.</li>
     */
     @SerializedName("Transparency")
     @Expose
@@ -163,16 +167,32 @@ public class ImageWatermarkTemplate extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Transparency 
+     * Get Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent.</li> 
+     * @return Transparency Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent.</li>
      */
     public Long getTransparency() {
         return this.Transparency;
     }
 
     /**
-     * Set 
-     * @param Transparency 
+     * Set Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent.</li>
+     * @param Transparency Image transparency, value range: [0, 100]
+
+<li>0: Completely opaque</li>
+
+<li>100: Completely transparent.</li>
      */
     public void setTransparency(Long Transparency) {
         this.Transparency = Transparency;

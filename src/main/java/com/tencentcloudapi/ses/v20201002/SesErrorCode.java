@@ -45,7 +45,7 @@ public enum SesErrorCode {
      /* Insufficient emails in plans. */
      FAILEDOPERATION_INSUFFICIENTQUOTA("FailedOperation.InsufficientQuota"),
      
-     /* Unsupported attachment name. please check whether the attachment name contains special characters. for details, see the appendix attachment description (https://www.tencentcloud.comom/document/product/1288/51951?from_cn_redirect=1). */
+     /* Unsupported attachment name. please check whether the attachment name contains special characters. for details, see the appendix attachment description (https://www.tencentcloud.com/document/product/1288/51951?from_cn_redirect=1). */
      FAILEDOPERATION_INVALIDATTACHNAME("FailedOperation.InvalidAttachName"),
      
      /* Reached the query limit (100). */

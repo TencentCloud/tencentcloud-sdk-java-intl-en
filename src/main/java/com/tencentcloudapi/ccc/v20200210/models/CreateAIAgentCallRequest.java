@@ -70,6 +70,13 @@ dify-inputs-xxx specifies the inputs variable for dify.
     private Variable [] Variables;
 
     /**
+    * Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
+    */
+    @SerializedName("MaxRingTimeoutSecond")
+    @Expose
+    private Long MaxRingTimeoutSecond;
+
+    /**
      * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
      * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
@@ -185,6 +192,22 @@ dify-inputs-xxx specifies the inputs variable for dify.
         this.Variables = Variables;
     }
 
+    /**
+     * Get Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter. 
+     * @return MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
+     */
+    public Long getMaxRingTimeoutSecond() {
+        return this.MaxRingTimeoutSecond;
+    }
+
+    /**
+     * Set Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
+     * @param MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports current parameter.
+     */
+    public void setMaxRingTimeoutSecond(Long MaxRingTimeoutSecond) {
+        this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
+    }
+
     public CreateAIAgentCallRequest() {
     }
 
@@ -220,6 +243,9 @@ dify-inputs-xxx specifies the inputs variable for dify.
                 this.Variables[i] = new Variable(source.Variables[i]);
             }
         }
+        if (source.MaxRingTimeoutSecond != null) {
+            this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
+        }
     }
 
 
@@ -233,6 +259,7 @@ dify-inputs-xxx specifies the inputs variable for dify.
         this.setParamArraySimple(map, prefix + "Callers.", this.Callers);
         this.setParamArrayObj(map, prefix + "PromptVariables.", this.PromptVariables);
         this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
+        this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
 
     }
 }

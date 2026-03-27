@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class IPStrategiesStatus extends AbstractModel {
 
     /**
-    * 
+    * Number of policies.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * 
+    * Policy List.
     */
     @SerializedName("StrategySet")
     @Expose
     private IPStrategy [] StrategySet;
 
     /**
-     * Get  
-     * @return TotalCount 
+     * Get Number of policies. 
+     * @return TotalCount Number of policies.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set 
-     * @param TotalCount 
+     * Set Number of policies.
+     * @param TotalCount Number of policies.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get  
-     * @return StrategySet 
+     * Get Policy List. 
+     * @return StrategySet Policy List.
      */
     public IPStrategy [] getStrategySet() {
         return this.StrategySet;
     }
 
     /**
-     * Set 
-     * @param StrategySet 
+     * Set Policy List.
+     * @param StrategySet Policy List.
      */
     public void setStrategySet(IPStrategy [] StrategySet) {
         this.StrategySet = StrategySet;

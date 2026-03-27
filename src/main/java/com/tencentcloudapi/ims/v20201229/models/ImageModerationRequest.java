@@ -80,7 +80,7 @@ public class ImageModerationRequest extends AbstractModel {
     private Device Device;
 
     /**
-    * 
+    * This field indicates the input image auditing type, with values including: IMAGE (Content Security) and IMAGE_AIGC (AI-generated content recognition). The default value is IMAGE.
     */
     @SerializedName("Type")
     @Expose
@@ -215,16 +215,16 @@ public class ImageModerationRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get This field indicates the input image auditing type, with values including: IMAGE (Content Security) and IMAGE_AIGC (AI-generated content recognition). The default value is IMAGE. 
+     * @return Type This field indicates the input image auditing type, with values including: IMAGE (Content Security) and IMAGE_AIGC (AI-generated content recognition). The default value is IMAGE.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set This field indicates the input image auditing type, with values including: IMAGE (Content Security) and IMAGE_AIGC (AI-generated content recognition). The default value is IMAGE.
+     * @param Type This field indicates the input image auditing type, with values including: IMAGE (Content Security) and IMAGE_AIGC (AI-generated content recognition). The default value is IMAGE.
      */
     public void setType(String Type) {
         this.Type = Type;

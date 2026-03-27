@@ -176,7 +176,7 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
     private CpuTopology CpuTopology;
 
     /**
-    * 
+    * Instance launch template.
     */
     @SerializedName("LaunchTemplate")
     @Expose
@@ -539,16 +539,16 @@ public class InquiryPriceRunInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return LaunchTemplate 
+     * Get Instance launch template. 
+     * @return LaunchTemplate Instance launch template.
      */
     public LaunchTemplate getLaunchTemplate() {
         return this.LaunchTemplate;
     }
 
     /**
-     * Set 
-     * @param LaunchTemplate 
+     * Set Instance launch template.
+     * @param LaunchTemplate Instance launch template.
      */
     public void setLaunchTemplate(LaunchTemplate LaunchTemplate) {
         this.LaunchTemplate = LaunchTemplate;

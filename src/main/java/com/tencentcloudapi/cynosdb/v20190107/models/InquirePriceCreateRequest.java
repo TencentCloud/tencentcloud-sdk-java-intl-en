@@ -52,7 +52,9 @@ public class InquirePriceCreateRequest extends AbstractModel {
     private String StoragePayMode;
 
     /**
-    * device type:common, exclusive
+    * Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
     */
     @SerializedName("DeviceType")
     @Expose
@@ -165,16 +167,24 @@ public class InquirePriceCreateRequest extends AbstractModel {
     }
 
     /**
-     * Get device type:common, exclusive 
-     * @return DeviceType device type:common, exclusive
+     * Get Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type. 
+     * @return DeviceType Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set device type:common, exclusive
-     * @param DeviceType device type:common, exclusive
+     * Set Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
+     * @param DeviceType Instance device type. Supported values are as follows:
+- common: indicates the general type
+- exclusive: indicates the exclusive type.
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

@@ -171,14 +171,18 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel {
     private String Env;
 
     /**
-    * 
+    * group by parameter value enumeration: 1:1m
+   2:5m  3:30m 
+   4:1h
+ 5:1d
     */
     @SerializedName("GroupByType")
     @Expose
     private Long GroupByType;
 
     /**
-    * 
+    * 1: Query Intelligent Research
+0: Use old logic, already offline, do not use
     */
     @SerializedName("IsNewData")
     @Expose
@@ -521,32 +525,48 @@ public class DescribeDataPvUrlStatisticsRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return GroupByType 
+     * Get group by parameter value enumeration: 1:1m
+   2:5m  3:30m 
+   4:1h
+ 5:1d 
+     * @return GroupByType group by parameter value enumeration: 1:1m
+   2:5m  3:30m 
+   4:1h
+ 5:1d
      */
     public Long getGroupByType() {
         return this.GroupByType;
     }
 
     /**
-     * Set 
-     * @param GroupByType 
+     * Set group by parameter value enumeration: 1:1m
+   2:5m  3:30m 
+   4:1h
+ 5:1d
+     * @param GroupByType group by parameter value enumeration: 1:1m
+   2:5m  3:30m 
+   4:1h
+ 5:1d
      */
     public void setGroupByType(Long GroupByType) {
         this.GroupByType = GroupByType;
     }
 
     /**
-     * Get  
-     * @return IsNewData 
+     * Get 1: Query Intelligent Research
+0: Use old logic, already offline, do not use 
+     * @return IsNewData 1: Query Intelligent Research
+0: Use old logic, already offline, do not use
      */
     public Long getIsNewData() {
         return this.IsNewData;
     }
 
     /**
-     * Set 
-     * @param IsNewData 
+     * Set 1: Query Intelligent Research
+0: Use old logic, already offline, do not use
+     * @param IsNewData 1: Query Intelligent Research
+0: Use old logic, already offline, do not use
      */
     public void setIsNewData(Long IsNewData) {
         this.IsNewData = IsNewData;

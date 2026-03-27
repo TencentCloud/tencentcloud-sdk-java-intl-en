@@ -31,14 +31,14 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 
+    * Cluster Name
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 
+    * Region Information
     */
     @SerializedName("Region")
     @Expose
@@ -59,7 +59,7 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private String Remark;
 
     /**
-    * 
+    * VPC and network information
     */
     @SerializedName("Vpcs")
     @Expose
@@ -73,28 +73,28 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Long [] ZoneIds;
 
     /**
-    * 
+    * Virtual Host Quantity
     */
     @SerializedName("VirtualHostNumber")
     @Expose
     private Long VirtualHostNumber;
 
     /**
-    * 
+    * Number of Queues
     */
     @SerializedName("QueueNumber")
     @Expose
     private Long QueueNumber;
 
     /**
-    * 
+    * Number of messages produced per second Unit: messages/second
     */
     @SerializedName("MessagePublishRate")
     @Expose
     private Float MessagePublishRate;
 
     /**
-    * 
+    * Number of backlogged messages Unit: messages
     */
     @SerializedName("MessageStackNumber")
     @Expose
@@ -108,28 +108,28 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Long ExpireTime;
 
     /**
-    * 
+    * Channel Count
     */
     @SerializedName("ChannelNumber")
     @Expose
     private Long ChannelNumber;
 
     /**
-    * 
+    * Connection Count
     */
     @SerializedName("ConnectionNumber")
     @Expose
     private Long ConnectionNumber;
 
     /**
-    * 
+    * Consumer Count
     */
     @SerializedName("ConsumerNumber")
     @Expose
     private Long ConsumerNumber;
 
     /**
-    * 
+    * Exchange Count
     */
     @SerializedName("ExchangeNumber")
     @Expose
@@ -237,32 +237,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return ClusterName 
+     * Get Cluster Name 
+     * @return ClusterName Cluster Name
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 
-     * @param ClusterName 
+     * Set Cluster Name
+     * @param ClusterName Cluster Name
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get  
-     * @return Region 
+     * Get Region Information 
+     * @return Region Region Information
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 
-     * @param Region 
+     * Set Region Information
+     * @param Region Region Information
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -301,16 +301,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Vpcs 
+     * Get VPC and network information 
+     * @return Vpcs VPC and network information
      */
     public VpcEndpointInfo [] getVpcs() {
         return this.Vpcs;
     }
 
     /**
-     * Set 
-     * @param Vpcs 
+     * Set VPC and network information
+     * @param Vpcs VPC and network information
      */
     public void setVpcs(VpcEndpointInfo [] Vpcs) {
         this.Vpcs = Vpcs;
@@ -333,64 +333,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return VirtualHostNumber 
+     * Get Virtual Host Quantity 
+     * @return VirtualHostNumber Virtual Host Quantity
      */
     public Long getVirtualHostNumber() {
         return this.VirtualHostNumber;
     }
 
     /**
-     * Set 
-     * @param VirtualHostNumber 
+     * Set Virtual Host Quantity
+     * @param VirtualHostNumber Virtual Host Quantity
      */
     public void setVirtualHostNumber(Long VirtualHostNumber) {
         this.VirtualHostNumber = VirtualHostNumber;
     }
 
     /**
-     * Get  
-     * @return QueueNumber 
+     * Get Number of Queues 
+     * @return QueueNumber Number of Queues
      */
     public Long getQueueNumber() {
         return this.QueueNumber;
     }
 
     /**
-     * Set 
-     * @param QueueNumber 
+     * Set Number of Queues
+     * @param QueueNumber Number of Queues
      */
     public void setQueueNumber(Long QueueNumber) {
         this.QueueNumber = QueueNumber;
     }
 
     /**
-     * Get  
-     * @return MessagePublishRate 
+     * Get Number of messages produced per second Unit: messages/second 
+     * @return MessagePublishRate Number of messages produced per second Unit: messages/second
      */
     public Float getMessagePublishRate() {
         return this.MessagePublishRate;
     }
 
     /**
-     * Set 
-     * @param MessagePublishRate 
+     * Set Number of messages produced per second Unit: messages/second
+     * @param MessagePublishRate Number of messages produced per second Unit: messages/second
      */
     public void setMessagePublishRate(Float MessagePublishRate) {
         this.MessagePublishRate = MessagePublishRate;
     }
 
     /**
-     * Get  
-     * @return MessageStackNumber 
+     * Get Number of backlogged messages Unit: messages 
+     * @return MessageStackNumber Number of backlogged messages Unit: messages
      */
     public Long getMessageStackNumber() {
         return this.MessageStackNumber;
     }
 
     /**
-     * Set 
-     * @param MessageStackNumber 
+     * Set Number of backlogged messages Unit: messages
+     * @param MessageStackNumber Number of backlogged messages Unit: messages
      */
     public void setMessageStackNumber(Long MessageStackNumber) {
         this.MessageStackNumber = MessageStackNumber;
@@ -413,64 +413,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return ChannelNumber 
+     * Get Channel Count 
+     * @return ChannelNumber Channel Count
      */
     public Long getChannelNumber() {
         return this.ChannelNumber;
     }
 
     /**
-     * Set 
-     * @param ChannelNumber 
+     * Set Channel Count
+     * @param ChannelNumber Channel Count
      */
     public void setChannelNumber(Long ChannelNumber) {
         this.ChannelNumber = ChannelNumber;
     }
 
     /**
-     * Get  
-     * @return ConnectionNumber 
+     * Get Connection Count 
+     * @return ConnectionNumber Connection Count
      */
     public Long getConnectionNumber() {
         return this.ConnectionNumber;
     }
 
     /**
-     * Set 
-     * @param ConnectionNumber 
+     * Set Connection Count
+     * @param ConnectionNumber Connection Count
      */
     public void setConnectionNumber(Long ConnectionNumber) {
         this.ConnectionNumber = ConnectionNumber;
     }
 
     /**
-     * Get  
-     * @return ConsumerNumber 
+     * Get Consumer Count 
+     * @return ConsumerNumber Consumer Count
      */
     public Long getConsumerNumber() {
         return this.ConsumerNumber;
     }
 
     /**
-     * Set 
-     * @param ConsumerNumber 
+     * Set Consumer Count
+     * @param ConsumerNumber Consumer Count
      */
     public void setConsumerNumber(Long ConsumerNumber) {
         this.ConsumerNumber = ConsumerNumber;
     }
 
     /**
-     * Get  
-     * @return ExchangeNumber 
+     * Get Exchange Count 
+     * @return ExchangeNumber Exchange Count
      */
     public Long getExchangeNumber() {
         return this.ExchangeNumber;
     }
 
     /**
-     * Set 
-     * @param ExchangeNumber 
+     * Set Exchange Count
+     * @param ExchangeNumber Exchange Count
      */
     public void setExchangeNumber(Long ExchangeNumber) {
         this.ExchangeNumber = ExchangeNumber;

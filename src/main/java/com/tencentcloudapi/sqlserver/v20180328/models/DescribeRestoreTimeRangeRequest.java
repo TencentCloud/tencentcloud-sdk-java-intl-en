@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeRestoreTimeRangeRequest extends AbstractModel {
 
     /**
-    * 
+    * Instance ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 
+    * Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
     */
     @SerializedName("TargetInstanceId")
     @Expose
     private String TargetInstanceId;
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get Instance ID 
+     * @return InstanceId Instance ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set Instance ID
+     * @param InstanceId Instance ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get  
-     * @return TargetInstanceId 
+     * Get Target instance ID for restoration; if left blank, defaults to restoring to the original instance. 
+     * @return TargetInstanceId Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
      */
     public String getTargetInstanceId() {
         return this.TargetInstanceId;
     }
 
     /**
-     * Set 
-     * @param TargetInstanceId 
+     * Set Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
+     * @param TargetInstanceId Target instance ID for restoration; if left blank, defaults to restoring to the original instance.
      */
     public void setTargetInstanceId(String TargetInstanceId) {
         this.TargetInstanceId = TargetInstanceId;

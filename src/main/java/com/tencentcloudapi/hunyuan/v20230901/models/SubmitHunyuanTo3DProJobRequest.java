@@ -100,7 +100,7 @@ Supported image format: JPG or PNG
 
     /**
     * Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
     */
     @SerializedName("FaceCount")
     @Expose
@@ -358,9 +358,9 @@ Supported image format: JPG or PNG
 
     /**
      * Get Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000 
+Specifies the supported face count generation range. value range: 3000-1500000 
      * @return FaceCount Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
      */
     public Long getFaceCount() {
         return this.FaceCount;
@@ -368,9 +368,9 @@ Specifies the supported face count generation range. value range: 40000-1500000
 
     /**
      * Set Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
      * @param FaceCount Specifies the face count for 3D model generation. default value is 500000.
-Specifies the supported face count generation range. value range: 40000-1500000
+Specifies the supported face count generation range. value range: 3000-1500000
      */
     public void setFaceCount(Long FaceCount) {
         this.FaceCount = FaceCount;

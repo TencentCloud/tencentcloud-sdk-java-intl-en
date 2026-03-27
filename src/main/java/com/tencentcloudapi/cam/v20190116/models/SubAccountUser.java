@@ -67,14 +67,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long UserType;
 
     /**
-    * 
+    * Recent Login IP
     */
     @SerializedName("LastLoginIp")
     @Expose
     private String LastLoginIp;
 
     /**
-    * 
+    * Recent login time; if the returned value is empty, it means the console has never been logged in to.
     */
     @SerializedName("LastLoginTime")
     @Expose
@@ -181,32 +181,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return LastLoginIp 
+     * Get Recent Login IP 
+     * @return LastLoginIp Recent Login IP
      */
     public String getLastLoginIp() {
         return this.LastLoginIp;
     }
 
     /**
-     * Set 
-     * @param LastLoginIp 
+     * Set Recent Login IP
+     * @param LastLoginIp Recent Login IP
      */
     public void setLastLoginIp(String LastLoginIp) {
         this.LastLoginIp = LastLoginIp;
     }
 
     /**
-     * Get  
-     * @return LastLoginTime 
+     * Get Recent login time; if the returned value is empty, it means the console has never been logged in to. 
+     * @return LastLoginTime Recent login time; if the returned value is empty, it means the console has never been logged in to.
      */
     public String getLastLoginTime() {
         return this.LastLoginTime;
     }
 
     /**
-     * Set 
-     * @param LastLoginTime 
+     * Set Recent login time; if the returned value is empty, it means the console has never been logged in to.
+     * @param LastLoginTime Recent login time; if the returned value is empty, it means the console has never been logged in to.
      */
     public void setLastLoginTime(String LastLoginTime) {
         this.LastLoginTime = LastLoginTime;

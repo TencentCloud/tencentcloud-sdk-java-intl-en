@@ -121,7 +121,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DigitalWatermarkType;
 
     /**
-    * 
+    * Copyright information.
     */
     @SerializedName("CopyRightWatermarkText")
     @Expose
@@ -372,16 +372,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return CopyRightWatermarkText 
+     * Get Copyright information. 
+     * @return CopyRightWatermarkText Copyright information.
      */
     public String getCopyRightWatermarkText() {
         return this.CopyRightWatermarkText;
     }
 
     /**
-     * Set 
-     * @param CopyRightWatermarkText 
+     * Set Copyright information.
+     * @param CopyRightWatermarkText Copyright information.
      */
     public void setCopyRightWatermarkText(String CopyRightWatermarkText) {
         this.CopyRightWatermarkText = CopyRightWatermarkText;

@@ -52,7 +52,7 @@ public class EnterRescueModeRequest extends AbstractModel {
     private Boolean ForceStop;
 
     /**
-    * 
+    * The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
     */
     @SerializedName("StopType")
     @Expose
@@ -127,16 +127,16 @@ public class EnterRescueModeRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return StopType 
+     * Get The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT. 
+     * @return StopType The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
      */
     public String getStopType() {
         return this.StopType;
     }
 
     /**
-     * Set 
-     * @param StopType 
+     * Set The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
+     * @param StopType The shutdown mode of the instance. Valid values: <br><li>SOFT_FIRST: Indicates a forced shutdown after a graceful shutdown fails</li><br><li>HARD: Direct forced shutdown</li><br><li>SOFT: Soft shutdown only</li><br>Default value: SOFT.
      */
     public void setStopType(String StopType) {
         this.StopType = StopType;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyDataBaseTuple extends AbstractModel {
 
     /**
-    * 
+    * Subscription Relationship to be Modified
     */
     @SerializedName("DatabaseTuple")
     @Expose
     private DatabaseTuple DatabaseTuple;
 
     /**
-    * 
+    * Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
     */
     @SerializedName("NewDatabaseTuple")
     @Expose
     private DatabaseTuple NewDatabaseTuple;
 
     /**
-    * 
+    * Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
     */
     @SerializedName("DeleteDataBasesTuple")
     @Expose
     private Boolean DeleteDataBasesTuple;
 
     /**
-     * Get  
-     * @return DatabaseTuple 
+     * Get Subscription Relationship to be Modified 
+     * @return DatabaseTuple Subscription Relationship to be Modified
      */
     public DatabaseTuple getDatabaseTuple() {
         return this.DatabaseTuple;
     }
 
     /**
-     * Set 
-     * @param DatabaseTuple 
+     * Set Subscription Relationship to be Modified
+     * @param DatabaseTuple Subscription Relationship to be Modified
      */
     public void setDatabaseTuple(DatabaseTuple DatabaseTuple) {
         this.DatabaseTuple = DatabaseTuple;
     }
 
     /**
-     * Get  
-     * @return NewDatabaseTuple 
+     * Get Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false 
+     * @return NewDatabaseTuple Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
      */
     public DatabaseTuple getNewDatabaseTuple() {
         return this.NewDatabaseTuple;
     }
 
     /**
-     * Set 
-     * @param NewDatabaseTuple 
+     * Set Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
+     * @param NewDatabaseTuple Modified subscription relationship. Takes effect when DeleteDataBasesTuple is false
      */
     public void setNewDatabaseTuple(DatabaseTuple NewDatabaseTuple) {
         this.NewDatabaseTuple = NewDatabaseTuple;
     }
 
     /**
-     * Get  
-     * @return DeleteDataBasesTuple 
+     * Get Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid 
+     * @return DeleteDataBasesTuple Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
      */
     public Boolean getDeleteDataBasesTuple() {
         return this.DeleteDataBasesTuple;
     }
 
     /**
-     * Set 
-     * @param DeleteDataBasesTuple 
+     * Set Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
+     * @param DeleteDataBasesTuple Whether to delete the subscription relationship. When this option is true, NewDatabaseTuple is invalid
      */
     public void setDeleteDataBasesTuple(Boolean DeleteDataBasesTuple) {
         this.DeleteDataBasesTuple = DeleteDataBasesTuple;

@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class DescribeTelCallInfoResponse extends AbstractModel {
 
     /**
-    * Number of minutes consumed by outbound package.
+    * <P>Minutes consumed by outbound package</p>.
     */
     @SerializedName("TelCallOutCount")
     @Expose
     private Long TelCallOutCount;
 
     /**
-    * Number of minutes consumed by inbound package.
+    * <P>Minutes consumed by inbound package</p>.
     */
     @SerializedName("TelCallInCount")
     @Expose
     private Long TelCallInCount;
 
     /**
-    * Number of agent usage statistics.
+    * <P>Number of agent usage statistics</p>.
     */
     @SerializedName("SeatUsedCount")
     @Expose
     private Long SeatUsedCount;
 
     /**
-    * Number of minutes consumed by audio package.
+    * <P>Minutes consumed by audio package</p>.
     */
     @SerializedName("VoipCallInCount")
     @Expose
     private Long VoipCallInCount;
 
     /**
-    * Number of minutes consumed by audio package.
+    * <P>Minutes consumed by audio package</p>.
     */
     @SerializedName("VOIPCallInCount")
     @Expose
     private Long VOIPCallInCount;
 
     /**
-    * Number of minutes consumed by offline speech-to-text package.
+    * <P>Minutes consumed by offline speech-to-text package</p>.
     */
     @SerializedName("AsrOfflineCount")
     @Expose
     private Long AsrOfflineCount;
 
     /**
-    * Number of minutes consumed by real-time speech-to-text package.
+    * <P>Minutes consumed by real-time speech-to-text package</p>.
     */
     @SerializedName("AsrRealtimeCount")
     @Expose
@@ -80,56 +80,56 @@ public class DescribeTelCallInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of minutes consumed by outbound package. 
-     * @return TelCallOutCount Number of minutes consumed by outbound package.
+     * Get <P>Minutes consumed by outbound package</p>. 
+     * @return TelCallOutCount <P>Minutes consumed by outbound package</p>.
      */
     public Long getTelCallOutCount() {
         return this.TelCallOutCount;
     }
 
     /**
-     * Set Number of minutes consumed by outbound package.
-     * @param TelCallOutCount Number of minutes consumed by outbound package.
+     * Set <P>Minutes consumed by outbound package</p>.
+     * @param TelCallOutCount <P>Minutes consumed by outbound package</p>.
      */
     public void setTelCallOutCount(Long TelCallOutCount) {
         this.TelCallOutCount = TelCallOutCount;
     }
 
     /**
-     * Get Number of minutes consumed by inbound package. 
-     * @return TelCallInCount Number of minutes consumed by inbound package.
+     * Get <P>Minutes consumed by inbound package</p>. 
+     * @return TelCallInCount <P>Minutes consumed by inbound package</p>.
      */
     public Long getTelCallInCount() {
         return this.TelCallInCount;
     }
 
     /**
-     * Set Number of minutes consumed by inbound package.
-     * @param TelCallInCount Number of minutes consumed by inbound package.
+     * Set <P>Minutes consumed by inbound package</p>.
+     * @param TelCallInCount <P>Minutes consumed by inbound package</p>.
      */
     public void setTelCallInCount(Long TelCallInCount) {
         this.TelCallInCount = TelCallInCount;
     }
 
     /**
-     * Get Number of agent usage statistics. 
-     * @return SeatUsedCount Number of agent usage statistics.
+     * Get <P>Number of agent usage statistics</p>. 
+     * @return SeatUsedCount <P>Number of agent usage statistics</p>.
      */
     public Long getSeatUsedCount() {
         return this.SeatUsedCount;
     }
 
     /**
-     * Set Number of agent usage statistics.
-     * @param SeatUsedCount Number of agent usage statistics.
+     * Set <P>Number of agent usage statistics</p>.
+     * @param SeatUsedCount <P>Number of agent usage statistics</p>.
      */
     public void setSeatUsedCount(Long SeatUsedCount) {
         this.SeatUsedCount = SeatUsedCount;
     }
 
     /**
-     * Get Number of minutes consumed by audio package. 
-     * @return VoipCallInCount Number of minutes consumed by audio package.
+     * Get <P>Minutes consumed by audio package</p>. 
+     * @return VoipCallInCount <P>Minutes consumed by audio package</p>.
      * @deprecated
      */
     @Deprecated
@@ -138,8 +138,8 @@ public class DescribeTelCallInfoResponse extends AbstractModel {
     }
 
     /**
-     * Set Number of minutes consumed by audio package.
-     * @param VoipCallInCount Number of minutes consumed by audio package.
+     * Set <P>Minutes consumed by audio package</p>.
+     * @param VoipCallInCount <P>Minutes consumed by audio package</p>.
      * @deprecated
      */
     @Deprecated
@@ -148,48 +148,48 @@ public class DescribeTelCallInfoResponse extends AbstractModel {
     }
 
     /**
-     * Get Number of minutes consumed by audio package. 
-     * @return VOIPCallInCount Number of minutes consumed by audio package.
+     * Get <P>Minutes consumed by audio package</p>. 
+     * @return VOIPCallInCount <P>Minutes consumed by audio package</p>.
      */
     public Long getVOIPCallInCount() {
         return this.VOIPCallInCount;
     }
 
     /**
-     * Set Number of minutes consumed by audio package.
-     * @param VOIPCallInCount Number of minutes consumed by audio package.
+     * Set <P>Minutes consumed by audio package</p>.
+     * @param VOIPCallInCount <P>Minutes consumed by audio package</p>.
      */
     public void setVOIPCallInCount(Long VOIPCallInCount) {
         this.VOIPCallInCount = VOIPCallInCount;
     }
 
     /**
-     * Get Number of minutes consumed by offline speech-to-text package. 
-     * @return AsrOfflineCount Number of minutes consumed by offline speech-to-text package.
+     * Get <P>Minutes consumed by offline speech-to-text package</p>. 
+     * @return AsrOfflineCount <P>Minutes consumed by offline speech-to-text package</p>.
      */
     public Long getAsrOfflineCount() {
         return this.AsrOfflineCount;
     }
 
     /**
-     * Set Number of minutes consumed by offline speech-to-text package.
-     * @param AsrOfflineCount Number of minutes consumed by offline speech-to-text package.
+     * Set <P>Minutes consumed by offline speech-to-text package</p>.
+     * @param AsrOfflineCount <P>Minutes consumed by offline speech-to-text package</p>.
      */
     public void setAsrOfflineCount(Long AsrOfflineCount) {
         this.AsrOfflineCount = AsrOfflineCount;
     }
 
     /**
-     * Get Number of minutes consumed by real-time speech-to-text package. 
-     * @return AsrRealtimeCount Number of minutes consumed by real-time speech-to-text package.
+     * Get <P>Minutes consumed by real-time speech-to-text package</p>. 
+     * @return AsrRealtimeCount <P>Minutes consumed by real-time speech-to-text package</p>.
      */
     public Long getAsrRealtimeCount() {
         return this.AsrRealtimeCount;
     }
 
     /**
-     * Set Number of minutes consumed by real-time speech-to-text package.
-     * @param AsrRealtimeCount Number of minutes consumed by real-time speech-to-text package.
+     * Set <P>Minutes consumed by real-time speech-to-text package</p>.
+     * @param AsrRealtimeCount <P>Minutes consumed by real-time speech-to-text package</p>.
      */
     public void setAsrRealtimeCount(Long AsrRealtimeCount) {
         this.AsrRealtimeCount = AsrRealtimeCount;

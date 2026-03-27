@@ -150,14 +150,14 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     private String ConnectionPoolType;
 
     /**
-    * 
+    * Whether to enable adaptive load balancing. Disabled by default.
     */
     @SerializedName("AutoLoadBalance")
     @Expose
     private Boolean AutoLoadBalance;
 
     /**
-    * 
+    * Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
     */
     @SerializedName("AccessMode")
     @Expose
@@ -452,32 +452,32 @@ public class CreateCdbProxyAddressRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AutoLoadBalance 
+     * Get Whether to enable adaptive load balancing. Disabled by default. 
+     * @return AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
      */
     public Boolean getAutoLoadBalance() {
         return this.AutoLoadBalance;
     }
 
     /**
-     * Set 
-     * @param AutoLoadBalance 
+     * Set Whether to enable adaptive load balancing. Disabled by default.
+     * @param AutoLoadBalance Whether to enable adaptive load balancing. Disabled by default.
      */
     public void setAutoLoadBalance(Boolean AutoLoadBalance) {
         this.AutoLoadBalance = AutoLoadBalance;
     }
 
     /**
-     * Get  
-     * @return AccessMode 
+     * Get Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy. 
+     * @return AccessMode Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
      */
     public String getAccessMode() {
         return this.AccessMode;
     }
 
     /**
-     * Set 
-     * @param AccessMode 
+     * Set Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
+     * @param AccessMode Access Mode. nearBy - nearby access, balance - balanced allocation. Default value: nearBy.
      */
     public void setAccessMode(String AccessMode) {
         this.AccessMode = AccessMode;

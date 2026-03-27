@@ -80,7 +80,7 @@ public class DescribeInstanceErrorLogsRequest extends AbstractModel {
     private String [] LogLevels;
 
     /**
-    * 
+    * Keywords, supports fuzzy search
     */
     @SerializedName("KeyWords")
     @Expose
@@ -215,16 +215,16 @@ public class DescribeInstanceErrorLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return KeyWords 
+     * Get Keywords, supports fuzzy search 
+     * @return KeyWords Keywords, supports fuzzy search
      */
     public String [] getKeyWords() {
         return this.KeyWords;
     }
 
     /**
-     * Set 
-     * @param KeyWords 
+     * Set Keywords, supports fuzzy search
+     * @param KeyWords Keywords, supports fuzzy search
      */
     public void setKeyWords(String [] KeyWords) {
         this.KeyWords = KeyWords;

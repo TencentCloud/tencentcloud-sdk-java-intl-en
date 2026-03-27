@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class MedicalInvoice extends AbstractModel {
 
     /**
-    * 
+    * Invoice name.
     */
     @SerializedName("Title")
     @Expose
     private String Title;
 
     /**
-    * 
+    * Invoice code.
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * 
+    * Invoice number.
     */
     @SerializedName("Number")
     @Expose
     private String Number;
 
     /**
-    * 
+    * Total amount (in figures).
     */
     @SerializedName("Total")
     @Expose
     private String Total;
 
     /**
-    * 
+    * Total Amount (in words).
     */
     @SerializedName("TotalCn")
     @Expose
     private String TotalCn;
 
     /**
-    * 
+    * Invoice date.
     */
     @SerializedName("Date")
     @Expose
     private String Date;
 
     /**
-    * 
+    * Verification code
     */
     @SerializedName("CheckCode")
     @Expose
     private String CheckCode;
 
     /**
-    * 
+    * Place of Issue.
     */
     @SerializedName("Place")
     @Expose
     private String Place;
 
     /**
-    * 
+    * Reviewer.
     */
     @SerializedName("Reviewer")
     @Expose
     private String Reviewer;
 
     /**
-     * Get  
-     * @return Title 
+     * Get Invoice name. 
+     * @return Title Invoice name.
      */
     public String getTitle() {
         return this.Title;
     }
 
     /**
-     * Set 
-     * @param Title 
+     * Set Invoice name.
+     * @param Title Invoice name.
      */
     public void setTitle(String Title) {
         this.Title = Title;
     }
 
     /**
-     * Get  
-     * @return Code 
+     * Get Invoice code. 
+     * @return Code Invoice code.
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 
-     * @param Code 
+     * Set Invoice code.
+     * @param Code Invoice code.
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get  
-     * @return Number 
+     * Get Invoice number. 
+     * @return Number Invoice number.
      */
     public String getNumber() {
         return this.Number;
     }
 
     /**
-     * Set 
-     * @param Number 
+     * Set Invoice number.
+     * @param Number Invoice number.
      */
     public void setNumber(String Number) {
         this.Number = Number;
     }
 
     /**
-     * Get  
-     * @return Total 
+     * Get Total amount (in figures). 
+     * @return Total Total amount (in figures).
      */
     public String getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 
-     * @param Total 
+     * Set Total amount (in figures).
+     * @param Total Total amount (in figures).
      */
     public void setTotal(String Total) {
         this.Total = Total;
     }
 
     /**
-     * Get  
-     * @return TotalCn 
+     * Get Total Amount (in words). 
+     * @return TotalCn Total Amount (in words).
      */
     public String getTotalCn() {
         return this.TotalCn;
     }
 
     /**
-     * Set 
-     * @param TotalCn 
+     * Set Total Amount (in words).
+     * @param TotalCn Total Amount (in words).
      */
     public void setTotalCn(String TotalCn) {
         this.TotalCn = TotalCn;
     }
 
     /**
-     * Get  
-     * @return Date 
+     * Get Invoice date. 
+     * @return Date Invoice date.
      */
     public String getDate() {
         return this.Date;
     }
 
     /**
-     * Set 
-     * @param Date 
+     * Set Invoice date.
+     * @param Date Invoice date.
      */
     public void setDate(String Date) {
         this.Date = Date;
     }
 
     /**
-     * Get  
-     * @return CheckCode 
+     * Get Verification code 
+     * @return CheckCode Verification code
      */
     public String getCheckCode() {
         return this.CheckCode;
     }
 
     /**
-     * Set 
-     * @param CheckCode 
+     * Set Verification code
+     * @param CheckCode Verification code
      */
     public void setCheckCode(String CheckCode) {
         this.CheckCode = CheckCode;
     }
 
     /**
-     * Get  
-     * @return Place 
+     * Get Place of Issue. 
+     * @return Place Place of Issue.
      */
     public String getPlace() {
         return this.Place;
     }
 
     /**
-     * Set 
-     * @param Place 
+     * Set Place of Issue.
+     * @param Place Place of Issue.
      */
     public void setPlace(String Place) {
         this.Place = Place;
     }
 
     /**
-     * Get  
-     * @return Reviewer 
+     * Get Reviewer. 
+     * @return Reviewer Reviewer.
      */
     public String getReviewer() {
         return this.Reviewer;
     }
 
     /**
-     * Set 
-     * @param Reviewer 
+     * Set Reviewer.
+     * @param Reviewer Reviewer.
      */
     public void setReviewer(String Reviewer) {
         this.Reviewer = Reviewer;

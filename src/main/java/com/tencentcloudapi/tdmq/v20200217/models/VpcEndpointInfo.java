@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class VpcEndpointInfo extends AbstractModel {
 
     /**
-    * 
+    * vpc id
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 
+    * subnet id
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 
+    * vpc Access Point Information
     */
     @SerializedName("VpcEndpoint")
     @Expose
@@ -59,48 +59,48 @@ public class VpcEndpointInfo extends AbstractModel {
     private String VpcTlsEndpoint;
 
     /**
-     * Get  
-     * @return VpcId 
+     * Get vpc id 
+     * @return VpcId vpc id
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 
-     * @param VpcId 
+     * Set vpc id
+     * @param VpcId vpc id
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get  
-     * @return SubnetId 
+     * Get subnet id 
+     * @return SubnetId subnet id
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 
-     * @param SubnetId 
+     * Set subnet id
+     * @param SubnetId subnet id
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get  
-     * @return VpcEndpoint 
+     * Get vpc Access Point Information 
+     * @return VpcEndpoint vpc Access Point Information
      */
     public String getVpcEndpoint() {
         return this.VpcEndpoint;
     }
 
     /**
-     * Set 
-     * @param VpcEndpoint 
+     * Set vpc Access Point Information
+     * @param VpcEndpoint vpc Access Point Information
      */
     public void setVpcEndpoint(String VpcEndpoint) {
         this.VpcEndpoint = VpcEndpoint;

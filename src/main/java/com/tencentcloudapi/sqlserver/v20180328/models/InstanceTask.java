@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class InstanceTask extends AbstractModel {
 
     /**
-    * 
+    * Unique id
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * 
+    * Job Type
     */
     @SerializedName("Type")
     @Expose
     private Long Type;
 
     /**
-    * 
+    * Job Status
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 
+    * Progress Percentage 0~100
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * 
+    * Start Time
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * End Time
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 
+    * Error Code
     */
     @SerializedName("ErrorCode")
     @Expose
     private Long ErrorCode;
 
     /**
-    * 
+    * Error Message Description
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get  
-     * @return Id 
+     * Get Unique id 
+     * @return Id Unique id
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set Unique id
+     * @param Id Unique id
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Job Type 
+     * @return Type Job Type
      */
     public Long getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Job Type
+     * @param Type Job Type
      */
     public void setType(Long Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Job Status 
+     * @return Status Job Status
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Job Status
+     * @param Status Job Status
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return Progress 
+     * Get Progress Percentage 0~100 
+     * @return Progress Progress Percentage 0~100
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 
-     * @param Progress 
+     * Set Progress Percentage 0~100
+     * @param Progress Progress Percentage 0~100
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Start Time 
+     * @return StartTime Start Time
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Start Time
+     * @param StartTime Start Time
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get End Time 
+     * @return EndTime End Time
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set End Time
+     * @param EndTime End Time
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get  
-     * @return ErrorCode 
+     * Get Error Code 
+     * @return ErrorCode Error Code
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set 
-     * @param ErrorCode 
+     * Set Error Code
+     * @param ErrorCode Error Code
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Error Message Description 
+     * @return Message Error Message Description
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Error Message Description
+     * @param Message Error Message Description
      */
     public void setMessage(String Message) {
         this.Message = Message;

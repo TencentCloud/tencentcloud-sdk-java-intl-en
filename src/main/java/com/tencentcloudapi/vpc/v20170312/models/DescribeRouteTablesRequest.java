@@ -58,7 +58,7 @@ public class DescribeRouteTablesRequest extends AbstractModel {
     private String Limit;
 
     /**
-    * 
+    * Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
     */
     @SerializedName("NeedRouterInfo")
     @Expose
@@ -153,16 +153,16 @@ public class DescribeRouteTablesRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return NeedRouterInfo 
+     * Get Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information. 
+     * @return NeedRouterInfo Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
      */
     public Boolean getNeedRouterInfo() {
         return this.NeedRouterInfo;
     }
 
     /**
-     * Set 
-     * @param NeedRouterInfo 
+     * Set Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
+     * @param NeedRouterInfo Whether to obtain routing policy information. Enabled by default. Set to False when the console does not need to pull routing policy information.
      */
     public void setNeedRouterInfo(Boolean NeedRouterInfo) {
         this.NeedRouterInfo = NeedRouterInfo;

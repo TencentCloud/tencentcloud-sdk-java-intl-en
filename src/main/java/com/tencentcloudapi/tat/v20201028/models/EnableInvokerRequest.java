@@ -26,7 +26,7 @@ public class EnableInvokerRequest extends AbstractModel {
     /**
     * Executor ID to be enabled.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
     */
     @SerializedName("InvokerId")
     @Expose
@@ -35,10 +35,10 @@ Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/617
     /**
      * Get Executor ID to be enabled.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution. 
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution. 
      * @return InvokerId Executor ID to be enabled.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public String getInvokerId() {
         return this.InvokerId;
@@ -47,10 +47,10 @@ Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/617
     /**
      * Set Executor ID to be enabled.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      * @param InvokerId Executor ID to be enabled.
 
-Call the [DescribeInvokers](https://www.tencentcloud.comom/document/api/1340/61759?from_cn_redirect=1) api to query execution.
+Call the [DescribeInvokers](https://www.tencentcloud.com/document/api/1340/61759?from_cn_redirect=1) api to query execution.
      */
     public void setInvokerId(String InvokerId) {
         this.InvokerId = InvokerId;

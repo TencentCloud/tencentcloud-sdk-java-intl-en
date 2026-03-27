@@ -64,7 +64,7 @@ public class DescribeBillResourceSummaryRequest extends AbstractModel {
 Daily settlement
 Yearly/monthly subscription
 Spot
-New monthly subscription
+New yearly/monthly subscription
 Yearly/monthly subscription renewal
 Yearly/monthly subscription specification adjustment
 Yearly/monthly subscription refund
@@ -217,7 +217,7 @@ This parameter can be used for querying bills after January 2021.
 Daily settlement
 Yearly/monthly subscription
 Spot
-New monthly subscription
+New yearly/monthly subscription
 Yearly/monthly subscription renewal
 Yearly/monthly subscription specification adjustment
 Yearly/monthly subscription refund
@@ -232,7 +232,7 @@ Offline product deduction
 Daily settlement
 Yearly/monthly subscription
 Spot
-New monthly subscription
+New yearly/monthly subscription
 Yearly/monthly subscription renewal
 Yearly/monthly subscription specification adjustment
 Yearly/monthly subscription refund
@@ -253,7 +253,7 @@ Offline product deduction
 Daily settlement
 Yearly/monthly subscription
 Spot
-New monthly subscription
+New yearly/monthly subscription
 Yearly/monthly subscription renewal
 Yearly/monthly subscription specification adjustment
 Yearly/monthly subscription refund
@@ -268,7 +268,7 @@ Offline product deduction
 Daily settlement
 Yearly/monthly subscription
 Spot
-New monthly subscription
+New yearly/monthly subscription
 Yearly/monthly subscription renewal
 Yearly/monthly subscription specification adjustment
 Yearly/monthly subscription refund

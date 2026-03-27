@@ -180,7 +180,7 @@ Default value: `0`.
     private String DBVersion;
 
     /**
-    * 
+    * <p>Dedicated Cluster ID</p>
     */
     @SerializedName("DedicatedClusterId")
     @Expose
@@ -575,16 +575,16 @@ Default value: `0`.
     }
 
     /**
-     * Get  
-     * @return DedicatedClusterId 
+     * Get <p>Dedicated Cluster ID</p> 
+     * @return DedicatedClusterId <p>Dedicated Cluster ID</p>
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set 
-     * @param DedicatedClusterId 
+     * Set <p>Dedicated Cluster ID</p>
+     * @param DedicatedClusterId <p>Dedicated Cluster ID</p>
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;

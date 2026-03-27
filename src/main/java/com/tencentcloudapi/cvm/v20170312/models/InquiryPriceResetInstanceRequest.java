@@ -59,7 +59,7 @@ public class InquiryPriceResetInstanceRequest extends AbstractModel {
     private EnhancedService EnhancedService;
 
     /**
-    * 
+    * User data provided for the instance, which must be base64-encoded. The maximum supported data size is 16KB. For detailed instructions on obtaining this parameter, see [Windows](https://cloud.tencent.com/document/product/213/17526) and [Linux](https://cloud.tencent.com/document/product/213/17525) documentation on executing commands during startup.
     */
     @SerializedName("UserData")
     @Expose
@@ -146,16 +146,16 @@ public class InquiryPriceResetInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return UserData 
+     * Get User data provided for the instance, which must be base64-encoded. The maximum supported data size is 16KB. For detailed instructions on obtaining this parameter, see [Windows](https://cloud.tencent.com/document/product/213/17526) and [Linux](https://cloud.tencent.com/document/product/213/17525) documentation on executing commands during startup. 
+     * @return UserData User data provided for the instance, which must be base64-encoded. The maximum supported data size is 16KB. For detailed instructions on obtaining this parameter, see [Windows](https://cloud.tencent.com/document/product/213/17526) and [Linux](https://cloud.tencent.com/document/product/213/17525) documentation on executing commands during startup.
      */
     public String getUserData() {
         return this.UserData;
     }
 
     /**
-     * Set 
-     * @param UserData 
+     * Set User data provided for the instance, which must be base64-encoded. The maximum supported data size is 16KB. For detailed instructions on obtaining this parameter, see [Windows](https://cloud.tencent.com/document/product/213/17526) and [Linux](https://cloud.tencent.com/document/product/213/17525) documentation on executing commands during startup.
+     * @param UserData User data provided for the instance, which must be base64-encoded. The maximum supported data size is 16KB. For detailed instructions on obtaining this parameter, see [Windows](https://cloud.tencent.com/document/product/213/17526) and [Linux](https://cloud.tencent.com/document/product/213/17525) documentation on executing commands during startup.
      */
     public void setUserData(String UserData) {
         this.UserData = UserData;

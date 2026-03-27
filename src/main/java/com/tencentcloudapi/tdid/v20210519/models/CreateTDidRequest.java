@@ -38,7 +38,7 @@ public class CreateTDidRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    *  
+    * Deployment mechanism: 1 for enabled, 0 for disabled
     */
     @SerializedName("Relegation")
     @Expose
@@ -77,16 +77,16 @@ public class CreateTDidRequest extends AbstractModel {
     }
 
     /**
-     * Get   
-     * @return Relegation  
+     * Get Deployment mechanism: 1 for enabled, 0 for disabled 
+     * @return Relegation Deployment mechanism: 1 for enabled, 0 for disabled
      */
     public Long getRelegation() {
         return this.Relegation;
     }
 
     /**
-     * Set  
-     * @param Relegation  
+     * Set Deployment mechanism: 1 for enabled, 0 for disabled
+     * @param Relegation Deployment mechanism: 1 for enabled, 0 for disabled
      */
     public void setRelegation(Long Relegation) {
         this.Relegation = Relegation;

@@ -24,138 +24,148 @@ import java.util.HashMap;
 public class CheckItem extends AbstractModel {
 
     /**
-    * 
+    * Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
     */
     @SerializedName("CheckName")
     @Expose
     private String CheckName;
 
     /**
-    * 
+    * Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * 
+    * Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
     */
     @SerializedName("Passed")
     @Expose
     private Long Passed;
 
     /**
-    * 
+    * Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
     */
     @SerializedName("IsAffect")
     @Expose
     private Long IsAffect;
 
     /**
-    * 
+    * Required description when impact exists or the check is not passed
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-    * 
+    * Describe the corresponding code
     */
     @SerializedName("MsgCode")
     @Expose
     private Long MsgCode;
 
     /**
-     * Get  
-     * @return CheckName 
+     * Get Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check; 
+     * @return CheckName Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
      */
     public String getCheckName() {
         return this.CheckName;
     }
 
     /**
-     * Set 
-     * @param CheckName 
+     * Set Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
+     * @param CheckName Check item names: CK_CPU - Post-Resizing CPU Risk Check; CK_MASTER_STORAGE - During read-only replica resizing, verify that read-only replica storage space is not less than that of the primary instance; CK_MEMORY - Post-Resizing Memory Risk Check; CK_STORAGE - Post-Resizing Storage Space Risk Check; CK_UPGRATE - Resizing Migration Requirement Check;
      */
     public void setCheckName(String CheckName) {
         this.CheckName = CheckName;
     }
 
     /**
-     * Get  
-     * @return CurrentValue 
+     * Get Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing; 
+     * @return CurrentValue Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set 
-     * @param CurrentValue 
+     * Set Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
+     * @param CurrentValue Check item return values: CK_CPU - Maximum CPU utilization (%) in the last 7 days; CK_MASTER_STORAGE - Disk space of the primary instance (GB); CK_MEMORY - Maximum memory usage (GB) in the last 7 days;
+
+CK_STORAGE - Maximum disk usage (GB) in the last 7 days; CK_UPGRATE - Whether the current resizing check requires migration: MIGRATE indicates migration resizing is required, LOCAL indicates local resizing;
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get  
-     * @return Passed 
+     * Get Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed 
+     * @return Passed Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
      */
     public Long getPassed() {
         return this.Passed;
     }
 
     /**
-     * Set 
-     * @param Passed 
+     * Set Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
+     * @param Passed Check item pass status: 0 - Not passed, resizing not allowed; 1 - Passed, resizing allowed
      */
     public void setPassed(Long Passed) {
         this.Passed = Passed;
     }
 
     /**
-     * Get  
-     * @return IsAffect 
+     * Get Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists 
+     * @return IsAffect Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
      */
     public Long getIsAffect() {
         return this.IsAffect;
     }
 
     /**
-     * Set 
-     * @param IsAffect 
+     * Set Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
+     * @param IsAffect Whether this resizing item affects the instance: 0 - No impact; 1 - Impact exists
      */
     public void setIsAffect(Long IsAffect) {
         this.IsAffect = IsAffect;
     }
 
     /**
-     * Get  
-     * @return Msg 
+     * Get Required description when impact exists or the check is not passed 
+     * @return Msg Required description when impact exists or the check is not passed
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set 
-     * @param Msg 
+     * Set Required description when impact exists or the check is not passed
+     * @param Msg Required description when impact exists or the check is not passed
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get  
-     * @return MsgCode 
+     * Get Describe the corresponding code 
+     * @return MsgCode Describe the corresponding code
      */
     public Long getMsgCode() {
         return this.MsgCode;
     }
 
     /**
-     * Set 
-     * @param MsgCode 
+     * Set Describe the corresponding code
+     * @param MsgCode Describe the corresponding code
      */
     public void setMsgCode(Long MsgCode) {
         this.MsgCode = MsgCode;

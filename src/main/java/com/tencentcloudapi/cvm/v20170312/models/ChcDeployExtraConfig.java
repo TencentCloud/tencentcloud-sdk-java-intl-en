@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ChcDeployExtraConfig extends AbstractModel {
 
     /**
-    * 
+    * MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
     */
     @SerializedName("MiniOsType")
     @Expose
     private String MiniOsType;
 
     /**
-    * 
+    * Server architecture and boot mode. Value: x86_legacy, arm_uefi.
     */
     @SerializedName("BootType")
     @Expose
     private String BootType;
 
     /**
-    * 
+    * The boot file used by PXE. Default: pxelinux.0.
     */
     @SerializedName("BootFile")
     @Expose
     private String BootFile;
 
     /**
-    * 
+    * tftp server ip address.
     */
     @SerializedName("NextServerAddress")
     @Expose
     private String NextServerAddress;
 
     /**
-     * Get  
-     * @return MiniOsType 
+     * Get MinIO type: whether to use Tencent Cloud's minios or the customer's own minios. 
+     * @return MiniOsType MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
      */
     public String getMiniOsType() {
         return this.MiniOsType;
     }
 
     /**
-     * Set 
-     * @param MiniOsType 
+     * Set MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
+     * @param MiniOsType MinIO type: whether to use Tencent Cloud's minios or the customer's own minios.
      */
     public void setMiniOsType(String MiniOsType) {
         this.MiniOsType = MiniOsType;
     }
 
     /**
-     * Get  
-     * @return BootType 
+     * Get Server architecture and boot mode. Value: x86_legacy, arm_uefi. 
+     * @return BootType Server architecture and boot mode. Value: x86_legacy, arm_uefi.
      */
     public String getBootType() {
         return this.BootType;
     }
 
     /**
-     * Set 
-     * @param BootType 
+     * Set Server architecture and boot mode. Value: x86_legacy, arm_uefi.
+     * @param BootType Server architecture and boot mode. Value: x86_legacy, arm_uefi.
      */
     public void setBootType(String BootType) {
         this.BootType = BootType;
     }
 
     /**
-     * Get  
-     * @return BootFile 
+     * Get The boot file used by PXE. Default: pxelinux.0. 
+     * @return BootFile The boot file used by PXE. Default: pxelinux.0.
      */
     public String getBootFile() {
         return this.BootFile;
     }
 
     /**
-     * Set 
-     * @param BootFile 
+     * Set The boot file used by PXE. Default: pxelinux.0.
+     * @param BootFile The boot file used by PXE. Default: pxelinux.0.
      */
     public void setBootFile(String BootFile) {
         this.BootFile = BootFile;
     }
 
     /**
-     * Get  
-     * @return NextServerAddress 
+     * Get tftp server ip address. 
+     * @return NextServerAddress tftp server ip address.
      */
     public String getNextServerAddress() {
         return this.NextServerAddress;
     }
 
     /**
-     * Set 
-     * @param NextServerAddress 
+     * Set tftp server ip address.
+     * @param NextServerAddress tftp server ip address.
      */
     public void setNextServerAddress(String NextServerAddress) {
         this.NextServerAddress = NextServerAddress;

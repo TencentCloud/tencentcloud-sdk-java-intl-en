@@ -52,7 +52,7 @@ public class CreateApiKeyRequest extends AbstractModel {
     private String AccessKeySecret;
 
     /**
-    * 
+    * Tag
     */
     @SerializedName("Tags")
     @Expose
@@ -123,16 +123,16 @@ public class CreateApiKeyRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get Tag 
+     * @return Tags Tag
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set Tag
+     * @param Tags Tag
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

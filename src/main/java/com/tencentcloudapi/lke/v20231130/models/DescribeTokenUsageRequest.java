@@ -87,14 +87,14 @@ public class DescribeTokenUsageRequest extends AbstractModel {
     private String [] SubScenes;
 
     /**
-    * 
+    * Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
     */
     @SerializedName("AppType")
     @Expose
     private String AppType;
 
     /**
-    * 
+    * Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
     */
     @SerializedName("SpaceId")
     @Expose
@@ -245,32 +245,32 @@ public class DescribeTokenUsageRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return AppType 
+     * Get Application type (knowledge_qa application management, shared_knowlege shared knowledge base) 
+     * @return AppType Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set 
-     * @param AppType 
+     * Set Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
+     * @param AppType Application type (knowledge_qa application management, shared_knowlege shared knowledge base)
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;
     }
 
     /**
-     * Get  
-     * @return SpaceId 
+     * Get Space ID, used to limit the query scope. When not filled, data from all spaces are queried. 
+     * @return SpaceId Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
      */
     public String getSpaceId() {
         return this.SpaceId;
     }
 
     /**
-     * Set 
-     * @param SpaceId 
+     * Set Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
+     * @param SpaceId Space ID, used to limit the query scope. When not filled, data from all spaces are queried.
      */
     public void setSpaceId(String SpaceId) {
         this.SpaceId = SpaceId;

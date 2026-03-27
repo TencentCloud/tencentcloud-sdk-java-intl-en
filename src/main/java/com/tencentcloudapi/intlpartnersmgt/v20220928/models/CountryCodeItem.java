@@ -38,14 +38,14 @@ public class CountryCodeItem extends AbstractModel {
     private String Name;
 
     /**
-    * 
+    * ISO2 standard country/region code
     */
     @SerializedName("IOS2")
     @Expose
     private String IOS2;
 
     /**
-    * 
+    * ISO3 standard country/region code
     */
     @SerializedName("IOS3")
     @Expose
@@ -91,32 +91,32 @@ public class CountryCodeItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return IOS2 
+     * Get ISO2 standard country/region code 
+     * @return IOS2 ISO2 standard country/region code
      */
     public String getIOS2() {
         return this.IOS2;
     }
 
     /**
-     * Set 
-     * @param IOS2 
+     * Set ISO2 standard country/region code
+     * @param IOS2 ISO2 standard country/region code
      */
     public void setIOS2(String IOS2) {
         this.IOS2 = IOS2;
     }
 
     /**
-     * Get  
-     * @return IOS3 
+     * Get ISO3 standard country/region code 
+     * @return IOS3 ISO3 standard country/region code
      */
     public String getIOS3() {
         return this.IOS3;
     }
 
     /**
-     * Set 
-     * @param IOS3 
+     * Set ISO3 standard country/region code
+     * @param IOS3 ISO3 standard country/region code
      */
     public void setIOS3(String IOS3) {
         this.IOS3 = IOS3;

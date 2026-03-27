@@ -245,7 +245,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     private ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingCompleteEvent;
 
     /**
-    * 
+    * MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
     */
     @SerializedName("ProcessMediaByMPSCompleteEvent")
     @Expose
@@ -804,16 +804,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get  
-     * @return ProcessMediaByMPSCompleteEvent 
+     * Get MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete. 
+     * @return ProcessMediaByMPSCompleteEvent MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
      */
     public ProcessMediaByMPS getProcessMediaByMPSCompleteEvent() {
         return this.ProcessMediaByMPSCompleteEvent;
     }
 
     /**
-     * Set 
-     * @param ProcessMediaByMPSCompleteEvent 
+     * Set MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
+     * @param ProcessMediaByMPSCompleteEvent MPS video processing task information, valid only when EventType is ProcessMediaByMPSComplete.
      */
     public void setProcessMediaByMPSCompleteEvent(ProcessMediaByMPS ProcessMediaByMPSCompleteEvent) {
         this.ProcessMediaByMPSCompleteEvent = ProcessMediaByMPSCompleteEvent;

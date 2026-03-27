@@ -403,7 +403,7 @@ public class DBInstance extends AbstractModel {
     private String Style;
 
     /**
-    * 
+    * Multi-Node Instance Secondary AZ Information
     */
     @SerializedName("MultiSlaveZones")
     @Expose
@@ -1278,16 +1278,16 @@ public class DBInstance extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return MultiSlaveZones 
+     * Get Multi-Node Instance Secondary AZ Information 
+     * @return MultiSlaveZones Multi-Node Instance Secondary AZ Information
      */
     public SlaveZones [] getMultiSlaveZones() {
         return this.MultiSlaveZones;
     }
 
     /**
-     * Set 
-     * @param MultiSlaveZones 
+     * Set Multi-Node Instance Secondary AZ Information
+     * @param MultiSlaveZones Multi-Node Instance Secondary AZ Information
      */
     public void setMultiSlaveZones(SlaveZones [] MultiSlaveZones) {
         this.MultiSlaveZones = MultiSlaveZones;

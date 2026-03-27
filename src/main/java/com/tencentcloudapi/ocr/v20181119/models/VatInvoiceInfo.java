@@ -297,21 +297,21 @@ public class VatInvoiceInfo extends AbstractModel {
     private String Receiptor;
 
     /**
-    * 
+    * Whether fully electronic and paper tickets exist (0: No, 1: Yes).
     */
     @SerializedName("ElectronicFullMark")
     @Expose
     private Long ElectronicFullMark;
 
     /**
-    * 
+    * Fully Electronic Number
     */
     @SerializedName("ElectronicFullNumber")
     @Expose
     private String ElectronicFullNumber;
 
     /**
-    * 
+    * Co-branded Invoice.
     */
     @SerializedName("FormName")
     @Expose
@@ -942,48 +942,48 @@ public class VatInvoiceInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ElectronicFullMark 
+     * Get Whether fully electronic and paper tickets exist (0: No, 1: Yes). 
+     * @return ElectronicFullMark Whether fully electronic and paper tickets exist (0: No, 1: Yes).
      */
     public Long getElectronicFullMark() {
         return this.ElectronicFullMark;
     }
 
     /**
-     * Set 
-     * @param ElectronicFullMark 
+     * Set Whether fully electronic and paper tickets exist (0: No, 1: Yes).
+     * @param ElectronicFullMark Whether fully electronic and paper tickets exist (0: No, 1: Yes).
      */
     public void setElectronicFullMark(Long ElectronicFullMark) {
         this.ElectronicFullMark = ElectronicFullMark;
     }
 
     /**
-     * Get  
-     * @return ElectronicFullNumber 
+     * Get Fully Electronic Number 
+     * @return ElectronicFullNumber Fully Electronic Number
      */
     public String getElectronicFullNumber() {
         return this.ElectronicFullNumber;
     }
 
     /**
-     * Set 
-     * @param ElectronicFullNumber 
+     * Set Fully Electronic Number
+     * @param ElectronicFullNumber Fully Electronic Number
      */
     public void setElectronicFullNumber(String ElectronicFullNumber) {
         this.ElectronicFullNumber = ElectronicFullNumber;
     }
 
     /**
-     * Get  
-     * @return FormName 
+     * Get Co-branded Invoice. 
+     * @return FormName Co-branded Invoice.
      */
     public String getFormName() {
         return this.FormName;
     }
 
     /**
-     * Set 
-     * @param FormName 
+     * Set Co-branded Invoice.
+     * @param FormName Co-branded Invoice.
      */
     public void setFormName(String FormName) {
         this.FormName = FormName;

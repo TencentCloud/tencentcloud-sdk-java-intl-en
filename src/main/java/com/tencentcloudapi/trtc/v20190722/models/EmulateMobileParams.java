@@ -24,46 +24,66 @@ import java.util.HashMap;
 public class EmulateMobileParams extends AbstractModel {
 
     /**
-    * 
+    * Mobile device types,
+0: Phone
+1: Tablet
     */
     @SerializedName("MobileDeviceType")
     @Expose
     private Long MobileDeviceType;
 
     /**
-    * 
+    * Screen orientation,
+0: Portrait,
+1: Landscape
     */
     @SerializedName("ScreenOrientation")
     @Expose
     private Long ScreenOrientation;
 
     /**
-     * Get  
-     * @return MobileDeviceType 
+     * Get Mobile device types,
+0: Phone
+1: Tablet 
+     * @return MobileDeviceType Mobile device types,
+0: Phone
+1: Tablet
      */
     public Long getMobileDeviceType() {
         return this.MobileDeviceType;
     }
 
     /**
-     * Set 
-     * @param MobileDeviceType 
+     * Set Mobile device types,
+0: Phone
+1: Tablet
+     * @param MobileDeviceType Mobile device types,
+0: Phone
+1: Tablet
      */
     public void setMobileDeviceType(Long MobileDeviceType) {
         this.MobileDeviceType = MobileDeviceType;
     }
 
     /**
-     * Get  
-     * @return ScreenOrientation 
+     * Get Screen orientation,
+0: Portrait,
+1: Landscape 
+     * @return ScreenOrientation Screen orientation,
+0: Portrait,
+1: Landscape
      */
     public Long getScreenOrientation() {
         return this.ScreenOrientation;
     }
 
     /**
-     * Set 
-     * @param ScreenOrientation 
+     * Set Screen orientation,
+0: Portrait,
+1: Landscape
+     * @param ScreenOrientation Screen orientation,
+0: Portrait,
+1: Landscape
      */
     public void setScreenOrientation(Long ScreenOrientation) {
         this.ScreenOrientation = ScreenOrientation;

@@ -26,7 +26,7 @@ public class DeleteRegisterCodesRequest extends AbstractModel {
     /**
     * Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
     */
     @SerializedName("RegisterCodeIds")
     @Expose
@@ -35,10 +35,10 @@ Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/134
     /**
      * Get Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes. 
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes. 
      * @return RegisterCodeIds Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
      */
     public String [] getRegisterCodeIds() {
         return this.RegisterCodeIds;
@@ -47,10 +47,10 @@ Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/134
     /**
      * Set Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
      * @param RegisterCodeIds Registration code ID list. limits the input registration code ID quantity to more than 0 and less than 100.
 
-Call the [DescribeRegisterCodes](https://www.tencentcloud.comom/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
+Call the [DescribeRegisterCodes](https://www.tencentcloud.com/document/api/1340/96925?from_cn_redirect=1) api to query registration codes.
      */
     public void setRegisterCodeIds(String [] RegisterCodeIds) {
         this.RegisterCodeIds = RegisterCodeIds;

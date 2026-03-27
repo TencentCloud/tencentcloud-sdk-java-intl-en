@@ -87,7 +87,7 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
     private String [] Quuids;
 
     /**
-    * 
+    * Machines to be excluded
     */
     @SerializedName("ExcludedQuuids")
     @Expose
@@ -238,16 +238,16 @@ public class ModifyWebHookPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ExcludedQuuids 
+     * Get Machines to be excluded 
+     * @return ExcludedQuuids Machines to be excluded
      */
     public String [] getExcludedQuuids() {
         return this.ExcludedQuuids;
     }
 
     /**
-     * Set 
-     * @param ExcludedQuuids 
+     * Set Machines to be excluded
+     * @param ExcludedQuuids Machines to be excluded
      */
     public void setExcludedQuuids(String [] ExcludedQuuids) {
         this.ExcludedQuuids = ExcludedQuuids;

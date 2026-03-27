@@ -82,7 +82,7 @@ public class CreateBandwidthPackageRequest extends AbstractModel {
     private String Protocol;
 
     /**
-    * 
+    * Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
     */
     @SerializedName("TimeSpan")
     @Expose
@@ -246,16 +246,16 @@ center_egress1,center_egress2,center_egress3
     }
 
     /**
-     * Get  
-     * @return TimeSpan 
+     * Get Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type. 
+     * @return TimeSpan Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set 
-     * @param TimeSpan 
+     * Set Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
+     * @param TimeSpan Purchase duration of the prepaid monthly bandwidth package, unit: month, value range: 1~60. Must be passed for prepaid billing type.
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;

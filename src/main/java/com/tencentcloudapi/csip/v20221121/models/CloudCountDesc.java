@@ -24,69 +24,74 @@ import java.util.HashMap;
 public class CloudCountDesc extends AbstractModel {
 
     /**
-    * 
+    * 0 represents Tencent Cloud
+1 represents AWS
     */
     @SerializedName("CloudType")
     @Expose
     private Long CloudType;
 
     /**
-    * 
+    * Account quantity
     */
     @SerializedName("CloudCount")
     @Expose
     private Long CloudCount;
 
     /**
-    * 
+    * The cloud account type description
     */
     @SerializedName("CloudDesc")
     @Expose
     private String CloudDesc;
 
     /**
-     * Get  
-     * @return CloudType 
+     * Get 0 represents Tencent Cloud
+1 represents AWS 
+     * @return CloudType 0 represents Tencent Cloud
+1 represents AWS
      */
     public Long getCloudType() {
         return this.CloudType;
     }
 
     /**
-     * Set 
-     * @param CloudType 
+     * Set 0 represents Tencent Cloud
+1 represents AWS
+     * @param CloudType 0 represents Tencent Cloud
+1 represents AWS
      */
     public void setCloudType(Long CloudType) {
         this.CloudType = CloudType;
     }
 
     /**
-     * Get  
-     * @return CloudCount 
+     * Get Account quantity 
+     * @return CloudCount Account quantity
      */
     public Long getCloudCount() {
         return this.CloudCount;
     }
 
     /**
-     * Set 
-     * @param CloudCount 
+     * Set Account quantity
+     * @param CloudCount Account quantity
      */
     public void setCloudCount(Long CloudCount) {
         this.CloudCount = CloudCount;
     }
 
     /**
-     * Get  
-     * @return CloudDesc 
+     * Get The cloud account type description 
+     * @return CloudDesc The cloud account type description
      */
     public String getCloudDesc() {
         return this.CloudDesc;
     }
 
     /**
-     * Set 
-     * @param CloudDesc 
+     * Set The cloud account type description
+     * @param CloudDesc The cloud account type description
      */
     public void setCloudDesc(String CloudDesc) {
         this.CloudDesc = CloudDesc;

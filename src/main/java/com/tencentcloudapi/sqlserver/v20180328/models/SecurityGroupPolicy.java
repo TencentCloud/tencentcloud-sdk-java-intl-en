@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class SecurityGroupPolicy extends AbstractModel {
 
     /**
-    * 
+    * Policy, ACCEPT or DROP
     */
     @SerializedName("Action")
     @Expose
     private String Action;
 
     /**
-    * 
+    * Destination IP or IP range, for example 172.16.0.0/12
     */
     @SerializedName("CidrIp")
     @Expose
     private String CidrIp;
 
     /**
-    * 
+    * port or port range
     */
     @SerializedName("PortRange")
     @Expose
     private String PortRange;
 
     /**
-    * 
+    * Network protocol supports UDP, TCP, etc.
     */
     @SerializedName("IpProtocol")
     @Expose
     private String IpProtocol;
 
     /**
-    * 
+    * Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
     */
     @SerializedName("Dir")
     @Expose
     private String Dir;
 
     /**
-     * Get  
-     * @return Action 
+     * Get Policy, ACCEPT or DROP 
+     * @return Action Policy, ACCEPT or DROP
      */
     public String getAction() {
         return this.Action;
     }
 
     /**
-     * Set 
-     * @param Action 
+     * Set Policy, ACCEPT or DROP
+     * @param Action Policy, ACCEPT or DROP
      */
     public void setAction(String Action) {
         this.Action = Action;
     }
 
     /**
-     * Get  
-     * @return CidrIp 
+     * Get Destination IP or IP range, for example 172.16.0.0/12 
+     * @return CidrIp Destination IP or IP range, for example 172.16.0.0/12
      */
     public String getCidrIp() {
         return this.CidrIp;
     }
 
     /**
-     * Set 
-     * @param CidrIp 
+     * Set Destination IP or IP range, for example 172.16.0.0/12
+     * @param CidrIp Destination IP or IP range, for example 172.16.0.0/12
      */
     public void setCidrIp(String CidrIp) {
         this.CidrIp = CidrIp;
     }
 
     /**
-     * Get  
-     * @return PortRange 
+     * Get port or port range 
+     * @return PortRange port or port range
      */
     public String getPortRange() {
         return this.PortRange;
     }
 
     /**
-     * Set 
-     * @param PortRange 
+     * Set port or port range
+     * @param PortRange port or port range
      */
     public void setPortRange(String PortRange) {
         this.PortRange = PortRange;
     }
 
     /**
-     * Get  
-     * @return IpProtocol 
+     * Get Network protocol supports UDP, TCP, etc. 
+     * @return IpProtocol Network protocol supports UDP, TCP, etc.
      */
     public String getIpProtocol() {
         return this.IpProtocol;
     }
 
     /**
-     * Set 
-     * @param IpProtocol 
+     * Set Network protocol supports UDP, TCP, etc.
+     * @param IpProtocol Network protocol supports UDP, TCP, etc.
      */
     public void setIpProtocol(String IpProtocol) {
         this.IpProtocol = IpProtocol;
     }
 
     /**
-     * Get  
-     * @return Dir 
+     * Get Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules 
+     * @return Dir Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
      */
     public String getDir() {
         return this.Dir;
     }
 
     /**
-     * Set 
-     * @param Dir 
+     * Set Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
+     * @param Dir Rule direction, OUTPUT - Outbound Rules, INPUT - Inbound Rules
      */
     public void setDir(String Dir) {
         this.Dir = Dir;

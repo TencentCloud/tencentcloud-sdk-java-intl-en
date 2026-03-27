@@ -24,92 +24,152 @@ import java.util.HashMap;
 public class FuseFaceReviewDetail extends AbstractModel {
 
     /**
-    * 
+    * Reserved Field
     */
     @SerializedName("Field")
     @Expose
     private String Field;
 
     /**
-    * 
+    * Tag name matched in audit
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 
+    * Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
+
+0 to 70: Suggestion is PASS;
+
+70 to 80: Suggestion is REVIEW;
+
+80 to 100: Suggestion is BLOCK.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * 
+    * Audit conclusion for identified scenarios:
+
+PASS: Normal
+
+REVIEW: Suspected
+
+BLOCK: Violation
     */
     @SerializedName("Suggestion")
     @Expose
     private String Suggestion;
 
     /**
-     * Get  
-     * @return Field 
+     * Get Reserved Field 
+     * @return Field Reserved Field
      */
     public String getField() {
         return this.Field;
     }
 
     /**
-     * Set 
-     * @param Field 
+     * Set Reserved Field
+     * @param Field Reserved Field
      */
     public void setField(String Field) {
         this.Field = Field;
     }
 
     /**
-     * Get  
-     * @return Label 
+     * Get Tag name matched in audit 
+     * @return Label Tag name matched in audit
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 
-     * @param Label 
+     * Set Tag name matched in audit
+     * @param Label Tag name matched in audit
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get  
-     * @return Confidence 
+     * Get Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
+
+0 to 70: Suggestion is PASS;
+
+70 to 80: Suggestion is REVIEW;
+
+80 to 100: Suggestion is BLOCK. 
+     * @return Confidence Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
+
+0 to 70: Suggestion is PASS;
+
+70 to 80: Suggestion is REVIEW;
+
+80 to 100: Suggestion is BLOCK.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set 
-     * @param Confidence 
+     * Set Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
+
+0 to 70: Suggestion is PASS;
+
+70 to 80: Suggestion is REVIEW;
+
+80 to 100: Suggestion is BLOCK.
+     * @param Confidence Confidence score corresponding to the identified label. A higher score indicates a higher probability of violation.
+
+0 to 70: Suggestion is PASS;
+
+70 to 80: Suggestion is REVIEW;
+
+80 to 100: Suggestion is BLOCK.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get  
-     * @return Suggestion 
+     * Get Audit conclusion for identified scenarios:
+
+PASS: Normal
+
+REVIEW: Suspected
+
+BLOCK: Violation 
+     * @return Suggestion Audit conclusion for identified scenarios:
+
+PASS: Normal
+
+REVIEW: Suspected
+
+BLOCK: Violation
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set 
-     * @param Suggestion 
+     * Set Audit conclusion for identified scenarios:
+
+PASS: Normal
+
+REVIEW: Suspected
+
+BLOCK: Violation
+     * @param Suggestion Audit conclusion for identified scenarios:
+
+PASS: Normal
+
+REVIEW: Suspected
+
+BLOCK: Violation
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;

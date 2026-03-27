@@ -221,21 +221,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long PodMem;
 
     /**
-    * 
+    * Cluster Name
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 
+    * Cluster ID
     */
     @SerializedName("ClusterID")
     @Expose
     private String ClusterID;
 
     /**
-    * 
+    * pod uid
     */
     @SerializedName("PodUid")
     @Expose
@@ -706,48 +706,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return ClusterName 
+     * Get Cluster Name 
+     * @return ClusterName Cluster Name
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 
-     * @param ClusterName 
+     * Set Cluster Name
+     * @param ClusterName Cluster Name
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get  
-     * @return ClusterID 
+     * Get Cluster ID 
+     * @return ClusterID Cluster ID
      */
     public String getClusterID() {
         return this.ClusterID;
     }
 
     /**
-     * Set 
-     * @param ClusterID 
+     * Set Cluster ID
+     * @param ClusterID Cluster ID
      */
     public void setClusterID(String ClusterID) {
         this.ClusterID = ClusterID;
     }
 
     /**
-     * Get  
-     * @return PodUid 
+     * Get pod uid 
+     * @return PodUid pod uid
      */
     public String getPodUid() {
         return this.PodUid;
     }
 
     /**
-     * Set 
-     * @param PodUid 
+     * Set pod uid
+     * @param PodUid pod uid
      */
     public void setPodUid(String PodUid) {
         this.PodUid = PodUid;

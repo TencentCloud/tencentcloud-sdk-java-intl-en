@@ -32,7 +32,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String ProductName;
 
     /**
-    * 
+    * Product Details
     */
     @SerializedName("SubProductName")
     @Expose
@@ -59,16 +59,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return SubProductName 
+     * Get Product Details 
+     * @return SubProductName Product Details
      */
     public String getSubProductName() {
         return this.SubProductName;
     }
 
     /**
-     * Set 
-     * @param SubProductName 
+     * Set Product Details
+     * @param SubProductName Product Details
      */
     public void setSubProductName(String SubProductName) {
         this.SubProductName = SubProductName;

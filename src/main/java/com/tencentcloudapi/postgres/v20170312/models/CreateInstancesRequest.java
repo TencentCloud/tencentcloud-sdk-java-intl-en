@@ -240,7 +240,7 @@ For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tence
     private String KMSRegion;
 
     /**
-    * 
+    * <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
     */
     @SerializedName("KMSClusterId")
     @Expose
@@ -844,16 +844,16 @@ For more information on `KMSRegion`, see [Enabling TDE](https://intl.cloud.tence
     }
 
     /**
-     * Get  
-     * @return KMSClusterId 
+     * Get <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p> 
+     * @return KMSClusterId <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
      */
     public String getKMSClusterId() {
         return this.KMSClusterId;
     }
 
     /**
-     * Set 
-     * @param KMSClusterId 
+     * Set <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
+     * @param KMSClusterId <p>For clusters that specify the KMS service, if KMSClusterId is empty, the default cluster's KMS is used. If you choose to specify a KMS cluster, you need to provide KMSClusterId. For details about KMSClusterId, see Enabling Transparent Data Encryption.</p>
      */
     public void setKMSClusterId(String KMSClusterId) {
         this.KMSClusterId = KMSClusterId;

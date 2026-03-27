@@ -73,7 +73,7 @@ public class AigcVideoTaskInput extends AbstractModel {
     private String EnhancePrompt;
 
     /**
-    * 
+    * Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
     */
     @SerializedName("GenerationMode")
     @Expose
@@ -199,16 +199,16 @@ public class AigcVideoTaskInput extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return GenerationMode 
+     * Get Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li> 
+     * @return GenerationMode Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
      */
     public String getGenerationMode() {
         return this.GenerationMode;
     }
 
     /**
-     * Set 
-     * @param GenerationMode 
+     * Set Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+     * @param GenerationMode Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
      */
     public void setGenerationMode(String GenerationMode) {
         this.GenerationMode = GenerationMode;

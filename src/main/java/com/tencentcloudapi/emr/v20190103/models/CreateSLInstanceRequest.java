@@ -87,7 +87,7 @@ public class CreateSLInstanceRequest extends AbstractModel {
     private String ClientToken;
 
     /**
-    * 
+    * Deployment Mode
     */
     @SerializedName("DeploymentMode")
     @Expose
@@ -238,16 +238,16 @@ public class CreateSLInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return DeploymentMode 
+     * Get Deployment Mode 
+     * @return DeploymentMode Deployment Mode
      */
     public String getDeploymentMode() {
         return this.DeploymentMode;
     }
 
     /**
-     * Set 
-     * @param DeploymentMode 
+     * Set Deployment Mode
+     * @param DeploymentMode Deployment Mode
      */
     public void setDeploymentMode(String DeploymentMode) {
         this.DeploymentMode = DeploymentMode;

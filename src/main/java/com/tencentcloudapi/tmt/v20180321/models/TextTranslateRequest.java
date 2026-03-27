@@ -95,14 +95,14 @@ hi: Hindi
     private String UntranslatedText;
 
     /**
-    * 
+    * Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
     */
     @SerializedName("TermRepoIDList")
     @Expose
     private String [] TermRepoIDList;
 
     /**
-    * 
+    * The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
     */
     @SerializedName("SentRepoIDList")
     @Expose
@@ -333,32 +333,32 @@ hi: Hindi
     }
 
     /**
-     * Get  
-     * @return TermRepoIDList 
+     * Get Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926). 
+     * @return TermRepoIDList Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
      */
     public String [] getTermRepoIDList() {
         return this.TermRepoIDList;
     }
 
     /**
-     * Set 
-     * @param TermRepoIDList 
+     * Set Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
+     * @param TermRepoIDList Term base list to be used; obtain by creating your own term base via the [Term Base Operation Guide](https://cloud.tencent.com/document/product/551/107926).
      */
     public void setTermRepoIDList(String [] TermRepoIDList) {
         this.TermRepoIDList = TermRepoIDList;
     }
 
     /**
-     * Get  
-     * @return SentRepoIDList 
+     * Get The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927). 
+     * @return SentRepoIDList The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
      */
     public String [] getSentRepoIDList() {
         return this.SentRepoIDList;
     }
 
     /**
-     * Set 
-     * @param SentRepoIDList 
+     * Set The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
+     * @param SentRepoIDList The list of example sentence libraries to be used; obtain by creating your own example sentence library via the [Example Sentence Library Operation Guide](https://cloud.tencent.com/document/product/551/107927).
      */
     public void setSentRepoIDList(String [] SentRepoIDList) {
         this.SentRepoIDList = SentRepoIDList;

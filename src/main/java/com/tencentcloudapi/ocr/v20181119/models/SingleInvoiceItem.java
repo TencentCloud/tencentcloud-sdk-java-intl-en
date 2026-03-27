@@ -200,14 +200,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TrainTicket TrainTicket;
 
     /**
-    * 
+    * Medical Outpatient Fee Invoice (Electronic).
     */
     @SerializedName("MedicalOutpatientInvoice")
     @Expose
     private MedicalInvoice MedicalOutpatientInvoice;
 
     /**
-    * 
+    * Inpatient Medical Fee Invoice (Electronic).
     */
     @SerializedName("MedicalHospitalizedInvoice")
     @Expose
@@ -654,32 +654,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return MedicalOutpatientInvoice 
+     * Get Medical Outpatient Fee Invoice (Electronic). 
+     * @return MedicalOutpatientInvoice Medical Outpatient Fee Invoice (Electronic).
      */
     public MedicalInvoice getMedicalOutpatientInvoice() {
         return this.MedicalOutpatientInvoice;
     }
 
     /**
-     * Set 
-     * @param MedicalOutpatientInvoice 
+     * Set Medical Outpatient Fee Invoice (Electronic).
+     * @param MedicalOutpatientInvoice Medical Outpatient Fee Invoice (Electronic).
      */
     public void setMedicalOutpatientInvoice(MedicalInvoice MedicalOutpatientInvoice) {
         this.MedicalOutpatientInvoice = MedicalOutpatientInvoice;
     }
 
     /**
-     * Get  
-     * @return MedicalHospitalizedInvoice 
+     * Get Inpatient Medical Fee Invoice (Electronic). 
+     * @return MedicalHospitalizedInvoice Inpatient Medical Fee Invoice (Electronic).
      */
     public MedicalInvoice getMedicalHospitalizedInvoice() {
         return this.MedicalHospitalizedInvoice;
     }
 
     /**
-     * Set 
-     * @param MedicalHospitalizedInvoice 
+     * Set Inpatient Medical Fee Invoice (Electronic).
+     * @param MedicalHospitalizedInvoice Inpatient Medical Fee Invoice (Electronic).
      */
     public void setMedicalHospitalizedInvoice(MedicalInvoice MedicalHospitalizedInvoice) {
         this.MedicalHospitalizedInvoice = MedicalHospitalizedInvoice;

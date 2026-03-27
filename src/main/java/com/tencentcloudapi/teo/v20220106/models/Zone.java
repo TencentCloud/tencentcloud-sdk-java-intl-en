@@ -129,7 +129,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String ModifiedOn;
 
     /**
-    * 
+    * Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
     */
     @SerializedName("Area")
     @Expose
@@ -400,16 +406,40 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return Area 
+     * Get Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li> 
+     * @return Area Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set 
-     * @param Area 
+     * Set Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
+     * @param Area Site access region, with values:
+
+<li> global: Global;</li>
+
+<li> mainland: Chinese mainland;</li>
+
+<li> overseas: Overseas regions.</li>
      */
     public void setArea(String Area) {
         this.Area = Area;

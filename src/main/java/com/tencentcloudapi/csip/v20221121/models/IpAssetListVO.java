@@ -88,7 +88,7 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private Long PublicIpType;
 
     /**
-    * 
+    * vpc
     */
     @SerializedName("VpcId")
     @Expose
@@ -463,16 +463,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get  
-     * @return VpcId 
+     * Get vpc 
+     * @return VpcId vpc
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 
-     * @param VpcId 
+     * Set vpc
+     * @param VpcId vpc
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

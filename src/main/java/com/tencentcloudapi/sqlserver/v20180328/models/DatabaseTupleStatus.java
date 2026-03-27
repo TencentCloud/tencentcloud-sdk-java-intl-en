@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DatabaseTupleStatus extends AbstractModel {
 
     /**
-    * 
+    * Publish Database Name
     */
     @SerializedName("PublishDatabase")
     @Expose
     private String PublishDatabase;
 
     /**
-    * 
+    * Subscription Database Name
     */
     @SerializedName("SubscribeDatabase")
     @Expose
     private String SubscribeDatabase;
 
     /**
-    * 
+    * Latest Synchronization Time
     */
     @SerializedName("LastSyncTime")
     @Expose
     private String LastSyncTime;
 
     /**
-    * 
+    * Publish/Subscribe Status Between Databases: running, success, fail, unknow
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get  
-     * @return PublishDatabase 
+     * Get Publish Database Name 
+     * @return PublishDatabase Publish Database Name
      */
     public String getPublishDatabase() {
         return this.PublishDatabase;
     }
 
     /**
-     * Set 
-     * @param PublishDatabase 
+     * Set Publish Database Name
+     * @param PublishDatabase Publish Database Name
      */
     public void setPublishDatabase(String PublishDatabase) {
         this.PublishDatabase = PublishDatabase;
     }
 
     /**
-     * Get  
-     * @return SubscribeDatabase 
+     * Get Subscription Database Name 
+     * @return SubscribeDatabase Subscription Database Name
      */
     public String getSubscribeDatabase() {
         return this.SubscribeDatabase;
     }
 
     /**
-     * Set 
-     * @param SubscribeDatabase 
+     * Set Subscription Database Name
+     * @param SubscribeDatabase Subscription Database Name
      */
     public void setSubscribeDatabase(String SubscribeDatabase) {
         this.SubscribeDatabase = SubscribeDatabase;
     }
 
     /**
-     * Get  
-     * @return LastSyncTime 
+     * Get Latest Synchronization Time 
+     * @return LastSyncTime Latest Synchronization Time
      */
     public String getLastSyncTime() {
         return this.LastSyncTime;
     }
 
     /**
-     * Set 
-     * @param LastSyncTime 
+     * Set Latest Synchronization Time
+     * @param LastSyncTime Latest Synchronization Time
      */
     public void setLastSyncTime(String LastSyncTime) {
         this.LastSyncTime = LastSyncTime;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Publish/Subscribe Status Between Databases: running, success, fail, unknow 
+     * @return Status Publish/Subscribe Status Between Databases: running, success, fail, unknow
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Publish/Subscribe Status Between Databases: running, success, fail, unknow
+     * @param Status Publish/Subscribe Status Between Databases: running, success, fail, unknow
      */
     public void setStatus(String Status) {
         this.Status = Status;

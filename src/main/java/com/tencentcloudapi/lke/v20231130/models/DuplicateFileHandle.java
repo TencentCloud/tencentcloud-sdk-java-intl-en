@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DuplicateFileHandle extends AbstractModel {
 
     /**
-    * 
+    * Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
     */
     @SerializedName("CheckType")
     @Expose
     private Long CheckType;
 
     /**
-    * 
+    * Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
     */
     @SerializedName("HandleType")
     @Expose
     private Long HandleType;
 
     /**
-     * Get  
-     * @return CheckType 
+     * Get Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist 
+     * @return CheckType Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
      */
     public Long getCheckType() {
         return this.CheckType;
     }
 
     /**
-     * Set 
-     * @param CheckType 
+     * Set Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
+     * @param CheckType Duplicate document identification method, 1: By document content, i.e., using the cos_hash field to determine whether duplicates exist
      */
     public void setCheckType(Long CheckType) {
         this.CheckType = CheckType;
     }
 
     /**
-     * Get  
-     * @return HandleType 
+     * Get Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document 
+     * @return HandleType Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
      */
     public Long getHandleType() {
         return this.HandleType;
     }
 
     /**
-     * Set 
-     * @param HandleType 
+     * Set Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
+     * @param HandleType Duplicate document handling method, 1: Return an error, 2: Skip and return the business ID of the duplicate document
      */
     public void setHandleType(Long HandleType) {
         this.HandleType = HandleType;

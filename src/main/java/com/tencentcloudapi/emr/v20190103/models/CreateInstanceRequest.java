@@ -265,7 +265,7 @@ Hadoop-Hbase
     private ExternalService [] ExternalService;
 
     /**
-    * 
+    * If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
     */
     @SerializedName("VersionID")
     @Expose
@@ -923,16 +923,16 @@ Hadoop-Hbase
     }
 
     /**
-     * Get  
-     * @return VersionID 
+     * Get If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead. 
+     * @return VersionID If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
      */
     public Long getVersionID() {
         return this.VersionID;
     }
 
     /**
-     * Set 
-     * @param VersionID 
+     * Set If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
+     * @param VersionID If the value is 0, MultiZone, MultiDeployStrategy, and MultiZoneSettings are disabled. If the value is 1, ResourceSpec is deprecated and MultiZoneSettings is used instead.
      */
     public void setVersionID(Long VersionID) {
         this.VersionID = VersionID;

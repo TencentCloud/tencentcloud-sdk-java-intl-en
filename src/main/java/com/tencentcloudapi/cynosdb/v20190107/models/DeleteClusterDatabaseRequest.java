@@ -31,7 +31,7 @@ public class DeleteClusterDatabaseRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * 
+    * Database Name
     */
     @SerializedName("DbNames")
     @Expose
@@ -54,16 +54,16 @@ public class DeleteClusterDatabaseRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return DbNames 
+     * Get Database Name 
+     * @return DbNames Database Name
      */
     public String [] getDbNames() {
         return this.DbNames;
     }
 
     /**
-     * Set 
-     * @param DbNames 
+     * Set Database Name
+     * @param DbNames Database Name
      */
     public void setDbNames(String [] DbNames) {
         this.DbNames = DbNames;

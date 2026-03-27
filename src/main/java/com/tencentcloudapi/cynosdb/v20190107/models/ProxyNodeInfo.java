@@ -94,7 +94,7 @@ public class ProxyNodeInfo extends AbstractModel {
     private String Zone;
 
     /**
-    * 
+    * Database Proxy Node Name
     */
     @SerializedName("OssProxyNodeName")
     @Expose
@@ -261,16 +261,16 @@ public class ProxyNodeInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return OssProxyNodeName 
+     * Get Database Proxy Node Name 
+     * @return OssProxyNodeName Database Proxy Node Name
      */
     public String getOssProxyNodeName() {
         return this.OssProxyNodeName;
     }
 
     /**
-     * Set 
-     * @param OssProxyNodeName 
+     * Set Database Proxy Node Name
+     * @param OssProxyNodeName Database Proxy Node Name
      */
     public void setOssProxyNodeName(String OssProxyNodeName) {
         this.OssProxyNodeName = OssProxyNodeName;

@@ -48,7 +48,7 @@ public class DDoSSpeedLimitConfig extends AbstractModel {
     private PortSegment [] DstPortScopes;
 
     /**
-    * 
+    * Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
     */
     @SerializedName("Id")
     @Expose
@@ -136,16 +136,16 @@ Note: For custom protocol ranges, only protocol number is supported. Multiple ra
     }
 
     /**
-     * Get  
-     * @return Id 
+     * Get Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in. 
+     * @return Id Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set 
-     * @param Id 
+     * Set Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
+     * @param Id Configuration ID is generated after the configuration is successfully added. When adding a new restriction configuration, this field does not need to be filled in; when modifying or deleting a rate limiting configuration, the Configuration ID needs to be filled in.
      */
     public void setId(String Id) {
         this.Id = Id;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AnonymousInfo extends AbstractModel {
 
     /**
-    * 
+    * Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
     */
     @SerializedName("Operations")
     @Expose
     private String [] Operations;
 
     /**
-    * 
+    * Condition list
     */
     @SerializedName("Conditions")
     @Expose
     private ConditionInfo [] Conditions;
 
     /**
-     * Get  
-     * @return Operations 
+     * Get Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload). 
+     * @return Operations Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
      */
     public String [] getOperations() {
         return this.Operations;
     }
 
     /**
-     * Set 
-     * @param Operations 
+     * Set Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
+     * @param Operations Operation list supports trackLog (JS/HTTP log upload) and realtimeProducer (kafka protocol log upload).
      */
     public void setOperations(String [] Operations) {
         this.Operations = Operations;
     }
 
     /**
-     * Get  
-     * @return Conditions 
+     * Get Condition list 
+     * @return Conditions Condition list
      */
     public ConditionInfo [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set 
-     * @param Conditions 
+     * Set Condition list
+     * @param Conditions Condition list
      */
     public void setConditions(ConditionInfo [] Conditions) {
         this.Conditions = Conditions;

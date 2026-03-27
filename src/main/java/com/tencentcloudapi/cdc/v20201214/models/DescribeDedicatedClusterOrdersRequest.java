@@ -66,7 +66,7 @@ public class DescribeDedicatedClusterOrdersRequest extends AbstractModel {
     private String ActionType;
 
     /**
-    * 
+    * Order Type List
     */
     @SerializedName("OrderTypes")
     @Expose
@@ -169,16 +169,16 @@ public class DescribeDedicatedClusterOrdersRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return OrderTypes 
+     * Get Order Type List 
+     * @return OrderTypes Order Type List
      */
     public String [] getOrderTypes() {
         return this.OrderTypes;
     }
 
     /**
-     * Set 
-     * @param OrderTypes 
+     * Set Order Type List
+     * @param OrderTypes Order Type List
      */
     public void setOrderTypes(String [] OrderTypes) {
         this.OrderTypes = OrderTypes;

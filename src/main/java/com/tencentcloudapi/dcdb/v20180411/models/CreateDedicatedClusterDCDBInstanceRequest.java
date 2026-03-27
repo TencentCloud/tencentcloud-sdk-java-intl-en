@@ -227,7 +227,7 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
     private String RollbackTime;
 
     /**
-    * 
+    * DCN synchronization mode: 0: asynchronous, 1: strong synchronization
     */
     @SerializedName("DcnSyncMode")
     @Expose
@@ -698,16 +698,16 @@ public class CreateDedicatedClusterDCDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return DcnSyncMode 
+     * Get DCN synchronization mode: 0: asynchronous, 1: strong synchronization 
+     * @return DcnSyncMode DCN synchronization mode: 0: asynchronous, 1: strong synchronization
      */
     public Long getDcnSyncMode() {
         return this.DcnSyncMode;
     }
 
     /**
-     * Set 
-     * @param DcnSyncMode 
+     * Set DCN synchronization mode: 0: asynchronous, 1: strong synchronization
+     * @param DcnSyncMode DCN synchronization mode: 0: asynchronous, 1: strong synchronization
      */
     public void setDcnSyncMode(Long DcnSyncMode) {
         this.DcnSyncMode = DcnSyncMode;

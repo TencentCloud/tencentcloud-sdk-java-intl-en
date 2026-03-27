@@ -31,14 +31,14 @@ public class DescribeUpdatableDataEnginesRequest extends AbstractModel {
     private String DataEngineConfigCommand;
 
     /**
-    * 
+    * Whether to use managed storage as result storage
     */
     @SerializedName("UseLakeFs")
     @Expose
     private Boolean UseLakeFs;
 
     /**
-    * 
+    * User-defined Result Storage Path
     */
     @SerializedName("CustomResultPath")
     @Expose
@@ -61,32 +61,32 @@ public class DescribeUpdatableDataEnginesRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return UseLakeFs 
+     * Get Whether to use managed storage as result storage 
+     * @return UseLakeFs Whether to use managed storage as result storage
      */
     public Boolean getUseLakeFs() {
         return this.UseLakeFs;
     }
 
     /**
-     * Set 
-     * @param UseLakeFs 
+     * Set Whether to use managed storage as result storage
+     * @param UseLakeFs Whether to use managed storage as result storage
      */
     public void setUseLakeFs(Boolean UseLakeFs) {
         this.UseLakeFs = UseLakeFs;
     }
 
     /**
-     * Get  
-     * @return CustomResultPath 
+     * Get User-defined Result Storage Path 
+     * @return CustomResultPath User-defined Result Storage Path
      */
     public String getCustomResultPath() {
         return this.CustomResultPath;
     }
 
     /**
-     * Set 
-     * @param CustomResultPath 
+     * Set User-defined Result Storage Path
+     * @param CustomResultPath User-defined Result Storage Path
      */
     public void setCustomResultPath(String CustomResultPath) {
         this.CustomResultPath = CustomResultPath;

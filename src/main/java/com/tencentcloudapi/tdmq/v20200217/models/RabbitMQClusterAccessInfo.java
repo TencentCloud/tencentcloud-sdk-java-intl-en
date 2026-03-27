@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class RabbitMQClusterAccessInfo extends AbstractModel {
 
     /**
-    * 
+    * Cluster Public Network Access Address
     */
     @SerializedName("PublicAccessEndpoint")
     @Expose
     private String PublicAccessEndpoint;
 
     /**
-    * 
+    * Cluster Console Access Address
     */
     @SerializedName("WebConsoleEndpoint")
     @Expose
     private String WebConsoleEndpoint;
 
     /**
-    * 
+    * Cluster Console Login Username
     */
     @SerializedName("WebConsoleUsername")
     @Expose
     private String WebConsoleUsername;
 
     /**
-    * 
+    * Cluster Console Login Password
     */
     @SerializedName("WebConsolePassword")
     @Expose
     private String WebConsolePassword;
 
     /**
-    * 
+    * Deprecated
     */
     @SerializedName("PublicAccessEndpointStatus")
     @Expose
     private Boolean PublicAccessEndpointStatus;
 
     /**
-    * 
+    * Deprecated
     */
     @SerializedName("PublicControlConsoleSwitchStatus")
     @Expose
     private Boolean PublicControlConsoleSwitchStatus;
 
     /**
-    * 
+    * Deprecated
     */
     @SerializedName("VpcControlConsoleSwitchStatus")
     @Expose
     private Boolean VpcControlConsoleSwitchStatus;
 
     /**
-    * 
+    * Vpc management console access address, example value: http://1.1.1.1:15672
     */
     @SerializedName("VpcWebConsoleEndpoint")
     @Expose
@@ -137,128 +137,128 @@ OFF/ON/CREATING/DELETING
     private Boolean PublicIpReused;
 
     /**
-     * Get  
-     * @return PublicAccessEndpoint 
+     * Get Cluster Public Network Access Address 
+     * @return PublicAccessEndpoint Cluster Public Network Access Address
      */
     public String getPublicAccessEndpoint() {
         return this.PublicAccessEndpoint;
     }
 
     /**
-     * Set 
-     * @param PublicAccessEndpoint 
+     * Set Cluster Public Network Access Address
+     * @param PublicAccessEndpoint Cluster Public Network Access Address
      */
     public void setPublicAccessEndpoint(String PublicAccessEndpoint) {
         this.PublicAccessEndpoint = PublicAccessEndpoint;
     }
 
     /**
-     * Get  
-     * @return WebConsoleEndpoint 
+     * Get Cluster Console Access Address 
+     * @return WebConsoleEndpoint Cluster Console Access Address
      */
     public String getWebConsoleEndpoint() {
         return this.WebConsoleEndpoint;
     }
 
     /**
-     * Set 
-     * @param WebConsoleEndpoint 
+     * Set Cluster Console Access Address
+     * @param WebConsoleEndpoint Cluster Console Access Address
      */
     public void setWebConsoleEndpoint(String WebConsoleEndpoint) {
         this.WebConsoleEndpoint = WebConsoleEndpoint;
     }
 
     /**
-     * Get  
-     * @return WebConsoleUsername 
+     * Get Cluster Console Login Username 
+     * @return WebConsoleUsername Cluster Console Login Username
      */
     public String getWebConsoleUsername() {
         return this.WebConsoleUsername;
     }
 
     /**
-     * Set 
-     * @param WebConsoleUsername 
+     * Set Cluster Console Login Username
+     * @param WebConsoleUsername Cluster Console Login Username
      */
     public void setWebConsoleUsername(String WebConsoleUsername) {
         this.WebConsoleUsername = WebConsoleUsername;
     }
 
     /**
-     * Get  
-     * @return WebConsolePassword 
+     * Get Cluster Console Login Password 
+     * @return WebConsolePassword Cluster Console Login Password
      */
     public String getWebConsolePassword() {
         return this.WebConsolePassword;
     }
 
     /**
-     * Set 
-     * @param WebConsolePassword 
+     * Set Cluster Console Login Password
+     * @param WebConsolePassword Cluster Console Login Password
      */
     public void setWebConsolePassword(String WebConsolePassword) {
         this.WebConsolePassword = WebConsolePassword;
     }
 
     /**
-     * Get  
-     * @return PublicAccessEndpointStatus 
+     * Get Deprecated 
+     * @return PublicAccessEndpointStatus Deprecated
      */
     public Boolean getPublicAccessEndpointStatus() {
         return this.PublicAccessEndpointStatus;
     }
 
     /**
-     * Set 
-     * @param PublicAccessEndpointStatus 
+     * Set Deprecated
+     * @param PublicAccessEndpointStatus Deprecated
      */
     public void setPublicAccessEndpointStatus(Boolean PublicAccessEndpointStatus) {
         this.PublicAccessEndpointStatus = PublicAccessEndpointStatus;
     }
 
     /**
-     * Get  
-     * @return PublicControlConsoleSwitchStatus 
+     * Get Deprecated 
+     * @return PublicControlConsoleSwitchStatus Deprecated
      */
     public Boolean getPublicControlConsoleSwitchStatus() {
         return this.PublicControlConsoleSwitchStatus;
     }
 
     /**
-     * Set 
-     * @param PublicControlConsoleSwitchStatus 
+     * Set Deprecated
+     * @param PublicControlConsoleSwitchStatus Deprecated
      */
     public void setPublicControlConsoleSwitchStatus(Boolean PublicControlConsoleSwitchStatus) {
         this.PublicControlConsoleSwitchStatus = PublicControlConsoleSwitchStatus;
     }
 
     /**
-     * Get  
-     * @return VpcControlConsoleSwitchStatus 
+     * Get Deprecated 
+     * @return VpcControlConsoleSwitchStatus Deprecated
      */
     public Boolean getVpcControlConsoleSwitchStatus() {
         return this.VpcControlConsoleSwitchStatus;
     }
 
     /**
-     * Set 
-     * @param VpcControlConsoleSwitchStatus 
+     * Set Deprecated
+     * @param VpcControlConsoleSwitchStatus Deprecated
      */
     public void setVpcControlConsoleSwitchStatus(Boolean VpcControlConsoleSwitchStatus) {
         this.VpcControlConsoleSwitchStatus = VpcControlConsoleSwitchStatus;
     }
 
     /**
-     * Get  
-     * @return VpcWebConsoleEndpoint 
+     * Get Vpc management console access address, example value: http://1.1.1.1:15672 
+     * @return VpcWebConsoleEndpoint Vpc management console access address, example value: http://1.1.1.1:15672
      */
     public String getVpcWebConsoleEndpoint() {
         return this.VpcWebConsoleEndpoint;
     }
 
     /**
-     * Set 
-     * @param VpcWebConsoleEndpoint 
+     * Set Vpc management console access address, example value: http://1.1.1.1:15672
+     * @param VpcWebConsoleEndpoint Vpc management console access address, example value: http://1.1.1.1:15672
      */
     public void setVpcWebConsoleEndpoint(String VpcWebConsoleEndpoint) {
         this.VpcWebConsoleEndpoint = VpcWebConsoleEndpoint;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeStaffInfoListRequest extends AbstractModel {
 
     /**
-    * Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+    * <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Page size, upper limit 9,999.
+    * <P>Pagination size. upper limit: 9999.</p>.
     */
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
 
     /**
-    * Page number starting from 0.
+    * <P>Page number, starting from 0.</p>.
     */
     @SerializedName("PageNumber")
     @Expose
     private Long PageNumber;
 
     /**
-    * Agent account used when querying a single agent.
+    * <P>Agent account, used when query single agent.</p>.
     */
     @SerializedName("StaffMail")
     @Expose
     private String StaffMail;
 
     /**
-    * Use when querying for agents with a modification time greater or equal to modifiedtime.
+    * <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
     */
     @SerializedName("ModifiedTime")
     @Expose
     private Long ModifiedTime;
 
     /**
-    * Skill group id.
+    * <p>Skill group ID</p>.
     */
     @SerializedName("SkillGroupId")
     @Expose
     private Long SkillGroupId;
 
     /**
-     * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Get <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>. 
+     * @return SdkAppId <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set Application id (required) can be found at https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
+     * Set <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
+     * @param SdkAppId <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Page size, upper limit 9,999. 
-     * @return PageSize Page size, upper limit 9,999.
+     * Get <P>Pagination size. upper limit: 9999.</p>. 
+     * @return PageSize <P>Pagination size. upper limit: 9999.</p>.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Page size, upper limit 9,999.
-     * @param PageSize Page size, upper limit 9,999.
+     * Set <P>Pagination size. upper limit: 9999.</p>.
+     * @param PageSize <P>Pagination size. upper limit: 9999.</p>.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
     }
 
     /**
-     * Get Page number starting from 0. 
-     * @return PageNumber Page number starting from 0.
+     * Get <P>Page number, starting from 0.</p>. 
+     * @return PageNumber <P>Page number, starting from 0.</p>.
      */
     public Long getPageNumber() {
         return this.PageNumber;
     }
 
     /**
-     * Set Page number starting from 0.
-     * @param PageNumber Page number starting from 0.
+     * Set <P>Page number, starting from 0.</p>.
+     * @param PageNumber <P>Page number, starting from 0.</p>.
      */
     public void setPageNumber(Long PageNumber) {
         this.PageNumber = PageNumber;
     }
 
     /**
-     * Get Agent account used when querying a single agent. 
-     * @return StaffMail Agent account used when querying a single agent.
+     * Get <P>Agent account, used when query single agent.</p>. 
+     * @return StaffMail <P>Agent account, used when query single agent.</p>.
      */
     public String getStaffMail() {
         return this.StaffMail;
     }
 
     /**
-     * Set Agent account used when querying a single agent.
-     * @param StaffMail Agent account used when querying a single agent.
+     * Set <P>Agent account, used when query single agent.</p>.
+     * @param StaffMail <P>Agent account, used when query single agent.</p>.
      */
     public void setStaffMail(String StaffMail) {
         this.StaffMail = StaffMail;
     }
 
     /**
-     * Get Use when querying for agents with a modification time greater or equal to modifiedtime. 
-     * @return ModifiedTime Use when querying for agents with a modification time greater or equal to modifiedtime.
+     * Get <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>. 
+     * @return ModifiedTime <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
      */
     public Long getModifiedTime() {
         return this.ModifiedTime;
     }
 
     /**
-     * Set Use when querying for agents with a modification time greater or equal to modifiedtime.
-     * @param ModifiedTime Use when querying for agents with a modification time greater or equal to modifiedtime.
+     * Set <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
+     * @param ModifiedTime <p>Use when querying for agents with modified time equal to or greater than ModifiedTime</p>.
      */
     public void setModifiedTime(Long ModifiedTime) {
         this.ModifiedTime = ModifiedTime;
     }
 
     /**
-     * Get Skill group id. 
-     * @return SkillGroupId Skill group id.
+     * Get <p>Skill group ID</p>. 
+     * @return SkillGroupId <p>Skill group ID</p>.
      */
     public Long getSkillGroupId() {
         return this.SkillGroupId;
     }
 
     /**
-     * Set Skill group id.
-     * @param SkillGroupId Skill group id.
+     * Set <p>Skill group ID</p>.
+     * @param SkillGroupId <p>Skill group ID</p>.
      */
     public void setSkillGroupId(Long SkillGroupId) {
         this.SkillGroupId = SkillGroupId;

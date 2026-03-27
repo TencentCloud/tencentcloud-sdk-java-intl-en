@@ -55,7 +55,7 @@ public class RoomUsageDataItem extends AbstractModel {
     private Float Value;
 
     /**
-    * 
+    * Interactive whiteboard room ID
     */
     @SerializedName("RoomID")
     @Expose
@@ -138,16 +138,16 @@ public class RoomUsageDataItem extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return RoomID 
+     * Get Interactive whiteboard room ID 
+     * @return RoomID Interactive whiteboard room ID
      */
     public Long getRoomID() {
         return this.RoomID;
     }
 
     /**
-     * Set 
-     * @param RoomID 
+     * Set Interactive whiteboard room ID
+     * @param RoomID Interactive whiteboard room ID
      */
     public void setRoomID(Long RoomID) {
         this.RoomID = RoomID;

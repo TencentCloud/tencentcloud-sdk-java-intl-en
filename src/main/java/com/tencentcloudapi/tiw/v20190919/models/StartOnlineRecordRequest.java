@@ -107,14 +107,24 @@ MIX_STREAM - Stream mixing feature
     private RecordControl RecordControl;
 
     /**
-    * 
+    * Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
     */
     @SerializedName("RecordMode")
     @Expose
     private String RecordMode;
 
     /**
-    * 
+    * Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
     */
     @SerializedName("ChatGroupId")
     @Expose
@@ -337,32 +347,72 @@ MIX_STREAM - Stream mixing feature
     }
 
     /**
-     * Get  
-     * @return RecordMode 
+     * Get Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate) 
+     * @return RecordMode Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
      */
     public String getRecordMode() {
         return this.RecordMode;
     }
 
     /**
-     * Set 
-     * @param RecordMode 
+     * Set Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
+     * @param RecordMode Recording mode
+
+
+
+REALTIME_MODE - Real-time recording mode (default)
+
+VIDEO_GENERATION_MODE - Video generation mode (internal testing, requires email application to activate)
      */
     public void setRecordMode(String RecordMode) {
         this.RecordMode = RecordMode;
     }
 
     /**
-     * Get  
-     * @return ChatGroupId 
+     * Get Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded. 
+     * @return ChatGroupId Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
      */
     public String getChatGroupId() {
         return this.ChatGroupId;
     }
 
     /**
-     * Set 
-     * @param ChatGroupId 
+     * Set Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
+     * @param ChatGroupId Chat group ID. This field is only applicable to `video generation mode`.
+
+
+
+In `video generation mode`, non-whiteboard signaling messages in the whiteboard group are recorded by default. If `ChatGroupId` is specified, chat messages from the designated group ID will be recorded.
      */
     public void setChatGroupId(String ChatGroupId) {
         this.ChatGroupId = ChatGroupId;

@@ -24,23 +24,38 @@ import java.util.HashMap;
 public class OriginPullProtocolParameters extends AbstractModel {
 
     /**
-    * 
+    * Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-     * Get  
-     * @return Protocol 
+     * Get Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li> 
+     * @return Protocol Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set 
-     * @param Protocol 
+     * Set Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
+     * @param Protocol Origin protocol configuration, with values:
+<li>http: Use HTTP protocol for origin pull;</li>
+<li>https: Use HTTPS protocol for origin pull;</li>
+<li>follow: Protocol following.</li>
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

@@ -38,7 +38,7 @@ public class AuditLogFilter extends AbstractModel {
     private String [] User;
 
     /**
-    * 
+    * Database Name.
     */
     @SerializedName("DBName")
     @Expose
@@ -59,14 +59,14 @@ public class AuditLogFilter extends AbstractModel {
     private String [] PolicyName;
 
     /**
-    * 
+    * SQL statement. Supports fuzzy matching.
     */
     @SerializedName("Sql")
     @Expose
     private String Sql;
 
     /**
-    * 
+    * SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
     */
     @SerializedName("SqlType")
     @Expose
@@ -196,16 +196,16 @@ public class AuditLogFilter extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return DBName 
+     * Get Database Name. 
+     * @return DBName Database Name.
      */
     public String [] getDBName() {
         return this.DBName;
     }
 
     /**
-     * Set 
-     * @param DBName 
+     * Set Database Name.
+     * @param DBName Database Name.
      */
     public void setDBName(String [] DBName) {
         this.DBName = DBName;
@@ -244,32 +244,32 @@ public class AuditLogFilter extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Sql 
+     * Get SQL statement. Supports fuzzy matching. 
+     * @return Sql SQL statement. Supports fuzzy matching.
      */
     public String getSql() {
         return this.Sql;
     }
 
     /**
-     * Set 
-     * @param Sql 
+     * Set SQL statement. Supports fuzzy matching.
+     * @param Sql SQL statement. Supports fuzzy matching.
      */
     public void setSql(String Sql) {
         this.Sql = Sql;
     }
 
     /**
-     * Get  
-     * @return SqlType 
+     * Get SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE". 
+     * @return SqlType SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
      */
     public String getSqlType() {
         return this.SqlType;
     }
 
     /**
-     * Set 
-     * @param SqlType 
+     * Set SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
+     * @param SqlType SQL Type. Currently supports: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE".
      */
     public void setSqlType(String SqlType) {
         this.SqlType = SqlType;

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class SwitchLog extends AbstractModel {
 
     /**
-    * 
+    * Switchover Event ID
     */
     @SerializedName("EventId")
     @Expose
     private String EventId;
 
     /**
-    * 
+    * Switchover Mode 0-System Automatic Switchover, 1-Manual Switchover
     */
     @SerializedName("SwitchType")
     @Expose
     private Long SwitchType;
 
     /**
-    * 
+    * Switchover Start Time
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * 
+    * Switchover End Time
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * 
+    * Machine failure causes automatic switchover.
     */
     @SerializedName("Reason")
     @Expose
     private String Reason;
 
     /**
-     * Get  
-     * @return EventId 
+     * Get Switchover Event ID 
+     * @return EventId Switchover Event ID
      */
     public String getEventId() {
         return this.EventId;
     }
 
     /**
-     * Set 
-     * @param EventId 
+     * Set Switchover Event ID
+     * @param EventId Switchover Event ID
      */
     public void setEventId(String EventId) {
         this.EventId = EventId;
     }
 
     /**
-     * Get  
-     * @return SwitchType 
+     * Get Switchover Mode 0-System Automatic Switchover, 1-Manual Switchover 
+     * @return SwitchType Switchover Mode 0-System Automatic Switchover, 1-Manual Switchover
      */
     public Long getSwitchType() {
         return this.SwitchType;
     }
 
     /**
-     * Set 
-     * @param SwitchType 
+     * Set Switchover Mode 0-System Automatic Switchover, 1-Manual Switchover
+     * @param SwitchType Switchover Mode 0-System Automatic Switchover, 1-Manual Switchover
      */
     public void setSwitchType(Long SwitchType) {
         this.SwitchType = SwitchType;
     }
 
     /**
-     * Get  
-     * @return StartTime 
+     * Get Switchover Start Time 
+     * @return StartTime Switchover Start Time
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set 
-     * @param StartTime 
+     * Set Switchover Start Time
+     * @param StartTime Switchover Start Time
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get  
-     * @return EndTime 
+     * Get Switchover End Time 
+     * @return EndTime Switchover End Time
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set 
-     * @param EndTime 
+     * Set Switchover End Time
+     * @param EndTime Switchover End Time
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get  
-     * @return Reason 
+     * Get Machine failure causes automatic switchover. 
+     * @return Reason Machine failure causes automatic switchover.
      */
     public String getReason() {
         return this.Reason;
     }
 
     /**
-     * Set 
-     * @param Reason 
+     * Set Machine failure causes automatic switchover.
+     * @param Reason Machine failure causes automatic switchover.
      */
     public void setReason(String Reason) {
         this.Reason = Reason;

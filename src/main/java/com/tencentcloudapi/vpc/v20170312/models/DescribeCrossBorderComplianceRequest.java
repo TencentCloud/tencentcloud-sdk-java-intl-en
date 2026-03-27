@@ -59,7 +59,7 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel {
     private String LegalPerson;
 
     /**
-    * 
+    * (Exact match) Legal person ID number.
     */
     @SerializedName("LegalPersonId")
     @Expose
@@ -237,16 +237,16 @@ public class DescribeCrossBorderComplianceRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return LegalPersonId 
+     * Get (Exact match) Legal person ID number. 
+     * @return LegalPersonId (Exact match) Legal person ID number.
      */
     public String getLegalPersonId() {
         return this.LegalPersonId;
     }
 
     /**
-     * Set 
-     * @param LegalPersonId 
+     * Set (Exact match) Legal person ID number.
+     * @param LegalPersonId (Exact match) Legal person ID number.
      */
     public void setLegalPersonId(String LegalPersonId) {
         this.LegalPersonId = LegalPersonId;

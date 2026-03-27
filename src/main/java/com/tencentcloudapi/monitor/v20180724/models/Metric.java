@@ -121,7 +121,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long [] Periods;
 
     /**
-    * 
+    * Whether delay metrics
     */
     @SerializedName("IsLatenessMetric")
     @Expose
@@ -360,16 +360,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return IsLatenessMetric 
+     * Get Whether delay metrics 
+     * @return IsLatenessMetric Whether delay metrics
      */
     public Long getIsLatenessMetric() {
         return this.IsLatenessMetric;
     }
 
     /**
-     * Set 
-     * @param IsLatenessMetric 
+     * Set Whether delay metrics
+     * @param IsLatenessMetric Whether delay metrics
      */
     public void setIsLatenessMetric(Long IsLatenessMetric) {
         this.IsLatenessMetric = IsLatenessMetric;

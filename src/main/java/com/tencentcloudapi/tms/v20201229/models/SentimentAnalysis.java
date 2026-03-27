@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class SentimentAnalysis extends AbstractModel {
 
     /**
-    * 
+    * Sentiment Tag
     */
     @SerializedName("Label")
     @Expose
     private String Label;
 
     /**
-    * 
+    * Tag score, ranging from 0 to 100
     */
     @SerializedName("Score")
     @Expose
     private Long Score;
 
     /**
-    * 
+    * Sentiment analysis details
     */
     @SerializedName("Detail")
     @Expose
     private SentimentDetail Detail;
 
     /**
-    * 
+    * Response code; "OK" for success, "InternalError" for failure
     */
     @SerializedName("Code")
     @Expose
     private String Code;
 
     /**
-    * 
+    * Exception information
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-     * Get  
-     * @return Label 
+     * Get Sentiment Tag 
+     * @return Label Sentiment Tag
      */
     public String getLabel() {
         return this.Label;
     }
 
     /**
-     * Set 
-     * @param Label 
+     * Set Sentiment Tag
+     * @param Label Sentiment Tag
      */
     public void setLabel(String Label) {
         this.Label = Label;
     }
 
     /**
-     * Get  
-     * @return Score 
+     * Get Tag score, ranging from 0 to 100 
+     * @return Score Tag score, ranging from 0 to 100
      */
     public Long getScore() {
         return this.Score;
     }
 
     /**
-     * Set 
-     * @param Score 
+     * Set Tag score, ranging from 0 to 100
+     * @param Score Tag score, ranging from 0 to 100
      */
     public void setScore(Long Score) {
         this.Score = Score;
     }
 
     /**
-     * Get  
-     * @return Detail 
+     * Get Sentiment analysis details 
+     * @return Detail Sentiment analysis details
      */
     public SentimentDetail getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set 
-     * @param Detail 
+     * Set Sentiment analysis details
+     * @param Detail Sentiment analysis details
      */
     public void setDetail(SentimentDetail Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get  
-     * @return Code 
+     * Get Response code; "OK" for success, "InternalError" for failure 
+     * @return Code Response code; "OK" for success, "InternalError" for failure
      */
     public String getCode() {
         return this.Code;
     }
 
     /**
-     * Set 
-     * @param Code 
+     * Set Response code; "OK" for success, "InternalError" for failure
+     * @param Code Response code; "OK" for success, "InternalError" for failure
      */
     public void setCode(String Code) {
         this.Code = Code;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get Exception information 
+     * @return Message Exception information
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set Exception information
+     * @param Message Exception information
      */
     public void setMessage(String Message) {
         this.Message = Message;

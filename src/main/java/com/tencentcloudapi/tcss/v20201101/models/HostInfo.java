@@ -152,14 +152,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String ClusterID;
 
     /**
-    * 
+    * Cluster Name
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * 
+    * Cluster Access Status
     */
     @SerializedName("ClusterAccessedStatus")
     @Expose
@@ -462,32 +462,32 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return ClusterName 
+     * Get Cluster Name 
+     * @return ClusterName Cluster Name
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set 
-     * @param ClusterName 
+     * Set Cluster Name
+     * @param ClusterName Cluster Name
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get  
-     * @return ClusterAccessedStatus 
+     * Get Cluster Access Status 
+     * @return ClusterAccessedStatus Cluster Access Status
      */
     public String getClusterAccessedStatus() {
         return this.ClusterAccessedStatus;
     }
 
     /**
-     * Set 
-     * @param ClusterAccessedStatus 
+     * Set Cluster Access Status
+     * @param ClusterAccessedStatus Cluster Access Status
      */
     public void setClusterAccessedStatus(String ClusterAccessedStatus) {
         this.ClusterAccessedStatus = ClusterAccessedStatus;

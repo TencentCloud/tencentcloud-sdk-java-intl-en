@@ -24,322 +24,322 @@ import java.util.HashMap;
 public class CrossSummaryDetailRes extends AbstractModel {
 
     /**
-    * 
+    * Instance Status
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 
+    * Instance Region
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * 
+    * Instance ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * 
+    * Instance Name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Cross-Region Backup Status: enable - Enabled, disable - Disabled
     */
     @SerializedName("CrossBackupEnabled")
     @Expose
     private String CrossBackupEnabled;
 
     /**
-    * 
+    * Cross-Region Backup Target Region
     */
     @SerializedName("CrossRegions")
     @Expose
     private String [] CrossRegions;
 
     /**
-    * 
+    * Latest Backup Start Time
     */
     @SerializedName("LastBackupStartTime")
     @Expose
     private String LastBackupStartTime;
 
     /**
-    * 
+    * Cross-Region Backup Retention Days
     */
     @SerializedName("CrossBackupSaveDays")
     @Expose
     private Long CrossBackupSaveDays;
 
     /**
-    * 
+    * Cross-Region Data Backup Total Space
     */
     @SerializedName("DataBackupSpace")
     @Expose
     private Long DataBackupSpace;
 
     /**
-    * 
+    * Cross-Region Data Backup Total File Count
     */
     @SerializedName("DataBackupCount")
     @Expose
     private Long DataBackupCount;
 
     /**
-    * 
+    * Cross-Region Log Backup Total Space
     */
     @SerializedName("LogBackupSpace")
     @Expose
     private Long LogBackupSpace;
 
     /**
-    * 
+    * Cross-Region Log Backup Total File Count
     */
     @SerializedName("LogBackupCount")
     @Expose
     private Long LogBackupCount;
 
     /**
-    * 
+    * Cross-Region Backup Total Space
     */
     @SerializedName("ActualUsedSpace")
     @Expose
     private Long ActualUsedSpace;
 
     /**
-    * 
+    * Cross-Region Backup Total Count
     */
     @SerializedName("ActualUsedCount")
     @Expose
     private Long ActualUsedCount;
 
     /**
-     * Get  
-     * @return Status 
+     * Get Instance Status 
+     * @return Status Instance Status
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Instance Status
+     * @param Status Instance Status
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return Region 
+     * Get Instance Region 
+     * @return Region Instance Region
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set 
-     * @param Region 
+     * Set Instance Region
+     * @param Region Instance Region
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get Instance ID 
+     * @return InstanceId Instance ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set Instance ID
+     * @param InstanceId Instance ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Instance Name 
+     * @return Name Instance Name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Instance Name
+     * @param Name Instance Name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return CrossBackupEnabled 
+     * Get Cross-Region Backup Status: enable - Enabled, disable - Disabled 
+     * @return CrossBackupEnabled Cross-Region Backup Status: enable - Enabled, disable - Disabled
      */
     public String getCrossBackupEnabled() {
         return this.CrossBackupEnabled;
     }
 
     /**
-     * Set 
-     * @param CrossBackupEnabled 
+     * Set Cross-Region Backup Status: enable - Enabled, disable - Disabled
+     * @param CrossBackupEnabled Cross-Region Backup Status: enable - Enabled, disable - Disabled
      */
     public void setCrossBackupEnabled(String CrossBackupEnabled) {
         this.CrossBackupEnabled = CrossBackupEnabled;
     }
 
     /**
-     * Get  
-     * @return CrossRegions 
+     * Get Cross-Region Backup Target Region 
+     * @return CrossRegions Cross-Region Backup Target Region
      */
     public String [] getCrossRegions() {
         return this.CrossRegions;
     }
 
     /**
-     * Set 
-     * @param CrossRegions 
+     * Set Cross-Region Backup Target Region
+     * @param CrossRegions Cross-Region Backup Target Region
      */
     public void setCrossRegions(String [] CrossRegions) {
         this.CrossRegions = CrossRegions;
     }
 
     /**
-     * Get  
-     * @return LastBackupStartTime 
+     * Get Latest Backup Start Time 
+     * @return LastBackupStartTime Latest Backup Start Time
      */
     public String getLastBackupStartTime() {
         return this.LastBackupStartTime;
     }
 
     /**
-     * Set 
-     * @param LastBackupStartTime 
+     * Set Latest Backup Start Time
+     * @param LastBackupStartTime Latest Backup Start Time
      */
     public void setLastBackupStartTime(String LastBackupStartTime) {
         this.LastBackupStartTime = LastBackupStartTime;
     }
 
     /**
-     * Get  
-     * @return CrossBackupSaveDays 
+     * Get Cross-Region Backup Retention Days 
+     * @return CrossBackupSaveDays Cross-Region Backup Retention Days
      */
     public Long getCrossBackupSaveDays() {
         return this.CrossBackupSaveDays;
     }
 
     /**
-     * Set 
-     * @param CrossBackupSaveDays 
+     * Set Cross-Region Backup Retention Days
+     * @param CrossBackupSaveDays Cross-Region Backup Retention Days
      */
     public void setCrossBackupSaveDays(Long CrossBackupSaveDays) {
         this.CrossBackupSaveDays = CrossBackupSaveDays;
     }
 
     /**
-     * Get  
-     * @return DataBackupSpace 
+     * Get Cross-Region Data Backup Total Space 
+     * @return DataBackupSpace Cross-Region Data Backup Total Space
      */
     public Long getDataBackupSpace() {
         return this.DataBackupSpace;
     }
 
     /**
-     * Set 
-     * @param DataBackupSpace 
+     * Set Cross-Region Data Backup Total Space
+     * @param DataBackupSpace Cross-Region Data Backup Total Space
      */
     public void setDataBackupSpace(Long DataBackupSpace) {
         this.DataBackupSpace = DataBackupSpace;
     }
 
     /**
-     * Get  
-     * @return DataBackupCount 
+     * Get Cross-Region Data Backup Total File Count 
+     * @return DataBackupCount Cross-Region Data Backup Total File Count
      */
     public Long getDataBackupCount() {
         return this.DataBackupCount;
     }
 
     /**
-     * Set 
-     * @param DataBackupCount 
+     * Set Cross-Region Data Backup Total File Count
+     * @param DataBackupCount Cross-Region Data Backup Total File Count
      */
     public void setDataBackupCount(Long DataBackupCount) {
         this.DataBackupCount = DataBackupCount;
     }
 
     /**
-     * Get  
-     * @return LogBackupSpace 
+     * Get Cross-Region Log Backup Total Space 
+     * @return LogBackupSpace Cross-Region Log Backup Total Space
      */
     public Long getLogBackupSpace() {
         return this.LogBackupSpace;
     }
 
     /**
-     * Set 
-     * @param LogBackupSpace 
+     * Set Cross-Region Log Backup Total Space
+     * @param LogBackupSpace Cross-Region Log Backup Total Space
      */
     public void setLogBackupSpace(Long LogBackupSpace) {
         this.LogBackupSpace = LogBackupSpace;
     }
 
     /**
-     * Get  
-     * @return LogBackupCount 
+     * Get Cross-Region Log Backup Total File Count 
+     * @return LogBackupCount Cross-Region Log Backup Total File Count
      */
     public Long getLogBackupCount() {
         return this.LogBackupCount;
     }
 
     /**
-     * Set 
-     * @param LogBackupCount 
+     * Set Cross-Region Log Backup Total File Count
+     * @param LogBackupCount Cross-Region Log Backup Total File Count
      */
     public void setLogBackupCount(Long LogBackupCount) {
         this.LogBackupCount = LogBackupCount;
     }
 
     /**
-     * Get  
-     * @return ActualUsedSpace 
+     * Get Cross-Region Backup Total Space 
+     * @return ActualUsedSpace Cross-Region Backup Total Space
      */
     public Long getActualUsedSpace() {
         return this.ActualUsedSpace;
     }
 
     /**
-     * Set 
-     * @param ActualUsedSpace 
+     * Set Cross-Region Backup Total Space
+     * @param ActualUsedSpace Cross-Region Backup Total Space
      */
     public void setActualUsedSpace(Long ActualUsedSpace) {
         this.ActualUsedSpace = ActualUsedSpace;
     }
 
     /**
-     * Get  
-     * @return ActualUsedCount 
+     * Get Cross-Region Backup Total Count 
+     * @return ActualUsedCount Cross-Region Backup Total Count
      */
     public Long getActualUsedCount() {
         return this.ActualUsedCount;
     }
 
     /**
-     * Set 
-     * @param ActualUsedCount 
+     * Set Cross-Region Backup Total Count
+     * @param ActualUsedCount Cross-Region Backup Total Count
      */
     public void setActualUsedCount(Long ActualUsedCount) {
         this.ActualUsedCount = ActualUsedCount;

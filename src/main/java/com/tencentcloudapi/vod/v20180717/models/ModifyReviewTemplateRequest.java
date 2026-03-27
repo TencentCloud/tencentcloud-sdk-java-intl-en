@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyReviewTemplateRequest extends AbstractModel {
 
     /**
-    * 
+    * Audit template unique ID.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,14 +38,14 @@ public class ModifyReviewTemplateRequest extends AbstractModel {
     private Long SubAppId;
 
     /**
-    * 
+    * Audit template name, length limit: 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * 
+    * Audit template description, length limit: 256 characters.
     */
     @SerializedName("Comment")
     @Expose
@@ -59,16 +59,16 @@ public class ModifyReviewTemplateRequest extends AbstractModel {
     private String [] Labels;
 
     /**
-     * Get  
-     * @return Definition 
+     * Get Audit template unique ID. 
+     * @return Definition Audit template unique ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set 
-     * @param Definition 
+     * Set Audit template unique ID.
+     * @param Definition Audit template unique ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
@@ -91,32 +91,32 @@ public class ModifyReviewTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Name 
+     * Get Audit template name, length limit: 64 characters. 
+     * @return Name Audit template name, length limit: 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set 
-     * @param Name 
+     * Set Audit template name, length limit: 64 characters.
+     * @param Name Audit template name, length limit: 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get  
-     * @return Comment 
+     * Get Audit template description, length limit: 256 characters. 
+     * @return Comment Audit template description, length limit: 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set 
-     * @param Comment 
+     * Set Audit template description, length limit: 256 characters.
+     * @param Comment Audit template description, length limit: 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

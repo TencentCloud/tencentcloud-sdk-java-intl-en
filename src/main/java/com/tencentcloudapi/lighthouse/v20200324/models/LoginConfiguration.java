@@ -44,7 +44,7 @@ For Windows instances, the password must contain 12 to 30 characters of the foll
     private String Password;
 
     /**
-    * 
+    * Key ID list. You can specify up to 5 keys simultaneously. After associating keys, you can access the instance using the corresponding private key. Keys and passwords cannot be specified simultaneously. Additionally, the WINDOWS operating system does not support key specification. The key ID list can be obtained via the [DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540) API.
     */
     @SerializedName("KeyIds")
     @Expose
@@ -107,16 +107,16 @@ For Windows instances, the password must contain 12 to 30 characters of the foll
     }
 
     /**
-     * Get  
-     * @return KeyIds 
+     * Get Key ID list. You can specify up to 5 keys simultaneously. After associating keys, you can access the instance using the corresponding private key. Keys and passwords cannot be specified simultaneously. Additionally, the WINDOWS operating system does not support key specification. The key ID list can be obtained via the [DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540) API. 
+     * @return KeyIds Key ID list. You can specify up to 5 keys simultaneously. After associating keys, you can access the instance using the corresponding private key. Keys and passwords cannot be specified simultaneously. Additionally, the WINDOWS operating system does not support key specification. The key ID list can be obtained via the [DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540) API.
      */
     public String [] getKeyIds() {
         return this.KeyIds;
     }
 
     /**
-     * Set 
-     * @param KeyIds 
+     * Set Key ID list. You can specify up to 5 keys simultaneously. After associating keys, you can access the instance using the corresponding private key. Keys and passwords cannot be specified simultaneously. Additionally, the WINDOWS operating system does not support key specification. The key ID list can be obtained via the [DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540) API.
+     * @param KeyIds Key ID list. You can specify up to 5 keys simultaneously. After associating keys, you can access the instance using the corresponding private key. Keys and passwords cannot be specified simultaneously. Additionally, the WINDOWS operating system does not support key specification. The key ID list can be obtained via the [DescribeKeyPairs](https://cloud.tencent.com/document/product/1207/55540) API.
      */
     public void setKeyIds(String [] KeyIds) {
         this.KeyIds = KeyIds;

@@ -38,7 +38,7 @@ public class CreateSubAppIdRequest extends AbstractModel {
     private String Description;
 
     /**
-    * 
+    * Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
     */
     @SerializedName("Type")
     @Expose
@@ -77,16 +77,16 @@ public class CreateSubAppIdRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne. 
+     * @return Type Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
+     * @param Type Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
      */
     public void setType(String Type) {
         this.Type = Type;

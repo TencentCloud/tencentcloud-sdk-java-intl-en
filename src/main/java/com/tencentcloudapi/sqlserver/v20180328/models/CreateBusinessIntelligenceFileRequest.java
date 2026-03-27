@@ -31,7 +31,7 @@ public class CreateBusinessIntelligenceFileRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * 
+    * COS_URL
     */
     @SerializedName("FileURL")
     @Expose
@@ -68,16 +68,16 @@ public class CreateBusinessIntelligenceFileRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return FileURL 
+     * Get COS_URL 
+     * @return FileURL COS_URL
      */
     public String getFileURL() {
         return this.FileURL;
     }
 
     /**
-     * Set 
-     * @param FileURL 
+     * Set COS_URL
+     * @param FileURL COS_URL
      */
     public void setFileURL(String FileURL) {
         this.FileURL = FileURL;

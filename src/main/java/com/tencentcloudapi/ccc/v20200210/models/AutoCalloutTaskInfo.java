@@ -69,11 +69,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
     */
     @SerializedName("State")
     @Expose
@@ -85,6 +86,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
+
+    /**
+    * Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+    */
+    @SerializedName("MaxRingTimeoutSecond")
+    @Expose
+    private Long MaxRingTimeoutSecond;
 
     /**
      * Get Task name. 
@@ -192,17 +200,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Get Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration. 
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution. 
      * @return State Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
      */
     public Long getState() {
         return this.State;
@@ -210,17 +220,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
      * @param State Task status:.
-0 initial: task creation, call not started.
-1 running.
-2 completed: all calls in the task are completed.
-3 ending: the task has expired, but there are still some calls not ended.
-4 ended: task terminated due to expiration.
+0 initial: task created, call not started.
+1: running.
+2 completed: all calls in the task are done.
+3 ending: the task expires, but some calls are not ended.
+4 stopped: the task expired and ended.
+5 paused: recoverable to continue execution.
      */
     public void setState(Long State) {
         this.State = State;
@@ -240,6 +252,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;
+    }
+
+    /**
+     * Get Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter. 
+     * @return MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     */
+    public Long getMaxRingTimeoutSecond() {
+        return this.MaxRingTimeoutSecond;
+    }
+
+    /**
+     * Set Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     * @param MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     */
+    public void setMaxRingTimeoutSecond(Long MaxRingTimeoutSecond) {
+        this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
     }
 
     public AutoCalloutTaskInfo() {
@@ -277,6 +305,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.TaskId != null) {
             this.TaskId = new Long(source.TaskId);
         }
+        if (source.MaxRingTimeoutSecond != null) {
+            this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
+        }
     }
 
 
@@ -292,6 +323,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IvrId", this.IvrId);
         this.setParamSimple(map, prefix + "State", this.State);
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
 
     }
 }

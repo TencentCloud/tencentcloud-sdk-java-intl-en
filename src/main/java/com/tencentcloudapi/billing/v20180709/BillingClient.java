@@ -440,6 +440,19 @@ Note: The API request may fail due to network instability or other exceptions. I
     }
 
     /**
+     *Notes:
+1. This API supports querying annual and monthly subscription instances integrated into the renewal management page, including running and isolated instances (some products unsupported).
+2. When using this API, a sub-user should have the QcloudFinanceRenewManageFullAccess permission policy.
+     * @param req DescribeRenewInstancesRequest
+     * @return DescribeRenewInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRenewInstancesResponse DescribeRenewInstances(DescribeRenewInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRenewInstances", DescribeRenewInstancesResponse.class);
+    }
+
+    /**
      *This API is used to get cost allocation tags.
      * @param req DescribeTagListRequest
      * @return DescribeTagListResponse
@@ -538,6 +551,20 @@ Currently, the integrated and supported product for renewal includes: Cloud Fire
     public RenewInstanceResponse RenewInstance(RenewInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RenewInstance", RenewInstanceResponse.class);
+    }
+
+    /**
+     *Notes:
+1. This API supports setting auto-renewal mode and period for annual and monthly subscription instances.
+2. Obtain the product code and region code through an instance query API.
+3. When using this API, a sub-user must possess the QcloudFinanceRenewManageFullAccess permission policy.
+     * @param req SetRenewalRequest
+     * @return SetRenewalResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetRenewalResponse SetRenewal(SetRenewalRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetRenewal", SetRenewalResponse.class);
     }
 
 }

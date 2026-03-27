@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BizTaskModifyInstanceParam extends AbstractModel {
 
     /**
-    * 
+    * Instance ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -38,16 +38,16 @@ public class BizTaskModifyInstanceParam extends AbstractModel {
     private ModifyParamItem [] ModifyInstanceParamList;
 
     /**
-     * Get  
-     * @return InstanceId 
+     * Get Instance ID 
+     * @return InstanceId Instance ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set 
-     * @param InstanceId 
+     * Set Instance ID
+     * @param InstanceId Instance ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

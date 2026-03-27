@@ -24,98 +24,98 @@ import java.util.HashMap;
 public class ReadOnlyGroup extends AbstractModel {
 
     /**
-    * 
+    * Read-Only Group ID
     */
     @SerializedName("ReadOnlyGroupId")
     @Expose
     private String ReadOnlyGroupId;
 
     /**
-    * 
+    * Read-Only Group Name
     */
     @SerializedName("ReadOnlyGroupName")
     @Expose
     private String ReadOnlyGroupName;
 
     /**
-    * 
+    * Region ID of the Read-Only Group, same as the Primary Instance
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * 
+    * Read-Only Group's AZ ID, same as the Primary Instance
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * 
+    * Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
     */
     @SerializedName("IsOfflineDelay")
     @Expose
     private Long IsOfflineDelay;
 
     /**
-    * 
+    * Timeout threshold used after enabling the timeout culling feature
     */
     @SerializedName("ReadOnlyMaxDelayTime")
     @Expose
     private Long ReadOnlyMaxDelayTime;
 
     /**
-    * 
+    * Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
     */
     @SerializedName("MinReadOnlyInGroup")
     @Expose
     private Long MinReadOnlyInGroup;
 
     /**
-    * 
+    * Read-Only Group vip
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * 
+    * Read-Only Group vport
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * 
+    * Read-Only Group VPC ID
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * 
+    * Read-Only Group VPC Subnet ID
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * 
+    * Read-Only Group Status: 1-Running, 5-Creating
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * 
+    * Primary instance ID, in the form of mssql-sgeshe3th
     */
     @SerializedName("MasterInstanceId")
     @Expose
     private String MasterInstanceId;
 
     /**
-    * 
+    * Read-Only Instance Replica Set
     */
     @SerializedName("ReadOnlyInstanceSet")
     @Expose
@@ -136,224 +136,224 @@ public class ReadOnlyGroup extends AbstractModel {
     private Long TgwWanVPort;
 
     /**
-     * Get  
-     * @return ReadOnlyGroupId 
+     * Get Read-Only Group ID 
+     * @return ReadOnlyGroupId Read-Only Group ID
      */
     public String getReadOnlyGroupId() {
         return this.ReadOnlyGroupId;
     }
 
     /**
-     * Set 
-     * @param ReadOnlyGroupId 
+     * Set Read-Only Group ID
+     * @param ReadOnlyGroupId Read-Only Group ID
      */
     public void setReadOnlyGroupId(String ReadOnlyGroupId) {
         this.ReadOnlyGroupId = ReadOnlyGroupId;
     }
 
     /**
-     * Get  
-     * @return ReadOnlyGroupName 
+     * Get Read-Only Group Name 
+     * @return ReadOnlyGroupName Read-Only Group Name
      */
     public String getReadOnlyGroupName() {
         return this.ReadOnlyGroupName;
     }
 
     /**
-     * Set 
-     * @param ReadOnlyGroupName 
+     * Set Read-Only Group Name
+     * @param ReadOnlyGroupName Read-Only Group Name
      */
     public void setReadOnlyGroupName(String ReadOnlyGroupName) {
         this.ReadOnlyGroupName = ReadOnlyGroupName;
     }
 
     /**
-     * Get  
-     * @return RegionId 
+     * Get Region ID of the Read-Only Group, same as the Primary Instance 
+     * @return RegionId Region ID of the Read-Only Group, same as the Primary Instance
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set 
-     * @param RegionId 
+     * Set Region ID of the Read-Only Group, same as the Primary Instance
+     * @param RegionId Region ID of the Read-Only Group, same as the Primary Instance
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get  
-     * @return ZoneId 
+     * Get Read-Only Group's AZ ID, same as the Primary Instance 
+     * @return ZoneId Read-Only Group's AZ ID, same as the Primary Instance
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set 
-     * @param ZoneId 
+     * Set Read-Only Group's AZ ID, same as the Primary Instance
+     * @param ZoneId Read-Only Group's AZ ID, same as the Primary Instance
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get  
-     * @return IsOfflineDelay 
+     * Get Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled 
+     * @return IsOfflineDelay Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
      */
     public Long getIsOfflineDelay() {
         return this.IsOfflineDelay;
     }
 
     /**
-     * Set 
-     * @param IsOfflineDelay 
+     * Set Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
+     * @param IsOfflineDelay Whether to enable the timeout culling feature; 0 - disabled, 1 - enabled
      */
     public void setIsOfflineDelay(Long IsOfflineDelay) {
         this.IsOfflineDelay = IsOfflineDelay;
     }
 
     /**
-     * Get  
-     * @return ReadOnlyMaxDelayTime 
+     * Get Timeout threshold used after enabling the timeout culling feature 
+     * @return ReadOnlyMaxDelayTime Timeout threshold used after enabling the timeout culling feature
      */
     public Long getReadOnlyMaxDelayTime() {
         return this.ReadOnlyMaxDelayTime;
     }
 
     /**
-     * Set 
-     * @param ReadOnlyMaxDelayTime 
+     * Set Timeout threshold used after enabling the timeout culling feature
+     * @param ReadOnlyMaxDelayTime Timeout threshold used after enabling the timeout culling feature
      */
     public void setReadOnlyMaxDelayTime(Long ReadOnlyMaxDelayTime) {
         this.ReadOnlyMaxDelayTime = ReadOnlyMaxDelayTime;
     }
 
     /**
-     * Get  
-     * @return MinReadOnlyInGroup 
+     * Get Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature 
+     * @return MinReadOnlyInGroup Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
      */
     public Long getMinReadOnlyInGroup() {
         return this.MinReadOnlyInGroup;
     }
 
     /**
-     * Set 
-     * @param MinReadOnlyInGroup 
+     * Set Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
+     * @param MinReadOnlyInGroup Minimum number of read-only replicas retained in the read-only group after enabling the timeout culling feature
      */
     public void setMinReadOnlyInGroup(Long MinReadOnlyInGroup) {
         this.MinReadOnlyInGroup = MinReadOnlyInGroup;
     }
 
     /**
-     * Get  
-     * @return Vip 
+     * Get Read-Only Group vip 
+     * @return Vip Read-Only Group vip
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set 
-     * @param Vip 
+     * Set Read-Only Group vip
+     * @param Vip Read-Only Group vip
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get  
-     * @return Vport 
+     * Get Read-Only Group vport 
+     * @return Vport Read-Only Group vport
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set 
-     * @param Vport 
+     * Set Read-Only Group vport
+     * @param Vport Read-Only Group vport
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get  
-     * @return VpcId 
+     * Get Read-Only Group VPC ID 
+     * @return VpcId Read-Only Group VPC ID
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 
-     * @param VpcId 
+     * Set Read-Only Group VPC ID
+     * @param VpcId Read-Only Group VPC ID
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get  
-     * @return SubnetId 
+     * Get Read-Only Group VPC Subnet ID 
+     * @return SubnetId Read-Only Group VPC Subnet ID
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set 
-     * @param SubnetId 
+     * Set Read-Only Group VPC Subnet ID
+     * @param SubnetId Read-Only Group VPC Subnet ID
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Read-Only Group Status: 1-Running, 5-Creating 
+     * @return Status Read-Only Group Status: 1-Running, 5-Creating
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Read-Only Group Status: 1-Running, 5-Creating
+     * @param Status Read-Only Group Status: 1-Running, 5-Creating
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return MasterInstanceId 
+     * Get Primary instance ID, in the form of mssql-sgeshe3th 
+     * @return MasterInstanceId Primary instance ID, in the form of mssql-sgeshe3th
      */
     public String getMasterInstanceId() {
         return this.MasterInstanceId;
     }
 
     /**
-     * Set 
-     * @param MasterInstanceId 
+     * Set Primary instance ID, in the form of mssql-sgeshe3th
+     * @param MasterInstanceId Primary instance ID, in the form of mssql-sgeshe3th
      */
     public void setMasterInstanceId(String MasterInstanceId) {
         this.MasterInstanceId = MasterInstanceId;
     }
 
     /**
-     * Get  
-     * @return ReadOnlyInstanceSet 
+     * Get Read-Only Instance Replica Set 
+     * @return ReadOnlyInstanceSet Read-Only Instance Replica Set
      */
     public ReadOnlyInstance [] getReadOnlyInstanceSet() {
         return this.ReadOnlyInstanceSet;
     }
 
     /**
-     * Set 
-     * @param ReadOnlyInstanceSet 
+     * Set Read-Only Instance Replica Set
+     * @param ReadOnlyInstanceSet Read-Only Instance Replica Set
      */
     public void setReadOnlyInstanceSet(ReadOnlyInstance [] ReadOnlyInstanceSet) {
         this.ReadOnlyInstanceSet = ReadOnlyInstanceSet;

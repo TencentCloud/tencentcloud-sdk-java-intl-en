@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeStaffInfoListResponse extends AbstractModel {
 
     /**
-    * Total number of agent users.
+    * <P>Total number of agent users</p>.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Agent user information list.
+    * <P>Agent user information list</p>.
     */
     @SerializedName("StaffList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeStaffInfoListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of agent users. 
-     * @return TotalCount Total number of agent users.
+     * Get <P>Total number of agent users</p>. 
+     * @return TotalCount <P>Total number of agent users</p>.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of agent users.
-     * @param TotalCount Total number of agent users.
+     * Set <P>Total number of agent users</p>.
+     * @param TotalCount <P>Total number of agent users</p>.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Agent user information list. 
-     * @return StaffList Agent user information list.
+     * Get <P>Agent user information list</p>. 
+     * @return StaffList <P>Agent user information list</p>.
      */
     public StaffInfo [] getStaffList() {
         return this.StaffList;
     }
 
     /**
-     * Set Agent user information list.
-     * @param StaffList Agent user information list.
+     * Set <P>Agent user information list</p>.
+     * @param StaffList <P>Agent user information list</p>.
      */
     public void setStaffList(StaffInfo [] StaffList) {
         this.StaffList = StaffList;

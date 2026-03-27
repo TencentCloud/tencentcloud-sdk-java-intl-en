@@ -59,7 +59,7 @@ public class ConfigureChcAssistVpcRequest extends AbstractModel {
     private String [] DeploySecurityGroupIds;
 
     /**
-    * 
+    * Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
     */
     @SerializedName("ChcDeployExtraConfig")
     @Expose
@@ -146,16 +146,16 @@ public class ConfigureChcAssistVpcRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ChcDeployExtraConfig 
+     * Get Additional parameters for deployment network, used to specify minios type, bios boot mode, etc. 
+     * @return ChcDeployExtraConfig Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
      */
     public ChcDeployExtraConfig getChcDeployExtraConfig() {
         return this.ChcDeployExtraConfig;
     }
 
     /**
-     * Set 
-     * @param ChcDeployExtraConfig 
+     * Set Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
+     * @param ChcDeployExtraConfig Additional parameters for deployment network, used to specify minios type, bios boot mode, etc.
      */
     public void setChcDeployExtraConfig(ChcDeployExtraConfig ChcDeployExtraConfig) {
         this.ChcDeployExtraConfig = ChcDeployExtraConfig;

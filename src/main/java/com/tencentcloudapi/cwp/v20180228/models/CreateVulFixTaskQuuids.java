@@ -38,7 +38,7 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
     private String [] Quuids;
 
     /**
-    * 
+    * Repair method: 0 component update or patch installation, 1 disable service
     */
     @SerializedName("FixMethod")
     @Expose
@@ -77,16 +77,16 @@ public class CreateVulFixTaskQuuids extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return FixMethod 
+     * Get Repair method: 0 component update or patch installation, 1 disable service 
+     * @return FixMethod Repair method: 0 component update or patch installation, 1 disable service
      */
     public Long getFixMethod() {
         return this.FixMethod;
     }
 
     /**
-     * Set 
-     * @param FixMethod 
+     * Set Repair method: 0 component update or patch installation, 1 disable service
+     * @param FixMethod Repair method: 0 component update or patch installation, 1 disable service
      */
     public void setFixMethod(Long FixMethod) {
         this.FixMethod = FixMethod;

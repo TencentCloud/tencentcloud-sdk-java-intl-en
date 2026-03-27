@@ -24,165 +24,179 @@ import java.util.HashMap;
 public class DescribeSessionDetailResponse extends AbstractModel {
 
     /**
-    * Calling number.
+    * <P>Calling number</p>.
     */
     @SerializedName("Caller")
     @Expose
     private String Caller;
 
     /**
-    * Called number.
+    * <P>Called number</p>.
     */
     @SerializedName("Callee")
     @Expose
     private String Callee;
 
     /**
-    * Call type. valid values: 1 (outgoing call), 2 (incoming call), 3 (audio dial-in), 5 (predictive outbound call), 6 (internal call).
+    * <P>Call type 1 outgoing call 2 incoming call 3 audio dial-in 5 predictive outbound call 6 extension call</p>.
     */
     @SerializedName("CallType")
     @Expose
     private Long CallType;
 
     /**
-    * Start timestamp. Unix second-level timestamp.
+    * <p>Start timestamp, Unix second-level timestamp</p>.
     */
     @SerializedName("StartTimeStamp")
     @Expose
     private Long StartTimeStamp;
 
     /**
-    * Ring timestamp. UNIX second-level timestamp.
+    * <p>Ring timestamp, UNIX second-level timestamp</p>.
     */
     @SerializedName("RingTimestamp")
     @Expose
     private Long RingTimestamp;
 
     /**
-    * Answer timestamp. UNIX second-level timestamp.
+    * <p>Answer timestamp, UNIX second-level timestamp</p>.
     */
     @SerializedName("AcceptTimestamp")
     @Expose
     private Long AcceptTimestamp;
 
     /**
-    * End timestamp, UNIX second-level timestamp.
+    * <p>End timestamp, UNIX second-level timestamp</p>.
     */
     @SerializedName("EndedTimestamp")
     @Expose
     private Long EndedTimestamp;
 
     /**
-    * Queue entry time. Unix second-level timestamp.
+    * <p>Queue entry time, Unix second-level timestamp</p>.
     */
     @SerializedName("QueuedTimestamp")
     @Expose
     private Long QueuedTimestamp;
 
     /**
-    * Agent account.
+    * <P>Agent account</p>.
     */
     @SerializedName("StaffUserId")
     @Expose
     private String StaffUserId;
 
     /**
-    * Refers to the EndStatus field in the DescribeTelCdr api.
+    * <p>Refer to the EndStatus field in the DescribeTelCdr api.</p>.
     */
     @SerializedName("EndStatus")
     @Expose
     private Long EndStatus;
 
     /**
-    * Queue skill group ID.
+    * <p>Queue skill group ID</p>.
     */
     @SerializedName("QueuedSkillGroupId")
     @Expose
     private Long QueuedSkillGroupId;
 
     /**
-    * Queue skill group name.
+    * <P>Queue skill group name</p>.
     */
     @SerializedName("QueuedSkillGroupName")
     @Expose
     private String QueuedSkillGroupName;
 
     /**
-    * Recording url with authentication and valid period. obtain and pull within a short time frame. do not persist this link.
+    * <P>The recording link comes with authentication and a valid period. after obtaining it, please retrieve the content within 24 hours. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
     */
     @SerializedName("RecordURL")
     @Expose
     private String RecordURL;
 
     /**
-    * Specifies the COS link for recording transfer to a third party.
+    * <p>Recording transfer to external COS link</p>.
     */
     @SerializedName("CustomRecordURL")
     @Expose
     private String CustomRecordURL;
 
     /**
-    * Recording text information link with authentication and valid period. retrieve it within a short time frame. do not persist this link.
+    * <P>Text information link of the voice recording, with authentication and valid period. please retrieve it within 24 hr after obtaining. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
     */
     @SerializedName("AsrURL")
     @Expose
     private String AsrURL;
 
     /**
-    * Voicemail recording url.
+    * <P>Voicemail recording link</p>.
     */
     @SerializedName("VoicemailRecordURL")
     @Expose
     private String [] VoicemailRecordURL;
 
     /**
-    * Voicemail recording text information url. purchase the offline speech recognition package through the console and enable the offline speech recognition switch.
+    * <P>Voicemail voice recording text information link. you need to purchase an offline speech recognition package through the console and enable the offline speech recognition switch.</p>.
     */
     @SerializedName("VoicemailAsrURL")
     @Expose
     private String [] VoicemailAsrURL;
 
     /**
-    * IVR key information.
+    * <P>IVR key information</p>.
     */
     @SerializedName("IVRKeyPressed")
     @Expose
     private IVRKeyPressedElement [] IVRKeyPressed;
 
     /**
-    * Satisfaction rate keystroke information.
+    * <P>Key information of satisfaction rate</p>.
     */
     @SerializedName("PostIVRKeyPressed")
     @Expose
     private IVRKeyPressedElement [] PostIVRKeyPressed;
 
     /**
-    * Hang-Up side. valid values: seat, user, system.
+    * <P>Hang-Up side seat agent user system</p>.
     */
     @SerializedName("HungUpSide")
     @Expose
     private String HungUpSide;
 
     /**
-    * Customer custom data (User-to-User Interface).
+    * <p>Customer custom data (User-to-User Interface)</p>.
     */
     @SerializedName("UUI")
     @Expose
     private String UUI;
 
     /**
-    * List of events during a call.
+    * <P>Event list for calls in progress</p>.
     */
     @SerializedName("Events")
     @Expose
     private SessionEvent [] Events;
 
     /**
-    * List of service participants.
+    * <P>Service participant list</p>.
     */
     @SerializedName("ServeParticipants")
     @Expose
     private ServeParticipant [] ServeParticipants;
+
+    /**
+    * <P>Status code for reason of system hang-up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+    */
+    @SerializedName("SysHangupReason")
+    @Expose
+    private Long SysHangupReason;
+
+    /**
+    * <P>Reason for system hang up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+    */
+    @SerializedName("SysHangupReasonString")
+    @Expose
+    private String SysHangupReasonString;
 
     /**
     * The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -192,371 +206,403 @@ public class DescribeSessionDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Calling number. 
-     * @return Caller Calling number.
+     * Get <P>Calling number</p>. 
+     * @return Caller <P>Calling number</p>.
      */
     public String getCaller() {
         return this.Caller;
     }
 
     /**
-     * Set Calling number.
-     * @param Caller Calling number.
+     * Set <P>Calling number</p>.
+     * @param Caller <P>Calling number</p>.
      */
     public void setCaller(String Caller) {
         this.Caller = Caller;
     }
 
     /**
-     * Get Called number. 
-     * @return Callee Called number.
+     * Get <P>Called number</p>. 
+     * @return Callee <P>Called number</p>.
      */
     public String getCallee() {
         return this.Callee;
     }
 
     /**
-     * Set Called number.
-     * @param Callee Called number.
+     * Set <P>Called number</p>.
+     * @param Callee <P>Called number</p>.
      */
     public void setCallee(String Callee) {
         this.Callee = Callee;
     }
 
     /**
-     * Get Call type. valid values: 1 (outgoing call), 2 (incoming call), 3 (audio dial-in), 5 (predictive outbound call), 6 (internal call). 
-     * @return CallType Call type. valid values: 1 (outgoing call), 2 (incoming call), 3 (audio dial-in), 5 (predictive outbound call), 6 (internal call).
+     * Get <P>Call type 1 outgoing call 2 incoming call 3 audio dial-in 5 predictive outbound call 6 extension call</p>. 
+     * @return CallType <P>Call type 1 outgoing call 2 incoming call 3 audio dial-in 5 predictive outbound call 6 extension call</p>.
      */
     public Long getCallType() {
         return this.CallType;
     }
 
     /**
-     * Set Call type. valid values: 1 (outgoing call), 2 (incoming call), 3 (audio dial-in), 5 (predictive outbound call), 6 (internal call).
-     * @param CallType Call type. valid values: 1 (outgoing call), 2 (incoming call), 3 (audio dial-in), 5 (predictive outbound call), 6 (internal call).
+     * Set <P>Call type 1 outgoing call 2 incoming call 3 audio dial-in 5 predictive outbound call 6 extension call</p>.
+     * @param CallType <P>Call type 1 outgoing call 2 incoming call 3 audio dial-in 5 predictive outbound call 6 extension call</p>.
      */
     public void setCallType(Long CallType) {
         this.CallType = CallType;
     }
 
     /**
-     * Get Start timestamp. Unix second-level timestamp. 
-     * @return StartTimeStamp Start timestamp. Unix second-level timestamp.
+     * Get <p>Start timestamp, Unix second-level timestamp</p>. 
+     * @return StartTimeStamp <p>Start timestamp, Unix second-level timestamp</p>.
      */
     public Long getStartTimeStamp() {
         return this.StartTimeStamp;
     }
 
     /**
-     * Set Start timestamp. Unix second-level timestamp.
-     * @param StartTimeStamp Start timestamp. Unix second-level timestamp.
+     * Set <p>Start timestamp, Unix second-level timestamp</p>.
+     * @param StartTimeStamp <p>Start timestamp, Unix second-level timestamp</p>.
      */
     public void setStartTimeStamp(Long StartTimeStamp) {
         this.StartTimeStamp = StartTimeStamp;
     }
 
     /**
-     * Get Ring timestamp. UNIX second-level timestamp. 
-     * @return RingTimestamp Ring timestamp. UNIX second-level timestamp.
+     * Get <p>Ring timestamp, UNIX second-level timestamp</p>. 
+     * @return RingTimestamp <p>Ring timestamp, UNIX second-level timestamp</p>.
      */
     public Long getRingTimestamp() {
         return this.RingTimestamp;
     }
 
     /**
-     * Set Ring timestamp. UNIX second-level timestamp.
-     * @param RingTimestamp Ring timestamp. UNIX second-level timestamp.
+     * Set <p>Ring timestamp, UNIX second-level timestamp</p>.
+     * @param RingTimestamp <p>Ring timestamp, UNIX second-level timestamp</p>.
      */
     public void setRingTimestamp(Long RingTimestamp) {
         this.RingTimestamp = RingTimestamp;
     }
 
     /**
-     * Get Answer timestamp. UNIX second-level timestamp. 
-     * @return AcceptTimestamp Answer timestamp. UNIX second-level timestamp.
+     * Get <p>Answer timestamp, UNIX second-level timestamp</p>. 
+     * @return AcceptTimestamp <p>Answer timestamp, UNIX second-level timestamp</p>.
      */
     public Long getAcceptTimestamp() {
         return this.AcceptTimestamp;
     }
 
     /**
-     * Set Answer timestamp. UNIX second-level timestamp.
-     * @param AcceptTimestamp Answer timestamp. UNIX second-level timestamp.
+     * Set <p>Answer timestamp, UNIX second-level timestamp</p>.
+     * @param AcceptTimestamp <p>Answer timestamp, UNIX second-level timestamp</p>.
      */
     public void setAcceptTimestamp(Long AcceptTimestamp) {
         this.AcceptTimestamp = AcceptTimestamp;
     }
 
     /**
-     * Get End timestamp, UNIX second-level timestamp. 
-     * @return EndedTimestamp End timestamp, UNIX second-level timestamp.
+     * Get <p>End timestamp, UNIX second-level timestamp</p>. 
+     * @return EndedTimestamp <p>End timestamp, UNIX second-level timestamp</p>.
      */
     public Long getEndedTimestamp() {
         return this.EndedTimestamp;
     }
 
     /**
-     * Set End timestamp, UNIX second-level timestamp.
-     * @param EndedTimestamp End timestamp, UNIX second-level timestamp.
+     * Set <p>End timestamp, UNIX second-level timestamp</p>.
+     * @param EndedTimestamp <p>End timestamp, UNIX second-level timestamp</p>.
      */
     public void setEndedTimestamp(Long EndedTimestamp) {
         this.EndedTimestamp = EndedTimestamp;
     }
 
     /**
-     * Get Queue entry time. Unix second-level timestamp. 
-     * @return QueuedTimestamp Queue entry time. Unix second-level timestamp.
+     * Get <p>Queue entry time, Unix second-level timestamp</p>. 
+     * @return QueuedTimestamp <p>Queue entry time, Unix second-level timestamp</p>.
      */
     public Long getQueuedTimestamp() {
         return this.QueuedTimestamp;
     }
 
     /**
-     * Set Queue entry time. Unix second-level timestamp.
-     * @param QueuedTimestamp Queue entry time. Unix second-level timestamp.
+     * Set <p>Queue entry time, Unix second-level timestamp</p>.
+     * @param QueuedTimestamp <p>Queue entry time, Unix second-level timestamp</p>.
      */
     public void setQueuedTimestamp(Long QueuedTimestamp) {
         this.QueuedTimestamp = QueuedTimestamp;
     }
 
     /**
-     * Get Agent account. 
-     * @return StaffUserId Agent account.
+     * Get <P>Agent account</p>. 
+     * @return StaffUserId <P>Agent account</p>.
      */
     public String getStaffUserId() {
         return this.StaffUserId;
     }
 
     /**
-     * Set Agent account.
-     * @param StaffUserId Agent account.
+     * Set <P>Agent account</p>.
+     * @param StaffUserId <P>Agent account</p>.
      */
     public void setStaffUserId(String StaffUserId) {
         this.StaffUserId = StaffUserId;
     }
 
     /**
-     * Get Refers to the EndStatus field in the DescribeTelCdr api. 
-     * @return EndStatus Refers to the EndStatus field in the DescribeTelCdr api.
+     * Get <p>Refer to the EndStatus field in the DescribeTelCdr api.</p>. 
+     * @return EndStatus <p>Refer to the EndStatus field in the DescribeTelCdr api.</p>.
      */
     public Long getEndStatus() {
         return this.EndStatus;
     }
 
     /**
-     * Set Refers to the EndStatus field in the DescribeTelCdr api.
-     * @param EndStatus Refers to the EndStatus field in the DescribeTelCdr api.
+     * Set <p>Refer to the EndStatus field in the DescribeTelCdr api.</p>.
+     * @param EndStatus <p>Refer to the EndStatus field in the DescribeTelCdr api.</p>.
      */
     public void setEndStatus(Long EndStatus) {
         this.EndStatus = EndStatus;
     }
 
     /**
-     * Get Queue skill group ID. 
-     * @return QueuedSkillGroupId Queue skill group ID.
+     * Get <p>Queue skill group ID</p>. 
+     * @return QueuedSkillGroupId <p>Queue skill group ID</p>.
      */
     public Long getQueuedSkillGroupId() {
         return this.QueuedSkillGroupId;
     }
 
     /**
-     * Set Queue skill group ID.
-     * @param QueuedSkillGroupId Queue skill group ID.
+     * Set <p>Queue skill group ID</p>.
+     * @param QueuedSkillGroupId <p>Queue skill group ID</p>.
      */
     public void setQueuedSkillGroupId(Long QueuedSkillGroupId) {
         this.QueuedSkillGroupId = QueuedSkillGroupId;
     }
 
     /**
-     * Get Queue skill group name. 
-     * @return QueuedSkillGroupName Queue skill group name.
+     * Get <P>Queue skill group name</p>. 
+     * @return QueuedSkillGroupName <P>Queue skill group name</p>.
      */
     public String getQueuedSkillGroupName() {
         return this.QueuedSkillGroupName;
     }
 
     /**
-     * Set Queue skill group name.
-     * @param QueuedSkillGroupName Queue skill group name.
+     * Set <P>Queue skill group name</p>.
+     * @param QueuedSkillGroupName <P>Queue skill group name</p>.
      */
     public void setQueuedSkillGroupName(String QueuedSkillGroupName) {
         this.QueuedSkillGroupName = QueuedSkillGroupName;
     }
 
     /**
-     * Get Recording url with authentication and valid period. obtain and pull within a short time frame. do not persist this link. 
-     * @return RecordURL Recording url with authentication and valid period. obtain and pull within a short time frame. do not persist this link.
+     * Get <P>The recording link comes with authentication and a valid period. after obtaining it, please retrieve the content within 24 hours. do not persist this link. if the link has expired, call this api again to get a new link.</p>. 
+     * @return RecordURL <P>The recording link comes with authentication and a valid period. after obtaining it, please retrieve the content within 24 hours. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
      */
     public String getRecordURL() {
         return this.RecordURL;
     }
 
     /**
-     * Set Recording url with authentication and valid period. obtain and pull within a short time frame. do not persist this link.
-     * @param RecordURL Recording url with authentication and valid period. obtain and pull within a short time frame. do not persist this link.
+     * Set <P>The recording link comes with authentication and a valid period. after obtaining it, please retrieve the content within 24 hours. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
+     * @param RecordURL <P>The recording link comes with authentication and a valid period. after obtaining it, please retrieve the content within 24 hours. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
      */
     public void setRecordURL(String RecordURL) {
         this.RecordURL = RecordURL;
     }
 
     /**
-     * Get Specifies the COS link for recording transfer to a third party. 
-     * @return CustomRecordURL Specifies the COS link for recording transfer to a third party.
+     * Get <p>Recording transfer to external COS link</p>. 
+     * @return CustomRecordURL <p>Recording transfer to external COS link</p>.
      */
     public String getCustomRecordURL() {
         return this.CustomRecordURL;
     }
 
     /**
-     * Set Specifies the COS link for recording transfer to a third party.
-     * @param CustomRecordURL Specifies the COS link for recording transfer to a third party.
+     * Set <p>Recording transfer to external COS link</p>.
+     * @param CustomRecordURL <p>Recording transfer to external COS link</p>.
      */
     public void setCustomRecordURL(String CustomRecordURL) {
         this.CustomRecordURL = CustomRecordURL;
     }
 
     /**
-     * Get Recording text information link with authentication and valid period. retrieve it within a short time frame. do not persist this link. 
-     * @return AsrURL Recording text information link with authentication and valid period. retrieve it within a short time frame. do not persist this link.
+     * Get <P>Text information link of the voice recording, with authentication and valid period. please retrieve it within 24 hr after obtaining. do not persist this link. if the link has expired, call this api again to get a new link.</p>. 
+     * @return AsrURL <P>Text information link of the voice recording, with authentication and valid period. please retrieve it within 24 hr after obtaining. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
      */
     public String getAsrURL() {
         return this.AsrURL;
     }
 
     /**
-     * Set Recording text information link with authentication and valid period. retrieve it within a short time frame. do not persist this link.
-     * @param AsrURL Recording text information link with authentication and valid period. retrieve it within a short time frame. do not persist this link.
+     * Set <P>Text information link of the voice recording, with authentication and valid period. please retrieve it within 24 hr after obtaining. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
+     * @param AsrURL <P>Text information link of the voice recording, with authentication and valid period. please retrieve it within 24 hr after obtaining. do not persist this link. if the link has expired, call this api again to get a new link.</p>.
      */
     public void setAsrURL(String AsrURL) {
         this.AsrURL = AsrURL;
     }
 
     /**
-     * Get Voicemail recording url. 
-     * @return VoicemailRecordURL Voicemail recording url.
+     * Get <P>Voicemail recording link</p>. 
+     * @return VoicemailRecordURL <P>Voicemail recording link</p>.
      */
     public String [] getVoicemailRecordURL() {
         return this.VoicemailRecordURL;
     }
 
     /**
-     * Set Voicemail recording url.
-     * @param VoicemailRecordURL Voicemail recording url.
+     * Set <P>Voicemail recording link</p>.
+     * @param VoicemailRecordURL <P>Voicemail recording link</p>.
      */
     public void setVoicemailRecordURL(String [] VoicemailRecordURL) {
         this.VoicemailRecordURL = VoicemailRecordURL;
     }
 
     /**
-     * Get Voicemail recording text information url. purchase the offline speech recognition package through the console and enable the offline speech recognition switch. 
-     * @return VoicemailAsrURL Voicemail recording text information url. purchase the offline speech recognition package through the console and enable the offline speech recognition switch.
+     * Get <P>Voicemail voice recording text information link. you need to purchase an offline speech recognition package through the console and enable the offline speech recognition switch.</p>. 
+     * @return VoicemailAsrURL <P>Voicemail voice recording text information link. you need to purchase an offline speech recognition package through the console and enable the offline speech recognition switch.</p>.
      */
     public String [] getVoicemailAsrURL() {
         return this.VoicemailAsrURL;
     }
 
     /**
-     * Set Voicemail recording text information url. purchase the offline speech recognition package through the console and enable the offline speech recognition switch.
-     * @param VoicemailAsrURL Voicemail recording text information url. purchase the offline speech recognition package through the console and enable the offline speech recognition switch.
+     * Set <P>Voicemail voice recording text information link. you need to purchase an offline speech recognition package through the console and enable the offline speech recognition switch.</p>.
+     * @param VoicemailAsrURL <P>Voicemail voice recording text information link. you need to purchase an offline speech recognition package through the console and enable the offline speech recognition switch.</p>.
      */
     public void setVoicemailAsrURL(String [] VoicemailAsrURL) {
         this.VoicemailAsrURL = VoicemailAsrURL;
     }
 
     /**
-     * Get IVR key information. 
-     * @return IVRKeyPressed IVR key information.
+     * Get <P>IVR key information</p>. 
+     * @return IVRKeyPressed <P>IVR key information</p>.
      */
     public IVRKeyPressedElement [] getIVRKeyPressed() {
         return this.IVRKeyPressed;
     }
 
     /**
-     * Set IVR key information.
-     * @param IVRKeyPressed IVR key information.
+     * Set <P>IVR key information</p>.
+     * @param IVRKeyPressed <P>IVR key information</p>.
      */
     public void setIVRKeyPressed(IVRKeyPressedElement [] IVRKeyPressed) {
         this.IVRKeyPressed = IVRKeyPressed;
     }
 
     /**
-     * Get Satisfaction rate keystroke information. 
-     * @return PostIVRKeyPressed Satisfaction rate keystroke information.
+     * Get <P>Key information of satisfaction rate</p>. 
+     * @return PostIVRKeyPressed <P>Key information of satisfaction rate</p>.
      */
     public IVRKeyPressedElement [] getPostIVRKeyPressed() {
         return this.PostIVRKeyPressed;
     }
 
     /**
-     * Set Satisfaction rate keystroke information.
-     * @param PostIVRKeyPressed Satisfaction rate keystroke information.
+     * Set <P>Key information of satisfaction rate</p>.
+     * @param PostIVRKeyPressed <P>Key information of satisfaction rate</p>.
      */
     public void setPostIVRKeyPressed(IVRKeyPressedElement [] PostIVRKeyPressed) {
         this.PostIVRKeyPressed = PostIVRKeyPressed;
     }
 
     /**
-     * Get Hang-Up side. valid values: seat, user, system. 
-     * @return HungUpSide Hang-Up side. valid values: seat, user, system.
+     * Get <P>Hang-Up side seat agent user system</p>. 
+     * @return HungUpSide <P>Hang-Up side seat agent user system</p>.
      */
     public String getHungUpSide() {
         return this.HungUpSide;
     }
 
     /**
-     * Set Hang-Up side. valid values: seat, user, system.
-     * @param HungUpSide Hang-Up side. valid values: seat, user, system.
+     * Set <P>Hang-Up side seat agent user system</p>.
+     * @param HungUpSide <P>Hang-Up side seat agent user system</p>.
      */
     public void setHungUpSide(String HungUpSide) {
         this.HungUpSide = HungUpSide;
     }
 
     /**
-     * Get Customer custom data (User-to-User Interface). 
-     * @return UUI Customer custom data (User-to-User Interface).
+     * Get <p>Customer custom data (User-to-User Interface)</p>. 
+     * @return UUI <p>Customer custom data (User-to-User Interface)</p>.
      */
     public String getUUI() {
         return this.UUI;
     }
 
     /**
-     * Set Customer custom data (User-to-User Interface).
-     * @param UUI Customer custom data (User-to-User Interface).
+     * Set <p>Customer custom data (User-to-User Interface)</p>.
+     * @param UUI <p>Customer custom data (User-to-User Interface)</p>.
      */
     public void setUUI(String UUI) {
         this.UUI = UUI;
     }
 
     /**
-     * Get List of events during a call. 
-     * @return Events List of events during a call.
+     * Get <P>Event list for calls in progress</p>. 
+     * @return Events <P>Event list for calls in progress</p>.
      */
     public SessionEvent [] getEvents() {
         return this.Events;
     }
 
     /**
-     * Set List of events during a call.
-     * @param Events List of events during a call.
+     * Set <P>Event list for calls in progress</p>.
+     * @param Events <P>Event list for calls in progress</p>.
      */
     public void setEvents(SessionEvent [] Events) {
         this.Events = Events;
     }
 
     /**
-     * Get List of service participants. 
-     * @return ServeParticipants List of service participants.
+     * Get <P>Service participant list</p>. 
+     * @return ServeParticipants <P>Service participant list</p>.
      */
     public ServeParticipant [] getServeParticipants() {
         return this.ServeParticipants;
     }
 
     /**
-     * Set List of service participants.
-     * @param ServeParticipants List of service participants.
+     * Set <P>Service participant list</p>.
+     * @param ServeParticipants <P>Service participant list</p>.
      */
     public void setServeParticipants(ServeParticipant [] ServeParticipants) {
         this.ServeParticipants = ServeParticipants;
+    }
+
+    /**
+     * Get <P>Status code for reason of system hang-up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>. 
+     * @return SysHangupReason <P>Status code for reason of system hang-up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+     */
+    public Long getSysHangupReason() {
+        return this.SysHangupReason;
+    }
+
+    /**
+     * Set <P>Status code for reason of system hang-up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+     * @param SysHangupReason <P>Status code for reason of system hang-up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+     */
+    public void setSysHangupReason(Long SysHangupReason) {
+        this.SysHangupReason = SysHangupReason;
+    }
+
+    /**
+     * Get <P>Reason for system hang up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>. 
+     * @return SysHangupReasonString <P>Reason for system hang up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+     */
+    public String getSysHangupReasonString() {
+        return this.SysHangupReasonString;
+    }
+
+    /**
+     * Set <P>Reason for system hang up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+     * @param SysHangupReasonString <P>Reason for system hang up after connect.</p><p><a href="https://www.tencentcloud.com/document/product/679/123938?from_cn_redirect=1">details</a></p>.
+     */
+    public void setSysHangupReasonString(String SysHangupReasonString) {
+        this.SysHangupReasonString = SysHangupReasonString;
     }
 
     /**
@@ -670,6 +716,12 @@ public class DescribeSessionDetailResponse extends AbstractModel {
                 this.ServeParticipants[i] = new ServeParticipant(source.ServeParticipants[i]);
             }
         }
+        if (source.SysHangupReason != null) {
+            this.SysHangupReason = new Long(source.SysHangupReason);
+        }
+        if (source.SysHangupReasonString != null) {
+            this.SysHangupReasonString = new String(source.SysHangupReasonString);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -703,6 +755,8 @@ public class DescribeSessionDetailResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "UUI", this.UUI);
         this.setParamArrayObj(map, prefix + "Events.", this.Events);
         this.setParamArrayObj(map, prefix + "ServeParticipants.", this.ServeParticipants);
+        this.setParamSimple(map, prefix + "SysHangupReason", this.SysHangupReason);
+        this.setParamSimple(map, prefix + "SysHangupReasonString", this.SysHangupReasonString);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

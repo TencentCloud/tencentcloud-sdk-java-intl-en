@@ -108,7 +108,11 @@ public class ServeParticipant extends AbstractModel {
     private Long SkillGroupId;
 
     /**
-    * Ending status.
+    * End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
     */
     @SerializedName("EndStatusString")
     @Expose
@@ -342,16 +346,32 @@ public class ServeParticipant extends AbstractModel {
     }
 
     /**
-     * Get Ending status. 
-     * @return EndStatusString Ending status.
+     * Get End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en). 
+     * @return EndStatusString End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
      */
     public String getEndStatusString() {
         return this.EndStatusString;
     }
 
     /**
-     * Set Ending status.
-     * @param EndStatusString Ending status.
+     * Set End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
+     * @param EndStatusString End status.
+
+For chinese description, see [https://www.tencentcloud.com/zh/document/product/1229/71847](https://www.tencentcloud.com/zh/document/product/1229/71847).
+
+For english details, see [reference](https://www.tencentcloud.com/document/product/1229/71847?lang=en).
      */
     public void setEndStatusString(String EndStatusString) {
         this.EndStatusString = EndStatusString;

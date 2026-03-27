@@ -31,7 +31,7 @@ public class DstInfo extends AbstractModel {
     private String Region;
 
     /**
-    * 
+    * Migration destination Ip
     */
     @SerializedName("Ip")
     @Expose
@@ -68,16 +68,16 @@ public class DstInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Ip 
+     * Get Migration destination Ip 
+     * @return Ip Migration destination Ip
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 
-     * @param Ip 
+     * Set Migration destination Ip
+     * @param Ip Migration destination Ip
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

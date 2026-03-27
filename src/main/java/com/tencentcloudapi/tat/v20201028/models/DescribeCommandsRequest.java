@@ -36,7 +36,7 @@ public class DescribeCommandsRequest extends AbstractModel {
 - command-id - String - required: no - (filter condition) filter by the command id.
 - command-name - String - required: no - (filter condition) filter by the command name.
 -command-type - String - required: no - (filtering conditions) filters by command type. valid values: SHELL, POWERSHELL, BAT.
--scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.comom/document/api/1340/109968?from_cn_redirect=1) api.
+-scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.com/document/api/1340/109968?from_cn_redirect=1) api.
 -created-by - String - required: no - (filter condition) filter by command creator, value is TAT or USER. TAT represents public command, USER represents USER created command.
 - tag-key - String - required: no - (filter condition) filter by the tag key.
 - tag-value - String - required: no - (filter condition) filter by the tag value.
@@ -84,7 +84,7 @@ The maximum number of `Filters` per request is 10, and that of `Filter.Values` i
 - command-id - String - required: no - (filter condition) filter by the command id.
 - command-name - String - required: no - (filter condition) filter by the command name.
 -command-type - String - required: no - (filtering conditions) filters by command type. valid values: SHELL, POWERSHELL, BAT.
--scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.comom/document/api/1340/109968?from_cn_redirect=1) api.
+-scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.com/document/api/1340/109968?from_cn_redirect=1) api.
 -created-by - String - required: no - (filter condition) filter by command creator, value is TAT or USER. TAT represents public command, USER represents USER created command.
 - tag-key - String - required: no - (filter condition) filter by the tag key.
 - tag-value - String - required: no - (filter condition) filter by the tag value.
@@ -96,7 +96,7 @@ The maximum number of `Filters` per request is 10, and that of `Filter.Values` i
 - command-id - String - required: no - (filter condition) filter by the command id.
 - command-name - String - required: no - (filter condition) filter by the command name.
 -command-type - String - required: no - (filtering conditions) filters by command type. valid values: SHELL, POWERSHELL, BAT.
--scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.comom/document/api/1340/109968?from_cn_redirect=1) api.
+-scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.com/document/api/1340/109968?from_cn_redirect=1) api.
 -created-by - String - required: no - (filter condition) filter by command creator, value is TAT or USER. TAT represents public command, USER represents USER created command.
 - tag-key - String - required: no - (filter condition) filter by the tag key.
 - tag-value - String - required: no - (filter condition) filter by the tag value.
@@ -114,7 +114,7 @@ The maximum number of `Filters` per request is 10, and that of `Filter.Values` i
 - command-id - String - required: no - (filter condition) filter by the command id.
 - command-name - String - required: no - (filter condition) filter by the command name.
 -command-type - String - required: no - (filtering conditions) filters by command type. valid values: SHELL, POWERSHELL, BAT.
--scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.comom/document/api/1340/109968?from_cn_redirect=1) api.
+-scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.com/document/api/1340/109968?from_cn_redirect=1) api.
 -created-by - String - required: no - (filter condition) filter by command creator, value is TAT or USER. TAT represents public command, USER represents USER created command.
 - tag-key - String - required: no - (filter condition) filter by the tag key.
 - tag-value - String - required: no - (filter condition) filter by the tag value.
@@ -126,7 +126,7 @@ The maximum number of `Filters` per request is 10, and that of `Filter.Values` i
 - command-id - String - required: no - (filter condition) filter by the command id.
 - command-name - String - required: no - (filter condition) filter by the command name.
 -command-type - String - required: no - (filtering conditions) filters by command type. valid values: SHELL, POWERSHELL, BAT.
--scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.comom/document/api/1340/109968?from_cn_redirect=1) api.
+-scene-id - String - required: no - (filter condition) filter by scenario id. obtain scenario id through the [DescribeScenes (query scenario)](https://www.tencentcloud.com/document/api/1340/109968?from_cn_redirect=1) api.
 -created-by - String - required: no - (filter condition) filter by command creator, value is TAT or USER. TAT represents public command, USER represents USER created command.
 - tag-key - String - required: no - (filter condition) filter by the tag key.
 - tag-value - String - required: no - (filter condition) filter by the tag value.

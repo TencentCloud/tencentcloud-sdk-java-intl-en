@@ -91,7 +91,7 @@ public class AllocateAddressesRequest extends AbstractModel {
     private String AnycastZone;
 
     /**
-    * 
+    * Specify IP address to apply for an EIP; each account has a quota of three times per month.
     */
     @SerializedName("VipCluster")
     @Expose
@@ -129,14 +129,18 @@ Whether the Anycast EIP can be bound to CLB instances.
     private String AddressName;
 
     /**
-    * 
+    * CDC unique ID
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-    * 
+    * Whether to use a dedicated resource pool. Default value: True
+- True: indicates the use of a dedicated resource pool
+- False: indicates the use of a shared resource pool
+
+Note: To use a dedicated resource pool, submit a ticket (https://console.cloud.tencent.com/workorder/category) for consultation. Contact your business manager for specific pricing details.
     */
     @SerializedName("IsDedicatedAddressPool")
     @Expose
@@ -348,16 +352,16 @@ Whether the Anycast EIP can be bound to CLB instances.
     }
 
     /**
-     * Get  
-     * @return VipCluster 
+     * Get Specify IP address to apply for an EIP; each account has a quota of three times per month. 
+     * @return VipCluster Specify IP address to apply for an EIP; each account has a quota of three times per month.
      */
     public String [] getVipCluster() {
         return this.VipCluster;
     }
 
     /**
-     * Set 
-     * @param VipCluster 
+     * Set Specify IP address to apply for an EIP; each account has a quota of three times per month.
+     * @param VipCluster Specify IP address to apply for an EIP; each account has a quota of three times per month.
      */
     public void setVipCluster(String [] VipCluster) {
         this.VipCluster = VipCluster;
@@ -440,32 +444,48 @@ Whether the Anycast EIP can be bound to CLB instances.
     }
 
     /**
-     * Get  
-     * @return DedicatedClusterId 
+     * Get CDC unique ID 
+     * @return DedicatedClusterId CDC unique ID
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set 
-     * @param DedicatedClusterId 
+     * Set CDC unique ID
+     * @param DedicatedClusterId CDC unique ID
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get  
-     * @return IsDedicatedAddressPool 
+     * Get Whether to use a dedicated resource pool. Default value: True
+- True: indicates the use of a dedicated resource pool
+- False: indicates the use of a shared resource pool
+
+Note: To use a dedicated resource pool, submit a ticket (https://console.cloud.tencent.com/workorder/category) for consultation. Contact your business manager for specific pricing details. 
+     * @return IsDedicatedAddressPool Whether to use a dedicated resource pool. Default value: True
+- True: indicates the use of a dedicated resource pool
+- False: indicates the use of a shared resource pool
+
+Note: To use a dedicated resource pool, submit a ticket (https://console.cloud.tencent.com/workorder/category) for consultation. Contact your business manager for specific pricing details.
      */
     public Boolean getIsDedicatedAddressPool() {
         return this.IsDedicatedAddressPool;
     }
 
     /**
-     * Set 
-     * @param IsDedicatedAddressPool 
+     * Set Whether to use a dedicated resource pool. Default value: True
+- True: indicates the use of a dedicated resource pool
+- False: indicates the use of a shared resource pool
+
+Note: To use a dedicated resource pool, submit a ticket (https://console.cloud.tencent.com/workorder/category) for consultation. Contact your business manager for specific pricing details.
+     * @param IsDedicatedAddressPool Whether to use a dedicated resource pool. Default value: True
+- True: indicates the use of a dedicated resource pool
+- False: indicates the use of a shared resource pool
+
+Note: To use a dedicated resource pool, submit a ticket (https://console.cloud.tencent.com/workorder/category) for consultation. Contact your business manager for specific pricing details.
      */
     public void setIsDedicatedAddressPool(Boolean IsDedicatedAddressPool) {
         this.IsDedicatedAddressPool = IsDedicatedAddressPool;

@@ -45,7 +45,7 @@ public class ConfigureChcDeployVpcRequest extends AbstractModel {
     private String [] DeploySecurityGroupIds;
 
     /**
-    * 
+    * dhcp option parameters required for deployment
     */
     @SerializedName("ChcDeployExtraConfig")
     @Expose
@@ -100,16 +100,16 @@ public class ConfigureChcDeployVpcRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return ChcDeployExtraConfig 
+     * Get dhcp option parameters required for deployment 
+     * @return ChcDeployExtraConfig dhcp option parameters required for deployment
      */
     public ChcDeployExtraConfig getChcDeployExtraConfig() {
         return this.ChcDeployExtraConfig;
     }
 
     /**
-     * Set 
-     * @param ChcDeployExtraConfig 
+     * Set dhcp option parameters required for deployment
+     * @param ChcDeployExtraConfig dhcp option parameters required for deployment
      */
     public void setChcDeployExtraConfig(ChcDeployExtraConfig ChcDeployExtraConfig) {
         this.ChcDeployExtraConfig = ChcDeployExtraConfig;

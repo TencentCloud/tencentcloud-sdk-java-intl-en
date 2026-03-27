@@ -66,6 +66,13 @@ public class CreateIVRSessionRequest extends AbstractModel {
     private String UUI;
 
     /**
+    * Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+    */
+    @SerializedName("MaxRingTimeoutSecond")
+    @Expose
+    private Long MaxRingTimeoutSecond;
+
+    /**
      * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
      * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
@@ -161,6 +168,22 @@ public class CreateIVRSessionRequest extends AbstractModel {
         this.UUI = UUI;
     }
 
+    /**
+     * Get Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter. 
+     * @return MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     */
+    public Long getMaxRingTimeoutSecond() {
+        return this.MaxRingTimeoutSecond;
+    }
+
+    /**
+     * Set Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     * @param MaxRingTimeoutSecond Maximum ringing duration. auto hang up when the duration threshold is reached. only own number supports this parameter.
+     */
+    public void setMaxRingTimeoutSecond(Long MaxRingTimeoutSecond) {
+        this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
+    }
+
     public CreateIVRSessionRequest() {
     }
 
@@ -193,6 +216,9 @@ public class CreateIVRSessionRequest extends AbstractModel {
         if (source.UUI != null) {
             this.UUI = new String(source.UUI);
         }
+        if (source.MaxRingTimeoutSecond != null) {
+            this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class CreateIVRSessionRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "Callers.", this.Callers);
         this.setParamArrayObj(map, prefix + "Variables.", this.Variables);
         this.setParamSimple(map, prefix + "UUI", this.UUI);
+        this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
 
     }
 }

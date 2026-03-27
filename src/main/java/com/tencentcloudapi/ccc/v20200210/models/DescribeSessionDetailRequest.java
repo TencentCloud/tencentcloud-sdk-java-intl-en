@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeSessionDetailRequest extends AbstractModel {
 
     /**
-    * App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
+    * <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * Specifies the session id of the call.
+    * <P>Call session id</p>.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
+    * <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
     */
     @SerializedName("StartTimestamp")
     @Expose
     private Long StartTimestamp;
 
     /**
-    * End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
+    * <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
     */
     @SerializedName("EndTimestamp")
     @Expose
     private Long EndTimestamp;
 
     /**
-     * Get App ID (required). can be used to view https://console.cloud.tencent.com/ccc. 
-     * @return SdkAppId App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
+     * Get <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>. 
+     * @return SdkAppId <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
-     * @param SdkAppId App ID (required). can be used to view https://console.cloud.tencent.com/ccc.
+     * Set <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
+     * @param SdkAppId <p>App ID (required). can check https://console.cloud.tencent.com/ccc</p>.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get Specifies the session id of the call. 
-     * @return SessionId Specifies the session id of the call.
+     * Get <P>Call session id</p>. 
+     * @return SessionId <P>Call session id</p>.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Specifies the session id of the call.
-     * @param SessionId Specifies the session id of the call.
+     * Set <P>Call session id</p>.
+     * @param SessionId <P>Call session id</p>.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Start timestamp. Unix second-level timestamp. supports up to nearly 180 days. 
-     * @return StartTimestamp Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
+     * Get <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>. 
+     * @return StartTimestamp <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
      */
     public Long getStartTimestamp() {
         return this.StartTimestamp;
     }
 
     /**
-     * Set Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
-     * @param StartTimestamp Start timestamp. Unix second-level timestamp. supports up to nearly 180 days.
+     * Set <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
+     * @param StartTimestamp <p>Start timestamp, Unix second-level timestamp, supports up to the last 180 days.</p>.
      */
     public void setStartTimestamp(Long StartTimestamp) {
         this.StartTimestamp = StartTimestamp;
     }
 
     /**
-     * Get End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days. 
-     * @return EndTimestamp End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
+     * Get <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>. 
+     * @return EndTimestamp <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
      */
     public Long getEndTimestamp() {
         return this.EndTimestamp;
     }
 
     /**
-     * Set End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
-     * @param EndTimestamp End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.
+     * Set <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
+     * @param EndTimestamp <p>End timestamp, Unix second-level timestamp. the interval range between end time and start time is less than 90 days.</p>.
      */
     public void setEndTimestamp(Long EndTimestamp) {
         this.EndTimestamp = EndTimestamp;

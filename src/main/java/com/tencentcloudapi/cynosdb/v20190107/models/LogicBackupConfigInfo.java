@@ -59,7 +59,7 @@ public class LogicBackupConfigInfo extends AbstractModel {
     private String LogicCrossRegionsEnable;
 
     /**
-    * 
+    * Logical Backup Cross-Region
     */
     @SerializedName("LogicCrossRegions")
     @Expose
@@ -146,16 +146,16 @@ public class LogicBackupConfigInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return LogicCrossRegions 
+     * Get Logical Backup Cross-Region 
+     * @return LogicCrossRegions Logical Backup Cross-Region
      */
     public String [] getLogicCrossRegions() {
         return this.LogicCrossRegions;
     }
 
     /**
-     * Set 
-     * @param LogicCrossRegions 
+     * Set Logical Backup Cross-Region
+     * @param LogicCrossRegions Logical Backup Cross-Region
      */
     public void setLogicCrossRegions(String [] LogicCrossRegions) {
         this.LogicCrossRegions = LogicCrossRegions;

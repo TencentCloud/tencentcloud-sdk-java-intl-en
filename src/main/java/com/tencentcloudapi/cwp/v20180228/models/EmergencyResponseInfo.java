@@ -38,7 +38,7 @@ public class EmergencyResponseInfo extends AbstractModel {
     private Long HostNum;
 
     /**
-    * 
+    * Service status: 0 not started, · in progress, 2 completed
     */
     @SerializedName("Status")
     @Expose
@@ -98,16 +98,16 @@ public class EmergencyResponseInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get Service status: 0 not started, · in progress, 2 completed 
+     * @return Status Service status: 0 not started, · in progress, 2 completed
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set Service status: 0 not started, · in progress, 2 completed
+     * @param Status Service status: 0 not started, · in progress, 2 completed
      */
     public void setStatus(Long Status) {
         this.Status = Status;

@@ -38,7 +38,7 @@ public class AuditLog extends AbstractModel {
     private Long ErrCode;
 
     /**
-    * 
+    * SQL Type.
     */
     @SerializedName("SqlType")
     @Expose
@@ -52,14 +52,14 @@ public class AuditLog extends AbstractModel {
     private String PolicyName;
 
     /**
-    * 
+    * Database Name.
     */
     @SerializedName("DBName")
     @Expose
     private String DBName;
 
     /**
-    * 
+    * SQL Statement.
     */
     @SerializedName("Sql")
     @Expose
@@ -196,16 +196,16 @@ Note: The return value may be null, indicating that no valid data can be obtaine
     }
 
     /**
-     * Get  
-     * @return SqlType 
+     * Get SQL Type. 
+     * @return SqlType SQL Type.
      */
     public String getSqlType() {
         return this.SqlType;
     }
 
     /**
-     * Set 
-     * @param SqlType 
+     * Set SQL Type.
+     * @param SqlType SQL Type.
      */
     public void setSqlType(String SqlType) {
         this.SqlType = SqlType;
@@ -228,32 +228,32 @@ Note: The return value may be null, indicating that no valid data can be obtaine
     }
 
     /**
-     * Get  
-     * @return DBName 
+     * Get Database Name. 
+     * @return DBName Database Name.
      */
     public String getDBName() {
         return this.DBName;
     }
 
     /**
-     * Set 
-     * @param DBName 
+     * Set Database Name.
+     * @param DBName Database Name.
      */
     public void setDBName(String DBName) {
         this.DBName = DBName;
     }
 
     /**
-     * Get  
-     * @return Sql 
+     * Get SQL Statement. 
+     * @return Sql SQL Statement.
      */
     public String getSql() {
         return this.Sql;
     }
 
     /**
-     * Set 
-     * @param Sql 
+     * Set SQL Statement.
+     * @param Sql SQL Statement.
      */
     public void setSql(String Sql) {
         this.Sql = Sql;

@@ -56,7 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] FixTag;
 
     /**
-    * 
+    * Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
     */
     @SerializedName("VulCategory")
     @Expose
@@ -143,16 +143,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return VulCategory 
+     * Get Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities 
+     * @return VulCategory Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
      */
     public Long getVulCategory() {
         return this.VulCategory;
     }
 
     /**
-     * Set 
-     * @param VulCategory 
+     * Set Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
+     * @param VulCategory Vulnerability categories: 1 web cms vulnerabilities, 2 application vulnerabilities, 4 linux software vulnerabilities, 5 windows system vulnerabilities
      */
     public void setVulCategory(Long VulCategory) {
         this.VulCategory = VulCategory;

@@ -31,7 +31,7 @@ public class SrcInfo extends AbstractModel {
     private String Region;
 
     /**
-    * 
+    * Migration source Ip
     */
     @SerializedName("Ip")
     @Expose
@@ -68,16 +68,16 @@ public class SrcInfo extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Ip 
+     * Get Migration source Ip 
+     * @return Ip Migration source Ip
      */
     public String getIp() {
         return this.Ip;
     }
 
     /**
-     * Set 
-     * @param Ip 
+     * Set Migration source Ip
+     * @param Ip Migration source Ip
      */
     public void setIp(String Ip) {
         this.Ip = Ip;

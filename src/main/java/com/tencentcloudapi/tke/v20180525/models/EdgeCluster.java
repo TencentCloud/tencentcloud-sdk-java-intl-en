@@ -59,7 +59,7 @@ public class EdgeCluster extends AbstractModel {
     private String ServiceCIDR;
 
     /**
-    * 
+    * k8s version number
     */
     @SerializedName("K8SVersion")
     @Expose
@@ -230,16 +230,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get  
-     * @return K8SVersion 
+     * Get k8s version number 
+     * @return K8SVersion k8s version number
      */
     public String getK8SVersion() {
         return this.K8SVersion;
     }
 
     /**
-     * Set 
-     * @param K8SVersion 
+     * Set k8s version number
+     * @param K8SVersion k8s version number
      */
     public void setK8SVersion(String K8SVersion) {
         this.K8SVersion = K8SVersion;

@@ -101,7 +101,7 @@ public class RocketMQInstanceConfig extends AbstractModel {
     private RocketMQTopicDistribution [] TopicDistribution;
 
     /**
-    * 
+    * Maximum number of queues per topic
     */
     @SerializedName("MaxQueuesPerTopic")
     @Expose
@@ -331,16 +331,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return MaxQueuesPerTopic 
+     * Get Maximum number of queues per topic 
+     * @return MaxQueuesPerTopic Maximum number of queues per topic
      */
     public Long getMaxQueuesPerTopic() {
         return this.MaxQueuesPerTopic;
     }
 
     /**
-     * Set 
-     * @param MaxQueuesPerTopic 
+     * Set Maximum number of queues per topic
+     * @param MaxQueuesPerTopic Maximum number of queues per topic
      */
     public void setMaxQueuesPerTopic(Long MaxQueuesPerTopic) {
         this.MaxQueuesPerTopic = MaxQueuesPerTopic;

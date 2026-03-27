@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AssetBaseInfoResponse extends AbstractModel {
 
     /**
-    * 
+    * vpc-id
     */
     @SerializedName("VpcId")
     @Expose
@@ -255,16 +255,16 @@ Note: This field may return·null, indicating that no valid values can be obtain
     private Long ProtectedDay;
 
     /**
-     * Get  
-     * @return VpcId 
+     * Get vpc-id 
+     * @return VpcId vpc-id
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set 
-     * @param VpcId 
+     * Set vpc-id
+     * @param VpcId vpc-id
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

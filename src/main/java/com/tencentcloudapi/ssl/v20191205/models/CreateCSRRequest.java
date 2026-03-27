@@ -108,7 +108,7 @@ public class CreateCSRRequest extends AbstractModel {
     private String Remark;
 
     /**
-    * 
+    * Tag List
     */
     @SerializedName("Tags")
     @Expose
@@ -307,16 +307,16 @@ public class CreateCSRRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return Tags 
+     * Get Tag List 
+     * @return Tags Tag List
      */
     public Tags [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set 
-     * @param Tags 
+     * Set Tag List
+     * @param Tags Tag List
      */
     public void setTags(Tags [] Tags) {
         this.Tags = Tags;

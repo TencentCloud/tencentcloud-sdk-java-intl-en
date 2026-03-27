@@ -26,7 +26,7 @@ public class ModifyRegisterInstanceRequest extends AbstractModel {
     /**
     * Managed instance ID.
 
-Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
+Call the [DescribeRegisterInstances](https://www.tencentcloud.com/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -42,10 +42,10 @@ Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api
     /**
      * Get Managed instance ID.
 
-Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api/1340/96924?from_cn_redirect=1) api to query managed instances. 
+Call the [DescribeRegisterInstances](https://www.tencentcloud.com/document/api/1340/96924?from_cn_redirect=1) api to query managed instances. 
      * @return InstanceId Managed instance ID.
 
-Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
+Call the [DescribeRegisterInstances](https://www.tencentcloud.com/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
      */
     public String getInstanceId() {
         return this.InstanceId;
@@ -54,10 +54,10 @@ Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api
     /**
      * Set Managed instance ID.
 
-Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
+Call the [DescribeRegisterInstances](https://www.tencentcloud.com/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
      * @param InstanceId Managed instance ID.
 
-Call the [DescribeRegisterInstances](https://www.tencentcloud.comom/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
+Call the [DescribeRegisterInstances](https://www.tencentcloud.com/document/api/1340/96924?from_cn_redirect=1) api to query managed instances.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

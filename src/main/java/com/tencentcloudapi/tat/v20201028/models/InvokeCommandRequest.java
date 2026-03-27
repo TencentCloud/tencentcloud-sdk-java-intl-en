@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InvokeCommandRequest extends AbstractModel {
 
     /**
-    * Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+    * Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
     */
     @SerializedName("CommandId")
     @Expose
@@ -45,7 +45,7 @@ Instance ID can be obtained through the query instance interface of correspondin
     /**
     * Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
@@ -94,16 +94,16 @@ The principle of the least privilege is the best practice for permission managem
     private String OutputCOSKeyPrefix;
 
     /**
-     * Get Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details. 
-     * @return CommandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+     * Get Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details. 
+     * @return CommandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public String getCommandId() {
         return this.CommandId;
     }
 
     /**
-     * Set Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
-     * @param CommandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+     * Set Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
+     * @param CommandId Pending trigger command ID. call the [DescribeCommands](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api to query command details.
      */
     public void setCommandId(String CommandId) {
         this.CommandId = CommandId;
@@ -148,13 +148,13 @@ Instance ID can be obtained through the query instance interface of correspondin
     /**
      * Get Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_]. 
      * @return Parameters Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
@@ -166,13 +166,13 @@ The custom parameter name must meet the following standard: the number of charac
     /**
      * Set Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].
      * @param Parameters Custom parameter of Command. field type is json encoded string. for example: {"varA": "222"}.
 The key is the custom parameter name, and the value is the default. both kv are string-type.
-This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.comom/document/api/1340/52681?from_cn_redirect=1) api.
+This parameter can be set only when the EnableParameter of the command is true. you can obtain the EnableParameter settings through the [DescribeCommands (detailed command information)](https://www.tencentcloud.com/document/api/1340/52681?from_cn_redirect=1) api.
 If the parameter value is not provided, the DefaultParameters or DefaultParameterConfs of Command will be used to replace it.
 Custom parameters can be up to 20.
 The custom parameter name must meet the following standard: the number of characters has a cap of 64, and the optional range is [a-zA-Z0-9-_].

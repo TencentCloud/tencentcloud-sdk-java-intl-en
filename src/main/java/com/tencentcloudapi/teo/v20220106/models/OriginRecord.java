@@ -80,7 +80,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private OriginRecordPrivateParameter [] PrivateParameter;
 
     /**
-    * 
+    * When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
     */
     @SerializedName("Proto")
     @Expose
@@ -227,16 +227,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get  
-     * @return Proto 
+     * Get When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https 
+     * @return Proto When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
      */
     public String getProto() {
         return this.Proto;
     }
 
     /**
-     * Set 
-     * @param Proto 
+     * Set When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
+     * @param Proto When the origin site configuration type Type=proto, it indicates the client request protocol, values: http/https
      */
     public void setProto(String Proto) {
         this.Proto = Proto;

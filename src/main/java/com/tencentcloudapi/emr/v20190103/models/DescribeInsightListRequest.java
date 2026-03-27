@@ -66,7 +66,7 @@ public class DescribeInsightListRequest extends AbstractModel {
     private String Type;
 
     /**
-    * 
+    * Whether it includes specific parameter suggestions and other information
     */
     @SerializedName("MustHasContext")
     @Expose
@@ -169,16 +169,16 @@ public class DescribeInsightListRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return MustHasContext 
+     * Get Whether it includes specific parameter suggestions and other information 
+     * @return MustHasContext Whether it includes specific parameter suggestions and other information
      */
     public Boolean getMustHasContext() {
         return this.MustHasContext;
     }
 
     /**
-     * Set 
-     * @param MustHasContext 
+     * Set Whether it includes specific parameter suggestions and other information
+     * @param MustHasContext Whether it includes specific parameter suggestions and other information
      */
     public void setMustHasContext(Boolean MustHasContext) {
         this.MustHasContext = MustHasContext;

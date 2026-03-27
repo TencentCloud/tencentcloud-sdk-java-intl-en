@@ -88,21 +88,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Type;
 
     /**
-    * 
+    * The PTS timestamp for the exception start.
     */
     @SerializedName("Timestamp")
     @Expose
     private Float Timestamp;
 
     /**
-    * 
+    * Diagnosed abnormal description.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * 
+    * Abnormality detection time in Beijing time, using ISO date format.
     */
     @SerializedName("DateTime")
     @Expose
@@ -354,48 +354,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return Timestamp 
+     * Get The PTS timestamp for the exception start. 
+     * @return Timestamp The PTS timestamp for the exception start.
      */
     public Float getTimestamp() {
         return this.Timestamp;
     }
 
     /**
-     * Set 
-     * @param Timestamp 
+     * Set The PTS timestamp for the exception start.
+     * @param Timestamp The PTS timestamp for the exception start.
      */
     public void setTimestamp(Float Timestamp) {
         this.Timestamp = Timestamp;
     }
 
     /**
-     * Get  
-     * @return Description 
+     * Get Diagnosed abnormal description. 
+     * @return Description Diagnosed abnormal description.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set 
-     * @param Description 
+     * Set Diagnosed abnormal description.
+     * @param Description Diagnosed abnormal description.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get  
-     * @return DateTime 
+     * Get Abnormality detection time in Beijing time, using ISO date format. 
+     * @return DateTime Abnormality detection time in Beijing time, using ISO date format.
      */
     public String getDateTime() {
         return this.DateTime;
     }
 
     /**
-     * Set 
-     * @param DateTime 
+     * Set Abnormality detection time in Beijing time, using ISO date format.
+     * @param DateTime Abnormality detection time in Beijing time, using ISO date format.
      */
     public void setDateTime(String DateTime) {
         this.DateTime = DateTime;

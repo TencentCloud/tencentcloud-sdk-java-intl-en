@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class Price extends AbstractModel {
 
     /**
-    * 
+    * Reference price for yearly/monthly subscription, unit-cent
     */
     @SerializedName("PrepaidPrice")
     @Expose
     private Long PrepaidPrice;
 
     /**
-    * 
+    * Price unit for yearly/monthly subscription, M-month
     */
     @SerializedName("PrepaidPriceUnit")
     @Expose
     private String PrepaidPriceUnit;
 
     /**
-    * 
+    * Pay-as-you-go price, unit-cent
     */
     @SerializedName("PostpaidPrice")
     @Expose
     private Long PostpaidPrice;
 
     /**
-    * 
+    * Pay-as-you-go price unit, H-hour
     */
     @SerializedName("PostpaidPriceUnit")
     @Expose
     private String PostpaidPriceUnit;
 
     /**
-     * Get  
-     * @return PrepaidPrice 
+     * Get Reference price for yearly/monthly subscription, unit-cent 
+     * @return PrepaidPrice Reference price for yearly/monthly subscription, unit-cent
      */
     public Long getPrepaidPrice() {
         return this.PrepaidPrice;
     }
 
     /**
-     * Set 
-     * @param PrepaidPrice 
+     * Set Reference price for yearly/monthly subscription, unit-cent
+     * @param PrepaidPrice Reference price for yearly/monthly subscription, unit-cent
      */
     public void setPrepaidPrice(Long PrepaidPrice) {
         this.PrepaidPrice = PrepaidPrice;
     }
 
     /**
-     * Get  
-     * @return PrepaidPriceUnit 
+     * Get Price unit for yearly/monthly subscription, M-month 
+     * @return PrepaidPriceUnit Price unit for yearly/monthly subscription, M-month
      */
     public String getPrepaidPriceUnit() {
         return this.PrepaidPriceUnit;
     }
 
     /**
-     * Set 
-     * @param PrepaidPriceUnit 
+     * Set Price unit for yearly/monthly subscription, M-month
+     * @param PrepaidPriceUnit Price unit for yearly/monthly subscription, M-month
      */
     public void setPrepaidPriceUnit(String PrepaidPriceUnit) {
         this.PrepaidPriceUnit = PrepaidPriceUnit;
     }
 
     /**
-     * Get  
-     * @return PostpaidPrice 
+     * Get Pay-as-you-go price, unit-cent 
+     * @return PostpaidPrice Pay-as-you-go price, unit-cent
      */
     public Long getPostpaidPrice() {
         return this.PostpaidPrice;
     }
 
     /**
-     * Set 
-     * @param PostpaidPrice 
+     * Set Pay-as-you-go price, unit-cent
+     * @param PostpaidPrice Pay-as-you-go price, unit-cent
      */
     public void setPostpaidPrice(Long PostpaidPrice) {
         this.PostpaidPrice = PostpaidPrice;
     }
 
     /**
-     * Get  
-     * @return PostpaidPriceUnit 
+     * Get Pay-as-you-go price unit, H-hour 
+     * @return PostpaidPriceUnit Pay-as-you-go price unit, H-hour
      */
     public String getPostpaidPriceUnit() {
         return this.PostpaidPriceUnit;
     }
 
     /**
-     * Set 
-     * @param PostpaidPriceUnit 
+     * Set Pay-as-you-go price unit, H-hour
+     * @param PostpaidPriceUnit Pay-as-you-go price unit, H-hour
      */
     public void setPostpaidPriceUnit(String PostpaidPriceUnit) {
         this.PostpaidPriceUnit = PostpaidPriceUnit;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class TopicExtendInfo extends AbstractModel {
 
     /**
-    * 
+    * Log topic authentication-free configuration information
     */
     @SerializedName("AnonymousAccess")
     @Expose
     private AnonymousInfo AnonymousAccess;
 
     /**
-     * Get  
-     * @return AnonymousAccess 
+     * Get Log topic authentication-free configuration information 
+     * @return AnonymousAccess Log topic authentication-free configuration information
      */
     public AnonymousInfo getAnonymousAccess() {
         return this.AnonymousAccess;
     }
 
     /**
-     * Set 
-     * @param AnonymousAccess 
+     * Set Log topic authentication-free configuration information
+     * @param AnonymousAccess Log topic authentication-free configuration information
      */
     public void setAnonymousAccess(AnonymousInfo AnonymousAccess) {
         this.AnonymousAccess = AnonymousAccess;

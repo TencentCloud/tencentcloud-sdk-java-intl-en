@@ -52,7 +52,7 @@ public class ApplicationStatics extends AbstractModel {
     private Long SumMemorySeconds;
 
     /**
-    * 
+    * Total VCore Seconds
     */
     @SerializedName("SumVCoreSeconds")
     @Expose
@@ -144,16 +144,16 @@ public class ApplicationStatics extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return SumVCoreSeconds 
+     * Get Total VCore Seconds 
+     * @return SumVCoreSeconds Total VCore Seconds
      */
     public Long getSumVCoreSeconds() {
         return this.SumVCoreSeconds;
     }
 
     /**
-     * Set 
-     * @param SumVCoreSeconds 
+     * Set Total VCore Seconds
+     * @param SumVCoreSeconds Total VCore Seconds
      */
     public void setSumVCoreSeconds(Long SumVCoreSeconds) {
         this.SumVCoreSeconds = SumVCoreSeconds;

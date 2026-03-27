@@ -366,14 +366,14 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String ClusterName;
 
     /**
-    * 
+    * Namespace
     */
     @SerializedName("Namespace")
     @Expose
     private String Namespace;
 
     /**
-    * 
+    * Workload
     */
     @SerializedName("WorkloadType")
     @Expose
@@ -1220,32 +1220,32 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get  
-     * @return Namespace 
+     * Get Namespace 
+     * @return Namespace Namespace
      */
     public String getNamespace() {
         return this.Namespace;
     }
 
     /**
-     * Set 
-     * @param Namespace 
+     * Set Namespace
+     * @param Namespace Namespace
      */
     public void setNamespace(String Namespace) {
         this.Namespace = Namespace;
     }
 
     /**
-     * Get  
-     * @return WorkloadType 
+     * Get Workload 
+     * @return WorkloadType Workload
      */
     public String getWorkloadType() {
         return this.WorkloadType;
     }
 
     /**
-     * Set 
-     * @param WorkloadType 
+     * Set Workload
+     * @param WorkloadType Workload
      */
     public void setWorkloadType(String WorkloadType) {
         this.WorkloadType = WorkloadType;
