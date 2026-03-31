@@ -24,337 +24,322 @@ import java.util.HashMap;
 public class SendEmailRequest extends AbstractModel {
 
     /**
-    * Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
+    * <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
     */
     @SerializedName("FromEmailAddress")
     @Expose
     private String FromEmailAddress;
 
     /**
-    * Email subject.
+    * <p>Email Subject</p>
     */
     @SerializedName("Subject")
     @Expose
     private String Subject;
 
     /**
-    * Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+    * <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
     */
     @SerializedName("Destination")
     @Expose
     private String [] Destination;
 
     /**
-    * The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+    * <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
     */
     @SerializedName("ReplyToAddresses")
     @Expose
     private String ReplyToAddresses;
 
     /**
-    * Cc recipient email address, supports up to 20 carbon copies.
+    * <p>Email address of CC recipients, supports up to 20 carbon copies.</p>
     */
     @SerializedName("Cc")
     @Expose
     private String [] Cc;
 
     /**
-    * Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
+    * <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
     */
     @SerializedName("Bcc")
     @Expose
     private String [] Bcc;
 
     /**
-    * Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+    * <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
     */
     @SerializedName("Template")
     @Expose
     private Template Template;
 
     /**
-    * This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+    * <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
     */
     @SerializedName("Simple")
     @Expose
     private Simple Simple;
 
     /**
-    * When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
+    * <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
     */
     @SerializedName("Attachments")
     @Expose
     private Attachment [] Attachments;
 
     /**
-    * Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+    * Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
     */
     @SerializedName("Unsubscribe")
     @Expose
     private String Unsubscribe;
 
     /**
-    * Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
+    * <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
     */
     @SerializedName("TriggerType")
     @Expose
     private Long TriggerType;
 
     /**
-    * Message-Id field in the smtp header.
+    * <p>Message-Id field in the smtp header</p>
     */
     @SerializedName("SmtpMessageId")
     @Expose
     private String SmtpMessageId;
 
     /**
-    * Other fields that can be set in the smtp header.
+    * <p>Other fields that can be set in the smtp header</p>
     */
     @SerializedName("SmtpHeaders")
     @Expose
     private String SmtpHeaders;
 
     /**
-    * from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+    * <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
     */
     @SerializedName("HeaderFrom")
     @Expose
     private String HeaderFrom;
 
     /**
-     * Get Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:). 
-     * @return FromEmailAddress Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
+     * Get <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p> 
+     * @return FromEmailAddress <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
      */
     public String getFromEmailAddress() {
         return this.FromEmailAddress;
     }
 
     /**
-     * Set Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
-     * @param FromEmailAddress Sender'S email address. when not using an alias, enter the sender's email address directly, for example: noreply@mail.qcloud.com. to enter a sender alias, follow this format (note that a space must separate the alias and email address): alias+space+<email address>. the alias cannot contain a colon (:).
+     * Set <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
+     * @param FromEmailAddress <p>Sender's email address. If no alias is used, enter the sender's email address directly, for example: noreply@mail.qcloud.com. To use a sender alias, follow this format (note that a space must be used between the alias and the email address): alias+space+&lt;email address&gt;. The alias cannot contain a colon (:).</p>
      */
     public void setFromEmailAddress(String FromEmailAddress) {
         this.FromEmailAddress = FromEmailAddress;
     }
 
     /**
-     * Get Email subject. 
-     * @return Subject Email subject.
+     * Get <p>Email Subject</p> 
+     * @return Subject <p>Email Subject</p>
      */
     public String getSubject() {
         return this.Subject;
     }
 
     /**
-     * Set Email subject.
-     * @param Subject Email subject.
+     * Set <p>Email Subject</p>
+     * @param Subject <p>Email Subject</p>
      */
     public void setSubject(String Subject) {
         this.Subject = Subject;
     }
 
     /**
-     * Get Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist. 
-     * @return Destination Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+     * Get <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p> 
+     * @return Destination <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
      */
     public String [] getDestination() {
         return this.Destination;
     }
 
     /**
-     * Set Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
-     * @param Destination Recipient email address, supports up to 50 recipients for mass sending. note: the email content will display all recipient addresses. for non-mass sending, call the API multiple times to send.
-Specifies that at least one of the Destination, Cc, or Bcc parameters must exist.
+     * Set <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
+     * @param Destination <p>Recipient email address, supports up to 50 recipients in mass sending. Note: The email content displays all recipient addresses. For non-mass sending, call the API multiple times to send.<br>At least one of the three parameters Destination/Cc/Bcc must exist.</p>
      */
     public void setDestination(String [] Destination) {
         this.Destination = Destination;
     }
 
     /**
-     * Get The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send. 
-     * @return ReplyToAddresses The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+     * Get <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p> 
+     * @return ReplyToAddresses <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
      */
     public String getReplyToAddresses() {
         return this.ReplyToAddresses;
     }
 
     /**
-     * Set The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
-     * @param ReplyToAddresses The "reply" email address of the mail. can be filled with an email address where you can receive mail, which can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+     * Set <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
+     * @param ReplyToAddresses <p>The "reply" email address of the mail. Can be filled with a mailbox address where you can receive emails, which can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
      */
     public void setReplyToAddresses(String ReplyToAddresses) {
         this.ReplyToAddresses = ReplyToAddresses;
     }
 
     /**
-     * Get Cc recipient email address, supports up to 20 carbon copies. 
-     * @return Cc Cc recipient email address, supports up to 20 carbon copies.
+     * Get <p>Email address of CC recipients, supports up to 20 carbon copies.</p> 
+     * @return Cc <p>Email address of CC recipients, supports up to 20 carbon copies.</p>
      */
     public String [] getCc() {
         return this.Cc;
     }
 
     /**
-     * Set Cc recipient email address, supports up to 20 carbon copies.
-     * @param Cc Cc recipient email address, supports up to 20 carbon copies.
+     * Set <p>Email address of CC recipients, supports up to 20 carbon copies.</p>
+     * @param Cc <p>Email address of CC recipients, supports up to 20 carbon copies.</p>
      */
     public void setCc(String [] Cc) {
         this.Cc = Cc;
     }
 
     /**
-     * Get Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique. 
-     * @return Bcc Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
+     * Get <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p> 
+     * @return Bcc <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
      */
     public String [] getBcc() {
         return this.Bcc;
     }
 
     /**
-     * Set Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
-     * @param Bcc Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.
+     * Set <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
+     * @param Bcc <p>Bcc email address, supports up to 20 carbon copies. Bcc and Destination must be unique.</p>
      */
     public void setBcc(String [] Bcc) {
         this.Bcc = Bcc;
     }
 
     /**
-     * Get Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>. 
-     * @return Template Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+     * Get <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote> 
+     * @return Template <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
      */
     public Template getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
-     * @param Template Use template for sending and fill in related parameters.
-<dx-alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+     * Set <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
+     * @param Template <p>Fill in the template parameters when sending with a template.</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
      */
     public void setTemplate(Template Template) {
         this.Template = Template;
     }
 
     /**
-     * Get This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>. 
-     * @return Simple This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+     * Get <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote> 
+     * @return Simple <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
      */
     public Simple getSimple() {
         return this.Simple;
     }
 
     /**
-     * Set This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
-     * @param Simple This parameter has been deprecated.
-<dx-alert infotype="notice" title="description"> only customers who have applied for special configuration in the past need to use this. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+     * Set <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
+     * @param Simple <p>Abandoned</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration require the use of this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote>
      */
     public void setSimple(Simple Simple) {
         this.Simple = Simple;
     }
 
     /**
-     * Get When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M. 
-     * @return Attachments When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
+     * Get <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p> 
+     * @return Attachments <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
      */
     public Attachment [] getAttachments() {
         return this.Attachments;
     }
 
     /**
-     * Set When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
-     * @param Attachments When sending an attachment, fill in the related parameters. the tencent cloud API request supports a maximum of 8M request packet. the attachment content transits Base64 and is expected to expand by 1.5 times. you should control the total size of all attachments within 4M. the API will return an error if the overall request exceeds 8M.
+     * Set <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
+     * @param Attachments <p>To send an attachment, fill in the relevant parameters. The Tencent Cloud API request supports a maximum of 8M request packet. The attachment content is expected to expand by 1.5 times after Base64 encoding. The total size of all attachments should not exceed 4M. The API will return an error if the overall request exceeds 8M.</p>
      */
     public void setAttachments(Attachment [] Attachments) {
         this.Attachments = Attachments;
     }
 
     /**
-     * Get Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 
-     * @return Unsubscribe Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+     * Get Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian. 
+     * @return Unsubscribe Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
      */
     public String getUnsubscribe() {
         return this.Unsubscribe;
     }
 
     /**
-     * Set Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
-     * @param Unsubscribe Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+     * Set Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
+     * @param Unsubscribe Unsubscription link options 0: do not add unsubscription link 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai 11: indonesian.
      */
     public void setUnsubscribe(String Unsubscribe) {
         this.Unsubscribe = Unsubscribe;
     }
 
     /**
-     * Get Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel. 
-     * @return TriggerType Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
+     * Get <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p> 
+     * @return TriggerType <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
      */
     public Long getTriggerType() {
         return this.TriggerType;
     }
 
     /**
-     * Set Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
-     * @param TriggerType Mail trigger type. 0: non-trigger class, default type, select this type for marketing emails and non-instant emails. 1: trigger class, instant delivery emails such as captcha-intl. if the mail exceeds a certain size, the system will automatically select the non-trigger class channel.
+     * Set <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
+     * @param TriggerType <p>Mail trigger type 0: Non-trigger class, default type, select this type for marketing email, non-instant mail. 1: Trigger class, instant delivery mail such as verification code. If the mail exceeds a certain size, the system will automatically select a non-trigger type channel.</p>
      */
     public void setTriggerType(Long TriggerType) {
         this.TriggerType = TriggerType;
     }
 
     /**
-     * Get Message-Id field in the smtp header. 
-     * @return SmtpMessageId Message-Id field in the smtp header.
+     * Get <p>Message-Id field in the smtp header</p> 
+     * @return SmtpMessageId <p>Message-Id field in the smtp header</p>
      */
     public String getSmtpMessageId() {
         return this.SmtpMessageId;
     }
 
     /**
-     * Set Message-Id field in the smtp header.
-     * @param SmtpMessageId Message-Id field in the smtp header.
+     * Set <p>Message-Id field in the smtp header</p>
+     * @param SmtpMessageId <p>Message-Id field in the smtp header</p>
      */
     public void setSmtpMessageId(String SmtpMessageId) {
         this.SmtpMessageId = SmtpMessageId;
     }
 
     /**
-     * Get Other fields that can be set in the smtp header. 
-     * @return SmtpHeaders Other fields that can be set in the smtp header.
+     * Get <p>Other fields that can be set in the smtp header</p> 
+     * @return SmtpHeaders <p>Other fields that can be set in the smtp header</p>
      */
     public String getSmtpHeaders() {
         return this.SmtpHeaders;
     }
 
     /**
-     * Set Other fields that can be set in the smtp header.
-     * @param SmtpHeaders Other fields that can be set in the smtp header.
+     * Set <p>Other fields that can be set in the smtp header</p>
+     * @param SmtpHeaders <p>Other fields that can be set in the smtp header</p>
      */
     public void setSmtpHeaders(String SmtpHeaders) {
         this.SmtpHeaders = SmtpHeaders;
     }
 
     /**
-     * Get from field in the smtp header. the domain name should be consistent with FromEmailAddress. 
-     * @return HeaderFrom from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+     * Get <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p> 
+     * @return HeaderFrom <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
      */
     public String getHeaderFrom() {
         return this.HeaderFrom;
     }
 
     /**
-     * Set from field in the smtp header. the domain name should be consistent with FromEmailAddress.
-     * @param HeaderFrom from field in the smtp header. the domain name should be consistent with FromEmailAddress.
+     * Set <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
+     * @param HeaderFrom <p>The from field in the smtp header. The domain name should be consistent with the FromEmailAddress.</p>
      */
     public void setHeaderFrom(String HeaderFrom) {
         this.HeaderFrom = HeaderFrom;

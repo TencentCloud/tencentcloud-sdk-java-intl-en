@@ -31,21 +31,21 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     private String Zone;
 
     /**
-    * Instance memory size in GB
+    * Instance memory size in GB.
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Instance disk size in GB
+    * Instance disk size in GB.
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * Number of CPU cores
+    * Number of CPU cores.
     */
     @SerializedName("Cpu")
     @Expose
@@ -59,14 +59,14 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     private String MachineType;
 
     /**
-    * Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+    * Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * Project ID
+    * Project ID.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -108,7 +108,7 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     private Long AutoVoucher;
 
     /**
-    * Array of voucher IDs (currently, only one voucher can be used per order)
+    * Array of voucher IDs (currently, only one voucher can be used per order).
     */
     @SerializedName("VoucherIds")
     @Expose
@@ -122,7 +122,7 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     private String DBVersion;
 
     /**
-    * Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+    * Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
@@ -150,7 +150,7 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     private String StartTime;
 
     /**
-    * Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
+    * Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
     */
     @SerializedName("Span")
     @Expose
@@ -164,7 +164,7 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     private Boolean MultiZones;
 
     /**
-    * Tags associated with the instances to be created
+    * Tags associated with the instances to be created.
     */
     @SerializedName("ResourceTags")
     @Expose
@@ -185,6 +185,27 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     private String TimeZone;
 
     /**
+    * Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+    */
+    @SerializedName("MultiNodes")
+    @Expose
+    private Boolean MultiNodes;
+
+    /**
+    * The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+    */
+    @SerializedName("DrZones")
+    @Expose
+    private String [] DrZones;
+
+    /**
+    * Disk encryption identifier, 0-unencrypted, 1-encrypted.
+    */
+    @SerializedName("DiskEncryptFlag")
+    @Expose
+    private Long DiskEncryptFlag;
+
+    /**
      * Get Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API. 
      * @return Zone Instance AZ, such as `ap-guangzhou-1` (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the`DescribeZones` API.
      */
@@ -201,48 +222,48 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance memory size in GB 
-     * @return Memory Instance memory size in GB
+     * Get Instance memory size in GB. 
+     * @return Memory Instance memory size in GB.
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Instance memory size in GB
-     * @param Memory Instance memory size in GB
+     * Set Instance memory size in GB.
+     * @param Memory Instance memory size in GB.
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Instance disk size in GB 
-     * @return Storage Instance disk size in GB
+     * Get Instance disk size in GB. 
+     * @return Storage Instance disk size in GB.
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Instance disk size in GB
-     * @param Storage Instance disk size in GB
+     * Set Instance disk size in GB.
+     * @param Storage Instance disk size in GB.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get Number of CPU cores 
-     * @return Cpu Number of CPU cores
+     * Get Number of CPU cores. 
+     * @return Cpu Number of CPU cores.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPU cores
-     * @param Cpu Number of CPU cores
+     * Set Number of CPU cores.
+     * @param Cpu Number of CPU cores.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
@@ -265,32 +286,32 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go). 
-     * @return InstanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+     * Get Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go). 
+     * @return InstanceChargeType Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
-     * @param InstanceChargeType Billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID` (pay-as-you-go).
+     * Set Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
+     * @param InstanceChargeType Billing mode. Valid values: `PREPAID` (yearly/monthly subscription), `POSTPAID` (pay-as-you-go).
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID. 
+     * @return ProjectId Project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID.
+     * @param ProjectId Project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -377,16 +398,16 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Array of voucher IDs (currently, only one voucher can be used per order) 
-     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+     * Get Array of voucher IDs (currently, only one voucher can be used per order). 
+     * @return VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set Array of voucher IDs (currently, only one voucher can be used per order)
-     * @param VoucherIds Array of voucher IDs (currently, only one voucher can be used per order)
+     * Set Array of voucher IDs (currently, only one voucher can be used per order).
+     * @param VoucherIds Array of voucher IDs (currently, only one voucher can be used per order).
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;
@@ -409,16 +430,16 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`. 
-     * @return AutoRenewFlag Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+     * Get Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`. 
+     * @return AutoRenewFlag Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
-     * @param AutoRenewFlag Auto-renewal flag, which takes effect only when purchasing a monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+     * Set Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
+     * @param AutoRenewFlag Auto-renewal flag, which takes effect only when purchasing a yearly/monthly subscribed instance.  Valid values:  `0` (auto-renewal disabled), `1` (auto-renewal enabled). Default value: `0`.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
@@ -473,16 +494,16 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour 
-     * @return Span Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
+     * Get Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour. 
+     * @return Span Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
      */
     public Long getSpan() {
         return this.Span;
     }
 
     /**
-     * Set Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
-     * @param Span Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour
+     * Set Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
+     * @param Span Configuration of the maintenance window, which specifies the maintenance duration in hours. Hour.
      */
     public void setSpan(Long Span) {
         this.Span = Span;
@@ -505,16 +526,16 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Tags associated with the instances to be created 
-     * @return ResourceTags Tags associated with the instances to be created
+     * Get Tags associated with the instances to be created. 
+     * @return ResourceTags Tags associated with the instances to be created.
      */
     public ResourceTag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set Tags associated with the instances to be created
-     * @param ResourceTags Tags associated with the instances to be created
+     * Set Tags associated with the instances to be created.
+     * @param ResourceTags Tags associated with the instances to be created.
      */
     public void setResourceTags(ResourceTag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
@@ -550,6 +571,54 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
      */
     public void setTimeZone(String TimeZone) {
         this.TimeZone = TimeZone;
+    }
+
+    /**
+     * Get Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true. 
+     * @return MultiNodes Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+     */
+    public Boolean getMultiNodes() {
+        return this.MultiNodes;
+    }
+
+    /**
+     * Set Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+     * @param MultiNodes Whether it is a multi-node architecture instance. Default value: `false`.If MultiNodes = true, the value of the MultiZones parameter must be true.
+     */
+    public void setMultiNodes(Boolean MultiNodes) {
+        this.MultiNodes = MultiNodes;
+    }
+
+    /**
+     * Get The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5. 
+     * @return DrZones The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+     */
+    public String [] getDrZones() {
+        return this.DrZones;
+    }
+
+    /**
+     * Set The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+     * @param DrZones The zone in which the standby node is available. Default is empty. When MultiNodes = true, the availability zones of the primary and standby nodes cannot all be the same. The minimum number of availability zones for the standby nodes is 2, and the maximum is 5.
+     */
+    public void setDrZones(String [] DrZones) {
+        this.DrZones = DrZones;
+    }
+
+    /**
+     * Get Disk encryption identifier, 0-unencrypted, 1-encrypted. 
+     * @return DiskEncryptFlag Disk encryption identifier, 0-unencrypted, 1-encrypted.
+     */
+    public Long getDiskEncryptFlag() {
+        return this.DiskEncryptFlag;
+    }
+
+    /**
+     * Set Disk encryption identifier, 0-unencrypted, 1-encrypted.
+     * @param DiskEncryptFlag Disk encryption identifier, 0-unencrypted, 1-encrypted.
+     */
+    public void setDiskEncryptFlag(Long DiskEncryptFlag) {
+        this.DiskEncryptFlag = DiskEncryptFlag;
     }
 
     public CreateCloudDBInstancesRequest() {
@@ -641,6 +710,18 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
         if (source.TimeZone != null) {
             this.TimeZone = new String(source.TimeZone);
         }
+        if (source.MultiNodes != null) {
+            this.MultiNodes = new Boolean(source.MultiNodes);
+        }
+        if (source.DrZones != null) {
+            this.DrZones = new String[source.DrZones.length];
+            for (int i = 0; i < source.DrZones.length; i++) {
+                this.DrZones[i] = new String(source.DrZones[i]);
+            }
+        }
+        if (source.DiskEncryptFlag != null) {
+            this.DiskEncryptFlag = new Long(source.DiskEncryptFlag);
+        }
     }
 
 
@@ -671,6 +752,9 @@ public class CreateCloudDBInstancesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         this.setParamSimple(map, prefix + "Collation", this.Collation);
         this.setParamSimple(map, prefix + "TimeZone", this.TimeZone);
+        this.setParamSimple(map, prefix + "MultiNodes", this.MultiNodes);
+        this.setParamArraySimple(map, prefix + "DrZones.", this.DrZones);
+        this.setParamSimple(map, prefix + "DiskEncryptFlag", this.DiskEncryptFlag);
 
     }
 }

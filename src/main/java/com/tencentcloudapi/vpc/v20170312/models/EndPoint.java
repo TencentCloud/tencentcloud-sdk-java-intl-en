@@ -31,7 +31,7 @@ public class EndPoint extends AbstractModel {
     private String EndPointId;
 
     /**
-    * VPC ID
+    * The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
     */
     @SerializedName("VpcId")
     @Expose
@@ -94,7 +94,7 @@ public class EndPoint extends AbstractModel {
     private String State;
 
     /**
-    * Creation time
+    * Creation time. format: YYYY-MM-DD HH:MM:SS.
     */
     @SerializedName("CreateTime")
     @Expose
@@ -108,12 +108,25 @@ public class EndPoint extends AbstractModel {
     private String [] GroupSet;
 
     /**
-    * Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Endpoint service name.
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
+
+    /**
+    * CDC cluster unique ID.
+    */
+    @SerializedName("CdcId")
+    @Expose
+    private String CdcId;
+
+    /**
+    * Tag key-value pair.		
+    */
+    @SerializedName("TagSet")
+    @Expose
+    private Tag [] TagSet;
 
     /**
      * Get Endpoint ID 
@@ -132,16 +145,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1). 
+     * @return VpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+     * @param VpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
@@ -276,16 +289,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. format: YYYY-MM-DD HH:MM:SS. 
+     * @return CreateTime Creation time. format: YYYY-MM-DD HH:MM:SS.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time. format: YYYY-MM-DD HH:MM:SS.
+     * @param CreateTime Creation time. format: YYYY-MM-DD HH:MM:SS.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -308,23 +321,51 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ServiceName Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Endpoint service name. 
+     * @return ServiceName Endpoint service name.
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ServiceName Endpoint service name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Endpoint service name.
+     * @param ServiceName Endpoint service name.
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
+    }
+
+    /**
+     * Get CDC cluster unique ID. 
+     * @return CdcId CDC cluster unique ID.
+     */
+    public String getCdcId() {
+        return this.CdcId;
+    }
+
+    /**
+     * Set CDC cluster unique ID.
+     * @param CdcId CDC cluster unique ID.
+     */
+    public void setCdcId(String CdcId) {
+        this.CdcId = CdcId;
+    }
+
+    /**
+     * Get Tag key-value pair.		 
+     * @return TagSet Tag key-value pair.		
+     */
+    public Tag [] getTagSet() {
+        return this.TagSet;
+    }
+
+    /**
+     * Set Tag key-value pair.		
+     * @param TagSet Tag key-value pair.		
+     */
+    public void setTagSet(Tag [] TagSet) {
+        this.TagSet = TagSet;
     }
 
     public EndPoint() {
@@ -377,6 +418,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (source.ServiceName != null) {
             this.ServiceName = new String(source.ServiceName);
         }
+        if (source.CdcId != null) {
+            this.CdcId = new String(source.CdcId);
+        }
+        if (source.TagSet != null) {
+            this.TagSet = new Tag[source.TagSet.length];
+            for (int i = 0; i < source.TagSet.length; i++) {
+                this.TagSet[i] = new Tag(source.TagSet[i]);
+            }
+        }
     }
 
 
@@ -397,6 +447,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamArraySimple(map, prefix + "GroupSet.", this.GroupSet);
         this.setParamSimple(map, prefix + "ServiceName", this.ServiceName);
+        this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamArrayObj(map, prefix + "TagSet.", this.TagSet);
 
     }
 }

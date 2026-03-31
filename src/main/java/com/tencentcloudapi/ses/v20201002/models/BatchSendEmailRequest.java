@@ -24,291 +24,276 @@ import java.util.HashMap;
 public class BatchSendEmailRequest extends AbstractModel {
 
     /**
-    * Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
+    * <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
     */
     @SerializedName("FromEmailAddress")
     @Expose
     private String FromEmailAddress;
 
     /**
-    * Recipient list ID.
+    * <p>Recipient list ID</p>
     */
     @SerializedName("ReceiverId")
     @Expose
     private Long ReceiverId;
 
     /**
-    * Email subject.
+    * <p>Email Subject</p>
     */
     @SerializedName("Subject")
     @Expose
     private String Subject;
 
     /**
-    * Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
+    * <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
     */
     @SerializedName("TaskType")
     @Expose
     private Long TaskType;
 
     /**
-    * The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+    * <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
     */
     @SerializedName("ReplyToAddresses")
     @Expose
     private String ReplyToAddresses;
 
     /**
-    * When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+    * <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
     */
     @SerializedName("Template")
     @Expose
     private Template Template;
 
     /**
-    * Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+    * <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
     */
     @SerializedName("Simple")
     @Expose
     private Simple Simple;
 
     /**
-    * Send attachment when required. fill in related parameters (not supported).
+    * <p>When you need to send an attachment, fill in the related parameters (not supported).</p>
     */
     @SerializedName("Attachments")
     @Expose
     private Attachment [] Attachments;
 
     /**
-    * Required parameter for sending tasks periodically.
+    * <p>Required parameter for sending tasks periodically</p>
     */
     @SerializedName("CycleParam")
     @Expose
     private CycleEmailParam CycleParam;
 
     /**
-    * Required parameter for scheduled task assignment.
+    * <p>Required parameter of scheduled task assignment</p>
     */
     @SerializedName("TimedParam")
     @Expose
     private TimedEmailParam TimedParam;
 
     /**
-    * Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+    * Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
     */
     @SerializedName("Unsubscribe")
     @Expose
     private String Unsubscribe;
 
     /**
-    * Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
+    * <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
     */
     @SerializedName("ADLocation")
     @Expose
     private Long ADLocation;
 
     /**
-     * Get Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;. 
-     * @return FromEmailAddress Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
+     * Get <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p> 
+     * @return FromEmailAddress <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
      */
     public String getFromEmailAddress() {
         return this.FromEmailAddress;
     }
 
     /**
-     * Set Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
-     * @param FromEmailAddress Sender'S email address. please fill in the sender's email address, such as noreply@mail.qcloud.com. if you need to fill in the sender's description, please follow.
-Sender &lt;email address&gt; via fill in, such as:.
-Tencent cloud team &lt;noreply@mail.qcloud.com&gt;.
+     * Set <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
+     * @param FromEmailAddress <p>Sender's email address. Please fill in the sender's email address, for example: noreply@mail.qcloud.com. If you need to fill in the sender description, please enter it via<br>sender &lt;email address&gt;, for example:<br>Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;</p>
      */
     public void setFromEmailAddress(String FromEmailAddress) {
         this.FromEmailAddress = FromEmailAddress;
     }
 
     /**
-     * Get Recipient list ID. 
-     * @return ReceiverId Recipient list ID.
+     * Get <p>Recipient list ID</p> 
+     * @return ReceiverId <p>Recipient list ID</p>
      */
     public Long getReceiverId() {
         return this.ReceiverId;
     }
 
     /**
-     * Set Recipient list ID.
-     * @param ReceiverId Recipient list ID.
+     * Set <p>Recipient list ID</p>
+     * @param ReceiverId <p>Recipient list ID</p>
      */
     public void setReceiverId(Long ReceiverId) {
         this.ReceiverId = ReceiverId;
     }
 
     /**
-     * Get Email subject. 
-     * @return Subject Email subject.
+     * Get <p>Email Subject</p> 
+     * @return Subject <p>Email Subject</p>
      */
     public String getSubject() {
         return this.Subject;
     }
 
     /**
-     * Set Email subject.
-     * @param Subject Email subject.
+     * Set <p>Email Subject</p>
+     * @param Subject <p>Email Subject</p>
      */
     public void setSubject(String Subject) {
         this.Subject = Subject;
     }
 
     /**
-     * Get Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending. 
-     * @return TaskType Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
+     * Get <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p> 
+     * @return TaskType <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
      */
     public Long getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
-     * @param TaskType Task type 1: send now 2: scheduled sending 3: cycle (frequency) sending.
+     * Set <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
+     * @param TaskType <p>Task type 1: Send now 2: Scheduled sending 3: Cycle (frequency) sending</p>
      */
     public void setTaskType(Long TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send. 
-     * @return ReplyToAddresses The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+     * Get <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p> 
+     * @return ReplyToAddresses <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
      */
     public String getReplyToAddresses() {
         return this.ReplyToAddresses;
     }
 
     /**
-     * Set The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
-     * @param ReplyToAddresses The "reply" email address of the mail. can be filled with an email address you can receive mail from, can be a personal mailbox. if left empty, the recipient's reply mail will fail to send.
+     * Set <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
+     * @param ReplyToAddresses <p>The "reply" email address of the mail. Can be filled with an email address you can receive mail, can be a personal mailbox. If left empty, the recipient's reply mail will fail to send.</p>
      */
     public void setReplyToAddresses(String ReplyToAddresses) {
         this.ReplyToAddresses = ReplyToAddresses;
     }
 
     /**
-     * Get When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>. 
-     * @return Template When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+     * Get <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote> 
+     * @return Template <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
      */
     public Template getTemplate() {
         return this.Template;
     }
 
     /**
-     * Set When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
-     * @param Template When using a template to send, fill in the related parameters of the template.
-<Dx-Alert infotype="notice" title="note">this field must be specified if you have not applied for special configuration.</dx-alert>.
+     * Set <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
+     * @param Template <p>Template-related parameters to fill in when sending with a template</p><blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Note</div>        <div class="rno-document-tip-desc"><p>This field must be specified if you have not applied for special configuration</p></div>    </div></blockquote>
      */
     public void setTemplate(Template Template) {
         this.Template = Template;
     }
 
     /**
-     * Get Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>. 
-     * @return Simple Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+     * Get <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p> 
+     * @return Simple <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
      */
     public Simple getSimple() {
         return this.Simple;
     }
 
     /**
-     * Set Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
-     * @param Simple Abandoned<Dx-Alert infotype="notice" title="description">only customers who historically applied for special configuration require the use of it. if you have not applied for special configuration, this field does not exist.</dx-alert>.
+     * Set <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
+     * @param Simple <p>Abandoned<blockquote class="rno-document-tips rno-document-tips-notice">    <div class="rno-document-tips-body">        <i class="rno-document-tip-icon"></i>        <div class="rno-document-tip-title">Description</div>        <div class="rno-document-tip-desc"><p>Only customers who historically applied for special configuration need to use this. If you have not applied for special configuration, this field does not exist.</p></div>    </div></blockquote></p>
      */
     public void setSimple(Simple Simple) {
         this.Simple = Simple;
     }
 
     /**
-     * Get Send attachment when required. fill in related parameters (not supported). 
-     * @return Attachments Send attachment when required. fill in related parameters (not supported).
+     * Get <p>When you need to send an attachment, fill in the related parameters (not supported).</p> 
+     * @return Attachments <p>When you need to send an attachment, fill in the related parameters (not supported).</p>
      */
     public Attachment [] getAttachments() {
         return this.Attachments;
     }
 
     /**
-     * Set Send attachment when required. fill in related parameters (not supported).
-     * @param Attachments Send attachment when required. fill in related parameters (not supported).
+     * Set <p>When you need to send an attachment, fill in the related parameters (not supported).</p>
+     * @param Attachments <p>When you need to send an attachment, fill in the related parameters (not supported).</p>
      */
     public void setAttachments(Attachment [] Attachments) {
         this.Attachments = Attachments;
     }
 
     /**
-     * Get Required parameter for sending tasks periodically. 
-     * @return CycleParam Required parameter for sending tasks periodically.
+     * Get <p>Required parameter for sending tasks periodically</p> 
+     * @return CycleParam <p>Required parameter for sending tasks periodically</p>
      */
     public CycleEmailParam getCycleParam() {
         return this.CycleParam;
     }
 
     /**
-     * Set Required parameter for sending tasks periodically.
-     * @param CycleParam Required parameter for sending tasks periodically.
+     * Set <p>Required parameter for sending tasks periodically</p>
+     * @param CycleParam <p>Required parameter for sending tasks periodically</p>
      */
     public void setCycleParam(CycleEmailParam CycleParam) {
         this.CycleParam = CycleParam;
     }
 
     /**
-     * Get Required parameter for scheduled task assignment. 
-     * @return TimedParam Required parameter for scheduled task assignment.
+     * Get <p>Required parameter of scheduled task assignment</p> 
+     * @return TimedParam <p>Required parameter of scheduled task assignment</p>
      */
     public TimedEmailParam getTimedParam() {
         return this.TimedParam;
     }
 
     /**
-     * Set Required parameter for scheduled task assignment.
-     * @param TimedParam Required parameter for scheduled task assignment.
+     * Set <p>Required parameter of scheduled task assignment</p>
+     * @param TimedParam <p>Required parameter of scheduled task assignment</p>
      */
     public void setTimedParam(TimedEmailParam TimedParam) {
         this.TimedParam = TimedParam;
     }
 
     /**
-     * Get Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 
-     * @return Unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+     * Get Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian. 
+     * @return Unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
      */
     public String getUnsubscribe() {
         return this.Unsubscribe;
     }
 
     /**
-     * Set Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
-     * @param Unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai.
+     * Set Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
+     * @param Unsubscribe Unsubscription link options 0: do not add 1: english 2: simplified chinese 3: traditional chinese 4: spanish 5: french 6: german 7: japanese 8: korean 9: arabic 10: thai. 11: indonesian.
      */
     public void setUnsubscribe(String Unsubscribe) {
         this.Unsubscribe = Unsubscribe;
     }
 
     /**
-     * Get Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject). 
-     * @return ADLocation Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
+     * Get <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p> 
+     * @return ADLocation <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
      */
     public Long getADLocation() {
         return this.ADLocation;
     }
 
     /**
-     * Set Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
-     * @param ADLocation Whether to add an ad flag. valid values: 0 (do not add), 1 (add to the previous subject), 2 (add to the following subject).
+     * Set <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
+     * @param ADLocation <p>Whether to add an ad flag 0: do not add 1: add to the previous subject 2: add to the following subject</p>
      */
     public void setADLocation(Long ADLocation) {
         this.ADLocation = ADLocation;

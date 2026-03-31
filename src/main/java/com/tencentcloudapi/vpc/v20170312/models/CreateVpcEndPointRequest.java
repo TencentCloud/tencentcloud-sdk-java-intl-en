@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateVpcEndPointRequest extends AbstractModel {
 
     /**
-    * VPC instance ID
+    * VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet instance ID
+    * Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Endpoint name
+    * Endpoint name. limited to 60 characters.
     */
     @SerializedName("EndPointName")
     @Expose
     private String EndPointName;
 
     /**
-    * Endpoint service ID
+    * Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
     */
     @SerializedName("EndPointServiceId")
     @Expose
@@ -59,71 +59,85 @@ public class CreateVpcEndPointRequest extends AbstractModel {
     private String EndPointVip;
 
     /**
-    * Security group ID
+    * Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
     */
     @SerializedName("SecurityGroupId")
     @Expose
     private String SecurityGroupId;
 
     /**
-     * Get VPC instance ID 
-     * @return VpcId VPC instance ID
+    * List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * Protocol type. supports Ipv4 and Ipv6. default is Ipv4.
+    */
+    @SerializedName("IpAddressType")
+    @Expose
+    private String IpAddressType;
+
+    /**
+     * Get VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1). 
+     * @return VpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC instance ID
-     * @param VpcId VPC instance ID
+     * Set VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
+     * @param VpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet instance ID 
-     * @return SubnetId Subnet instance ID
+     * Get Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api. 
+     * @return SubnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet instance ID
-     * @param SubnetId Subnet instance ID
+     * Set Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+     * @param SubnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Endpoint name 
-     * @return EndPointName Endpoint name
+     * Get Endpoint name. limited to 60 characters. 
+     * @return EndPointName Endpoint name. limited to 60 characters.
      */
     public String getEndPointName() {
         return this.EndPointName;
     }
 
     /**
-     * Set Endpoint name
-     * @param EndPointName Endpoint name
+     * Set Endpoint name. limited to 60 characters.
+     * @param EndPointName Endpoint name. limited to 60 characters.
      */
     public void setEndPointName(String EndPointName) {
         this.EndPointName = EndPointName;
     }
 
     /**
-     * Get Endpoint service ID 
-     * @return EndPointServiceId Endpoint service ID
+     * Get Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api. 
+     * @return EndPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
      */
     public String getEndPointServiceId() {
         return this.EndPointServiceId;
     }
 
     /**
-     * Set Endpoint service ID
-     * @param EndPointServiceId Endpoint service ID
+     * Set Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+     * @param EndPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
      */
     public void setEndPointServiceId(String EndPointServiceId) {
         this.EndPointServiceId = EndPointServiceId;
@@ -146,19 +160,51 @@ public class CreateVpcEndPointRequest extends AbstractModel {
     }
 
     /**
-     * Get Security group ID 
-     * @return SecurityGroupId Security group ID
+     * Get Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1). 
+     * @return SecurityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set Security group ID
-     * @param SecurityGroupId Security group ID
+     * Set Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * @param SecurityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;
+    }
+
+    /**
+     * Get List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}]. 
+     * @return Tags List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
+     * @param Tags List of tags to be bound, for example, [{"Key": "city", "Value": "shanghai"}].
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Protocol type. supports Ipv4 and Ipv6. default is Ipv4. 
+     * @return IpAddressType Protocol type. supports Ipv4 and Ipv6. default is Ipv4.
+     */
+    public String getIpAddressType() {
+        return this.IpAddressType;
+    }
+
+    /**
+     * Set Protocol type. supports Ipv4 and Ipv6. default is Ipv4.
+     * @param IpAddressType Protocol type. supports Ipv4 and Ipv6. default is Ipv4.
+     */
+    public void setIpAddressType(String IpAddressType) {
+        this.IpAddressType = IpAddressType;
     }
 
     public CreateVpcEndPointRequest() {
@@ -187,6 +233,15 @@ public class CreateVpcEndPointRequest extends AbstractModel {
         if (source.SecurityGroupId != null) {
             this.SecurityGroupId = new String(source.SecurityGroupId);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.IpAddressType != null) {
+            this.IpAddressType = new String(source.IpAddressType);
+        }
     }
 
 
@@ -200,6 +255,8 @@ public class CreateVpcEndPointRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndPointServiceId", this.EndPointServiceId);
         this.setParamSimple(map, prefix + "EndPointVip", this.EndPointVip);
         this.setParamSimple(map, prefix + "SecurityGroupId", this.SecurityGroupId);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IpAddressType", this.IpAddressType);
 
     }
 }
