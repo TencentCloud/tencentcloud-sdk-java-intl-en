@@ -24,148 +24,161 @@ import java.util.HashMap;
 public class SearchMediaBySemanticsRequest extends AbstractModel {
 
     /**
-    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. for customers who activate on-demand services after december 25, 2023, this field must be filled with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
+    * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Specifies the search content.
+    * <p>Search content</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * Specifies the number of returned records. the default value is 20.
+    * <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * File type. matches any element in the collection: <li>Video: Video file</li> <li>Audio: Audio file</li> <li>Image: Image file</li>.
+    * <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
     */
     @SerializedName("Categories")
     @Expose
     private String [] Categories;
 
     /**
-    * Tag set, match any element in the collection. <li>single Tag length limit: 32 characters.</li> <li>array length limit: 16.</li>
+    * <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * Specifies the task type for the search. valid values:. 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
+    * <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
+    */
+    @SerializedName("Persons")
+    @Expose
+    private String [] Persons;
+
+    /**
+    * <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
     */
     @SerializedName("TaskTypes")
     @Expose
     private String [] TaskTypes;
 
     /**
-     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. for customers who activate on-demand services after december 25, 2023, this field must be filled with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b> 
-     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. for customers who activate on-demand services after december 25, 2023, this field must be filled with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
+     * Get <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. for customers who activate on-demand services after december 25, 2023, this field must be filled with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
-     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. for customers who activate on-demand services after december 25, 2023, this field must be filled with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
+     * Set <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Specifies the search content. 
-     * @return Text Specifies the search content.
+     * Get <p>Search content</p> 
+     * @return Text <p>Search content</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Specifies the search content.
-     * @param Text Specifies the search content.
+     * Set <p>Search content</p>
+     * @param Text <p>Search content</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get Specifies the number of returned records. the default value is 20. 
-     * @return Limit Specifies the number of returned records. the default value is 20.
+     * Get <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p> 
+     * @return Limit <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Specifies the number of returned records. the default value is 20.
-     * @param Limit Specifies the number of returned records. the default value is 20.
+     * Set <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
+     * @param Limit <p>Number of returned records. The default value is 20.</p><p>Value ranges from 1 to 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get File type. matches any element in the collection: <li>Video: Video file</li> <li>Audio: Audio file</li> <li>Image: Image file</li>. 
-     * @return Categories File type. matches any element in the collection: <li>Video: Video file</li> <li>Audio: Audio file</li> <li>Image: Image file</li>.
+     * Get <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p> 
+     * @return Categories <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
      */
     public String [] getCategories() {
         return this.Categories;
     }
 
     /**
-     * Set File type. matches any element in the collection: <li>Video: Video file</li> <li>Audio: Audio file</li> <li>Image: Image file</li>.
-     * @param Categories File type. matches any element in the collection: <li>Video: Video file</li> <li>Audio: Audio file</li> <li>Image: Image file</li>.
+     * Set <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
+     * @param Categories <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
      */
     public void setCategories(String [] Categories) {
         this.Categories = Categories;
     }
 
     /**
-     * Get Tag set, match any element in the collection. <li>single Tag length limit: 32 characters.</li> <li>array length limit: 16.</li> 
-     * @return Tags Tag set, match any element in the collection. <li>single Tag length limit: 32 characters.</li> <li>array length limit: 16.</li>
+     * Get <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p> 
+     * @return Tags <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag set, match any element in the collection. <li>single Tag length limit: 32 characters.</li> <li>array length limit: 16.</li>
-     * @param Tags Tag set, match any element in the collection. <li>single Tag length limit: 32 characters.</li> <li>array length limit: 16.</li>
+     * Set <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
+     * @param Tags <p>Tag set, match any element in the collection.</p><p>Input parameter limit: single tag length limited to 32 characters. Array length limit: 16.</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Specifies the task type for the search. valid values:. 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask 
-     * @return TaskTypes Specifies the task type for the search. valid values:. 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
+     * Get <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p> 
+     * @return Persons <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
+     */
+    public String [] getPersons() {
+        return this.Persons;
+    }
+
+    /**
+     * Set <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
+     * @param Persons <p>Figure collection, matching video clips where all imported figures appear.</p><p>Input limit: Array length limit: 16.</p>
+     */
+    public void setPersons(String [] Persons) {
+        this.Persons = Persons;
+    }
+
+    /**
+     * Get <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul> 
+     * @return TaskTypes <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      */
     public String [] getTaskTypes() {
         return this.TaskTypes;
     }
 
     /**
-     * Set Specifies the task type for the search. valid values:. 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
-     * @param TaskTypes Specifies the task type for the search. valid values:. 
-- AiAnalysis.DescriptionTask 
-- SmartSubtitle.AsrFullTextTask
+     * Set <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+     * @param TaskTypes <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
      */
     public void setTaskTypes(String [] TaskTypes) {
         this.TaskTypes = TaskTypes;
@@ -200,6 +213,12 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
                 this.Tags[i] = new String(source.Tags[i]);
             }
         }
+        if (source.Persons != null) {
+            this.Persons = new String[source.Persons.length];
+            for (int i = 0; i < source.Persons.length; i++) {
+                this.Persons[i] = new String(source.Persons[i]);
+            }
+        }
         if (source.TaskTypes != null) {
             this.TaskTypes = new String[source.TaskTypes.length];
             for (int i = 0; i < source.TaskTypes.length; i++) {
@@ -218,6 +237,7 @@ public class SearchMediaBySemanticsRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamArraySimple(map, prefix + "Categories.", this.Categories);
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
+        this.setParamArraySimple(map, prefix + "Persons.", this.Persons);
         this.setParamArraySimple(map, prefix + "TaskTypes.", this.TaskTypes);
 
     }

@@ -40,6 +40,13 @@ public class DBNode extends AbstractModel {
     private String Zone;
 
     /**
+    * CDC ID.
+    */
+    @SerializedName("DedicatedClusterId")
+    @Expose
+    private String DedicatedClusterId;
+
+    /**
      * Get Node type. Valid values:
 `Primary`;
 `Standby`. 
@@ -79,6 +86,22 @@ public class DBNode extends AbstractModel {
         this.Zone = Zone;
     }
 
+    /**
+     * Get CDC ID. 
+     * @return DedicatedClusterId CDC ID.
+     */
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
+    }
+
+    /**
+     * Set CDC ID.
+     * @param DedicatedClusterId CDC ID.
+     */
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
+    }
+
     public DBNode() {
     }
 
@@ -93,6 +116,9 @@ public class DBNode extends AbstractModel {
         if (source.Zone != null) {
             this.Zone = new String(source.Zone);
         }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
+        }
     }
 
 
@@ -102,6 +128,7 @@ public class DBNode extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Role", this.Role);
         this.setParamSimple(map, prefix + "Zone", this.Zone);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

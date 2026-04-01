@@ -59,24 +59,21 @@ public class DBInstanceNetInfo extends AbstractModel {
     private String Status;
 
     /**
-    * VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * VPC ID. specifies the ID of the virtual private cloud.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Subnet ID.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
     */
     @SerializedName("ProtocolType")
     @Expose
@@ -163,60 +160,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get VPC ID. specifies the ID of the virtual private cloud. 
+     * @return VpcId VPC ID. specifies the ID of the virtual private cloud.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set VPC ID. specifies the ID of the virtual private cloud.
+     * @param VpcId VPC ID. specifies the ID of the virtual private cloud.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SubnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Subnet ID. 
+     * @return SubnetId Subnet ID.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SubnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Subnet ID.
+     * @param SubnetId Subnet ID.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProtocolType Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax). 
+     * @return ProtocolType Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
      */
     public String getProtocolType() {
         return this.ProtocolType;
     }
 
     /**
-     * Set Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProtocolType Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
+     * @param ProtocolType Specifies the protocol type to connect to the database. currently supported: postgresql, mssql (mssql compatible syntax).
      */
     public void setProtocolType(String ProtocolType) {
         this.ProtocolType = ProtocolType;

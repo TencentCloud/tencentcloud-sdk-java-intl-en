@@ -38,6 +38,13 @@ public class ImportMediaKnowledgeRequest extends AbstractModel {
     private String FileId;
 
     /**
+    * Unique identifier of the Large Model Comprehend Template
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
     * Specifies the task type for importing the knowledge base. valid values:.
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask
@@ -79,13 +86,31 @@ public class ImportMediaKnowledgeRequest extends AbstractModel {
     }
 
     /**
+     * Get Unique identifier of the Large Model Comprehend Template 
+     * @return Definition Unique identifier of the Large Model Comprehend Template
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set Unique identifier of the Large Model Comprehend Template
+     * @param Definition Unique identifier of the Large Model Comprehend Template
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
+    }
+
+    /**
      * Get Specifies the task type for importing the knowledge base. valid values:.
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask 
      * @return ImportTasks Specifies the task type for importing the knowledge base. valid values:.
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask
+     * @deprecated
      */
+    @Deprecated
     public String [] getImportTasks() {
         return this.ImportTasks;
     }
@@ -97,7 +122,9 @@ public class ImportMediaKnowledgeRequest extends AbstractModel {
      * @param ImportTasks Specifies the task type for importing the knowledge base. valid values:.
 - AiAnalysis.DescriptionTask
 - SmartSubtitle.AsrFullTextTask
+     * @deprecated
      */
+    @Deprecated
     public void setImportTasks(String [] ImportTasks) {
         this.ImportTasks = ImportTasks;
     }
@@ -116,6 +143,9 @@ public class ImportMediaKnowledgeRequest extends AbstractModel {
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
         if (source.ImportTasks != null) {
             this.ImportTasks = new String[source.ImportTasks.length];
             for (int i = 0; i < source.ImportTasks.length; i++) {
@@ -131,6 +161,7 @@ public class ImportMediaKnowledgeRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamArraySimple(map, prefix + "ImportTasks.", this.ImportTasks);
 
     }

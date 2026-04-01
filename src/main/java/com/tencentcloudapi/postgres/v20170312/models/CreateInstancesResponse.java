@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateInstancesResponse extends AbstractModel {
 
     /**
-    * Order number list. Each instance corresponds to an order number.
+    * <p>Order number list. Each instance corresponds to an order number.</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * Bill ID of frozen fees
+    * <p>Frozen transaction ID.</p>
     */
     @SerializedName("BillId")
     @Expose
     private String BillId;
 
     /**
-    * ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+    * <p>ID set of successfully created instances. Return value is available only in pay scenarios.</p>
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
@@ -52,48 +52,48 @@ public class CreateInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Order number list. Each instance corresponds to an order number. 
-     * @return DealNames Order number list. Each instance corresponds to an order number.
+     * Get <p>Order number list. Each instance corresponds to an order number.</p> 
+     * @return DealNames <p>Order number list. Each instance corresponds to an order number.</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Order number list. Each instance corresponds to an order number.
-     * @param DealNames Order number list. Each instance corresponds to an order number.
+     * Set <p>Order number list. Each instance corresponds to an order number.</p>
+     * @param DealNames <p>Order number list. Each instance corresponds to an order number.</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get Bill ID of frozen fees 
-     * @return BillId Bill ID of frozen fees
+     * Get <p>Frozen transaction ID.</p> 
+     * @return BillId <p>Frozen transaction ID.</p>
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set Bill ID of frozen fees
-     * @param BillId Bill ID of frozen fees
+     * Set <p>Frozen transaction ID.</p>
+     * @param BillId <p>Frozen transaction ID.</p>
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used. 
-     * @return DBInstanceIdSet ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+     * Get <p>ID set of successfully created instances. Return value is available only in pay scenarios.</p> 
+     * @return DBInstanceIdSet <p>ID set of successfully created instances. Return value is available only in pay scenarios.</p>
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
-     * @param DBInstanceIdSet ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+     * Set <p>ID set of successfully created instances. Return value is available only in pay scenarios.</p>
+     * @param DBInstanceIdSet <p>ID set of successfully created instances. Return value is available only in pay scenarios.</p>
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;

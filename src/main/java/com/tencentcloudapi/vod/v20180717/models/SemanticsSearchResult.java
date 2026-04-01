@@ -45,7 +45,7 @@ public class SemanticsSearchResult extends AbstractModel {
     private Float StartTimeOffset;
 
     /**
-    * Specifies the end time of the video clip, in seconds.
+    * Segment end time of the video, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
@@ -100,16 +100,16 @@ public class SemanticsSearchResult extends AbstractModel {
     }
 
     /**
-     * Get Specifies the end time of the video clip, in seconds. 
-     * @return EndTimeOffset Specifies the end time of the video clip, in seconds.
+     * Get Segment end time of the video, in seconds. 
+     * @return EndTimeOffset Segment end time of the video, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set Specifies the end time of the video clip, in seconds.
-     * @param EndTimeOffset Specifies the end time of the video clip, in seconds.
+     * Set Segment end time of the video, in seconds.
+     * @param EndTimeOffset Segment end time of the video, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

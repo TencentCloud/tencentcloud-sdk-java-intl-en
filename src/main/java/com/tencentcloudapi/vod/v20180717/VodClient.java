@@ -320,6 +320,17 @@ This API is used to create a custom audio/video moderation template. Up to 50 te
     }
 
     /**
+     *Create a large model comprehend template
+     * @param req CreateLLMComprehendTemplateRequest
+     * @return CreateLLMComprehendTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLLMComprehendTemplateResponse CreateLLMComprehendTemplate(CreateLLMComprehendTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLLMComprehendTemplate", CreateLLMComprehendTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create samples for using facial features positioning and other technologies to perform video processing operations such as content recognition and inappropriate information recognition.
      * @param req CreatePersonSampleRequest
      * @return CreatePersonSampleResponse
@@ -647,6 +658,19 @@ This API is used to delete a custom audio/video moderation template.
     public DeleteJustInTimeTranscodeTemplateResponse DeleteJustInTimeTranscodeTemplate(DeleteJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteJustInTimeTranscodeTemplate", DeleteJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
+     *This API is used to delete a user-customized  large model comprehend template.
+
+Note: Templates with an ID below 10000 are system-preset templates and cannot be deleted.
+     * @param req DeleteLLMComprehendTemplateRequest
+     * @return DeleteLLMComprehendTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLLMComprehendTemplateResponse DeleteLLMComprehendTemplate(DeleteLLMComprehendTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLLMComprehendTemplate", DeleteLLMComprehendTemplateResponse.class);
     }
 
     /**
@@ -1100,6 +1124,17 @@ This API is used to get the information of custom and [preset](https://intl.clou
     public DescribeJustInTimeTranscodeTemplatesResponse DescribeJustInTimeTranscodeTemplates(DescribeJustInTimeTranscodeTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeJustInTimeTranscodeTemplates", DescribeJustInTimeTranscodeTemplatesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the template detail list based on the Template Unique Identifier of the large model comprehend template. The returned results include all eligible customized large model parsing templates.
+     * @param req DescribeLLMComprehendTemplatesRequest
+     * @return DescribeLLMComprehendTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLLMComprehendTemplatesResponse DescribeLLMComprehendTemplates(DescribeLLMComprehendTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLLMComprehendTemplates", DescribeLLMComprehendTemplatesResponse.class);
     }
 
     /**
@@ -1732,6 +1767,17 @@ Developers can achieve this by calling this interface:
     public ModifyJustInTimeTranscodeTemplateResponse ModifyJustInTimeTranscodeTemplate(ModifyJustInTimeTranscodeTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyJustInTimeTranscodeTemplate", ModifyJustInTimeTranscodeTemplateResponse.class);
+    }
+
+    /**
+     *Modify the parsing template of a large model
+     * @param req ModifyLLMComprehendTemplateRequest
+     * @return ModifyLLMComprehendTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLLMComprehendTemplateResponse ModifyLLMComprehendTemplate(ModifyLLMComprehendTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLLMComprehendTemplate", ModifyLLMComprehendTemplateResponse.class);
     }
 
     /**

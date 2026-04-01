@@ -32,7 +32,7 @@ The information of AZ can be obtained from the `Zone` field in the return value 
     private String Zone;
 
     /**
-    * ID of the primary instance to which the read-only instance belongs
+    * Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("MasterDBInstanceId")
     @Expose
@@ -46,57 +46,57 @@ The information of AZ can be obtained from the `Zone` field in the return value 
     private String SpecCode;
 
     /**
-    * Instance storage capacity in GB
+    * Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
+    * Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * Validity period in months, valid values:
-<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+    * Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+    * VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+    * VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Instance billing mode. Valid values: 
-<li>`PREPAID`: Monthly subscription
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
-Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
+    * Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+    * Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
     */
     @SerializedName("AutoVoucher")
     @Expose
@@ -110,17 +110,17 @@ Default value: `0`.
     private String [] VoucherIds;
 
     /**
-    * Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+    * Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * Project ID
+    * Project ID. default value is 0, means it belongs to the default project.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -156,35 +156,42 @@ Default value: `0`.
     private String [] SecurityGroupIds;
 
     /**
-    * Whether IPv6 is supported.
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+    * Specifies whether to support Ipv6.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
     */
     @SerializedName("NeedSupportIpv6")
     @Expose
     private Long NeedSupportIpv6;
 
     /**
-    * Instance name (which will be supported in the future)
+    * Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+    * Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
     */
     @SerializedName("DBVersion")
     @Expose
     private String DBVersion;
 
     /**
-    * <p>Dedicated Cluster ID</p>
+    * CDC ID.
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
+
+    /**
+    * Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
 
     /**
      * Get Primary AZ of an instance, such as "ap-guangzhou-3".
@@ -207,16 +214,16 @@ The information of AZ can be obtained from the `Zone` field in the return value 
     }
 
     /**
-     * Get ID of the primary instance to which the read-only instance belongs 
-     * @return MasterDBInstanceId ID of the primary instance to which the read-only instance belongs
+     * Get Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). 
+     * @return MasterDBInstanceId Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
      */
     public String getMasterDBInstanceId() {
         return this.MasterDBInstanceId;
     }
 
     /**
-     * Set ID of the primary instance to which the read-only instance belongs
-     * @param MasterDBInstanceId ID of the primary instance to which the read-only instance belongs
+     * Set Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * @param MasterDBInstanceId Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
      */
     public void setMasterDBInstanceId(String MasterDBInstanceId) {
         this.MasterDBInstanceId = MasterDBInstanceId;
@@ -239,144 +246,144 @@ The information of AZ can be obtained from the `Zone` field in the return value 
     }
 
     /**
-     * Get Instance storage capacity in GB 
-     * @return Storage Instance storage capacity in GB
+     * Get Instance disk capacity size in GB. specifies the step length for parameter settings as 10. 
+     * @return Storage Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Instance storage capacity in GB
-     * @param Storage Instance storage capacity in GB
+     * Set Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
+     * @param Storage Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls. 
-     * @return InstanceCount The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
+     * Get Number of instances to purchase. value range: [1-6]. maximum allowed number is 6. 
+     * @return InstanceCount Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
-     * @param InstanceCount The number of instances to be purchased at a time. Value range: 1-10. To purchase more than 10 instances each time, you can make multiple calls.
+     * Set Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
+     * @param InstanceCount Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get Validity period in months, valid values:
-<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`. 
-     * @return Period Validity period in months, valid values:
-<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+     * Get Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li> 
+     * @return Period Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Validity period in months, valid values:
-<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
-     * @param Period Validity period in months, valid values:
-<li>Monthly subscription: `1`, `2`, `3`, 4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`.
-<li>Pay-as-you-go: `1`.
+     * Set Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
+     * @param Period Purchase duration, in months.
+<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
+<li>Pay-as-you-go: Only supports `1`.</li>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API. 
-     * @return VpcId VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+     * Get VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API. 
+     * @return VpcId VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
-     * @param VpcId VPC ID in the format of `vpc-xxxxxxx`, which can be obtained in the console or from the `unVpcId` field in the return value of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+     * Set VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+     * @param VpcId VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. 
-     * @return SubnetId VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+     * Get VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. 
+     * @return SubnetId VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
-     * @param SubnetId VPC subnet ID in the format of `subnet-xxxxxxxx` which can be obtained in the console or from the `unSubnetId` field in the return value of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+     * Set VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+     * @param SubnetId VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Instance billing mode. Valid values: 
-<li>`PREPAID`: Monthly subscription
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
-Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance. 
-     * @return InstanceChargeType Instance billing mode. Valid values: 
-<li>`PREPAID`: Monthly subscription
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
-Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
+     * Get Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid. 
+     * @return InstanceChargeType Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing mode. Valid values: 
-<li>`PREPAID`: Monthly subscription
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
-Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
-     * @param InstanceChargeType Instance billing mode. Valid values: 
-<li>`PREPAID`: Monthly subscription
-<li>`POSTPAID_BY_HOUR`: Pay-as-you-go
-Default value: `PREPAID`. If the primary instance is pay-as-you-go, so is the read-only instance.
+     * Set Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
+     * @param InstanceChargeType Instance billing type, which currently supports:.
+<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
+<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
+Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`. 
-     * @return AutoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+     * Get Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0 
+     * @return AutoVoucher Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-     * @param AutoVoucher Whether to use vouchers automatically. Valid values:
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+     * Set Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
+     * @param AutoVoucher Specifies whether to automatically use a voucher.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
@@ -399,44 +406,44 @@ Default value: `0`.
     }
 
     /**
-     * Get Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`. 
-     * @return AutoRenewFlag Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+     * Get Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0 
+     * @return AutoRenewFlag Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
-     * @param AutoRenewFlag Auto-renewal flag. Valid values:
-<li>`0`: Manual renewal.
-<li>`1`: Automatic renewal.
-Default value: `0`.
+     * Set Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
+     * @param AutoRenewFlag Specifies the auto-renewal flag.
+<Li>`0`: manual renewal.</li>.
+<Li>`1`: auto-renewal</li>.
+Default value: 0
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID. default value is 0, means it belongs to the default project. 
+     * @return ProjectId Project ID. default value is 0, means it belongs to the default project.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID. default value is 0, means it belongs to the default project.
+     * @param ProjectId Project ID. default value is 0, means it belongs to the default project.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -511,52 +518,52 @@ Default value: `0`.
     }
 
     /**
-     * Get Whether IPv6 is supported.
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`. 
-     * @return NeedSupportIpv6 Whether IPv6 is supported.
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+     * Get Specifies whether to support Ipv6.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0 
+     * @return NeedSupportIpv6 Specifies whether to support Ipv6.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
      */
     public Long getNeedSupportIpv6() {
         return this.NeedSupportIpv6;
     }
 
     /**
-     * Set Whether IPv6 is supported.
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
-     * @param NeedSupportIpv6 Whether IPv6 is supported.
-<li>`0`: No.
-<li>`1`: Yes.
-Default value: `0`.
+     * Set Specifies whether to support Ipv6.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
+     * @param NeedSupportIpv6 Specifies whether to support Ipv6.
+<Li>0: no.</li>.
+<Li>`1`: yes.</li>.
+Default value: 0
      */
     public void setNeedSupportIpv6(Long NeedSupportIpv6) {
         this.NeedSupportIpv6 = NeedSupportIpv6;
     }
 
     /**
-     * Get Instance name (which will be supported in the future) 
-     * @return Name Instance name (which will be supported in the future)
+     * Get Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters. 
+     * @return Name Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Instance name (which will be supported in the future)
-     * @param Name Instance name (which will be supported in the future)
+     * Set Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
+     * @param Name Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance. 
-     * @return DBVersion (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+     * Get Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified. 
+     * @return DBVersion Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
      * @deprecated
      */
     @Deprecated
@@ -565,8 +572,8 @@ Default value: `0`.
     }
 
     /**
-     * Set (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
-     * @param DBVersion (Disused) You don't need to specify a version, as the kernel version is as the same as that of the instance.
+     * Set Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
+     * @param DBVersion Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
      * @deprecated
      */
     @Deprecated
@@ -575,19 +582,35 @@ Default value: `0`.
     }
 
     /**
-     * Get <p>Dedicated Cluster ID</p> 
-     * @return DedicatedClusterId <p>Dedicated Cluster ID</p>
+     * Get CDC ID. 
+     * @return DedicatedClusterId CDC ID.
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set <p>Dedicated Cluster ID</p>
-     * @param DedicatedClusterId <p>Dedicated Cluster ID</p>
+     * Set CDC ID.
+     * @param DedicatedClusterId CDC ID.
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
+    }
+
+    /**
+     * Get Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection). 
+     * @return DeletionProtection Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+     * @param DeletionProtection Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
     }
 
     public CreateReadOnlyDBInstanceRequest() {
@@ -667,6 +690,9 @@ Default value: `0`.
         if (source.DedicatedClusterId != null) {
             this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -695,6 +721,7 @@ Default value: `0`.
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DBVersion", this.DBVersion);
         this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

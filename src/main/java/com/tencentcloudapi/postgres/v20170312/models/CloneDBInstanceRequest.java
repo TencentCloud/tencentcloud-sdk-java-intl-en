@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CloneDBInstanceRequest extends AbstractModel {
 
     /**
-    * ID of the original instance to be cloned.
+    * The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -38,7 +38,7 @@ public class CloneDBInstanceRequest extends AbstractModel {
     private String SpecCode;
 
     /**
-    * Instance storage capacity in GB.
+    * Instance disk capacity size. set step size to 10. unit: GB.
     */
     @SerializedName("Storage")
     @Expose
@@ -56,10 +56,11 @@ public class CloneDBInstanceRequest extends AbstractModel {
     private Long Period;
 
     /**
-    * Renewal Flag:
+    * Specifies the auto-renewal flag. this parameter is valid only when the billing mode is prepaid.
+Valid values:.
 
-- `0`: manual renewal
-`1`: auto-renewal
+- `0`: specifies manual renewal.
+-`1`: specifies auto-renewal.
 
 Default value: 0
     */
@@ -82,7 +83,7 @@ Default value: 0
     private String SubnetId;
 
     /**
-    * Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
+    * Specifies the instance name for new purchase, only supports chinese/english/digits/"_"/"-" with length less than 60. displays "source instance name-Copy" by default if no instance name is specified.
     */
     @SerializedName("Name")
     @Expose
@@ -91,7 +92,7 @@ Default value: 0
     /**
     * Instance billing type, which currently supports:
 
-- PREPAID: Prepaid, i.e., monthly subscription
+- PREPAID: Prepaid, i.e., yearly/monthly subscription
 - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
 
 Default value: PREPAID
@@ -101,7 +102,7 @@ Default value: PREPAID
     private String InstanceChargeType;
 
     /**
-    * Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+    * Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
     */
     @SerializedName("SecurityGroupIds")
@@ -109,7 +110,7 @@ Default value: PREPAID
     private String [] SecurityGroupIds;
 
     /**
-    * Project ID.
+    * Project ID. default value is 0, which means it belongs to the default project.
     */
     @SerializedName("ProjectId")
     @Expose
@@ -123,8 +124,8 @@ Default value: PREPAID
     private Tag [] TagList;
 
     /**
-    * Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+    * Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
     */
     @SerializedName("DBNodeSet")
     @Expose
@@ -157,14 +158,14 @@ Default value: 0
     private Long ActivityId;
 
     /**
-    * Basic backup set ID.
+    * Basic backup set ID. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
     */
     @SerializedName("BackupSetId")
     @Expose
     private String BackupSetId;
 
     /**
-    * Restoration point in time.
+    * Specifies the recovery time point. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
     */
     @SerializedName("RecoveryTargetTime")
     @Expose
@@ -182,16 +183,23 @@ Default value for the read-only instance: Async
     private String SyncMode;
 
     /**
-     * Get ID of the original instance to be cloned. 
-     * @return DBInstanceId ID of the original instance to be cloned.
+    * Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+    */
+    @SerializedName("DeletionProtection")
+    @Expose
+    private Boolean DeletionProtection;
+
+    /**
+     * Get The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set ID of the original instance to be cloned.
-     * @param DBInstanceId ID of the original instance to be cloned.
+     * Set The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId The source instance ID to be cloned. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -214,16 +222,16 @@ Default value for the read-only instance: Async
     }
 
     /**
-     * Get Instance storage capacity in GB. 
-     * @return Storage Instance storage capacity in GB.
+     * Get Instance disk capacity size. set step size to 10. unit: GB. 
+     * @return Storage Instance disk capacity size. set step size to 10. unit: GB.
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Instance storage capacity in GB.
-     * @param Storage Instance storage capacity in GB.
+     * Set Instance disk capacity size. set step size to 10. unit: GB.
+     * @param Storage Instance disk capacity size. set step size to 10. unit: GB.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -262,16 +270,18 @@ Default value for the read-only instance: Async
     }
 
     /**
-     * Get Renewal Flag:
+     * Get Specifies the auto-renewal flag. this parameter is valid only when the billing mode is prepaid.
+Valid values:.
 
-- `0`: manual renewal
-`1`: auto-renewal
+- `0`: specifies manual renewal.
+-`1`: specifies auto-renewal.
 
 Default value: 0 
-     * @return AutoRenewFlag Renewal Flag:
+     * @return AutoRenewFlag Specifies the auto-renewal flag. this parameter is valid only when the billing mode is prepaid.
+Valid values:.
 
-- `0`: manual renewal
-`1`: auto-renewal
+- `0`: specifies manual renewal.
+-`1`: specifies auto-renewal.
 
 Default value: 0
      */
@@ -280,16 +290,18 @@ Default value: 0
     }
 
     /**
-     * Set Renewal Flag:
+     * Set Specifies the auto-renewal flag. this parameter is valid only when the billing mode is prepaid.
+Valid values:.
 
-- `0`: manual renewal
-`1`: auto-renewal
+- `0`: specifies manual renewal.
+-`1`: specifies auto-renewal.
 
 Default value: 0
-     * @param AutoRenewFlag Renewal Flag:
+     * @param AutoRenewFlag Specifies the auto-renewal flag. this parameter is valid only when the billing mode is prepaid.
+Valid values:.
 
-- `0`: manual renewal
-`1`: auto-renewal
+- `0`: specifies manual renewal.
+-`1`: specifies auto-renewal.
 
 Default value: 0
      */
@@ -330,16 +342,16 @@ Default value: 0
     }
 
     /**
-     * Get Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default. 
-     * @return Name Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
+     * Get Specifies the instance name for new purchase, only supports chinese/english/digits/"_"/"-" with length less than 60. displays "source instance name-Copy" by default if no instance name is specified. 
+     * @return Name Specifies the instance name for new purchase, only supports chinese/english/digits/"_"/"-" with length less than 60. displays "source instance name-Copy" by default if no instance name is specified.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
-     * @param Name Name of the newly purchased instance, which can contain up to 60 letters, digits, or symbols (-_). If this parameter is not specified, "Unnamed" will be displayed by default.
+     * Set Specifies the instance name for new purchase, only supports chinese/english/digits/"_"/"-" with length less than 60. displays "source instance name-Copy" by default if no instance name is specified.
+     * @param Name Specifies the instance name for new purchase, only supports chinese/english/digits/"_"/"-" with length less than 60. displays "source instance name-Copy" by default if no instance name is specified.
      */
     public void setName(String Name) {
         this.Name = Name;
@@ -348,13 +360,13 @@ Default value: 0
     /**
      * Get Instance billing type, which currently supports:
 
-- PREPAID: Prepaid, i.e., monthly subscription
+- PREPAID: Prepaid, i.e., yearly/monthly subscription
 - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
 
 Default value: PREPAID 
      * @return InstanceChargeType Instance billing type, which currently supports:
 
-- PREPAID: Prepaid, i.e., monthly subscription
+- PREPAID: Prepaid, i.e., yearly/monthly subscription
 - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
 
 Default value: PREPAID
@@ -366,13 +378,13 @@ Default value: PREPAID
     /**
      * Set Instance billing type, which currently supports:
 
-- PREPAID: Prepaid, i.e., monthly subscription
+- PREPAID: Prepaid, i.e., yearly/monthly subscription
 - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
 
 Default value: PREPAID
      * @param InstanceChargeType Instance billing type, which currently supports:
 
-- PREPAID: Prepaid, i.e., monthly subscription
+- PREPAID: Prepaid, i.e., yearly/monthly subscription
 - POSTPAID_BY_HOUR: Pay-as-you-go, i.e., pay by consumption
 
 Default value: PREPAID
@@ -382,9 +394,9 @@ Default value: PREPAID
     }
 
     /**
-     * Get Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+     * Get Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
  
-     * @return SecurityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+     * @return SecurityGroupIds Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
      */
     public String [] getSecurityGroupIds() {
@@ -392,9 +404,9 @@ Default value: PREPAID
     }
 
     /**
-     * Set Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+     * Set Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
-     * @param SecurityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
+     * @param SecurityGroupIds Security group to which an instance belongs. obtain this parameter by calling the SecurityGroupId field in the return value of [DescribeSecurityGroups](https://www.tencentcloud.comom/document/api/215/15808?from_cn_redirect=1). if not specified, the default security group is bound.
 
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
@@ -402,16 +414,16 @@ Default value: PREPAID
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get Project ID. default value is 0, which means it belongs to the default project. 
+     * @return ProjectId Project ID. default value is 0, which means it belongs to the default project.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set Project ID. default value is 0, which means it belongs to the default project.
+     * @param ProjectId Project ID. default value is 0, which means it belongs to the default project.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
@@ -434,20 +446,20 @@ Default value: PREPAID
     }
 
     /**
-     * Get Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API. 
-     * @return DBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+     * Get Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value. 
+     * @return DBNodeSet Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
      */
     public DBNode [] getDBNodeSet() {
         return this.DBNodeSet;
     }
 
     /**
-     * Set Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
-     * @param DBNodeSet Deployment information of the instance node, which will display the information of each AZ when the instance node is deployed across multiple AZs.
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+     * Set Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
+     * @param DBNodeSet Deployment information of instance nodes. the availability zone of primary and secondary nodes is required. when multi-availability zone deployment is supported, the availability zone information for each node must be specified.
+AZ information can be obtained by calling the DescribeZones api (https://www.tencentcloud.comom/document/api/409/16769?from_cn_redirect=1) and checking the Zone field in the returned value.
      */
     public void setDBNodeSet(DBNode [] DBNodeSet) {
         this.DBNodeSet = DBNodeSet;
@@ -522,32 +534,32 @@ Default value: 0
     }
 
     /**
-     * Get Basic backup set ID. 
-     * @return BackupSetId Basic backup set ID.
+     * Get Basic backup set ID. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both. 
+     * @return BackupSetId Basic backup set ID. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
      */
     public String getBackupSetId() {
         return this.BackupSetId;
     }
 
     /**
-     * Set Basic backup set ID.
-     * @param BackupSetId Basic backup set ID.
+     * Set Basic backup set ID. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
+     * @param BackupSetId Basic backup set ID. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
      */
     public void setBackupSetId(String BackupSetId) {
         this.BackupSetId = BackupSetId;
     }
 
     /**
-     * Get Restoration point in time. 
-     * @return RecoveryTargetTime Restoration point in time.
+     * Get Specifies the recovery time point. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both. 
+     * @return RecoveryTargetTime Specifies the recovery time point. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
      */
     public String getRecoveryTargetTime() {
         return this.RecoveryTargetTime;
     }
 
     /**
-     * Set Restoration point in time.
-     * @param RecoveryTargetTime Restoration point in time.
+     * Set Specifies the recovery time point. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
+     * @param RecoveryTargetTime Specifies the recovery time point. either `BackupSetId` or `RecoveryTargetTime` must be provided, and cannot include both.
      */
     public void setRecoveryTargetTime(String RecoveryTargetTime) {
         this.RecoveryTargetTime = RecoveryTargetTime;
@@ -583,6 +595,22 @@ Default value for the read-only instance: Async
      */
     public void setSyncMode(String SyncMode) {
         this.SyncMode = SyncMode;
+    }
+
+    /**
+     * Get Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection). 
+     * @return DeletionProtection Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+     */
+    public Boolean getDeletionProtection() {
+        return this.DeletionProtection;
+    }
+
+    /**
+     * Set Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+     * @param DeletionProtection Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+     */
+    public void setDeletionProtection(Boolean DeletionProtection) {
+        this.DeletionProtection = DeletionProtection;
     }
 
     public CloneDBInstanceRequest() {
@@ -659,6 +687,9 @@ Default value for the read-only instance: Async
         if (source.SyncMode != null) {
             this.SyncMode = new String(source.SyncMode);
         }
+        if (source.DeletionProtection != null) {
+            this.DeletionProtection = new Boolean(source.DeletionProtection);
+        }
     }
 
 
@@ -685,6 +716,7 @@ Default value for the read-only instance: Async
         this.setParamSimple(map, prefix + "BackupSetId", this.BackupSetId);
         this.setParamSimple(map, prefix + "RecoveryTargetTime", this.RecoveryTargetTime);
         this.setParamSimple(map, prefix + "SyncMode", this.SyncMode);
+        this.setParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
 
     }
 }

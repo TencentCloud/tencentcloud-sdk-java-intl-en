@@ -24,224 +24,184 @@ import java.util.HashMap;
 public class NetworkAccess extends AbstractModel {
 
     /**
-    * Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Network resource id, instance id, or RO group id.
     */
     @SerializedName("ResourceId")
     @Expose
     private String ResourceId;
 
     /**
-    * Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Resource type. valid values: 1 (instance), 2 (RO group).
     */
     @SerializedName("ResourceType")
     @Expose
     private Long ResourceType;
 
     /**
-    * VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * VPC ID. specifies the ID of the virtual private cloud.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * IPv4 Address
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * IPv6 Address
     */
     @SerializedName("Vip6")
     @Expose
     private String Vip6;
 
     /**
-    * Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the access port.
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Subnet ID.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
     */
     @SerializedName("VpcStatus")
     @Expose
     private Long VpcStatus;
 
     /**
-     * Get Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ResourceId Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Network resource id, instance id, or RO group id. 
+     * @return ResourceId Network resource id, instance id, or RO group id.
      */
     public String getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ResourceId Network resource ID, instance ID, or RO group ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Network resource id, instance id, or RO group id.
+     * @param ResourceId Network resource id, instance id, or RO group id.
      */
     public void setResourceId(String ResourceId) {
         this.ResourceId = ResourceId;
     }
 
     /**
-     * Get Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ResourceType Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Resource type. valid values: 1 (instance), 2 (RO group). 
+     * @return ResourceType Resource type. valid values: 1 (instance), 2 (RO group).
      */
     public Long getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ResourceType Resource type. Valid values: `1` (instance), `2` (RO group)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Resource type. valid values: 1 (instance), 2 (RO group).
+     * @param ResourceType Resource type. valid values: 1 (instance), 2 (RO group).
      */
     public void setResourceType(Long ResourceType) {
         this.ResourceType = ResourceType;
     }
 
     /**
-     * Get VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get VPC ID. specifies the ID of the virtual private cloud. 
+     * @return VpcId VPC ID. specifies the ID of the virtual private cloud.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set VPC ID. specifies the ID of the virtual private cloud.
+     * @param VpcId VPC ID. specifies the ID of the virtual private cloud.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Vip IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get IPv4 Address 
+     * @return Vip IPv4 Address
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Vip IPv4 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set IPv4 Address
+     * @param Vip IPv4 Address
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Vip6 IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get IPv6 Address 
+     * @return Vip6 IPv6 Address
      */
     public String getVip6() {
         return this.Vip6;
     }
 
     /**
-     * Set IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Vip6 IPv6 address
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set IPv6 Address
+     * @param Vip6 IPv6 Address
      */
     public void setVip6(String Vip6) {
         this.Vip6 = Vip6;
     }
 
     /**
-     * Get Access port
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Vport Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the access port. 
+     * @return Vport Specifies the access port.
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Vport Access port
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the access port.
+     * @param Vport Specifies the access port.
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SubnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Subnet ID. 
+     * @return SubnetId Subnet ID.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SubnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Subnet ID.
+     * @param SubnetId Subnet ID.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return VpcStatus Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted. 
+     * @return VpcStatus Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
      */
     public Long getVpcStatus() {
         return this.VpcStatus;
     }
 
     /**
-     * Set Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param VpcStatus Network status. Valid values: `1` (applying), `2` (in use), `3` (deleting), `4` (deleted)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
+     * @param VpcStatus Network status. valid values: 1-applying, 2-active, 3-deleting, 4-deleted.
      */
     public void setVpcStatus(Long VpcStatus) {
         this.VpcStatus = VpcStatus;
