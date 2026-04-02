@@ -3262,7 +3262,7 @@ Note: Only the name and description can be modified.
     }
 
     /**
-     *This API (RenewVpnGateway) is used to renew prepaid (monthly subscription) VPN gateways. Currently, only IPSEC gateways are supported.
+     *This API (RenewVpnGateway) is used to renew prepaid (yearly/monthly subscription) VPN gateways. Currently, only IPSEC gateways are supported.
      * @param req RenewVpnGatewayRequest
      * @return RenewVpnGatewayResponse
      * @throws TencentCloudSDKException

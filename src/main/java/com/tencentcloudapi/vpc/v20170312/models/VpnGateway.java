@@ -108,7 +108,7 @@ public class VpnGateway extends AbstractModel {
     private Boolean IsAddressBlocked;
 
     /**
-    * Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+    * Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
     */
     @SerializedName("NewPurchasePlan")
     @Expose
@@ -162,6 +162,13 @@ public class VpnGateway extends AbstractModel {
     @SerializedName("MaxConnection")
     @Expose
     private Long MaxConnection;
+
+    /**
+    * 
+    */
+    @SerializedName("BgpAsn")
+    @Expose
+    private Long BgpAsn;
 
     /**
      * Get Gateway instance ID. 
@@ -356,16 +363,16 @@ public class VpnGateway extends AbstractModel {
     }
 
     /**
-     * Get Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour. 
-     * @return NewPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+     * Get Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour. 
+     * @return NewPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
      */
     public String getNewPurchasePlan() {
         return this.NewPurchasePlan;
     }
 
     /**
-     * Set Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
-     * @param NewPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Monthly subscription prepaid to postpaid by hour.
+     * Set Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
+     * @param NewPurchasePlan Change of billing method. PREPAID_TO_POSTPAID: Yearly/monthly subscription prepaid to postpaid by hour.
      */
     public void setNewPurchasePlan(String NewPurchasePlan) {
         this.NewPurchasePlan = NewPurchasePlan;
@@ -483,6 +490,22 @@ public class VpnGateway extends AbstractModel {
         this.MaxConnection = MaxConnection;
     }
 
+    /**
+     * Get  
+     * @return BgpAsn 
+     */
+    public Long getBgpAsn() {
+        return this.BgpAsn;
+    }
+
+    /**
+     * Set 
+     * @param BgpAsn 
+     */
+    public void setBgpAsn(Long BgpAsn) {
+        this.BgpAsn = BgpAsn;
+    }
+
     public VpnGateway() {
     }
 
@@ -554,6 +577,9 @@ public class VpnGateway extends AbstractModel {
         if (source.MaxConnection != null) {
             this.MaxConnection = new Long(source.MaxConnection);
         }
+        if (source.BgpAsn != null) {
+            this.BgpAsn = new Long(source.BgpAsn);
+        }
     }
 
 
@@ -581,6 +607,7 @@ public class VpnGateway extends AbstractModel {
         this.setParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
+        this.setParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
 
     }
 }

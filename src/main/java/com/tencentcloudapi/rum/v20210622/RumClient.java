@@ -223,6 +223,17 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
+     *This API is used to obtain DescribeDataBridgeUrl information.
+     * @param req DescribeDataBridgeUrlV2Request
+     * @return DescribeDataBridgeUrlV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataBridgeUrlV2Response DescribeDataBridgeUrlV2(DescribeDataBridgeUrlV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataBridgeUrlV2", DescribeDataBridgeUrlV2Response.class);
+    }
+
+    /**
      *This API is used to get the DescribeDataCustomUrl information.
      * @param req DescribeDataCustomUrlRequest
      * @return DescribeDataCustomUrlResponse
@@ -234,6 +245,17 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
+     *This API is used to obtain DescribeDataCustomUrl information.
+     * @param req DescribeDataCustomUrlV2Request
+     * @return DescribeDataCustomUrlV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataCustomUrlV2Response DescribeDataCustomUrlV2(DescribeDataCustomUrlV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataCustomUrlV2", DescribeDataCustomUrlV2Response.class);
+    }
+
+    /**
      *This API is used to get the DescribeDataEventUrl information.
      * @param req DescribeDataEventUrlRequest
      * @return DescribeDataEventUrlResponse
@@ -242,6 +264,17 @@ Default API request rate limit: 20 requests/sec.
     public DescribeDataEventUrlResponse DescribeDataEventUrl(DescribeDataEventUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataEventUrl", DescribeDataEventUrlResponse.class);
+    }
+
+    /**
+     *This API is used to obtain DescribeDataEventUrl information.
+     * @param req DescribeDataEventUrlV2Request
+     * @return DescribeDataEventUrlV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataEventUrlV2Response DescribeDataEventUrlV2(DescribeDataEventUrlV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataEventUrlV2", DescribeDataEventUrlV2Response.class);
     }
 
     /**
@@ -278,6 +311,17 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
+     *This API is used to obtain DescribeDataFetchUrl information.
+     * @param req DescribeDataFetchUrlV2Request
+     * @return DescribeDataFetchUrlV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataFetchUrlV2Response DescribeDataFetchUrlV2(DescribeDataFetchUrlV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataFetchUrlV2", DescribeDataFetchUrlV2Response.class);
+    }
+
+    /**
      *This API is used to get the loginfo information.
      * @param req DescribeDataLogUrlInfoRequest
      * @return DescribeDataLogUrlInfoResponse
@@ -300,6 +344,17 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
+     *This API is used to obtain LogUrlStatistics information.
+     * @param req DescribeDataLogUrlStatisticsV2Request
+     * @return DescribeDataLogUrlStatisticsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataLogUrlStatisticsV2Response DescribeDataLogUrlStatisticsV2(DescribeDataLogUrlStatisticsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataLogUrlStatisticsV2", DescribeDataLogUrlStatisticsV2Response.class);
+    }
+
+    /**
      *This API is used to get the PerformancePage information.
      * @param req DescribeDataPerformancePageRequest
      * @return DescribeDataPerformancePageResponse
@@ -308,6 +363,17 @@ Default API request rate limit: 20 requests/sec.
     public DescribeDataPerformancePageResponse DescribeDataPerformancePage(DescribeDataPerformancePageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataPerformancePage", DescribeDataPerformancePageResponse.class);
+    }
+
+    /**
+     *This API is used to obtain PerformancePage information.
+     * @param req DescribeDataPerformancePageV2Request
+     * @return DescribeDataPerformancePageV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataPerformancePageV2Response DescribeDataPerformancePageV2(DescribeDataPerformancePageV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataPerformancePageV2", DescribeDataPerformancePageV2Response.class);
     }
 
     /**
@@ -344,6 +410,17 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
+     *This API is used to obtain DescribeDataPvUrlStatistics information.
+     * @param req DescribeDataPvUrlStatisticsV2Request
+     * @return DescribeDataPvUrlStatisticsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataPvUrlStatisticsV2Response DescribeDataPvUrlStatisticsV2(DescribeDataPvUrlStatisticsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataPvUrlStatisticsV2", DescribeDataPvUrlStatisticsV2Response.class);
+    }
+
+    /**
      *This API is used to get the number of reported data entries for a project.
      * @param req DescribeDataReportCountRequest
      * @return DescribeDataReportCountResponse
@@ -352,6 +429,17 @@ Default API request rate limit: 20 requests/sec.
     public DescribeDataReportCountResponse DescribeDataReportCount(DescribeDataReportCountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataReportCount", DescribeDataReportCountResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the project reporting volume.
+     * @param req DescribeDataReportCountV2Request
+     * @return DescribeDataReportCountV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataReportCountV2Response DescribeDataReportCountV2(DescribeDataReportCountV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataReportCountV2", DescribeDataReportCountV2Response.class);
     }
 
     /**
@@ -366,6 +454,17 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
+     *This API is used to obtain DescribeDataSetUrlStatistics information.
+     * @param req DescribeDataSetUrlStatisticsV2Request
+     * @return DescribeDataSetUrlStatisticsV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataSetUrlStatisticsV2Response DescribeDataSetUrlStatisticsV2(DescribeDataSetUrlStatisticsV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataSetUrlStatisticsV2", DescribeDataSetUrlStatisticsV2Response.class);
+    }
+
+    /**
      *This API is used to get the DescribeDataStaticProject information.
      * @param req DescribeDataStaticProjectRequest
      * @return DescribeDataStaticProjectResponse
@@ -374,6 +473,17 @@ Default API request rate limit: 20 requests/sec.
     public DescribeDataStaticProjectResponse DescribeDataStaticProject(DescribeDataStaticProjectRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataStaticProject", DescribeDataStaticProjectResponse.class);
+    }
+
+    /**
+     *This API is used to obtain DescribeDataStaticProject information.
+     * @param req DescribeDataStaticProjectV2Request
+     * @return DescribeDataStaticProjectV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataStaticProjectV2Response DescribeDataStaticProjectV2(DescribeDataStaticProjectV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataStaticProjectV2", DescribeDataStaticProjectV2Response.class);
     }
 
     /**
@@ -388,6 +498,17 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
+     *This API is used to obtain DescribeDataStaticResource information.
+     * @param req DescribeDataStaticResourceV2Request
+     * @return DescribeDataStaticResourceV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataStaticResourceV2Response DescribeDataStaticResourceV2(DescribeDataStaticResourceV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataStaticResourceV2", DescribeDataStaticResourceV2Response.class);
+    }
+
+    /**
      *This API is used to get the DescribeDataStaticUrl information.
      * @param req DescribeDataStaticUrlRequest
      * @return DescribeDataStaticUrlResponse
@@ -396,6 +517,17 @@ Default API request rate limit: 20 requests/sec.
     public DescribeDataStaticUrlResponse DescribeDataStaticUrl(DescribeDataStaticUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataStaticUrl", DescribeDataStaticUrlResponse.class);
+    }
+
+    /**
+     *This API is used to obtain DescribeDataStaticUrl information.
+     * @param req DescribeDataStaticUrlV2Request
+     * @return DescribeDataStaticUrlV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataStaticUrlV2Response DescribeDataStaticUrlV2(DescribeDataStaticUrlV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataStaticUrlV2", DescribeDataStaticUrlV2Response.class);
     }
 
     /**
@@ -408,6 +540,18 @@ It includes the Web Vitals metric for the page loading performance.
     public DescribeDataWebVitalsPageResponse DescribeDataWebVitalsPage(DescribeDataWebVitalsPageRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDataWebVitalsPage", DescribeDataWebVitalsPageResponse.class);
+    }
+
+    /**
+     *This API is used to obtain DescribeDataWebVitalsPage information, which is the core user activity information.
+Web Vitals for page loading performance are key performance metrics.
+     * @param req DescribeDataWebVitalsPageV2Request
+     * @return DescribeDataWebVitalsPageV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDataWebVitalsPageV2Response DescribeDataWebVitalsPageV2(DescribeDataWebVitalsPageV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDataWebVitalsPageV2", DescribeDataWebVitalsPageV2Response.class);
     }
 
     /**
@@ -599,6 +743,17 @@ Default API request rate limit: 20 requests/sec.
     public DescribeScoresResponse DescribeScores(DescribeScoresRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeScores", DescribeScoresResponse.class);
+    }
+
+    /**
+     *This API is used to obtain the home page score list.
+     * @param req DescribeScoresV2Request
+     * @return DescribeScoresV2Response
+     * @throws TencentCloudSDKException
+     */
+    public DescribeScoresV2Response DescribeScoresV2(DescribeScoresV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeScoresV2", DescribeScoresV2Response.class);
     }
 
     /**

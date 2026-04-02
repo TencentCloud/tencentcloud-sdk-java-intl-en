@@ -38,11 +38,25 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel {
     private String VpnGatewayName;
 
     /**
-    * VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+    * VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
+
+    /**
+    * 
+    */
+    @SerializedName("BgpAsn")
+    @Expose
+    private Long BgpAsn;
+
+    /**
+    * 
+    */
+    @SerializedName("MaxConnection")
+    @Expose
+    private Long MaxConnection;
 
     /**
      * Get The ID of the VPN gateway instance. 
@@ -77,19 +91,51 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR. 
-     * @return InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+     * Get VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR. 
+     * @return InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
-     * @param InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+     * Set VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
+     * @param InstanceChargeType VPN gateway billing mode. Currently, only the conversion of prepaid (yearly/monthly subscription) to postpaid (that is, pay-as-you-go) is supported. That is, the parameters only supports POSTPAID_BY_HOUR.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
+    }
+
+    /**
+     * Get  
+     * @return BgpAsn 
+     */
+    public Long getBgpAsn() {
+        return this.BgpAsn;
+    }
+
+    /**
+     * Set 
+     * @param BgpAsn 
+     */
+    public void setBgpAsn(Long BgpAsn) {
+        this.BgpAsn = BgpAsn;
+    }
+
+    /**
+     * Get  
+     * @return MaxConnection 
+     */
+    public Long getMaxConnection() {
+        return this.MaxConnection;
+    }
+
+    /**
+     * Set 
+     * @param MaxConnection 
+     */
+    public void setMaxConnection(Long MaxConnection) {
+        this.MaxConnection = MaxConnection;
     }
 
     public ModifyVpnGatewayAttributeRequest() {
@@ -109,6 +155,12 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel {
         if (source.InstanceChargeType != null) {
             this.InstanceChargeType = new String(source.InstanceChargeType);
         }
+        if (source.BgpAsn != null) {
+            this.BgpAsn = new Long(source.BgpAsn);
+        }
+        if (source.MaxConnection != null) {
+            this.MaxConnection = new Long(source.MaxConnection);
+        }
     }
 
 
@@ -119,6 +171,8 @@ public class ModifyVpnGatewayAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
         this.setParamSimple(map, prefix + "VpnGatewayName", this.VpnGatewayName);
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+        this.setParamSimple(map, prefix + "BgpAsn", this.BgpAsn);
+        this.setParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
 
     }
 }
