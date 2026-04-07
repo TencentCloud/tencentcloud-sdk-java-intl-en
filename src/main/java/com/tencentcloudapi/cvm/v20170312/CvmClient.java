@@ -200,6 +200,17 @@ This API is used to create an instance launch template. After the initial creati
     }
 
     /**
+     *This API is used to batch remove CVM instances from specified placement groups.
+     * @param req DeleteInstancesDisasterRecoverGroupsRequest
+     * @return DeleteInstancesDisasterRecoverGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteInstancesDisasterRecoverGroupsResponse DeleteInstancesDisasterRecoverGroups(DeleteInstancesDisasterRecoverGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteInstancesDisasterRecoverGroups", DeleteInstancesDisasterRecoverGroupsResponse.class);
+    }
+
+    /**
      *This API is used to delete the key pairs hosted in Tencent Cloud.
 
 * You can delete multiple key pairs at the same time.

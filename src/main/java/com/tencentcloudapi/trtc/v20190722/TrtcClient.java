@@ -104,6 +104,18 @@ This API is used to achieve the following goals:
     }
 
     /**
+     *API description:
+Enable the cloud transcription feature.
+     * @param req CreateCloudTranscriptionRequest
+     * @return CreateCloudTranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCloudTranscriptionResponse CreateCloudTranscription(CreateCloudTranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCloudTranscription", CreateCloudTranscriptionResponse.class);
+    }
+
+    /**
      *This API is used to stop submission for moderation after the cloud moderation task is successfully started.
      * @param req DeleteCloudModerationRequest
      * @return DeleteCloudModerationResponse
@@ -134,6 +146,17 @@ This API is used to achieve the following goals:
     public DeleteCloudSliceTaskResponse DeleteCloudSliceTask(DeleteCloudSliceTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteCloudSliceTask", DeleteCloudSliceTaskResponse.class);
+    }
+
+    /**
+     *This API is used to terminate the transcription task after successful activation.
+     * @param req DeleteCloudTranscriptionRequest
+     * @return DeleteCloudTranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCloudTranscriptionResponse DeleteCloudTranscription(DeleteCloudTranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCloudTranscription", DeleteCloudTranscriptionResponse.class);
     }
 
     /**
@@ -204,6 +227,17 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
     public DescribeCloudSliceTaskResponse DescribeCloudSliceTask(DescribeCloudSliceTaskRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCloudSliceTask", DescribeCloudSliceTaskResponse.class);
+    }
+
+    /**
+     *This API is used to query the transcription status after starting a transcription task. It is effective only when the transcription task is in process. Querying after termination will return an error.
+     * @param req DescribeCloudTranscriptionRequest
+     * @return DescribeCloudTranscriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCloudTranscriptionResponse DescribeCloudTranscription(DescribeCloudTranscriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCloudTranscription", DescribeCloudTranscriptionResponse.class);
     }
 
     /**

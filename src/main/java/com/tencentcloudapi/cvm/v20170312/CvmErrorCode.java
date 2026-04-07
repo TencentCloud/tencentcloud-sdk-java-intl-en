@@ -21,8 +21,11 @@ public enum CvmErrorCode {
      /* BYOL images cannot be shared. */
      FAILEDOPERATION_BYOLIMAGESHAREFAILED("FailedOperation.BYOLImageShareFailed"),
      
-     /* The specified spread placement group does not exist. */
+     /* The specified placement group does not exist. */
      FAILEDOPERATION_DISASTERRECOVERGROUPNOTFOUND("FailedOperation.DisasterRecoverGroupNotFound"),
+     
+     /* The placement group information of the instance is mismatched. */
+     FAILEDOPERATION_DISASTERRECOVERGROUPNOTMATCH("FailedOperation.DisasterRecoverGroupNotMatch"),
      
      /* Failed to obtain the status of TencentCloud Automation Tools for the instance. */
      FAILEDOPERATION_GETINSTANCETATAGENTSTATUSFAILED("FailedOperation.GetInstanceTATAgentStatusFailed"),
@@ -803,6 +806,9 @@ public enum CvmErrorCode {
      
      /* The HPC cluster does not exist. */
      RESOURCENOTFOUND_HPCCLUSTER("ResourceNotFound.HpcCluster"),
+     
+     /* Instance ID not found. */
+     RESOURCENOTFOUND_INVALIDINSTANCEIDNOTFOUND("ResourceNotFound.InvalidInstanceIdNotFound"),
      
      /* The specified placement group does not exist. */
      RESOURCENOTFOUND_INVALIDPLACEMENTSET("ResourceNotFound.InvalidPlacementSet"),
