@@ -276,6 +276,17 @@ This API is used to create an orchestration, which is in disable status by defau
     }
 
     /**
+     *This API is used to create a custom subtitle suppression template.
+     * @param req CreateSubtitleEmbedTemplateRequest
+     * @return CreateSubtitleEmbedTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateSubtitleEmbedTemplateResponse CreateSubtitleEmbedTemplate(CreateSubtitleEmbedTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateSubtitleEmbedTemplate", CreateSubtitleEmbedTemplateResponse.class);
+    }
+
+    /**
      *This API is used to create a custom transcoding template. Up to 1,000 templates can be created.
      * @param req CreateTranscodeTemplateRequest
      * @return CreateTranscodeTemplateResponse
@@ -517,6 +528,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DeleteSnapshotByTimeOffsetTemplateResponse DeleteSnapshotByTimeOffsetTemplate(DeleteSnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteSnapshotByTimeOffsetTemplate", DeleteSnapshotByTimeOffsetTemplateResponse.class);
+    }
+
+    /**
+     *Delete a user-customized Subtitle Suppression Template.
+     * @param req DeleteSubtitleEmbedTemplateRequest
+     * @return DeleteSubtitleEmbedTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteSubtitleEmbedTemplateResponse DeleteSubtitleEmbedTemplate(DeleteSubtitleEmbedTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteSubtitleEmbedTemplate", DeleteSubtitleEmbedTemplateResponse.class);
     }
 
     /**
@@ -825,6 +847,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeStreamLinkSecurityGroupResponse DescribeStreamLinkSecurityGroup(DescribeStreamLinkSecurityGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeStreamLinkSecurityGroup", DescribeStreamLinkSecurityGroupResponse.class);
+    }
+
+    /**
+     *This API is used to retrieve the subtitle suppression template details list based on template unique identifier. The returned results include all eligible user-customized subtitle suppression templates and system preset subtitle suppression templates.
+     * @param req DescribeSubtitleEmbedTemplatesRequest
+     * @return DescribeSubtitleEmbedTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSubtitleEmbedTemplatesResponse DescribeSubtitleEmbedTemplates(DescribeSubtitleEmbedTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSubtitleEmbedTemplates", DescribeSubtitleEmbedTemplatesResponse.class);
     }
 
     /**
@@ -1195,6 +1228,17 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(ModifySnapshotByTimeOffsetTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifySnapshotByTimeOffsetTemplate", ModifySnapshotByTimeOffsetTemplateResponse.class);
+    }
+
+    /**
+     *This API is used to modify a user-customized subtitle suppression template.
+     * @param req ModifySubtitleEmbedTemplateRequest
+     * @return ModifySubtitleEmbedTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySubtitleEmbedTemplateResponse ModifySubtitleEmbedTemplate(ModifySubtitleEmbedTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySubtitleEmbedTemplate", ModifySubtitleEmbedTemplateResponse.class);
     }
 
     /**

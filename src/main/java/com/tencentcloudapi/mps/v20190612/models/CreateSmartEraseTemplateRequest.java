@@ -24,153 +24,138 @@ import java.util.HashMap;
 public class CreateSmartEraseTemplateRequest extends AbstractModel {
 
     /**
-    * Length limit for the smart erasing template name: 64 characters.
+    * <p>Length limit for the smart erasing template name: 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
+    * <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
     */
     @SerializedName("EraseType")
     @Expose
     private String EraseType;
 
     /**
-    * Length limit for the description information of the smart erasing template: 256 characters.
+    * <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.
+    * <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
     */
     @SerializedName("EraseSubtitleConfig")
     @Expose
     private SmartEraseSubtitleConfig EraseSubtitleConfig;
 
     /**
-    * Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.
+    * <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
     */
     @SerializedName("EraseWatermarkConfig")
     @Expose
     private SmartEraseWatermarkConfig EraseWatermarkConfig;
 
     /**
-    * Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.
+    * <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
     */
     @SerializedName("ErasePrivacyConfig")
     @Expose
     private SmartErasePrivacyConfig ErasePrivacyConfig;
 
     /**
-     * Get Length limit for the smart erasing template name: 64 characters. 
-     * @return Name Length limit for the smart erasing template name: 64 characters.
+     * Get <p>Length limit for the smart erasing template name: 64 characters.</p> 
+     * @return Name <p>Length limit for the smart erasing template name: 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Length limit for the smart erasing template name: 64 characters.
-     * @param Name Length limit for the smart erasing template name: 64 characters.
+     * Set <p>Length limit for the smart erasing template name: 64 characters.</p>
+     * @param Name <p>Length limit for the smart erasing template name: 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection. 
-     * @return EraseType Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
+     * Get <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul> 
+     * @return EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
      */
     public String getEraseType() {
         return this.EraseType;
     }
 
     /**
-     * Set Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
-     * @param EraseType Erasing type.
--subtitle: subtitle removal.
--watermark: watermark removal.
--privacy: privacy protection.
+     * Set <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * @param EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
      */
     public void setEraseType(String EraseType) {
         this.EraseType = EraseType;
     }
 
     /**
-     * Get Length limit for the description information of the smart erasing template: 256 characters. 
-     * @return Comment Length limit for the description information of the smart erasing template: 256 characters.
+     * Get <p>Length limit for the description information of the smart erasing template: 256 characters.</p> 
+     * @return Comment <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Length limit for the description information of the smart erasing template: 256 characters.
-     * @param Comment Length limit for the description information of the smart erasing template: 256 characters.
+     * Set <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+     * @param Comment <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle. 
-     * @return EraseSubtitleConfig Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.
+     * Get <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p> 
+     * @return EraseSubtitleConfig <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
      */
     public SmartEraseSubtitleConfig getEraseSubtitleConfig() {
         return this.EraseSubtitleConfig;
     }
 
     /**
-     * Set Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.
-     * @param EraseSubtitleConfig Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.
+     * Set <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
+     * @param EraseSubtitleConfig <p>Subtitle erasing configuration. This parameter is required and valid only when the value of EraseType is set to subtitle.</p>
      */
     public void setEraseSubtitleConfig(SmartEraseSubtitleConfig EraseSubtitleConfig) {
         this.EraseSubtitleConfig = EraseSubtitleConfig;
     }
 
     /**
-     * Get Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark. 
-     * @return EraseWatermarkConfig Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.
+     * Get <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p> 
+     * @return EraseWatermarkConfig <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
      */
     public SmartEraseWatermarkConfig getEraseWatermarkConfig() {
         return this.EraseWatermarkConfig;
     }
 
     /**
-     * Set Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.
-     * @param EraseWatermarkConfig Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.
+     * Set <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
+     * @param EraseWatermarkConfig <p>Watermark erasing configuration. This parameter is required and valid only when the value of EraseType is set to watermark.</p>
      */
     public void setEraseWatermarkConfig(SmartEraseWatermarkConfig EraseWatermarkConfig) {
         this.EraseWatermarkConfig = EraseWatermarkConfig;
     }
 
     /**
-     * Get Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy. 
-     * @return ErasePrivacyConfig Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.
+     * Get <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p> 
+     * @return ErasePrivacyConfig <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
      */
     public SmartErasePrivacyConfig getErasePrivacyConfig() {
         return this.ErasePrivacyConfig;
     }
 
     /**
-     * Set Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.
-     * @param ErasePrivacyConfig Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.
+     * Set <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
+     * @param ErasePrivacyConfig <p>Privacy protection configuration. This parameter is required and valid only when the value of EraseType is set to privacy.</p>
      */
     public void setErasePrivacyConfig(SmartErasePrivacyConfig ErasePrivacyConfig) {
         this.ErasePrivacyConfig = ErasePrivacyConfig;

@@ -101,6 +101,13 @@ public class DescribeDLCTableListRequest extends AbstractModel {
     private String TableFormat;
 
     /**
+    * 
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get Database name 
      * @return DbName Database name
      */
@@ -276,6 +283,22 @@ public class DescribeDLCTableListRequest extends AbstractModel {
         this.TableFormat = TableFormat;
     }
 
+    /**
+     * Get  
+     * @return DatasourceConnectionName 
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 
+     * @param DatasourceConnectionName 
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public DescribeDLCTableListRequest() {
     }
 
@@ -317,6 +340,9 @@ public class DescribeDLCTableListRequest extends AbstractModel {
         if (source.TableFormat != null) {
             this.TableFormat = new String(source.TableFormat);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -335,6 +361,7 @@ public class DescribeDLCTableListRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Sort", this.Sort);
         this.setParamSimple(map, prefix + "Asc", this.Asc);
         this.setParamSimple(map, prefix + "TableFormat", this.TableFormat);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

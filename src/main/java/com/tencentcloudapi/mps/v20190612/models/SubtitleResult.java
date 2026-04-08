@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class SubtitleResult extends AbstractModel {
 
     /**
-    * Language of the subtitle file.
+    * <p>Language of the subtitle file</p>
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * Whether the processing is successful.
+    * <p>Whether the processing is successful.</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Subtitle file URL.
+    * <p>Subtitle file path</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-     * Get Language of the subtitle file. 
-     * @return Language Language of the subtitle file.
+    * <p>Subtitle suppression video path.</p>
+    */
+    @SerializedName("SubtitleEmbedPath")
+    @Expose
+    private String SubtitleEmbedPath;
+
+    /**
+     * Get <p>Language of the subtitle file</p> 
+     * @return Language <p>Language of the subtitle file</p>
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set Language of the subtitle file.
-     * @param Language Language of the subtitle file.
+     * Set <p>Language of the subtitle file</p>
+     * @param Language <p>Language of the subtitle file</p>
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get Whether the processing is successful. 
-     * @return Status Whether the processing is successful.
+     * Get <p>Whether the processing is successful.</p> 
+     * @return Status <p>Whether the processing is successful.</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether the processing is successful.
-     * @param Status Whether the processing is successful.
+     * Set <p>Whether the processing is successful.</p>
+     * @param Status <p>Whether the processing is successful.</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Subtitle file URL. 
-     * @return Path Subtitle file URL.
+     * Get <p>Subtitle file path</p> 
+     * @return Path <p>Subtitle file path</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Subtitle file URL.
-     * @param Path Subtitle file URL.
+     * Set <p>Subtitle file path</p>
+     * @param Path <p>Subtitle file path</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
+    }
+
+    /**
+     * Get <p>Subtitle suppression video path.</p> 
+     * @return SubtitleEmbedPath <p>Subtitle suppression video path.</p>
+     */
+    public String getSubtitleEmbedPath() {
+        return this.SubtitleEmbedPath;
+    }
+
+    /**
+     * Set <p>Subtitle suppression video path.</p>
+     * @param SubtitleEmbedPath <p>Subtitle suppression video path.</p>
+     */
+    public void setSubtitleEmbedPath(String SubtitleEmbedPath) {
+        this.SubtitleEmbedPath = SubtitleEmbedPath;
     }
 
     public SubtitleResult() {
@@ -109,6 +132,9 @@ public class SubtitleResult extends AbstractModel {
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
+        if (source.SubtitleEmbedPath != null) {
+            this.SubtitleEmbedPath = new String(source.SubtitleEmbedPath);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class SubtitleResult extends AbstractModel {
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "SubtitleEmbedPath", this.SubtitleEmbedPath);
 
     }
 }

@@ -24,105 +24,118 @@ import java.util.HashMap;
 public class SubtitleTransResultItem extends AbstractModel {
 
     /**
-    * Translation marker.
-- Success
-- Error
+    * <p>Translation flag:</p><ul><li>Success</li><li>Error</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Source language (such as "en").
+    * <p>Source language (such as "en")</p>
     */
     @SerializedName("TransSrc")
     @Expose
     private String TransSrc;
 
     /**
-    * Target language (such as "zh").
+    * <p>Target language (such as "zh")</p>
     */
     @SerializedName("TransDst")
     @Expose
     private String TransDst;
 
     /**
-    * Subtitle file URL.
+    * <p>Subtitle file URL</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-     * Get Translation marker.
-- Success
-- Error 
-     * @return Status Translation marker.
-- Success
-- Error
+    * <p>Subtitle translation suppression video path.</p>
+    */
+    @SerializedName("SubtitleEmbedPath")
+    @Expose
+    private String SubtitleEmbedPath;
+
+    /**
+     * Get <p>Translation flag:</p><ul><li>Success</li><li>Error</li></ul> 
+     * @return Status <p>Translation flag:</p><ul><li>Success</li><li>Error</li></ul>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Translation marker.
-- Success
-- Error
-     * @param Status Translation marker.
-- Success
-- Error
+     * Set <p>Translation flag:</p><ul><li>Success</li><li>Error</li></ul>
+     * @param Status <p>Translation flag:</p><ul><li>Success</li><li>Error</li></ul>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Source language (such as "en"). 
-     * @return TransSrc Source language (such as "en").
+     * Get <p>Source language (such as "en")</p> 
+     * @return TransSrc <p>Source language (such as "en")</p>
      */
     public String getTransSrc() {
         return this.TransSrc;
     }
 
     /**
-     * Set Source language (such as "en").
-     * @param TransSrc Source language (such as "en").
+     * Set <p>Source language (such as "en")</p>
+     * @param TransSrc <p>Source language (such as "en")</p>
      */
     public void setTransSrc(String TransSrc) {
         this.TransSrc = TransSrc;
     }
 
     /**
-     * Get Target language (such as "zh"). 
-     * @return TransDst Target language (such as "zh").
+     * Get <p>Target language (such as "zh")</p> 
+     * @return TransDst <p>Target language (such as "zh")</p>
      */
     public String getTransDst() {
         return this.TransDst;
     }
 
     /**
-     * Set Target language (such as "zh").
-     * @param TransDst Target language (such as "zh").
+     * Set <p>Target language (such as "zh")</p>
+     * @param TransDst <p>Target language (such as "zh")</p>
      */
     public void setTransDst(String TransDst) {
         this.TransDst = TransDst;
     }
 
     /**
-     * Get Subtitle file URL. 
-     * @return Path Subtitle file URL.
+     * Get <p>Subtitle file URL</p> 
+     * @return Path <p>Subtitle file URL</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Subtitle file URL.
-     * @param Path Subtitle file URL.
+     * Set <p>Subtitle file URL</p>
+     * @param Path <p>Subtitle file URL</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
+    }
+
+    /**
+     * Get <p>Subtitle translation suppression video path.</p> 
+     * @return SubtitleEmbedPath <p>Subtitle translation suppression video path.</p>
+     */
+    public String getSubtitleEmbedPath() {
+        return this.SubtitleEmbedPath;
+    }
+
+    /**
+     * Set <p>Subtitle translation suppression video path.</p>
+     * @param SubtitleEmbedPath <p>Subtitle translation suppression video path.</p>
+     */
+    public void setSubtitleEmbedPath(String SubtitleEmbedPath) {
+        this.SubtitleEmbedPath = SubtitleEmbedPath;
     }
 
     public SubtitleTransResultItem() {
@@ -145,6 +158,9 @@ public class SubtitleTransResultItem extends AbstractModel {
         if (source.Path != null) {
             this.Path = new String(source.Path);
         }
+        if (source.SubtitleEmbedPath != null) {
+            this.SubtitleEmbedPath = new String(source.SubtitleEmbedPath);
+        }
     }
 
 
@@ -156,6 +172,7 @@ public class SubtitleTransResultItem extends AbstractModel {
         this.setParamSimple(map, prefix + "TransSrc", this.TransSrc);
         this.setParamSimple(map, prefix + "TransDst", this.TransDst);
         this.setParamSimple(map, prefix + "Path", this.Path);
+        this.setParamSimple(map, prefix + "SubtitleEmbedPath", this.SubtitleEmbedPath);
 
     }
 }

@@ -24,151 +24,169 @@ import java.util.HashMap;
 public class SmartSubtitleTaskTransTextSegmentItem extends AbstractModel {
 
     /**
-    * Confidence of a recognized segment. Value range: 0-100.
+    * <p>Confidence of a recognized segment. Value range: 0-100.</p>
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * Start time offset of a recognized segment, in seconds.
+    * <p>Start time offset of a recognized segment, in seconds.</p>
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End time offset of a recognized segment, in seconds.
+    * <p>End time offset of a recognized segment, in seconds.</p>
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Recognized text.
+    * <p>Recognized text.</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * Translated text.
+    * <p>Translated text.</p>
     */
     @SerializedName("Trans")
     @Expose
     private String Trans;
 
     /**
-    * Word timestamp information.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Word timestamp information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Wordlist")
     @Expose
     private WordResult [] Wordlist;
 
     /**
-     * Get Confidence of a recognized segment. Value range: 0-100. 
-     * @return Confidence Confidence of a recognized segment. Value range: 0-100.
+    * <p>Speaker ID (if speaker recognition is enabled)</p>
+    */
+    @SerializedName("SpeakerId")
+    @Expose
+    private String SpeakerId;
+
+    /**
+     * Get <p>Confidence of a recognized segment. Value range: 0-100.</p> 
+     * @return Confidence <p>Confidence of a recognized segment. Value range: 0-100.</p>
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence of a recognized segment. Value range: 0-100.
-     * @param Confidence Confidence of a recognized segment. Value range: 0-100.
+     * Set <p>Confidence of a recognized segment. Value range: 0-100.</p>
+     * @param Confidence <p>Confidence of a recognized segment. Value range: 0-100.</p>
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get Start time offset of a recognized segment, in seconds. 
-     * @return StartTimeOffset Start time offset of a recognized segment, in seconds.
+     * Get <p>Start time offset of a recognized segment, in seconds.</p> 
+     * @return StartTimeOffset <p>Start time offset of a recognized segment, in seconds.</p>
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Start time offset of a recognized segment, in seconds.
-     * @param StartTimeOffset Start time offset of a recognized segment, in seconds.
+     * Set <p>Start time offset of a recognized segment, in seconds.</p>
+     * @param StartTimeOffset <p>Start time offset of a recognized segment, in seconds.</p>
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End time offset of a recognized segment, in seconds. 
-     * @return EndTimeOffset End time offset of a recognized segment, in seconds.
+     * Get <p>End time offset of a recognized segment, in seconds.</p> 
+     * @return EndTimeOffset <p>End time offset of a recognized segment, in seconds.</p>
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End time offset of a recognized segment, in seconds.
-     * @param EndTimeOffset End time offset of a recognized segment, in seconds.
+     * Set <p>End time offset of a recognized segment, in seconds.</p>
+     * @param EndTimeOffset <p>End time offset of a recognized segment, in seconds.</p>
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Recognized text. 
-     * @return Text Recognized text.
+     * Get <p>Recognized text.</p> 
+     * @return Text <p>Recognized text.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Recognized text.
-     * @param Text Recognized text.
+     * Set <p>Recognized text.</p>
+     * @param Text <p>Recognized text.</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get Translated text. 
-     * @return Trans Translated text.
+     * Get <p>Translated text.</p> 
+     * @return Trans <p>Translated text.</p>
      */
     public String getTrans() {
         return this.Trans;
     }
 
     /**
-     * Set Translated text.
-     * @param Trans Translated text.
+     * Set <p>Translated text.</p>
+     * @param Trans <p>Translated text.</p>
      */
     public void setTrans(String Trans) {
         this.Trans = Trans;
     }
 
     /**
-     * Get Word timestamp information.
-
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Wordlist Word timestamp information.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Word timestamp information.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Wordlist <p>Word timestamp information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public WordResult [] getWordlist() {
         return this.Wordlist;
     }
 
     /**
-     * Set Word timestamp information.
-
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Wordlist Word timestamp information.
-
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Word timestamp information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Wordlist <p>Word timestamp information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWordlist(WordResult [] Wordlist) {
         this.Wordlist = Wordlist;
+    }
+
+    /**
+     * Get <p>Speaker ID (if speaker recognition is enabled)</p> 
+     * @return SpeakerId <p>Speaker ID (if speaker recognition is enabled)</p>
+     */
+    public String getSpeakerId() {
+        return this.SpeakerId;
+    }
+
+    /**
+     * Set <p>Speaker ID (if speaker recognition is enabled)</p>
+     * @param SpeakerId <p>Speaker ID (if speaker recognition is enabled)</p>
+     */
+    public void setSpeakerId(String SpeakerId) {
+        this.SpeakerId = SpeakerId;
     }
 
     public SmartSubtitleTaskTransTextSegmentItem() {
@@ -200,6 +218,9 @@ Note: This field may return null, indicating that no valid value can be obtained
                 this.Wordlist[i] = new WordResult(source.Wordlist[i]);
             }
         }
+        if (source.SpeakerId != null) {
+            this.SpeakerId = new String(source.SpeakerId);
+        }
     }
 
 
@@ -213,6 +234,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "Text", this.Text);
         this.setParamSimple(map, prefix + "Trans", this.Trans);
         this.setParamArrayObj(map, prefix + "Wordlist.", this.Wordlist);
+        this.setParamSimple(map, prefix + "SpeakerId", this.SpeakerId);
 
     }
 }

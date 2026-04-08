@@ -94,12 +94,26 @@ sl: Slovenian.
     private String AudioData;
 
     /**
+    * 
+    */
+    @SerializedName("AudioUrl")
+    @Expose
+    private String AudioUrl;
+
+    /**
     * Cloning audio language. The default language is Chinese.
 Supported languages are the same as those for TextLang.
     */
     @SerializedName("AudioLang")
     @Expose
     private String AudioLang;
+
+    /**
+    * 
+    */
+    @SerializedName("Output")
+    @Expose
+    private SyncDubbingOutputOption Output;
 
     /**
     * Extended parameters in the format of a JSON string.
@@ -341,6 +355,22 @@ sl: Slovenian.
     }
 
     /**
+     * Get  
+     * @return AudioUrl 
+     */
+    public String getAudioUrl() {
+        return this.AudioUrl;
+    }
+
+    /**
+     * Set 
+     * @param AudioUrl 
+     */
+    public void setAudioUrl(String AudioUrl) {
+        this.AudioUrl = AudioUrl;
+    }
+
+    /**
      * Get Cloning audio language. The default language is Chinese.
 Supported languages are the same as those for TextLang. 
      * @return AudioLang Cloning audio language. The default language is Chinese.
@@ -358,6 +388,22 @@ Supported languages are the same as those for TextLang.
      */
     public void setAudioLang(String AudioLang) {
         this.AudioLang = AudioLang;
+    }
+
+    /**
+     * Get  
+     * @return Output 
+     */
+    public SyncDubbingOutputOption getOutput() {
+        return this.Output;
+    }
+
+    /**
+     * Set 
+     * @param Output 
+     */
+    public void setOutput(SyncDubbingOutputOption Output) {
+        this.Output = Output;
     }
 
     /**
@@ -396,8 +442,14 @@ Supported languages are the same as those for TextLang.
         if (source.AudioData != null) {
             this.AudioData = new String(source.AudioData);
         }
+        if (source.AudioUrl != null) {
+            this.AudioUrl = new String(source.AudioUrl);
+        }
         if (source.AudioLang != null) {
             this.AudioLang = new String(source.AudioLang);
+        }
+        if (source.Output != null) {
+            this.Output = new SyncDubbingOutputOption(source.Output);
         }
         if (source.ExtParam != null) {
             this.ExtParam = new String(source.ExtParam);
@@ -413,7 +465,9 @@ Supported languages are the same as those for TextLang.
         this.setParamSimple(map, prefix + "TextLang", this.TextLang);
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
         this.setParamSimple(map, prefix + "AudioData", this.AudioData);
+        this.setParamSimple(map, prefix + "AudioUrl", this.AudioUrl);
         this.setParamSimple(map, prefix + "AudioLang", this.AudioLang);
+        this.setParamObj(map, prefix + "Output.", this.Output);
         this.setParamSimple(map, prefix + "ExtParam", this.ExtParam);
 
     }

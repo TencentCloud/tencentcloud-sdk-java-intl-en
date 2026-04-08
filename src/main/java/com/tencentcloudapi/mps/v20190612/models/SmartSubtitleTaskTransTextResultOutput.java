@@ -24,120 +24,120 @@ import java.util.HashMap;
 public class SmartSubtitleTaskTransTextResultOutput extends AbstractModel {
 
     /**
-    * List of segments for translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>List of segments for translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SegmentSet")
     @Expose
     private SmartSubtitleTaskTransTextSegmentItem [] SegmentSet;
 
     /**
-    * Subtitle file path.
+    * <p>Subtitle file URL.</p>
     */
     @SerializedName("SubtitlePath")
     @Expose
     private String SubtitlePath;
 
     /**
-    * Subtitle file storage location.
+    * <p>Smart subtitling result storage information.</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Subtitle file URL.
+    * <p>Subtitle file path</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Returned translation result during multilingual translation.	
+    * <p>Returned translation result during multilingual translation.</p>
     */
     @SerializedName("SubtitleResults")
     @Expose
     private SubtitleTransResultItem [] SubtitleResults;
 
     /**
-     * Get List of segments for translation.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SegmentSet List of segments for translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>List of segments for translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SegmentSet <p>List of segments for translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SmartSubtitleTaskTransTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of segments for translation.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SegmentSet List of segments for translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>List of segments for translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SegmentSet <p>List of segments for translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSegmentSet(SmartSubtitleTaskTransTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get Subtitle file path. 
-     * @return SubtitlePath Subtitle file path.
+     * Get <p>Subtitle file URL.</p> 
+     * @return SubtitlePath <p>Subtitle file URL.</p>
      */
     public String getSubtitlePath() {
         return this.SubtitlePath;
     }
 
     /**
-     * Set Subtitle file path.
-     * @param SubtitlePath Subtitle file path.
+     * Set <p>Subtitle file URL.</p>
+     * @param SubtitlePath <p>Subtitle file URL.</p>
      */
     public void setSubtitlePath(String SubtitlePath) {
         this.SubtitlePath = SubtitlePath;
     }
 
     /**
-     * Get Subtitle file storage location. 
-     * @return OutputStorage Subtitle file storage location.
+     * Get <p>Smart subtitling result storage information.</p> 
+     * @return OutputStorage <p>Smart subtitling result storage information.</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Subtitle file storage location.
-     * @param OutputStorage Subtitle file storage location.
+     * Set <p>Smart subtitling result storage information.</p>
+     * @param OutputStorage <p>Smart subtitling result storage information.</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get Subtitle file URL. 
-     * @return Path Subtitle file URL.
+     * Get <p>Subtitle file path</p> 
+     * @return Path <p>Subtitle file path</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Subtitle file URL.
-     * @param Path Subtitle file URL.
+     * Set <p>Subtitle file path</p>
+     * @param Path <p>Subtitle file path</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Returned translation result during multilingual translation.	 
-     * @return SubtitleResults Returned translation result during multilingual translation.	
+     * Get <p>Returned translation result during multilingual translation.</p> 
+     * @return SubtitleResults <p>Returned translation result during multilingual translation.</p>
      */
     public SubtitleTransResultItem [] getSubtitleResults() {
         return this.SubtitleResults;
     }
 
     /**
-     * Set Returned translation result during multilingual translation.	
-     * @param SubtitleResults Returned translation result during multilingual translation.	
+     * Set <p>Returned translation result during multilingual translation.</p>
+     * @param SubtitleResults <p>Returned translation result during multilingual translation.</p>
      */
     public void setSubtitleResults(SubtitleTransResultItem [] SubtitleResults) {
         this.SubtitleResults = SubtitleResults;

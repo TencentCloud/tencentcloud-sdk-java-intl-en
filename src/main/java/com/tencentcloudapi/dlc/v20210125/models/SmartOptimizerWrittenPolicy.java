@@ -32,6 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String WrittenEnable;
 
     /**
+    * 
+    */
+    @SerializedName("AdvancePolicy")
+    @Expose
+    private WrittenAdvancePolicy AdvancePolicy;
+
+    /**
      * Get none/enable/disable/default
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return WrittenEnable none/enable/disable/default
@@ -51,6 +58,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.WrittenEnable = WrittenEnable;
     }
 
+    /**
+     * Get  
+     * @return AdvancePolicy 
+     */
+    public WrittenAdvancePolicy getAdvancePolicy() {
+        return this.AdvancePolicy;
+    }
+
+    /**
+     * Set 
+     * @param AdvancePolicy 
+     */
+    public void setAdvancePolicy(WrittenAdvancePolicy AdvancePolicy) {
+        this.AdvancePolicy = AdvancePolicy;
+    }
+
     public SmartOptimizerWrittenPolicy() {
     }
 
@@ -62,6 +85,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.WrittenEnable != null) {
             this.WrittenEnable = new String(source.WrittenEnable);
         }
+        if (source.AdvancePolicy != null) {
+            this.AdvancePolicy = new WrittenAdvancePolicy(source.AdvancePolicy);
+        }
     }
 
 
@@ -70,6 +96,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "WrittenEnable", this.WrittenEnable);
+        this.setParamObj(map, prefix + "AdvancePolicy.", this.AdvancePolicy);
 
     }
 }

@@ -52,6 +52,13 @@ public class DropDMSTableRequest extends AbstractModel {
     private KVPair EnvProps;
 
     /**
+    * 
+    */
+    @SerializedName("DatasourceConnectionName")
+    @Expose
+    private String DatasourceConnectionName;
+
+    /**
      * Get Database name 
      * @return DbName Database name
      */
@@ -115,6 +122,22 @@ public class DropDMSTableRequest extends AbstractModel {
         this.EnvProps = EnvProps;
     }
 
+    /**
+     * Get  
+     * @return DatasourceConnectionName 
+     */
+    public String getDatasourceConnectionName() {
+        return this.DatasourceConnectionName;
+    }
+
+    /**
+     * Set 
+     * @param DatasourceConnectionName 
+     */
+    public void setDatasourceConnectionName(String DatasourceConnectionName) {
+        this.DatasourceConnectionName = DatasourceConnectionName;
+    }
+
     public DropDMSTableRequest() {
     }
 
@@ -135,6 +158,9 @@ public class DropDMSTableRequest extends AbstractModel {
         if (source.EnvProps != null) {
             this.EnvProps = new KVPair(source.EnvProps);
         }
+        if (source.DatasourceConnectionName != null) {
+            this.DatasourceConnectionName = new String(source.DatasourceConnectionName);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DropDMSTableRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DeleteData", this.DeleteData);
         this.setParamObj(map, prefix + "EnvProps.", this.EnvProps);
+        this.setParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
 
     }
 }

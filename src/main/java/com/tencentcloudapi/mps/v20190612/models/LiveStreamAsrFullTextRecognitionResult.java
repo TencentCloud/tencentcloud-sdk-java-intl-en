@@ -52,21 +52,21 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel {
     private Float Confidence;
 
     /**
-    * Recognition start UTC time.
+    * 
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Recognition end UTC time.
+    * 
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Steady state marker.
+    * 
     */
     @SerializedName("SteadyState")
     @Expose
@@ -144,48 +144,48 @@ public class LiveStreamAsrFullTextRecognitionResult extends AbstractModel {
     }
 
     /**
-     * Get Recognition start UTC time. 
-     * @return StartTime Recognition start UTC time.
+     * Get  
+     * @return StartTime 
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Recognition start UTC time.
-     * @param StartTime Recognition start UTC time.
+     * Set 
+     * @param StartTime 
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Recognition end UTC time. 
-     * @return EndTime Recognition end UTC time.
+     * Get  
+     * @return EndTime 
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Recognition end UTC time.
-     * @param EndTime Recognition end UTC time.
+     * Set 
+     * @param EndTime 
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Steady state marker. 
-     * @return SteadyState Steady state marker.
+     * Get  
+     * @return SteadyState 
      */
     public Boolean getSteadyState() {
         return this.SteadyState;
     }
 
     /**
-     * Set Steady state marker.
-     * @param SteadyState Steady state marker.
+     * Set 
+     * @param SteadyState 
      */
     public void setSteadyState(Boolean SteadyState) {
         this.SteadyState = SteadyState;

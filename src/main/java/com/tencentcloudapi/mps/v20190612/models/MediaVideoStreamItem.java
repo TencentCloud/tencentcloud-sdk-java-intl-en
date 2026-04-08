@@ -96,7 +96,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String HdrType;
 
     /**
-    * Video Codecs.
+    * 
     */
     @SerializedName("Codecs")
     @Expose
@@ -299,16 +299,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Video Codecs. 
-     * @return Codecs Video Codecs.
+     * Get  
+     * @return Codecs 
      */
     public String getCodecs() {
         return this.Codecs;
     }
 
     /**
-     * Set Video Codecs.
-     * @param Codecs Video Codecs.
+     * Set 
+     * @param Codecs 
      */
     public void setCodecs(String Codecs) {
         this.Codecs = Codecs;

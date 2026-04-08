@@ -24,140 +24,179 @@ import java.util.HashMap;
 public class RawSmartEraseParameter extends AbstractModel {
 
     /**
-    * Specifies the removal type.
--subtitle removal.
--Remove watermark.
--privacy protection.
+    * <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
     */
     @SerializedName("EraseType")
     @Expose
     private String EraseType;
 
     /**
-    * Subtitle erasure configuration.
-When EraseType is subtitle, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EraseSubtitleConfig")
     @Expose
     private SmartEraseSubtitleConfig EraseSubtitleConfig;
 
     /**
-    * Specifies the watermark removal configuration.
-When EraseType is watermark, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EraseWatermarkConfig")
     @Expose
     private SmartEraseWatermarkConfig EraseWatermarkConfig;
 
     /**
-    * Privacy protection configuration.
-When EraseType is privacy, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ErasePrivacyConfig")
     @Expose
     private SmartErasePrivacyConfig ErasePrivacyConfig;
 
     /**
-     * Get Specifies the removal type.
--subtitle removal.
--Remove watermark.
--privacy protection. 
-     * @return EraseType Specifies the removal type.
--subtitle removal.
--Remove watermark.
--privacy protection.
+    * <p>id of the subtitle removal suppression template.</p>
+    */
+    @SerializedName("SubtitleEmbedId")
+    @Expose
+    private Long SubtitleEmbedId;
+
+    /**
+    * <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+    */
+    @SerializedName("UseOriginalPos")
+    @Expose
+    private Long UseOriginalPos;
+
+    /**
+    * <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+    */
+    @SerializedName("UseOriginalSize")
+    @Expose
+    private Long UseOriginalSize;
+
+    /**
+     * Get <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul> 
+     * @return EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
      */
     public String getEraseType() {
         return this.EraseType;
     }
 
     /**
-     * Set Specifies the removal type.
--subtitle removal.
--Remove watermark.
--privacy protection.
-     * @param EraseType Specifies the removal type.
--subtitle removal.
--Remove watermark.
--privacy protection.
+     * Set <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+     * @param EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
      */
     public void setEraseType(String EraseType) {
         this.EraseType = EraseType;
     }
 
     /**
-     * Get Subtitle erasure configuration.
-When EraseType is subtitle, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return EraseSubtitleConfig Subtitle erasure configuration.
-When EraseType is subtitle, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SmartEraseSubtitleConfig getEraseSubtitleConfig() {
         return this.EraseSubtitleConfig;
     }
 
     /**
-     * Set Subtitle erasure configuration.
-When EraseType is subtitle, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param EraseSubtitleConfig Subtitle erasure configuration.
-When EraseType is subtitle, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEraseSubtitleConfig(SmartEraseSubtitleConfig EraseSubtitleConfig) {
         this.EraseSubtitleConfig = EraseSubtitleConfig;
     }
 
     /**
-     * Get Specifies the watermark removal configuration.
-When EraseType is watermark, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return EraseWatermarkConfig Specifies the watermark removal configuration.
-When EraseType is watermark, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SmartEraseWatermarkConfig getEraseWatermarkConfig() {
         return this.EraseWatermarkConfig;
     }
 
     /**
-     * Set Specifies the watermark removal configuration.
-When EraseType is watermark, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param EraseWatermarkConfig Specifies the watermark removal configuration.
-When EraseType is watermark, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEraseWatermarkConfig(SmartEraseWatermarkConfig EraseWatermarkConfig) {
         this.EraseWatermarkConfig = EraseWatermarkConfig;
     }
 
     /**
-     * Get Privacy protection configuration.
-When EraseType is privacy, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ErasePrivacyConfig Privacy protection configuration.
-When EraseType is privacy, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SmartErasePrivacyConfig getErasePrivacyConfig() {
         return this.ErasePrivacyConfig;
     }
 
     /**
-     * Set Privacy protection configuration.
-When EraseType is privacy, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ErasePrivacyConfig Privacy protection configuration.
-When EraseType is privacy, this field is required.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setErasePrivacyConfig(SmartErasePrivacyConfig ErasePrivacyConfig) {
         this.ErasePrivacyConfig = ErasePrivacyConfig;
+    }
+
+    /**
+     * Get <p>id of the subtitle removal suppression template.</p> 
+     * @return SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+     */
+    public Long getSubtitleEmbedId() {
+        return this.SubtitleEmbedId;
+    }
+
+    /**
+     * Set <p>id of the subtitle removal suppression template.</p>
+     * @param SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+     */
+    public void setSubtitleEmbedId(Long SubtitleEmbedId) {
+        this.SubtitleEmbedId = SubtitleEmbedId;
+    }
+
+    /**
+     * Get <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p> 
+     * @return UseOriginalPos <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+     */
+    public Long getUseOriginalPos() {
+        return this.UseOriginalPos;
+    }
+
+    /**
+     * Set <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+     * @param UseOriginalPos <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+     */
+    public void setUseOriginalPos(Long UseOriginalPos) {
+        this.UseOriginalPos = UseOriginalPos;
+    }
+
+    /**
+     * Get <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p> 
+     * @return UseOriginalSize <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+     */
+    public Long getUseOriginalSize() {
+        return this.UseOriginalSize;
+    }
+
+    /**
+     * Set <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+     * @param UseOriginalSize <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+     */
+    public void setUseOriginalSize(Long UseOriginalSize) {
+        this.UseOriginalSize = UseOriginalSize;
     }
 
     public RawSmartEraseParameter() {
@@ -180,6 +219,15 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.ErasePrivacyConfig != null) {
             this.ErasePrivacyConfig = new SmartErasePrivacyConfig(source.ErasePrivacyConfig);
         }
+        if (source.SubtitleEmbedId != null) {
+            this.SubtitleEmbedId = new Long(source.SubtitleEmbedId);
+        }
+        if (source.UseOriginalPos != null) {
+            this.UseOriginalPos = new Long(source.UseOriginalPos);
+        }
+        if (source.UseOriginalSize != null) {
+            this.UseOriginalSize = new Long(source.UseOriginalSize);
+        }
     }
 
 
@@ -191,6 +239,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "EraseSubtitleConfig.", this.EraseSubtitleConfig);
         this.setParamObj(map, prefix + "EraseWatermarkConfig.", this.EraseWatermarkConfig);
         this.setParamObj(map, prefix + "ErasePrivacyConfig.", this.ErasePrivacyConfig);
+        this.setParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
+        this.setParamSimple(map, prefix + "UseOriginalPos", this.UseOriginalPos);
+        this.setParamSimple(map, prefix + "UseOriginalSize", this.UseOriginalSize);
 
     }
 }

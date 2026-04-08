@@ -24,97 +24,120 @@ import java.util.HashMap;
 public class SmartSubtitleTaskAsrFullTextResultOutput extends AbstractModel {
 
     /**
-    * List of segments for full speech recognition.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>List of segments for full speech recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SegmentSet")
     @Expose
     private SmartSubtitleTaskAsrFullTextSegmentItem [] SegmentSet;
 
     /**
-    * Subtitle file path.
+    * <p>Subtitle file path</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Subtitle file path.
+    * <p>Subtitle file URL.</p>
     */
     @SerializedName("SubtitlePath")
     @Expose
     private String SubtitlePath;
 
     /**
-    * Subtitle file storage location.
+    * <p>Subtitle recognition result info.</p>
+    */
+    @SerializedName("SubtitleInfo")
+    @Expose
+    private SubtitleResult SubtitleInfo;
+
+    /**
+    * <p>Storage location of the subtitle file.</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get List of segments for full speech recognition.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SegmentSet List of segments for full speech recognition.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>List of segments for full speech recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SegmentSet <p>List of segments for full speech recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SmartSubtitleTaskAsrFullTextSegmentItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set List of segments for full speech recognition.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SegmentSet List of segments for full speech recognition.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>List of segments for full speech recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SegmentSet <p>List of segments for full speech recognition.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSegmentSet(SmartSubtitleTaskAsrFullTextSegmentItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get Subtitle file path. 
-     * @return Path Subtitle file path.
+     * Get <p>Subtitle file path</p> 
+     * @return Path <p>Subtitle file path</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Subtitle file path.
-     * @param Path Subtitle file path.
+     * Set <p>Subtitle file path</p>
+     * @param Path <p>Subtitle file path</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Subtitle file path. 
-     * @return SubtitlePath Subtitle file path.
+     * Get <p>Subtitle file URL.</p> 
+     * @return SubtitlePath <p>Subtitle file URL.</p>
      */
     public String getSubtitlePath() {
         return this.SubtitlePath;
     }
 
     /**
-     * Set Subtitle file path.
-     * @param SubtitlePath Subtitle file path.
+     * Set <p>Subtitle file URL.</p>
+     * @param SubtitlePath <p>Subtitle file URL.</p>
      */
     public void setSubtitlePath(String SubtitlePath) {
         this.SubtitlePath = SubtitlePath;
     }
 
     /**
-     * Get Subtitle file storage location. 
-     * @return OutputStorage Subtitle file storage location.
+     * Get <p>Subtitle recognition result info.</p> 
+     * @return SubtitleInfo <p>Subtitle recognition result info.</p>
+     */
+    public SubtitleResult getSubtitleInfo() {
+        return this.SubtitleInfo;
+    }
+
+    /**
+     * Set <p>Subtitle recognition result info.</p>
+     * @param SubtitleInfo <p>Subtitle recognition result info.</p>
+     */
+    public void setSubtitleInfo(SubtitleResult SubtitleInfo) {
+        this.SubtitleInfo = SubtitleInfo;
+    }
+
+    /**
+     * Get <p>Storage location of the subtitle file.</p> 
+     * @return OutputStorage <p>Storage location of the subtitle file.</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Subtitle file storage location.
-     * @param OutputStorage Subtitle file storage location.
+     * Set <p>Storage location of the subtitle file.</p>
+     * @param OutputStorage <p>Storage location of the subtitle file.</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
@@ -140,6 +163,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SubtitlePath != null) {
             this.SubtitlePath = new String(source.SubtitlePath);
         }
+        if (source.SubtitleInfo != null) {
+            this.SubtitleInfo = new SubtitleResult(source.SubtitleInfo);
+        }
         if (source.OutputStorage != null) {
             this.OutputStorage = new TaskOutputStorage(source.OutputStorage);
         }
@@ -153,6 +179,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
         this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "SubtitlePath", this.SubtitlePath);
+        this.setParamObj(map, prefix + "SubtitleInfo.", this.SubtitleInfo);
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
 
     }

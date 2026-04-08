@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class AiAnalysisTaskDubbingOutput extends AbstractModel {
 
     /**
-    * Specifies the video path for translation.
+    * <p>Dubbed video path.</p>
     */
     @SerializedName("VideoPath")
     @Expose
     private String VideoPath;
 
     /**
-    * Specifies the file path of the tag.
-
+    * <p>Tag file path</p>
     */
     @SerializedName("SpeakerPath")
     @Expose
     private String SpeakerPath;
 
     /**
-    * Voice type ID.
+    * <p>Voice type id</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * Specifies the storage location of the transcoded video.
+    * <p>Storage location of the dubbed video.</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get Specifies the video path for translation. 
-     * @return VideoPath Specifies the video path for translation.
+     * Get <p>Dubbed video path.</p> 
+     * @return VideoPath <p>Dubbed video path.</p>
      */
     public String getVideoPath() {
         return this.VideoPath;
     }
 
     /**
-     * Set Specifies the video path for translation.
-     * @param VideoPath Specifies the video path for translation.
+     * Set <p>Dubbed video path.</p>
+     * @param VideoPath <p>Dubbed video path.</p>
      */
     public void setVideoPath(String VideoPath) {
         this.VideoPath = VideoPath;
     }
 
     /**
-     * Get Specifies the file path of the tag.
- 
-     * @return SpeakerPath Specifies the file path of the tag.
-
+     * Get <p>Tag file path</p> 
+     * @return SpeakerPath <p>Tag file path</p>
      */
     public String getSpeakerPath() {
         return this.SpeakerPath;
     }
 
     /**
-     * Set Specifies the file path of the tag.
-
-     * @param SpeakerPath Specifies the file path of the tag.
-
+     * Set <p>Tag file path</p>
+     * @param SpeakerPath <p>Tag file path</p>
      */
     public void setSpeakerPath(String SpeakerPath) {
         this.SpeakerPath = SpeakerPath;
     }
 
     /**
-     * Get Voice type ID. 
-     * @return VoiceId Voice type ID.
+     * Get <p>Voice type id</p> 
+     * @return VoiceId <p>Voice type id</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set Voice type ID.
-     * @param VoiceId Voice type ID.
+     * Set <p>Voice type id</p>
+     * @param VoiceId <p>Voice type id</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get Specifies the storage location of the transcoded video. 
-     * @return OutputStorage Specifies the storage location of the transcoded video.
+     * Get <p>Storage location of the dubbed video.</p> 
+     * @return OutputStorage <p>Storage location of the dubbed video.</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Specifies the storage location of the transcoded video.
-     * @param OutputStorage Specifies the storage location of the transcoded video.
+     * Set <p>Storage location of the dubbed video.</p>
+     * @param OutputStorage <p>Storage location of the dubbed video.</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class LiveStreamTagRecognitionResult extends AbstractModel {
 
     /**
-    * Tagging events.
+    * 
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Start PTS time of the recognition segment, unit: seconds.
+    * 
     */
     @SerializedName("StartPtsTime")
     @Expose
     private Float StartPtsTime;
 
     /**
-    * Termination PTS time of the recognition segment, unit: seconds.
+    * 
     */
     @SerializedName("EndPtsTime")
     @Expose
     private Float EndPtsTime;
 
     /**
-    * Recognition segment confidence. Range: 0-100.
+    * 
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-     * Get Tagging events. 
-     * @return Id Tagging events.
+     * Get  
+     * @return Id 
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Tagging events.
-     * @param Id Tagging events.
+     * Set 
+     * @param Id 
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Start PTS time of the recognition segment, unit: seconds. 
-     * @return StartPtsTime Start PTS time of the recognition segment, unit: seconds.
+     * Get  
+     * @return StartPtsTime 
      */
     public Float getStartPtsTime() {
         return this.StartPtsTime;
     }
 
     /**
-     * Set Start PTS time of the recognition segment, unit: seconds.
-     * @param StartPtsTime Start PTS time of the recognition segment, unit: seconds.
+     * Set 
+     * @param StartPtsTime 
      */
     public void setStartPtsTime(Float StartPtsTime) {
         this.StartPtsTime = StartPtsTime;
     }
 
     /**
-     * Get Termination PTS time of the recognition segment, unit: seconds. 
-     * @return EndPtsTime Termination PTS time of the recognition segment, unit: seconds.
+     * Get  
+     * @return EndPtsTime 
      */
     public Float getEndPtsTime() {
         return this.EndPtsTime;
     }
 
     /**
-     * Set Termination PTS time of the recognition segment, unit: seconds.
-     * @param EndPtsTime Termination PTS time of the recognition segment, unit: seconds.
+     * Set 
+     * @param EndPtsTime 
      */
     public void setEndPtsTime(Float EndPtsTime) {
         this.EndPtsTime = EndPtsTime;
     }
 
     /**
-     * Get Recognition segment confidence. Range: 0-100. 
-     * @return Confidence Recognition segment confidence. Range: 0-100.
+     * Get  
+     * @return Confidence 
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Recognition segment confidence. Range: 0-100.
-     * @param Confidence Recognition segment confidence. Range: 0-100.
+     * Set 
+     * @param Confidence 
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;

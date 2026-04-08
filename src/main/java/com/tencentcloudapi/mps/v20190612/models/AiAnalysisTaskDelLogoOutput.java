@@ -24,176 +24,176 @@ import java.util.HashMap;
 public class AiAnalysisTaskDelLogoOutput extends AbstractModel {
 
     /**
-    * Path of a file after removal.
+    * <p>Path of a file after removal.</p>
     */
     @SerializedName("Path")
     @Expose
     private String Path;
 
     /**
-    * Storage location of a file after removal.
+    * <p>Storage location of a file after removal.</p>
     */
     @SerializedName("OutputStorage")
     @Expose
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Path of a subtitle file extracted from a video.
+    * <p>Path of subtitle file extracted from video.</p>
     */
     @SerializedName("OriginSubtitlePath")
     @Expose
     private String OriginSubtitlePath;
 
     /**
-    * Path of a subtitle translation file extracted from a video.
+    * <p>Path of a subtitle translation file extracted from a video.</p>
     */
     @SerializedName("TranslateSubtitlePath")
     @Expose
     private String TranslateSubtitlePath;
 
     /**
-    * Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubtitlePos")
     @Expose
     private SubtitlePosition SubtitlePos;
 
     /**
-    * Specifies the file url of the video after voice cloning.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>File URL of the video after voice type cloning</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VoiceClonedVideo")
     @Expose
     private String VoiceClonedVideo;
 
     /**
-    * Specifies the file address of the voice type clone annotation.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>File address of the voice type clone annotation</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VoiceClonedMarkFile")
     @Expose
     private String VoiceClonedMarkFile;
 
     /**
-     * Get Path of a file after removal. 
-     * @return Path Path of a file after removal.
+     * Get <p>Path of a file after removal.</p> 
+     * @return Path <p>Path of a file after removal.</p>
      */
     public String getPath() {
         return this.Path;
     }
 
     /**
-     * Set Path of a file after removal.
-     * @param Path Path of a file after removal.
+     * Set <p>Path of a file after removal.</p>
+     * @param Path <p>Path of a file after removal.</p>
      */
     public void setPath(String Path) {
         this.Path = Path;
     }
 
     /**
-     * Get Storage location of a file after removal. 
-     * @return OutputStorage Storage location of a file after removal.
+     * Get <p>Storage location of a file after removal.</p> 
+     * @return OutputStorage <p>Storage location of a file after removal.</p>
      */
     public TaskOutputStorage getOutputStorage() {
         return this.OutputStorage;
     }
 
     /**
-     * Set Storage location of a file after removal.
-     * @param OutputStorage Storage location of a file after removal.
+     * Set <p>Storage location of a file after removal.</p>
+     * @param OutputStorage <p>Storage location of a file after removal.</p>
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
         this.OutputStorage = OutputStorage;
     }
 
     /**
-     * Get Path of a subtitle file extracted from a video. 
-     * @return OriginSubtitlePath Path of a subtitle file extracted from a video.
+     * Get <p>Path of subtitle file extracted from video.</p> 
+     * @return OriginSubtitlePath <p>Path of subtitle file extracted from video.</p>
      */
     public String getOriginSubtitlePath() {
         return this.OriginSubtitlePath;
     }
 
     /**
-     * Set Path of a subtitle file extracted from a video.
-     * @param OriginSubtitlePath Path of a subtitle file extracted from a video.
+     * Set <p>Path of subtitle file extracted from video.</p>
+     * @param OriginSubtitlePath <p>Path of subtitle file extracted from video.</p>
      */
     public void setOriginSubtitlePath(String OriginSubtitlePath) {
         this.OriginSubtitlePath = OriginSubtitlePath;
     }
 
     /**
-     * Get Path of a subtitle translation file extracted from a video. 
-     * @return TranslateSubtitlePath Path of a subtitle translation file extracted from a video.
+     * Get <p>Path of a subtitle translation file extracted from a video.</p> 
+     * @return TranslateSubtitlePath <p>Path of a subtitle translation file extracted from a video.</p>
      */
     public String getTranslateSubtitlePath() {
         return this.TranslateSubtitlePath;
     }
 
     /**
-     * Set Path of a subtitle translation file extracted from a video.
-     * @param TranslateSubtitlePath Path of a subtitle translation file extracted from a video.
+     * Set <p>Path of a subtitle translation file extracted from a video.</p>
+     * @param TranslateSubtitlePath <p>Path of a subtitle translation file extracted from a video.</p>
      */
     public void setTranslateSubtitlePath(String TranslateSubtitlePath) {
         this.TranslateSubtitlePath = TranslateSubtitlePath;
     }
 
     /**
-     * Get Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SubtitlePos Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubtitlePos <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SubtitlePosition getSubtitlePos() {
         return this.SubtitlePos;
     }
 
     /**
-     * Set Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SubtitlePos Position of the erased subtitle. Note: This field is only valid for subtitle extraction when the option to return subtitle positions is enabled.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubtitlePos <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubtitlePos(SubtitlePosition SubtitlePos) {
         this.SubtitlePos = SubtitlePos;
     }
 
     /**
-     * Get Specifies the file url of the video after voice cloning.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return VoiceClonedVideo Specifies the file url of the video after voice cloning.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>File URL of the video after voice type cloning</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VoiceClonedVideo <p>File URL of the video after voice type cloning</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVoiceClonedVideo() {
         return this.VoiceClonedVideo;
     }
 
     /**
-     * Set Specifies the file url of the video after voice cloning.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param VoiceClonedVideo Specifies the file url of the video after voice cloning.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>File URL of the video after voice type cloning</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VoiceClonedVideo <p>File URL of the video after voice type cloning</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVoiceClonedVideo(String VoiceClonedVideo) {
         this.VoiceClonedVideo = VoiceClonedVideo;
     }
 
     /**
-     * Get Specifies the file address of the voice type clone annotation.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return VoiceClonedMarkFile Specifies the file address of the voice type clone annotation.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>File address of the voice type clone annotation</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return VoiceClonedMarkFile <p>File address of the voice type clone annotation</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVoiceClonedMarkFile() {
         return this.VoiceClonedMarkFile;
     }
 
     /**
-     * Set Specifies the file address of the voice type clone annotation.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param VoiceClonedMarkFile Specifies the file address of the voice type clone annotation.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>File address of the voice type clone annotation</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param VoiceClonedMarkFile <p>File address of the voice type clone annotation</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVoiceClonedMarkFile(String VoiceClonedMarkFile) {
         this.VoiceClonedMarkFile = VoiceClonedMarkFile;

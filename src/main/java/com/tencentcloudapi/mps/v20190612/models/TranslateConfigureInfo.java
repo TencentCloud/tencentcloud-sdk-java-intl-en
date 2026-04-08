@@ -33,14 +33,14 @@ public class TranslateConfigureInfo extends AbstractModel {
     private String Switch;
 
     /**
-    * Video source language.
+    * 
     */
     @SerializedName("SourceLanguage")
     @Expose
     private String SourceLanguage;
 
     /**
-    * Translated target language.
+    * 
     */
     @SerializedName("DestinationLanguage")
     @Expose
@@ -81,32 +81,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Video source language. 
-     * @return SourceLanguage Video source language.
+     * Get  
+     * @return SourceLanguage 
      */
     public String getSourceLanguage() {
         return this.SourceLanguage;
     }
 
     /**
-     * Set Video source language.
-     * @param SourceLanguage Video source language.
+     * Set 
+     * @param SourceLanguage 
      */
     public void setSourceLanguage(String SourceLanguage) {
         this.SourceLanguage = SourceLanguage;
     }
 
     /**
-     * Get Translated target language. 
-     * @return DestinationLanguage Translated target language.
+     * Get  
+     * @return DestinationLanguage 
      */
     public String getDestinationLanguage() {
         return this.DestinationLanguage;
     }
 
     /**
-     * Set Translated target language.
-     * @param DestinationLanguage Translated target language.
+     * Set 
+     * @param DestinationLanguage 
      */
     public void setDestinationLanguage(String DestinationLanguage) {
         this.DestinationLanguage = DestinationLanguage;

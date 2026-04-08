@@ -108,7 +108,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return DropTable Whether to delete the table
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public Boolean getDropTable() {
         return this.DropTable;
     }
@@ -118,7 +120,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param DropTable Whether to delete the table
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setDropTable(Boolean DropTable) {
         this.DropTable = DropTable;
     }

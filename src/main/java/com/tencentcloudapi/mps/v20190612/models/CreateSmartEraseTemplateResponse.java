@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSmartEraseTemplateResponse extends AbstractModel {
 
     /**
-    * Unique identifier of the smart erasing template.
+    * <p>Unique identifier of the intelligent erasure template</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSmartEraseTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Unique identifier of the smart erasing template. 
-     * @return Definition Unique identifier of the smart erasing template.
+     * Get <p>Unique identifier of the intelligent erasure template</p> 
+     * @return Definition <p>Unique identifier of the intelligent erasure template</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique identifier of the smart erasing template.
-     * @param Definition Unique identifier of the smart erasing template.
+     * Set <p>Unique identifier of the intelligent erasure template</p>
+     * @param Definition <p>Unique identifier of the intelligent erasure template</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

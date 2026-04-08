@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSmartSubtitleTemplateResponse extends AbstractModel {
 
     /**
-    * Unique identifier of the smart subtitle template.
+    * <p>Unique identifier of the smart subtitle template.</p>
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSmartSubtitleTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Unique identifier of the smart subtitle template. 
-     * @return Definition Unique identifier of the smart subtitle template.
+     * Get <p>Unique identifier of the smart subtitle template.</p> 
+     * @return Definition <p>Unique identifier of the smart subtitle template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique identifier of the smart subtitle template.
-     * @param Definition Unique identifier of the smart subtitle template.
+     * Set <p>Unique identifier of the smart subtitle template.</p>
+     * @param Definition <p>Unique identifier of the smart subtitle template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

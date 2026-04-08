@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SmartSubtitleTaskTextResultOutput extends AbstractModel {
 
     /**
-    * Subtitle recognition result.
+    * <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RecognizeSubtitleResult")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SubtitleResult [] RecognizeSubtitleResult;
 
     /**
-    * Subtitle translation result.
+    * <p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransSubtitleResult")
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private SubtitleResult [] TransSubtitleResult;
 
     /**
-    * Storage location of the subtitle file.
+    * <p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OutputStorage")
@@ -48,9 +48,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TaskOutputStorage OutputStorage;
 
     /**
-     * Get Subtitle recognition result.
+     * Get <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RecognizeSubtitleResult Subtitle recognition result.
+     * @return RecognizeSubtitleResult <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SubtitleResult [] getRecognizeSubtitleResult() {
@@ -58,9 +58,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Subtitle recognition result.
+     * Set <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RecognizeSubtitleResult Subtitle recognition result.
+     * @param RecognizeSubtitleResult <p>Subtitle recognition result</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRecognizeSubtitleResult(SubtitleResult [] RecognizeSubtitleResult) {
@@ -68,9 +68,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Subtitle translation result.
+     * Get <p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransSubtitleResult Subtitle translation result.
+     * @return TransSubtitleResult <p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SubtitleResult [] getTransSubtitleResult() {
@@ -78,9 +78,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Subtitle translation result.
+     * Set <p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransSubtitleResult Subtitle translation result.
+     * @param TransSubtitleResult <p>Translated subtitles</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransSubtitleResult(SubtitleResult [] TransSubtitleResult) {
@@ -88,9 +88,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Storage location of the subtitle file.
+     * Get <p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutputStorage Storage location of the subtitle file.
+     * @return OutputStorage <p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TaskOutputStorage getOutputStorage() {
@@ -98,9 +98,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Storage location of the subtitle file.
+     * Set <p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OutputStorage Storage location of the subtitle file.
+     * @param OutputStorage <p>Storage location of the subtitle file</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {

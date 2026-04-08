@@ -80,6 +80,13 @@ public class CreateDLCTableRequest extends AbstractModel {
     private String ResourceGroupname;
 
     /**
+    * 
+    */
+    @SerializedName("Catalog")
+    @Expose
+    private String Catalog;
+
+    /**
      * Get Data table configuration information 
      * @return TableBaseInfo Data table configuration information
      */
@@ -207,6 +214,22 @@ public class CreateDLCTableRequest extends AbstractModel {
         this.ResourceGroupname = ResourceGroupname;
     }
 
+    /**
+     * Get  
+     * @return Catalog 
+     */
+    public String getCatalog() {
+        return this.Catalog;
+    }
+
+    /**
+     * Set 
+     * @param Catalog 
+     */
+    public void setCatalog(String Catalog) {
+        this.Catalog = Catalog;
+    }
+
     public CreateDLCTableRequest() {
     }
 
@@ -248,6 +271,9 @@ public class CreateDLCTableRequest extends AbstractModel {
         if (source.ResourceGroupname != null) {
             this.ResourceGroupname = new String(source.ResourceGroupname);
         }
+        if (source.Catalog != null) {
+            this.Catalog = new String(source.Catalog);
+        }
     }
 
 
@@ -263,6 +289,7 @@ public class CreateDLCTableRequest extends AbstractModel {
         this.setParamObj(map, prefix + "ExternalDataConfiguration.", this.ExternalDataConfiguration);
         this.setParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
         this.setParamSimple(map, prefix + "ResourceGroupname", this.ResourceGroupname);
+        this.setParamSimple(map, prefix + "Catalog", this.Catalog);
 
     }
 }
