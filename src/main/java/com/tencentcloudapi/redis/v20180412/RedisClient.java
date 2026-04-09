@@ -963,6 +963,17 @@ public class RedisClient extends AbstractClient{
     }
 
     /**
+     *This API is used to change the billing type of an instance.
+     * @param req ModifyInstanceChargeTypeRequest
+     * @return ModifyInstanceChargeTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceChargeTypeResponse ModifyInstanceChargeType(ModifyInstanceChargeTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceChargeType", ModifyInstanceChargeTypeResponse.class);
+    }
+
+    /**
      *This API is used to modify the operations event execution schedule of an instance.
      * @param req ModifyInstanceEventRequest
      * @return ModifyInstanceEventResponse

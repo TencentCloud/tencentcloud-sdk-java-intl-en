@@ -87,20 +87,32 @@ public class VoucherInfos extends AbstractModel {
     private String EndTime;
 
     /**
-    * The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+    * Product information applies to
     */
     @SerializedName("ApplicableProducts")
     @Expose
     private ApplicableProducts ApplicableProducts;
 
     /**
-    * The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+    * Product information not applicable
     */
     @SerializedName("ExcludedProducts")
     @Expose
     private ExcludedProducts [] ExcludedProducts;
+
+    /**
+    * Instructions/Batch Remarks
+    */
+    @SerializedName("PolicyRemark")
+    @Expose
+    private String PolicyRemark;
+
+    /**
+    * Coupon issuance time
+    */
+    @SerializedName("CreateTime")
+    @Expose
+    private String CreateTime;
 
     /**
      * Get The owner of the voucher. 
@@ -247,43 +259,67 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ApplicableProducts The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Product information applies to 
+     * @return ApplicableProducts Product information applies to
      */
     public ApplicableProducts getApplicableProducts() {
         return this.ApplicableProducts;
     }
 
     /**
-     * Set The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ApplicableProducts The products that are applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Product information applies to
+     * @param ApplicableProducts Product information applies to
      */
     public void setApplicableProducts(ApplicableProducts ApplicableProducts) {
         this.ApplicableProducts = ApplicableProducts;
     }
 
     /**
-     * Get The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return ExcludedProducts The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Product information not applicable 
+     * @return ExcludedProducts Product information not applicable
      */
     public ExcludedProducts [] getExcludedProducts() {
         return this.ExcludedProducts;
     }
 
     /**
-     * Set The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param ExcludedProducts The products that are not applicable.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Product information not applicable
+     * @param ExcludedProducts Product information not applicable
      */
     public void setExcludedProducts(ExcludedProducts [] ExcludedProducts) {
         this.ExcludedProducts = ExcludedProducts;
+    }
+
+    /**
+     * Get Instructions/Batch Remarks 
+     * @return PolicyRemark Instructions/Batch Remarks
+     */
+    public String getPolicyRemark() {
+        return this.PolicyRemark;
+    }
+
+    /**
+     * Set Instructions/Batch Remarks
+     * @param PolicyRemark Instructions/Batch Remarks
+     */
+    public void setPolicyRemark(String PolicyRemark) {
+        this.PolicyRemark = PolicyRemark;
+    }
+
+    /**
+     * Get Coupon issuance time 
+     * @return CreateTime Coupon issuance time
+     */
+    public String getCreateTime() {
+        return this.CreateTime;
+    }
+
+    /**
+     * Set Coupon issuance time
+     * @param CreateTime Coupon issuance time
+     */
+    public void setCreateTime(String CreateTime) {
+        this.CreateTime = CreateTime;
     }
 
     public VoucherInfos() {
@@ -330,6 +366,12 @@ Note: This field may return `null`, indicating that no valid value was found.
                 this.ExcludedProducts[i] = new ExcludedProducts(source.ExcludedProducts[i]);
             }
         }
+        if (source.PolicyRemark != null) {
+            this.PolicyRemark = new String(source.PolicyRemark);
+        }
+        if (source.CreateTime != null) {
+            this.CreateTime = new String(source.CreateTime);
+        }
     }
 
 
@@ -348,6 +390,8 @@ Note: This field may return `null`, indicating that no valid value was found.
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamObj(map, prefix + "ApplicableProducts.", this.ApplicableProducts);
         this.setParamArrayObj(map, prefix + "ExcludedProducts.", this.ExcludedProducts);
+        this.setParamSimple(map, prefix + "PolicyRemark", this.PolicyRemark);
+        this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
 
     }
 }

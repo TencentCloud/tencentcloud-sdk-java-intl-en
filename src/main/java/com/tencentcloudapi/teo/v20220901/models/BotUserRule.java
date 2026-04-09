@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BotUserRule extends AbstractModel {
 
     /**
-    * Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
+    * 
     */
     @SerializedName("RuleName")
     @Expose
@@ -140,16 +140,16 @@ Default: `source_to_eo`.
     private String RedirectUrl;
 
     /**
-     * Get Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore. 
-     * @return RuleName Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
+     * Get  
+     * @return RuleName 
      */
     public String getRuleName() {
         return this.RuleName;
     }
 
     /**
-     * Set Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
-     * @param RuleName Rule name can only consist of English letters, numbers, and underscores, and cannot start with an underscore.
+     * Set 
+     * @param RuleName 
      */
     public void setRuleName(String RuleName) {
         this.RuleName = RuleName;

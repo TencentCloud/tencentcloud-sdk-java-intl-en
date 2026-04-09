@@ -59,6 +59,13 @@ public class ManagedRules extends AbstractModel {
     private ManagedRuleGroup [] ManagedRuleGroups;
 
     /**
+    * High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+    */
+    @SerializedName("FrequentScanningProtection")
+    @Expose
+    private FrequentScanningProtection FrequentScanningProtection;
+
+    /**
      * Get The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>. 
      * @return Enabled The managed rule status. Values: <li>`on`: enabled, all managed rules take effect as configured;</li> <li>`off`: disabled, all managed rules do not take effect.</li>.
      */
@@ -138,6 +145,22 @@ public class ManagedRules extends AbstractModel {
         this.ManagedRuleGroups = ManagedRuleGroups;
     }
 
+    /**
+     * Get High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked. 
+     * @return FrequentScanningProtection High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+     */
+    public FrequentScanningProtection getFrequentScanningProtection() {
+        return this.FrequentScanningProtection;
+    }
+
+    /**
+     * Set High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+     * @param FrequentScanningProtection High-Frequency scan protection configuration option. when a visitor's frequent requests hit the managed rule configured as block within a period of time, all requests from that visitor are blocked.
+     */
+    public void setFrequentScanningProtection(FrequentScanningProtection FrequentScanningProtection) {
+        this.FrequentScanningProtection = FrequentScanningProtection;
+    }
+
     public ManagedRules() {
     }
 
@@ -164,6 +187,9 @@ public class ManagedRules extends AbstractModel {
                 this.ManagedRuleGroups[i] = new ManagedRuleGroup(source.ManagedRuleGroups[i]);
             }
         }
+        if (source.FrequentScanningProtection != null) {
+            this.FrequentScanningProtection = new FrequentScanningProtection(source.FrequentScanningProtection);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class ManagedRules extends AbstractModel {
         this.setParamSimple(map, prefix + "SemanticAnalysis", this.SemanticAnalysis);
         this.setParamObj(map, prefix + "AutoUpdate.", this.AutoUpdate);
         this.setParamArrayObj(map, prefix + "ManagedRuleGroups.", this.ManagedRuleGroups);
+        this.setParamObj(map, prefix + "FrequentScanningProtection.", this.FrequentScanningProtection);
 
     }
 }

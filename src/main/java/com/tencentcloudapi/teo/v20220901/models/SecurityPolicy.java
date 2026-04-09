@@ -68,6 +68,13 @@ Note: This field may return null, indicating that no valid value can be obtained
     private BotManagement BotManagement;
 
     /**
+    * Basic Bot management configuration.
+    */
+    @SerializedName("BotManagementLite")
+    @Expose
+    private BotManagementLite BotManagementLite;
+
+    /**
      * Get Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return CustomRules Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
@@ -171,6 +178,22 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.BotManagement = BotManagement;
     }
 
+    /**
+     * Get Basic Bot management configuration. 
+     * @return BotManagementLite Basic Bot management configuration.
+     */
+    public BotManagementLite getBotManagementLite() {
+        return this.BotManagementLite;
+    }
+
+    /**
+     * Set Basic Bot management configuration.
+     * @param BotManagementLite Basic Bot management configuration.
+     */
+    public void setBotManagementLite(BotManagementLite BotManagementLite) {
+        this.BotManagementLite = BotManagementLite;
+    }
+
     public SecurityPolicy() {
     }
 
@@ -197,6 +220,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.BotManagement != null) {
             this.BotManagement = new BotManagement(source.BotManagement);
         }
+        if (source.BotManagementLite != null) {
+            this.BotManagementLite = new BotManagementLite(source.BotManagementLite);
+        }
     }
 
 
@@ -210,6 +236,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "RateLimitingRules.", this.RateLimitingRules);
         this.setParamObj(map, prefix + "ExceptionRules.", this.ExceptionRules);
         this.setParamObj(map, prefix + "BotManagement.", this.BotManagement);
+        this.setParamObj(map, prefix + "BotManagementLite.", this.BotManagementLite);
 
     }
 }

@@ -24,394 +24,555 @@ import java.util.HashMap;
 public class DescribeVoucherInfoRequest extends AbstractModel {
 
     /**
-    * The number of records per page. The default is 20, and the maximum is 1,000.
+    * <p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * The page number the records start from. The default is 1.
+    * <p>Page number, starts from 1 by default</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
+    * <p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * The voucher ID.
+    * <p>Voucher id</p>
     */
     @SerializedName("VoucherId")
     @Expose
     private String VoucherId;
 
     /**
-    * The voucher order ID.
+    * <p>Voucher order id</p>
     */
     @SerializedName("CodeId")
     @Expose
     private String CodeId;
 
     /**
-    * The product code.
+    * <p>product code</p>
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * The campaign ID.
+    * <p>Activity id</p>
     */
     @SerializedName("ActivityId")
     @Expose
     private String ActivityId;
 
     /**
-    * The voucher name.
+    * <p>Voucher name</p>
     */
     @SerializedName("VoucherName")
     @Expose
     private String VoucherName;
 
     /**
-    * The start date of the voucher issuance, such as `2021-01-01`.
+    * <p>Start time of delivery. Example: 2021-01-01</p>
     */
     @SerializedName("TimeFrom")
     @Expose
     private String TimeFrom;
 
     /**
-    * The end date of the voucher issuance, such as `2021-01-01`.
+    * <p>Delivery end time. Example: 2021-01-01</p>
     */
     @SerializedName("TimeTo")
     @Expose
     private String TimeTo;
 
     /**
-    * The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
+    * <p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
     */
     @SerializedName("SortField")
     @Expose
     private String SortField;
 
     /**
-    * Whether to sort the records in ascending or descending order. Valid values: desc, asc.
+    * <p>Specify ascending/descending order: desc, asc</p>
     */
     @SerializedName("SortOrder")
     @Expose
     private String SortOrder;
 
     /**
-    * The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
+    * <p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
+    * <p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
     */
     @SerializedName("PayScene")
     @Expose
     private String PayScene;
 
     /**
-    * The operator. The default is the UIN of the current user.
+    * <p>Operator is used by default as user uin</p>
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+    * <p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
     */
     @SerializedName("VoucherMainType")
     @Expose
     private String VoucherMainType;
 
     /**
-    * Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+    * <p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
     */
     @SerializedName("VoucherSubType")
     @Expose
     private String VoucherSubType;
 
     /**
-     * Get The number of records per page. The default is 20, and the maximum is 1,000. 
-     * @return Limit The number of records per page. The default is 20, and the maximum is 1,000.
+    * <p>Voucher validity start time</p>
+    */
+    @SerializedName("StartTimeFrom")
+    @Expose
+    private String StartTimeFrom;
+
+    /**
+    * <p>Voucher validity time end time</p>
+    */
+    @SerializedName("StartTimeTo")
+    @Expose
+    private String StartTimeTo;
+
+    /**
+    * <p>Voucher expiration time start time</p>
+    */
+    @SerializedName("EndTimeFrom")
+    @Expose
+    private String EndTimeFrom;
+
+    /**
+    * <p>Voucher expiration time end time</p>
+    */
+    @SerializedName("EndTimeTo")
+    @Expose
+    private String EndTimeTo;
+
+    /**
+    * <p>Voucher issuance start time</p>
+    */
+    @SerializedName("CreateTimeFrom")
+    @Expose
+    private String CreateTimeFrom;
+
+    /**
+    * <p>Voucher issuance time end time</p>
+    */
+    @SerializedName("CreateTimeTo")
+    @Expose
+    private String CreateTimeTo;
+
+    /**
+    * <p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
+    */
+    @SerializedName("Lang")
+    @Expose
+    private String Lang;
+
+    /**
+     * Get <p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p> 
+     * @return Limit <p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of records per page. The default is 20, and the maximum is 1,000.
-     * @param Limit The number of records per page. The default is 20, and the maximum is 1,000.
+     * Set <p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
+     * @param Limit <p>How many data entries per page, 20 is selected by default, maximum not exceeding 1000</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get The page number the records start from. The default is 1. 
-     * @return Offset The page number the records start from. The default is 1.
+     * Get <p>Page number, starts from 1 by default</p> 
+     * @return Offset <p>Page number, starts from 1 by default</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The page number the records start from. The default is 1.
-     * @param Offset The page number the records start from. The default is 1.
+     * Set <p>Page number, starts from 1 by default</p>
+     * @param Offset <p>Page number, starts from 1 by default</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`. 
-     * @return Status The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
+     * Get <p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p> 
+     * @return Status <p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
-     * @param Status The voucher status. Valid values: `unUsed`, `used`, `delivered`, `cancel`, `overdue`.
+     * Set <p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
+     * @param Status <p>Voucher status: pending use: unUsed, Used: used, delivered: delivered, discarded: cancel, expired: overdue</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The voucher ID. 
-     * @return VoucherId The voucher ID.
+     * Get <p>Voucher id</p> 
+     * @return VoucherId <p>Voucher id</p>
      */
     public String getVoucherId() {
         return this.VoucherId;
     }
 
     /**
-     * Set The voucher ID.
-     * @param VoucherId The voucher ID.
+     * Set <p>Voucher id</p>
+     * @param VoucherId <p>Voucher id</p>
      */
     public void setVoucherId(String VoucherId) {
         this.VoucherId = VoucherId;
     }
 
     /**
-     * Get The voucher order ID. 
-     * @return CodeId The voucher order ID.
+     * Get <p>Voucher order id</p> 
+     * @return CodeId <p>Voucher order id</p>
      */
     public String getCodeId() {
         return this.CodeId;
     }
 
     /**
-     * Set The voucher order ID.
-     * @param CodeId The voucher order ID.
+     * Set <p>Voucher order id</p>
+     * @param CodeId <p>Voucher order id</p>
      */
     public void setCodeId(String CodeId) {
         this.CodeId = CodeId;
     }
 
     /**
-     * Get The product code. 
-     * @return ProductCode The product code.
+     * Get <p>product code</p> 
+     * @return ProductCode <p>product code</p>
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set The product code.
-     * @param ProductCode The product code.
+     * Set <p>product code</p>
+     * @param ProductCode <p>product code</p>
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get The campaign ID. 
-     * @return ActivityId The campaign ID.
+     * Get <p>Activity id</p> 
+     * @return ActivityId <p>Activity id</p>
      */
     public String getActivityId() {
         return this.ActivityId;
     }
 
     /**
-     * Set The campaign ID.
-     * @param ActivityId The campaign ID.
+     * Set <p>Activity id</p>
+     * @param ActivityId <p>Activity id</p>
      */
     public void setActivityId(String ActivityId) {
         this.ActivityId = ActivityId;
     }
 
     /**
-     * Get The voucher name. 
-     * @return VoucherName The voucher name.
+     * Get <p>Voucher name</p> 
+     * @return VoucherName <p>Voucher name</p>
      */
     public String getVoucherName() {
         return this.VoucherName;
     }
 
     /**
-     * Set The voucher name.
-     * @param VoucherName The voucher name.
+     * Set <p>Voucher name</p>
+     * @param VoucherName <p>Voucher name</p>
      */
     public void setVoucherName(String VoucherName) {
         this.VoucherName = VoucherName;
     }
 
     /**
-     * Get The start date of the voucher issuance, such as `2021-01-01`. 
-     * @return TimeFrom The start date of the voucher issuance, such as `2021-01-01`.
+     * Get <p>Start time of delivery. Example: 2021-01-01</p> 
+     * @return TimeFrom <p>Start time of delivery. Example: 2021-01-01</p>
      */
     public String getTimeFrom() {
         return this.TimeFrom;
     }
 
     /**
-     * Set The start date of the voucher issuance, such as `2021-01-01`.
-     * @param TimeFrom The start date of the voucher issuance, such as `2021-01-01`.
+     * Set <p>Start time of delivery. Example: 2021-01-01</p>
+     * @param TimeFrom <p>Start time of delivery. Example: 2021-01-01</p>
      */
     public void setTimeFrom(String TimeFrom) {
         this.TimeFrom = TimeFrom;
     }
 
     /**
-     * Get The end date of the voucher issuance, such as `2021-01-01`. 
-     * @return TimeTo The end date of the voucher issuance, such as `2021-01-01`.
+     * Get <p>Delivery end time. Example: 2021-01-01</p> 
+     * @return TimeTo <p>Delivery end time. Example: 2021-01-01</p>
      */
     public String getTimeTo() {
         return this.TimeTo;
     }
 
     /**
-     * Set The end date of the voucher issuance, such as `2021-01-01`.
-     * @param TimeTo The end date of the voucher issuance, such as `2021-01-01`.
+     * Set <p>Delivery end time. Example: 2021-01-01</p>
+     * @param TimeTo <p>Delivery end time. Example: 2021-01-01</p>
      */
     public void setTimeTo(String TimeTo) {
         this.TimeTo = TimeTo;
     }
 
     /**
-     * Get The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime. 
-     * @return SortField The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
+     * Get <p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p> 
+     * @return SortField <p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
      */
     public String getSortField() {
         return this.SortField;
     }
 
     /**
-     * Set The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
-     * @param SortField The field used to sort the records. Valid values: BeginTime, EndTime, CreateTime.
+     * Set <p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
+     * @param SortField <p>Specified sorting field: BeginTime start time, EndTime expiry time, CreateTime creation time</p>
      */
     public void setSortField(String SortField) {
         this.SortField = SortField;
     }
 
     /**
-     * Get Whether to sort the records in ascending or descending order. Valid values: desc, asc. 
-     * @return SortOrder Whether to sort the records in ascending or descending order. Valid values: desc, asc.
+     * Get <p>Specify ascending/descending order: desc, asc</p> 
+     * @return SortOrder <p>Specify ascending/descending order: desc, asc</p>
      */
     public String getSortOrder() {
         return this.SortOrder;
     }
 
     /**
-     * Set Whether to sort the records in ascending or descending order. Valid values: desc, asc.
-     * @param SortOrder Whether to sort the records in ascending or descending order. Valid values: desc, asc.
+     * Set <p>Specify ascending/descending order: desc, asc</p>
+     * @param SortOrder <p>Specify ascending/descending order: desc, asc</p>
      */
     public void setSortOrder(String SortOrder) {
         this.SortOrder = SortOrder;
     }
 
     /**
-     * Get The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty. 
-     * @return PayMode The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
+     * Get <p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p> 
+     * @return PayMode <p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
-     * @param PayMode The payment mode. Valid values: `postPay`: pay-as-you-go; `prePay`: prepaid; `riPay`: reserved instance; empty or `*`: all. If this parameter is empty or `*`, `productCode` and `subProductCode` must also be empty.
+     * Set <p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
+     * @param PayMode <p>Payment mode, postPay (postpaid)/prePay (prepaid)/riPay (reserved instance)/"" or "*" means all modes. If payMode is "" or "*", productCode and subProductCode must be empty.</p>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios. 
-     * @return PayScene If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
+     * Get <p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p> 
+     * @return PayScene <p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
      */
     public String getPayScene() {
         return this.PayScene;
     }
 
     /**
-     * Set If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
-     * @param PayScene If `PayMode` is `postPay`, this parameter may be `spotpay` (spot instance) or `settle account` (regular pay-as-you-go). If `PayMode` is `prePay`, this parameter may be `purchase`, `renew`, or `modify` (downgrade/upgrade). If `PayMode` is `riPay`, this parameter may be `oneOffFee` (prepayment of reserved instance) or `hourlyFee` (hourly billing of reserved instance). `*` means to query vouchers that support all billing scenarios.
+     * Set <p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
+     * @param PayScene <p>Payment scenario PayMode=postPay: spotpay - spot instance, "settle account" - standard post-paid. PayMode=prePay: purchase - monthly subscription new purchase, renew - annual and monthly renewal (auto renewal), modify - monthly subscription configuration change. PayMode=riPay: oneOffFee - prepayment of reserved instance, hourlyFee - hourly charge for reserved instance, * - support all payment scenarios.</p>
      */
     public void setPayScene(String PayScene) {
         this.PayScene = PayScene;
     }
 
     /**
-     * Get The operator. The default is the UIN of the current user. 
-     * @return Operator The operator. The default is the UIN of the current user.
+     * Get <p>Operator is used by default as user uin</p> 
+     * @return Operator <p>Operator is used by default as user uin</p>
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set The operator. The default is the UIN of the current user.
-     * @param Operator The operator. The default is the UIN of the current user.
+     * Set <p>Operator is used by default as user uin</p>
+     * @param Operator <p>Operator is used by default as user uin</p>
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively. 
-     * @return VoucherMainType The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+     * Get <p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p> 
+     * @return VoucherMainType <p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
      */
     public String getVoucherMainType() {
         return this.VoucherMainType;
     }
 
     /**
-     * Set The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
-     * @param VoucherMainType The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.
+     * Set <p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
+     * @param VoucherMainType <p>The primary types of vouchers are has_price and no_price, which represent the cash voucher with a price and the cash voucher without a price respectively.</p>
      */
     public void setVoucherMainType(String VoucherMainType) {
         this.VoucherMainType = VoucherMainType;
     }
 
     /**
-     * Get Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher. 
-     * @return VoucherSubType Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+     * Get <p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p> 
+     * @return VoucherSubType <p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
      */
     public String getVoucherSubType() {
         return this.VoucherSubType;
     }
 
     /**
-     * Set Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
-     * @param VoucherSubType Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.
+     * Set <p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
+     * @param VoucherSubType <p>Voucher subtype: Discount is a discount voucher, and deduct is a deduction voucher.</p>
      */
     public void setVoucherSubType(String VoucherSubType) {
         this.VoucherSubType = VoucherSubType;
+    }
+
+    /**
+     * Get <p>Voucher validity start time</p> 
+     * @return StartTimeFrom <p>Voucher validity start time</p>
+     */
+    public String getStartTimeFrom() {
+        return this.StartTimeFrom;
+    }
+
+    /**
+     * Set <p>Voucher validity start time</p>
+     * @param StartTimeFrom <p>Voucher validity start time</p>
+     */
+    public void setStartTimeFrom(String StartTimeFrom) {
+        this.StartTimeFrom = StartTimeFrom;
+    }
+
+    /**
+     * Get <p>Voucher validity time end time</p> 
+     * @return StartTimeTo <p>Voucher validity time end time</p>
+     */
+    public String getStartTimeTo() {
+        return this.StartTimeTo;
+    }
+
+    /**
+     * Set <p>Voucher validity time end time</p>
+     * @param StartTimeTo <p>Voucher validity time end time</p>
+     */
+    public void setStartTimeTo(String StartTimeTo) {
+        this.StartTimeTo = StartTimeTo;
+    }
+
+    /**
+     * Get <p>Voucher expiration time start time</p> 
+     * @return EndTimeFrom <p>Voucher expiration time start time</p>
+     */
+    public String getEndTimeFrom() {
+        return this.EndTimeFrom;
+    }
+
+    /**
+     * Set <p>Voucher expiration time start time</p>
+     * @param EndTimeFrom <p>Voucher expiration time start time</p>
+     */
+    public void setEndTimeFrom(String EndTimeFrom) {
+        this.EndTimeFrom = EndTimeFrom;
+    }
+
+    /**
+     * Get <p>Voucher expiration time end time</p> 
+     * @return EndTimeTo <p>Voucher expiration time end time</p>
+     */
+    public String getEndTimeTo() {
+        return this.EndTimeTo;
+    }
+
+    /**
+     * Set <p>Voucher expiration time end time</p>
+     * @param EndTimeTo <p>Voucher expiration time end time</p>
+     */
+    public void setEndTimeTo(String EndTimeTo) {
+        this.EndTimeTo = EndTimeTo;
+    }
+
+    /**
+     * Get <p>Voucher issuance start time</p> 
+     * @return CreateTimeFrom <p>Voucher issuance start time</p>
+     */
+    public String getCreateTimeFrom() {
+        return this.CreateTimeFrom;
+    }
+
+    /**
+     * Set <p>Voucher issuance start time</p>
+     * @param CreateTimeFrom <p>Voucher issuance start time</p>
+     */
+    public void setCreateTimeFrom(String CreateTimeFrom) {
+        this.CreateTimeFrom = CreateTimeFrom;
+    }
+
+    /**
+     * Get <p>Voucher issuance time end time</p> 
+     * @return CreateTimeTo <p>Voucher issuance time end time</p>
+     */
+    public String getCreateTimeTo() {
+        return this.CreateTimeTo;
+    }
+
+    /**
+     * Set <p>Voucher issuance time end time</p>
+     * @param CreateTimeTo <p>Voucher issuance time end time</p>
+     */
+    public void setCreateTimeTo(String CreateTimeTo) {
+        this.CreateTimeTo = CreateTimeTo;
+    }
+
+    /**
+     * Get <p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p> 
+     * @return Lang <p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
+     */
+    public String getLang() {
+        return this.Lang;
+    }
+
+    /**
+     * Set <p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
+     * @param Lang <p>Language parameter</p><p>Default value: zh</p><p>Expect the product name to return in Chinese or other languages. Currently only support Chinese and English. Return in Chinese when "zh" is entered or left blank; return in English in other cases.</p>
+     */
+    public void setLang(String Lang) {
+        this.Lang = Lang;
     }
 
     public DescribeVoucherInfoRequest() {
@@ -473,6 +634,27 @@ public class DescribeVoucherInfoRequest extends AbstractModel {
         if (source.VoucherSubType != null) {
             this.VoucherSubType = new String(source.VoucherSubType);
         }
+        if (source.StartTimeFrom != null) {
+            this.StartTimeFrom = new String(source.StartTimeFrom);
+        }
+        if (source.StartTimeTo != null) {
+            this.StartTimeTo = new String(source.StartTimeTo);
+        }
+        if (source.EndTimeFrom != null) {
+            this.EndTimeFrom = new String(source.EndTimeFrom);
+        }
+        if (source.EndTimeTo != null) {
+            this.EndTimeTo = new String(source.EndTimeTo);
+        }
+        if (source.CreateTimeFrom != null) {
+            this.CreateTimeFrom = new String(source.CreateTimeFrom);
+        }
+        if (source.CreateTimeTo != null) {
+            this.CreateTimeTo = new String(source.CreateTimeTo);
+        }
+        if (source.Lang != null) {
+            this.Lang = new String(source.Lang);
+        }
     }
 
 
@@ -497,6 +679,13 @@ public class DescribeVoucherInfoRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Operator", this.Operator);
         this.setParamSimple(map, prefix + "VoucherMainType", this.VoucherMainType);
         this.setParamSimple(map, prefix + "VoucherSubType", this.VoucherSubType);
+        this.setParamSimple(map, prefix + "StartTimeFrom", this.StartTimeFrom);
+        this.setParamSimple(map, prefix + "StartTimeTo", this.StartTimeTo);
+        this.setParamSimple(map, prefix + "EndTimeFrom", this.EndTimeFrom);
+        this.setParamSimple(map, prefix + "EndTimeTo", this.EndTimeTo);
+        this.setParamSimple(map, prefix + "CreateTimeFrom", this.CreateTimeFrom);
+        this.setParamSimple(map, prefix + "CreateTimeTo", this.CreateTimeTo);
+        this.setParamSimple(map, prefix + "Lang", this.Lang);
 
     }
 }

@@ -78,6 +78,17 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
+     *According to Convert3DFormatJob, querying the specific results of the model format conversion typically requires the unique JobID corresponding to that task.
+     * @param req DescribeConvert3DFormatJobRequest
+     * @return DescribeConvert3DFormatJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeConvert3DFormatJobResponse DescribeConvert3DFormatJob(DescribeConvert3DFormatJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeConvert3DFormatJob", DescribeConvert3DFormatJobResponse.class);
+    }
+
+    /**
      *Query component splitting tasks.
      * @param req DescribeHunyuanTo3DUVJobRequest
      * @return DescribeHunyuanTo3DUVJobResponse
@@ -144,6 +155,17 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
     public Submit3DSmartTopologyJobResponse Submit3DSmartTopologyJob(Submit3DSmartTopologyJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "Submit3DSmartTopologyJob", Submit3DSmartTopologyJobResponse.class);
+    }
+
+    /**
+     *After inputting the 3D model file, the system will automatically convert it to the required format. The maximum supported file size is 200MB.
+     * @param req SubmitConvert3DFormatJobRequest
+     * @return SubmitConvert3DFormatJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitConvert3DFormatJobResponse SubmitConvert3DFormatJob(SubmitConvert3DFormatJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitConvert3DFormatJob", SubmitConvert3DFormatJobResponse.class);
     }
 
     /**

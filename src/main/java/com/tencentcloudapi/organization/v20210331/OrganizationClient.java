@@ -1029,6 +1029,17 @@ public class OrganizationClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query and view the policy list data.
+     * @param req ListPoliciesRequest
+     * @return ListPoliciesResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListPoliciesResponse ListPolicies(ListPoliciesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListPolicies", ListPoliciesResponse.class);
+    }
+
+    /**
      *This API is used to query the list of policies associated with a target.
      * @param req ListPoliciesForTargetRequest
      * @return ListPoliciesForTargetResponse

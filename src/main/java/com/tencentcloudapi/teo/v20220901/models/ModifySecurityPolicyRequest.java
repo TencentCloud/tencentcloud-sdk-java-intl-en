@@ -31,14 +31,14 @@ public class ModifySecurityPolicyRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limits, and managed rule policy, it is recommended to use the SecurityPolicy parameter for configuration.</li>.
+    * Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
     */
     @SerializedName("SecurityConfig")
     @Expose
     private SecurityConfig SecurityConfig;
 
     /**
-    * Security policy configuration. recommend using for Web exception rules, protection custom policies, rate rules, and managed rules. supports configuring security policies with expression grammar.
+    * Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
     */
     @SerializedName("SecurityPolicy")
     @Expose
@@ -82,32 +82,32 @@ public class ModifySecurityPolicyRequest extends AbstractModel {
     }
 
     /**
-     * Get Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limits, and managed rule policy, it is recommended to use the SecurityPolicy parameter for configuration.</li>. 
-     * @return SecurityConfig Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limits, and managed rule policy, it is recommended to use the SecurityPolicy parameter for configuration.</li>.
+     * Get Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>. 
+     * @return SecurityConfig Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
      */
     public SecurityConfig getSecurityConfig() {
         return this.SecurityConfig;
     }
 
     /**
-     * Set Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limits, and managed rule policy, it is recommended to use the SecurityPolicy parameter for configuration.</li>.
-     * @param SecurityConfig Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limits, and managed rule policy, it is recommended to use the SecurityPolicy parameter for configuration.</li>.
+     * Set Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
+     * @param SecurityConfig Security policy configuration. <li>when ExceptionRules in the SecurityPolicy parameter is set, ExceptConfig in the SecurityConfig parameter will be ignored;</li> <li>when CustomRules in the SecurityPolicy parameter is set, AclConfig and IpTableConfig in the SecurityConfig parameter will be ignored;</li> <li>when HttpDDoSProtection and RateLimitingRules in the SecurityPolicy parameter are set, RateLimitConfig in the SecurityConfig parameter will be ignored;</li> <li>when ManagedRule in the SecurityPolicy parameter is set, WafConfig in the SecurityConfig parameter will be ignored;</li> <li>when BotManagement in the SecurityPolicy parameter is set, BotConfig in the SecurityConfig parameter will be ignored;</li> <li>for exception rules, custom rules, rate limiting, managed rules, and Bot management policy configuration, recommend using the SecurityPolicy parameter for settings.</li>.
      */
     public void setSecurityConfig(SecurityConfig SecurityConfig) {
         this.SecurityConfig = SecurityConfig;
     }
 
     /**
-     * Get Security policy configuration. recommend using for Web exception rules, protection custom policies, rate rules, and managed rules. supports configuring security policies with expression grammar. 
-     * @return SecurityPolicy Security policy configuration. recommend using for Web exception rules, protection custom policies, rate rules, and managed rules. supports configuring security policies with expression grammar.
+     * Get Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar. 
+     * @return SecurityPolicy Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
      */
     public SecurityPolicy getSecurityPolicy() {
         return this.SecurityPolicy;
     }
 
     /**
-     * Set Security policy configuration. recommend using for Web exception rules, protection custom policies, rate rules, and managed rules. supports configuring security policies with expression grammar.
-     * @param SecurityPolicy Security policy configuration. recommend using for Web exception rules, protection custom policies, rate rules, and managed rules. supports configuring security policies with expression grammar.
+     * Set Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
+     * @param SecurityPolicy Security policy configuration. recommend using for Web exception rules, custom policies, rate rules, managed rules, and Bot management configuration. supports configuring security policies with expression grammar.
      */
     public void setSecurityPolicy(SecurityPolicy SecurityPolicy) {
         this.SecurityPolicy = SecurityPolicy;
