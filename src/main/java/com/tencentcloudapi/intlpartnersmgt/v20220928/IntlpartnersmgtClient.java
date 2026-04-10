@@ -294,6 +294,18 @@ Callable roles: Reseller, Second-level Reseller or Distributor.
     }
 
     /**
+     *Description: The current API is used to query the usage details of reseller's customer vouchers by Reseller, Second-level Reseller or Distributor.
+Reseller, Second-level Reseller or Distributor can call this API.
+     * @param req DescribeCustomerVoucherUsageDetailsRequest
+     * @return DescribeCustomerVoucherUsageDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerVoucherUsageDetailsResponse DescribeCustomerVoucherUsageDetails(DescribeCustomerVoucherUsageDetailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomerVoucherUsageDetails", DescribeCustomerVoucherUsageDetailsResponse.class);
+    }
+
+    /**
      *This API is used to download the commission bill file by resellers/agents. The file URL is returned.
 Resellers/Agents can call this API.
      * @param req DescribeRebateDownloadUrlRequest
