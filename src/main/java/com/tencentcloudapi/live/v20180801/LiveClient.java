@@ -1058,6 +1058,17 @@ If the start time and end time are not on the same day or if the data of specifi
     }
 
     /**
+     *Live Streaming Push Bandwidth and Traffic Data Query. The push billing will first compare the global push usage with the global playback usage. If the billing conditions are met, billing will be issued based on the usage in each region. For details, refer to the Billing Documentation.(https://cloud.tencent.com/document/product/267/34175)
+     * @param req DescribePushBandwidthAndFluxListRequest
+     * @return DescribePushBandwidthAndFluxListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePushBandwidthAndFluxListResponse DescribePushBandwidthAndFluxList(DescribePushBandwidthAndFluxListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePushBandwidthAndFluxList", DescribePushBandwidthAndFluxListResponse.class);
+    }
+
+    /**
      *This API is used to retrieve a list of recording tasks that were started and ended within a specified time range. 
 - Prerequisites: 
 1. This API is only used to query recording tasks created by the CreateRecordTask interface. 

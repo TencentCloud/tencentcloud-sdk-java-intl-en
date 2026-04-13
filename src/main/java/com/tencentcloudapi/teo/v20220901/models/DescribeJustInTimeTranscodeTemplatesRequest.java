@@ -31,7 +31,7 @@ public class DescribeJustInTimeTranscodeTemplatesRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * The maximum number of Filters is 20. the upper limit for Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria: <li>template-name: filter by template name in batch. example: mytemplate;</li> <li>template-type: filter by template type in batch. example: preset or custom.</li> <li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li> empty by default.
+    * Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
     */
     @SerializedName("Filters")
     @Expose
@@ -82,16 +82,16 @@ public class DescribeJustInTimeTranscodeTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get The maximum number of Filters is 20. the upper limit for Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria: <li>template-name: filter by template name in batch. example: mytemplate;</li> <li>template-type: filter by template type in batch. example: preset or custom.</li> <li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li> empty by default. 
-     * @return Filters The maximum number of Filters is 20. the upper limit for Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria: <li>template-name: filter by template name in batch. example: mytemplate;</li> <li>template-type: filter by template type in batch. example: preset or custom.</li> <li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li> empty by default.
+     * Get Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default. 
+     * @return Filters Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set The maximum number of Filters is 20. the upper limit for Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria: <li>template-name: filter by template name in batch. example: mytemplate;</li> <li>template-type: filter by template type in batch. example: preset or custom.</li> <li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li> empty by default.
-     * @param Filters The maximum number of Filters is 20. the upper limit for Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria: <li>template-name: filter by template name in batch. example: mytemplate;</li> <li>template-type: filter by template type in batch. example: preset or custom.</li> <li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li> empty by default.
+     * Set Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
+     * @param Filters Filter criteria. the maximum number of Filters is 20, and the maximum number of Filters.Values is 20. if this parameter is left empty, it returns the authorized just-in-time transcoding templates in the current ZoneId by default. detailed filter criteria are as follows: <li>template-name: filter by template name in batch. example: mytemplate;</li><li>template-type: filter by template type in batch. example: preset or custom.</li><li>template-id: filter by template id in batch. example: C1LZ7982VgTpYhJ7M.</li>empty by default.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

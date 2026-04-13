@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeBackupDownloadURLRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeBackupDownloadURLRequest extends AbstractModel {
     private String BackupId;
 
     /**
-    * Validity period of a URL, which is 12 hours by default.
+    * Validity time of the connection. value range: [0,36]. default value: 12 hours.
     */
     @SerializedName("URLExpireTime")
     @Expose
@@ -59,16 +59,16 @@ public class DescribeBackupDownloadURLRequest extends AbstractModel {
     private BackupDownloadRestriction BackupDownloadRestriction;
 
     /**
-     * Get Instance ID. 
-     * @return DBInstanceId Instance ID.
+     * Get Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). 
+     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param DBInstanceId Instance ID.
+     * Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+     * @param DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -107,16 +107,16 @@ public class DescribeBackupDownloadURLRequest extends AbstractModel {
     }
 
     /**
-     * Get Validity period of a URL, which is 12 hours by default. 
-     * @return URLExpireTime Validity period of a URL, which is 12 hours by default.
+     * Get Validity time of the connection. value range: [0,36]. default value: 12 hours. 
+     * @return URLExpireTime Validity time of the connection. value range: [0,36]. default value: 12 hours.
      */
     public Long getURLExpireTime() {
         return this.URLExpireTime;
     }
 
     /**
-     * Set Validity period of a URL, which is 12 hours by default.
-     * @param URLExpireTime Validity period of a URL, which is 12 hours by default.
+     * Set Validity time of the connection. value range: [0,36]. default value: 12 hours.
+     * @param URLExpireTime Validity time of the connection. value range: [0,36]. default value: 12 hours.
      */
     public void setURLExpireTime(Long URLExpireTime) {
         this.URLExpireTime = URLExpireTime;

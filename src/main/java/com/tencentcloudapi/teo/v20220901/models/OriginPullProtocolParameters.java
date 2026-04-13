@@ -24,38 +24,38 @@ import java.util.HashMap;
 public class OriginPullProtocolParameters extends AbstractModel {
 
     /**
-    * Origin protocol configuration, with values:
-<li>http: Use HTTP protocol for origin pull;</li>
-<li>https: Use HTTPS protocol for origin pull;</li>
-<li>follow: Protocol following.</li>
+    * Origin protocol configuration. valid values:.
+<li>http: specifies to use http protocol for origin.</li>.
+<li>https: use the https protocol for origin-pull.</li>.
+<Li>Follow: follow protocol.</li>.
     */
     @SerializedName("Protocol")
     @Expose
     private String Protocol;
 
     /**
-     * Get Origin protocol configuration, with values:
-<li>http: Use HTTP protocol for origin pull;</li>
-<li>https: Use HTTPS protocol for origin pull;</li>
-<li>follow: Protocol following.</li> 
-     * @return Protocol Origin protocol configuration, with values:
-<li>http: Use HTTP protocol for origin pull;</li>
-<li>https: Use HTTPS protocol for origin pull;</li>
-<li>follow: Protocol following.</li>
+     * Get Origin protocol configuration. valid values:.
+<li>http: specifies to use http protocol for origin.</li>.
+<li>https: use the https protocol for origin-pull.</li>.
+<Li>Follow: follow protocol.</li>. 
+     * @return Protocol Origin protocol configuration. valid values:.
+<li>http: specifies to use http protocol for origin.</li>.
+<li>https: use the https protocol for origin-pull.</li>.
+<Li>Follow: follow protocol.</li>.
      */
     public String getProtocol() {
         return this.Protocol;
     }
 
     /**
-     * Set Origin protocol configuration, with values:
-<li>http: Use HTTP protocol for origin pull;</li>
-<li>https: Use HTTPS protocol for origin pull;</li>
-<li>follow: Protocol following.</li>
-     * @param Protocol Origin protocol configuration, with values:
-<li>http: Use HTTP protocol for origin pull;</li>
-<li>https: Use HTTPS protocol for origin pull;</li>
-<li>follow: Protocol following.</li>
+     * Set Origin protocol configuration. valid values:.
+<li>http: specifies to use http protocol for origin.</li>.
+<li>https: use the https protocol for origin-pull.</li>.
+<Li>Follow: follow protocol.</li>.
+     * @param Protocol Origin protocol configuration. valid values:.
+<li>http: specifies to use http protocol for origin.</li>.
+<li>https: use the https protocol for origin-pull.</li>.
+<Li>Follow: follow protocol.</li>.
      */
     public void setProtocol(String Protocol) {
         this.Protocol = Protocol;

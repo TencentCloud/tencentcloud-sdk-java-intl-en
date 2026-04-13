@@ -24,11 +24,12 @@ import java.util.HashMap;
 public class CreateZoneRequest extends AbstractModel {
 
     /**
-    * Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
+    * Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
     */
     @SerializedName("Type")
     @Expose
@@ -92,32 +93,36 @@ Note: if this parameter is not specified, a site in "init" status will be create
     private Boolean JumpStart;
 
     /**
-     * Get Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li> 
-     * @return Type Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
+     * Get Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>. 
+     * @return Type Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
-     * @param Type Site access type. If this parameter is not input, the default value `partial` is used. Valid values of this parameter are as follows:
-<li>partial: CNAME access;</li>
-<li>full: NS access;</li>
-<li>noDomainAccess: access with no domain name.</li>
-<li>dnsPodAccess: DNSPod hosted access. To use this access mode, your domain name should have been hosted on DNSPod.</li>
+     * Set Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
+     * @param Type Site access type. if this parameter is not input, the default value `partial` is used. valid values of this parameter are as follows:.
+<li>partial: CNAME access;</li>.
+<li>full: NS access;</li>.
+<li>noDomainAccess: access with no domain name.</li>.
+<li>dnsPodAccess: DNSPod hosted access. to use this access mode, your domain name should have been hosted on DNSPod.</li>.
+<li>ai: edge reasoning integration.</li>.
      */
     public void setType(String Type) {
         this.Type = Type;

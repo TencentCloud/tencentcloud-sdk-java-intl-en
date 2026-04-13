@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAccountsRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of postgres-6fego161
+    * Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Number of entries returned per page. Default value: 10. Value range: 1–100.
+    * Pagination return. maximum return per page. default 20. value range 1-100.
     */
     @SerializedName("Limit")
     @Expose
@@ -45,46 +45,48 @@ public class DescribeAccountsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
+    * Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+    * Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-     * Get Instance ID in the format of postgres-6fego161 
-     * @return DBInstanceId Instance ID in the format of postgres-6fego161
+     * Get Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en). 
+     * @return DBInstanceId Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID in the format of postgres-6fego161
-     * @param DBInstanceId Instance ID in the format of postgres-6fego161
+     * Set Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
+     * @param DBInstanceId Instance ID, such as postgres-6fego161. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Number of entries returned per page. Default value: 10. Value range: 1–100. 
-     * @return Limit Number of entries returned per page. Default value: 10. Value range: 1–100.
+     * Get Pagination return. maximum return per page. default 20. value range 1-100. 
+     * @return Limit Pagination return. maximum return per page. default 20. value range 1-100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries returned per page. Default value: 10. Value range: 1–100.
-     * @param Limit Number of entries returned per page. Default value: 10. Value range: 1–100.
+     * Set Pagination return. maximum return per page. default 20. value range 1-100.
+     * @param Limit Pagination return. maximum return per page. default 20. value range 1-100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -107,32 +109,40 @@ public class DescribeAccountsRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username) 
-     * @return OrderBy Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
+     * Get Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime. 
+     * @return OrderBy Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
-     * @param OrderBy Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
+     * Set Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
+     * @param OrderBy Return data is sorted by creation time or username. valid values: createTime, name, updateTime. createTime - sort by creation time; name - sort by username; updateTime - sort by update time.
+Default value: createTime.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending) 
-     * @return OrderByType Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+     * Get Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc. 
+     * @return OrderByType Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
-     * @param OrderByType Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
+     * Set Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
+     * @param OrderByType Specifies whether the returned results are in ascending or descending order. valid values: desc or asc. desc - descending order; asc - ascending order.
+Default value: desc.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

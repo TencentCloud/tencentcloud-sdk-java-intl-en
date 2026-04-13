@@ -33,12 +33,12 @@ If you want to quickly submit targets urls under different sites, you can set it
     private String ZoneId;
 
     /**
-    * Type of cache purging. Values:
-<li>`purge_url`: Purge by the URL</li>
-<li>`purge_prefix`: Purge by the directory</li>
-<li>`purge_host`: Purge by the hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+    * Node cache clearing type, valid values:
+<li>purge_url: URL refresh;</li>
+<li>purge_prefix: Directory refresh.</li>
+<li>purge_host: Hostname refresh;</li>
+<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
     */
     @SerializedName("Type")
     @Expose
@@ -98,36 +98,36 @@ If you want to quickly submit targets urls under different sites, you can set it
     }
 
     /**
-     * Get Type of cache purging. Values:
-<li>`purge_url`: Purge by the URL</li>
-<li>`purge_prefix`: Purge by the directory</li>
-<li>`purge_host`: Purge by the hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1). 
-     * @return Type Type of cache purging. Values:
-<li>`purge_url`: Purge by the URL</li>
-<li>`purge_prefix`: Purge by the directory</li>
-<li>`purge_host`: Purge by the hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+     * Get Node cache clearing type, valid values:
+<li>purge_url: URL refresh;</li>
+<li>purge_prefix: Directory refresh.</li>
+<li>purge_host: Hostname refresh;</li>
+<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1). 
+     * @return Type Node cache clearing type, valid values:
+<li>purge_url: URL refresh;</li>
+<li>purge_prefix: Directory refresh.</li>
+<li>purge_host: Hostname refresh;</li>
+<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of cache purging. Values:
-<li>`purge_url`: Purge by the URL</li>
-<li>`purge_prefix`: Purge by the directory</li>
-<li>`purge_host`: Purge by the hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
-     * @param Type Type of cache purging. Values:
-<li>`purge_url`: Purge by the URL</li>
-<li>`purge_prefix`: Purge by the directory</li>
-<li>`purge_host`: Purge by the hostname</li>
-<li>`purge_all`: Purge all caches</li>
-<li>`purge_cache_tag`: Purge by the cache-tag </li>For more details, see [Cache Purge](https://intl.cloud.tencent.com/document/product/1552/70759?from_cn_redirect=1).
+     * Set Node cache clearing type, valid values:
+<li>purge_url: URL refresh;</li>
+<li>purge_prefix: Directory refresh.</li>
+<li>purge_host: Hostname refresh;</li>
+<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
+     * @param Type Node cache clearing type, valid values:
+<li>purge_url: URL refresh;</li>
+<li>purge_prefix: Directory refresh.</li>
+<li>purge_host: Hostname refresh;</li>
+<li>purge_all: Purge all caches under the site (ZoneId input as * is not supported when this value is taken);</li>
+<li>purge_cache_tag: cache-tag refresh.</li>For details on purge types, see [Purge Cache](https://www.tencentcloud.com/document/product/1552/70759?from_cn_redirect=1).
      */
     public void setType(String Type) {
         this.Type = Type;

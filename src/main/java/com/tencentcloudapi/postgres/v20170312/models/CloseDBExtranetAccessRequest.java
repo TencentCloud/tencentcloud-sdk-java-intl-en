@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CloseDBExtranetAccessRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of postgres-6r233v55
+    * Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+    * Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
     */
     @SerializedName("IsIpv6")
     @Expose
     private Long IsIpv6;
 
     /**
-     * Get Instance ID in the format of postgres-6r233v55 
-     * @return DBInstanceId Instance ID in the format of postgres-6r233v55
+     * Get Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55. 
+     * @return DBInstanceId Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID in the format of postgres-6r233v55
-     * @param DBInstanceId Instance ID in the format of postgres-6r233v55
+     * Set Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
+     * @param DBInstanceId Specifies the instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). such as postgres-6r233v55.
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no) 
-     * @return IsIpv6 Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+     * Get Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0. 
+     * @return IsIpv6 Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
      */
     public Long getIsIpv6() {
         return this.IsIpv6;
     }
 
     /**
-     * Set Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
-     * @param IsIpv6 Whether to disable public network access over IPv6 address. Valid values: 1 (yes), 0 (no)
+     * Set Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
+     * @param IsIpv6 Specifies whether to close public network Ipv6. 1: yes. 0: no. default value: 0.
      */
     public void setIsIpv6(Long IsIpv6) {
         this.IsIpv6 = IsIpv6;

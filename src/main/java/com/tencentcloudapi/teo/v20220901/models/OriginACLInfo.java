@@ -64,6 +64,13 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     private String Status;
 
     /**
+    * Origin protection back-to-origin ACL control domain.
+    */
+    @SerializedName("OriginACLFamily")
+    @Expose
+    private String OriginACLFamily;
+
+    /**
      * Get The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled. 
      * @return L7Hosts The list of L7 accelerated domains that enable the origin ACLs. This field is empty when origin protection is not enabled.
      */
@@ -163,6 +170,22 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         this.Status = Status;
     }
 
+    /**
+     * Get Origin protection back-to-origin ACL control domain. 
+     * @return OriginACLFamily Origin protection back-to-origin ACL control domain.
+     */
+    public String getOriginACLFamily() {
+        return this.OriginACLFamily;
+    }
+
+    /**
+     * Set Origin protection back-to-origin ACL control domain.
+     * @param OriginACLFamily Origin protection back-to-origin ACL control domain.
+     */
+    public void setOriginACLFamily(String OriginACLFamily) {
+        this.OriginACLFamily = OriginACLFamily;
+    }
+
     public OriginACLInfo() {
     }
 
@@ -192,6 +215,9 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.OriginACLFamily != null) {
+            this.OriginACLFamily = new String(source.OriginACLFamily);
+        }
     }
 
 
@@ -204,6 +230,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
         this.setParamObj(map, prefix + "CurrentOriginACL.", this.CurrentOriginACL);
         this.setParamObj(map, prefix + "NextOriginACL.", this.NextOriginACL);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "OriginACLFamily", this.OriginACLFamily);
 
     }
 }

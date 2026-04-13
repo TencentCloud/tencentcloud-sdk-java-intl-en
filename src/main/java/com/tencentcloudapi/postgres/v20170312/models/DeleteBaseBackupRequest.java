@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteBaseBackupRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Data Backup ID.
+    * Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). automatic backup sets cannot be deleted within 7 days.
     */
     @SerializedName("BaseBackupId")
     @Expose
     private String BaseBackupId;
 
     /**
-     * Get Instance ID 
-     * @return DBInstanceId Instance ID
+     * Get Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). 
+     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param DBInstanceId Instance ID
+     * Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+     * @param DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Data Backup ID. 
-     * @return BaseBackupId Data Backup ID.
+     * Get Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). automatic backup sets cannot be deleted within 7 days. 
+     * @return BaseBackupId Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). automatic backup sets cannot be deleted within 7 days.
      */
     public String getBaseBackupId() {
         return this.BaseBackupId;
     }
 
     /**
-     * Set Data Backup ID.
-     * @param BaseBackupId Data Backup ID.
+     * Set Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). automatic backup sets cannot be deleted within 7 days.
+     * @param BaseBackupId Data backup ID. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343?lang=en). automatic backup sets cannot be deleted within 7 days.
      */
     public void setBaseBackupId(String BaseBackupId) {
         this.BaseBackupId = BaseBackupId;

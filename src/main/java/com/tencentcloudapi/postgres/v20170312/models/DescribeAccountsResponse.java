@@ -31,7 +31,7 @@ public class DescribeAccountsResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Detailed account list information.
+    * Detailed account list information. when the CreateTime field is 0000-00-00 00:00:00, it means the corresponding account is created by direct connection database, not through the CreateAccount api.
     */
     @SerializedName("Details")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeAccountsResponse extends AbstractModel {
     }
 
     /**
-     * Get Detailed account list information. 
-     * @return Details Detailed account list information.
+     * Get Detailed account list information. when the CreateTime field is 0000-00-00 00:00:00, it means the corresponding account is created by direct connection database, not through the CreateAccount api. 
+     * @return Details Detailed account list information. when the CreateTime field is 0000-00-00 00:00:00, it means the corresponding account is created by direct connection database, not through the CreateAccount api.
      */
     public AccountInfo [] getDetails() {
         return this.Details;
     }
 
     /**
-     * Set Detailed account list information.
-     * @param Details Detailed account list information.
+     * Set Detailed account list information. when the CreateTime field is 0000-00-00 00:00:00, it means the corresponding account is created by direct connection database, not through the CreateAccount api.
+     * @param Details Detailed account list information. when the CreateTime field is 0000-00-00 00:00:00, it means the corresponding account is created by direct connection database, not through the CreateAccount api.
      */
     public void setDetails(AccountInfo [] Details) {
         this.Details = Details;

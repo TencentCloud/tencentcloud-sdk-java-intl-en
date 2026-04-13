@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AscriptionInfo extends AbstractModel {
 
     /**
-    * Host record.
+    * 
     */
     @SerializedName("Subdomain")
     @Expose
@@ -45,16 +45,16 @@ public class AscriptionInfo extends AbstractModel {
     private String RecordValue;
 
     /**
-     * Get Host record. 
-     * @return Subdomain Host record.
+     * Get  
+     * @return Subdomain 
      */
     public String getSubdomain() {
         return this.Subdomain;
     }
 
     /**
-     * Set Host record.
-     * @param Subdomain Host record.
+     * Set 
+     * @param Subdomain 
      */
     public void setSubdomain(String Subdomain) {
         this.Subdomain = Subdomain;

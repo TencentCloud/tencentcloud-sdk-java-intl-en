@@ -38,6 +38,20 @@ public class ModifyOriginACLRequest extends AbstractModel {
     private OriginACLEntity [] OriginACLEntities;
 
     /**
+    * The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+    */
+    @SerializedName("OriginACLFamily")
+    @Expose
+    private String OriginACLFamily;
+
+    /**
      * Get Specifies the site ID. 
      * @return ZoneId Specifies the site ID.
      */
@@ -69,6 +83,50 @@ public class ModifyOriginACLRequest extends AbstractModel {
         this.OriginACLEntities = OriginACLEntities;
     }
 
+    /**
+     * Get The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li> 
+     * @return OriginACLFamily The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+     */
+    public String getOriginACLFamily() {
+        return this.OriginACLFamily;
+    }
+
+    /**
+     * Set The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+     * @param OriginACLFamily The origin protection back-to-origin ACL control domain remains unchanged by default if left blank. The domain information can be obtained through the DescribeAvailableOriginACLFamily API query.
+Valid values are as follows:
+<li>gaz: Standard global availability zone control domain;</li>
+<li>mlc: Standard Chinese mainland availability zone control domain;</li>
+<li>emc: Standard global (exclude Chinese mainland) availability zone control domain;</li>
+<li>plat-gaz: Simplify global availability zone control domain;</li>
+<li>plat-mlc: Simplified Chinese mainland availability zone control domain;</li>
+<li>plat-emc: Simplify the global (excluding Chinese mainland) availability zone control domain;</li>
+     */
+    public void setOriginACLFamily(String OriginACLFamily) {
+        this.OriginACLFamily = OriginACLFamily;
+    }
+
     public ModifyOriginACLRequest() {
     }
 
@@ -86,6 +144,9 @@ public class ModifyOriginACLRequest extends AbstractModel {
                 this.OriginACLEntities[i] = new OriginACLEntity(source.OriginACLEntities[i]);
             }
         }
+        if (source.OriginACLFamily != null) {
+            this.OriginACLFamily = new String(source.OriginACLFamily);
+        }
     }
 
 
@@ -95,6 +156,7 @@ public class ModifyOriginACLRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArrayObj(map, prefix + "OriginACLEntities.", this.OriginACLEntities);
+        this.setParamSimple(map, prefix + "OriginACLFamily", this.OriginACLFamily);
 
     }
 }

@@ -94,10 +94,10 @@ public class Resource extends AbstractModel {
     private String PlanId;
 
     /**
-    * Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
+    * Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
     */
     @SerializedName("Area")
     @Expose
@@ -303,28 +303,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li> 
-     * @return Area Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
+     * Get Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>. 
+     * @return Area Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
-     * @param Area Applicable area. Values:
-<li>`mainland`: Chinese mainland</li>
-<li>`overseas`: Regions outside the Chinese mainland</li>
-<li>`global`: Global</li>
+     * Set Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
+     * @param Area Region. valid values:.
+<Li>Mainland: within the chinese mainland;</li>.
+<li>overseas: outside the chinese mainland.</li>.
+<Li>Global: global.</li>.
      */
     public void setArea(String Area) {
         this.Area = Area;

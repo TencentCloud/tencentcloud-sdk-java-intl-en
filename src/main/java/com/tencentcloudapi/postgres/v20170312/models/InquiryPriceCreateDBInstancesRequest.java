@@ -24,220 +24,233 @@ import java.util.HashMap;
 public class InquiryPriceCreateDBInstancesRequest extends AbstractModel {
 
     /**
-    * AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+    * <p>Availability zone name. The value of this parameter can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+    * <p>Specification ID. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/product/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * Storage capacity size in GB.
+    * <p>Storage capacity, in GB. The value for this parameter must be set in increments of 10.</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service.
+    * <p>Instance quantity. The maximum allowed quantity is no more than 100. If you need to create more instances at a time, please contact customer service.</p>
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
+    * <p>Purchased duration, in months. Only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.</p>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+    * <p>[Deprecated and no longer effective] Billing ID. The value of this parameter can be obtained from the returned Pid field of the DescribeProductConfig API.</p>
     */
     @SerializedName("Pid")
     @Expose
     private Long Pid;
 
     /**
-    * Instance billing type. Valid value: POSTPAID_BY_HOUR (pay-as-you-go)
+    * <p>Instance billing type. Valid values: PREPAID (prepaid, also known as yearly/monthly subscription) and POSTPAID (pay-as-you-go).<br>Default value: PREPAID.</p>
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * Instance type. Default value: `primary`. Valid values:
-`primary` (dual-server high-availability, one-primary-one-standby)
-`readonly` (read-only instance)
+    * <p>Instance type. The default value is primary. Valid values:<br>primary (dual-server high availability (one primary and one standby)).<br>readonly (read-only instance).</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
+    * <p>Database engine. The default value is postgresql. Valid values:<br>postgresql (TencentDB for PostgreSQL).<br>mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
     */
     @SerializedName("DBEngine")
     @Expose
     private String DBEngine;
 
     /**
-     * Get AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API. 
-     * @return Zone AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+    * <p>Instance storage type. Valid values: PHYSICAL_LOCAL_SSD: local SSD of physical machine. CLOUD_PREMIUM: Premium Disk. CLOUD_SSD: Cloud SSD. CLOUD_HSSD: Enhanced SSD.</p>
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
+     * Get <p>Availability zone name. The value of this parameter can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p> 
+     * @return Zone <p>Availability zone name. The value of this parameter can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
-     * @param Zone AZ ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
+     * Set <p>Availability zone name. The value of this parameter can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
+     * @param Zone <p>Availability zone name. The value of this parameter can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API. 
-     * @return SpecCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+     * Get <p>Specification ID. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/product/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p> 
+     * @return SpecCode <p>Specification ID. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/product/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
-     * @param SpecCode Specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeClasses` API.
+     * Set <p>Specification ID. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/product/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
+     * @param SpecCode <p>Specification ID. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/product/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get Storage capacity size in GB. 
-     * @return Storage Storage capacity size in GB.
+     * Get <p>Storage capacity, in GB. The value for this parameter must be set in increments of 10.</p> 
+     * @return Storage <p>Storage capacity, in GB. The value for this parameter must be set in increments of 10.</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Storage capacity size in GB.
-     * @param Storage Storage capacity size in GB.
+     * Set <p>Storage capacity, in GB. The value for this parameter must be set in increments of 10.</p>
+     * @param Storage <p>Storage capacity, in GB. The value for this parameter must be set in increments of 10.</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service. 
-     * @return InstanceCount Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service.
+     * Get <p>Instance quantity. The maximum allowed quantity is no more than 100. If you need to create more instances at a time, please contact customer service.</p> 
+     * @return InstanceCount <p>Instance quantity. The maximum allowed quantity is no more than 100. If you need to create more instances at a time, please contact customer service.</p>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service.
-     * @param InstanceCount Number of instances. Maximum value: 100. If you need to create more instances at a time, please contact customer service.
+     * Set <p>Instance quantity. The maximum allowed quantity is no more than 100. If you need to create more instances at a time, please contact customer service.</p>
+     * @param InstanceCount <p>Instance quantity. The maximum allowed quantity is no more than 100. If you need to create more instances at a time, please contact customer service.</p>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported. 
-     * @return Period Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
+     * Get <p>Purchased duration, in months. Only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.</p> 
+     * @return Period <p>Purchased duration, in months. Only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.</p>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
-     * @param Period Length of purchase in months. Currently, only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.
+     * Set <p>Purchased duration, in months. Only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.</p>
+     * @param Period <p>Purchased duration, in months. Only 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36 are supported.</p>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API. 
-     * @return Pid [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+     * Get <p>[Deprecated and no longer effective] Billing ID. The value of this parameter can be obtained from the returned Pid field of the DescribeProductConfig API.</p> 
+     * @return Pid <p>[Deprecated and no longer effective] Billing ID. The value of this parameter can be obtained from the returned Pid field of the DescribeProductConfig API.</p>
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
-     * @param Pid [Disused] Billing ID, which can be obtained through the `Pid` field in the returned value of the `DescribeProductConfig` API.
+     * Set <p>[Deprecated and no longer effective] Billing ID. The value of this parameter can be obtained from the returned Pid field of the DescribeProductConfig API.</p>
+     * @param Pid <p>[Deprecated and no longer effective] Billing ID. The value of this parameter can be obtained from the returned Pid field of the DescribeProductConfig API.</p>
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get Instance billing type. Valid value: POSTPAID_BY_HOUR (pay-as-you-go) 
-     * @return InstanceChargeType Instance billing type. Valid value: POSTPAID_BY_HOUR (pay-as-you-go)
+     * Get <p>Instance billing type. Valid values: PREPAID (prepaid, also known as yearly/monthly subscription) and POSTPAID (pay-as-you-go).<br>Default value: PREPAID.</p> 
+     * @return InstanceChargeType <p>Instance billing type. Valid values: PREPAID (prepaid, also known as yearly/monthly subscription) and POSTPAID (pay-as-you-go).<br>Default value: PREPAID.</p>
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing type. Valid value: POSTPAID_BY_HOUR (pay-as-you-go)
-     * @param InstanceChargeType Instance billing type. Valid value: POSTPAID_BY_HOUR (pay-as-you-go)
+     * Set <p>Instance billing type. Valid values: PREPAID (prepaid, also known as yearly/monthly subscription) and POSTPAID (pay-as-you-go).<br>Default value: PREPAID.</p>
+     * @param InstanceChargeType <p>Instance billing type. Valid values: PREPAID (prepaid, also known as yearly/monthly subscription) and POSTPAID (pay-as-you-go).<br>Default value: PREPAID.</p>
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get Instance type. Default value: `primary`. Valid values:
-`primary` (dual-server high-availability, one-primary-one-standby)
-`readonly` (read-only instance) 
-     * @return InstanceType Instance type. Default value: `primary`. Valid values:
-`primary` (dual-server high-availability, one-primary-one-standby)
-`readonly` (read-only instance)
+     * Get <p>Instance type. The default value is primary. Valid values:<br>primary (dual-server high availability (one primary and one standby)).<br>readonly (read-only instance).</p> 
+     * @return InstanceType <p>Instance type. The default value is primary. Valid values:<br>primary (dual-server high availability (one primary and one standby)).<br>readonly (read-only instance).</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. Default value: `primary`. Valid values:
-`primary` (dual-server high-availability, one-primary-one-standby)
-`readonly` (read-only instance)
-     * @param InstanceType Instance type. Default value: `primary`. Valid values:
-`primary` (dual-server high-availability, one-primary-one-standby)
-`readonly` (read-only instance)
+     * Set <p>Instance type. The default value is primary. Valid values:<br>primary (dual-server high availability (one primary and one standby)).<br>readonly (read-only instance).</p>
+     * @param InstanceType <p>Instance type. The default value is primary. Valid values:<br>primary (dual-server high availability (one primary and one standby)).<br>readonly (read-only instance).</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p> 
-     * @return DBEngine <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
+     * Get <p>Database engine. The default value is postgresql. Valid values:<br>postgresql (TencentDB for PostgreSQL).<br>mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p> 
+     * @return DBEngine <p>Database engine. The default value is postgresql. Valid values:<br>postgresql (TencentDB for PostgreSQL).<br>mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
      */
     public String getDBEngine() {
         return this.DBEngine;
     }
 
     /**
-     * Set <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
-     * @param DBEngine <p>DB engine, default is postgresql, supports the following:<br>postgresql (TencentDB for PostgreSQL)<br>mssql_compatible (MSSQL-compatible - TencentDB for PostgreSQL)</p>
+     * Set <p>Database engine. The default value is postgresql. Valid values:<br>postgresql (TencentDB for PostgreSQL).<br>mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
+     * @param DBEngine <p>Database engine. The default value is postgresql. Valid values:<br>postgresql (TencentDB for PostgreSQL).<br>mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
      */
     public void setDBEngine(String DBEngine) {
         this.DBEngine = DBEngine;
+    }
+
+    /**
+     * Get <p>Instance storage type. Valid values: PHYSICAL_LOCAL_SSD: local SSD of physical machine. CLOUD_PREMIUM: Premium Disk. CLOUD_SSD: Cloud SSD. CLOUD_HSSD: Enhanced SSD.</p> 
+     * @return StorageType <p>Instance storage type. Valid values: PHYSICAL_LOCAL_SSD: local SSD of physical machine. CLOUD_PREMIUM: Premium Disk. CLOUD_SSD: Cloud SSD. CLOUD_HSSD: Enhanced SSD.</p>
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set <p>Instance storage type. Valid values: PHYSICAL_LOCAL_SSD: local SSD of physical machine. CLOUD_PREMIUM: Premium Disk. CLOUD_SSD: Cloud SSD. CLOUD_HSSD: Enhanced SSD.</p>
+     * @param StorageType <p>Instance storage type. Valid values: PHYSICAL_LOCAL_SSD: local SSD of physical machine. CLOUD_PREMIUM: Premium Disk. CLOUD_SSD: Cloud SSD. CLOUD_HSSD: Enhanced SSD.</p>
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
     }
 
     public InquiryPriceCreateDBInstancesRequest() {
@@ -275,6 +288,9 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel {
         if (source.DBEngine != null) {
             this.DBEngine = new String(source.DBEngine);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -291,6 +307,7 @@ public class InquiryPriceCreateDBInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
         this.setParamSimple(map, prefix + "DBEngine", this.DBEngine);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

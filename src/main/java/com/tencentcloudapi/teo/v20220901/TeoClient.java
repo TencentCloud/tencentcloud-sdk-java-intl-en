@@ -45,7 +45,7 @@ Step 2: Configure the corresponding domain as verification content.
 Step 3: Call CheckFreeCertificateVerification to verify. After verification passes, the free certificate application is completed.
 Step 4: Call ModifyHostsCertificate to issue a domain certificate configured to use the EdgeOne free certificate.
 
-The application method introduction in the document: [Free Certificate Application Description](https://www.tencentcloud.com/document/product/1552/90437?from_cn_redirect=1). 
+The application method introduction in the document: [Free Certificate Application Description](https://www.tencentcloud.comom/document/product/1552/90437?from_cn_redirect=1). 
 description:.
 - Only CNAME access mode can call this API to specify the free certificate application method. NS/DNSPod hosting access modes use automatic validation to apply for free certificates with no need to call this API.
 - If you need to switch the free certificate authentication method, you can call this API again by changing the VerificationMethod field to update it.
@@ -60,7 +60,7 @@ description:.
     }
 
     /**
-     *This API is used to bind/unbind a domain name to/from a specific policy template. 
+     *This API is used to bind/unbind a domain name to/from a specific policy template.
      * @param req BindSecurityTemplateToEntityRequest
      * @return BindSecurityTemplateToEntityResponse
      * @throws TencentCloudSDKException
@@ -106,7 +106,7 @@ You can obtain the designated CNAME domain name assigned by EdgeOne for the inte
 
     /**
      *This API is used to verify a free certificate and obtain the application result. If verified, you can query the free certificate information for the corresponding domain name application through this API. If failed to apply, this API will return the corresponding verification failure message.
-This API is used to check the free certificate application result after triggering the [ApplyFreeCertificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1) . Once the application is successful, you need to configure through the [ModifyHostsCertificate](https://www.tencentcloud.com/document/product/1552/80764?from_cn_redirect=1) to deploy the free certificate to the acceleration domain.
+This API is used to check the free certificate application result after triggering the [ApplyFreeCertificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1) . Once the application is successful, you need to configure through the [ModifyHostsCertificate](https://www.tencentcloud.comom/document/product/1552/80764?from_cn_redirect=1) to deploy the free certificate to the acceleration domain.
      * @param req CheckFreeCertificateVerificationRequest
      * @return CheckFreeCertificateVerificationResponse
      * @throws TencentCloudSDKException
@@ -241,6 +241,17 @@ The feature is only supported by the enterprise plan and is currently in closed 
     }
 
     /**
+     *This API is used to create a KV namespace in the specified site.
+     * @param req CreateEdgeKVNamespaceRequest
+     * @return CreateEdgeKVNamespaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateEdgeKVNamespaceResponse CreateEdgeKVNamespace(CreateEdgeKVNamespaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateEdgeKVNamespace", CreateEdgeKVNamespaceResponse.class);
+    }
+
+    /**
      *This API is used to create and deploy an edge function to EdgeOne edge nodes.
      * @param req CreateFunctionRequest
      * @return CreateFunctionResponse
@@ -252,7 +263,7 @@ The feature is only supported by the enterprise plan and is currently in closed 
     }
 
     /**
-     *This API is used to create a trigger rule for an edge function.
+     *This API is used to create trigger rules for edge functions. It supports determining whether to execute the function via customized filter conditions. When execution is required, it provides multiple ways to select the target function, including directly specifying, selecting based on client region, and selecting based on weight.
      * @param req CreateFunctionRuleRequest
      * @return CreateFunctionRuleResponse
      * @throws TencentCloudSDKException
@@ -265,7 +276,7 @@ The feature is only supported by the enterprise plan and is currently in closed 
     /**
      *JIT transcoding already provides preset transcoding templates to meet most needs. If there are personalized transcoding requirements, you can create custom transcoding templates through this API, with up to 100 custom transcoding templates allowed.
 This API is used to ensure the consistency of JIT transcoding effect, avoid video output exceptions caused by EO cache or M3U8 sharding template changes during the process, and templates cannot be modified after creation.
-This API is used to learn about the detailed capacity of JIT transcoding. EdgeOne video instant processing function introduction (https://www.tencentcloud.com/document/product/1552/111927?from_cn_redirect=1).
+This API is used to learn about the detailed capacity of JIT transcoding. EdgeOne video instant processing function introduction (https://www.tencentcloud.comom/document/product/1552/111927?from_cn_redirect=1).
      * @param req CreateJustInTimeTranscodeTemplateRequest
      * @return CreateJustInTimeTranscodeTemplateResponse
      * @throws TencentCloudSDKException
@@ -411,15 +422,14 @@ This API is used to learn about the detailed capacity of JIT transcoding. EdgeOn
     }
 
     /**
-     *This API is used to create a real-time log delivery task.
-The following restrictions apply:
+     *This API is used to create a real-time log delivery task. The following limits apply.
+-When the data delivery type (LogType) is site acceleration log (Layer 7 Access Logs), L4 proxy logs, or edge function logs, an entity (L7 domain, L4 proxy instance, or edge function instance) under the same combination of data delivery type (LogType) and data delivery area (Area) can only be added to the following real-time log delivery task type (TaskType) combinations:.
+-A task to push to Tencent Cloud CLS, add another task to push to a custom HTTP(S) address;.
+-A task to push to Tencent Cloud CLS, add another task to push to AWS S3-compatible Cloud Object Storage;.
+-When the data delivery type (LogType) is rate limit and CC attack defense log, managed rule log, custom rule log, or Bot Management Log, an entity can only be added to one real-time log delivery task under the same combination of data delivery type (LogType) and data delivery Area.
+-When the real-time log delivery task type (TaskType) is EdgeOne log analysis (log_analysis), it supports only the data delivery type (LogType) as site acceleration log (domain). Under the combination of the same site (ZoneId) and data delivery area (Area), you can only add one real-time log delivery task for EdgeOne log analysis.
 
-- When the log type (`LogType`) is site acceleration log (L7 access log) (`domain`), L4 proxy log (`application`), or Edge Function execution log (`function`), the same entity (L7 domain, L4 proxy instance, or Edge Function instance) can be added to only one of the following `TaskType` combinations within the same `LogType`-`Area` pair:
-    - One task delivering to Tencent Cloud CLS plus one task delivering to a custom HTTP(S) endpoint;
-    - One task delivering to Tencent Cloud CLS plus one task delivering to an AWS S3-compatible bucket.
-- When the log type (`LogType`) is rate-limiting & CC attack protection log (`web-rateLiming`), managed rule log (`web-attack`), custom rule log (`web-rule`), or bot management log (`web-bot`), the same entity can be added to only one real-time log delivery task within the same `LogType`-`Area` pair.
-
-Before creating a task, we recommend that you first call [DescribeRealtimeLogDeliveryTasks](https://intl.cloud.tencent.com/document/product/1552/104110?from_cn_redirect=1) to list existing tasks for the entity and verify whether it has already been added to another task.
+This API is used to query the real-time log delivery task list based on the entity to check whether the entity has been added to another real-time log delivery task. It is advisable to use the [DescribeRealtimeLogDeliveryTasks](https://www.tencentcloud.comom/document/product/1552/104110?from_cn_redirect=1) API first.
      * @param req CreateRealtimeLogDeliveryTaskRequest
      * @return CreateRealtimeLogDeliveryTaskResponse
      * @throws TencentCloudSDKException
@@ -606,6 +616,17 @@ The feature is only supported by the enterprise plan and is currently in closed 
     public DeleteDnsRecordsResponse DeleteDnsRecords(DeleteDnsRecordsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteDnsRecords", DeleteDnsRecordsResponse.class);
+    }
+
+    /**
+     *This API is used to delete specified KV namespace. Once deleted, all keys in namespace will be cleared and cannot be recovered. If the namespace is being referred by edge function, you need to unbind relationship before it can only be deleted.
+     * @param req DeleteEdgeKVNamespaceRequest
+     * @return DeleteEdgeKVNamespaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteEdgeKVNamespaceResponse DeleteEdgeKVNamespace(DeleteEdgeKVNamespaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteEdgeKVNamespace", DeleteEdgeKVNamespaceResponse.class);
     }
 
     /**
@@ -1028,6 +1049,17 @@ The feature is only supported in the enterprise plan and is currently in closed 
     }
 
     /**
+     *This API is used to query the KV namespace list of a specified site, supporting pagination, sorting and conditional filtering. It returns the basic info, capacity utilization and reference relationship of namespaces. If data not found, return an empty array.
+     * @param req DescribeEdgeKVNamespacesRequest
+     * @return DescribeEdgeKVNamespacesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeEdgeKVNamespacesResponse DescribeEdgeKVNamespaces(DescribeEdgeKVNamespacesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeEdgeKVNamespaces", DescribeEdgeKVNamespacesResponse.class);
+    }
+
+    /**
      *This API is used to query environment information in version management mode. The response includes the environment ID, type, and current effective version. The version management feature is currently undergoing beta testing and is accessible only to users on the whitelist.
      * @param req DescribeEnvironmentsRequest
      * @return DescribeEnvironmentsResponse
@@ -1036,6 +1068,17 @@ The feature is only supported in the enterprise plan and is currently in closed 
     public DescribeEnvironmentsResponse DescribeEnvironments(DescribeEnvironmentsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeEnvironments", DescribeEnvironmentsResponse.class);
+    }
+
+    /**
+     *This API is used to query the component binding list of a specified edge function. It supports pagination and conditional filtering, and returns detailed information such as bound component types, variable names, and configuration parameters. Currently supported bound component types include KV namespace (kv_namespace).
+     * @param req DescribeFunctionComponentBindingsRequest
+     * @return DescribeFunctionComponentBindingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeFunctionComponentBindingsResponse DescribeFunctionComponentBindings(DescribeFunctionComponentBindingsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeFunctionComponentBindings", DescribeFunctionComponentBindingsResponse.class);
     }
 
     /**
@@ -1305,6 +1348,17 @@ Note: Starting from June 27, 2025, the legacy version APIs will stop updating. N
     }
 
     /**
+     *This API is used to query the origin speed limit. This feature is in closed beta testing.
+     * @param req DescribePrefetchOriginLimitRequest
+     * @return DescribePrefetchOriginLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePrefetchOriginLimitResponse DescribePrefetchOriginLimit(DescribePrefetchOriginLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePrefetchOriginLimit", DescribePrefetchOriginLimitResponse.class);
+    }
+
+    /**
      *DescribePrefetchTasks is used to query the submission history and execution progress of preheating tasks. This interface can be used to query the tasks submitted by the CreatePrefetchTasks interface.
      * @param req DescribePrefetchTasksRequest
      * @return DescribePrefetchTasksResponse
@@ -1463,7 +1517,18 @@ This API is used to query the configuration information of an IP group, includin
     }
 
     /**
-     *This API is used to query the list of L4 traffic data recorded over time.
+     *Query the shared CNAME list, support fuzzy search, paginate, and sort.
+     * @param req DescribeSharedCNAMERequest
+     * @return DescribeSharedCNAMEResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSharedCNAMEResponse DescribeSharedCNAME(DescribeSharedCNAMERequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSharedCNAME", DescribeSharedCNAMEResponse.class);
+    }
+
+    /**
+     *<p>This API is used to query the time series Data list of Layer 4.</p>.
      * @param req DescribeTimingL4DataRequest
      * @return DescribeTimingL4DataResponse
      * @throws TencentCloudSDKException
@@ -1499,7 +1564,8 @@ This API is used to return post-protection traffic request data by default. User
     }
 
     /**
-     *This API is used to query time series data for layer-7 domain services' origin-pull data.
+     *This API is used to query time series data of origin-pull for L7 domains. 
+Group aggregation can be performed by specifying the query dimension <code>DimensionName</code>, returning multiple groups of time series data. For detailed guide and limits, see [How to Use API to Implement Grouping Aggregation in a Single Call](https://www.tencentcloud.com/document/product/1145/77047?lang=en&pg=).
      * @param req DescribeTimingL7OriginPullDataRequest
      * @return DescribeTimingL7OriginPullDataResponse
      * @throws TencentCloudSDKException
@@ -1641,11 +1707,55 @@ A site can be deleted by using the [Delete Site](https://intl.cloud.tencent.com/
     }
 
     /**
-     *This API is used to enable origin protection for a site for the first time. Enabled, EdgeOne will use specific origin IP ranges to backhaul traffic for L7 acceleration domains/L4 proxy instances. The maximum allowed number of L7 acceleration domains per submission is 200, and the maximum allowed number of L4 proxy instances is 100. Mixing L7 acceleration domains and L4 proxy instances in a single submission is supported, with a total maximum of 200 instances. To enable more than 200 resources, first enable the maximum quantity via specified resources, then enable the remaining resources via the ModifyOriginACL API. Subsequent addition of L7 acceleration domains/L4 proxy instances should be configured via the ModifyOriginACL API.
+     *This API is used to delete one or more key-value pair data in the specified namespace, with batch deletion supported. Data cannot be recovered after deletion.
+     * @param req EdgeKVDeleteRequest
+     * @return EdgeKVDeleteResponse
+     * @throws TencentCloudSDKException
+     */
+    public EdgeKVDeleteResponse EdgeKVDelete(EdgeKVDeleteRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EdgeKVDelete", EdgeKVDeleteResponse.class);
+    }
 
-Create and bind policy Query instance Reset instance access password.
--Call this API to deem as consent to the origin protection enablement special agreement (https://intl.cloud.tencent.com/document/product/1552/120141?from_cn_redirect=1);.
--The origin IP range may change irregularly. tencent cloud EdgeOne (EdgeOne) will trigger notifications via message Center, SMS, or email 14 days, 7 days, 3 days, and 1 day before the change. To ensure you receive the change notification for the origin IP range, please ensure you have selected EdgeOne product services in the [tencent cloud message Center console](https://console.cloud.tencent.com/message) and configured the correct message recipient. For the setting method, refer to [message Subscription Management](https://intl.cloud.tencent.com/document/product/567/43476?from_cn_redirect=1).
+    /**
+     *This API is used to batch read key values from a specified namespace, supporting a single query of up to 20 keys.
+     * @param req EdgeKVGetRequest
+     * @return EdgeKVGetResponse
+     * @throws TencentCloudSDKException
+     */
+    public EdgeKVGetResponse EdgeKVGet(EdgeKVGetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EdgeKVGet", EdgeKVGetResponse.class);
+    }
+
+    /**
+     *This API is used to list all keys in the specified namespace with prefix filtering support. It implements cursor traversal through Cursor and returns the next cursor to proceed with querying. Suitable for traversal of all keys in the namespace.
+     * @param req EdgeKVListRequest
+     * @return EdgeKVListResponse
+     * @throws TencentCloudSDKException
+     */
+    public EdgeKVListResponse EdgeKVList(EdgeKVListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EdgeKVList", EdgeKVListResponse.class);
+    }
+
+    /**
+     *This API is used to write key-value pair data to a specified namespace and supports setting expiration time. If the key already exists, it overwrites the original value. If Not Exist, it creates a new key-value pair.
+     * @param req EdgeKVPutRequest
+     * @return EdgeKVPutResponse
+     * @throws TencentCloudSDKException
+     */
+    public EdgeKVPutResponse EdgeKVPut(EdgeKVPutRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EdgeKVPut", EdgeKVPutResponse.class);
+    }
+
+    /**
+     *This API is used to enable origin protection for a site for the first time. Enabled, EdgeOne will use specific origin-pull IP ranges for L7 acceleration domains/L4 proxy instances. The maximum quantity of L7 acceleration domains supported in a single submission is 200, and the maximum quantity of L4 proxy instances is 100. It supports composite submission of L7 acceleration domains/L4 proxy instances, with a maximum total number of instances of 200. To enable exceeding 200 resources, you can first enable the maximum allowed number via specified resources, and enable the remaining resources via the ModifyOriginACL API. Subsequent addition of L7 acceleration domains/L4 proxy instances should be configured via the ModifyOriginACL API. When enabling simultaneously, allowlisted accounts support selecting other origin-pull IP range versions, such as simplified edition, to achieve origin-pull effect with fewer IP ranges.
+
+Note:
+-Calling this API is deemed as agreement to the special agreement for origin protection enablement (https://www.tencentcloud.com/document/product/1552/120141?from_cn_redirect=1);
+-The origin IP range may change irregularly. EdgeOne will trigger notifications via Message Center, SMS, or email 14 days, 7 days, 3 days, and 1 day before the change. To ensure you receive the origin IP range change notification, please ensure you have selected the edge security acceleration platform EO product services relevant message notification and configured the correct message recipients in the Tencent Cloud Message Center Console (https://console.cloud.tencent.com/message). For the setting method, refer to Message Subscription Management (https://www.tencentcloud.com/document/product/567/43476?from_cn_redirect=1).
      * @param req EnableOriginACLRequest
      * @return EnableOriginACLResponse
      * @throws TencentCloudSDKException
@@ -1656,7 +1766,7 @@ Create and bind policy Query instance Reset instance access password.
     }
 
     /**
-     *This API is used to export site configuration . The exported configuration is used for import via the API (ImportZoneConfig). This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+     *This API is used to export site configuration based on desired configuration items. The exported configuration is used for import via the site configuration import API.
      * @param req ExportZoneConfigRequest
      * @return ExportZoneConfigResponse
      * @throws TencentCloudSDKException
@@ -1860,6 +1970,17 @@ The feature is only supported in the enterprise plan and is currently in closed 
     }
 
     /**
+     *This API is used to modify the attribute information of a specified KV namespace. Currently supported is namespace description modification.
+     * @param req ModifyEdgeKVNamespaceRequest
+     * @return ModifyEdgeKVNamespaceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyEdgeKVNamespaceResponse ModifyEdgeKVNamespace(ModifyEdgeKVNamespaceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyEdgeKVNamespace", ModifyEdgeKVNamespaceResponse.class);
+    }
+
+    /**
      *This API is used to modify an edge function. It supports modifying the function content and description. The function will take effect immediately after modification and redeployment.
      * @param req ModifyFunctionRequest
      * @return ModifyFunctionResponse
@@ -1871,7 +1992,18 @@ The feature is only supported in the enterprise plan and is currently in closed 
     }
 
     /**
-     *This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description.
+     *This API is used to modify the binding relationship between edge functions and components, supporting four operation modes: bind, bind-override, unbind, and rebind. By specifying the operation type and component list, you can manage the component binding of functions.
+     * @param req ModifyFunctionComponentBindingsRequest
+     * @return ModifyFunctionComponentBindingsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyFunctionComponentBindingsResponse ModifyFunctionComponentBindings(ModifyFunctionComponentBindingsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyFunctionComponentBindings", ModifyFunctionComponentBindingsResponse.class);
+    }
+
+    /**
+     *This API is used to modify a trigger rule for an edge function. It supports modifying rule conditions, execution functions, and description. You can first use the DescribeFunctionRules API to get the RuleId of the rule that needs to be modified, then input the modified rule content. The original rule content will be overwritten.
      * @param req ModifyFunctionRuleRequest
      * @return ModifyFunctionRuleResponse
      * @throws TencentCloudSDKException
@@ -2037,7 +2169,7 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     }
 
     /**
-     *This API is used to enable or disable specific origin ACLs for L7 acceleration domain names or L4 proxy instances. A single submission supports up to 200 L7 acceleration domain names or 100 L4 proxy instances. Hybrid submissions of L7 acceleration domain names and L4 proxy instances are supported, with a maximum total number of instances of 200. If changes are needed for exceeding 200 instances, submit them in batches via this API.
+     *This API is used to enable or disable specific origin IP ranges for L7 acceleration domains or L4 proxy instances. The maximum quantity for single submission is 200 L7 acceleration domains or 100 L4 proxy instances, with mixed submissions supported up to a total of 200 instances. If changes are needed for submissions exceeding 200 instances, please submit in batches via this interface. Meanwhile, allowlisted customers can switch to other available origin protection IP range versions such as the simplified edition, which can reduce origin IP ranges.
      * @param req ModifyOriginACLRequest
      * @return ModifyOriginACLResponse
      * @throws TencentCloudSDKException
@@ -2067,6 +2199,18 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     public ModifyPlanResponse ModifyPlan(ModifyPlanRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyPlan", ModifyPlanResponse.class);
+    }
+
+    /**
+     *This API is used to configure the origin speed limit. This feature is in beta test.
+This API is used to create, modify and delete preheating origin speed limit restrictions. Each account supports up to 100 restrictions.
+     * @param req ModifyPrefetchOriginLimitRequest
+     * @return ModifyPrefetchOriginLimitResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyPrefetchOriginLimitResponse ModifyPrefetchOriginLimit(ModifyPrefetchOriginLimitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyPrefetchOriginLimit", ModifyPrefetchOriginLimitResponse.class);
     }
 
     /**
@@ -2159,6 +2303,17 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     }
 
     /**
+     *This API is used to modify a shared CNAME. Currently only support modifying the description of a shared CNAME and setting the associated IP SSL domain name of a shared CNAME with IP SSL type. The shared CNAME itself cannot be modified after creation. This feature is in beta test.
+     * @param req ModifySharedCNAMERequest
+     * @return ModifySharedCNAMEResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySharedCNAMEResponse ModifySharedCNAME(ModifySharedCNAMERequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySharedCNAME", ModifySharedCNAMEResponse.class);
+    }
+
+    /**
      *This API is used to modify the security policy configuration template.
      * @param req ModifyWebSecurityTemplateRequest
      * @return ModifyWebSecurityTemplateResponse
@@ -2200,6 +2355,17 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
     public ModifyZoneStatusResponse ModifyZoneStatus(ModifyZoneStatusRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyZoneStatus", ModifyZoneStatusResponse.class);
+    }
+
+    /**
+     *This API is used to modify the working mode of configuration modules under a site. Configuration modules can enable version management mode or immediate effect mode by configuration group dimension. For details, refer to version management (https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+     * @param req ModifyZoneWorkModeRequest
+     * @return ModifyZoneWorkModeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyZoneWorkModeResponse ModifyZoneWorkMode(ModifyZoneWorkModeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyZoneWorkMode", ModifyZoneWorkModeResponse.class);
     }
 
     /**

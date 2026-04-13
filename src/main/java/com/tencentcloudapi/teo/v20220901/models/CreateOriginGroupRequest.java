@@ -31,6 +31,13 @@ public class CreateOriginGroupRequest extends AbstractModel {
     private String ZoneId;
 
     /**
+    * (Required) Origins in the origin group.
+    */
+    @SerializedName("Records")
+    @Expose
+    private OriginRecord [] Records;
+
+    /**
     * Origin group name. It can contain 1 to 200 characters ([a-z], [A-Z], [0-9] and [_-]).
     */
     @SerializedName("Name")
@@ -45,13 +52,6 @@ public class CreateOriginGroupRequest extends AbstractModel {
     @SerializedName("Type")
     @Expose
     private String Type;
-
-    /**
-    * (Required) Origins in the origin group.
-    */
-    @SerializedName("Records")
-    @Expose
-    private OriginRecord [] Records;
 
     /**
     * Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
@@ -74,6 +74,22 @@ public class CreateOriginGroupRequest extends AbstractModel {
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get (Required) Origins in the origin group. 
+     * @return Records (Required) Origins in the origin group.
+     */
+    public OriginRecord [] getRecords() {
+        return this.Records;
+    }
+
+    /**
+     * Set (Required) Origins in the origin group.
+     * @param Records (Required) Origins in the origin group.
+     */
+    public void setRecords(OriginRecord [] Records) {
+        this.Records = Records;
     }
 
     /**
@@ -117,22 +133,6 @@ public class CreateOriginGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get (Required) Origins in the origin group. 
-     * @return Records (Required) Origins in the origin group.
-     */
-    public OriginRecord [] getRecords() {
-        return this.Records;
-    }
-
-    /**
-     * Set (Required) Origins in the origin group.
-     * @param Records (Required) Origins in the origin group.
-     */
-    public void setRecords(OriginRecord [] Records) {
-        this.Records = Records;
-    }
-
-    /**
      * Get Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration. 
      * @return HostHeader Host header used for origin-pull. It only works when `Type=HTTP`. The `HostHeader` specified in `RuleEngine` takes a higher priority over this configuration.
      */
@@ -159,17 +159,17 @@ public class CreateOriginGroupRequest extends AbstractModel {
         if (source.ZoneId != null) {
             this.ZoneId = new String(source.ZoneId);
         }
-        if (source.Name != null) {
-            this.Name = new String(source.Name);
-        }
-        if (source.Type != null) {
-            this.Type = new String(source.Type);
-        }
         if (source.Records != null) {
             this.Records = new OriginRecord[source.Records.length];
             for (int i = 0; i < source.Records.length; i++) {
                 this.Records[i] = new OriginRecord(source.Records[i]);
             }
+        }
+        if (source.Name != null) {
+            this.Name = new String(source.Name);
+        }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
         }
         if (source.HostHeader != null) {
             this.HostHeader = new String(source.HostHeader);
@@ -182,9 +182,9 @@ public class CreateOriginGroupRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamArrayObj(map, prefix + "Records.", this.Records);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Type", this.Type);
-        this.setParamArrayObj(map, prefix + "Records.", this.Records);
         this.setParamSimple(map, prefix + "HostHeader", this.HostHeader);
 
     }

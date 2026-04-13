@@ -80,14 +80,14 @@ public class JustInTimeTranscodeTemplate extends AbstractModel {
     private AudioTemplateInfo AudioTemplate;
 
     /**
-    * Template creation time. uses [ISO date format](https://www.tencentcloud.com/zh/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Template last modified time. uses [ISO date format](https://www.tencentcloud.com/zh/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -222,32 +222,32 @@ public class JustInTimeTranscodeTemplate extends AbstractModel {
     }
 
     /**
-     * Get Template creation time. uses [ISO date format](https://www.tencentcloud.com/zh/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return CreateTime Template creation time. uses [ISO date format](https://www.tencentcloud.com/zh/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
+     * @return CreateTime Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Template creation time. uses [ISO date format](https://www.tencentcloud.com/zh/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param CreateTime Template creation time. uses [ISO date format](https://www.tencentcloud.com/zh/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param CreateTime Template creation time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Template last modified time. uses [ISO date format](https://www.tencentcloud.com/zh/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return UpdateTime Template last modified time. uses [ISO date format](https://www.tencentcloud.com/zh/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
+     * @return UpdateTime Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Template last modified time. uses [ISO date format](https://www.tencentcloud.com/zh/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param UpdateTime Template last modified time. uses [ISO date format](https://www.tencentcloud.com/zh/document/product/266/11732#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * @param UpdateTime Template last modified time. uses [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

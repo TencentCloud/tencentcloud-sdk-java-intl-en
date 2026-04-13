@@ -47,9 +47,10 @@ public class ClientAttester extends AbstractModel {
     private String Type;
 
     /**
-    * Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
+    * Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
     */
     @SerializedName("AttesterSource")
     @Expose
@@ -80,6 +81,14 @@ public class ClientAttester extends AbstractModel {
     @SerializedName("TCCaptchaOption")
     @Expose
     private TCCaptchaOption TCCaptchaOption;
+
+    /**
+    * Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+    */
+    @SerializedName("TCEOCaptchaOption")
+    @Expose
+    private TCEOCaptchaOption TCEOCaptchaOption;
 
     /**
      * Get Authentication option ID. 
@@ -138,24 +147,28 @@ public class ClientAttester extends AbstractModel {
     }
 
     /**
-     * Get Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>. 
-     * @return AttesterSource Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
+     * Get Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li> 
+     * @return AttesterSource Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
      */
     public String getAttesterSource() {
         return this.AttesterSource;
     }
 
     /**
-     * Set Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
-     * @param AttesterSource Authentication method. valid values:.
-<Li>TC-RCE: uses the full-stack risk control engine for authentication.</li>.
-<Li>TC-CAPTCHA-Intl: specifies authentication using captcha-intl.</li>.
+     * Set Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
+     * @param AttesterSource Authentication method. Valid values:
+<li>TC-RCE: Authentication with RCE risk identification;</li>
+<li>TC-CAPTCHA: Authentication using Tianyu verification code;</li>
+<li>TC-EO-CAPTCHA: Use EdgeOne CAPTCHA for authentication.</li>
      */
     public void setAttesterSource(String AttesterSource) {
         this.AttesterSource = AttesterSource;
@@ -229,6 +242,26 @@ public class ClientAttester extends AbstractModel {
         this.TCCaptchaOption = TCCaptchaOption;
     }
 
+    /**
+     * Get Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li> 
+     * @return TCEOCaptchaOption Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+     */
+    public TCEOCaptchaOption getTCEOCaptchaOption() {
+        return this.TCEOCaptchaOption;
+    }
+
+    /**
+     * Set Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+     * @param TCEOCaptchaOption Configuration message of TC-EO-CAPTCHA authentication.
+<li>This field is required when the AttesterSource parameter value is TC-EO-CAPTCHA.</li>
+     */
+    public void setTCEOCaptchaOption(TCEOCaptchaOption TCEOCaptchaOption) {
+        this.TCEOCaptchaOption = TCEOCaptchaOption;
+    }
+
     public ClientAttester() {
     }
 
@@ -258,6 +291,9 @@ public class ClientAttester extends AbstractModel {
         if (source.TCCaptchaOption != null) {
             this.TCCaptchaOption = new TCCaptchaOption(source.TCCaptchaOption);
         }
+        if (source.TCEOCaptchaOption != null) {
+            this.TCEOCaptchaOption = new TCEOCaptchaOption(source.TCEOCaptchaOption);
+        }
     }
 
 
@@ -272,6 +308,7 @@ public class ClientAttester extends AbstractModel {
         this.setParamSimple(map, prefix + "AttesterDuration", this.AttesterDuration);
         this.setParamObj(map, prefix + "TCRCEOption.", this.TCRCEOption);
         this.setParamObj(map, prefix + "TCCaptchaOption.", this.TCCaptchaOption);
+        this.setParamObj(map, prefix + "TCEOCaptchaOption.", this.TCEOCaptchaOption);
 
     }
 }

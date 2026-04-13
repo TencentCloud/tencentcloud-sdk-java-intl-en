@@ -33,13 +33,27 @@ If you wish to quickly submit Targets urls under different sites, you can fill i
     private String ZoneId;
 
     /**
-    * List of resources to be preheated. Each element format is similar to the following:
-http://www.example.com/example.txt. The parameter value is currently required.
-Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+    * List of resources to be preheated. required. each element format is as follows:.
+http://www.example.com/example.txt.
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
     */
     @SerializedName("Targets")
     @Expose
     private String [] Targets;
+
+    /**
+    * Preheat mode. valid values:.
+<Li>Default: default mode, which preheats to the middle layer.</li>.
+<Li>Edge: specifies edge preheating mode, which preheats to both edge and middle layer.</li> if left empty, the default value is default.
+Notes:.
+Preheating to the edge generates edge layer traffic, which is included in billing traffic.
+2. specifies the default allocation of edge preheating as a separate preheating amount of 1000 per day, which does not consume the standard preheating amount.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
 
     /**
     * Whether to encode a URL according to RFC3986. Enable this field when the URL contains non-ASCII characters.
@@ -49,7 +63,7 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
     private Boolean EncodeUrl;
 
     /**
-    * HTTP header information
+    * Specifies whether to carry HTTP header information for preheating. leave it empty otherwise.
     */
     @SerializedName("Headers")
     @Expose
@@ -58,15 +72,14 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
     /**
     * Media fragment preheating control. valid values:.
 <Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
-<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
-
+<Li>Off: only preheats the submitted description file.</li>default value: off if left empty.
 Notes:.
-1. the supported description file is M3U8, and the corresponding shard is TS.
-Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
-Recursive resolution depth is no more than 3.
-Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
-
-This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+Supported description file is M3U8; corresponding shard is TS.
+Specifies the description file must support normal requests and describe sharding paths as per industry standards.
+Specifies the recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the limit, silent processing is triggered and preheating is no longer executed.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
     */
     @SerializedName("PrefetchMediaSegments")
     @Expose
@@ -97,27 +110,71 @@ If you wish to quickly submit Targets urls under different sites, you can fill i
     }
 
     /**
-     * Get List of resources to be preheated. Each element format is similar to the following:
-http://www.example.com/example.txt. The parameter value is currently required.
-Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1). 
-     * @return Targets List of resources to be preheated. Each element format is similar to the following:
-http://www.example.com/example.txt. The parameter value is currently required.
-Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+     * Get List of resources to be preheated. required. each element format is as follows:.
+http://www.example.com/example.txt.
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1). 
+     * @return Targets List of resources to be preheated. required. each element format is as follows:.
+http://www.example.com/example.txt.
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
      */
     public String [] getTargets() {
         return this.Targets;
     }
 
     /**
-     * Set List of resources to be preheated. Each element format is similar to the following:
-http://www.example.com/example.txt. The parameter value is currently required.
-Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
-     * @param Targets List of resources to be preheated. Each element format is similar to the following:
-http://www.example.com/example.txt. The parameter value is currently required.
-Note: The number of tasks that can be submitted is limited by the quota of a billing package. For details, see [Billing Overview] (https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1).
+     * Set List of resources to be preheated. required. each element format is as follows:.
+http://www.example.com/example.txt.
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+     * @param Targets List of resources to be preheated. required. each element format is as follows:.
+http://www.example.com/example.txt.
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;
+    }
+
+    /**
+     * Get Preheat mode. valid values:.
+<Li>Default: default mode, which preheats to the middle layer.</li>.
+<Li>Edge: specifies edge preheating mode, which preheats to both edge and middle layer.</li> if left empty, the default value is default.
+Notes:.
+Preheating to the edge generates edge layer traffic, which is included in billing traffic.
+2. specifies the default allocation of edge preheating as a separate preheating amount of 1000 per day, which does not consume the standard preheating amount.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers. 
+     * @return Mode Preheat mode. valid values:.
+<Li>Default: default mode, which preheats to the middle layer.</li>.
+<Li>Edge: specifies edge preheating mode, which preheats to both edge and middle layer.</li> if left empty, the default value is default.
+Notes:.
+Preheating to the edge generates edge layer traffic, which is included in billing traffic.
+2. specifies the default allocation of edge preheating as a separate preheating amount of 1000 per day, which does not consume the standard preheating amount.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set Preheat mode. valid values:.
+<Li>Default: default mode, which preheats to the middle layer.</li>.
+<Li>Edge: specifies edge preheating mode, which preheats to both edge and middle layer.</li> if left empty, the default value is default.
+Notes:.
+Preheating to the edge generates edge layer traffic, which is included in billing traffic.
+2. specifies the default allocation of edge preheating as a separate preheating amount of 1000 per day, which does not consume the standard preheating amount.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+     * @param Mode Preheat mode. valid values:.
+<Li>Default: default mode, which preheats to the middle layer.</li>.
+<Li>Edge: specifies edge preheating mode, which preheats to both edge and middle layer.</li> if left empty, the default value is default.
+Notes:.
+Preheating to the edge generates edge layer traffic, which is included in billing traffic.
+2. specifies the default allocation of edge preheating as a separate preheating amount of 1000 per day, which does not consume the standard preheating amount.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
     }
 
     /**
@@ -141,16 +198,16 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
     }
 
     /**
-     * Get HTTP header information 
-     * @return Headers HTTP header information
+     * Get Specifies whether to carry HTTP header information for preheating. leave it empty otherwise. 
+     * @return Headers Specifies whether to carry HTTP header information for preheating. leave it empty otherwise.
      */
     public Header [] getHeaders() {
         return this.Headers;
     }
 
     /**
-     * Set HTTP header information
-     * @param Headers HTTP header information
+     * Set Specifies whether to carry HTTP header information for preheating. leave it empty otherwise.
+     * @param Headers Specifies whether to carry HTTP header information for preheating. leave it empty otherwise.
      */
     public void setHeaders(Header [] Headers) {
         this.Headers = Headers;
@@ -159,26 +216,24 @@ Note: The number of tasks that can be submitted is limited by the quota of a bil
     /**
      * Get Media fragment preheating control. valid values:.
 <Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
-<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
-
+<Li>Off: only preheats the submitted description file.</li>default value: off if left empty.
 Notes:.
-1. the supported description file is M3U8, and the corresponding shard is TS.
-Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
-Recursive resolution depth is no more than 3.
-Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
-
-This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers. 
+Supported description file is M3U8; corresponding shard is TS.
+Specifies the description file must support normal requests and describe sharding paths as per industry standards.
+Specifies the recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the limit, silent processing is triggered and preheating is no longer executed.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers. 
      * @return PrefetchMediaSegments Media fragment preheating control. valid values:.
 <Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
-<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
-
+<Li>Off: only preheats the submitted description file.</li>default value: off if left empty.
 Notes:.
-1. the supported description file is M3U8, and the corresponding shard is TS.
-Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
-Recursive resolution depth is no more than 3.
-Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
-
-This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+Supported description file is M3U8; corresponding shard is TS.
+Specifies the description file must support normal requests and describe sharding paths as per industry standards.
+Specifies the recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the limit, silent processing is triggered and preheating is no longer executed.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
      */
     public String getPrefetchMediaSegments() {
         return this.PrefetchMediaSegments;
@@ -187,26 +242,24 @@ This parameter specifies the allowlist feature. if necessary, contact tencent cl
     /**
      * Set Media fragment preheating control. valid values:.
 <Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
-<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
-
+<Li>Off: only preheats the submitted description file.</li>default value: off if left empty.
 Notes:.
-1. the supported description file is M3U8, and the corresponding shard is TS.
-Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
-Recursive resolution depth is no more than 3.
-Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
-
-This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+Supported description file is M3U8; corresponding shard is TS.
+Specifies the description file must support normal requests and describe sharding paths as per industry standards.
+Specifies the recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the limit, silent processing is triggered and preheating is no longer executed.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
      * @param PrefetchMediaSegments Media fragment preheating control. valid values:.
 <Li>On: enables shard preheating, preheats the description file, and performs recursive resolution of the description file shards for preheating.</li>.
-<Li>Off: only preheat the submitted description file.</li>default value: off if left empty.
-
+<Li>Off: only preheats the submitted description file.</li>default value: off if left empty.
 Notes:.
-1. the supported description file is M3U8, and the corresponding shard is TS.
-Describes the requirement that the description file can process normal requests and specify the sharding path as per industry standards.
-Recursive resolution depth is no more than 3.
-Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the quota limit, silent processing is triggered and preheating is no longer executed.
-
-This parameter specifies the allowlist feature. if necessary, contact tencent cloud engineers.
+Supported description file is M3U8; corresponding shard is TS.
+Specifies the description file must support normal requests and describe sharding paths as per industry standards.
+Specifies the recursive resolution depth is no more than 3.
+Parsed shards normally accumulate daily pre-warming amount. when usage exceeds the limit, silent processing is triggered and preheating is no longer executed.
+Description:.
+This parameter is the allowlist feature. if needed, contact tencent cloud engineers.
      */
     public void setPrefetchMediaSegments(String PrefetchMediaSegments) {
         this.PrefetchMediaSegments = PrefetchMediaSegments;
@@ -229,6 +282,9 @@ This parameter specifies the allowlist feature. if necessary, contact tencent cl
                 this.Targets[i] = new String(source.Targets[i]);
             }
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
         if (source.EncodeUrl != null) {
             this.EncodeUrl = new Boolean(source.EncodeUrl);
         }
@@ -250,6 +306,7 @@ This parameter specifies the allowlist feature. if necessary, contact tencent cl
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArraySimple(map, prefix + "Targets.", this.Targets);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
         this.setParamArrayObj(map, prefix + "Headers.", this.Headers);
         this.setParamSimple(map, prefix + "PrefetchMediaSegments", this.PrefetchMediaSegments);

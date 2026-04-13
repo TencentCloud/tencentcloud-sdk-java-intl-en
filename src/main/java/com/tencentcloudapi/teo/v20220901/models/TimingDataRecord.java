@@ -31,11 +31,18 @@ public class TimingDataRecord extends AbstractModel {
     private String TypeKey;
 
     /**
-    * Detailed time series data
+    * Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
     */
     @SerializedName("TypeValue")
     @Expose
     private TimingTypeValue [] TypeValue;
+
+    /**
+    * Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+    */
+    @SerializedName("FloatTypeValue")
+    @Expose
+    private FloatTimingTypeValue [] FloatTypeValue;
 
     /**
      * Get The query dimension value. 
@@ -54,19 +61,35 @@ public class TimingDataRecord extends AbstractModel {
     }
 
     /**
-     * Get Detailed time series data 
-     * @return TypeValue Detailed time series data
+     * Get Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default. 
+     * @return TypeValue Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
      */
     public TimingTypeValue [] getTypeValue() {
         return this.TypeValue;
     }
 
     /**
-     * Set Detailed time series data
-     * @param TypeValue Detailed time series data
+     * Set Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
+     * @param TypeValue Detailed time series data of the <code>Integer</code> type. query metrics with the <code>Integer</code> value type will return corresponding time series data through this field.<br> **note**: if the query metric does not specify the value type, this field will return data by default.
      */
     public void setTypeValue(TimingTypeValue [] TypeValue) {
         this.TypeValue = TypeValue;
+    }
+
+    /**
+     * Get Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field. 
+     * @return FloatTypeValue Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+     */
+    public FloatTimingTypeValue [] getFloatTypeValue() {
+        return this.FloatTypeValue;
+    }
+
+    /**
+     * Set Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+     * @param FloatTypeValue Detailed time series data of <code>Float</code> type. query metrics with <code>Float</code> value type will return corresponding time series data via this field.
+     */
+    public void setFloatTypeValue(FloatTimingTypeValue [] FloatTypeValue) {
+        this.FloatTypeValue = FloatTypeValue;
     }
 
     public TimingDataRecord() {
@@ -86,6 +109,12 @@ public class TimingDataRecord extends AbstractModel {
                 this.TypeValue[i] = new TimingTypeValue(source.TypeValue[i]);
             }
         }
+        if (source.FloatTypeValue != null) {
+            this.FloatTypeValue = new FloatTimingTypeValue[source.FloatTypeValue.length];
+            for (int i = 0; i < source.FloatTypeValue.length; i++) {
+                this.FloatTypeValue[i] = new FloatTimingTypeValue(source.FloatTypeValue[i]);
+            }
+        }
     }
 
 
@@ -95,6 +124,7 @@ public class TimingDataRecord extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "TypeKey", this.TypeKey);
         this.setParamArrayObj(map, prefix + "TypeValue.", this.TypeValue);
+        this.setParamArrayObj(map, prefix + "FloatTypeValue.", this.FloatTypeValue);
 
     }
 }

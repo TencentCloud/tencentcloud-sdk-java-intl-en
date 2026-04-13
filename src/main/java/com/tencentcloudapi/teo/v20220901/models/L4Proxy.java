@@ -99,8 +99,9 @@ public class L4Proxy extends AbstractModel {
     private String AccelerateMainland;
 
     /**
-    * Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("DDosProtectionConfig")
     @Expose
@@ -301,21 +302,29 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return DDosProtectionConfig Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value. 
+     * @return DDosProtectionConfig Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @deprecated
      */
+    @Deprecated
     public DDosProtectionConfig getDDosProtectionConfig() {
         return this.DDosProtectionConfig;
     }
 
     /**
-     * Set Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param DDosProtectionConfig Security protection configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @param DDosProtectionConfig Security protection settings.
+This field is deprecated.
+Note: This field may return null, which indicates a failure to obtain a valid value.
+     * @deprecated
      */
+    @Deprecated
     public void setDDosProtectionConfig(DDosProtectionConfig DDosProtectionConfig) {
         this.DDosProtectionConfig = DDosProtectionConfig;
     }

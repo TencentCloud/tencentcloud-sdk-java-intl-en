@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class InquiryPriceCreateDBInstancesResponse extends AbstractModel {
 
     /**
-    * Published price in US Cent
+    * <p>List price, in cents.</p>
     */
     @SerializedName("OriginalPrice")
     @Expose
     private Long OriginalPrice;
 
     /**
-    * Discounted total amount in US Cent
+    * <p>Actual payment amount after discount, in cents.</p>
     */
     @SerializedName("Price")
     @Expose
@@ -52,32 +52,32 @@ public class InquiryPriceCreateDBInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Published price in US Cent 
-     * @return OriginalPrice Published price in US Cent
+     * Get <p>List price, in cents.</p> 
+     * @return OriginalPrice <p>List price, in cents.</p>
      */
     public Long getOriginalPrice() {
         return this.OriginalPrice;
     }
 
     /**
-     * Set Published price in US Cent
-     * @param OriginalPrice Published price in US Cent
+     * Set <p>List price, in cents.</p>
+     * @param OriginalPrice <p>List price, in cents.</p>
      */
     public void setOriginalPrice(Long OriginalPrice) {
         this.OriginalPrice = OriginalPrice;
     }
 
     /**
-     * Get Discounted total amount in US Cent 
-     * @return Price Discounted total amount in US Cent
+     * Get <p>Actual payment amount after discount, in cents.</p> 
+     * @return Price <p>Actual payment amount after discount, in cents.</p>
      */
     public Long getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Discounted total amount in US Cent
-     * @param Price Discounted total amount in US Cent
+     * Set <p>Actual payment amount after discount, in cents.</p>
+     * @param Price <p>Actual payment amount after discount, in cents.</p>
      */
     public void setPrice(Long Price) {
         this.Price = Price;

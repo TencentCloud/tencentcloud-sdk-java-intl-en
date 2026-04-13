@@ -102,6 +102,13 @@ public class LoadBalancer extends AbstractModel {
     private String [] L7UsedList;
 
     /**
+    * Specifies the list of instances referenced by cloud load balancer.
+    */
+    @SerializedName("References")
+    @Expose
+    private OriginGroupReference [] References;
+
+    /**
      * Get LoadBalancer ID. 
      * @return InstanceId LoadBalancer ID.
      */
@@ -293,6 +300,22 @@ public class LoadBalancer extends AbstractModel {
         this.L7UsedList = L7UsedList;
     }
 
+    /**
+     * Get Specifies the list of instances referenced by cloud load balancer. 
+     * @return References Specifies the list of instances referenced by cloud load balancer.
+     */
+    public OriginGroupReference [] getReferences() {
+        return this.References;
+    }
+
+    /**
+     * Set Specifies the list of instances referenced by cloud load balancer.
+     * @param References Specifies the list of instances referenced by cloud load balancer.
+     */
+    public void setReferences(OriginGroupReference [] References) {
+        this.References = References;
+    }
+
     public LoadBalancer() {
     }
 
@@ -340,6 +363,12 @@ public class LoadBalancer extends AbstractModel {
                 this.L7UsedList[i] = new String(source.L7UsedList[i]);
             }
         }
+        if (source.References != null) {
+            this.References = new OriginGroupReference[source.References.length];
+            for (int i = 0; i < source.References.length; i++) {
+                this.References[i] = new OriginGroupReference(source.References[i]);
+            }
+        }
     }
 
 
@@ -357,6 +386,7 @@ public class LoadBalancer extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "L4UsedList.", this.L4UsedList);
         this.setParamArraySimple(map, prefix + "L7UsedList.", this.L7UsedList);
+        this.setParamArrayObj(map, prefix + "References.", this.References);
 
     }
 }

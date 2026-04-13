@@ -1,0 +1,128 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.teo.v20220901.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class EdgeKVGetRequest extends AbstractModel {
+
+    /**
+    * Zone ID.
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private String ZoneId;
+
+    /**
+    * Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
+    */
+    @SerializedName("Namespace")
+    @Expose
+    private String Namespace;
+
+    /**
+    * Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element.
+    */
+    @SerializedName("Keys")
+    @Expose
+    private String [] Keys;
+
+    /**
+     * Get Zone ID. 
+     * @return ZoneId Zone ID.
+     */
+    public String getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set Zone ID.
+     * @param ZoneId Zone ID.
+     */
+    public void setZoneId(String ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API. 
+     * @return Namespace Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
+     */
+    public String getNamespace() {
+        return this.Namespace;
+    }
+
+    /**
+     * Set Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
+     * @param Namespace Namespace name. You can obtain the list of namespaces under the site through the DescribeEdgeKVNamespaces API.
+     */
+    public void setNamespace(String Namespace) {
+        this.Namespace = Namespace;
+    }
+
+    /**
+     * Get Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element. 
+     * @return Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element.
+     */
+    public String [] getKeys() {
+        return this.Keys;
+    }
+
+    /**
+     * Set Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element.
+     * @param Keys Name list. Maximum array length is 20. Each key cannot be empty, with a length of 1-512 characters. Allowed characters include letters, numbers, hyphens, and underscores. To query a single key, input an array with one element.
+     */
+    public void setKeys(String [] Keys) {
+        this.Keys = Keys;
+    }
+
+    public EdgeKVGetRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public EdgeKVGetRequest(EdgeKVGetRequest source) {
+        if (source.ZoneId != null) {
+            this.ZoneId = new String(source.ZoneId);
+        }
+        if (source.Namespace != null) {
+            this.Namespace = new String(source.Namespace);
+        }
+        if (source.Keys != null) {
+            this.Keys = new String[source.Keys.length];
+            for (int i = 0; i < source.Keys.length; i++) {
+                this.Keys[i] = new String(source.Keys[i]);
+            }
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "Namespace", this.Namespace);
+        this.setParamArraySimple(map, prefix + "Keys.", this.Keys);
+
+    }
+}
+

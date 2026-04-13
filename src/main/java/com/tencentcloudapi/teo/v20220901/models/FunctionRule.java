@@ -38,25 +38,43 @@ public class FunctionRule extends AbstractModel {
     private FunctionRuleCondition [] FunctionRuleConditions;
 
     /**
-    * Function ID, specifying a function executed when a trigger rule condition is met.
+    * Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+    */
+    @SerializedName("TriggerType")
+    @Expose
+    private String TriggerType;
+
+    /**
+    * Specifies the function ID to be executed. valid only when TriggerType is direct.
     */
     @SerializedName("FunctionId")
     @Expose
     private String FunctionId;
 
     /**
-    * Rule description.
-    */
-    @SerializedName("Remark")
-    @Expose
-    private String Remark;
-
-    /**
-    * Function name.
+    * Specifies the name of the function executed.
     */
     @SerializedName("FunctionName")
     @Expose
     private String FunctionName;
+
+    /**
+    * Function selection configuration based on client IP country/region.
+    */
+    @SerializedName("RegionMappingSelections")
+    @Expose
+    private FunctionRegionSelection [] RegionMappingSelections;
+
+    /**
+    * Describes the function selection configuration based on weight.
+    */
+    @SerializedName("WeightedSelections")
+    @Expose
+    private FunctionWeightedSelection [] WeightedSelections;
 
     /**
     * Priority of a trigger rule for a function. The larger the value, the higher the priority.
@@ -64,6 +82,13 @@ public class FunctionRule extends AbstractModel {
     @SerializedName("Priority")
     @Expose
     private Long Priority;
+
+    /**
+    * Rule description.
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
 
     /**
     * Creation time, which adopts Coordinated Universal Time (UTC) and follows the date and time format of the ISO 8601 standard.
@@ -112,51 +137,99 @@ public class FunctionRule extends AbstractModel {
     }
 
     /**
-     * Get Function ID, specifying a function executed when a trigger rule condition is met. 
-     * @return FunctionId Function ID, specifying a function executed when a trigger rule condition is met.
+     * Get Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+ 
+     * @return TriggerType Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+     */
+    public String getTriggerType() {
+        return this.TriggerType;
+    }
+
+    /**
+     * Set Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+     * @param TriggerType Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+
+     */
+    public void setTriggerType(String TriggerType) {
+        this.TriggerType = TriggerType;
+    }
+
+    /**
+     * Get Specifies the function ID to be executed. valid only when TriggerType is direct. 
+     * @return FunctionId Specifies the function ID to be executed. valid only when TriggerType is direct.
      */
     public String getFunctionId() {
         return this.FunctionId;
     }
 
     /**
-     * Set Function ID, specifying a function executed when a trigger rule condition is met.
-     * @param FunctionId Function ID, specifying a function executed when a trigger rule condition is met.
+     * Set Specifies the function ID to be executed. valid only when TriggerType is direct.
+     * @param FunctionId Specifies the function ID to be executed. valid only when TriggerType is direct.
      */
     public void setFunctionId(String FunctionId) {
         this.FunctionId = FunctionId;
     }
 
     /**
-     * Get Rule description. 
-     * @return Remark Rule description.
-     */
-    public String getRemark() {
-        return this.Remark;
-    }
-
-    /**
-     * Set Rule description.
-     * @param Remark Rule description.
-     */
-    public void setRemark(String Remark) {
-        this.Remark = Remark;
-    }
-
-    /**
-     * Get Function name. 
-     * @return FunctionName Function name.
+     * Get Specifies the name of the function executed. 
+     * @return FunctionName Specifies the name of the function executed.
      */
     public String getFunctionName() {
         return this.FunctionName;
     }
 
     /**
-     * Set Function name.
-     * @param FunctionName Function name.
+     * Set Specifies the name of the function executed.
+     * @param FunctionName Specifies the name of the function executed.
      */
     public void setFunctionName(String FunctionName) {
         this.FunctionName = FunctionName;
+    }
+
+    /**
+     * Get Function selection configuration based on client IP country/region. 
+     * @return RegionMappingSelections Function selection configuration based on client IP country/region.
+     */
+    public FunctionRegionSelection [] getRegionMappingSelections() {
+        return this.RegionMappingSelections;
+    }
+
+    /**
+     * Set Function selection configuration based on client IP country/region.
+     * @param RegionMappingSelections Function selection configuration based on client IP country/region.
+     */
+    public void setRegionMappingSelections(FunctionRegionSelection [] RegionMappingSelections) {
+        this.RegionMappingSelections = RegionMappingSelections;
+    }
+
+    /**
+     * Get Describes the function selection configuration based on weight. 
+     * @return WeightedSelections Describes the function selection configuration based on weight.
+     */
+    public FunctionWeightedSelection [] getWeightedSelections() {
+        return this.WeightedSelections;
+    }
+
+    /**
+     * Set Describes the function selection configuration based on weight.
+     * @param WeightedSelections Describes the function selection configuration based on weight.
+     */
+    public void setWeightedSelections(FunctionWeightedSelection [] WeightedSelections) {
+        this.WeightedSelections = WeightedSelections;
     }
 
     /**
@@ -173,6 +246,22 @@ public class FunctionRule extends AbstractModel {
      */
     public void setPriority(Long Priority) {
         this.Priority = Priority;
+    }
+
+    /**
+     * Get Rule description. 
+     * @return Remark Rule description.
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Rule description.
+     * @param Remark Rule description.
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
     }
 
     /**
@@ -224,17 +313,32 @@ public class FunctionRule extends AbstractModel {
                 this.FunctionRuleConditions[i] = new FunctionRuleCondition(source.FunctionRuleConditions[i]);
             }
         }
+        if (source.TriggerType != null) {
+            this.TriggerType = new String(source.TriggerType);
+        }
         if (source.FunctionId != null) {
             this.FunctionId = new String(source.FunctionId);
-        }
-        if (source.Remark != null) {
-            this.Remark = new String(source.Remark);
         }
         if (source.FunctionName != null) {
             this.FunctionName = new String(source.FunctionName);
         }
+        if (source.RegionMappingSelections != null) {
+            this.RegionMappingSelections = new FunctionRegionSelection[source.RegionMappingSelections.length];
+            for (int i = 0; i < source.RegionMappingSelections.length; i++) {
+                this.RegionMappingSelections[i] = new FunctionRegionSelection(source.RegionMappingSelections[i]);
+            }
+        }
+        if (source.WeightedSelections != null) {
+            this.WeightedSelections = new FunctionWeightedSelection[source.WeightedSelections.length];
+            for (int i = 0; i < source.WeightedSelections.length; i++) {
+                this.WeightedSelections[i] = new FunctionWeightedSelection(source.WeightedSelections[i]);
+            }
+        }
         if (source.Priority != null) {
             this.Priority = new Long(source.Priority);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
         }
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
@@ -251,10 +355,13 @@ public class FunctionRule extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
         this.setParamArrayObj(map, prefix + "FunctionRuleConditions.", this.FunctionRuleConditions);
+        this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
         this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
-        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "FunctionName", this.FunctionName);
+        this.setParamArrayObj(map, prefix + "RegionMappingSelections.", this.RegionMappingSelections);
+        this.setParamArrayObj(map, prefix + "WeightedSelections.", this.WeightedSelections);
         this.setParamSimple(map, prefix + "Priority", this.Priority);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
 

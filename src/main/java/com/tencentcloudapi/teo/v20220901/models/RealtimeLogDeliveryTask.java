@@ -45,7 +45,7 @@ public class RealtimeLogDeliveryTask extends AbstractModel {
     private String DeliveryStatus;
 
     /**
-    * Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
+    * Type of a real-time log shipping task. valid values:<li>cls: push to tencent cloud cls;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>S3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analysis.</li>.
     */
     @SerializedName("TaskType")
     @Expose
@@ -197,16 +197,16 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li> 
-     * @return TaskType Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
+     * Get Type of a real-time log shipping task. valid values:<li>cls: push to tencent cloud cls;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>S3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analysis.</li>. 
+     * @return TaskType Type of a real-time log shipping task. valid values:<li>cls: push to tencent cloud cls;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>S3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analysis.</li>.
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
-     * @param TaskType Type of a real-time log shipping task. Valid values:<li>cls: push to Tencent Cloud CLS;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>s3: push to an AWS S3-compatible bucket address.</li>
+     * Set Type of a real-time log shipping task. valid values:<li>cls: push to tencent cloud cls;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>S3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analysis.</li>.
+     * @param TaskType Type of a real-time log shipping task. valid values:<li>cls: push to tencent cloud cls;</li><li>custom_endpoint: push to a custom HTTP(S) address;</li><li>S3: push to an AWS S3-compatible bucket address;</li><li>log_analysis: push to EdgeOne log analysis.</li>.
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;

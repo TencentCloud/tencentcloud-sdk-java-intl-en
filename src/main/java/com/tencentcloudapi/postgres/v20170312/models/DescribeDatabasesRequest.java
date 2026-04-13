@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDatabasesRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -45,23 +45,24 @@ public class DescribeDatabasesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of items displayed at a time
+    * Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Instance ID 
-     * @return DBInstanceId Instance ID
+     * Get Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param DBInstanceId Instance ID
+     * Set Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Instance ID. obtain through the API [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -100,16 +101,20 @@ public class DescribeDatabasesRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of items displayed at a time 
-     * @return Limit Number of items displayed at a time
+     * Get Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20. 
+     * @return Limit Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of items displayed at a time
-     * @param Limit Number of items displayed at a time
+     * Set Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
+     * @param Limit Number of items displayed at a time. the maximum value is recommended to be 100.
+Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -31,7 +31,7 @@ public class DescribeL7AccRulesResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1#.e4.bc.98.e5.85.88.e7.ba.a7).
+    * Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://www.tencentcloud.com/document/product/1145/46151#.E4.BC.98.E5.85.88.E7.BA.A7).
 Note: this field may return null, which indicates a failure to obtain a valid value.
     */
     @SerializedName("Rules")
@@ -62,9 +62,9 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1#.e4.bc.98.e5.85.88.e7.ba.a7).
+     * Get Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://www.tencentcloud.com/document/product/1145/46151#.E4.BC.98.E5.85.88.E7.BA.A7).
 Note: this field may return null, which indicates a failure to obtain a valid value. 
-     * @return Rules Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1#.e4.bc.98.e5.85.88.e7.ba.a7).
+     * @return Rules Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://www.tencentcloud.com/document/product/1145/46151#.E4.BC.98.E5.85.88.E7.BA.A7).
 Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public RuleEngineItem [] getRules() {
@@ -72,9 +72,9 @@ Note: this field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Set Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1#.e4.bc.98.e5.85.88.e7.ba.a7).
+     * Set Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://www.tencentcloud.com/document/product/1145/46151#.E4.BC.98.E5.85.88.E7.BA.A7).
 Note: this field may return null, which indicates a failure to obtain a valid value.
-     * @param Rules Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://intl.cloud.tencent.com/document/product/1552/70901?from_cn_redirect=1#.e4.bc.98.e5.85.88.e7.ba.a7).
+     * @param Rules Rule list. rules are executed in top-down order. for details, refer to [rule priority](https://www.tencentcloud.com/document/product/1145/46151#.E4.BC.98.E5.85.88.E7.BA.A7).
 Note: this field may return null, which indicates a failure to obtain a valid value.
      */
     public void setRules(RuleEngineItem [] Rules) {

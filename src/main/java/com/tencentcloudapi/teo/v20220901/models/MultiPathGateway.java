@@ -86,6 +86,13 @@ public class MultiPathGateway extends AbstractModel {
     private MultiPathGatewayLine [] Lines;
 
     /**
+    * Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+    */
+    @SerializedName("NeedConfirm")
+    @Expose
+    private String NeedConfirm;
+
+    /**
      * Get Specifies the gateway ID. 
      * @return GatewayId Specifies the gateway ID.
      */
@@ -237,6 +244,22 @@ public class MultiPathGateway extends AbstractModel {
         this.Lines = Lines;
     }
 
+    /**
+     * Get Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>. 
+     * @return NeedConfirm Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+     */
+    public String getNeedConfirm() {
+        return this.NeedConfirm;
+    }
+
+    /**
+     * Set Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+     * @param NeedConfirm Specifies whether the origin-pull IP list has changed and re-confirmation is required. valid values: <li>true: the origin-pull IP list has changed and confirmation is needed.</li><li>false: the origin-pull IP list remains unchanged and no confirmation is required.</li>.
+     */
+    public void setNeedConfirm(String NeedConfirm) {
+        this.NeedConfirm = NeedConfirm;
+    }
+
     public MultiPathGateway() {
     }
 
@@ -272,6 +295,9 @@ public class MultiPathGateway extends AbstractModel {
                 this.Lines[i] = new MultiPathGatewayLine(source.Lines[i]);
             }
         }
+        if (source.NeedConfirm != null) {
+            this.NeedConfirm = new String(source.NeedConfirm);
+        }
     }
 
 
@@ -287,6 +313,7 @@ public class MultiPathGateway extends AbstractModel {
         this.setParamSimple(map, prefix + "GatewayIP", this.GatewayIP);
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamArrayObj(map, prefix + "Lines.", this.Lines);
+        this.setParamSimple(map, prefix + "NeedConfirm", this.NeedConfirm);
 
     }
 }

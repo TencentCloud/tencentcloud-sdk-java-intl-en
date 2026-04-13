@@ -24,171 +24,164 @@ import java.util.HashMap;
 public class EncryptionKey extends AbstractModel {
 
     /**
-    * Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the KeyId for KMS instance encryption.
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Alias name of the KMS instance encryption Key.
     */
     @SerializedName("KeyAlias")
     @Expose
     private String KeyAlias;
 
     /**
-    * Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the ciphertext of the instance encryption key DEK.
     */
     @SerializedName("DEKCipherTextBlob")
     @Expose
     private String DEKCipherTextBlob;
 
     /**
-    * Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
     */
     @SerializedName("IsEnabled")
     @Expose
     private Long IsEnabled;
 
     /**
-    * Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the region of the KMS key.
     */
     @SerializedName("KeyRegion")
     @Expose
     private String KeyRegion;
 
     /**
-    * DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Creation time of the DEK key.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-     * Get Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return KeyId Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
+    */
+    @SerializedName("KMSClusterId")
+    @Expose
+    private String KMSClusterId;
+
+    /**
+     * Get Specifies the KeyId for KMS instance encryption. 
+     * @return KeyId Specifies the KeyId for KMS instance encryption.
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param KeyId Encrypted KeyId of KMS instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies the KeyId for KMS instance encryption.
+     * @param KeyId Specifies the KeyId for KMS instance encryption.
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return KeyAlias Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Alias name of the KMS instance encryption Key. 
+     * @return KeyAlias Alias name of the KMS instance encryption Key.
      */
     public String getKeyAlias() {
         return this.KeyAlias;
     }
 
     /**
-     * Set Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param KeyAlias Encryption key alias of KMS instance 
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Alias name of the KMS instance encryption Key.
+     * @param KeyAlias Alias name of the KMS instance encryption Key.
      */
     public void setKeyAlias(String KeyAlias) {
         this.KeyAlias = KeyAlias;
     }
 
     /**
-     * Get Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return DEKCipherTextBlob Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Specifies the ciphertext of the instance encryption key DEK. 
+     * @return DEKCipherTextBlob Specifies the ciphertext of the instance encryption key DEK.
      */
     public String getDEKCipherTextBlob() {
         return this.DEKCipherTextBlob;
     }
 
     /**
-     * Set Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param DEKCipherTextBlob Instance DEK ciphertext
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies the ciphertext of the instance encryption key DEK.
+     * @param DEKCipherTextBlob Specifies the ciphertext of the instance encryption key DEK.
      */
     public void setDEKCipherTextBlob(String DEKCipherTextBlob) {
         this.DEKCipherTextBlob = DEKCipherTextBlob;
     }
 
     /**
-     * Get Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return IsEnabled Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Whether the key is enabled. valid values: 1 (enabled), 0 (disabled). 
+     * @return IsEnabled Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
      */
     public Long getIsEnabled() {
         return this.IsEnabled;
     }
 
     /**
-     * Set Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param IsEnabled Whether the key is enabled. Valid values: `1` (yes), `0` (no)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
+     * @param IsEnabled Whether the key is enabled. valid values: 1 (enabled), 0 (disabled).
      */
     public void setIsEnabled(Long IsEnabled) {
         this.IsEnabled = IsEnabled;
     }
 
     /**
-     * Get Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return KeyRegion Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Specifies the region of the KMS key. 
+     * @return KeyRegion Specifies the region of the KMS key.
      */
     public String getKeyRegion() {
         return this.KeyRegion;
     }
 
     /**
-     * Set Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param KeyRegion Region where KMS key resides
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies the region of the KMS key.
+     * @param KeyRegion Specifies the region of the KMS key.
      */
     public void setKeyRegion(String KeyRegion) {
         this.KeyRegion = KeyRegion;
     }
 
     /**
-     * Get DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return CreateTime DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Creation time of the DEK key. 
+     * @return CreateTime Creation time of the DEK key.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param CreateTime DEK key creation time
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Creation time of the DEK key.
+     * @param CreateTime Creation time of the DEK key.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
+    }
+
+    /**
+     * Get Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster. 
+     * @return KMSClusterId Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
+     */
+    public String getKMSClusterId() {
+        return this.KMSClusterId;
+    }
+
+    /**
+     * Set Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
+     * @param KMSClusterId Specifies the Id of the KMS service cluster where the key resides. being empty indicates the key is in the default KMS cluster. a non-empty value indicates the key is in the specified KMS service cluster.
+     */
+    public void setKMSClusterId(String KMSClusterId) {
+        this.KMSClusterId = KMSClusterId;
     }
 
     public EncryptionKey() {
@@ -217,6 +210,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (source.CreateTime != null) {
             this.CreateTime = new String(source.CreateTime);
         }
+        if (source.KMSClusterId != null) {
+            this.KMSClusterId = new String(source.KMSClusterId);
+        }
     }
 
 
@@ -230,6 +226,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         this.setParamSimple(map, prefix + "IsEnabled", this.IsEnabled);
         this.setParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
+        this.setParamSimple(map, prefix + "KMSClusterId", this.KMSClusterId);
 
     }
 }

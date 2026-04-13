@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class EventItem extends AbstractModel {
 
     /**
-    * Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Parameter name.
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Number of modified events.
     */
     @SerializedName("EventCount")
     @Expose
     private Long EventCount;
 
     /**
-    * Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Last modification time.
     */
     @SerializedName("EventDetail")
     @Expose
     private EventInfo [] EventDetail;
 
     /**
-     * Get Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ParamName Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Parameter name. 
+     * @return ParamName Parameter name.
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ParamName Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Parameter name.
+     * @param ParamName Parameter name.
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return EventCount The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Number of modified events. 
+     * @return EventCount Number of modified events.
      */
     public Long getEventCount() {
         return this.EventCount;
     }
 
     /**
-     * Set The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param EventCount The number of modification events
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Number of modified events.
+     * @param EventCount Number of modified events.
      */
     public void setEventCount(Long EventCount) {
         this.EventCount = EventCount;
     }
 
     /**
-     * Get Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return EventDetail Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Last modification time. 
+     * @return EventDetail Last modification time.
      */
     public EventInfo [] getEventDetail() {
         return this.EventDetail;
     }
 
     /**
-     * Set Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param EventDetail Modification event details
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Last modification time.
+     * @param EventDetail Last modification time.
      */
     public void setEventDetail(EventInfo [] EventDetail) {
         this.EventDetail = EventDetail;

@@ -24,113 +24,113 @@ import java.util.HashMap;
 public class TranslationParam extends AbstractModel {
 
     /**
-    * Target language for translation. Example: `["en", "ja"]`.
+    * Target language for translation. Example: ["en", "ja"].
 
 Supported target languages:
 
-- `"zh"`: Chinese
-- `"en"`: English
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"fr"`: French
-- `"ms"`: Malay
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
+- <code>"zh"</code>: Chinese
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
     */
     @SerializedName("TargetLang")
     @Expose
     private String [] TargetLang;
 
     /**
-     * Get Target language for translation. Example: `["en", "ja"]`.
+     * Get Target language for translation. Example: ["en", "ja"].
 
 Supported target languages:
 
-- `"zh"`: Chinese
-- `"en"`: English
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"fr"`: French
-- `"ms"`: Malay
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian 
-     * @return TargetLang Target language for translation. Example: `["en", "ja"]`.
+- <code>"zh"</code>: Chinese
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian 
+     * @return TargetLang Target language for translation. Example: ["en", "ja"].
 
 Supported target languages:
 
-- `"zh"`: Chinese
-- `"en"`: English
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"fr"`: French
-- `"ms"`: Malay
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
+- <code>"zh"</code>: Chinese
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
      */
     public String [] getTargetLang() {
         return this.TargetLang;
     }
 
     /**
-     * Set Target language for translation. Example: `["en", "ja"]`.
+     * Set Target language for translation. Example: ["en", "ja"].
 
 Supported target languages:
 
-- `"zh"`: Chinese
-- `"en"`: English
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"fr"`: French
-- `"ms"`: Malay
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
-     * @param TargetLang Target language for translation. Example: `["en", "ja"]`.
+- <code>"zh"</code>: Chinese
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
+     * @param TargetLang Target language for translation. Example: ["en", "ja"].
 
 Supported target languages:
 
-- `"zh"`: Chinese
-- `"en"`: English
-- `"vi"`: Vietnamese
-- `"ja"`: Japanese
-- `"ko"`: Korean
-- `"id"`: Indonesian
-- `"th"`: Thai
-- `"pt"`: Portuguese
-- `"ar"`: Arabic
-- `"es"`: Spanish
-- `"fr"`: French
-- `"ms"`: Malay
-- `"de"`: German
-- `"it"`: Italian
-- `"ru"`: Russian
+- <code>"zh"</code>: Chinese
+- <code>"en"</code>: English
+- <code>"vi"</code>: Vietnamese
+- <code>"ja"</code>: Japanese
+- <code>"ko"</code>: Korean
+- <code>"id"</code>: Indonesian
+- <code>"th"</code>: Thai
+- <code>"pt"</code>: Portuguese
+- <code>"ar"</code>: Arabic
+- <code>"es"</code>: Spanish
+- <code>"fr"</code>: French
+- <code>"ms"</code>: Malay
+- <code>"de"</code>: German
+- <code>"it"</code>: Italian
+- <code>"ru"</code>: Russian
      */
     public void setTargetLang(String [] TargetLang) {
         this.TargetLang = TargetLang;

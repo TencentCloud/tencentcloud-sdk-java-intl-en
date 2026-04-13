@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateReadOnlyGroupNetworkAccessRequest extends AbstractModel {
 
     /**
-    * RO group ID in the format of pgro-4t9c6g7k.
+    * ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
     */
     @SerializedName("ReadOnlyGroupId")
     @Expose
@@ -52,23 +52,23 @@ public class CreateReadOnlyGroupNetworkAccessRequest extends AbstractModel {
     private Boolean IsAssignVip;
 
     /**
-    * Target VIP.
+    * Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-     * Get RO group ID in the format of pgro-4t9c6g7k. 
-     * @return ReadOnlyGroupId RO group ID in the format of pgro-4t9c6g7k.
+     * Get ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en). 
+     * @return ReadOnlyGroupId ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
      */
     public String getReadOnlyGroupId() {
         return this.ReadOnlyGroupId;
     }
 
     /**
-     * Set RO group ID in the format of pgro-4t9c6g7k.
-     * @param ReadOnlyGroupId RO group ID in the format of pgro-4t9c6g7k.
+     * Set ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
+     * @param ReadOnlyGroupId ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/product/409/39725?lang=en).
      */
     public void setReadOnlyGroupId(String ReadOnlyGroupId) {
         this.ReadOnlyGroupId = ReadOnlyGroupId;
@@ -123,16 +123,16 @@ public class CreateReadOnlyGroupNetworkAccessRequest extends AbstractModel {
     }
 
     /**
-     * Get Target VIP. 
-     * @return Vip Target VIP.
+     * Get Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default. 
+     * @return Vip Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set Target VIP.
-     * @param Vip Target VIP.
+     * Set Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
+     * @param Vip Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;

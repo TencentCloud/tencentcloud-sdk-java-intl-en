@@ -38,11 +38,36 @@ public class CreateFunctionRuleRequest extends AbstractModel {
     private FunctionRuleCondition [] FunctionRuleConditions;
 
     /**
-    * Function ID, specifying a function executed when a trigger rule condition is met.
+    * Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+    */
+    @SerializedName("TriggerType")
+    @Expose
+    private String TriggerType;
+
+    /**
+    * Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
     */
     @SerializedName("FunctionId")
     @Expose
     private String FunctionId;
+
+    /**
+    * Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+    */
+    @SerializedName("RegionMappingSelections")
+    @Expose
+    private FunctionRegionSelection [] RegionMappingSelections;
+
+    /**
+    * Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+    */
+    @SerializedName("WeightedSelections")
+    @Expose
+    private FunctionWeightedSelection [] WeightedSelections;
 
     /**
     * Rule description, which can contain up to 60 characters.
@@ -84,19 +109,83 @@ public class CreateFunctionRuleRequest extends AbstractModel {
     }
 
     /**
-     * Get Function ID, specifying a function executed when a trigger rule condition is met. 
-     * @return FunctionId Function ID, specifying a function executed when a trigger rule condition is met.
+     * Get Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank. 
+     * @return TriggerType Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+     */
+    public String getTriggerType() {
+        return this.TriggerType;
+    }
+
+    /**
+     * Set Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+     * @param TriggerType Function selection configuration type.
+<Li>Direct: specifies the execution function directly.</li>.
+<Li>Weight: selects the function based on weight ratio.</li>.
+<li> region: specifies the country/region selection function based on client IP.</li>.
+Specifies the default value as direct when left blank.
+     */
+    public void setTriggerType(String TriggerType) {
+        this.TriggerType = TriggerType;
+    }
+
+    /**
+     * Get Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty. 
+     * @return FunctionId Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
      */
     public String getFunctionId() {
         return this.FunctionId;
     }
 
     /**
-     * Set Function ID, specifying a function executed when a trigger rule condition is met.
-     * @param FunctionId Function ID, specifying a function executed when a trigger rule condition is met.
+     * Set Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
+     * @param FunctionId Specifies the function ID to be executed. this parameter is valid only when TriggerType is direct or left empty.
      */
     public void setFunctionId(String FunctionId) {
         this.FunctionId = FunctionId;
+    }
+
+    /**
+     * Get Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default. 
+     * @return RegionMappingSelections Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+     */
+    public FunctionRegionSelection [] getRegionMappingSelections() {
+        return this.RegionMappingSelections;
+    }
+
+    /**
+     * Set Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+     * @param RegionMappingSelections Function selection configuration based on client IP country/region. this parameter is valid only when TriggerType is region and RegionMappingSelections is required. RegionMappingSelections must include at least one configuration with Regions set to Default.
+     */
+    public void setRegionMappingSelections(FunctionRegionSelection [] RegionMappingSelections) {
+        this.RegionMappingSelections = RegionMappingSelections;
+    }
+
+    /**
+     * Get Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100. 
+     * @return WeightedSelections Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+     */
+    public FunctionWeightedSelection [] getWeightedSelections() {
+        return this.WeightedSelections;
+    }
+
+    /**
+     * Set Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+     * @param WeightedSelections Weighted function selection configuration. this parameter is valid only when TriggerType is weight and WeightedSelections is required. the sum of all weights in WeightedSelections need to be 100.
+     */
+    public void setWeightedSelections(FunctionWeightedSelection [] WeightedSelections) {
+        this.WeightedSelections = WeightedSelections;
     }
 
     /**
@@ -132,8 +221,23 @@ public class CreateFunctionRuleRequest extends AbstractModel {
                 this.FunctionRuleConditions[i] = new FunctionRuleCondition(source.FunctionRuleConditions[i]);
             }
         }
+        if (source.TriggerType != null) {
+            this.TriggerType = new String(source.TriggerType);
+        }
         if (source.FunctionId != null) {
             this.FunctionId = new String(source.FunctionId);
+        }
+        if (source.RegionMappingSelections != null) {
+            this.RegionMappingSelections = new FunctionRegionSelection[source.RegionMappingSelections.length];
+            for (int i = 0; i < source.RegionMappingSelections.length; i++) {
+                this.RegionMappingSelections[i] = new FunctionRegionSelection(source.RegionMappingSelections[i]);
+            }
+        }
+        if (source.WeightedSelections != null) {
+            this.WeightedSelections = new FunctionWeightedSelection[source.WeightedSelections.length];
+            for (int i = 0; i < source.WeightedSelections.length; i++) {
+                this.WeightedSelections[i] = new FunctionWeightedSelection(source.WeightedSelections[i]);
+            }
         }
         if (source.Remark != null) {
             this.Remark = new String(source.Remark);
@@ -147,7 +251,10 @@ public class CreateFunctionRuleRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamArrayObj(map, prefix + "FunctionRuleConditions.", this.FunctionRuleConditions);
+        this.setParamSimple(map, prefix + "TriggerType", this.TriggerType);
         this.setParamSimple(map, prefix + "FunctionId", this.FunctionId);
+        this.setParamArrayObj(map, prefix + "RegionMappingSelections.", this.RegionMappingSelections);
+        this.setParamArrayObj(map, prefix + "WeightedSelections.", this.WeightedSelections);
         this.setParamSimple(map, prefix + "Remark", this.Remark);
 
     }

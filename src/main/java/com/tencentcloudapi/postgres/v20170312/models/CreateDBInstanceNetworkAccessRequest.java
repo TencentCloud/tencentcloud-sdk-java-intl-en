@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDBInstanceNetworkAccessRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of postgres-6bwgamo3.
+    * Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -52,23 +52,23 @@ public class CreateDBInstanceNetworkAccessRequest extends AbstractModel {
     private Boolean IsAssignVip;
 
     /**
-    * Target VIP.
+    * Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-     * Get Instance ID in the format of postgres-6bwgamo3. 
-     * @return DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+     * Get Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773). 
+     * @return DBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID in the format of postgres-6bwgamo3.
-     * @param DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+     * Set Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
+     * @param DBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -123,16 +123,16 @@ public class CreateDBInstanceNetworkAccessRequest extends AbstractModel {
     }
 
     /**
-     * Get Target VIP. 
-     * @return Vip Target VIP.
+     * Get Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default. 
+     * @return Vip Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set Target VIP.
-     * @param Vip Target VIP.
+     * Set Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
+     * @param Vip Target VIP address. when this parameter is not specified and IsAssignVip is true, the system automatically assigns a VIP by default.
      */
     public void setVip(String Vip) {
         this.Vip = Vip;

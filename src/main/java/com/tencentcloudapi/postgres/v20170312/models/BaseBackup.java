@@ -45,21 +45,21 @@ public class BaseBackup extends AbstractModel {
     private String Name;
 
     /**
-    * Backup method, including physical and logical.
+    * Specifies the backup method: physical - physical backup, logical - logical backup.
     */
     @SerializedName("BackupMethod")
     @Expose
     private String BackupMethod;
 
     /**
-    * Backup mode, including automatic and manual.
+    * Backup mode: automatic - automatic backup, manual - manual backup.
     */
     @SerializedName("BackupMode")
     @Expose
     private String BackupMode;
 
     /**
-    * Backup task status
+    * Backup task status. valid values: init, running, finished, failed, canceled.
     */
     @SerializedName("State")
     @Expose
@@ -142,48 +142,48 @@ public class BaseBackup extends AbstractModel {
     }
 
     /**
-     * Get Backup method, including physical and logical. 
-     * @return BackupMethod Backup method, including physical and logical.
+     * Get Specifies the backup method: physical - physical backup, logical - logical backup. 
+     * @return BackupMethod Specifies the backup method: physical - physical backup, logical - logical backup.
      */
     public String getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set Backup method, including physical and logical.
-     * @param BackupMethod Backup method, including physical and logical.
+     * Set Specifies the backup method: physical - physical backup, logical - logical backup.
+     * @param BackupMethod Specifies the backup method: physical - physical backup, logical - logical backup.
      */
     public void setBackupMethod(String BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get Backup mode, including automatic and manual. 
-     * @return BackupMode Backup mode, including automatic and manual.
+     * Get Backup mode: automatic - automatic backup, manual - manual backup. 
+     * @return BackupMode Backup mode: automatic - automatic backup, manual - manual backup.
      */
     public String getBackupMode() {
         return this.BackupMode;
     }
 
     /**
-     * Set Backup mode, including automatic and manual.
-     * @param BackupMode Backup mode, including automatic and manual.
+     * Set Backup mode: automatic - automatic backup, manual - manual backup.
+     * @param BackupMode Backup mode: automatic - automatic backup, manual - manual backup.
      */
     public void setBackupMode(String BackupMode) {
         this.BackupMode = BackupMode;
     }
 
     /**
-     * Get Backup task status 
-     * @return State Backup task status
+     * Get Backup task status. valid values: init, running, finished, failed, canceled. 
+     * @return State Backup task status. valid values: init, running, finished, failed, canceled.
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set Backup task status
-     * @param State Backup task status
+     * Set Backup task status. valid values: init, running, finished, failed, canceled.
+     * @param State Backup task status. valid values: init, running, finished, failed, canceled.
      */
     public void setState(String State) {
         this.State = State;

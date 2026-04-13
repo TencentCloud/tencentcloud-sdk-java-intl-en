@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeviceProfile extends AbstractModel {
 
     /**
-    * Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
+    * Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
     */
     @SerializedName("ClientType")
     @Expose
@@ -59,16 +59,16 @@ public class DeviceProfile extends AbstractModel {
     private SecurityAction MediumRiskRequestAction;
 
     /**
-     * Get Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>. 
-     * @return ClientType Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
+     * Get Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li> 
+     * @return ClientType Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
      */
     public String getClientType() {
         return this.ClientType;
     }
 
     /**
-     * Set Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
-     * @param ClientType Client device type. valid values: <li>iOS;</li> <li>Android;</li> <li>WebView.</li>.
+     * Set Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
+     * @param ClientType Client device type. Valid values: <li>iOS;</li> <li>Android;</li> <li>WebView;</li> <li>WeChatMiniProgram.</li>
      */
     public void setClientType(String ClientType) {
         this.ClientType = ClientType;

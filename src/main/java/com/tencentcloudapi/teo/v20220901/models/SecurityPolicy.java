@@ -75,6 +75,13 @@ Note: This field may return null, indicating that no valid value can be obtained
     private BotManagementLite BotManagementLite;
 
     /**
+    * Default intercept action configuration.
+    */
+    @SerializedName("DefaultDenySecurityActionParameters")
+    @Expose
+    private DefaultDenySecurityActionParameters DefaultDenySecurityActionParameters;
+
+    /**
      * Get Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
 Note: This field may return null, indicating that no valid value can be obtained. 
      * @return CustomRules Custom rules. If the parameter is null or not filled, the configuration last set will be used by default.
@@ -194,6 +201,22 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.BotManagementLite = BotManagementLite;
     }
 
+    /**
+     * Get Default intercept action configuration. 
+     * @return DefaultDenySecurityActionParameters Default intercept action configuration.
+     */
+    public DefaultDenySecurityActionParameters getDefaultDenySecurityActionParameters() {
+        return this.DefaultDenySecurityActionParameters;
+    }
+
+    /**
+     * Set Default intercept action configuration.
+     * @param DefaultDenySecurityActionParameters Default intercept action configuration.
+     */
+    public void setDefaultDenySecurityActionParameters(DefaultDenySecurityActionParameters DefaultDenySecurityActionParameters) {
+        this.DefaultDenySecurityActionParameters = DefaultDenySecurityActionParameters;
+    }
+
     public SecurityPolicy() {
     }
 
@@ -223,6 +246,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.BotManagementLite != null) {
             this.BotManagementLite = new BotManagementLite(source.BotManagementLite);
         }
+        if (source.DefaultDenySecurityActionParameters != null) {
+            this.DefaultDenySecurityActionParameters = new DefaultDenySecurityActionParameters(source.DefaultDenySecurityActionParameters);
+        }
     }
 
 
@@ -237,6 +263,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "ExceptionRules.", this.ExceptionRules);
         this.setParamObj(map, prefix + "BotManagement.", this.BotManagement);
         this.setParamObj(map, prefix + "BotManagementLite.", this.BotManagementLite);
+        this.setParamObj(map, prefix + "DefaultDenySecurityActionParameters.", this.DefaultDenySecurityActionParameters);
 
     }
 }

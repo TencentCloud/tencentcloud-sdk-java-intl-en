@@ -31,6 +31,13 @@ public class UpstreamCertInfo extends AbstractModel {
     private MutualTLS UpstreamMutualTLS;
 
     /**
+    * In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+    */
+    @SerializedName("UpstreamCertificateVerify")
+    @Expose
+    private OriginCertificateVerify UpstreamCertificateVerify;
+
+    /**
      * Get In the origin-pull mutual authentication scenario, this field represents the certificate (including the public and private keys) carried during EO node origin-pull, which is deployed in the EO node for the origin server to authenticate the EO node. When used as an input parameter, it is left blank to indicate retaining the original configuration. 
      * @return UpstreamMutualTLS In the origin-pull mutual authentication scenario, this field represents the certificate (including the public and private keys) carried during EO node origin-pull, which is deployed in the EO node for the origin server to authenticate the EO node. When used as an input parameter, it is left blank to indicate retaining the original configuration.
      */
@@ -46,6 +53,22 @@ public class UpstreamCertInfo extends AbstractModel {
         this.UpstreamMutualTLS = UpstreamMutualTLS;
     }
 
+    /**
+     * Get In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration. 
+     * @return UpstreamCertificateVerify In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+     */
+    public OriginCertificateVerify getUpstreamCertificateVerify() {
+        return this.UpstreamCertificateVerify;
+    }
+
+    /**
+     * Set In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+     * @param UpstreamCertificateVerify In the origin certificate verification scenario, this field represents the CA certificate used by the EO node to verify the server-side certificate when returning to the origin. it is deployed in the EO node and used for the EO node to authenticate the server certificate. when used as an input parameter, leave blank to indicate retaining the original configuration.
+     */
+    public void setUpstreamCertificateVerify(OriginCertificateVerify UpstreamCertificateVerify) {
+        this.UpstreamCertificateVerify = UpstreamCertificateVerify;
+    }
+
     public UpstreamCertInfo() {
     }
 
@@ -57,6 +80,9 @@ public class UpstreamCertInfo extends AbstractModel {
         if (source.UpstreamMutualTLS != null) {
             this.UpstreamMutualTLS = new MutualTLS(source.UpstreamMutualTLS);
         }
+        if (source.UpstreamCertificateVerify != null) {
+            this.UpstreamCertificateVerify = new OriginCertificateVerify(source.UpstreamCertificateVerify);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class UpstreamCertInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "UpstreamMutualTLS.", this.UpstreamMutualTLS);
+        this.setParamObj(map, prefix + "UpstreamCertificateVerify.", this.UpstreamCertificateVerify);
 
     }
 }

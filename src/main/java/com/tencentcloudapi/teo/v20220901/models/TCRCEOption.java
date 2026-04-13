@@ -31,6 +31,13 @@ public class TCRCEOption extends AbstractModel {
     private String Channel;
 
     /**
+    * Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
      * Get Channel information. 
      * @return Channel Channel information.
      */
@@ -46,6 +53,22 @@ public class TCRCEOption extends AbstractModel {
         this.Channel = Channel;
     }
 
+    /**
+     * Get Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>. 
+     * @return Region Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
+     */
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
+     * @param Region Enabled regions for RCE Channel. currently optional value ranges from: <li>ap-beijing: north china (beijing);</li><li>ap-jakarta: southeast asia pacific (jakarta);</li><li>ap-singapore: southeast asia pacific (singapore);</li><li>eu-frankfurt: Europe (frankfurt);</li><li>na-siliconvalley: west us (silicon valley).</li>.
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
     public TCRCEOption() {
     }
 
@@ -57,6 +80,9 @@ public class TCRCEOption extends AbstractModel {
         if (source.Channel != null) {
             this.Channel = new String(source.Channel);
         }
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class TCRCEOption extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Channel", this.Channel);
+        this.setParamSimple(map, prefix + "Region", this.Region);
 
     }
 }

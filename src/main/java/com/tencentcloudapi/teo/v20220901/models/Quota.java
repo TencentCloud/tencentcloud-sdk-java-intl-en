@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class Quota extends AbstractModel {
 
     /**
-    * Single batch submission quota limit.
+    * 
     */
     @SerializedName("Batch")
     @Expose
@@ -57,16 +57,16 @@ public class Quota extends AbstractModel {
     private String Type;
 
     /**
-     * Get Single batch submission quota limit. 
-     * @return Batch Single batch submission quota limit.
+     * Get  
+     * @return Batch 
      */
     public Long getBatch() {
         return this.Batch;
     }
 
     /**
-     * Set Single batch submission quota limit.
-     * @param Batch Single batch submission quota limit.
+     * Set 
+     * @param Batch 
      */
     public void setBatch(Long Batch) {
         this.Batch = Batch;

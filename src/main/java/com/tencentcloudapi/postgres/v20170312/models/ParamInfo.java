@@ -25,58 +25,51 @@ public class ParamInfo extends AbstractModel {
 
     /**
     * Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Parameter name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
     */
     @SerializedName("ParamValueType")
     @Expose
     private String ParamValueType;
 
     /**
-    * Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parameter value unit. returns null if the parameter has no units.
     */
     @SerializedName("Unit")
     @Expose
     private String Unit;
 
     /**
-    * Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Default parameter value. returns in string form.
     */
     @SerializedName("DefaultValue")
     @Expose
     private String DefaultValue;
 
     /**
-    * Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the current value in string form.
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the numerical type (integer, real) parameter and its lower bound.
     */
     @SerializedName("Max")
     @Expose
@@ -91,80 +84,70 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String [] EnumValue;
 
     /**
-    * The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Numerical type (integer, real) parameter specifies the upper bound.
     */
     @SerializedName("Min")
     @Expose
     private Float Min;
 
     /**
-    * Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Chinese description.
     */
     @SerializedName("ParamDescriptionCH")
     @Expose
     private String ParamDescriptionCH;
 
     /**
-    * Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the english description of the parameter.
     */
     @SerializedName("ParamDescriptionEN")
     @Expose
     private String ParamDescriptionEN;
 
     /**
-    * Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
     */
     @SerializedName("NeedReboot")
     @Expose
     private Boolean NeedReboot;
 
     /**
-    * Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Parameter chinese category.
     */
     @SerializedName("ClassificationCN")
     @Expose
     private String ClassificationCN;
 
     /**
-    * Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Parameter english category.
     */
     @SerializedName("ClassificationEN")
     @Expose
     private String ClassificationEN;
 
     /**
-    * Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies whether it is related to the specification (true for related, false for unrelated).
     */
     @SerializedName("SpecRelated")
     @Expose
     private Boolean SpecRelated;
 
     /**
-    * Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
     */
     @SerializedName("Advanced")
     @Expose
     private Boolean Advanced;
 
     /**
-    * The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the last modified time.
     */
     @SerializedName("LastModifyTime")
     @Expose
     private String LastModifyTime;
 
     /**
-    * Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
     */
     @SerializedName("StandbyRelated")
     @Expose
@@ -187,10 +170,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ParamSpecRelation [] SpecRelationSet;
 
     /**
-     * Get Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * Get Parameter ID 
      * @return ID Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getID() {
         return this.ID;
@@ -198,141 +179,115 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param ID Parameter ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Name Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Parameter name. 
+     * @return Name Parameter name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Name Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Parameter name.
+     * @param Name Parameter name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ParamValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value. 
+     * @return ParamValueType Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
      */
     public String getParamValueType() {
         return this.ParamValueType;
     }
 
     /**
-     * Set Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ParamValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
-For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
-For a `bool` parameter, the valid values include `true` and `false`; 
-For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
+     * @param ParamValueType Parameter value type: integer, real, bool, enum, mutil_enum.
+When the parameter type is integer or real (floating-point), the value range is determined based on the Max and Min of the return value. 
+When the parameter type is boolean, the valid values are true or false. 
+When the parameter type is enum (enumeration type) or mutil_enum (multi-enum type), the valid values are determined by EnumValue in the return value.
      */
     public void setParamValueType(String ParamValueType) {
         this.ParamValueType = ParamValueType;
     }
 
     /**
-     * Get Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parameter value unit. returns null if the parameter has no units. 
+     * @return Unit Parameter value unit. returns null if the parameter has no units.
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parameter value unit. returns null if the parameter has no units.
+     * @param Unit Parameter value unit. returns null if the parameter has no units.
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return DefaultValue Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Default parameter value. returns in string form. 
+     * @return DefaultValue Default parameter value. returns in string form.
      */
     public String getDefaultValue() {
         return this.DefaultValue;
     }
 
     /**
-     * Set Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DefaultValue Default value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Default parameter value. returns in string form.
+     * @param DefaultValue Default parameter value. returns in string form.
      */
     public void setDefaultValue(String DefaultValue) {
         this.DefaultValue = DefaultValue;
     }
 
     /**
-     * Get Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return CurrentValue Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the current value in string form. 
+     * @return CurrentValue Specifies the current value in string form.
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param CurrentValue Current value of the parameter, which is returned as a string
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the current value in string form.
+     * @param CurrentValue Specifies the current value in string form.
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Max The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the numerical type (integer, real) parameter and its lower bound. 
+     * @return Max Specifies the numerical type (integer, real) parameter and its lower bound.
      */
     public Float getMax() {
         return this.Max;
     }
 
     /**
-     * Set The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Max The maximum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the numerical type (integer, real) parameter and its lower bound.
+     * @param Max Specifies the numerical type (integer, real) parameter and its lower bound.
      */
     public void setMax(Float Max) {
         this.Max = Max;
@@ -359,200 +314,160 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Min The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Numerical type (integer, real) parameter specifies the upper bound. 
+     * @return Min Numerical type (integer, real) parameter specifies the upper bound.
      */
     public Float getMin() {
         return this.Min;
     }
 
     /**
-     * Set The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Min The minimum value of the `integer` or `real` parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Numerical type (integer, real) parameter specifies the upper bound.
+     * @param Min Numerical type (integer, real) parameter specifies the upper bound.
      */
     public void setMin(Float Min) {
         this.Min = Min;
     }
 
     /**
-     * Get Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ParamDescriptionCH Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Chinese description. 
+     * @return ParamDescriptionCH Chinese description.
      */
     public String getParamDescriptionCH() {
         return this.ParamDescriptionCH;
     }
 
     /**
-     * Set Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ParamDescriptionCH Parameter description in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Chinese description.
+     * @param ParamDescriptionCH Chinese description.
      */
     public void setParamDescriptionCH(String ParamDescriptionCH) {
         this.ParamDescriptionCH = ParamDescriptionCH;
     }
 
     /**
-     * Get Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ParamDescriptionEN Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the english description of the parameter. 
+     * @return ParamDescriptionEN Specifies the english description of the parameter.
      */
     public String getParamDescriptionEN() {
         return this.ParamDescriptionEN;
     }
 
     /**
-     * Set Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ParamDescriptionEN Parameter description in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the english description of the parameter.
+     * @param ParamDescriptionEN Specifies the english description of the parameter.
      */
     public void setParamDescriptionEN(String ParamDescriptionEN) {
         this.ParamDescriptionEN = ParamDescriptionEN;
     }
 
     /**
-     * Get Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return NeedReboot Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required). 
+     * @return NeedReboot Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
      */
     public Boolean getNeedReboot() {
         return this.NeedReboot;
     }
 
     /**
-     * Set Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param NeedReboot Whether to restart the instance for the modified parameter to take effect. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
+     * @param NeedReboot Specifies whether a restart is required for parameter modification (true indicates required, false indicates not required).
      */
     public void setNeedReboot(Boolean NeedReboot) {
         this.NeedReboot = NeedReboot;
     }
 
     /**
-     * Get Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ClassificationCN Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Parameter chinese category. 
+     * @return ClassificationCN Parameter chinese category.
      */
     public String getClassificationCN() {
         return this.ClassificationCN;
     }
 
     /**
-     * Set Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ClassificationCN Parameter category in Chinese
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Parameter chinese category.
+     * @param ClassificationCN Parameter chinese category.
      */
     public void setClassificationCN(String ClassificationCN) {
         this.ClassificationCN = ClassificationCN;
     }
 
     /**
-     * Get Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ClassificationEN Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Parameter english category. 
+     * @return ClassificationEN Parameter english category.
      */
     public String getClassificationEN() {
         return this.ClassificationEN;
     }
 
     /**
-     * Set Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ClassificationEN Parameter category in English
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Parameter english category.
+     * @param ClassificationEN Parameter english category.
      */
     public void setClassificationEN(String ClassificationEN) {
         this.ClassificationEN = ClassificationEN;
     }
 
     /**
-     * Get Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SpecRelated Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies whether it is related to the specification (true for related, false for unrelated). 
+     * @return SpecRelated Specifies whether it is related to the specification (true for related, false for unrelated).
      */
     public Boolean getSpecRelated() {
         return this.SpecRelated;
     }
 
     /**
-     * Set Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SpecRelated Whether the parameter is related to specifications. Valid values: `true` (yes), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies whether it is related to the specification (true for related, false for unrelated).
+     * @param SpecRelated Specifies whether it is related to the specification (true for related, false for unrelated).
      */
     public void setSpecRelated(Boolean SpecRelated) {
         this.SpecRelated = SpecRelated;
     }
 
     /**
-     * Get Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Advanced Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance). 
+     * @return Advanced Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
      */
     public Boolean getAdvanced() {
         return this.Advanced;
     }
 
     /**
-     * Set Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Advanced Whether it is a key parameter. Valid values: `true` (yes, and modifying it may affect instance performance), `false` (no)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
+     * @param Advanced Indicates whether it is a key parameter (true means it is a key parameter, modification requires special attention and may affect instance performance).
      */
     public void setAdvanced(Boolean Advanced) {
         this.Advanced = Advanced;
     }
 
     /**
-     * Get The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return LastModifyTime The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the last modified time. 
+     * @return LastModifyTime Specifies the last modified time.
      */
     public String getLastModifyTime() {
         return this.LastModifyTime;
     }
 
     /**
-     * Set The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param LastModifyTime The last modified time of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the last modified time.
+     * @param LastModifyTime Specifies the last modified time.
      */
     public void setLastModifyTime(String LastModifyTime) {
         this.LastModifyTime = LastModifyTime;
     }
 
     /**
-     * Get Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return StandbyRelated Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine. 
+     * @return StandbyRelated Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
      */
     public Long getStandbyRelated() {
         return this.StandbyRelated;
     }
 
     /**
-     * Set Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param StandbyRelated Parameter primary-secondary constraints, `0`: No constraint, `1`: Standby parameter value must be greater than that of the primary machine, `2`: Primary parameter value must be greater than that of the standby machine.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
+     * @param StandbyRelated Parameter primary-secondary constraints. `0`: no constraint between primary and standby. `1`: standby parameter value > primary machine parameter value. `2`: primary parameter value must be greater than that of the standby machine.
      */
     public void setStandbyRelated(Long StandbyRelated) {
         this.StandbyRelated = StandbyRelated;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeEncryptionKeysResponse extends AbstractModel {
 
     /**
-    * Instance key list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Specifies the key information list of the instance.
     */
     @SerializedName("EncryptionKeys")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     private String RequestId;
 
     /**
-     * Get Instance key list
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return EncryptionKeys Instance key list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Specifies the key information list of the instance. 
+     * @return EncryptionKeys Specifies the key information list of the instance.
      */
     public EncryptionKey [] getEncryptionKeys() {
         return this.EncryptionKeys;
     }
 
     /**
-     * Set Instance key list
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param EncryptionKeys Instance key list
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Specifies the key information list of the instance.
+     * @param EncryptionKeys Specifies the key information list of the instance.
      */
     public void setEncryptionKeys(EncryptionKey [] EncryptionKeys) {
         this.EncryptionKeys = EncryptionKeys;

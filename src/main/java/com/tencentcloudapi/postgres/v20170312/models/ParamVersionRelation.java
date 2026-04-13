@@ -24,48 +24,42 @@ import java.util.HashMap;
 public class ParamVersionRelation extends AbstractModel {
 
     /**
-    * Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parameter name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parameter information belonging to kernel version.
     */
     @SerializedName("DBKernelVersion")
     @Expose
     private String DBKernelVersion;
 
     /**
-    * Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Default value of the parameter for this version and specification.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-    * Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Parameter value unit. returns null if the parameter has no units.
     */
     @SerializedName("Unit")
     @Expose
     private String Unit;
 
     /**
-    * The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Numerical type (integer, real) parameter specifies the upper bound.
     */
     @SerializedName("Max")
     @Expose
     private Float Max;
 
     /**
-    * The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the numerical type (integer, real) parameter and its lower bound.
     */
     @SerializedName("Min")
     @Expose
@@ -80,120 +74,96 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] EnumValue;
 
     /**
-     * Get Parameter name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parameter name. 
+     * @return Name Parameter name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Parameter name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parameter name.
+     * @param Name Parameter name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DBKernelVersion The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parameter information belonging to kernel version. 
+     * @return DBKernelVersion Parameter information belonging to kernel version.
      */
     public String getDBKernelVersion() {
         return this.DBKernelVersion;
     }
 
     /**
-     * Set The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DBKernelVersion The kernel version that corresponds to the parameter information
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parameter information belonging to kernel version.
+     * @param DBKernelVersion Parameter information belonging to kernel version.
      */
     public void setDBKernelVersion(String DBKernelVersion) {
         this.DBKernelVersion = DBKernelVersion;
     }
 
     /**
-     * Get Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Value Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Default value of the parameter for this version and specification. 
+     * @return Value Default value of the parameter for this version and specification.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Value Default parameter value under the kernel version and specification of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Default value of the parameter for this version and specification.
+     * @param Value Default value of the parameter for this version and specification.
      */
     public void setValue(String Value) {
         this.Value = Value;
     }
 
     /**
-     * Get Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Parameter value unit. returns null if the parameter has no units. 
+     * @return Unit Parameter value unit. returns null if the parameter has no units.
      */
     public String getUnit() {
         return this.Unit;
     }
 
     /**
-     * Set Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Parameter value unit. returns null if the parameter has no units.
+     * @param Unit Parameter value unit. returns null if the parameter has no units.
      */
     public void setUnit(String Unit) {
         this.Unit = Unit;
     }
 
     /**
-     * Get The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Max The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Numerical type (integer, real) parameter specifies the upper bound. 
+     * @return Max Numerical type (integer, real) parameter specifies the upper bound.
      */
     public Float getMax() {
         return this.Max;
     }
 
     /**
-     * Set The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Max The maximum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Numerical type (integer, real) parameter specifies the upper bound.
+     * @param Max Numerical type (integer, real) parameter specifies the upper bound.
      */
     public void setMax(Float Max) {
         this.Max = Max;
     }
 
     /**
-     * Get The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Min The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the numerical type (integer, real) parameter and its lower bound. 
+     * @return Min Specifies the numerical type (integer, real) parameter and its lower bound.
      */
     public Float getMin() {
         return this.Min;
     }
 
     /**
-     * Set The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Min The minimum value of the `integer` or `real` parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the numerical type (integer, real) parameter and its lower bound.
+     * @param Min Specifies the numerical type (integer, real) parameter and its lower bound.
      */
     public void setMin(Float Min) {
         this.Min = Min;

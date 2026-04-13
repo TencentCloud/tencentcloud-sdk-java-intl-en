@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyParameterTemplateRequest extends AbstractModel {
 
     /**
-    * Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+    * Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
     */
     @SerializedName("TemplateId")
     @Expose
@@ -59,16 +59,16 @@ public class ModifyParameterTemplateRequest extends AbstractModel {
     private String [] DeleteParamSet;
 
     /**
-     * Get Parameter template ID, which uniquely identifies a parameter template and cannot be modified. 
-     * @return TemplateId Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+     * Get Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en). 
+     * @return TemplateId Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
-     * @param TemplateId Parameter template ID, which uniquely identifies a parameter template and cannot be modified.
+     * Set Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
+     * @param TemplateId Specifies the parameter template ID, which uniquely identifies the parameter template and cannot be modified. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/product/409/52651?lang=en).
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

@@ -38,32 +38,56 @@ public class AccountInfo extends AbstractModel {
     private String UserName;
 
     /**
-    * Account remarks
+    * Specifies the account remark.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+    * Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Account creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Account last modified time
+    * Last update time of the account.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
+
+    /**
+    * Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+    */
+    @SerializedName("PasswordUpdateTime")
+    @Expose
+    private String PasswordUpdateTime;
+
+    /**
+    * Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+    */
+    @SerializedName("UserType")
+    @Expose
+    private String UserType;
+
+    /**
+    * Specifies whether CAM verification is enabled for the user account.
+    */
+    @SerializedName("OpenCam")
+    @Expose
+    private Boolean OpenCam;
 
     /**
      * Get Instance ID in the format of postgres-lnp6j617 
@@ -98,67 +122,127 @@ public class AccountInfo extends AbstractModel {
     }
 
     /**
-     * Get Account remarks 
-     * @return Remark Account remarks
+     * Get Specifies the account remark. 
+     * @return Remark Specifies the account remark.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Account remarks
-     * @param Remark Account remarks
+     * Set Specifies the account remark.
+     * @param Remark Specifies the account remark.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting 
-     * @return Status Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+     * Get Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting. 
+     * @return Status Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
-     * @param Status Account status. 1: creating, 2: normal, 3: modifying, 4: resetting password, -1: deleting
+     * Set Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
+     * @param Status Account status. valid values: 1-creating, 2-normal, 3-modifying, 4-resetting password, 5-locked, -1-deleting.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Account creation time 
-     * @return CreateTime Account creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Account creation time
-     * @param CreateTime Account creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Account last modified time 
-     * @return UpdateTime Account last modified time
+     * Get Last update time of the account. 
+     * @return UpdateTime Last update time of the account.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Account last modified time
-     * @param UpdateTime Account last modified time
+     * Set Last update time of the account.
+     * @param UpdateTime Last update time of the account.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
+    }
+
+    /**
+     * Get Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console. 
+     * @return PasswordUpdateTime Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+     */
+    public String getPasswordUpdateTime() {
+        return this.PasswordUpdateTime;
+    }
+
+    /**
+     * Set Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+     * @param PasswordUpdateTime Specifies the last modified time of the account.
+
+This field will only take effect after 2025-10-31. No matter whether the password is modified before, the value will be the default value: 0000-00-00 00:00:00
+Indicates that this field is updated only when the password is modified via the cloud API or the console.
+     */
+    public void setPasswordUpdateTime(String PasswordUpdateTime) {
+        this.PasswordUpdateTime = PasswordUpdateTime;
+    }
+
+    /**
+     * Get Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role. 
+     * @return UserType Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+     */
+    public String getUserType() {
+        return this.UserType;
+    }
+
+    /**
+     * Set Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+     * @param UserType Account type. valid values: normal, tencentDBSuper. normal references a general user, tencentDBSuper possesses the pg_tencentdb_superuser user role.
+     */
+    public void setUserType(String UserType) {
+        this.UserType = UserType;
+    }
+
+    /**
+     * Get Specifies whether CAM verification is enabled for the user account. 
+     * @return OpenCam Specifies whether CAM verification is enabled for the user account.
+     */
+    public Boolean getOpenCam() {
+        return this.OpenCam;
+    }
+
+    /**
+     * Set Specifies whether CAM verification is enabled for the user account.
+     * @param OpenCam Specifies whether CAM verification is enabled for the user account.
+     */
+    public void setOpenCam(Boolean OpenCam) {
+        this.OpenCam = OpenCam;
     }
 
     public AccountInfo() {
@@ -187,6 +271,15 @@ public class AccountInfo extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
+        if (source.PasswordUpdateTime != null) {
+            this.PasswordUpdateTime = new String(source.PasswordUpdateTime);
+        }
+        if (source.UserType != null) {
+            this.UserType = new String(source.UserType);
+        }
+        if (source.OpenCam != null) {
+            this.OpenCam = new Boolean(source.OpenCam);
+        }
     }
 
 
@@ -200,6 +293,9 @@ public class AccountInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+        this.setParamSimple(map, prefix + "PasswordUpdateTime", this.PasswordUpdateTime);
+        this.setParamSimple(map, prefix + "UserType", this.UserType);
+        this.setParamSimple(map, prefix + "OpenCam", this.OpenCam);
 
     }
 }

@@ -24,224 +24,184 @@ import java.util.HashMap;
 public class EventInfo extends AbstractModel {
 
     /**
-    * Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Parameter name.
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Original parameter value.
     */
     @SerializedName("OldValue")
     @Expose
     private String OldValue;
 
     /**
-    * New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * This modification specifies the expected parameter value.
     */
     @SerializedName("NewValue")
     @Expose
     private String NewValue;
 
     /**
-    * Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the start time for backend parameter modification.
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the start of effective time for the backend parameter.
     */
     @SerializedName("EffectiveTime")
     @Expose
     private String EffectiveTime;
 
     /**
-    * Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Modification status. valid values: in progress, success, paused.
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Operator (normal: user sub UIN).
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Time log.
     */
     @SerializedName("EventLog")
     @Expose
     private String EventLog;
 
     /**
-     * Get Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ParamName Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Parameter name. 
+     * @return ParamName Parameter name.
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ParamName Parameter name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Parameter name.
+     * @param ParamName Parameter name.
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return OldValue Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Original parameter value. 
+     * @return OldValue Original parameter value.
      */
     public String getOldValue() {
         return this.OldValue;
     }
 
     /**
-     * Set Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OldValue Original parameter value
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Original parameter value.
+     * @param OldValue Original parameter value.
      */
     public void setOldValue(String OldValue) {
         this.OldValue = OldValue;
     }
 
     /**
-     * Get New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return NewValue New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get This modification specifies the expected parameter value. 
+     * @return NewValue This modification specifies the expected parameter value.
      */
     public String getNewValue() {
         return this.NewValue;
     }
 
     /**
-     * Set New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param NewValue New parameter value in this modification event
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set This modification specifies the expected parameter value.
+     * @param NewValue This modification specifies the expected parameter value.
      */
     public void setNewValue(String NewValue) {
         this.NewValue = NewValue;
     }
 
     /**
-     * Get Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ModifyTime Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the start time for backend parameter modification. 
+     * @return ModifyTime Specifies the start time for backend parameter modification.
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ModifyTime Start time of parameter modification
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the start time for backend parameter modification.
+     * @param ModifyTime Specifies the start time for backend parameter modification.
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return EffectiveTime Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the start of effective time for the backend parameter. 
+     * @return EffectiveTime Specifies the start of effective time for the backend parameter.
      */
     public String getEffectiveTime() {
         return this.EffectiveTime;
     }
 
     /**
-     * Set Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param EffectiveTime Start time when the modified parameter takes effect
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the start of effective time for the backend parameter.
+     * @param EffectiveTime Specifies the start of effective time for the backend parameter.
      */
     public void setEffectiveTime(String EffectiveTime) {
         this.EffectiveTime = EffectiveTime;
     }
 
     /**
-     * Get Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return State Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Modification status. valid values: in progress, success, paused. 
+     * @return State Modification status. valid values: in progress, success, paused.
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param State Modification status
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Modification status. valid values: in progress, success, paused.
+     * @param State Modification status. valid values: in progress, success, paused.
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Operator Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Operator (normal: user sub UIN). 
+     * @return Operator Operator (normal: user sub UIN).
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Operator Operator (generally, the value is the UIN of a sub-user)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Operator (normal: user sub UIN).
+     * @param Operator Operator (normal: user sub UIN).
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get Event log
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return EventLog Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Time log. 
+     * @return EventLog Time log.
      */
     public String getEventLog() {
         return this.EventLog;
     }
 
     /**
-     * Set Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param EventLog Event log
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Time log.
+     * @param EventLog Time log.
      */
     public void setEventLog(String EventLog) {
         this.EventLog = EventLog;
