@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApplyWebVerificationBizTokenIntlRequest extends AbstractModel {
 
     /**
-    * The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+    * Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
     */
@@ -63,10 +63,10 @@ Example: {"AutoSkip": true,"CheckMode": 1,"IdCardType": "HKIDCard"}
     private WebVerificationConfigIntl Config;
 
     /**
-     * Get The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+     * Get Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid. 
-     * @return RedirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+     * @return RedirectURL Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
      */
@@ -75,10 +75,10 @@ Example: https://www.tencentcloud.com/products/faceid.
     }
 
     /**
-     * Set The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+     * Set Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
-     * @param RedirectURL The web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
+     * @param RedirectURL Web callback URL to redirect to after the verification is completed, including the protocol, hostname, and path. 
 After the verification process is completed, the BizToken of this process will be spliced to the callback URL in the format of https://www.tencentcloud.com/products/faceid?token={BizToken} before redirect.
 Example: https://www.tencentcloud.com/products/faceid.
      */

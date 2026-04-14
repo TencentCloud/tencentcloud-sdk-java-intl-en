@@ -60,4 +60,15 @@ public class VclmClient extends AbstractClient{
         return this.internalRequest(req, "SubmitImageAnimateJob", SubmitImageAnimateJobResponse.class);
     }
 
+    /**
+     *Submit a Vidu image-to-video task API
+     * @param req SubmitImageToVideoViduJobRequest
+     * @return SubmitImageToVideoViduJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitImageToVideoViduJobResponse SubmitImageToVideoViduJob(SubmitImageToVideoViduJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitImageToVideoViduJob", SubmitImageToVideoViduJobResponse.class);
+    }
+
 }

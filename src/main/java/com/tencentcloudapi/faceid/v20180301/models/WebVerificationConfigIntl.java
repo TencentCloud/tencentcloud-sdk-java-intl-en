@@ -86,7 +86,8 @@ Example: false
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
     */
     @SerializedName("SecurityLevel")
@@ -191,6 +192,16 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     @SerializedName("AllowExpiredDocument")
     @Expose
     private Boolean AllowExpiredDocument;
+
+    /**
+    * Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
+    */
+    @SerializedName("Version")
+    @Expose
+    private String Version;
 
     /**
      * Get When starting verification, whether to skip the starting verification page. If true, enter the verification process directly. This configuration will not take effect if the downgrade policy is triggered. The default is false.
@@ -366,14 +377,16 @@ Example: false
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4 
      * @return SecurityLevel Liveness security level, the default value is 3. The currently supported security level are as follows:
 1:Silent mode;
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
      */
     public Long getSecurityLevel() {
@@ -386,14 +399,16 @@ Example: 4
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
      * @param SecurityLevel Liveness security level, the default value is 3. The currently supported security level are as follows:
 1:Silent mode;
 2:Action mode;
 3:Lighting mode;
 4:Action+Lighting mode;
-5:Action+Lighting(High security) mode.
+5:Action+Lighting(High security) mode. This mode offers higher security but has a lower pass rate. Please contact us before use.
+
 Example: 4
      */
     public void setSecurityLevel(Long SecurityLevel) {
@@ -676,6 +691,34 @@ false : Expired HKID is rejected and cannot enter the liveness process.
         this.AllowExpiredDocument = AllowExpiredDocument;
     }
 
+    /**
+     * Get Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC. 
+     * @return Version Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
+     */
+    public String getVersion() {
+        return this.Version;
+    }
+
+    /**
+     * Set Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
+     * @param Version Service version, including Basic version (BASIC) and PLUS version (PLUS). The currently supported service version are as follows:
+BASIC: Basic version.
+PLUS: PLUS version.
+The default value is BASIC.
+     */
+    public void setVersion(String Version) {
+        this.Version = Version;
+    }
+
     public WebVerificationConfigIntl() {
     }
 
@@ -732,6 +775,9 @@ false : Expired HKID is rejected and cannot enter the liveness process.
         if (source.AllowExpiredDocument != null) {
             this.AllowExpiredDocument = new Boolean(source.AllowExpiredDocument);
         }
+        if (source.Version != null) {
+            this.Version = new String(source.Version);
+        }
     }
 
 
@@ -755,6 +801,7 @@ false : Expired HKID is rejected and cannot enter the liveness process.
         this.setParamSimple(map, prefix + "LivenessTimeout", this.LivenessTimeout);
         this.setParamSimple(map, prefix + "SelectedWarningCodes", this.SelectedWarningCodes);
         this.setParamSimple(map, prefix + "AllowExpiredDocument", this.AllowExpiredDocument);
+        this.setParamSimple(map, prefix + "Version", this.Version);
 
     }
 }

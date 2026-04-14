@@ -72,6 +72,39 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *This API is used to validate the authenticity and consistency of the name and bank card number.
+     * @param req BankCard2EVerificationRequest
+     * @return BankCard2EVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public BankCard2EVerificationResponse BankCard2EVerification(BankCard2EVerificationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BankCard2EVerification", BankCard2EVerificationResponse.class);
+    }
+
+    /**
+     *This API is used to verify the authenticity and consistency of the bank card number, name, ID number, and mobile number for account opening.
+     * @param req BankCard4EVerificationRequest
+     * @return BankCard4EVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public BankCard4EVerificationResponse BankCard4EVerification(BankCard4EVerificationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BankCard4EVerification", BankCard4EVerificationResponse.class);
+    }
+
+    /**
+     *This API is used to verify the authenticity and consistency of the bank card number, name, and ID number of information.
+     * @param req BankCardVerificationRequest
+     * @return BankCardVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public BankCardVerificationResponse BankCardVerification(BankCardVerificationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "BankCardVerification", BankCardVerificationResponse.class);
+    }
+
+    /**
      *This interface supports judgment of real person and photo comparison to verify the user's identity online. By passing the video and photo into the interface, it will first judge whether the person in the video is real. If yes, it judges whether the person in the video is the same one as the uploaded photo and returns authentication result.
      * @param req CompareFaceLivenessRequest
      * @return CompareFaceLivenessResponse
@@ -194,6 +227,17 @@ This API on the legacy version will continue to serve existing users but will be
     public LivenessCompareResponse LivenessCompare(LivenessCompareRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "LivenessCompare", LivenessCompareResponse.class);
+    }
+
+    /**
+     *This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+     * @param req VideoLivenessCompareRequest
+     * @return VideoLivenessCompareResponse
+     * @throws TencentCloudSDKException
+     */
+    public VideoLivenessCompareResponse VideoLivenessCompare(VideoLivenessCompareRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VideoLivenessCompare", VideoLivenessCompareResponse.class);
     }
 
 }
