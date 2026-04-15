@@ -105,6 +105,17 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *Bank card basic information query
+     * @param req CheckBankCardInformationRequest
+     * @return CheckBankCardInformationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckBankCardInformationResponse CheckBankCardInformation(CheckBankCardInformationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckBankCardInformation", CheckBankCardInformationResponse.class);
+    }
+
+    /**
      *This interface supports judgment of real person and photo comparison to verify the user's identity online. By passing the video and photo into the interface, it will first judge whether the person in the video is real. If yes, it judges whether the person in the video is the same one as the uploaded photo and returns authentication result.
      * @param req CompareFaceLivenessRequest
      * @return CompareFaceLivenessResponse
