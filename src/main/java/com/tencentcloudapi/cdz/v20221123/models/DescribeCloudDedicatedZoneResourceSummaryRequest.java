@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeCloudDedicatedZoneResourceSummaryRequest extends AbstractModel {
 
     /**
-    * Unique id of the cloud dedicated zone.
+    * Unique id of the cloud dedicated zone
     */
     @SerializedName("CdzId")
     @Expose
     private String CdzId;
 
     /**
-     * Get Unique id of the cloud dedicated zone. 
-     * @return CdzId Unique id of the cloud dedicated zone.
+     * Get Unique id of the cloud dedicated zone 
+     * @return CdzId Unique id of the cloud dedicated zone
      */
     public String getCdzId() {
         return this.CdzId;
     }
 
     /**
-     * Set Unique id of the cloud dedicated zone.
-     * @param CdzId Unique id of the cloud dedicated zone.
+     * Set Unique id of the cloud dedicated zone
+     * @param CdzId Unique id of the cloud dedicated zone
      */
     public void setCdzId(String CdzId) {
         this.CdzId = CdzId;

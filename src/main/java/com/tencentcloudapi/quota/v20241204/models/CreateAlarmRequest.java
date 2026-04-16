@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAlarmRequest extends AbstractModel {
 
     /**
-    * Alarm rule name. specifies the name of the Alarm rule.
+    * Alarm rule name. specifies the name of the Alarm rule
     */
     @SerializedName("Name")
     @Expose
@@ -73,16 +73,16 @@ public class CreateAlarmRequest extends AbstractModel {
     private Long MemberUin;
 
     /**
-     * Get Alarm rule name. specifies the name of the Alarm rule. 
-     * @return Name Alarm rule name. specifies the name of the Alarm rule.
+     * Get Alarm rule name. specifies the name of the Alarm rule 
+     * @return Name Alarm rule name. specifies the name of the Alarm rule
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Alarm rule name. specifies the name of the Alarm rule.
-     * @param Name Alarm rule name. specifies the name of the Alarm rule.
+     * Set Alarm rule name. specifies the name of the Alarm rule
+     * @param Name Alarm rule name. specifies the name of the Alarm rule
      */
     public void setName(String Name) {
         this.Name = Name;

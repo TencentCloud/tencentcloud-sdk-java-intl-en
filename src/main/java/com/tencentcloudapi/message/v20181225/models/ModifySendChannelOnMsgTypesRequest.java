@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ModifySendChannelOnMsgTypesRequest extends AbstractModel {
 
     /**
-    * Message sending channel.
+    * Message sending channel
     */
     @SerializedName("SendTypes")
     @Expose
     private SendType [] SendTypes;
 
     /**
-     * Get Message sending channel. 
-     * @return SendTypes Message sending channel.
+     * Get Message sending channel 
+     * @return SendTypes Message sending channel
      */
     public SendType [] getSendTypes() {
         return this.SendTypes;
     }
 
     /**
-     * Set Message sending channel.
-     * @param SendTypes Message sending channel.
+     * Set Message sending channel
+     * @param SendTypes Message sending channel
      */
     public void setSendTypes(SendType [] SendTypes) {
         this.SendTypes = SendTypes;

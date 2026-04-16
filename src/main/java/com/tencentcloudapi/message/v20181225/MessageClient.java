@@ -39,7 +39,7 @@ public class MessageClient extends AbstractClient{
     }
 
     /**
-     *This API is used to batch modify delivery methods.
+     *This API is used to batch modify delivery methods
      * @param req ModifySendChannelOnMsgTypesRequest
      * @return ModifySendChannelOnMsgTypesResponse
      * @throws TencentCloudSDKException

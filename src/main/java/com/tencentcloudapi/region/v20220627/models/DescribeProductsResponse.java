@@ -31,7 +31,7 @@ public class DescribeProductsResponse extends AbstractModel {
     private RegionProduct [] Products;
 
     /**
-    * Total number of products.
+    * Total number of products
     */
     @SerializedName("TotalCount")
     @Expose
@@ -61,16 +61,16 @@ public class DescribeProductsResponse extends AbstractModel {
     }
 
     /**
-     * Get Total number of products. 
-     * @return TotalCount Total number of products.
+     * Get Total number of products 
+     * @return TotalCount Total number of products
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of products.
-     * @param TotalCount Total number of products.
+     * Set Total number of products
+     * @param TotalCount Total number of products
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
