@@ -73,6 +73,13 @@ public class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractMod
     private AdBreakInfo [] AdBreaks;
 
     /**
+    * VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
+    */
+    @SerializedName("VodAcquisitionMethod")
+    @Expose
+    private String VodAcquisitionMethod;
+
+    /**
      * Get Program ID. 
      * @return Id Program ID.
      */
@@ -184,6 +191,22 @@ public class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractMod
         this.AdBreaks = AdBreaks;
     }
 
+    /**
+     * Get VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported. 
+     * @return VodAcquisitionMethod VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
+     */
+    public String getVodAcquisitionMethod() {
+        return this.VodAcquisitionMethod;
+    }
+
+    /**
+     * Set VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
+     * @param VodAcquisitionMethod VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported.
+     */
+    public void setVodAcquisitionMethod(String VodAcquisitionMethod) {
+        this.VodAcquisitionMethod = VodAcquisitionMethod;
+    }
+
     public ModifyStreamPackageLinearAssemblyProgramRequest() {
     }
 
@@ -216,6 +239,9 @@ public class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractMod
                 this.AdBreaks[i] = new AdBreakInfo(source.AdBreaks[i]);
             }
         }
+        if (source.VodAcquisitionMethod != null) {
+            this.VodAcquisitionMethod = new String(source.VodAcquisitionMethod);
+        }
     }
 
 
@@ -230,6 +256,7 @@ public class ModifyStreamPackageLinearAssemblyProgramRequest extends AbstractMod
         this.setParamSimple(map, prefix + "SourceName", this.SourceName);
         this.setParamObj(map, prefix + "PlaybackConf.", this.PlaybackConf);
         this.setParamArrayObj(map, prefix + "AdBreaks.", this.AdBreaks);
+        this.setParamSimple(map, prefix + "VodAcquisitionMethod", this.VodAcquisitionMethod);
 
     }
 }

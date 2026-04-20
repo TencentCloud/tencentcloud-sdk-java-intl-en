@@ -101,6 +101,13 @@ public class LinearAssemblyProgramInfo extends AbstractModel {
     private String SourceLocationName;
 
     /**
+    * VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported
+    */
+    @SerializedName("VodAcquisitionMethod")
+    @Expose
+    private String VodAcquisitionMethod;
+
+    /**
      * Get Channel linear assembly program information. 
      * @return Name Channel linear assembly program information.
      */
@@ -276,6 +283,22 @@ public class LinearAssemblyProgramInfo extends AbstractModel {
         this.SourceLocationName = SourceLocationName;
     }
 
+    /**
+     * Get VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported 
+     * @return VodAcquisitionMethod VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported
+     */
+    public String getVodAcquisitionMethod() {
+        return this.VodAcquisitionMethod;
+    }
+
+    /**
+     * Set VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported
+     * @param VodAcquisitionMethod VOD acquisition methods, supporting PreCaching and DynamicUpdating, with PreCaching as the default, and only Linear channels are supported
+     */
+    public void setVodAcquisitionMethod(String VodAcquisitionMethod) {
+        this.VodAcquisitionMethod = VodAcquisitionMethod;
+    }
+
     public LinearAssemblyProgramInfo() {
     }
 
@@ -320,6 +343,9 @@ public class LinearAssemblyProgramInfo extends AbstractModel {
         if (source.SourceLocationName != null) {
             this.SourceLocationName = new String(source.SourceLocationName);
         }
+        if (source.VodAcquisitionMethod != null) {
+            this.VodAcquisitionMethod = new String(source.VodAcquisitionMethod);
+        }
     }
 
 
@@ -338,6 +364,7 @@ public class LinearAssemblyProgramInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "Id", this.Id);
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamSimple(map, prefix + "SourceLocationName", this.SourceLocationName);
+        this.setParamSimple(map, prefix + "VodAcquisitionMethod", this.VodAcquisitionMethod);
 
     }
 }
