@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class TimedMetadataInfo extends AbstractModel {
 
     /**
-    * Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
+    * Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
     */
     @SerializedName("ID3")
     @Expose
     private String ID3;
 
     /**
-     * Get Base64-encoded id3 metadata information, with a maximum limit of 1024 characters. 
-     * @return ID3 Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
+    * Label, the maximum supported length is 1024 characters for the label, 
+    */
+    @SerializedName("Tag")
+    @Expose
+    private String Tag;
+
+    /**
+     * Get Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence 
+     * @return ID3 Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
      */
     public String getID3() {
         return this.ID3;
     }
 
     /**
-     * Set Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
-     * @param ID3 Base64-encoded id3 metadata information, with a maximum limit of 1024 characters.
+     * Set Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
+     * @param ID3 Base64-encoded ID3 metadata information, with a maximum limit of 1024 characters. When both ID3 and Tag have values, the ID3 value takes precedence
      */
     public void setID3(String ID3) {
         this.ID3 = ID3;
+    }
+
+    /**
+     * Get Label, the maximum supported length is 1024 characters for the label,  
+     * @return Tag Label, the maximum supported length is 1024 characters for the label, 
+     */
+    public String getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set Label, the maximum supported length is 1024 characters for the label, 
+     * @param Tag Label, the maximum supported length is 1024 characters for the label, 
+     */
+    public void setTag(String Tag) {
+        this.Tag = Tag;
     }
 
     public TimedMetadataInfo() {
@@ -57,6 +80,9 @@ public class TimedMetadataInfo extends AbstractModel {
         if (source.ID3 != null) {
             this.ID3 = new String(source.ID3);
         }
+        if (source.Tag != null) {
+            this.Tag = new String(source.Tag);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class TimedMetadataInfo extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ID3", this.ID3);
+        this.setParamSimple(map, prefix + "Tag", this.Tag);
 
     }
 }

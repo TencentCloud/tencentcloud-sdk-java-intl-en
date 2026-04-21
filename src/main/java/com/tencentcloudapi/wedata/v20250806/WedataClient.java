@@ -1414,6 +1414,17 @@ public class WedataClient extends AbstractClient{
     }
 
     /**
+     *Query workflow operation
+     * @param req ListTriggerTaskRunsRequest
+     * @return ListTriggerTaskRunsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ListTriggerTaskRunsResponse ListTriggerTaskRuns(ListTriggerTaskRunsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ListTriggerTaskRuns", ListTriggerTaskRunsResponse.class);
+    }
+
+    /**
      *Task save version list.
      * @param req ListTriggerTaskVersionsRequest
      * @return ListTriggerTaskVersionsResponse

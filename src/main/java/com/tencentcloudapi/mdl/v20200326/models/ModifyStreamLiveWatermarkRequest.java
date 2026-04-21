@@ -52,7 +52,7 @@ public class ModifyStreamLiveWatermarkRequest extends AbstractModel {
     private CreateTextSettings TextSettings;
 
     /**
-    * AB watermark configuration.
+    * 
     */
     @SerializedName("AbWatermarkSettings")
     @Expose
@@ -123,16 +123,16 @@ public class ModifyStreamLiveWatermarkRequest extends AbstractModel {
     }
 
     /**
-     * Get AB watermark configuration. 
-     * @return AbWatermarkSettings AB watermark configuration.
+     * Get  
+     * @return AbWatermarkSettings 
      */
     public AbWatermarkSettingsReq getAbWatermarkSettings() {
         return this.AbWatermarkSettings;
     }
 
     /**
-     * Set AB watermark configuration.
-     * @param AbWatermarkSettings AB watermark configuration.
+     * Set 
+     * @param AbWatermarkSettings 
      */
     public void setAbWatermarkSettings(AbWatermarkSettingsReq AbWatermarkSettings) {
         this.AbWatermarkSettings = AbWatermarkSettings;

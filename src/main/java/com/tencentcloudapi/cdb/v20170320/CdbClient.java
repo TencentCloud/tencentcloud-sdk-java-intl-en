@@ -1007,6 +1007,17 @@ Note: the HTTP response packet will be very large if it contain a single large e
     }
 
     /**
+     *This API is used to query the SSL enabling status. If the SSL is enabled, the certificate download link will be returned synchronously.
+     * @param req DescribeSSLStatusRequest
+     * @return DescribeSSLStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSSLStatusResponse DescribeSSLStatus(DescribeSSLStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSSLStatus", DescribeSSLStatusResponse.class);
+    }
+
+    /**
      *This API is used to query the slow logs of an instance over the past month by search criteria.
 Note: the HTTP response packet will be very large if it contain a single large slow log, which causes the API call to time out. If this happens, we recommend you lower the value of the input parameter `Limit` to reduce the packet size so that the API can respond timely.
      * @param req DescribeSlowLogDataRequest

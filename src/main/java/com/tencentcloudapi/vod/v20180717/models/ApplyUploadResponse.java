@@ -24,44 +24,42 @@ import java.util.HashMap;
 public class ApplyUploadResponse extends AbstractModel {
 
     /**
-    * Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
+    * Bucket for uploading the API URL bucket_name.
     */
     @SerializedName("StorageBucket")
     @Expose
     private String StorageBucket;
 
     /**
-    * Storage region, which is used as the `Region` in the `Host` of the upload API.
+    * Storage campus for uploading the Host Region of the port.
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * VOD session, which is used to confirm the `VodSessionKey` parameter of the upload API.
+    * VOD session for confirmation of API parameters VodSessionKey.
     */
     @SerializedName("VodSessionKey")
     @Expose
     private String VodSessionKey;
 
     /**
-    * Media storage path, which is used as the `Key` of the stored media of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Media storage path for the object key (Key) used by the upload API to store media.
     */
     @SerializedName("MediaStoragePath")
     @Expose
     private String MediaStoragePath;
 
     /**
-    * Cover storage path, which is used as the `Key` of the stored cover of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Cover storage path for uploading the object Key of the cover via API.
     */
     @SerializedName("CoverStoragePath")
     @Expose
     private String CoverStoragePath;
 
     /**
-    * Temporary credential, which is used for authentication of the upload API.
+    * Temporary credentials for uploading API permission verification.
     */
     @SerializedName("TempCertificate")
     @Expose
@@ -75,104 +73,96 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Storage bucket, which is used as the `bucket_name` in the URL of the upload API. 
-     * @return StorageBucket Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
+     * Get Bucket for uploading the API URL bucket_name. 
+     * @return StorageBucket Bucket for uploading the API URL bucket_name.
      */
     public String getStorageBucket() {
         return this.StorageBucket;
     }
 
     /**
-     * Set Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
-     * @param StorageBucket Storage bucket, which is used as the `bucket_name` in the URL of the upload API.
+     * Set Bucket for uploading the API URL bucket_name.
+     * @param StorageBucket Bucket for uploading the API URL bucket_name.
      */
     public void setStorageBucket(String StorageBucket) {
         this.StorageBucket = StorageBucket;
     }
 
     /**
-     * Get Storage region, which is used as the `Region` in the `Host` of the upload API. 
-     * @return StorageRegion Storage region, which is used as the `Region` in the `Host` of the upload API.
+     * Get Storage campus for uploading the Host Region of the port. 
+     * @return StorageRegion Storage campus for uploading the Host Region of the port.
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set Storage region, which is used as the `Region` in the `Host` of the upload API.
-     * @param StorageRegion Storage region, which is used as the `Region` in the `Host` of the upload API.
+     * Set Storage campus for uploading the Host Region of the port.
+     * @param StorageRegion Storage campus for uploading the Host Region of the port.
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get VOD session, which is used to confirm the `VodSessionKey` parameter of the upload API. 
-     * @return VodSessionKey VOD session, which is used to confirm the `VodSessionKey` parameter of the upload API.
+     * Get VOD session for confirmation of API parameters VodSessionKey. 
+     * @return VodSessionKey VOD session for confirmation of API parameters VodSessionKey.
      */
     public String getVodSessionKey() {
         return this.VodSessionKey;
     }
 
     /**
-     * Set VOD session, which is used to confirm the `VodSessionKey` parameter of the upload API.
-     * @param VodSessionKey VOD session, which is used to confirm the `VodSessionKey` parameter of the upload API.
+     * Set VOD session for confirmation of API parameters VodSessionKey.
+     * @param VodSessionKey VOD session for confirmation of API parameters VodSessionKey.
      */
     public void setVodSessionKey(String VodSessionKey) {
         this.VodSessionKey = VodSessionKey;
     }
 
     /**
-     * Get Media storage path, which is used as the `Key` of the stored media of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return MediaStoragePath Media storage path, which is used as the `Key` of the stored media of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Media storage path for the object key (Key) used by the upload API to store media. 
+     * @return MediaStoragePath Media storage path for the object key (Key) used by the upload API to store media.
      */
     public String getMediaStoragePath() {
         return this.MediaStoragePath;
     }
 
     /**
-     * Set Media storage path, which is used as the `Key` of the stored media of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaStoragePath Media storage path, which is used as the `Key` of the stored media of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Media storage path for the object key (Key) used by the upload API to store media.
+     * @param MediaStoragePath Media storage path for the object key (Key) used by the upload API to store media.
      */
     public void setMediaStoragePath(String MediaStoragePath) {
         this.MediaStoragePath = MediaStoragePath;
     }
 
     /**
-     * Get Cover storage path, which is used as the `Key` of the stored cover of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CoverStoragePath Cover storage path, which is used as the `Key` of the stored cover of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Cover storage path for uploading the object Key of the cover via API. 
+     * @return CoverStoragePath Cover storage path for uploading the object Key of the cover via API.
      */
     public String getCoverStoragePath() {
         return this.CoverStoragePath;
     }
 
     /**
-     * Set Cover storage path, which is used as the `Key` of the stored cover of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CoverStoragePath Cover storage path, which is used as the `Key` of the stored cover of the upload API.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Cover storage path for uploading the object Key of the cover via API.
+     * @param CoverStoragePath Cover storage path for uploading the object Key of the cover via API.
      */
     public void setCoverStoragePath(String CoverStoragePath) {
         this.CoverStoragePath = CoverStoragePath;
     }
 
     /**
-     * Get Temporary credential, which is used for authentication of the upload API. 
-     * @return TempCertificate Temporary credential, which is used for authentication of the upload API.
+     * Get Temporary credentials for uploading API permission verification. 
+     * @return TempCertificate Temporary credentials for uploading API permission verification.
      */
     public TempCertificate getTempCertificate() {
         return this.TempCertificate;
     }
 
     /**
-     * Set Temporary credential, which is used for authentication of the upload API.
-     * @param TempCertificate Temporary credential, which is used for authentication of the upload API.
+     * Set Temporary credentials for uploading API permission verification.
+     * @param TempCertificate Temporary credentials for uploading API permission verification.
      */
     public void setTempCertificate(TempCertificate TempCertificate) {
         this.TempCertificate = TempCertificate;
