@@ -59,7 +59,7 @@ public class DescribeMNGMAUMonthlyComparisonMetricCardRequest extends AbstractMo
     private String ApplicationId;
 
     /**
-    * Mini program appid, required. When provided, the query is performed based on the mini program.
+    * Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
@@ -153,16 +153,16 @@ public class DescribeMNGMAUMonthlyComparisonMetricCardRequest extends AbstractMo
     }
 
     /**
-     * Get Mini program appid, required. When provided, the query is performed based on the mini program. 
-     * @return MNPId Mini program appid, required. When provided, the query is performed based on the mini program.
+     * Get Mini program appid. If this parameter is specified, the query is filtered by mini program appid. 
+     * @return MNPId Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program appid, required. When provided, the query is performed based on the mini program.
-     * @param MNPId Mini program appid, required. When provided, the query is performed based on the mini program.
+     * Set Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
+     * @param MNPId Mini program appid. If this parameter is specified, the query is filtered by mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;

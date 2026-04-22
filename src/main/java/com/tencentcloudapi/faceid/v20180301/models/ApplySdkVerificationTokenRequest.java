@@ -148,6 +148,20 @@ false : Expired HKID is rejected and cannot enter the liveness process.
     private Boolean AllowExpiredDocument;
 
     /**
+    * 
+    */
+    @SerializedName("SkipResultPage")
+    @Expose
+    private Boolean SkipResultPage;
+
+    /**
+    * 
+    */
+    @SerializedName("CardOcrDisplayFields")
+    @Expose
+    private String [] CardOcrDisplayFields;
+
+    /**
      * Get The verification mode. Valid values:
 1: OCR + liveness detection + face comparison
 2: Liveness detection + face comparison
@@ -503,6 +517,38 @@ false : Expired HKID is rejected and cannot enter the liveness process.
         this.AllowExpiredDocument = AllowExpiredDocument;
     }
 
+    /**
+     * Get  
+     * @return SkipResultPage 
+     */
+    public Boolean getSkipResultPage() {
+        return this.SkipResultPage;
+    }
+
+    /**
+     * Set 
+     * @param SkipResultPage 
+     */
+    public void setSkipResultPage(Boolean SkipResultPage) {
+        this.SkipResultPage = SkipResultPage;
+    }
+
+    /**
+     * Get  
+     * @return CardOcrDisplayFields 
+     */
+    public String [] getCardOcrDisplayFields() {
+        return this.CardOcrDisplayFields;
+    }
+
+    /**
+     * Set 
+     * @param CardOcrDisplayFields 
+     */
+    public void setCardOcrDisplayFields(String [] CardOcrDisplayFields) {
+        this.CardOcrDisplayFields = CardOcrDisplayFields;
+    }
+
     public ApplySdkVerificationTokenRequest() {
     }
 
@@ -550,6 +596,15 @@ false : Expired HKID is rejected and cannot enter the liveness process.
         if (source.AllowExpiredDocument != null) {
             this.AllowExpiredDocument = new Boolean(source.AllowExpiredDocument);
         }
+        if (source.SkipResultPage != null) {
+            this.SkipResultPage = new Boolean(source.SkipResultPage);
+        }
+        if (source.CardOcrDisplayFields != null) {
+            this.CardOcrDisplayFields = new String[source.CardOcrDisplayFields.length];
+            for (int i = 0; i < source.CardOcrDisplayFields.length; i++) {
+                this.CardOcrDisplayFields[i] = new String(source.CardOcrDisplayFields[i]);
+            }
+        }
     }
 
 
@@ -569,6 +624,8 @@ false : Expired HKID is rejected and cannot enter the liveness process.
         this.setParamSimple(map, prefix + "SdkVersion", this.SdkVersion);
         this.setParamSimple(map, prefix + "ActionList", this.ActionList);
         this.setParamSimple(map, prefix + "AllowExpiredDocument", this.AllowExpiredDocument);
+        this.setParamSimple(map, prefix + "SkipResultPage", this.SkipResultPage);
+        this.setParamArraySimple(map, prefix + "CardOcrDisplayFields.", this.CardOcrDisplayFields);
 
     }
 }

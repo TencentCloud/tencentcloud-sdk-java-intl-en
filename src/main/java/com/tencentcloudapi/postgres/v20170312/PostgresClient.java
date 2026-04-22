@@ -924,6 +924,17 @@ This API is used to show summarized steps, which may be adjusted during version 
     }
 
     /**
+     *This interface (DeletionProtection) is used to enable or disable instance destruction protection.
+     * @param req ModifyDBInstanceDeletionProtectionRequest
+     * @return ModifyDBInstanceDeletionProtectionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDBInstanceDeletionProtectionResponse ModifyDBInstanceDeletionProtection(ModifyDBInstanceDeletionProtectionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDBInstanceDeletionProtection", ModifyDBInstanceDeletionProtectionResponse.class);
+    }
+
+    /**
      *This API is used to modify the AZs where the nodes of a source instance reside.
      * @param req ModifyDBInstanceDeploymentRequest
      * @return ModifyDBInstanceDeploymentResponse
