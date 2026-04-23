@@ -121,11 +121,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String DigitalWatermarkType;
 
     /**
-    * Copyright information.
+    * 
     */
     @SerializedName("CopyRightWatermarkText")
     @Expose
     private String CopyRightWatermarkText;
+
+    /**
+    * Digital watermark template id.
+    */
+    @SerializedName("BlindWatermarkDefinition")
+    @Expose
+    private Long BlindWatermarkDefinition;
 
     /**
      * Get Address of output video file.
@@ -372,19 +379,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Copyright information. 
-     * @return CopyRightWatermarkText Copyright information.
+     * Get  
+     * @return CopyRightWatermarkText 
      */
     public String getCopyRightWatermarkText() {
         return this.CopyRightWatermarkText;
     }
 
     /**
-     * Set Copyright information.
-     * @param CopyRightWatermarkText Copyright information.
+     * Set 
+     * @param CopyRightWatermarkText 
      */
     public void setCopyRightWatermarkText(String CopyRightWatermarkText) {
         this.CopyRightWatermarkText = CopyRightWatermarkText;
+    }
+
+    /**
+     * Get Digital watermark template id. 
+     * @return BlindWatermarkDefinition Digital watermark template id.
+     */
+    public Long getBlindWatermarkDefinition() {
+        return this.BlindWatermarkDefinition;
+    }
+
+    /**
+     * Set Digital watermark template id.
+     * @param BlindWatermarkDefinition Digital watermark template id.
+     */
+    public void setBlindWatermarkDefinition(Long BlindWatermarkDefinition) {
+        this.BlindWatermarkDefinition = BlindWatermarkDefinition;
     }
 
     public MediaTranscodeItem() {
@@ -440,6 +463,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.CopyRightWatermarkText != null) {
             this.CopyRightWatermarkText = new String(source.CopyRightWatermarkText);
         }
+        if (source.BlindWatermarkDefinition != null) {
+            this.BlindWatermarkDefinition = new Long(source.BlindWatermarkDefinition);
+        }
     }
 
 
@@ -460,6 +486,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
         this.setParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
         this.setParamSimple(map, prefix + "CopyRightWatermarkText", this.CopyRightWatermarkText);
+        this.setParamSimple(map, prefix + "BlindWatermarkDefinition", this.BlindWatermarkDefinition);
 
     }
 }

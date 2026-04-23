@@ -24,40 +24,35 @@ import java.util.HashMap;
 public class MediaImageSpriteItem extends AbstractModel {
 
     /**
-    * Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Height of the sprite sheet.</p>
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Width of the sprite sheet.</p>
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>The number of small images in each sprite sheet.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>The domain names or IP addresses of each sprite sheet.</p>
     */
     @SerializedName("ImageUrlSet")
     @Expose
@@ -72,100 +67,80 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String WebVttUrl;
 
     /**
-     * Get Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p> 
+     * @return Definition <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+     * @param Definition <p>Sprite sheet specification. Please refer to <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Height Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Height of the sprite sheet.</p> 
+     * @return Height <p>Height of the sprite sheet.</p>
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Height Subimage height of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Height of the sprite sheet.</p>
+     * @param Height <p>Height of the sprite sheet.</p>
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Width Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Width of the sprite sheet.</p> 
+     * @return Width <p>Width of the sprite sheet.</p>
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Width Subimage width of image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Width of the sprite sheet.</p>
+     * @param Width <p>Width of the sprite sheet.</p>
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>The number of small images in each sprite sheet.</p> 
+     * @return TotalCount <p>The number of small images in each sprite sheet.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Total number of subimages in each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>The number of small images in each sprite sheet.</p>
+     * @param TotalCount <p>The number of small images in each sprite sheet.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ImageUrlSet Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>The domain names or IP addresses of each sprite sheet.</p> 
+     * @return ImageUrlSet <p>The domain names or IP addresses of each sprite sheet.</p>
      */
     public String [] getImageUrlSet() {
         return this.ImageUrlSet;
     }
 
     /**
-     * Set Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ImageUrlSet Address of each image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>The domain names or IP addresses of each sprite sheet.</p>
+     * @param ImageUrlSet <p>The domain names or IP addresses of each sprite sheet.</p>
      */
     public void setImageUrlSet(String [] ImageUrlSet) {
         this.ImageUrlSet = ImageUrlSet;

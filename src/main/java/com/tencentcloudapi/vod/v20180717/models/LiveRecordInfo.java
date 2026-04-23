@@ -24,69 +24,115 @@ import java.util.HashMap;
 public class LiveRecordInfo extends AbstractModel {
 
     /**
-    * Live recording stream ID.
+    * <p>Live streaming Recording domain name</p>
+    */
+    @SerializedName("Domain")
+    @Expose
+    private String Domain;
+
+    /**
+    * <p>Live streaming Recording Path</p>
+    */
+    @SerializedName("Path")
+    @Expose
+    private String Path;
+
+    /**
+    * <p>Live recording stream ID.</p>
     */
     @SerializedName("StreamId")
     @Expose
     private String StreamId;
 
     /**
-    * Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+    * <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
     */
     @SerializedName("RecordStartTime")
     @Expose
     private String RecordStartTime;
 
     /**
-    * Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+    * <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("RecordEndTime")
     @Expose
     private String RecordEndTime;
 
     /**
-     * Get Live recording stream ID. 
-     * @return StreamId Live recording stream ID.
+     * Get <p>Live streaming Recording domain name</p> 
+     * @return Domain <p>Live streaming Recording domain name</p>
+     */
+    public String getDomain() {
+        return this.Domain;
+    }
+
+    /**
+     * Set <p>Live streaming Recording domain name</p>
+     * @param Domain <p>Live streaming Recording domain name</p>
+     */
+    public void setDomain(String Domain) {
+        this.Domain = Domain;
+    }
+
+    /**
+     * Get <p>Live streaming Recording Path</p> 
+     * @return Path <p>Live streaming Recording Path</p>
+     */
+    public String getPath() {
+        return this.Path;
+    }
+
+    /**
+     * Set <p>Live streaming Recording Path</p>
+     * @param Path <p>Live streaming Recording Path</p>
+     */
+    public void setPath(String Path) {
+        this.Path = Path;
+    }
+
+    /**
+     * Get <p>Live recording stream ID.</p> 
+     * @return StreamId <p>Live recording stream ID.</p>
      */
     public String getStreamId() {
         return this.StreamId;
     }
 
     /**
-     * Set Live recording stream ID.
-     * @param StreamId Live recording stream ID.
+     * Set <p>Live recording stream ID.</p>
+     * @param StreamId <p>Live recording stream ID.</p>
      */
     public void setStreamId(String StreamId) {
         this.StreamId = StreamId;
     }
 
     /**
-     * Get Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
-     * @return RecordStartTime Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Get <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p> 
+     * @return RecordStartTime <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
      */
     public String getRecordStartTime() {
         return this.RecordStartTime;
     }
 
     /**
-     * Set Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param RecordStartTime Recording start time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Set <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
+     * @param RecordStartTime <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
      */
     public void setRecordStartTime(String RecordStartTime) {
         this.RecordStartTime = RecordStartTime;
     }
 
     /**
-     * Get Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
-     * @return RecordEndTime Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Get <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return RecordEndTime <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getRecordEndTime() {
         return this.RecordEndTime;
     }
 
     /**
-     * Set Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param RecordEndTime Recording end time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Set <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param RecordEndTime <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setRecordEndTime(String RecordEndTime) {
         this.RecordEndTime = RecordEndTime;
@@ -100,6 +146,12 @@ public class LiveRecordInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public LiveRecordInfo(LiveRecordInfo source) {
+        if (source.Domain != null) {
+            this.Domain = new String(source.Domain);
+        }
+        if (source.Path != null) {
+            this.Path = new String(source.Path);
+        }
         if (source.StreamId != null) {
             this.StreamId = new String(source.StreamId);
         }
@@ -116,6 +168,8 @@ public class LiveRecordInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Domain", this.Domain);
+        this.setParamSimple(map, prefix + "Path", this.Path);
         this.setParamSimple(map, prefix + "StreamId", this.StreamId);
         this.setParamSimple(map, prefix + "RecordStartTime", this.RecordStartTime);
         this.setParamSimple(map, prefix + "RecordEndTime", this.RecordEndTime);

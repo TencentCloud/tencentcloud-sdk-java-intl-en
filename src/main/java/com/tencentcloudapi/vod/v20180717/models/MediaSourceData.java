@@ -24,115 +24,160 @@ import java.util.HashMap;
 public class MediaSourceData extends AbstractModel {
 
     /**
-    * Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
+    * Media file source category:
+<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
+<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
+<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
     */
     @SerializedName("SourceType")
     @Expose
     private String SourceType;
 
     /**
-    * User-transparent transmission field when creating a file.
+    * Field passed through when the user creates a file.
     */
     @SerializedName("SourceContext")
     @Expose
     private String SourceContext;
 
     /**
-    * Live streaming recording information, valid when the file source is Record.
+    * Live recording information is valid when file source is Record.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("LiveRecordInfo")
     @Expose
     private LiveRecordInfo LiveRecordInfo;
 
     /**
-    * TRTC recording information, valid when the file source is TrtcRecord.
+    * TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TrtcRecordInfo")
     @Expose
     private TrtcRecordInfo TrtcRecordInfo;
 
     /**
-    * Panoramic recording information, valid when the file source is WebPageRecord.
+    * Panoramic recording information. Valid when the file source is WebPageRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WebPageRecordInfo")
     @Expose
     private WebPageRecordInfo WebPageRecordInfo;
 
     /**
-     * Get Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li> 
-     * @return SourceType Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
+     * Get Media file source category:
+<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
+<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
+<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li> 
+     * @return SourceType Media file source category:
+<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
+<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
+<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
      */
     public String getSourceType() {
         return this.SourceType;
     }
 
     /**
-     * Set Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
-     * @param SourceType Media files source category: <li>Record: From recording. Such as live streaming recording, live time shift recording, etc.</li> <li>Upload: From upload. Such as pull upload, upload from server, client UGC upload, etc.</li> <li>VideoProcessing: From video processing. Such as video splicing, video editing, etc.</li> <li>TrtcRecord: From TRTC accompanying recording.</li> <li>WebPageRecord: From panoramic recording.</li> <li>Unknown: Unknown source.</li>
+     * Set Media file source category:
+<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
+<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
+<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
+     * @param SourceType Media file source category:
+<li>Record: comes from recording, such as live recording, live streaming time shift recording.</li>
+<li>Upload: Comes from upload, such as pull upload, server-side upload, and client UGC upload.</li>
+<li>VideoProcessing: comes from video processing, such as video splicing, video editing.</li>
+<li>TrtcRecord: Comes from TRTC simultaneous recording.</li>
+<li>WebPageRecord: comes from panoramic recording.</li>
+<li>Unknown: Unknown source.</li>
      */
     public void setSourceType(String SourceType) {
         this.SourceType = SourceType;
     }
 
     /**
-     * Get User-transparent transmission field when creating a file. 
-     * @return SourceContext User-transparent transmission field when creating a file.
+     * Get Field passed through when the user creates a file. 
+     * @return SourceContext Field passed through when the user creates a file.
      */
     public String getSourceContext() {
         return this.SourceContext;
     }
 
     /**
-     * Set User-transparent transmission field when creating a file.
-     * @param SourceContext User-transparent transmission field when creating a file.
+     * Set Field passed through when the user creates a file.
+     * @param SourceContext Field passed through when the user creates a file.
      */
     public void setSourceContext(String SourceContext) {
         this.SourceContext = SourceContext;
     }
 
     /**
-     * Get Live streaming recording information, valid when the file source is Record. 
-     * @return LiveRecordInfo Live streaming recording information, valid when the file source is Record.
+     * Get Live recording information is valid when file source is Record.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return LiveRecordInfo Live recording information is valid when file source is Record.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public LiveRecordInfo getLiveRecordInfo() {
         return this.LiveRecordInfo;
     }
 
     /**
-     * Set Live streaming recording information, valid when the file source is Record.
-     * @param LiveRecordInfo Live streaming recording information, valid when the file source is Record.
+     * Set Live recording information is valid when file source is Record.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param LiveRecordInfo Live recording information is valid when file source is Record.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLiveRecordInfo(LiveRecordInfo LiveRecordInfo) {
         this.LiveRecordInfo = LiveRecordInfo;
     }
 
     /**
-     * Get TRTC recording information, valid when the file source is TrtcRecord. 
-     * @return TrtcRecordInfo TRTC recording information, valid when the file source is TrtcRecord.
+     * Get TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TrtcRecordInfo TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TrtcRecordInfo getTrtcRecordInfo() {
         return this.TrtcRecordInfo;
     }
 
     /**
-     * Set TRTC recording information, valid when the file source is TrtcRecord.
-     * @param TrtcRecordInfo TRTC recording information, valid when the file source is TrtcRecord.
+     * Set TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TrtcRecordInfo TRTC Companion Recording Information. Valid at that time when the file source is TrtcRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTrtcRecordInfo(TrtcRecordInfo TrtcRecordInfo) {
         this.TrtcRecordInfo = TrtcRecordInfo;
     }
 
     /**
-     * Get Panoramic recording information, valid when the file source is WebPageRecord. 
-     * @return WebPageRecordInfo Panoramic recording information, valid when the file source is WebPageRecord.
+     * Get Panoramic recording information. Valid when the file source is WebPageRecord.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return WebPageRecordInfo Panoramic recording information. Valid when the file source is WebPageRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public WebPageRecordInfo getWebPageRecordInfo() {
         return this.WebPageRecordInfo;
     }
 
     /**
-     * Set Panoramic recording information, valid when the file source is WebPageRecord.
-     * @param WebPageRecordInfo Panoramic recording information, valid when the file source is WebPageRecord.
+     * Set Panoramic recording information. Valid when the file source is WebPageRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WebPageRecordInfo Panoramic recording information. Valid when the file source is WebPageRecord.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWebPageRecordInfo(WebPageRecordInfo WebPageRecordInfo) {
         this.WebPageRecordInfo = WebPageRecordInfo;

@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class MediaAudioStreamItem extends AbstractModel {
 
     /**
-    * Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Bitrate of the audio stream. Measurement unit: bps.</p>
     */
     @SerializedName("Bitrate")
     @Expose
     private Long Bitrate;
 
     /**
-    * Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Sampling rate of the audio stream, unit: hz.</p>
     */
     @SerializedName("SamplingRate")
     @Expose
     private Long SamplingRate;
 
     /**
-    * Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Audio stream encoding format, such as aac.</p>
     */
     @SerializedName("Codec")
     @Expose
     private String Codec;
 
     /**
-     * Get Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Bitrate Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Bitrate of the audio stream. Measurement unit: bps.</p> 
+     * @return Bitrate <p>Bitrate of the audio stream. Measurement unit: bps.</p>
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Bitrate Bitrate of audio stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Bitrate of the audio stream. Measurement unit: bps.</p>
+     * @param Bitrate <p>Bitrate of the audio stream. Measurement unit: bps.</p>
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;
     }
 
     /**
-     * Get Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SamplingRate Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Sampling rate of the audio stream, unit: hz.</p> 
+     * @return SamplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
      */
     public Long getSamplingRate() {
         return this.SamplingRate;
     }
 
     /**
-     * Set Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SamplingRate Sample rate of audio stream in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Sampling rate of the audio stream, unit: hz.</p>
+     * @param SamplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
      */
     public void setSamplingRate(Long SamplingRate) {
         this.SamplingRate = SamplingRate;
     }
 
     /**
-     * Get Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Codec Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Audio stream encoding format, such as aac.</p> 
+     * @return Codec <p>Audio stream encoding format, such as aac.</p>
      */
     public String getCodec() {
         return this.Codec;
     }
 
     /**
-     * Set Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Codec Audio stream encoder, such as aac.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Audio stream encoding format, such as aac.</p>
+     * @param Codec <p>Audio stream encoding format, such as aac.</p>
      */
     public void setCodec(String Codec) {
         this.Codec = Codec;

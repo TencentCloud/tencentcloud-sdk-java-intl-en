@@ -61,6 +61,17 @@ public class QuotaClient extends AbstractClient{
     }
 
     /**
+     *user quota list
+     * @param req DescribeAggregateUserQuotasRequest
+     * @return DescribeAggregateUserQuotasResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAggregateUserQuotasResponse DescribeAggregateUserQuotas(DescribeAggregateUserQuotasRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAggregateUserQuotas", DescribeAggregateUserQuotasResponse.class);
+    }
+
+    /**
      *This API is used to query the alarm rule list.
      * @param req DescribeAlarmsRequest
      * @return DescribeAlarmsResponse
@@ -69,6 +80,17 @@ public class QuotaClient extends AbstractClient{
     public DescribeAlarmsResponse DescribeAlarms(DescribeAlarmsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAlarms", DescribeAlarmsResponse.class);
+    }
+
+    /**
+     *Query a user quota
+     * @param req DescribeUserQuotaRequest
+     * @return DescribeUserQuotaResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeUserQuotaResponse DescribeUserQuota(DescribeUserQuotaRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeUserQuota", DescribeUserQuotaResponse.class);
     }
 
     /**

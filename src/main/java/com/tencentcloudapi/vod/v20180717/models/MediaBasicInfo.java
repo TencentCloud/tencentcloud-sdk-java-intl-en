@@ -127,6 +127,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String StorageRegion;
 
     /**
+    * Media storage path.
+    */
+    @SerializedName("StoragePath")
+    @Expose
+    private String StoragePath;
+
+    /**
     * Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
     */
@@ -426,6 +433,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Media storage path. 
+     * @return StoragePath Media storage path.
+     */
+    public String getStoragePath() {
+        return this.StoragePath;
+    }
+
+    /**
+     * Set Media storage path.
+     * @param StoragePath Media storage path.
+     */
+    public void setStoragePath(String StoragePath) {
+        this.StoragePath = StoragePath;
+    }
+
+    /**
      * Get Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return TagSet Tag information of media file.
@@ -584,6 +607,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.StorageRegion != null) {
             this.StorageRegion = new String(source.StorageRegion);
         }
+        if (source.StoragePath != null) {
+            this.StoragePath = new String(source.StoragePath);
+        }
         if (source.TagSet != null) {
             this.TagSet = new String[source.TagSet.length];
             for (int i = 0; i < source.TagSet.length; i++) {
@@ -622,6 +648,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
         this.setParamObj(map, prefix + "SourceInfo.", this.SourceInfo);
         this.setParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
+        this.setParamSimple(map, prefix + "StoragePath", this.StoragePath);
         this.setParamArraySimple(map, prefix + "TagSet.", this.TagSet);
         this.setParamSimple(map, prefix + "Vid", this.Vid);
         this.setParamSimple(map, prefix + "Category", this.Category);
