@@ -99,6 +99,13 @@ Example:ins-a2bb34
     private String ResourceId;
 
     /**
+    * Order status
+    */
+    @SerializedName("StatusSet")
+    @Expose
+    private Long [] StatusSet;
+
+    /**
      * Get Start time 
 Example :2016-01-01 00:00:00 
      * @return StartTime Start time 
@@ -302,6 +309,22 @@ Example:ins-a2bb34
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get Order status 
+     * @return StatusSet Order status
+     */
+    public Long [] getStatusSet() {
+        return this.StatusSet;
+    }
+
+    /**
+     * Set Order status
+     * @param StatusSet Order status
+     */
+    public void setStatusSet(Long [] StatusSet) {
+        this.StatusSet = StatusSet;
+    }
+
     public DescribeDealsByCondRequest() {
     }
 
@@ -334,6 +357,12 @@ Example:ins-a2bb34
         if (source.ResourceId != null) {
             this.ResourceId = new String(source.ResourceId);
         }
+        if (source.StatusSet != null) {
+            this.StatusSet = new Long[source.StatusSet.length];
+            for (int i = 0; i < source.StatusSet.length; i++) {
+                this.StatusSet[i] = new Long(source.StatusSet[i]);
+            }
+        }
     }
 
 
@@ -349,6 +378,7 @@ Example:ins-a2bb34
         this.setParamSimple(map, prefix + "OrderId", this.OrderId);
         this.setParamSimple(map, prefix + "BigDealId", this.BigDealId);
         this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);
 
     }
 }

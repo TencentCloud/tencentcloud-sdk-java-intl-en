@@ -31,7 +31,7 @@ public class VideoEncode extends AbstractModel {
     private Long Width;
 
     /**
-    * The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+    * Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
     */
     @SerializedName("Height")
     @Expose
@@ -75,16 +75,16 @@ public class VideoEncode extends AbstractModel {
     }
 
     /**
-     * Get The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080]. 
-     * @return Height The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+     * Get Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value. 
+     * @return Height Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
-     * @param Height The height of the output stream (pixels). This parameter is required if audio and video are relayed. Value range: [0, 1080].
+     * Set Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
+     * @param Height Output stream is high and required for audio and video output. value ranges from 0 to 1920. unit: pixel value.
      */
     public void setHeight(Long Height) {
         this.Height = Height;

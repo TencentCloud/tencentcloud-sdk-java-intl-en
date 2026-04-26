@@ -31,6 +31,20 @@ public class CreateAuditTrackRequest extends AbstractModel {
     private String Name;
 
     /**
+    * Tracking set status (0: Not enabled; 1: Enabled).
+    */
+    @SerializedName("Status")
+    @Expose
+    private Long Status;
+
+    /**
+    * Storage type of shipped data. Valid values: `cos`, `cls`.
+    */
+    @SerializedName("Storage")
+    @Expose
+    private Storage Storage;
+
+    /**
     * Tracking set event type (`Read`: Read; `Write`: Write; `*`: All)
     */
     @SerializedName("ActionType")
@@ -45,13 +59,6 @@ public class CreateAuditTrackRequest extends AbstractModel {
     private String ResourceType;
 
     /**
-    * Tracking set status (0: Not enabled; 1: Enabled)
-    */
-    @SerializedName("Status")
-    @Expose
-    private Long Status;
-
-    /**
     * The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
     */
     @SerializedName("EventNames")
@@ -59,18 +66,18 @@ public class CreateAuditTrackRequest extends AbstractModel {
     private String [] EventNames;
 
     /**
-    * Storage type of shipped data. Valid values: `cos`, `cls`.
-    */
-    @SerializedName("Storage")
-    @Expose
-    private Storage Storage;
-
-    /**
-    * Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+    * Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
     */
     @SerializedName("TrackForAllMembers")
     @Expose
     private Long TrackForAllMembers;
+
+    /**
+    * 
+    */
+    @SerializedName("ExportId")
+    @Expose
+    private String ExportId;
 
     /**
      * Get Tracking set name, which can only contain 3-48 letters, digits, hyphens, and underscores. 
@@ -86,6 +93,38 @@ public class CreateAuditTrackRequest extends AbstractModel {
      */
     public void setName(String Name) {
         this.Name = Name;
+    }
+
+    /**
+     * Get Tracking set status (0: Not enabled; 1: Enabled). 
+     * @return Status Tracking set status (0: Not enabled; 1: Enabled).
+     */
+    public Long getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set Tracking set status (0: Not enabled; 1: Enabled).
+     * @param Status Tracking set status (0: Not enabled; 1: Enabled).
+     */
+    public void setStatus(Long Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get Storage type of shipped data. Valid values: `cos`, `cls`. 
+     * @return Storage Storage type of shipped data. Valid values: `cos`, `cls`.
+     */
+    public Storage getStorage() {
+        return this.Storage;
+    }
+
+    /**
+     * Set Storage type of shipped data. Valid values: `cos`, `cls`.
+     * @param Storage Storage type of shipped data. Valid values: `cos`, `cls`.
+     */
+    public void setStorage(Storage Storage) {
+        this.Storage = Storage;
     }
 
     /**
@@ -121,22 +160,6 @@ public class CreateAuditTrackRequest extends AbstractModel {
     }
 
     /**
-     * Get Tracking set status (0: Not enabled; 1: Enabled) 
-     * @return Status Tracking set status (0: Not enabled; 1: Enabled)
-     */
-    public Long getStatus() {
-        return this.Status;
-    }
-
-    /**
-     * Set Tracking set status (0: Not enabled; 1: Enabled)
-     * @param Status Tracking set status (0: Not enabled; 1: Enabled)
-     */
-    public void setStatus(Long Status) {
-        this.Status = Status;
-    }
-
-    /**
      * Get The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported. 
      * @return EventNames The list of API names of tracking set events. When `ResourceType` is `*`, the value of `EventNames` must be `*`. When `ResourceType` is a specified product, the value of `EventNames` can be `*`. When `ResourceType` is `cos` or `cls`, up to 10 APIs are supported.
      */
@@ -153,35 +176,35 @@ public class CreateAuditTrackRequest extends AbstractModel {
     }
 
     /**
-     * Get Storage type of shipped data. Valid values: `cos`, `cls`. 
-     * @return Storage Storage type of shipped data. Valid values: `cos`, `cls`.
-     */
-    public Storage getStorage() {
-        return this.Storage;
-    }
-
-    /**
-     * Set Storage type of shipped data. Valid values: `cos`, `cls`.
-     * @param Storage Storage type of shipped data. Valid values: `cos`, `cls`.
-     */
-    public void setStorage(Storage Storage) {
-        this.Storage = Storage;
-    }
-
-    /**
-     * Get Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account) 
-     * @return TrackForAllMembers Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+     * Get Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account) 
+     * @return TrackForAllMembers Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
      */
     public Long getTrackForAllMembers() {
         return this.TrackForAllMembers;
     }
 
     /**
-     * Set Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
-     * @param TrackForAllMembers Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+     * Set Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+     * @param TrackForAllMembers Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
      */
     public void setTrackForAllMembers(Long TrackForAllMembers) {
         this.TrackForAllMembers = TrackForAllMembers;
+    }
+
+    /**
+     * Get  
+     * @return ExportId 
+     */
+    public String getExportId() {
+        return this.ExportId;
+    }
+
+    /**
+     * Set 
+     * @param ExportId 
+     */
+    public void setExportId(String ExportId) {
+        this.ExportId = ExportId;
     }
 
     public CreateAuditTrackRequest() {
@@ -195,14 +218,17 @@ public class CreateAuditTrackRequest extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Status != null) {
+            this.Status = new Long(source.Status);
+        }
+        if (source.Storage != null) {
+            this.Storage = new Storage(source.Storage);
+        }
         if (source.ActionType != null) {
             this.ActionType = new String(source.ActionType);
         }
         if (source.ResourceType != null) {
             this.ResourceType = new String(source.ResourceType);
-        }
-        if (source.Status != null) {
-            this.Status = new Long(source.Status);
         }
         if (source.EventNames != null) {
             this.EventNames = new String[source.EventNames.length];
@@ -210,11 +236,11 @@ public class CreateAuditTrackRequest extends AbstractModel {
                 this.EventNames[i] = new String(source.EventNames[i]);
             }
         }
-        if (source.Storage != null) {
-            this.Storage = new Storage(source.Storage);
-        }
         if (source.TrackForAllMembers != null) {
             this.TrackForAllMembers = new Long(source.TrackForAllMembers);
+        }
+        if (source.ExportId != null) {
+            this.ExportId = new String(source.ExportId);
         }
     }
 
@@ -224,12 +250,13 @@ public class CreateAuditTrackRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamObj(map, prefix + "Storage.", this.Storage);
         this.setParamSimple(map, prefix + "ActionType", this.ActionType);
         this.setParamSimple(map, prefix + "ResourceType", this.ResourceType);
-        this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "EventNames.", this.EventNames);
-        this.setParamObj(map, prefix + "Storage.", this.Storage);
         this.setParamSimple(map, prefix + "TrackForAllMembers", this.TrackForAllMembers);
+        this.setParamSimple(map, prefix + "ExportId", this.ExportId);
 
     }
 }

@@ -39,21 +39,6 @@ public class CloudauditClient extends AbstractClient{
     }
 
     /**
-     *Parameter requirements:
-1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `osBucketName` are required.
-2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
-3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
-4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
-     * @param req CreateAuditRequest
-     * @return CreateAuditResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateAuditResponse CreateAudit(CreateAuditRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateAudit", CreateAuditResponse.class);
-    }
-
-    /**
      *This API is used to create a tracking set.
      * @param req CreateAuditTrackRequest
      * @return CreateAuditTrackResponse
@@ -62,17 +47,6 @@ public class CloudauditClient extends AbstractClient{
     public CreateAuditTrackResponse CreateAuditTrack(CreateAuditTrackRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAuditTrack", CreateAuditTrackResponse.class);
-    }
-
-    /**
-     *This API is used to delete a tracking set.
-     * @param req DeleteAuditRequest
-     * @return DeleteAuditResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteAuditResponse DeleteAudit(DeleteAuditRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteAudit", DeleteAuditResponse.class);
     }
 
     /**

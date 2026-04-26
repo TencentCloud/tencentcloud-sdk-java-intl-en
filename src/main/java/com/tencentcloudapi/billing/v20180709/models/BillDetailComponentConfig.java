@@ -25,7 +25,6 @@ public class BillDetailComponentConfig extends AbstractModel {
 
     /**
     * Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
@@ -33,17 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Configuration description name 
      * @return Name Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
@@ -51,19 +47,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Name Configuration description name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Configuration description value 
      * @return Value Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getValue() {
         return this.Value;
@@ -71,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Value Configuration description value
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setValue(String Value) {
         this.Value = Value;

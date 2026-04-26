@@ -220,6 +220,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] ResourceId;
 
     /**
+    * Availability zone Id corresponding to the order
+    */
+    @SerializedName("ZoneCode")
+    @Expose
+    private String ZoneCode;
+
+    /**
      * Get Order ID. 
      * @return OrderId Order ID.
      */
@@ -691,6 +698,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ResourceId = ResourceId;
     }
 
+    /**
+     * Get Availability zone Id corresponding to the order 
+     * @return ZoneCode Availability zone Id corresponding to the order
+     */
+    public String getZoneCode() {
+        return this.ZoneCode;
+    }
+
+    /**
+     * Set Availability zone Id corresponding to the order
+     * @param ZoneCode Availability zone Id corresponding to the order
+     */
+    public void setZoneCode(String ZoneCode) {
+        this.ZoneCode = ZoneCode;
+    }
+
     public Deal() {
     }
 
@@ -783,6 +806,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.ResourceId[i] = new String(source.ResourceId[i]);
             }
         }
+        if (source.ZoneCode != null) {
+            this.ZoneCode = new String(source.ZoneCode);
+        }
     }
 
 
@@ -816,6 +842,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ProductName", this.ProductName);
         this.setParamSimple(map, prefix + "SubProductName", this.SubProductName);
         this.setParamArraySimple(map, prefix + "ResourceId.", this.ResourceId);
+        this.setParamSimple(map, prefix + "ZoneCode", this.ZoneCode);
 
     }
 }

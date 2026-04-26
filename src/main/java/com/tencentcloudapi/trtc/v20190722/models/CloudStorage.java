@@ -32,7 +32,7 @@ public class CloudStorage extends AbstractModel {
     private Long Vendor;
 
     /**
-    * [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+    * [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
@@ -72,6 +72,13 @@ To store files to tencent cloud object storage (COS), visit https://console.clou
     private String [] FileNamePrefix;
 
     /**
+    * If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
+    */
+    @SerializedName("EndpointUrl")
+    @Expose
+    private String EndpointUrl;
+
+    /**
      * Get The cloud storage provider.
 `0`: Tencent Cloud COS; `1`: AWS storage. Other vendors are not supported currently. 
      * @return Vendor The cloud storage provider.
@@ -92,11 +99,11 @@ To store files to tencent cloud object storage (COS), visit https://console.clou
     }
 
     /**
-     * Get [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+     * Get [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3. 
-     * @return Region [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+     * @return Region [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
@@ -106,11 +113,11 @@ Example value: cn-shanghai-1.
     }
 
     /**
-     * Set [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+     * Set [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
-     * @param Region [Region information](https://www.tencentcloud.com/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
+     * @param Region [Region information](https://www.tencentcloud.comom/document/product/436/6224?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F) of tencent cloud object storage.
 Example value: cn-shanghai-1.
 
 [Region information](https://docs.AWS.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions) of AWS S3.
@@ -191,6 +198,22 @@ To store files to tencent cloud object storage (COS), visit https://console.clou
         this.FileNamePrefix = FileNamePrefix;
     }
 
+    /**
+     * Get If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com" 
+     * @return EndpointUrl If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
+     */
+    public String getEndpointUrl() {
+        return this.EndpointUrl;
+    }
+
+    /**
+     * Set If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
+     * @param EndpointUrl If specified, the client uses this S3-compatible endpoint override instead of the default AWS S3 endpoint. This is useful for S3-compatible storage services such as Cloudflare R2. Example: "account_id.r2.cloudflarestorage.com"
+     */
+    public void setEndpointUrl(String EndpointUrl) {
+        this.EndpointUrl = EndpointUrl;
+    }
+
     public CloudStorage() {
     }
 
@@ -220,6 +243,9 @@ To store files to tencent cloud object storage (COS), visit https://console.clou
                 this.FileNamePrefix[i] = new String(source.FileNamePrefix[i]);
             }
         }
+        if (source.EndpointUrl != null) {
+            this.EndpointUrl = new String(source.EndpointUrl);
+        }
     }
 
 
@@ -233,6 +259,7 @@ To store files to tencent cloud object storage (COS), visit https://console.clou
         this.setParamSimple(map, prefix + "AccessKey", this.AccessKey);
         this.setParamSimple(map, prefix + "SecretKey", this.SecretKey);
         this.setParamArraySimple(map, prefix + "FileNamePrefix.", this.FileNamePrefix);
+        this.setParamSimple(map, prefix + "EndpointUrl", this.EndpointUrl);
 
     }
 }

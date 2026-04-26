@@ -25,24 +25,21 @@ public class AnalyseProjectDetail extends AbstractModel {
 
     /**
     * Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * Default projectNote: This field may return null, indicating that no valid values can be obtained.
+    * default project
     */
     @SerializedName("ProjectName")
     @Expose
     private String ProjectName;
 
     /**
-     * Get Project ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Project ID 
      * @return ProjectId Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProjectId() {
         return this.ProjectId;
@@ -50,25 +47,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param ProjectId Project ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Default projectNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectName Default projectNote: This field may return null, indicating that no valid values can be obtained.
+     * Get default project 
+     * @return ProjectName default project
      */
     public String getProjectName() {
         return this.ProjectName;
     }
 
     /**
-     * Set Default projectNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ProjectName Default projectNote: This field may return null, indicating that no valid values can be obtained.
+     * Set default project
+     * @param ProjectName default project
      */
     public void setProjectName(String ProjectName) {
         this.ProjectName = ProjectName;

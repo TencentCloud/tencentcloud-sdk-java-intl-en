@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateAllocationRuleRequest extends AbstractModel {
 
     /**
-    * List of sharing rules.
+    * List of sharing rules
     */
     @SerializedName("RuleList")
     @Expose
@@ -38,16 +38,16 @@ public class CreateAllocationRuleRequest extends AbstractModel {
     private String Month;
 
     /**
-     * Get List of sharing rules. 
-     * @return RuleList List of sharing rules.
+     * Get List of sharing rules 
+     * @return RuleList List of sharing rules
      */
     public AllocationRulesSummary getRuleList() {
         return this.RuleList;
     }
 
     /**
-     * Set List of sharing rules.
-     * @param RuleList List of sharing rules.
+     * Set List of sharing rules
+     * @param RuleList List of sharing rules
      */
     public void setRuleList(AllocationRulesSummary RuleList) {
         this.RuleList = RuleList;

@@ -31,7 +31,7 @@ public class ConsumptionSummaryTrend extends AbstractModel {
     private String Type;
 
     /**
-    * Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
+    * Trend value. The value of this field is null when Type is none.
     */
     @SerializedName("Value")
     @Expose
@@ -54,16 +54,16 @@ public class ConsumptionSummaryTrend extends AbstractModel {
     }
 
     /**
-     * Get Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Value Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Trend value. The value of this field is null when Type is none. 
+     * @return Value Trend value. The value of this field is null when Type is none.
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Value Trend value. The value is null when Type is none.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Trend value. The value of this field is null when Type is none.
+     * @param Value Trend value. The value of this field is null when Type is none.
      */
     public void setValue(String Value) {
         this.Value = Value;

@@ -38,7 +38,7 @@ public class AnalyseDetail extends AbstractModel {
     private String Total;
 
     /**
-    * Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
+    * Date Detail Amount
     */
     @SerializedName("TimeDetail")
     @Expose
@@ -77,16 +77,16 @@ public class AnalyseDetail extends AbstractModel {
     }
 
     /**
-     * Get Date detailed amountNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return TimeDetail Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Date Detail Amount 
+     * @return TimeDetail Date Detail Amount
      */
     public AnalyseTimeDetail [] getTimeDetail() {
         return this.TimeDetail;
     }
 
     /**
-     * Set Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
-     * @param TimeDetail Date detailed amountNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Date Detail Amount
+     * @param TimeDetail Date Detail Amount
      */
     public void setTimeDetail(AnalyseTimeDetail [] TimeDetail) {
         this.TimeDetail = TimeDetail;

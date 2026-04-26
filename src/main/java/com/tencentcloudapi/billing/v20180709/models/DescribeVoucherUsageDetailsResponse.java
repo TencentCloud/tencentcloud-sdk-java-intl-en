@@ -38,8 +38,7 @@ public class DescribeVoucherUsageDetailsResponse extends AbstractModel {
     private Long TotalUsedAmount;
 
     /**
-    * The usage details.
-Note: This field may return `null`, indicating that no valid value was found.
+    * Voucher usage record details
     */
     @SerializedName("UsageRecords")
     @Expose
@@ -85,20 +84,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get The usage details.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return UsageRecords The usage details.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Voucher usage record details 
+     * @return UsageRecords Voucher usage record details
      */
     public UsageRecords [] getUsageRecords() {
         return this.UsageRecords;
     }
 
     /**
-     * Set The usage details.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param UsageRecords The usage details.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Voucher usage record details
+     * @param UsageRecords Voucher usage record details
      */
     public void setUsageRecords(UsageRecords [] UsageRecords) {
         this.UsageRecords = UsageRecords;

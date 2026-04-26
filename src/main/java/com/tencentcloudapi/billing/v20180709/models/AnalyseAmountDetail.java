@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AnalyseAmountDetail extends AbstractModel {
 
     /**
-    * Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+    * Fee type
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
+    * Indicates whether to display
     */
     @SerializedName("Display")
     @Expose
     private Long Display;
 
     /**
-     * Get Fee typeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Key Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Fee type 
+     * @return Key Fee type
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Fee typeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Key Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Fee type
+     * @param Key Fee type
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Whether to displayNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Display Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Indicates whether to display 
+     * @return Display Indicates whether to display
      */
     public Long getDisplay() {
         return this.Display;
     }
 
     /**
-     * Set Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Display Whether to displayNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Indicates whether to display
+     * @param Display Indicates whether to display
      */
     public void setDisplay(Long Display) {
         this.Display = Display;

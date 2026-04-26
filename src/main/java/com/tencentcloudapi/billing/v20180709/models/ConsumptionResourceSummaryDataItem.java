@@ -115,21 +115,21 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
     private String ConsumptionTypeName;
 
     /**
-    * Pre-discount priceNote: This field may return null, indicating that no valid values can be obtained.
+    * Original price
     */
     @SerializedName("RealCost")
     @Expose
     private String RealCost;
 
     /**
-    * Start time of feesNote: This field may return null, indicating that no valid values can be obtained.
+    * Fee start time
     */
     @SerializedName("FeeBeginTime")
     @Expose
     private String FeeBeginTime;
 
     /**
-    * End time of feesNote: This field may return null, indicating that no valid values can be obtained.
+    * End time of fees
     */
     @SerializedName("FeeEndTime")
     @Expose
@@ -137,28 +137,27 @@ public class ConsumptionResourceSummaryDataItem extends AbstractModel {
 
     /**
     * Days
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DayDiff")
     @Expose
     private String DayDiff;
 
     /**
-    * Daily consumptionNote: This field may return null, indicating that no valid values can be obtained.
+    * Daily consumption
     */
     @SerializedName("DailyTotalCost")
     @Expose
     private String DailyTotalCost;
 
     /**
-    * Order numberNote: This field may return null, indicating that no valid values can be obtained.
+    * Order ID
     */
     @SerializedName("OrderId")
     @Expose
     private String OrderId;
 
     /**
-    * VoucherNote: This field may return null, indicating that no valid values can be obtained.
+    * Voucher
     */
     @SerializedName("VoucherPayAmount")
     @Expose
@@ -166,140 +165,160 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+    * Royalty amount
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
 
     /**
-    * Payer UIN: the account ID of the payer, which is the unique identifier of a Tencent Cloud userNote: This field may return null, indicating that no valid values can be obtained.
+    * Tax
+    */
+    @SerializedName("Tax")
+    @Expose
+    private String Tax;
+
+    /**
+    * tax rate
+    */
+    @SerializedName("TaxRate")
+    @Expose
+    private String TaxRate;
+
+    /**
+    * Cash payment (pre-tax)
+    */
+    @SerializedName("AmountBeforeTax")
+    @Expose
+    private String AmountBeforeTax;
+
+    /**
+    * Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * User UIN: the account ID of the actual resource userNote: This field may return null, indicating that no valid values can be obtained.
+    * User UIN: Account ID of the actual resource user
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-    * Operator UIN: the account ID or role ID of the operator who places orders for prepaid resources or activates postpaid resourcesNote: This field may return null, indicating that no valid values can be obtained.
+    * Operator UIN: Operator account ID (ID of the operator who places orders for prepaid resources or activates postpaid resource account, or role ID).
     */
     @SerializedName("OperateUin")
     @Expose
     private String OperateUin;
 
     /**
-    * Subproduct codeNote: This field may return null, indicating that no valid values can be obtained.
+    * Subproduct code
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * Subproduct name: the subcategory of a product purchased by the user, such as CVM – Standard S1Note: This field may return null, indicating that no valid values can be obtained.
+    * Subproduct name: Product subdivision type purchased by the user, such as Cloud Virtual Machine (CVM)-Standard Type S1
     */
     @SerializedName("ProductCodeName")
     @Expose
     private String ProductCodeName;
 
     /**
-    * Region typeNote: This field may return null, indicating that no valid values can be obtained.
+    * Region type
     */
     @SerializedName("RegionType")
     @Expose
     private String RegionType;
 
     /**
-    * Region type nameNote: This field may return null, indicating that no valid values can be obtained.
+    * Region type name.
     */
     @SerializedName("RegionTypeName")
     @Expose
     private String RegionTypeName;
 
     /**
-    * Extended field 1Note: This field may return null, indicating that no valid values can be obtained.
+    * Extension Field 1
     */
     @SerializedName("Extend1")
     @Expose
     private String Extend1;
 
     /**
-    * Extended field 2Note: This field may return null, indicating that no valid values can be obtained.
+    * Extension Field 2
     */
     @SerializedName("Extend2")
     @Expose
     private String Extend2;
 
     /**
-    * Extended field 3Note: This field may return null, indicating that no valid values can be obtained.
+    * Extension Field 3
     */
     @SerializedName("Extend3")
     @Expose
     private String Extend3;
 
     /**
-    * Extended field 4Note: This field may return null, indicating that no valid values can be obtained.
+    * Extension Field 4
     */
     @SerializedName("Extend4")
     @Expose
     private String Extend4;
 
     /**
-    * Extended field 5Note: This field may return null, indicating that no valid values can be obtained.
+    * Extension Field 5
     */
     @SerializedName("Extend5")
     @Expose
     private String Extend5;
 
     /**
-    * Instance typeNote: This field may return null, indicating that no valid values can be obtained.
+    * Instance type
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Instance type nameNote: This field may return null, indicating that no valid values can be obtained.
+    * Instance Type Name
     */
     @SerializedName("InstanceTypeName")
     @Expose
     private String InstanceTypeName;
 
     /**
-    * Deduction time: the time at which a payment is deductedNote: This field may return null, indicating that no valid values can be obtained.
+    * Deduction time: Deduction time
     */
     @SerializedName("PayTime")
     @Expose
     private String PayTime;
 
     /**
-    * Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3Note: This field may return null, indicating that no valid values can be obtained.
+    * Availability zone: The availability zone where the resource is located, such as Guangzhou Zone 3.
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained.
+    * Describing Configurations
     */
     @SerializedName("ComponentConfig")
     @Expose
     private String ComponentConfig;
 
     /**
-    * Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag information.
     */
     @SerializedName("Tags")
     @Expose
@@ -514,58 +533,56 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Pre-discount priceNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return RealCost Pre-discount priceNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Original price 
+     * @return RealCost Original price
      */
     public String getRealCost() {
         return this.RealCost;
     }
 
     /**
-     * Set Pre-discount priceNote: This field may return null, indicating that no valid values can be obtained.
-     * @param RealCost Pre-discount priceNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Original price
+     * @param RealCost Original price
      */
     public void setRealCost(String RealCost) {
         this.RealCost = RealCost;
     }
 
     /**
-     * Get Start time of feesNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return FeeBeginTime Start time of feesNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Fee start time 
+     * @return FeeBeginTime Fee start time
      */
     public String getFeeBeginTime() {
         return this.FeeBeginTime;
     }
 
     /**
-     * Set Start time of feesNote: This field may return null, indicating that no valid values can be obtained.
-     * @param FeeBeginTime Start time of feesNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Fee start time
+     * @param FeeBeginTime Fee start time
      */
     public void setFeeBeginTime(String FeeBeginTime) {
         this.FeeBeginTime = FeeBeginTime;
     }
 
     /**
-     * Get End time of feesNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return FeeEndTime End time of feesNote: This field may return null, indicating that no valid values can be obtained.
+     * Get End time of fees 
+     * @return FeeEndTime End time of fees
      */
     public String getFeeEndTime() {
         return this.FeeEndTime;
     }
 
     /**
-     * Set End time of feesNote: This field may return null, indicating that no valid values can be obtained.
-     * @param FeeEndTime End time of feesNote: This field may return null, indicating that no valid values can be obtained.
+     * Set End time of fees
+     * @param FeeEndTime End time of fees
      */
     public void setFeeEndTime(String FeeEndTime) {
         this.FeeEndTime = FeeEndTime;
     }
 
     /**
-     * Get Days
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Days 
      * @return DayDiff Days
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDayDiff() {
         return this.DayDiff;
@@ -573,67 +590,63 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Days
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DayDiff Days
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDayDiff(String DayDiff) {
         this.DayDiff = DayDiff;
     }
 
     /**
-     * Get Daily consumptionNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return DailyTotalCost Daily consumptionNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Daily consumption 
+     * @return DailyTotalCost Daily consumption
      */
     public String getDailyTotalCost() {
         return this.DailyTotalCost;
     }
 
     /**
-     * Set Daily consumptionNote: This field may return null, indicating that no valid values can be obtained.
-     * @param DailyTotalCost Daily consumptionNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Daily consumption
+     * @param DailyTotalCost Daily consumption
      */
     public void setDailyTotalCost(String DailyTotalCost) {
         this.DailyTotalCost = DailyTotalCost;
     }
 
     /**
-     * Get Order numberNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrderId Order numberNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Order ID 
+     * @return OrderId Order ID
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set Order numberNote: This field may return null, indicating that no valid values can be obtained.
-     * @param OrderId Order numberNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Order ID
+     * @param OrderId Order ID
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;
     }
 
     /**
-     * Get VoucherNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoucherPayAmount VoucherNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Voucher 
+     * @return VoucherPayAmount Voucher
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set VoucherNote: This field may return null, indicating that no valid values can be obtained.
-     * @param VoucherPayAmount VoucherNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Voucher
+     * @param VoucherPayAmount Voucher
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Bonus
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Bonus 
      * @return IncentivePayAmount Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
@@ -641,313 +654,359 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IncentivePayAmount Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Share revenueNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Royalty amount 
+     * @return TransferPayAmount Royalty amount
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Share revenueNote: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Royalty amount
+     * @param TransferPayAmount Royalty amount
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get Payer UIN: the account ID of the payer, which is the unique identifier of a Tencent Cloud userNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayerUin Payer UIN: the account ID of the payer, which is the unique identifier of a Tencent Cloud userNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Tax 
+     * @return Tax Tax
+     */
+    public String getTax() {
+        return this.Tax;
+    }
+
+    /**
+     * Set Tax
+     * @param Tax Tax
+     */
+    public void setTax(String Tax) {
+        this.Tax = Tax;
+    }
+
+    /**
+     * Get tax rate 
+     * @return TaxRate tax rate
+     */
+    public String getTaxRate() {
+        return this.TaxRate;
+    }
+
+    /**
+     * Set tax rate
+     * @param TaxRate tax rate
+     */
+    public void setTaxRate(String TaxRate) {
+        this.TaxRate = TaxRate;
+    }
+
+    /**
+     * Get Cash payment (pre-tax) 
+     * @return AmountBeforeTax Cash payment (pre-tax)
+     */
+    public String getAmountBeforeTax() {
+        return this.AmountBeforeTax;
+    }
+
+    /**
+     * Set Cash payment (pre-tax)
+     * @param AmountBeforeTax Cash payment (pre-tax)
+     */
+    public void setAmountBeforeTax(String AmountBeforeTax) {
+        this.AmountBeforeTax = AmountBeforeTax;
+    }
+
+    /**
+     * Get Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud. 
+     * @return PayerUin Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set Payer UIN: the account ID of the payer, which is the unique identifier of a Tencent Cloud userNote: This field may return null, indicating that no valid values can be obtained.
-     * @param PayerUin Payer UIN: the account ID of the payer, which is the unique identifier of a Tencent Cloud userNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+     * @param PayerUin Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get User UIN: the account ID of the actual resource userNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return OwnerUin User UIN: the account ID of the actual resource userNote: This field may return null, indicating that no valid values can be obtained.
+     * Get User UIN: Account ID of the actual resource user 
+     * @return OwnerUin User UIN: Account ID of the actual resource user
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set User UIN: the account ID of the actual resource userNote: This field may return null, indicating that no valid values can be obtained.
-     * @param OwnerUin User UIN: the account ID of the actual resource userNote: This field may return null, indicating that no valid values can be obtained.
+     * Set User UIN: Account ID of the actual resource user
+     * @param OwnerUin User UIN: Account ID of the actual resource user
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get Operator UIN: the account ID or role ID of the operator who places orders for prepaid resources or activates postpaid resourcesNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return OperateUin Operator UIN: the account ID or role ID of the operator who places orders for prepaid resources or activates postpaid resourcesNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Operator UIN: Operator account ID (ID of the operator who places orders for prepaid resources or activates postpaid resource account, or role ID). 
+     * @return OperateUin Operator UIN: Operator account ID (ID of the operator who places orders for prepaid resources or activates postpaid resource account, or role ID).
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set Operator UIN: the account ID or role ID of the operator who places orders for prepaid resources or activates postpaid resourcesNote: This field may return null, indicating that no valid values can be obtained.
-     * @param OperateUin Operator UIN: the account ID or role ID of the operator who places orders for prepaid resources or activates postpaid resourcesNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Operator UIN: Operator account ID (ID of the operator who places orders for prepaid resources or activates postpaid resource account, or role ID).
+     * @param OperateUin Operator UIN: Operator account ID (ID of the operator who places orders for prepaid resources or activates postpaid resource account, or role ID).
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get Subproduct codeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProductCode Subproduct codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Subproduct code 
+     * @return ProductCode Subproduct code
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set Subproduct codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ProductCode Subproduct codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Subproduct code
+     * @param ProductCode Subproduct code
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get Subproduct name: the subcategory of a product purchased by the user, such as CVM – Standard S1Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProductCodeName Subproduct name: the subcategory of a product purchased by the user, such as CVM – Standard S1Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Subproduct name: Product subdivision type purchased by the user, such as Cloud Virtual Machine (CVM)-Standard Type S1 
+     * @return ProductCodeName Subproduct name: Product subdivision type purchased by the user, such as Cloud Virtual Machine (CVM)-Standard Type S1
      */
     public String getProductCodeName() {
         return this.ProductCodeName;
     }
 
     /**
-     * Set Subproduct name: the subcategory of a product purchased by the user, such as CVM – Standard S1Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProductCodeName Subproduct name: the subcategory of a product purchased by the user, such as CVM – Standard S1Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Subproduct name: Product subdivision type purchased by the user, such as Cloud Virtual Machine (CVM)-Standard Type S1
+     * @param ProductCodeName Subproduct name: Product subdivision type purchased by the user, such as Cloud Virtual Machine (CVM)-Standard Type S1
      */
     public void setProductCodeName(String ProductCodeName) {
         this.ProductCodeName = ProductCodeName;
     }
 
     /**
-     * Get Region typeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegionType Region typeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Region type 
+     * @return RegionType Region type
      */
     public String getRegionType() {
         return this.RegionType;
     }
 
     /**
-     * Set Region typeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param RegionType Region typeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Region type
+     * @param RegionType Region type
      */
     public void setRegionType(String RegionType) {
         this.RegionType = RegionType;
     }
 
     /**
-     * Get Region type nameNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegionTypeName Region type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Region type name. 
+     * @return RegionTypeName Region type name.
      */
     public String getRegionTypeName() {
         return this.RegionTypeName;
     }
 
     /**
-     * Set Region type nameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param RegionTypeName Region type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Region type name.
+     * @param RegionTypeName Region type name.
      */
     public void setRegionTypeName(String RegionTypeName) {
         this.RegionTypeName = RegionTypeName;
     }
 
     /**
-     * Get Extended field 1Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Extend1 Extended field 1Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Extension Field 1 
+     * @return Extend1 Extension Field 1
      */
     public String getExtend1() {
         return this.Extend1;
     }
 
     /**
-     * Set Extended field 1Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Extend1 Extended field 1Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Extension Field 1
+     * @param Extend1 Extension Field 1
      */
     public void setExtend1(String Extend1) {
         this.Extend1 = Extend1;
     }
 
     /**
-     * Get Extended field 2Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Extend2 Extended field 2Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Extension Field 2 
+     * @return Extend2 Extension Field 2
      */
     public String getExtend2() {
         return this.Extend2;
     }
 
     /**
-     * Set Extended field 2Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Extend2 Extended field 2Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Extension Field 2
+     * @param Extend2 Extension Field 2
      */
     public void setExtend2(String Extend2) {
         this.Extend2 = Extend2;
     }
 
     /**
-     * Get Extended field 3Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Extend3 Extended field 3Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Extension Field 3 
+     * @return Extend3 Extension Field 3
      */
     public String getExtend3() {
         return this.Extend3;
     }
 
     /**
-     * Set Extended field 3Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Extend3 Extended field 3Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Extension Field 3
+     * @param Extend3 Extension Field 3
      */
     public void setExtend3(String Extend3) {
         this.Extend3 = Extend3;
     }
 
     /**
-     * Get Extended field 4Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Extend4 Extended field 4Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Extension Field 4 
+     * @return Extend4 Extension Field 4
      */
     public String getExtend4() {
         return this.Extend4;
     }
 
     /**
-     * Set Extended field 4Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Extend4 Extended field 4Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Extension Field 4
+     * @param Extend4 Extension Field 4
      */
     public void setExtend4(String Extend4) {
         this.Extend4 = Extend4;
     }
 
     /**
-     * Get Extended field 5Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Extend5 Extended field 5Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Extension Field 5 
+     * @return Extend5 Extension Field 5
      */
     public String getExtend5() {
         return this.Extend5;
     }
 
     /**
-     * Set Extended field 5Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Extend5 Extended field 5Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Extension Field 5
+     * @param Extend5 Extension Field 5
      */
     public void setExtend5(String Extend5) {
         this.Extend5 = Extend5;
     }
 
     /**
-     * Get Instance typeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceType Instance typeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance type 
+     * @return InstanceType Instance type
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance typeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceType Instance typeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance type
+     * @param InstanceType Instance type
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Instance type nameNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceTypeName Instance type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance Type Name 
+     * @return InstanceTypeName Instance Type Name
      */
     public String getInstanceTypeName() {
         return this.InstanceTypeName;
     }
 
     /**
-     * Set Instance type nameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceTypeName Instance type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance Type Name
+     * @param InstanceTypeName Instance Type Name
      */
     public void setInstanceTypeName(String InstanceTypeName) {
         this.InstanceTypeName = InstanceTypeName;
     }
 
     /**
-     * Get Deduction time: the time at which a payment is deductedNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayTime Deduction time: the time at which a payment is deductedNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Deduction time: Deduction time 
+     * @return PayTime Deduction time: Deduction time
      */
     public String getPayTime() {
         return this.PayTime;
     }
 
     /**
-     * Set Deduction time: the time at which a payment is deductedNote: This field may return null, indicating that no valid values can be obtained.
-     * @param PayTime Deduction time: the time at which a payment is deductedNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Deduction time: Deduction time
+     * @param PayTime Deduction time: Deduction time
      */
     public void setPayTime(String PayTime) {
         this.PayTime = PayTime;
     }
 
     /**
-     * Get Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneName Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Availability zone: The availability zone where the resource is located, such as Guangzhou Zone 3. 
+     * @return ZoneName Availability zone: The availability zone where the resource is located, such as Guangzhou Zone 3.
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneName Availability zone: availability zone of a resource, e.g. Guangzhou Zone 3Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Availability zone: The availability zone where the resource is located, such as Guangzhou Zone 3.
+     * @param ZoneName Availability zone: The availability zone where the resource is located, such as Guangzhou Zone 3.
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ComponentConfig Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Describing Configurations 
+     * @return ComponentConfig Describing Configurations
      */
     public String getComponentConfig() {
         return this.ComponentConfig;
     }
 
     /**
-     * Set Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ComponentConfig Configuration descriptionNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Describing Configurations
+     * @param ComponentConfig Describing Configurations
      */
     public void setComponentConfig(String ComponentConfig) {
         this.ComponentConfig = ComponentConfig;
     }
 
     /**
-     * Get Tag information.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag information. 
+     * @return Tags Tag information.
      */
     public String getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag information.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag information.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag information.
+     * @param Tags Tag information.
      */
     public void setTags(String Tags) {
         this.Tags = Tags;
@@ -1026,6 +1085,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (source.TransferPayAmount != null) {
             this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
+        if (source.Tax != null) {
+            this.Tax = new String(source.Tax);
+        }
+        if (source.TaxRate != null) {
+            this.TaxRate = new String(source.TaxRate);
+        }
+        if (source.AmountBeforeTax != null) {
+            this.AmountBeforeTax = new String(source.AmountBeforeTax);
         }
         if (source.PayerUin != null) {
             this.PayerUin = new String(source.PayerUin);
@@ -1110,6 +1178,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+        this.setParamSimple(map, prefix + "Tax", this.Tax);
+        this.setParamSimple(map, prefix + "TaxRate", this.TaxRate);
+        this.setParamSimple(map, prefix + "AmountBeforeTax", this.AmountBeforeTax);
         this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
         this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
         this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);

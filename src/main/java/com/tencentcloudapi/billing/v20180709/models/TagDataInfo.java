@@ -38,8 +38,7 @@ public class TagDataInfo extends AbstractModel {
     private Long Status;
 
     /**
-    * Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Set the allocation tag time. Ordinary tags do not return.
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -78,20 +77,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Set the allocation tag time. Ordinary tags do not return. 
+     * @return UpdateTime Set the allocation tag time. Ordinary tags do not return.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Time to set the cost allocation tag. It will not be returned if `Status` is `0`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Set the allocation tag time. Ordinary tags do not return.
+     * @param UpdateTime Set the allocation tag time. Ordinary tags do not return.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

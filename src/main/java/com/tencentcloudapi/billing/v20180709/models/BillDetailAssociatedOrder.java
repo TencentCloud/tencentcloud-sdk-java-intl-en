@@ -24,168 +24,138 @@ import java.util.HashMap;
 public class BillDetailAssociatedOrder extends AbstractModel {
 
     /**
-    * Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Newly purchased order
     */
     @SerializedName("PrepayPurchase")
     @Expose
     private String PrepayPurchase;
 
     /**
-    * Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Renewal order
     */
     @SerializedName("PrepayRenew")
     @Expose
     private String PrepayRenew;
 
     /**
-    * Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Configuration upgrade order
     */
     @SerializedName("PrepayModifyUp")
     @Expose
     private String PrepayModifyUp;
 
     /**
-    * Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Write-off order
     */
     @SerializedName("ReverseOrder")
     @Expose
     private String ReverseOrder;
 
     /**
-    * The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Order after discount adjustment
     */
     @SerializedName("NewOrder")
     @Expose
     private String NewOrder;
 
     /**
-    * The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Order before discount adjustment
     */
     @SerializedName("Original")
     @Expose
     private String Original;
 
     /**
-     * Get Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrepayPurchase Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Newly purchased order 
+     * @return PrepayPurchase Newly purchased order
      */
     public String getPrepayPurchase() {
         return this.PrepayPurchase;
     }
 
     /**
-     * Set Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrepayPurchase Purchase order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Newly purchased order
+     * @param PrepayPurchase Newly purchased order
      */
     public void setPrepayPurchase(String PrepayPurchase) {
         this.PrepayPurchase = PrepayPurchase;
     }
 
     /**
-     * Get Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrepayRenew Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Renewal order 
+     * @return PrepayRenew Renewal order
      */
     public String getPrepayRenew() {
         return this.PrepayRenew;
     }
 
     /**
-     * Set Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrepayRenew Renewal order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Renewal order
+     * @param PrepayRenew Renewal order
      */
     public void setPrepayRenew(String PrepayRenew) {
         this.PrepayRenew = PrepayRenew;
     }
 
     /**
-     * Get Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PrepayModifyUp Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Configuration upgrade order 
+     * @return PrepayModifyUp Configuration upgrade order
      */
     public String getPrepayModifyUp() {
         return this.PrepayModifyUp;
     }
 
     /**
-     * Set Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PrepayModifyUp Upgrade order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Configuration upgrade order
+     * @param PrepayModifyUp Configuration upgrade order
      */
     public void setPrepayModifyUp(String PrepayModifyUp) {
         this.PrepayModifyUp = PrepayModifyUp;
     }
 
     /**
-     * Get Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ReverseOrder Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Write-off order 
+     * @return ReverseOrder Write-off order
      */
     public String getReverseOrder() {
         return this.ReverseOrder;
     }
 
     /**
-     * Set Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReverseOrder Write-off order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Write-off order
+     * @param ReverseOrder Write-off order
      */
     public void setReverseOrder(String ReverseOrder) {
         this.ReverseOrder = ReverseOrder;
     }
 
     /**
-     * Get The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return NewOrder The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Order after discount adjustment 
+     * @return NewOrder Order after discount adjustment
      */
     public String getNewOrder() {
         return this.NewOrder;
     }
 
     /**
-     * Set The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param NewOrder The order after discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Order after discount adjustment
+     * @param NewOrder Order after discount adjustment
      */
     public void setNewOrder(String NewOrder) {
         this.NewOrder = NewOrder;
     }
 
     /**
-     * Get The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Original The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Order before discount adjustment 
+     * @return Original Order before discount adjustment
      */
     public String getOriginal() {
         return this.Original;
     }
 
     /**
-     * Set The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Original The original order before discount.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Order before discount adjustment
+     * @param Original Order before discount adjustment
      */
     public void setOriginal(String Original) {
         this.Original = Original;

@@ -185,8 +185,7 @@ public class BillDistributionResourceSummary extends AbstractModel {
     private String IncentivePayAmount;
 
     /**
-    * Commission credit payment: The amount paid with the user's commission credit.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Royalty account expenditure: The amount paid through the royalty account
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -215,7 +214,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
@@ -285,7 +283,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String OriginalCostWithSP;
 
     /**
-    * Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+    * Billing month
     */
     @SerializedName("BillMonth")
     @Expose
@@ -660,20 +658,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Commission credit payment: The amount paid with the user's commission credit.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit payment: The amount paid with the user's commission credit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Royalty account expenditure: The amount paid through the royalty account 
+     * @return TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit payment: The amount paid with the user's commission credit.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit payment: The amount paid with the user's commission credit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Royalty account expenditure: The amount paid through the royalty account
+     * @param TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
@@ -728,10 +722,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tag information.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Tag information. 
      * @return Tags Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BillTagInfo [] getTags() {
         return this.Tags;
@@ -739,9 +731,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tags Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(BillTagInfo [] Tags) {
         this.Tags = Tags;
@@ -896,16 +886,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Billing monthNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Billing month 
+     * @return BillMonth Billing month
      */
     public String getBillMonth() {
         return this.BillMonth;
     }
 
     /**
-     * Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
-     * @param BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Billing month
+     * @param BillMonth Billing month
      */
     public void setBillMonth(String BillMonth) {
         this.BillMonth = BillMonth;

@@ -25,7 +25,6 @@ public class DescribeCostDetailResponse extends AbstractModel {
 
     /**
     * Consumption details
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DetailSet")
     @Expose
@@ -46,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Consumption details
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Consumption details 
      * @return DetailSet Consumption details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CostDetail [] getDetailSet() {
         return this.DetailSet;
@@ -57,9 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Consumption details
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param DetailSet Consumption details
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDetailSet(CostDetail [] DetailSet) {
         this.DetailSet = DetailSet;

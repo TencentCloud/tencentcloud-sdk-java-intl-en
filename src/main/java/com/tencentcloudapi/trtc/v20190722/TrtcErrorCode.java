@@ -24,10 +24,10 @@ public enum TrtcErrorCode {
      /* The cloud transcription method does not support this. */
      FAILEDOPERATION_CTUNSUPPORTMETHOD("FailedOperation.CTUnsupportMethod"),
      
-     /* Need to unlock the required ability */
+     /* Unlock the required capability bit. */
      FAILEDOPERATION_NOTABILITY("FailedOperation.NotAbility"),
      
-     /* This operation is not allowed, please submit a ticket to contact us */
+     /* This operation is not allowed. submit a ticket to contact us. */
      FAILEDOPERATION_NOTALLOWED("FailedOperation.NotAllowed"),
      
      /* RTMP is not enabled. */
@@ -45,7 +45,7 @@ public enum TrtcErrorCode {
      /* The application ID does not exist. */
      FAILEDOPERATION_SDKAPPIDNOTEXIST("FailedOperation.SdkAppIdNotExist"),
      
-     /* There is no resource for this SdkAppId  In this AppId */
+     /* No resource belonging to this SdkAppId under the AppId. */
      FAILEDOPERATION_SDKAPPIDNOTUNDERAPPID("FailedOperation.SdkAppIdNotUnderAppId"),
      
      /* Task already exists */

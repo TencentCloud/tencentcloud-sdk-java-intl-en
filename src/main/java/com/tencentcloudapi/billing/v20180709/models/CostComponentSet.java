@@ -108,6 +108,20 @@ public class CostComponentSet extends AbstractModel {
     private String IncentivePayAmount;
 
     /**
+    * Tax
+    */
+    @SerializedName("Tax")
+    @Expose
+    private String Tax;
+
+    /**
+    * tax rate
+    */
+    @SerializedName("TaxRate")
+    @Expose
+    private String TaxRate;
+
+    /**
      * Get Component type name 
      * @return ComponentCodeName Component type name
      */
@@ -299,6 +313,38 @@ public class CostComponentSet extends AbstractModel {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
+    /**
+     * Get Tax 
+     * @return Tax Tax
+     */
+    public String getTax() {
+        return this.Tax;
+    }
+
+    /**
+     * Set Tax
+     * @param Tax Tax
+     */
+    public void setTax(String Tax) {
+        this.Tax = Tax;
+    }
+
+    /**
+     * Get tax rate 
+     * @return TaxRate tax rate
+     */
+    public String getTaxRate() {
+        return this.TaxRate;
+    }
+
+    /**
+     * Set tax rate
+     * @param TaxRate tax rate
+     */
+    public void setTaxRate(String TaxRate) {
+        this.TaxRate = TaxRate;
+    }
+
     public CostComponentSet() {
     }
 
@@ -343,6 +389,12 @@ public class CostComponentSet extends AbstractModel {
         if (source.IncentivePayAmount != null) {
             this.IncentivePayAmount = new String(source.IncentivePayAmount);
         }
+        if (source.Tax != null) {
+            this.Tax = new String(source.Tax);
+        }
+        if (source.TaxRate != null) {
+            this.TaxRate = new String(source.TaxRate);
+        }
     }
 
 
@@ -362,6 +414,8 @@ public class CostComponentSet extends AbstractModel {
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+        this.setParamSimple(map, prefix + "Tax", this.Tax);
+        this.setParamSimple(map, prefix + "TaxRate", this.TaxRate);
 
     }
 }

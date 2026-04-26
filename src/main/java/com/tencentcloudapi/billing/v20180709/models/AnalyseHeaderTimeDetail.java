@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AnalyseHeaderTimeDetail extends AbstractModel {
 
     /**
-    * DateNote: This field may return null, indicating that no valid values can be obtained.
+    * Date
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get DateNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name DateNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Date 
+     * @return Name Date
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set DateNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Name DateNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Date
+     * @param Name Date
      */
     public void setName(String Name) {
         this.Name = Name;

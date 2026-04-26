@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.cloudaudit.v20190319.models;
+package com.tencentcloudapi.billing.v20180709.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,67 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DeleteAuditRequest extends AbstractModel {
+public class BillTag extends AbstractModel {
 
     /**
-    * Tracking set name
+    * Tag key
     */
-    @SerializedName("AuditName")
+    @SerializedName("TagKey")
     @Expose
-    private String AuditName;
+    private String TagKey;
 
     /**
-     * Get Tracking set name 
-     * @return AuditName Tracking set name
+    * Tag value
+    */
+    @SerializedName("TagValue")
+    @Expose
+    private String TagValue;
+
+    /**
+     * Get Tag key 
+     * @return TagKey Tag key
      */
-    public String getAuditName() {
-        return this.AuditName;
+    public String getTagKey() {
+        return this.TagKey;
     }
 
     /**
-     * Set Tracking set name
-     * @param AuditName Tracking set name
+     * Set Tag key
+     * @param TagKey Tag key
      */
-    public void setAuditName(String AuditName) {
-        this.AuditName = AuditName;
+    public void setTagKey(String TagKey) {
+        this.TagKey = TagKey;
     }
 
-    public DeleteAuditRequest() {
+    /**
+     * Get Tag value 
+     * @return TagValue Tag value
+     */
+    public String getTagValue() {
+        return this.TagValue;
+    }
+
+    /**
+     * Set Tag value
+     * @param TagValue Tag value
+     */
+    public void setTagValue(String TagValue) {
+        this.TagValue = TagValue;
+    }
+
+    public BillTag() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DeleteAuditRequest(DeleteAuditRequest source) {
-        if (source.AuditName != null) {
-            this.AuditName = new String(source.AuditName);
+    public BillTag(BillTag source) {
+        if (source.TagKey != null) {
+            this.TagKey = new String(source.TagKey);
+        }
+        if (source.TagValue != null) {
+            this.TagValue = new String(source.TagValue);
         }
     }
 
@@ -64,7 +90,8 @@ public class DeleteAuditRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "AuditName", this.AuditName);
+        this.setParamSimple(map, prefix + "TagKey", this.TagKey);
+        this.setParamSimple(map, prefix + "TagValue", this.TagValue);
 
     }
 }

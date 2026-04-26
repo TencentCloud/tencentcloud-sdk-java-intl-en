@@ -45,7 +45,7 @@ public class DescribeCostSummaryByProjectResponse extends AbstractModel {
     private ConsumptionProjectSummaryDataItem [] Data;
 
     /**
-    * Record count. The system returns null when NeedRecordNum is 0.
+    * Record count. If NeedRecordNum is 0, null is returned.
     */
     @SerializedName("RecordNum")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeCostSummaryByProjectResponse extends AbstractModel {
     }
 
     /**
-     * Get Record count. The system returns null when NeedRecordNum is 0. 
-     * @return RecordNum Record count. The system returns null when NeedRecordNum is 0.
+     * Get Record count. If NeedRecordNum is 0, null is returned. 
+     * @return RecordNum Record count. If NeedRecordNum is 0, null is returned.
      */
     public Long getRecordNum() {
         return this.RecordNum;
     }
 
     /**
-     * Set Record count. The system returns null when NeedRecordNum is 0.
-     * @param RecordNum Record count. The system returns null when NeedRecordNum is 0.
+     * Set Record count. If NeedRecordNum is 0, null is returned.
+     * @param RecordNum Record count. If NeedRecordNum is 0, null is returned.
      */
     public void setRecordNum(Long RecordNum) {
         this.RecordNum = RecordNum;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDosageCosDetailByDateRequest extends AbstractModel {
 
     /**
-    * The start date of the usage query, such as `2020-09-01`.
+    * The start date of the usage query in the format of yyyy-mm-dd, such as `2020-09-01`.
     */
     @SerializedName("StartDate")
     @Expose
     private String StartDate;
 
     /**
-    * The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
+    * The end date of the usage query in the format of yyyy-mm-dd, such as `2020-09-30`. (The end date must be in the same month as the start date. Cross-month queries are not supported.)
     */
     @SerializedName("EndDate")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDosageCosDetailByDateRequest extends AbstractModel {
     private String BucketName;
 
     /**
-     * Get The start date of the usage query, such as `2020-09-01`. 
-     * @return StartDate The start date of the usage query, such as `2020-09-01`.
+     * Get The start date of the usage query in the format of yyyy-mm-dd, such as `2020-09-01`. 
+     * @return StartDate The start date of the usage query in the format of yyyy-mm-dd, such as `2020-09-01`.
      */
     public String getStartDate() {
         return this.StartDate;
     }
 
     /**
-     * Set The start date of the usage query, such as `2020-09-01`.
-     * @param StartDate The start date of the usage query, such as `2020-09-01`.
+     * Set The start date of the usage query in the format of yyyy-mm-dd, such as `2020-09-01`.
+     * @param StartDate The start date of the usage query in the format of yyyy-mm-dd, such as `2020-09-01`.
      */
     public void setStartDate(String StartDate) {
         this.StartDate = StartDate;
     }
 
     /**
-     * Get The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`. 
-     * @return EndDate The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
+     * Get The end date of the usage query in the format of yyyy-mm-dd, such as `2020-09-30`. (The end date must be in the same month as the start date. Cross-month queries are not supported.) 
+     * @return EndDate The end date of the usage query in the format of yyyy-mm-dd, such as `2020-09-30`. (The end date must be in the same month as the start date. Cross-month queries are not supported.)
      */
     public String getEndDate() {
         return this.EndDate;
     }
 
     /**
-     * Set The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
-     * @param EndDate The end date of the usage query (end date must be in the same month as the start date), such as `2020-09-30`.
+     * Set The end date of the usage query in the format of yyyy-mm-dd, such as `2020-09-30`. (The end date must be in the same month as the start date. Cross-month queries are not supported.)
+     * @param EndDate The end date of the usage query in the format of yyyy-mm-dd, such as `2020-09-30`. (The end date must be in the same month as the start date. Cross-month queries are not supported.)
      */
     public void setEndDate(String EndDate) {
         this.EndDate = EndDate;

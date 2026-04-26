@@ -144,39 +144,34 @@ public class DistributionBillDetail extends AbstractModel {
 
     /**
     * Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
     private BillTagInfo [] Tags;
 
     /**
-    * Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Product code
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Subproduct code
     */
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
 
     /**
-    * Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Transaction type code
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Region ID
     */
     @SerializedName("RegionId")
     @Expose
@@ -190,46 +185,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ProjectId;
 
     /**
-    * Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
     */
     @SerializedName("PriceInfo")
     @Expose
     private String [] PriceInfo;
 
     /**
-    * Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
     */
     @SerializedName("AssociatedOrder")
     @Expose
     private BillDetailAssociatedOrder AssociatedOrder;
 
     /**
-    * Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
     */
     @SerializedName("Formula")
     @Expose
     private String Formula;
 
     /**
-    * Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Billing Rules: The detailed billing rules for each product shown in the portal explanation link
     */
     @SerializedName("FormulaUrl")
     @Expose
     private String FormulaUrl;
 
     /**
-    * Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+    * Billing month
     */
     @SerializedName("BillMonth")
     @Expose
     private String BillMonth;
 
     /**
-    * Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+    * Billing day
     */
     @SerializedName("BillDay")
     @Expose
@@ -508,10 +499,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tag information.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Tag information. 
      * @return Tags Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public BillTagInfo [] getTags() {
         return this.Tags;
@@ -519,89 +508,71 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tags Tag information.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(BillTagInfo [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Product code.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BusinessCode Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Product code 
+     * @return BusinessCode Product code
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BusinessCode Product code.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Product code
+     * @param BusinessCode Product code
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProductCode Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Subproduct code 
+     * @return ProductCode Subproduct code
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProductCode Subproduct code.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Subproduct code
+     * @param ProductCode Subproduct code
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;
     }
 
     /**
-     * Get Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ActionType Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Transaction type code 
+     * @return ActionType Transaction type code
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ActionType Transaction type code.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Transaction type code
+     * @param ActionType Transaction type code
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get Region ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegionId Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Region ID 
+     * @return RegionId Region ID
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RegionId Region ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Region ID
+     * @param RegionId Region ID
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
@@ -624,112 +595,96 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PriceInfo Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration 
+     * @return PriceInfo Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
      */
     public String [] getPriceInfo() {
         return this.PriceInfo;
     }
 
     /**
-     * Set Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PriceInfo Price attribute: A set of attributes which will determine the price of a component, apart from unit price and usage duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
+     * @param PriceInfo Price attribute: Other attributes of the component that affect discount pricing besides unit price and duration
      */
     public void setPriceInfo(String [] PriceInfo) {
         this.PriceInfo = PriceInfo;
     }
 
     /**
-     * Get Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AssociatedOrder Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order. 
+     * @return AssociatedOrder Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
      */
     public BillDetailAssociatedOrder getAssociatedOrder() {
         return this.AssociatedOrder;
     }
 
     /**
-     * Set Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AssociatedOrder Associated transaction document ID: The ID of the document associated with a transaction, such as a write-off order, the original order showing a deduction error during first settlement, a restructured order, or the original purchase order corresponding to a refund order.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
+     * @param AssociatedOrder Associated transaction document ID: Document ID associated with this transaction, such as a write-off order, the original order, a resettlement order, or the original purchase order number recorded in a refund order.
      */
     public void setAssociatedOrder(BillDetailAssociatedOrder AssociatedOrder) {
         this.AssociatedOrder = AssociatedOrder;
     }
 
     /**
-     * Get Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Formula Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes. 
+     * @return Formula Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
      */
     public String getFormula() {
         return this.Formula;
     }
 
     /**
-     * Set Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Formula Calculation formula: The detailed calculation formula for a specific transaction type, such as refund or configuration change.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
+     * @param Formula Calculation explanation: A detailed explanation to calculations of billing settlement for special transaction types, such as refund and configuration changes.
      */
     public void setFormula(String Formula) {
         this.Formula = Formula;
     }
 
     /**
-     * Get Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return FormulaUrl Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Billing Rules: The detailed billing rules for each product shown in the portal explanation link 
+     * @return FormulaUrl Billing Rules: The detailed billing rules for each product shown in the portal explanation link
      */
     public String getFormulaUrl() {
         return this.FormulaUrl;
     }
 
     /**
-     * Set Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FormulaUrl Billing rules: Official website links for detailed billing rules of each product.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Billing Rules: The detailed billing rules for each product shown in the portal explanation link
+     * @param FormulaUrl Billing Rules: The detailed billing rules for each product shown in the portal explanation link
      */
     public void setFormulaUrl(String FormulaUrl) {
         this.FormulaUrl = FormulaUrl;
     }
 
     /**
-     * Get Billing monthNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Billing month 
+     * @return BillMonth Billing month
      */
     public String getBillMonth() {
         return this.BillMonth;
     }
 
     /**
-     * Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
-     * @param BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Billing month
+     * @param BillMonth Billing month
      */
     public void setBillMonth(String BillMonth) {
         this.BillMonth = BillMonth;
     }
 
     /**
-     * Get Billing dayNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Billing day 
+     * @return BillDay Billing day
      */
     public String getBillDay() {
         return this.BillDay;
     }
 
     /**
-     * Set Billing dayNote: This field may return null, indicating that no valid values can be obtained.
-     * @param BillDay Billing dayNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Billing day
+     * @param BillDay Billing day
      */
     public void setBillDay(String BillDay) {
         this.BillDay = BillDay;

@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class AnalyseRegionDetail extends AbstractModel {
 
     /**
-    * Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Region ID.
     */
     @SerializedName("RegionId")
     @Expose
     private String RegionId;
 
     /**
-    * Region nameNote: This field may return null, indicating that no valid values can be obtained.
+    * Region name
     */
     @SerializedName("RegionName")
     @Expose
     private String RegionName;
 
     /**
-     * Get Region ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegionId Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Region ID. 
+     * @return RegionId Region ID.
      */
     public String getRegionId() {
         return this.RegionId;
     }
 
     /**
-     * Set Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RegionId Region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Region ID.
+     * @param RegionId Region ID.
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;
     }
 
     /**
-     * Get Region nameNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegionName Region nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Region name 
+     * @return RegionName Region name
      */
     public String getRegionName() {
         return this.RegionName;
     }
 
     /**
-     * Set Region nameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param RegionName Region nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Region name
+     * @param RegionName Region name
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;

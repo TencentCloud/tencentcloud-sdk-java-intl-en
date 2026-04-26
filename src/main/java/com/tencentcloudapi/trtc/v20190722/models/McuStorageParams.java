@@ -24,61 +24,46 @@ import java.util.HashMap;
 public class McuStorageParams extends AbstractModel {
 
     /**
-    * Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
+    * Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
     */
     @SerializedName("CloudStorage")
     @Expose
     private CloudStorage CloudStorage;
 
     /**
-    * Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
+    * Account information of tencent cloud vod.
     */
     @SerializedName("McuCloudVod")
     @Expose
     private McuCloudVod McuCloudVod;
 
     /**
-     * Get Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]} 
-     * @return CloudStorage Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
+     * Get Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.). 
+     * @return CloudStorage Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
      */
     public CloudStorage getCloudStorage() {
         return this.CloudStorage;
     }
 
     /**
-     * Set Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
-     * @param CloudStorage Third-Party Cloud Storage Account Information
-(Note: Storing files in Object Storage COS will incur recording file delivery fees. For details, see [Cloud Recording Billing]. Storing in VOD does not incur this fee.)
-Example:{"Vendor":0,"Region":"ap-shanghai","Bucket":"*","AccessKey":"*","SecretKey":"***","FileNamePrefix":["mcu_record"]}
+     * Set Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
+     * @param CloudStorage Account information for third-party cloud storage (special note: if you select storage to cloud object storage (COS), there will be a charge for shipping recorded files to COS. for details, see cloud recording pricing information. storing to VOD will incur no charge for this item.).
      */
     public void setCloudStorage(CloudStorage CloudStorage) {
         this.CloudStorage = CloudStorage;
     }
 
     /**
-     * Get Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}} 
-     * @return McuCloudVod Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
+     * Get Account information of tencent cloud vod. 
+     * @return McuCloudVod Account information of tencent cloud vod.
      */
     public McuCloudVod getMcuCloudVod() {
         return this.McuCloudVod;
     }
 
     /**
-     * Set Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
-     * @param McuCloudVod Tencent Cloud VOD Account Information
-Example:{"McuTencentVod":{"ExpireTime":86400}}
+     * Set Account information of tencent cloud vod.
+     * @param McuCloudVod Account information of tencent cloud vod.
      */
     public void setMcuCloudVod(McuCloudVod McuCloudVod) {
         this.McuCloudVod = McuCloudVod;

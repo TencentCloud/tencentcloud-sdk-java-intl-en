@@ -1,0 +1,1403 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.billing.v20180709.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class AllocationSummaryByResource extends AbstractModel {
+
+    /**
+    * Unique identifier of a cost allocation unit
+    */
+    @SerializedName("TreeNodeUniqKey")
+    @Expose
+    private String TreeNodeUniqKey;
+
+    /**
+    * Name of a cost allocation unit
+    */
+    @SerializedName("TreeNodeUniqKeyName")
+    @Expose
+    private String TreeNodeUniqKeyName;
+
+    /**
+    * Date: Settlement date
+    */
+    @SerializedName("BillDate")
+    @Expose
+    private String BillDate;
+
+    /**
+    * Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+    */
+    @SerializedName("PayerUin")
+    @Expose
+    private String PayerUin;
+
+    /**
+    * User UIN: Account ID of the actual resource user
+    */
+    @SerializedName("OwnerUin")
+    @Expose
+    private String OwnerUin;
+
+    /**
+    * Operator account ID (the resource account ID or role ID opened by prepaid resource ordering or postpaid operation)
+    */
+    @SerializedName("OperateUin")
+    @Expose
+    private String OperateUin;
+
+    /**
+    * Billing mode code
+    */
+    @SerializedName("PayMode")
+    @Expose
+    private String PayMode;
+
+    /**
+    * Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+    */
+    @SerializedName("PayModeName")
+    @Expose
+    private String PayModeName;
+
+    /**
+    * Transaction type code
+    */
+    @SerializedName("ActionType")
+    @Expose
+    private String ActionType;
+
+    /**
+    * Transaction type: Detailed transaction type
+    */
+    @SerializedName("ActionTypeName")
+    @Expose
+    private String ActionTypeName;
+
+    /**
+    * Product code
+    */
+    @SerializedName("BusinessCode")
+    @Expose
+    private String BusinessCode;
+
+    /**
+    * Product name: Various cloud products purchased by users
+    */
+    @SerializedName("BusinessCodeName")
+    @Expose
+    private String BusinessCodeName;
+
+    /**
+    * Subproduct code
+    */
+    @SerializedName("ProductCode")
+    @Expose
+    private String ProductCode;
+
+    /**
+    * Subproduct name: Product subdivision type purchased by the user
+    */
+    @SerializedName("ProductCodeName")
+    @Expose
+    private String ProductCodeName;
+
+    /**
+    * Region ID
+    */
+    @SerializedName("RegionId")
+    @Expose
+    private Long RegionId;
+
+    /**
+    * Region name: The region where the resource is located
+    */
+    @SerializedName("RegionName")
+    @Expose
+    private String RegionName;
+
+    /**
+    * AZ ID
+    */
+    @SerializedName("ZoneId")
+    @Expose
+    private Long ZoneId;
+
+    /**
+    * Availability zone: The availability zone where the resource is located.
+    */
+    @SerializedName("ZoneName")
+    @Expose
+    private String ZoneName;
+
+    /**
+    * Instance type code
+    */
+    @SerializedName("InstanceType")
+    @Expose
+    private String InstanceType;
+
+    /**
+    * Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. It is displayed as "-" by default for regular instances.
+    */
+    @SerializedName("InstanceTypeName")
+    @Expose
+    private String InstanceTypeName;
+
+    /**
+    * Resource ID: Resources vary by product, and the content is not identical. For example, Cloud Virtual Machine (CVM) corresponds to the instance ID. If the product is split, it shows the split item ID, such as COS bucket ID and CDN domain name.
+    */
+    @SerializedName("ResourceId")
+    @Expose
+    private String ResourceId;
+
+    /**
+    * Instance name: The name set by the user for the resource in the console, which is empty by default if not set. If the product is split, it shows the split resource alias.
+    */
+    @SerializedName("ResourceName")
+    @Expose
+    private String ResourceName;
+
+    /**
+    * Allocation tag: The resource-bound tag
+    */
+    @SerializedName("Tag")
+    @Expose
+    private BillTag [] Tag;
+
+    /**
+    * Project ID
+    */
+    @SerializedName("ProjectId")
+    @Expose
+    private Long ProjectId;
+
+    /**
+    * Project name: The Project to which a resource belongs, which is independently allocated by the user for the resource in the console. If a resource has not been allocated to an Project, it will be a default Project.
+    */
+    @SerializedName("ProjectName")
+    @Expose
+    private String ProjectName;
+
+    /**
+    * Cost collection type: The source types of fees, including allocated, collection and unallocated.
+0 - Allocation 
+1 - Collection 
+-1 - Unallocated
+    */
+    @SerializedName("AllocationType")
+    @Expose
+    private Long AllocationType;
+
+    /**
+    * Original price of a component: Original Price = Component List Price * Component Usage * Duration of Use (not displayed if the customer enjoys a fixed price/contract price, and not displayed by default in refund scenarios), specified price mode
+    */
+    @SerializedName("TotalCost")
+    @Expose
+    private String TotalCost;
+
+    /**
+    * Reserved instance deduction duration: The duration of use deducted by reserved instances for this product or service.
+    */
+    @SerializedName("RiTimeSpan")
+    @Expose
+    private String RiTimeSpan;
+
+    /**
+    * Original price deducted by a reserved instance: The original price of a component deducted by reserved instances for this product or service
+    */
+    @SerializedName("RiCost")
+    @Expose
+    private String RiCost;
+
+    /**
+    * Discounted total: discounted total = (Original Price - Original Price Deducted by a Reserved Instance - Savings Plan Deduction from Original Price) * Discount Rate
+    */
+    @SerializedName("RealTotalCost")
+    @Expose
+    private String RealTotalCost;
+
+    /**
+    * Cash account expenditure (CNY): The amount paid through the cash account
+    */
+    @SerializedName("CashPayAmount")
+    @Expose
+    private String CashPayAmount;
+
+    /**
+    * Promo voucher expenditure (CNY): The amount paid using various vouchers (such as promo vouchers and cash vouchers)
+    */
+    @SerializedName("VoucherPayAmount")
+    @Expose
+    private String VoucherPayAmount;
+
+    /**
+    * Gift account expenditure (CNY): The amount paid using free credits
+    */
+    @SerializedName("IncentivePayAmount")
+    @Expose
+    private String IncentivePayAmount;
+
+    /**
+    * Royalty account expenditure (CNY): The amount paid through the royalty account
+    */
+    @SerializedName("TransferPayAmount")
+    @Expose
+    private String TransferPayAmount;
+
+    /**
+    * Split item ID: The ID of the split item involved in the split product, such as COS bucket ID and CDN domain name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SplitItemId")
+    @Expose
+    private String SplitItemId;
+
+    /**
+    * Split item name: The split item involved in the split product
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("SplitItemName")
+    @Expose
+    private String SplitItemName;
+
+    /**
+    * Usage start time: Usage start time
+    */
+    @SerializedName("FeeBeginTime")
+    @Expose
+    private String FeeBeginTime;
+
+    /**
+    * Usage end time: Product or service usage end time
+    */
+    @SerializedName("FeeEndTime")
+    @Expose
+    private String FeeEndTime;
+
+    /**
+    * Savings plan deduction from original price: Savings Plan Deduction from Original Price = Monetary Value of Savings Plan Deduction/ Savings Plan Deduction Rate
+    */
+    @SerializedName("SPCost")
+    @Expose
+    private String SPCost;
+
+    /**
+    * Domestic and international codes
+    */
+    @SerializedName("RegionType")
+    @Expose
+    private String RegionType;
+
+    /**
+    * Domestic and international: Resource region type (domestic, international)
+    */
+    @SerializedName("RegionTypeName")
+    @Expose
+    private String RegionTypeName;
+
+    /**
+    * Configuration description: Name and usage of each component under the corresponding resource (the total usage if the component is cumulative usage billing type)
+    */
+    @SerializedName("ComponentConfig")
+    @Expose
+    private String ComponentConfig;
+
+    /**
+    * SPDeduction
+    */
+    @SerializedName("SPDeduction")
+    @Expose
+    private String SPDeduction;
+
+    /**
+    * Currency.
+    */
+    @SerializedName("Currency")
+    @Expose
+    private String Currency;
+
+    /**
+    * Tax
+    */
+    @SerializedName("Tax")
+    @Expose
+    private String Tax;
+
+    /**
+    * tax rate
+    */
+    @SerializedName("TaxRate")
+    @Expose
+    private String TaxRate;
+
+    /**
+    * CostBeforeTax
+    */
+    @SerializedName("CostBeforeTax")
+    @Expose
+    private String CostBeforeTax;
+
+    /**
+    * AmountBeforeTax
+    */
+    @SerializedName("AmountBeforeTax")
+    @Expose
+    private String AmountBeforeTax;
+
+    /**
+    * Billing month
+    */
+    @SerializedName("BillMonth")
+    @Expose
+    private String BillMonth;
+
+    /**
+     * Get Unique identifier of a cost allocation unit 
+     * @return TreeNodeUniqKey Unique identifier of a cost allocation unit
+     */
+    public String getTreeNodeUniqKey() {
+        return this.TreeNodeUniqKey;
+    }
+
+    /**
+     * Set Unique identifier of a cost allocation unit
+     * @param TreeNodeUniqKey Unique identifier of a cost allocation unit
+     */
+    public void setTreeNodeUniqKey(String TreeNodeUniqKey) {
+        this.TreeNodeUniqKey = TreeNodeUniqKey;
+    }
+
+    /**
+     * Get Name of a cost allocation unit 
+     * @return TreeNodeUniqKeyName Name of a cost allocation unit
+     */
+    public String getTreeNodeUniqKeyName() {
+        return this.TreeNodeUniqKeyName;
+    }
+
+    /**
+     * Set Name of a cost allocation unit
+     * @param TreeNodeUniqKeyName Name of a cost allocation unit
+     */
+    public void setTreeNodeUniqKeyName(String TreeNodeUniqKeyName) {
+        this.TreeNodeUniqKeyName = TreeNodeUniqKeyName;
+    }
+
+    /**
+     * Get Date: Settlement date 
+     * @return BillDate Date: Settlement date
+     */
+    public String getBillDate() {
+        return this.BillDate;
+    }
+
+    /**
+     * Set Date: Settlement date
+     * @param BillDate Date: Settlement date
+     */
+    public void setBillDate(String BillDate) {
+        this.BillDate = BillDate;
+    }
+
+    /**
+     * Get Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud. 
+     * @return PayerUin Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+     */
+    public String getPayerUin() {
+        return this.PayerUin;
+    }
+
+    /**
+     * Set Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+     * @param PayerUin Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+     */
+    public void setPayerUin(String PayerUin) {
+        this.PayerUin = PayerUin;
+    }
+
+    /**
+     * Get User UIN: Account ID of the actual resource user 
+     * @return OwnerUin User UIN: Account ID of the actual resource user
+     */
+    public String getOwnerUin() {
+        return this.OwnerUin;
+    }
+
+    /**
+     * Set User UIN: Account ID of the actual resource user
+     * @param OwnerUin User UIN: Account ID of the actual resource user
+     */
+    public void setOwnerUin(String OwnerUin) {
+        this.OwnerUin = OwnerUin;
+    }
+
+    /**
+     * Get Operator account ID (the resource account ID or role ID opened by prepaid resource ordering or postpaid operation) 
+     * @return OperateUin Operator account ID (the resource account ID or role ID opened by prepaid resource ordering or postpaid operation)
+     */
+    public String getOperateUin() {
+        return this.OperateUin;
+    }
+
+    /**
+     * Set Operator account ID (the resource account ID or role ID opened by prepaid resource ordering or postpaid operation)
+     * @param OperateUin Operator account ID (the resource account ID or role ID opened by prepaid resource ordering or postpaid operation)
+     */
+    public void setOperateUin(String OperateUin) {
+        this.OperateUin = OperateUin;
+    }
+
+    /**
+     * Get Billing mode code 
+     * @return PayMode Billing mode code
+     */
+    public String getPayMode() {
+        return this.PayMode;
+    }
+
+    /**
+     * Set Billing mode code
+     * @param PayMode Billing mode code
+     */
+    public void setPayMode(String PayMode) {
+        this.PayMode = PayMode;
+    }
+
+    /**
+     * Get Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go. 
+     * @return PayModeName Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     */
+    public String getPayModeName() {
+        return this.PayModeName;
+    }
+
+    /**
+     * Set Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     * @param PayModeName Billing mode: Resource billing mode, which can be monthly subscription or pay-as-you-go.
+     */
+    public void setPayModeName(String PayModeName) {
+        this.PayModeName = PayModeName;
+    }
+
+    /**
+     * Get Transaction type code 
+     * @return ActionType Transaction type code
+     */
+    public String getActionType() {
+        return this.ActionType;
+    }
+
+    /**
+     * Set Transaction type code
+     * @param ActionType Transaction type code
+     */
+    public void setActionType(String ActionType) {
+        this.ActionType = ActionType;
+    }
+
+    /**
+     * Get Transaction type: Detailed transaction type 
+     * @return ActionTypeName Transaction type: Detailed transaction type
+     */
+    public String getActionTypeName() {
+        return this.ActionTypeName;
+    }
+
+    /**
+     * Set Transaction type: Detailed transaction type
+     * @param ActionTypeName Transaction type: Detailed transaction type
+     */
+    public void setActionTypeName(String ActionTypeName) {
+        this.ActionTypeName = ActionTypeName;
+    }
+
+    /**
+     * Get Product code 
+     * @return BusinessCode Product code
+     */
+    public String getBusinessCode() {
+        return this.BusinessCode;
+    }
+
+    /**
+     * Set Product code
+     * @param BusinessCode Product code
+     */
+    public void setBusinessCode(String BusinessCode) {
+        this.BusinessCode = BusinessCode;
+    }
+
+    /**
+     * Get Product name: Various cloud products purchased by users 
+     * @return BusinessCodeName Product name: Various cloud products purchased by users
+     */
+    public String getBusinessCodeName() {
+        return this.BusinessCodeName;
+    }
+
+    /**
+     * Set Product name: Various cloud products purchased by users
+     * @param BusinessCodeName Product name: Various cloud products purchased by users
+     */
+    public void setBusinessCodeName(String BusinessCodeName) {
+        this.BusinessCodeName = BusinessCodeName;
+    }
+
+    /**
+     * Get Subproduct code 
+     * @return ProductCode Subproduct code
+     */
+    public String getProductCode() {
+        return this.ProductCode;
+    }
+
+    /**
+     * Set Subproduct code
+     * @param ProductCode Subproduct code
+     */
+    public void setProductCode(String ProductCode) {
+        this.ProductCode = ProductCode;
+    }
+
+    /**
+     * Get Subproduct name: Product subdivision type purchased by the user 
+     * @return ProductCodeName Subproduct name: Product subdivision type purchased by the user
+     */
+    public String getProductCodeName() {
+        return this.ProductCodeName;
+    }
+
+    /**
+     * Set Subproduct name: Product subdivision type purchased by the user
+     * @param ProductCodeName Subproduct name: Product subdivision type purchased by the user
+     */
+    public void setProductCodeName(String ProductCodeName) {
+        this.ProductCodeName = ProductCodeName;
+    }
+
+    /**
+     * Get Region ID 
+     * @return RegionId Region ID
+     */
+    public Long getRegionId() {
+        return this.RegionId;
+    }
+
+    /**
+     * Set Region ID
+     * @param RegionId Region ID
+     */
+    public void setRegionId(Long RegionId) {
+        this.RegionId = RegionId;
+    }
+
+    /**
+     * Get Region name: The region where the resource is located 
+     * @return RegionName Region name: The region where the resource is located
+     */
+    public String getRegionName() {
+        return this.RegionName;
+    }
+
+    /**
+     * Set Region name: The region where the resource is located
+     * @param RegionName Region name: The region where the resource is located
+     */
+    public void setRegionName(String RegionName) {
+        this.RegionName = RegionName;
+    }
+
+    /**
+     * Get AZ ID 
+     * @return ZoneId AZ ID
+     */
+    public Long getZoneId() {
+        return this.ZoneId;
+    }
+
+    /**
+     * Set AZ ID
+     * @param ZoneId AZ ID
+     */
+    public void setZoneId(Long ZoneId) {
+        this.ZoneId = ZoneId;
+    }
+
+    /**
+     * Get Availability zone: The availability zone where the resource is located. 
+     * @return ZoneName Availability zone: The availability zone where the resource is located.
+     */
+    public String getZoneName() {
+        return this.ZoneName;
+    }
+
+    /**
+     * Set Availability zone: The availability zone where the resource is located.
+     * @param ZoneName Availability zone: The availability zone where the resource is located.
+     */
+    public void setZoneName(String ZoneName) {
+        this.ZoneName = ZoneName;
+    }
+
+    /**
+     * Get Instance type code 
+     * @return InstanceType Instance type code
+     */
+    public String getInstanceType() {
+        return this.InstanceType;
+    }
+
+    /**
+     * Set Instance type code
+     * @param InstanceType Instance type code
+     */
+    public void setInstanceType(String InstanceType) {
+        this.InstanceType = InstanceType;
+    }
+
+    /**
+     * Get Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. It is displayed as "-" by default for regular instances. 
+     * @return InstanceTypeName Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. It is displayed as "-" by default for regular instances.
+     */
+    public String getInstanceTypeName() {
+        return this.InstanceTypeName;
+    }
+
+    /**
+     * Set Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. It is displayed as "-" by default for regular instances.
+     * @param InstanceTypeName Instance type: The type of an instance corresponding to the product service purchased, including resource packages, RI, SP, and spot instances. It is displayed as "-" by default for regular instances.
+     */
+    public void setInstanceTypeName(String InstanceTypeName) {
+        this.InstanceTypeName = InstanceTypeName;
+    }
+
+    /**
+     * Get Resource ID: Resources vary by product, and the content is not identical. For example, Cloud Virtual Machine (CVM) corresponds to the instance ID. If the product is split, it shows the split item ID, such as COS bucket ID and CDN domain name. 
+     * @return ResourceId Resource ID: Resources vary by product, and the content is not identical. For example, Cloud Virtual Machine (CVM) corresponds to the instance ID. If the product is split, it shows the split item ID, such as COS bucket ID and CDN domain name.
+     */
+    public String getResourceId() {
+        return this.ResourceId;
+    }
+
+    /**
+     * Set Resource ID: Resources vary by product, and the content is not identical. For example, Cloud Virtual Machine (CVM) corresponds to the instance ID. If the product is split, it shows the split item ID, such as COS bucket ID and CDN domain name.
+     * @param ResourceId Resource ID: Resources vary by product, and the content is not identical. For example, Cloud Virtual Machine (CVM) corresponds to the instance ID. If the product is split, it shows the split item ID, such as COS bucket ID and CDN domain name.
+     */
+    public void setResourceId(String ResourceId) {
+        this.ResourceId = ResourceId;
+    }
+
+    /**
+     * Get Instance name: The name set by the user for the resource in the console, which is empty by default if not set. If the product is split, it shows the split resource alias. 
+     * @return ResourceName Instance name: The name set by the user for the resource in the console, which is empty by default if not set. If the product is split, it shows the split resource alias.
+     */
+    public String getResourceName() {
+        return this.ResourceName;
+    }
+
+    /**
+     * Set Instance name: The name set by the user for the resource in the console, which is empty by default if not set. If the product is split, it shows the split resource alias.
+     * @param ResourceName Instance name: The name set by the user for the resource in the console, which is empty by default if not set. If the product is split, it shows the split resource alias.
+     */
+    public void setResourceName(String ResourceName) {
+        this.ResourceName = ResourceName;
+    }
+
+    /**
+     * Get Allocation tag: The resource-bound tag 
+     * @return Tag Allocation tag: The resource-bound tag
+     */
+    public BillTag [] getTag() {
+        return this.Tag;
+    }
+
+    /**
+     * Set Allocation tag: The resource-bound tag
+     * @param Tag Allocation tag: The resource-bound tag
+     */
+    public void setTag(BillTag [] Tag) {
+        this.Tag = Tag;
+    }
+
+    /**
+     * Get Project ID 
+     * @return ProjectId Project ID
+     */
+    public Long getProjectId() {
+        return this.ProjectId;
+    }
+
+    /**
+     * Set Project ID
+     * @param ProjectId Project ID
+     */
+    public void setProjectId(Long ProjectId) {
+        this.ProjectId = ProjectId;
+    }
+
+    /**
+     * Get Project name: The Project to which a resource belongs, which is independently allocated by the user for the resource in the console. If a resource has not been allocated to an Project, it will be a default Project. 
+     * @return ProjectName Project name: The Project to which a resource belongs, which is independently allocated by the user for the resource in the console. If a resource has not been allocated to an Project, it will be a default Project.
+     */
+    public String getProjectName() {
+        return this.ProjectName;
+    }
+
+    /**
+     * Set Project name: The Project to which a resource belongs, which is independently allocated by the user for the resource in the console. If a resource has not been allocated to an Project, it will be a default Project.
+     * @param ProjectName Project name: The Project to which a resource belongs, which is independently allocated by the user for the resource in the console. If a resource has not been allocated to an Project, it will be a default Project.
+     */
+    public void setProjectName(String ProjectName) {
+        this.ProjectName = ProjectName;
+    }
+
+    /**
+     * Get Cost collection type: The source types of fees, including allocated, collection and unallocated.
+0 - Allocation 
+1 - Collection 
+-1 - Unallocated 
+     * @return AllocationType Cost collection type: The source types of fees, including allocated, collection and unallocated.
+0 - Allocation 
+1 - Collection 
+-1 - Unallocated
+     */
+    public Long getAllocationType() {
+        return this.AllocationType;
+    }
+
+    /**
+     * Set Cost collection type: The source types of fees, including allocated, collection and unallocated.
+0 - Allocation 
+1 - Collection 
+-1 - Unallocated
+     * @param AllocationType Cost collection type: The source types of fees, including allocated, collection and unallocated.
+0 - Allocation 
+1 - Collection 
+-1 - Unallocated
+     */
+    public void setAllocationType(Long AllocationType) {
+        this.AllocationType = AllocationType;
+    }
+
+    /**
+     * Get Original price of a component: Original Price = Component List Price * Component Usage * Duration of Use (not displayed if the customer enjoys a fixed price/contract price, and not displayed by default in refund scenarios), specified price mode 
+     * @return TotalCost Original price of a component: Original Price = Component List Price * Component Usage * Duration of Use (not displayed if the customer enjoys a fixed price/contract price, and not displayed by default in refund scenarios), specified price mode
+     */
+    public String getTotalCost() {
+        return this.TotalCost;
+    }
+
+    /**
+     * Set Original price of a component: Original Price = Component List Price * Component Usage * Duration of Use (not displayed if the customer enjoys a fixed price/contract price, and not displayed by default in refund scenarios), specified price mode
+     * @param TotalCost Original price of a component: Original Price = Component List Price * Component Usage * Duration of Use (not displayed if the customer enjoys a fixed price/contract price, and not displayed by default in refund scenarios), specified price mode
+     */
+    public void setTotalCost(String TotalCost) {
+        this.TotalCost = TotalCost;
+    }
+
+    /**
+     * Get Reserved instance deduction duration: The duration of use deducted by reserved instances for this product or service. 
+     * @return RiTimeSpan Reserved instance deduction duration: The duration of use deducted by reserved instances for this product or service.
+     */
+    public String getRiTimeSpan() {
+        return this.RiTimeSpan;
+    }
+
+    /**
+     * Set Reserved instance deduction duration: The duration of use deducted by reserved instances for this product or service.
+     * @param RiTimeSpan Reserved instance deduction duration: The duration of use deducted by reserved instances for this product or service.
+     */
+    public void setRiTimeSpan(String RiTimeSpan) {
+        this.RiTimeSpan = RiTimeSpan;
+    }
+
+    /**
+     * Get Original price deducted by a reserved instance: The original price of a component deducted by reserved instances for this product or service 
+     * @return RiCost Original price deducted by a reserved instance: The original price of a component deducted by reserved instances for this product or service
+     */
+    public String getRiCost() {
+        return this.RiCost;
+    }
+
+    /**
+     * Set Original price deducted by a reserved instance: The original price of a component deducted by reserved instances for this product or service
+     * @param RiCost Original price deducted by a reserved instance: The original price of a component deducted by reserved instances for this product or service
+     */
+    public void setRiCost(String RiCost) {
+        this.RiCost = RiCost;
+    }
+
+    /**
+     * Get Discounted total: discounted total = (Original Price - Original Price Deducted by a Reserved Instance - Savings Plan Deduction from Original Price) * Discount Rate 
+     * @return RealTotalCost Discounted total: discounted total = (Original Price - Original Price Deducted by a Reserved Instance - Savings Plan Deduction from Original Price) * Discount Rate
+     */
+    public String getRealTotalCost() {
+        return this.RealTotalCost;
+    }
+
+    /**
+     * Set Discounted total: discounted total = (Original Price - Original Price Deducted by a Reserved Instance - Savings Plan Deduction from Original Price) * Discount Rate
+     * @param RealTotalCost Discounted total: discounted total = (Original Price - Original Price Deducted by a Reserved Instance - Savings Plan Deduction from Original Price) * Discount Rate
+     */
+    public void setRealTotalCost(String RealTotalCost) {
+        this.RealTotalCost = RealTotalCost;
+    }
+
+    /**
+     * Get Cash account expenditure (CNY): The amount paid through the cash account 
+     * @return CashPayAmount Cash account expenditure (CNY): The amount paid through the cash account
+     */
+    public String getCashPayAmount() {
+        return this.CashPayAmount;
+    }
+
+    /**
+     * Set Cash account expenditure (CNY): The amount paid through the cash account
+     * @param CashPayAmount Cash account expenditure (CNY): The amount paid through the cash account
+     */
+    public void setCashPayAmount(String CashPayAmount) {
+        this.CashPayAmount = CashPayAmount;
+    }
+
+    /**
+     * Get Promo voucher expenditure (CNY): The amount paid using various vouchers (such as promo vouchers and cash vouchers) 
+     * @return VoucherPayAmount Promo voucher expenditure (CNY): The amount paid using various vouchers (such as promo vouchers and cash vouchers)
+     */
+    public String getVoucherPayAmount() {
+        return this.VoucherPayAmount;
+    }
+
+    /**
+     * Set Promo voucher expenditure (CNY): The amount paid using various vouchers (such as promo vouchers and cash vouchers)
+     * @param VoucherPayAmount Promo voucher expenditure (CNY): The amount paid using various vouchers (such as promo vouchers and cash vouchers)
+     */
+    public void setVoucherPayAmount(String VoucherPayAmount) {
+        this.VoucherPayAmount = VoucherPayAmount;
+    }
+
+    /**
+     * Get Gift account expenditure (CNY): The amount paid using free credits 
+     * @return IncentivePayAmount Gift account expenditure (CNY): The amount paid using free credits
+     */
+    public String getIncentivePayAmount() {
+        return this.IncentivePayAmount;
+    }
+
+    /**
+     * Set Gift account expenditure (CNY): The amount paid using free credits
+     * @param IncentivePayAmount Gift account expenditure (CNY): The amount paid using free credits
+     */
+    public void setIncentivePayAmount(String IncentivePayAmount) {
+        this.IncentivePayAmount = IncentivePayAmount;
+    }
+
+    /**
+     * Get Royalty account expenditure (CNY): The amount paid through the royalty account 
+     * @return TransferPayAmount Royalty account expenditure (CNY): The amount paid through the royalty account
+     */
+    public String getTransferPayAmount() {
+        return this.TransferPayAmount;
+    }
+
+    /**
+     * Set Royalty account expenditure (CNY): The amount paid through the royalty account
+     * @param TransferPayAmount Royalty account expenditure (CNY): The amount paid through the royalty account
+     */
+    public void setTransferPayAmount(String TransferPayAmount) {
+        this.TransferPayAmount = TransferPayAmount;
+    }
+
+    /**
+     * Get Split item ID: The ID of the split item involved in the split product, such as COS bucket ID and CDN domain name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SplitItemId Split item ID: The ID of the split item involved in the split product, such as COS bucket ID and CDN domain name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
+     */
+    @Deprecated
+    public String getSplitItemId() {
+        return this.SplitItemId;
+    }
+
+    /**
+     * Set Split item ID: The ID of the split item involved in the split product, such as COS bucket ID and CDN domain name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SplitItemId Split item ID: The ID of the split item involved in the split product, such as COS bucket ID and CDN domain name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
+     */
+    @Deprecated
+    public void setSplitItemId(String SplitItemId) {
+        this.SplitItemId = SplitItemId;
+    }
+
+    /**
+     * Get Split item name: The split item involved in the split product
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SplitItemName Split item name: The split item involved in the split product
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
+     */
+    @Deprecated
+    public String getSplitItemName() {
+        return this.SplitItemName;
+    }
+
+    /**
+     * Set Split item name: The split item involved in the split product
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SplitItemName Split item name: The split item involved in the split product
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @deprecated
+     */
+    @Deprecated
+    public void setSplitItemName(String SplitItemName) {
+        this.SplitItemName = SplitItemName;
+    }
+
+    /**
+     * Get Usage start time: Usage start time 
+     * @return FeeBeginTime Usage start time: Usage start time
+     */
+    public String getFeeBeginTime() {
+        return this.FeeBeginTime;
+    }
+
+    /**
+     * Set Usage start time: Usage start time
+     * @param FeeBeginTime Usage start time: Usage start time
+     */
+    public void setFeeBeginTime(String FeeBeginTime) {
+        this.FeeBeginTime = FeeBeginTime;
+    }
+
+    /**
+     * Get Usage end time: Product or service usage end time 
+     * @return FeeEndTime Usage end time: Product or service usage end time
+     */
+    public String getFeeEndTime() {
+        return this.FeeEndTime;
+    }
+
+    /**
+     * Set Usage end time: Product or service usage end time
+     * @param FeeEndTime Usage end time: Product or service usage end time
+     */
+    public void setFeeEndTime(String FeeEndTime) {
+        this.FeeEndTime = FeeEndTime;
+    }
+
+    /**
+     * Get Savings plan deduction from original price: Savings Plan Deduction from Original Price = Monetary Value of Savings Plan Deduction/ Savings Plan Deduction Rate 
+     * @return SPCost Savings plan deduction from original price: Savings Plan Deduction from Original Price = Monetary Value of Savings Plan Deduction/ Savings Plan Deduction Rate
+     */
+    public String getSPCost() {
+        return this.SPCost;
+    }
+
+    /**
+     * Set Savings plan deduction from original price: Savings Plan Deduction from Original Price = Monetary Value of Savings Plan Deduction/ Savings Plan Deduction Rate
+     * @param SPCost Savings plan deduction from original price: Savings Plan Deduction from Original Price = Monetary Value of Savings Plan Deduction/ Savings Plan Deduction Rate
+     */
+    public void setSPCost(String SPCost) {
+        this.SPCost = SPCost;
+    }
+
+    /**
+     * Get Domestic and international codes 
+     * @return RegionType Domestic and international codes
+     */
+    public String getRegionType() {
+        return this.RegionType;
+    }
+
+    /**
+     * Set Domestic and international codes
+     * @param RegionType Domestic and international codes
+     */
+    public void setRegionType(String RegionType) {
+        this.RegionType = RegionType;
+    }
+
+    /**
+     * Get Domestic and international: Resource region type (domestic, international) 
+     * @return RegionTypeName Domestic and international: Resource region type (domestic, international)
+     */
+    public String getRegionTypeName() {
+        return this.RegionTypeName;
+    }
+
+    /**
+     * Set Domestic and international: Resource region type (domestic, international)
+     * @param RegionTypeName Domestic and international: Resource region type (domestic, international)
+     */
+    public void setRegionTypeName(String RegionTypeName) {
+        this.RegionTypeName = RegionTypeName;
+    }
+
+    /**
+     * Get Configuration description: Name and usage of each component under the corresponding resource (the total usage if the component is cumulative usage billing type) 
+     * @return ComponentConfig Configuration description: Name and usage of each component under the corresponding resource (the total usage if the component is cumulative usage billing type)
+     */
+    public String getComponentConfig() {
+        return this.ComponentConfig;
+    }
+
+    /**
+     * Set Configuration description: Name and usage of each component under the corresponding resource (the total usage if the component is cumulative usage billing type)
+     * @param ComponentConfig Configuration description: Name and usage of each component under the corresponding resource (the total usage if the component is cumulative usage billing type)
+     */
+    public void setComponentConfig(String ComponentConfig) {
+        this.ComponentConfig = ComponentConfig;
+    }
+
+    /**
+     * Get SPDeduction 
+     * @return SPDeduction SPDeduction
+     */
+    public String getSPDeduction() {
+        return this.SPDeduction;
+    }
+
+    /**
+     * Set SPDeduction
+     * @param SPDeduction SPDeduction
+     */
+    public void setSPDeduction(String SPDeduction) {
+        this.SPDeduction = SPDeduction;
+    }
+
+    /**
+     * Get Currency. 
+     * @return Currency Currency.
+     */
+    public String getCurrency() {
+        return this.Currency;
+    }
+
+    /**
+     * Set Currency.
+     * @param Currency Currency.
+     */
+    public void setCurrency(String Currency) {
+        this.Currency = Currency;
+    }
+
+    /**
+     * Get Tax 
+     * @return Tax Tax
+     */
+    public String getTax() {
+        return this.Tax;
+    }
+
+    /**
+     * Set Tax
+     * @param Tax Tax
+     */
+    public void setTax(String Tax) {
+        this.Tax = Tax;
+    }
+
+    /**
+     * Get tax rate 
+     * @return TaxRate tax rate
+     */
+    public String getTaxRate() {
+        return this.TaxRate;
+    }
+
+    /**
+     * Set tax rate
+     * @param TaxRate tax rate
+     */
+    public void setTaxRate(String TaxRate) {
+        this.TaxRate = TaxRate;
+    }
+
+    /**
+     * Get CostBeforeTax 
+     * @return CostBeforeTax CostBeforeTax
+     */
+    public String getCostBeforeTax() {
+        return this.CostBeforeTax;
+    }
+
+    /**
+     * Set CostBeforeTax
+     * @param CostBeforeTax CostBeforeTax
+     */
+    public void setCostBeforeTax(String CostBeforeTax) {
+        this.CostBeforeTax = CostBeforeTax;
+    }
+
+    /**
+     * Get AmountBeforeTax 
+     * @return AmountBeforeTax AmountBeforeTax
+     */
+    public String getAmountBeforeTax() {
+        return this.AmountBeforeTax;
+    }
+
+    /**
+     * Set AmountBeforeTax
+     * @param AmountBeforeTax AmountBeforeTax
+     */
+    public void setAmountBeforeTax(String AmountBeforeTax) {
+        this.AmountBeforeTax = AmountBeforeTax;
+    }
+
+    /**
+     * Get Billing month 
+     * @return BillMonth Billing month
+     */
+    public String getBillMonth() {
+        return this.BillMonth;
+    }
+
+    /**
+     * Set Billing month
+     * @param BillMonth Billing month
+     */
+    public void setBillMonth(String BillMonth) {
+        this.BillMonth = BillMonth;
+    }
+
+    public AllocationSummaryByResource() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AllocationSummaryByResource(AllocationSummaryByResource source) {
+        if (source.TreeNodeUniqKey != null) {
+            this.TreeNodeUniqKey = new String(source.TreeNodeUniqKey);
+        }
+        if (source.TreeNodeUniqKeyName != null) {
+            this.TreeNodeUniqKeyName = new String(source.TreeNodeUniqKeyName);
+        }
+        if (source.BillDate != null) {
+            this.BillDate = new String(source.BillDate);
+        }
+        if (source.PayerUin != null) {
+            this.PayerUin = new String(source.PayerUin);
+        }
+        if (source.OwnerUin != null) {
+            this.OwnerUin = new String(source.OwnerUin);
+        }
+        if (source.OperateUin != null) {
+            this.OperateUin = new String(source.OperateUin);
+        }
+        if (source.PayMode != null) {
+            this.PayMode = new String(source.PayMode);
+        }
+        if (source.PayModeName != null) {
+            this.PayModeName = new String(source.PayModeName);
+        }
+        if (source.ActionType != null) {
+            this.ActionType = new String(source.ActionType);
+        }
+        if (source.ActionTypeName != null) {
+            this.ActionTypeName = new String(source.ActionTypeName);
+        }
+        if (source.BusinessCode != null) {
+            this.BusinessCode = new String(source.BusinessCode);
+        }
+        if (source.BusinessCodeName != null) {
+            this.BusinessCodeName = new String(source.BusinessCodeName);
+        }
+        if (source.ProductCode != null) {
+            this.ProductCode = new String(source.ProductCode);
+        }
+        if (source.ProductCodeName != null) {
+            this.ProductCodeName = new String(source.ProductCodeName);
+        }
+        if (source.RegionId != null) {
+            this.RegionId = new Long(source.RegionId);
+        }
+        if (source.RegionName != null) {
+            this.RegionName = new String(source.RegionName);
+        }
+        if (source.ZoneId != null) {
+            this.ZoneId = new Long(source.ZoneId);
+        }
+        if (source.ZoneName != null) {
+            this.ZoneName = new String(source.ZoneName);
+        }
+        if (source.InstanceType != null) {
+            this.InstanceType = new String(source.InstanceType);
+        }
+        if (source.InstanceTypeName != null) {
+            this.InstanceTypeName = new String(source.InstanceTypeName);
+        }
+        if (source.ResourceId != null) {
+            this.ResourceId = new String(source.ResourceId);
+        }
+        if (source.ResourceName != null) {
+            this.ResourceName = new String(source.ResourceName);
+        }
+        if (source.Tag != null) {
+            this.Tag = new BillTag[source.Tag.length];
+            for (int i = 0; i < source.Tag.length; i++) {
+                this.Tag[i] = new BillTag(source.Tag[i]);
+            }
+        }
+        if (source.ProjectId != null) {
+            this.ProjectId = new Long(source.ProjectId);
+        }
+        if (source.ProjectName != null) {
+            this.ProjectName = new String(source.ProjectName);
+        }
+        if (source.AllocationType != null) {
+            this.AllocationType = new Long(source.AllocationType);
+        }
+        if (source.TotalCost != null) {
+            this.TotalCost = new String(source.TotalCost);
+        }
+        if (source.RiTimeSpan != null) {
+            this.RiTimeSpan = new String(source.RiTimeSpan);
+        }
+        if (source.RiCost != null) {
+            this.RiCost = new String(source.RiCost);
+        }
+        if (source.RealTotalCost != null) {
+            this.RealTotalCost = new String(source.RealTotalCost);
+        }
+        if (source.CashPayAmount != null) {
+            this.CashPayAmount = new String(source.CashPayAmount);
+        }
+        if (source.VoucherPayAmount != null) {
+            this.VoucherPayAmount = new String(source.VoucherPayAmount);
+        }
+        if (source.IncentivePayAmount != null) {
+            this.IncentivePayAmount = new String(source.IncentivePayAmount);
+        }
+        if (source.TransferPayAmount != null) {
+            this.TransferPayAmount = new String(source.TransferPayAmount);
+        }
+        if (source.SplitItemId != null) {
+            this.SplitItemId = new String(source.SplitItemId);
+        }
+        if (source.SplitItemName != null) {
+            this.SplitItemName = new String(source.SplitItemName);
+        }
+        if (source.FeeBeginTime != null) {
+            this.FeeBeginTime = new String(source.FeeBeginTime);
+        }
+        if (source.FeeEndTime != null) {
+            this.FeeEndTime = new String(source.FeeEndTime);
+        }
+        if (source.SPCost != null) {
+            this.SPCost = new String(source.SPCost);
+        }
+        if (source.RegionType != null) {
+            this.RegionType = new String(source.RegionType);
+        }
+        if (source.RegionTypeName != null) {
+            this.RegionTypeName = new String(source.RegionTypeName);
+        }
+        if (source.ComponentConfig != null) {
+            this.ComponentConfig = new String(source.ComponentConfig);
+        }
+        if (source.SPDeduction != null) {
+            this.SPDeduction = new String(source.SPDeduction);
+        }
+        if (source.Currency != null) {
+            this.Currency = new String(source.Currency);
+        }
+        if (source.Tax != null) {
+            this.Tax = new String(source.Tax);
+        }
+        if (source.TaxRate != null) {
+            this.TaxRate = new String(source.TaxRate);
+        }
+        if (source.CostBeforeTax != null) {
+            this.CostBeforeTax = new String(source.CostBeforeTax);
+        }
+        if (source.AmountBeforeTax != null) {
+            this.AmountBeforeTax = new String(source.AmountBeforeTax);
+        }
+        if (source.BillMonth != null) {
+            this.BillMonth = new String(source.BillMonth);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TreeNodeUniqKey", this.TreeNodeUniqKey);
+        this.setParamSimple(map, prefix + "TreeNodeUniqKeyName", this.TreeNodeUniqKeyName);
+        this.setParamSimple(map, prefix + "BillDate", this.BillDate);
+        this.setParamSimple(map, prefix + "PayerUin", this.PayerUin);
+        this.setParamSimple(map, prefix + "OwnerUin", this.OwnerUin);
+        this.setParamSimple(map, prefix + "OperateUin", this.OperateUin);
+        this.setParamSimple(map, prefix + "PayMode", this.PayMode);
+        this.setParamSimple(map, prefix + "PayModeName", this.PayModeName);
+        this.setParamSimple(map, prefix + "ActionType", this.ActionType);
+        this.setParamSimple(map, prefix + "ActionTypeName", this.ActionTypeName);
+        this.setParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
+        this.setParamSimple(map, prefix + "BusinessCodeName", this.BusinessCodeName);
+        this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
+        this.setParamSimple(map, prefix + "ProductCodeName", this.ProductCodeName);
+        this.setParamSimple(map, prefix + "RegionId", this.RegionId);
+        this.setParamSimple(map, prefix + "RegionName", this.RegionName);
+        this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
+        this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
+        this.setParamSimple(map, prefix + "InstanceType", this.InstanceType);
+        this.setParamSimple(map, prefix + "InstanceTypeName", this.InstanceTypeName);
+        this.setParamSimple(map, prefix + "ResourceId", this.ResourceId);
+        this.setParamSimple(map, prefix + "ResourceName", this.ResourceName);
+        this.setParamArrayObj(map, prefix + "Tag.", this.Tag);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
+        this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);
+        this.setParamSimple(map, prefix + "AllocationType", this.AllocationType);
+        this.setParamSimple(map, prefix + "TotalCost", this.TotalCost);
+        this.setParamSimple(map, prefix + "RiTimeSpan", this.RiTimeSpan);
+        this.setParamSimple(map, prefix + "RiCost", this.RiCost);
+        this.setParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
+        this.setParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
+        this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+        this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+        this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+        this.setParamSimple(map, prefix + "SplitItemId", this.SplitItemId);
+        this.setParamSimple(map, prefix + "SplitItemName", this.SplitItemName);
+        this.setParamSimple(map, prefix + "FeeBeginTime", this.FeeBeginTime);
+        this.setParamSimple(map, prefix + "FeeEndTime", this.FeeEndTime);
+        this.setParamSimple(map, prefix + "SPCost", this.SPCost);
+        this.setParamSimple(map, prefix + "RegionType", this.RegionType);
+        this.setParamSimple(map, prefix + "RegionTypeName", this.RegionTypeName);
+        this.setParamSimple(map, prefix + "ComponentConfig", this.ComponentConfig);
+        this.setParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+        this.setParamSimple(map, prefix + "Currency", this.Currency);
+        this.setParamSimple(map, prefix + "Tax", this.Tax);
+        this.setParamSimple(map, prefix + "TaxRate", this.TaxRate);
+        this.setParamSimple(map, prefix + "CostBeforeTax", this.CostBeforeTax);
+        this.setParamSimple(map, prefix + "AmountBeforeTax", this.AmountBeforeTax);
+        this.setParamSimple(map, prefix + "BillMonth", this.BillMonth);
+
+    }
+}
+

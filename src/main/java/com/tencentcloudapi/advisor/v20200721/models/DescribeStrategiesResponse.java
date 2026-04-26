@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeStrategiesResponse extends AbstractModel {
 
     /**
-    * Assessment item list
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Assessment item list.
     */
     @SerializedName("Strategies")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Assessment item list
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Strategies Assessment item list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Assessment item list. 
+     * @return Strategies Assessment item list.
      */
     public Strategies [] getStrategies() {
         return this.Strategies;
     }
 
     /**
-     * Set Assessment item list
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Strategies Assessment item list
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Assessment item list.
+     * @param Strategies Assessment item list.
      */
     public void setStrategies(Strategies [] Strategies) {
         this.Strategies = Strategies;

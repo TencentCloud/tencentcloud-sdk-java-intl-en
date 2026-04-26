@@ -24,22 +24,21 @@ import java.util.HashMap;
 public class DescribeBillDetailResponse extends AbstractModel {
 
     /**
-    * Details list
+    * Detail list
     */
     @SerializedName("DetailSet")
     @Expose
     private BillDetail [] DetailSet;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Total record count, cached once every 24 hours, may be less than the actual total record count
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * Note: This field may return null, indicating that no valid values can be obtained.
+    * Context information of this request can be used in the request parameter of the next request to accelerate query speed.
     */
     @SerializedName("Context")
     @Expose
@@ -53,52 +52,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Details list 
-     * @return DetailSet Details list
+     * Get Detail list 
+     * @return DetailSet Detail list
      */
     public BillDetail [] getDetailSet() {
         return this.DetailSet;
     }
 
     /**
-     * Set Details list
-     * @param DetailSet Details list
+     * Set Detail list
+     * @param DetailSet Detail list
      */
     public void setDetailSet(BillDetail [] DetailSet) {
         this.DetailSet = DetailSet;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Total 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Total record count, cached once every 24 hours, may be less than the actual total record count 
+     * @return Total Total record count, cached once every 24 hours, may be less than the actual total record count
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Total 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Total record count, cached once every 24 hours, may be less than the actual total record count
+     * @param Total Total record count, cached once every 24 hours, may be less than the actual total record count
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Context Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Context information of this request can be used in the request parameter of the next request to accelerate query speed. 
+     * @return Context Context information of this request can be used in the request parameter of the next request to accelerate query speed.
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Context Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Context information of this request can be used in the request parameter of the next request to accelerate query speed.
+     * @param Context Context information of this request can be used in the request parameter of the next request to accelerate query speed.
      */
     public void setContext(String Context) {
         this.Context = Context;

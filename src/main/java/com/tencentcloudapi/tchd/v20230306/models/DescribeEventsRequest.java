@@ -38,7 +38,7 @@ public class DescribeEventsRequest extends AbstractModel {
     private String [] ProductIds;
 
     /**
-    *  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+    *  1. Query by Region ID(s). Region ID examples: ap-guangzhou, ap-shanghai, ap-singapore.
 2. The region ID for non-region-specific products should be set to non-regional.
     */
     @SerializedName("RegionIds")
@@ -78,9 +78,9 @@ public class DescribeEventsRequest extends AbstractModel {
     }
 
     /**
-     * Get  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+     * Get  1. Query by Region ID(s). Region ID examples: ap-guangzhou, ap-shanghai, ap-singapore.
 2. The region ID for non-region-specific products should be set to non-regional. 
-     * @return RegionIds  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+     * @return RegionIds  1. Query by Region ID(s). Region ID examples: ap-guangzhou, ap-shanghai, ap-singapore.
 2. The region ID for non-region-specific products should be set to non-regional.
      */
     public String [] getRegionIds() {
@@ -88,9 +88,9 @@ public class DescribeEventsRequest extends AbstractModel {
     }
 
     /**
-     * Set  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+     * Set  1. Query by Region ID(s). Region ID examples: ap-guangzhou, ap-shanghai, ap-singapore.
 2. The region ID for non-region-specific products should be set to non-regional.
-     * @param RegionIds  1. Query by Region ID(s). Region ID examples: ap-guangzhou、ap-shanghai、ap-singapore.
+     * @param RegionIds  1. Query by Region ID(s). Region ID examples: ap-guangzhou, ap-shanghai, ap-singapore.
 2. The region ID for non-region-specific products should be set to non-regional.
      */
     public void setRegionIds(String [] RegionIds) {

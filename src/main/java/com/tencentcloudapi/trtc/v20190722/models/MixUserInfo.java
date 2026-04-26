@@ -38,7 +38,7 @@ public class MixUserInfo extends AbstractModel {
     private String RoomId;
 
     /**
-    * The type of the `RoomId` parameter. 0: integer; 1: string.
+    * Room id type. 0 indicates integer room number. 1 indicates string room number.
     */
     @SerializedName("RoomIdType")
     @Expose
@@ -77,16 +77,16 @@ public class MixUserInfo extends AbstractModel {
     }
 
     /**
-     * Get The type of the `RoomId` parameter. 0: integer; 1: string. 
-     * @return RoomIdType The type of the `RoomId` parameter. 0: integer; 1: string.
+     * Get Room id type. 0 indicates integer room number. 1 indicates string room number. 
+     * @return RoomIdType Room id type. 0 indicates integer room number. 1 indicates string room number.
      */
     public Long getRoomIdType() {
         return this.RoomIdType;
     }
 
     /**
-     * Set The type of the `RoomId` parameter. 0: integer; 1: string.
-     * @param RoomIdType The type of the `RoomId` parameter. 0: integer; 1: string.
+     * Set Room id type. 0 indicates integer room number. 1 indicates string room number.
+     * @param RoomIdType Room id type. 0 indicates integer room number. 1 indicates string room number.
      */
     public void setRoomIdType(Long RoomIdType) {
         this.RoomIdType = RoomIdType;

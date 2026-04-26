@@ -24,36 +24,35 @@ import java.util.HashMap;
 public class DescribeCostExplorerSummaryResponse extends AbstractModel {
 
     /**
-    * Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Number of data records
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * Header informationNote: This field may return null, indicating that no valid values can be obtained.
+    * Header information.
     */
     @SerializedName("Header")
     @Expose
     private AnalyseHeaderDetail Header;
 
     /**
-    * Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+    * Data details
     */
     @SerializedName("Detail")
     @Expose
     private AnalyseDetail [] Detail;
 
     /**
-    * Data amountNote: This field may return null, indicating that no valid values can be obtained.
+    * data total
     */
     @SerializedName("TotalDetail")
     @Expose
     private AnalyseDetail TotalDetail;
 
     /**
-    * Filter boxNote: This field may return null, indicating that no valid values can be obtained.
+    * filtering box
     */
     @SerializedName("ConditionValue")
     @Expose
@@ -67,84 +66,80 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Total Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Number of data records 
+     * @return Total Number of data records
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Total Number of data entries
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Number of data records
+     * @param Total Number of data records
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get Header informationNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Header Header informationNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Header information. 
+     * @return Header Header information.
      */
     public AnalyseHeaderDetail getHeader() {
         return this.Header;
     }
 
     /**
-     * Set Header informationNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Header Header informationNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Header information.
+     * @param Header Header information.
      */
     public void setHeader(AnalyseHeaderDetail Header) {
         this.Header = Header;
     }
 
     /**
-     * Get Data detailsNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Detail Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Data details 
+     * @return Detail Data details
      */
     public AnalyseDetail [] getDetail() {
         return this.Detail;
     }
 
     /**
-     * Set Data detailsNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Detail Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Data details
+     * @param Detail Data details
      */
     public void setDetail(AnalyseDetail [] Detail) {
         this.Detail = Detail;
     }
 
     /**
-     * Get Data amountNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalDetail Data amountNote: This field may return null, indicating that no valid values can be obtained.
+     * Get data total 
+     * @return TotalDetail data total
      */
     public AnalyseDetail getTotalDetail() {
         return this.TotalDetail;
     }
 
     /**
-     * Set Data amountNote: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalDetail Data amountNote: This field may return null, indicating that no valid values can be obtained.
+     * Set data total
+     * @param TotalDetail data total
      */
     public void setTotalDetail(AnalyseDetail TotalDetail) {
         this.TotalDetail = TotalDetail;
     }
 
     /**
-     * Get Filter boxNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConditionValue Filter boxNote: This field may return null, indicating that no valid values can be obtained.
+     * Get filtering box 
+     * @return ConditionValue filtering box
      */
     public AnalyseConditionDetail getConditionValue() {
         return this.ConditionValue;
     }
 
     /**
-     * Set Filter boxNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ConditionValue Filter boxNote: This field may return null, indicating that no valid values can be obtained.
+     * Set filtering box
+     * @param ConditionValue filtering box
      */
     public void setConditionValue(AnalyseConditionDetail ConditionValue) {
         this.ConditionValue = ConditionValue;

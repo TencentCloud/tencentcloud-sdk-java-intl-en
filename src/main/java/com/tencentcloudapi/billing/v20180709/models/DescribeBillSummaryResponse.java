@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeBillSummaryResponse extends AbstractModel {
 
     /**
-    * Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates that the current UIN is initializing billing for the first time. Wait for 5-10 minutes and try again.
+    * <p>Data readiness, 0 preparing, 1 ready. (Ready=0 indicates the first time initialization billing is in progress for the present UIN, is expected to take 5-10 minutes. Just retry after 10 minutes.)</p>
     */
     @SerializedName("Ready")
     @Expose
     private Long Ready;
 
     /**
-    * Detailed summary of costs by multiple dimensions
+    * <p>Multidimensional bill summary of consumption detail</p>
     */
     @SerializedName("SummaryDetail")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeBillSummaryResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates that the current UIN is initializing billing for the first time. Wait for 5-10 minutes and try again. 
-     * @return Ready Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates that the current UIN is initializing billing for the first time. Wait for 5-10 minutes and try again.
+     * Get <p>Data readiness, 0 preparing, 1 ready. (Ready=0 indicates the first time initialization billing is in progress for the present UIN, is expected to take 5-10 minutes. Just retry after 10 minutes.)</p> 
+     * @return Ready <p>Data readiness, 0 preparing, 1 ready. (Ready=0 indicates the first time initialization billing is in progress for the present UIN, is expected to take 5-10 minutes. Just retry after 10 minutes.)</p>
      */
     public Long getReady() {
         return this.Ready;
     }
 
     /**
-     * Set Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates that the current UIN is initializing billing for the first time. Wait for 5-10 minutes and try again.
-     * @param Ready Indicates whether the data is ready. `0`: Not ready. `1`: Ready. If `Ready` is `0`, it indicates that the current UIN is initializing billing for the first time. Wait for 5-10 minutes and try again.
+     * Set <p>Data readiness, 0 preparing, 1 ready. (Ready=0 indicates the first time initialization billing is in progress for the present UIN, is expected to take 5-10 minutes. Just retry after 10 minutes.)</p>
+     * @param Ready <p>Data readiness, 0 preparing, 1 ready. (Ready=0 indicates the first time initialization billing is in progress for the present UIN, is expected to take 5-10 minutes. Just retry after 10 minutes.)</p>
      */
     public void setReady(Long Ready) {
         this.Ready = Ready;
     }
 
     /**
-     * Get Detailed summary of costs by multiple dimensions 
-     * @return SummaryDetail Detailed summary of costs by multiple dimensions
+     * Get <p>Multidimensional bill summary of consumption detail</p> 
+     * @return SummaryDetail <p>Multidimensional bill summary of consumption detail</p>
      */
     public SummaryDetail [] getSummaryDetail() {
         return this.SummaryDetail;
     }
 
     /**
-     * Set Detailed summary of costs by multiple dimensions
-     * @param SummaryDetail Detailed summary of costs by multiple dimensions
+     * Set <p>Multidimensional bill summary of consumption detail</p>
+     * @param SummaryDetail <p>Multidimensional bill summary of consumption detail</p>
      */
     public void setSummaryDetail(SummaryDetail [] SummaryDetail) {
         this.SummaryDetail = SummaryDetail;

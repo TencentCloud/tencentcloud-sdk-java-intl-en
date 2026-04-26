@@ -116,6 +116,28 @@ public class FaceidClient extends AbstractClient{
     }
 
     /**
+     *This API is used to import the ID card portrait side photo, recognize the information on the ID card photo, and compare the name, identity card number, and ID card portrait photo with the ID photo in the authoritative database to verify if they belong to the same person, thereby verifying the authenticity of the identity card information.
+     * @param req CheckIdCardInformationRequest
+     * @return CheckIdCardInformationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckIdCardInformationResponse CheckIdCardInformation(CheckIdCardInformationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckIdCardInformation", CheckIdCardInformationResponse.class);
+    }
+
+    /**
+     *This API is used to validate the authenticity and consistency of the name, identity card number, and valid period.
+     * @param req CheckIdNameDateRequest
+     * @return CheckIdNameDateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckIdNameDateResponse CheckIdNameDate(CheckIdNameDateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckIdNameDate", CheckIdNameDateResponse.class);
+    }
+
+    /**
      *This interface supports judgment of real person and photo comparison to verify the user's identity online. By passing the video and photo into the interface, it will first judge whether the person in the video is real. If yes, it judges whether the person in the video is the same one as the uploaded photo and returns authentication result.
      * @param req CompareFaceLivenessRequest
      * @return CompareFaceLivenessResponse
@@ -229,6 +251,50 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     }
 
     /**
+     *This API is used to validate the authenticity and consistency of the name and identity card number. You can provide the required verification information by manually inputting the name and identity card number or importing the ID card portrait side image.
+     * @param req IdCardOCRVerificationRequest
+     * @return IdCardOCRVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public IdCardOCRVerificationResponse IdCardOCRVerification(IdCardOCRVerificationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IdCardOCRVerification", IdCardOCRVerificationResponse.class);
+    }
+
+    /**
+     *This API is used to validate the authenticity and consistency of the name and identity card number.
+     * @param req IdCardVerificationRequest
+     * @return IdCardVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public IdCardVerificationResponse IdCardVerification(IdCardVerificationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IdCardVerification", IdCardVerificationResponse.class);
+    }
+
+    /**
+     *This API is used to judge whether the image passed in and the ID photo in the authoritative database belong to the same person based on the identity information (this interface has stopped integration, new customers please use the <a href="https://www.tencentcloud.com/document/product/1007/102203?from_cn_redirect=1">photo face verification (V2.0)</a> API).
+     * @param req ImageRecognitionRequest
+     * @return ImageRecognitionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ImageRecognitionResponse ImageRecognition(ImageRecognitionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImageRecognition", ImageRecognitionResponse.class);
+    }
+
+    /**
+     *This API is used to judge whether the image passed in and the ID photo in the authoritative database belong to the same person based on the identity information.
+     * @param req ImageRecognitionV2Request
+     * @return ImageRecognitionV2Response
+     * @throws TencentCloudSDKException
+     */
+    public ImageRecognitionV2Response ImageRecognitionV2(ImageRecognitionV2Request req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ImageRecognitionV2", ImageRecognitionV2Response.class);
+    }
+
+    /**
      *This API is used to pass in a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
 This API on the legacy version will continue to serve existing users but will be unavailable to new users. We recommend you use `VideoLivenessCompare` for better service quality.
      * @param req LivenessCompareRequest
@@ -238,6 +304,39 @@ This API on the legacy version will continue to serve existing users but will be
     public LivenessCompareResponse LivenessCompare(LivenessCompareRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "LivenessCompare", LivenessCompareResponse.class);
+    }
+
+    /**
+     *This API is used to query the duration of a mobile number. Enter mobile number to query.
+     * @param req MobileNetworkTimeVerificationRequest
+     * @return MobileNetworkTimeVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public MobileNetworkTimeVerificationResponse MobileNetworkTimeVerification(MobileNetworkTimeVerificationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "MobileNetworkTimeVerification", MobileNetworkTimeVerificationResponse.class);
+    }
+
+    /**
+     *This API is used to verify phone number status. You can enter mobile number to query.
+     * @param req MobileStatusRequest
+     * @return MobileStatusResponse
+     * @throws TencentCloudSDKException
+     */
+    public MobileStatusResponse MobileStatus(MobileStatusRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "MobileStatus", MobileStatusResponse.class);
+    }
+
+    /**
+     *This API is used to validate the authenticity and consistency of the mobile number, name, and identity card number. For details on supported mobile number segments, see the <a href="https://www.tencentcloud.com/document/product/1007/46063?from_cn_redirect=1">carrier</a> document.
+     * @param req PhoneVerificationRequest
+     * @return PhoneVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public PhoneVerificationResponse PhoneVerification(PhoneVerificationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PhoneVerification", PhoneVerificationResponse.class);
     }
 
     /**

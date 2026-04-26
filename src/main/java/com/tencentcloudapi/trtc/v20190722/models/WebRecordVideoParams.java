@@ -24,107 +24,107 @@ import java.util.HashMap;
 public class WebRecordVideoParams extends AbstractModel {
 
     /**
-    * Recording screen width, defaults to 1280, value range [0, 1920]
+    * Recording image width defaults to 1280, with a value range of [0, 1920].
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Recording screen height, defaults to 720, value range [0, 1080]
+    * Recording image height, defaults to 720, in the range of [0, 1080].
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
- 
+    * Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
+    * If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
     */
     @SerializedName("MaxMediaFileDuration")
     @Expose
     private Long MaxMediaFileDuration;
 
     /**
-     * Get Recording screen width, defaults to 1280, value range [0, 1920] 
-     * @return Width Recording screen width, defaults to 1280, value range [0, 1920]
+     * Get Recording image width defaults to 1280, with a value range of [0, 1920]. 
+     * @return Width Recording image width defaults to 1280, with a value range of [0, 1920].
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Recording screen width, defaults to 1280, value range [0, 1920]
-     * @param Width Recording screen width, defaults to 1280, value range [0, 1920]
+     * Set Recording image width defaults to 1280, with a value range of [0, 1920].
+     * @param Width Recording image width defaults to 1280, with a value range of [0, 1920].
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Recording screen height, defaults to 720, value range [0, 1080] 
-     * @return Height Recording screen height, defaults to 720, value range [0, 1080]
+     * Get Recording image height, defaults to 720, in the range of [0, 1080]. 
+     * @return Height Recording image height, defaults to 720, in the range of [0, 1080].
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Recording screen height, defaults to 720, value range [0, 1080]
-     * @param Height Recording screen height, defaults to 720, value range [0, 1080]
+     * Set Recording image height, defaults to 720, in the range of [0, 1080].
+     * @param Height Recording image height, defaults to 720, in the range of [0, 1080].
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
-  
-     * @return Format Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
+     * Get Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
  
+     * @return Format Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
- 
-     * @param Format Specify the output format, optional hls, mp4. When storing to VOD, this parameter is invalid; please use the MediaType setting within TencentVod (https://cloud.tencent.com/document/api/647/44055#TencentVod).
- 
+     * Set Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
+     * @param Format Specify output format. valid values: hls, mp4. this parameter is invalid when storing in VOD. to store in VOD, set MediaType in TencentVod (https://www.tencentcloud.comom/document/api/647/44055?from_cn_redirect=1#TencentVod).
+
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440 
-     * @return MaxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
+     * Get If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440. 
+     * @return MaxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
      */
     public Long getMaxMediaFileDuration() {
         return this.MaxMediaFileDuration;
     }
 
     /**
-     * Set If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
-     * @param MaxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when it exceeds the length limit. Unit: minutes. Default: 1440 min (24h), value range: 1-1440. [Single file size is limited to a maximum of 2G. Files will be automatically split if either condition is met: file size >2G or recording duration > 24h]
-This parameter does not take effect for Hls format recordings.
-Sample value: 1440
+     * Set If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
+     * @param MaxMediaFileDuration If the file format is aac or mp4, the system will automatically split the video file when the length limit is exceeded. measurement unit: minute. defaults to 1440 min (24h). value range: 1-1440. [single file limit is 2G. if file size exceeds 2G or recording duration exceeds 24h, the file will be automatically split.].
+Hls format recording. this parameter is not effective.
+Example value: 1440.
      */
     public void setMaxMediaFileDuration(Long MaxMediaFileDuration) {
         this.MaxMediaFileDuration = MaxMediaFileDuration;

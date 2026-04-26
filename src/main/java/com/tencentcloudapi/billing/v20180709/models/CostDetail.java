@@ -87,7 +87,7 @@ public class CostDetail extends AbstractModel {
     private String ResourceName;
 
     /**
-    * Type nameNote: This field may return null, indicating that no valid values can be obtained.
+    * Type name
     */
     @SerializedName("ActionTypeName")
     @Expose
@@ -134,6 +134,13 @@ public class CostDetail extends AbstractModel {
     @SerializedName("ProductCode")
     @Expose
     private String ProductCode;
+
+    /**
+    * Tag information.	
+    */
+    @SerializedName("Tags")
+    @Expose
+    private BillTagInfo [] Tags;
 
     /**
      * Get Payer UIN 
@@ -280,16 +287,16 @@ public class CostDetail extends AbstractModel {
     }
 
     /**
-     * Get Type nameNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ActionTypeName Type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Type name 
+     * @return ActionTypeName Type name
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set Type nameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ActionTypeName Type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Type name
+     * @param ActionTypeName Type name
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;
@@ -391,6 +398,22 @@ public class CostDetail extends AbstractModel {
         this.ProductCode = ProductCode;
     }
 
+    /**
+     * Get Tag information.	 
+     * @return Tags Tag information.	
+     */
+    public BillTagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag information.	
+     * @param Tags Tag information.	
+     */
+    public void setTags(BillTagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CostDetail() {
     }
 
@@ -450,6 +473,12 @@ public class CostDetail extends AbstractModel {
         if (source.ProductCode != null) {
             this.ProductCode = new String(source.ProductCode);
         }
+        if (source.Tags != null) {
+            this.Tags = new BillTagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new BillTagInfo(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -473,6 +502,7 @@ public class CostDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "FeeEndTime", this.FeeEndTime);
         this.setParamArrayObj(map, prefix + "ComponentSet.", this.ComponentSet);
         this.setParamSimple(map, prefix + "ProductCode", this.ProductCode);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

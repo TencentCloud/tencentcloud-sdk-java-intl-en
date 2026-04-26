@@ -3,6 +3,12 @@ public enum StsErrorCode {
      /* Invalid key. */
      AUTHFAILURE_ACCESSKEYILLEGAL("AuthFailure.AccessKeyIllegal"),
      
+     /*  */
+     FAILEDOPERATION_CHECKMFAERROR("FailedOperation.CheckMFAError"),
+     
+     /*  */
+     FAILEDOPERATION_MFATYPENOTSUPPORTED("FailedOperation.MFATypeNotSupported"),
+     
      /* Database error. */
      INTERNALERROR_DBERROR("InternalError.DbError"),
      
@@ -68,6 +74,9 @@ public enum StsErrorCode {
      
      /* WebIdentityToken parameter error */
      INVALIDPARAMETER_WEBIDENTITYTOKENERROR("InvalidParameter.WebIdentityTokenError"),
+     
+     /* Too many and frequent requests. */
+     REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
      /* The role corresponding to the account does not exist. */
      RESOURCENOTFOUND_ROLENOTFOUND("ResourceNotFound.RoleNotFound"),

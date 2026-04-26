@@ -24,291 +24,430 @@ import java.util.HashMap;
 public class McuLayout extends AbstractModel {
 
     /**
-    * The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence.
+    * User media stream parameters. if left blank, tencent cloud backend fills them automatically by the room entry sequence of the uplink host.
     */
     @SerializedName("UserMediaStream")
     @Expose
     private UserMediaStream UserMediaStream;
 
     /**
-    * The video width (pixels). If you do not pass this parameter, 0 will be used.
+    * The width of the sub-screen in the output, unit: pixel value. defaults to 0 if left blank.
     */
     @SerializedName("ImageWidth")
     @Expose
     private Long ImageWidth;
 
     /**
-    * The video height (pixels). If you do not pass this parameter, 0 will be used.
+    * The height of the sub-screen in the output, in pixel values. default is 0.
     */
     @SerializedName("ImageHeight")
     @Expose
     private Long ImageHeight;
 
     /**
-    * The horizontal offset (pixels) of the video. The sum of `LocationX` and `ImageWidth` cannot exceed the width of the canvas. If you do not pass this parameter, 0 will be used.
+    * The X-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationX and ImageWidth must not exceed the total width of the mixed stream output. default is 0.
     */
     @SerializedName("LocationX")
     @Expose
     private Long LocationX;
 
     /**
-    * The vertical offset of the video. The sum of `LocationY` and `ImageHeight` cannot exceed the height of the canvas. If you do not pass this parameter, 0 will be used.
+    * The Y-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationY and ImageHeight must not exceed the total height of the mixed stream output. default is 0 if left blank.
     */
     @SerializedName("LocationY")
     @Expose
     private Long LocationY;
 
     /**
-    * The image layer of the video. If you do not pass this parameter, 0 will be used.
+    * The hierarchy of the sub-screen in the output. default is 0.
     */
     @SerializedName("ZOrder")
     @Expose
     private Long ZOrder;
 
     /**
-    * The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used.
+    * The display mode of the sub-screen in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background. defaults to 0 if left blank.
     */
     @SerializedName("RenderMode")
     @Expose
     private Long RenderMode;
 
     /**
-    * (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
-Red: `0xcc0033`
-Yellow: `0xcc9900`
-Green: `0xcccc33`
-Blue: `0x99CCFF`
-Black: `0x000000`
-White: `0xFFFFFF`
-Grey: `0x999999`
+    * [This parameter configuration is invalid and not currently supported] the background color of the sub-picture. commonly used colors are:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
     */
     @SerializedName("BackGroundColor")
     @Expose
     private String BackGroundColor;
 
     /**
-    * The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
+    * The url of the placeholder image for the sub-window. fill in this parameter to specify the image displayed in the layout position when the user turns the camera off or has not joined the TRTC room. if the specified image has a different size ratio from the layout position, it will be stretched. this parameter has a higher priority than BackGroundColor. supported formats include png, jpg, jpeg, bmp, gif, and webm. the image size limit is no more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the placeholder image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the placeholder image will not take effect.
     */
     @SerializedName("BackgroundImageUrl")
     @Expose
     private String BackgroundImageUrl;
 
     /**
-    * Custom cropping.
+    * Customer custom crop, targeting the input stream.
     */
     @SerializedName("CustomCrop")
     @Expose
     private McuCustomCrop CustomCrop;
 
     /**
-    * The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+    * The display mode of the sub-background image in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background, 3 for variable-scale scaling, 4 for custom rendering. defaults to 3 if left blank.
     */
     @SerializedName("BackgroundRenderMode")
     @Expose
     private Long BackgroundRenderMode;
 
     /**
-     * Get The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence. 
-     * @return UserMediaStream The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence.
+    * The sub-screen template url points to a template image with an alpha channel. fill in this parameter, and the backend will extract the alpha channel of the template image during compositing, scale it as the alpha channel of the target frame, and mix it with other frames. you can use the transparent template to achieve a semi-transparent effect and arbitrary shape cropping (such as rounded corners, stars, hearts) for the target frame. png format is supported. the image size limit is no more than 5MB.
+Note:.
+1. the image aspect ratio of the template should be close to the target frame aspect ratio to avoid deformation of the template effect when scaling to fit the target frame. 2. the transparent template only takes effect when RenderMode is 0 (crop). 3. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the transparent template will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the transparent template will not take effect.
+    */
+    @SerializedName("TransparentUrl")
+    @Expose
+    private String TransparentUrl;
+
+    /**
+    * 
+    */
+    @SerializedName("BackgroundCustomRender")
+    @Expose
+    private McuBackgroundCustomRender BackgroundCustomRender;
+
+    /**
+    * Sub-Background color effective mode. default value 0 means disabled.
+bit0 specifies whether placeholder image scaling takes effect.
+bit1 specifies whether upstream flow scaling takes effect.
+You can set the corresponding bit position to 1 to start up and take effect, such as:.
+0(00) means the sub background color is disabled.
+1(01) indicates the sub-background color is valid only when placeholder image scaling is enabled.
+2(10) means the sub background color is valid only when upstream flow scaling.
+3(11) indicates the sub-background color takes effect in both placeholder image scaling and upstream flow scaling.
+
+    */
+    @SerializedName("BackGroundColorMode")
+    @Expose
+    private Long BackGroundColorMode;
+
+    /**
+     * Get User media stream parameters. if left blank, tencent cloud backend fills them automatically by the room entry sequence of the uplink host. 
+     * @return UserMediaStream User media stream parameters. if left blank, tencent cloud backend fills them automatically by the room entry sequence of the uplink host.
      */
     public UserMediaStream getUserMediaStream() {
         return this.UserMediaStream;
     }
 
     /**
-     * Set The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence.
-     * @param UserMediaStream The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence.
+     * Set User media stream parameters. if left blank, tencent cloud backend fills them automatically by the room entry sequence of the uplink host.
+     * @param UserMediaStream User media stream parameters. if left blank, tencent cloud backend fills them automatically by the room entry sequence of the uplink host.
      */
     public void setUserMediaStream(UserMediaStream UserMediaStream) {
         this.UserMediaStream = UserMediaStream;
     }
 
     /**
-     * Get The video width (pixels). If you do not pass this parameter, 0 will be used. 
-     * @return ImageWidth The video width (pixels). If you do not pass this parameter, 0 will be used.
+     * Get The width of the sub-screen in the output, unit: pixel value. defaults to 0 if left blank. 
+     * @return ImageWidth The width of the sub-screen in the output, unit: pixel value. defaults to 0 if left blank.
      */
     public Long getImageWidth() {
         return this.ImageWidth;
     }
 
     /**
-     * Set The video width (pixels). If you do not pass this parameter, 0 will be used.
-     * @param ImageWidth The video width (pixels). If you do not pass this parameter, 0 will be used.
+     * Set The width of the sub-screen in the output, unit: pixel value. defaults to 0 if left blank.
+     * @param ImageWidth The width of the sub-screen in the output, unit: pixel value. defaults to 0 if left blank.
      */
     public void setImageWidth(Long ImageWidth) {
         this.ImageWidth = ImageWidth;
     }
 
     /**
-     * Get The video height (pixels). If you do not pass this parameter, 0 will be used. 
-     * @return ImageHeight The video height (pixels). If you do not pass this parameter, 0 will be used.
+     * Get The height of the sub-screen in the output, in pixel values. default is 0. 
+     * @return ImageHeight The height of the sub-screen in the output, in pixel values. default is 0.
      */
     public Long getImageHeight() {
         return this.ImageHeight;
     }
 
     /**
-     * Set The video height (pixels). If you do not pass this parameter, 0 will be used.
-     * @param ImageHeight The video height (pixels). If you do not pass this parameter, 0 will be used.
+     * Set The height of the sub-screen in the output, in pixel values. default is 0.
+     * @param ImageHeight The height of the sub-screen in the output, in pixel values. default is 0.
      */
     public void setImageHeight(Long ImageHeight) {
         this.ImageHeight = ImageHeight;
     }
 
     /**
-     * Get The horizontal offset (pixels) of the video. The sum of `LocationX` and `ImageWidth` cannot exceed the width of the canvas. If you do not pass this parameter, 0 will be used. 
-     * @return LocationX The horizontal offset (pixels) of the video. The sum of `LocationX` and `ImageWidth` cannot exceed the width of the canvas. If you do not pass this parameter, 0 will be used.
+     * Get The X-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationX and ImageWidth must not exceed the total width of the mixed stream output. default is 0. 
+     * @return LocationX The X-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationX and ImageWidth must not exceed the total width of the mixed stream output. default is 0.
      */
     public Long getLocationX() {
         return this.LocationX;
     }
 
     /**
-     * Set The horizontal offset (pixels) of the video. The sum of `LocationX` and `ImageWidth` cannot exceed the width of the canvas. If you do not pass this parameter, 0 will be used.
-     * @param LocationX The horizontal offset (pixels) of the video. The sum of `LocationX` and `ImageWidth` cannot exceed the width of the canvas. If you do not pass this parameter, 0 will be used.
+     * Set The X-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationX and ImageWidth must not exceed the total width of the mixed stream output. default is 0.
+     * @param LocationX The X-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationX and ImageWidth must not exceed the total width of the mixed stream output. default is 0.
      */
     public void setLocationX(Long LocationX) {
         this.LocationX = LocationX;
     }
 
     /**
-     * Get The vertical offset of the video. The sum of `LocationY` and `ImageHeight` cannot exceed the height of the canvas. If you do not pass this parameter, 0 will be used. 
-     * @return LocationY The vertical offset of the video. The sum of `LocationY` and `ImageHeight` cannot exceed the height of the canvas. If you do not pass this parameter, 0 will be used.
+     * Get The Y-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationY and ImageHeight must not exceed the total height of the mixed stream output. default is 0 if left blank. 
+     * @return LocationY The Y-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationY and ImageHeight must not exceed the total height of the mixed stream output. default is 0 if left blank.
      */
     public Long getLocationY() {
         return this.LocationY;
     }
 
     /**
-     * Set The vertical offset of the video. The sum of `LocationY` and `ImageHeight` cannot exceed the height of the canvas. If you do not pass this parameter, 0 will be used.
-     * @param LocationY The vertical offset of the video. The sum of `LocationY` and `ImageHeight` cannot exceed the height of the canvas. If you do not pass this parameter, 0 will be used.
+     * Set The Y-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationY and ImageHeight must not exceed the total height of the mixed stream output. default is 0 if left blank.
+     * @param LocationY The Y-axis offset of the sub-screen in the output, unit: pixel value. the sum of LocationY and ImageHeight must not exceed the total height of the mixed stream output. default is 0 if left blank.
      */
     public void setLocationY(Long LocationY) {
         this.LocationY = LocationY;
     }
 
     /**
-     * Get The image layer of the video. If you do not pass this parameter, 0 will be used. 
-     * @return ZOrder The image layer of the video. If you do not pass this parameter, 0 will be used.
+     * Get The hierarchy of the sub-screen in the output. default is 0. 
+     * @return ZOrder The hierarchy of the sub-screen in the output. default is 0.
      */
     public Long getZOrder() {
         return this.ZOrder;
     }
 
     /**
-     * Set The image layer of the video. If you do not pass this parameter, 0 will be used.
-     * @param ZOrder The image layer of the video. If you do not pass this parameter, 0 will be used.
+     * Set The hierarchy of the sub-screen in the output. default is 0.
+     * @param ZOrder The hierarchy of the sub-screen in the output. default is 0.
      */
     public void setZOrder(Long ZOrder) {
         this.ZOrder = ZOrder;
     }
 
     /**
-     * Get The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used. 
-     * @return RenderMode The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used.
+     * Get The display mode of the sub-screen in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background. defaults to 0 if left blank. 
+     * @return RenderMode The display mode of the sub-screen in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background. defaults to 0 if left blank.
      */
     public Long getRenderMode() {
         return this.RenderMode;
     }
 
     /**
-     * Set The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used.
-     * @param RenderMode The rendering mode of the video. 0 (the video is scaled and the excess parts are cropped), 1 (the video is scaled), 2 (the video is scaled and the blank spaces are filled with black bars). If you do not pass this parameter, 0 will be used.
+     * Set The display mode of the sub-screen in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background. defaults to 0 if left blank.
+     * @param RenderMode The display mode of the sub-screen in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background. defaults to 0 if left blank.
      */
     public void setRenderMode(Long RenderMode) {
         this.RenderMode = RenderMode;
     }
 
     /**
-     * Get (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
-Red: `0xcc0033`
-Yellow: `0xcc9900`
-Green: `0xcccc33`
-Blue: `0x99CCFF`
-Black: `0x000000`
-White: `0xFFFFFF`
-Grey: `0x999999` 
-     * @return BackGroundColor (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
-Red: `0xcc0033`
-Yellow: `0xcc9900`
-Green: `0xcccc33`
-Blue: `0x99CCFF`
-Black: `0x000000`
-White: `0xFFFFFF`
-Grey: `0x999999`
+     * Get [This parameter configuration is invalid and not currently supported] the background color of the sub-picture. commonly used colors are:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999. 
+     * @return BackGroundColor [This parameter configuration is invalid and not currently supported] the background color of the sub-picture. commonly used colors are:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
      */
     public String getBackGroundColor() {
         return this.BackGroundColor;
     }
 
     /**
-     * Set (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
-Red: `0xcc0033`
-Yellow: `0xcc9900`
-Green: `0xcccc33`
-Blue: `0x99CCFF`
-Black: `0x000000`
-White: `0xFFFFFF`
-Grey: `0x999999`
-     * @param BackGroundColor (Not supported yet) The background color of a video. Below are the values for some commonly used colors:
-Red: `0xcc0033`
-Yellow: `0xcc9900`
-Green: `0xcccc33`
-Blue: `0x99CCFF`
-Black: `0x000000`
-White: `0xFFFFFF`
-Grey: `0x999999`
+     * Set [This parameter configuration is invalid and not currently supported] the background color of the sub-picture. commonly used colors are:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
+     * @param BackGroundColor [This parameter configuration is invalid and not currently supported] the background color of the sub-picture. commonly used colors are:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
      */
     public void setBackGroundColor(String BackGroundColor) {
         this.BackGroundColor = BackGroundColor;
     }
 
     /**
-     * Get The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`. 
-     * @return BackgroundImageUrl The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
+     * Get The url of the placeholder image for the sub-window. fill in this parameter to specify the image displayed in the layout position when the user turns the camera off or has not joined the TRTC room. if the specified image has a different size ratio from the layout position, it will be stretched. this parameter has a higher priority than BackGroundColor. supported formats include png, jpg, jpeg, bmp, gif, and webm. the image size limit is no more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the placeholder image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the placeholder image will not take effect. 
+     * @return BackgroundImageUrl The url of the placeholder image for the sub-window. fill in this parameter to specify the image displayed in the layout position when the user turns the camera off or has not joined the TRTC room. if the specified image has a different size ratio from the layout position, it will be stretched. this parameter has a higher priority than BackGroundColor. supported formats include png, jpg, jpeg, bmp, gif, and webm. the image size limit is no more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the placeholder image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the placeholder image will not take effect.
      */
     public String getBackgroundImageUrl() {
         return this.BackgroundImageUrl;
     }
 
     /**
-     * Set The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
-     * @param BackgroundImageUrl The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
+     * Set The url of the placeholder image for the sub-window. fill in this parameter to specify the image displayed in the layout position when the user turns the camera off or has not joined the TRTC room. if the specified image has a different size ratio from the layout position, it will be stretched. this parameter has a higher priority than BackGroundColor. supported formats include png, jpg, jpeg, bmp, gif, and webm. the image size limit is no more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the placeholder image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the placeholder image will not take effect.
+     * @param BackgroundImageUrl The url of the placeholder image for the sub-window. fill in this parameter to specify the image displayed in the layout position when the user turns the camera off or has not joined the TRTC room. if the specified image has a different size ratio from the layout position, it will be stretched. this parameter has a higher priority than BackGroundColor. supported formats include png, jpg, jpeg, bmp, gif, and webm. the image size limit is no more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the placeholder image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the placeholder image will not take effect.
      */
     public void setBackgroundImageUrl(String BackgroundImageUrl) {
         this.BackgroundImageUrl = BackgroundImageUrl;
     }
 
     /**
-     * Get Custom cropping. 
-     * @return CustomCrop Custom cropping.
+     * Get Customer custom crop, targeting the input stream. 
+     * @return CustomCrop Customer custom crop, targeting the input stream.
      */
     public McuCustomCrop getCustomCrop() {
         return this.CustomCrop;
     }
 
     /**
-     * Set Custom cropping.
-     * @param CustomCrop Custom cropping.
+     * Set Customer custom crop, targeting the input stream.
+     * @param CustomCrop Customer custom crop, targeting the input stream.
      */
     public void setCustomCrop(McuCustomCrop CustomCrop) {
         this.CustomCrop = CustomCrop;
     }
 
     /**
-     * Get The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3. 
-     * @return BackgroundRenderMode The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+     * Get The display mode of the sub-background image in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background, 3 for variable-scale scaling, 4 for custom rendering. defaults to 3 if left blank. 
+     * @return BackgroundRenderMode The display mode of the sub-background image in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background, 3 for variable-scale scaling, 4 for custom rendering. defaults to 3 if left blank.
      */
     public Long getBackgroundRenderMode() {
         return this.BackgroundRenderMode;
     }
 
     /**
-     * Set The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
-     * @param BackgroundRenderMode The display mode of the sub-background image during output: 0 for cropping, 1 for scaling and displaying the background, 2 for scaling and displaying the black background, 3 for proportional scaling. If not filled in, the default is 3.
+     * Set The display mode of the sub-background image in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background, 3 for variable-scale scaling, 4 for custom rendering. defaults to 3 if left blank.
+     * @param BackgroundRenderMode The display mode of the sub-background image in the output: 0 for crop, 1 for scale and display background, 2 for scale and display black background, 3 for variable-scale scaling, 4 for custom rendering. defaults to 3 if left blank.
      */
     public void setBackgroundRenderMode(Long BackgroundRenderMode) {
         this.BackgroundRenderMode = BackgroundRenderMode;
+    }
+
+    /**
+     * Get The sub-screen template url points to a template image with an alpha channel. fill in this parameter, and the backend will extract the alpha channel of the template image during compositing, scale it as the alpha channel of the target frame, and mix it with other frames. you can use the transparent template to achieve a semi-transparent effect and arbitrary shape cropping (such as rounded corners, stars, hearts) for the target frame. png format is supported. the image size limit is no more than 5MB.
+Note:.
+1. the image aspect ratio of the template should be close to the target frame aspect ratio to avoid deformation of the template effect when scaling to fit the target frame. 2. the transparent template only takes effect when RenderMode is 0 (crop). 3. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the transparent template will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the transparent template will not take effect. 
+     * @return TransparentUrl The sub-screen template url points to a template image with an alpha channel. fill in this parameter, and the backend will extract the alpha channel of the template image during compositing, scale it as the alpha channel of the target frame, and mix it with other frames. you can use the transparent template to achieve a semi-transparent effect and arbitrary shape cropping (such as rounded corners, stars, hearts) for the target frame. png format is supported. the image size limit is no more than 5MB.
+Note:.
+1. the image aspect ratio of the template should be close to the target frame aspect ratio to avoid deformation of the template effect when scaling to fit the target frame. 2. the transparent template only takes effect when RenderMode is 0 (crop). 3. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the transparent template will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the transparent template will not take effect.
+     */
+    public String getTransparentUrl() {
+        return this.TransparentUrl;
+    }
+
+    /**
+     * Set The sub-screen template url points to a template image with an alpha channel. fill in this parameter, and the backend will extract the alpha channel of the template image during compositing, scale it as the alpha channel of the target frame, and mix it with other frames. you can use the transparent template to achieve a semi-transparent effect and arbitrary shape cropping (such as rounded corners, stars, hearts) for the target frame. png format is supported. the image size limit is no more than 5MB.
+Note:.
+1. the image aspect ratio of the template should be close to the target frame aspect ratio to avoid deformation of the template effect when scaling to fit the target frame. 2. the transparent template only takes effect when RenderMode is 0 (crop). 3. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the transparent template will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the transparent template will not take effect.
+     * @param TransparentUrl The sub-screen template url points to a template image with an alpha channel. fill in this parameter, and the backend will extract the alpha channel of the template image during compositing, scale it as the alpha channel of the target frame, and mix it with other frames. you can use the transparent template to achieve a semi-transparent effect and arbitrary shape cropping (such as rounded corners, stars, hearts) for the target frame. png format is supported. the image size limit is no more than 5MB.
+Note:.
+1. the image aspect ratio of the template should be close to the target frame aspect ratio to avoid deformation of the template effect when scaling to fit the target frame. 2. the transparent template only takes effect when RenderMode is 0 (crop). 3. make sure the image link is accessible. the backend single download timeout period is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the transparent template will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if characters outside the supported character sets exist, the transparent template will not take effect.
+     */
+    public void setTransparentUrl(String TransparentUrl) {
+        this.TransparentUrl = TransparentUrl;
+    }
+
+    /**
+     * Get  
+     * @return BackgroundCustomRender 
+     */
+    public McuBackgroundCustomRender getBackgroundCustomRender() {
+        return this.BackgroundCustomRender;
+    }
+
+    /**
+     * Set 
+     * @param BackgroundCustomRender 
+     */
+    public void setBackgroundCustomRender(McuBackgroundCustomRender BackgroundCustomRender) {
+        this.BackgroundCustomRender = BackgroundCustomRender;
+    }
+
+    /**
+     * Get Sub-Background color effective mode. default value 0 means disabled.
+bit0 specifies whether placeholder image scaling takes effect.
+bit1 specifies whether upstream flow scaling takes effect.
+You can set the corresponding bit position to 1 to start up and take effect, such as:.
+0(00) means the sub background color is disabled.
+1(01) indicates the sub-background color is valid only when placeholder image scaling is enabled.
+2(10) means the sub background color is valid only when upstream flow scaling.
+3(11) indicates the sub-background color takes effect in both placeholder image scaling and upstream flow scaling.
+ 
+     * @return BackGroundColorMode Sub-Background color effective mode. default value 0 means disabled.
+bit0 specifies whether placeholder image scaling takes effect.
+bit1 specifies whether upstream flow scaling takes effect.
+You can set the corresponding bit position to 1 to start up and take effect, such as:.
+0(00) means the sub background color is disabled.
+1(01) indicates the sub-background color is valid only when placeholder image scaling is enabled.
+2(10) means the sub background color is valid only when upstream flow scaling.
+3(11) indicates the sub-background color takes effect in both placeholder image scaling and upstream flow scaling.
+
+     */
+    public Long getBackGroundColorMode() {
+        return this.BackGroundColorMode;
+    }
+
+    /**
+     * Set Sub-Background color effective mode. default value 0 means disabled.
+bit0 specifies whether placeholder image scaling takes effect.
+bit1 specifies whether upstream flow scaling takes effect.
+You can set the corresponding bit position to 1 to start up and take effect, such as:.
+0(00) means the sub background color is disabled.
+1(01) indicates the sub-background color is valid only when placeholder image scaling is enabled.
+2(10) means the sub background color is valid only when upstream flow scaling.
+3(11) indicates the sub-background color takes effect in both placeholder image scaling and upstream flow scaling.
+
+     * @param BackGroundColorMode Sub-Background color effective mode. default value 0 means disabled.
+bit0 specifies whether placeholder image scaling takes effect.
+bit1 specifies whether upstream flow scaling takes effect.
+You can set the corresponding bit position to 1 to start up and take effect, such as:.
+0(00) means the sub background color is disabled.
+1(01) indicates the sub-background color is valid only when placeholder image scaling is enabled.
+2(10) means the sub background color is valid only when upstream flow scaling.
+3(11) indicates the sub-background color takes effect in both placeholder image scaling and upstream flow scaling.
+
+     */
+    public void setBackGroundColorMode(Long BackGroundColorMode) {
+        this.BackGroundColorMode = BackGroundColorMode;
     }
 
     public McuLayout() {
@@ -352,6 +491,15 @@ Grey: `0x999999`
         if (source.BackgroundRenderMode != null) {
             this.BackgroundRenderMode = new Long(source.BackgroundRenderMode);
         }
+        if (source.TransparentUrl != null) {
+            this.TransparentUrl = new String(source.TransparentUrl);
+        }
+        if (source.BackgroundCustomRender != null) {
+            this.BackgroundCustomRender = new McuBackgroundCustomRender(source.BackgroundCustomRender);
+        }
+        if (source.BackGroundColorMode != null) {
+            this.BackGroundColorMode = new Long(source.BackGroundColorMode);
+        }
     }
 
 
@@ -370,6 +518,9 @@ Grey: `0x999999`
         this.setParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
         this.setParamObj(map, prefix + "CustomCrop.", this.CustomCrop);
         this.setParamSimple(map, prefix + "BackgroundRenderMode", this.BackgroundRenderMode);
+        this.setParamSimple(map, prefix + "TransparentUrl", this.TransparentUrl);
+        this.setParamObj(map, prefix + "BackgroundCustomRender.", this.BackgroundCustomRender);
+        this.setParamSimple(map, prefix + "BackGroundColorMode", this.BackGroundColorMode);
 
     }
 }

@@ -62,7 +62,7 @@ zone = Availability zoneactionType = Transaction typepayMode = Billing modetags 
     private String Dimensions;
 
     /**
-    * Fee type: cost-total cost, totalCost-original price cost
+    * Fee type: cost-discounted total cost, totalCost-original price cost
     */
     @SerializedName("FeeType")
     @Expose
@@ -196,16 +196,16 @@ zone = Availability zoneactionType = Transaction typepayMode = Billing modetags 
     }
 
     /**
-     * Get Fee type: cost-total cost, totalCost-original price cost 
-     * @return FeeType Fee type: cost-total cost, totalCost-original price cost
+     * Get Fee type: cost-discounted total cost, totalCost-original price cost 
+     * @return FeeType Fee type: cost-discounted total cost, totalCost-original price cost
      */
     public String getFeeType() {
         return this.FeeType;
     }
 
     /**
-     * Set Fee type: cost-total cost, totalCost-original price cost
-     * @param FeeType Fee type: cost-total cost, totalCost-original price cost
+     * Set Fee type: cost-discounted total cost, totalCost-original price cost
+     * @param FeeType Fee type: cost-discounted total cost, totalCost-original price cost
      */
     public void setFeeType(String FeeType) {
         this.FeeType = FeeType;

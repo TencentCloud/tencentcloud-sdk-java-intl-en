@@ -76,7 +76,7 @@ If this parameter is set to 5, make sure that an [oral-to-written resource packa
     /**
     * Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
     */
     @SerializedName("SourceType")
     @Expose
@@ -93,7 +93,7 @@ Note: The audio data size cannot exceed 5 MB.
     private String Data;
 
     /**
-    * Data length (before Base64 encoding).
+    * Data length (before Base64 encoding)
     */
     @SerializedName("DataLen")
     @Expose
@@ -286,6 +286,13 @@ Notes:
     private String [] KeyWordLibIdList;
 
     /**
+    * 
+    */
+    @SerializedName("ReplaceTextId")
+    @Expose
+    private String ReplaceTextId;
+
+    /**
      * Get Engine model type.
 Each recognition engine adopts a specific billing plan. Engines marked with "large model version" adopt the large model billing plan. For product billing instructions, [click here] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1).
 
@@ -452,10 +459,10 @@ If this parameter is set to 5, make sure that an [oral-to-written resource packa
     /**
      * Get Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request). 
+1: Local audio file (body of the POST request) 
      * @return SourceType Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
      */
     public Long getSourceType() {
         return this.SourceType;
@@ -464,10 +471,10 @@ If this parameter is set to 5, make sure that an [oral-to-written resource packa
     /**
      * Set Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
      * @param SourceType Audio source.
 0: Audio URL.
-1: Local audio file (body of the POST request).
+1: Local audio file (body of the POST request)
      */
     public void setSourceType(Long SourceType) {
         this.SourceType = SourceType;
@@ -502,16 +509,16 @@ Note: The audio data size cannot exceed 5 MB.
     }
 
     /**
-     * Get Data length (before Base64 encoding). 
-     * @return DataLen Data length (before Base64 encoding).
+     * Get Data length (before Base64 encoding) 
+     * @return DataLen Data length (before Base64 encoding)
      */
     public Long getDataLen() {
         return this.DataLen;
     }
 
     /**
-     * Set Data length (before Base64 encoding).
-     * @param DataLen Data length (before Base64 encoding).
+     * Set Data length (before Base64 encoding)
+     * @param DataLen Data length (before Base64 encoding)
      */
     public void setDataLen(Long DataLen) {
         this.DataLen = DataLen;
@@ -1061,6 +1068,22 @@ Notes:
         this.KeyWordLibIdList = KeyWordLibIdList;
     }
 
+    /**
+     * Get  
+     * @return ReplaceTextId 
+     */
+    public String getReplaceTextId() {
+        return this.ReplaceTextId;
+    }
+
+    /**
+     * Set 
+     * @param ReplaceTextId 
+     */
+    public void setReplaceTextId(String ReplaceTextId) {
+        this.ReplaceTextId = ReplaceTextId;
+    }
+
     public CreateRecTaskRequest() {
     }
 
@@ -1141,6 +1164,9 @@ Notes:
                 this.KeyWordLibIdList[i] = new String(source.KeyWordLibIdList[i]);
             }
         }
+        if (source.ReplaceTextId != null) {
+            this.ReplaceTextId = new String(source.ReplaceTextId);
+        }
     }
 
 
@@ -1171,6 +1197,7 @@ Notes:
         this.setParamSimple(map, prefix + "Extra", this.Extra);
         this.setParamSimple(map, prefix + "HotwordList", this.HotwordList);
         this.setParamArraySimple(map, prefix + "KeyWordLibIdList.", this.KeyWordLibIdList);
+        this.setParamSimple(map, prefix + "ReplaceTextId", this.ReplaceTextId);
 
     }
 }

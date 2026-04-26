@@ -31,7 +31,7 @@ public class DescribeCostSummaryByResourceResponse extends AbstractModel {
     private Long Ready;
 
     /**
-    * Consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
+    * Consumption details
     */
     @SerializedName("Total")
     @Expose
@@ -53,7 +53,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long RecordNum;
 
     /**
-    * Resource consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
+    * Resource consumption details
     */
     @SerializedName("Data")
     @Expose
@@ -83,16 +83,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Consumption detailsNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Total Consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Consumption details 
+     * @return Total Consumption details
      */
     public ConsumptionSummaryTotal getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Total Consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Consumption details
+     * @param Total Consumption details
      */
     public void setTotal(ConsumptionSummaryTotal Total) {
         this.Total = Total;
@@ -135,16 +135,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Resource consumption detailsNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Resource consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource consumption details 
+     * @return Data Resource consumption details
      */
     public ConsumptionResourceSummaryDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Resource consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Resource consumption detailsNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource consumption details
+     * @param Data Resource consumption details
      */
     public void setData(ConsumptionResourceSummaryDataItem [] Data) {
         this.Data = Data;

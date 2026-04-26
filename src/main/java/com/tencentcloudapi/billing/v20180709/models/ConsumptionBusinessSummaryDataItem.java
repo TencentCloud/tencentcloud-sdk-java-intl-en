@@ -53,7 +53,6 @@ public class ConsumptionBusinessSummaryDataItem extends AbstractModel {
 
     /**
     * Cash
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CashPayAmount")
     @Expose
@@ -61,29 +60,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * VoucherNote: This field may return null, indicating that no valid values can be obtained.
+    * Voucher
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+    * Royalty amount
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
 
     /**
+    * Cash payment (pre-tax)
+    */
+    @SerializedName("AmountBeforeTax")
+    @Expose
+    private String AmountBeforeTax;
+
+    /**
+    * Tax
+    */
+    @SerializedName("Tax")
+    @Expose
+    private String Tax;
+
+    /**
     * Region name (only shown in regional summary)
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RegionName")
     @Expose
@@ -154,10 +165,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cash
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Cash 
      * @return CashPayAmount Cash
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
@@ -165,19 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Cash
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param CashPayAmount Cash
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Bonus
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Bonus 
      * @return IncentivePayAmount Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
@@ -185,51 +190,79 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param IncentivePayAmount Bonus
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get VoucherNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoucherPayAmount VoucherNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Voucher 
+     * @return VoucherPayAmount Voucher
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set VoucherNote: This field may return null, indicating that no valid values can be obtained.
-     * @param VoucherPayAmount VoucherNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Voucher
+     * @param VoucherPayAmount Voucher
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Share revenueNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Royalty amount 
+     * @return TransferPayAmount Royalty amount
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Share revenueNote: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Share revenueNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Royalty amount
+     * @param TransferPayAmount Royalty amount
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get Region name (only shown in regional summary)
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Cash payment (pre-tax) 
+     * @return AmountBeforeTax Cash payment (pre-tax)
+     */
+    public String getAmountBeforeTax() {
+        return this.AmountBeforeTax;
+    }
+
+    /**
+     * Set Cash payment (pre-tax)
+     * @param AmountBeforeTax Cash payment (pre-tax)
+     */
+    public void setAmountBeforeTax(String AmountBeforeTax) {
+        this.AmountBeforeTax = AmountBeforeTax;
+    }
+
+    /**
+     * Get Tax 
+     * @return Tax Tax
+     */
+    public String getTax() {
+        return this.Tax;
+    }
+
+    /**
+     * Set Tax
+     * @param Tax Tax
+     */
+    public void setTax(String Tax) {
+        this.Tax = Tax;
+    }
+
+    /**
+     * Get Region name (only shown in regional summary) 
      * @return RegionName Region name (only shown in regional summary)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRegionName() {
         return this.RegionName;
@@ -237,9 +270,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Region name (only shown in regional summary)
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RegionName Region name (only shown in regional summary)
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRegionName(String RegionName) {
         this.RegionName = RegionName;
@@ -277,6 +308,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.TransferPayAmount != null) {
             this.TransferPayAmount = new String(source.TransferPayAmount);
         }
+        if (source.AmountBeforeTax != null) {
+            this.AmountBeforeTax = new String(source.AmountBeforeTax);
+        }
+        if (source.Tax != null) {
+            this.Tax = new String(source.Tax);
+        }
         if (source.RegionName != null) {
             this.RegionName = new String(source.RegionName);
         }
@@ -295,6 +332,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
         this.setParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
         this.setParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
+        this.setParamSimple(map, prefix + "AmountBeforeTax", this.AmountBeforeTax);
+        this.setParamSimple(map, prefix + "Tax", this.Tax);
         this.setParamSimple(map, prefix + "RegionName", this.RegionName);
 
     }

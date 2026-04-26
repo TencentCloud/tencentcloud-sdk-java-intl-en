@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTagListResponse extends AbstractModel {
 
     /**
-    * Total number of records.
+    * Total number of records
     */
     @SerializedName("RecordNum")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeTagListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records. 
-     * @return RecordNum Total number of records.
+     * Get Total number of records 
+     * @return RecordNum Total number of records
      */
     public Long getRecordNum() {
         return this.RecordNum;
     }
 
     /**
-     * Set Total number of records.
-     * @param RecordNum Total number of records.
+     * Set Total number of records
+     * @param RecordNum Total number of records
      */
     public void setRecordNum(Long RecordNum) {
         this.RecordNum = RecordNum;

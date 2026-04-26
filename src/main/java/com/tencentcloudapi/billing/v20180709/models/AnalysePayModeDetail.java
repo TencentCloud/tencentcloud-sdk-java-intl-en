@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AnalysePayModeDetail extends AbstractModel {
 
     /**
-    * Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
+    * Billing mode code
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
+    * Billing mode Name
     */
     @SerializedName("PayModeName")
     @Expose
     private String PayModeName;
 
     /**
-     * Get Billing mode codeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayMode Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Billing mode code 
+     * @return PayMode Billing mode code
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param PayMode Billing mode codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Billing mode code
+     * @param PayMode Billing mode code
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Billing mode nameNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayModeName Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Billing mode Name 
+     * @return PayModeName Billing mode Name
      */
     public String getPayModeName() {
         return this.PayModeName;
     }
 
     /**
-     * Set Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param PayModeName Billing mode nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Billing mode Name
+     * @param PayModeName Billing mode Name
      */
     public void setPayModeName(String PayModeName) {
         this.PayModeName = PayModeName;

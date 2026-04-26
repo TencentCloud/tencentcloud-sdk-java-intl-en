@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class McuLayoutParams extends AbstractModel {
 
     /**
-    * The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+    * Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
     */
     @SerializedName("MixLayoutMode")
     @Expose
@@ -38,7 +38,7 @@ public class McuLayoutParams extends AbstractModel {
     private Long PureAudioHoldPlaceMode;
 
     /**
-    * The details of a custom layout.
+    * Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
     */
     @SerializedName("MixLayoutList")
     @Expose
@@ -59,16 +59,16 @@ public class McuLayoutParams extends AbstractModel {
     private Long RenderMode;
 
     /**
-     * Get The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts. 
-     * @return MixLayoutMode The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+     * Get Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream. 
+     * @return MixLayoutMode Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
      */
     public Long getMixLayoutMode() {
         return this.MixLayoutMode;
     }
 
     /**
-     * Set The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
-     * @param MixLayoutMode The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
+     * Set Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
+     * @param MixLayoutMode Layout mode: dynamic layout (1: floating layout (default), 2: screen sharing layout, 3: nine-grid layout), static layout (4: custom layout). supports up to 16 mixed media streams. if the user only sends upstream audio, it will be counted as one stream. in custom layout, if the sub-screen only uses placeholder images, it will also be counted as one stream.
      */
     public void setMixLayoutMode(Long MixLayoutMode) {
         this.MixLayoutMode = MixLayoutMode;
@@ -91,16 +91,16 @@ public class McuLayoutParams extends AbstractModel {
     }
 
     /**
-     * Get The details of a custom layout. 
-     * @return MixLayoutList The details of a custom layout.
+     * Get Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams. 
+     * @return MixLayoutList Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
      */
     public McuLayout [] getMixLayoutList() {
         return this.MixLayoutList;
     }
 
     /**
-     * Set The details of a custom layout.
-     * @param MixLayoutList The details of a custom layout.
+     * Set Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
+     * @param MixLayoutList Valid in custom template. specifies the position of designated user video in mixed display. supports setting up to 16 input streams.
      */
     public void setMixLayoutList(McuLayout [] MixLayoutList) {
         this.MixLayoutList = MixLayoutList;

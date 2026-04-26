@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BusinessSummaryOverviewItem extends AbstractModel {
 
     /**
-    * Product code. Note: This field may return null, indicating that no valid values can be obtained.
+    * Product code
     */
     @SerializedName("BusinessCode")
     @Expose
@@ -94,16 +94,16 @@ public class BusinessSummaryOverviewItem extends AbstractModel {
     private String TotalCost;
 
     /**
-     * Get Product code. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BusinessCode Product code. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Product code 
+     * @return BusinessCode Product code
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set Product code. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BusinessCode Product code. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Product code
+     * @param BusinessCode Product code
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;

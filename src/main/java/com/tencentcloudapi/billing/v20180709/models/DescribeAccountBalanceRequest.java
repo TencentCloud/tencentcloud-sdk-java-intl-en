@@ -23,6 +23,29 @@ import java.util.HashMap;
 
 public class DescribeAccountBalanceRequest extends AbstractModel {
 
+    /**
+    * Query the temporary limit
+    */
+    @SerializedName("TempCredit")
+    @Expose
+    private Boolean TempCredit;
+
+    /**
+     * Get Query the temporary limit 
+     * @return TempCredit Query the temporary limit
+     */
+    public Boolean getTempCredit() {
+        return this.TempCredit;
+    }
+
+    /**
+     * Set Query the temporary limit
+     * @param TempCredit Query the temporary limit
+     */
+    public void setTempCredit(Boolean TempCredit) {
+        this.TempCredit = TempCredit;
+    }
+
     public DescribeAccountBalanceRequest() {
     }
 
@@ -31,6 +54,9 @@ public class DescribeAccountBalanceRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeAccountBalanceRequest(DescribeAccountBalanceRequest source) {
+        if (source.TempCredit != null) {
+            this.TempCredit = new Boolean(source.TempCredit);
+        }
     }
 
 
@@ -38,6 +64,7 @@ public class DescribeAccountBalanceRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "TempCredit", this.TempCredit);
 
     }
 }

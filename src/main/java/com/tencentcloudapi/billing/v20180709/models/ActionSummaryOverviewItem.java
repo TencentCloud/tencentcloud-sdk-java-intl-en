@@ -73,7 +73,7 @@ public class ActionSummaryOverviewItem extends AbstractModel {
     private String VoucherPayAmount;
 
     /**
-    * Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+    * Royalty account expenditure: The amount paid through the royalty account
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -206,16 +206,16 @@ public class ActionSummaryOverviewItem extends AbstractModel {
     }
 
     /**
-     * Get Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Royalty account expenditure: The amount paid through the royalty account 
+     * @return TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Royalty account expenditure: The amount paid through the royalty account
+     * @param TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;

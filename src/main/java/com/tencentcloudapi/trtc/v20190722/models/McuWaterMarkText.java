@@ -80,6 +80,27 @@ public class McuWaterMarkText extends AbstractModel {
     private String BackGroundColor;
 
     /**
+    * 
+    */
+    @SerializedName("DynamicPosType")
+    @Expose
+    private Long DynamicPosType;
+
+    /**
+    * 
+    */
+    @SerializedName("ZOrder")
+    @Expose
+    private Long ZOrder;
+
+    /**
+    * Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
+    */
+    @SerializedName("Font")
+    @Expose
+    private String Font;
+
+    /**
      * Get The text. 
      * @return Text The text.
      */
@@ -207,6 +228,54 @@ public class McuWaterMarkText extends AbstractModel {
         this.BackGroundColor = BackGroundColor;
     }
 
+    /**
+     * Get  
+     * @return DynamicPosType 
+     */
+    public Long getDynamicPosType() {
+        return this.DynamicPosType;
+    }
+
+    /**
+     * Set 
+     * @param DynamicPosType 
+     */
+    public void setDynamicPosType(Long DynamicPosType) {
+        this.DynamicPosType = DynamicPosType;
+    }
+
+    /**
+     * Get  
+     * @return ZOrder 
+     */
+    public Long getZOrder() {
+        return this.ZOrder;
+    }
+
+    /**
+     * Set 
+     * @param ZOrder 
+     */
+    public void setZOrder(Long ZOrder) {
+        this.ZOrder = ZOrder;
+    }
+
+    /**
+     * Get Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans. 
+     * @return Font Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
+     */
+    public String getFont() {
+        return this.Font;
+    }
+
+    /**
+     * Set Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
+     * @param Font Watermark font, by default if left blank is Tencent. valid values: Tencent (default), SourceHanSans.
+     */
+    public void setFont(String Font) {
+        this.Font = Font;
+    }
+
     public McuWaterMarkText() {
     }
 
@@ -239,6 +308,15 @@ public class McuWaterMarkText extends AbstractModel {
         if (source.BackGroundColor != null) {
             this.BackGroundColor = new String(source.BackGroundColor);
         }
+        if (source.DynamicPosType != null) {
+            this.DynamicPosType = new Long(source.DynamicPosType);
+        }
+        if (source.ZOrder != null) {
+            this.ZOrder = new Long(source.ZOrder);
+        }
+        if (source.Font != null) {
+            this.Font = new String(source.Font);
+        }
     }
 
 
@@ -254,6 +332,9 @@ public class McuWaterMarkText extends AbstractModel {
         this.setParamSimple(map, prefix + "FontSize", this.FontSize);
         this.setParamSimple(map, prefix + "FontColor", this.FontColor);
         this.setParamSimple(map, prefix + "BackGroundColor", this.BackGroundColor);
+        this.setParamSimple(map, prefix + "DynamicPosType", this.DynamicPosType);
+        this.setParamSimple(map, prefix + "ZOrder", this.ZOrder);
+        this.setParamSimple(map, prefix + "Font", this.Font);
 
     }
 }

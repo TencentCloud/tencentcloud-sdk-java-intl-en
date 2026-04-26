@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddOrganizationNodeRequest extends AbstractModel {
 
     /**
-    * Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+    * Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1)
     */
     @SerializedName("ParentNodeId")
     @Expose
@@ -52,16 +52,16 @@ public class AddOrganizationNodeRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1). 
-     * @return ParentNodeId Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+     * Get Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1) 
+     * @return ParentNodeId Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1)
      */
     public Long getParentNodeId() {
         return this.ParentNodeId;
     }
 
     /**
-     * Set Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
-     * @param ParentNodeId Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1).
+     * Set Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1)
+     * @param ParentNodeId Parent node ID, which can be obtained through [DescribeOrganizationNodes](https://intl.cloud.tencent.com/document/product/850/82926?from_cn_redirect=1)
      */
     public void setParentNodeId(Long ParentNodeId) {
         this.ParentNodeId = ParentNodeId;

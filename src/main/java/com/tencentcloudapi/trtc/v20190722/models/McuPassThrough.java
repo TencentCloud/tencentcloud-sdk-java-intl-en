@@ -31,7 +31,8 @@ public class McuPassThrough extends AbstractModel {
     private String PayloadContent;
 
     /**
-    * The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+    * PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
     */
     @SerializedName("PayloadType")
     @Expose
@@ -75,16 +76,20 @@ public class McuPassThrough extends AbstractModel {
     }
 
     /**
-     * Get The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps). 
-     * @return PayloadType The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+     * Get PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType. 
+     * @return PayloadType PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
      */
     public Long getPayloadType() {
         return this.PayloadType;
     }
 
     /**
-     * Set The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
-     * @param PayloadType The payload type of the SEI message. Value range: 5 and 100-254 (244 is used internally by Tencent Cloud for timestamps).
+     * Set PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
+     * @param PayloadType PayloadType of SEI message. valid values: 5, 100-254 (exclusion: 244, which is internal custom timestamp SEI).
+Note: some players may not support the standard type with PayloadType 5 and PayloadUuid. recommend using another PayloadType.
      */
     public void setPayloadType(Long PayloadType) {
         this.PayloadType = PayloadType;

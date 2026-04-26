@@ -24,213 +24,153 @@ import java.util.HashMap;
 public class AdjustInfoDetail extends AbstractModel {
 
     /**
-    * Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
+    * Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-    * Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
+    * Bill month, formatted as yyyy-MM.
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
+    * Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
     */
     @SerializedName("AdjustType")
     @Expose
     private String AdjustType;
 
     /**
-    * Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
+    * Adjustment Number
     */
     @SerializedName("AdjustNum")
     @Expose
     private String AdjustNum;
 
     /**
-    * Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
+    * Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
     */
     @SerializedName("AdjustCompletionTime")
     @Expose
     private String AdjustCompletionTime;
 
     /**
-    * Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
+    * Adjustment Amount
     */
     @SerializedName("AdjustAmount")
     @Expose
     private Float AdjustAmount;
 
     /**
-     * Get Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400. 
-     * @return PayerUin Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
+     * Get Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud. 
+     * @return PayerUin Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
-     * @param PayerUin Payer UIN, namely the account ID of the payer. The account ID is the user's unique account identifier on Tencent Cloud.
-Note: This field may return null, indicating that no valid values can be obtained.
-Example value: 909619400.
+     * Set Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
+     * @param PayerUin Payer UIN: Account ID of the payer, which is the unique account identifier for the user in Tencent Cloud.
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;
     }
 
     /**
-     * Get Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10. 
-     * @return Month Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
+     * Get Bill month, formatted as yyyy-MM. 
+     * @return Month Bill month, formatted as yyyy-MM.
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
-     * @param Month Bill month. Format: yyyy-MM.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2024-10.
+     * Set Bill month, formatted as yyyy-MM.
+     * @param Month Bill month, formatted as yyyy-MM.
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment. 
-     * @return AdjustType Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
+     * Get Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement 
+     * @return AdjustType Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
      */
     public String getAdjustType() {
         return this.AdjustType;
     }
 
     /**
-     * Set Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
-     * @param AdjustType Adjustment type.
-Adjustment: manualAdjustment.
-Supplementary settlement: supplementarySettlement.
-Re-settlement: reSettlement.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: manualAdjustment.
+     * Set Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
+     * @param AdjustType Adjustment type
+Bill adjustment: manualAdjustment
+Supplementary settlement: supplementarySettlement
+Re-settlement
      */
     public void setAdjustType(String AdjustType) {
         this.AdjustType = AdjustType;
     }
 
     /**
-     * Get Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135. 
-     * @return AdjustNum Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
+     * Get Adjustment Number 
+     * @return AdjustNum Adjustment Number
      */
     public String getAdjustNum() {
         return this.AdjustNum;
     }
 
     /**
-     * Set Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
-     * @param AdjustNum Adjustment order number.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2220726096135.
+     * Set Adjustment Number
+     * @param AdjustNum Adjustment Number
      */
     public void setAdjustNum(String AdjustNum) {
         this.AdjustNum = AdjustNum;
     }
 
     /**
-     * Get Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04. 
-     * @return AdjustCompletionTime Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
+     * Get Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss 
+     * @return AdjustCompletionTime Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
      */
     public String getAdjustCompletionTime() {
         return this.AdjustCompletionTime;
     }
 
     /**
-     * Set Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
-     * @param AdjustCompletionTime Completion time of exception adjustment. Format: yyyy-MM-dd HH:mm:ss.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 2022-12-02 12:39:04.
+     * Set Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
+     * @param AdjustCompletionTime Abnormal adjustment completion time. Format: yyyy-MM-dd HH:mm:ss
      */
     public void setAdjustCompletionTime(String AdjustCompletionTime) {
         this.AdjustCompletionTime = AdjustCompletionTime;
     }
 
     /**
-     * Get Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000. 
-     * @return AdjustAmount Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
+     * Get Adjustment Amount 
+     * @return AdjustAmount Adjustment Amount
      */
     public Float getAdjustAmount() {
         return this.AdjustAmount;
     }
 
     /**
-     * Set Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
-     * @param AdjustAmount Adjustment amount.
-Note: This field may return null, indicating that no valid value can be obtained.
-Example value: 333.00000000.
+     * Set Adjustment Amount
+     * @param AdjustAmount Adjustment Amount
      */
     public void setAdjustAmount(Float AdjustAmount) {
         this.AdjustAmount = AdjustAmount;

@@ -1,5 +1,8 @@
 package com.tencentcloudapi.billing.v20180709;
 public enum BillingErrorCode {
+     /* CAM signature/authentication error. */
+     AUTHFAILURE("AuthFailure"),
+     
      /* No permission. */
      AUTHFAILURE_UNAUTHORIZEDOPERATION("AuthFailure.UnauthorizedOperation"),
      
@@ -89,6 +92,9 @@ public enum BillingErrorCode {
      
      /* Invalid parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+     /* Parameters are missing */
+     MISSINGPARAMETER("MissingParameter"),
      
      /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),

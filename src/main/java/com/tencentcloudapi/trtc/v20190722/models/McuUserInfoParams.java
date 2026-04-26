@@ -31,6 +31,14 @@ public class McuUserInfoParams extends AbstractModel {
     private MixUserInfo UserInfo;
 
     /**
+    * Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
+    */
+    @SerializedName("SoundLevel")
+    @Expose
+    private Long SoundLevel;
+
+    /**
      * Get The user information. 
      * @return UserInfo The user information.
      */
@@ -46,6 +54,26 @@ public class McuUserInfoParams extends AbstractModel {
         this.UserInfo = UserInfo;
     }
 
+    /**
+     * Get Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios. 
+     * @return SoundLevel Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
+     */
+    public Long getSoundLevel() {
+        return this.SoundLevel;
+    }
+
+    /**
+     * Set Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
+     * @param SoundLevel Audio mix volume adjustment. value ranges from 0 to 100. 100 indicates the original uplink volume. the default value is 100 if left blank. a lower value results in a lower volume.
+Note: this parameter takes effect only when configured in the volume allowlist and is unavailable in other scenarios.
+     */
+    public void setSoundLevel(Long SoundLevel) {
+        this.SoundLevel = SoundLevel;
+    }
+
     public McuUserInfoParams() {
     }
 
@@ -57,6 +85,9 @@ public class McuUserInfoParams extends AbstractModel {
         if (source.UserInfo != null) {
             this.UserInfo = new MixUserInfo(source.UserInfo);
         }
+        if (source.SoundLevel != null) {
+            this.SoundLevel = new Long(source.SoundLevel);
+        }
     }
 
 
@@ -65,6 +96,7 @@ public class McuUserInfoParams extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamObj(map, prefix + "UserInfo.", this.UserInfo);
+        this.setParamSimple(map, prefix + "SoundLevel", this.SoundLevel);
 
     }
 }

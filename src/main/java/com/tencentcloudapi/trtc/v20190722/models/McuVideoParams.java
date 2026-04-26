@@ -24,173 +24,188 @@ import java.util.HashMap;
 public class McuVideoParams extends AbstractModel {
 
     /**
-    * The video encoding parameters.
+    * Video encoding parameter for the output stream.
     */
     @SerializedName("VideoEncode")
     @Expose
     private VideoEncode VideoEncode;
 
     /**
-    * The layout parameters.
+    * Stream mixing layout parameter.
     */
     @SerializedName("LayoutParams")
     @Expose
     private McuLayoutParams LayoutParams;
 
     /**
-    * The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+    * The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
     */
     @SerializedName("BackGroundColor")
     @Expose
     private String BackGroundColor;
 
     /**
-    * The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
+    * The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
     */
     @SerializedName("BackgroundImageUrl")
     @Expose
     private String BackgroundImageUrl;
 
     /**
-    * The watermark information for the mixed stream.
+    * Watermark parameters for the stream mixing layout.
     */
     @SerializedName("WaterMarkList")
     @Expose
     private McuWaterMarkParams [] WaterMarkList;
 
     /**
-    * Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+    * The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
     */
     @SerializedName("BackgroundRenderMode")
     @Expose
     private Long BackgroundRenderMode;
 
     /**
-     * Get The video encoding parameters. 
-     * @return VideoEncode The video encoding parameters.
+     * Get Video encoding parameter for the output stream. 
+     * @return VideoEncode Video encoding parameter for the output stream.
      */
     public VideoEncode getVideoEncode() {
         return this.VideoEncode;
     }
 
     /**
-     * Set The video encoding parameters.
-     * @param VideoEncode The video encoding parameters.
+     * Set Video encoding parameter for the output stream.
+     * @param VideoEncode Video encoding parameter for the output stream.
      */
     public void setVideoEncode(VideoEncode VideoEncode) {
         this.VideoEncode = VideoEncode;
     }
 
     /**
-     * Get The layout parameters. 
-     * @return LayoutParams The layout parameters.
+     * Get Stream mixing layout parameter. 
+     * @return LayoutParams Stream mixing layout parameter.
      */
     public McuLayoutParams getLayoutParams() {
         return this.LayoutParams;
     }
 
     /**
-     * Set The layout parameters.
-     * @param LayoutParams The layout parameters.
+     * Set Stream mixing layout parameter.
+     * @param LayoutParams Stream mixing layout parameter.
      */
     public void setLayoutParams(McuLayoutParams LayoutParams) {
         this.LayoutParams = LayoutParams;
     }
 
     /**
-     * Get The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999 
-     * @return BackGroundColor The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+     * Get The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999. 
+     * @return BackGroundColor The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
      */
     public String getBackGroundColor() {
         return this.BackGroundColor;
     }
 
     /**
-     * Set The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
-     * @param BackGroundColor The canvas color. Below are the values for some common colors:
-Red: 0xcc0033
-Yellow: 0xcc9900
-Green: 0xcccc33
-Blue: 0x99CCFF
-Black: 0x000000
-White: 0xFFFFFF
-Grey: 0x999999
+     * Set The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
+     * @param BackGroundColor The entire canvas background color. commonly used colors:.
+Red: 0xcc0033.
+Yellow: 0xcc9900.
+Green: 0xcccc33.
+Blue: 0x99CCFF.
+Black: 0x000000.
+White: 0xFFFFFF.
+Gray: 0x999999.
      */
     public void setBackGroundColor(String BackGroundColor) {
         this.BackGroundColor = BackGroundColor;
     }
 
     /**
-     * Get The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`. 
-     * @return BackgroundImageUrl The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
+     * Get The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect. 
+     * @return BackgroundImageUrl The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
      */
     public String getBackgroundImageUrl() {
         return this.BackgroundImageUrl;
     }
 
     /**
-     * Set The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
-     * @param BackgroundImageUrl The URL of the background image for the canvas. This parameter has a higher priority than `BackGroundColor`.
+     * Set The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
+     * @param BackgroundImageUrl The url of the background image for the entire canvas. priority is higher than BackGroundColor. supports png, jpg, and jpeg formats. image size limit is not more than 5MB.
+Note:.
+1. make sure the image link is accessible. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the background image will not take effect.
+2. url supported character sets: ['0-9','a-z','a-z','-', '.', '_', '~', ':', '/', '?', '#', '[', ']','@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any character outside the supported character sets exists, the background image will not take effect.
      */
     public void setBackgroundImageUrl(String BackgroundImageUrl) {
         this.BackgroundImageUrl = BackgroundImageUrl;
     }
 
     /**
-     * Get The watermark information for the mixed stream. 
-     * @return WaterMarkList The watermark information for the mixed stream.
+     * Get Watermark parameters for the stream mixing layout. 
+     * @return WaterMarkList Watermark parameters for the stream mixing layout.
      */
     public McuWaterMarkParams [] getWaterMarkList() {
         return this.WaterMarkList;
     }
 
     /**
-     * Set The watermark information for the mixed stream.
-     * @param WaterMarkList The watermark information for the mixed stream.
+     * Set Watermark parameters for the stream mixing layout.
+     * @param WaterMarkList Watermark parameters for the stream mixing layout.
      */
     public void setWaterMarkList(McuWaterMarkParams [] WaterMarkList) {
         this.WaterMarkList = WaterMarkList;
     }
 
     /**
-     * Get Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling. 
-     * @return BackgroundRenderMode Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+     * Get The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling. 
+     * @return BackgroundRenderMode The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
      */
     public Long getBackgroundRenderMode() {
         return this.BackgroundRenderMode;
     }
 
     /**
-     * Set Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
-     * @param BackgroundRenderMode Background image display mode during output: 0 for crop, 1 for scale and display with black background, 2 for proportional scaling. The backend default is proportional scaling.
+     * Set The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
+     * @param BackgroundRenderMode The display mode of the background image in the output: 0 for crop, 1 for scale and display black background, 2 for variable-scale scaling. the backend defaults to variable-scale scaling.
      */
     public void setBackgroundRenderMode(Long BackgroundRenderMode) {
         this.BackgroundRenderMode = BackgroundRenderMode;

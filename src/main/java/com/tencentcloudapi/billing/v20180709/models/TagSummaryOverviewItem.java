@@ -25,68 +25,63 @@ public class TagSummaryOverviewItem extends AbstractModel {
 
     /**
     * Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TagValue")
     @Expose
     private String TagValue;
 
     /**
-    * Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Percentage of the fee, with 2 decimal places.
     */
     @SerializedName("RealTotalCostRatio")
     @Expose
     private String RealTotalCostRatio;
 
     /**
-    * Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+    * discounted total price
     */
     @SerializedName("RealTotalCost")
     @Expose
     private String RealTotalCost;
 
     /**
-    * Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+    * Cash account expenditure: The amount paid through the cash account
     */
     @SerializedName("CashPayAmount")
     @Expose
     private String CashPayAmount;
 
     /**
-    * Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+    * Gift account expenditure: The amount paid using free credits
     */
     @SerializedName("IncentivePayAmount")
     @Expose
     private String IncentivePayAmount;
 
     /**
-    * Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+    * Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
     */
     @SerializedName("VoucherPayAmount")
     @Expose
     private String VoucherPayAmount;
 
     /**
-    * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+    * Royalty account expenditure: The amount paid through the royalty account
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
 
     /**
-    * The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
     */
     @SerializedName("TotalCost")
     @Expose
     private String TotalCost;
 
     /**
-     * Get Tag value
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Tag value 
      * @return TagValue Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTagValue() {
         return this.TagValue;
@@ -94,129 +89,119 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TagValue Tag value
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTagValue(String TagValue) {
         this.TagValue = TagValue;
     }
 
     /**
-     * Get Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RealTotalCostRatio Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Percentage of the fee, with 2 decimal places. 
+     * @return RealTotalCostRatio Percentage of the fee, with 2 decimal places.
      */
     public String getRealTotalCostRatio() {
         return this.RealTotalCostRatio;
     }
 
     /**
-     * Set Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RealTotalCostRatio Cost percentage rounded to two decimal places
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Percentage of the fee, with 2 decimal places.
+     * @param RealTotalCostRatio Percentage of the fee, with 2 decimal places.
      */
     public void setRealTotalCostRatio(String RealTotalCostRatio) {
         this.RealTotalCostRatio = RealTotalCostRatio;
     }
 
     /**
-     * Get Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RealTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get discounted total price 
+     * @return RealTotalCost discounted total price
      */
     public String getRealTotalCost() {
         return this.RealTotalCost;
     }
 
     /**
-     * Set Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RealTotalCost Total amount after discount. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set discounted total price
+     * @param RealTotalCost discounted total price
      */
     public void setRealTotalCost(String RealTotalCost) {
         this.RealTotalCost = RealTotalCost;
     }
 
     /**
-     * Get Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CashPayAmount Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Cash account expenditure: The amount paid through the cash account 
+     * @return CashPayAmount Cash account expenditure: The amount paid through the cash account
      */
     public String getCashPayAmount() {
         return this.CashPayAmount;
     }
 
     /**
-     * Set Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CashPayAmount Cash credit: The amount paid from the user’s cash account. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Cash account expenditure: The amount paid through the cash account
+     * @param CashPayAmount Cash account expenditure: The amount paid through the cash account
      */
     public void setCashPayAmount(String CashPayAmount) {
         this.CashPayAmount = CashPayAmount;
     }
 
     /**
-     * Get Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IncentivePayAmount Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Gift account expenditure: The amount paid using free credits 
+     * @return IncentivePayAmount Gift account expenditure: The amount paid using free credits
      */
     public String getIncentivePayAmount() {
         return this.IncentivePayAmount;
     }
 
     /**
-     * Set Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IncentivePayAmount Free credit: The amount paid with the user’s free credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Gift account expenditure: The amount paid using free credits
+     * @param IncentivePayAmount Gift account expenditure: The amount paid using free credits
      */
     public void setIncentivePayAmount(String IncentivePayAmount) {
         this.IncentivePayAmount = IncentivePayAmount;
     }
 
     /**
-     * Get Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoucherPayAmount Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers) 
+     * @return VoucherPayAmount Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
      */
     public String getVoucherPayAmount() {
         return this.VoucherPayAmount;
     }
 
     /**
-     * Set Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoucherPayAmount Voucher payment: The amount deducted by using vouchers. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
+     * @param VoucherPayAmount Coupon expenditure: The amount paid using various vouchers (such as vouchers and cash vouchers)
      */
     public void setVoucherPayAmount(String VoucherPayAmount) {
         this.VoucherPayAmount = VoucherPayAmount;
     }
 
     /**
-     * Get Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Royalty account expenditure: The amount paid through the royalty account 
+     * @return TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Royalty account expenditure: The amount paid through the royalty account
+     * @param TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price. 
+     * @return TotalCost Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
      */
     public String getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
+     * @param TotalCost Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;

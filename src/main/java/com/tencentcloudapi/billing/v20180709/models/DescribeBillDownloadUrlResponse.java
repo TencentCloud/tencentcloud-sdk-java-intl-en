@@ -24,14 +24,15 @@ import java.util.HashMap;
 public class DescribeBillDownloadUrlResponse extends AbstractModel {
 
     /**
-    * Indicates whether the bill file is ready. Valid values: `0` (the file is being generated), `1` (the file has been generated).
+    * Whether the bill file is ready. 0: file generating, 1: file generated
     */
     @SerializedName("Ready")
     @Expose
     private Long Ready;
 
     /**
-    * Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained.
+    * Billing file download link, valid for 1 day
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DownloadUrl")
     @Expose
@@ -45,32 +46,36 @@ public class DescribeBillDownloadUrlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Indicates whether the bill file is ready. Valid values: `0` (the file is being generated), `1` (the file has been generated). 
-     * @return Ready Indicates whether the bill file is ready. Valid values: `0` (the file is being generated), `1` (the file has been generated).
+     * Get Whether the bill file is ready. 0: file generating, 1: file generated 
+     * @return Ready Whether the bill file is ready. 0: file generating, 1: file generated
      */
     public Long getReady() {
         return this.Ready;
     }
 
     /**
-     * Set Indicates whether the bill file is ready. Valid values: `0` (the file is being generated), `1` (the file has been generated).
-     * @param Ready Indicates whether the bill file is ready. Valid values: `0` (the file is being generated), `1` (the file has been generated).
+     * Set Whether the bill file is ready. 0: file generating, 1: file generated
+     * @param Ready Whether the bill file is ready. 0: file generating, 1: file generated
      */
     public void setReady(Long Ready) {
         this.Ready = Ready;
     }
 
     /**
-     * Get Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DownloadUrl Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Billing file download link, valid for 1 day
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DownloadUrl Billing file download link, valid for 1 day
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDownloadUrl() {
         return this.DownloadUrl;
     }
 
     /**
-     * Set Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DownloadUrl Billing file download link, valid for 1 day. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Billing file download link, valid for 1 day
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DownloadUrl Billing file download link, valid for 1 day
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDownloadUrl(String DownloadUrl) {
         this.DownloadUrl = DownloadUrl;

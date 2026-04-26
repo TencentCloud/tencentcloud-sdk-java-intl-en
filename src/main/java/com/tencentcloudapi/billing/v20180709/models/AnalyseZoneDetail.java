@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AnalyseZoneDetail extends AbstractModel {
 
     /**
-    * Availability zone IDNote: This field may return null, indicating that no valid values can be obtained.
+    * AZ ID.
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Availability zone nameNote: This field may return null, indicating that no valid values can be obtained.
+    * Available zone Name
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-     * Get Availability zone IDNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneId Availability zone IDNote: This field may return null, indicating that no valid values can be obtained.
+     * Get AZ ID. 
+     * @return ZoneId AZ ID.
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Availability zone IDNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneId Availability zone IDNote: This field may return null, indicating that no valid values can be obtained.
+     * Set AZ ID.
+     * @param ZoneId AZ ID.
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Availability zone nameNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneName Availability zone nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Available zone Name 
+     * @return ZoneName Available zone Name
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set Availability zone nameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneName Availability zone nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Available zone Name
+     * @param ZoneName Available zone Name
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;

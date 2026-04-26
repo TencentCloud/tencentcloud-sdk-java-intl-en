@@ -38,14 +38,14 @@ public class DescribeCostSummaryByProductResponse extends AbstractModel {
     private ConsumptionSummaryTotal Total;
 
     /**
-    * Consumption details summarized by productNote: This field may return null, indicating that no valid values can be obtained.
+    * Consumption details summarized by product
     */
     @SerializedName("Data")
     @Expose
     private ConsumptionBusinessSummaryDataItem [] Data;
 
     /**
-    * Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
+    * Record count. If NeedRecordNum is 0, null is returned.
     */
     @SerializedName("RecordNum")
     @Expose
@@ -91,32 +91,32 @@ public class DescribeCostSummaryByProductResponse extends AbstractModel {
     }
 
     /**
-     * Get Consumption details summarized by productNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Consumption details summarized by productNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Consumption details summarized by product 
+     * @return Data Consumption details summarized by product
      */
     public ConsumptionBusinessSummaryDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Consumption details summarized by productNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Consumption details summarized by productNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Consumption details summarized by product
+     * @param Data Consumption details summarized by product
      */
     public void setData(ConsumptionBusinessSummaryDataItem [] Data) {
         this.Data = Data;
     }
 
     /**
-     * Get Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RecordNum Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Record count. If NeedRecordNum is 0, null is returned. 
+     * @return RecordNum Record count. If NeedRecordNum is 0, null is returned.
      */
     public Long getRecordNum() {
         return this.RecordNum;
     }
 
     /**
-     * Set Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RecordNum Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Record count. If NeedRecordNum is 0, null is returned.
+     * @param RecordNum Record count. If NeedRecordNum is 0, null is returned.
      */
     public void setRecordNum(Long RecordNum) {
         this.RecordNum = RecordNum;

@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class AnalyseConditionDetail extends AbstractModel {
 
     /**
-    * ProductNote: This field may return null, indicating that no valid values can be obtained.
+    * product
     */
     @SerializedName("Business")
     @Expose
     private AnalyseBusinessDetail [] Business;
 
     /**
-    * ItemNote: This field may return null, indicating that no valid values can be obtained.
+    * Project
     */
     @SerializedName("Project")
     @Expose
     private AnalyseProjectDetail [] Project;
 
     /**
-    * RegionNote: This field may return null, indicating that no valid values can be obtained.
+    * Region.
     */
     @SerializedName("Region")
     @Expose
     private AnalyseRegionDetail [] Region;
 
     /**
-    * Billing modeNote: This field may return null, indicating that no valid values can be obtained.
+    * Billing mode.
     */
     @SerializedName("PayMode")
     @Expose
     private AnalysePayModeDetail [] PayMode;
 
     /**
-    * Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
+    * Transaction type
     */
     @SerializedName("ActionType")
     @Expose
     private AnalyseActionTypeDetail [] ActionType;
 
     /**
-    * Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
+    * Availability zone
     */
     @SerializedName("Zone")
     @Expose
     private AnalyseZoneDetail [] Zone;
 
     /**
-    * Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
+    * Resource owner Uin
     */
     @SerializedName("OwnerUin")
     @Expose
     private AnalyseOwnerUinDetail [] OwnerUin;
 
     /**
-    * Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+    * Fee type
     */
     @SerializedName("Amount")
     @Expose
     private AnalyseAmountDetail [] Amount;
 
     /**
-     * Get ProductNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Business ProductNote: This field may return null, indicating that no valid values can be obtained.
+     * Get product 
+     * @return Business product
      */
     public AnalyseBusinessDetail [] getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set ProductNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Business ProductNote: This field may return null, indicating that no valid values can be obtained.
+     * Set product
+     * @param Business product
      */
     public void setBusiness(AnalyseBusinessDetail [] Business) {
         this.Business = Business;
     }
 
     /**
-     * Get ItemNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Project ItemNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Project 
+     * @return Project Project
      */
     public AnalyseProjectDetail [] getProject() {
         return this.Project;
     }
 
     /**
-     * Set ItemNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Project ItemNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Project
+     * @param Project Project
      */
     public void setProject(AnalyseProjectDetail [] Project) {
         this.Project = Project;
     }
 
     /**
-     * Get RegionNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Region RegionNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Region. 
+     * @return Region Region.
      */
     public AnalyseRegionDetail [] getRegion() {
         return this.Region;
     }
 
     /**
-     * Set RegionNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Region RegionNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Region.
+     * @param Region Region.
      */
     public void setRegion(AnalyseRegionDetail [] Region) {
         this.Region = Region;
     }
 
     /**
-     * Get Billing modeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayMode Billing modeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Billing mode. 
+     * @return PayMode Billing mode.
      */
     public AnalysePayModeDetail [] getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing modeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param PayMode Billing modeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Billing mode.
+     * @param PayMode Billing mode.
      */
     public void setPayMode(AnalysePayModeDetail [] PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Transaction typeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ActionType Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Transaction type 
+     * @return ActionType Transaction type
      */
     public AnalyseActionTypeDetail [] getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ActionType Transaction typeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Transaction type
+     * @param ActionType Transaction type
      */
     public void setActionType(AnalyseActionTypeDetail [] ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get Availability zoneNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Zone Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Availability zone 
+     * @return Zone Availability zone
      */
     public AnalyseZoneDetail [] getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Zone Availability zoneNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Availability zone
+     * @param Zone Availability zone
      */
     public void setZone(AnalyseZoneDetail [] Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Resource owner UINNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return OwnerUin Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Resource owner Uin 
+     * @return OwnerUin Resource owner Uin
      */
     public AnalyseOwnerUinDetail [] getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
-     * @param OwnerUin Resource owner UINNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Resource owner Uin
+     * @param OwnerUin Resource owner Uin
      */
     public void setOwnerUin(AnalyseOwnerUinDetail [] OwnerUin) {
         this.OwnerUin = OwnerUin;
     }
 
     /**
-     * Get Fee typeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Amount Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Fee type 
+     * @return Amount Fee type
      */
     public AnalyseAmountDetail [] getAmount() {
         return this.Amount;
     }
 
     /**
-     * Set Fee typeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Amount Fee typeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Fee type
+     * @param Amount Fee type
      */
     public void setAmount(AnalyseAmountDetail [] Amount) {
         this.Amount = Amount;

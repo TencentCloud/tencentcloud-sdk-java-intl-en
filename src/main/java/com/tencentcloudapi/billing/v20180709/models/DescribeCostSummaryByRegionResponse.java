@@ -45,7 +45,7 @@ public class DescribeCostSummaryByRegionResponse extends AbstractModel {
     private ConsumptionRegionSummaryDataItem [] Data;
 
     /**
-    * Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
+    * Record count. If NeedRecordNum is 0, null is returned.
     */
     @SerializedName("RecordNum")
     @Expose
@@ -107,16 +107,16 @@ public class DescribeCostSummaryByRegionResponse extends AbstractModel {
     }
 
     /**
-     * Get Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RecordNum Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Record count. If NeedRecordNum is 0, null is returned. 
+     * @return RecordNum Record count. If NeedRecordNum is 0, null is returned.
      */
     public Long getRecordNum() {
         return this.RecordNum;
     }
 
     /**
-     * Set Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RecordNum Record count. The system returns null when NeedRecordNum is 0.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Record count. If NeedRecordNum is 0, null is returned.
+     * @param RecordNum Record count. If NeedRecordNum is 0, null is returned.
      */
     public void setRecordNum(Long RecordNum) {
         this.RecordNum = RecordNum;

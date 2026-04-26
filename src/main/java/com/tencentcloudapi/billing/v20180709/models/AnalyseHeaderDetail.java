@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AnalyseHeaderDetail extends AbstractModel {
 
     /**
-    * Header dateNote: This field may return null, indicating that no valid values can be obtained.
+    * Header date
     */
     @SerializedName("HeadDetail")
     @Expose
     private AnalyseHeaderTimeDetail [] HeadDetail;
 
     /**
-    * TimeNote: This field may return null, indicating that no valid values can be obtained.
+    * Time
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * TotalNote: This field may return null, indicating that no valid values can be obtained.
+    * total
     */
     @SerializedName("Total")
     @Expose
     private String Total;
 
     /**
-     * Get Header dateNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return HeadDetail Header dateNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Header date 
+     * @return HeadDetail Header date
      */
     public AnalyseHeaderTimeDetail [] getHeadDetail() {
         return this.HeadDetail;
     }
 
     /**
-     * Set Header dateNote: This field may return null, indicating that no valid values can be obtained.
-     * @param HeadDetail Header dateNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Header date
+     * @param HeadDetail Header date
      */
     public void setHeadDetail(AnalyseHeaderTimeDetail [] HeadDetail) {
         this.HeadDetail = HeadDetail;
     }
 
     /**
-     * Get TimeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name TimeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Time 
+     * @return Name Time
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set TimeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Name TimeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Time
+     * @param Name Time
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get TotalNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Total TotalNote: This field may return null, indicating that no valid values can be obtained.
+     * Get total 
+     * @return Total total
      */
     public String getTotal() {
         return this.Total;
     }
 
     /**
-     * Set TotalNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Total TotalNote: This field may return null, indicating that no valid values can be obtained.
+     * Set total
+     * @param Total total
      */
     public void setTotal(String Total) {
         this.Total = Total;

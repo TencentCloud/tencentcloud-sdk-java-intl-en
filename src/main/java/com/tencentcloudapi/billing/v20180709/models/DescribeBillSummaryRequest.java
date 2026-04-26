@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeBillSummaryRequest extends AbstractModel {
 
     /**
-    * Bill month in the format of "yyyy-mm"
+    * <p>Bill month, formatted as 2023-04</p>
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
+    * <p>Billing dimension type. Enumeration values as follows: business, project, region, payMode, tag</p>
     */
     @SerializedName("GroupType")
     @Expose
     private String GroupType;
 
     /**
-    * Tag key, which is used when `GroupType` is `tag`.
+    * <p>Tag key. Pass GroupType=tag when obtaining dimensional billing by tag.</p>
     */
     @SerializedName("TagKey")
     @Expose
     private String [] TagKey;
 
     /**
-    * 
+    * <p>Operator UIN: Operator account ID (ID of the prepaid resource order or postpaid operation, activate postpaid resource account or role ID)</p>
     */
     @SerializedName("OperateUin")
     @Expose
     private String OperateUin;
 
     /**
-    * 
+    * <p>Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.</p>
     */
     @SerializedName("PayerUin")
     @Expose
     private String PayerUin;
 
     /**
-     * Get Bill month in the format of "yyyy-mm" 
-     * @return Month Bill month in the format of "yyyy-mm"
+     * Get <p>Bill month, formatted as 2023-04</p> 
+     * @return Month <p>Bill month, formatted as 2023-04</p>
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set Bill month in the format of "yyyy-mm"
-     * @param Month Bill month in the format of "yyyy-mm"
+     * Set <p>Bill month, formatted as 2023-04</p>
+     * @param Month <p>Bill month, formatted as 2023-04</p>
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag` 
-     * @return GroupType Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
+     * Get <p>Billing dimension type. Enumeration values as follows: business, project, region, payMode, tag</p> 
+     * @return GroupType <p>Billing dimension type. Enumeration values as follows: business, project, region, payMode, tag</p>
      */
     public String getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
-     * @param GroupType Bill dimension. Valid values: `business`, `project`, `region`, `payMode`, and `tag`
+     * Set <p>Billing dimension type. Enumeration values as follows: business, project, region, payMode, tag</p>
+     * @param GroupType <p>Billing dimension type. Enumeration values as follows: business, project, region, payMode, tag</p>
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;
     }
 
     /**
-     * Get Tag key, which is used when `GroupType` is `tag`. 
-     * @return TagKey Tag key, which is used when `GroupType` is `tag`.
+     * Get <p>Tag key. Pass GroupType=tag when obtaining dimensional billing by tag.</p> 
+     * @return TagKey <p>Tag key. Pass GroupType=tag when obtaining dimensional billing by tag.</p>
      */
     public String [] getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set Tag key, which is used when `GroupType` is `tag`.
-     * @param TagKey Tag key, which is used when `GroupType` is `tag`.
+     * Set <p>Tag key. Pass GroupType=tag when obtaining dimensional billing by tag.</p>
+     * @param TagKey <p>Tag key. Pass GroupType=tag when obtaining dimensional billing by tag.</p>
      */
     public void setTagKey(String [] TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get  
-     * @return OperateUin 
+     * Get <p>Operator UIN: Operator account ID (ID of the prepaid resource order or postpaid operation, activate postpaid resource account or role ID)</p> 
+     * @return OperateUin <p>Operator UIN: Operator account ID (ID of the prepaid resource order or postpaid operation, activate postpaid resource account or role ID)</p>
      */
     public String getOperateUin() {
         return this.OperateUin;
     }
 
     /**
-     * Set 
-     * @param OperateUin 
+     * Set <p>Operator UIN: Operator account ID (ID of the prepaid resource order or postpaid operation, activate postpaid resource account or role ID)</p>
+     * @param OperateUin <p>Operator UIN: Operator account ID (ID of the prepaid resource order or postpaid operation, activate postpaid resource account or role ID)</p>
      */
     public void setOperateUin(String OperateUin) {
         this.OperateUin = OperateUin;
     }
 
     /**
-     * Get  
-     * @return PayerUin 
+     * Get <p>Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.</p> 
+     * @return PayerUin <p>Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.</p>
      */
     public String getPayerUin() {
         return this.PayerUin;
     }
 
     /**
-     * Set 
-     * @param PayerUin 
+     * Set <p>Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.</p>
+     * @param PayerUin <p>Account ID of the payer (Account ID is the unique account identifier for the user in Tencent Cloud). By default, the query returns the account statement of the current account. If the group management account needs to query the self-pay bills of member accounts, enter the member account UIN in this field.</p>
      */
     public void setPayerUin(String PayerUin) {
         this.PayerUin = PayerUin;

@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class Conditions extends AbstractModel {
 
     /**
-    * Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Warning condition ID.
     */
     @SerializedName("ConditionId")
     @Expose
@@ -33,15 +32,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Level")
     @Expose
     private Long Level;
 
     /**
-    * Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Describes the warning level.
     */
     @SerializedName("LevelDesc")
     @Expose
@@ -55,30 +52,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Desc;
 
     /**
-     * Get Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConditionId Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Warning condition ID. 
+     * @return ConditionId Warning condition ID.
      */
     public Long getConditionId() {
         return this.ConditionId;
     }
 
     /**
-     * Set Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConditionId Warning condition ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Warning condition ID.
+     * @param ConditionId Warning condition ID.
      */
     public void setConditionId(Long ConditionId) {
         this.ConditionId = ConditionId;
     }
 
     /**
-     * Get Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Warning level. 2: medium risk; 3: high risk. 
      * @return Level Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getLevel() {
         return this.Level;
@@ -86,29 +77,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Level Warning level. 2: medium risk; 3: high risk.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setLevel(Long Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Warning level description
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return LevelDesc Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Describes the warning level. 
+     * @return LevelDesc Describes the warning level.
      */
     public String getLevelDesc() {
         return this.LevelDesc;
     }
 
     /**
-     * Set Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param LevelDesc Warning level description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Describes the warning level.
+     * @param LevelDesc Describes the warning level.
      */
     public void setLevelDesc(String LevelDesc) {
         this.LevelDesc = LevelDesc;

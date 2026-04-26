@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AnalyseTimeDetail extends AbstractModel {
 
     /**
-    * DateNote: This field may return null, indicating that no valid values can be obtained.
+    * Date
     */
     @SerializedName("Time")
     @Expose
     private String Time;
 
     /**
-    * AmountNote: This field may return null, indicating that no valid values can be obtained.
+    * Amount
     */
     @SerializedName("Money")
     @Expose
     private String Money;
 
     /**
-     * Get DateNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Time DateNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Date 
+     * @return Time Date
      */
     public String getTime() {
         return this.Time;
     }
 
     /**
-     * Set DateNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Time DateNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Date
+     * @param Time Date
      */
     public void setTime(String Time) {
         this.Time = Time;
     }
 
     /**
-     * Get AmountNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Money AmountNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Amount 
+     * @return Money Amount
      */
     public String getMoney() {
         return this.Money;
     }
 
     /**
-     * Set AmountNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Money AmountNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Amount
+     * @param Money Amount
      */
     public void setMoney(String Money) {
         this.Money = Money;

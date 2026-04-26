@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartWebRecordResponse extends AbstractModel {
 
     /**
-    * The unique ID of the recording task
+    * Unique Id of the recording task.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class StartWebRecordResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The unique ID of the recording task 
-     * @return TaskId The unique ID of the recording task
+     * Get Unique Id of the recording task. 
+     * @return TaskId Unique Id of the recording task.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The unique ID of the recording task
-     * @param TaskId The unique ID of the recording task
+     * Set Unique Id of the recording task.
+     * @param TaskId Unique Id of the recording task.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

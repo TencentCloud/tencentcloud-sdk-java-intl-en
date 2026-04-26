@@ -87,7 +87,7 @@ public class UpdateAuditRequest extends AbstractModel {
     private Long IsEnableKmsEncry;
 
     /**
-    * User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+    * User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
     */
     @SerializedName("CosBucketName")
     @Expose
@@ -101,7 +101,7 @@ public class UpdateAuditRequest extends AbstractModel {
     private String CmqRegion;
 
     /**
-    * Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
+    * Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
     */
     @SerializedName("LogFilePrefix")
     @Expose
@@ -259,16 +259,16 @@ public class UpdateAuditRequest extends AbstractModel {
     }
 
     /**
-     * Get User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss. 
-     * @return CosBucketName User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+     * Get User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss. 
+     * @return CosBucketName User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
      */
     public String getCosBucketName() {
         return this.CosBucketName;
     }
 
     /**
-     * Set User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
-     * @param CosBucketName User-defined COS bucket name, which can only contain 1–40 lowercase letters (a–z), digits (0–9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+     * Set User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
+     * @param CosBucketName User-defined COS bucket name, which can only contain 1-40 lowercase letters (a-z), digits (0-9), and dashes (-) and cannot begin or end with "-". If a bucket is not newly created, CloudAudit will not verify whether it actually exists. Enter the name with caution to avoid log delivery failure and consequent data loss.
      */
     public void setCosBucketName(String CosBucketName) {
         this.CosBucketName = CosBucketName;
@@ -291,16 +291,16 @@ public class UpdateAuditRequest extends AbstractModel {
     }
 
     /**
-     * Get Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9). 
-     * @return LogFilePrefix Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
+     * Get Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9). 
+     * @return LogFilePrefix Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
      */
     public String getLogFilePrefix() {
         return this.LogFilePrefix;
     }
 
     /**
-     * Set Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
-     * @param LogFilePrefix Log file prefix, which can only contain 3–40 ASCII letters (a–z; A–Z) and digits (0–9).
+     * Set Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
+     * @param LogFilePrefix Log file prefix, which can only contain 3-40 ASCII letters (a-z; A-Z) and digits (0-9).
      */
     public void setLogFilePrefix(String LogFilePrefix) {
         this.LogFilePrefix = LogFilePrefix;

@@ -52,7 +52,7 @@ public class AssumeRoleWithSAMLRequest extends AbstractModel {
     private String RoleSessionName;
 
     /**
-    * The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+    * Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
     */
     @SerializedName("DurationSeconds")
     @Expose
@@ -123,16 +123,16 @@ public class AssumeRoleWithSAMLRequest extends AbstractModel {
     }
 
     /**
-     * Get The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s. 
-     * @return DurationSeconds The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+     * Get Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s. 
+     * @return DurationSeconds Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
      */
     public Long getDurationSeconds() {
         return this.DurationSeconds;
     }
 
     /**
-     * Set The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
-     * @param DurationSeconds The validity period of the temporary credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+     * Set Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
+     * @param DurationSeconds Specifies the validity period of the temporary access credentials in seconds. Default value: 7,200s. Maximum value: 43,200s.
      */
     public void setDurationSeconds(Long DurationSeconds) {
         this.DurationSeconds = DurationSeconds;

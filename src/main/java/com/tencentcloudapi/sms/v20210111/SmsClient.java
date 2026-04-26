@@ -250,9 +250,18 @@ Currently, you can also [configure the callback](https://intl.cloud.tencent.com/
     }
 
     /**
+     *This API is used to send Global SMS messages in batches. Compared with the SendSms API, it supports sending SMS messages with different content to multiple phone numbers in a single request and allows specifying different SenderIds.
+     * @param req SendMultiGlobalSmsRequest
+     * @return SendMultiGlobalSmsResponse
+     * @throws TencentCloudSDKException
+     */
+    public SendMultiGlobalSmsResponse SendMultiGlobalSms(SendMultiGlobalSmsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SendMultiGlobalSms", SendMultiGlobalSmsResponse.class);
+    }
+
+    /**
      *This API is used to send SMS verification codes, notification, or marketing messages to users.
->- Note: Because of the improved security of **TencentCloud API 3.0**, **API authentication** is more complicated. We recommend you use the Tencent Cloud SMS service with the [SDK](https://intl.cloud.tencent.com/document/product/382/43193?from_cn_redirect=1).
->- Note: You can run this API directly in [API 3.0 Explorer](https://console.cloud.tencent.com/api/explorer?Product=sms&Version=2021-01-11&Action=SendSms), which eliminates the signature calculation steps. After it is executed successfully, API Explorer can **automatically generate** SDK code samples.
      * @param req SendSmsRequest
      * @return SendSmsResponse
      * @throws TencentCloudSDKException

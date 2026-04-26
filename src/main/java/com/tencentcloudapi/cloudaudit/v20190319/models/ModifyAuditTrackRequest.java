@@ -73,7 +73,7 @@ public class ModifyAuditTrackRequest extends AbstractModel {
     private Storage Storage;
 
     /**
-    * Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+    * Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
     */
     @SerializedName("TrackForAllMembers")
     @Expose
@@ -192,16 +192,16 @@ public class ModifyAuditTrackRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account) 
-     * @return TrackForAllMembers Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+     * Get Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account) 
+     * @return TrackForAllMembers Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
      */
     public Long getTrackForAllMembers() {
         return this.TrackForAllMembers;
     }
 
     /**
-     * Set Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
-     * @param TrackForAllMembers Whether to enable the feature of shipping organization members’ operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+     * Set Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
+     * @param TrackForAllMembers Whether to enable the feature of shipping organization members' operation logs to the organization admin account or the trusted service admin account (0: Not enabled; 1: Enabled. This feature can only be enabled by the organization admin account or the trusted service admin account)
      */
     public void setTrackForAllMembers(Long TrackForAllMembers) {
         this.TrackForAllMembers = TrackForAllMembers;

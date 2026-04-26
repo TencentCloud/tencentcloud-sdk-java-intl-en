@@ -24,251 +24,166 @@ import java.util.HashMap;
 public class McuTencentVod extends AbstractModel {
 
     /**
-    * Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
+    * Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
     */
     @SerializedName("Procedure")
     @Expose
     private String Procedure;
 
     /**
-    * Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
+    * Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
+    * Specify the upload park, applicable only to the user with special requirement for upload region.
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
+    * Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
+    * Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
+    * Task flow context, passed through when task complete.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
+    * Upload context, passed through on upload completion callback.
     */
     @SerializedName("SourceContext")
     @Expose
     private String SourceContext;
 
     /**
-     * Get Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name 
-     * @return Procedure Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
+     * Get Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming. 
+     * @return Procedure Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
      */
     public String getProcedure() {
         return this.Procedure;
     }
 
     /**
-     * Set Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
-     * @param Procedure Post-Upload Task Processing
-Automatically initiates task flows after media uploads complete. Value = Task flow template name.
-VOD supports creating and naming task flow templates.
-Example: template_name
+     * Set Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
+     * @param Procedure Subsequent media task processing operations allow automatic task initiation after media upload is completed. the parameter value is the task flow template name. VOD (video on demand) supports creating task flow templates and template naming.
      */
     public void setProcedure(String Procedure) {
         this.Procedure = Procedure;
     }
 
     /**
-     * Get Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400 
-     * @return ExpireTime Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
+     * Get Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation. 
+     * @return ExpireTime Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
-     * @param ExpireTime Media File Expiration Time
-Absolute expiration time from current timestamp.
-86400 = 1 day retention
-0 = permanent storage (default)
-Example: 86400
+     * Set Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
+     * @param ExpireTime Media file expiry time is the absolute expiration time from the current system time. to save for one day, enter "86400". to retain permanently, enter "0". the default is permanent preservation.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai 
-     * @return StorageRegion Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
+     * Get Specify the upload park, applicable only to the user with special requirement for upload region. 
+     * @return StorageRegion Specify the upload park, applicable only to the user with special requirement for upload region.
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
-     * @param StorageRegion Upload Region Specification
-For users requiring specific upload regions.
-Example: ap-shanghai
+     * Set Specify the upload park, applicable only to the user with special requirement for upload region.
+     * @param StorageRegion Specify the upload park, applicable only to the user with special requirement for upload region.
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0 
-     * @return ClassId Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
+     * Get Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories. 
+     * @return ClassId Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
-     * @param ClassId Category ID
-Manages media classification. Obtain via category creation API.
-Default: 0 (Other category)
-Example: 0
+     * Set Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
+     * @param ClassId Category ID is used to categorize and manage media. you can create a category and obtain the category ID through the create category api.
+The default value is 0, indicating other categories.
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0 
-     * @return SubAppId VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
+     * Get Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required. 
+     * @return SubAppId Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
-     * @param SubAppId VOD SubAppId
-Required when accessing sub-application resources. Leave empty otherwise.
-Example: 0
+     * Set Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
+     * @param SubAppId Subapplication ID for video-on-demand (vod). if you need to access resources belonging to a subapplication, fill in this field with the subapplication ID. otherwise, this field is not required.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom 
-     * @return SessionContext Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
+     * Get Task flow context, passed through when task complete. 
+     * @return SessionContext Task flow context, passed through when task complete.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
-     * @param SessionContext Task Flow Context
-Passed through in task completion callbacks.
-Example: user_custom
+     * Set Task flow context, passed through when task complete.
+     * @param SessionContext Task flow context, passed through when task complete.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom 
-     * @return SourceContext Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
+     * Get Upload context, passed through on upload completion callback. 
+     * @return SourceContext Upload context, passed through on upload completion callback.
      */
     public String getSourceContext() {
         return this.SourceContext;
     }
 
     /**
-     * Set Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
-     * @param SourceContext Upload Context
-Passed through in upload completion callbacks.
-Example: user_custom
+     * Set Upload context, passed through on upload completion callback.
+     * @param SourceContext Upload context, passed through on upload completion callback.
      */
     public void setSourceContext(String SourceContext) {
         this.SourceContext = SourceContext;

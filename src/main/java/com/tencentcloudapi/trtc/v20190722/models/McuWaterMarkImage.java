@@ -24,7 +24,10 @@ import java.util.HashMap;
 public class McuWaterMarkImage extends AbstractModel {
 
     /**
-    * The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+    * Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
     */
     @SerializedName("WaterMarkUrl")
     @Expose
@@ -66,16 +69,35 @@ public class McuWaterMarkImage extends AbstractModel {
     private Long ZOrder;
 
     /**
-     * Get The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB. 
-     * @return WaterMarkUrl The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+    * 
+    */
+    @SerializedName("DynamicPosType")
+    @Expose
+    private Long DynamicPosType;
+
+    /**
+     * Get Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect. 
+     * @return WaterMarkUrl Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
      */
     public String getWaterMarkUrl() {
         return this.WaterMarkUrl;
     }
 
     /**
-     * Set The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
-     * @param WaterMarkUrl The URL of the watermark image, which must be in PNG, JPG, or JPEG format and cannot exceed 5 MB.
+     * Set Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
+     * @param WaterMarkUrl Watermark image URL address. supports png, jpg, and jpeg formats. image size limit not more than 5MB.
+Note:.
+Make sure the image link has data accessibility. the backend download timeout is 10 seconds with a maximum of 3 retries. if the image download fails eventually, the watermark image will not take effect.
+2. supported character sets for urls: ['0-9', 'a-z', 'a-z', '-', '.', '_', '~', ':', '/', '?', '#', '[', ']', '@', '!', '&', '(', ')', '*', '+', ',', '%', '=', ';', '|']. make sure url characters are within the supported character sets. if any characters exist outside the supported character sets, the watermark image will not take effect.
      */
     public void setWaterMarkUrl(String WaterMarkUrl) {
         this.WaterMarkUrl = WaterMarkUrl;
@@ -161,6 +183,22 @@ public class McuWaterMarkImage extends AbstractModel {
         this.ZOrder = ZOrder;
     }
 
+    /**
+     * Get  
+     * @return DynamicPosType 
+     */
+    public Long getDynamicPosType() {
+        return this.DynamicPosType;
+    }
+
+    /**
+     * Set 
+     * @param DynamicPosType 
+     */
+    public void setDynamicPosType(Long DynamicPosType) {
+        this.DynamicPosType = DynamicPosType;
+    }
+
     public McuWaterMarkImage() {
     }
 
@@ -187,6 +225,9 @@ public class McuWaterMarkImage extends AbstractModel {
         if (source.ZOrder != null) {
             this.ZOrder = new Long(source.ZOrder);
         }
+        if (source.DynamicPosType != null) {
+            this.DynamicPosType = new Long(source.DynamicPosType);
+        }
     }
 
 
@@ -200,6 +241,7 @@ public class McuWaterMarkImage extends AbstractModel {
         this.setParamSimple(map, prefix + "LocationX", this.LocationX);
         this.setParamSimple(map, prefix + "LocationY", this.LocationY);
         this.setParamSimple(map, prefix + "ZOrder", this.ZOrder);
+        this.setParamSimple(map, prefix + "DynamicPosType", this.DynamicPosType);
 
     }
 }

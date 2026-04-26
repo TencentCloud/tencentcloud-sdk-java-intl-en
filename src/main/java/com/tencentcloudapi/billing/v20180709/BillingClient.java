@@ -150,6 +150,61 @@ Currently, the integrated and supported product for purchase includes: Cloud Fir
     }
 
     /**
+     *This API is used to query the filter conditions of a resource directory.
+     * @param req DescribeAllocateConditionsRequest
+     * @return DescribeAllocateConditionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocateConditionsResponse DescribeAllocateConditions(DescribeAllocateConditionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocateConditions", DescribeAllocateConditionsResponse.class);
+    }
+
+    /**
+     *This API is used to query the filter conditions of a cost allocation bill.
+     * @param req DescribeAllocationBillConditionsRequest
+     * @return DescribeAllocationBillConditionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationBillConditionsResponse DescribeAllocationBillConditions(DescribeAllocationBillConditionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationBillConditions", DescribeAllocationBillConditionsResponse.class);
+    }
+
+    /**
+     *This API is used to query the details of a cost allocation bill.
+     * @param req DescribeAllocationBillDetailRequest
+     * @return DescribeAllocationBillDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationBillDetailResponse DescribeAllocationBillDetail(DescribeAllocationBillDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationBillDetail", DescribeAllocationBillDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query the monthly overview of a cost allocation bill.
+     * @param req DescribeAllocationMonthOverviewRequest
+     * @return DescribeAllocationMonthOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationMonthOverviewResponse DescribeAllocationMonthOverview(DescribeAllocationMonthOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationMonthOverview", DescribeAllocationMonthOverviewResponse.class);
+    }
+
+    /**
+     *This API is used to query the daily overview of a cost allocation bill.
+     * @param req DescribeAllocationOverviewRequest
+     * @return DescribeAllocationOverviewResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationOverviewResponse DescribeAllocationOverview(DescribeAllocationOverviewRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationOverview", DescribeAllocationOverviewResponse.class);
+    }
+
+    /**
      *This API is used to query sharing rule details.
      * @param req DescribeAllocationRuleDetailRequest
      * @return DescribeAllocationRuleDetailResponse
@@ -172,6 +227,39 @@ Currently, the integrated and supported product for purchase includes: Cloud Fir
     }
 
     /**
+     *This API is used to query the details of a cost allocation bill by product.
+     * @param req DescribeAllocationSummaryByBusinessRequest
+     * @return DescribeAllocationSummaryByBusinessResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationSummaryByBusinessResponse DescribeAllocationSummaryByBusiness(DescribeAllocationSummaryByBusinessRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationSummaryByBusiness", DescribeAllocationSummaryByBusinessResponse.class);
+    }
+
+    /**
+     *This API is used to query the details of a cost allocation bill by item.
+     * @param req DescribeAllocationSummaryByItemRequest
+     * @return DescribeAllocationSummaryByItemResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationSummaryByItemResponse DescribeAllocationSummaryByItem(DescribeAllocationSummaryByItemRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationSummaryByItem", DescribeAllocationSummaryByItemResponse.class);
+    }
+
+    /**
+     *This API is used to query the details of a cost allocation bill by resource.
+     * @param req DescribeAllocationSummaryByResourceRequest
+     * @return DescribeAllocationSummaryByResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationSummaryByResourceResponse DescribeAllocationSummaryByResource(DescribeAllocationSummaryByResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationSummaryByResource", DescribeAllocationSummaryByResourceResponse.class);
+    }
+
+    /**
      *This API is used to query the cost tree.
      * @param req DescribeAllocationTreeRequest
      * @return DescribeAllocationTreeResponse
@@ -180,6 +268,17 @@ Currently, the integrated and supported product for purchase includes: Cloud Fir
     public DescribeAllocationTreeResponse DescribeAllocationTree(DescribeAllocationTreeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAllocationTree", DescribeAllocationTreeResponse.class);
+    }
+
+    /**
+     *This API is used to query the cost trend of a cost allocation bill.
+     * @param req DescribeAllocationTrendByMonthRequest
+     * @return DescribeAllocationTrendByMonthResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAllocationTrendByMonthResponse DescribeAllocationTrendByMonth(DescribeAllocationTrendByMonthRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAllocationTrendByMonth", DescribeAllocationTrendByMonthResponse.class);
     }
 
     /**
@@ -194,7 +293,7 @@ Currently, the integrated and supported product for purchase includes: Cloud Fir
     }
 
     /**
-     *This API is used to check whether the current UIN has any adjustment, enabling customers to proactively obtain the adjustment status faster.
+     *This API is used to query whether there is a bill adjustment for the current UIN through API. Customers can obtain bill adjustment status faster and proactively.
      * @param req DescribeBillAdjustInfoRequest
      * @return DescribeBillAdjustInfoResponse
      * @throws TencentCloudSDKException
@@ -341,7 +440,21 @@ Note: The API request may fail due to network instability or other exceptions. I
     }
 
     /**
+     *Query the four-layer matching relationship between the quoted product name and billing products
+     * @param req DescribeCPQBillingMappingRequest
+     * @return DescribeCPQBillingMappingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCPQBillingMappingResponse DescribeCPQBillingMapping(DescribeCPQBillingMappingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCPQBillingMapping", DescribeCPQBillingMappingResponse.class);
+    }
+
+    /**
      *This API is used to query consumption details.
+
+Notes:
+For customers with large-scale consumption detail (for example, monthly consumption detail exceeding 1M), there will be a timeout risk when retrieving detailed data via API call. It is recommended to enable the billing data storage function and analyze bill files obtained in a bucket. [Store bills to COS](https://www.tencentcloud.com/document/product/555/61275?from_cn_redirect=1)
      * @param req DescribeCostDetailRequest
      * @return DescribeCostDetailResponse
      * @throws TencentCloudSDKException
@@ -426,6 +539,17 @@ Note: The API request may fail due to network instability or other exceptions. I
     public DescribeDosageCosDetailByDateResponse DescribeDosageCosDetailByDate(DescribeDosageCosDetailByDateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDosageCosDetailByDate", DescribeDosageCosDetailByDateResponse.class);
+    }
+
+    /**
+     *This API is used to query the details of a cost allocation bill by resource.
+     * @param req DescribeGatherResourceRequest
+     * @return DescribeGatherResourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeGatherResourceResponse DescribeGatherResource(DescribeGatherResourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeGatherResource", DescribeGatherResourceResponse.class);
     }
 
     /**

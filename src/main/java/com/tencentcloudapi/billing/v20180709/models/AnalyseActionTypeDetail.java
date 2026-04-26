@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AnalyseActionTypeDetail extends AbstractModel {
 
     /**
-    * Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
+    * Transaction type code
     */
     @SerializedName("ActionType")
     @Expose
     private String ActionType;
 
     /**
-    * Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
+    * Transaction type Name
     */
     @SerializedName("ActionTypeName")
     @Expose
     private String ActionTypeName;
 
     /**
-     * Get Transaction type codeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ActionType Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Transaction type code 
+     * @return ActionType Transaction type code
      */
     public String getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ActionType Transaction type codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Transaction type code
+     * @param ActionType Transaction type code
      */
     public void setActionType(String ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get Transaction type nameNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ActionTypeName Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Transaction type Name 
+     * @return ActionTypeName Transaction type Name
      */
     public String getActionTypeName() {
         return this.ActionTypeName;
     }
 
     /**
-     * Set Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ActionTypeName Transaction type nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Transaction type Name
+     * @param ActionTypeName Transaction type Name
      */
     public void setActionTypeName(String ActionTypeName) {
         this.ActionTypeName = ActionTypeName;

@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class AnalyseOwnerUinDetail extends AbstractModel {
 
     /**
-    * User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+    * User uin
     */
     @SerializedName("OwnerUin")
     @Expose
     private String OwnerUin;
 
     /**
-     * Get User UIN
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OwnerUin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get User uin 
+     * @return OwnerUin User uin
      */
     public String getOwnerUin() {
         return this.OwnerUin;
     }
 
     /**
-     * Set User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OwnerUin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set User uin
+     * @param OwnerUin User uin
      */
     public void setOwnerUin(String OwnerUin) {
         this.OwnerUin = OwnerUin;

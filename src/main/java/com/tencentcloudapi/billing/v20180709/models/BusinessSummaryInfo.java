@@ -38,8 +38,7 @@ public class BusinessSummaryInfo extends AbstractModel {
     private String BusinessCodeName;
 
     /**
-    * Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
     */
     @SerializedName("TotalCost")
     @Expose
@@ -74,7 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String VoucherPayAmount;
 
     /**
-    * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+    * Royalty account expenditure: The amount paid through the royalty account
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -113,20 +112,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCost Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price. 
+     * @return TotalCost Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
      */
     public String getTotalCost() {
         return this.TotalCost;
     }
 
     /**
-     * Set Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCost Original cost in USD. This parameter became valid when Bill 3.0 took effect in May 2021. Before that, `-` was returned for this parameter. If a customer has applied for a contract price different from the prices listed on the official website, `-` will also be returned for this parameter. 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
+     * @param TotalCost Original price in CNY. The TotalCost field comes into effect after bill 3.0 (May 2021) and returns "-" before bill 3.0. In the current situation of contract price, the TotalCost field returns "-" if a price difference exists with the official website price.
      */
     public void setTotalCost(String TotalCost) {
         this.TotalCost = TotalCost;
@@ -197,16 +192,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Royalty account expenditure: The amount paid through the royalty account 
+     * @return TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Royalty account expenditure: The amount paid through the royalty account
+     * @param TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;

@@ -39,7 +39,7 @@ public class TagClient extends AbstractClient{
     }
 
     /**
-     *Creates a project
+     *Creates a project.
      * @param req AddProjectRequest
      * @return AddProjectResponse
      * @throws TencentCloudSDKException

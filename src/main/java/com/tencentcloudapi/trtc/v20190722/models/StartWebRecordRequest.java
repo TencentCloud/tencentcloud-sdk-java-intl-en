@@ -24,207 +24,212 @@ import java.util.HashMap;
 public class StartWebRecordRequest extends AbstractModel {
 
     /**
-    * URL of the web page to be recorded
+    * [Required] webpage URL that needs to be recorded.
     */
     @SerializedName("RecordUrl")
     @Expose
     private String RecordUrl;
 
     /**
-    * Maximum recording duration limit, in seconds. Valid range: [1800, 36000]. Default is 36,000 seconds (10 hours).
-    */
-    @SerializedName("MaxDurationLimit")
-    @Expose
-    private Long MaxDurationLimit;
-
-    /**
-    * [Required] Parameters related to cloud storage. Currently, Tencent Cloud Object Storage and Tencent Cloud VOD are supported, but third-party cloud storage is not supported. The storage format of the output file only supports hls or mp4.
+    * [Required] cloud storage related parameters. currently supports tencent cloud object storage as well as VOD. no support for third-party cloud storage. the storage format of the output file is only supported for hls or mp4.
     */
     @SerializedName("StorageParams")
     @Expose
     private StorageParams StorageParams;
 
     /**
-    * web-page recording video parameters
-    */
-    @SerializedName("WebRecordVideoParams")
-    @Expose
-    private WebRecordVideoParams WebRecordVideoParams;
-
-    /**
-    * [Required] The SDKAppID of the TRTC room 
+    * [Required] the SdkAppId of TRTC.
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * When sensitive to repetitive tasks, please pay attention to this value: To avoid tasks being initiated repeatedly in a short period, leading to task duplication, pass in the recording RecordId to identify the current task. The RecordId should be less than 32 bytes. If you carry the RecordId and initiate the start recording request more than once, only one task will be started, and the second one will report the error FailedOperation.TaskExist. Note that if the StartWebRecord call fails with an error other than FailedOperation.TaskExist, please change the RecordId and initiate the request again.
+    * Maximum recording duration limit in seconds. valid values [1800, 86400]. default 86400s (24 hr).
+    */
+    @SerializedName("MaxDurationLimit")
+    @Expose
+    private Long MaxDurationLimit;
+
+    /**
+    * Page recording video parameter.
+    */
+    @SerializedName("WebRecordVideoParams")
+    @Expose
+    private WebRecordVideoParams WebRecordVideoParams;
+
+    /**
+    * When sensitive to repetition tasks, pay attention to this value: to avoid triggering tasks repeatedly in a short time frame, which may lead to task duplication.
+Import the recording RecordId to identify the task, less than 32 bytes. if carrying RecordId initiates start recording requests more than twice, only one task will start up, and the second will report error FailedOperation.TaskExist. note that when StartWebRecord call fails instead of FailedOperation.TaskExist error, change RecordId and re-initiate the request.
     */
     @SerializedName("RecordId")
     @Expose
     private String RecordId;
 
     /**
-    * If you want to push the stream to a CDN, you can use the PublishCdnParams.N parameter to set it. It supports pushing streams to up to 10 CDN addresses simultaneously. If the relay address is a Tencent Cloud CDN, please explicitly set IsTencentCdn to 1.
+    * If you want to push stream to CDN, you can configure parameters in PublishCdnParams.N. it supports streaming simultaneously to up to 10 CDN addresses. if the relay address is tencent cloud CDN, set IsTencentCdn to 1.
     */
     @SerializedName("PublishCdnParams")
     @Expose
     private McuPublishCdnParam [] PublishCdnParams;
 
     /**
-    * The timeout for loading page resources during recording, in seconds. The default value is 0 seconds. This value must be greater than or equal to 0 seconds and less than or equal to 60 seconds. If page load timeout detection is not enabled for the recording page, please do not set this parameter.
+    * Timeout period for recording page resource loading, unit: second. default value is 0, which must be greater than or equal to 0 and less than or equal to 60. do not set this parameter when page loading timeout detection is disabled for the recording page.
     */
     @SerializedName("ReadyTimeout")
     @Expose
     private Long ReadyTimeout;
 
     /**
-    * Render mobile mode parameters; do not set this parameter if you are not going to render mobile mode pages.
+    * Render the mobile mode parameter. do not set this parameter when not preparing to render the mobile mode webpage.
     */
     @SerializedName("EmulateMobileParams")
     @Expose
     private EmulateMobileParams EmulateMobileParams;
 
     /**
-     * Get URL of the web page to be recorded 
-     * @return RecordUrl URL of the web page to be recorded
+     * Get [Required] webpage URL that needs to be recorded. 
+     * @return RecordUrl [Required] webpage URL that needs to be recorded.
      */
     public String getRecordUrl() {
         return this.RecordUrl;
     }
 
     /**
-     * Set URL of the web page to be recorded
-     * @param RecordUrl URL of the web page to be recorded
+     * Set [Required] webpage URL that needs to be recorded.
+     * @param RecordUrl [Required] webpage URL that needs to be recorded.
      */
     public void setRecordUrl(String RecordUrl) {
         this.RecordUrl = RecordUrl;
     }
 
     /**
-     * Get Maximum recording duration limit, in seconds. Valid range: [1800, 36000]. Default is 36,000 seconds (10 hours). 
-     * @return MaxDurationLimit Maximum recording duration limit, in seconds. Valid range: [1800, 36000]. Default is 36,000 seconds (10 hours).
-     */
-    public Long getMaxDurationLimit() {
-        return this.MaxDurationLimit;
-    }
-
-    /**
-     * Set Maximum recording duration limit, in seconds. Valid range: [1800, 36000]. Default is 36,000 seconds (10 hours).
-     * @param MaxDurationLimit Maximum recording duration limit, in seconds. Valid range: [1800, 36000]. Default is 36,000 seconds (10 hours).
-     */
-    public void setMaxDurationLimit(Long MaxDurationLimit) {
-        this.MaxDurationLimit = MaxDurationLimit;
-    }
-
-    /**
-     * Get [Required] Parameters related to cloud storage. Currently, Tencent Cloud Object Storage and Tencent Cloud VOD are supported, but third-party cloud storage is not supported. The storage format of the output file only supports hls or mp4. 
-     * @return StorageParams [Required] Parameters related to cloud storage. Currently, Tencent Cloud Object Storage and Tencent Cloud VOD are supported, but third-party cloud storage is not supported. The storage format of the output file only supports hls or mp4.
+     * Get [Required] cloud storage related parameters. currently supports tencent cloud object storage as well as VOD. no support for third-party cloud storage. the storage format of the output file is only supported for hls or mp4. 
+     * @return StorageParams [Required] cloud storage related parameters. currently supports tencent cloud object storage as well as VOD. no support for third-party cloud storage. the storage format of the output file is only supported for hls or mp4.
      */
     public StorageParams getStorageParams() {
         return this.StorageParams;
     }
 
     /**
-     * Set [Required] Parameters related to cloud storage. Currently, Tencent Cloud Object Storage and Tencent Cloud VOD are supported, but third-party cloud storage is not supported. The storage format of the output file only supports hls or mp4.
-     * @param StorageParams [Required] Parameters related to cloud storage. Currently, Tencent Cloud Object Storage and Tencent Cloud VOD are supported, but third-party cloud storage is not supported. The storage format of the output file only supports hls or mp4.
+     * Set [Required] cloud storage related parameters. currently supports tencent cloud object storage as well as VOD. no support for third-party cloud storage. the storage format of the output file is only supported for hls or mp4.
+     * @param StorageParams [Required] cloud storage related parameters. currently supports tencent cloud object storage as well as VOD. no support for third-party cloud storage. the storage format of the output file is only supported for hls or mp4.
      */
     public void setStorageParams(StorageParams StorageParams) {
         this.StorageParams = StorageParams;
     }
 
     /**
-     * Get web-page recording video parameters 
-     * @return WebRecordVideoParams web-page recording video parameters
-     */
-    public WebRecordVideoParams getWebRecordVideoParams() {
-        return this.WebRecordVideoParams;
-    }
-
-    /**
-     * Set web-page recording video parameters
-     * @param WebRecordVideoParams web-page recording video parameters
-     */
-    public void setWebRecordVideoParams(WebRecordVideoParams WebRecordVideoParams) {
-        this.WebRecordVideoParams = WebRecordVideoParams;
-    }
-
-    /**
-     * Get [Required] The SDKAppID of the TRTC room  
-     * @return SdkAppId [Required] The SDKAppID of the TRTC room 
+     * Get [Required] the SdkAppId of TRTC. 
+     * @return SdkAppId [Required] the SdkAppId of TRTC.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set [Required] The SDKAppID of the TRTC room 
-     * @param SdkAppId [Required] The SDKAppID of the TRTC room 
+     * Set [Required] the SdkAppId of TRTC.
+     * @param SdkAppId [Required] the SdkAppId of TRTC.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get When sensitive to repetitive tasks, please pay attention to this value: To avoid tasks being initiated repeatedly in a short period, leading to task duplication, pass in the recording RecordId to identify the current task. The RecordId should be less than 32 bytes. If you carry the RecordId and initiate the start recording request more than once, only one task will be started, and the second one will report the error FailedOperation.TaskExist. Note that if the StartWebRecord call fails with an error other than FailedOperation.TaskExist, please change the RecordId and initiate the request again. 
-     * @return RecordId When sensitive to repetitive tasks, please pay attention to this value: To avoid tasks being initiated repeatedly in a short period, leading to task duplication, pass in the recording RecordId to identify the current task. The RecordId should be less than 32 bytes. If you carry the RecordId and initiate the start recording request more than once, only one task will be started, and the second one will report the error FailedOperation.TaskExist. Note that if the StartWebRecord call fails with an error other than FailedOperation.TaskExist, please change the RecordId and initiate the request again.
+     * Get Maximum recording duration limit in seconds. valid values [1800, 86400]. default 86400s (24 hr). 
+     * @return MaxDurationLimit Maximum recording duration limit in seconds. valid values [1800, 86400]. default 86400s (24 hr).
+     */
+    public Long getMaxDurationLimit() {
+        return this.MaxDurationLimit;
+    }
+
+    /**
+     * Set Maximum recording duration limit in seconds. valid values [1800, 86400]. default 86400s (24 hr).
+     * @param MaxDurationLimit Maximum recording duration limit in seconds. valid values [1800, 86400]. default 86400s (24 hr).
+     */
+    public void setMaxDurationLimit(Long MaxDurationLimit) {
+        this.MaxDurationLimit = MaxDurationLimit;
+    }
+
+    /**
+     * Get Page recording video parameter. 
+     * @return WebRecordVideoParams Page recording video parameter.
+     */
+    public WebRecordVideoParams getWebRecordVideoParams() {
+        return this.WebRecordVideoParams;
+    }
+
+    /**
+     * Set Page recording video parameter.
+     * @param WebRecordVideoParams Page recording video parameter.
+     */
+    public void setWebRecordVideoParams(WebRecordVideoParams WebRecordVideoParams) {
+        this.WebRecordVideoParams = WebRecordVideoParams;
+    }
+
+    /**
+     * Get When sensitive to repetition tasks, pay attention to this value: to avoid triggering tasks repeatedly in a short time frame, which may lead to task duplication.
+Import the recording RecordId to identify the task, less than 32 bytes. if carrying RecordId initiates start recording requests more than twice, only one task will start up, and the second will report error FailedOperation.TaskExist. note that when StartWebRecord call fails instead of FailedOperation.TaskExist error, change RecordId and re-initiate the request. 
+     * @return RecordId When sensitive to repetition tasks, pay attention to this value: to avoid triggering tasks repeatedly in a short time frame, which may lead to task duplication.
+Import the recording RecordId to identify the task, less than 32 bytes. if carrying RecordId initiates start recording requests more than twice, only one task will start up, and the second will report error FailedOperation.TaskExist. note that when StartWebRecord call fails instead of FailedOperation.TaskExist error, change RecordId and re-initiate the request.
      */
     public String getRecordId() {
         return this.RecordId;
     }
 
     /**
-     * Set When sensitive to repetitive tasks, please pay attention to this value: To avoid tasks being initiated repeatedly in a short period, leading to task duplication, pass in the recording RecordId to identify the current task. The RecordId should be less than 32 bytes. If you carry the RecordId and initiate the start recording request more than once, only one task will be started, and the second one will report the error FailedOperation.TaskExist. Note that if the StartWebRecord call fails with an error other than FailedOperation.TaskExist, please change the RecordId and initiate the request again.
-     * @param RecordId When sensitive to repetitive tasks, please pay attention to this value: To avoid tasks being initiated repeatedly in a short period, leading to task duplication, pass in the recording RecordId to identify the current task. The RecordId should be less than 32 bytes. If you carry the RecordId and initiate the start recording request more than once, only one task will be started, and the second one will report the error FailedOperation.TaskExist. Note that if the StartWebRecord call fails with an error other than FailedOperation.TaskExist, please change the RecordId and initiate the request again.
+     * Set When sensitive to repetition tasks, pay attention to this value: to avoid triggering tasks repeatedly in a short time frame, which may lead to task duplication.
+Import the recording RecordId to identify the task, less than 32 bytes. if carrying RecordId initiates start recording requests more than twice, only one task will start up, and the second will report error FailedOperation.TaskExist. note that when StartWebRecord call fails instead of FailedOperation.TaskExist error, change RecordId and re-initiate the request.
+     * @param RecordId When sensitive to repetition tasks, pay attention to this value: to avoid triggering tasks repeatedly in a short time frame, which may lead to task duplication.
+Import the recording RecordId to identify the task, less than 32 bytes. if carrying RecordId initiates start recording requests more than twice, only one task will start up, and the second will report error FailedOperation.TaskExist. note that when StartWebRecord call fails instead of FailedOperation.TaskExist error, change RecordId and re-initiate the request.
      */
     public void setRecordId(String RecordId) {
         this.RecordId = RecordId;
     }
 
     /**
-     * Get If you want to push the stream to a CDN, you can use the PublishCdnParams.N parameter to set it. It supports pushing streams to up to 10 CDN addresses simultaneously. If the relay address is a Tencent Cloud CDN, please explicitly set IsTencentCdn to 1. 
-     * @return PublishCdnParams If you want to push the stream to a CDN, you can use the PublishCdnParams.N parameter to set it. It supports pushing streams to up to 10 CDN addresses simultaneously. If the relay address is a Tencent Cloud CDN, please explicitly set IsTencentCdn to 1.
+     * Get If you want to push stream to CDN, you can configure parameters in PublishCdnParams.N. it supports streaming simultaneously to up to 10 CDN addresses. if the relay address is tencent cloud CDN, set IsTencentCdn to 1. 
+     * @return PublishCdnParams If you want to push stream to CDN, you can configure parameters in PublishCdnParams.N. it supports streaming simultaneously to up to 10 CDN addresses. if the relay address is tencent cloud CDN, set IsTencentCdn to 1.
      */
     public McuPublishCdnParam [] getPublishCdnParams() {
         return this.PublishCdnParams;
     }
 
     /**
-     * Set If you want to push the stream to a CDN, you can use the PublishCdnParams.N parameter to set it. It supports pushing streams to up to 10 CDN addresses simultaneously. If the relay address is a Tencent Cloud CDN, please explicitly set IsTencentCdn to 1.
-     * @param PublishCdnParams If you want to push the stream to a CDN, you can use the PublishCdnParams.N parameter to set it. It supports pushing streams to up to 10 CDN addresses simultaneously. If the relay address is a Tencent Cloud CDN, please explicitly set IsTencentCdn to 1.
+     * Set If you want to push stream to CDN, you can configure parameters in PublishCdnParams.N. it supports streaming simultaneously to up to 10 CDN addresses. if the relay address is tencent cloud CDN, set IsTencentCdn to 1.
+     * @param PublishCdnParams If you want to push stream to CDN, you can configure parameters in PublishCdnParams.N. it supports streaming simultaneously to up to 10 CDN addresses. if the relay address is tencent cloud CDN, set IsTencentCdn to 1.
      */
     public void setPublishCdnParams(McuPublishCdnParam [] PublishCdnParams) {
         this.PublishCdnParams = PublishCdnParams;
     }
 
     /**
-     * Get The timeout for loading page resources during recording, in seconds. The default value is 0 seconds. This value must be greater than or equal to 0 seconds and less than or equal to 60 seconds. If page load timeout detection is not enabled for the recording page, please do not set this parameter. 
-     * @return ReadyTimeout The timeout for loading page resources during recording, in seconds. The default value is 0 seconds. This value must be greater than or equal to 0 seconds and less than or equal to 60 seconds. If page load timeout detection is not enabled for the recording page, please do not set this parameter.
+     * Get Timeout period for recording page resource loading, unit: second. default value is 0, which must be greater than or equal to 0 and less than or equal to 60. do not set this parameter when page loading timeout detection is disabled for the recording page. 
+     * @return ReadyTimeout Timeout period for recording page resource loading, unit: second. default value is 0, which must be greater than or equal to 0 and less than or equal to 60. do not set this parameter when page loading timeout detection is disabled for the recording page.
      */
     public Long getReadyTimeout() {
         return this.ReadyTimeout;
     }
 
     /**
-     * Set The timeout for loading page resources during recording, in seconds. The default value is 0 seconds. This value must be greater than or equal to 0 seconds and less than or equal to 60 seconds. If page load timeout detection is not enabled for the recording page, please do not set this parameter.
-     * @param ReadyTimeout The timeout for loading page resources during recording, in seconds. The default value is 0 seconds. This value must be greater than or equal to 0 seconds and less than or equal to 60 seconds. If page load timeout detection is not enabled for the recording page, please do not set this parameter.
+     * Set Timeout period for recording page resource loading, unit: second. default value is 0, which must be greater than or equal to 0 and less than or equal to 60. do not set this parameter when page loading timeout detection is disabled for the recording page.
+     * @param ReadyTimeout Timeout period for recording page resource loading, unit: second. default value is 0, which must be greater than or equal to 0 and less than or equal to 60. do not set this parameter when page loading timeout detection is disabled for the recording page.
      */
     public void setReadyTimeout(Long ReadyTimeout) {
         this.ReadyTimeout = ReadyTimeout;
     }
 
     /**
-     * Get Render mobile mode parameters; do not set this parameter if you are not going to render mobile mode pages. 
-     * @return EmulateMobileParams Render mobile mode parameters; do not set this parameter if you are not going to render mobile mode pages.
+     * Get Render the mobile mode parameter. do not set this parameter when not preparing to render the mobile mode webpage. 
+     * @return EmulateMobileParams Render the mobile mode parameter. do not set this parameter when not preparing to render the mobile mode webpage.
      */
     public EmulateMobileParams getEmulateMobileParams() {
         return this.EmulateMobileParams;
     }
 
     /**
-     * Set Render mobile mode parameters; do not set this parameter if you are not going to render mobile mode pages.
-     * @param EmulateMobileParams Render mobile mode parameters; do not set this parameter if you are not going to render mobile mode pages.
+     * Set Render the mobile mode parameter. do not set this parameter when not preparing to render the mobile mode webpage.
+     * @param EmulateMobileParams Render the mobile mode parameter. do not set this parameter when not preparing to render the mobile mode webpage.
      */
     public void setEmulateMobileParams(EmulateMobileParams EmulateMobileParams) {
         this.EmulateMobileParams = EmulateMobileParams;
@@ -241,17 +246,17 @@ public class StartWebRecordRequest extends AbstractModel {
         if (source.RecordUrl != null) {
             this.RecordUrl = new String(source.RecordUrl);
         }
-        if (source.MaxDurationLimit != null) {
-            this.MaxDurationLimit = new Long(source.MaxDurationLimit);
-        }
         if (source.StorageParams != null) {
             this.StorageParams = new StorageParams(source.StorageParams);
         }
-        if (source.WebRecordVideoParams != null) {
-            this.WebRecordVideoParams = new WebRecordVideoParams(source.WebRecordVideoParams);
-        }
         if (source.SdkAppId != null) {
             this.SdkAppId = new Long(source.SdkAppId);
+        }
+        if (source.MaxDurationLimit != null) {
+            this.MaxDurationLimit = new Long(source.MaxDurationLimit);
+        }
+        if (source.WebRecordVideoParams != null) {
+            this.WebRecordVideoParams = new WebRecordVideoParams(source.WebRecordVideoParams);
         }
         if (source.RecordId != null) {
             this.RecordId = new String(source.RecordId);
@@ -276,10 +281,10 @@ public class StartWebRecordRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RecordUrl", this.RecordUrl);
-        this.setParamSimple(map, prefix + "MaxDurationLimit", this.MaxDurationLimit);
         this.setParamObj(map, prefix + "StorageParams.", this.StorageParams);
-        this.setParamObj(map, prefix + "WebRecordVideoParams.", this.WebRecordVideoParams);
         this.setParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+        this.setParamSimple(map, prefix + "MaxDurationLimit", this.MaxDurationLimit);
+        this.setParamObj(map, prefix + "WebRecordVideoParams.", this.WebRecordVideoParams);
         this.setParamSimple(map, prefix + "RecordId", this.RecordId);
         this.setParamArrayObj(map, prefix + "PublishCdnParams.", this.PublishCdnParams);
         this.setParamSimple(map, prefix + "ReadyTimeout", this.ReadyTimeout);

@@ -31,7 +31,7 @@ public class SendStatus extends AbstractModel {
     private String SerialNo;
 
     /**
-    * Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+    * Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
     */
     @SerializedName("PhoneNumber")
     @Expose
@@ -66,7 +66,7 @@ public class SendStatus extends AbstractModel {
     private String Message;
 
     /**
-    * Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+    * Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
     */
     @SerializedName("IsoCode")
     @Expose
@@ -89,16 +89,16 @@ public class SendStatus extends AbstractModel {
     }
 
     /**
-     * Get Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number). 
-     * @return PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+     * Get Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number). 
+     * @return PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
      */
     public String getPhoneNumber() {
         return this.PhoneNumber;
     }
 
     /**
-     * Set Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
-     * @param PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
+     * Set Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
+     * @param PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +60198890000, which has a + sign followed by 60 (country/region code) and then by 198890000 (mobile number).
      */
     public void setPhoneNumber(String PhoneNumber) {
         this.PhoneNumber = PhoneNumber;
@@ -169,16 +169,16 @@ public class SendStatus extends AbstractModel {
     }
 
     /**
-     * Get Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1). 
-     * @return IsoCode Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+     * Get Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1). 
+     * @return IsoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
      */
     public String getIsoCode() {
         return this.IsoCode;
     }
 
     /**
-     * Set Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
-     * @param IsoCode Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+     * Set Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+     * @param IsoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
      */
     public void setIsoCode(String IsoCode) {
         this.IsoCode = IsoCode;

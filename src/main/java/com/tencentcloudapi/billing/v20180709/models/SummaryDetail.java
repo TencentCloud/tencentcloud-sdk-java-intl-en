@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class SummaryDetail extends AbstractModel {
 
     /**
-    * Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
+    * Bill dimension code
     */
     @SerializedName("GroupKey")
     @Expose
     private String GroupKey;
 
     /**
-    * Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
+    * Billing dimension value
     */
     @SerializedName("GroupValue")
     @Expose
@@ -73,46 +73,46 @@ public class SummaryDetail extends AbstractModel {
     private String VoucherPayAmount;
 
     /**
-    * Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+    * Royalty account expenditure: The amount paid through the royalty account
     */
     @SerializedName("TransferPayAmount")
     @Expose
     private String TransferPayAmount;
 
     /**
-    * Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
+    * Product summary information
     */
     @SerializedName("Business")
     @Expose
     private BusinessSummaryInfo [] Business;
 
     /**
-     * Get Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupKey Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Bill dimension code 
+     * @return GroupKey Bill dimension code
      */
     public String getGroupKey() {
         return this.GroupKey;
     }
 
     /**
-     * Set Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupKey Bill dimension code. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Bill dimension code
+     * @param GroupKey Bill dimension code
      */
     public void setGroupKey(String GroupKey) {
         this.GroupKey = GroupKey;
     }
 
     /**
-     * Get Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupValue Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Billing dimension value 
+     * @return GroupValue Billing dimension value
      */
     public String getGroupValue() {
         return this.GroupValue;
     }
 
     /**
-     * Set Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupValue Bill dimension value. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Billing dimension value
+     * @param GroupValue Billing dimension value
      */
     public void setGroupValue(String GroupValue) {
         this.GroupValue = GroupValue;
@@ -199,32 +199,32 @@ public class SummaryDetail extends AbstractModel {
     }
 
     /**
-     * Get Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Royalty account expenditure: The amount paid through the royalty account 
+     * @return TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit: The amount paid with the user’s commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Royalty account expenditure: The amount paid through the royalty account
+     * @param TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
     }
 
     /**
-     * Get Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Business Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Product summary information 
+     * @return Business Product summary information
      */
     public BusinessSummaryInfo [] getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Business Detailed summary of products. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Product summary information
+     * @param Business Product summary information
      */
     public void setBusiness(BusinessSummaryInfo [] Business) {
         this.Business = Business;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AnalyseBusinessDetail extends AbstractModel {
 
     /**
-    * Product codeNote: This field may return null, indicating that no valid values can be obtained.
+    * Product code
     */
     @SerializedName("BusinessCode")
     @Expose
     private String BusinessCode;
 
     /**
-    * Product nameNote: This field may return null, indicating that no valid values can be obtained.
+    * Product name
     */
     @SerializedName("BusinessCodeName")
     @Expose
     private String BusinessCodeName;
 
     /**
-     * Get Product codeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return BusinessCode Product codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Product code 
+     * @return BusinessCode Product code
      */
     public String getBusinessCode() {
         return this.BusinessCode;
     }
 
     /**
-     * Set Product codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param BusinessCode Product codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Product code
+     * @param BusinessCode Product code
      */
     public void setBusinessCode(String BusinessCode) {
         this.BusinessCode = BusinessCode;
     }
 
     /**
-     * Get Product nameNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return BusinessCodeName Product nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Product name 
+     * @return BusinessCodeName Product name
      */
     public String getBusinessCodeName() {
         return this.BusinessCodeName;
     }
 
     /**
-     * Set Product nameNote: This field may return null, indicating that no valid values can be obtained.
-     * @param BusinessCodeName Product nameNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Product name
+     * @param BusinessCodeName Product name
      */
     public void setBusinessCodeName(String BusinessCodeName) {
         this.BusinessCodeName = BusinessCodeName;

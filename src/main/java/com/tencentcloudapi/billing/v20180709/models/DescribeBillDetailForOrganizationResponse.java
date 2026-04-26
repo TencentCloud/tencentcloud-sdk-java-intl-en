@@ -39,8 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Total;
 
     /**
-    * Context information of the current request, which can be used in the parameters of the next request to speed up the query.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Context information of this request can be used in the request parameter of the next request to accelerate query speed.
     */
     @SerializedName("Context")
     @Expose
@@ -90,20 +89,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Context information of the current request, which can be used in the parameters of the next request to speed up the query.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Context Context information of the current request, which can be used in the parameters of the next request to speed up the query.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Context information of this request can be used in the request parameter of the next request to accelerate query speed. 
+     * @return Context Context information of this request can be used in the request parameter of the next request to accelerate query speed.
      */
     public String getContext() {
         return this.Context;
     }
 
     /**
-     * Set Context information of the current request, which can be used in the parameters of the next request to speed up the query.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Context Context information of the current request, which can be used in the parameters of the next request to speed up the query.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Context information of this request can be used in the request parameter of the next request to accelerate query speed.
+     * @param Context Context information of this request can be used in the request parameter of the next request to accelerate query speed.
      */
     public void setContext(String Context) {
         this.Context = Context;

@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeBillAdjustInfoResponse extends AbstractModel {
 
     /**
-    * Total amount of data.
-Example value: 10.
+    * <p>Total data</p>
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * Detailed data.
-Example value: [].
+    * <p>Detailed data</p>
     */
     @SerializedName("Data")
     @Expose
@@ -47,40 +45,32 @@ Example value: [].
     private String RequestId;
 
     /**
-     * Get Total amount of data.
-Example value: 10. 
-     * @return Total Total amount of data.
-Example value: 10.
+     * Get <p>Total data</p> 
+     * @return Total <p>Total data</p>
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set Total amount of data.
-Example value: 10.
-     * @param Total Total amount of data.
-Example value: 10.
+     * Set <p>Total data</p>
+     * @param Total <p>Total data</p>
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get Detailed data.
-Example value: []. 
-     * @return Data Detailed data.
-Example value: [].
+     * Get <p>Detailed data</p> 
+     * @return Data <p>Detailed data</p>
      */
     public AdjustInfoDetail [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Detailed data.
-Example value: [].
-     * @param Data Detailed data.
-Example value: [].
+     * Set <p>Detailed data</p>
+     * @param Data <p>Detailed data</p>
      */
     public void setData(AdjustInfoDetail [] Data) {
         this.Data = Data;

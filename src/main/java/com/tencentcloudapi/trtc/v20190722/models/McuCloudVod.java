@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class McuCloudVod extends AbstractModel {
 
     /**
-    * Tencent VOD Parameters
-Example :{"ExpireTime":86400}
+    * Parameters of tencent cloud video on demand (vod).	
     */
     @SerializedName("McuTencentVod")
     @Expose
     private McuTencentVod McuTencentVod;
 
     /**
-     * Get Tencent VOD Parameters
-Example :{"ExpireTime":86400} 
-     * @return McuTencentVod Tencent VOD Parameters
-Example :{"ExpireTime":86400}
+     * Get Parameters of tencent cloud video on demand (vod).	 
+     * @return McuTencentVod Parameters of tencent cloud video on demand (vod).	
      */
     public McuTencentVod getMcuTencentVod() {
         return this.McuTencentVod;
     }
 
     /**
-     * Set Tencent VOD Parameters
-Example :{"ExpireTime":86400}
-     * @param McuTencentVod Tencent VOD Parameters
-Example :{"ExpireTime":86400}
+     * Set Parameters of tencent cloud video on demand (vod).	
+     * @param McuTencentVod Parameters of tencent cloud video on demand (vod).	
      */
     public void setMcuTencentVod(McuTencentVod McuTencentVod) {
         this.McuTencentVod = McuTencentVod;

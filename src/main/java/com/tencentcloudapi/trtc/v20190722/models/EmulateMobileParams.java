@@ -24,66 +24,66 @@ import java.util.HashMap;
 public class EmulateMobileParams extends AbstractModel {
 
     /**
-    * Mobile device types,
-0: Phone
-1: Tablet
+    * Mobile device type.
+Mobile phone.
+Tablet.
     */
     @SerializedName("MobileDeviceType")
     @Expose
     private Long MobileDeviceType;
 
     /**
-    * Screen orientation,
-0: Portrait,
-1: Landscape
+    * Screen orientation.
+Portrait mode.
+Landscape mode.
     */
     @SerializedName("ScreenOrientation")
     @Expose
     private Long ScreenOrientation;
 
     /**
-     * Get Mobile device types,
-0: Phone
-1: Tablet 
-     * @return MobileDeviceType Mobile device types,
-0: Phone
-1: Tablet
+     * Get Mobile device type.
+Mobile phone.
+Tablet. 
+     * @return MobileDeviceType Mobile device type.
+Mobile phone.
+Tablet.
      */
     public Long getMobileDeviceType() {
         return this.MobileDeviceType;
     }
 
     /**
-     * Set Mobile device types,
-0: Phone
-1: Tablet
-     * @param MobileDeviceType Mobile device types,
-0: Phone
-1: Tablet
+     * Set Mobile device type.
+Mobile phone.
+Tablet.
+     * @param MobileDeviceType Mobile device type.
+Mobile phone.
+Tablet.
      */
     public void setMobileDeviceType(Long MobileDeviceType) {
         this.MobileDeviceType = MobileDeviceType;
     }
 
     /**
-     * Get Screen orientation,
-0: Portrait,
-1: Landscape 
-     * @return ScreenOrientation Screen orientation,
-0: Portrait,
-1: Landscape
+     * Get Screen orientation.
+Portrait mode.
+Landscape mode. 
+     * @return ScreenOrientation Screen orientation.
+Portrait mode.
+Landscape mode.
      */
     public Long getScreenOrientation() {
         return this.ScreenOrientation;
     }
 
     /**
-     * Set Screen orientation,
-0: Portrait,
-1: Landscape
-     * @param ScreenOrientation Screen orientation,
-0: Portrait,
-1: Landscape
+     * Set Screen orientation.
+Portrait mode.
+Landscape mode.
+     * @param ScreenOrientation Screen orientation.
+Portrait mode.
+Landscape mode.
      */
     public void setScreenOrientation(Long ScreenOrientation) {
         this.ScreenOrientation = ScreenOrientation;

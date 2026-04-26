@@ -38,14 +38,14 @@ public class DescribeCostDetailRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Cycle start time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+    * Cycle start time. The query granularity is daily. The hour/minute/second parameter must be input in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
     */
     @SerializedName("BeginTime")
     @Expose
     private String BeginTime;
 
     /**
-    * Cycle end time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+    * Cycle end time. The query granularity is daily. The hour-minute-second parameter must be imported in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If this field is present, Month becomes invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
     */
     @SerializedName("EndTime")
     @Expose
@@ -59,14 +59,14 @@ public class DescribeCostDetailRequest extends AbstractModel {
     private Long NeedRecordNum;
 
     /**
-    * Month, in the format of yyyy-mm. Either Month or BeginTime&EndTime must be entered, and if BeginTime&EndTime is entered, Month becomes invalid. It cannot be earlier than the month when cost analysis is activated. Data of up to 24 months can be retrieved.
+    * The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. It cannot be earlier than the month when the consumption bill was enabled. Data within the last 18 months can be pulled at most.
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * Used to query information of a specified product (currently not available)
+    * Query information of a specified product
     */
     @SerializedName("ProductCode")
     @Expose
@@ -119,32 +119,32 @@ public class DescribeCostDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Cycle start time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months. 
-     * @return BeginTime Cycle start time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+     * Get Cycle start time. The query granularity is daily. The hour/minute/second parameter must be input in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months. 
+     * @return BeginTime Cycle start time. The query granularity is daily. The hour/minute/second parameter must be input in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
      */
     public String getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Cycle start time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
-     * @param BeginTime Cycle start time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+     * Set Cycle start time. The query granularity is daily. The hour/minute/second parameter must be input in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
+     * @param BeginTime Cycle start time. The query granularity is daily. The hour/minute/second parameter must be input in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
      */
     public void setBeginTime(String BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get Cycle end time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months. 
-     * @return EndTime Cycle end time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+     * Get Cycle end time. The query granularity is daily. The hour-minute-second parameter must be imported in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If this field is present, Month becomes invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months. 
+     * @return EndTime Cycle end time. The query granularity is daily. The hour-minute-second parameter must be imported in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If this field is present, Month becomes invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Cycle end time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
-     * @param EndTime Cycle end time in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be entered, and if this field is present, Month becomes invalid. BeginTime and EndTime must be entered together, and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after cost analysis is activated and within the past 24 months.
+     * Set Cycle end time. The query granularity is daily. The hour-minute-second parameter must be imported in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If this field is present, Month becomes invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
+     * @param EndTime Cycle end time. The query granularity is daily. The hour-minute-second parameter must be imported in the format of yyyy-mm-dd hh:ii:ss. Either Month or BeginTime&EndTime must be specified. If this field is present, Month becomes invalid. BeginTime and EndTime must be specified together and must be in the same month. Cross-month retrieval is not currently supported. Data retrievable is the data after consumption bill is enabled and within the past 18 months.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
@@ -167,32 +167,32 @@ public class DescribeCostDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Month, in the format of yyyy-mm. Either Month or BeginTime&EndTime must be entered, and if BeginTime&EndTime is entered, Month becomes invalid. It cannot be earlier than the month when cost analysis is activated. Data of up to 24 months can be retrieved. 
-     * @return Month Month, in the format of yyyy-mm. Either Month or BeginTime&EndTime must be entered, and if BeginTime&EndTime is entered, Month becomes invalid. It cannot be earlier than the month when cost analysis is activated. Data of up to 24 months can be retrieved.
+     * Get The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. It cannot be earlier than the month when the consumption bill was enabled. Data within the last 18 months can be pulled at most. 
+     * @return Month The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. It cannot be earlier than the month when the consumption bill was enabled. Data within the last 18 months can be pulled at most.
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set Month, in the format of yyyy-mm. Either Month or BeginTime&EndTime must be entered, and if BeginTime&EndTime is entered, Month becomes invalid. It cannot be earlier than the month when cost analysis is activated. Data of up to 24 months can be retrieved.
-     * @param Month Month, in the format of yyyy-mm. Either Month or BeginTime&EndTime must be entered, and if BeginTime&EndTime is entered, Month becomes invalid. It cannot be earlier than the month when cost analysis is activated. Data of up to 24 months can be retrieved.
+     * Set The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. It cannot be earlier than the month when the consumption bill was enabled. Data within the last 18 months can be pulled at most.
+     * @param Month The month is in the format of yyyy-mm. Either Month or BeginTime&EndTime must be specified. If BeginTime&EndTime is specified, the Month field is invalid. It cannot be earlier than the month when the consumption bill was enabled. Data within the last 18 months can be pulled at most.
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get Used to query information of a specified product (currently not available) 
-     * @return ProductCode Used to query information of a specified product (currently not available)
+     * Get Query information of a specified product 
+     * @return ProductCode Query information of a specified product
      */
     public String getProductCode() {
         return this.ProductCode;
     }
 
     /**
-     * Set Used to query information of a specified product (currently not available)
-     * @param ProductCode Used to query information of a specified product (currently not available)
+     * Set Query information of a specified product
+     * @param ProductCode Query information of a specified product
      */
     public void setProductCode(String ProductCode) {
         this.ProductCode = ProductCode;

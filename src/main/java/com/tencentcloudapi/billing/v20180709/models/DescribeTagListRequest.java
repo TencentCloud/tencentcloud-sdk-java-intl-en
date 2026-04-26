@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeTagListRequest extends AbstractModel {
 
     /**
-    * The number of entries returned at a time. The maximum value is `1000`.
+    * Quantity, with the maximum value of 1,000
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+    * Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Cost allocation tag key, used for fuzzy search.
+    * Cost allocation tag key, used as fuzzy search
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
+    * Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
+    * Sorting method, enumeration value: asc for ascending order, desc for descending order.
     */
     @SerializedName("OrderType")
     @Expose
     private String OrderType;
 
     /**
-     * Get The number of entries returned at a time. The maximum value is `1000`. 
-     * @return Limit The number of entries returned at a time. The maximum value is `1000`.
+     * Get Quantity, with the maximum value of 1,000 
+     * @return Limit Quantity, with the maximum value of 1,000
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of entries returned at a time. The maximum value is `1000`.
-     * @param Limit The number of entries returned at a time. The maximum value is `1000`.
+     * Set Quantity, with the maximum value of 1,000
+     * @param Limit Quantity, with the maximum value of 1,000
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on. 
-     * @return Offset Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+     * Get Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on. 
+     * @return Offset Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
-     * @param Offset Pagination offset. If `Offset` is `0`, it indicates the first page. When `Limit` is `100`, if `Offset` is `100`, it indicates the second page; if `Offset` is `200`, it indicates the third page, and so on.
+     * Set Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
+     * @param Offset Pagination offset. Offset=0 indicates the first page. If Limit=100, Offset=100 indicates the second page, Offset=200 indicates the third page, and so on.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Cost allocation tag key, used for fuzzy search. 
-     * @return TagKey Cost allocation tag key, used for fuzzy search.
+     * Get Cost allocation tag key, used as fuzzy search 
+     * @return TagKey Cost allocation tag key, used as fuzzy search
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set Cost allocation tag key, used for fuzzy search.
-     * @param TagKey Cost allocation tag key, used for fuzzy search.
+     * Set Cost allocation tag key, used as fuzzy search
+     * @param TagKey Cost allocation tag key, used as fuzzy search
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried. 
-     * @return Status Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
+     * Get Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys. 
+     * @return Status Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
-     * @param Status Tag type, used for tag filtering. Valid values: `0` (general tags), `1` (cost allocation tags). If it is not specified, all tag keys will be queried.
+     * Set Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
+     * @param Status Tag type, enumeration value: 0 ordinary tag, 1 allocation tag, used for filtering. If not passed, get all tag keys.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Sorting order. Valid values: `asc` (ascending order), `desc` (descending order). 
-     * @return OrderType Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
+     * Get Sorting method, enumeration value: asc for ascending order, desc for descending order. 
+     * @return OrderType Sorting method, enumeration value: asc for ascending order, desc for descending order.
      */
     public String getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
-     * @param OrderType Sorting order. Valid values: `asc` (ascending order), `desc` (descending order).
+     * Set Sorting method, enumeration value: asc for ascending order, desc for descending order.
+     * @param OrderType Sorting method, enumeration value: asc for ascending order, desc for descending order.
      */
     public void setOrderType(String OrderType) {
         this.OrderType = OrderType;

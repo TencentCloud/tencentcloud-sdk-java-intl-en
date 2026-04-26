@@ -187,7 +187,7 @@ public class BillResourceSummary extends AbstractModel {
     private String IncentivePayAmount;
 
     /**
-    * Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+    * Royalty account expenditure: The amount paid through the royalty account
     */
     @SerializedName("TransferPayAmount")
     @Expose
@@ -215,7 +215,7 @@ public class BillResourceSummary extends AbstractModel {
     private String ExtendField5;
 
     /**
-    * Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+    * Tag information.
     */
     @SerializedName("Tags")
     @Expose
@@ -292,7 +292,7 @@ public class BillResourceSummary extends AbstractModel {
     private String OriginalCostWithSP;
 
     /**
-    * Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+    * Billing month
     */
     @SerializedName("BillMonth")
     @Expose
@@ -675,16 +675,16 @@ public class BillResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Royalty account expenditure: The amount paid through the royalty account 
+     * @return TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     public String getTransferPayAmount() {
         return this.TransferPayAmount;
     }
 
     /**
-     * Set Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TransferPayAmount Commission credit: The amount paid with the user's commission credit. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Royalty account expenditure: The amount paid through the royalty account
+     * @param TransferPayAmount Royalty account expenditure: The amount paid through the royalty account
      */
     public void setTransferPayAmount(String TransferPayAmount) {
         this.TransferPayAmount = TransferPayAmount;
@@ -739,16 +739,16 @@ public class BillResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get Tag information. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Tag information. 
+     * @return Tags Tag information.
      */
     public BillTagInfo [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag information. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag information. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Tag information.
+     * @param Tags Tag information.
      */
     public void setTags(BillTagInfo [] Tags) {
         this.Tags = Tags;
@@ -919,16 +919,16 @@ public class BillResourceSummary extends AbstractModel {
     }
 
     /**
-     * Get Billing monthNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Billing month 
+     * @return BillMonth Billing month
      */
     public String getBillMonth() {
         return this.BillMonth;
     }
 
     /**
-     * Set Billing monthNote: This field may return null, indicating that no valid values can be obtained.
-     * @param BillMonth Billing monthNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Billing month
+     * @param BillMonth Billing month
      */
     public void setBillMonth(String BillMonth) {
         this.BillMonth = BillMonth;

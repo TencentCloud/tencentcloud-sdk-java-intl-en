@@ -24,104 +24,104 @@ import java.util.HashMap;
 public class DescribeBillDownloadUrlRequest extends AbstractModel {
 
     /**
-    * Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
+    * Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
+    * Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
     */
     @SerializedName("Month")
     @Expose
     private String Month;
 
     /**
-    * List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
+    * Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
     */
     @SerializedName("ChildUin")
     @Expose
     private String [] ChildUin;
 
     /**
-     * Get Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs) 
-     * @return FileType Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
+     * Get Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack 
+     * @return FileType Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
-     * @param FileType Bill type. Valid values:
-`billOverview` (L0: PDF bills)
-`billSummary` (L1: Bill summary)	
-`billResource` (L2: Bill by instance)	
-`billDetail` (L3: Bill details)	
-`billPack` (Bill packs)
+     * Set Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
+     * @param FileType Billing mode. Enumeration values
+billOverview=L0-PDF Bill
+Bill Summary=L1-Summary Bill	
+billResource=L2-Resource bill	
+billDetail=L3-Detailed Bill	
+billPack
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month. 
-     * @return Month Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
+     * Get Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00. 
+     * @return Month Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
      */
     public String getMonth() {
         return this.Month;
     }
 
     /**
-     * Set Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
-     * @param Month Bill month.
-The earliest month that can be queried is January 2021.
-L0 bills and bill packs cannot be downloaded for the current month. Please download the current month's bills after it is generated at 19:00 on the 1st day of the next month.
+     * Set Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
+     * @param Month Billing month
+Earliest start month supported is 2021-01
+L0-PDF&bill package does not support download for the current month. Please download the monthly bill after billing on the 1st of next month at 19:00.
      */
     public void setMonth(String Month) {
         this.Month = Month;
     }
 
     /**
-     * Get List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter. 
-     * @return ChildUin List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
+     * Get Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field. 
+     * @return ChildUin Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
      */
     public String [] getChildUin() {
         return this.ChildUin;
     }
 
     /**
-     * Set List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
-     * @param ChildUin List of account IDs for downloading the bill. By default, it queries the bill for the current account. If you are an admin account and need to download bills for member accounts with their own payment, input the member account's UIN for this parameter.
+     * Set Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
+     * @param ChildUin Downloaded account ID list. By default, the query returns the account statement of the current account. If the group management account needs to download the self-pay bills of member accounts, enter the member account UIN in this field.
      */
     public void setChildUin(String [] ChildUin) {
         this.ChildUin = ChildUin;

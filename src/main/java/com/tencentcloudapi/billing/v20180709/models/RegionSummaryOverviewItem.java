@@ -25,7 +25,6 @@ public class RegionSummaryOverviewItem extends AbstractModel {
 
     /**
     * Region ID
-Note: This field may return null, indicating that no valid value was found.
     */
     @SerializedName("RegionId")
     @Expose
@@ -95,10 +94,8 @@ Note: This field may return null, indicating that no valid value was found.
     private String TotalCost;
 
     /**
-     * Get Region ID
-Note: This field may return null, indicating that no valid value was found. 
+     * Get Region ID 
      * @return RegionId Region ID
-Note: This field may return null, indicating that no valid value was found.
      */
     public String getRegionId() {
         return this.RegionId;
@@ -106,9 +103,7 @@ Note: This field may return null, indicating that no valid value was found.
 
     /**
      * Set Region ID
-Note: This field may return null, indicating that no valid value was found.
      * @param RegionId Region ID
-Note: This field may return null, indicating that no valid value was found.
      */
     public void setRegionId(String RegionId) {
         this.RegionId = RegionId;

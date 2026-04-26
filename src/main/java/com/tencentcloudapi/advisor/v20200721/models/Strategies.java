@@ -25,81 +25,70 @@ public class Strategies extends AbstractModel {
 
     /**
     * Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("StrategyId")
     @Expose
     private Long StrategyId;
 
     /**
-    * Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Assessment item name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Assessment item description.
     */
     @SerializedName("Desc")
     @Expose
     private String Desc;
 
     /**
-    * Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Product ID corresponding to the assessment item.
     */
     @SerializedName("Product")
     @Expose
     private String Product;
 
     /**
-    * Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Assessment item corresponding product name.
     */
     @SerializedName("ProductDesc")
     @Expose
     private String ProductDesc;
 
     /**
-    * Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies optimization suggestions for the assessment item.
     */
     @SerializedName("Repair")
     @Expose
     private String Repair;
 
     /**
-    * Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Assessment item category ID.
     */
     @SerializedName("GroupId")
     @Expose
     private Long GroupId;
 
     /**
-    * Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the category name of the assessment item.
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the evaluation item risk list.
     */
     @SerializedName("Conditions")
     @Expose
     private Conditions [] Conditions;
 
     /**
-     * Get Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Assessment item ID 
      * @return StrategyId Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStrategyId() {
         return this.StrategyId;
@@ -107,169 +96,135 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param StrategyId Assessment item ID
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStrategyId(Long StrategyId) {
         this.StrategyId = StrategyId;
     }
 
     /**
-     * Get Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Assessment item name. 
+     * @return Name Assessment item name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name Assessment item name
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Assessment item name.
+     * @param Name Assessment item name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Desc Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Assessment item description. 
+     * @return Desc Assessment item description.
      */
     public String getDesc() {
         return this.Desc;
     }
 
     /**
-     * Set Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Desc Assessment item description
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Assessment item description.
+     * @param Desc Assessment item description.
      */
     public void setDesc(String Desc) {
         this.Desc = Desc;
     }
 
     /**
-     * Get Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Product Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Product ID corresponding to the assessment item. 
+     * @return Product Product ID corresponding to the assessment item.
      */
     public String getProduct() {
         return this.Product;
     }
 
     /**
-     * Set Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Product Product ID corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Product ID corresponding to the assessment item.
+     * @param Product Product ID corresponding to the assessment item.
      */
     public void setProduct(String Product) {
         this.Product = Product;
     }
 
     /**
-     * Get Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProductDesc Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Assessment item corresponding product name. 
+     * @return ProductDesc Assessment item corresponding product name.
      */
     public String getProductDesc() {
         return this.ProductDesc;
     }
 
     /**
-     * Set Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProductDesc Product name corresponding to the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Assessment item corresponding product name.
+     * @param ProductDesc Assessment item corresponding product name.
      */
     public void setProductDesc(String ProductDesc) {
         this.ProductDesc = ProductDesc;
     }
 
     /**
-     * Get Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Repair Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies optimization suggestions for the assessment item. 
+     * @return Repair Specifies optimization suggestions for the assessment item.
      */
     public String getRepair() {
         return this.Repair;
     }
 
     /**
-     * Set Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Repair Optimization suggestions for the assessment item
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies optimization suggestions for the assessment item.
+     * @param Repair Specifies optimization suggestions for the assessment item.
      */
     public void setRepair(String Repair) {
         this.Repair = Repair;
     }
 
     /**
-     * Get Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupId Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Assessment item category ID. 
+     * @return GroupId Assessment item category ID.
      */
     public Long getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupId Category ID of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Assessment item category ID.
+     * @param GroupId Assessment item category ID.
      */
     public void setGroupId(Long GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return GroupName Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the category name of the assessment item. 
+     * @return GroupName Specifies the category name of the assessment item.
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param GroupName Category name of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the category name of the assessment item.
+     * @param GroupName Specifies the category name of the assessment item.
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Conditions Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the evaluation item risk list. 
+     * @return Conditions Specifies the evaluation item risk list.
      */
     public Conditions [] getConditions() {
         return this.Conditions;
     }
 
     /**
-     * Set Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Conditions Risk list of the assessment item 
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the evaluation item risk list.
+     * @param Conditions Specifies the evaluation item risk list.
      */
     public void setConditions(Conditions [] Conditions) {
         this.Conditions = Conditions;

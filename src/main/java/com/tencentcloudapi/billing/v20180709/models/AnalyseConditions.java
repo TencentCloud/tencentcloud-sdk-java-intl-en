@@ -24,299 +24,324 @@ import java.util.HashMap;
 public class AnalyseConditions extends AbstractModel {
 
     /**
-    * Product name codeNote: This field may return null, indicating that no valid values can be obtained.
+    * Product name code
     */
     @SerializedName("BusinessCodes")
     @Expose
     private String BusinessCodes;
 
     /**
-    * Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
+    * Subproduct name code
     */
     @SerializedName("ProductCodes")
     @Expose
     private String ProductCodes;
 
     /**
-    * Component type codeNote: This field may return null, indicating that no valid values can be obtained.
+    * Component type code
     */
     @SerializedName("ComponentCode")
     @Expose
     private String ComponentCode;
 
     /**
-    * Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+    * Availability zone ID: The availability zone ID where the resource is located.
     */
     @SerializedName("ZoneIds")
     @Expose
     private String ZoneIds;
 
     /**
-    * Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+    * Region ID: Resource region ID
     */
     @SerializedName("RegionIds")
     @Expose
     private String RegionIds;
 
     /**
-    * Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+    * Project ID: Project ID of the resource
     */
     @SerializedName("ProjectIds")
     @Expose
     private String ProjectIds;
 
     /**
-    * Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
+    * Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
     */
     @SerializedName("PayModes")
     @Expose
     private String PayModes;
 
     /**
-    * Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+    * Transaction type. Query transaction type (please use transaction type code as input parameter).
     */
     @SerializedName("ActionTypes")
     @Expose
     private String ActionTypes;
 
     /**
-    * Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
+    * Cost allocation tag key
     */
     @SerializedName("Tags")
     @Expose
     private String Tags;
 
     /**
-    * Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
+    * Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
     */
     @SerializedName("FeeType")
     @Expose
     private String FeeType;
 
     /**
-    * User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
+    * User UIN for querying cost analysis data
     */
     @SerializedName("PayerUins")
     @Expose
     private String PayerUins;
 
     /**
-    * User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
+    * User UIN for using resources
     */
     @SerializedName("OwnerUins")
     @Expose
     private String OwnerUins;
 
     /**
-    * Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+    * Consumption type. Query consumption type (please use consumption type code input parameter).
     */
     @SerializedName("ConsumptionTypes")
     @Expose
     private String ConsumptionTypes;
 
     /**
-     * Get Product name codeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return BusinessCodes Product name codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Product name code 
+     * @return BusinessCodes Product name code
      */
     public String getBusinessCodes() {
         return this.BusinessCodes;
     }
 
     /**
-     * Set Product name codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param BusinessCodes Product name codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Product name code
+     * @param BusinessCodes Product name code
      */
     public void setBusinessCodes(String BusinessCodes) {
         this.BusinessCodes = BusinessCodes;
     }
 
     /**
-     * Get Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProductCodes Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Subproduct name code 
+     * @return ProductCodes Subproduct name code
      */
     public String getProductCodes() {
         return this.ProductCodes;
     }
 
     /**
-     * Set Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ProductCodes Sub-product name codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Subproduct name code
+     * @param ProductCodes Subproduct name code
      */
     public void setProductCodes(String ProductCodes) {
         this.ProductCodes = ProductCodes;
     }
 
     /**
-     * Get Component type codeNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ComponentCode Component type codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Component type code 
+     * @return ComponentCode Component type code
      */
     public String getComponentCode() {
         return this.ComponentCode;
     }
 
     /**
-     * Set Component type codeNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ComponentCode Component type codeNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Component type code
+     * @param ComponentCode Component type code
      */
     public void setComponentCode(String ComponentCode) {
         this.ComponentCode = ComponentCode;
     }
 
     /**
-     * Get Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneIds Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Availability zone ID: The availability zone ID where the resource is located. 
+     * @return ZoneIds Availability zone ID: The availability zone ID where the resource is located.
      */
     public String getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneIds Availability zone ID: The availability zone ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Availability zone ID: The availability zone ID where the resource is located.
+     * @param ZoneIds Availability zone ID: The availability zone ID where the resource is located.
      */
     public void setZoneIds(String ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return RegionIds Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Region ID: Resource region ID 
+     * @return RegionIds Region ID: Resource region ID
      */
     public String getRegionIds() {
         return this.RegionIds;
     }
 
     /**
-     * Set Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
-     * @param RegionIds Region ID: The region ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Region ID: Resource region ID
+     * @param RegionIds Region ID: Resource region ID
      */
     public void setRegionIds(String RegionIds) {
         this.RegionIds = RegionIds;
     }
 
     /**
-     * Get Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectIds Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Project ID: Project ID of the resource 
+     * @return ProjectIds Project ID: Project ID of the resource
      */
     public String getProjectIds() {
         return this.ProjectIds;
     }
 
     /**
-     * Set Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
-     * @param ProjectIds Project ID: The project ID to which the resource belongsNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Project ID: Project ID of the resource
+     * @param ProjectIds Project ID: Project ID of the resource
      */
     public void setProjectIds(String ProjectIds) {
         this.ProjectIds = ProjectIds;
     }
 
     /**
-     * Get Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayModes Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing) 
+     * @return PayModes Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
      */
     public String getPayModes() {
         return this.PayModes;
     }
 
     /**
-     * Set Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PayModes Billing mode prePay (indicates monthly subscription)/postPay (indicates pay-as-you-go billing)Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+     * @param PayModes Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
      */
     public void setPayModes(String PayModes) {
         this.PayModes = PayModes;
     }
 
     /**
-     * Get Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ActionTypes Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Transaction type. Query transaction type (please use transaction type code as input parameter). 
+     * @return ActionTypes Transaction type. Query transaction type (please use transaction type code as input parameter).
      */
     public String getActionTypes() {
         return this.ActionTypes;
     }
 
     /**
-     * Set Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ActionTypes Transaction type. Query transaction type. (Use transaction type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Transaction type. Query transaction type (please use transaction type code as input parameter).
+     * @param ActionTypes Transaction type. Query transaction type (please use transaction type code as input parameter).
      */
     public void setActionTypes(String ActionTypes) {
         this.ActionTypes = ActionTypes;
     }
 
     /**
-     * Get Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Cost allocation tag key 
+     * @return Tags Cost allocation tag key
      */
     public String getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Cost allocation tag keyNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Cost allocation tag key
+     * @param Tags Cost allocation tag key
      */
     public void setTags(String Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return FeeType Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
+     * Get Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price 
+     * @return FeeType Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
      */
     public String getFeeType() {
         return this.FeeType;
     }
 
     /**
-     * Set Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
-     * @param FeeType Fee type. Query fee type. (Use fee type code input parameter.) The input parameter enumeration is as follows:cashPayAmount: cash incentivePayAmount: free credits voucherPayAmount: coupons tax:taxes costBeforeTax: price before taxNote: This field may return null, indicating that no valid values can be obtained.
+     * Set Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
+     * @param FeeType Fee type. Query fee type (please use fee type code input parameter). The input parameter enumeration is as follows:
+cashPayAmount: Cash 
+incentivePayAmount: Bonus 
+voucherPayAmount: Coupon 
+tax: tax. 
+costBeforeTax: pre-tax price
      */
     public void setFeeType(String FeeType) {
         this.FeeType = FeeType;
     }
 
     /**
-     * Get User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return PayerUins User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
+     * Get User UIN for querying cost analysis data 
+     * @return PayerUins User UIN for querying cost analysis data
      */
     public String getPayerUins() {
         return this.PayerUins;
     }
 
     /**
-     * Set User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
-     * @param PayerUins User UIN for querying cost analysis dataNote: This field may return null, indicating that no valid values can be obtained.
+     * Set User UIN for querying cost analysis data
+     * @param PayerUins User UIN for querying cost analysis data
      */
     public void setPayerUins(String PayerUins) {
         this.PayerUins = PayerUins;
     }
 
     /**
-     * Get User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained. 
-     * @return OwnerUins User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
+     * Get User UIN for using resources 
+     * @return OwnerUins User UIN for using resources
      */
     public String getOwnerUins() {
         return this.OwnerUins;
     }
 
     /**
-     * Set User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
-     * @param OwnerUins User UIN for using resourcesNote: This field may return null, indicating that no valid values can be obtained.
+     * Set User UIN for using resources
+     * @param OwnerUins User UIN for using resources
      */
     public void setOwnerUins(String OwnerUins) {
         this.OwnerUins = OwnerUins;
     }
 
     /**
-     * Get Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ConsumptionTypes Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Consumption type. Query consumption type (please use consumption type code input parameter). 
+     * @return ConsumptionTypes Consumption type. Query consumption type (please use consumption type code input parameter).
      */
     public String getConsumptionTypes() {
         return this.ConsumptionTypes;
     }
 
     /**
-     * Set Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ConsumptionTypes Consumption type. Query consumption type. (Use consumption type code input parameter.)Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Consumption type. Query consumption type (please use consumption type code input parameter).
+     * @param ConsumptionTypes Consumption type. Query consumption type (please use consumption type code input parameter).
      */
     public void setConsumptionTypes(String ConsumptionTypes) {
         this.ConsumptionTypes = ConsumptionTypes;

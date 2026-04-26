@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class RetrievalLivenessExtraInfo extends AbstractModel {
 
     /**
-    * Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
+    * 
     */
     @SerializedName("HitGroup")
     @Expose
     private String HitGroup;
 
     /**
-    * Matched Similarity
+    * 
     */
     @SerializedName("SimilarityScore")
     @Expose
     private Float SimilarityScore;
 
     /**
-    * Matched Template id
+    * 
     */
     @SerializedName("HitTemplate")
     @Expose
     private String HitTemplate;
 
     /**
-     * Get Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library. 
-     * @return HitGroup Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
+     * Get  
+     * @return HitGroup 
      */
     public String getHitGroup() {
         return this.HitGroup;
     }
 
     /**
-     * Set Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
-     * @param HitGroup Matched template types, where Common - public library; Auto - automatic clustering library; Owner - self-built template library.
+     * Set 
+     * @param HitGroup 
      */
     public void setHitGroup(String HitGroup) {
         this.HitGroup = HitGroup;
     }
 
     /**
-     * Get Matched Similarity 
-     * @return SimilarityScore Matched Similarity
+     * Get  
+     * @return SimilarityScore 
      */
     public Float getSimilarityScore() {
         return this.SimilarityScore;
     }
 
     /**
-     * Set Matched Similarity
-     * @param SimilarityScore Matched Similarity
+     * Set 
+     * @param SimilarityScore 
      */
     public void setSimilarityScore(Float SimilarityScore) {
         this.SimilarityScore = SimilarityScore;
     }
 
     /**
-     * Get Matched Template id 
-     * @return HitTemplate Matched Template id
+     * Get  
+     * @return HitTemplate 
      */
     public String getHitTemplate() {
         return this.HitTemplate;
     }
 
     /**
-     * Set Matched Template id
-     * @param HitTemplate Matched Template id
+     * Set 
+     * @param HitTemplate 
      */
     public void setHitTemplate(String HitTemplate) {
         this.HitTemplate = HitTemplate;
