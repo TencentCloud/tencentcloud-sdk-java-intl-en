@@ -204,6 +204,17 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a secret key for a mini program or mini game.
+     * @param req CreateMNPSecretKeyRequest
+     * @return CreateMNPSecretKeyResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateMNPSecretKeyResponse CreateMNPSecretKey(CreateMNPSecretKeyRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateMNPSecretKey", CreateMNPSecretKeyResponse.class);
+    }
+
+    /**
      *This API is used to create a permission request to allow a mini program to call sensitive APIs.
      * @param req CreateMNPSensitiveAPIPermissionApprovalRequest
      * @return CreateMNPSensitiveAPIPermissionApprovalResponse

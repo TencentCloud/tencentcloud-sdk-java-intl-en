@@ -31,7 +31,7 @@ public class EventSettingsReq extends AbstractModel {
     private String EventType;
 
     /**
-    * ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
+    * ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
     */
     @SerializedName("InputAttachment")
     @Expose
@@ -138,16 +138,16 @@ public class EventSettingsReq extends AbstractModel {
     }
 
     /**
-     * Get ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH` 
-     * @return InputAttachment ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
+     * Get ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`. 
+     * @return InputAttachment ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
      */
     public String getInputAttachment() {
         return this.InputAttachment;
     }
 
     /**
-     * Set ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
-     * @param InputAttachment ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`
+     * Set ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
+     * @param InputAttachment ID of the input to attach, which is required if `EventType` is `INPUT_SWITCH`.
      */
     public void setInputAttachment(String InputAttachment) {
         this.InputAttachment = InputAttachment;

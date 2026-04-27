@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateStreamLivePlanRequest extends AbstractModel {
 
     /**
-    * ID of the channel for which you want to configure an event
+    * ID of the channel for which you want to configure an event.
     */
     @SerializedName("ChannelId")
     @Expose
     private String ChannelId;
 
     /**
-    * Event configuration
+    * Event configuration.
     */
     @SerializedName("Plan")
     @Expose
     private PlanReq Plan;
 
     /**
-     * Get ID of the channel for which you want to configure an event 
-     * @return ChannelId ID of the channel for which you want to configure an event
+     * Get ID of the channel for which you want to configure an event. 
+     * @return ChannelId ID of the channel for which you want to configure an event.
      */
     public String getChannelId() {
         return this.ChannelId;
     }
 
     /**
-     * Set ID of the channel for which you want to configure an event
-     * @param ChannelId ID of the channel for which you want to configure an event
+     * Set ID of the channel for which you want to configure an event.
+     * @param ChannelId ID of the channel for which you want to configure an event.
      */
     public void setChannelId(String ChannelId) {
         this.ChannelId = ChannelId;
     }
 
     /**
-     * Get Event configuration 
-     * @return Plan Event configuration
+     * Get Event configuration. 
+     * @return Plan Event configuration.
      */
     public PlanReq getPlan() {
         return this.Plan;
     }
 
     /**
-     * Set Event configuration
-     * @param Plan Event configuration
+     * Set Event configuration.
+     * @param Plan Event configuration.
      */
     public void setPlan(PlanReq Plan) {
         this.Plan = Plan;
