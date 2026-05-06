@@ -34,7 +34,7 @@ public class CNAMEDetail extends AbstractModel {
     private Long IsFake;
 
     /**
-    * Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
+    * Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
     */
     @SerializedName("OwnershipVerification")
     @Expose
@@ -69,16 +69,16 @@ public class CNAMEDetail extends AbstractModel {
     }
 
     /**
-     * Get Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1). 
-     * @return OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
+     * Get Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1). 
+     * @return OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     public OwnershipVerification getOwnershipVerification() {
         return this.OwnershipVerification;
     }
 
     /**
-     * Set Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
-     * @param OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.comom/document/product/1552/70789?from_cn_redirect=1).
+     * Set Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
+     * @param OwnershipVerification Ownership verification information. for details, refer to [site/domain ownership verification](https://www.tencentcloud.com/document/product/1552/70789?from_cn_redirect=1).
      */
     public void setOwnershipVerification(OwnershipVerification OwnershipVerification) {
         this.OwnershipVerification = OwnershipVerification;

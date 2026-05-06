@@ -194,6 +194,17 @@ Smart subtitle (full speech, speech hotword, and speech translation)
     }
 
     /**
+     *This API is used to create an episode project.
+     * @param req CreateProjectRequest
+     * @return CreateProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateProjectResponse CreateProject(CreateProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateProject", CreateProjectResponse.class);
+    }
+
+    /**
      *This API is used to create a media quality inspection template. Up to 50 templates can be created.
      * @param req CreateQualityControlTemplateRequest
      * @return CreateQualityControlTemplateResponse
@@ -465,6 +476,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to delete an episode project.
+     * @param req DeleteProjectRequest
+     * @return DeleteProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteProjectResponse DeleteProject(DeleteProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteProject", DeleteProjectResponse.class);
+    }
+
+    /**
      *This API is used to delete a media quality inspection template.
      * @param req DeleteQualityControlTemplateRequest
      * @return DeleteQualityControlTemplateResponse
@@ -704,6 +726,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeContentReviewTemplatesResponse DescribeContentReviewTemplates(DescribeContentReviewTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeContentReviewTemplates", DescribeContentReviewTemplatesResponse.class);
+    }
+
+    /**
+     *This API is used to query the result of an asynchronous voice design task.
+     * @param req DescribeDesignTaskRequest
+     * @return DescribeDesignTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDesignTaskResponse DescribeDesignTask(DescribeDesignTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDesignTask", DescribeDesignTaskResponse.class);
     }
 
     /**

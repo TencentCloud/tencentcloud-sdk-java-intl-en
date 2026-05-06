@@ -219,7 +219,7 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     private VanityNameServersIps [] VanityNameServersIps;
 
     /**
-    * Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+    * Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
     */
     @SerializedName("WorkModeInfos")
     @Expose
@@ -718,16 +718,16 @@ Note: This field may return null, which indicates a failure to obtain a valid va
     }
 
     /**
-     * Get Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1). 
-     * @return WorkModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+     * Get Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1). 
+     * @return WorkModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
      */
     public ConfigGroupWorkModeInfo [] getWorkModeInfos() {
         return this.WorkModeInfos;
     }
 
     /**
-     * Set Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
-     * @param WorkModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.comom/document/product/1552/113690?from_cn_redirect=1).
+     * Set Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
+     * @param WorkModeInfos Version management configuration group working mode. site configuration modules can enable "version management mode" or "immediate effect mode" by configuration group dimension. for details, see [version management](https://www.tencentcloud.com/document/product/1552/113690?from_cn_redirect=1).
      */
     public void setWorkModeInfos(ConfigGroupWorkModeInfo [] WorkModeInfos) {
         this.WorkModeInfos = WorkModeInfos;

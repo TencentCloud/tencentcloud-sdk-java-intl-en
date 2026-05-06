@@ -38,7 +38,7 @@ public class DownloadL4LogsRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
+    * The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
     */
     @SerializedName("ZoneIds")
     @Expose
@@ -98,16 +98,16 @@ public class DownloadL4LogsRequest extends AbstractModel {
     }
 
     /**
-     * Get The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1). 
-     * @return ZoneIds The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
+     * Get The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1). 
+     * @return ZoneIds The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
      */
     public String [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
-     * @param ZoneIds The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.comom/document/product/1552/104902?from_cn_redirect=1).
+     * Set The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
+     * @param ZoneIds The site ID set. this parameter will change from selectable to required after may 30, 2024. for details, see the notice: [tencent cloud EdgeOne: tencentcloud API change notification](https://www.tencentcloud.com/document/product/1552/104902?from_cn_redirect=1).
      */
     public void setZoneIds(String [] ZoneIds) {
         this.ZoneIds = ZoneIds;

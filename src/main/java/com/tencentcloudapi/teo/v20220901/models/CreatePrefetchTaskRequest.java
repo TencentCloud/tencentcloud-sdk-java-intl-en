@@ -35,7 +35,7 @@ If you wish to quickly submit Targets urls under different sites, you can fill i
     /**
     * List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
     */
     @SerializedName("Targets")
     @Expose
@@ -112,10 +112,10 @@ If you wish to quickly submit Targets urls under different sites, you can fill i
     /**
      * Get List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1). 
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1). 
      * @return Targets List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
      */
     public String [] getTargets() {
         return this.Targets;
@@ -124,10 +124,10 @@ Note: the number of submitted tasks is limited by the quota of a billing package
     /**
      * Set List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
      * @param Targets List of resources to be preheated. required. each element format is as follows:.
 http://www.example.com/example.txt.
-Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.comom/document/product/1552/77380?from_cn_redirect=1).
+Note: the number of submitted tasks is limited by the quota of a billing package. check the [EO billing package](https://www.tencentcloud.com/document/product/1552/77380?from_cn_redirect=1).
      */
     public void setTargets(String [] Targets) {
         this.Targets = Targets;

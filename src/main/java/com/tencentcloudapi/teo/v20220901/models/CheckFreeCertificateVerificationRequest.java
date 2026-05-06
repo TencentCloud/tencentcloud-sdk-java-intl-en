@@ -31,7 +31,7 @@ public class CheckFreeCertificateVerificationRequest extends AbstractModel {
     private String ZoneId;
 
     /**
-    * Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1).
+    * Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1).
     */
     @SerializedName("Domain")
     @Expose
@@ -54,16 +54,16 @@ public class CheckFreeCertificateVerificationRequest extends AbstractModel {
     }
 
     /**
-     * Get Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1). 
-     * @return Domain Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1).
+     * Get Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1). 
+     * @return Domain Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1).
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1).
-     * @param Domain Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.comom/document/product/1552/124807?from_cn_redirect=1).
+     * Set Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1).
+     * @param Domain Acceleration domain name, that domain name used when [applying for free certificate](https://www.tencentcloud.com/document/product/1552/124807?from_cn_redirect=1).
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;

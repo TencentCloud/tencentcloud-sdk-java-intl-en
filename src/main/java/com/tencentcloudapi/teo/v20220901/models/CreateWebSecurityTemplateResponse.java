@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateWebSecurityTemplateResponse extends AbstractModel {
 
     /**
-    * Policy template ID.
+    * Policy template ID
     */
     @SerializedName("TemplateId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateWebSecurityTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Policy template ID. 
-     * @return TemplateId Policy template ID.
+     * Get Policy template ID 
+     * @return TemplateId Policy template ID
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Policy template ID.
-     * @param TemplateId Policy template ID.
+     * Set Policy template ID
+     * @param TemplateId Policy template ID
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

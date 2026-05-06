@@ -38,7 +38,7 @@ public class RateLimitingRule extends AbstractModel {
     private String Name;
 
     /**
-    * The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to the product document (https://www.tencentcloud.comom/document/product/1552/125343?from_cn_redirect=1).
+    * The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
     */
     @SerializedName("Condition")
     @Expose
@@ -66,7 +66,7 @@ public class RateLimitingRule extends AbstractModel {
     private String CountingPeriod;
 
     /**
-    * The duration of an Action is only supported in the following units: <li>s: seconds, value range 1–120;</li> <li>m: minutes, value range 1–120;</li> <li>h: hours, value range 1–48;</li> <li>d: days, value range 1–30.</li>.
+    * The duration of an Action is only supported in the following units: <li>s: seconds, value range 1-120;</li> <li>m: minutes, value range 1-120;</li> <li>h: hours, value range 1-48;</li> <li>d: days, value range 1-30.</li>.
     */
     @SerializedName("ActionDuration")
     @Expose
@@ -126,16 +126,16 @@ public class RateLimitingRule extends AbstractModel {
     }
 
     /**
-     * Get The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to the product document (https://www.tencentcloud.comom/document/product/1552/125343?from_cn_redirect=1). 
-     * @return Condition The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to the product document (https://www.tencentcloud.comom/document/product/1552/125343?from_cn_redirect=1).
+     * Get The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) . 
+     * @return Condition The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
      */
     public String getCondition() {
         return this.Condition;
     }
 
     /**
-     * Set The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to the product document (https://www.tencentcloud.comom/document/product/1552/125343?from_cn_redirect=1).
-     * @param Condition The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to the product document (https://www.tencentcloud.comom/document/product/1552/125343?from_cn_redirect=1).
+     * Set The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
+     * @param Condition The specific content of precise rate limiting must comply with expression grammar. for detailed requirements, please refer to [the product document](https://www.tencentcloud.com/document/product/1552/125343?from_cn_redirect=1) .
      */
     public void setCondition(String Condition) {
         this.Condition = Condition;
@@ -190,16 +190,16 @@ public class RateLimitingRule extends AbstractModel {
     }
 
     /**
-     * Get The duration of an Action is only supported in the following units: <li>s: seconds, value range 1–120;</li> <li>m: minutes, value range 1–120;</li> <li>h: hours, value range 1–48;</li> <li>d: days, value range 1–30.</li>. 
-     * @return ActionDuration The duration of an Action is only supported in the following units: <li>s: seconds, value range 1–120;</li> <li>m: minutes, value range 1–120;</li> <li>h: hours, value range 1–48;</li> <li>d: days, value range 1–30.</li>.
+     * Get The duration of an Action is only supported in the following units: <li>s: seconds, value range 1-120;</li> <li>m: minutes, value range 1-120;</li> <li>h: hours, value range 1-48;</li> <li>d: days, value range 1-30.</li>. 
+     * @return ActionDuration The duration of an Action is only supported in the following units: <li>s: seconds, value range 1-120;</li> <li>m: minutes, value range 1-120;</li> <li>h: hours, value range 1-48;</li> <li>d: days, value range 1-30.</li>.
      */
     public String getActionDuration() {
         return this.ActionDuration;
     }
 
     /**
-     * Set The duration of an Action is only supported in the following units: <li>s: seconds, value range 1–120;</li> <li>m: minutes, value range 1–120;</li> <li>h: hours, value range 1–48;</li> <li>d: days, value range 1–30.</li>.
-     * @param ActionDuration The duration of an Action is only supported in the following units: <li>s: seconds, value range 1–120;</li> <li>m: minutes, value range 1–120;</li> <li>h: hours, value range 1–48;</li> <li>d: days, value range 1–30.</li>.
+     * Set The duration of an Action is only supported in the following units: <li>s: seconds, value range 1-120;</li> <li>m: minutes, value range 1-120;</li> <li>h: hours, value range 1-48;</li> <li>d: days, value range 1-30.</li>.
+     * @param ActionDuration The duration of an Action is only supported in the following units: <li>s: seconds, value range 1-120;</li> <li>m: minutes, value range 1-120;</li> <li>h: hours, value range 1-48;</li> <li>d: days, value range 1-30.</li>.
      */
     public void setActionDuration(String ActionDuration) {
         this.ActionDuration = ActionDuration;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteOrganizationNodesRequest extends AbstractModel {
 
     /**
-    * Organizational unit ID list
+    * Organizational unit ID list.
     */
     @SerializedName("NodeIds")
     @Expose
     private Long [] NodeIds;
 
     /**
-     * Get Organizational unit ID list 
-     * @return NodeIds Organizational unit ID list
+     * Get Organizational unit ID list. 
+     * @return NodeIds Organizational unit ID list.
      */
     public Long [] getNodeIds() {
         return this.NodeIds;
     }
 
     /**
-     * Set Organizational unit ID list
-     * @param NodeIds Organizational unit ID list
+     * Set Organizational unit ID list.
+     * @param NodeIds Organizational unit ID list.
      */
     public void setNodeIds(Long [] NodeIds) {
         this.NodeIds = NodeIds;

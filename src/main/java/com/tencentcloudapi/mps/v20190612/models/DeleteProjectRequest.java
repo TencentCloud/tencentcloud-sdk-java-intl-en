@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageTaskDetailRequest extends AbstractModel {
+public class DeleteProjectRequest extends AbstractModel {
 
     /**
-    * <p>ID of the image processing task.</p>
+    * <p>Project ID.</p>
     */
-    @SerializedName("TaskId")
+    @SerializedName("ProjectId")
     @Expose
-    private String TaskId;
+    private String ProjectId;
 
     /**
-     * Get <p>ID of the image processing task.</p> 
-     * @return TaskId <p>ID of the image processing task.</p>
+     * Get <p>Project ID.</p> 
+     * @return ProjectId <p>Project ID.</p>
      */
-    public String getTaskId() {
-        return this.TaskId;
+    public String getProjectId() {
+        return this.ProjectId;
     }
 
     /**
-     * Set <p>ID of the image processing task.</p>
-     * @param TaskId <p>ID of the image processing task.</p>
+     * Set <p>Project ID.</p>
+     * @param ProjectId <p>Project ID.</p>
      */
-    public void setTaskId(String TaskId) {
-        this.TaskId = TaskId;
+    public void setProjectId(String ProjectId) {
+        this.ProjectId = ProjectId;
     }
 
-    public DescribeImageTaskDetailRequest() {
+    public DeleteProjectRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeImageTaskDetailRequest(DescribeImageTaskDetailRequest source) {
-        if (source.TaskId != null) {
-            this.TaskId = new String(source.TaskId);
+    public DeleteProjectRequest(DeleteProjectRequest source) {
+        if (source.ProjectId != null) {
+            this.ProjectId = new String(source.ProjectId);
         }
     }
 
@@ -64,7 +64,7 @@ public class DescribeImageTaskDetailRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "TaskId", this.TaskId);
+        this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
 
     }
 }

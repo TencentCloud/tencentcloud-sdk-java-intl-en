@@ -49,7 +49,7 @@ public class CreateL4ProxyRequest extends AbstractModel {
     private String Area;
 
     /**
-    * Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+    * Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
     */
@@ -58,7 +58,7 @@ public class CreateL4ProxyRequest extends AbstractModel {
     private String Ipv6;
 
     /**
-    * Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+    * Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
     */
@@ -67,7 +67,7 @@ public class CreateL4ProxyRequest extends AbstractModel {
     private String StaticIp;
 
     /**
-    * Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+    * Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
     */
@@ -76,7 +76,7 @@ public class CreateL4ProxyRequest extends AbstractModel {
     private String AccelerateMainland;
 
     /**
-    * Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.comom/document/product/1552/95994?from_cn_redirect=1).
+    * Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
 This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
     */
     @SerializedName("DDosProtectionConfig")
@@ -148,10 +148,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Get Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * Get Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li> 
-     * @return Ipv6 Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @return Ipv6 Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -160,10 +160,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Set Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * Set Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-     * @param Ipv6 Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @param Ipv6 Whether IPv6 access is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to [creating a new layer 4 proxy instance](https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -172,10 +172,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Get Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * Get Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li> 
-     * @return StaticIp Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @return StaticIp Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -184,10 +184,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Set Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * Set Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-     * @param StaticIp Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @param StaticIp Whether to enable static IP, default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -196,10 +196,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Get Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * Get Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li> 
-     * @return AccelerateMainland Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @return AccelerateMainland Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -208,10 +208,10 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Set Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * Set Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
-     * @param AccelerateMainland Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.comom/document/product/1552/90025?from_cn_redirect=1). valid values:.
+     * @param AccelerateMainland Whether network optimization in the chinese mainland is enabled. default off if left empty. this configuration can only be enabled in certain acceleration zones and security protection configurations. for details, refer to creating a new layer 4 proxy instance (https://www.tencentcloud.com/document/product/1552/90025?from_cn_redirect=1). valid values:.
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
      */
@@ -220,9 +220,9 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Get Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.comom/document/product/1552/95994?from_cn_redirect=1).
+     * Get Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
 This field is deprecated, please use DDosProtectionId field specification for associated protection configuration. 
-     * @return DDosProtectionConfig Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.comom/document/product/1552/95994?from_cn_redirect=1).
+     * @return DDosProtectionConfig Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
 This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
      * @deprecated
      */
@@ -232,9 +232,9 @@ This field is deprecated, please use DDosProtectionId field specification for as
     }
 
     /**
-     * Set Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.comom/document/product/1552/95994?from_cn_redirect=1).
+     * Set Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
 This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
-     * @param DDosProtectionConfig Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.comom/document/product/1552/95994?from_cn_redirect=1).
+     * @param DDosProtectionConfig Configuration of L3/L4 DDoS protection. If this parameter is not input, the default platform protection option is used. For details, see [Exclusive DDoS Protection Usage] (https://www.tencentcloud.com/document/product/1552/95994?from_cn_redirect=1).
 This field is deprecated, please use DDosProtectionId field specification for associated protection configuration.
      * @deprecated
      */

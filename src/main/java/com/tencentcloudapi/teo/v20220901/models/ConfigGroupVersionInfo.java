@@ -45,9 +45,7 @@ public class ConfigGroupVersionInfo extends AbstractModel {
     private String GroupId;
 
     /**
-    * Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
+    * Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
     */
     @SerializedName("GroupType")
     @Expose
@@ -126,24 +124,16 @@ public class ConfigGroupVersionInfo extends AbstractModel {
     }
 
     /**
-     * Get Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li> 
-     * @return GroupType Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
+     * Get Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li> 
+     * @return GroupType Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
      */
     public String getGroupType() {
         return this.GroupType;
     }
 
     /**
-     * Set Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
-     * @param GroupType Configuration group type. Valid values: 
-<li>l7_acceleration: L7 acceleration configuration group. </li>
-<li>edge_functions: Edge function configuration group. </li>
+     * Set Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
+     * @param GroupType Configuration group type. Optional options are as follows: <li>l7_acceleration: layer-7 acceleration configuration group;</li><li>edge_functions: edge function configuration group;</li><li>web_security: web protection configuration group.</li>
      */
     public void setGroupType(String GroupType) {
         this.GroupType = GroupType;

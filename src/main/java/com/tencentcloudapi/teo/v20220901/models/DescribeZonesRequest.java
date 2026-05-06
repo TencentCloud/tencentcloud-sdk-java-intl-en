@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeZonesRequest extends AbstractModel {
 
     /**
-    * The page offset. Default value: 0
+    * The page offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -67,16 +67,16 @@ public class DescribeZonesRequest extends AbstractModel {
     private String Direction;
 
     /**
-     * Get The page offset. Default value: 0 
-     * @return Offset The page offset. Default value: 0
+     * Get The page offset. Default value: 0. 
+     * @return Offset The page offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The page offset. Default value: 0
-     * @param Offset The page offset. Default value: 0
+     * Set The page offset. Default value: 0.
+     * @param Offset The page offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

@@ -31,12 +31,8 @@ public class DescribeTimingL7OriginPullDataRequest extends AbstractModel {
     private String [] ZoneIds;
 
     /**
-    * Metric list. valid values:
-<ul><li>l7Flow_outFlux_hy: specifies the request traffic from the EdgeOne node to the origin server direction. measurement unit: Byte.</li>
-<li>l7Flow_outBandwidth_hy: request bandwidth from EdgeOne node to origin server direction, measurement unit: bps;</li>.
-<li>l7Flow_request_hy: number of requests in the EdgeOne node to origin server direction. unit: count.</li>.
-<li>l7Flow_inFlux_hy: specifies the response traffic from the origin server to the EdgeOne node direction, measurement unit: Byte.</li>.
-<li>l7Flow_inBandwidth_hy: specifies the response bandwidth from the origin server to the EdgeOne node. measurement unit: bps.</li></ul>.
+    * Metric list. Valid values:
+<ul><li>l7Flow_outFlux_hy: Request traffic from the EdgeOne node to the origin server. Unit: Byte.</li><li>l7Flow_outBandwidth_hy: Request bandwidth from the EdgeOne node to the origin server. Unit: bps.</li><li>l7Flow_request_hy: Number of requests from the EdgeOne node to the origin server. Unit: count.</li><li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node. Unit: Byte.</li><li>l7Flow_inBandwidth_hy: Response bandwidth from the origin server to the EdgeOne node. Unit: bps.</li></ul>
     */
     @SerializedName("MetricNames")
     @Expose
@@ -57,25 +53,28 @@ public class DescribeTimingL7OriginPullDataRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * Time granularity of the query. valid values:.
-<Ul><Li>Min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>if this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is within 2 hours, within 2 days, within 7 days, and exceeding 7 days.
+    * Time granularity of the query. Valid values:
+<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not specified, the granularity will be automatically inferred based on the time range between the start time and end time. Specifically, the granularity will be min, 5min, hour, and day when the time range is within 2 hours, within 2 days, within 7 days, and exceeding 7 days, respectively.
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * Filter criteria. detailed filter criteria:.
-<ul><li><strong>domain</strong>: the requested domain name from the client. if accessing EdgeOne via wildcard domain, the data records the wildcard domain name rather than the specific domain.</li><li><strong>originStatusCode</strong>: origin status code. this filter item is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.<br>the corresponding Value options are as follows:<ul><li><code>1xx</code>: status codes of the 1xx kind.</li><li><code>2xx</code>: status codes of the 2xx kind.</li><li><code>3xx</code>: status codes of the 3xx kind.</li><li><code>4xx</code>: status codes of the 4xx kind.</li><li><code>5xx</code>: status codes of the 5xx kind.</li><li>integer within range <code>[0, 600)</code> (excluding 600).</li></ul></li></ul>.
-**Note**: when <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
+    * Filter criteria. Detailed filter criteria:
+<ul><li><strong>domain</strong>: The requested domain name from the client. If accessing EdgeOne via a wildcard domain, the data records the wildcard domain name rather than the specific subdomain.</li><li><strong>originStatusCode</strong>: Origin status code. This filter is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.
+Valid values:<ul><li><code>1xx</code>: Status codes in the 1xx range.</li><li><code>2xx</code>: Status codes in the 2xx range.</li><li><code>3xx</code>: Status codes in the 3xx range.</li><li><code>4xx</code>: Status codes in the 4xx range.</li><li><code>5xx</code>: Status codes in the 5xx range.</li><li>Any integer in the range <code>[0, 600)</code>.</li></ul></li></ul>**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
     */
     @SerializedName("Filters")
     @Expose
     private QueryCondition [] Filters;
 
     /**
-    * <p>Query dimension name. valid values:</p><ul><li><strong>domain</strong>: the domain name requested by the client. if EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.<br>when using the domain dimension, the <code>Filters</code> must include the <code>domain</code> filter item, specifying a list of no more than 100 domain names to query.</li><li><strong>origin-status-code</strong>: origin status code, such as 200, 404.<br>this dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: origin status code category, such as 2xx, 4xx.<br>this dimension is supported only when <code>MetricNames =["l7Flow_request_hy"]</code>.</li></ul><p>if the <code>DimensionName</code> input parameter is empty, the data is aggregated by the <code>AppId</code> dimension by default, returning only one set of data.</p><p>if the <code>DimensionName</code> input parameter is not empty, the corresponding time series data is returned grouped by the specified query dimension. for example:</p><ul>when <code>DimensionName = origin-status-code</code>:<ul><li>the <code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li>the <code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul>.
-<strong>Note</strong>: when specifying DimensionName during queries, concurrent calls are forbidden. if exceeded the query frequency limit, it will return an error <code><strong>InvalidParameter.ActionInProgress</strong></code>.
+    * Query dimension name. Valid values:
+<ul><li><strong>domain</strong>: The domain name requested by the client. If EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.
+When using the domain dimension, the <code>Filters</code> parameter must include the <code>domain</code> filter item, specifying a list of up to 100 domain names.</li><li><strong>origin-status-code</strong>: Origin status code, such as 200 or 404.
+This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin status code category, such as 2xx or 4xx.
+This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is left empty, data is aggregated by the <code>AppId</code> dimension by default, returning a single set of data.</p><p>If <code>DimensionName</code> is specified, time series data is returned grouped by the specified dimension. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li><code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li><code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul><p><strong>Note</strong>: When <code>DimensionName</code> is specified, concurrent calls are not allowed. Exceeding the query rate limit will return the error <code><strong>InvalidParameter.ActionInProgress</strong></code>.</p>
     */
     @SerializedName("DimensionName")
     @Expose
@@ -98,36 +97,20 @@ public class DescribeTimingL7OriginPullDataRequest extends AbstractModel {
     }
 
     /**
-     * Get Metric list. valid values:
-<ul><li>l7Flow_outFlux_hy: specifies the request traffic from the EdgeOne node to the origin server direction. measurement unit: Byte.</li>
-<li>l7Flow_outBandwidth_hy: request bandwidth from EdgeOne node to origin server direction, measurement unit: bps;</li>.
-<li>l7Flow_request_hy: number of requests in the EdgeOne node to origin server direction. unit: count.</li>.
-<li>l7Flow_inFlux_hy: specifies the response traffic from the origin server to the EdgeOne node direction, measurement unit: Byte.</li>.
-<li>l7Flow_inBandwidth_hy: specifies the response bandwidth from the origin server to the EdgeOne node. measurement unit: bps.</li></ul>. 
-     * @return MetricNames Metric list. valid values:
-<ul><li>l7Flow_outFlux_hy: specifies the request traffic from the EdgeOne node to the origin server direction. measurement unit: Byte.</li>
-<li>l7Flow_outBandwidth_hy: request bandwidth from EdgeOne node to origin server direction, measurement unit: bps;</li>.
-<li>l7Flow_request_hy: number of requests in the EdgeOne node to origin server direction. unit: count.</li>.
-<li>l7Flow_inFlux_hy: specifies the response traffic from the origin server to the EdgeOne node direction, measurement unit: Byte.</li>.
-<li>l7Flow_inBandwidth_hy: specifies the response bandwidth from the origin server to the EdgeOne node. measurement unit: bps.</li></ul>.
+     * Get Metric list. Valid values:
+<ul><li>l7Flow_outFlux_hy: Request traffic from the EdgeOne node to the origin server. Unit: Byte.</li><li>l7Flow_outBandwidth_hy: Request bandwidth from the EdgeOne node to the origin server. Unit: bps.</li><li>l7Flow_request_hy: Number of requests from the EdgeOne node to the origin server. Unit: count.</li><li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node. Unit: Byte.</li><li>l7Flow_inBandwidth_hy: Response bandwidth from the origin server to the EdgeOne node. Unit: bps.</li></ul> 
+     * @return MetricNames Metric list. Valid values:
+<ul><li>l7Flow_outFlux_hy: Request traffic from the EdgeOne node to the origin server. Unit: Byte.</li><li>l7Flow_outBandwidth_hy: Request bandwidth from the EdgeOne node to the origin server. Unit: bps.</li><li>l7Flow_request_hy: Number of requests from the EdgeOne node to the origin server. Unit: count.</li><li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node. Unit: Byte.</li><li>l7Flow_inBandwidth_hy: Response bandwidth from the origin server to the EdgeOne node. Unit: bps.</li></ul>
      */
     public String [] getMetricNames() {
         return this.MetricNames;
     }
 
     /**
-     * Set Metric list. valid values:
-<ul><li>l7Flow_outFlux_hy: specifies the request traffic from the EdgeOne node to the origin server direction. measurement unit: Byte.</li>
-<li>l7Flow_outBandwidth_hy: request bandwidth from EdgeOne node to origin server direction, measurement unit: bps;</li>.
-<li>l7Flow_request_hy: number of requests in the EdgeOne node to origin server direction. unit: count.</li>.
-<li>l7Flow_inFlux_hy: specifies the response traffic from the origin server to the EdgeOne node direction, measurement unit: Byte.</li>.
-<li>l7Flow_inBandwidth_hy: specifies the response bandwidth from the origin server to the EdgeOne node. measurement unit: bps.</li></ul>.
-     * @param MetricNames Metric list. valid values:
-<ul><li>l7Flow_outFlux_hy: specifies the request traffic from the EdgeOne node to the origin server direction. measurement unit: Byte.</li>
-<li>l7Flow_outBandwidth_hy: request bandwidth from EdgeOne node to origin server direction, measurement unit: bps;</li>.
-<li>l7Flow_request_hy: number of requests in the EdgeOne node to origin server direction. unit: count.</li>.
-<li>l7Flow_inFlux_hy: specifies the response traffic from the origin server to the EdgeOne node direction, measurement unit: Byte.</li>.
-<li>l7Flow_inBandwidth_hy: specifies the response bandwidth from the origin server to the EdgeOne node. measurement unit: bps.</li></ul>.
+     * Set Metric list. Valid values:
+<ul><li>l7Flow_outFlux_hy: Request traffic from the EdgeOne node to the origin server. Unit: Byte.</li><li>l7Flow_outBandwidth_hy: Request bandwidth from the EdgeOne node to the origin server. Unit: bps.</li><li>l7Flow_request_hy: Number of requests from the EdgeOne node to the origin server. Unit: count.</li><li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node. Unit: Byte.</li><li>l7Flow_inBandwidth_hy: Response bandwidth from the origin server to the EdgeOne node. Unit: bps.</li></ul>
+     * @param MetricNames Metric list. Valid values:
+<ul><li>l7Flow_outFlux_hy: Request traffic from the EdgeOne node to the origin server. Unit: Byte.</li><li>l7Flow_outBandwidth_hy: Request bandwidth from the EdgeOne node to the origin server. Unit: bps.</li><li>l7Flow_request_hy: Number of requests from the EdgeOne node to the origin server. Unit: count.</li><li>l7Flow_inFlux_hy: Response traffic from the origin server to the EdgeOne node. Unit: Byte.</li><li>l7Flow_inBandwidth_hy: Response bandwidth from the origin server to the EdgeOne node. Unit: bps.</li></ul>
      */
     public void setMetricNames(String [] MetricNames) {
         this.MetricNames = MetricNames;
@@ -166,64 +149,76 @@ public class DescribeTimingL7OriginPullDataRequest extends AbstractModel {
     }
 
     /**
-     * Get Time granularity of the query. valid values:.
-<Ul><Li>Min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>if this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is within 2 hours, within 2 days, within 7 days, and exceeding 7 days. 
-     * @return Interval Time granularity of the query. valid values:.
-<Ul><Li>Min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>if this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is within 2 hours, within 2 days, within 7 days, and exceeding 7 days.
+     * Get Time granularity of the query. Valid values:
+<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not specified, the granularity will be automatically inferred based on the time range between the start time and end time. Specifically, the granularity will be min, 5min, hour, and day when the time range is within 2 hours, within 2 days, within 7 days, and exceeding 7 days, respectively. 
+     * @return Interval Time granularity of the query. Valid values:
+<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not specified, the granularity will be automatically inferred based on the time range between the start time and end time. Specifically, the granularity will be min, 5min, hour, and day when the time range is within 2 hours, within 2 days, within 7 days, and exceeding 7 days, respectively.
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Time granularity of the query. valid values:.
-<Ul><Li>Min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>if this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is within 2 hours, within 2 days, within 7 days, and exceeding 7 days.
-     * @param Interval Time granularity of the query. valid values:.
-<Ul><Li>Min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>if this parameter is not input, the granularity will be automatically inferred based on the interval between the start time and end time. specifically, data will be queried with a granularity of min, 5min, hour, and day respectively when the period is within 2 hours, within 2 days, within 7 days, and exceeding 7 days.
+     * Set Time granularity of the query. Valid values:
+<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not specified, the granularity will be automatically inferred based on the time range between the start time and end time. Specifically, the granularity will be min, 5min, hour, and day when the time range is within 2 hours, within 2 days, within 7 days, and exceeding 7 days, respectively.
+     * @param Interval Time granularity of the query. Valid values:
+<ul><li>min: 1 minute;</li><li>5min: 5 minutes;</li><li>hour: 1 hour;</li><li>day: 1 day.</li></ul>If this parameter is not specified, the granularity will be automatically inferred based on the time range between the start time and end time. Specifically, the granularity will be min, 5min, hour, and day when the time range is within 2 hours, within 2 days, within 7 days, and exceeding 7 days, respectively.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Filter criteria. detailed filter criteria:.
-<ul><li><strong>domain</strong>: the requested domain name from the client. if accessing EdgeOne via wildcard domain, the data records the wildcard domain name rather than the specific domain.</li><li><strong>originStatusCode</strong>: origin status code. this filter item is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.<br>the corresponding Value options are as follows:<ul><li><code>1xx</code>: status codes of the 1xx kind.</li><li><code>2xx</code>: status codes of the 2xx kind.</li><li><code>3xx</code>: status codes of the 3xx kind.</li><li><code>4xx</code>: status codes of the 4xx kind.</li><li><code>5xx</code>: status codes of the 5xx kind.</li><li>integer within range <code>[0, 600)</code> (excluding 600).</li></ul></li></ul>.
-**Note**: when <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported. 
-     * @return Filters Filter criteria. detailed filter criteria:.
-<ul><li><strong>domain</strong>: the requested domain name from the client. if accessing EdgeOne via wildcard domain, the data records the wildcard domain name rather than the specific domain.</li><li><strong>originStatusCode</strong>: origin status code. this filter item is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.<br>the corresponding Value options are as follows:<ul><li><code>1xx</code>: status codes of the 1xx kind.</li><li><code>2xx</code>: status codes of the 2xx kind.</li><li><code>3xx</code>: status codes of the 3xx kind.</li><li><code>4xx</code>: status codes of the 4xx kind.</li><li><code>5xx</code>: status codes of the 5xx kind.</li><li>integer within range <code>[0, 600)</code> (excluding 600).</li></ul></li></ul>.
-**Note**: when <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
+     * Get Filter criteria. Detailed filter criteria:
+<ul><li><strong>domain</strong>: The requested domain name from the client. If accessing EdgeOne via a wildcard domain, the data records the wildcard domain name rather than the specific subdomain.</li><li><strong>originStatusCode</strong>: Origin status code. This filter is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.
+Valid values:<ul><li><code>1xx</code>: Status codes in the 1xx range.</li><li><code>2xx</code>: Status codes in the 2xx range.</li><li><code>3xx</code>: Status codes in the 3xx range.</li><li><code>4xx</code>: Status codes in the 4xx range.</li><li><code>5xx</code>: Status codes in the 5xx range.</li><li>Any integer in the range <code>[0, 600)</code>.</li></ul></li></ul>**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported. 
+     * @return Filters Filter criteria. Detailed filter criteria:
+<ul><li><strong>domain</strong>: The requested domain name from the client. If accessing EdgeOne via a wildcard domain, the data records the wildcard domain name rather than the specific subdomain.</li><li><strong>originStatusCode</strong>: Origin status code. This filter is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.
+Valid values:<ul><li><code>1xx</code>: Status codes in the 1xx range.</li><li><code>2xx</code>: Status codes in the 2xx range.</li><li><code>3xx</code>: Status codes in the 3xx range.</li><li><code>4xx</code>: Status codes in the 4xx range.</li><li><code>5xx</code>: Status codes in the 5xx range.</li><li>Any integer in the range <code>[0, 600)</code>.</li></ul></li></ul>**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
      */
     public QueryCondition [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter criteria. detailed filter criteria:.
-<ul><li><strong>domain</strong>: the requested domain name from the client. if accessing EdgeOne via wildcard domain, the data records the wildcard domain name rather than the specific domain.</li><li><strong>originStatusCode</strong>: origin status code. this filter item is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.<br>the corresponding Value options are as follows:<ul><li><code>1xx</code>: status codes of the 1xx kind.</li><li><code>2xx</code>: status codes of the 2xx kind.</li><li><code>3xx</code>: status codes of the 3xx kind.</li><li><code>4xx</code>: status codes of the 4xx kind.</li><li><code>5xx</code>: status codes of the 5xx kind.</li><li>integer within range <code>[0, 600)</code> (excluding 600).</li></ul></li></ul>.
-**Note**: when <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
-     * @param Filters Filter criteria. detailed filter criteria:.
-<ul><li><strong>domain</strong>: the requested domain name from the client. if accessing EdgeOne via wildcard domain, the data records the wildcard domain name rather than the specific domain.</li><li><strong>originStatusCode</strong>: origin status code. this filter item is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.<br>the corresponding Value options are as follows:<ul><li><code>1xx</code>: status codes of the 1xx kind.</li><li><code>2xx</code>: status codes of the 2xx kind.</li><li><code>3xx</code>: status codes of the 3xx kind.</li><li><code>4xx</code>: status codes of the 4xx kind.</li><li><code>5xx</code>: status codes of the 5xx kind.</li><li>integer within range <code>[0, 600)</code> (excluding 600).</li></ul></li></ul>.
-**Note**: when <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
+     * Set Filter criteria. Detailed filter criteria:
+<ul><li><strong>domain</strong>: The requested domain name from the client. If accessing EdgeOne via a wildcard domain, the data records the wildcard domain name rather than the specific subdomain.</li><li><strong>originStatusCode</strong>: Origin status code. This filter is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.
+Valid values:<ul><li><code>1xx</code>: Status codes in the 1xx range.</li><li><code>2xx</code>: Status codes in the 2xx range.</li><li><code>3xx</code>: Status codes in the 3xx range.</li><li><code>4xx</code>: Status codes in the 4xx range.</li><li><code>5xx</code>: Status codes in the 5xx range.</li><li>Any integer in the range <code>[0, 600)</code>.</li></ul></li></ul>**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
+     * @param Filters Filter criteria. Detailed filter criteria:
+<ul><li><strong>domain</strong>: The requested domain name from the client. If accessing EdgeOne via a wildcard domain, the data records the wildcard domain name rather than the specific subdomain.</li><li><strong>originStatusCode</strong>: Origin status code. This filter is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.
+Valid values:<ul><li><code>1xx</code>: Status codes in the 1xx range.</li><li><code>2xx</code>: Status codes in the 2xx range.</li><li><code>3xx</code>: Status codes in the 3xx range.</li><li><code>4xx</code>: Status codes in the 4xx range.</li><li><code>5xx</code>: Status codes in the 5xx range.</li><li>Any integer in the range <code>[0, 600)</code>.</li></ul></li></ul>**Note**: When <code>DimensionName</code> is not empty, only the <code>equals</code> operator is supported.
      */
     public void setFilters(QueryCondition [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get <p>Query dimension name. valid values:</p><ul><li><strong>domain</strong>: the domain name requested by the client. if EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.<br>when using the domain dimension, the <code>Filters</code> must include the <code>domain</code> filter item, specifying a list of no more than 100 domain names to query.</li><li><strong>origin-status-code</strong>: origin status code, such as 200, 404.<br>this dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: origin status code category, such as 2xx, 4xx.<br>this dimension is supported only when <code>MetricNames =["l7Flow_request_hy"]</code>.</li></ul><p>if the <code>DimensionName</code> input parameter is empty, the data is aggregated by the <code>AppId</code> dimension by default, returning only one set of data.</p><p>if the <code>DimensionName</code> input parameter is not empty, the corresponding time series data is returned grouped by the specified query dimension. for example:</p><ul>when <code>DimensionName = origin-status-code</code>:<ul><li>the <code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li>the <code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul>.
-<strong>Note</strong>: when specifying DimensionName during queries, concurrent calls are forbidden. if exceeded the query frequency limit, it will return an error <code><strong>InvalidParameter.ActionInProgress</strong></code>. 
-     * @return DimensionName <p>Query dimension name. valid values:</p><ul><li><strong>domain</strong>: the domain name requested by the client. if EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.<br>when using the domain dimension, the <code>Filters</code> must include the <code>domain</code> filter item, specifying a list of no more than 100 domain names to query.</li><li><strong>origin-status-code</strong>: origin status code, such as 200, 404.<br>this dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: origin status code category, such as 2xx, 4xx.<br>this dimension is supported only when <code>MetricNames =["l7Flow_request_hy"]</code>.</li></ul><p>if the <code>DimensionName</code> input parameter is empty, the data is aggregated by the <code>AppId</code> dimension by default, returning only one set of data.</p><p>if the <code>DimensionName</code> input parameter is not empty, the corresponding time series data is returned grouped by the specified query dimension. for example:</p><ul>when <code>DimensionName = origin-status-code</code>:<ul><li>the <code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li>the <code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul>.
-<strong>Note</strong>: when specifying DimensionName during queries, concurrent calls are forbidden. if exceeded the query frequency limit, it will return an error <code><strong>InvalidParameter.ActionInProgress</strong></code>.
+     * Get Query dimension name. Valid values:
+<ul><li><strong>domain</strong>: The domain name requested by the client. If EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.
+When using the domain dimension, the <code>Filters</code> parameter must include the <code>domain</code> filter item, specifying a list of up to 100 domain names.</li><li><strong>origin-status-code</strong>: Origin status code, such as 200 or 404.
+This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin status code category, such as 2xx or 4xx.
+This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is left empty, data is aggregated by the <code>AppId</code> dimension by default, returning a single set of data.</p><p>If <code>DimensionName</code> is specified, time series data is returned grouped by the specified dimension. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li><code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li><code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul><p><strong>Note</strong>: When <code>DimensionName</code> is specified, concurrent calls are not allowed. Exceeding the query rate limit will return the error <code><strong>InvalidParameter.ActionInProgress</strong></code>.</p> 
+     * @return DimensionName Query dimension name. Valid values:
+<ul><li><strong>domain</strong>: The domain name requested by the client. If EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.
+When using the domain dimension, the <code>Filters</code> parameter must include the <code>domain</code> filter item, specifying a list of up to 100 domain names.</li><li><strong>origin-status-code</strong>: Origin status code, such as 200 or 404.
+This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin status code category, such as 2xx or 4xx.
+This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is left empty, data is aggregated by the <code>AppId</code> dimension by default, returning a single set of data.</p><p>If <code>DimensionName</code> is specified, time series data is returned grouped by the specified dimension. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li><code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li><code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul><p><strong>Note</strong>: When <code>DimensionName</code> is specified, concurrent calls are not allowed. Exceeding the query rate limit will return the error <code><strong>InvalidParameter.ActionInProgress</strong></code>.</p>
      */
     public String getDimensionName() {
         return this.DimensionName;
     }
 
     /**
-     * Set <p>Query dimension name. valid values:</p><ul><li><strong>domain</strong>: the domain name requested by the client. if EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.<br>when using the domain dimension, the <code>Filters</code> must include the <code>domain</code> filter item, specifying a list of no more than 100 domain names to query.</li><li><strong>origin-status-code</strong>: origin status code, such as 200, 404.<br>this dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: origin status code category, such as 2xx, 4xx.<br>this dimension is supported only when <code>MetricNames =["l7Flow_request_hy"]</code>.</li></ul><p>if the <code>DimensionName</code> input parameter is empty, the data is aggregated by the <code>AppId</code> dimension by default, returning only one set of data.</p><p>if the <code>DimensionName</code> input parameter is not empty, the corresponding time series data is returned grouped by the specified query dimension. for example:</p><ul>when <code>DimensionName = origin-status-code</code>:<ul><li>the <code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li>the <code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul>.
-<strong>Note</strong>: when specifying DimensionName during queries, concurrent calls are forbidden. if exceeded the query frequency limit, it will return an error <code><strong>InvalidParameter.ActionInProgress</strong></code>.
-     * @param DimensionName <p>Query dimension name. valid values:</p><ul><li><strong>domain</strong>: the domain name requested by the client. if EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.<br>when using the domain dimension, the <code>Filters</code> must include the <code>domain</code> filter item, specifying a list of no more than 100 domain names to query.</li><li><strong>origin-status-code</strong>: origin status code, such as 200, 404.<br>this dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: origin status code category, such as 2xx, 4xx.<br>this dimension is supported only when <code>MetricNames =["l7Flow_request_hy"]</code>.</li></ul><p>if the <code>DimensionName</code> input parameter is empty, the data is aggregated by the <code>AppId</code> dimension by default, returning only one set of data.</p><p>if the <code>DimensionName</code> input parameter is not empty, the corresponding time series data is returned grouped by the specified query dimension. for example:</p><ul>when <code>DimensionName = origin-status-code</code>:<ul><li>the <code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li>the <code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul>.
-<strong>Note</strong>: when specifying DimensionName during queries, concurrent calls are forbidden. if exceeded the query frequency limit, it will return an error <code><strong>InvalidParameter.ActionInProgress</strong></code>.
+     * Set Query dimension name. Valid values:
+<ul><li><strong>domain</strong>: The domain name requested by the client. If EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.
+When using the domain dimension, the <code>Filters</code> parameter must include the <code>domain</code> filter item, specifying a list of up to 100 domain names.</li><li><strong>origin-status-code</strong>: Origin status code, such as 200 or 404.
+This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin status code category, such as 2xx or 4xx.
+This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is left empty, data is aggregated by the <code>AppId</code> dimension by default, returning a single set of data.</p><p>If <code>DimensionName</code> is specified, time series data is returned grouped by the specified dimension. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li><code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li><code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul><p><strong>Note</strong>: When <code>DimensionName</code> is specified, concurrent calls are not allowed. Exceeding the query rate limit will return the error <code><strong>InvalidParameter.ActionInProgress</strong></code>.</p>
+     * @param DimensionName Query dimension name. Valid values:
+<ul><li><strong>domain</strong>: The domain name requested by the client. If EdgeOne is accessed via a wildcard domain name, the data records the wildcard domain name.
+When using the domain dimension, the <code>Filters</code> parameter must include the <code>domain</code> filter item, specifying a list of up to 100 domain names.</li><li><strong>origin-status-code</strong>: Origin status code, such as 200 or 404.
+This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li><li><strong>origin-status-code-category</strong>: Origin status code category, such as 2xx or 4xx.
+This dimension is supported only when <code>MetricNames = ["l7Flow_request_hy"]</code>.</li></ul><p>If <code>DimensionName</code> is left empty, data is aggregated by the <code>AppId</code> dimension by default, returning a single set of data.</p><p>If <code>DimensionName</code> is specified, time series data is returned grouped by the specified dimension. For example:</p><ul>When <code>DimensionName = origin-status-code</code>:<ul><li><code>TimingDataRecords.TypeKey</code> in the returned data is the specific origin status code, such as 200.</li><li><code>TimingDataRecords.TypeValue</code> in the returned data is the time series data corresponding to that status code.</li></ul></ul><p><strong>Note</strong>: When <code>DimensionName</code> is specified, concurrent calls are not allowed. Exceeding the query rate limit will return the error <code><strong>InvalidParameter.ActionInProgress</strong></code>.</p>
      */
     public void setDimensionName(String DimensionName) {
         this.DimensionName = DimensionName;

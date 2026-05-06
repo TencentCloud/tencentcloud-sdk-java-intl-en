@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateFunctionRuleRequest extends AbstractModel {
 
     /**
-    * Zone ID.
+    * Zone ID
     */
     @SerializedName("ZoneId")
     @Expose
@@ -77,16 +77,16 @@ Specifies the default value as direct when left blank.
     private String Remark;
 
     /**
-     * Get Zone ID. 
-     * @return ZoneId Zone ID.
+     * Get Zone ID 
+     * @return ZoneId Zone ID
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Zone ID.
-     * @param ZoneId Zone ID.
+     * Set Zone ID
+     * @param ZoneId Zone ID
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

@@ -21,39 +21,39 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class DescribeImageTaskDetailRequest extends AbstractModel {
+public class DescribeDesignTaskRequest extends AbstractModel {
 
     /**
-    * <p>ID of the image processing task.</p>
+    * <p>Task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get <p>ID of the image processing task.</p> 
-     * @return TaskId <p>ID of the image processing task.</p>
+     * Get <p>Task ID.</p> 
+     * @return TaskId <p>Task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>ID of the image processing task.</p>
-     * @param TaskId <p>ID of the image processing task.</p>
+     * Set <p>Task ID.</p>
+     * @param TaskId <p>Task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
-    public DescribeImageTaskDetailRequest() {
+    public DescribeDesignTaskRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public DescribeImageTaskDetailRequest(DescribeImageTaskDetailRequest source) {
+    public DescribeDesignTaskRequest(DescribeDesignTaskRequest source) {
         if (source.TaskId != null) {
             this.TaskId = new String(source.TaskId);
         }

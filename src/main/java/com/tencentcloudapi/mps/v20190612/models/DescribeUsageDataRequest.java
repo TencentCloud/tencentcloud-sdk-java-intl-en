@@ -24,177 +24,92 @@ import java.util.HashMap;
 public class DescribeUsageDataRequest extends AbstractModel {
 
     /**
-    * Start date. use ISO date format.
+    * <p>Start date. Use ISO date format.</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+    * <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p><p>Parameter format: 2019-07-16T06:21:28Z.</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
+    * <p>Media processing task type to query. Default value: Transcode. Valid values: </p><li>Transcode: Transcoding, </li><li>Enhance: Enhancement, </li><li>AIAnalysis: AI Analysis, </li><li>AIRecognition: AI Recognition, </li><li>AIReview: AI Review, </li><li>Snapshot: Snapshot, </li><li>AnimatedGraphics: Animated Graphics, </li><li>AiQualityControl: Quality Control, </li><li>Evaluation: Video Evaluation, </li><li>ImageProcess: Image Processing, </li><li>AddBlindWatermark: Add Basic Copyright Digital Watermark, </li><li>AddNagraWatermark: Add NAGRA Digital Watermark, </li><li>ExtractBlindWatermark: Extract Basic Copyright Digital Watermark, </li><li>AIGCVideo: AIGC Video Generation, </li><li>AIGCImage: AIGC Image Generation.</li>
     */
     @SerializedName("Types")
     @Expose
     private String [] Types;
 
     /**
-    * MPS park. ap-guangzhou park is returned by default.
-<li>ap-guangzhou: Guangzhou.</li>
-<li>ap-hongkong: Hong Kong (China).</li>
-<li>ap-taipei: Taipei (China).</li>
-<li>ap-singapore: Singapore.</li>
-<li>ap-mumbai: India.</li>
-<li>ap-jakarta: Jakarta.</li>
-<li>ap-seoul: Seoul.</li>
-<li>ap-bangkok: Thailand.</li>
-<li>ap-tokyo: Japan.</li>
-<li>na-siliconvalley: Silicon Valley.</li>
-<li>na-ashburn: Virginia.</li>
-<li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: Sao Paulo.</li>
-<li>eu-frankfurt: Frankfurt.</li>
-<li>eu-moscow: Russia.</li>
-<li>aws: AWS.</li>
+    * <p>Media processing region. Default value: ap-guangzhou. Valid values: </p><li>ap-guangzhou: Guangzhou, </li><li>ap-hongkong: Hong Kong (China), </li><li>ap-taipei: Taiwan (China), </li><li>ap-singapore: Singapore, </li><li>ap-mumbai: India, </li><li>ap-jakarta: Jakarta, </li><li>ap-seoul: Seoul, </li><li>ap-bangkok: Thailand, </li><li>ap-tokyo: Japan, </li><li>na-siliconvalley: Silicon Valley (USA), </li><li>na-ashburn: Virginia, </li><li>na-toronto: Toronto, </li><li>sa-saopaulo: Sao Paulo, </li><li>eu-frankfurt: Frankfurt, </li><li>eu-moscow: Russia, </li><li>aws: AWS.</li>
     */
     @SerializedName("ProcessRegions")
     @Expose
     private String [] ProcessRegions;
 
     /**
-     * Get Start date. use ISO date format. 
-     * @return StartTime Start date. use ISO date format.
+     * Get <p>Start date. Use ISO date format.</p> 
+     * @return StartTime <p>Start date. Use ISO date format.</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start date. use ISO date format.
-     * @param StartTime Start date. use ISO date format.
+     * Set <p>Start date. Use ISO date format.</p>
+     * @param StartTime <p>Start date. Use ISO date format.</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). 
-     * @return EndTime End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Get <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p><p>Parameter format: 2019-07-16T06:21:28Z.</p> 
+     * @return EndTime <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p><p>Parameter format: 2019-07-16T06:21:28Z.</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param EndTime End date, which should be greater than or equal to the start date. Use the [ISO date and time format](https://www.tencentcloud.comom/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * Set <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p><p>Parameter format: 2019-07-16T06:21:28Z.</p>
+     * @param EndTime <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p><p>Parameter format: 2019-07-16T06:21:28Z.</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li> 
-     * @return Types Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
+     * Get <p>Media processing task type to query. Default value: Transcode. Valid values: </p><li>Transcode: Transcoding, </li><li>Enhance: Enhancement, </li><li>AIAnalysis: AI Analysis, </li><li>AIRecognition: AI Recognition, </li><li>AIReview: AI Review, </li><li>Snapshot: Snapshot, </li><li>AnimatedGraphics: Animated Graphics, </li><li>AiQualityControl: Quality Control, </li><li>Evaluation: Video Evaluation, </li><li>ImageProcess: Image Processing, </li><li>AddBlindWatermark: Add Basic Copyright Digital Watermark, </li><li>AddNagraWatermark: Add NAGRA Digital Watermark, </li><li>ExtractBlindWatermark: Extract Basic Copyright Digital Watermark, </li><li>AIGCVideo: AIGC Video Generation, </li><li>AIGCImage: AIGC Image Generation.</li> 
+     * @return Types <p>Media processing task type to query. Default value: Transcode. Valid values: </p><li>Transcode: Transcoding, </li><li>Enhance: Enhancement, </li><li>AIAnalysis: AI Analysis, </li><li>AIRecognition: AI Recognition, </li><li>AIReview: AI Review, </li><li>Snapshot: Snapshot, </li><li>AnimatedGraphics: Animated Graphics, </li><li>AiQualityControl: Quality Control, </li><li>Evaluation: Video Evaluation, </li><li>ImageProcess: Image Processing, </li><li>AddBlindWatermark: Add Basic Copyright Digital Watermark, </li><li>AddNagraWatermark: Add NAGRA Digital Watermark, </li><li>ExtractBlindWatermark: Extract Basic Copyright Digital Watermark, </li><li>AIGCVideo: AIGC Video Generation, </li><li>AIGCImage: AIGC Image Generation.</li>
      */
     public String [] getTypes() {
         return this.Types;
     }
 
     /**
-     * Set Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
-     * @param Types Type of MPS tasks to query. The transcoding tasks are queried by default.<li>Transcode: transcoding.</li><li>Enhance: enhancement.</li><li>AIAnalysis: intelligent analysis.</li><li>AIRecognition: intelligent identification.</li><li>AIReview: content moderation.</li><li>Snapshot: screenshot.</li><li>AnimatedGraphics: animated graphics.</li><li>AiQualityControl: quality inspection.</li><li>Evaluation: video evaluation.</li><li>ImageProcess: image processing.</li>
-<li>AddBlindWatermark: adding basic copyright digital watermarks.</li><li>AddNagraWatermark: adding NAGRA digital watermarks.</li><li>ExtractBlindWatermark: extracting basic copyright digital watermarks.</li><li>AIGC: AIGC</li>
+     * Set <p>Media processing task type to query. Default value: Transcode. Valid values: </p><li>Transcode: Transcoding, </li><li>Enhance: Enhancement, </li><li>AIAnalysis: AI Analysis, </li><li>AIRecognition: AI Recognition, </li><li>AIReview: AI Review, </li><li>Snapshot: Snapshot, </li><li>AnimatedGraphics: Animated Graphics, </li><li>AiQualityControl: Quality Control, </li><li>Evaluation: Video Evaluation, </li><li>ImageProcess: Image Processing, </li><li>AddBlindWatermark: Add Basic Copyright Digital Watermark, </li><li>AddNagraWatermark: Add NAGRA Digital Watermark, </li><li>ExtractBlindWatermark: Extract Basic Copyright Digital Watermark, </li><li>AIGCVideo: AIGC Video Generation, </li><li>AIGCImage: AIGC Image Generation.</li>
+     * @param Types <p>Media processing task type to query. Default value: Transcode. Valid values: </p><li>Transcode: Transcoding, </li><li>Enhance: Enhancement, </li><li>AIAnalysis: AI Analysis, </li><li>AIRecognition: AI Recognition, </li><li>AIReview: AI Review, </li><li>Snapshot: Snapshot, </li><li>AnimatedGraphics: Animated Graphics, </li><li>AiQualityControl: Quality Control, </li><li>Evaluation: Video Evaluation, </li><li>ImageProcess: Image Processing, </li><li>AddBlindWatermark: Add Basic Copyright Digital Watermark, </li><li>AddNagraWatermark: Add NAGRA Digital Watermark, </li><li>ExtractBlindWatermark: Extract Basic Copyright Digital Watermark, </li><li>AIGCVideo: AIGC Video Generation, </li><li>AIGCImage: AIGC Image Generation.</li>
      */
     public void setTypes(String [] Types) {
         this.Types = Types;
     }
 
     /**
-     * Get MPS park. ap-guangzhou park is returned by default.
-<li>ap-guangzhou: Guangzhou.</li>
-<li>ap-hongkong: Hong Kong (China).</li>
-<li>ap-taipei: Taipei (China).</li>
-<li>ap-singapore: Singapore.</li>
-<li>ap-mumbai: India.</li>
-<li>ap-jakarta: Jakarta.</li>
-<li>ap-seoul: Seoul.</li>
-<li>ap-bangkok: Thailand.</li>
-<li>ap-tokyo: Japan.</li>
-<li>na-siliconvalley: Silicon Valley.</li>
-<li>na-ashburn: Virginia.</li>
-<li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: Sao Paulo.</li>
-<li>eu-frankfurt: Frankfurt.</li>
-<li>eu-moscow: Russia.</li>
-<li>aws: AWS.</li> 
-     * @return ProcessRegions MPS park. ap-guangzhou park is returned by default.
-<li>ap-guangzhou: Guangzhou.</li>
-<li>ap-hongkong: Hong Kong (China).</li>
-<li>ap-taipei: Taipei (China).</li>
-<li>ap-singapore: Singapore.</li>
-<li>ap-mumbai: India.</li>
-<li>ap-jakarta: Jakarta.</li>
-<li>ap-seoul: Seoul.</li>
-<li>ap-bangkok: Thailand.</li>
-<li>ap-tokyo: Japan.</li>
-<li>na-siliconvalley: Silicon Valley.</li>
-<li>na-ashburn: Virginia.</li>
-<li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: Sao Paulo.</li>
-<li>eu-frankfurt: Frankfurt.</li>
-<li>eu-moscow: Russia.</li>
-<li>aws: AWS.</li>
+     * Get <p>Media processing region. Default value: ap-guangzhou. Valid values: </p><li>ap-guangzhou: Guangzhou, </li><li>ap-hongkong: Hong Kong (China), </li><li>ap-taipei: Taiwan (China), </li><li>ap-singapore: Singapore, </li><li>ap-mumbai: India, </li><li>ap-jakarta: Jakarta, </li><li>ap-seoul: Seoul, </li><li>ap-bangkok: Thailand, </li><li>ap-tokyo: Japan, </li><li>na-siliconvalley: Silicon Valley (USA), </li><li>na-ashburn: Virginia, </li><li>na-toronto: Toronto, </li><li>sa-saopaulo: Sao Paulo, </li><li>eu-frankfurt: Frankfurt, </li><li>eu-moscow: Russia, </li><li>aws: AWS.</li> 
+     * @return ProcessRegions <p>Media processing region. Default value: ap-guangzhou. Valid values: </p><li>ap-guangzhou: Guangzhou, </li><li>ap-hongkong: Hong Kong (China), </li><li>ap-taipei: Taiwan (China), </li><li>ap-singapore: Singapore, </li><li>ap-mumbai: India, </li><li>ap-jakarta: Jakarta, </li><li>ap-seoul: Seoul, </li><li>ap-bangkok: Thailand, </li><li>ap-tokyo: Japan, </li><li>na-siliconvalley: Silicon Valley (USA), </li><li>na-ashburn: Virginia, </li><li>na-toronto: Toronto, </li><li>sa-saopaulo: Sao Paulo, </li><li>eu-frankfurt: Frankfurt, </li><li>eu-moscow: Russia, </li><li>aws: AWS.</li>
      */
     public String [] getProcessRegions() {
         return this.ProcessRegions;
     }
 
     /**
-     * Set MPS park. ap-guangzhou park is returned by default.
-<li>ap-guangzhou: Guangzhou.</li>
-<li>ap-hongkong: Hong Kong (China).</li>
-<li>ap-taipei: Taipei (China).</li>
-<li>ap-singapore: Singapore.</li>
-<li>ap-mumbai: India.</li>
-<li>ap-jakarta: Jakarta.</li>
-<li>ap-seoul: Seoul.</li>
-<li>ap-bangkok: Thailand.</li>
-<li>ap-tokyo: Japan.</li>
-<li>na-siliconvalley: Silicon Valley.</li>
-<li>na-ashburn: Virginia.</li>
-<li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: Sao Paulo.</li>
-<li>eu-frankfurt: Frankfurt.</li>
-<li>eu-moscow: Russia.</li>
-<li>aws: AWS.</li>
-     * @param ProcessRegions MPS park. ap-guangzhou park is returned by default.
-<li>ap-guangzhou: Guangzhou.</li>
-<li>ap-hongkong: Hong Kong (China).</li>
-<li>ap-taipei: Taipei (China).</li>
-<li>ap-singapore: Singapore.</li>
-<li>ap-mumbai: India.</li>
-<li>ap-jakarta: Jakarta.</li>
-<li>ap-seoul: Seoul.</li>
-<li>ap-bangkok: Thailand.</li>
-<li>ap-tokyo: Japan.</li>
-<li>na-siliconvalley: Silicon Valley.</li>
-<li>na-ashburn: Virginia.</li>
-<li>na-toronto: Toronto.</li>
-<li>sa-saopaulo: Sao Paulo.</li>
-<li>eu-frankfurt: Frankfurt.</li>
-<li>eu-moscow: Russia.</li>
-<li>aws: AWS.</li>
+     * Set <p>Media processing region. Default value: ap-guangzhou. Valid values: </p><li>ap-guangzhou: Guangzhou, </li><li>ap-hongkong: Hong Kong (China), </li><li>ap-taipei: Taiwan (China), </li><li>ap-singapore: Singapore, </li><li>ap-mumbai: India, </li><li>ap-jakarta: Jakarta, </li><li>ap-seoul: Seoul, </li><li>ap-bangkok: Thailand, </li><li>ap-tokyo: Japan, </li><li>na-siliconvalley: Silicon Valley (USA), </li><li>na-ashburn: Virginia, </li><li>na-toronto: Toronto, </li><li>sa-saopaulo: Sao Paulo, </li><li>eu-frankfurt: Frankfurt, </li><li>eu-moscow: Russia, </li><li>aws: AWS.</li>
+     * @param ProcessRegions <p>Media processing region. Default value: ap-guangzhou. Valid values: </p><li>ap-guangzhou: Guangzhou, </li><li>ap-hongkong: Hong Kong (China), </li><li>ap-taipei: Taiwan (China), </li><li>ap-singapore: Singapore, </li><li>ap-mumbai: India, </li><li>ap-jakarta: Jakarta, </li><li>ap-seoul: Seoul, </li><li>ap-bangkok: Thailand, </li><li>ap-tokyo: Japan, </li><li>na-siliconvalley: Silicon Valley (USA), </li><li>na-ashburn: Virginia, </li><li>na-toronto: Toronto, </li><li>sa-saopaulo: Sao Paulo, </li><li>eu-frankfurt: Frankfurt, </li><li>eu-moscow: Russia, </li><li>aws: AWS.</li>
      */
     public void setProcessRegions(String [] ProcessRegions) {
         this.ProcessRegions = ProcessRegions;
