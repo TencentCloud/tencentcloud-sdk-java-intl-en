@@ -1,0 +1,98 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.tse.v20201207.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class AutoScalerBehavior extends AbstractModel {
+
+    /**
+    * Scale-out behavior configuration
+    */
+    @SerializedName("ScaleUp")
+    @Expose
+    private AutoScalerRules ScaleUp;
+
+    /**
+    * Behavior configuration for scale-in
+    */
+    @SerializedName("ScaleDown")
+    @Expose
+    private AutoScalerRules ScaleDown;
+
+    /**
+     * Get Scale-out behavior configuration 
+     * @return ScaleUp Scale-out behavior configuration
+     */
+    public AutoScalerRules getScaleUp() {
+        return this.ScaleUp;
+    }
+
+    /**
+     * Set Scale-out behavior configuration
+     * @param ScaleUp Scale-out behavior configuration
+     */
+    public void setScaleUp(AutoScalerRules ScaleUp) {
+        this.ScaleUp = ScaleUp;
+    }
+
+    /**
+     * Get Behavior configuration for scale-in 
+     * @return ScaleDown Behavior configuration for scale-in
+     */
+    public AutoScalerRules getScaleDown() {
+        return this.ScaleDown;
+    }
+
+    /**
+     * Set Behavior configuration for scale-in
+     * @param ScaleDown Behavior configuration for scale-in
+     */
+    public void setScaleDown(AutoScalerRules ScaleDown) {
+        this.ScaleDown = ScaleDown;
+    }
+
+    public AutoScalerBehavior() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public AutoScalerBehavior(AutoScalerBehavior source) {
+        if (source.ScaleUp != null) {
+            this.ScaleUp = new AutoScalerRules(source.ScaleUp);
+        }
+        if (source.ScaleDown != null) {
+            this.ScaleDown = new AutoScalerRules(source.ScaleDown);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamObj(map, prefix + "ScaleUp.", this.ScaleUp);
+        this.setParamObj(map, prefix + "ScaleDown.", this.ScaleDown);
+
+    }
+}
+
