@@ -26,7 +26,7 @@ public class SubmitHunyuanTo3DUVJobRequest extends AbstractModel {
     /**
     * File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
     */
     @SerializedName("File")
     @Expose
@@ -35,10 +35,10 @@ Supported formats: FBX, OBJ, GLB
     /**
      * Get File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces 
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100 
      * @return File File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
      */
     public InputFile3D getFile() {
         return this.File;
@@ -47,10 +47,10 @@ Supported formats: FBX, OBJ, GLB
     /**
      * Set File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
      * @param File File URL of the 3D model requiring UV unfold
 Supported formats: FBX, OBJ, GLB
-3D model limit: less than 30000 faces
+3D model limit: The face count of the 3D model is less than 30,000 and the number of connected components does not exceed 100
      */
     public void setFile(InputFile3D File) {
         this.File = File;

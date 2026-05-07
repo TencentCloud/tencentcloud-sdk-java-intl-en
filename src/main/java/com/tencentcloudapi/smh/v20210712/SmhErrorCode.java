@@ -54,6 +54,9 @@ public enum SmhErrorCode {
      /* The number of users has been reached. please first upgrade the product spec. */
      LIMITEXCEEDED_USERLIMIT("LimitExceeded.UserLimit"),
      
+     /*  */
+     MISSINGPARAMETER("MissingParameter"),
+     
      /* The sms verification code sent to the designated mobile number has reached the rate limit. */
      REQUESTLIMITEXCEEDED_SENDSMS("RequestLimitExceeded.SendSms"),
      

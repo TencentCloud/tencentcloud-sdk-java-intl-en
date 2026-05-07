@@ -39,7 +39,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add a team member.
+     *This API is used to add a team member
      * @param req AddTeamMemberRequest
      * @return AddTeamMemberResponse
      * @throws TencentCloudSDKException

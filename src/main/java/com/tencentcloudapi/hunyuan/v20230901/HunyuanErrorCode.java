@@ -37,7 +37,10 @@ public enum HunyuanErrorCode {
      INVALIDPARAMETERVALUE_MODEL("InvalidParameterValue.Model"),
      
      /* The quota limit is exceeded. */
-     LIMITEXCEEDED("LimitExceeded");
+     LIMITEXCEEDED("LimitExceeded"),
+     
+     /*  */
+     RESOURCENOTFOUND("ResourceNotFound");
      
     private String value;
     private HunyuanErrorCode (String value){

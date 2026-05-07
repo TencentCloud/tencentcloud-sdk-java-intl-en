@@ -95,6 +95,13 @@ Filipino: fil, hindi: hi, polish: pl, czech: cs, dutch: nl, khmer: km, burmese: 
     private Reference [] References;
 
     /**
+    * 
+    */
+    @SerializedName("GlossaryIDs")
+    @Expose
+    private String [] GlossaryIDs;
+
+    /**
      * Get Model name. optional values include hunyuan-translation.
 Please read the introduction in [the product overview](https://www.tencentcloud.com/document/product/1284/75277) for model descriptions.
 
@@ -294,6 +301,22 @@ Filipino: fil, hindi: hi, polish: pl, czech: cs, dutch: nl, khmer: km, burmese: 
         this.References = References;
     }
 
+    /**
+     * Get  
+     * @return GlossaryIDs 
+     */
+    public String [] getGlossaryIDs() {
+        return this.GlossaryIDs;
+    }
+
+    /**
+     * Set 
+     * @param GlossaryIDs 
+     */
+    public void setGlossaryIDs(String [] GlossaryIDs) {
+        this.GlossaryIDs = GlossaryIDs;
+    }
+
     public ChatTranslationsRequest() {
     }
 
@@ -326,6 +349,12 @@ Filipino: fil, hindi: hi, polish: pl, czech: cs, dutch: nl, khmer: km, burmese: 
                 this.References[i] = new Reference(source.References[i]);
             }
         }
+        if (source.GlossaryIDs != null) {
+            this.GlossaryIDs = new String[source.GlossaryIDs.length];
+            for (int i = 0; i < source.GlossaryIDs.length; i++) {
+                this.GlossaryIDs[i] = new String(source.GlossaryIDs[i]);
+            }
+        }
     }
 
 
@@ -340,6 +369,7 @@ Filipino: fil, hindi: hi, polish: pl, czech: cs, dutch: nl, khmer: km, burmese: 
         this.setParamSimple(map, prefix + "Target", this.Target);
         this.setParamSimple(map, prefix + "Field", this.Field);
         this.setParamArrayObj(map, prefix + "References.", this.References);
+        this.setParamArraySimple(map, prefix + "GlossaryIDs.", this.GlossaryIDs);
 
     }
 }

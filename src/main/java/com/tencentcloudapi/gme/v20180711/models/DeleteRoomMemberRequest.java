@@ -31,13 +31,6 @@ public class DeleteRoomMemberRequest extends AbstractModel {
     private String RoomId;
 
     /**
-    * List of the members to remove
-    */
-    @SerializedName("Uids")
-    @Expose
-    private String [] Uids;
-
-    /**
     * Operation type. `1`: Delete a room; `2`: Remove members
     */
     @SerializedName("DeleteType")
@@ -50,6 +43,13 @@ public class DeleteRoomMemberRequest extends AbstractModel {
     @SerializedName("BizId")
     @Expose
     private Long BizId;
+
+    /**
+    * List of the members to remove
+    */
+    @SerializedName("Uids")
+    @Expose
+    private String [] Uids;
 
     /**
      * Get ID of the target room 
@@ -65,22 +65,6 @@ public class DeleteRoomMemberRequest extends AbstractModel {
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;
-    }
-
-    /**
-     * Get List of the members to remove 
-     * @return Uids List of the members to remove
-     */
-    public String [] getUids() {
-        return this.Uids;
-    }
-
-    /**
-     * Set List of the members to remove
-     * @param Uids List of the members to remove
-     */
-    public void setUids(String [] Uids) {
-        this.Uids = Uids;
     }
 
     /**
@@ -115,6 +99,22 @@ public class DeleteRoomMemberRequest extends AbstractModel {
         this.BizId = BizId;
     }
 
+    /**
+     * Get List of the members to remove 
+     * @return Uids List of the members to remove
+     */
+    public String [] getUids() {
+        return this.Uids;
+    }
+
+    /**
+     * Set List of the members to remove
+     * @param Uids List of the members to remove
+     */
+    public void setUids(String [] Uids) {
+        this.Uids = Uids;
+    }
+
     public DeleteRoomMemberRequest() {
     }
 
@@ -126,17 +126,17 @@ public class DeleteRoomMemberRequest extends AbstractModel {
         if (source.RoomId != null) {
             this.RoomId = new String(source.RoomId);
         }
-        if (source.Uids != null) {
-            this.Uids = new String[source.Uids.length];
-            for (int i = 0; i < source.Uids.length; i++) {
-                this.Uids[i] = new String(source.Uids[i]);
-            }
-        }
         if (source.DeleteType != null) {
             this.DeleteType = new Long(source.DeleteType);
         }
         if (source.BizId != null) {
             this.BizId = new Long(source.BizId);
+        }
+        if (source.Uids != null) {
+            this.Uids = new String[source.Uids.length];
+            for (int i = 0; i < source.Uids.length; i++) {
+                this.Uids[i] = new String(source.Uids[i]);
+            }
         }
     }
 
@@ -146,9 +146,9 @@ public class DeleteRoomMemberRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "RoomId", this.RoomId);
-        this.setParamArraySimple(map, prefix + "Uids.", this.Uids);
         this.setParamSimple(map, prefix + "DeleteType", this.DeleteType);
         this.setParamSimple(map, prefix + "BizId", this.BizId);
+        this.setParamArraySimple(map, prefix + "Uids.", this.Uids);
 
     }
 }

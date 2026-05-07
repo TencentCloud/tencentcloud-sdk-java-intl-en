@@ -23,6 +23,75 @@ import java.util.HashMap;
 
 public class SceneInfo extends AbstractModel {
 
+    /**
+    * 
+    */
+    @SerializedName("SceneId")
+    @Expose
+    private String SceneId;
+
+    /**
+    * 
+    */
+    @SerializedName("Status")
+    @Expose
+    private Boolean Status;
+
+    /**
+    * 
+    */
+    @SerializedName("CallbackUrl")
+    @Expose
+    private String CallbackUrl;
+
+    /**
+     * Get  
+     * @return SceneId 
+     */
+    public String getSceneId() {
+        return this.SceneId;
+    }
+
+    /**
+     * Set 
+     * @param SceneId 
+     */
+    public void setSceneId(String SceneId) {
+        this.SceneId = SceneId;
+    }
+
+    /**
+     * Get  
+     * @return Status 
+     */
+    public Boolean getStatus() {
+        return this.Status;
+    }
+
+    /**
+     * Set 
+     * @param Status 
+     */
+    public void setStatus(Boolean Status) {
+        this.Status = Status;
+    }
+
+    /**
+     * Get  
+     * @return CallbackUrl 
+     */
+    public String getCallbackUrl() {
+        return this.CallbackUrl;
+    }
+
+    /**
+     * Set 
+     * @param CallbackUrl 
+     */
+    public void setCallbackUrl(String CallbackUrl) {
+        this.CallbackUrl = CallbackUrl;
+    }
+
     public SceneInfo() {
     }
 
@@ -31,6 +100,15 @@ public class SceneInfo extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public SceneInfo(SceneInfo source) {
+        if (source.SceneId != null) {
+            this.SceneId = new String(source.SceneId);
+        }
+        if (source.Status != null) {
+            this.Status = new Boolean(source.Status);
+        }
+        if (source.CallbackUrl != null) {
+            this.CallbackUrl = new String(source.CallbackUrl);
+        }
     }
 
 
@@ -38,6 +116,9 @@ public class SceneInfo extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SceneId", this.SceneId);
+        this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
 
     }
 }

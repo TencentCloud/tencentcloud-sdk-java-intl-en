@@ -31,7 +31,7 @@ public class CreateApplicationSensitiveAPIRequest extends AbstractModel {
     private String ApplicationId;
 
     /**
-    * List of newly-added APIs
+    * List of newly-added APIs.
     */
     @SerializedName("APIList")
     @Expose
@@ -61,16 +61,16 @@ public class CreateApplicationSensitiveAPIRequest extends AbstractModel {
     }
 
     /**
-     * Get List of newly-added APIs 
-     * @return APIList List of newly-added APIs
+     * Get List of newly-added APIs. 
+     * @return APIList List of newly-added APIs.
      */
     public CreateApplicationSensitiveAPIReq [] getAPIList() {
         return this.APIList;
     }
 
     /**
-     * Set List of newly-added APIs
-     * @param APIList List of newly-added APIs
+     * Set List of newly-added APIs.
+     * @param APIList List of newly-added APIs.
      */
     public void setAPIList(CreateApplicationSensitiveAPIReq [] APIList) {
         this.APIList = APIList;
