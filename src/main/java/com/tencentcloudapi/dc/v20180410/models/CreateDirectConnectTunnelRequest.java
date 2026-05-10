@@ -173,6 +173,14 @@ Default value: Non-zero.
     private NQAInfo NqaInfo;
 
     /**
+    * Tag key-value pair
+
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Direct Connect ID, such as `dc-kd7d06of`. 
      * @return DirectConnectId Direct Connect ID, such as `dc-kd7d06of`.
      */
@@ -528,6 +536,26 @@ Default value: Non-zero.
         this.NqaInfo = NqaInfo;
     }
 
+    /**
+     * Get Tag key-value pair
+ 
+     * @return Tags Tag key-value pair
+
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag key-value pair
+
+     * @param Tags Tag key-value pair
+
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public CreateDirectConnectTunnelRequest() {
     }
 
@@ -599,6 +627,12 @@ Default value: Non-zero.
         if (source.NqaInfo != null) {
             this.NqaInfo = new NQAInfo(source.NqaInfo);
         }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -626,6 +660,7 @@ Default value: Non-zero.
         this.setParamSimple(map, prefix + "NqaEnable", this.NqaEnable);
         this.setParamObj(map, prefix + "BfdInfo.", this.BfdInfo);
         this.setParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

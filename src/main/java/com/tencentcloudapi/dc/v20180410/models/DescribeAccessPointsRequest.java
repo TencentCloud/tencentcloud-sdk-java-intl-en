@@ -47,6 +47,13 @@ You can call `DescribeRegions` to get the region ID.
     private Long Limit;
 
     /**
+    * 
+    */
+    @SerializedName("Filters")
+    @Expose
+    private Filter [] Filters;
+
+    /**
      * Get Access point region, which can be queried through `DescribeRegions`.
 
 You can call `DescribeRegions` to get the region ID. 
@@ -102,6 +109,22 @@ You can call `DescribeRegions` to get the region ID.
         this.Limit = Limit;
     }
 
+    /**
+     * Get  
+     * @return Filters 
+     */
+    public Filter [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set 
+     * @param Filters 
+     */
+    public void setFilters(Filter [] Filters) {
+        this.Filters = Filters;
+    }
+
     public DescribeAccessPointsRequest() {
     }
 
@@ -119,6 +142,12 @@ You can call `DescribeRegions` to get the region ID.
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
         }
+        if (source.Filters != null) {
+            this.Filters = new Filter[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new Filter(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -129,6 +158,7 @@ You can call `DescribeRegions` to get the region ID.
         this.setParamSimple(map, prefix + "RegionId", this.RegionId);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

@@ -50,7 +50,7 @@ public class DcClient extends AbstractClient{
     }
 
     /**
-     *This API is used to apply for an internet tunnel’s CIDR block.
+     *This API is used to apply for an internet tunnel's CIDR block.
      * @param req ApplyInternetAddressRequest
      * @return ApplyInternetAddressResponse
      * @throws TencentCloudSDKException
@@ -110,7 +110,6 @@ Only connected connections can be deleted.
 
     /**
      *This API is used to query connection access points.
-
      * @param req DescribeAccessPointsRequest
      * @return DescribeAccessPointsResponse
      * @throws TencentCloudSDKException

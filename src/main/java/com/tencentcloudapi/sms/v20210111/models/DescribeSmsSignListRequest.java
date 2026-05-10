@@ -24,14 +24,6 @@ import java.util.HashMap;
 public class DescribeSmsSignListRequest extends AbstractModel {
 
     /**
-    * Signature ID array.
-Note: the maximum length of the array is 100 by default.
-    */
-    @SerializedName("SignIdSet")
-    @Expose
-    private Long [] SignIdSet;
-
-    /**
     * Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
@@ -41,24 +33,28 @@ Note: the maximum length of the array is 100 by default.
     private Long International;
 
     /**
-     * Get Signature ID array.
-Note: the maximum length of the array is 100 by default. 
-     * @return SignIdSet Signature ID array.
+    * Signature ID array.
 Note: the maximum length of the array is 100 by default.
-     */
-    public Long [] getSignIdSet() {
-        return this.SignIdSet;
-    }
+    */
+    @SerializedName("SignIdSet")
+    @Expose
+    private Long [] SignIdSet;
 
     /**
-     * Set Signature ID array.
-Note: the maximum length of the array is 100 by default.
-     * @param SignIdSet Signature ID array.
-Note: the maximum length of the array is 100 by default.
-     */
-    public void setSignIdSet(Long [] SignIdSet) {
-        this.SignIdSet = SignIdSet;
-    }
+    * Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
      * Get Whether it is Global SMS:
@@ -84,6 +80,66 @@ Note: the maximum length of the array is 100 by default.
         this.International = International;
     }
 
+    /**
+     * Get Signature ID array.
+Note: the maximum length of the array is 100 by default. 
+     * @return SignIdSet Signature ID array.
+Note: the maximum length of the array is 100 by default.
+     */
+    public Long [] getSignIdSet() {
+        return this.SignIdSet;
+    }
+
+    /**
+     * Set Signature ID array.
+Note: the maximum length of the array is 100 by default.
+     * @param SignIdSet Signature ID array.
+Note: the maximum length of the array is 100 by default.
+     */
+    public void setSignIdSet(Long [] SignIdSet) {
+        this.SignIdSet = SignIdSet;
+    }
+
+    /**
+     * Get Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty. 
+     * @return Limit Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
+     * @param Limit Upper limit. Maximum value: 100.
+Note: it is 10 by default and is enabled when SignIdSet is empty.
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty. 
+     * @return Offset Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
+     * @param Offset Offset.
+Note: it is 0 by default and is enabled when SignIdSet is empty.
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
     public DescribeSmsSignListRequest() {
     }
 
@@ -92,14 +148,20 @@ Note: the maximum length of the array is 100 by default.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeSmsSignListRequest(DescribeSmsSignListRequest source) {
+        if (source.International != null) {
+            this.International = new Long(source.International);
+        }
         if (source.SignIdSet != null) {
             this.SignIdSet = new Long[source.SignIdSet.length];
             for (int i = 0; i < source.SignIdSet.length; i++) {
                 this.SignIdSet[i] = new Long(source.SignIdSet[i]);
             }
         }
-        if (source.International != null) {
-            this.International = new Long(source.International);
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
         }
     }
 
@@ -108,8 +170,10 @@ Note: the maximum length of the array is 100 by default.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "SignIdSet.", this.SignIdSet);
         this.setParamSimple(map, prefix + "International", this.International);
+        this.setParamArraySimple(map, prefix + "SignIdSet.", this.SignIdSet);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
 
     }
 }

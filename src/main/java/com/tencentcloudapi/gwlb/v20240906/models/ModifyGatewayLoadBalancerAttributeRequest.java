@@ -38,6 +38,13 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
     private String LoadBalancerName;
 
     /**
+    * 
+    */
+    @SerializedName("DeleteProtect")
+    @Expose
+    private Boolean DeleteProtect;
+
+    /**
      * Get Unique GWLB ID. 
      * @return LoadBalancerId Unique GWLB ID.
      */
@@ -69,6 +76,22 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
         this.LoadBalancerName = LoadBalancerName;
     }
 
+    /**
+     * Get  
+     * @return DeleteProtect 
+     */
+    public Boolean getDeleteProtect() {
+        return this.DeleteProtect;
+    }
+
+    /**
+     * Set 
+     * @param DeleteProtect 
+     */
+    public void setDeleteProtect(Boolean DeleteProtect) {
+        this.DeleteProtect = DeleteProtect;
+    }
+
     public ModifyGatewayLoadBalancerAttributeRequest() {
     }
 
@@ -83,6 +106,9 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
         if (source.LoadBalancerName != null) {
             this.LoadBalancerName = new String(source.LoadBalancerName);
         }
+        if (source.DeleteProtect != null) {
+            this.DeleteProtect = new Boolean(source.DeleteProtect);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class ModifyGatewayLoadBalancerAttributeRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
+        this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
 
     }
 }

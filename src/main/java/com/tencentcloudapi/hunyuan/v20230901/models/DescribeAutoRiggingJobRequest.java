@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.tencentcloudapi.dc.v20180410.models;
+package com.tencentcloudapi.hunyuan.v20230901.models;
 
 import com.tencentcloudapi.common.AbstractModel;
 import com.tencentcloudapi.common.SSEResponseModel;
@@ -21,41 +21,41 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class EnableInternetAddressRequest extends AbstractModel {
+public class DescribeAutoRiggingJobRequest extends AbstractModel {
 
     /**
-    * ID of the internet tunnel's public IP address
+    * Task ID (valid period: 24 hours).
     */
-    @SerializedName("InstanceId")
+    @SerializedName("JobId")
     @Expose
-    private String InstanceId;
+    private String JobId;
 
     /**
-     * Get ID of the internet tunnel's public IP address 
-     * @return InstanceId ID of the internet tunnel's public IP address
+     * Get Task ID (valid period: 24 hours). 
+     * @return JobId Task ID (valid period: 24 hours).
      */
-    public String getInstanceId() {
-        return this.InstanceId;
+    public String getJobId() {
+        return this.JobId;
     }
 
     /**
-     * Set ID of the internet tunnel's public IP address
-     * @param InstanceId ID of the internet tunnel's public IP address
+     * Set Task ID (valid period: 24 hours).
+     * @param JobId Task ID (valid period: 24 hours).
      */
-    public void setInstanceId(String InstanceId) {
-        this.InstanceId = InstanceId;
+    public void setJobId(String JobId) {
+        this.JobId = JobId;
     }
 
-    public EnableInternetAddressRequest() {
+    public DescribeAutoRiggingJobRequest() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public EnableInternetAddressRequest(EnableInternetAddressRequest source) {
-        if (source.InstanceId != null) {
-            this.InstanceId = new String(source.InstanceId);
+    public DescribeAutoRiggingJobRequest(DescribeAutoRiggingJobRequest source) {
+        if (source.JobId != null) {
+            this.JobId = new String(source.JobId);
         }
     }
 
@@ -64,7 +64,7 @@ public class EnableInternetAddressRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "JobId", this.JobId);
 
     }
 }

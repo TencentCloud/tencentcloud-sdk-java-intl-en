@@ -84,6 +84,52 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private Boolean AllDeadToAlive;
 
     /**
+    * Tags
+    */
+    @SerializedName("Tags")
+    @Expose
+    private TagInfo [] Tags;
+
+    /**
+    * Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+    */
+    @SerializedName("ForwardingMode")
+    @Expose
+    private String ForwardingMode;
+
+    /**
+    * <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+    */
+    @SerializedName("RescheduleUnbindRs")
+    @Expose
+    private Boolean RescheduleUnbindRs;
+
+    /**
+    * <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+    */
+    @SerializedName("RescheduleUnbindRsStartTime")
+    @Expose
+    private Long RescheduleUnbindRsStartTime;
+
+    /**
+    * <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+    */
+    @SerializedName("RescheduleUnhealthy")
+    @Expose
+    private Boolean RescheduleUnhealthy;
+
+    /**
+    * <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
+    */
+    @SerializedName("RescheduleUnhealthyStartTime")
+    @Expose
+    private Long RescheduleUnhealthyStartTime;
+
+    /**
      * Get Target group name, limited to 60 characters. 
      * @return TargetGroupName Target group name, limited to 60 characters.
      */
@@ -227,6 +273,118 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.AllDeadToAlive = AllDeadToAlive;
     }
 
+    /**
+     * Get Tags 
+     * @return Tags Tags
+     */
+    public TagInfo [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tags
+     * @param Tags Tags
+     */
+    public void setTags(TagInfo [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul> 
+     * @return ForwardingMode Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+     */
+    public String getForwardingMode() {
+        return this.ForwardingMode;
+    }
+
+    /**
+     * Set Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+     * @param ForwardingMode Traffic Distribution Mode
+<ul>
+<li>STATELESS: Stateless</li>
+<li>STATEFUL: Stateful</li>
+</ul>
+     */
+    public void setForwardingMode(String ForwardingMode) {
+        this.ForwardingMode = ForwardingMode;
+    }
+
+    /**
+     * Get <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p> 
+     * @return RescheduleUnbindRs <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+     */
+    public Boolean getRescheduleUnbindRs() {
+        return this.RescheduleUnbindRs;
+    }
+
+    /**
+     * Set <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+     * @param RescheduleUnbindRs <p>Switch for unbinding backend services in the rescheduling function. When enabled, unbinding backend services will trigger rescheduling.</p>
+     */
+    public void setRescheduleUnbindRs(Boolean RescheduleUnbindRs) {
+        this.RescheduleUnbindRs = RescheduleUnbindRs;
+    }
+
+    /**
+     * Get <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p> 
+     * @return RescheduleUnbindRsStartTime <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+     */
+    public Long getRescheduleUnbindRsStartTime() {
+        return this.RescheduleUnbindRsStartTime;
+    }
+
+    /**
+     * Set <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+     * @param RescheduleUnbindRsStartTime <p>The time to enable rescheduling after unbinding RS, configurable from 0s to 3600s, with a default value of 0s</p>
+     */
+    public void setRescheduleUnbindRsStartTime(Long RescheduleUnbindRsStartTime) {
+        this.RescheduleUnbindRsStartTime = RescheduleUnbindRsStartTime;
+    }
+
+    /**
+     * Get <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p> 
+     * @return RescheduleUnhealthy <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+     */
+    public Boolean getRescheduleUnhealthy() {
+        return this.RescheduleUnhealthy;
+    }
+
+    /**
+     * Set <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+     * @param RescheduleUnhealthy <p>Switch for backend service health detection exception in the rescheduling function. When enabled, abnormal health checks of backend services will trigger rescheduling.</p>
+     */
+    public void setRescheduleUnhealthy(Boolean RescheduleUnhealthy) {
+        this.RescheduleUnhealthy = RescheduleUnhealthy;
+    }
+
+    /**
+     * Get <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p> 
+     * @return RescheduleUnhealthyStartTime <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
+     */
+    public Long getRescheduleUnhealthyStartTime() {
+        return this.RescheduleUnhealthyStartTime;
+    }
+
+    /**
+     * Set <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
+     * @param RescheduleUnhealthyStartTime <p>The waiting time to enable rescheduling after abnormal health detection of backend services, configurable from 0s to 3600s, default is 0s</p>
+     */
+    public void setRescheduleUnhealthyStartTime(Long RescheduleUnhealthyStartTime) {
+        this.RescheduleUnhealthyStartTime = RescheduleUnhealthyStartTime;
+    }
+
     public CreateTargetGroupRequest() {
     }
 
@@ -262,6 +420,27 @@ public class CreateTargetGroupRequest extends AbstractModel {
         if (source.AllDeadToAlive != null) {
             this.AllDeadToAlive = new Boolean(source.AllDeadToAlive);
         }
+        if (source.Tags != null) {
+            this.Tags = new TagInfo[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new TagInfo(source.Tags[i]);
+            }
+        }
+        if (source.ForwardingMode != null) {
+            this.ForwardingMode = new String(source.ForwardingMode);
+        }
+        if (source.RescheduleUnbindRs != null) {
+            this.RescheduleUnbindRs = new Boolean(source.RescheduleUnbindRs);
+        }
+        if (source.RescheduleUnbindRsStartTime != null) {
+            this.RescheduleUnbindRsStartTime = new Long(source.RescheduleUnbindRsStartTime);
+        }
+        if (source.RescheduleUnhealthy != null) {
+            this.RescheduleUnhealthy = new Boolean(source.RescheduleUnhealthy);
+        }
+        if (source.RescheduleUnhealthyStartTime != null) {
+            this.RescheduleUnhealthyStartTime = new Long(source.RescheduleUnhealthyStartTime);
+        }
     }
 
 
@@ -277,6 +456,12 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         this.setParamSimple(map, prefix + "ScheduleAlgorithm", this.ScheduleAlgorithm);
         this.setParamSimple(map, prefix + "AllDeadToAlive", this.AllDeadToAlive);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "ForwardingMode", this.ForwardingMode);
+        this.setParamSimple(map, prefix + "RescheduleUnbindRs", this.RescheduleUnbindRs);
+        this.setParamSimple(map, prefix + "RescheduleUnbindRsStartTime", this.RescheduleUnbindRsStartTime);
+        this.setParamSimple(map, prefix + "RescheduleUnhealthy", this.RescheduleUnhealthy);
+        this.setParamSimple(map, prefix + "RescheduleUnhealthyStartTime", this.RescheduleUnhealthyStartTime);
 
     }
 }

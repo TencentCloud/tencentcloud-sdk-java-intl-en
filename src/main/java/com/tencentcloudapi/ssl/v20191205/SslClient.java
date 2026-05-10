@@ -83,6 +83,28 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *Submit certificate information for payment
+     * @param req CertificateInfoSubmitRequest
+     * @return CertificateInfoSubmitResponse
+     * @throws TencentCloudSDKException
+     */
+    public CertificateInfoSubmitResponse CertificateInfoSubmit(CertificateInfoSubmitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CertificateInfoSubmit", CertificateInfoSubmitResponse.class);
+    }
+
+    /**
+     *Submit a certificate order
+     * @param req CertificateOrderSubmitRequest
+     * @return CertificateOrderSubmitResponse
+     * @throws TencentCloudSDKException
+     */
+    public CertificateOrderSubmitResponse CertificateOrderSubmit(CertificateOrderSubmitRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CertificateOrderSubmit", CertificateOrderSubmitResponse.class);
+    }
+
+    /**
      *Submit payment certificate orders; This API does not maintain new features, and you can use the new API to submit orders. [CertificateOrderSubmit](https://intl.cloud.tencent.com/document/product/400/116032?from_cn_redirect=1).
      * @param req CommitCertificateInformationRequest
      * @return CommitCertificateInformationResponse

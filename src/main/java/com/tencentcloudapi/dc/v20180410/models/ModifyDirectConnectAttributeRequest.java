@@ -101,6 +101,13 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel {
     private String FaultReportContactNumber;
 
     /**
+    * Fault reporting contact email
+    */
+    @SerializedName("FaultReportContactEmail")
+    @Expose
+    private String FaultReportContactEmail;
+
+    /**
     * Whether the connection applicant has signed the service agreement.
     */
     @SerializedName("SignLaw")
@@ -108,7 +115,7 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel {
     private Boolean SignLaw;
 
     /**
-    * Connection’s bandwidth
+    * Connection's bandwidth
     */
     @SerializedName("Bandwidth")
     @Expose
@@ -291,6 +298,22 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel {
     }
 
     /**
+     * Get Fault reporting contact email 
+     * @return FaultReportContactEmail Fault reporting contact email
+     */
+    public String getFaultReportContactEmail() {
+        return this.FaultReportContactEmail;
+    }
+
+    /**
+     * Set Fault reporting contact email
+     * @param FaultReportContactEmail Fault reporting contact email
+     */
+    public void setFaultReportContactEmail(String FaultReportContactEmail) {
+        this.FaultReportContactEmail = FaultReportContactEmail;
+    }
+
+    /**
      * Get Whether the connection applicant has signed the service agreement. 
      * @return SignLaw Whether the connection applicant has signed the service agreement.
      */
@@ -307,16 +330,16 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get Connection’s bandwidth 
-     * @return Bandwidth Connection’s bandwidth
+     * Get Connection's bandwidth 
+     * @return Bandwidth Connection's bandwidth
      */
     public Long getBandwidth() {
         return this.Bandwidth;
     }
 
     /**
-     * Set Connection’s bandwidth
-     * @param Bandwidth Connection’s bandwidth
+     * Set Connection's bandwidth
+     * @param Bandwidth Connection's bandwidth
      */
     public void setBandwidth(Long Bandwidth) {
         this.Bandwidth = Bandwidth;
@@ -363,6 +386,9 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel {
         if (source.FaultReportContactNumber != null) {
             this.FaultReportContactNumber = new String(source.FaultReportContactNumber);
         }
+        if (source.FaultReportContactEmail != null) {
+            this.FaultReportContactEmail = new String(source.FaultReportContactEmail);
+        }
         if (source.SignLaw != null) {
             this.SignLaw = new Boolean(source.SignLaw);
         }
@@ -387,6 +413,7 @@ public class ModifyDirectConnectAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "CustomerContactNumber", this.CustomerContactNumber);
         this.setParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+        this.setParamSimple(map, prefix + "FaultReportContactEmail", this.FaultReportContactEmail);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
 

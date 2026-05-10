@@ -271,6 +271,18 @@ Callable roles: Customer.
     }
 
     /**
+     *Description: The current API is used to query usage details of customer's own voucher by the customer self.
+Call role: End customer.
+     * @param req DescribeCustomerOwnVoucherUsageDetailsRequest
+     * @return DescribeCustomerOwnVoucherUsageDetailsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerOwnVoucherUsageDetailsResponse DescribeCustomerOwnVoucherUsageDetails(DescribeCustomerOwnVoucherUsageDetailsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomerOwnVoucherUsageDetails", DescribeCustomerOwnVoucherUsageDetailsResponse.class);
+    }
+
+    /**
      *This API is used to query the list of customer UINs.
      * @param req DescribeCustomerUinRequest
      * @return DescribeCustomerUinResponse

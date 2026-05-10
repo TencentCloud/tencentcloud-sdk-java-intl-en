@@ -78,6 +78,17 @@ public class HunyuanClient extends AbstractClient{
     }
 
     /**
+     *3D Model Auto Rigging API, powered by the Hunyuan Large Model, processes input 3D models of characters or animals to perform automatic rigging and skinning, outputting a 3D model complete with skeletal data. By default, one concurrent slot is provided, meaning that a maximum of one submitted task can be processed simultaneously; the next task can only begin processing once the previous one has been completed.
+     * @param req DescribeAutoRiggingJobRequest
+     * @return DescribeAutoRiggingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAutoRiggingJobResponse DescribeAutoRiggingJob(DescribeAutoRiggingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAutoRiggingJob", DescribeAutoRiggingJobResponse.class);
+    }
+
+    /**
      *According to Convert3DFormatJob, querying the specific results of the model format conversion typically requires the unique JobID corresponding to that task.
      * @param req DescribeConvert3DFormatJobRequest
      * @return DescribeConvert3DFormatJobResponse
@@ -155,6 +166,17 @@ This API is used to provide 1 concurrent task by default, which means only 1 sub
     public Submit3DSmartTopologyJobResponse Submit3DSmartTopologyJob(Submit3DSmartTopologyJobRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "Submit3DSmartTopologyJob", Submit3DSmartTopologyJobResponse.class);
+    }
+
+    /**
+     *3D Model Auto Rigging API, powered by the HY Large Model, processes input 3D models of characters or animals to perform automatic rigging and skinning, outputting a 3D model complete with skeletal data. By default, one concurrent slot is provided, meaning that a maximum of one submitted task can be processed simultaneously; the next task can only begin processing once the previous one has been completed.
+     * @param req SubmitAutoRiggingJobRequest
+     * @return SubmitAutoRiggingJobResponse
+     * @throws TencentCloudSDKException
+     */
+    public SubmitAutoRiggingJobResponse SubmitAutoRiggingJob(SubmitAutoRiggingJobRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SubmitAutoRiggingJob", SubmitAutoRiggingJobResponse.class);
     }
 
     /**

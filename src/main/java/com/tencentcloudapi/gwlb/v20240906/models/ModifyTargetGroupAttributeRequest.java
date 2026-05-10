@@ -52,6 +52,34 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
     private Boolean AllDeadToAlive;
 
     /**
+    * 
+    */
+    @SerializedName("RescheduleUnbindRs")
+    @Expose
+    private Boolean RescheduleUnbindRs;
+
+    /**
+    * 
+    */
+    @SerializedName("RescheduleUnbindRsStartTime")
+    @Expose
+    private Long RescheduleUnbindRsStartTime;
+
+    /**
+    * 
+    */
+    @SerializedName("RescheduleUnhealthy")
+    @Expose
+    private Boolean RescheduleUnhealthy;
+
+    /**
+    * 
+    */
+    @SerializedName("RescheduleUnhealthyStartTime")
+    @Expose
+    private Long RescheduleUnhealthyStartTime;
+
+    /**
      * Get Target group ID. 
      * @return TargetGroupId Target group ID.
      */
@@ -115,6 +143,70 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
         this.AllDeadToAlive = AllDeadToAlive;
     }
 
+    /**
+     * Get  
+     * @return RescheduleUnbindRs 
+     */
+    public Boolean getRescheduleUnbindRs() {
+        return this.RescheduleUnbindRs;
+    }
+
+    /**
+     * Set 
+     * @param RescheduleUnbindRs 
+     */
+    public void setRescheduleUnbindRs(Boolean RescheduleUnbindRs) {
+        this.RescheduleUnbindRs = RescheduleUnbindRs;
+    }
+
+    /**
+     * Get  
+     * @return RescheduleUnbindRsStartTime 
+     */
+    public Long getRescheduleUnbindRsStartTime() {
+        return this.RescheduleUnbindRsStartTime;
+    }
+
+    /**
+     * Set 
+     * @param RescheduleUnbindRsStartTime 
+     */
+    public void setRescheduleUnbindRsStartTime(Long RescheduleUnbindRsStartTime) {
+        this.RescheduleUnbindRsStartTime = RescheduleUnbindRsStartTime;
+    }
+
+    /**
+     * Get  
+     * @return RescheduleUnhealthy 
+     */
+    public Boolean getRescheduleUnhealthy() {
+        return this.RescheduleUnhealthy;
+    }
+
+    /**
+     * Set 
+     * @param RescheduleUnhealthy 
+     */
+    public void setRescheduleUnhealthy(Boolean RescheduleUnhealthy) {
+        this.RescheduleUnhealthy = RescheduleUnhealthy;
+    }
+
+    /**
+     * Get  
+     * @return RescheduleUnhealthyStartTime 
+     */
+    public Long getRescheduleUnhealthyStartTime() {
+        return this.RescheduleUnhealthyStartTime;
+    }
+
+    /**
+     * Set 
+     * @param RescheduleUnhealthyStartTime 
+     */
+    public void setRescheduleUnhealthyStartTime(Long RescheduleUnhealthyStartTime) {
+        this.RescheduleUnhealthyStartTime = RescheduleUnhealthyStartTime;
+    }
+
     public ModifyTargetGroupAttributeRequest() {
     }
 
@@ -135,6 +227,18 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
         if (source.AllDeadToAlive != null) {
             this.AllDeadToAlive = new Boolean(source.AllDeadToAlive);
         }
+        if (source.RescheduleUnbindRs != null) {
+            this.RescheduleUnbindRs = new Boolean(source.RescheduleUnbindRs);
+        }
+        if (source.RescheduleUnbindRsStartTime != null) {
+            this.RescheduleUnbindRsStartTime = new Long(source.RescheduleUnbindRsStartTime);
+        }
+        if (source.RescheduleUnhealthy != null) {
+            this.RescheduleUnhealthy = new Boolean(source.RescheduleUnhealthy);
+        }
+        if (source.RescheduleUnhealthyStartTime != null) {
+            this.RescheduleUnhealthyStartTime = new Long(source.RescheduleUnhealthyStartTime);
+        }
     }
 
 
@@ -146,6 +250,10 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "TargetGroupName", this.TargetGroupName);
         this.setParamObj(map, prefix + "HealthCheck.", this.HealthCheck);
         this.setParamSimple(map, prefix + "AllDeadToAlive", this.AllDeadToAlive);
+        this.setParamSimple(map, prefix + "RescheduleUnbindRs", this.RescheduleUnbindRs);
+        this.setParamSimple(map, prefix + "RescheduleUnbindRsStartTime", this.RescheduleUnbindRsStartTime);
+        this.setParamSimple(map, prefix + "RescheduleUnhealthy", this.RescheduleUnhealthy);
+        this.setParamSimple(map, prefix + "RescheduleUnhealthyStartTime", this.RescheduleUnhealthyStartTime);
 
     }
 }

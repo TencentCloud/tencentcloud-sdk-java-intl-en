@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApplyFreeCertificateRequest extends AbstractModel {
 
     /**
-    * Site ID.
+    * Site ID
     */
     @SerializedName("ZoneId")
     @Expose
@@ -49,16 +49,16 @@ Note: after triggering this api, you need to complete the verification content c
     private String VerificationMethod;
 
     /**
-     * Get Site ID. 
-     * @return ZoneId Site ID.
+     * Get Site ID 
+     * @return ZoneId Site ID
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Site ID.
-     * @param ZoneId Site ID.
+     * Set Site ID
+     * @param ZoneId Site ID
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;

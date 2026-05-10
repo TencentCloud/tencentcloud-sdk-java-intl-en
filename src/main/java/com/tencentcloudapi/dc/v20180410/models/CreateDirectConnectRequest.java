@@ -137,11 +137,32 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     private String FaultReportContactNumber;
 
     /**
+    * 
+    */
+    @SerializedName("FaultReportContactEmail")
+    @Expose
+    private String FaultReportContactEmail;
+
+    /**
     * Whether the connection applicant has signed the service agreement. Default value: true.
     */
     @SerializedName("SignLaw")
     @Expose
     private Boolean SignLaw;
+
+    /**
+    * Tag key-value pair
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * Is MACsec required
+    */
+    @SerializedName("IsMacSec")
+    @Expose
+    private Boolean IsMacSec;
 
     /**
      * Get Connection name. 
@@ -404,6 +425,22 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
     }
 
     /**
+     * Get  
+     * @return FaultReportContactEmail 
+     */
+    public String getFaultReportContactEmail() {
+        return this.FaultReportContactEmail;
+    }
+
+    /**
+     * Set 
+     * @param FaultReportContactEmail 
+     */
+    public void setFaultReportContactEmail(String FaultReportContactEmail) {
+        this.FaultReportContactEmail = FaultReportContactEmail;
+    }
+
+    /**
      * Get Whether the connection applicant has signed the service agreement. Default value: true. 
      * @return SignLaw Whether the connection applicant has signed the service agreement. Default value: true.
      */
@@ -417,6 +454,38 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
      */
     public void setSignLaw(Boolean SignLaw) {
         this.SignLaw = SignLaw;
+    }
+
+    /**
+     * Get Tag key-value pair 
+     * @return Tags Tag key-value pair
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Tag key-value pair
+     * @param Tags Tag key-value pair
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get Is MACsec required 
+     * @return IsMacSec Is MACsec required
+     */
+    public Boolean getIsMacSec() {
+        return this.IsMacSec;
+    }
+
+    /**
+     * Set Is MACsec required
+     * @param IsMacSec Is MACsec required
+     */
+    public void setIsMacSec(Boolean IsMacSec) {
+        this.IsMacSec = IsMacSec;
     }
 
     public CreateDirectConnectRequest() {
@@ -475,8 +544,20 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
         if (source.FaultReportContactNumber != null) {
             this.FaultReportContactNumber = new String(source.FaultReportContactNumber);
         }
+        if (source.FaultReportContactEmail != null) {
+            this.FaultReportContactEmail = new String(source.FaultReportContactEmail);
+        }
         if (source.SignLaw != null) {
             this.SignLaw = new Boolean(source.SignLaw);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.IsMacSec != null) {
+            this.IsMacSec = new Boolean(source.IsMacSec);
         }
     }
 
@@ -501,7 +582,10 @@ You can call `DescribeAccessPoints` to get the region ID. The selected access po
         this.setParamSimple(map, prefix + "CustomerContactNumber", this.CustomerContactNumber);
         this.setParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
         this.setParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
+        this.setParamSimple(map, prefix + "FaultReportContactEmail", this.FaultReportContactEmail);
         this.setParamSimple(map, prefix + "SignLaw", this.SignLaw);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "IsMacSec", this.IsMacSec);
 
     }
 }

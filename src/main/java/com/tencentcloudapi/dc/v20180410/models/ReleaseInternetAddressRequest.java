@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ReleaseInternetAddressRequest extends AbstractModel {
 
     /**
-    * ID of the internet tunnel’s public IP address
+    * ID of the internet tunnel's public IP address
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get ID of the internet tunnel’s public IP address 
-     * @return InstanceId ID of the internet tunnel’s public IP address
+     * Get ID of the internet tunnel's public IP address 
+     * @return InstanceId ID of the internet tunnel's public IP address
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the internet tunnel’s public IP address
-     * @param InstanceId ID of the internet tunnel’s public IP address
+     * Set ID of the internet tunnel's public IP address
+     * @param InstanceId ID of the internet tunnel's public IP address
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

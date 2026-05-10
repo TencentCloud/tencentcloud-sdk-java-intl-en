@@ -24,8 +24,14 @@ public enum GwlbErrorCode {
      /* The same value exists. */
      INVALIDPARAMETERVALUE_DUPLICATE("InvalidParameterValue.Duplicate"),
      
+     /*  */
+     INVALIDPARAMETERVALUE_INVALIDFILTER("InvalidParameterValue.InvalidFilter"),
+     
      /* InvalidParameterValue.Length */
      INVALIDPARAMETERVALUE_LENGTH("InvalidParameterValue.Length"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_RANGE("InvalidParameterValue.Range"),
      
      /* The quota limit is exceeded. */
      LIMITEXCEEDED("LimitExceeded"),
