@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class SceneAigcImageTaskOutput extends AbstractModel {
 
     /**
-    * File information of the out image for the AIGC image generation task.
+    * Output file information of the AIGC image generation task.
     */
     @SerializedName("FileInfos")
     @Expose
     private SceneAigcImageTaskOutputFileInfo [] FileInfos;
 
     /**
-     * Get File information of the out image for the AIGC image generation task. 
-     * @return FileInfos File information of the out image for the AIGC image generation task.
+     * Get Output file information of the AIGC image generation task. 
+     * @return FileInfos Output file information of the AIGC image generation task.
      */
     public SceneAigcImageTaskOutputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set File information of the out image for the AIGC image generation task.
-     * @param FileInfos File information of the out image for the AIGC image generation task.
+     * Set Output file information of the AIGC image generation task.
+     * @param FileInfos Output file information of the AIGC image generation task.
      */
     public void setFileInfos(SceneAigcImageTaskOutputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;

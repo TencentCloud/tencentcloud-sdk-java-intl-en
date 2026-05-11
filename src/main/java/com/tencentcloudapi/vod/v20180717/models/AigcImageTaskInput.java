@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class AigcImageTaskInput extends AbstractModel {
 
     /**
-    * Model name. 
+    * Model name.
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * Model version. 
+    * Model version.
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * File information of the input image for the AIGC image generation task.
+    * Input file of the AIGC image generation task.
     */
     @SerializedName("FileInfos")
     @Expose
     private AigcImageTaskInputFileInfo [] FileInfos;
 
     /**
-    * The prompt content for image generation.
+    * Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * Prevent the model from generating image generation prompts.
+    * To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
     */
     @SerializedName("NegativePrompt")
     @Expose
     private String NegativePrompt;
 
     /**
-    * Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
+    * Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
     */
     @SerializedName("EnhancePrompt")
     @Expose
     private String EnhancePrompt;
 
     /**
-    * Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+    * Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
     */
     @SerializedName("GenerationMode")
     @Expose
     private String GenerationMode;
 
     /**
-    * Output media file configuration for the task.
+    * Output the result file of the AIGC image generation.
     */
     @SerializedName("OutputConfig")
     @Expose
     private AigcImageOutputConfig OutputConfig;
 
     /**
-     * Get Model name.  
-     * @return ModelName Model name. 
+     * Get Model name. 
+     * @return ModelName Model name.
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set Model name. 
-     * @param ModelName Model name. 
+     * Set Model name.
+     * @param ModelName Model name.
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get Model version.  
-     * @return ModelVersion Model version. 
+     * Get Model version. 
+     * @return ModelVersion Model version.
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set Model version. 
-     * @param ModelVersion Model version. 
+     * Set Model version.
+     * @param ModelVersion Model version.
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get File information of the input image for the AIGC image generation task. 
-     * @return FileInfos File information of the input image for the AIGC image generation task.
+     * Get Input file of the AIGC image generation task. 
+     * @return FileInfos Input file of the AIGC image generation task.
      */
     public AigcImageTaskInputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set File information of the input image for the AIGC image generation task.
-     * @param FileInfos File information of the input image for the AIGC image generation task.
+     * Set Input file of the AIGC image generation task.
+     * @param FileInfos Input file of the AIGC image generation task.
      */
     public void setFileInfos(AigcImageTaskInputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get The prompt content for image generation. 
-     * @return Prompt The prompt content for image generation.
+     * Get Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty. 
+     * @return Prompt Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set The prompt content for image generation.
-     * @param Prompt The prompt content for image generation.
+     * Set Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
+     * @param Prompt Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get Prevent the model from generating image generation prompts. 
-     * @return NegativePrompt Prevent the model from generating image generation prompts.
+     * Get To prevent the model from generating image prompts. Supports a maximum of 1000 characters. 
+     * @return NegativePrompt To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set Prevent the model from generating image generation prompts.
-     * @param NegativePrompt Prevent the model from generating image generation prompts.
+     * Set To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
+     * @param NegativePrompt To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
     }
 
     /**
-     * Get Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li> 
-     * @return EnhancePrompt Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
+     * Get Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+     * @return EnhancePrompt Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
      */
     public String getEnhancePrompt() {
         return this.EnhancePrompt;
     }
 
     /**
-     * Set Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
-     * @param EnhancePrompt Whether to optimize Prompt content automatically. when Enabled, it will optimize the passed in Prompt automatically to enhance generation quality. valid values: <li>Enabled: turn on;</li> <li>Disabled: turn off;</li>
+     * Set Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
+     * @param EnhancePrompt Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
      */
     public void setEnhancePrompt(String EnhancePrompt) {
         this.EnhancePrompt = EnhancePrompt;
     }
 
     /**
-     * Get Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li> 
-     * @return GenerationMode Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+     * Get Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li> 
+     * @return GenerationMode Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
      */
     public String getGenerationMode() {
         return this.GenerationMode;
     }
 
     /**
-     * Set Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
-     * @param GenerationMode Generation mode. Available values: <li>Standard: Standard mode;</li> <li>Professional: High-quality mode;</li>
+     * Set Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
+     * @param GenerationMode Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
      */
     public void setGenerationMode(String GenerationMode) {
         this.GenerationMode = GenerationMode;
     }
 
     /**
-     * Get Output media file configuration for the task. 
-     * @return OutputConfig Output media file configuration for the task.
+     * Get Output the result file of the AIGC image generation. 
+     * @return OutputConfig Output the result file of the AIGC image generation.
      */
     public AigcImageOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set Output media file configuration for the task.
-     * @param OutputConfig Output media file configuration for the task.
+     * Set Output the result file of the AIGC image generation.
+     * @param OutputConfig Output the result file of the AIGC image generation.
      */
     public void setOutputConfig(AigcImageOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

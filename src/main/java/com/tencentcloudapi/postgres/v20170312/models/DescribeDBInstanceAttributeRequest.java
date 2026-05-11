@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeDBInstanceAttributeRequest extends AbstractModel {
 
     /**
-    * Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+    * Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-     * Get Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). 
-     * @return DBInstanceId Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * Get Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
-     * @param DBInstanceId Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * Set Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Instance ID. can be obtained through the DescribeDBInstances api (https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;

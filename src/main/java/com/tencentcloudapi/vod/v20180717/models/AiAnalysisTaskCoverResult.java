@@ -59,8 +59,7 @@ public class AiAnalysisTaskCoverResult extends AbstractModel {
     private AiAnalysisTaskCoverInput Input;
 
     /**
-    * Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Intelligent Cover Task output.
     */
     @SerializedName("Output")
     @Expose
@@ -168,20 +167,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent Cover Task output. 
+     * @return Output Intelligent Cover Task output.
      */
     public AiAnalysisTaskCoverOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent Cover Task output.
+     * @param Output Intelligent Cover Task output.
      */
     public void setOutput(AiAnalysisTaskCoverOutput Output) {
         this.Output = Output;

@@ -31,7 +31,16 @@ public class ProcessMediaRequest extends AbstractModel {
     private String FileId;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+    */
+    @SerializedName("MediaStoragePath")
+    @Expose
+    private String MediaStoragePath;
+
+    /**
+    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -102,6 +111,13 @@ This parameter is <font color=red>\*no longer recommended</font>. Please use [Re
     private String ExtInfo;
 
     /**
+    * 
+    */
+    @SerializedName("Url")
+    @Expose
+    private String Url;
+
+    /**
      * Get Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media). 
      * @return FileId Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
      */
@@ -118,16 +134,40 @@ This parameter is <font color=red>\*no longer recommended</font>. Please use [Re
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided. 
+     * @return MediaStoragePath Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+     */
+    public String getMediaStoragePath() {
+        return this.MediaStoragePath;
+    }
+
+    /**
+     * Set Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+     * @param MediaStoragePath Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+     */
+    public void setMediaStoragePath(String MediaStoragePath) {
+        this.MediaStoragePath = MediaStoragePath;
+    }
+
+    /**
+     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -281,6 +321,22 @@ This parameter is <font color=red>\*no longer recommended</font>. Please use [Re
         this.ExtInfo = ExtInfo;
     }
 
+    /**
+     * Get  
+     * @return Url 
+     */
+    public String getUrl() {
+        return this.Url;
+    }
+
+    /**
+     * Set 
+     * @param Url 
+     */
+    public void setUrl(String Url) {
+        this.Url = Url;
+    }
+
     public ProcessMediaRequest() {
     }
 
@@ -291,6 +347,9 @@ This parameter is <font color=red>\*no longer recommended</font>. Please use [Re
     public ProcessMediaRequest(ProcessMediaRequest source) {
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
+        }
+        if (source.MediaStoragePath != null) {
+            this.MediaStoragePath = new String(source.MediaStoragePath);
         }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
@@ -322,6 +381,9 @@ This parameter is <font color=red>\*no longer recommended</font>. Please use [Re
         if (source.ExtInfo != null) {
             this.ExtInfo = new String(source.ExtInfo);
         }
+        if (source.Url != null) {
+            this.Url = new String(source.Url);
+        }
     }
 
 
@@ -330,6 +392,7 @@ This parameter is <font color=red>\*no longer recommended</font>. Please use [Re
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
@@ -340,6 +403,7 @@ This parameter is <font color=red>\*no longer recommended</font>. Please use [Re
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
+        this.setParamSimple(map, prefix + "Url", this.Url);
 
     }
 }

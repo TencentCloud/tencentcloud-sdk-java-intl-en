@@ -59,8 +59,7 @@ public class AiAnalysisTaskClassificationResult extends AbstractModel {
     private AiAnalysisTaskClassificationInput Input;
 
     /**
-    * Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Intelligent classification task output.
     */
     @SerializedName("Output")
     @Expose
@@ -168,20 +167,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent classification task output. 
+     * @return Output Intelligent classification task output.
      */
     public AiAnalysisTaskClassificationOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent classification task output.
+     * @param Output Intelligent classification task output.
      */
     public void setOutput(AiAnalysisTaskClassificationOutput Output) {
         this.Output = Output;

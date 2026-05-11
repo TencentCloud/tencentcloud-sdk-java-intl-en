@@ -24,92 +24,177 @@ import java.util.HashMap;
 public class QualityInspectResultItem extends AbstractModel {
 
     /**
-    * Abnormal type, range: <li>Jitter: Jitter;</li> <li>Blur: Blur;</li> <li>LowLighting: Low lighting;</li> <li>HighLighting: Overexposure;</li> <li>CrashScreen: Crash screen;</li> <li>BlackWhiteEdge: Black and white edges;</li> <li>SolidColorScreen: Solid color screen;</li> <li>Noise: Noise;</li> <li>Mosaic: Mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Applet code;</li> <li>BarCode: Bar code;</li> <li>LowVoice: Low voice;</li> <li>HighVoice: High voice;</li> <li>NoVoice: mutes;</li> <li>LowEvaluation: No reference scoring below the threshold.</li>
+    * Exception type. Valid values:
+<li>Jitter: jitter.</li>
+<li>Blur: blurry;</li>
+<li>LowLighting: low light;</li>
+<li>HighLighting: overexposure.</li>
+<li>CrashScreen: screen glitch;</li>
+<li>BlackWhiteEdge: black and white edges.</li>
+<li>SolidColorScreen: solid color screen.</li>
+<li>Noise: noise.</li>
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode;</li>
+<li>LowVoice: bass;</li>
+<li>HighVoice: high voice;</li>
+<li>NoVoice: mute;</li>
+<li>LowEvaluation: no-reference scoring below threshold.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Abnormal segment List. <font color=red>Pay attention to:</font> This list will only show the first 100 elements at most. If you wish to get the complete result, please get it from the file corresponding to SegmentSetFileUrl.
+    * Abnormal fragment list.
+<font color=red>Note:</font> The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
     */
     @SerializedName("SegmentSet")
     @Expose
     private QualityInspectItem [] SegmentSet;
 
     /**
-    * Abnormal segment List file URL. The file content is JSON, and the data structure is consistent with the SegmentSet Field. (The file will not be permanently stored, and will be deleted after reaching the SegmentSetFileUrlExpireTime Time point).
+    * URL of Abnormal Fragment List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
     */
     @SerializedName("SegmentSetFileUrl")
     @Expose
     private String SegmentSetFileUrl;
 
     /**
-    * Abnormal segment List file URL expiration time, using [ISO date supported](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+    * Expiration time of the Segment List File URL for anomalies, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("SegmentSetFileUrlExpireTime")
     @Expose
     private String SegmentSetFileUrlExpireTime;
 
     /**
-     * Get Abnormal type, range: <li>Jitter: Jitter;</li> <li>Blur: Blur;</li> <li>LowLighting: Low lighting;</li> <li>HighLighting: Overexposure;</li> <li>CrashScreen: Crash screen;</li> <li>BlackWhiteEdge: Black and white edges;</li> <li>SolidColorScreen: Solid color screen;</li> <li>Noise: Noise;</li> <li>Mosaic: Mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Applet code;</li> <li>BarCode: Bar code;</li> <li>LowVoice: Low voice;</li> <li>HighVoice: High voice;</li> <li>NoVoice: mutes;</li> <li>LowEvaluation: No reference scoring below the threshold.</li> 
-     * @return Type Abnormal type, range: <li>Jitter: Jitter;</li> <li>Blur: Blur;</li> <li>LowLighting: Low lighting;</li> <li>HighLighting: Overexposure;</li> <li>CrashScreen: Crash screen;</li> <li>BlackWhiteEdge: Black and white edges;</li> <li>SolidColorScreen: Solid color screen;</li> <li>Noise: Noise;</li> <li>Mosaic: Mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Applet code;</li> <li>BarCode: Bar code;</li> <li>LowVoice: Low voice;</li> <li>HighVoice: High voice;</li> <li>NoVoice: mutes;</li> <li>LowEvaluation: No reference scoring below the threshold.</li>
+     * Get Exception type. Valid values:
+<li>Jitter: jitter.</li>
+<li>Blur: blurry;</li>
+<li>LowLighting: low light;</li>
+<li>HighLighting: overexposure.</li>
+<li>CrashScreen: screen glitch;</li>
+<li>BlackWhiteEdge: black and white edges.</li>
+<li>SolidColorScreen: solid color screen.</li>
+<li>Noise: noise.</li>
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode;</li>
+<li>LowVoice: bass;</li>
+<li>HighVoice: high voice;</li>
+<li>NoVoice: mute;</li>
+<li>LowEvaluation: no-reference scoring below threshold.</li> 
+     * @return Type Exception type. Valid values:
+<li>Jitter: jitter.</li>
+<li>Blur: blurry;</li>
+<li>LowLighting: low light;</li>
+<li>HighLighting: overexposure.</li>
+<li>CrashScreen: screen glitch;</li>
+<li>BlackWhiteEdge: black and white edges.</li>
+<li>SolidColorScreen: solid color screen.</li>
+<li>Noise: noise.</li>
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode;</li>
+<li>LowVoice: bass;</li>
+<li>HighVoice: high voice;</li>
+<li>NoVoice: mute;</li>
+<li>LowEvaluation: no-reference scoring below threshold.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Abnormal type, range: <li>Jitter: Jitter;</li> <li>Blur: Blur;</li> <li>LowLighting: Low lighting;</li> <li>HighLighting: Overexposure;</li> <li>CrashScreen: Crash screen;</li> <li>BlackWhiteEdge: Black and white edges;</li> <li>SolidColorScreen: Solid color screen;</li> <li>Noise: Noise;</li> <li>Mosaic: Mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Applet code;</li> <li>BarCode: Bar code;</li> <li>LowVoice: Low voice;</li> <li>HighVoice: High voice;</li> <li>NoVoice: mutes;</li> <li>LowEvaluation: No reference scoring below the threshold.</li>
-     * @param Type Abnormal type, range: <li>Jitter: Jitter;</li> <li>Blur: Blur;</li> <li>LowLighting: Low lighting;</li> <li>HighLighting: Overexposure;</li> <li>CrashScreen: Crash screen;</li> <li>BlackWhiteEdge: Black and white edges;</li> <li>SolidColorScreen: Solid color screen;</li> <li>Noise: Noise;</li> <li>Mosaic: Mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Applet code;</li> <li>BarCode: Bar code;</li> <li>LowVoice: Low voice;</li> <li>HighVoice: High voice;</li> <li>NoVoice: mutes;</li> <li>LowEvaluation: No reference scoring below the threshold.</li>
+     * Set Exception type. Valid values:
+<li>Jitter: jitter.</li>
+<li>Blur: blurry;</li>
+<li>LowLighting: low light;</li>
+<li>HighLighting: overexposure.</li>
+<li>CrashScreen: screen glitch;</li>
+<li>BlackWhiteEdge: black and white edges.</li>
+<li>SolidColorScreen: solid color screen.</li>
+<li>Noise: noise.</li>
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode;</li>
+<li>LowVoice: bass;</li>
+<li>HighVoice: high voice;</li>
+<li>NoVoice: mute;</li>
+<li>LowEvaluation: no-reference scoring below threshold.</li>
+     * @param Type Exception type. Valid values:
+<li>Jitter: jitter.</li>
+<li>Blur: blurry;</li>
+<li>LowLighting: low light;</li>
+<li>HighLighting: overexposure.</li>
+<li>CrashScreen: screen glitch;</li>
+<li>BlackWhiteEdge: black and white edges.</li>
+<li>SolidColorScreen: solid color screen.</li>
+<li>Noise: noise.</li>
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode;</li>
+<li>LowVoice: bass;</li>
+<li>HighVoice: high voice;</li>
+<li>NoVoice: mute;</li>
+<li>LowEvaluation: no-reference scoring below threshold.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Abnormal segment List. <font color=red>Pay attention to:</font> This list will only show the first 100 elements at most. If you wish to get the complete result, please get it from the file corresponding to SegmentSetFileUrl. 
-     * @return SegmentSet Abnormal segment List. <font color=red>Pay attention to:</font> This list will only show the first 100 elements at most. If you wish to get the complete result, please get it from the file corresponding to SegmentSetFileUrl.
+     * Get Abnormal fragment list.
+<font color=red>Note:</font> The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl. 
+     * @return SegmentSet Abnormal fragment list.
+<font color=red>Note:</font> The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
      */
     public QualityInspectItem [] getSegmentSet() {
         return this.SegmentSet;
     }
 
     /**
-     * Set Abnormal segment List. <font color=red>Pay attention to:</font> This list will only show the first 100 elements at most. If you wish to get the complete result, please get it from the file corresponding to SegmentSetFileUrl.
-     * @param SegmentSet Abnormal segment List. <font color=red>Pay attention to:</font> This list will only show the first 100 elements at most. If you wish to get the complete result, please get it from the file corresponding to SegmentSetFileUrl.
+     * Set Abnormal fragment list.
+<font color=red>Note:</font> The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+     * @param SegmentSet Abnormal fragment list.
+<font color=red>Note:</font> The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
      */
     public void setSegmentSet(QualityInspectItem [] SegmentSet) {
         this.SegmentSet = SegmentSet;
     }
 
     /**
-     * Get Abnormal segment List file URL. The file content is JSON, and the data structure is consistent with the SegmentSet Field. (The file will not be permanently stored, and will be deleted after reaching the SegmentSetFileUrlExpireTime Time point). 
-     * @return SegmentSetFileUrl Abnormal segment List file URL. The file content is JSON, and the data structure is consistent with the SegmentSet Field. (The file will not be permanently stored, and will be deleted after reaching the SegmentSetFileUrlExpireTime Time point).
+     * Get URL of Abnormal Fragment List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.) 
+     * @return SegmentSetFileUrl URL of Abnormal Fragment List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
      */
     public String getSegmentSetFileUrl() {
         return this.SegmentSetFileUrl;
     }
 
     /**
-     * Set Abnormal segment List file URL. The file content is JSON, and the data structure is consistent with the SegmentSet Field. (The file will not be permanently stored, and will be deleted after reaching the SegmentSetFileUrlExpireTime Time point).
-     * @param SegmentSetFileUrl Abnormal segment List file URL. The file content is JSON, and the data structure is consistent with the SegmentSet Field. (The file will not be permanently stored, and will be deleted after reaching the SegmentSetFileUrlExpireTime Time point).
+     * Set URL of Abnormal Fragment List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+     * @param SegmentSetFileUrl URL of Abnormal Fragment List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
      */
     public void setSegmentSetFileUrl(String SegmentSetFileUrl) {
         this.SegmentSetFileUrl = SegmentSetFileUrl;
     }
 
     /**
-     * Get Abnormal segment List file URL expiration time, using [ISO date supported](https://www.tencentcloud.com/document/product/266/11732#iso-date-format). 
-     * @return SegmentSetFileUrlExpireTime Abnormal segment List file URL expiration time, using [ISO date supported](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Get Expiration time of the Segment List File URL for anomalies, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return SegmentSetFileUrlExpireTime Expiration time of the Segment List File URL for anomalies, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getSegmentSetFileUrlExpireTime() {
         return this.SegmentSetFileUrlExpireTime;
     }
 
     /**
-     * Set Abnormal segment List file URL expiration time, using [ISO date supported](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-     * @param SegmentSetFileUrlExpireTime Abnormal segment List file URL expiration time, using [ISO date supported](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+     * Set Expiration time of the Segment List File URL for anomalies, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param SegmentSetFileUrlExpireTime Expiration time of the Segment List File URL for anomalies, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setSegmentSetFileUrlExpireTime(String SegmentSetFileUrlExpireTime) {
         this.SegmentSetFileUrlExpireTime = SegmentSetFileUrlExpireTime;

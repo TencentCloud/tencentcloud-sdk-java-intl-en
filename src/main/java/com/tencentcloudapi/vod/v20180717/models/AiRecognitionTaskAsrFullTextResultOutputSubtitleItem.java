@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends AbstractModel {
 
     /**
-    * Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+    * Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+    * Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Subtitle Language.
+    * Subtitle language.
     */
     @SerializedName("Language")
     @Expose
@@ -63,56 +63,56 @@ public class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem extends Abstra
     private String Url;
 
     /**
-     * Get Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid. 
-     * @return Id Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+     * Get Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z. 
+     * @return Id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
-     * @param Id Media asset subtitle ID, used for media asset subtitle management, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+     * Set Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+     * @param Id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid. 
-     * @return Name Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+     * Get Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z. 
+     * @return Name Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
-     * @param Name Media asset subtitle name, used for player display, only valid when Format is vtt.
-<font color=red>Note:</font> Tasks before 2024-11-01T10:00:00Z return this field as invalid.
+     * Set Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
+     * @param Name Media Asset Subtitle Name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks before 2024-11-01T10:00:00Z.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Subtitle Language. 
-     * @return Language Subtitle Language.
+     * Get Subtitle language. 
+     * @return Language Subtitle language.
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set Subtitle Language.
-     * @param Language Subtitle Language.
+     * Set Subtitle language.
+     * @param Language Subtitle language.
      */
     public void setLanguage(String Language) {
         this.Language = Language;

@@ -53,6 +53,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private CopyRightWatermarkInput CopyRightWatermark;
 
     /**
+    * Digital watermark.
+    */
+    @SerializedName("BlindWatermark")
+    @Expose
+    private BlindWatermarkInput BlindWatermark;
+
+    /**
     * List of blurs. Up to 10 ones can be supported.
     */
     @SerializedName("MosaicSet")
@@ -152,6 +159,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setCopyRightWatermark(CopyRightWatermarkInput CopyRightWatermark) {
         this.CopyRightWatermark = CopyRightWatermark;
+    }
+
+    /**
+     * Get Digital watermark. 
+     * @return BlindWatermark Digital watermark.
+     */
+    public BlindWatermarkInput getBlindWatermark() {
+        return this.BlindWatermark;
+    }
+
+    /**
+     * Set Digital watermark.
+     * @param BlindWatermark Digital watermark.
+     */
+    public void setBlindWatermark(BlindWatermarkInput BlindWatermark) {
+        this.BlindWatermark = BlindWatermark;
     }
 
     /**
@@ -265,6 +288,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (source.CopyRightWatermark != null) {
             this.CopyRightWatermark = new CopyRightWatermarkInput(source.CopyRightWatermark);
         }
+        if (source.BlindWatermark != null) {
+            this.BlindWatermark = new BlindWatermarkInput(source.BlindWatermark);
+        }
         if (source.MosaicSet != null) {
             this.MosaicSet = new MosaicInput[source.MosaicSet.length];
             for (int i = 0; i < source.MosaicSet.length; i++) {
@@ -294,6 +320,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         this.setParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
         this.setParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
         this.setParamObj(map, prefix + "CopyRightWatermark.", this.CopyRightWatermark);
+        this.setParamObj(map, prefix + "BlindWatermark.", this.BlindWatermark);
         this.setParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
         this.setParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
         this.setParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);

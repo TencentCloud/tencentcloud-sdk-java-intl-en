@@ -24,139 +24,84 @@ import java.util.HashMap;
 public class SmartSubtitleTemplateItem extends AbstractModel {
 
     /**
-    * Unique identifier of the smart subtitle template.
+    * <p>Unique identifier of the smart subtitle template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Smart subtitle template name.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AsrHotWordsConfigure")
     @Expose
     private AsrHotWordsConfigure AsrHotWordsConfigure;
 
     /**
-    * Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AsrHotWordsLibraryName")
     @Expose
     private String AsrHotWordsLibraryName;
 
     /**
-    * List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
+    * <p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
     */
     @SerializedName("VideoSrcLanguage")
     @Expose
     private String VideoSrcLanguage;
 
     /**
-    * Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SubtitleFormat")
     @Expose
     private String SubtitleFormat;
 
     /**
-    * Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+    * <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
     */
     @SerializedName("SubtitleType")
     @Expose
     private Long SubtitleType;
 
     /**
-    * Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TranslateSwitch")
     @Expose
     private String TranslateSwitch;
 
     /**
-    * Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+    * <p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TranslateDstLanguage")
@@ -164,409 +109,255 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TranslateDstLanguage;
 
     /**
-    * Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+    * <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+    * <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AliasName")
     @Expose
     private String AliasName;
 
     /**
-    * Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+    * <p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
     */
     @SerializedName("ProcessType")
     @Expose
     private Long ProcessType;
 
     /**
-    * Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SelectingSubtitleAreasConfig")
     @Expose
     private SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig;
 
     /**
-     * Get Unique identifier of the smart subtitle template. 
-     * @return Definition Unique identifier of the smart subtitle template.
+    * <p>Subtitle burn-in template ID.</p>
+    */
+    @SerializedName("SubtitleEmbedId")
+    @Expose
+    private Long SubtitleEmbedId;
+
+    /**
+    * <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+    */
+    @SerializedName("SpeakerMode")
+    @Expose
+    private Long SpeakerMode;
+
+    /**
+    * <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+    */
+    @SerializedName("SpeakerLabel")
+    @Expose
+    private Long SpeakerLabel;
+
+    /**
+     * Get <p>Unique identifier of the smart subtitle template.</p> 
+     * @return Definition <p>Unique identifier of the smart subtitle template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique identifier of the smart subtitle template.
-     * @param Definition Unique identifier of the smart subtitle template.
+     * Set <p>Unique identifier of the smart subtitle template.</p>
+     * @param Definition <p>Unique identifier of the smart subtitle template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Name Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Smart subtitle template name.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Name <p>Smart subtitle template name.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Name Smart subtitle template name.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Smart subtitle template name.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Name <p>Smart subtitle template name.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Comment Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Comment <p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Comment Smart subtitle template description.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Comment <p>Smart subtitle template description.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Type Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Type <p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Type Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Type <p>Template type. Valid values:</p><ul><li>Preset: preset template.</li><li>Custom: custom template.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return AsrHotWordsConfigure ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AsrHotWordsConfigure <p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AsrHotWordsConfigure getAsrHotWordsConfigure() {
         return this.AsrHotWordsConfigure;
     }
 
     /**
-     * Set ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AsrHotWordsConfigure ASR hotword lexicon parameter.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AsrHotWordsConfigure <p>ASR hotword lexicon parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAsrHotWordsConfigure(AsrHotWordsConfigure AsrHotWordsConfigure) {
         this.AsrHotWordsConfigure = AsrHotWordsConfigure;
     }
 
     /**
-     * Get Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return AsrHotWordsLibraryName Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AsrHotWordsLibraryName <p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAsrHotWordsLibraryName() {
         return this.AsrHotWordsLibraryName;
     }
 
     /**
-     * Set Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AsrHotWordsLibraryName Name of the hotword lexicon associated with the template.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AsrHotWordsLibraryName <p>Name of the hotword lexicon associated with the template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAsrHotWordsLibraryName(String AsrHotWordsLibraryName) {
         this.AsrHotWordsLibraryName = AsrHotWordsLibraryName;
     }
 
     /**
-     * Get List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation). 
-     * @return VideoSrcLanguage List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
+     * Get <p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p> 
+     * @return VideoSrcLanguage <p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
      */
     public String getVideoSrcLanguage() {
         return this.VideoSrcLanguage;
     }
 
     /**
-     * Set List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
-     * @param VideoSrcLanguage List of source languages of the video with smart subtitles.
-`zh`: Simplified Chinese.
-`yue`: Cantonese.
-`zh-PY`: Chinese, English, and Cantonese.
-`zh_medical`: Chinese (medical scenario).
-`zh_dialect`: Chinese dialect.
-`prime_zh`: Chinese, English, and Chinese dialects.
-`zh_en`: Chinese and English.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-`auto`: automatic recognition (it is only supported in pure subtitle translation).
+     * Set <p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
+     * @param VideoSrcLanguage <p>Video source language list for smart subtitle:</p><p><code>zh</code>: Simplified Chinese<br><code>yue</code>: Cantonese<br><code>zh-PY</code>: Chinese, English, and Cantonese<br><code>zh_medical</code>: Chinese healthcare<br><code>zh_dialect</code>: Chinese dialect<br><code>prime_zh</code>: Chinese and English dialects<br><code>zh_en</code>: Chinese and English<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino<br><code>auto</code>: Automatic identification (only supported for subtitle translation)</p>
      */
     public void setVideoSrcLanguage(String VideoSrcLanguage) {
         this.VideoSrcLanguage = VideoSrcLanguage;
     }
 
     /**
-     * Get Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SubtitleFormat Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SubtitleFormat <p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubtitleFormat() {
         return this.SubtitleFormat;
     }
 
     /**
-     * Set Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SubtitleFormat Smart subtitle file format.
-- vtt: WebVTT.- srt: SRT.- original: same as the source subtitle file (for subtitle translation templates).- Not specified or empty: no subtitle file generated.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SubtitleFormat <p>Smart subtitle file format.</p><ul><li>vtt: WebVTT.</li><li>srt: SRT.</li><li>original: same as the source subtitle file (for subtitle translation templates).</li><li>Not specified or empty: no subtitle file generated.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubtitleFormat(String SubtitleFormat) {
         this.SubtitleFormat = SubtitleFormat;
     }
 
     /**
-     * Get Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON. 
-     * @return SubtitleType Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+     * Get <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p> 
+     * @return SubtitleType <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
      */
     public Long getSubtitleType() {
         return this.SubtitleType;
     }
 
     /**
-     * Set Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
-     * @param SubtitleType Smart subtitle language type.
-0: source language1: target language
-2: source language + target language
-The value can only be 0 when TranslateSwitch is set to OFF.The value can only be 1 or 2 when TranslateSwitch is set to ON.
+     * Set <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
+     * @param SubtitleType <p>Smart subtitle language type.<br>0: source language.<br>1: target language.<br>2: source language and target language.<br>Only 0 is supported when TranslateSwitch is OFF.<br>Only 1 or 2 is supported when TranslateSwitch is ON.</p>
      */
     public void setSubtitleType(Long SubtitleType) {
         this.SubtitleType = SubtitleType;
     }
 
     /**
-     * Get Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return TranslateSwitch Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TranslateSwitch <p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTranslateSwitch() {
         return this.TranslateSwitch;
     }
 
     /**
-     * Set Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param TranslateSwitch Subtitle translation switch.
-ON: enable translation
-OFF: disable translation
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TranslateSwitch <p>Subtitle translation switch.<br>ON: enables translation.<br>OFF: disables translation.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTranslateSwitch(String TranslateSwitch) {
         this.TranslateSwitch = TranslateSwitch;
     }
 
     /**
-     * Get Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+     * Get <p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TranslateDstLanguage Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+     * @return TranslateDstLanguage <p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTranslateDstLanguage() {
@@ -574,53 +365,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+     * Set <p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TranslateDstLanguage Target language for subtitle translation.
-This field is valid when the value of TranslateSwitch is ON.
-`zh`: Simplified Chinese.
-`zh-TW`: Traditional Chinese.
-`en`: English.
-`ja`: Japanese.
-`ko`: Korean.
-`fr`: French.
-`es`: Spanish.
-`it`: Italian.
-`de`: German.
-`tr`: Turkish.
-`ru`: Russian.
-`pt`: Portuguese (Brazil).
-`pt-PT`: Portuguese (Portugal).
-`vi`: Vietnamese.
-`id`: Indonesian.
-`ms`: Malay.
-`th`: Thai.
-`ar`: Arabic.
-`hi`: Hindi.
-`fil`: Filipino.
-**Note**: Use `/` to separate multiple languages, such as `en/ja`, which indicates English and Japanese.
+     * @param TranslateDstLanguage <p>Target language for subtitle translation.<br>This parameter takes effect when TranslateSwitch is ON.<br><code>zh</code>: Simplified Chinese<br><code>zh-TW</code>: Traditional Chinese<br><code>en</code>: English<br><code>ja</code>: Japanese<br><code>ko</code>: Korean<br><code>fr</code>: French<br><code>es</code>: Spanish<br><code>it</code>: Italian<br><code>de</code>: German<br><code>tr</code>: Turkish<br><code>ru</code>: Russian<br><code>pt</code>: Portuguese (Brazil)<br><code>pt-PT</code>: Portuguese (Portugal)<br><code>vi</code>: Vietnamese<br><code>id</code>: Indonesian<br><code>ms</code>: Malay<br><code>th</code>: Thai<br><code>ar</code>: Arabic<br><code>hi</code>: Hindi<br><code>fil</code>: Filipino</p><p><strong>Note</strong>: Use <code>/</code> to separate multiple languages, such as <code>en/ja</code>, which indicates English and Japanese.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTranslateDstLanguage(String TranslateDstLanguage) {
@@ -628,87 +375,139 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52). 
-     * @return CreateTime Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Get <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p> 
+     * @return CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-     * @param CreateTime Template creation time in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
+     * @param CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52). 
-     * @return UpdateTime Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Get <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p> 
+     * @return UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-     * @param UpdateTime Last modification time of the template in [ISO datetime format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
+     * @param UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date format</a>.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return AliasName Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AliasName <p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAliasName() {
         return this.AliasName;
     }
 
     /**
-     * Set Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AliasName Alias of the preset smart subtitle template.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AliasName <p>Preset template alias for smart subtitle.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAliasName(String AliasName) {
         this.AliasName = AliasName;
     }
 
     /**
-     * Get Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition. 
-     * @return ProcessType Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+     * Get <p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul> 
+     * @return ProcessType <p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
      */
     public Long getProcessType() {
         return this.ProcessType;
     }
 
     /**
-     * Set Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
-     * @param ProcessType Subtitle processing type:- 0: ASR subtitle recognition.- 1: subtitle translation.- 2: OCR subtitle recognition.
+     * Set <p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
+     * @param ProcessType <p>Subtitle processing type:</p><ul><li>0: ASR.</li><li>1: subtitle translation.</li><li>2: OCR.</li></ul>
      */
     public void setProcessType(Long ProcessType) {
         this.ProcessType = ProcessType;
     }
 
     /**
-     * Get Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SelectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SelectingSubtitleAreasConfig <p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SelectingSubtitleAreasConfig getSelectingSubtitleAreasConfig() {
         return this.SelectingSubtitleAreasConfig;
     }
 
     /**
-     * Set Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SelectingSubtitleAreasConfig Area configurations for the subtitle OCR extraction box.Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SelectingSubtitleAreasConfig <p>Area configurations for the subtitle OCR extraction box.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSelectingSubtitleAreasConfig(SelectingSubtitleAreasConfig SelectingSubtitleAreasConfig) {
         this.SelectingSubtitleAreasConfig = SelectingSubtitleAreasConfig;
+    }
+
+    /**
+     * Get <p>Subtitle burn-in template ID.</p> 
+     * @return SubtitleEmbedId <p>Subtitle burn-in template ID.</p>
+     */
+    public Long getSubtitleEmbedId() {
+        return this.SubtitleEmbedId;
+    }
+
+    /**
+     * Set <p>Subtitle burn-in template ID.</p>
+     * @param SubtitleEmbedId <p>Subtitle burn-in template ID.</p>
+     */
+    public void setSubtitleEmbedId(Long SubtitleEmbedId) {
+        this.SubtitleEmbedId = SubtitleEmbedId;
+    }
+
+    /**
+     * Get <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p> 
+     * @return SpeakerMode <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+     */
+    public Long getSpeakerMode() {
+        return this.SpeakerMode;
+    }
+
+    /**
+     * Set <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+     * @param SpeakerMode <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+     */
+    public void setSpeakerMode(Long SpeakerMode) {
+        this.SpeakerMode = SpeakerMode;
+    }
+
+    /**
+     * Get <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p> 
+     * @return SpeakerLabel <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+     */
+    public Long getSpeakerLabel() {
+        return this.SpeakerLabel;
+    }
+
+    /**
+     * Set <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+     * @param SpeakerLabel <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+     */
+    public void setSpeakerLabel(Long SpeakerLabel) {
+        this.SpeakerLabel = SpeakerLabel;
     }
 
     public SmartSubtitleTemplateItem() {
@@ -767,6 +566,15 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SelectingSubtitleAreasConfig != null) {
             this.SelectingSubtitleAreasConfig = new SelectingSubtitleAreasConfig(source.SelectingSubtitleAreasConfig);
         }
+        if (source.SubtitleEmbedId != null) {
+            this.SubtitleEmbedId = new Long(source.SubtitleEmbedId);
+        }
+        if (source.SpeakerMode != null) {
+            this.SpeakerMode = new Long(source.SpeakerMode);
+        }
+        if (source.SpeakerLabel != null) {
+            this.SpeakerLabel = new Long(source.SpeakerLabel);
+        }
     }
 
 
@@ -790,6 +598,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "AliasName", this.AliasName);
         this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
         this.setParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
+        this.setParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
+        this.setParamSimple(map, prefix + "SpeakerMode", this.SpeakerMode);
+        this.setParamSimple(map, prefix + "SpeakerLabel", this.SpeakerLabel);
 
     }
 }

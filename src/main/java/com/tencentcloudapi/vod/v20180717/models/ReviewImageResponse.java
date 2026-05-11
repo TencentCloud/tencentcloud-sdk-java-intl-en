@@ -48,7 +48,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Get The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font> 
      * @return ReviewResultSet The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
+     * @deprecated
      */
+    @Deprecated
     public ContentReviewResult [] getReviewResultSet() {
         return this.ReviewResultSet;
     }
@@ -56,7 +58,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * Set The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
      * @param ReviewResultSet The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
+     * @deprecated
      */
+    @Deprecated
     public void setReviewResultSet(ContentReviewResult [] ReviewResultSet) {
         this.ReviewResultSet = ReviewResultSet;
     }

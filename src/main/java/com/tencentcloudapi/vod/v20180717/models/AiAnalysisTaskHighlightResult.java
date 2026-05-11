@@ -59,8 +59,7 @@ public class AiAnalysisTaskHighlightResult extends AbstractModel {
     private AiAnalysisTaskHighlightInput Input;
 
     /**
-    * Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Intelligent Highlight Task output.
     */
     @SerializedName("Output")
     @Expose
@@ -168,20 +167,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent Highlight Task output. 
+     * @return Output Intelligent Highlight Task output.
      */
     public AiAnalysisTaskHighlightOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of an intelligent highlight generating task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent Highlight Task output.
+     * @param Output Intelligent Highlight Task output.
      */
     public void setOutput(AiAnalysisTaskHighlightOutput Output) {
         this.Output = Output;

@@ -24,59 +24,77 @@ import java.util.HashMap;
 public class SmartSubtitleTaskResultInput extends AbstractModel {
 
     /**
-    * Smart subtitle template ID.
+    * <p>Smart subtitle template ID.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RawParameter")
     @Expose
     private RawSmartSubtitleParameter RawParameter;
 
     /**
-     * Get Smart subtitle template ID. 
-     * @return Definition Smart subtitle template ID.
+    * <p>Extended parameter.</p>
+    */
+    @SerializedName("UserExtPara")
+    @Expose
+    private String UserExtPara;
+
+    /**
+     * Get <p>Smart subtitle template ID.</p> 
+     * @return Definition <p>Smart subtitle template ID.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Smart subtitle template ID.
-     * @param Definition Smart subtitle template ID.
+     * Set <p>Smart subtitle template ID.</p>
+     * @param Definition <p>Smart subtitle template ID.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RawParameter Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RawSmartSubtitleParameter getRawParameter() {
         return this.RawParameter;
     }
 
     /**
-     * Set Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RawParameter Custom smart subtitle parameter. It takes effect when Definition is set to 0.
-This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRawParameter(RawSmartSubtitleParameter RawParameter) {
         this.RawParameter = RawParameter;
+    }
+
+    /**
+     * Get <p>Extended parameter.</p> 
+     * @return UserExtPara <p>Extended parameter.</p>
+     */
+    public String getUserExtPara() {
+        return this.UserExtPara;
+    }
+
+    /**
+     * Set <p>Extended parameter.</p>
+     * @param UserExtPara <p>Extended parameter.</p>
+     */
+    public void setUserExtPara(String UserExtPara) {
+        this.UserExtPara = UserExtPara;
     }
 
     public SmartSubtitleTaskResultInput() {
@@ -93,6 +111,9 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.RawParameter != null) {
             this.RawParameter = new RawSmartSubtitleParameter(source.RawParameter);
         }
+        if (source.UserExtPara != null) {
+            this.UserExtPara = new String(source.UserExtPara);
+        }
     }
 
 
@@ -102,6 +123,7 @@ Note: This field may return null, indicating that no valid value can be obtained
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
         this.setParamObj(map, prefix + "RawParameter.", this.RawParameter);
+        this.setParamSimple(map, prefix + "UserExtPara", this.UserExtPara);
 
     }
 }

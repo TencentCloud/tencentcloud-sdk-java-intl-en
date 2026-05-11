@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class AiAnalysisTaskHeadTailInput extends AbstractModel {
 
     /**
-    * Opening and closing segments recognition template ID.
+    * <p>ID of the intro and outro recognition template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Opening and closing segments recognition template ID. 
-     * @return Definition Opening and closing segments recognition template ID.
+    * <p>Extended parameter.</p>
+    */
+    @SerializedName("ExtendedParameter")
+    @Expose
+    private String ExtendedParameter;
+
+    /**
+     * Get <p>ID of the intro and outro recognition template.</p> 
+     * @return Definition <p>ID of the intro and outro recognition template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Opening and closing segments recognition template ID.
-     * @param Definition Opening and closing segments recognition template ID.
+     * Set <p>ID of the intro and outro recognition template.</p>
+     * @param Definition <p>ID of the intro and outro recognition template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <p>Extended parameter.</p> 
+     * @return ExtendedParameter <p>Extended parameter.</p>
+     */
+    public String getExtendedParameter() {
+        return this.ExtendedParameter;
+    }
+
+    /**
+     * Set <p>Extended parameter.</p>
+     * @param ExtendedParameter <p>Extended parameter.</p>
+     */
+    public void setExtendedParameter(String ExtendedParameter) {
+        this.ExtendedParameter = ExtendedParameter;
     }
 
     public AiAnalysisTaskHeadTailInput() {
@@ -57,6 +80,9 @@ public class AiAnalysisTaskHeadTailInput extends AbstractModel {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.ExtendedParameter != null) {
+            this.ExtendedParameter = new String(source.ExtendedParameter);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class AiAnalysisTaskHeadTailInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
 
     }
 }

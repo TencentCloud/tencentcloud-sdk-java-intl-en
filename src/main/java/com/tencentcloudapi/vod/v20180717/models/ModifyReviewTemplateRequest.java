@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ModifyReviewTemplateRequest extends AbstractModel {
 
     /**
-    * Audit template unique ID.
+    * 
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Audit template name, length limit: 64 characters.
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Audit template description, length limit: 256 characters.
+    * 
     */
     @SerializedName("Comment")
     @Expose
@@ -59,64 +59,64 @@ public class ModifyReviewTemplateRequest extends AbstractModel {
     private String [] Labels;
 
     /**
-     * Get Audit template unique ID. 
-     * @return Definition Audit template unique ID.
+     * Get  
+     * @return Definition 
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Audit template unique ID.
-     * @param Definition Audit template unique ID.
+     * Set 
+     * @param Definition 
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Audit template name, length limit: 64 characters. 
-     * @return Name Audit template name, length limit: 64 characters.
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Audit template name, length limit: 64 characters.
-     * @param Name Audit template name, length limit: 64 characters.
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Audit template description, length limit: 256 characters. 
-     * @return Comment Audit template description, length limit: 256 characters.
+     * Get  
+     * @return Comment 
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Audit template description, length limit: 256 characters.
-     * @param Comment Audit template description, length limit: 256 characters.
+     * Set 
+     * @param Comment 
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

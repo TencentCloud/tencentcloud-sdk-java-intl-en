@@ -126,6 +126,9 @@ public enum VodErrorCode {
      /* Incorrect parameter value: `Definition` for AI-based recognition. */
      INVALIDPARAMETERVALUE_AIRECOGNITIONTASKDEFINITION("InvalidParameterValue.AiRecognitionTaskDefinition"),
      
+     /*  */
+     INVALIDPARAMETERVALUE_APPID("InvalidParameterValue.AppId"),
+     
      /* Invalid `Area`. */
      INVALIDPARAMETERVALUE_AREA("InvalidParameterValue.Area"),
      
@@ -272,6 +275,9 @@ public enum VodErrorCode {
      
      /* The `FileIds` array is empty. */
      INVALIDPARAMETERVALUE_FILEIDSEMPTY("InvalidParameterValue.FileIdsEmpty"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_FILEIDSOVERLIMIT("InvalidParameterValue.FileIdsOverLimit"),
      
      /* Incorrect parameter value: too many `FileId` */
      INVALIDPARAMETERVALUE_FILEIDSTOOMANY("InvalidParameterValue.FileIdsTooMany"),
@@ -629,6 +635,9 @@ public enum VodErrorCode {
      
      /* Playlist length too large. */
      LIMITEXCEEDED_PLAYLIST("LimitExceeded.PlayList"),
+     
+     /*  */
+     LIMITEXCEEDED_ROUNDPLAYLIST("LimitExceeded.RoundPlaylist"),
      
      /* Exceeds broadcast playlist total limit. */
      LIMITEXCEEDED_ROUNDPLAYS("LimitExceeded.RoundPlays"),

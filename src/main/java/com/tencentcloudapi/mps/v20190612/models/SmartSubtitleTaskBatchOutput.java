@@ -24,148 +24,148 @@ import java.util.HashMap;
 public class SmartSubtitleTaskBatchOutput extends AbstractModel {
 
     /**
-    * Task progress.
+    * <p>Task progress.</p>
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Task status, including PROCESSING, SUCCESS, and FAIL.
+    * <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+    * <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * Error message.
+    * <p>Error message.</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TransTextTask")
     @Expose
     private SmartSubtitleTaskTransTextResultOutput TransTextTask;
 
     /**
-    * Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AsrFullTextTask")
     @Expose
     private SmartSubtitleTaskAsrFullTextResultOutput AsrFullTextTask;
 
     /**
-     * Get Task progress. 
-     * @return Progress Task progress.
+     * Get <p>Task progress.</p> 
+     * @return Progress <p>Task progress.</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set Task progress.
-     * @param Progress Task progress.
+     * Set <p>Task progress.</p>
+     * @param Progress <p>Task progress.</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Task status, including PROCESSING, SUCCESS, and FAIL. 
-     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * Get <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p> 
+     * @return Status <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status, including PROCESSING, SUCCESS, and FAIL.
-     * @param Status Task status, including PROCESSING, SUCCESS, and FAIL.
+     * Set <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
+     * @param Status <p>Task status. Valid values are PROCESSING, SUCCESS, WAITING, and FAIL.</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81). 
-     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Get <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p> 
+     * @return ErrCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+     * Set <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
+     * @param ErrCodeExt <p>Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of <a href="https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81">MPS error codes</a>.</p>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get Error message. 
-     * @return Message Error message.
+     * Get <p>Error message.</p> 
+     * @return Message <p>Error message.</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message.
-     * @param Message Error message.
+     * Set <p>Error message.</p>
+     * @param Message <p>Error message.</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return TransTextTask Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TransTextTask <p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SmartSubtitleTaskTransTextResultOutput getTransTextTask() {
         return this.TransTextTask;
     }
 
     /**
-     * Set Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param TransTextTask Translation task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TransTextTask <p>Translation task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTransTextTask(SmartSubtitleTaskTransTextResultOutput TransTextTask) {
         this.TransTextTask = TransTextTask;
     }
 
     /**
-     * Get Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return AsrFullTextTask Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AsrFullTextTask <p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SmartSubtitleTaskAsrFullTextResultOutput getAsrFullTextTask() {
         return this.AsrFullTextTask;
     }
 
     /**
-     * Set Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param AsrFullTextTask Output information on the full speech recognition task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AsrFullTextTask <p>Full speech recognition task output information.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAsrFullTextTask(SmartSubtitleTaskAsrFullTextResultOutput AsrFullTextTask) {
         this.AsrFullTextTask = AsrFullTextTask;

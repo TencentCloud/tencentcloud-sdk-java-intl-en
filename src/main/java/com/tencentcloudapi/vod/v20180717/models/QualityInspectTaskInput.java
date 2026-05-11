@@ -31,7 +31,7 @@ public class QualityInspectTaskInput extends AbstractModel {
     private String FileId;
 
     /**
-    * Media quality inspect template ID.
+    * Audio and video quality inspection template ID.
     */
     @SerializedName("Definition")
     @Expose
@@ -54,16 +54,16 @@ public class QualityInspectTaskInput extends AbstractModel {
     }
 
     /**
-     * Get Media quality inspect template ID. 
-     * @return Definition Media quality inspect template ID.
+     * Get Audio and video quality inspection template ID. 
+     * @return Definition Audio and video quality inspection template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Media quality inspect template ID.
-     * @param Definition Media quality inspect template ID.
+     * Set Audio and video quality inspection template ID.
+     * @param Definition Audio and video quality inspection template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

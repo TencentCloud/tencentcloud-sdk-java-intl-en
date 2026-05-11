@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class HandleCurrentPlaylistRequest extends AbstractModel {
 
     /**
-    * <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
+    * <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
     */
     @SerializedName("SubAppId")
     @Expose
@@ -52,6 +52,13 @@ public class HandleCurrentPlaylistRequest extends AbstractModel {
     private String ItemId;
 
     /**
+    * 
+    */
+    @SerializedName("SegmentIndex")
+    @Expose
+    private Long SegmentIndex;
+
+    /**
     * Program list. required when operation is insert, inserttemporary, delete, indicating the list of programs to be operated on. the list length can be up to a maximum of 10.
     */
     @SerializedName("RoundPlaylist")
@@ -59,16 +66,16 @@ public class HandleCurrentPlaylistRequest extends AbstractModel {
     private RoundPlayListItemInfo [] RoundPlaylist;
 
     /**
-     * Get <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>. 
-     * @return SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
+     * Get <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>. 
+     * @return SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
-     * @param SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574) id.</b>.
+     * Set <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
+     * @param SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -123,6 +130,22 @@ public class HandleCurrentPlaylistRequest extends AbstractModel {
     }
 
     /**
+     * Get  
+     * @return SegmentIndex 
+     */
+    public Long getSegmentIndex() {
+        return this.SegmentIndex;
+    }
+
+    /**
+     * Set 
+     * @param SegmentIndex 
+     */
+    public void setSegmentIndex(Long SegmentIndex) {
+        this.SegmentIndex = SegmentIndex;
+    }
+
+    /**
      * Get Program list. required when operation is insert, inserttemporary, delete, indicating the list of programs to be operated on. the list length can be up to a maximum of 10. 
      * @return RoundPlaylist Program list. required when operation is insert, inserttemporary, delete, indicating the list of programs to be operated on. the list length can be up to a maximum of 10.
      */
@@ -158,6 +181,9 @@ public class HandleCurrentPlaylistRequest extends AbstractModel {
         if (source.ItemId != null) {
             this.ItemId = new String(source.ItemId);
         }
+        if (source.SegmentIndex != null) {
+            this.SegmentIndex = new Long(source.SegmentIndex);
+        }
         if (source.RoundPlaylist != null) {
             this.RoundPlaylist = new RoundPlayListItemInfo[source.RoundPlaylist.length];
             for (int i = 0; i < source.RoundPlaylist.length; i++) {
@@ -175,6 +201,7 @@ public class HandleCurrentPlaylistRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "RoundPlayId", this.RoundPlayId);
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "ItemId", this.ItemId);
+        this.setParamSimple(map, prefix + "SegmentIndex", this.SegmentIndex);
         this.setParamArrayObj(map, prefix + "RoundPlaylist.", this.RoundPlaylist);
 
     }

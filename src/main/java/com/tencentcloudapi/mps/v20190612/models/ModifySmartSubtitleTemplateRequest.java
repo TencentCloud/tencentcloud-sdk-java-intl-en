@@ -108,6 +108,20 @@ public class ModifySmartSubtitleTemplateRequest extends AbstractModel {
     private Long SubtitleEmbedId;
 
     /**
+    * <p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+    */
+    @SerializedName("SpeakerMode")
+    @Expose
+    private Long SpeakerMode;
+
+    /**
+    * <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
+    */
+    @SerializedName("SpeakerLabel")
+    @Expose
+    private Long SpeakerLabel;
+
+    /**
      * Get <p>Unique identifier of the smart subtitle template.</p> 
      * @return Definition <p>Unique identifier of the smart subtitle template.</p>
      */
@@ -299,6 +313,38 @@ public class ModifySmartSubtitleTemplateRequest extends AbstractModel {
         this.SubtitleEmbedId = SubtitleEmbedId;
     }
 
+    /**
+     * Get <p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p> 
+     * @return SpeakerMode <p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+     */
+    public Long getSpeakerMode() {
+        return this.SpeakerMode;
+    }
+
+    /**
+     * Set <p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+     * @param SpeakerMode <p>Speaker identification switch. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.</p>
+     */
+    public void setSpeakerMode(Long SpeakerMode) {
+        this.SpeakerMode = SpeakerMode;
+    }
+
+    /**
+     * Get <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p> 
+     * @return SpeakerLabel <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
+     */
+    public Long getSpeakerLabel() {
+        return this.SpeakerLabel;
+    }
+
+    /**
+     * Set <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
+     * @param SpeakerLabel <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.</p>
+     */
+    public void setSpeakerLabel(Long SpeakerLabel) {
+        this.SpeakerLabel = SpeakerLabel;
+    }
+
     public ModifySmartSubtitleTemplateRequest() {
     }
 
@@ -343,6 +389,12 @@ public class ModifySmartSubtitleTemplateRequest extends AbstractModel {
         if (source.SubtitleEmbedId != null) {
             this.SubtitleEmbedId = new Long(source.SubtitleEmbedId);
         }
+        if (source.SpeakerMode != null) {
+            this.SpeakerMode = new Long(source.SpeakerMode);
+        }
+        if (source.SpeakerLabel != null) {
+            this.SpeakerLabel = new Long(source.SpeakerLabel);
+        }
     }
 
 
@@ -362,6 +414,8 @@ public class ModifySmartSubtitleTemplateRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
         this.setParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
         this.setParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
+        this.setParamSimple(map, prefix + "SpeakerMode", this.SpeakerMode);
+        this.setParamSimple(map, prefix + "SpeakerLabel", this.SpeakerLabel);
 
     }
 }

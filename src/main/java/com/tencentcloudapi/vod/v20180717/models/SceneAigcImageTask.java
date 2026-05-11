@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class SceneAigcImageTask extends AbstractModel {
 
     /**
-    * The task ID.
+    * Task ID.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+    * Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+    * Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+    * Error message.
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * The execution progress of a single adaptive bitrate stream. Value range: 0-100.
+    * Task progress, with a value range of [0-100].
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Input of AIGC image task.
+    * Input of the AIGC image generation task.
     */
     @SerializedName("Input")
     @Expose
     private SceneAigcImageTaskInput Input;
 
     /**
-    * Output of AIGC image task.
+    * Output information of the AIGC image generation task.
     */
     @SerializedName("Output")
     @Expose
     private SceneAigcImageTaskOutput Output;
 
     /**
-    * ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+    * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+    * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-     * Get The task ID. 
-     * @return TaskId The task ID.
+     * Get Task ID. 
+     * @return TaskId Task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The task ID.
-     * @param TaskId The task ID.
+     * Set Task ID.
+     * @param TaskId Task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li> 
-     * @return Status Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+     * Get Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li> 
+     * @return Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
-     * @param Status Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+     * Set Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * @param Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task. 
-     * @return ErrCode Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+     * Get Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task. 
+     * @return ErrCode Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
-     * @param ErrCode Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+     * Set Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
+     * @param ErrCode Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task. 
-     * @return Message Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+     * Get Error message. 
+     * @return Message Error message.
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
-     * @param Message Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+     * Set Error message.
+     * @param Message Error message.
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get The execution progress of a single adaptive bitrate stream. Value range: 0-100. 
-     * @return Progress The execution progress of a single adaptive bitrate stream. Value range: 0-100.
+     * Get Task progress, with a value range of [0-100]. 
+     * @return Progress Task progress, with a value range of [0-100].
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set The execution progress of a single adaptive bitrate stream. Value range: 0-100.
-     * @param Progress The execution progress of a single adaptive bitrate stream. Value range: 0-100.
+     * Set Task progress, with a value range of [0-100].
+     * @param Progress Task progress, with a value range of [0-100].
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Input of AIGC image task. 
-     * @return Input Input of AIGC image task.
+     * Get Input of the AIGC image generation task. 
+     * @return Input Input of the AIGC image generation task.
      */
     public SceneAigcImageTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of AIGC image task.
-     * @param Input Input of AIGC image task.
+     * Set Input of the AIGC image generation task.
+     * @param Input Input of the AIGC image generation task.
      */
     public void setInput(SceneAigcImageTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of AIGC image task. 
-     * @return Output Output of AIGC image task.
+     * Get Output information of the AIGC image generation task. 
+     * @return Output Output information of the AIGC image generation task.
      */
     public SceneAigcImageTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of AIGC image task.
-     * @param Output Output of AIGC image task.
+     * Set Output information of the AIGC image generation task.
+     * @param Output Output information of the AIGC image generation task.
      */
     public void setOutput(SceneAigcImageTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed. 
-     * @return SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+     * Get Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed. 
+     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
-     * @param SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+     * Set Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+     * @param SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters. 
-     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+     * Get Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters. 
+     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
-     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+     * Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;

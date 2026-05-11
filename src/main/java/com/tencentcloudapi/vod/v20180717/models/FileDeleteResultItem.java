@@ -31,8 +31,7 @@ public class FileDeleteResultItem extends AbstractModel {
     private String FileId;
 
     /**
-    * The type of the file deleted.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+    * Part of the file deleted this time.
     */
     @SerializedName("DeleteParts")
     @Expose
@@ -55,20 +54,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     }
 
     /**
-     * Get The type of the file deleted.
-Note: This field may return `null`, indicating that no valid value can be obtained. 
-     * @return DeleteParts The type of the file deleted.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Get Part of the file deleted this time. 
+     * @return DeleteParts Part of the file deleted this time.
      */
     public MediaDeleteItem [] getDeleteParts() {
         return this.DeleteParts;
     }
 
     /**
-     * Set The type of the file deleted.
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param DeleteParts The type of the file deleted.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * Set Part of the file deleted this time.
+     * @param DeleteParts Part of the file deleted this time.
      */
     public void setDeleteParts(MediaDeleteItem [] DeleteParts) {
         this.DeleteParts = DeleteParts;

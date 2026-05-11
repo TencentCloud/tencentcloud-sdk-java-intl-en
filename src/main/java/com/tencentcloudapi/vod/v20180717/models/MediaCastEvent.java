@@ -24,66 +24,66 @@ import java.util.HashMap;
 public class MediaCastEvent extends AbstractModel {
 
     /**
-    * Media relay ID.
+    * 
     */
     @SerializedName("CastId")
     @Expose
     private String CastId;
 
     /**
-    * Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
+    * Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get Media relay ID. 
-     * @return CastId Media relay ID.
+     * Get  
+     * @return CastId 
      */
     public String getCastId() {
         return this.CastId;
     }
 
     /**
-     * Set Media relay ID.
-     * @param CastId Media relay ID.
+     * Set 
+     * @param CastId 
      */
     public void setCastId(String CastId) {
         this.CastId = CastId;
     }
 
     /**
-     * Get Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li> 
-     * @return Status Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
+     * Get Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li> 
+     * @return Status Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
-     * @param Status Relay status. Valid values:
-<li>Working: Running;</li>
-<li>Scheduled: To be started after the scheduled time arrives;</li>
-<li>Stopped: Relay stopped;</li>
-<li>Idle: Idle.</li>
+     * Set Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
+     * @param Status Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: start up after reaching the scheduled time;</li>
+<li>Stopped: relay has been stopped;</li>
+<li>Idle: idle.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;

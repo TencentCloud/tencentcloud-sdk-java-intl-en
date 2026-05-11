@@ -24,9 +24,10 @@ import java.util.HashMap;
 public class AigcImageSceneInfo extends AbstractModel {
 
     /**
-    * AI image generation scenario type. valid values:
+    * Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
     */
     @SerializedName("Type")
     @Expose
@@ -47,24 +48,28 @@ public class AigcImageSceneInfo extends AbstractModel {
     private ProductImageConfig ProductImageConfig;
 
     /**
-     * Get AI image generation scenario type. valid values:
+     * Get Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image. 
-     * @return Type AI image generation scenario type. valid values:
+-Product image: AI-generated product image.
+-outpainting: AI image expansion. 
+     * @return Type Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set AI image generation scenario type. valid values:
+     * Set Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
-     * @param Type AI image generation scenario type. valid values:
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
+     * @param Type Scenario type of AI image generation. Available values:
 -change_clothes: AI clothing change.
--product_image: AI-generated product image.
+-Product image: AI-generated product image.
+-outpainting: AI image expansion.
      */
     public void setType(String Type) {
         this.Type = Type;

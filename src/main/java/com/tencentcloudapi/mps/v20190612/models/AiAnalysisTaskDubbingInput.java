@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class AiAnalysisTaskDubbingInput extends AbstractModel {
 
     /**
-    * Video translation template ID.
+    * <p>ID of the video localization template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Video translation template ID. 
-     * @return Definition Video translation template ID.
+    * <p>Extended parameter.</p>
+    */
+    @SerializedName("ExtendedParameter")
+    @Expose
+    private String ExtendedParameter;
+
+    /**
+     * Get <p>ID of the video localization template.</p> 
+     * @return Definition <p>ID of the video localization template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Video translation template ID.
-     * @param Definition Video translation template ID.
+     * Set <p>ID of the video localization template.</p>
+     * @param Definition <p>ID of the video localization template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <p>Extended parameter.</p> 
+     * @return ExtendedParameter <p>Extended parameter.</p>
+     */
+    public String getExtendedParameter() {
+        return this.ExtendedParameter;
+    }
+
+    /**
+     * Set <p>Extended parameter.</p>
+     * @param ExtendedParameter <p>Extended parameter.</p>
+     */
+    public void setExtendedParameter(String ExtendedParameter) {
+        this.ExtendedParameter = ExtendedParameter;
     }
 
     public AiAnalysisTaskDubbingInput() {
@@ -57,6 +80,9 @@ public class AiAnalysisTaskDubbingInput extends AbstractModel {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.ExtendedParameter != null) {
+            this.ExtendedParameter = new String(source.ExtendedParameter);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class AiAnalysisTaskDubbingInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
 
     }
 }

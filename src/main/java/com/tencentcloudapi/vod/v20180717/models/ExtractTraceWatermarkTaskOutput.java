@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ExtractTraceWatermarkTaskOutput extends AbstractModel {
 
     /**
-    * The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+    * Player's ID, represented in hexadecimal, 6 digits in total.
     */
     @SerializedName("Uv")
     @Expose
@@ -38,16 +38,16 @@ public class ExtractTraceWatermarkTaskOutput extends AbstractModel {
     private String Uid;
 
     /**
-     * Get The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used. 
-     * @return Uv The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+     * Get Player's ID, represented in hexadecimal, 6 digits in total. 
+     * @return Uv Player's ID, represented in hexadecimal, 6 digits in total.
      */
     public String getUv() {
         return this.Uv;
     }
 
     /**
-     * Set The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
-     * @param Uv The distributor’s user ID, which is a six-digit hex number. This parameter is relevant when [digital watermarks](https://intl.cloud.tencent.com/document/product/266/75789?from_cn_redirect=1) are used.
+     * Set Player's ID, represented in hexadecimal, 6 digits in total.
+     * @param Uv Player's ID, represented in hexadecimal, 6 digits in total.
      */
     public void setUv(String Uv) {
         this.Uv = Uv;

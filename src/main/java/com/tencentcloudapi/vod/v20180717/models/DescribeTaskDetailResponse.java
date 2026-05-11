@@ -24,267 +24,306 @@ import java.util.HashMap;
 public class DescribeTaskDetailResponse extends AbstractModel {
 
     /**
-    * The task type. Valid values:
-<li>`Procedure`: Video processing</li>
-<li>`EditMedia`: Video editing</li>
-<li>`SplitMedia`: Video splitting</li>
-<li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: Weixin publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
-<li>`PullUpload`: Pulling media files for upload</li>
-<li>`FastClipMedia`: Quick clipping</li>
-<li>`RemoveWatermarkTask`: Watermark removal</li>
-<li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li> `ReviewAudioVideo`: Moderation</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`: Enhance audio/video</li>
-<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li><li>`ProcessMediaByMPS`: Process media by MPS.</li>
+    * <p>Task type. Valid values: <li>Procedure: Video processing task;</li><li>EditMedia: Video editing task;</li><li>SplitMedia: Video splitting task;</li><li>ComposeMedia: Media file creation task;</li><li>WechatPublish: WeChat publishing task;</li><li>WechatMiniProgramPublish: WeChat Mini Program Video Publishing Task;</li><li>PullUpload: Pull and upload media files task;</li><li>FastClipMedia: Quick trimming task;</li><li>RemoveWatermarkTask: Intelligent watermark removal task;</li><li>DescribeFileAttributesTask: File attribute retrieval task;</li><li>RebuildMedia: Audio and video quality regeneration task (not recommended);</li><li>ReviewAudioVideo: Audio/video moderation task;</li><li>ExtractTraceWatermark: Source watermark extraction task;</li><li>ExtractCopyRightWatermark: Copyright Watermark Extraction Task;</li><li>QualityInspect: Audio and video quality inspection task;</li><li>QualityEnhance: Audio and video quality regeneration task;</li><li>ComplexAdaptiveDynamicStreaming: Complex adaptive bitstream task;</li><li>ProcessMediaByMPS: MPS video processing task;</li><li>AigcImageTask: AIGC image generation task;</li><li>SceneAigcImageTask: Scenario-based AIGC image generation task;</li><li>AigcVideoTask: AIGC video generation task;</li><li>ImportMediaKnowledge: Import media knowledge task.</li><li>SceneAigcVideoTask: Scenario-based AIGC video generation task;</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>CreateAigcAdvancedCustomElementTask: Create custom subject task</li><li>CreateAigcCustomVoiceTask: Create custom voice type task</li><li>CreateAigcSubjectTask: Create subject task</li></p>
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * Task status. Valid values:
-<li>WAITING: waiting;</li>
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+    * <p>Task status. Value:</p><li>WAITING: Waiting;</li><li>PROCESSING: Processing;</li><li>FINISH: Completed;</li><li>ABORTED: Terminated.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * <p>Task creation time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * <p>Task execution start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
     */
     @SerializedName("BeginProcessTime")
     @Expose
     private String BeginProcessTime;
 
     /**
-    * End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * <p>Task execution completion time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
     */
     @SerializedName("FinishTime")
     @Expose
     private String FinishTime;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Video processing task information. This field has a value only when TaskType is Procedure.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProcedureTask")
     @Expose
     private ProcedureTask ProcedureTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Video editing task information. This field has a value only when TaskType is EditMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EditMediaTask")
     @Expose
     private EditMediaTask EditMediaTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>WeChat publishing task information. This field has a value only when TaskType is WechatPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WechatPublishTask")
     @Expose
     private WechatPublishTask WechatPublishTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Media file production task information. This field has a value only when TaskType is ComposeMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ComposeMediaTask")
     @Expose
     private ComposeMediaTask ComposeMediaTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Video splitting task information. This field has a value only when TaskType is SplitMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SplitMediaTask")
     @Expose
     private SplitMediaTask SplitMediaTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>WeChat Mini Program publishing task information. This field has a value only when TaskType is WechatMiniProgramPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("WechatMiniProgramPublishTask")
     @Expose
     private WechatMiniProgramPublishTask WechatMiniProgramPublishTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Pull and upload media files task information. This field has a value only when TaskType is PullUpload.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PullUploadTask")
     @Expose
     private PullUploadTask PullUploadTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Video transcoding task information. This field has a value only when TaskType is Transcode.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TranscodeTask")
     @Expose
     private TranscodeTask2017 TranscodeTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Video splicing task information. This field has a value only when TaskType is Concat.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ConcatTask")
     @Expose
     private ConcatTask2017 ConcatTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Video editing task information. This field has a value only when TaskType is Clip.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClipTask")
     @Expose
     private ClipTask2017 ClipTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Capturing sprite image task information. This field has a value only when TaskType is ImageSprite.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateImageSpriteTask")
     @Expose
     private CreateImageSpriteTask2017 CreateImageSpriteTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Video screenshot at specified time task information. This field has a value only when TaskType is SnapshotByTimeOffset.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SnapshotByTimeOffsetTask")
     @Expose
     private SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Intelligent watermark removal task information. This field has a value only when TaskType is RemoveWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RemoveWatermarkTask")
     @Expose
     private RemoveWatermarkTask RemoveWatermarkTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Audio and video quality revival task information. This field has a value only when TaskType is RebuildMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RebuildMediaTask")
     @Expose
     private RebuildMediaTask RebuildMediaTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Information about the traceability watermark extraction task. This field has a value only when TaskType is ExtractTraceWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExtractTraceWatermarkTask")
     @Expose
     private ExtractTraceWatermarkTask ExtractTraceWatermarkTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Information about the copyright watermark extraction task. This field has a value only when TaskType is ExtractCopyRightWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExtractCopyRightWatermarkTask")
     @Expose
     private ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Audio/video moderation task info. This field has a value only when TaskType is ReviewAudioVideo.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReviewAudioVideoTask")
     @Expose
     private ReviewAudioVideoTask ReviewAudioVideoTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>This field is invalid.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ReduceMediaBitrateTask")
     @Expose
     private ReduceMediaBitrateTask ReduceMediaBitrateTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>File attribute acquisition task information. This field has a value only when TaskType is DescribeFileAttributes.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DescribeFileAttributesTask")
     @Expose
     private DescribeFileAttributesTask DescribeFileAttributesTask;
 
     /**
-    * 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Audio and video quality detection task information. This field has a value only when TaskType is QualityInspect.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("QualityInspectTask")
     @Expose
     private QualityInspectTask QualityInspectTask;
 
     /**
-    * Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Audio and video quality revival task information. This field has a value only when TaskType is QualityEnhance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("QualityEnhanceTask")
     @Expose
     private QualityEnhanceTask QualityEnhanceTask;
 
     /**
-    * Complex adaptive bitrate streaming processing task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming. 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Complex adaptive bitrate task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ComplexAdaptiveDynamicStreamingTask")
     @Expose
     private ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingTask;
 
     /**
-    * Media processing by MPS task information. This field contains a value only when TaskType is ProcessMediaByMPS.
+    * <p>MPS video processing task information. This field has a value only when TaskType is ProcessMediaByMPS.</p>
     */
     @SerializedName("ProcessMediaByMPSTask")
     @Expose
     private ProcessMediaByMPS ProcessMediaByMPSTask;
 
     /**
-    * AIGC image task information. This field contains a value only when TaskType is AigcImageTask.
+    * <p>AIGC image generation task info. This field has a value only when TaskType is AigcImageTask.</p>
     */
     @SerializedName("AigcImageTask")
     @Expose
     private AigcImageTask AigcImageTask;
 
     /**
-    * AIGC video task information. This field contains a value only when TaskType is AigcVideoTask.
+    * <p>AIGC video task information. This field has a value only when TaskType is AigcVideoTask.</p>
     */
     @SerializedName("AigcVideoTask")
     @Expose
     private AigcVideoTask AigcVideoTask;
 
     /**
-    * 
+    * <p>Media import knowledge base task info. This field has a value only when TaskType is ImportMediaKnowledge.</p>
     */
     @SerializedName("ImportMediaKnowledge")
     @Expose
     private ImportMediaKnowledgeTask ImportMediaKnowledge;
 
     /**
-    * Scenario-based AIGC image task information. This field contains a value only when TaskType is SceneAigcImageTask.
+    * <p>Scenario-based AIGC image generation task info. This field has a value only when TaskType is SceneAigcImageTask.</p>
     */
     @SerializedName("SceneAigcImageTask")
     @Expose
     private SceneAigcImageTask SceneAigcImageTask;
+
+    /**
+    * <p>Scenario-based AIGC video task info. This field has a value only when TaskType is SceneAigcVideoTask.</p>
+    */
+    @SerializedName("SceneAigcVideoTask")
+    @Expose
+    private SceneAigcVideoTask SceneAigcVideoTask;
+
+    /**
+    * <p>Asynchronous image processing task information. This field has a value only when TaskType is ProcessImageAsync.</p>
+    */
+    @SerializedName("ProcessImageAsyncTask")
+    @Expose
+    private ProcessImageAsync ProcessImageAsyncTask;
+
+    /**
+    * <p>Extract digital watermark task info. This field has a value only when TaskType is ExtractBlindWatermark.</p>
+    */
+    @SerializedName("ExtractBlindWatermarkTask")
+    @Expose
+    private ExtractBlindWatermarkTask ExtractBlindWatermarkTask;
+
+    /**
+    * <p>Create custom entity information. This field has a value only when TaskType is CreateAigcAdvancedCustomElement.</p>
+    */
+    @SerializedName("CreateAigcAdvancedCustomElementTask")
+    @Expose
+    private CreateAigcAdvancedCustomElementTask CreateAigcAdvancedCustomElementTask;
+
+    /**
+    * <p>Create custom tone information. This field has a value only when TaskType is CreateAigcCustomVoice.</p>
+    */
+    @SerializedName("CreateAigcCustomVoiceTask")
+    @Expose
+    private CreateAigcCustomVoiceTask CreateAigcCustomVoiceTask;
+
+    /**
+    * <p>Create entity information. This field has a value only when TaskType is CreateAigcSubject.</p>
+    */
+    @SerializedName("CreateAigcSubjectTask")
+    @Expose
+    private CreateAigcSubjectTask CreateAigcSubjectTask;
+
+    /**
+    * 
+    */
+    @SerializedName("AigcVideoRedrawTask")
+    @Expose
+    private AigcVideoRedrawTask AigcVideoRedrawTask;
+
+    /**
+    * 
+    */
+    @SerializedName("AigcAudioTask")
+    @Expose
+    private AigcAudioTask AigcAudioTask;
 
     /**
     * The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -294,671 +333,731 @@ Note: This field may return null, indicating that no valid value can be obtained
     private String RequestId;
 
     /**
-     * Get The task type. Valid values:
-<li>`Procedure`: Video processing</li>
-<li>`EditMedia`: Video editing</li>
-<li>`SplitMedia`: Video splitting</li>
-<li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: Weixin publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
-<li>`PullUpload`: Pulling media files for upload</li>
-<li>`FastClipMedia`: Quick clipping</li>
-<li>`RemoveWatermarkTask`: Watermark removal</li>
-<li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li> `ReviewAudioVideo`: Moderation</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`: Enhance audio/video</li>
-<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li><li>`ProcessMediaByMPS`: Process media by MPS.</li> 
-     * @return TaskType The task type. Valid values:
-<li>`Procedure`: Video processing</li>
-<li>`EditMedia`: Video editing</li>
-<li>`SplitMedia`: Video splitting</li>
-<li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: Weixin publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
-<li>`PullUpload`: Pulling media files for upload</li>
-<li>`FastClipMedia`: Quick clipping</li>
-<li>`RemoveWatermarkTask`: Watermark removal</li>
-<li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li> `ReviewAudioVideo`: Moderation</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`: Enhance audio/video</li>
-<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li><li>`ProcessMediaByMPS`: Process media by MPS.</li>
+     * Get <p>Task type. Valid values: <li>Procedure: Video processing task;</li><li>EditMedia: Video editing task;</li><li>SplitMedia: Video splitting task;</li><li>ComposeMedia: Media file creation task;</li><li>WechatPublish: WeChat publishing task;</li><li>WechatMiniProgramPublish: WeChat Mini Program Video Publishing Task;</li><li>PullUpload: Pull and upload media files task;</li><li>FastClipMedia: Quick trimming task;</li><li>RemoveWatermarkTask: Intelligent watermark removal task;</li><li>DescribeFileAttributesTask: File attribute retrieval task;</li><li>RebuildMedia: Audio and video quality regeneration task (not recommended);</li><li>ReviewAudioVideo: Audio/video moderation task;</li><li>ExtractTraceWatermark: Source watermark extraction task;</li><li>ExtractCopyRightWatermark: Copyright Watermark Extraction Task;</li><li>QualityInspect: Audio and video quality inspection task;</li><li>QualityEnhance: Audio and video quality regeneration task;</li><li>ComplexAdaptiveDynamicStreaming: Complex adaptive bitstream task;</li><li>ProcessMediaByMPS: MPS video processing task;</li><li>AigcImageTask: AIGC image generation task;</li><li>SceneAigcImageTask: Scenario-based AIGC image generation task;</li><li>AigcVideoTask: AIGC video generation task;</li><li>ImportMediaKnowledge: Import media knowledge task.</li><li>SceneAigcVideoTask: Scenario-based AIGC video generation task;</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>CreateAigcAdvancedCustomElementTask: Create custom subject task</li><li>CreateAigcCustomVoiceTask: Create custom voice type task</li><li>CreateAigcSubjectTask: Create subject task</li></p> 
+     * @return TaskType <p>Task type. Valid values: <li>Procedure: Video processing task;</li><li>EditMedia: Video editing task;</li><li>SplitMedia: Video splitting task;</li><li>ComposeMedia: Media file creation task;</li><li>WechatPublish: WeChat publishing task;</li><li>WechatMiniProgramPublish: WeChat Mini Program Video Publishing Task;</li><li>PullUpload: Pull and upload media files task;</li><li>FastClipMedia: Quick trimming task;</li><li>RemoveWatermarkTask: Intelligent watermark removal task;</li><li>DescribeFileAttributesTask: File attribute retrieval task;</li><li>RebuildMedia: Audio and video quality regeneration task (not recommended);</li><li>ReviewAudioVideo: Audio/video moderation task;</li><li>ExtractTraceWatermark: Source watermark extraction task;</li><li>ExtractCopyRightWatermark: Copyright Watermark Extraction Task;</li><li>QualityInspect: Audio and video quality inspection task;</li><li>QualityEnhance: Audio and video quality regeneration task;</li><li>ComplexAdaptiveDynamicStreaming: Complex adaptive bitstream task;</li><li>ProcessMediaByMPS: MPS video processing task;</li><li>AigcImageTask: AIGC image generation task;</li><li>SceneAigcImageTask: Scenario-based AIGC image generation task;</li><li>AigcVideoTask: AIGC video generation task;</li><li>ImportMediaKnowledge: Import media knowledge task.</li><li>SceneAigcVideoTask: Scenario-based AIGC video generation task;</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>CreateAigcAdvancedCustomElementTask: Create custom subject task</li><li>CreateAigcCustomVoiceTask: Create custom voice type task</li><li>CreateAigcSubjectTask: Create subject task</li></p>
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set The task type. Valid values:
-<li>`Procedure`: Video processing</li>
-<li>`EditMedia`: Video editing</li>
-<li>`SplitMedia`: Video splitting</li>
-<li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: Weixin publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
-<li>`PullUpload`: Pulling media files for upload</li>
-<li>`FastClipMedia`: Quick clipping</li>
-<li>`RemoveWatermarkTask`: Watermark removal</li>
-<li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li> `ReviewAudioVideo`: Moderation</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`: Enhance audio/video</li>
-<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li><li>`ProcessMediaByMPS`: Process media by MPS.</li>
-     * @param TaskType The task type. Valid values:
-<li>`Procedure`: Video processing</li>
-<li>`EditMedia`: Video editing</li>
-<li>`SplitMedia`: Video splitting</li>
-<li>`ComposeMedia`: Media file production</li>
-<li>`WechatPublish`: Weixin publishing</li>
-<li>`WechatMiniProgramPublish`: Publishing videos on Weixin Mini Program</li>
-<li>`PullUpload`: Pulling media files for upload</li>
-<li>`FastClipMedia`: Quick clipping</li>
-<li>`RemoveWatermarkTask`: Watermark removal</li>
-<li>`DescribeFileAttributesTask`: Getting file attributes</li>
-<li> `ReviewAudioVideo`: Moderation</li>
-<li>`ExtractTraceWatermark`: Digital watermark extraction</li>
-<li>`QualityEnhance`: Enhance audio/video</li>
-<li>`ComplexAdaptiveDynamicStreaming`: Complex adaptive bitrate streaming processing task</li><li>`ProcessMediaByMPS`: Process media by MPS.</li>
+     * Set <p>Task type. Valid values: <li>Procedure: Video processing task;</li><li>EditMedia: Video editing task;</li><li>SplitMedia: Video splitting task;</li><li>ComposeMedia: Media file creation task;</li><li>WechatPublish: WeChat publishing task;</li><li>WechatMiniProgramPublish: WeChat Mini Program Video Publishing Task;</li><li>PullUpload: Pull and upload media files task;</li><li>FastClipMedia: Quick trimming task;</li><li>RemoveWatermarkTask: Intelligent watermark removal task;</li><li>DescribeFileAttributesTask: File attribute retrieval task;</li><li>RebuildMedia: Audio and video quality regeneration task (not recommended);</li><li>ReviewAudioVideo: Audio/video moderation task;</li><li>ExtractTraceWatermark: Source watermark extraction task;</li><li>ExtractCopyRightWatermark: Copyright Watermark Extraction Task;</li><li>QualityInspect: Audio and video quality inspection task;</li><li>QualityEnhance: Audio and video quality regeneration task;</li><li>ComplexAdaptiveDynamicStreaming: Complex adaptive bitstream task;</li><li>ProcessMediaByMPS: MPS video processing task;</li><li>AigcImageTask: AIGC image generation task;</li><li>SceneAigcImageTask: Scenario-based AIGC image generation task;</li><li>AigcVideoTask: AIGC video generation task;</li><li>ImportMediaKnowledge: Import media knowledge task.</li><li>SceneAigcVideoTask: Scenario-based AIGC video generation task;</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>CreateAigcAdvancedCustomElementTask: Create custom subject task</li><li>CreateAigcCustomVoiceTask: Create custom voice type task</li><li>CreateAigcSubjectTask: Create subject task</li></p>
+     * @param TaskType <p>Task type. Valid values: <li>Procedure: Video processing task;</li><li>EditMedia: Video editing task;</li><li>SplitMedia: Video splitting task;</li><li>ComposeMedia: Media file creation task;</li><li>WechatPublish: WeChat publishing task;</li><li>WechatMiniProgramPublish: WeChat Mini Program Video Publishing Task;</li><li>PullUpload: Pull and upload media files task;</li><li>FastClipMedia: Quick trimming task;</li><li>RemoveWatermarkTask: Intelligent watermark removal task;</li><li>DescribeFileAttributesTask: File attribute retrieval task;</li><li>RebuildMedia: Audio and video quality regeneration task (not recommended);</li><li>ReviewAudioVideo: Audio/video moderation task;</li><li>ExtractTraceWatermark: Source watermark extraction task;</li><li>ExtractCopyRightWatermark: Copyright Watermark Extraction Task;</li><li>QualityInspect: Audio and video quality inspection task;</li><li>QualityEnhance: Audio and video quality regeneration task;</li><li>ComplexAdaptiveDynamicStreaming: Complex adaptive bitstream task;</li><li>ProcessMediaByMPS: MPS video processing task;</li><li>AigcImageTask: AIGC image generation task;</li><li>SceneAigcImageTask: Scenario-based AIGC image generation task;</li><li>AigcVideoTask: AIGC video generation task;</li><li>ImportMediaKnowledge: Import media knowledge task.</li><li>SceneAigcVideoTask: Scenario-based AIGC video generation task;</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>ExtractBlindWatermark: Digital watermark extraction task.</li><li>CreateAigcAdvancedCustomElementTask: Create custom subject task</li><li>CreateAigcCustomVoiceTask: Create custom voice type task</li><li>CreateAigcSubjectTask: Create subject task</li></p>
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get Task status. Valid values:
-<li>WAITING: waiting;</li>
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li> 
-     * @return Status Task status. Valid values:
-<li>WAITING: waiting;</li>
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+     * Get <p>Task status. Value:</p><li>WAITING: Waiting;</li><li>PROCESSING: Processing;</li><li>FINISH: Completed;</li><li>ABORTED: Terminated.</li> 
+     * @return Status <p>Task status. Value:</p><li>WAITING: Waiting;</li><li>PROCESSING: Processing;</li><li>FINISH: Completed;</li><li>ABORTED: Terminated.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Valid values:
-<li>WAITING: waiting;</li>
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
-     * @param Status Task status. Valid values:
-<li>WAITING: waiting;</li>
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+     * Set <p>Task status. Value:</p><li>WAITING: Waiting;</li><li>PROCESSING: Processing;</li><li>FINISH: Completed;</li><li>ABORTED: Terminated.</li>
+     * @param Status <p>Task status. Value:</p><li>WAITING: Waiting;</li><li>PROCESSING: Processing;</li><li>FINISH: Completed;</li><li>ABORTED: Terminated.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get <p>Task creation time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return CreateTime <p>Task creation time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set <p>Task creation time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param CreateTime <p>Task creation time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get <p>Task execution start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p> 
+     * @return BeginProcessTime <p>Task execution start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
      */
     public String getBeginProcessTime() {
         return this.BeginProcessTime;
     }
 
     /**
-     * Set Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set <p>Task execution start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
+     * @param BeginProcessTime <p>Task execution start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
      */
     public void setBeginProcessTime(String BeginProcessTime) {
         this.BeginProcessTime = BeginProcessTime;
     }
 
     /**
-     * Get End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return FinishTime End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get <p>Task execution completion time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p> 
+     * @return FinishTime <p>Task execution completion time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
      */
     public String getFinishTime() {
         return this.FinishTime;
     }
 
     /**
-     * Set End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param FinishTime End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set <p>Task execution completion time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
+     * @param FinishTime <p>Task execution completion time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
      */
     public void setFinishTime(String FinishTime) {
         this.FinishTime = FinishTime;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ProcedureTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Video processing task information. This field has a value only when TaskType is Procedure.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ProcedureTask <p>Video processing task information. This field has a value only when TaskType is Procedure.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ProcedureTask getProcedureTask() {
         return this.ProcedureTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ProcedureTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Video processing task information. This field has a value only when TaskType is Procedure.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ProcedureTask <p>Video processing task information. This field has a value only when TaskType is Procedure.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcedureTask(ProcedureTask ProcedureTask) {
         this.ProcedureTask = ProcedureTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return EditMediaTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Video editing task information. This field has a value only when TaskType is EditMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EditMediaTask <p>Video editing task information. This field has a value only when TaskType is EditMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public EditMediaTask getEditMediaTask() {
         return this.EditMediaTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param EditMediaTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Video editing task information. This field has a value only when TaskType is EditMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EditMediaTask <p>Video editing task information. This field has a value only when TaskType is EditMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEditMediaTask(EditMediaTask EditMediaTask) {
         this.EditMediaTask = EditMediaTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return WechatPublishTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>WeChat publishing task information. This field has a value only when TaskType is WechatPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return WechatPublishTask <p>WeChat publishing task information. This field has a value only when TaskType is WechatPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public WechatPublishTask getWechatPublishTask() {
         return this.WechatPublishTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param WechatPublishTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>WeChat publishing task information. This field has a value only when TaskType is WechatPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WechatPublishTask <p>WeChat publishing task information. This field has a value only when TaskType is WechatPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWechatPublishTask(WechatPublishTask WechatPublishTask) {
         this.WechatPublishTask = WechatPublishTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ComposeMediaTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Media file production task information. This field has a value only when TaskType is ComposeMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ComposeMediaTask <p>Media file production task information. This field has a value only when TaskType is ComposeMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ComposeMediaTask getComposeMediaTask() {
         return this.ComposeMediaTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ComposeMediaTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Media file production task information. This field has a value only when TaskType is ComposeMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ComposeMediaTask <p>Media file production task information. This field has a value only when TaskType is ComposeMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setComposeMediaTask(ComposeMediaTask ComposeMediaTask) {
         this.ComposeMediaTask = ComposeMediaTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SplitMediaTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Video splitting task information. This field has a value only when TaskType is SplitMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SplitMediaTask <p>Video splitting task information. This field has a value only when TaskType is SplitMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SplitMediaTask getSplitMediaTask() {
         return this.SplitMediaTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SplitMediaTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Video splitting task information. This field has a value only when TaskType is SplitMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SplitMediaTask <p>Video splitting task information. This field has a value only when TaskType is SplitMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSplitMediaTask(SplitMediaTask SplitMediaTask) {
         this.SplitMediaTask = SplitMediaTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return WechatMiniProgramPublishTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>WeChat Mini Program publishing task information. This field has a value only when TaskType is WechatMiniProgramPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return WechatMiniProgramPublishTask <p>WeChat Mini Program publishing task information. This field has a value only when TaskType is WechatMiniProgramPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() {
         return this.WechatMiniProgramPublishTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param WechatMiniProgramPublishTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>WeChat Mini Program publishing task information. This field has a value only when TaskType is WechatMiniProgramPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param WechatMiniProgramPublishTask <p>WeChat Mini Program publishing task information. This field has a value only when TaskType is WechatMiniProgramPublish.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask WechatMiniProgramPublishTask) {
         this.WechatMiniProgramPublishTask = WechatMiniProgramPublishTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return PullUploadTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Pull and upload media files task information. This field has a value only when TaskType is PullUpload.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PullUploadTask <p>Pull and upload media files task information. This field has a value only when TaskType is PullUpload.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public PullUploadTask getPullUploadTask() {
         return this.PullUploadTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param PullUploadTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Pull and upload media files task information. This field has a value only when TaskType is PullUpload.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PullUploadTask <p>Pull and upload media files task information. This field has a value only when TaskType is PullUpload.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPullUploadTask(PullUploadTask PullUploadTask) {
         this.PullUploadTask = PullUploadTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return TranscodeTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Video transcoding task information. This field has a value only when TaskType is Transcode.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TranscodeTask <p>Video transcoding task information. This field has a value only when TaskType is Transcode.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TranscodeTask2017 getTranscodeTask() {
         return this.TranscodeTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param TranscodeTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Video transcoding task information. This field has a value only when TaskType is Transcode.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TranscodeTask <p>Video transcoding task information. This field has a value only when TaskType is Transcode.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTranscodeTask(TranscodeTask2017 TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ConcatTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Video splicing task information. This field has a value only when TaskType is Concat.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ConcatTask <p>Video splicing task information. This field has a value only when TaskType is Concat.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ConcatTask2017 getConcatTask() {
         return this.ConcatTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ConcatTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Video splicing task information. This field has a value only when TaskType is Concat.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ConcatTask <p>Video splicing task information. This field has a value only when TaskType is Concat.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setConcatTask(ConcatTask2017 ConcatTask) {
         this.ConcatTask = ConcatTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ClipTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Video editing task information. This field has a value only when TaskType is Clip.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ClipTask <p>Video editing task information. This field has a value only when TaskType is Clip.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ClipTask2017 getClipTask() {
         return this.ClipTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ClipTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Video editing task information. This field has a value only when TaskType is Clip.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ClipTask <p>Video editing task information. This field has a value only when TaskType is Clip.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClipTask(ClipTask2017 ClipTask) {
         this.ClipTask = ClipTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CreateImageSpriteTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Capturing sprite image task information. This field has a value only when TaskType is ImageSprite.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CreateImageSpriteTask <p>Capturing sprite image task information. This field has a value only when TaskType is ImageSprite.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CreateImageSpriteTask2017 getCreateImageSpriteTask() {
         return this.CreateImageSpriteTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CreateImageSpriteTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Capturing sprite image task information. This field has a value only when TaskType is ImageSprite.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CreateImageSpriteTask <p>Capturing sprite image task information. This field has a value only when TaskType is ImageSprite.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateImageSpriteTask(CreateImageSpriteTask2017 CreateImageSpriteTask) {
         this.CreateImageSpriteTask = CreateImageSpriteTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SnapshotByTimeOffsetTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Video screenshot at specified time task information. This field has a value only when TaskType is SnapshotByTimeOffset.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SnapshotByTimeOffsetTask <p>Video screenshot at specified time task information. This field has a value only when TaskType is SnapshotByTimeOffset.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() {
         return this.SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SnapshotByTimeOffsetTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Video screenshot at specified time task information. This field has a value only when TaskType is SnapshotByTimeOffset.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SnapshotByTimeOffsetTask <p>Video screenshot at specified time task information. This field has a value only when TaskType is SnapshotByTimeOffset.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 SnapshotByTimeOffsetTask) {
         this.SnapshotByTimeOffsetTask = SnapshotByTimeOffsetTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RemoveWatermarkTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Intelligent watermark removal task information. This field has a value only when TaskType is RemoveWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RemoveWatermarkTask <p>Intelligent watermark removal task information. This field has a value only when TaskType is RemoveWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RemoveWatermarkTask getRemoveWatermarkTask() {
         return this.RemoveWatermarkTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RemoveWatermarkTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Intelligent watermark removal task information. This field has a value only when TaskType is RemoveWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RemoveWatermarkTask <p>Intelligent watermark removal task information. This field has a value only when TaskType is RemoveWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemoveWatermarkTask(RemoveWatermarkTask RemoveWatermarkTask) {
         this.RemoveWatermarkTask = RemoveWatermarkTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return RebuildMediaTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Audio and video quality revival task information. This field has a value only when TaskType is RebuildMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return RebuildMediaTask <p>Audio and video quality revival task information. This field has a value only when TaskType is RebuildMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RebuildMediaTask getRebuildMediaTask() {
         return this.RebuildMediaTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param RebuildMediaTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Audio and video quality revival task information. This field has a value only when TaskType is RebuildMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RebuildMediaTask <p>Audio and video quality revival task information. This field has a value only when TaskType is RebuildMedia.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRebuildMediaTask(RebuildMediaTask RebuildMediaTask) {
         this.RebuildMediaTask = RebuildMediaTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ExtractTraceWatermarkTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Information about the traceability watermark extraction task. This field has a value only when TaskType is ExtractTraceWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExtractTraceWatermarkTask <p>Information about the traceability watermark extraction task. This field has a value only when TaskType is ExtractTraceWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ExtractTraceWatermarkTask getExtractTraceWatermarkTask() {
         return this.ExtractTraceWatermarkTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ExtractTraceWatermarkTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Information about the traceability watermark extraction task. This field has a value only when TaskType is ExtractTraceWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExtractTraceWatermarkTask <p>Information about the traceability watermark extraction task. This field has a value only when TaskType is ExtractTraceWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask ExtractTraceWatermarkTask) {
         this.ExtractTraceWatermarkTask = ExtractTraceWatermarkTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ExtractCopyRightWatermarkTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Information about the copyright watermark extraction task. This field has a value only when TaskType is ExtractCopyRightWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ExtractCopyRightWatermarkTask <p>Information about the copyright watermark extraction task. This field has a value only when TaskType is ExtractCopyRightWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ExtractCopyRightWatermarkTask getExtractCopyRightWatermarkTask() {
         return this.ExtractCopyRightWatermarkTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ExtractCopyRightWatermarkTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Information about the copyright watermark extraction task. This field has a value only when TaskType is ExtractCopyRightWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExtractCopyRightWatermarkTask <p>Information about the copyright watermark extraction task. This field has a value only when TaskType is ExtractCopyRightWatermark.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExtractCopyRightWatermarkTask(ExtractCopyRightWatermarkTask ExtractCopyRightWatermarkTask) {
         this.ExtractCopyRightWatermarkTask = ExtractCopyRightWatermarkTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ReviewAudioVideoTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Audio/video moderation task info. This field has a value only when TaskType is ReviewAudioVideo.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReviewAudioVideoTask <p>Audio/video moderation task info. This field has a value only when TaskType is ReviewAudioVideo.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ReviewAudioVideoTask getReviewAudioVideoTask() {
         return this.ReviewAudioVideoTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ReviewAudioVideoTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Audio/video moderation task info. This field has a value only when TaskType is ReviewAudioVideo.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReviewAudioVideoTask <p>Audio/video moderation task info. This field has a value only when TaskType is ReviewAudioVideo.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReviewAudioVideoTask(ReviewAudioVideoTask ReviewAudioVideoTask) {
         this.ReviewAudioVideoTask = ReviewAudioVideoTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ReduceMediaBitrateTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>This field is invalid.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ReduceMediaBitrateTask <p>This field is invalid.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ReduceMediaBitrateTask getReduceMediaBitrateTask() {
         return this.ReduceMediaBitrateTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ReduceMediaBitrateTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>This field is invalid.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReduceMediaBitrateTask <p>This field is invalid.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setReduceMediaBitrateTask(ReduceMediaBitrateTask ReduceMediaBitrateTask) {
         this.ReduceMediaBitrateTask = ReduceMediaBitrateTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return DescribeFileAttributesTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>File attribute acquisition task information. This field has a value only when TaskType is DescribeFileAttributes.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DescribeFileAttributesTask <p>File attribute acquisition task information. This field has a value only when TaskType is DescribeFileAttributes.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DescribeFileAttributesTask getDescribeFileAttributesTask() {
         return this.DescribeFileAttributesTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param DescribeFileAttributesTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>File attribute acquisition task information. This field has a value only when TaskType is DescribeFileAttributes.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DescribeFileAttributesTask <p>File attribute acquisition task information. This field has a value only when TaskType is DescribeFileAttributes.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDescribeFileAttributesTask(DescribeFileAttributesTask DescribeFileAttributesTask) {
         this.DescribeFileAttributesTask = DescribeFileAttributesTask;
     }
 
     /**
-     * Get 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return QualityInspectTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Audio and video quality detection task information. This field has a value only when TaskType is QualityInspect.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QualityInspectTask <p>Audio and video quality detection task information. This field has a value only when TaskType is QualityInspect.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public QualityInspectTask getQualityInspectTask() {
         return this.QualityInspectTask;
     }
 
     /**
-     * Set 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param QualityInspectTask 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Audio and video quality detection task information. This field has a value only when TaskType is QualityInspect.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QualityInspectTask <p>Audio and video quality detection task information. This field has a value only when TaskType is QualityInspect.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQualityInspectTask(QualityInspectTask QualityInspectTask) {
         this.QualityInspectTask = QualityInspectTask;
     }
 
     /**
-     * Get Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return QualityEnhanceTask Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Audio and video quality revival task information. This field has a value only when TaskType is QualityEnhance.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QualityEnhanceTask <p>Audio and video quality revival task information. This field has a value only when TaskType is QualityEnhance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public QualityEnhanceTask getQualityEnhanceTask() {
         return this.QualityEnhanceTask;
     }
 
     /**
-     * Set Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param QualityEnhanceTask Media Quality Enhance task information. This field has a value only when TaskType is QualityEnhance.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Audio and video quality revival task information. This field has a value only when TaskType is QualityEnhance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QualityEnhanceTask <p>Audio and video quality revival task information. This field has a value only when TaskType is QualityEnhance.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setQualityEnhanceTask(QualityEnhanceTask QualityEnhanceTask) {
         this.QualityEnhanceTask = QualityEnhanceTask;
     }
 
     /**
-     * Get Complex adaptive bitrate streaming processing task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming. 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return ComplexAdaptiveDynamicStreamingTask Complex adaptive bitrate streaming processing task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming. 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Complex adaptive bitrate task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ComplexAdaptiveDynamicStreamingTask <p>Complex adaptive bitrate task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ComplexAdaptiveDynamicStreamingTask getComplexAdaptiveDynamicStreamingTask() {
         return this.ComplexAdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Set Complex adaptive bitrate streaming processing task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming. 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param ComplexAdaptiveDynamicStreamingTask Complex adaptive bitrate streaming processing task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming. 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Complex adaptive bitrate task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ComplexAdaptiveDynamicStreamingTask <p>Complex adaptive bitrate task information. This field has a value only when TaskType is ComplexAdaptiveDynamicStreaming.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setComplexAdaptiveDynamicStreamingTask(ComplexAdaptiveDynamicStreamingTask ComplexAdaptiveDynamicStreamingTask) {
         this.ComplexAdaptiveDynamicStreamingTask = ComplexAdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Get Media processing by MPS task information. This field contains a value only when TaskType is ProcessMediaByMPS. 
-     * @return ProcessMediaByMPSTask Media processing by MPS task information. This field contains a value only when TaskType is ProcessMediaByMPS.
+     * Get <p>MPS video processing task information. This field has a value only when TaskType is ProcessMediaByMPS.</p> 
+     * @return ProcessMediaByMPSTask <p>MPS video processing task information. This field has a value only when TaskType is ProcessMediaByMPS.</p>
      */
     public ProcessMediaByMPS getProcessMediaByMPSTask() {
         return this.ProcessMediaByMPSTask;
     }
 
     /**
-     * Set Media processing by MPS task information. This field contains a value only when TaskType is ProcessMediaByMPS.
-     * @param ProcessMediaByMPSTask Media processing by MPS task information. This field contains a value only when TaskType is ProcessMediaByMPS.
+     * Set <p>MPS video processing task information. This field has a value only when TaskType is ProcessMediaByMPS.</p>
+     * @param ProcessMediaByMPSTask <p>MPS video processing task information. This field has a value only when TaskType is ProcessMediaByMPS.</p>
      */
     public void setProcessMediaByMPSTask(ProcessMediaByMPS ProcessMediaByMPSTask) {
         this.ProcessMediaByMPSTask = ProcessMediaByMPSTask;
     }
 
     /**
-     * Get AIGC image task information. This field contains a value only when TaskType is AigcImageTask. 
-     * @return AigcImageTask AIGC image task information. This field contains a value only when TaskType is AigcImageTask.
+     * Get <p>AIGC image generation task info. This field has a value only when TaskType is AigcImageTask.</p> 
+     * @return AigcImageTask <p>AIGC image generation task info. This field has a value only when TaskType is AigcImageTask.</p>
      */
     public AigcImageTask getAigcImageTask() {
         return this.AigcImageTask;
     }
 
     /**
-     * Set AIGC image task information. This field contains a value only when TaskType is AigcImageTask.
-     * @param AigcImageTask AIGC image task information. This field contains a value only when TaskType is AigcImageTask.
+     * Set <p>AIGC image generation task info. This field has a value only when TaskType is AigcImageTask.</p>
+     * @param AigcImageTask <p>AIGC image generation task info. This field has a value only when TaskType is AigcImageTask.</p>
      */
     public void setAigcImageTask(AigcImageTask AigcImageTask) {
         this.AigcImageTask = AigcImageTask;
     }
 
     /**
-     * Get AIGC video task information. This field contains a value only when TaskType is AigcVideoTask. 
-     * @return AigcVideoTask AIGC video task information. This field contains a value only when TaskType is AigcVideoTask.
+     * Get <p>AIGC video task information. This field has a value only when TaskType is AigcVideoTask.</p> 
+     * @return AigcVideoTask <p>AIGC video task information. This field has a value only when TaskType is AigcVideoTask.</p>
      */
     public AigcVideoTask getAigcVideoTask() {
         return this.AigcVideoTask;
     }
 
     /**
-     * Set AIGC video task information. This field contains a value only when TaskType is AigcVideoTask.
-     * @param AigcVideoTask AIGC video task information. This field contains a value only when TaskType is AigcVideoTask.
+     * Set <p>AIGC video task information. This field has a value only when TaskType is AigcVideoTask.</p>
+     * @param AigcVideoTask <p>AIGC video task information. This field has a value only when TaskType is AigcVideoTask.</p>
      */
     public void setAigcVideoTask(AigcVideoTask AigcVideoTask) {
         this.AigcVideoTask = AigcVideoTask;
     }
 
     /**
-     * Get  
-     * @return ImportMediaKnowledge 
+     * Get <p>Media import knowledge base task info. This field has a value only when TaskType is ImportMediaKnowledge.</p> 
+     * @return ImportMediaKnowledge <p>Media import knowledge base task info. This field has a value only when TaskType is ImportMediaKnowledge.</p>
      */
     public ImportMediaKnowledgeTask getImportMediaKnowledge() {
         return this.ImportMediaKnowledge;
     }
 
     /**
-     * Set 
-     * @param ImportMediaKnowledge 
+     * Set <p>Media import knowledge base task info. This field has a value only when TaskType is ImportMediaKnowledge.</p>
+     * @param ImportMediaKnowledge <p>Media import knowledge base task info. This field has a value only when TaskType is ImportMediaKnowledge.</p>
      */
     public void setImportMediaKnowledge(ImportMediaKnowledgeTask ImportMediaKnowledge) {
         this.ImportMediaKnowledge = ImportMediaKnowledge;
     }
 
     /**
-     * Get Scenario-based AIGC image task information. This field contains a value only when TaskType is SceneAigcImageTask. 
-     * @return SceneAigcImageTask Scenario-based AIGC image task information. This field contains a value only when TaskType is SceneAigcImageTask.
+     * Get <p>Scenario-based AIGC image generation task info. This field has a value only when TaskType is SceneAigcImageTask.</p> 
+     * @return SceneAigcImageTask <p>Scenario-based AIGC image generation task info. This field has a value only when TaskType is SceneAigcImageTask.</p>
      */
     public SceneAigcImageTask getSceneAigcImageTask() {
         return this.SceneAigcImageTask;
     }
 
     /**
-     * Set Scenario-based AIGC image task information. This field contains a value only when TaskType is SceneAigcImageTask.
-     * @param SceneAigcImageTask Scenario-based AIGC image task information. This field contains a value only when TaskType is SceneAigcImageTask.
+     * Set <p>Scenario-based AIGC image generation task info. This field has a value only when TaskType is SceneAigcImageTask.</p>
+     * @param SceneAigcImageTask <p>Scenario-based AIGC image generation task info. This field has a value only when TaskType is SceneAigcImageTask.</p>
      */
     public void setSceneAigcImageTask(SceneAigcImageTask SceneAigcImageTask) {
         this.SceneAigcImageTask = SceneAigcImageTask;
+    }
+
+    /**
+     * Get <p>Scenario-based AIGC video task info. This field has a value only when TaskType is SceneAigcVideoTask.</p> 
+     * @return SceneAigcVideoTask <p>Scenario-based AIGC video task info. This field has a value only when TaskType is SceneAigcVideoTask.</p>
+     */
+    public SceneAigcVideoTask getSceneAigcVideoTask() {
+        return this.SceneAigcVideoTask;
+    }
+
+    /**
+     * Set <p>Scenario-based AIGC video task info. This field has a value only when TaskType is SceneAigcVideoTask.</p>
+     * @param SceneAigcVideoTask <p>Scenario-based AIGC video task info. This field has a value only when TaskType is SceneAigcVideoTask.</p>
+     */
+    public void setSceneAigcVideoTask(SceneAigcVideoTask SceneAigcVideoTask) {
+        this.SceneAigcVideoTask = SceneAigcVideoTask;
+    }
+
+    /**
+     * Get <p>Asynchronous image processing task information. This field has a value only when TaskType is ProcessImageAsync.</p> 
+     * @return ProcessImageAsyncTask <p>Asynchronous image processing task information. This field has a value only when TaskType is ProcessImageAsync.</p>
+     */
+    public ProcessImageAsync getProcessImageAsyncTask() {
+        return this.ProcessImageAsyncTask;
+    }
+
+    /**
+     * Set <p>Asynchronous image processing task information. This field has a value only when TaskType is ProcessImageAsync.</p>
+     * @param ProcessImageAsyncTask <p>Asynchronous image processing task information. This field has a value only when TaskType is ProcessImageAsync.</p>
+     */
+    public void setProcessImageAsyncTask(ProcessImageAsync ProcessImageAsyncTask) {
+        this.ProcessImageAsyncTask = ProcessImageAsyncTask;
+    }
+
+    /**
+     * Get <p>Extract digital watermark task info. This field has a value only when TaskType is ExtractBlindWatermark.</p> 
+     * @return ExtractBlindWatermarkTask <p>Extract digital watermark task info. This field has a value only when TaskType is ExtractBlindWatermark.</p>
+     */
+    public ExtractBlindWatermarkTask getExtractBlindWatermarkTask() {
+        return this.ExtractBlindWatermarkTask;
+    }
+
+    /**
+     * Set <p>Extract digital watermark task info. This field has a value only when TaskType is ExtractBlindWatermark.</p>
+     * @param ExtractBlindWatermarkTask <p>Extract digital watermark task info. This field has a value only when TaskType is ExtractBlindWatermark.</p>
+     */
+    public void setExtractBlindWatermarkTask(ExtractBlindWatermarkTask ExtractBlindWatermarkTask) {
+        this.ExtractBlindWatermarkTask = ExtractBlindWatermarkTask;
+    }
+
+    /**
+     * Get <p>Create custom entity information. This field has a value only when TaskType is CreateAigcAdvancedCustomElement.</p> 
+     * @return CreateAigcAdvancedCustomElementTask <p>Create custom entity information. This field has a value only when TaskType is CreateAigcAdvancedCustomElement.</p>
+     */
+    public CreateAigcAdvancedCustomElementTask getCreateAigcAdvancedCustomElementTask() {
+        return this.CreateAigcAdvancedCustomElementTask;
+    }
+
+    /**
+     * Set <p>Create custom entity information. This field has a value only when TaskType is CreateAigcAdvancedCustomElement.</p>
+     * @param CreateAigcAdvancedCustomElementTask <p>Create custom entity information. This field has a value only when TaskType is CreateAigcAdvancedCustomElement.</p>
+     */
+    public void setCreateAigcAdvancedCustomElementTask(CreateAigcAdvancedCustomElementTask CreateAigcAdvancedCustomElementTask) {
+        this.CreateAigcAdvancedCustomElementTask = CreateAigcAdvancedCustomElementTask;
+    }
+
+    /**
+     * Get <p>Create custom tone information. This field has a value only when TaskType is CreateAigcCustomVoice.</p> 
+     * @return CreateAigcCustomVoiceTask <p>Create custom tone information. This field has a value only when TaskType is CreateAigcCustomVoice.</p>
+     */
+    public CreateAigcCustomVoiceTask getCreateAigcCustomVoiceTask() {
+        return this.CreateAigcCustomVoiceTask;
+    }
+
+    /**
+     * Set <p>Create custom tone information. This field has a value only when TaskType is CreateAigcCustomVoice.</p>
+     * @param CreateAigcCustomVoiceTask <p>Create custom tone information. This field has a value only when TaskType is CreateAigcCustomVoice.</p>
+     */
+    public void setCreateAigcCustomVoiceTask(CreateAigcCustomVoiceTask CreateAigcCustomVoiceTask) {
+        this.CreateAigcCustomVoiceTask = CreateAigcCustomVoiceTask;
+    }
+
+    /**
+     * Get <p>Create entity information. This field has a value only when TaskType is CreateAigcSubject.</p> 
+     * @return CreateAigcSubjectTask <p>Create entity information. This field has a value only when TaskType is CreateAigcSubject.</p>
+     */
+    public CreateAigcSubjectTask getCreateAigcSubjectTask() {
+        return this.CreateAigcSubjectTask;
+    }
+
+    /**
+     * Set <p>Create entity information. This field has a value only when TaskType is CreateAigcSubject.</p>
+     * @param CreateAigcSubjectTask <p>Create entity information. This field has a value only when TaskType is CreateAigcSubject.</p>
+     */
+    public void setCreateAigcSubjectTask(CreateAigcSubjectTask CreateAigcSubjectTask) {
+        this.CreateAigcSubjectTask = CreateAigcSubjectTask;
+    }
+
+    /**
+     * Get  
+     * @return AigcVideoRedrawTask 
+     */
+    public AigcVideoRedrawTask getAigcVideoRedrawTask() {
+        return this.AigcVideoRedrawTask;
+    }
+
+    /**
+     * Set 
+     * @param AigcVideoRedrawTask 
+     */
+    public void setAigcVideoRedrawTask(AigcVideoRedrawTask AigcVideoRedrawTask) {
+        this.AigcVideoRedrawTask = AigcVideoRedrawTask;
+    }
+
+    /**
+     * Get  
+     * @return AigcAudioTask 
+     */
+    public AigcAudioTask getAigcAudioTask() {
+        return this.AigcAudioTask;
+    }
+
+    /**
+     * Set 
+     * @param AigcAudioTask 
+     */
+    public void setAigcAudioTask(AigcAudioTask AigcAudioTask) {
+        this.AigcAudioTask = AigcAudioTask;
     }
 
     /**
@@ -1081,6 +1180,30 @@ Note: This field may return null, indicating that no valid value can be obtained
         if (source.SceneAigcImageTask != null) {
             this.SceneAigcImageTask = new SceneAigcImageTask(source.SceneAigcImageTask);
         }
+        if (source.SceneAigcVideoTask != null) {
+            this.SceneAigcVideoTask = new SceneAigcVideoTask(source.SceneAigcVideoTask);
+        }
+        if (source.ProcessImageAsyncTask != null) {
+            this.ProcessImageAsyncTask = new ProcessImageAsync(source.ProcessImageAsyncTask);
+        }
+        if (source.ExtractBlindWatermarkTask != null) {
+            this.ExtractBlindWatermarkTask = new ExtractBlindWatermarkTask(source.ExtractBlindWatermarkTask);
+        }
+        if (source.CreateAigcAdvancedCustomElementTask != null) {
+            this.CreateAigcAdvancedCustomElementTask = new CreateAigcAdvancedCustomElementTask(source.CreateAigcAdvancedCustomElementTask);
+        }
+        if (source.CreateAigcCustomVoiceTask != null) {
+            this.CreateAigcCustomVoiceTask = new CreateAigcCustomVoiceTask(source.CreateAigcCustomVoiceTask);
+        }
+        if (source.CreateAigcSubjectTask != null) {
+            this.CreateAigcSubjectTask = new CreateAigcSubjectTask(source.CreateAigcSubjectTask);
+        }
+        if (source.AigcVideoRedrawTask != null) {
+            this.AigcVideoRedrawTask = new AigcVideoRedrawTask(source.AigcVideoRedrawTask);
+        }
+        if (source.AigcAudioTask != null) {
+            this.AigcAudioTask = new AigcAudioTask(source.AigcAudioTask);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1123,6 +1246,14 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamObj(map, prefix + "AigcVideoTask.", this.AigcVideoTask);
         this.setParamObj(map, prefix + "ImportMediaKnowledge.", this.ImportMediaKnowledge);
         this.setParamObj(map, prefix + "SceneAigcImageTask.", this.SceneAigcImageTask);
+        this.setParamObj(map, prefix + "SceneAigcVideoTask.", this.SceneAigcVideoTask);
+        this.setParamObj(map, prefix + "ProcessImageAsyncTask.", this.ProcessImageAsyncTask);
+        this.setParamObj(map, prefix + "ExtractBlindWatermarkTask.", this.ExtractBlindWatermarkTask);
+        this.setParamObj(map, prefix + "CreateAigcAdvancedCustomElementTask.", this.CreateAigcAdvancedCustomElementTask);
+        this.setParamObj(map, prefix + "CreateAigcCustomVoiceTask.", this.CreateAigcCustomVoiceTask);
+        this.setParamObj(map, prefix + "CreateAigcSubjectTask.", this.CreateAigcSubjectTask);
+        this.setParamObj(map, prefix + "AigcVideoRedrawTask.", this.AigcVideoRedrawTask);
+        this.setParamObj(map, prefix + "AigcAudioTask.", this.AigcAudioTask);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

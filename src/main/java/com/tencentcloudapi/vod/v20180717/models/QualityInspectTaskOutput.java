@@ -24,92 +24,112 @@ import java.util.HashMap;
 public class QualityInspectTaskOutput extends AbstractModel {
 
     /**
-    * Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
+    * Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
     */
     @SerializedName("NoAudio")
     @Expose
     private Long NoAudio;
 
     /**
-    * Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
+    * Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
     */
     @SerializedName("NoVideo")
     @Expose
     private Long NoVideo;
 
     /**
-    * Quality score, value range: [0, 100].
+    * Video picture quality score, value ranges from 0 to 100.
     */
     @SerializedName("QualityEvaluationScore")
     @Expose
     private Long QualityEvaluationScore;
 
     /**
-    * Abnormal items list detected of media quality inspection task
+    * List of abnormalities detected in audio and video quality.
     */
     @SerializedName("QualityInspectResultSet")
     @Expose
     private QualityInspectResultItem [] QualityInspectResultSet;
 
     /**
-     * Get Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li> 
-     * @return NoAudio Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
+     * Get Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li> 
+     * @return NoAudio Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
      */
     public Long getNoAudio() {
         return this.NoAudio;
     }
 
     /**
-     * Set Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
-     * @param NoAudio Whether the media files have no audio track, range: <li>0: No, that is, there is an audio track;</li> <li>1: Yes, that is, there is no audio track.</li>
+     * Set Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
+     * @param NoAudio Whether there is no audio track in the media file. Value ranges from...to...
+<li>0: No, have audio tracks;</li>
+<li>1: Yes, no audio track.</li>
      */
     public void setNoAudio(Long NoAudio) {
         this.NoAudio = NoAudio;
     }
 
     /**
-     * Get Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li> 
-     * @return NoVideo Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
+     * Get Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li> 
+     * @return NoVideo Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
      */
     public Long getNoVideo() {
         return this.NoVideo;
     }
 
     /**
-     * Set Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
-     * @param NoVideo Whether the media files have no video track, range: <li>0: No, that is, there is a video track;</li> <li>1: Yes, that is, there is no video track.</li>
+     * Set Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
+     * @param NoVideo Whether there is no video track in the media file. Value ranges from...to...
+<li>0: No, meaning there is a video track;</li>
+<li>1: Yes, no video track.</li>
      */
     public void setNoVideo(Long NoVideo) {
         this.NoVideo = NoVideo;
     }
 
     /**
-     * Get Quality score, value range: [0, 100]. 
-     * @return QualityEvaluationScore Quality score, value range: [0, 100].
+     * Get Video picture quality score, value ranges from 0 to 100. 
+     * @return QualityEvaluationScore Video picture quality score, value ranges from 0 to 100.
      */
     public Long getQualityEvaluationScore() {
         return this.QualityEvaluationScore;
     }
 
     /**
-     * Set Quality score, value range: [0, 100].
-     * @param QualityEvaluationScore Quality score, value range: [0, 100].
+     * Set Video picture quality score, value ranges from 0 to 100.
+     * @param QualityEvaluationScore Video picture quality score, value ranges from 0 to 100.
      */
     public void setQualityEvaluationScore(Long QualityEvaluationScore) {
         this.QualityEvaluationScore = QualityEvaluationScore;
     }
 
     /**
-     * Get Abnormal items list detected of media quality inspection task 
-     * @return QualityInspectResultSet Abnormal items list detected of media quality inspection task
+     * Get List of abnormalities detected in audio and video quality. 
+     * @return QualityInspectResultSet List of abnormalities detected in audio and video quality.
      */
     public QualityInspectResultItem [] getQualityInspectResultSet() {
         return this.QualityInspectResultSet;
     }
 
     /**
-     * Set Abnormal items list detected of media quality inspection task
-     * @param QualityInspectResultSet Abnormal items list detected of media quality inspection task
+     * Set List of abnormalities detected in audio and video quality.
+     * @param QualityInspectResultSet List of abnormalities detected in audio and video quality.
      */
     public void setQualityInspectResultSet(QualityInspectResultItem [] QualityInspectResultSet) {
         this.QualityInspectResultSet = QualityInspectResultSet;

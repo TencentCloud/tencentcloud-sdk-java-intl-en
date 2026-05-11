@@ -59,8 +59,7 @@ public class AiRecognitionTaskAsrFullTextResult extends AbstractModel {
     private AiRecognitionTaskAsrFullTextResultInput Input;
 
     /**
-    * Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Output information on the speech full-text recognition task.
     */
     @SerializedName("Output")
     @Expose
@@ -168,20 +167,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Output information on the speech full-text recognition task. 
+     * @return Output Output information on the speech full-text recognition task.
      */
     public AiRecognitionTaskAsrFullTextResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output information of full speech recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Output information on the speech full-text recognition task.
+     * @param Output Output information on the speech full-text recognition task.
      */
     public void setOutput(AiRecognitionTaskAsrFullTextResultOutput Output) {
         this.Output = Output;

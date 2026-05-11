@@ -59,8 +59,7 @@ public class AiRecognitionTaskFaceResult extends AbstractModel {
     private AiRecognitionTaskFaceResultInput Input;
 
     /**
-    * Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Face recognition task output information.
     */
     @SerializedName("Output")
     @Expose
@@ -168,20 +167,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Face recognition task output information. 
+     * @return Output Face recognition task output information.
      */
     public AiRecognitionTaskFaceResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output information of face recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Face recognition task output information.
+     * @param Output Face recognition task output information.
      */
     public void setOutput(AiRecognitionTaskFaceResultOutput Output) {
         this.Output = Output;

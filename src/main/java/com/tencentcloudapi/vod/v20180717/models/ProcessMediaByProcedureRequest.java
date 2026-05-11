@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class ProcessMediaByProcedureRequest extends AbstractModel {
 
     /**
-    * Media file ID.
-    */
-    @SerializedName("FileId")
-    @Expose
-    private String FileId;
-
-    /**
     * [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name.
     */
     @SerializedName("ProcedureName")
@@ -38,7 +31,23 @@ public class ProcessMediaByProcedureRequest extends AbstractModel {
     private String ProcedureName;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * Media file ID.
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
+    * Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+    */
+    @SerializedName("MediaStoragePath")
+    @Expose
+    private String MediaStoragePath;
+
+    /**
+    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -80,22 +89,6 @@ public class ProcessMediaByProcedureRequest extends AbstractModel {
     private String ExtInfo;
 
     /**
-     * Get Media file ID. 
-     * @return FileId Media file ID.
-     */
-    public String getFileId() {
-        return this.FileId;
-    }
-
-    /**
-     * Set Media file ID.
-     * @param FileId Media file ID.
-     */
-    public void setFileId(String FileId) {
-        this.FileId = FileId;
-    }
-
-    /**
      * Get [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name. 
      * @return ProcedureName [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name.
      */
@@ -112,16 +105,56 @@ public class ProcessMediaByProcedureRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get Media file ID. 
+     * @return FileId Media file ID.
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set Media file ID.
+     * @param FileId Media file ID.
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
+    /**
+     * Get Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided. 
+     * @return MediaStoragePath Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+     */
+    public String getMediaStoragePath() {
+        return this.MediaStoragePath;
+    }
+
+    /**
+     * Set Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+     * @param MediaStoragePath Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+     */
+    public void setMediaStoragePath(String MediaStoragePath) {
+        this.MediaStoragePath = MediaStoragePath;
+    }
+
+    /**
+     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -215,11 +248,14 @@ public class ProcessMediaByProcedureRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ProcessMediaByProcedureRequest(ProcessMediaByProcedureRequest source) {
+        if (source.ProcedureName != null) {
+            this.ProcedureName = new String(source.ProcedureName);
+        }
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
-        if (source.ProcedureName != null) {
-            this.ProcedureName = new String(source.ProcedureName);
+        if (source.MediaStoragePath != null) {
+            this.MediaStoragePath = new String(source.MediaStoragePath);
         }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
@@ -246,8 +282,9 @@ public class ProcessMediaByProcedureRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "ProcedureName", this.ProcedureName);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "TasksNotifyMode", this.TasksNotifyMode);

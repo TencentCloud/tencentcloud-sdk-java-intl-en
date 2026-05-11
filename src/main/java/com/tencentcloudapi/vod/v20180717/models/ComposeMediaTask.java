@@ -66,16 +66,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Progress;
 
     /**
-    * Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Input of the media file creation task.
     */
     @SerializedName("Input")
     @Expose
     private ComposeMediaTaskInput Input;
 
     /**
-    * Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Output of the media file creation task.
     */
     @SerializedName("Output")
     @Expose
@@ -212,40 +210,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Input Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Input of the media file creation task. 
+     * @return Input Input of the media file creation task.
      */
     public ComposeMediaTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Input Input of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Input of the media file creation task.
+     * @param Input Input of the media file creation task.
      */
     public void setInput(ComposeMediaTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Output of the media file creation task. 
+     * @return Output Output of the media file creation task.
      */
     public ComposeMediaTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of media file composing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Output of the media file creation task.
+     * @param Output Output of the media file creation task.
      */
     public void setOutput(ComposeMediaTaskOutput Output) {
         this.Output = Output;

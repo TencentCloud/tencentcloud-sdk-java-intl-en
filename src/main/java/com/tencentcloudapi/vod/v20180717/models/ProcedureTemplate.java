@@ -234,7 +234,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return AiRecognitionTask Type parameter of AI-based content recognition task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public AiRecognitionTaskInput getAiRecognitionTask() {
         return this.AiRecognitionTask;
     }
@@ -244,7 +246,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AiRecognitionTask Type parameter of AI-based content recognition task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @deprecated
      */
+    @Deprecated
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
         this.AiRecognitionTask = AiRecognitionTask;
     }

@@ -31,7 +31,7 @@ public class SimpleHlsClipRequest extends AbstractModel {
     private String Url;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -96,21 +96,21 @@ This parameter is valid only if `IsPersistence` is `1`.
     private String SessionContext;
 
     /**
-    * This field is deprecated.
+    * 
     */
     @SerializedName("Precision")
     @Expose
     private String Precision;
 
     /**
-    * Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
+    * 
     */
     @SerializedName("OutputMediaType")
     @Expose
     private String OutputMediaType;
 
     /**
-    * Reserved field, used for special purposes. Example value: ""
+    * 
     */
     @SerializedName("ExtInfo")
     @Expose
@@ -133,16 +133,16 @@ This parameter is valid only if `IsPersistence` is `1`.
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -285,48 +285,52 @@ This parameter is valid only if `IsPersistence` is `1`.
     }
 
     /**
-     * Get This field is deprecated. 
-     * @return Precision This field is deprecated.
+     * Get  
+     * @return Precision 
+     * @deprecated
      */
+    @Deprecated
     public String getPrecision() {
         return this.Precision;
     }
 
     /**
-     * Set This field is deprecated.
-     * @param Precision This field is deprecated.
+     * Set 
+     * @param Precision 
+     * @deprecated
      */
+    @Deprecated
     public void setPrecision(String Precision) {
         this.Precision = Precision;
     }
 
     /**
-     * Get Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls. 
-     * @return OutputMediaType Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
+     * Get  
+     * @return OutputMediaType 
      */
     public String getOutputMediaType() {
         return this.OutputMediaType;
     }
 
     /**
-     * Set Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
-     * @param OutputMediaType Output video type. Valid values are: <li>hls: outputs hls files.</li> Default value: hls.
+     * Set 
+     * @param OutputMediaType 
      */
     public void setOutputMediaType(String OutputMediaType) {
         this.OutputMediaType = OutputMediaType;
     }
 
     /**
-     * Get Reserved field, used for special purposes. Example value: "" 
-     * @return ExtInfo Reserved field, used for special purposes. Example value: ""
+     * Get  
+     * @return ExtInfo 
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set Reserved field, used for special purposes. Example value: ""
-     * @param ExtInfo Reserved field, used for special purposes. Example value: ""
+     * Set 
+     * @param ExtInfo 
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

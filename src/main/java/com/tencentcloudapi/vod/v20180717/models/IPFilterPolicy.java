@@ -24,89 +24,69 @@ import java.util.HashMap;
 public class IPFilterPolicy extends AbstractModel {
 
     /**
-    * IP access restriction status. Optional values:
-<li>Enabled: enable;</li>
-<li>Disabled: disable.</li>
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * IP access restriction type:
-<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
-<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
+    * 
     */
     @SerializedName("FilterType")
     @Expose
     private String FilterType;
 
     /**
-    * IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
+    * 
     */
     @SerializedName("IPList")
     @Expose
     private String [] IPList;
 
     /**
-     * Get IP access restriction status. Optional values:
-<li>Enabled: enable;</li>
-<li>Disabled: disable.</li> 
-     * @return Status IP access restriction status. Optional values:
-<li>Enabled: enable;</li>
-<li>Disabled: disable.</li>
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set IP access restriction status. Optional values:
-<li>Enabled: enable;</li>
-<li>Disabled: disable.</li>
-     * @param Status IP access restriction status. Optional values:
-<li>Enabled: enable;</li>
-<li>Disabled: disable.</li>
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get IP access restriction type:
-<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
-<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned. 
-     * @return FilterType IP access restriction type:
-<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
-<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
+     * Get  
+     * @return FilterType 
      */
     public String getFilterType() {
         return this.FilterType;
     }
 
     /**
-     * Set IP access restriction type:
-<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
-<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
-     * @param FilterType IP access restriction type:
-<li>Black: blocklist-based verification. Only IP requests from the IPList will be blocked.</li>
-<li>White: allowlist-based verification. Only IP requests from the IPList will be allowed.</li>When Status is set to Enabled, FilterType must be assigned.
+     * Set 
+     * @param FilterType 
      */
     public void setFilterType(String FilterType) {
         this.FilterType = FilterType;
     }
 
     /**
-     * Get IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned. 
-     * @return IPList IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
+     * Get  
+     * @return IPList 
      */
     public String [] getIPList() {
         return this.IPList;
     }
 
     /**
-     * Set IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
-     * @param IPList IP list, supporting IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or CIDR notation /N (IPV4: 1 ≤ N ≤ 32; IPV6: 1 ≤ N ≤ 128). A maximum of 200 IPs or CIDR blocks can be added. When Status is set to Enabled, IPList must be assigned.
+     * Set 
+     * @param IPList 
      */
     public void setIPList(String [] IPList) {
         this.IPList = IPList;

@@ -61,8 +61,7 @@ public class ReduceMediaBitrateTask extends AbstractModel {
     private String FileUrl;
 
     /**
-    * The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Metadata of the original video.
     */
     @SerializedName("MetaData")
     @Expose
@@ -194,20 +193,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MetaData The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Metadata of the original video. 
+     * @return MetaData Metadata of the original video.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MetaData The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Metadata of the original video.
+     * @param MetaData Metadata of the original video.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

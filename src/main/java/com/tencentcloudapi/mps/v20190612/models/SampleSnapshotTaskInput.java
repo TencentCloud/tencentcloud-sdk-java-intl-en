@@ -24,22 +24,21 @@ import java.util.HashMap;
 public class SampleSnapshotTaskInput extends AbstractModel {
 
     /**
-    * Sampled screenshot template ID.
+    * <p>Sampled screenshot template ID.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
     */
     @SerializedName("WatermarkSet")
     @Expose
     private WatermarkInput [] WatermarkSet;
 
     /**
-    * Target bucket of a sampled screenshot. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+    * <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OutputStorage")
@@ -47,20 +46,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private TaskOutputStorage OutputStorage;
 
     /**
-    * Output path of an image file after sampled screenshot taking, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_sampleSnapshot_{definition}_{number}.{format}`.
+    * <p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>.
     */
     @SerializedName("OutputObjectPath")
     @Expose
     private String OutputObjectPath;
 
     /**
-    * Rule of the `{number}` variable in the sampled screenshot output path.
+    * <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ObjectNumberFormat")
@@ -68,45 +61,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private NumberFormat ObjectNumberFormat;
 
     /**
-     * Get Sampled screenshot template ID. 
-     * @return Definition Sampled screenshot template ID.
+    * <p>Extended parameter.</p>
+    */
+    @SerializedName("ExtInfo")
+    @Expose
+    private String ExtInfo;
+
+    /**
+     * Get <p>Sampled screenshot template ID.</p> 
+     * @return Definition <p>Sampled screenshot template ID.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Sampled screenshot template ID.
-     * @param Definition Sampled screenshot template ID.
+     * Set <p>Sampled screenshot template ID.</p>
+     * @param Definition <p>Sampled screenshot template ID.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return WatermarkSet List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Watermark list. Up to 10 image or text watermarks are supported.</p> 
+     * @return WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
      */
     public WatermarkInput [] getWatermarkSet() {
         return this.WatermarkSet;
     }
 
     /**
-     * Set List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param WatermarkSet List of up to 10 image or text watermarks.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+     * @param WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
      */
     public void setWatermarkSet(WatermarkInput [] WatermarkSet) {
         this.WatermarkSet = WatermarkSet;
     }
 
     /**
-     * Get Target bucket of a sampled screenshot. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+     * Get <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OutputStorage Target bucket of a sampled screenshot. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+     * @return OutputStorage <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TaskOutputStorage getOutputStorage() {
@@ -114,9 +110,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Target bucket of a sampled screenshot. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+     * Set <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OutputStorage Target bucket of a sampled screenshot. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
+     * @param OutputStorage <p>Target storage for the file after the sampled screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOutputStorage(TaskOutputStorage OutputStorage) {
@@ -124,49 +120,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output path of an image file after sampled screenshot taking, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_sampleSnapshot_{definition}_{number}.{format}`. 
-     * @return OutputObjectPath Output path of an image file after sampled screenshot taking, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_sampleSnapshot_{definition}_{number}.{format}`.
+     * Get <p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>. 
+     * @return OutputObjectPath <p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>.
      */
     public String getOutputObjectPath() {
         return this.OutputObjectPath;
     }
 
     /**
-     * Set Output path of an image file after sampled screenshot taking, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_sampleSnapshot_{definition}_{number}.{format}`.
-     * @param OutputObjectPath Output path of an image file after sampled screenshot taking, which can be a relative or absolute path.
-If you need to define an output path, the path must end with `.{format}`. For variable names, refer to [Filename Variable](https://intl.cloud.tencent.com/document/product/862/37039?from_cn_redirect=1).Relative path example:
-<li>Filename_{Variable name}.{format}.</li>
-<li>Filename.{format}.</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}.</li>
-If left empty, a relative path is used by default: `{inputName}_sampleSnapshot_{definition}_{number}.{format}`.
+     * Set <p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>.
+     * @param OutputObjectPath <p>Output path of the image file after the sampled screenshot is taken, which can be a relative or absolute path.<br>To define the output path, the path must end with <code>.{format}</code>. For variable names, see <a href="https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1">File Name Variable Description</a>.<br>Relative path example:</p><li>File name_{variable name}.{format}</li><li>File name.{format}</li>Absolute path example:<li>/custom path/file name_{variable name}.{format}</li>If this is not specified, the default relative path is <code>{inputName}_sampleSnapshot_{definition}_{number}.{format}</code>.
      */
     public void setOutputObjectPath(String OutputObjectPath) {
         this.OutputObjectPath = OutputObjectPath;
     }
 
     /**
-     * Get Rule of the `{number}` variable in the sampled screenshot output path.
+     * Get <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ObjectNumberFormat Rule of the `{number}` variable in the sampled screenshot output path.
+     * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public NumberFormat getObjectNumberFormat() {
@@ -174,13 +146,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Rule of the `{number}` variable in the sampled screenshot output path.
+     * Set <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ObjectNumberFormat Rule of the `{number}` variable in the sampled screenshot output path.
+     * @param ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sampled screenshot is taken.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setObjectNumberFormat(NumberFormat ObjectNumberFormat) {
         this.ObjectNumberFormat = ObjectNumberFormat;
+    }
+
+    /**
+     * Get <p>Extended parameter.</p> 
+     * @return ExtInfo <p>Extended parameter.</p>
+     */
+    public String getExtInfo() {
+        return this.ExtInfo;
+    }
+
+    /**
+     * Set <p>Extended parameter.</p>
+     * @param ExtInfo <p>Extended parameter.</p>
+     */
+    public void setExtInfo(String ExtInfo) {
+        this.ExtInfo = ExtInfo;
     }
 
     public SampleSnapshotTaskInput() {
@@ -209,6 +197,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ObjectNumberFormat != null) {
             this.ObjectNumberFormat = new NumberFormat(source.ObjectNumberFormat);
         }
+        if (source.ExtInfo != null) {
+            this.ExtInfo = new String(source.ExtInfo);
+        }
     }
 
 
@@ -221,6 +212,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
         this.setParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
         this.setParamObj(map, prefix + "ObjectNumberFormat.", this.ObjectNumberFormat);
+        this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
 
     }
 }

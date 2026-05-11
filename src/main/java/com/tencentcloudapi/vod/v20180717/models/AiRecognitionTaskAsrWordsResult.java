@@ -59,8 +59,7 @@ public class AiRecognitionTaskAsrWordsResult extends AbstractModel {
     private AiRecognitionTaskAsrWordsResultInput Input;
 
     /**
-    * Output information of speech keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Speech keyword recognition task output information.
     */
     @SerializedName("Output")
     @Expose
@@ -168,20 +167,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output information of speech keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output information of speech keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Speech keyword recognition task output information. 
+     * @return Output Speech keyword recognition task output information.
      */
     public AiRecognitionTaskAsrWordsResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output information of speech keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output information of speech keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Speech keyword recognition task output information.
+     * @param Output Speech keyword recognition task output information.
      */
     public void setOutput(AiRecognitionTaskAsrWordsResultOutput Output) {
         this.Output = Output;

@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class AiAnalysisTaskHighlightInput extends AbstractModel {
 
     /**
-    * The ID of the intelligent highlight generation template.
+    * <p>ID of the intelligent video highlight template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get The ID of the intelligent highlight generation template. 
-     * @return Definition The ID of the intelligent highlight generation template.
+    * <p>Extended parameter.</p>
+    */
+    @SerializedName("ExtendedParameter")
+    @Expose
+    private String ExtendedParameter;
+
+    /**
+     * Get <p>ID of the intelligent video highlight template.</p> 
+     * @return Definition <p>ID of the intelligent video highlight template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The ID of the intelligent highlight generation template.
-     * @param Definition The ID of the intelligent highlight generation template.
+     * Set <p>ID of the intelligent video highlight template.</p>
+     * @param Definition <p>ID of the intelligent video highlight template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <p>Extended parameter.</p> 
+     * @return ExtendedParameter <p>Extended parameter.</p>
+     */
+    public String getExtendedParameter() {
+        return this.ExtendedParameter;
+    }
+
+    /**
+     * Set <p>Extended parameter.</p>
+     * @param ExtendedParameter <p>Extended parameter.</p>
+     */
+    public void setExtendedParameter(String ExtendedParameter) {
+        this.ExtendedParameter = ExtendedParameter;
     }
 
     public AiAnalysisTaskHighlightInput() {
@@ -57,6 +80,9 @@ public class AiAnalysisTaskHighlightInput extends AbstractModel {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.ExtendedParameter != null) {
+            this.ExtendedParameter = new String(source.ExtendedParameter);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class AiAnalysisTaskHighlightInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
 
     }
 }

@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateReadOnlyDBInstanceResponse extends AbstractModel {
 
     /**
-    * Order number list. Each instance corresponds to an order number.
+    * <p>Order number list. Each instance corresponds to an order number.</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * Bill ID of frozen fees
+    * <p>Frozen bill ID.</p>
     */
     @SerializedName("BillId")
     @Expose
     private String BillId;
 
     /**
-    * ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+    * <p>ID set of successfully created instances. The return value is available only in postpaid scenarios.</p>
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
     private String [] DBInstanceIdSet;
 
     /**
-    * BillingParameters specifies the parameters for product order placement. the output has a value only when billingparameters is provided.
+    * <p>The output parameter has a value only when the input parameter BillingParameters has a value. The value is the parameters for product order placement.</p>
     */
     @SerializedName("BillingParameters")
     @Expose
@@ -59,64 +59,64 @@ public class CreateReadOnlyDBInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Order number list. Each instance corresponds to an order number. 
-     * @return DealNames Order number list. Each instance corresponds to an order number.
+     * Get <p>Order number list. Each instance corresponds to an order number.</p> 
+     * @return DealNames <p>Order number list. Each instance corresponds to an order number.</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Order number list. Each instance corresponds to an order number.
-     * @param DealNames Order number list. Each instance corresponds to an order number.
+     * Set <p>Order number list. Each instance corresponds to an order number.</p>
+     * @param DealNames <p>Order number list. Each instance corresponds to an order number.</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get Bill ID of frozen fees 
-     * @return BillId Bill ID of frozen fees
+     * Get <p>Frozen bill ID.</p> 
+     * @return BillId <p>Frozen bill ID.</p>
      */
     public String getBillId() {
         return this.BillId;
     }
 
     /**
-     * Set Bill ID of frozen fees
-     * @param BillId Bill ID of frozen fees
+     * Set <p>Frozen bill ID.</p>
+     * @param BillId <p>Frozen bill ID.</p>
      */
     public void setBillId(String BillId) {
         this.BillId = BillId;
     }
 
     /**
-     * Get ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used. 
-     * @return DBInstanceIdSet ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+     * Get <p>ID set of successfully created instances. The return value is available only in postpaid scenarios.</p> 
+     * @return DBInstanceIdSet <p>ID set of successfully created instances. The return value is available only in postpaid scenarios.</p>
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
-     * @param DBInstanceIdSet ID set of instances which have been created successfully. The parameter value will be returned only when the pay-as-you-go billing mode is used.
+     * Set <p>ID set of successfully created instances. The return value is available only in postpaid scenarios.</p>
+     * @param DBInstanceIdSet <p>ID set of successfully created instances. The return value is available only in postpaid scenarios.</p>
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;
     }
 
     /**
-     * Get BillingParameters specifies the parameters for product order placement. the output has a value only when billingparameters is provided. 
-     * @return BillingParameters BillingParameters specifies the parameters for product order placement. the output has a value only when billingparameters is provided.
+     * Get <p>The output parameter has a value only when the input parameter BillingParameters has a value. The value is the parameters for product order placement.</p> 
+     * @return BillingParameters <p>The output parameter has a value only when the input parameter BillingParameters has a value. The value is the parameters for product order placement.</p>
      */
     public String getBillingParameters() {
         return this.BillingParameters;
     }
 
     /**
-     * Set BillingParameters specifies the parameters for product order placement. the output has a value only when billingparameters is provided.
-     * @param BillingParameters BillingParameters specifies the parameters for product order placement. the output has a value only when billingparameters is provided.
+     * Set <p>The output parameter has a value only when the input parameter BillingParameters has a value. The value is the parameters for product order placement.</p>
+     * @param BillingParameters <p>The output parameter has a value only when the input parameter BillingParameters has a value. The value is the parameters for product order placement.</p>
      */
     public void setBillingParameters(String BillingParameters) {
         this.BillingParameters = BillingParameters;

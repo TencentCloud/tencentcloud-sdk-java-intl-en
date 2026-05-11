@@ -36,40 +36,35 @@ public class AiAnalysisResult extends AbstractModel {
     private String Type;
 
     /**
-    * Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Query result of the intelligent video content analysis classification task. Valid when the task type is Classification.
     */
     @SerializedName("ClassificationTask")
     @Expose
     private AiAnalysisTaskClassificationResult ClassificationTask;
 
     /**
-    * Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Query result of the Intelligent Cover Task for video content analysis. Valid when the task type is Cover.
     */
     @SerializedName("CoverTask")
     @Expose
     private AiAnalysisTaskCoverResult CoverTask;
 
     /**
-    * Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Query result of the video content analysis intelligent tag task. Valid at that time when the task type is Tag.
     */
     @SerializedName("TagTask")
     @Expose
     private AiAnalysisTaskTagResult TagTask;
 
     /**
-    * Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Query result of the intelligent frame-specific tagging task for video content analysis. Valid when the task type is FrameTag.
     */
     @SerializedName("FrameTagTask")
     @Expose
     private AiAnalysisTaskFrameTagResult FrameTagTask;
 
     /**
-    * Query result of an intelligent highlight generating task in video content analysis, which is valid when task type is `Highlight`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Query result of the intelligent video content analysis highlight task. Valid when the task type is Highlight.
     */
     @SerializedName("HighlightTask")
     @Expose
@@ -112,100 +107,80 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ClassificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Query result of the intelligent video content analysis classification task. Valid when the task type is Classification. 
+     * @return ClassificationTask Query result of the intelligent video content analysis classification task. Valid when the task type is Classification.
      */
     public AiAnalysisTaskClassificationResult getClassificationTask() {
         return this.ClassificationTask;
     }
 
     /**
-     * Set Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ClassificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Query result of the intelligent video content analysis classification task. Valid when the task type is Classification.
+     * @param ClassificationTask Query result of the intelligent video content analysis classification task. Valid when the task type is Classification.
      */
     public void setClassificationTask(AiAnalysisTaskClassificationResult ClassificationTask) {
         this.ClassificationTask = ClassificationTask;
     }
 
     /**
-     * Get Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Query result of the Intelligent Cover Task for video content analysis. Valid when the task type is Cover. 
+     * @return CoverTask Query result of the Intelligent Cover Task for video content analysis. Valid when the task type is Cover.
      */
     public AiAnalysisTaskCoverResult getCoverTask() {
         return this.CoverTask;
     }
 
     /**
-     * Set Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Query result of the Intelligent Cover Task for video content analysis. Valid when the task type is Cover.
+     * @param CoverTask Query result of the Intelligent Cover Task for video content analysis. Valid when the task type is Cover.
      */
     public void setCoverTask(AiAnalysisTaskCoverResult CoverTask) {
         this.CoverTask = CoverTask;
     }
 
     /**
-     * Get Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Query result of the video content analysis intelligent tag task. Valid at that time when the task type is Tag. 
+     * @return TagTask Query result of the video content analysis intelligent tag task. Valid at that time when the task type is Tag.
      */
     public AiAnalysisTaskTagResult getTagTask() {
         return this.TagTask;
     }
 
     /**
-     * Set Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Query result of the video content analysis intelligent tag task. Valid at that time when the task type is Tag.
+     * @param TagTask Query result of the video content analysis intelligent tag task. Valid at that time when the task type is Tag.
      */
     public void setTagTask(AiAnalysisTaskTagResult TagTask) {
         this.TagTask = TagTask;
     }
 
     /**
-     * Get Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FrameTagTask Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Query result of the intelligent frame-specific tagging task for video content analysis. Valid when the task type is FrameTag. 
+     * @return FrameTagTask Query result of the intelligent frame-specific tagging task for video content analysis. Valid when the task type is FrameTag.
      */
     public AiAnalysisTaskFrameTagResult getFrameTagTask() {
         return this.FrameTagTask;
     }
 
     /**
-     * Set Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FrameTagTask Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Query result of the intelligent frame-specific tagging task for video content analysis. Valid when the task type is FrameTag.
+     * @param FrameTagTask Query result of the intelligent frame-specific tagging task for video content analysis. Valid when the task type is FrameTag.
      */
     public void setFrameTagTask(AiAnalysisTaskFrameTagResult FrameTagTask) {
         this.FrameTagTask = FrameTagTask;
     }
 
     /**
-     * Get Query result of an intelligent highlight generating task in video content analysis, which is valid when task type is `Highlight`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return HighlightTask Query result of an intelligent highlight generating task in video content analysis, which is valid when task type is `Highlight`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Query result of the intelligent video content analysis highlight task. Valid when the task type is Highlight. 
+     * @return HighlightTask Query result of the intelligent video content analysis highlight task. Valid when the task type is Highlight.
      */
     public AiAnalysisTaskHighlightResult getHighlightTask() {
         return this.HighlightTask;
     }
 
     /**
-     * Set Query result of an intelligent highlight generating task in video content analysis, which is valid when task type is `Highlight`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param HighlightTask Query result of an intelligent highlight generating task in video content analysis, which is valid when task type is `Highlight`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Query result of the intelligent video content analysis highlight task. Valid when the task type is Highlight.
+     * @param HighlightTask Query result of the intelligent video content analysis highlight task. Valid when the task type is Highlight.
      */
     public void setHighlightTask(AiAnalysisTaskHighlightResult HighlightTask) {
         this.HighlightTask = HighlightTask;

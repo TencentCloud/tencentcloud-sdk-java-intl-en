@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartPublishCdnStreamRequest extends AbstractModel {
 
     /**
-    * [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+    * [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
     */
     @SerializedName("SdkAppId")
     @Expose
@@ -102,23 +102,23 @@ Note: transcoding is required for stream mixing, and this parameter must be set 
     private McuFeedBackRoomParams [] FeedBackRoomParams;
 
     /**
-    * Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
+    * Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
     */
     @SerializedName("RecordParams")
     @Expose
     private McuRecordParams RecordParams;
 
     /**
-     * Get [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room. 
-     * @return SdkAppId [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+     * Get [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room. 
+     * @return SdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
-     * @param SdkAppId [SdkAppId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+     * Set [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
+     * @param SdkAppId [SdkAppId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#SdkAppId) of TRTC, which is the same as the SdkAppId corresponding to the relayed room.
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
@@ -289,16 +289,16 @@ Note: transcoding is required for stream mixing, and this parameter must be set 
     }
 
     /**
-     * Get Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1). 
-     * @return RecordParams Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
+     * Get Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1). 
+     * @return RecordParams Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
      */
     public McuRecordParams getRecordParams() {
         return this.RecordParams;
     }
 
     /**
-     * Set Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
-     * @param RecordParams Relay recording parameters. refer to the reference document (https://www.tencentcloud.comom/document/product/647/111748?from_cn_redirect=1).
+     * Set Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
+     * @param RecordParams Relay recording parameters. refer to the reference document (https://www.tencentcloud.com/document/product/647/111748?from_cn_redirect=1).
      */
     public void setRecordParams(McuRecordParams RecordParams) {
         this.RecordParams = RecordParams;

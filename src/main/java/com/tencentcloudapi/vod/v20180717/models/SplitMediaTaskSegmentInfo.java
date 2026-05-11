@@ -31,8 +31,7 @@ public class SplitMediaTaskSegmentInfo extends AbstractModel {
     private SplitMediaTaskInput Input;
 
     /**
-    * Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Video splitting task output information.
     */
     @SerializedName("Output")
     @Expose
@@ -69,20 +68,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return Output Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Video splitting task output information. 
+     * @return Output Video splitting task output information.
      */
     public TaskOutputMediaInfo getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param Output Output information of a video splitting task.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Video splitting task output information.
+     * @param Output Video splitting task output information.
      */
     public void setOutput(TaskOutputMediaInfo Output) {
         this.Output = Output;

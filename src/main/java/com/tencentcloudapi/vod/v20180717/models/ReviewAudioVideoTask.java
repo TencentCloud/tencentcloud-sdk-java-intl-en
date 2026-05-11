@@ -54,16 +54,14 @@ public class ReviewAudioVideoTask extends AbstractModel {
     private String Message;
 
     /**
-    * The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * Audio/video moderation task input.
     */
     @SerializedName("Input")
     @Expose
     private ReviewAudioVideoTaskInput Input;
 
     /**
-    * The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Audio/video moderation task output.
     */
     @SerializedName("Output")
     @Expose
@@ -156,40 +154,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return Input The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get Audio/video moderation task input. 
+     * @return Input Audio/video moderation task input.
      */
     public ReviewAudioVideoTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param Input The input of a moderation task.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set Audio/video moderation task input.
+     * @param Input Audio/video moderation task input.
      */
     public void setInput(ReviewAudioVideoTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Audio/video moderation task output. 
+     * @return Output Audio/video moderation task output.
      */
     public ReviewAudioVideoTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output The output of a moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Audio/video moderation task output.
+     * @param Output Audio/video moderation task output.
      */
     public void setOutput(ReviewAudioVideoTaskOutput Output) {
         this.Output = Output;

@@ -59,8 +59,7 @@ public class AiRecognitionTaskHeadTailResult extends AbstractModel {
     private AiRecognitionTaskHeadTailResultInput Input;
 
     /**
-    * Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Video opening and closing credits recognition task output information.
     */
     @SerializedName("Output")
     @Expose
@@ -168,20 +167,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Video opening and closing credits recognition task output information. 
+     * @return Output Video opening and closing credits recognition task output information.
      */
     public AiRecognitionTaskHeadTailResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output information of video opening and ending credits recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Video opening and closing credits recognition task output information.
+     * @param Output Video opening and closing credits recognition task output information.
      */
     public void setOutput(AiRecognitionTaskHeadTailResultOutput Output) {
         this.Output = Output;

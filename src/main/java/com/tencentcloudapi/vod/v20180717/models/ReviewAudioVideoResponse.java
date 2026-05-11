@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ReviewAudioVideoResponse extends AbstractModel {
 
     /**
-    * The task ID.
+    * Task ID
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class ReviewAudioVideoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The task ID. 
-     * @return TaskId The task ID.
+     * Get Task ID 
+     * @return TaskId Task ID
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The task ID.
-     * @param TaskId The task ID.
+     * Set Task ID
+     * @param TaskId Task ID
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

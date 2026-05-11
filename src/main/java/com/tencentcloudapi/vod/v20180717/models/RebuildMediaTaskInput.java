@@ -45,7 +45,7 @@ public class RebuildMediaTaskInput extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
-    * The ID of the remaster template.
+    * Audio and video quality rebirth template number.
     */
     @SerializedName("Definition")
     @Expose
@@ -191,16 +191,16 @@ public class RebuildMediaTaskInput extends AbstractModel {
     }
 
     /**
-     * Get The ID of the remaster template. 
-     * @return Definition The ID of the remaster template.
+     * Get Audio and video quality rebirth template number. 
+     * @return Definition Audio and video quality rebirth template number.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The ID of the remaster template.
-     * @param Definition The ID of the remaster template.
+     * Set Audio and video quality rebirth template number.
+     * @param Definition Audio and video quality rebirth template number.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

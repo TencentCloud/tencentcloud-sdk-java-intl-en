@@ -52,7 +52,7 @@ When making an SDK call, streaming and non-streaming calls require **different w
     private Boolean Stream;
 
     /**
-    * Text to be translated.
+    * Text to be translated
     */
     @SerializedName("Text")
     @Expose
@@ -190,16 +190,16 @@ When making an SDK call, streaming and non-streaming calls require **different w
     }
 
     /**
-     * Get Text to be translated. 
-     * @return Text Text to be translated.
+     * Get Text to be translated 
+     * @return Text Text to be translated
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Text to be translated.
-     * @param Text Text to be translated.
+     * Set Text to be translated
+     * @param Text Text to be translated
      */
     public void setText(String Text) {
         this.Text = Text;

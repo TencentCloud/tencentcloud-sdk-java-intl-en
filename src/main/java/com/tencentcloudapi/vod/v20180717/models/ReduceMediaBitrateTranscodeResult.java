@@ -52,8 +52,7 @@ public class ReduceMediaBitrateTranscodeResult extends AbstractModel {
     private TranscodeTaskInput Input;
 
     /**
-    * The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Transcoding task output.
     */
     @SerializedName("Output")
     @Expose
@@ -145,20 +144,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Transcoding task output. 
+     * @return Output Transcoding task output.
      */
     public MediaTranscodeItem getOutput() {
         return this.Output;
     }
 
     /**
-     * Set The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output The output of a transcoding task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Transcoding task output.
+     * @param Output Transcoding task output.
      */
     public void setOutput(MediaTranscodeItem Output) {
         this.Output = Output;

@@ -59,8 +59,7 @@ public class AiAnalysisTaskFrameTagResult extends AbstractModel {
     private AiAnalysisTaskFrameTagInput Input;
 
     /**
-    * Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Intelligent frame-specific tagging task output.
     */
     @SerializedName("Output")
     @Expose
@@ -168,20 +167,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent frame-specific tagging task output. 
+     * @return Output Intelligent frame-specific tagging task output.
      */
     public AiAnalysisTaskFrameTagOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent frame-specific tagging task output.
+     * @param Output Intelligent frame-specific tagging task output.
      */
     public void setOutput(AiAnalysisTaskFrameTagOutput Output) {
         this.Output = Output;

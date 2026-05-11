@@ -112,7 +112,9 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+     * @deprecated
      */
+    @Deprecated
     public String getSubtitleFormat() {
         return this.SubtitleFormat;
     }
@@ -126,7 +128,9 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
 <li>vtt</li>
 <li>srt</li>
 <font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+     * @deprecated
      */
+    @Deprecated
     public void setSubtitleFormat(String SubtitleFormat) {
         this.SubtitleFormat = SubtitleFormat;
     }

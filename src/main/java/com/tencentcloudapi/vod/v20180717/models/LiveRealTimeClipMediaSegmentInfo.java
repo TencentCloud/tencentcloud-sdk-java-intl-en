@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class LiveRealTimeClipMediaSegmentInfo extends AbstractModel {
 
     /**
-    * Start time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+    * Segment start time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+    * Segment end time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-     * Get Start time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732) 
-     * @return StartTime Start time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * Get Segment start time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return StartTime Segment start time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
-     * @param StartTime Start time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * Set Segment start time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param StartTime Segment start time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732) 
-     * @return EndTime End time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * Get Segment end time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return EndTime Segment end time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
-     * @param EndTime End time of the cliped segment, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * Set Segment end time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param EndTime Segment end time. Format reference [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;

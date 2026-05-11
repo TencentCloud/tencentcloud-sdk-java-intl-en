@@ -60,8 +60,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AiReviewPoliticalOcrTaskInput Input;
 
     /**
-    * Output for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Video moderation Ocr text involves inappropriate information in task output.
     */
     @SerializedName("Output")
     @Expose
@@ -159,20 +158,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return Output Output for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Video moderation Ocr text involves inappropriate information in task output. 
+     * @return Output Video moderation Ocr text involves inappropriate information in task output.
      */
     public AiReviewPoliticalOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param Output Output for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Video moderation Ocr text involves inappropriate information in task output.
+     * @param Output Video moderation Ocr text involves inappropriate information in task output.
      */
     public void setOutput(AiReviewPoliticalOcrTaskOutput Output) {
         this.Output = Output;

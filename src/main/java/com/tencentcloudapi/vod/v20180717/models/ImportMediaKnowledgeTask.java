@@ -31,14 +31,14 @@ public class ImportMediaKnowledgeTask extends AbstractModel {
     private String TaskId;
 
     /**
-    * Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+    * Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code; 0 indicates success, other values indicate failure
+    * Error code. 0 indicates success, other values indicate failure.
     */
     @SerializedName("ErrCode")
     @Expose
@@ -68,32 +68,32 @@ public class ImportMediaKnowledgeTask extends AbstractModel {
     }
 
     /**
-     * Get Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li> 
-     * @return Status Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * Get Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li> 
+     * @return Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
-     * @param Status Task Status. Valid values: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * Set Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+     * @param Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code; 0 indicates success, other values indicate failure 
-     * @return ErrCode Error code; 0 indicates success, other values indicate failure
+     * Get Error code. 0 indicates success, other values indicate failure. 
+     * @return ErrCode Error code. 0 indicates success, other values indicate failure.
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code; 0 indicates success, other values indicate failure
-     * @param ErrCode Error code; 0 indicates success, other values indicate failure
+     * Set Error code. 0 indicates success, other values indicate failure.
+     * @param ErrCode Error code. 0 indicates success, other values indicate failure.
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;

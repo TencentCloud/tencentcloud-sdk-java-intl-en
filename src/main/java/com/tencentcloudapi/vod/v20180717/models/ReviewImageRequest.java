@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class ReviewImageRequest extends AbstractModel {
 
     /**
-    * The unique ID of the media file. For this API to work, the file must be an image.
-    */
-    @SerializedName("FileId")
-    @Expose
-    private String FileId;
-
-    /**
     * The image moderation template ID. Valid values: <li>10: The preset template, whose violation labels are `Porn` and `Terror`.</li>
     */
     @SerializedName("Definition")
@@ -38,27 +31,25 @@ public class ReviewImageRequest extends AbstractModel {
     private Long Definition;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * The unique ID of the media file. For this API to work, the file must be an image.
+    */
+    @SerializedName("FileId")
+    @Expose
+    private String FileId;
+
+    /**
+    * 
+    */
+    @SerializedName("MediaStoragePath")
+    @Expose
+    private String MediaStoragePath;
+
+    /**
+    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
-
-    /**
-     * Get The unique ID of the media file. For this API to work, the file must be an image. 
-     * @return FileId The unique ID of the media file. For this API to work, the file must be an image.
-     */
-    public String getFileId() {
-        return this.FileId;
-    }
-
-    /**
-     * Set The unique ID of the media file. For this API to work, the file must be an image.
-     * @param FileId The unique ID of the media file. For this API to work, the file must be an image.
-     */
-    public void setFileId(String FileId) {
-        this.FileId = FileId;
-    }
 
     /**
      * Get The image moderation template ID. Valid values: <li>10: The preset template, whose violation labels are `Porn` and `Terror`.</li> 
@@ -77,16 +68,48 @@ public class ReviewImageRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get The unique ID of the media file. For this API to work, the file must be an image. 
+     * @return FileId The unique ID of the media file. For this API to work, the file must be an image.
+     */
+    public String getFileId() {
+        return this.FileId;
+    }
+
+    /**
+     * Set The unique ID of the media file. For this API to work, the file must be an image.
+     * @param FileId The unique ID of the media file. For this API to work, the file must be an image.
+     */
+    public void setFileId(String FileId) {
+        this.FileId = FileId;
+    }
+
+    /**
+     * Get  
+     * @return MediaStoragePath 
+     */
+    public String getMediaStoragePath() {
+        return this.MediaStoragePath;
+    }
+
+    /**
+     * Set 
+     * @param MediaStoragePath 
+     */
+    public void setMediaStoragePath(String MediaStoragePath) {
+        this.MediaStoragePath = MediaStoragePath;
+    }
+
+    /**
+     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -100,11 +123,14 @@ public class ReviewImageRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ReviewImageRequest(ReviewImageRequest source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
-        if (source.Definition != null) {
-            this.Definition = new Long(source.Definition);
+        if (source.MediaStoragePath != null) {
+            this.MediaStoragePath = new String(source.MediaStoragePath);
         }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
@@ -116,8 +142,9 @@ public class ReviewImageRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

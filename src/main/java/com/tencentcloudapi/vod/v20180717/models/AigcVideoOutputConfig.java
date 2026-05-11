@@ -124,11 +124,26 @@ Note:
     private String EnhanceSwitch;
 
     /**
+    * 
+    */
+    @SerializedName("OffPeak")
+    @Expose
+    private String OffPeak;
+
+    /**
     * Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
     */
     @SerializedName("FrameInterpolate")
     @Expose
     private String FrameInterpolate;
+
+    /**
+    * Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
+    */
+    @SerializedName("LogoAdd")
+    @Expose
+    private String LogoAdd;
 
     /**
      * Get Storage mode. valid values: <li>Permanent: Permanent storage. the generated video file will be stored in vod, and the FileId can be obtained from the event notification.</li> <li>Temporary: Temporary storage. the generated video file will not be stored in vod, and a Temporary access URL can be obtained from the event notification.</li>
@@ -387,6 +402,22 @@ Note:
     }
 
     /**
+     * Get  
+     * @return OffPeak 
+     */
+    public String getOffPeak() {
+        return this.OffPeak;
+    }
+
+    /**
+     * Set 
+     * @param OffPeak 
+     */
+    public void setOffPeak(String OffPeak) {
+        this.OffPeak = OffPeak;
+    }
+
+    /**
      * Get Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li> 
      * @return FrameInterpolate Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
      */
@@ -400,6 +431,26 @@ Note:
      */
     public void setFrameInterpolate(String FrameInterpolate) {
         this.FrameInterpolate = FrameInterpolate;
+    }
+
+    /**
+     * Get Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported. 
+     * @return LogoAdd Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
+     */
+    public String getLogoAdd() {
+        return this.LogoAdd;
+    }
+
+    /**
+     * Set Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
+     * @param LogoAdd Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
+Currently supported models include Vidu. Other models are not currently supported.
+     */
+    public void setLogoAdd(String LogoAdd) {
+        this.LogoAdd = LogoAdd;
     }
 
     public AigcVideoOutputConfig() {
@@ -446,8 +497,14 @@ Note:
         if (source.EnhanceSwitch != null) {
             this.EnhanceSwitch = new String(source.EnhanceSwitch);
         }
+        if (source.OffPeak != null) {
+            this.OffPeak = new String(source.OffPeak);
+        }
         if (source.FrameInterpolate != null) {
             this.FrameInterpolate = new String(source.FrameInterpolate);
+        }
+        if (source.LogoAdd != null) {
+            this.LogoAdd = new String(source.LogoAdd);
         }
     }
 
@@ -468,7 +525,9 @@ Note:
         this.setParamSimple(map, prefix + "InputComplianceCheck", this.InputComplianceCheck);
         this.setParamSimple(map, prefix + "OutputComplianceCheck", this.OutputComplianceCheck);
         this.setParamSimple(map, prefix + "EnhanceSwitch", this.EnhanceSwitch);
+        this.setParamSimple(map, prefix + "OffPeak", this.OffPeak);
         this.setParamSimple(map, prefix + "FrameInterpolate", this.FrameInterpolate);
+        this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
 
     }
 }

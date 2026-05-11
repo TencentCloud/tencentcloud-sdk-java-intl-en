@@ -71,24 +71,21 @@ public class QualityEnhanceTask extends AbstractModel {
     private Long Progress;
 
     /**
-    * Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Input of the audio and video quality regeneration task.
     */
     @SerializedName("Input")
     @Expose
     private QualityEnhanceTaskInput Input;
 
     /**
-    * Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Output of the audio and video quality regeneration task.
     */
     @SerializedName("Output")
     @Expose
     private QualityEnhanceTaskOutput Output;
 
     /**
-    * Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Metadata of the output video after audio and video quality revival.
     */
     @SerializedName("MetaData")
     @Expose
@@ -225,60 +222,48 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Input Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Input of the audio and video quality regeneration task. 
+     * @return Input Input of the audio and video quality regeneration task.
      */
     public QualityEnhanceTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Input Input for media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Input of the audio and video quality regeneration task.
+     * @param Input Input of the audio and video quality regeneration task.
      */
     public void setInput(QualityEnhanceTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Output Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Output of the audio and video quality regeneration task. 
+     * @return Output Output of the audio and video quality regeneration task.
      */
     public QualityEnhanceTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Output Output of the media quality enhance task.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Output of the audio and video quality regeneration task.
+     * @param Output Output of the audio and video quality regeneration task.
      */
     public void setOutput(QualityEnhanceTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return MetaData Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Metadata of the output video after audio and video quality revival. 
+     * @return MetaData Metadata of the output video after audio and video quality revival.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param MetaData Media quality enhance outputs meta-information of the video.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Metadata of the output video after audio and video quality revival.
+     * @param MetaData Metadata of the output video after audio and video quality revival.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

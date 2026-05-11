@@ -31,7 +31,7 @@ public class CreateCloudRecordingRequest extends AbstractModel {
     private Long SdkAppId;
 
     /**
-    * [RoomId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
+    * [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
 Note: the room id type defaults to integer. if the room id type is a string, specify it via RoomIdType.
 
     */
@@ -121,10 +121,10 @@ Note: the room id type defaults to integer. if the room id type is a string, spe
     }
 
     /**
-     * Get [RoomId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
+     * Get [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
 Note: the room id type defaults to integer. if the room id type is a string, specify it via RoomIdType.
  
-     * @return RoomId [RoomId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
+     * @return RoomId [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
 Note: the room id type defaults to integer. if the room id type is a string, specify it via RoomIdType.
 
      */
@@ -133,10 +133,10 @@ Note: the room id type defaults to integer. if the room id type is a string, spe
     }
 
     /**
-     * Set [RoomId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
+     * Set [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
 Note: the room id type defaults to integer. if the room id type is a string, specify it via RoomIdType.
 
-     * @param RoomId [RoomId](https://www.tencentcloud.comom/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
+     * @param RoomId [RoomId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#RoomId) of TRTC, which is the RoomId corresponding to the TRTC room in the recording.
 Note: the room id type defaults to integer. if the room id type is a string, specify it via RoomIdType.
 
      */

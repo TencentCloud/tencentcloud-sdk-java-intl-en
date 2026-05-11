@@ -59,8 +59,7 @@ public class AiReviewTaskTerrorismOcrResult extends AbstractModel {
     private AiReviewTerrorismOcrTaskInput Input;
 
     /**
-    * Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Video moderation Ocr text involves unsafe information in task output.
     */
     @SerializedName("Output")
     @Expose
@@ -154,20 +153,16 @@ Note: This field may return `null`, indicating that no valid value can be found.
     }
 
     /**
-     * Get Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return Output Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Video moderation Ocr text involves unsafe information in task output. 
+     * @return Output Video moderation Ocr text involves unsafe information in task output.
      */
     public AiReviewTerrorismOcrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param Output Output for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Video moderation Ocr text involves unsafe information in task output.
+     * @param Output Video moderation Ocr text involves unsafe information in task output.
      */
     public void setOutput(AiReviewTerrorismOcrTaskOutput Output) {
         this.Output = Output;

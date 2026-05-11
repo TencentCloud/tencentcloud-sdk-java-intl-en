@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class AiAnalysisTaskCutoutInput extends AbstractModel {
 
     /**
-    * ID of the intelligent video matting template.
+    * <p>ID of the intelligent video matting template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get ID of the intelligent video matting template. 
-     * @return Definition ID of the intelligent video matting template.
+    * <p>Extended parameter.</p>
+    */
+    @SerializedName("ExtendedParameter")
+    @Expose
+    private String ExtendedParameter;
+
+    /**
+     * Get <p>ID of the intelligent video matting template.</p> 
+     * @return Definition <p>ID of the intelligent video matting template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set ID of the intelligent video matting template.
-     * @param Definition ID of the intelligent video matting template.
+     * Set <p>ID of the intelligent video matting template.</p>
+     * @param Definition <p>ID of the intelligent video matting template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <p>Extended parameter.</p> 
+     * @return ExtendedParameter <p>Extended parameter.</p>
+     */
+    public String getExtendedParameter() {
+        return this.ExtendedParameter;
+    }
+
+    /**
+     * Set <p>Extended parameter.</p>
+     * @param ExtendedParameter <p>Extended parameter.</p>
+     */
+    public void setExtendedParameter(String ExtendedParameter) {
+        this.ExtendedParameter = ExtendedParameter;
     }
 
     public AiAnalysisTaskCutoutInput() {
@@ -57,6 +80,9 @@ public class AiAnalysisTaskCutoutInput extends AbstractModel {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.ExtendedParameter != null) {
+            this.ExtendedParameter = new String(source.ExtendedParameter);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class AiAnalysisTaskCutoutInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
 
     }
 }

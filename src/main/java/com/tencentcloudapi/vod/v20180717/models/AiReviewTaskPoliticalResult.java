@@ -60,8 +60,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AiReviewPoliticalTaskInput Input;
 
     /**
-    * Output for intelligent recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Video moderation involves inappropriate information in task output.
     */
     @SerializedName("Output")
     @Expose
@@ -159,20 +158,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output for intelligent recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return Output Output for intelligent recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Video moderation involves inappropriate information in task output. 
+     * @return Output Video moderation involves inappropriate information in task output.
      */
     public AiReviewPoliticalTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output for intelligent recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param Output Output for intelligent recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Video moderation involves inappropriate information in task output.
+     * @param Output Video moderation involves inappropriate information in task output.
      */
     public void setOutput(AiReviewPoliticalTaskOutput Output) {
         this.Output = Output;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class AiRecognitionTaskAsrTranslateResultInput extends AbstractModel {
 
     /**
-    * Voice translation template ID.
+    * Speech translation template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Voice translation template ID. 
-     * @return Definition Voice translation template ID.
+     * Get Speech translation template ID. 
+     * @return Definition Speech translation template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Voice translation template ID.
-     * @param Definition Voice translation template ID.
+     * Set Speech translation template ID.
+     * @param Definition Speech translation template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

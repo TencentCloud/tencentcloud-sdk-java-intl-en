@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class SyncDubbingResponse extends AbstractModel {
 
     /**
-    * Error code. 0 is returned if the request is successful.
+    * <p>Error code. 0 is returned if the request is successful.</p>
     */
     @SerializedName("ErrorCode")
     @Expose
     private Long ErrorCode;
 
     /**
-    * Error message. success is returned if the request is successful.
+    * <p>Error message. success is returned if the request is successful.</p>
     */
     @SerializedName("Msg")
     @Expose
     private String Msg;
 
     /**
-    * Synthetic audio in Base64 encoding and WAV format.
+    * <p>Synthetic audio in Base64 encoding and WAV format.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AudioData")
@@ -46,14 +46,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String AudioData;
 
     /**
-    * 
+    * <p>Synthetic audio URL. It is valid for 24 hours.</p>
     */
     @SerializedName("AudioUrl")
     @Expose
     private String AudioUrl;
 
     /**
-    * Cloned voice type ID.
+    * <p>Cloned voice ID.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VoiceId")
@@ -61,7 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String VoiceId;
 
     /**
-    * 
+    * <p>Extended information in the format of a JSON string. </p><p>duration: Duration of the resulting audio, in seconds.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
@@ -75,41 +75,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Error code. 0 is returned if the request is successful. 
-     * @return ErrorCode Error code. 0 is returned if the request is successful.
+     * Get <p>Error code. 0 is returned if the request is successful.</p> 
+     * @return ErrorCode <p>Error code. 0 is returned if the request is successful.</p>
      */
     public Long getErrorCode() {
         return this.ErrorCode;
     }
 
     /**
-     * Set Error code. 0 is returned if the request is successful.
-     * @param ErrorCode Error code. 0 is returned if the request is successful.
+     * Set <p>Error code. 0 is returned if the request is successful.</p>
+     * @param ErrorCode <p>Error code. 0 is returned if the request is successful.</p>
      */
     public void setErrorCode(Long ErrorCode) {
         this.ErrorCode = ErrorCode;
     }
 
     /**
-     * Get Error message. success is returned if the request is successful. 
-     * @return Msg Error message. success is returned if the request is successful.
+     * Get <p>Error message. success is returned if the request is successful.</p> 
+     * @return Msg <p>Error message. success is returned if the request is successful.</p>
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set Error message. success is returned if the request is successful.
-     * @param Msg Error message. success is returned if the request is successful.
+     * Set <p>Error message. success is returned if the request is successful.</p>
+     * @param Msg <p>Error message. success is returned if the request is successful.</p>
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;
     }
 
     /**
-     * Get Synthetic audio in Base64 encoding and WAV format.
+     * Get <p>Synthetic audio in Base64 encoding and WAV format.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AudioData Synthetic audio in Base64 encoding and WAV format.
+     * @return AudioData <p>Synthetic audio in Base64 encoding and WAV format.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getAudioData() {
@@ -117,9 +117,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Synthetic audio in Base64 encoding and WAV format.
+     * Set <p>Synthetic audio in Base64 encoding and WAV format.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioData Synthetic audio in Base64 encoding and WAV format.
+     * @param AudioData <p>Synthetic audio in Base64 encoding and WAV format.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAudioData(String AudioData) {
@@ -127,25 +127,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return AudioUrl 
+     * Get <p>Synthetic audio URL. It is valid for 24 hours.</p> 
+     * @return AudioUrl <p>Synthetic audio URL. It is valid for 24 hours.</p>
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set 
-     * @param AudioUrl 
+     * Set <p>Synthetic audio URL. It is valid for 24 hours.</p>
+     * @param AudioUrl <p>Synthetic audio URL. It is valid for 24 hours.</p>
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;
     }
 
     /**
-     * Get Cloned voice type ID.
+     * Get <p>Cloned voice ID.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VoiceId Cloned voice type ID.
+     * @return VoiceId <p>Cloned voice ID.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVoiceId() {
@@ -153,9 +153,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Cloned voice type ID.
+     * Set <p>Cloned voice ID.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoiceId Cloned voice type ID.
+     * @param VoiceId <p>Cloned voice ID.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVoiceId(String VoiceId) {
@@ -163,16 +163,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return ExtInfo 
+     * Get <p>Extended information in the format of a JSON string. </p><p>duration: Duration of the resulting audio, in seconds.</p> 
+     * @return ExtInfo <p>Extended information in the format of a JSON string. </p><p>duration: Duration of the resulting audio, in seconds.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set 
-     * @param ExtInfo 
+     * Set <p>Extended information in the format of a JSON string. </p><p>duration: Duration of the resulting audio, in seconds.</p>
+     * @param ExtInfo <p>Extended information in the format of a JSON string. </p><p>duration: Duration of the resulting audio, in seconds.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

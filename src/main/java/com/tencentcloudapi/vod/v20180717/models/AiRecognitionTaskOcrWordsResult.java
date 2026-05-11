@@ -59,8 +59,7 @@ public class AiRecognitionTaskOcrWordsResult extends AbstractModel {
     private AiRecognitionTaskOcrWordsResultInput Input;
 
     /**
-    * Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Text keyword recognition task output information.
     */
     @SerializedName("Output")
     @Expose
@@ -168,20 +167,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Text keyword recognition task output information. 
+     * @return Output Text keyword recognition task output information.
      */
     public AiRecognitionTaskOcrWordsResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output information of text keyword recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Text keyword recognition task output information.
+     * @param Output Text keyword recognition task output information.
      */
     public void setOutput(AiRecognitionTaskOcrWordsResultOutput Output) {
         this.Output = Output;

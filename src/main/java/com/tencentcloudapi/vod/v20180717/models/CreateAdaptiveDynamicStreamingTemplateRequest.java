@@ -41,7 +41,7 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
     private AdaptiveStreamTemplate [] StreamInfos;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -74,6 +74,13 @@ The default is `VOD`.
     @SerializedName("DrmKeyProvider")
     @Expose
     private String DrmKeyProvider;
+
+    /**
+    * 
+    */
+    @SerializedName("DrmEncryptType")
+    @Expose
+    private String DrmEncryptType;
 
     /**
     * Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
@@ -157,16 +164,16 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -246,6 +253,22 @@ The default is `VOD`.
      */
     public void setDrmKeyProvider(String DrmKeyProvider) {
         this.DrmKeyProvider = DrmKeyProvider;
+    }
+
+    /**
+     * Get  
+     * @return DrmEncryptType 
+     */
+    public String getDrmEncryptType() {
+        return this.DrmEncryptType;
+    }
+
+    /**
+     * Set 
+     * @param DrmEncryptType 
+     */
+    public void setDrmEncryptType(String DrmEncryptType) {
+        this.DrmEncryptType = DrmEncryptType;
     }
 
     /**
@@ -377,6 +400,9 @@ Default: ts
         if (source.DrmKeyProvider != null) {
             this.DrmKeyProvider = new String(source.DrmKeyProvider);
         }
+        if (source.DrmEncryptType != null) {
+            this.DrmEncryptType = new String(source.DrmEncryptType);
+        }
         if (source.DisableHigherVideoBitrate != null) {
             this.DisableHigherVideoBitrate = new Long(source.DisableHigherVideoBitrate);
         }
@@ -402,6 +428,7 @@ Default: ts
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "DrmType", this.DrmType);
         this.setParamSimple(map, prefix + "DrmKeyProvider", this.DrmKeyProvider);
+        this.setParamSimple(map, prefix + "DrmEncryptType", this.DrmEncryptType);
         this.setParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
         this.setParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
         this.setParamSimple(map, prefix + "Comment", this.Comment);

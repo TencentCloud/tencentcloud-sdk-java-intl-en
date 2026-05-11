@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class TextTranslationResponse extends AbstractModel {
 
     /**
-    * Text after translation.
+    * <p>Translated text.</p>
     */
     @SerializedName("TargetText")
     @Expose
     private String TargetText;
 
     /**
-    * Source language. See the input parameter Source.
+    * <p>Source language. See the input parameter Source.</p>
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * Target language. See the input parameter Target.
+    * <p>Target language. See the input parameter Target.</p>
     */
     @SerializedName("Target")
     @Expose
@@ -52,48 +52,48 @@ public class TextTranslationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Text after translation. 
-     * @return TargetText Text after translation.
+     * Get <p>Translated text.</p> 
+     * @return TargetText <p>Translated text.</p>
      */
     public String getTargetText() {
         return this.TargetText;
     }
 
     /**
-     * Set Text after translation.
-     * @param TargetText Text after translation.
+     * Set <p>Translated text.</p>
+     * @param TargetText <p>Translated text.</p>
      */
     public void setTargetText(String TargetText) {
         this.TargetText = TargetText;
     }
 
     /**
-     * Get Source language. See the input parameter Source. 
-     * @return Source Source language. See the input parameter Source.
+     * Get <p>Source language. See the input parameter Source.</p> 
+     * @return Source <p>Source language. See the input parameter Source.</p>
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set Source language. See the input parameter Source.
-     * @param Source Source language. See the input parameter Source.
+     * Set <p>Source language. See the input parameter Source.</p>
+     * @param Source <p>Source language. See the input parameter Source.</p>
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get Target language. See the input parameter Target. 
-     * @return Target Target language. See the input parameter Target.
+     * Get <p>Target language. See the input parameter Target.</p> 
+     * @return Target <p>Target language. See the input parameter Target.</p>
      */
     public String getTarget() {
         return this.Target;
     }
 
     /**
-     * Set Target language. See the input parameter Target.
-     * @param Target Target language. See the input parameter Target.
+     * Set <p>Target language. See the input parameter Target.</p>
+     * @param Target <p>Target language. See the input parameter Target.</p>
      */
     public void setTarget(String Target) {
         this.Target = Target;

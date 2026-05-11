@@ -34,9 +34,9 @@ Default value: `OFF`.
     private String Switch;
 
     /**
-    * The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+    * Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
     */
     @SerializedName("Type")
     @Expose
@@ -71,24 +71,24 @@ Default value: `OFF`.
     }
 
     /**
-     * Get The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`. 
-     * @return Type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+     * Get Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal. 
+     * @return Type Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
-     * @param Type The noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`normal`</li>
-Default value: `normal`.
+     * Set Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
+     * @param Type Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
+<li>normal: normal audio noise reduction.</li>
+Default value: normal.
      */
     public void setType(String Type) {
         this.Type = Type;

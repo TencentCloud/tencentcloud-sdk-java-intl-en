@@ -59,8 +59,7 @@ public class AiRecognitionTaskObjectResult extends AbstractModel {
     private AiRecognitionTaskObjectResultInput Input;
 
     /**
-    * Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Object recognition task output information.
     */
     @SerializedName("Output")
     @Expose
@@ -168,20 +167,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Object recognition task output information. 
+     * @return Output Object recognition task output information.
      */
     public AiRecognitionTaskObjectResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output information of object recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Object recognition task output information.
+     * @param Output Object recognition task output information.
      */
     public void setOutput(AiRecognitionTaskObjectResultOutput Output) {
         this.Output = Output;

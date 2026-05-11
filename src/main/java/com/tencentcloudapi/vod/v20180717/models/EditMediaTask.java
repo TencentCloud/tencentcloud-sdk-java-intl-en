@@ -74,16 +74,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Long Progress;
 
     /**
-    * Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Video editing task input.
     */
     @SerializedName("Input")
     @Expose
     private EditMediaTaskInput Input;
 
     /**
-    * Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Output of the video editing task.
     */
     @SerializedName("Output")
     @Expose
@@ -255,40 +253,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Input Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Video editing task input. 
+     * @return Input Video editing task input.
      */
     public EditMediaTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Input Input of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Video editing task input.
+     * @param Input Video editing task input.
      */
     public void setInput(EditMediaTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Output of the video editing task. 
+     * @return Output Output of the video editing task.
      */
     public EditMediaTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output of video editing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Output of the video editing task.
+     * @param Output Output of the video editing task.
      */
     public void setOutput(EditMediaTaskOutput Output) {
         this.Output = Output;

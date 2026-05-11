@@ -153,7 +153,7 @@ If there is no AZ or subnet in Zones/SubnetIds, a verification error will be rep
     private ServiceSettings ServiceSettings;
 
     /**
-    * The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+    * The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://www.tencentcloud.com/document/product/215/78469).
     */
     @SerializedName("Ipv6AddressCount")
     @Expose
@@ -219,11 +219,30 @@ Default value: FALSE.
     private Boolean CapacityRebalance;
 
     /**
-    * Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+    * Instance name index settings. If not specified, it is disabled by default. When enabled, an incremental numeric index will be appended to the names of instances automatically created within the scaling group.
     */
     @SerializedName("InstanceNameIndexSettings")
     @Expose
     private InstanceNameIndexSettings InstanceNameIndexSettings;
+
+    /**
+    * Specifies the related settings for the instance hostname index number. If not specified, it is disabled by default. When enabled, it appends incremental numeric index to the hostname of instances auto-created within the scaling group.
+    */
+    @SerializedName("HostNameIndexSettings")
+    @Expose
+    private HostNameIndexSettings HostNameIndexSettings;
+
+    /**
+    * This feature allows the system to perform multiple scale out operations concurrently in order to reach the desired capacity. However, the following constraints apply:
+
+- Compatibility: This option cannot be set if the InstanceAllocationPolicyis SPOT_MIXED or the ScalingMode is WAKE_UP_STOPPED_SCALING.
+- Concurrency Limit: The system currently supports a maximum of two concurrent scale-out operations.
+- Operation Restrictions: Other scaling actions such as scaling to a specific instance count or performing scale in, cannot be executed concurrently.
+Default: FALSE(indicating that concurrent scaling is disabled).
+    */
+    @SerializedName("ConcurrentScaleOutForDesiredCapacity")
+    @Expose
+    private Boolean ConcurrentScaleOutForDesiredCapacity;
 
     /**
      * Get Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account. 
@@ -538,16 +557,16 @@ If there is no AZ or subnet in Zones/SubnetIds, a verification error will be rep
     }
 
     /**
-     * Get The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1). 
-     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+     * Get The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://www.tencentcloud.com/document/product/215/78469). 
+     * @return Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://www.tencentcloud.com/document/product/215/78469).
      */
     public Long getIpv6AddressCount() {
         return this.Ipv6AddressCount;
     }
 
     /**
-     * Set The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
-     * @param Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://intl.cloud.tencent.com/document/product/1142/38369?from_cn_redirect=1).
+     * Set The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://www.tencentcloud.com/document/product/215/78469).
+     * @param Ipv6AddressCount The number of IPv6 addresses that an instance has. valid values: 0 and 1. default value: 0, which means the instance does not allocate an IPv6 address. use a private network that supports IPv6 and enable IPv6 CIDR in the subnet. for other usage restrictions, see [IPv6 usage limits](https://www.tencentcloud.com/document/product/215/78469).
      */
     public void setIpv6AddressCount(Long Ipv6AddressCount) {
         this.Ipv6AddressCount = Ipv6AddressCount;
@@ -718,19 +737,71 @@ Default value: FALSE.
     }
 
     /**
-     * Get Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group. 
-     * @return InstanceNameIndexSettings Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+     * Get Instance name index settings. If not specified, it is disabled by default. When enabled, an incremental numeric index will be appended to the names of instances automatically created within the scaling group. 
+     * @return InstanceNameIndexSettings Instance name index settings. If not specified, it is disabled by default. When enabled, an incremental numeric index will be appended to the names of instances automatically created within the scaling group.
      */
     public InstanceNameIndexSettings getInstanceNameIndexSettings() {
         return this.InstanceNameIndexSettings;
     }
 
     /**
-     * Set Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
-     * @param InstanceNameIndexSettings Instance name sequencing settings. If this parameter is not specified, the default is not enabled. When enabled, an incremental numeric sequence will be appended to the names of instances automatically created within the scaling group.
+     * Set Instance name index settings. If not specified, it is disabled by default. When enabled, an incremental numeric index will be appended to the names of instances automatically created within the scaling group.
+     * @param InstanceNameIndexSettings Instance name index settings. If not specified, it is disabled by default. When enabled, an incremental numeric index will be appended to the names of instances automatically created within the scaling group.
      */
     public void setInstanceNameIndexSettings(InstanceNameIndexSettings InstanceNameIndexSettings) {
         this.InstanceNameIndexSettings = InstanceNameIndexSettings;
+    }
+
+    /**
+     * Get Specifies the related settings for the instance hostname index number. If not specified, it is disabled by default. When enabled, it appends incremental numeric index to the hostname of instances auto-created within the scaling group. 
+     * @return HostNameIndexSettings Specifies the related settings for the instance hostname index number. If not specified, it is disabled by default. When enabled, it appends incremental numeric index to the hostname of instances auto-created within the scaling group.
+     */
+    public HostNameIndexSettings getHostNameIndexSettings() {
+        return this.HostNameIndexSettings;
+    }
+
+    /**
+     * Set Specifies the related settings for the instance hostname index number. If not specified, it is disabled by default. When enabled, it appends incremental numeric index to the hostname of instances auto-created within the scaling group.
+     * @param HostNameIndexSettings Specifies the related settings for the instance hostname index number. If not specified, it is disabled by default. When enabled, it appends incremental numeric index to the hostname of instances auto-created within the scaling group.
+     */
+    public void setHostNameIndexSettings(HostNameIndexSettings HostNameIndexSettings) {
+        this.HostNameIndexSettings = HostNameIndexSettings;
+    }
+
+    /**
+     * Get This feature allows the system to perform multiple scale out operations concurrently in order to reach the desired capacity. However, the following constraints apply:
+
+- Compatibility: This option cannot be set if the InstanceAllocationPolicyis SPOT_MIXED or the ScalingMode is WAKE_UP_STOPPED_SCALING.
+- Concurrency Limit: The system currently supports a maximum of two concurrent scale-out operations.
+- Operation Restrictions: Other scaling actions such as scaling to a specific instance count or performing scale in, cannot be executed concurrently.
+Default: FALSE(indicating that concurrent scaling is disabled). 
+     * @return ConcurrentScaleOutForDesiredCapacity This feature allows the system to perform multiple scale out operations concurrently in order to reach the desired capacity. However, the following constraints apply:
+
+- Compatibility: This option cannot be set if the InstanceAllocationPolicyis SPOT_MIXED or the ScalingMode is WAKE_UP_STOPPED_SCALING.
+- Concurrency Limit: The system currently supports a maximum of two concurrent scale-out operations.
+- Operation Restrictions: Other scaling actions such as scaling to a specific instance count or performing scale in, cannot be executed concurrently.
+Default: FALSE(indicating that concurrent scaling is disabled).
+     */
+    public Boolean getConcurrentScaleOutForDesiredCapacity() {
+        return this.ConcurrentScaleOutForDesiredCapacity;
+    }
+
+    /**
+     * Set This feature allows the system to perform multiple scale out operations concurrently in order to reach the desired capacity. However, the following constraints apply:
+
+- Compatibility: This option cannot be set if the InstanceAllocationPolicyis SPOT_MIXED or the ScalingMode is WAKE_UP_STOPPED_SCALING.
+- Concurrency Limit: The system currently supports a maximum of two concurrent scale-out operations.
+- Operation Restrictions: Other scaling actions such as scaling to a specific instance count or performing scale in, cannot be executed concurrently.
+Default: FALSE(indicating that concurrent scaling is disabled).
+     * @param ConcurrentScaleOutForDesiredCapacity This feature allows the system to perform multiple scale out operations concurrently in order to reach the desired capacity. However, the following constraints apply:
+
+- Compatibility: This option cannot be set if the InstanceAllocationPolicyis SPOT_MIXED or the ScalingMode is WAKE_UP_STOPPED_SCALING.
+- Concurrency Limit: The system currently supports a maximum of two concurrent scale-out operations.
+- Operation Restrictions: Other scaling actions such as scaling to a specific instance count or performing scale in, cannot be executed concurrently.
+Default: FALSE(indicating that concurrent scaling is disabled).
+     */
+    public void setConcurrentScaleOutForDesiredCapacity(Boolean ConcurrentScaleOutForDesiredCapacity) {
+        this.ConcurrentScaleOutForDesiredCapacity = ConcurrentScaleOutForDesiredCapacity;
     }
 
     public CreateAutoScalingGroupRequest() {
@@ -834,6 +905,12 @@ Default value: FALSE.
         if (source.InstanceNameIndexSettings != null) {
             this.InstanceNameIndexSettings = new InstanceNameIndexSettings(source.InstanceNameIndexSettings);
         }
+        if (source.HostNameIndexSettings != null) {
+            this.HostNameIndexSettings = new HostNameIndexSettings(source.HostNameIndexSettings);
+        }
+        if (source.ConcurrentScaleOutForDesiredCapacity != null) {
+            this.ConcurrentScaleOutForDesiredCapacity = new Boolean(source.ConcurrentScaleOutForDesiredCapacity);
+        }
     }
 
 
@@ -866,6 +943,8 @@ Default value: FALSE.
         this.setParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
         this.setParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
         this.setParamObj(map, prefix + "InstanceNameIndexSettings.", this.InstanceNameIndexSettings);
+        this.setParamObj(map, prefix + "HostNameIndexSettings.", this.HostNameIndexSettings);
+        this.setParamSimple(map, prefix + "ConcurrentScaleOutForDesiredCapacity", this.ConcurrentScaleOutForDesiredCapacity);
 
     }
 }

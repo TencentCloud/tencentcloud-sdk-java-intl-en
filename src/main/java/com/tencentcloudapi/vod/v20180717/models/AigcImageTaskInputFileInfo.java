@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AigcImageTaskInputFileInfo extends AbstractModel {
 
     /**
-    * Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
+    * Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
     */
     @SerializedName("Type")
     @Expose
@@ -58,16 +58,16 @@ Description:.
     private String Text;
 
     /**
-     * Get Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>. 
-     * @return Type Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
+     * Get Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> 
+     * @return Type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
-     * @param Type Input video File type. valid values: <li>File: on-demand media File;</li> <li>Url: accessible Url;</li>.
+     * Set Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+     * @param Type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
      */
     public void setType(String Type) {
         this.Type = Type;

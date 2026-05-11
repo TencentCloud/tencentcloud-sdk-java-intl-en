@@ -64,8 +64,7 @@ public class RemoveWatermarkTask extends AbstractModel {
     private String Message;
 
     /**
-    * The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Input of the intelligent watermark removal task.
     */
     @SerializedName("Input")
     @Expose
@@ -194,20 +193,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Input The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Input of the intelligent watermark removal task. 
+     * @return Input Input of the intelligent watermark removal task.
      */
     public RemoveWaterMarkTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Input The input of a watermark removal task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Input of the intelligent watermark removal task.
+     * @param Input Input of the intelligent watermark removal task.
      */
     public void setInput(RemoveWaterMarkTaskInput Input) {
         this.Input = Input;

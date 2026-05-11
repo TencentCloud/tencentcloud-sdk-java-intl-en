@@ -31,7 +31,7 @@ public class ResetProcedureTemplateRequest extends AbstractModel {
     private String Name;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -67,6 +67,13 @@ public class ResetProcedureTemplateRequest extends AbstractModel {
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
+    * 
+    */
+    @SerializedName("AiRecognitionTaskSet")
+    @Expose
+    private AiRecognitionTaskInput [] AiRecognitionTaskSet;
+
+    /**
     * Type parameter of AI-based content recognition task.
     */
     @SerializedName("AiRecognitionTask")
@@ -97,16 +104,16 @@ public class ResetProcedureTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -181,9 +188,27 @@ public class ResetProcedureTemplateRequest extends AbstractModel {
     }
 
     /**
+     * Get  
+     * @return AiRecognitionTaskSet 
+     */
+    public AiRecognitionTaskInput [] getAiRecognitionTaskSet() {
+        return this.AiRecognitionTaskSet;
+    }
+
+    /**
+     * Set 
+     * @param AiRecognitionTaskSet 
+     */
+    public void setAiRecognitionTaskSet(AiRecognitionTaskInput [] AiRecognitionTaskSet) {
+        this.AiRecognitionTaskSet = AiRecognitionTaskSet;
+    }
+
+    /**
      * Get Type parameter of AI-based content recognition task. 
      * @return AiRecognitionTask Type parameter of AI-based content recognition task.
+     * @deprecated
      */
+    @Deprecated
     public AiRecognitionTaskInput getAiRecognitionTask() {
         return this.AiRecognitionTask;
     }
@@ -191,7 +216,9 @@ public class ResetProcedureTemplateRequest extends AbstractModel {
     /**
      * Set Type parameter of AI-based content recognition task.
      * @param AiRecognitionTask Type parameter of AI-based content recognition task.
+     * @deprecated
      */
+    @Deprecated
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
         this.AiRecognitionTask = AiRecognitionTask;
     }
@@ -238,6 +265,12 @@ public class ResetProcedureTemplateRequest extends AbstractModel {
         if (source.AiAnalysisTask != null) {
             this.AiAnalysisTask = new AiAnalysisTaskInput(source.AiAnalysisTask);
         }
+        if (source.AiRecognitionTaskSet != null) {
+            this.AiRecognitionTaskSet = new AiRecognitionTaskInput[source.AiRecognitionTaskSet.length];
+            for (int i = 0; i < source.AiRecognitionTaskSet.length; i++) {
+                this.AiRecognitionTaskSet[i] = new AiRecognitionTaskInput(source.AiRecognitionTaskSet[i]);
+            }
+        }
         if (source.AiRecognitionTask != null) {
             this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
         }
@@ -257,6 +290,7 @@ public class ResetProcedureTemplateRequest extends AbstractModel {
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
+        this.setParamArrayObj(map, prefix + "AiRecognitionTaskSet.", this.AiRecognitionTaskSet);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
 

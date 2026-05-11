@@ -59,8 +59,7 @@ public class AiReviewTaskProhibitedAsrResult extends AbstractModel {
     private AiReviewProhibitedAsrTaskInput Input;
 
     /**
-    * Output for ASR-based recognition of banned content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Audio/video moderation Asr text prohibited task output.
     */
     @SerializedName("Output")
     @Expose
@@ -154,20 +153,16 @@ Note: This field may return `null`, indicating that no valid value can be found.
     }
 
     /**
-     * Get Output for ASR-based recognition of banned content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return Output Output for ASR-based recognition of banned content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Audio/video moderation Asr text prohibited task output. 
+     * @return Output Audio/video moderation Asr text prohibited task output.
      */
     public AiReviewProhibitedAsrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output for ASR-based recognition of banned content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param Output Output for ASR-based recognition of banned content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Audio/video moderation Asr text prohibited task output.
+     * @param Output Audio/video moderation Asr text prohibited task output.
      */
     public void setOutput(AiReviewProhibitedAsrTaskOutput Output) {
         this.Output = Output;

@@ -24,194 +24,194 @@ import java.util.HashMap;
 public class AigcImageTaskOutputFileInfo extends AbstractModel {
 
     /**
-    * Storage mode. valid values: <li>Permanent: Permanent storage. the generated image file will be stored in VOD (video on demand).</li> <li>Temporary: Temporary storage. the generated image file will not be stored in vod.</li>.
-Default value: Temporary.
+    * Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+
     */
     @SerializedName("StorageMode")
     @Expose
     private String StorageMode;
 
     /**
-    * Output filename, up to 64 characters. default filename is assigned by the system.
+    * Output filename, up to 64 characters. Default filename is specified generation by system. Valid when StorageMode is Permanent.
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * Category ID, used to categorize and manage media. you can create a category and obtain the category ID via the [create classification](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) api.
-<Li>Default value: 0, indicating other categories.</li>.
+    * Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * The expiry date of the output file. files will be deleted longer than this time. default is no expiration. format according to ISO 8601 standard. for details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * File Type.
+    * File type, such as mp4, flv.
     */
     @SerializedName("FileType")
     @Expose
     private String FileType;
 
     /**
-    * File Url.
+    * Media file playback address.
     */
     @SerializedName("FileUrl")
     @Expose
     private String FileUrl;
 
     /**
-    * File ID.
+    * Media file ID. Valid when StorageMode is Permanent.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Meta Data.
+    * Output video meta information. Valid when StorageMode is Permanent.
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-     * Get Storage mode. valid values: <li>Permanent: Permanent storage. the generated image file will be stored in VOD (video on demand).</li> <li>Temporary: Temporary storage. the generated image file will not be stored in vod.</li>.
-Default value: Temporary. 
-     * @return StorageMode Storage mode. valid values: <li>Permanent: Permanent storage. the generated image file will be stored in VOD (video on demand).</li> <li>Temporary: Temporary storage. the generated image file will not be stored in vod.</li>.
-Default value: Temporary.
+     * Get Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+ 
+     * @return StorageMode Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+
      */
     public String getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set Storage mode. valid values: <li>Permanent: Permanent storage. the generated image file will be stored in VOD (video on demand).</li> <li>Temporary: Temporary storage. the generated image file will not be stored in vod.</li>.
-Default value: Temporary.
-     * @param StorageMode Storage mode. valid values: <li>Permanent: Permanent storage. the generated image file will be stored in VOD (video on demand).</li> <li>Temporary: Temporary storage. the generated image file will not be stored in vod.</li>.
-Default value: Temporary.
+     * Set Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+
+     * @param StorageMode Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+
      */
     public void setStorageMode(String StorageMode) {
         this.StorageMode = StorageMode;
     }
 
     /**
-     * Get Output filename, up to 64 characters. default filename is assigned by the system. 
-     * @return MediaName Output filename, up to 64 characters. default filename is assigned by the system.
+     * Get Output filename, up to 64 characters. Default filename is specified generation by system. Valid when StorageMode is Permanent. 
+     * @return MediaName Output filename, up to 64 characters. Default filename is specified generation by system. Valid when StorageMode is Permanent.
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Output filename, up to 64 characters. default filename is assigned by the system.
-     * @param MediaName Output filename, up to 64 characters. default filename is assigned by the system.
+     * Set Output filename, up to 64 characters. Default filename is specified generation by system. Valid when StorageMode is Permanent.
+     * @param MediaName Output filename, up to 64 characters. Default filename is specified generation by system. Valid when StorageMode is Permanent.
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get Category ID, used to categorize and manage media. you can create a category and obtain the category ID via the [create classification](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) api.
-<Li>Default value: 0, indicating other categories.</li>. 
-     * @return ClassId Category ID, used to categorize and manage media. you can create a category and obtain the category ID via the [create classification](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) api.
-<Li>Default value: 0, indicating other categories.</li>.
+     * Get Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+ 
+     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set Category ID, used to categorize and manage media. you can create a category and obtain the category ID via the [create classification](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) api.
-<Li>Default value: 0, indicating other categories.</li>.
-     * @param ClassId Category ID, used to categorize and manage media. you can create a category and obtain the category ID via the [create classification](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) api.
-<Li>Default value: 0, indicating other categories.</li>.
+     * Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+
+     * @param ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API. Valid when StorageMode is Permanent.
+
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get The expiry date of the output file. files will be deleted longer than this time. default is no expiration. format according to ISO 8601 standard. for details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return ExpireTime The expiry date of the output file. files will be deleted longer than this time. default is no expiration. format according to ISO 8601 standard. for details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return ExpireTime Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set The expiry date of the output file. files will be deleted longer than this time. default is no expiration. format according to ISO 8601 standard. for details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ExpireTime The expiry date of the output file. files will be deleted longer than this time. default is no expiration. format according to ISO 8601 standard. for details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param ExpireTime Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get File Type. 
-     * @return FileType File Type.
+     * Get File type, such as mp4, flv. 
+     * @return FileType File type, such as mp4, flv.
      */
     public String getFileType() {
         return this.FileType;
     }
 
     /**
-     * Set File Type.
-     * @param FileType File Type.
+     * Set File type, such as mp4, flv.
+     * @param FileType File type, such as mp4, flv.
      */
     public void setFileType(String FileType) {
         this.FileType = FileType;
     }
 
     /**
-     * Get File Url. 
-     * @return FileUrl File Url.
+     * Get Media file playback address. 
+     * @return FileUrl Media file playback address.
      */
     public String getFileUrl() {
         return this.FileUrl;
     }
 
     /**
-     * Set File Url.
-     * @param FileUrl File Url.
+     * Set Media file playback address.
+     * @param FileUrl Media file playback address.
      */
     public void setFileUrl(String FileUrl) {
         this.FileUrl = FileUrl;
     }
 
     /**
-     * Get File ID. 
-     * @return FileId File ID.
+     * Get Media file ID. Valid when StorageMode is Permanent. 
+     * @return FileId Media file ID. Valid when StorageMode is Permanent.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set File ID.
-     * @param FileId File ID.
+     * Set Media file ID. Valid when StorageMode is Permanent.
+     * @param FileId Media file ID. Valid when StorageMode is Permanent.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Meta Data. 
-     * @return MetaData Meta Data.
+     * Get Output video meta information. Valid when StorageMode is Permanent. 
+     * @return MetaData Output video meta information. Valid when StorageMode is Permanent.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Meta Data.
-     * @param MetaData Meta Data.
+     * Set Output video meta information. Valid when StorageMode is Permanent.
+     * @param MetaData Output video meta information. Valid when StorageMode is Permanent.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

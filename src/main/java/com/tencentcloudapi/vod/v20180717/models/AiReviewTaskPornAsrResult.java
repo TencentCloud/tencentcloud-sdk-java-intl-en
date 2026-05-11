@@ -60,8 +60,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AiReviewPornAsrTaskInput Input;
 
     /**
-    * Output for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Video moderation involves offensive content in Asr text task output.
     */
     @SerializedName("Output")
     @Expose
@@ -159,20 +158,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Output for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return Output Output for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Video moderation involves offensive content in Asr text task output. 
+     * @return Output Video moderation involves offensive content in Asr text task output.
      */
     public AiReviewPornAsrTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param Output Output for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Video moderation involves offensive content in Asr text task output.
+     * @param Output Video moderation involves offensive content in Asr text task output.
      */
     public void setOutput(AiReviewPornAsrTaskOutput Output) {
         this.Output = Output;

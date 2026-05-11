@@ -99,6 +99,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long SubtitleEmbedId;
 
     /**
+    * <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+    */
+    @SerializedName("SpeakerMode")
+    @Expose
+    private Long SpeakerMode;
+
+    /**
+    * <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+    */
+    @SerializedName("SpeakerLabel")
+    @Expose
+    private Long SpeakerLabel;
+
+    /**
      * Get <p>Intelligent caption subtitle language type<br>0: Source language<br>1: Target language<br>2: Source language + target language<br>Only 0 is supported when TranslateSwitch is OFF<br>Only 1 or 2 is supported when TranslateSwitch is ON</p> 
      * @return SubtitleType <p>Intelligent caption subtitle language type<br>0: Source language<br>1: Target language<br>2: Source language + target language<br>Only 0 is supported when TranslateSwitch is OFF<br>Only 1 or 2 is supported when TranslateSwitch is ON</p>
      */
@@ -278,6 +292,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SubtitleEmbedId = SubtitleEmbedId;
     }
 
+    /**
+     * Get <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p> 
+     * @return SpeakerMode <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+     */
+    public Long getSpeakerMode() {
+        return this.SpeakerMode;
+    }
+
+    /**
+     * Set <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+     * @param SpeakerMode <p>Speaker identification mode. Valid values:<br>0: Speaker identification is disabled.<br>1: Speaker identification is enabled.<br>Default value: 0.</p>
+     */
+    public void setSpeakerMode(Long SpeakerMode) {
+        this.SpeakerMode = SpeakerMode;
+    }
+
+    /**
+     * Get <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p> 
+     * @return SpeakerLabel <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+     */
+    public Long getSpeakerLabel() {
+        return this.SpeakerLabel;
+    }
+
+    /**
+     * Set <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+     * @param SpeakerLabel <p>Indicates whether to output the identified speaker to the subtitle file. Valid values:<br>0: The speaker is not output to the subtitle file.<br>1: The speaker is output to the VTT subtitle file.<br>Note: To use this parameter, the value of SpeakerMode cannot be 0.<br>Default value: 0.</p>
+     */
+    public void setSpeakerLabel(Long SpeakerLabel) {
+        this.SpeakerLabel = SpeakerLabel;
+    }
+
     public RawSmartSubtitleParameter() {
     }
 
@@ -316,6 +362,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SubtitleEmbedId != null) {
             this.SubtitleEmbedId = new Long(source.SubtitleEmbedId);
         }
+        if (source.SpeakerMode != null) {
+            this.SpeakerMode = new Long(source.SpeakerMode);
+        }
+        if (source.SpeakerLabel != null) {
+            this.SpeakerLabel = new Long(source.SpeakerLabel);
+        }
     }
 
 
@@ -333,6 +385,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ProcessType", this.ProcessType);
         this.setParamObj(map, prefix + "SelectingSubtitleAreasConfig.", this.SelectingSubtitleAreasConfig);
         this.setParamSimple(map, prefix + "SubtitleEmbedId", this.SubtitleEmbedId);
+        this.setParamSimple(map, prefix + "SpeakerMode", this.SpeakerMode);
+        this.setParamSimple(map, prefix + "SpeakerLabel", this.SpeakerLabel);
 
     }
 }

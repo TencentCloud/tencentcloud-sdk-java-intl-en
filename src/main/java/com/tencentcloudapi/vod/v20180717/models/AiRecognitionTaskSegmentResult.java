@@ -52,16 +52,14 @@ public class AiRecognitionTaskSegmentResult extends AbstractModel {
     private String Message;
 
     /**
-    * Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Video splitting task input.
     */
     @SerializedName("Input")
     @Expose
     private AiRecognitionTaskSegmentResultInput Input;
 
     /**
-    * Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Video splitting task output information.
     */
     @SerializedName("Output")
     @Expose
@@ -153,40 +151,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Input Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Video splitting task input. 
+     * @return Input Video splitting task input.
      */
     public AiRecognitionTaskSegmentResultInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Input Input information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Video splitting task input.
+     * @param Input Video splitting task input.
      */
     public void setInput(AiRecognitionTaskSegmentResultInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Output Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Video splitting task output information. 
+     * @return Output Video splitting task output information.
      */
     public AiRecognitionTaskSegmentResultOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Output Output information of video splitting task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Video splitting task output information.
+     * @param Output Video splitting task output information.
      */
     public void setOutput(AiRecognitionTaskSegmentResultOutput Output) {
         this.Output = Output;

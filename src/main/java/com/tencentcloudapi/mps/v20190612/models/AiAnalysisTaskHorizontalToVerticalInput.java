@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AiAnalysisTaskHorizontalToVerticalInput extends AbstractModel {
 
     /**
-    * Intelligent landscape-to-portrait template ID.
+    * <p>ID of the horizontal-to-vertical video transformation template.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Definition")
@@ -32,9 +32,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Definition;
 
     /**
-     * Get Intelligent landscape-to-portrait template ID.
+    * <p>Extended parameter.</p>
+    */
+    @SerializedName("ExtendedParameter")
+    @Expose
+    private String ExtendedParameter;
+
+    /**
+     * Get <p>ID of the horizontal-to-vertical video transformation template.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Definition Intelligent landscape-to-portrait template ID.
+     * @return Definition <p>ID of the horizontal-to-vertical video transformation template.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDefinition() {
@@ -42,13 +49,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Intelligent landscape-to-portrait template ID.
+     * Set <p>ID of the horizontal-to-vertical video transformation template.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Definition Intelligent landscape-to-portrait template ID.
+     * @param Definition <p>ID of the horizontal-to-vertical video transformation template.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <p>Extended parameter.</p> 
+     * @return ExtendedParameter <p>Extended parameter.</p>
+     */
+    public String getExtendedParameter() {
+        return this.ExtendedParameter;
+    }
+
+    /**
+     * Set <p>Extended parameter.</p>
+     * @param ExtendedParameter <p>Extended parameter.</p>
+     */
+    public void setExtendedParameter(String ExtendedParameter) {
+        this.ExtendedParameter = ExtendedParameter;
     }
 
     public AiAnalysisTaskHorizontalToVerticalInput() {
@@ -62,6 +85,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.ExtendedParameter != null) {
+            this.ExtendedParameter = new String(source.ExtendedParameter);
+        }
     }
 
 
@@ -70,6 +96,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
 
     }
 }

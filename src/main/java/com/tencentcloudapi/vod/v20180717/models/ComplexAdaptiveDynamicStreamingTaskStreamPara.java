@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ComplexAdaptiveDynamicStreamingTaskStreamPara extends AbstractModel {
 
     /**
-    * Adaptive bitrate streaming template ID.
+    * Adaptive bitrate template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Adaptive bitrate streaming template ID. 
-     * @return Definition Adaptive bitrate streaming template ID.
+     * Get Adaptive bitrate template ID. 
+     * @return Definition Adaptive bitrate template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Adaptive bitrate streaming template ID.
-     * @param Definition Adaptive bitrate streaming template ID.
+     * Set Adaptive bitrate template ID.
+     * @param Definition Adaptive bitrate template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

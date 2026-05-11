@@ -24,138 +24,161 @@ import java.util.HashMap;
 public class QualityControlData extends AbstractModel {
 
     /**
-    * When this field is set to true, it indicates that the video has no audio track.
+    * <p>A value of true indicates that the video has no audio track.</p>
     */
     @SerializedName("NoAudio")
     @Expose
     private Boolean NoAudio;
 
     /**
-    * When this field is set to true, it indicates that the video has no video track.
+    * <p>A value of true indicates that the video has no video track.</p>
     */
     @SerializedName("NoVideo")
     @Expose
     private Boolean NoVideo;
 
     /**
-    * No-reference quality score of the video (100 points in total).
+    * <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
     */
     @SerializedName("QualityEvaluationScore")
     @Expose
     private Long QualityEvaluationScore;
 
     /**
-    * No-reference quality score of the video (MOS).
+    * <p>No-reference quality score of the video (MOS).</p>
     */
     @SerializedName("QualityEvaluationMeanOpinionScore")
     @Expose
     private Float QualityEvaluationMeanOpinionScore;
 
     /**
-    * Exception items identified in content quality inspection.
+    * <p>Video aesthetic score. Value range: [0, 100].</p>
+    */
+    @SerializedName("AestheticEvaluationScore")
+    @Expose
+    private Long AestheticEvaluationScore;
+
+    /**
+    * <p>Exception items detected in content quality inspection.</p>
     */
     @SerializedName("QualityControlResultSet")
     @Expose
     private QualityControlResult [] QualityControlResultSet;
 
     /**
-    * Exception items identified in format diagnosis.
+    * <p>Exception items detected in format diagnosis.</p>
     */
     @SerializedName("ContainerDiagnoseResultSet")
     @Expose
     private ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet;
 
     /**
-     * Get When this field is set to true, it indicates that the video has no audio track. 
-     * @return NoAudio When this field is set to true, it indicates that the video has no audio track.
+     * Get <p>A value of true indicates that the video has no audio track.</p> 
+     * @return NoAudio <p>A value of true indicates that the video has no audio track.</p>
      */
     public Boolean getNoAudio() {
         return this.NoAudio;
     }
 
     /**
-     * Set When this field is set to true, it indicates that the video has no audio track.
-     * @param NoAudio When this field is set to true, it indicates that the video has no audio track.
+     * Set <p>A value of true indicates that the video has no audio track.</p>
+     * @param NoAudio <p>A value of true indicates that the video has no audio track.</p>
      */
     public void setNoAudio(Boolean NoAudio) {
         this.NoAudio = NoAudio;
     }
 
     /**
-     * Get When this field is set to true, it indicates that the video has no video track. 
-     * @return NoVideo When this field is set to true, it indicates that the video has no video track.
+     * Get <p>A value of true indicates that the video has no video track.</p> 
+     * @return NoVideo <p>A value of true indicates that the video has no video track.</p>
      */
     public Boolean getNoVideo() {
         return this.NoVideo;
     }
 
     /**
-     * Set When this field is set to true, it indicates that the video has no video track.
-     * @param NoVideo When this field is set to true, it indicates that the video has no video track.
+     * Set <p>A value of true indicates that the video has no video track.</p>
+     * @param NoVideo <p>A value of true indicates that the video has no video track.</p>
      */
     public void setNoVideo(Boolean NoVideo) {
         this.NoVideo = NoVideo;
     }
 
     /**
-     * Get No-reference quality score of the video (100 points in total). 
-     * @return QualityEvaluationScore No-reference quality score of the video (100 points in total).
+     * Get <p>No-reference quality score of the video, on a scale of 0 to 100.</p> 
+     * @return QualityEvaluationScore <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
      */
     public Long getQualityEvaluationScore() {
         return this.QualityEvaluationScore;
     }
 
     /**
-     * Set No-reference quality score of the video (100 points in total).
-     * @param QualityEvaluationScore No-reference quality score of the video (100 points in total).
+     * Set <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
+     * @param QualityEvaluationScore <p>No-reference quality score of the video, on a scale of 0 to 100.</p>
      */
     public void setQualityEvaluationScore(Long QualityEvaluationScore) {
         this.QualityEvaluationScore = QualityEvaluationScore;
     }
 
     /**
-     * Get No-reference quality score of the video (MOS). 
-     * @return QualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
+     * Get <p>No-reference quality score of the video (MOS).</p> 
+     * @return QualityEvaluationMeanOpinionScore <p>No-reference quality score of the video (MOS).</p>
      */
     public Float getQualityEvaluationMeanOpinionScore() {
         return this.QualityEvaluationMeanOpinionScore;
     }
 
     /**
-     * Set No-reference quality score of the video (MOS).
-     * @param QualityEvaluationMeanOpinionScore No-reference quality score of the video (MOS).
+     * Set <p>No-reference quality score of the video (MOS).</p>
+     * @param QualityEvaluationMeanOpinionScore <p>No-reference quality score of the video (MOS).</p>
      */
     public void setQualityEvaluationMeanOpinionScore(Float QualityEvaluationMeanOpinionScore) {
         this.QualityEvaluationMeanOpinionScore = QualityEvaluationMeanOpinionScore;
     }
 
     /**
-     * Get Exception items identified in content quality inspection. 
-     * @return QualityControlResultSet Exception items identified in content quality inspection.
+     * Get <p>Video aesthetic score. Value range: [0, 100].</p> 
+     * @return AestheticEvaluationScore <p>Video aesthetic score. Value range: [0, 100].</p>
+     */
+    public Long getAestheticEvaluationScore() {
+        return this.AestheticEvaluationScore;
+    }
+
+    /**
+     * Set <p>Video aesthetic score. Value range: [0, 100].</p>
+     * @param AestheticEvaluationScore <p>Video aesthetic score. Value range: [0, 100].</p>
+     */
+    public void setAestheticEvaluationScore(Long AestheticEvaluationScore) {
+        this.AestheticEvaluationScore = AestheticEvaluationScore;
+    }
+
+    /**
+     * Get <p>Exception items detected in content quality inspection.</p> 
+     * @return QualityControlResultSet <p>Exception items detected in content quality inspection.</p>
      */
     public QualityControlResult [] getQualityControlResultSet() {
         return this.QualityControlResultSet;
     }
 
     /**
-     * Set Exception items identified in content quality inspection.
-     * @param QualityControlResultSet Exception items identified in content quality inspection.
+     * Set <p>Exception items detected in content quality inspection.</p>
+     * @param QualityControlResultSet <p>Exception items detected in content quality inspection.</p>
      */
     public void setQualityControlResultSet(QualityControlResult [] QualityControlResultSet) {
         this.QualityControlResultSet = QualityControlResultSet;
     }
 
     /**
-     * Get Exception items identified in format diagnosis. 
-     * @return ContainerDiagnoseResultSet Exception items identified in format diagnosis.
+     * Get <p>Exception items detected in format diagnosis.</p> 
+     * @return ContainerDiagnoseResultSet <p>Exception items detected in format diagnosis.</p>
      */
     public ContainerDiagnoseResultItem [] getContainerDiagnoseResultSet() {
         return this.ContainerDiagnoseResultSet;
     }
 
     /**
-     * Set Exception items identified in format diagnosis.
-     * @param ContainerDiagnoseResultSet Exception items identified in format diagnosis.
+     * Set <p>Exception items detected in format diagnosis.</p>
+     * @param ContainerDiagnoseResultSet <p>Exception items detected in format diagnosis.</p>
      */
     public void setContainerDiagnoseResultSet(ContainerDiagnoseResultItem [] ContainerDiagnoseResultSet) {
         this.ContainerDiagnoseResultSet = ContainerDiagnoseResultSet;
@@ -181,6 +204,9 @@ public class QualityControlData extends AbstractModel {
         if (source.QualityEvaluationMeanOpinionScore != null) {
             this.QualityEvaluationMeanOpinionScore = new Float(source.QualityEvaluationMeanOpinionScore);
         }
+        if (source.AestheticEvaluationScore != null) {
+            this.AestheticEvaluationScore = new Long(source.AestheticEvaluationScore);
+        }
         if (source.QualityControlResultSet != null) {
             this.QualityControlResultSet = new QualityControlResult[source.QualityControlResultSet.length];
             for (int i = 0; i < source.QualityControlResultSet.length; i++) {
@@ -204,6 +230,7 @@ public class QualityControlData extends AbstractModel {
         this.setParamSimple(map, prefix + "NoVideo", this.NoVideo);
         this.setParamSimple(map, prefix + "QualityEvaluationScore", this.QualityEvaluationScore);
         this.setParamSimple(map, prefix + "QualityEvaluationMeanOpinionScore", this.QualityEvaluationMeanOpinionScore);
+        this.setParamSimple(map, prefix + "AestheticEvaluationScore", this.AestheticEvaluationScore);
         this.setParamArrayObj(map, prefix + "QualityControlResultSet.", this.QualityControlResultSet);
         this.setParamArrayObj(map, prefix + "ContainerDiagnoseResultSet.", this.ContainerDiagnoseResultSet);
 

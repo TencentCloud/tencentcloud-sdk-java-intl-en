@@ -32,15 +32,16 @@ public class ComplexAdaptiveDynamicStreamingTask extends AbstractModel {
 
     /**
     * Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Execution status and result of the complex adaptive bitrate streaming task. Each array element corresponds to an adaptive bitrate streaming template specified when initiating the task.
+    * Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
     */
     @SerializedName("ComplexAdaptiveDynamicStreamingTaskResultSet")
     @Expose
@@ -64,11 +65,13 @@ public class ComplexAdaptiveDynamicStreamingTask extends AbstractModel {
 
     /**
      * Get Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li> 
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+ 
      * @return Status Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
      */
     public String getStatus() {
         return this.Status;
@@ -76,27 +79,29 @@ public class ComplexAdaptiveDynamicStreamingTask extends AbstractModel {
 
     /**
      * Set Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
      * @param Status Task status. Valid values:
-<li>PROCESSING: processing;</li>
-<li>FINISH: completed.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Execution status and result of the complex adaptive bitrate streaming task. Each array element corresponds to an adaptive bitrate streaming template specified when initiating the task. 
-     * @return ComplexAdaptiveDynamicStreamingTaskResultSet Execution status and result of the complex adaptive bitrate streaming task. Each array element corresponds to an adaptive bitrate streaming template specified when initiating the task.
+     * Get Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template. 
+     * @return ComplexAdaptiveDynamicStreamingTaskResultSet Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
      */
     public ComplexAdaptiveDynamicStreamingTaskResult [] getComplexAdaptiveDynamicStreamingTaskResultSet() {
         return this.ComplexAdaptiveDynamicStreamingTaskResultSet;
     }
 
     /**
-     * Set Execution status and result of the complex adaptive bitrate streaming task. Each array element corresponds to an adaptive bitrate streaming template specified when initiating the task.
-     * @param ComplexAdaptiveDynamicStreamingTaskResultSet Execution status and result of the complex adaptive bitrate streaming task. Each array element corresponds to an adaptive bitrate streaming template specified when initiating the task.
+     * Set Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
+     * @param ComplexAdaptiveDynamicStreamingTaskResultSet Task execution status and results of adaptive bitrate streaming. Each element corresponds to an adaptive bitrate template.
      */
     public void setComplexAdaptiveDynamicStreamingTaskResultSet(ComplexAdaptiveDynamicStreamingTaskResult [] ComplexAdaptiveDynamicStreamingTaskResultSet) {
         this.ComplexAdaptiveDynamicStreamingTaskResultSet = ComplexAdaptiveDynamicStreamingTaskResultSet;

@@ -24,92 +24,147 @@ import java.util.HashMap;
 public class QualityInspectItem extends AbstractModel {
 
     /**
-    * Abnormal segment start offset time, unit: seconds.
+    * Offset time of abnormal segment start, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * Abnormal segment termination's offset time, unit: seconds.
+    * End time offset of an abnormal fragment, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * Detect abnormality in the area coordinates. The array contains 4 elements [x1, y1, x2, y2], which indicate the horizontal and vertical coordinates of the upper left and lower right points of the area in sequence. <font color=red>Pay attention to:</font> The value of this field is valid only when Type is one of the following: <li>BlackWhiteEdge: black and white edge;</li> <li>Mosaic: mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Mini Program code;</li> <li>BarCode: bar code.</li>
+    * Detected abnormal area coordinates. The array contains 4 elements [x1,y1,x2,y2], sequentially representing the horizontal and vertical coordinates of the top-left corner and bottom-right point.
+<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
+<li>BlackWhiteEdge: black and white edges.</li>
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode.</li>
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * Confidence threshold, range: [0, 100]. <font color=red>Pay attention to:</font> This field is valid only when Type has one of the following values: <li>Mosaic: Mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Mini Program code;</li> <li>BarCode: Bar code.</li>
+    * Confidence degree, value ranges from 0 to 100.
+<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode.</li>
     */
     @SerializedName("Confidence")
     @Expose
     private Long Confidence;
 
     /**
-     * Get Abnormal segment start offset time, unit: seconds. 
-     * @return StartTimeOffset Abnormal segment start offset time, unit: seconds.
+     * Get Offset time of abnormal segment start, in seconds. 
+     * @return StartTimeOffset Offset time of abnormal segment start, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Abnormal segment start offset time, unit: seconds.
-     * @param StartTimeOffset Abnormal segment start offset time, unit: seconds.
+     * Set Offset time of abnormal segment start, in seconds.
+     * @param StartTimeOffset Offset time of abnormal segment start, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get Abnormal segment termination's offset time, unit: seconds. 
-     * @return EndTimeOffset Abnormal segment termination's offset time, unit: seconds.
+     * Get End time offset of an abnormal fragment, in seconds. 
+     * @return EndTimeOffset End time offset of an abnormal fragment, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set Abnormal segment termination's offset time, unit: seconds.
-     * @param EndTimeOffset Abnormal segment termination's offset time, unit: seconds.
+     * Set End time offset of an abnormal fragment, in seconds.
+     * @param EndTimeOffset End time offset of an abnormal fragment, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get Detect abnormality in the area coordinates. The array contains 4 elements [x1, y1, x2, y2], which indicate the horizontal and vertical coordinates of the upper left and lower right points of the area in sequence. <font color=red>Pay attention to:</font> The value of this field is valid only when Type is one of the following: <li>BlackWhiteEdge: black and white edge;</li> <li>Mosaic: mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Mini Program code;</li> <li>BarCode: bar code.</li> 
-     * @return AreaCoordSet Detect abnormality in the area coordinates. The array contains 4 elements [x1, y1, x2, y2], which indicate the horizontal and vertical coordinates of the upper left and lower right points of the area in sequence. <font color=red>Pay attention to:</font> The value of this field is valid only when Type is one of the following: <li>BlackWhiteEdge: black and white edge;</li> <li>Mosaic: mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Mini Program code;</li> <li>BarCode: bar code.</li>
+     * Get Detected abnormal area coordinates. The array contains 4 elements [x1,y1,x2,y2], sequentially representing the horizontal and vertical coordinates of the top-left corner and bottom-right point.
+<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
+<li>BlackWhiteEdge: black and white edges.</li>
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode.</li> 
+     * @return AreaCoordSet Detected abnormal area coordinates. The array contains 4 elements [x1,y1,x2,y2], sequentially representing the horizontal and vertical coordinates of the top-left corner and bottom-right point.
+<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
+<li>BlackWhiteEdge: black and white edges.</li>
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode.</li>
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set Detect abnormality in the area coordinates. The array contains 4 elements [x1, y1, x2, y2], which indicate the horizontal and vertical coordinates of the upper left and lower right points of the area in sequence. <font color=red>Pay attention to:</font> The value of this field is valid only when Type is one of the following: <li>BlackWhiteEdge: black and white edge;</li> <li>Mosaic: mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Mini Program code;</li> <li>BarCode: bar code.</li>
-     * @param AreaCoordSet Detect abnormality in the area coordinates. The array contains 4 elements [x1, y1, x2, y2], which indicate the horizontal and vertical coordinates of the upper left and lower right points of the area in sequence. <font color=red>Pay attention to:</font> The value of this field is valid only when Type is one of the following: <li>BlackWhiteEdge: black and white edge;</li> <li>Mosaic: mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Mini Program code;</li> <li>BarCode: bar code.</li>
+     * Set Detected abnormal area coordinates. The array contains 4 elements [x1,y1,x2,y2], sequentially representing the horizontal and vertical coordinates of the top-left corner and bottom-right point.
+<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
+<li>BlackWhiteEdge: black and white edges.</li>
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode.</li>
+     * @param AreaCoordSet Detected abnormal area coordinates. The array contains 4 elements [x1,y1,x2,y2], sequentially representing the horizontal and vertical coordinates of the top-left corner and bottom-right point.
+<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
+<li>BlackWhiteEdge: black and white edges.</li>
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode.</li>
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get Confidence threshold, range: [0, 100]. <font color=red>Pay attention to:</font> This field is valid only when Type has one of the following values: <li>Mosaic: Mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Mini Program code;</li> <li>BarCode: Bar code.</li> 
-     * @return Confidence Confidence threshold, range: [0, 100]. <font color=red>Pay attention to:</font> This field is valid only when Type has one of the following values: <li>Mosaic: Mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Mini Program code;</li> <li>BarCode: Bar code.</li>
+     * Get Confidence degree, value ranges from 0 to 100.
+<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode.</li> 
+     * @return Confidence Confidence degree, value ranges from 0 to 100.
+<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode.</li>
      */
     public Long getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set Confidence threshold, range: [0, 100]. <font color=red>Pay attention to:</font> This field is valid only when Type has one of the following values: <li>Mosaic: Mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Mini Program code;</li> <li>BarCode: Bar code.</li>
-     * @param Confidence Confidence threshold, range: [0, 100]. <font color=red>Pay attention to:</font> This field is valid only when Type has one of the following values: <li>Mosaic: Mosaic;</li> <li>QRCode: QR code;</li> <li>AppletCode: Mini Program code;</li> <li>BarCode: Bar code.</li>
+     * Set Confidence degree, value ranges from 0 to 100.
+<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode.</li>
+     * @param Confidence Confidence degree, value ranges from 0 to 100.
+<font color=red>Note:</font> This field is valid only when the Type value is one of the following:
+<li>Mosaic: mosaic.</li>
+<li>QRCode: QR code.</li>
+<li>AppletCode: mini program code.</li>
+<li>BarCode: barcode.</li>
      */
     public void setConfidence(Long Confidence) {
         this.Confidence = Confidence;

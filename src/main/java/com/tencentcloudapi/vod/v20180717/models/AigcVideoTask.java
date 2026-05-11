@@ -24,207 +24,230 @@ import java.util.HashMap;
 public class AigcVideoTask extends AbstractModel {
 
     /**
-    * The task ID.
+    * <p>Task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+    * <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+    * <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+    * <p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
+    */
+    @SerializedName("ErrCodeExt")
+    @Expose
+    private String ErrCodeExt;
+
+    /**
+    * <p>Error message.</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * The execution progress of a single adaptive bitrate stream. Value range: 0-100.
+    * <p>Task progress, with a value range of [0-100].</p>
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * Input of AIGC video task.
+    * <p>Input of the AIGC video generation task.</p>
     */
     @SerializedName("Input")
     @Expose
     private AigcVideoTaskInput Input;
 
     /**
-    * Output of AIGC video task.
+    * <p>Output information of the AIGC video task.</p>
     */
     @SerializedName("Output")
     @Expose
     private AigcVideoTaskOutput Output;
 
     /**
-    * ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+    * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+    * <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-     * Get The task ID. 
-     * @return TaskId The task ID.
+     * Get <p>Task ID.</p> 
+     * @return TaskId <p>Task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The task ID.
-     * @param TaskId The task ID.
+     * Set <p>Task ID.</p>
+     * @param TaskId <p>Task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li> 
-     * @return Status Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+     * Get <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p> 
+     * @return Status <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
-     * @param Status Task status, value: <li>PROCESSING: processing;</li><li>FINISH: completed.</li>
+     * Set <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
+     * @param Status <p>Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li></p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task. 
-     * @return ErrCode Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+     * Get <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p> 
+     * @return ErrCode <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
-     * @param ErrCode Error code. A non-zero error code is returned when the source is abnormal. If 0 is returned, use the ErrCode of each specific task.
+     * Set <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
+     * @param ErrCode <p>Error code. A non-zero error code is returned back when a source error occurs. Please use the ErrCode of each specific task when 0 is returned.</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task. 
-     * @return Message Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+     * Get <p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul> 
+     * @return ErrCodeExt <p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
+     */
+    public String getErrCodeExt() {
+        return this.ErrCodeExt;
+    }
+
+    /**
+     * Set <p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
+     * @param ErrCodeExt <p>Extended error codes.</p><p>Enumeration values:</p><ul><li>RequestLimitExceeded: API call exceeds the concurrency limit.</li><li>InvalidParameter.VoilationContent: User-submitted input prompt violates the Content Security Policy.</li><li>InvalidParameterValue: Parameter error.</li><li>FailedOperation: Model tasks accumulate.</li><li>InternalError: Internal error.</li></ul>
+     */
+    public void setErrCodeExt(String ErrCodeExt) {
+        this.ErrCodeExt = ErrCodeExt;
+    }
+
+    /**
+     * Get <p>Error message.</p> 
+     * @return Message <p>Error message.</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
-     * @param Message Error message. If the source is abnormal, the corresponding exception message is returned. Otherwise, use the message of each specific task.
+     * Set <p>Error message.</p>
+     * @param Message <p>Error message.</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get The execution progress of a single adaptive bitrate stream. Value range: 0-100. 
-     * @return Progress The execution progress of a single adaptive bitrate stream. Value range: 0-100.
+     * Get <p>Task progress, with a value range of [0-100].</p> 
+     * @return Progress <p>Task progress, with a value range of [0-100].</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set The execution progress of a single adaptive bitrate stream. Value range: 0-100.
-     * @param Progress The execution progress of a single adaptive bitrate stream. Value range: 0-100.
+     * Set <p>Task progress, with a value range of [0-100].</p>
+     * @param Progress <p>Task progress, with a value range of [0-100].</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get Input of AIGC video task. 
-     * @return Input Input of AIGC video task.
+     * Get <p>Input of the AIGC video generation task.</p> 
+     * @return Input <p>Input of the AIGC video generation task.</p>
      */
     public AigcVideoTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input of AIGC video task.
-     * @param Input Input of AIGC video task.
+     * Set <p>Input of the AIGC video generation task.</p>
+     * @param Input <p>Input of the AIGC video generation task.</p>
      */
     public void setInput(AigcVideoTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output of AIGC video task. 
-     * @return Output Output of AIGC video task.
+     * Get <p>Output information of the AIGC video task.</p> 
+     * @return Output <p>Output information of the AIGC video task.</p>
      */
     public AigcVideoTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output of AIGC video task.
-     * @param Output Output of AIGC video task.
+     * Set <p>Output information of the AIGC video task.</p>
+     * @param Output <p>Output information of the AIGC video task.</p>
      */
     public void setOutput(AigcVideoTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed. 
-     * @return SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+     * Get <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p> 
+     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
-     * @param SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
+     * Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @param SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters. 
-     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+     * Get <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p> 
+     * @return SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
-     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
+     * Set <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
@@ -246,6 +269,9 @@ public class AigcVideoTask extends AbstractModel {
         }
         if (source.ErrCode != null) {
             this.ErrCode = new Long(source.ErrCode);
+        }
+        if (source.ErrCodeExt != null) {
+            this.ErrCodeExt = new String(source.ErrCodeExt);
         }
         if (source.Message != null) {
             this.Message = new String(source.Message);
@@ -275,6 +301,7 @@ public class AigcVideoTask extends AbstractModel {
         this.setParamSimple(map, prefix + "TaskId", this.TaskId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "ErrCode", this.ErrCode);
+        this.setParamSimple(map, prefix + "ErrCodeExt", this.ErrCodeExt);
         this.setParamSimple(map, prefix + "Message", this.Message);
         this.setParamSimple(map, prefix + "Progress", this.Progress);
         this.setParamObj(map, prefix + "Input.", this.Input);

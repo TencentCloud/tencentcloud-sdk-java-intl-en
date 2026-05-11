@@ -24,399 +24,184 @@ import java.util.HashMap;
 public class SyncDubbingRequest extends AbstractModel {
 
     /**
-    * Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
+    * <p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
+    * <p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
     */
     @SerializedName("TextLang")
     @Expose
     private String TextLang;
 
     /**
-    * Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
+    * <p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * Base64-encoded audio for cloning.
+    * <p>Base64-encoded audio for cloning.</p>
     */
     @SerializedName("AudioData")
     @Expose
     private String AudioData;
 
     /**
-    * 
+    * <p>Cloning audio URL. Valid when AudioData is empty.</p>
     */
     @SerializedName("AudioUrl")
     @Expose
     private String AudioUrl;
 
     /**
-    * Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
+    * <p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
     */
     @SerializedName("AudioLang")
     @Expose
     private String AudioLang;
 
     /**
-    * 
+    * <p>Output parameters.</p><p>Specifies the output format, etc.</p>
     */
     @SerializedName("Output")
     @Expose
     private SyncDubbingOutputOption Output;
 
     /**
-    * Extended parameters in the format of a JSON string.
+    * <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
     */
     @SerializedName("ExtParam")
     @Expose
     private String ExtParam;
 
     /**
-     * Get Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length. 
-     * @return Text Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
+     * Get <p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p> 
+     * @return Text <p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
-     * @param Text Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.
+     * Set <p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
+     * @param Text <p>Text for the synthesis. This is required for text to speech. The text cannot exceed 2000 characters in length.</p>
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
- 
-     * @return TextLang Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
+     * Get <p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p> 
+     * @return TextLang <p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
      */
     public String getTextLang() {
         return this.TextLang;
     }
 
     /**
-     * Set Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
-     * @param TextLang Text language. This defaults to zh (Chinese) if left empty.
-Supported languages:
-zh: Chinese.
-en: English.
-ja: Japanese.
-de: German.
-fr: French.
-ko: Korean.
-ru: Russian.
-uk: Ukrainian.
-pt: Portuguese.
-it: Italian.
-es: Spanish.
-id: Indonesian.
-nl: Dutch.
-tr: Turkish.
-fil: Filipino.
-ms: Malay.
-el: Greek.
-fi: Finnish.
-hr: Croatian.
-sk: Slovak.
-pl: Polish.
-sv: Swedish.
-hi: Hindi.
-bg: Bulgarian.
-ro: Romanian.
-ar: Arabic.
-cs: Czech.
-da: Danish.
-ta: Tamil.
-hun: Hungarian.
-vi: Vietnamese.
-no: Norwegian.
-yue: Cantonese.
-th: Thai.
-he: Hebrew.
-ca: Catalan.
-nn: Nynorsk.
-af: Afrikaans.
-fa: Persian.
-sl: Slovenian.
-
+     * Set <p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
+     * @param TextLang <p>Text language. This defaults to Chinese if left empty.<br>Supported languages:<br>zh    Chinese<br>en    English<br>ja    Japanese<br>de    German<br>fr    French<br>ko    Korean<br>ru    Russian<br>uk    Ukrainian<br>pt    Portuguese<br>it    Italian<br>es    Spanish<br>id    Indonesian<br>nl    Dutch<br>tr    Turkish<br>fil    Filipino<br>ms    Malay<br>el    Greek<br>fi    Finnish<br>hr    Croatian<br>sk    Slovak<br>pl    Polish<br>sv    Swedish<br>hi    Hindi<br>bg    Bulgarian<br>ro    Romanian<br>ar    Arabic<br>cs    Czech<br>da    Danish<br>ta    Tamil<br>hun    Hungarian<br>vi    Vietnamese<br>no    Norwegian<br>yue    Cantonese<br>th    Thai<br>he    Hebrew<br>ca    Catalan<br>nn    Nynorsk<br>af    Afrikaans<br>fa    Persian<br>sl    Slovenian</p>
      */
     public void setTextLang(String TextLang) {
         this.TextLang = TextLang;
     }
 
     /**
-     * Get Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported. 
-     * @return VoiceId Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
+     * Get <p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p> 
+     * @return VoiceId <p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
-     * @param VoiceId Voice type ID. This is required for synthesis with a specific voice type. System voice types and voice type cloning are supported.
+     * Set <p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
+     * @param VoiceId <p>Voice ID. This is required for synthesis with a specific voice. System voice and voice cloning are supported.</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get Base64-encoded audio for cloning. 
-     * @return AudioData Base64-encoded audio for cloning.
+     * Get <p>Base64-encoded audio for cloning.</p> 
+     * @return AudioData <p>Base64-encoded audio for cloning.</p>
      */
     public String getAudioData() {
         return this.AudioData;
     }
 
     /**
-     * Set Base64-encoded audio for cloning.
-     * @param AudioData Base64-encoded audio for cloning.
+     * Set <p>Base64-encoded audio for cloning.</p>
+     * @param AudioData <p>Base64-encoded audio for cloning.</p>
      */
     public void setAudioData(String AudioData) {
         this.AudioData = AudioData;
     }
 
     /**
-     * Get  
-     * @return AudioUrl 
+     * Get <p>Cloning audio URL. Valid when AudioData is empty.</p> 
+     * @return AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
      */
     public String getAudioUrl() {
         return this.AudioUrl;
     }
 
     /**
-     * Set 
-     * @param AudioUrl 
+     * Set <p>Cloning audio URL. Valid when AudioData is empty.</p>
+     * @param AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
      */
     public void setAudioUrl(String AudioUrl) {
         this.AudioUrl = AudioUrl;
     }
 
     /**
-     * Get Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang. 
-     * @return AudioLang Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
+     * Get <p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p> 
+     * @return AudioLang <p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
      */
     public String getAudioLang() {
         return this.AudioLang;
     }
 
     /**
-     * Set Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
-     * @param AudioLang Cloning audio language. The default language is Chinese.
-Supported languages are the same as those for TextLang.
+     * Set <p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
+     * @param AudioLang <p>Cloning audio language. The default language is Chinese. <br>Supported languages are the same as those for TextLang.</p>
      */
     public void setAudioLang(String AudioLang) {
         this.AudioLang = AudioLang;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get <p>Output parameters.</p><p>Specifies the output format, etc.</p> 
+     * @return Output <p>Output parameters.</p><p>Specifies the output format, etc.</p>
      */
     public SyncDubbingOutputOption getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set <p>Output parameters.</p><p>Specifies the output format, etc.</p>
+     * @param Output <p>Output parameters.</p><p>Specifies the output format, etc.</p>
      */
     public void setOutput(SyncDubbingOutputOption Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Extended parameters in the format of a JSON string. 
-     * @return ExtParam Extended parameters in the format of a JSON string.
+     * Get <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p> 
+     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
      */
     public String getExtParam() {
         return this.ExtParam;
     }
 
     /**
-     * Set Extended parameters in the format of a JSON string.
-     * @param ExtParam Extended parameters in the format of a JSON string.
+     * Set <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
+     * @param ExtParam <p>Extended parameters in the format of a JSON string.</p><p>‑ synExt (Object): Speech synthesis extension parameter.<br>- duration (Float): Synthesized audio duration, in seconds. Example: 5.2.<br>- sampleRate (Integer): Synthesized audio sample rate. Default value: 16000. Supported values: [8000,16000,22050,32000,44100].<br> pitch (Integer): -Pitch. Default value: 0 (original voice output). Valid values: [-12, 12].<br>‑ cloneExt (Object): Voice cloning extension parameter.<br>    - timeRanges (Float[][]): Specifies the time ranges for audio cloning. Default value: [[0, 20]]. Example: [[5.2, 10], [45, 59.8]].</p>
      */
     public void setExtParam(String ExtParam) {
         this.ExtParam = ExtParam;

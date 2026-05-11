@@ -71,24 +71,21 @@ public class RebuildMediaTask extends AbstractModel {
     private Long Progress;
 
     /**
-    * The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Input of the audio and video quality regeneration task.
     */
     @SerializedName("Input")
     @Expose
     private RebuildMediaTaskInput Input;
 
     /**
-    * The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Output of the audio and video quality regeneration task.
     */
     @SerializedName("Output")
     @Expose
     private RebuildMediaTaskOutput Output;
 
     /**
-    * The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Metadata of the output video after audio and video quality revival.
     */
     @SerializedName("MetaData")
     @Expose
@@ -225,60 +222,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Input The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Input of the audio and video quality regeneration task. 
+     * @return Input Input of the audio and video quality regeneration task.
      */
     public RebuildMediaTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Input The input parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Input of the audio and video quality regeneration task.
+     * @param Input Input of the audio and video quality regeneration task.
      */
     public void setInput(RebuildMediaTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Output The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Output of the audio and video quality regeneration task. 
+     * @return Output Output of the audio and video quality regeneration task.
      */
     public RebuildMediaTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Output The output parameters of the audio/video remastering task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Output of the audio and video quality regeneration task.
+     * @param Output Output of the audio and video quality regeneration task.
      */
     public void setOutput(RebuildMediaTaskOutput Output) {
         this.Output = Output;
     }
 
     /**
-     * Get The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MetaData The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Metadata of the output video after audio and video quality revival. 
+     * @return MetaData Metadata of the output video after audio and video quality revival.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MetaData The metadata of the output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Metadata of the output video after audio and video quality revival.
+     * @param MetaData Metadata of the output video after audio and video quality revival.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;

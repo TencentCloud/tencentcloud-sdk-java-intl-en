@@ -125,7 +125,7 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
     private SnatIp [] SnatIps;
 
     /**
-    * Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
+    * Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
     */
     @SerializedName("ClusterIds")
     @Expose
@@ -396,16 +396,16 @@ Note: A secondary AZ will load traffic if the primary AZ is faulty. You can use 
     }
 
     /**
-     * Get Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api. 
-     * @return ClusterIds Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
+     * Get Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category).  
+     * @return ClusterIds Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
-     * @param ClusterIds Public network exclusive cluster ID or CDCId. can be obtained through the [DescribeExclusiveClusters](https://www.tencentcloud.com/document/product/214/49278?from_cn_redirect=1) api.
+     * Set Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
+     * @param ClusterIds Cluster ID. This cluster identifier is used for configuring a public cloud exclusive cluster or a cloud dedicated cluster. To apply for a public cloud exclusive cluster, [submit a ticket](https://console.cloud.tencent.com/workorder/category). 
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;

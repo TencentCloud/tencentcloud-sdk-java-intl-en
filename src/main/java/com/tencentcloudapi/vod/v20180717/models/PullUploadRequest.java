@@ -40,7 +40,7 @@ If you do not specify this parameter or pass in an empty string, the file obtain
     private String MediaType;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -91,6 +91,13 @@ If you do not specify this parameter or pass in an empty string, the file obtain
     private Long ClassId;
 
     /**
+    * The priority of the task. The higher the value, the higher the priority. The value range is-10 to 10, and it means 0 if not filled.
+    */
+    @SerializedName("TasksPriority")
+    @Expose
+    private Long TasksPriority;
+
+    /**
     * The source context which is used to pass through the user request information. After `Procedure` is specified, the task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
     */
     @SerializedName("SessionContext")
@@ -117,6 +124,15 @@ If you do not specify this parameter or pass in an empty string, the file obtain
     @SerializedName("SourceContext")
     @Expose
     private String SourceContext;
+
+    /**
+    * Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+    */
+    @SerializedName("MediaStoragePath")
+    @Expose
+    private String MediaStoragePath;
 
     /**
      * Get The URL of the media to pull, which can be in HLS format, but not DASH format.
@@ -159,16 +175,16 @@ If you do not specify this parameter or pass in an empty string, the file obtain
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -279,6 +295,22 @@ If you do not specify this parameter or pass in an empty string, the file obtain
     }
 
     /**
+     * Get The priority of the task. The higher the value, the higher the priority. The value range is-10 to 10, and it means 0 if not filled. 
+     * @return TasksPriority The priority of the task. The higher the value, the higher the priority. The value range is-10 to 10, and it means 0 if not filled.
+     */
+    public Long getTasksPriority() {
+        return this.TasksPriority;
+    }
+
+    /**
+     * Set The priority of the task. The higher the value, the higher the priority. The value range is-10 to 10, and it means 0 if not filled.
+     * @param TasksPriority The priority of the task. The higher the value, the higher the priority. The value range is-10 to 10, and it means 0 if not filled.
+     */
+    public void setTasksPriority(Long TasksPriority) {
+        this.TasksPriority = TasksPriority;
+    }
+
+    /**
      * Get The source context which is used to pass through the user request information. After `Procedure` is specified, the task flow status change callback will return the value of this field. It can contain up to 1,000 characters. 
      * @return SessionContext The source context which is used to pass through the user request information. After `Procedure` is specified, the task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      */
@@ -342,6 +374,30 @@ If you do not specify this parameter or pass in an empty string, the file obtain
         this.SourceContext = SourceContext;
     }
 
+    /**
+     * Get Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided. 
+     * @return MediaStoragePath Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+     */
+    public String getMediaStoragePath() {
+        return this.MediaStoragePath;
+    }
+
+    /**
+     * Set Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+     * @param MediaStoragePath Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+     */
+    public void setMediaStoragePath(String MediaStoragePath) {
+        this.MediaStoragePath = MediaStoragePath;
+    }
+
     public PullUploadRequest() {
     }
 
@@ -377,6 +433,9 @@ If you do not specify this parameter or pass in an empty string, the file obtain
         if (source.ClassId != null) {
             this.ClassId = new Long(source.ClassId);
         }
+        if (source.TasksPriority != null) {
+            this.TasksPriority = new Long(source.TasksPriority);
+        }
         if (source.SessionContext != null) {
             this.SessionContext = new String(source.SessionContext);
         }
@@ -388,6 +447,9 @@ If you do not specify this parameter or pass in an empty string, the file obtain
         }
         if (source.SourceContext != null) {
             this.SourceContext = new String(source.SourceContext);
+        }
+        if (source.MediaStoragePath != null) {
+            this.MediaStoragePath = new String(source.MediaStoragePath);
         }
     }
 
@@ -405,10 +467,12 @@ If you do not specify this parameter or pass in an empty string, the file obtain
         this.setParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
         this.setParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
         this.setParamSimple(map, prefix + "ClassId", this.ClassId);
+        this.setParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
         this.setParamSimple(map, prefix + "SessionContext", this.SessionContext);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);
         this.setParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         this.setParamSimple(map, prefix + "SourceContext", this.SourceContext);
+        this.setParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
 
     }
 }

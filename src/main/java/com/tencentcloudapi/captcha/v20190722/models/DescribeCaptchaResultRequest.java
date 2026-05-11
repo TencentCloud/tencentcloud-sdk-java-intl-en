@@ -31,14 +31,14 @@ public class DescribeCaptchaResultRequest extends AbstractModel {
     private Long CaptchaType;
 
     /**
-    * The user verification ticket returned by the frontend callback function
+    * The user verification ticket returned by the frontend callback function.
     */
     @SerializedName("Ticket")
     @Expose
     private String Ticket;
 
     /**
-    * The user public IP obtained from the customer backend server
+    * The user public IP obtained from the customer backend server.
     */
     @SerializedName("UserIp")
     @Expose
@@ -117,32 +117,32 @@ public class DescribeCaptchaResultRequest extends AbstractModel {
     }
 
     /**
-     * Get The user verification ticket returned by the frontend callback function 
-     * @return Ticket The user verification ticket returned by the frontend callback function
+     * Get The user verification ticket returned by the frontend callback function. 
+     * @return Ticket The user verification ticket returned by the frontend callback function.
      */
     public String getTicket() {
         return this.Ticket;
     }
 
     /**
-     * Set The user verification ticket returned by the frontend callback function
-     * @param Ticket The user verification ticket returned by the frontend callback function
+     * Set The user verification ticket returned by the frontend callback function.
+     * @param Ticket The user verification ticket returned by the frontend callback function.
      */
     public void setTicket(String Ticket) {
         this.Ticket = Ticket;
     }
 
     /**
-     * Get The user public IP obtained from the customer backend server 
-     * @return UserIp The user public IP obtained from the customer backend server
+     * Get The user public IP obtained from the customer backend server. 
+     * @return UserIp The user public IP obtained from the customer backend server.
      */
     public String getUserIp() {
         return this.UserIp;
     }
 
     /**
-     * Set The user public IP obtained from the customer backend server
-     * @param UserIp The user public IP obtained from the customer backend server
+     * Set The user public IP obtained from the customer backend server.
+     * @param UserIp The user public IP obtained from the customer backend server.
      */
     public void setUserIp(String UserIp) {
         this.UserIp = UserIp;

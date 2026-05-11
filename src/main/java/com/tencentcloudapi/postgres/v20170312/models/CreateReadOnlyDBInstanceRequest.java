@@ -24,546 +24,466 @@ import java.util.HashMap;
 public class CreateReadOnlyDBInstanceRequest extends AbstractModel {
 
     /**
-    * Primary AZ of an instance, such as "ap-guangzhou-3".
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+    * <p>Primary availability zone of the instance, such as: ap-guangzhou-3.<br>The availability zone can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+    * <p>Primary instance ID of the read-only instance, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
     */
     @SerializedName("MasterDBInstanceId")
     @Expose
     private String MasterDBInstanceId;
 
     /**
-    * Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
+    * <p>Purchasable specification code. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
+    * <p>Instance disk capacity, in GB. The value for this parameter must be set in increments of 10.</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
+    * <p>Number of instances to purchase. Value range: [1-6]. The maximum allowed number is 6.</p>
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * Purchase duration, in months.
-<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<li>Pay-as-you-go: Only supports `1`.</li>
+    * <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: supports only 1.</li>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+    * <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+    * <p>VPC subnet ID, such as subnet-xxxxxxxx (this parameter is required). A valid VPC subnet ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> API and obtain it from the unSubnetId field in the return value.</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Instance billing type, which currently supports:.
-<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
-Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
+    * <p>Instance billing type. Valid values:</p><li>PREPAID: prepaid (yearly/monthly subscription).</li><li>POSTPAID_BY_HOUR: postpaid (pay-as-you-go).</li>Default value: PREPAID. If the primary instance is postpaid, the read-only instance must also be postpaid.
     */
     @SerializedName("InstanceChargeType")
     @Expose
     private String InstanceChargeType;
 
     /**
-    * Specifies whether to automatically use a voucher.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
+    * <p>Indicates whether to use vouchers automatically:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * Voucher ID list. Currently, you can specify only one voucher.
+    * <p>Voucher ID list. Only one voucher can be specified.</p>
     */
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
 
     /**
-    * Specifies the auto-renewal flag.
-<Li>`0`: manual renewal.</li>.
-<Li>`1`: auto-renewal</li>.
-Default value: 0
+    * <p>Renewal flag:</p><li>0: manual renewal.</li><li>1: auto-renewal.</li>Default value: 0.
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * Project ID. default value is 0, means it belongs to the default project.
+    * <p>Project ID. The default value is 0, which means it belongs to the default project.</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Special offer ID
+    * <p>Discount offer ID.</p>
     */
     @SerializedName("ActivityId")
     @Expose
     private Long ActivityId;
 
     /**
-    * RO group ID
+    * <p>Read-only group ID.</p>
     */
     @SerializedName("ReadOnlyGroupId")
     @Expose
     private String ReadOnlyGroupId;
 
     /**
-    * The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
+    * <p>Tags to be bound to the instance. This is empty by default. Tags can be obtained from the returned Tags field of the <a href="https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1">DescribeTags</a> API.</p>
     */
     @SerializedName("TagList")
     @Expose
     private Tag TagList;
 
     /**
-    * Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
-
+    * <p>Security group to which the instance belongs. The value of this parameter can be obtained from the returned sgId field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, the default security group is bound.</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Specifies whether to support Ipv6.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
+    * <p>Indicates whether to support IPv6:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
     */
     @SerializedName("NeedSupportIpv6")
     @Expose
     private Long NeedSupportIpv6;
 
     /**
-    * Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
+    * <p>Instance name. The name can contain only Chinese characters, letters, digits, underscores (&quot;_&quot;), and hyphens (&quot;-&quot;), with a length of less than 60.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
+    * <p>Not required anymore. The kernel version is consistent with that of the primary instance.</p>
     */
     @SerializedName("DBVersion")
     @Expose
     private String DBVersion;
 
     /**
-    * CDC ID.
+    * <p>Dedicated cluster ID.</p>
     */
     @SerializedName("DedicatedClusterId")
     @Expose
     private String DedicatedClusterId;
 
     /**
-    * Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+    * <p>Indicates whether to enable deletion protection for the instance: true - enables deletion protection. false - disables deletion protection.</p>
     */
     @SerializedName("DeletionProtection")
     @Expose
     private Boolean DeletionProtection;
 
     /**
-     * Get Primary AZ of an instance, such as "ap-guangzhou-3".
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API. 
-     * @return Zone Primary AZ of an instance, such as "ap-guangzhou-3".
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+     * Get <p>Primary availability zone of the instance, such as: ap-guangzhou-3.<br>The availability zone can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p> 
+     * @return Zone <p>Primary availability zone of the instance, such as: ap-guangzhou-3.<br>The availability zone can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Primary AZ of an instance, such as "ap-guangzhou-3".
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
-     * @param Zone Primary AZ of an instance, such as "ap-guangzhou-3".
-The information of AZ can be obtained from the `Zone` field in the return value of the [DescribeZones](https://intl.cloud.tencent.com/document/api/409/16769?from_cn_redirect=1) API.
+     * Set <p>Primary availability zone of the instance, such as: ap-guangzhou-3.<br>The availability zone can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
+     * @param Zone <p>Primary availability zone of the instance, such as: ap-guangzhou-3.<br>The availability zone can be obtained from the returned Zone field of the <a href="https://www.tencentcloud.com/document/api/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1). 
-     * @return MasterDBInstanceId Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * Get <p>Primary instance ID of the read-only instance, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p> 
+     * @return MasterDBInstanceId <p>Primary instance ID of the read-only instance, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public String getMasterDBInstanceId() {
         return this.MasterDBInstanceId;
     }
 
     /**
-     * Set Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
-     * @param MasterDBInstanceId Primary instance ID of the read-only instance. obtain through the api [DescribeDBInstances](https://www.tencentcloud.comom/document/api/409/16773?from_cn_redirect=1).
+     * Set <p>Primary instance ID of the read-only instance, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+     * @param MasterDBInstanceId <p>Primary instance ID of the read-only instance, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public void setMasterDBInstanceId(String MasterDBInstanceId) {
         this.MasterDBInstanceId = MasterDBInstanceId;
     }
 
     /**
-     * Get Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API. 
-     * @return SpecCode Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
+     * Get <p>Purchasable specification code. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p> 
+     * @return SpecCode <p>Purchasable specification code. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
-     * @param SpecCode Purchasable code, which can be obtained from the `SpecCode` field in the return value of the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
+     * Set <p>Purchasable specification code. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
+     * @param SpecCode <p>Purchasable specification code. The value of this parameter can be obtained from the returned SpecCode field of the <a href="https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1">DescribeClasses</a> API.</p>
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get Instance disk capacity size in GB. specifies the step length for parameter settings as 10. 
-     * @return Storage Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
+     * Get <p>Instance disk capacity, in GB. The value for this parameter must be set in increments of 10.</p> 
+     * @return Storage <p>Instance disk capacity, in GB. The value for this parameter must be set in increments of 10.</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
-     * @param Storage Instance disk capacity size in GB. specifies the step length for parameter settings as 10.
+     * Set <p>Instance disk capacity, in GB. The value for this parameter must be set in increments of 10.</p>
+     * @param Storage <p>Instance disk capacity, in GB. The value for this parameter must be set in increments of 10.</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get Number of instances to purchase. value range: [1-6]. maximum allowed number is 6. 
-     * @return InstanceCount Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
+     * Get <p>Number of instances to purchase. Value range: [1-6]. The maximum allowed number is 6.</p> 
+     * @return InstanceCount <p>Number of instances to purchase. Value range: [1-6]. The maximum allowed number is 6.</p>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
-     * @param InstanceCount Number of instances to purchase. value range: [1-6]. maximum allowed number is 6.
+     * Set <p>Number of instances to purchase. Value range: [1-6]. The maximum allowed number is 6.</p>
+     * @param InstanceCount <p>Number of instances to purchase. Value range: [1-6]. The maximum allowed number is 6.</p>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get Purchase duration, in months.
-<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<li>Pay-as-you-go: Only supports `1`.</li> 
-     * @return Period Purchase duration, in months.
-<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<li>Pay-as-you-go: Only supports `1`.</li>
+     * Get <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: supports only 1.</li> 
+     * @return Period <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: supports only 1.</li>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Purchase duration, in months.
-<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<li>Pay-as-you-go: Only supports `1`.</li>
-     * @param Period Purchase duration, in months.
-<Li>Prepaid: supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<li>Pay-as-you-go: Only supports `1`.</li>
+     * Set <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: supports only 1.</li>
+     * @param Period <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: supports only 1.</li>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API. 
-     * @return VpcId VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+     * Get <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p> 
+     * @return VpcId <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
-     * @param VpcId VPC ID, in the format of vpc-xxxxxxxx (this parameter is currently required). A valid VpcId can be obtained by logging into the console; it can also be obtained from the unVpcId field in the return value of calling of the [DescribeVpcEx](https://intl.cloud.tencent.com/document/api/215/1372?from_cn_redirect=1) API.
+     * Set <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
+     * @param VpcId <p>VPC ID, such as vpc-xxxxxxxx (this parameter is required). A valid VPC ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/1372?from_cn_redirect=1">DescribeVpcEx</a> API to obtain it from the unVpcId field in the return value.</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API. 
-     * @return SubnetId VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+     * Get <p>VPC subnet ID, such as subnet-xxxxxxxx (this parameter is required). A valid VPC subnet ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> API and obtain it from the unSubnetId field in the return value.</p> 
+     * @return SubnetId <p>VPC subnet ID, such as subnet-xxxxxxxx (this parameter is required). A valid VPC subnet ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> API and obtain it from the unSubnetId field in the return value.</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
-     * @param SubnetId VPC subnet ID, in the format of subnet-xxxxxxxx (this parameter is currently required). A valid VPC subnet ID can be obtained by logging into the console; it can also be obtained from the unSubnetId field in the return value of calling of the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API.
+     * Set <p>VPC subnet ID, such as subnet-xxxxxxxx (this parameter is required). A valid VPC subnet ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> API and obtain it from the unSubnetId field in the return value.</p>
+     * @param SubnetId <p>VPC subnet ID, such as subnet-xxxxxxxx (this parameter is required). A valid VPC subnet ID can be queried by logging in to the console. You can also call the <a href="https://www.tencentcloud.com/document/api/215/15784?from_cn_redirect=1">DescribeSubnets</a> API and obtain it from the unSubnetId field in the return value.</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Instance billing type, which currently supports:.
-<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
-Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid. 
-     * @return InstanceChargeType Instance billing type, which currently supports:.
-<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
-Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
+     * Get <p>Instance billing type. Valid values:</p><li>PREPAID: prepaid (yearly/monthly subscription).</li><li>POSTPAID_BY_HOUR: postpaid (pay-as-you-go).</li>Default value: PREPAID. If the primary instance is postpaid, the read-only instance must also be postpaid. 
+     * @return InstanceChargeType <p>Instance billing type. Valid values:</p><li>PREPAID: prepaid (yearly/monthly subscription).</li><li>POSTPAID_BY_HOUR: postpaid (pay-as-you-go).</li>Default value: PREPAID. If the primary instance is postpaid, the read-only instance must also be postpaid.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing type, which currently supports:.
-<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
-Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
-     * @param InstanceChargeType Instance billing type, which currently supports:.
-<Li>PREPAID: prepaid, i.e., yearly/monthly subscription.</li>.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go, i.e., pay by consumption.</li>.
-Default value: PREPAID. if the primary instance is postpaid, the read-only instance must also be postpaid.
+     * Set <p>Instance billing type. Valid values:</p><li>PREPAID: prepaid (yearly/monthly subscription).</li><li>POSTPAID_BY_HOUR: postpaid (pay-as-you-go).</li>Default value: PREPAID. If the primary instance is postpaid, the read-only instance must also be postpaid.
+     * @param InstanceChargeType <p>Instance billing type. Valid values:</p><li>PREPAID: prepaid (yearly/monthly subscription).</li><li>POSTPAID_BY_HOUR: postpaid (pay-as-you-go).</li>Default value: PREPAID. If the primary instance is postpaid, the read-only instance must also be postpaid.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get Specifies whether to automatically use a voucher.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0 
-     * @return AutoVoucher Specifies whether to automatically use a voucher.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
+     * Get <p>Indicates whether to use vouchers automatically:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0. 
+     * @return AutoVoucher <p>Indicates whether to use vouchers automatically:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Specifies whether to automatically use a voucher.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
-     * @param AutoVoucher Specifies whether to automatically use a voucher.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
+     * Set <p>Indicates whether to use vouchers automatically:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
+     * @param AutoVoucher <p>Indicates whether to use vouchers automatically:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get Voucher ID list. Currently, you can specify only one voucher. 
-     * @return VoucherIds Voucher ID list. Currently, you can specify only one voucher.
+     * Get <p>Voucher ID list. Only one voucher can be specified.</p> 
+     * @return VoucherIds <p>Voucher ID list. Only one voucher can be specified.</p>
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set Voucher ID list. Currently, you can specify only one voucher.
-     * @param VoucherIds Voucher ID list. Currently, you can specify only one voucher.
+     * Set <p>Voucher ID list. Only one voucher can be specified.</p>
+     * @param VoucherIds <p>Voucher ID list. Only one voucher can be specified.</p>
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;
     }
 
     /**
-     * Get Specifies the auto-renewal flag.
-<Li>`0`: manual renewal.</li>.
-<Li>`1`: auto-renewal</li>.
-Default value: 0 
-     * @return AutoRenewFlag Specifies the auto-renewal flag.
-<Li>`0`: manual renewal.</li>.
-<Li>`1`: auto-renewal</li>.
-Default value: 0
+     * Get <p>Renewal flag:</p><li>0: manual renewal.</li><li>1: auto-renewal.</li>Default value: 0. 
+     * @return AutoRenewFlag <p>Renewal flag:</p><li>0: manual renewal.</li><li>1: auto-renewal.</li>Default value: 0.
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Specifies the auto-renewal flag.
-<Li>`0`: manual renewal.</li>.
-<Li>`1`: auto-renewal</li>.
-Default value: 0
-     * @param AutoRenewFlag Specifies the auto-renewal flag.
-<Li>`0`: manual renewal.</li>.
-<Li>`1`: auto-renewal</li>.
-Default value: 0
+     * Set <p>Renewal flag:</p><li>0: manual renewal.</li><li>1: auto-renewal.</li>Default value: 0.
+     * @param AutoRenewFlag <p>Renewal flag:</p><li>0: manual renewal.</li><li>1: auto-renewal.</li>Default value: 0.
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get Project ID. default value is 0, means it belongs to the default project. 
-     * @return ProjectId Project ID. default value is 0, means it belongs to the default project.
+     * Get <p>Project ID. The default value is 0, which means it belongs to the default project.</p> 
+     * @return ProjectId <p>Project ID. The default value is 0, which means it belongs to the default project.</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID. default value is 0, means it belongs to the default project.
-     * @param ProjectId Project ID. default value is 0, means it belongs to the default project.
+     * Set <p>Project ID. The default value is 0, which means it belongs to the default project.</p>
+     * @param ProjectId <p>Project ID. The default value is 0, which means it belongs to the default project.</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Special offer ID 
-     * @return ActivityId Special offer ID
+     * Get <p>Discount offer ID.</p> 
+     * @return ActivityId <p>Discount offer ID.</p>
      */
     public Long getActivityId() {
         return this.ActivityId;
     }
 
     /**
-     * Set Special offer ID
-     * @param ActivityId Special offer ID
+     * Set <p>Discount offer ID.</p>
+     * @param ActivityId <p>Discount offer ID.</p>
      */
     public void setActivityId(Long ActivityId) {
         this.ActivityId = ActivityId;
     }
 
     /**
-     * Get RO group ID 
-     * @return ReadOnlyGroupId RO group ID
+     * Get <p>Read-only group ID.</p> 
+     * @return ReadOnlyGroupId <p>Read-only group ID.</p>
      */
     public String getReadOnlyGroupId() {
         return this.ReadOnlyGroupId;
     }
 
     /**
-     * Set RO group ID
-     * @param ReadOnlyGroupId RO group ID
+     * Set <p>Read-only group ID.</p>
+     * @param ReadOnlyGroupId <p>Read-only group ID.</p>
      */
     public void setReadOnlyGroupId(String ReadOnlyGroupId) {
         this.ReadOnlyGroupId = ReadOnlyGroupId;
     }
 
     /**
-     * Get The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API. 
-     * @return TagList The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
+     * Get <p>Tags to be bound to the instance. This is empty by default. Tags can be obtained from the returned Tags field of the <a href="https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1">DescribeTags</a> API.</p> 
+     * @return TagList <p>Tags to be bound to the instance. This is empty by default. Tags can be obtained from the returned Tags field of the <a href="https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1">DescribeTags</a> API.</p>
      */
     public Tag getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
-     * @param TagList The information of tags to be bound with the instance, which is left empty by default. This parameter can be obtained from the `Tags` field in the return value of the [DescribeTags](https://intl.cloud.tencent.com/document/api/651/35316?from_cn_redirect=1) API.
+     * Set <p>Tags to be bound to the instance. This is empty by default. Tags can be obtained from the returned Tags field of the <a href="https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1">DescribeTags</a> API.</p>
+     * @param TagList <p>Tags to be bound to the instance. This is empty by default. Tags can be obtained from the returned Tags field of the <a href="https://www.tencentcloud.com/document/api/651/35316?from_cn_redirect=1">DescribeTags</a> API.</p>
      */
     public void setTagList(Tag TagList) {
         this.TagList = TagList;
     }
 
     /**
-     * Get Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
- 
-     * @return SecurityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
-
+     * Get <p>Security group to which the instance belongs. The value of this parameter can be obtained from the returned sgId field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, the default security group is bound.</p> 
+     * @return SecurityGroupIds <p>Security group to which the instance belongs. The value of this parameter can be obtained from the returned sgId field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, the default security group is bound.</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
-
-     * @param SecurityGroupIds Security group of the instance, which can be obtained from the `sgld` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1) API. If this parameter is not specified, the default security group will be bound.
-
+     * Set <p>Security group to which the instance belongs. The value of this parameter can be obtained from the returned sgId field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, the default security group is bound.</p>
+     * @param SecurityGroupIds <p>Security group to which the instance belongs. The value of this parameter can be obtained from the returned sgId field of the <a href="https://www.tencentcloud.com/document/api/215/15808?from_cn_redirect=1">DescribeSecurityGroups</a> API. If this parameter is not specified, the default security group is bound.</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Specifies whether to support Ipv6.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0 
-     * @return NeedSupportIpv6 Specifies whether to support Ipv6.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
+     * Get <p>Indicates whether to support IPv6:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0. 
+     * @return NeedSupportIpv6 <p>Indicates whether to support IPv6:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
      */
     public Long getNeedSupportIpv6() {
         return this.NeedSupportIpv6;
     }
 
     /**
-     * Set Specifies whether to support Ipv6.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
-     * @param NeedSupportIpv6 Specifies whether to support Ipv6.
-<Li>0: no.</li>.
-<Li>`1`: yes.</li>.
-Default value: 0
+     * Set <p>Indicates whether to support IPv6:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
+     * @param NeedSupportIpv6 <p>Indicates whether to support IPv6:</p><li>0: No.</li><li>1: Yes.</li>Default value: 0.
      */
     public void setNeedSupportIpv6(Long NeedSupportIpv6) {
         this.NeedSupportIpv6 = NeedSupportIpv6;
     }
 
     /**
-     * Get Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters. 
-     * @return Name Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
+     * Get <p>Instance name. The name can contain only Chinese characters, letters, digits, underscores (&quot;_&quot;), and hyphens (&quot;-&quot;), with a length of less than 60.</p> 
+     * @return Name <p>Instance name. The name can contain only Chinese characters, letters, digits, underscores (&quot;_&quot;), and hyphens (&quot;-&quot;), with a length of less than 60.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
-     * @param Name Instance name. only chinese characters, letters, digits, underscores (_), and delimiters (-) are supported. the length must be less than 60 characters.
+     * Set <p>Instance name. The name can contain only Chinese characters, letters, digits, underscores (&quot;_&quot;), and hyphens (&quot;-&quot;), with a length of less than 60.</p>
+     * @param Name <p>Instance name. The name can contain only Chinese characters, letters, digits, underscores (&quot;_&quot;), and hyphens (&quot;-&quot;), with a length of less than 60.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified. 
-     * @return DBVersion Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
+     * Get <p>Not required anymore. The kernel version is consistent with that of the primary instance.</p> 
+     * @return DBVersion <p>Not required anymore. The kernel version is consistent with that of the primary instance.</p>
      * @deprecated
      */
     @Deprecated
@@ -572,8 +492,8 @@ Default value: 0
     }
 
     /**
-     * Set Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
-     * @param DBVersion Specifies the kernel version number should be consistent with the primary instance and no longer needed to be specified.
+     * Set <p>Not required anymore. The kernel version is consistent with that of the primary instance.</p>
+     * @param DBVersion <p>Not required anymore. The kernel version is consistent with that of the primary instance.</p>
      * @deprecated
      */
     @Deprecated
@@ -582,32 +502,32 @@ Default value: 0
     }
 
     /**
-     * Get CDC ID. 
-     * @return DedicatedClusterId CDC ID.
+     * Get <p>Dedicated cluster ID.</p> 
+     * @return DedicatedClusterId <p>Dedicated cluster ID.</p>
      */
     public String getDedicatedClusterId() {
         return this.DedicatedClusterId;
     }
 
     /**
-     * Set CDC ID.
-     * @param DedicatedClusterId CDC ID.
+     * Set <p>Dedicated cluster ID.</p>
+     * @param DedicatedClusterId <p>Dedicated cluster ID.</p>
      */
     public void setDedicatedClusterId(String DedicatedClusterId) {
         this.DedicatedClusterId = DedicatedClusterId;
     }
 
     /**
-     * Get Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection). 
-     * @return DeletionProtection Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+     * Get <p>Indicates whether to enable deletion protection for the instance: true - enables deletion protection. false - disables deletion protection.</p> 
+     * @return DeletionProtection <p>Indicates whether to enable deletion protection for the instance: true - enables deletion protection. false - disables deletion protection.</p>
      */
     public Boolean getDeletionProtection() {
         return this.DeletionProtection;
     }
 
     /**
-     * Set Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
-     * @param DeletionProtection Specifies whether to enable deletion protection for the instance. valid values: true (enable deletion protection), false (disable deletion protection).
+     * Set <p>Indicates whether to enable deletion protection for the instance: true - enables deletion protection. false - disables deletion protection.</p>
+     * @param DeletionProtection <p>Indicates whether to enable deletion protection for the instance: true - enables deletion protection. false - disables deletion protection.</p>
      */
     public void setDeletionProtection(Boolean DeletionProtection) {
         this.DeletionProtection = DeletionProtection;

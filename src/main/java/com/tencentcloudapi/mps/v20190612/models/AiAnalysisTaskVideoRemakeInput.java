@@ -24,26 +24,49 @@ import java.util.HashMap;
 public class AiAnalysisTaskVideoRemakeInput extends AbstractModel {
 
     /**
-    * Intelligent deduplication template ID.
+    * <p>ID of the intelligent video deduplication template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-     * Get Intelligent deduplication template ID. 
-     * @return Definition Intelligent deduplication template ID.
+    * <p>Extended parameter.</p>
+    */
+    @SerializedName("ExtendedParameter")
+    @Expose
+    private String ExtendedParameter;
+
+    /**
+     * Get <p>ID of the intelligent video deduplication template.</p> 
+     * @return Definition <p>ID of the intelligent video deduplication template.</p>
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Intelligent deduplication template ID.
-     * @param Definition Intelligent deduplication template ID.
+     * Set <p>ID of the intelligent video deduplication template.</p>
+     * @param Definition <p>ID of the intelligent video deduplication template.</p>
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
+    }
+
+    /**
+     * Get <p>Extended parameter.</p> 
+     * @return ExtendedParameter <p>Extended parameter.</p>
+     */
+    public String getExtendedParameter() {
+        return this.ExtendedParameter;
+    }
+
+    /**
+     * Set <p>Extended parameter.</p>
+     * @param ExtendedParameter <p>Extended parameter.</p>
+     */
+    public void setExtendedParameter(String ExtendedParameter) {
+        this.ExtendedParameter = ExtendedParameter;
     }
 
     public AiAnalysisTaskVideoRemakeInput() {
@@ -57,6 +80,9 @@ public class AiAnalysisTaskVideoRemakeInput extends AbstractModel {
         if (source.Definition != null) {
             this.Definition = new Long(source.Definition);
         }
+        if (source.ExtendedParameter != null) {
+            this.ExtendedParameter = new String(source.ExtendedParameter);
+        }
     }
 
 
@@ -65,6 +91,7 @@ public class AiAnalysisTaskVideoRemakeInput extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "ExtendedParameter", this.ExtendedParameter);
 
     }
 }

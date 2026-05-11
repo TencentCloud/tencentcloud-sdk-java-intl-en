@@ -33,16 +33,14 @@ public class ReduceMediaBitrateMediaProcessTaskResult extends AbstractModel {
     private String Type;
 
     /**
-    * The result of a transcoding task. This parameter is valid if `Type` is `Transcode`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Query result of video transcoding task in bitrate reduction, valid when task type is Transcode.
     */
     @SerializedName("TranscodeTask")
     @Expose
     private ReduceMediaBitrateTranscodeResult TranscodeTask;
 
     /**
-    * The result of an adaptive bitrate task. This parameter is valid if `Type` is `AdaptiveDynamicStreaming`.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Query result of the video to adaptive streaming task in bitrate reduction tasks. Valid when the task type is AdaptiveDynamicStreaming.
     */
     @SerializedName("AdaptiveDynamicStreamingTask")
     @Expose
@@ -73,40 +71,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The result of a transcoding task. This parameter is valid if `Type` is `Transcode`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TranscodeTask The result of a transcoding task. This parameter is valid if `Type` is `Transcode`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Query result of video transcoding task in bitrate reduction, valid when task type is Transcode. 
+     * @return TranscodeTask Query result of video transcoding task in bitrate reduction, valid when task type is Transcode.
      */
     public ReduceMediaBitrateTranscodeResult getTranscodeTask() {
         return this.TranscodeTask;
     }
 
     /**
-     * Set The result of a transcoding task. This parameter is valid if `Type` is `Transcode`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TranscodeTask The result of a transcoding task. This parameter is valid if `Type` is `Transcode`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Query result of video transcoding task in bitrate reduction, valid when task type is Transcode.
+     * @param TranscodeTask Query result of video transcoding task in bitrate reduction, valid when task type is Transcode.
      */
     public void setTranscodeTask(ReduceMediaBitrateTranscodeResult TranscodeTask) {
         this.TranscodeTask = TranscodeTask;
     }
 
     /**
-     * Get The result of an adaptive bitrate task. This parameter is valid if `Type` is `AdaptiveDynamicStreaming`.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AdaptiveDynamicStreamingTask The result of an adaptive bitrate task. This parameter is valid if `Type` is `AdaptiveDynamicStreaming`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Query result of the video to adaptive streaming task in bitrate reduction tasks. Valid when the task type is AdaptiveDynamicStreaming. 
+     * @return AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in bitrate reduction tasks. Valid when the task type is AdaptiveDynamicStreaming.
      */
     public ReduceMediaBitrateAdaptiveDynamicStreamingResult getAdaptiveDynamicStreamingTask() {
         return this.AdaptiveDynamicStreamingTask;
     }
 
     /**
-     * Set The result of an adaptive bitrate task. This parameter is valid if `Type` is `AdaptiveDynamicStreaming`.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AdaptiveDynamicStreamingTask The result of an adaptive bitrate task. This parameter is valid if `Type` is `AdaptiveDynamicStreaming`.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Query result of the video to adaptive streaming task in bitrate reduction tasks. Valid when the task type is AdaptiveDynamicStreaming.
+     * @param AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in bitrate reduction tasks. Valid when the task type is AdaptiveDynamicStreaming.
      */
     public void setAdaptiveDynamicStreamingTask(ReduceMediaBitrateAdaptiveDynamicStreamingResult AdaptiveDynamicStreamingTask) {
         this.AdaptiveDynamicStreamingTask = AdaptiveDynamicStreamingTask;

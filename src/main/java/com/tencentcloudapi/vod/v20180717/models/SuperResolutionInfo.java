@@ -24,11 +24,9 @@ import java.util.HashMap;
 public class SuperResolutionInfo extends AbstractModel {
 
     /**
-    * Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
+    * Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
     */
     @SerializedName("Switch")
     @Expose
@@ -53,32 +51,24 @@ Default value: `2`.
     private Long Size;
 
     /**
-     * Get Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`. 
-     * @return Switch Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
+     * Get Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li> 
+     * @return Switch Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
-     * @param Switch Whether to enable super resolution. Valid values:
-<li>ON</li>
-<li>`OFF`</li>
-If super resolution is enabled, the output resolution will double.
-Default value: `OFF`.
+     * Set Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
+     * @param Switch Super resolution control switch. Optional values:
+<li>ON: Enable super resolution;</li>
+<li>OFF: Disable screen super resolution.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;

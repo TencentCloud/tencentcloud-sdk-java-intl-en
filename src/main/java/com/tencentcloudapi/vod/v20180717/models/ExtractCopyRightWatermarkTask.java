@@ -64,16 +64,14 @@ public class ExtractCopyRightWatermarkTask extends AbstractModel {
     private String ErrCodeExt;
 
     /**
-    * Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Input of the copyright watermark extraction task.
     */
     @SerializedName("Input")
     @Expose
     private ExtractCopyRightWatermarkTaskInput Input;
 
     /**
-    * Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Output message of the Copyright Watermark Extraction Task.
     */
     @SerializedName("Output")
     @Expose
@@ -194,40 +192,32 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Input Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Input of the copyright watermark extraction task. 
+     * @return Input Input of the copyright watermark extraction task.
      */
     public ExtractCopyRightWatermarkTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Input Extract copyright watermark task input information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Input of the copyright watermark extraction task.
+     * @param Input Input of the copyright watermark extraction task.
      */
     public void setInput(ExtractCopyRightWatermarkTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Output Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Output message of the Copyright Watermark Extraction Task. 
+     * @return Output Output message of the Copyright Watermark Extraction Task.
      */
     public ExtractCopyRightWatermarkTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Output Extract copyright watermark task output information.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Output message of the Copyright Watermark Extraction Task.
+     * @param Output Output message of the Copyright Watermark Extraction Task.
      */
     public void setOutput(ExtractCopyRightWatermarkTaskOutput Output) {
         this.Output = Output;

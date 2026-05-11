@@ -24,122 +24,122 @@ import java.util.HashMap;
 public class ComplexAdaptiveDynamicStreamingTaskOutput extends AbstractModel {
 
     /**
-    * Adaptive bitrate streaming template ID.
+    * Adaptive bitrate template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * The adaptive bitrate streaming format. Valid values:
+    * Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * DRM scheme type, value range:
+    * DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
     */
     @SerializedName("DrmType")
     @Expose
     private String DrmType;
 
     /**
-    * Playback address of the output manifest.
+    * Playback address of the adaptive bitrate stream.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get Adaptive bitrate streaming template ID. 
-     * @return Definition Adaptive bitrate streaming template ID.
+     * Get Adaptive bitrate template ID. 
+     * @return Definition Adaptive bitrate template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Adaptive bitrate streaming template ID.
-     * @param Definition Adaptive bitrate streaming template ID.
+     * Set Adaptive bitrate template ID.
+     * @param Definition Adaptive bitrate template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get The adaptive bitrate streaming format. Valid values:
+     * Get Adaptive bitrate stream packaging format. Optional values:
+<li>HLS;</li>
+<li>MPEG-DASH.</li> 
+     * @return Format Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
- 
-     * @return Format The adaptive bitrate streaming format. Valid values:
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
-
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set The adaptive bitrate streaming format. Valid values:
+     * Set Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-
-     * @param Format The adaptive bitrate streaming format. Valid values:
+     * @param Format Adaptive bitrate stream packaging format. Optional values:
 <li>HLS;</li>
 <li>MPEG-DASH.</li>
-
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get DRM scheme type, value range:
+     * Get DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
+<li>Widevine;</li>
+<li>FairPlay.</li> 
+     * @return DrmType DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected. 
-     * @return DrmType DRM scheme type, value range:
-<li>Widevine;</li>
-<li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
      */
     public String getDrmType() {
         return this.DrmType;
     }
 
     /**
-     * Set DRM scheme type, value range:
+     * Set DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
-     * @param DrmType DRM scheme type, value range:
+     * @param DrmType DRM solution type. Available values:
+<li>Empty string: Unencrypted.</li>
+<li>SimpleAES;</li>
 <li>Widevine;</li>
 <li>FairPlay.</li>
-The default value is an empty string, indicating that the video will not be DRM protected.
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;
     }
 
     /**
-     * Get Playback address of the output manifest. 
-     * @return Url Playback address of the output manifest.
+     * Get Playback address of the adaptive bitrate stream. 
+     * @return Url Playback address of the adaptive bitrate stream.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Playback address of the output manifest.
-     * @param Url Playback address of the output manifest.
+     * Set Playback address of the adaptive bitrate stream.
+     * @param Url Playback address of the adaptive bitrate stream.
      */
     public void setUrl(String Url) {
         this.Url = Url;

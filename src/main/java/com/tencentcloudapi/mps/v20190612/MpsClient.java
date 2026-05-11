@@ -40,7 +40,7 @@ public class MpsClient extends AbstractClient{
 
     /**
      *This API is used to initiate batch processing tasks for URL video links, with features including:
-Smart subtitle (full speech, speech hotword, and speech translation)
+Smart subtitle (full speech, speech hotword, and speech translation).
      * @param req BatchProcessMediaRequest
      * @return BatchProcessMediaResponse
      * @throws TencentCloudSDKException
@@ -918,6 +918,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to query the result of an asynchronous text to speech task.
+     * @param req DescribeTextToSpeechAsyncTaskRequest
+     * @return DescribeTextToSpeechAsyncTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTextToSpeechAsyncTaskResponse DescribeTextToSpeechAsyncTask(DescribeTextToSpeechAsyncTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTextToSpeechAsyncTask", DescribeTextToSpeechAsyncTaskResponse.class);
+    }
+
+    /**
      *This API is used to get the list of transcoding templates based on unique template ID. The return result includes all eligible custom and [preset transcoding templates](https://intl.cloud.tencent.com/document/product/266/33476?from_cn_redirect=1#.E9.A2.84.E7.BD.AE.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
      * @param req DescribeTranscodeTemplatesRequest
      * @return DescribeTranscodeTemplatesResponse
@@ -939,6 +950,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeUsageDataResponse DescribeUsageData(DescribeUsageDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeUsageData", DescribeUsageDataResponse.class);
+    }
+
+    /**
+     *This synchronous API is used to query available voices. It supports filtering voices by type, tag, language, and other criteria.
+     * @param req DescribeVoicesRequest
+     * @return DescribeVoicesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVoicesResponse DescribeVoices(DescribeVoicesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVoices", DescribeVoicesResponse.class);
     }
 
     /**
@@ -972,6 +994,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     public DescribeWorkflowsResponse DescribeWorkflows(DescribeWorkflowsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeWorkflows", DescribeWorkflowsResponse.class);
+    }
+
+    /**
+     *This API is used to design a voice. It generates a voice ID based on a prompt.
+     * @param req DesignVoiceAsyncRequest
+     * @return DesignVoiceAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public DesignVoiceAsyncResponse DesignVoiceAsync(DesignVoiceAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DesignVoiceAsync", DesignVoiceAsyncResponse.class);
     }
 
     /**
@@ -1388,6 +1421,17 @@ Live stream processing event notification supports HTTP callback and also suppor
     }
 
     /**
+     *This API is used to query an episode project.
+     * @param req QueryProjectRequest
+     * @return QueryProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public QueryProjectResponse QueryProject(QueryProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "QueryProject", QueryProjectResponse.class);
+    }
+
+    /**
      *This API is used to return the speech recognition results synchronously.
      * @param req RecognizeAudioRequest
      * @return RecognizeAudioResponse
@@ -1421,7 +1465,18 @@ Live stream processing event notification supports HTTP callback and also suppor
     }
 
     /**
-     *This API is used to translate text.
+     *This API is used to convert text to speech asynchronously and supports long text to speech.
+     * @param req TextToSpeechAsyncRequest
+     * @return TextToSpeechAsyncResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToSpeechAsyncResponse TextToSpeechAsync(TextToSpeechAsyncRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToSpeechAsync", TextToSpeechAsyncResponse.class);
+    }
+
+    /**
+     *
      * @param req TextTranslationRequest
      * @return TextTranslationResponse
      * @throws TencentCloudSDKException
@@ -1429,6 +1484,17 @@ Live stream processing event notification supports HTTP callback and also suppor
     public TextTranslationResponse TextTranslation(TextTranslationRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "TextTranslation", TextTranslationResponse.class);
+    }
+
+    /**
+     *This API is used to update an episode project.
+     * @param req UpdateProjectRequest
+     * @return UpdateProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateProjectResponse UpdateProject(UpdateProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateProject", UpdateProjectResponse.class);
     }
 
 }
