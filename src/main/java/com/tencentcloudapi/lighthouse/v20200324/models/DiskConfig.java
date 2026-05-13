@@ -24,158 +24,138 @@ import java.util.HashMap;
 public class DiskConfig extends AbstractModel {
 
     /**
-    * Availability zone.
+    * <P>Availability zone.</p>.
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
+    * <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Cloud disk sale status.
+    * <P>Cloud block storage (cbs) saleable state.</p>.
     */
     @SerializedName("DiskSalesState")
     @Expose
     private String DiskSalesState;
 
     /**
-    * Maximum cloud disk size.
+    * <p>Maximum CBS size.</p><p>unit: GB</p>.
     */
     @SerializedName("MaxDiskSize")
     @Expose
     private Long MaxDiskSize;
 
     /**
-    * Minimum cloud disk size.
+    * <p>Minimum CBS disk size.</p><p>unit: GB</p>.
     */
     @SerializedName("MinDiskSize")
     @Expose
     private Long MinDiskSize;
 
     /**
-    * Cloud disk increment.
+    * <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
     */
     @SerializedName("DiskStepSize")
     @Expose
     private Long DiskStepSize;
 
     /**
-     * Get Availability zone. 
-     * @return Zone Availability zone.
+     * Get <P>Availability zone.</p>. 
+     * @return Zone <P>Availability zone.</p>.
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set Availability zone.
-     * @param Zone Availability zone.
+     * Set <P>Availability zone.</p>.
+     * @param Zone <P>Availability zone.</p>.
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>. 
-     * @return DiskType Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
+     * Get <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>. 
+     * @return DiskType <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
-     * @param DiskType Cloud disk type. valid values are as follows:.
-
-<Li>CLOUD_BASIC: basic cloud disk.</li>.
-<Li>CLOUD_PREMIUM: specifies the high-performance cloud block storage.</li>.
-<Li>CLOUD_SSD: ssd cloud disk</li>.
+     * Set <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
+     * @param DiskType <p>CLOUD disk type. valid values as follows:</p><li>CLOUD_BASIC: ordinary CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_SSD: SSD CLOUD disk</li>.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Cloud disk sale status. 
-     * @return DiskSalesState Cloud disk sale status.
+     * Get <P>Cloud block storage (cbs) saleable state.</p>. 
+     * @return DiskSalesState <P>Cloud block storage (cbs) saleable state.</p>.
      */
     public String getDiskSalesState() {
         return this.DiskSalesState;
     }
 
     /**
-     * Set Cloud disk sale status.
-     * @param DiskSalesState Cloud disk sale status.
+     * Set <P>Cloud block storage (cbs) saleable state.</p>.
+     * @param DiskSalesState <P>Cloud block storage (cbs) saleable state.</p>.
      */
     public void setDiskSalesState(String DiskSalesState) {
         this.DiskSalesState = DiskSalesState;
     }
 
     /**
-     * Get Maximum cloud disk size. 
-     * @return MaxDiskSize Maximum cloud disk size.
+     * Get <p>Maximum CBS size.</p><p>unit: GB</p>. 
+     * @return MaxDiskSize <p>Maximum CBS size.</p><p>unit: GB</p>.
      */
     public Long getMaxDiskSize() {
         return this.MaxDiskSize;
     }
 
     /**
-     * Set Maximum cloud disk size.
-     * @param MaxDiskSize Maximum cloud disk size.
+     * Set <p>Maximum CBS size.</p><p>unit: GB</p>.
+     * @param MaxDiskSize <p>Maximum CBS size.</p><p>unit: GB</p>.
      */
     public void setMaxDiskSize(Long MaxDiskSize) {
         this.MaxDiskSize = MaxDiskSize;
     }
 
     /**
-     * Get Minimum cloud disk size. 
-     * @return MinDiskSize Minimum cloud disk size.
+     * Get <p>Minimum CBS disk size.</p><p>unit: GB</p>. 
+     * @return MinDiskSize <p>Minimum CBS disk size.</p><p>unit: GB</p>.
      */
     public Long getMinDiskSize() {
         return this.MinDiskSize;
     }
 
     /**
-     * Set Minimum cloud disk size.
-     * @param MinDiskSize Minimum cloud disk size.
+     * Set <p>Minimum CBS disk size.</p><p>unit: GB</p>.
+     * @param MinDiskSize <p>Minimum CBS disk size.</p><p>unit: GB</p>.
      */
     public void setMinDiskSize(Long MinDiskSize) {
         this.MinDiskSize = MinDiskSize;
     }
 
     /**
-     * Get Cloud disk increment. 
-     * @return DiskStepSize Cloud disk increment.
+     * Get <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>. 
+     * @return DiskStepSize <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
      */
     public Long getDiskStepSize() {
         return this.DiskStepSize;
     }
 
     /**
-     * Set Cloud disk increment.
-     * @param DiskStepSize Cloud disk increment.
+     * Set <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
+     * @param DiskStepSize <p>Cloud block storage (cbs) step length.</p><p>unit: GB</p>.
      */
     public void setDiskStepSize(Long DiskStepSize) {
         this.DiskStepSize = DiskStepSize;

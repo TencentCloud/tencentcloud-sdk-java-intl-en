@@ -399,17 +399,6 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
     }
 
     /**
-     *This API is used to query the attributes of the default login key of an instance.
-     * @param req DescribeInstanceLoginKeyPairAttributeRequest
-     * @return DescribeInstanceLoginKeyPairAttributeResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeInstanceLoginKeyPairAttributeResponse DescribeInstanceLoginKeyPairAttribute(DescribeInstanceLoginKeyPairAttributeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeInstanceLoginKeyPairAttribute", DescribeInstanceLoginKeyPairAttributeResponse.class);
-    }
-
-    /**
      *This API is used to query the URL for VNC login.
 
 * It does not support `STOPPED` CVMs.
@@ -835,19 +824,6 @@ Sharing CVM images to Lighthouse requires the following conditions to be met:
     public ModifyInstancesBundleResponse ModifyInstancesBundle(ModifyInstancesBundleRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstancesBundle", ModifyInstancesBundleResponse.class);
-    }
-
-    /**
-     *This API is used to set the attributes of the default login key pair of an instance.
-
-
-     * @param req ModifyInstancesLoginKeyPairAttributeRequest
-     * @return ModifyInstancesLoginKeyPairAttributeResponse
-     * @throws TencentCloudSDKException
-     */
-    public ModifyInstancesLoginKeyPairAttributeResponse ModifyInstancesLoginKeyPairAttribute(ModifyInstancesLoginKeyPairAttributeRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ModifyInstancesLoginKeyPairAttribute", ModifyInstancesLoginKeyPairAttributeResponse.class);
     }
 
     /**

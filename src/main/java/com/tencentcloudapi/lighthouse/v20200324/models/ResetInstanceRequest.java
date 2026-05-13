@@ -38,6 +38,13 @@ public class ResetInstanceRequest extends AbstractModel {
     private String BlueprintId;
 
     /**
+    * 
+    */
+    @SerializedName("Containers")
+    @Expose
+    private DockerContainerConfiguration [] Containers;
+
+    /**
      * Get Instance ID, which can be obtained from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API. 
      * @return InstanceId Instance ID, which can be obtained from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
      */
@@ -69,6 +76,22 @@ public class ResetInstanceRequest extends AbstractModel {
         this.BlueprintId = BlueprintId;
     }
 
+    /**
+     * Get  
+     * @return Containers 
+     */
+    public DockerContainerConfiguration [] getContainers() {
+        return this.Containers;
+    }
+
+    /**
+     * Set 
+     * @param Containers 
+     */
+    public void setContainers(DockerContainerConfiguration [] Containers) {
+        this.Containers = Containers;
+    }
+
     public ResetInstanceRequest() {
     }
 
@@ -83,6 +106,12 @@ public class ResetInstanceRequest extends AbstractModel {
         if (source.BlueprintId != null) {
             this.BlueprintId = new String(source.BlueprintId);
         }
+        if (source.Containers != null) {
+            this.Containers = new DockerContainerConfiguration[source.Containers.length];
+            for (int i = 0; i < source.Containers.length; i++) {
+                this.Containers[i] = new DockerContainerConfiguration(source.Containers[i]);
+            }
+        }
     }
 
 
@@ -92,6 +121,7 @@ public class ResetInstanceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "BlueprintId", this.BlueprintId);
+        this.setParamArrayObj(map, prefix + "Containers.", this.Containers);
 
     }
 }

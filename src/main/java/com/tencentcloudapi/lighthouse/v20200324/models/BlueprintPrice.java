@@ -42,7 +42,7 @@ public class BlueprintPrice extends AbstractModel {
     */
     @SerializedName("Discount")
     @Expose
-    private Long Discount;
+    private Float Discount;
 
     /**
     * Discounted image total price in USD.
@@ -87,7 +87,7 @@ public class BlueprintPrice extends AbstractModel {
      * Get Discount. 
      * @return Discount Discount.
      */
-    public Long getDiscount() {
+    public Float getDiscount() {
         return this.Discount;
     }
 
@@ -95,7 +95,7 @@ public class BlueprintPrice extends AbstractModel {
      * Set Discount.
      * @param Discount Discount.
      */
-    public void setDiscount(Long Discount) {
+    public void setDiscount(Float Discount) {
         this.Discount = Discount;
     }
 
@@ -130,7 +130,7 @@ public class BlueprintPrice extends AbstractModel {
             this.OriginalPrice = new Float(source.OriginalPrice);
         }
         if (source.Discount != null) {
-            this.Discount = new Long(source.Discount);
+            this.Discount = new Float(source.Discount);
         }
         if (source.DiscountPrice != null) {
             this.DiscountPrice = new Float(source.DiscountPrice);
