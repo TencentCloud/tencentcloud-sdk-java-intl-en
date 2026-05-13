@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyInstancePreResponse extends AbstractModel {
 
     /**
-    * Response structure of modifying the configurations of a prepaid instance.
+    * <p>Return structure for updating prepaid instance configuration</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyInstancePreResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Response structure of modifying the configurations of a prepaid instance. 
-     * @return Result Response structure of modifying the configurations of a prepaid instance.
+     * Get <p>Return structure for updating prepaid instance configuration</p> 
+     * @return Result <p>Return structure for updating prepaid instance configuration</p>
      */
     public CreateInstancePreResp getResult() {
         return this.Result;
     }
 
     /**
-     * Set Response structure of modifying the configurations of a prepaid instance.
-     * @param Result Response structure of modifying the configurations of a prepaid instance.
+     * Set <p>Return structure for updating prepaid instance configuration</p>
+     * @param Result <p>Return structure for updating prepaid instance configuration</p>
      */
     public void setResult(CreateInstancePreResp Result) {
         this.Result = Result;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class TerminateDisksRequest extends AbstractModel {
 
     /**
-    * List of cloud disk IDs required to be returned.
+    * List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
     */
     @SerializedName("DiskIds")
     @Expose
@@ -38,16 +38,16 @@ public class TerminateDisksRequest extends AbstractModel {
     private Long DeleteSnapshot;
 
     /**
-     * Get List of cloud disk IDs required to be returned. 
-     * @return DiskIds List of cloud disk IDs required to be returned.
+     * Get List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. 
+     * @return DiskIds List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
      */
     public String [] getDiskIds() {
         return this.DiskIds;
     }
 
     /**
-     * Set List of cloud disk IDs required to be returned.
-     * @param DiskIds List of cloud disk IDs required to be returned.
+     * Set List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+     * @param DiskIds List of cloud disk ids to be returned, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
      */
     public void setDiskIds(String [] DiskIds) {
         this.DiskIds = DiskIds;

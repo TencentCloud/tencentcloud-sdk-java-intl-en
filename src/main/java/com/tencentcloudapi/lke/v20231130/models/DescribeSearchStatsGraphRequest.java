@@ -80,6 +80,27 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     private String [] AppBizIds;
 
     /**
+    * Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+    */
+    @SerializedName("SpaceId")
+    @Expose
+    private String SpaceId;
+
+    /**
+    * Start time. Unix timestamp in seconds, empty by default.
+    */
+    @SerializedName("StatStartTime")
+    @Expose
+    private Long StatStartTime;
+
+    /**
+    * End time. Unix timestamp in seconds, empty by default.
+    */
+    @SerializedName("StatEndTime")
+    @Expose
+    private Long StatEndTime;
+
+    /**
      * Get Login to user's root account (required in integrator mode). 
      * @return LoginUin Login to user's root account (required in integrator mode).
      */
@@ -162,7 +183,9 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     /**
      * Get Start timestamp, in seconds. 
      * @return StartTime Start timestamp, in seconds.
+     * @deprecated
      */
+    @Deprecated
     public String getStartTime() {
         return this.StartTime;
     }
@@ -170,7 +193,9 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     /**
      * Set Start timestamp, in seconds.
      * @param StartTime Start timestamp, in seconds.
+     * @deprecated
      */
+    @Deprecated
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
@@ -178,7 +203,9 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     /**
      * Get End timestamp, in seconds. 
      * @return EndTime End timestamp, in seconds.
+     * @deprecated
      */
+    @Deprecated
     public String getEndTime() {
         return this.EndTime;
     }
@@ -186,7 +213,9 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
     /**
      * Set End timestamp, in seconds.
      * @param EndTime End timestamp, in seconds.
+     * @deprecated
      */
+    @Deprecated
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
@@ -205,6 +234,54 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
      */
     public void setAppBizIds(String [] AppBizIds) {
         this.AppBizIds = AppBizIds;
+    }
+
+    /**
+     * Get Space ID, used to limit the query scope. If left blank, data of all spaces will be returned. 
+     * @return SpaceId Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+     */
+    public String getSpaceId() {
+        return this.SpaceId;
+    }
+
+    /**
+     * Set Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+     * @param SpaceId Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+     */
+    public void setSpaceId(String SpaceId) {
+        this.SpaceId = SpaceId;
+    }
+
+    /**
+     * Get Start time. Unix timestamp in seconds, empty by default. 
+     * @return StatStartTime Start time. Unix timestamp in seconds, empty by default.
+     */
+    public Long getStatStartTime() {
+        return this.StatStartTime;
+    }
+
+    /**
+     * Set Start time. Unix timestamp in seconds, empty by default.
+     * @param StatStartTime Start time. Unix timestamp in seconds, empty by default.
+     */
+    public void setStatStartTime(Long StatStartTime) {
+        this.StatStartTime = StatStartTime;
+    }
+
+    /**
+     * Get End time. Unix timestamp in seconds, empty by default. 
+     * @return StatEndTime End time. Unix timestamp in seconds, empty by default.
+     */
+    public Long getStatEndTime() {
+        return this.StatEndTime;
+    }
+
+    /**
+     * Set End time. Unix timestamp in seconds, empty by default.
+     * @param StatEndTime End time. Unix timestamp in seconds, empty by default.
+     */
+    public void setStatEndTime(Long StatEndTime) {
+        this.StatEndTime = StatEndTime;
     }
 
     public DescribeSearchStatsGraphRequest() {
@@ -245,6 +322,15 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
                 this.AppBizIds[i] = new String(source.AppBizIds[i]);
             }
         }
+        if (source.SpaceId != null) {
+            this.SpaceId = new String(source.SpaceId);
+        }
+        if (source.StatStartTime != null) {
+            this.StatStartTime = new Long(source.StatStartTime);
+        }
+        if (source.StatEndTime != null) {
+            this.StatEndTime = new Long(source.StatEndTime);
+        }
     }
 
 
@@ -260,6 +346,9 @@ public class DescribeSearchStatsGraphRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
+        this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
+        this.setParamSimple(map, prefix + "StatStartTime", this.StatStartTime);
+        this.setParamSimple(map, prefix + "StatEndTime", this.StatEndTime);
 
     }
 }

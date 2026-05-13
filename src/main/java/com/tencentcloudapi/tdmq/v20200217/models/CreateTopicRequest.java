@@ -110,6 +110,27 @@ public class CreateTopicRequest extends AbstractModel {
     private Long AckTimeOut;
 
     /**
+    * Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+    */
+    @SerializedName("PulsarTopicMessageType")
+    @Expose
+    private Long PulsarTopicMessageType;
+
+    /**
+    * Theme tag
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
+    * defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+    */
+    @SerializedName("DelayMessagePolicy")
+    @Expose
+    private String DelayMessagePolicy;
+
+    /**
      * Get Environment (namespace) name. 
      * @return EnvironmentId Environment (namespace) name.
      */
@@ -321,6 +342,54 @@ public class CreateTopicRequest extends AbstractModel {
         this.AckTimeOut = AckTimeOut;
     }
 
+    /**
+     * Get Pulsar topic message Type 0: composite message 1: regular message 2: delayed message 
+     * @return PulsarTopicMessageType Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+     */
+    public Long getPulsarTopicMessageType() {
+        return this.PulsarTopicMessageType;
+    }
+
+    /**
+     * Set Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+     * @param PulsarTopicMessageType Pulsar topic message Type 0: composite message 1: regular message 2: delayed message
+     */
+    public void setPulsarTopicMessageType(Long PulsarTopicMessageType) {
+        this.PulsarTopicMessageType = PulsarTopicMessageType;
+    }
+
+    /**
+     * Get Theme tag 
+     * @return Tags Theme tag
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Theme tag
+     * @param Tags Theme tag
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
+    /**
+     * Get defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed 
+     * @return DelayMessagePolicy defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+     */
+    public String getDelayMessagePolicy() {
+        return this.DelayMessagePolicy;
+    }
+
+    /**
+     * Set defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+     * @param DelayMessagePolicy defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+     */
+    public void setDelayMessagePolicy(String DelayMessagePolicy) {
+        this.DelayMessagePolicy = DelayMessagePolicy;
+    }
+
     public CreateTopicRequest() {
     }
 
@@ -362,6 +431,18 @@ public class CreateTopicRequest extends AbstractModel {
         if (source.AckTimeOut != null) {
             this.AckTimeOut = new Long(source.AckTimeOut);
         }
+        if (source.PulsarTopicMessageType != null) {
+            this.PulsarTopicMessageType = new Long(source.PulsarTopicMessageType);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
+        if (source.DelayMessagePolicy != null) {
+            this.DelayMessagePolicy = new String(source.DelayMessagePolicy);
+        }
     }
 
 
@@ -380,6 +461,9 @@ public class CreateTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
         this.setParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
         this.setParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
+        this.setParamSimple(map, prefix + "PulsarTopicMessageType", this.PulsarTopicMessageType);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DelayMessagePolicy", this.DelayMessagePolicy);
 
     }
 }

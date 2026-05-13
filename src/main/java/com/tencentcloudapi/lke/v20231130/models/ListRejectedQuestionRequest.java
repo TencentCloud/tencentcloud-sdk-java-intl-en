@@ -56,6 +56,13 @@ public class ListRejectedQuestionRequest extends AbstractModel {
     private String Query;
 
     /**
+    * <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
+    */
+    @SerializedName("Filters")
+    @Expose
+    private FilterItem [] Filters;
+
+    /**
      * Get Application ID. 
      * @return BotBizId Application ID.
      */
@@ -135,6 +142,22 @@ public class ListRejectedQuestionRequest extends AbstractModel {
         this.Query = Query;
     }
 
+    /**
+     * Get <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p> 
+     * @return Filters <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
+     */
+    public FilterItem [] getFilters() {
+        return this.Filters;
+    }
+
+    /**
+     * Set <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
+     * @param Filters <p>Filter Conditions:<br>Effective: EnableScope: 1,2,3,4</p>
+     */
+    public void setFilters(FilterItem [] Filters) {
+        this.Filters = Filters;
+    }
+
     public ListRejectedQuestionRequest() {
     }
 
@@ -155,6 +178,12 @@ public class ListRejectedQuestionRequest extends AbstractModel {
         if (source.Query != null) {
             this.Query = new String(source.Query);
         }
+        if (source.Filters != null) {
+            this.Filters = new FilterItem[source.Filters.length];
+            for (int i = 0; i < source.Filters.length; i++) {
+                this.Filters[i] = new FilterItem(source.Filters[i]);
+            }
+        }
     }
 
 
@@ -166,6 +195,7 @@ public class ListRejectedQuestionRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
         this.setParamSimple(map, prefix + "Query", this.Query);
+        this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
 
     }
 }

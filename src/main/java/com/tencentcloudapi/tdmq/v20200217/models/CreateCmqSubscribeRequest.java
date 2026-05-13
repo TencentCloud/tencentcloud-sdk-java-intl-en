@@ -31,7 +31,7 @@ public class CreateCmqSubscribeRequest extends AbstractModel {
     private String TopicName;
 
     /**
-    * Subscription name, uniquely identifies under the same topic of the same account in a single region. subscription name is a string of no more than 64 characters, beginning with a letter, the remaining part can contain letters, digits, and hyphens (-).
+    * Subscription name is unique under the same account and same topic in a single region. Subscription name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation.
     */
     @SerializedName("SubscriptionName")
     @Expose
@@ -96,16 +96,16 @@ public class CreateCmqSubscribeRequest extends AbstractModel {
     }
 
     /**
-     * Get Subscription name, uniquely identifies under the same topic of the same account in a single region. subscription name is a string of no more than 64 characters, beginning with a letter, the remaining part can contain letters, digits, and hyphens (-). 
-     * @return SubscriptionName Subscription name, uniquely identifies under the same topic of the same account in a single region. subscription name is a string of no more than 64 characters, beginning with a letter, the remaining part can contain letters, digits, and hyphens (-).
+     * Get Subscription name is unique under the same account and same topic in a single region. Subscription name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation. 
+     * @return SubscriptionName Subscription name is unique under the same account and same topic in a single region. Subscription name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation.
      */
     public String getSubscriptionName() {
         return this.SubscriptionName;
     }
 
     /**
-     * Set Subscription name, uniquely identifies under the same topic of the same account in a single region. subscription name is a string of no more than 64 characters, beginning with a letter, the remaining part can contain letters, digits, and hyphens (-).
-     * @param SubscriptionName Subscription name, uniquely identifies under the same topic of the same account in a single region. subscription name is a string of no more than 64 characters, beginning with a letter, the remaining part can contain letters, digits, and hyphens (-).
+     * Set Subscription name is unique under the same account and same topic in a single region. Subscription name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation.
+     * @param SubscriptionName Subscription name is unique under the same account and same topic in a single region. Subscription name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation.
      */
     public void setSubscriptionName(String SubscriptionName) {
         this.SubscriptionName = SubscriptionName;

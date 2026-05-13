@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquirePriceModifyDiskBackupQuotaRequest extends AbstractModel {
 
     /**
-    * Cloud disk ID, which can be queried through the `DescribeDisks` API.
+    * Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API.
     */
     @SerializedName("DiskId")
     @Expose
@@ -38,16 +38,16 @@ public class InquirePriceModifyDiskBackupQuotaRequest extends AbstractModel {
     private Long DiskBackupQuota;
 
     /**
-     * Get Cloud disk ID, which can be queried through the `DescribeDisks` API. 
-     * @return DiskId Cloud disk ID, which can be queried through the `DescribeDisks` API.
+     * Get Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API. 
+     * @return DiskId Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API.
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set Cloud disk ID, which can be queried through the `DescribeDisks` API.
-     * @param DiskId Cloud disk ID, which can be queried through the `DescribeDisks` API.
+     * Set Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API.
+     * @param DiskId Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API.
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;

@@ -24,18 +24,11 @@ import java.util.HashMap;
 public class DescribeDiskConfigQuotaRequest extends AbstractModel {
 
     /**
-    * Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
+    * INQUIRY type. valid values:<br>INQUIRY_CBS_CONFIG: query the cloud disk configuration list<br>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks with instances.
     */
     @SerializedName("InquiryType")
     @Expose
     private String InquiryType;
-
-    /**
-    * Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
-    */
-    @SerializedName("Zones")
-    @Expose
-    private String [] Zones;
 
     /**
     * Billing mode. Value range: <br><li>POSTPAID_BY_HOUR: postpaid.
@@ -45,25 +38,39 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel {
     private String DiskChargeType;
 
     /**
-    * Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
+    * Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
+    */
+    @SerializedName("InstanceFamilies")
+    @Expose
+    private String [] InstanceFamilies;
+
+    /**
+    * Hard disk media type. valid values: <br> CLOUD_BASIC: BASIC CLOUD disk <br> CLOUD_PREMIUM: high-performance CLOUD block storage <br> CLOUD_SSD: SSD CLOUD disk <br> CLOUD_HSSD: enhanced SSD CLOUD disk.
     */
     @SerializedName("DiskTypes")
     @Expose
     private String [] DiskTypes;
 
     /**
-    * The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+    * Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+    */
+    @SerializedName("Zones")
+    @Expose
+    private String [] Zones;
+
+    /**
+    * Instance memory size in GB.
+    */
+    @SerializedName("Memory")
+    @Expose
+    private Long Memory;
+
+    /**
+    * SYSTEM DISK or DATA DISK. valid values:<br>SYSTEM_DISK: SYSTEM DISK<br>DATA_DISK: DATA DISK.
     */
     @SerializedName("DiskUsage")
     @Expose
     private String DiskUsage;
-
-    /**
-    * Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
-    */
-    @SerializedName("InstanceFamilies")
-    @Expose
-    private String [] InstanceFamilies;
 
     /**
     * Instance CPU cores.
@@ -73,42 +80,26 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel {
     private Long CPU;
 
     /**
-    * Instance memory size.
+    * Dedicated cluster ID.
     */
-    @SerializedName("Memory")
+    @SerializedName("DedicatedClusterId")
     @Expose
-    private Long Memory;
+    private String DedicatedClusterId;
 
     /**
-     * Get Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances. 
-     * @return InquiryType Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
+     * Get INQUIRY type. valid values:<br>INQUIRY_CBS_CONFIG: query the cloud disk configuration list<br>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks with instances. 
+     * @return InquiryType INQUIRY type. valid values:<br>INQUIRY_CBS_CONFIG: query the cloud disk configuration list<br>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks with instances.
      */
     public String getInquiryType() {
         return this.InquiryType;
     }
 
     /**
-     * Set Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
-     * @param InquiryType Inquiry type. Value range: INQUIRY_CBS_CONFIG: query the configuration list of cloud disks <br><li>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks and instances.
+     * Set INQUIRY type. valid values:<br>INQUIRY_CBS_CONFIG: query the cloud disk configuration list<br>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks with instances.
+     * @param InquiryType INQUIRY type. valid values:<br>INQUIRY_CBS_CONFIG: query the cloud disk configuration list<br>INQUIRY_CVM_CONFIG: query the configuration list of cloud disks with instances.
      */
     public void setInquiryType(String InquiryType) {
         this.InquiryType = InquiryType;
-    }
-
-    /**
-     * Get Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo). 
-     * @return Zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
-     */
-    public String [] getZones() {
-        return this.Zones;
-    }
-
-    /**
-     * Set Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
-     * @param Zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
-     */
-    public void setZones(String [] Zones) {
-        this.Zones = Zones;
     }
 
     /**
@@ -128,38 +119,6 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel {
     }
 
     /**
-     * Get Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD 
-     * @return DiskTypes Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
-     */
-    public String [] getDiskTypes() {
-        return this.DiskTypes;
-    }
-
-    /**
-     * Set Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
-     * @param DiskTypes Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD
-     */
-    public void setDiskTypes(String [] DiskTypes) {
-        this.DiskTypes = DiskTypes;
-    }
-
-    /**
-     * Get The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk. 
-     * @return DiskUsage The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-     */
-    public String getDiskUsage() {
-        return this.DiskUsage;
-    }
-
-    /**
-     * Set The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-     * @param DiskUsage The system disk or data disk. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-     */
-    public void setDiskUsage(String DiskUsage) {
-        this.DiskUsage = DiskUsage;
-    }
-
-    /**
      * Get Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1) 
      * @return InstanceFamilies Filter by the instance model series, such as S1, I1 and M1. For more information, please see [Instance Types](https://intl.cloud.tencent.com/document/product/213/11518?from_cn_redirect=1)
      */
@@ -173,6 +132,70 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel {
      */
     public void setInstanceFamilies(String [] InstanceFamilies) {
         this.InstanceFamilies = InstanceFamilies;
+    }
+
+    /**
+     * Get Hard disk media type. valid values: <br> CLOUD_BASIC: BASIC CLOUD disk <br> CLOUD_PREMIUM: high-performance CLOUD block storage <br> CLOUD_SSD: SSD CLOUD disk <br> CLOUD_HSSD: enhanced SSD CLOUD disk. 
+     * @return DiskTypes Hard disk media type. valid values: <br> CLOUD_BASIC: BASIC CLOUD disk <br> CLOUD_PREMIUM: high-performance CLOUD block storage <br> CLOUD_SSD: SSD CLOUD disk <br> CLOUD_HSSD: enhanced SSD CLOUD disk.
+     */
+    public String [] getDiskTypes() {
+        return this.DiskTypes;
+    }
+
+    /**
+     * Set Hard disk media type. valid values: <br> CLOUD_BASIC: BASIC CLOUD disk <br> CLOUD_PREMIUM: high-performance CLOUD block storage <br> CLOUD_SSD: SSD CLOUD disk <br> CLOUD_HSSD: enhanced SSD CLOUD disk.
+     * @param DiskTypes Hard disk media type. valid values: <br> CLOUD_BASIC: BASIC CLOUD disk <br> CLOUD_PREMIUM: high-performance CLOUD block storage <br> CLOUD_SSD: SSD CLOUD disk <br> CLOUD_HSSD: enhanced SSD CLOUD disk.
+     */
+    public void setDiskTypes(String [] DiskTypes) {
+        this.DiskTypes = DiskTypes;
+    }
+
+    /**
+     * Get Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo). 
+     * @return Zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+     */
+    public String [] getZones() {
+        return this.Zones;
+    }
+
+    /**
+     * Set Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+     * @param Zones Query configuration under one or more [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo).
+     */
+    public void setZones(String [] Zones) {
+        this.Zones = Zones;
+    }
+
+    /**
+     * Get Instance memory size in GB. 
+     * @return Memory Instance memory size in GB.
+     */
+    public Long getMemory() {
+        return this.Memory;
+    }
+
+    /**
+     * Set Instance memory size in GB.
+     * @param Memory Instance memory size in GB.
+     */
+    public void setMemory(Long Memory) {
+        this.Memory = Memory;
+    }
+
+    /**
+     * Get SYSTEM DISK or DATA DISK. valid values:<br>SYSTEM_DISK: SYSTEM DISK<br>DATA_DISK: DATA DISK. 
+     * @return DiskUsage SYSTEM DISK or DATA DISK. valid values:<br>SYSTEM_DISK: SYSTEM DISK<br>DATA_DISK: DATA DISK.
+     */
+    public String getDiskUsage() {
+        return this.DiskUsage;
+    }
+
+    /**
+     * Set SYSTEM DISK or DATA DISK. valid values:<br>SYSTEM_DISK: SYSTEM DISK<br>DATA_DISK: DATA DISK.
+     * @param DiskUsage SYSTEM DISK or DATA DISK. valid values:<br>SYSTEM_DISK: SYSTEM DISK<br>DATA_DISK: DATA DISK.
+     */
+    public void setDiskUsage(String DiskUsage) {
+        this.DiskUsage = DiskUsage;
     }
 
     /**
@@ -192,19 +215,19 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance memory size. 
-     * @return Memory Instance memory size.
+     * Get Dedicated cluster ID. 
+     * @return DedicatedClusterId Dedicated cluster ID.
      */
-    public Long getMemory() {
-        return this.Memory;
+    public String getDedicatedClusterId() {
+        return this.DedicatedClusterId;
     }
 
     /**
-     * Set Instance memory size.
-     * @param Memory Instance memory size.
+     * Set Dedicated cluster ID.
+     * @param DedicatedClusterId Dedicated cluster ID.
      */
-    public void setMemory(Long Memory) {
-        this.Memory = Memory;
+    public void setDedicatedClusterId(String DedicatedClusterId) {
+        this.DedicatedClusterId = DedicatedClusterId;
     }
 
     public DescribeDiskConfigQuotaRequest() {
@@ -218,23 +241,8 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel {
         if (source.InquiryType != null) {
             this.InquiryType = new String(source.InquiryType);
         }
-        if (source.Zones != null) {
-            this.Zones = new String[source.Zones.length];
-            for (int i = 0; i < source.Zones.length; i++) {
-                this.Zones[i] = new String(source.Zones[i]);
-            }
-        }
         if (source.DiskChargeType != null) {
             this.DiskChargeType = new String(source.DiskChargeType);
-        }
-        if (source.DiskTypes != null) {
-            this.DiskTypes = new String[source.DiskTypes.length];
-            for (int i = 0; i < source.DiskTypes.length; i++) {
-                this.DiskTypes[i] = new String(source.DiskTypes[i]);
-            }
-        }
-        if (source.DiskUsage != null) {
-            this.DiskUsage = new String(source.DiskUsage);
         }
         if (source.InstanceFamilies != null) {
             this.InstanceFamilies = new String[source.InstanceFamilies.length];
@@ -242,11 +250,29 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel {
                 this.InstanceFamilies[i] = new String(source.InstanceFamilies[i]);
             }
         }
-        if (source.CPU != null) {
-            this.CPU = new Long(source.CPU);
+        if (source.DiskTypes != null) {
+            this.DiskTypes = new String[source.DiskTypes.length];
+            for (int i = 0; i < source.DiskTypes.length; i++) {
+                this.DiskTypes[i] = new String(source.DiskTypes[i]);
+            }
+        }
+        if (source.Zones != null) {
+            this.Zones = new String[source.Zones.length];
+            for (int i = 0; i < source.Zones.length; i++) {
+                this.Zones[i] = new String(source.Zones[i]);
+            }
         }
         if (source.Memory != null) {
             this.Memory = new Long(source.Memory);
+        }
+        if (source.DiskUsage != null) {
+            this.DiskUsage = new String(source.DiskUsage);
+        }
+        if (source.CPU != null) {
+            this.CPU = new Long(source.CPU);
+        }
+        if (source.DedicatedClusterId != null) {
+            this.DedicatedClusterId = new String(source.DedicatedClusterId);
         }
     }
 
@@ -256,13 +282,14 @@ public class DescribeDiskConfigQuotaRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InquiryType", this.InquiryType);
-        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
-        this.setParamArraySimple(map, prefix + "DiskTypes.", this.DiskTypes);
-        this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
         this.setParamArraySimple(map, prefix + "InstanceFamilies.", this.InstanceFamilies);
-        this.setParamSimple(map, prefix + "CPU", this.CPU);
+        this.setParamArraySimple(map, prefix + "DiskTypes.", this.DiskTypes);
+        this.setParamArraySimple(map, prefix + "Zones.", this.Zones);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
+        this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
+        this.setParamSimple(map, prefix + "CPU", this.CPU);
+        this.setParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
 
     }
 }

@@ -24,437 +24,437 @@ import java.util.HashMap;
 public class ModifyTopicAttributesRequest extends AbstractModel {
 
     /**
-    * The ckafka cluster instance Id.
+    * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Topic name
+    * <p>Topic name</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
+    * <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * IP allowlist switch. 1: enabled, 0: disabled.
+    * <p>IP allowlist switch, 1: on; 0: off.</p>
     */
     @SerializedName("EnableWhiteList")
     @Expose
     private Long EnableWhiteList;
 
     /**
-    * Default value: 1.
+    * <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
     */
     @SerializedName("MinInsyncReplicas")
     @Expose
     private Long MinInsyncReplicas;
 
     /**
-    * 0: false, 1: true. Default value: 0.
+    * <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
     */
     @SerializedName("UncleanLeaderElectionEnable")
     @Expose
     private Long UncleanLeaderElectionEnable;
 
     /**
-    * Message retention period in ms. The current minimum value is 60,000 ms.
+    * <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
     */
     @SerializedName("RetentionMs")
     @Expose
     private Long RetentionMs;
 
     /**
-    * Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+    * <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
     */
     @SerializedName("MaxMessageBytes")
     @Expose
     private Long MaxMessageBytes;
 
     /**
-    * Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+    * <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
     */
     @SerializedName("SegmentMs")
     @Expose
     private Long SegmentMs;
 
     /**
-    * Message deletion policy. Valid values: delete, compact
+    * <p>Message deletion strategy: choose delete or compact</p>
     */
     @SerializedName("CleanUpPolicy")
     @Expose
     private String CleanUpPolicy;
 
     /**
-    * IP allowlist, which is required if the value of `enableWhileList` is 1.
+    * <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
     */
     @SerializedName("IpWhiteList")
     @Expose
     private String [] IpWhiteList;
 
     /**
-    * Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+    * <p>Preset ACL rule, 1: on 0: off, default is off</p>
     */
     @SerializedName("EnableAclRule")
     @Expose
     private Long EnableAclRule;
 
     /**
-    * ACL rule name.
+    * <p>ACL rule name</p>
     */
     @SerializedName("AclRuleName")
     @Expose
     private String AclRuleName;
 
     /**
-    * Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+    * <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
     */
     @SerializedName("RetentionBytes")
     @Expose
     private Long RetentionBytes;
 
     /**
-    * Tag list.
+    * <p>Tag list</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Production traffic throttling in MB/s. set to -1 to disable throttling.
+    * <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
     */
     @SerializedName("QuotaProducerByteRate")
     @Expose
     private Long QuotaProducerByteRate;
 
     /**
-    * Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+    * <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
     */
     @SerializedName("QuotaConsumerByteRate")
     @Expose
     private Long QuotaConsumerByteRate;
 
     /**
-    * Number of topic replicas. valid values: 1, 3.
+    * <p>topic replica count Minimum value: 1, Maximum value: 3</p>
     */
     @SerializedName("ReplicaNum")
     @Expose
     private Long ReplicaNum;
 
     /**
-    * Specifies the time type for message saving: CreateTime/LogAppendTime.
+    * <p>Time type for message saving: CreateTime/LogAppendTime</p>
     */
     @SerializedName("LogMsgTimestampType")
     @Expose
     private String LogMsgTimestampType;
 
     /**
-     * Get The ckafka cluster instance Id. 
-     * @return InstanceId The ckafka cluster instance Id.
+     * Get <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id.
-     * @param InstanceId The ckafka cluster instance Id.
+     * Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Topic name 
-     * @return TopicName Topic name
+     * Get <p>Topic name</p> 
+     * @return TopicName <p>Topic name</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name
-     * @param TopicName Topic name
+     * Set <p>Topic name</p>
+     * @param TopicName <p>Topic name</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`). 
-     * @return Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
+     * Get <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p> 
+     * @return Note <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
-     * @param Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
+     * Set <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
+     * @param Note <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p><p>Default value: ""</p>
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get IP allowlist switch. 1: enabled, 0: disabled. 
-     * @return EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled.
+     * Get <p>IP allowlist switch, 1: on; 0: off.</p> 
+     * @return EnableWhiteList <p>IP allowlist switch, 1: on; 0: off.</p>
      */
     public Long getEnableWhiteList() {
         return this.EnableWhiteList;
     }
 
     /**
-     * Set IP allowlist switch. 1: enabled, 0: disabled.
-     * @param EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled.
+     * Set <p>IP allowlist switch, 1: on; 0: off.</p>
+     * @param EnableWhiteList <p>IP allowlist switch, 1: on; 0: off.</p>
      */
     public void setEnableWhiteList(Long EnableWhiteList) {
         this.EnableWhiteList = EnableWhiteList;
     }
 
     /**
-     * Get Default value: 1. 
-     * @return MinInsyncReplicas Default value: 1.
+     * Get <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p> 
+     * @return MinInsyncReplicas <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
      */
     public Long getMinInsyncReplicas() {
         return this.MinInsyncReplicas;
     }
 
     /**
-     * Set Default value: 1.
-     * @param MinInsyncReplicas Default value: 1.
+     * Set <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
+     * @param MinInsyncReplicas <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
      */
     public void setMinInsyncReplicas(Long MinInsyncReplicas) {
         this.MinInsyncReplicas = MinInsyncReplicas;
     }
 
     /**
-     * Get 0: false, 1: true. Default value: 0. 
-     * @return UncleanLeaderElectionEnable 0: false, 1: true. Default value: 0.
+     * Get <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p> 
+     * @return UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
      */
     public Long getUncleanLeaderElectionEnable() {
         return this.UncleanLeaderElectionEnable;
     }
 
     /**
-     * Set 0: false, 1: true. Default value: 0.
-     * @param UncleanLeaderElectionEnable 0: false, 1: true. Default value: 0.
+     * Set <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
+     * @param UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader</p><p>Enumeration value:</p><ul><li>0: Not allowed</li><li>1: Allowed</li></ul><p>Default value: 0</p>
      */
     public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
     }
 
     /**
-     * Get Message retention period in ms. The current minimum value is 60,000 ms. 
-     * @return RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
+     * Get <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p> 
+     * @return RetentionMs <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set Message retention period in ms. The current minimum value is 60,000 ms.
-     * @param RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
+     * Set <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
+     * @param RetentionMs <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
     }
 
     /**
-     * Get Max message size in bytes. Max value: 8,388,608 bytes (8 MB). 
-     * @return MaxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+     * Get <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p> 
+     * @return MaxMessageBytes <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
      */
     public Long getMaxMessageBytes() {
         return this.MaxMessageBytes;
     }
 
     /**
-     * Set Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
-     * @param MaxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+     * Set <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
+     * @param MaxMessageBytes <p>Maximum topic messages</p><p>Value ranges from 1024 to 12582912</p><p>Unit: Bytes</p>
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
         this.MaxMessageBytes = MaxMessageBytes;
     }
 
     /**
-     * Get Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms. 
-     * @return SegmentMs Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+     * Get <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p> 
+     * @return SegmentMs <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
      */
     public Long getSegmentMs() {
         return this.SegmentMs;
     }
 
     /**
-     * Set Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
-     * @param SegmentMs Duration of Segment shard scrolling in milliseconds. current min value is 86400000 ms.
+     * Set <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
+     * @param SegmentMs <p>Duration of Segment fragment scrolling</p><p>Unit: ms</p><p>Minimum value: 86400000ms (1 day)</p>
      */
     public void setSegmentMs(Long SegmentMs) {
         this.SegmentMs = SegmentMs;
     }
 
     /**
-     * Get Message deletion policy. Valid values: delete, compact 
-     * @return CleanUpPolicy Message deletion policy. Valid values: delete, compact
+     * Get <p>Message deletion strategy: choose delete or compact</p> 
+     * @return CleanUpPolicy <p>Message deletion strategy: choose delete or compact</p>
      */
     public String getCleanUpPolicy() {
         return this.CleanUpPolicy;
     }
 
     /**
-     * Set Message deletion policy. Valid values: delete, compact
-     * @param CleanUpPolicy Message deletion policy. Valid values: delete, compact
+     * Set <p>Message deletion strategy: choose delete or compact</p>
+     * @param CleanUpPolicy <p>Message deletion strategy: choose delete or compact</p>
      */
     public void setCleanUpPolicy(String CleanUpPolicy) {
         this.CleanUpPolicy = CleanUpPolicy;
     }
 
     /**
-     * Get IP allowlist, which is required if the value of `enableWhileList` is 1. 
-     * @return IpWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
+     * Get <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p> 
+     * @return IpWhiteList <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
      */
     public String [] getIpWhiteList() {
         return this.IpWhiteList;
     }
 
     /**
-     * Set IP allowlist, which is required if the value of `enableWhileList` is 1.
-     * @param IpWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
+     * Set <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
+     * @param IpWhiteList <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
      */
     public void setIpWhiteList(String [] IpWhiteList) {
         this.IpWhiteList = IpWhiteList;
     }
 
     /**
-     * Get Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`. 
-     * @return EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     * Get <p>Preset ACL rule, 1: on 0: off, default is off</p> 
+     * @return EnableAclRule <p>Preset ACL rule, 1: on 0: off, default is off</p>
      */
     public Long getEnableAclRule() {
         return this.EnableAclRule;
     }
 
     /**
-     * Set Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
-     * @param EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     * Set <p>Preset ACL rule, 1: on 0: off, default is off</p>
+     * @param EnableAclRule <p>Preset ACL rule, 1: on 0: off, default is off</p>
      */
     public void setEnableAclRule(Long EnableAclRule) {
         this.EnableAclRule = EnableAclRule;
     }
 
     /**
-     * Get ACL rule name. 
-     * @return AclRuleName ACL rule name.
+     * Get <p>ACL rule name</p> 
+     * @return AclRuleName <p>ACL rule name</p>
      */
     public String getAclRuleName() {
         return this.AclRuleName;
     }
 
     /**
-     * Set ACL rule name.
-     * @param AclRuleName ACL rule name.
+     * Set <p>ACL rule name</p>
+     * @param AclRuleName <p>ACL rule name</p>
      */
     public void setAclRuleName(String AclRuleName) {
         this.AclRuleName = AclRuleName;
     }
 
     /**
-     * Get Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B. 
-     * @return RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     * Get <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p> 
+     * @return RetentionBytes <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
      */
     public Long getRetentionBytes() {
         return this.RetentionBytes;
     }
 
     /**
-     * Set Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
-     * @param RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     * Set <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
+     * @param RetentionBytes <p>Option, retain file size</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Bytes</p><p>Default value: -1</p><p>Special value: -1 indicates unlimited</p>
      */
     public void setRetentionBytes(Long RetentionBytes) {
         this.RetentionBytes = RetentionBytes;
     }
 
     /**
-     * Get Tag list. 
-     * @return Tags Tag list.
+     * Get <p>Tag list</p> 
+     * @return Tags <p>Tag list</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag list.
-     * @param Tags Tag list.
+     * Set <p>Tag list</p>
+     * @param Tags <p>Tag list</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Production traffic throttling in MB/s. set to -1 to disable throttling. 
-     * @return QuotaProducerByteRate Production traffic throttling in MB/s. set to -1 to disable throttling.
+     * Get <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p> 
+     * @return QuotaProducerByteRate <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
      */
     public Long getQuotaProducerByteRate() {
         return this.QuotaProducerByteRate;
     }
 
     /**
-     * Set Production traffic throttling in MB/s. set to -1 to disable throttling.
-     * @param QuotaProducerByteRate Production traffic throttling in MB/s. set to -1 to disable throttling.
+     * Set <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
+     * @param QuotaProducerByteRate <p>Production traffic throttling in MB/s. Set to -1 for unlimited production traffic throttling.</p>
      */
     public void setQuotaProducerByteRate(Long QuotaProducerByteRate) {
         this.QuotaProducerByteRate = QuotaProducerByteRate;
     }
 
     /**
-     * Get Consumption traffic throttling in MB/s. set to -1 for unlimited consumption. 
-     * @return QuotaConsumerByteRate Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+     * Get <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p> 
+     * @return QuotaConsumerByteRate <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
      */
     public Long getQuotaConsumerByteRate() {
         return this.QuotaConsumerByteRate;
     }
 
     /**
-     * Set Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
-     * @param QuotaConsumerByteRate Consumption traffic throttling in MB/s. set to -1 for unlimited consumption.
+     * Set <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
+     * @param QuotaConsumerByteRate <p>Consumption throttling, unit MB/s; set to -1 for unlimited consumption throttling.</p>
      */
     public void setQuotaConsumerByteRate(Long QuotaConsumerByteRate) {
         this.QuotaConsumerByteRate = QuotaConsumerByteRate;
     }
 
     /**
-     * Get Number of topic replicas. valid values: 1, 3. 
-     * @return ReplicaNum Number of topic replicas. valid values: 1, 3.
+     * Get <p>topic replica count Minimum value: 1, Maximum value: 3</p> 
+     * @return ReplicaNum <p>topic replica count Minimum value: 1, Maximum value: 3</p>
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
     }
 
     /**
-     * Set Number of topic replicas. valid values: 1, 3.
-     * @param ReplicaNum Number of topic replicas. valid values: 1, 3.
+     * Set <p>topic replica count Minimum value: 1, Maximum value: 3</p>
+     * @param ReplicaNum <p>topic replica count Minimum value: 1, Maximum value: 3</p>
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;
     }
 
     /**
-     * Get Specifies the time type for message saving: CreateTime/LogAppendTime. 
-     * @return LogMsgTimestampType Specifies the time type for message saving: CreateTime/LogAppendTime.
+     * Get <p>Time type for message saving: CreateTime/LogAppendTime</p> 
+     * @return LogMsgTimestampType <p>Time type for message saving: CreateTime/LogAppendTime</p>
      */
     public String getLogMsgTimestampType() {
         return this.LogMsgTimestampType;
     }
 
     /**
-     * Set Specifies the time type for message saving: CreateTime/LogAppendTime.
-     * @param LogMsgTimestampType Specifies the time type for message saving: CreateTime/LogAppendTime.
+     * Set <p>Time type for message saving: CreateTime/LogAppendTime</p>
+     * @param LogMsgTimestampType <p>Time type for message saving: CreateTime/LogAppendTime</p>
      */
     public void setLogMsgTimestampType(String LogMsgTimestampType) {
         this.LogMsgTimestampType = LogMsgTimestampType;

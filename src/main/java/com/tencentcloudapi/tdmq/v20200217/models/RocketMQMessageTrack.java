@@ -59,6 +59,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ExceptionDesc;
 
     /**
+    * Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
+    */
+    @SerializedName("ConsumeStatusSource")
+    @Expose
+    private String ConsumeStatusSource;
+
+    /**
      * Get Consumer group 
      * @return Group Consumer group
      */
@@ -150,6 +160,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.ExceptionDesc = ExceptionDesc;
     }
 
+    /**
+     * Get Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path. 
+     * @return ConsumeStatusSource Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
+     */
+    public String getConsumeStatusSource() {
+        return this.ConsumeStatusSource;
+    }
+
+    /**
+     * Set Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
+     * @param ConsumeStatusSource Consumption status source. The enumeration values are as follows:
+
+-DIFF_OFFSET: Calculate by server offset
+-TRACE_REPORT: Judge by the reported path.
+     */
+    public void setConsumeStatusSource(String ConsumeStatusSource) {
+        this.ConsumeStatusSource = ConsumeStatusSource;
+    }
+
     public RocketMQMessageTrack() {
     }
 
@@ -170,6 +208,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ExceptionDesc != null) {
             this.ExceptionDesc = new String(source.ExceptionDesc);
         }
+        if (source.ConsumeStatusSource != null) {
+            this.ConsumeStatusSource = new String(source.ConsumeStatusSource);
+        }
     }
 
 
@@ -181,6 +222,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ConsumeStatus", this.ConsumeStatus);
         this.setParamSimple(map, prefix + "TrackType", this.TrackType);
         this.setParamSimple(map, prefix + "ExceptionDesc", this.ExceptionDesc);
+        this.setParamSimple(map, prefix + "ConsumeStatusSource", this.ConsumeStatusSource);
 
     }
 }

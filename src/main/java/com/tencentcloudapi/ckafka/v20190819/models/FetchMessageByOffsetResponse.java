@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FetchMessageByOffsetResponse extends AbstractModel {
 
     /**
-    * Returned results
+    * <p>Returned result</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class FetchMessageByOffsetResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Returned results 
-     * @return Result Returned results
+     * Get <p>Returned result</p> 
+     * @return Result <p>Returned result</p>
      */
     public ConsumerRecord getResult() {
         return this.Result;
     }
 
     /**
-     * Set Returned results
-     * @param Result Returned results
+     * Set <p>Returned result</p>
+     * @param Result <p>Returned result</p>
      */
     public void setResult(ConsumerRecord Result) {
         this.Result = Result;

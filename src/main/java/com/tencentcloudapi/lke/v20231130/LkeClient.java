@@ -83,17 +83,6 @@ public class LkeClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create enterprises.
-     * @param req CreateCorpRequest
-     * @return CreateCorpResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateCorpResponse CreateCorp(CreateCorpRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateCorp", CreateCorpResponse.class);
-    }
-
-    /**
      *This API is used to create doc categories.
      * @param req CreateDocCateRequest
      * @return CreateDocCateResponse
@@ -124,19 +113,6 @@ public class LkeClient extends AbstractClient{
     public CreateQACateResponse CreateQACate(CreateQACateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateQACate", CreateQACateResponse.class);
-    }
-
-    /**
-     *This API is used to initiate requests for this asynchronous API, for initiating document parsing tasks.
-Document parsing supports converting images or PDF files into Markdown format files, and can parse content elements including tables, formulas, images, headings, paragraphs, headers, and footers, and intelligently convert the content into reading order.
-During the trial period, the QPS limit for a single account is only 1. If you need to access officially, please contact our R&D team.
-     * @param req CreateReconstructDocumentFlowRequest
-     * @return CreateReconstructDocumentFlowResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateReconstructDocumentFlowResponse CreateReconstructDocumentFlow(CreateReconstructDocumentFlowRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateReconstructDocumentFlow", CreateReconstructDocumentFlowResponse.class);
     }
 
     /**
@@ -291,17 +267,6 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     public DescribeConcurrencyUsageGraphResponse DescribeConcurrencyUsageGraph(DescribeConcurrencyUsageGraphRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeConcurrencyUsageGraph", DescribeConcurrencyUsageGraphResponse.class);
-    }
-
-    /**
-     *This API is used to query corporate details.
-     * @param req DescribeCorpRequest
-     * @return DescribeCorpResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeCorpResponse DescribeCorp(DescribeCorpRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeCorp", DescribeCorpResponse.class);
     }
 
     /**
@@ -569,17 +534,6 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     }
 
     /**
-     *This is an asynchronous APIs, used to get document parsing task results.
-     * @param req GetReconstructDocumentResultRequest
-     * @return GetReconstructDocumentResultResponse
-     * @throws TencentCloudSDKException
-     */
-    public GetReconstructDocumentResultResponse GetReconstructDocumentResult(GetReconstructDocumentResultRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "GetReconstructDocumentResult", GetReconstructDocumentResultResponse.class);
-    }
-
-    /**
      *This API is used to get the task status.
      * @param req GetTaskStatusRequest
      * @return GetTaskStatusResponse
@@ -635,6 +589,17 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     }
 
     /**
+     *This API is used to determine whether to transfer to human service.
+     * @param req IsTransferIntentRequest
+     * @return IsTransferIntentResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsTransferIntentResponse IsTransferIntent(IsTransferIntentRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IsTransferIntent", IsTransferIntentResponse.class);
+    }
+
+    /**
      *This API is used to get the application list under the corporate.
      * @param req ListAppRequest
      * @return ListAppResponse
@@ -643,17 +608,6 @@ During the trial period, the QPS limit for a single account is only 1. If you ne
     public ListAppResponse ListApp(ListAppRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ListApp", ListAppResponse.class);
-    }
-
-    /**
-     *This API is used to get list of application types.
-     * @param req ListAppCategoryRequest
-     * @return ListAppCategoryResponse
-     * @throws TencentCloudSDKException
-     */
-    public ListAppCategoryResponse ListAppCategory(ListAppCategoryRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "ListAppCategory", ListAppCategoryResponse.class);
     }
 
     /**

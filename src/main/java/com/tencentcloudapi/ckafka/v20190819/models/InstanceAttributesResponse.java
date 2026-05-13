@@ -283,7 +283,7 @@ public class InstanceAttributesResponse extends AbstractModel {
     private Long MaxMessageByte;
 
     /**
-    * <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+    * <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -344,6 +344,20 @@ public class InstanceAttributesResponse extends AbstractModel {
     @SerializedName("DeleteProtectionEnable")
     @Expose
     private Long DeleteProtectionEnable;
+
+    /**
+    * <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+    */
+    @SerializedName("RetentionBytes")
+    @Expose
+    private Long RetentionBytes;
+
+    /**
+    * <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+    */
+    @SerializedName("TransactionalIdExpirationMs")
+    @Expose
+    private Long TransactionalIdExpirationMs;
 
     /**
      * Get <p>ckafka cluster instance Id.</p>. 
@@ -938,16 +952,16 @@ public class InstanceAttributesResponse extends AbstractModel {
     }
 
     /**
-     * Get <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>. 
-     * @return InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+     * Get <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>. 
+     * @return InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
-     * @param InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: annual/monthly package.</p>.
+     * Set <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
+     * @param InstanceChargeType <p>Specifies the instance billing type. POSTPAID_BY_HOUR: hourly billing; PREPAID: yearly/monthly subscription.</p>.
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
@@ -1079,6 +1093,38 @@ public class InstanceAttributesResponse extends AbstractModel {
      */
     public void setDeleteProtectionEnable(Long DeleteProtectionEnable) {
         this.DeleteProtectionEnable = DeleteProtectionEnable;
+    }
+
+    /**
+     * Get <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1 
+     * @return RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+     */
+    public Long getRetentionBytes() {
+        return this.RetentionBytes;
+    }
+
+    /**
+     * Set <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+     * @param RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+     */
+    public void setRetentionBytes(Long RetentionBytes) {
+        this.RetentionBytes = RetentionBytes;
+    }
+
+    /**
+     * Get <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms 
+     * @return TransactionalIdExpirationMs <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+     */
+    public Long getTransactionalIdExpirationMs() {
+        return this.TransactionalIdExpirationMs;
+    }
+
+    /**
+     * Set <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+     * @param TransactionalIdExpirationMs <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+     */
+    public void setTransactionalIdExpirationMs(Long TransactionalIdExpirationMs) {
+        this.TransactionalIdExpirationMs = TransactionalIdExpirationMs;
     }
 
     public InstanceAttributesResponse() {
@@ -1239,6 +1285,12 @@ public class InstanceAttributesResponse extends AbstractModel {
         if (source.DeleteProtectionEnable != null) {
             this.DeleteProtectionEnable = new Long(source.DeleteProtectionEnable);
         }
+        if (source.RetentionBytes != null) {
+            this.RetentionBytes = new Long(source.RetentionBytes);
+        }
+        if (source.TransactionalIdExpirationMs != null) {
+            this.TransactionalIdExpirationMs = new Long(source.TransactionalIdExpirationMs);
+        }
     }
 
 
@@ -1292,6 +1344,8 @@ public class InstanceAttributesResponse extends AbstractModel {
         this.setParamSimple(map, prefix + "CustomCertId", this.CustomCertId);
         this.setParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
         this.setParamSimple(map, prefix + "DeleteProtectionEnable", this.DeleteProtectionEnable);
+        this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
+        this.setParamSimple(map, prefix + "TransactionalIdExpirationMs", this.TransactionalIdExpirationMs);
 
     }
 }

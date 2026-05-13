@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class VirtualHostQuota extends AbstractModel {
 
     /**
-    * Maximum number of vhosts allowed to be created
+    * 
     */
     @SerializedName("MaxVirtualHost")
     @Expose
@@ -59,16 +59,16 @@ public class VirtualHostQuota extends AbstractModel {
     private Long MaxQueuePerVhost;
 
     /**
-     * Get Maximum number of vhosts allowed to be created 
-     * @return MaxVirtualHost Maximum number of vhosts allowed to be created
+     * Get  
+     * @return MaxVirtualHost 
      */
     public Long getMaxVirtualHost() {
         return this.MaxVirtualHost;
     }
 
     /**
-     * Set Maximum number of vhosts allowed to be created
-     * @param MaxVirtualHost Maximum number of vhosts allowed to be created
+     * Set 
+     * @param MaxVirtualHost 
      */
     public void setMaxVirtualHost(Long MaxVirtualHost) {
         this.MaxVirtualHost = MaxVirtualHost;

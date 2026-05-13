@@ -45,7 +45,10 @@ public class DetailedRolePerm extends AbstractModel {
     private Boolean PermRead;
 
     /**
-    * Authorized resource type (Topic: topic; Group: consumer group).
+    * Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
     */
     @SerializedName("ResourceType")
     @Expose
@@ -107,16 +110,28 @@ public class DetailedRolePerm extends AbstractModel {
     }
 
     /**
-     * Get Authorized resource type (Topic: topic; Group: consumer group). 
-     * @return ResourceType Authorized resource type (Topic: topic; Group: consumer group).
+     * Get Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value) 
+     * @return ResourceType Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
      */
     public String getResourceType() {
         return this.ResourceType;
     }
 
     /**
-     * Set Authorized resource type (Topic: topic; Group: consumer group).
-     * @param ResourceType Authorized resource type (Topic: topic; Group: consumer group).
+     * Set Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
+     * @param ResourceType Authorized resource type. Enumeration values are as follows:
+-Topic: Topic dimension
+-Group: Consumer group dimension
+-Cluster: cluster-level (default value)
      */
     public void setResourceType(String ResourceType) {
         this.ResourceType = ResourceType;

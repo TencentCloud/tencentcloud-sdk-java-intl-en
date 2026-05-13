@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteDiskBackupsRequest extends AbstractModel {
 
     /**
-    * ID of the cloud disk backup point to be deleted.
+    * Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
     */
     @SerializedName("DiskBackupIds")
     @Expose
     private String [] DiskBackupIds;
 
     /**
-     * Get ID of the cloud disk backup point to be deleted. 
-     * @return DiskBackupIds ID of the cloud disk backup point to be deleted.
+     * Get Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api. 
+     * @return DiskBackupIds Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
      */
     public String [] getDiskBackupIds() {
         return this.DiskBackupIds;
     }
 
     /**
-     * Set ID of the cloud disk backup point to be deleted.
-     * @param DiskBackupIds ID of the cloud disk backup point to be deleted.
+     * Set Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
+     * @param DiskBackupIds Cloud disk backup point ID to be deleted. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
      */
     public void setDiskBackupIds(String [] DiskBackupIds) {
         this.DiskBackupIds = DiskBackupIds;

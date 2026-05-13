@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel {
 
     /**
-    * Scheduled snapshot policy ID.
+    * Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
     private String AutoSnapshotPolicyId;
 
     /**
-    * Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
+    * Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
     */
     @SerializedName("IsActivated")
     @Expose
     private Boolean IsActivated;
 
     /**
-    * Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+    * Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
     */
     @SerializedName("IsPermanent")
     @Expose
@@ -66,48 +66,48 @@ public class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel {
     private Long RetentionDays;
 
     /**
-     * Get Scheduled snapshot policy ID. 
-     * @return AutoSnapshotPolicyId Scheduled snapshot policy ID.
+     * Get Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1). 
+     * @return AutoSnapshotPolicyId Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set Scheduled snapshot policy ID.
-     * @param AutoSnapshotPolicyId Scheduled snapshot policy ID.
+     * Set Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
+     * @param AutoSnapshotPolicyId Specifies the scheduled snapshot policy ID. query via the describeautosnapshotpolicies API (https://www.tencentcloud.com/document/product/362/33556?from_cn_redirect=1).
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
     /**
-     * Get Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE. 
-     * @return IsActivated Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
+     * Get Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`. 
+     * @return IsActivated Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
      */
     public Boolean getIsActivated() {
         return this.IsActivated;
     }
 
     /**
-     * Set Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
-     * @param IsActivated Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
+     * Set Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
+     * @param IsActivated Whether the periodic snapshot policy is activated. `false` means inactive, `true` means active. defaults to `true`.
      */
     public void setIsActivated(Boolean IsActivated) {
         this.IsActivated = IsActivated;
     }
 
     /**
-     * Get Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE. 
-     * @return IsPermanent Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+     * Get Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`. 
+     * @return IsPermanent Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
      */
     public Boolean getIsPermanent() {
         return this.IsPermanent;
     }
 
     /**
-     * Set Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
-     * @param IsPermanent Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
+     * Set Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
+     * @param IsPermanent Indicates whether snapshots created by the regular snapshot policy are retained permanently. `false` means the snapshots are not retained permanently, `true` means permanent retention. defaults to `false`.
      */
     public void setIsPermanent(Boolean IsPermanent) {
         this.IsPermanent = IsPermanent;

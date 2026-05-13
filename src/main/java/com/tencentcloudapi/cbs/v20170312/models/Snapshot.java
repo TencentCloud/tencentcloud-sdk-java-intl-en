@@ -31,21 +31,37 @@ public class Snapshot extends AbstractModel {
     private Placement Placement;
 
     /**
-    * Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
+    * Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
     */
     @SerializedName("CopyFromRemote")
     @Expose
     private Boolean CopyFromRemote;
 
     /**
-    * Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
+    * Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
     */
     @SerializedName("SnapshotState")
     @Expose
     private String SnapshotState;
 
     /**
-    * Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
+    * Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
     */
     @SerializedName("IsPermanent")
     @Expose
@@ -87,14 +103,14 @@ public class Snapshot extends AbstractModel {
     private Long ShareReference;
 
     /**
-    * Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
+    * Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
     */
     @SerializedName("SnapshotType")
     @Expose
     private String SnapshotType;
 
     /**
-    * Size of the cloud disk used to create this snapshot (in GB).
+    * Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
     */
     @SerializedName("DiskSize")
     @Expose
@@ -108,14 +124,18 @@ public class Snapshot extends AbstractModel {
     private String DiskId;
 
     /**
-    * The destination region to which the snapshot is being replicated. Default value is [ ].
+    * Destination region of the snapshot currently under cross region replication. if not, return `[]`.
     */
     @SerializedName("CopyingToRegions")
     @Expose
     private String [] CopyingToRegions;
 
     /**
-    * Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
+    * Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
     */
     @SerializedName("Encrypt")
     @Expose
@@ -136,7 +156,12 @@ public class Snapshot extends AbstractModel {
     private Long ImageCount;
 
     /**
-    * The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+    * Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
     */
     @SerializedName("DiskUsage")
     @Expose
@@ -180,48 +205,112 @@ public class Snapshot extends AbstractModel {
     }
 
     /**
-     * Get Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region. 
-     * @return CopyFromRemote Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
+     * Get Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul> 
+     * @return CopyFromRemote Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
      */
     public Boolean getCopyFromRemote() {
         return this.CopyFromRemote;
     }
 
     /**
-     * Set Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
-     * @param CopyFromRemote Whether the snapshot is replicated across regions. Value range: <br><li>true: Indicates that the snapshot is replicated across regions. <br><li>false: Indicates that the snapshot belongs to the local region.
+     * Set Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
+     * @param CopyFromRemote Specifies whether the snapshot is for cross-region replication. value range:.
+<ul>
+<li>true: indicates a snapshot for cross-region replication.</li>.
+<li>false: snapshot of the local region.</li>.
+</ul>
      */
     public void setCopyFromRemote(Boolean CopyFromRemote) {
         this.CopyFromRemote = CopyFromRemote;
     }
 
     /**
-     * Get Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed. 
-     * @return SnapshotState Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
+     * Get Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul> 
+     * @return SnapshotState Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
      */
     public String getSnapshotState() {
         return this.SnapshotState;
     }
 
     /**
-     * Set Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
-     * @param SnapshotState Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
+     * Set Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
+     * @param SnapshotState Snapshot status. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is normal.</li>.
+<Li>CREATING: creating</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+<Li>COPYING_FROM_REMOTE: cross geo-replication in progress.</li>.
+<Li>CHECKING_COPIED: copying check in progress.</li>.
+<Li>TORECYCLE: to be recycled.</li>.
+</ul>
      */
     public void setSnapshotState(String SnapshotState) {
         this.SnapshotState = SnapshotState;
     }
 
     /**
-     * Get Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot. 
-     * @return IsPermanent Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
+     * Get Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul> 
+     * @return IsPermanent Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
      */
     public Boolean getIsPermanent() {
         return this.IsPermanent;
     }
 
     /**
-     * Set Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
-     * @param IsPermanent Whether it is a permanent snapshot. Value range: <br><li>true: Permanent snapshot <br><li>false: Non-permanent snapshot.
+     * Set Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
+     * @param IsPermanent Whether it is a permanent snapshot. valid values:.
+<ul>
+<li>true: permanent snapshot.</li>.
+<li>false: non-permanent snapshot.</li>.
+</ul>
      */
     public void setIsPermanent(Boolean IsPermanent) {
         this.IsPermanent = IsPermanent;
@@ -308,32 +397,32 @@ public class Snapshot extends AbstractModel {
     }
 
     /**
-     * Get Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT. 
-     * @return SnapshotType Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
+     * Get Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT). 
+     * @return SnapshotType Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
      */
     public String getSnapshotType() {
         return this.SnapshotType;
     }
 
     /**
-     * Set Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
-     * @param SnapshotType Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
+     * Set Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
+     * @param SnapshotType Specifies the SNAPSHOT type. valid values: `PRIVATE_SNAPSHOT` (PRIVATE SNAPSHOT) or `SHARED_SNAPSHOT` (SHARED SNAPSHOT).
      */
     public void setSnapshotType(String SnapshotType) {
         this.SnapshotType = SnapshotType;
     }
 
     /**
-     * Get Size of the cloud disk used to create this snapshot (in GB). 
-     * @return DiskSize Size of the cloud disk used to create this snapshot (in GB).
+     * Get Specifies the disk capacity of the CBS for creating this snapshot, in GiB. 
+     * @return DiskSize Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Size of the cloud disk used to create this snapshot (in GB).
-     * @param DiskSize Size of the cloud disk used to create this snapshot (in GB).
+     * Set Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
+     * @param DiskSize Specifies the disk capacity of the CBS for creating this snapshot, in GiB.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
@@ -356,32 +445,48 @@ public class Snapshot extends AbstractModel {
     }
 
     /**
-     * Get The destination region to which the snapshot is being replicated. Default value is [ ]. 
-     * @return CopyingToRegions The destination region to which the snapshot is being replicated. Default value is [ ].
+     * Get Destination region of the snapshot currently under cross region replication. if not, return `[]`. 
+     * @return CopyingToRegions Destination region of the snapshot currently under cross region replication. if not, return `[]`.
      */
     public String [] getCopyingToRegions() {
         return this.CopyingToRegions;
     }
 
     /**
-     * Set The destination region to which the snapshot is being replicated. Default value is [ ].
-     * @param CopyingToRegions The destination region to which the snapshot is being replicated. Default value is [ ].
+     * Set Destination region of the snapshot currently under cross region replication. if not, return `[]`.
+     * @param CopyingToRegions Destination region of the snapshot currently under cross region replication. if not, return `[]`.
      */
     public void setCopyingToRegions(String [] CopyingToRegions) {
         this.CopyingToRegions = CopyingToRegions;
     }
 
     /**
-     * Get Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No. 
-     * @return Encrypt Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
+     * Get Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul> 
+     * @return Encrypt Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
      */
     public Boolean getEncrypt() {
         return this.Encrypt;
     }
 
     /**
-     * Set Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
-     * @param Encrypt Whether the snapshot is created from an encrypted disk. Value range: <br><li>true: Yes <br><li>false: No.
+     * Set Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
+     * @param Encrypt Indicates whether the snapshot is created for an encrypted disk. valid values:.
+<ul>
+<li>true: specifies the snapshot is created by encrypted disks.</li>.
+<li>false: snapshot created for non-encrypted disk.</li>.
+</ul>
      */
     public void setEncrypt(Boolean Encrypt) {
         this.Encrypt = Encrypt;
@@ -420,16 +525,36 @@ public class Snapshot extends AbstractModel {
     }
 
     /**
-     * Get The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk. 
-     * @return DiskUsage The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+     * Get Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+ 
+     * @return DiskUsage Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
      */
     public String getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-     * @param DiskUsage The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+     * Set Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
+     * @param DiskUsage Specifies the cloud disk type of the CBS for creating this snapshot. valid values:.
+<ul>
+<Li>SYSTEM_DISK: system disk</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+</ul>
+
      */
     public void setDiskUsage(String DiskUsage) {
         this.DiskUsage = DiskUsage;

@@ -101,8 +101,7 @@ public class DBBackup extends AbstractModel {
     private String ExternalAddr;
 
     /**
-    * Backup set ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Backup set ID.
     */
     @SerializedName("SetId")
     @Expose
@@ -285,20 +284,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Backup set ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SetId Backup set ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Backup set ID. 
+     * @return SetId Backup set ID.
      */
     public String getSetId() {
         return this.SetId;
     }
 
     /**
-     * Set Backup set ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SetId Backup set ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Backup set ID.
+     * @param SetId Backup set ID.
      */
     public void setSetId(String SetId) {
         this.SetId = SetId;

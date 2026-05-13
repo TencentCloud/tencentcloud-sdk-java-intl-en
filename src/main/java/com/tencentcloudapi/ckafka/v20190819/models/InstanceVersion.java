@@ -24,141 +24,164 @@ import java.util.HashMap;
 public class InstanceVersion extends AbstractModel {
 
     /**
-    * CKafka cluster instance version.
+    * <p>ckafka cluster instance version</p>
     */
     @SerializedName("KafkaVersion")
     @Expose
     private String KafkaVersion;
 
     /**
-    * Broker version information.
+    * <p>broker version info</p>
     */
     @SerializedName("CurBrokerVersion")
     @Expose
     private String CurBrokerVersion;
 
     /**
-    * Latest version information.
+    * <p>latest version info</p>
     */
     @SerializedName("LatestBrokerVersion")
     @Expose
     private LatestBrokerVersion [] LatestBrokerVersion;
 
     /**
-    * Whether to allow kernel upgrades across major versions.
+    * <p>Permission for cross-major version kernel upgrade</p>
     */
     @SerializedName("AllowUpgradeHighVersion")
     @Expose
     private Boolean AllowUpgradeHighVersion;
 
     /**
-    * Major version allowed for upgrades.
+    * <p>Permission for major version upgrade</p>
     */
     @SerializedName("HighVersionSet")
     @Expose
     private String [] HighVersionSet;
 
     /**
-    * Whether to allow automatic deletion of consumer groups during minor version configuration.
+    * <p>Permission to configure auto deletion of consumer group for minor version number</p>
     */
     @SerializedName("AllowAutoDeleteTimestamp")
     @Expose
     private Boolean AllowAutoDeleteTimestamp;
 
     /**
-     * Get CKafka cluster instance version. 
-     * @return KafkaVersion CKafka cluster instance version.
+    * <p>Allow the modification of transaction ID expiration time configuration</p>
+    */
+    @SerializedName("AllowModifyTxnIdExpiration")
+    @Expose
+    private Boolean AllowModifyTxnIdExpiration;
+
+    /**
+     * Get <p>ckafka cluster instance version</p> 
+     * @return KafkaVersion <p>ckafka cluster instance version</p>
      */
     public String getKafkaVersion() {
         return this.KafkaVersion;
     }
 
     /**
-     * Set CKafka cluster instance version.
-     * @param KafkaVersion CKafka cluster instance version.
+     * Set <p>ckafka cluster instance version</p>
+     * @param KafkaVersion <p>ckafka cluster instance version</p>
      */
     public void setKafkaVersion(String KafkaVersion) {
         this.KafkaVersion = KafkaVersion;
     }
 
     /**
-     * Get Broker version information. 
-     * @return CurBrokerVersion Broker version information.
+     * Get <p>broker version info</p> 
+     * @return CurBrokerVersion <p>broker version info</p>
      */
     public String getCurBrokerVersion() {
         return this.CurBrokerVersion;
     }
 
     /**
-     * Set Broker version information.
-     * @param CurBrokerVersion Broker version information.
+     * Set <p>broker version info</p>
+     * @param CurBrokerVersion <p>broker version info</p>
      */
     public void setCurBrokerVersion(String CurBrokerVersion) {
         this.CurBrokerVersion = CurBrokerVersion;
     }
 
     /**
-     * Get Latest version information. 
-     * @return LatestBrokerVersion Latest version information.
+     * Get <p>latest version info</p> 
+     * @return LatestBrokerVersion <p>latest version info</p>
      */
     public LatestBrokerVersion [] getLatestBrokerVersion() {
         return this.LatestBrokerVersion;
     }
 
     /**
-     * Set Latest version information.
-     * @param LatestBrokerVersion Latest version information.
+     * Set <p>latest version info</p>
+     * @param LatestBrokerVersion <p>latest version info</p>
      */
     public void setLatestBrokerVersion(LatestBrokerVersion [] LatestBrokerVersion) {
         this.LatestBrokerVersion = LatestBrokerVersion;
     }
 
     /**
-     * Get Whether to allow kernel upgrades across major versions. 
-     * @return AllowUpgradeHighVersion Whether to allow kernel upgrades across major versions.
+     * Get <p>Permission for cross-major version kernel upgrade</p> 
+     * @return AllowUpgradeHighVersion <p>Permission for cross-major version kernel upgrade</p>
      */
     public Boolean getAllowUpgradeHighVersion() {
         return this.AllowUpgradeHighVersion;
     }
 
     /**
-     * Set Whether to allow kernel upgrades across major versions.
-     * @param AllowUpgradeHighVersion Whether to allow kernel upgrades across major versions.
+     * Set <p>Permission for cross-major version kernel upgrade</p>
+     * @param AllowUpgradeHighVersion <p>Permission for cross-major version kernel upgrade</p>
      */
     public void setAllowUpgradeHighVersion(Boolean AllowUpgradeHighVersion) {
         this.AllowUpgradeHighVersion = AllowUpgradeHighVersion;
     }
 
     /**
-     * Get Major version allowed for upgrades. 
-     * @return HighVersionSet Major version allowed for upgrades.
+     * Get <p>Permission for major version upgrade</p> 
+     * @return HighVersionSet <p>Permission for major version upgrade</p>
      */
     public String [] getHighVersionSet() {
         return this.HighVersionSet;
     }
 
     /**
-     * Set Major version allowed for upgrades.
-     * @param HighVersionSet Major version allowed for upgrades.
+     * Set <p>Permission for major version upgrade</p>
+     * @param HighVersionSet <p>Permission for major version upgrade</p>
      */
     public void setHighVersionSet(String [] HighVersionSet) {
         this.HighVersionSet = HighVersionSet;
     }
 
     /**
-     * Get Whether to allow automatic deletion of consumer groups during minor version configuration. 
-     * @return AllowAutoDeleteTimestamp Whether to allow automatic deletion of consumer groups during minor version configuration.
+     * Get <p>Permission to configure auto deletion of consumer group for minor version number</p> 
+     * @return AllowAutoDeleteTimestamp <p>Permission to configure auto deletion of consumer group for minor version number</p>
      */
     public Boolean getAllowAutoDeleteTimestamp() {
         return this.AllowAutoDeleteTimestamp;
     }
 
     /**
-     * Set Whether to allow automatic deletion of consumer groups during minor version configuration.
-     * @param AllowAutoDeleteTimestamp Whether to allow automatic deletion of consumer groups during minor version configuration.
+     * Set <p>Permission to configure auto deletion of consumer group for minor version number</p>
+     * @param AllowAutoDeleteTimestamp <p>Permission to configure auto deletion of consumer group for minor version number</p>
      */
     public void setAllowAutoDeleteTimestamp(Boolean AllowAutoDeleteTimestamp) {
         this.AllowAutoDeleteTimestamp = AllowAutoDeleteTimestamp;
+    }
+
+    /**
+     * Get <p>Allow the modification of transaction ID expiration time configuration</p> 
+     * @return AllowModifyTxnIdExpiration <p>Allow the modification of transaction ID expiration time configuration</p>
+     */
+    public Boolean getAllowModifyTxnIdExpiration() {
+        return this.AllowModifyTxnIdExpiration;
+    }
+
+    /**
+     * Set <p>Allow the modification of transaction ID expiration time configuration</p>
+     * @param AllowModifyTxnIdExpiration <p>Allow the modification of transaction ID expiration time configuration</p>
+     */
+    public void setAllowModifyTxnIdExpiration(Boolean AllowModifyTxnIdExpiration) {
+        this.AllowModifyTxnIdExpiration = AllowModifyTxnIdExpiration;
     }
 
     public InstanceVersion() {
@@ -193,6 +216,9 @@ public class InstanceVersion extends AbstractModel {
         if (source.AllowAutoDeleteTimestamp != null) {
             this.AllowAutoDeleteTimestamp = new Boolean(source.AllowAutoDeleteTimestamp);
         }
+        if (source.AllowModifyTxnIdExpiration != null) {
+            this.AllowModifyTxnIdExpiration = new Boolean(source.AllowModifyTxnIdExpiration);
+        }
     }
 
 
@@ -206,6 +232,7 @@ public class InstanceVersion extends AbstractModel {
         this.setParamSimple(map, prefix + "AllowUpgradeHighVersion", this.AllowUpgradeHighVersion);
         this.setParamArraySimple(map, prefix + "HighVersionSet.", this.HighVersionSet);
         this.setParamSimple(map, prefix + "AllowAutoDeleteTimestamp", this.AllowAutoDeleteTimestamp);
+        this.setParamSimple(map, prefix + "AllowModifyTxnIdExpiration", this.AllowModifyTxnIdExpiration);
 
     }
 }

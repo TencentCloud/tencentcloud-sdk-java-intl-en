@@ -72,6 +72,9 @@ public enum CbsErrorCode {
      /* The size of the cloud disk does not match the snapshot size. */
      INVALIDPARAMETER_DISKSIZENOTMATCH("InvalidParameter.DiskSizeNotMatch"),
      
+     /* ClientToken is unavailable. */
+     INVALIDPARAMETER_INVALIDCLIENTTOKEN("InvalidParameter.InvalidClientToken"),
+     
      /* The project ID does not exist. */
      INVALIDPARAMETER_PROJECTIDNOTEXIST("InvalidParameter.ProjectIdNotExist"),
      
@@ -98,6 +101,9 @@ public enum CbsErrorCode {
      
      /* Number of instances mounted to cloud disk exceeds the limit. */
      LIMITEXCEEDED_INSTANCEATTACHEDDISK("LimitExceeded.InstanceAttachedDisk"),
+     
+     /* HTTP calls to the Tag service exceed the frequency limit. */
+     LIMITEXCEEDED_TAGQUOTALIMITEXCEEDED("LimitExceeded.TagQuotaLimitExceeded"),
      
      /* Missing parameter. */
      MISSINGPARAMETER("MissingParameter"),
@@ -126,6 +132,9 @@ public enum CbsErrorCode {
      /* The number of returned cloud disks has reached the limit and no more cloud disks can be returned. */
      RESOURCEINSUFFICIENT_OVERREFUNDQUOTA("ResourceInsufficient.OverRefundQuota"),
      
+     /* Cloud block storage upgrade service is busy. please retry later. */
+     RESOURCEINSUFFICIENT_UPGRADESERVICEBUSY("ResourceInsufficient.UpgradeServiceBusy"),
+     
      /* The resource does not exist. */
      RESOURCENOTFOUND("ResourceNotFound"),
      
@@ -137,6 +146,9 @@ public enum CbsErrorCode {
      
      /* The cloud disk has been mounted to another CVM. */
      RESOURCEUNAVAILABLE_ATTACHED("ResourceUnavailable.Attached"),
+     
+     /* The data backup point is not created and temporarily unavailable. */
+     RESOURCEUNAVAILABLE_DISKBACKUPCREATING("ResourceUnavailable.DiskBackupCreating"),
      
      /* The snapshot chain of the cloud disk is too long, so snapshot creation is refused. */
      RESOURCEUNAVAILABLE_DISKSNAPSHOTCHAINTOOLARGE("ResourceUnavailable.DiskSnapshotChainTooLarge"),
@@ -174,6 +186,9 @@ public enum CbsErrorCode {
      /* The operation is unauthorized. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
+     /* CAM authentication Token is unavailable. */
+     UNAUTHORIZEDOPERATION_INVALIDTOKEN("UnauthorizedOperation.InvalidToken"),
+     
      /* Multi-factor authentication (MFA) has expired. Please try again. */
      UNAUTHORIZEDOPERATION_MFAEXPIRED("UnauthorizedOperation.MFAExpired"),
      
@@ -200,6 +215,9 @@ public enum CbsErrorCode {
      
      /* The snapshot is shared with others. Please cancel the sharing first. */
      UNSUPPORTEDOPERATION_SNAPHASSHARED("UnsupportedOperation.SnapHasShared"),
+     
+     /* The original cloud disk of the snapshot in the snapshot group association is not mounted on the same instance. */
+     UNSUPPORTEDOPERATION_SNAPSHOTGROUPDISKATTACHMULTIINSTANCE("UnsupportedOperation.SnapshotGroupDiskAttachMultiInstance"),
      
      /* A custom snapshot was created for this snapshot. First delete the corresponding image.  */
      UNSUPPORTEDOPERATION_SNAPSHOTHASBINDEDIMAGE("UnsupportedOperation.SnapshotHasBindedImage"),

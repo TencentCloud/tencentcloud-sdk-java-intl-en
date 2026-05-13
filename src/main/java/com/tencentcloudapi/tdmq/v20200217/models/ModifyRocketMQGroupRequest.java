@@ -31,7 +31,7 @@ public class ModifyRocketMQGroupRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Namespace
+    * Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -89,16 +89,16 @@ public class ModifyRocketMQGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Namespace 
-     * @return NamespaceId Namespace
+     * Get Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default 
+     * @return NamespaceId Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set Namespace
-     * @param NamespaceId Namespace
+     * Set Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
+     * @param NamespaceId Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;

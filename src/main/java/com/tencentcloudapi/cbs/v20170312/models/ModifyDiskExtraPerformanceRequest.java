@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class ModifyDiskExtraPerformanceRequest extends AbstractModel {
 
     /**
-    * ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-    */
-    @SerializedName("DiskId")
-    @Expose
-    private String DiskId;
-
-    /**
-    * The extra throughput to purchase, in MB/s
+    * Specifies the hard disk performance of the additional CBS purchase in MiB/s.
     */
     @SerializedName("ThroughputPerformance")
     @Expose
     private Long ThroughputPerformance;
 
     /**
-     * Get ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. 
-     * @return DiskId ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-     */
-    public String getDiskId() {
-        return this.DiskId;
-    }
+    * The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+    */
+    @SerializedName("DiskId")
+    @Expose
+    private String DiskId;
 
     /**
-     * Set ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-     * @param DiskId ID of the cloud disk to create a snapshot, which can be obtained via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
-     */
-    public void setDiskId(String DiskId) {
-        this.DiskId = DiskId;
-    }
-
-    /**
-     * Get The extra throughput to purchase, in MB/s 
-     * @return ThroughputPerformance The extra throughput to purchase, in MB/s
+     * Get Specifies the hard disk performance of the additional CBS purchase in MiB/s. 
+     * @return ThroughputPerformance Specifies the hard disk performance of the additional CBS purchase in MiB/s.
      */
     public Long getThroughputPerformance() {
         return this.ThroughputPerformance;
     }
 
     /**
-     * Set The extra throughput to purchase, in MB/s
-     * @param ThroughputPerformance The extra throughput to purchase, in MB/s
+     * Set Specifies the hard disk performance of the additional CBS purchase in MiB/s.
+     * @param ThroughputPerformance Specifies the hard disk performance of the additional CBS purchase in MiB/s.
      */
     public void setThroughputPerformance(Long ThroughputPerformance) {
         this.ThroughputPerformance = ThroughputPerformance;
+    }
+
+    /**
+     * Get The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size. 
+     * @return DiskId The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+     */
+    public String getDiskId() {
+        return this.DiskId;
+    }
+
+    /**
+     * Set The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+     * @param DiskId The CLOUD disk ID for which extra performance needs to be purchased. it can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+     */
+    public void setDiskId(String DiskId) {
+        this.DiskId = DiskId;
     }
 
     public ModifyDiskExtraPerformanceRequest() {
@@ -77,11 +77,11 @@ public class ModifyDiskExtraPerformanceRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyDiskExtraPerformanceRequest(ModifyDiskExtraPerformanceRequest source) {
-        if (source.DiskId != null) {
-            this.DiskId = new String(source.DiskId);
-        }
         if (source.ThroughputPerformance != null) {
             this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
         }
     }
 
@@ -90,8 +90,8 @@ public class ModifyDiskExtraPerformanceRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
 
     }
 }

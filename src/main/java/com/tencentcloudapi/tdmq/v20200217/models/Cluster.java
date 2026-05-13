@@ -132,12 +132,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String PublicEndPoint;
 
     /**
+    * Old public network access point
+    */
+    @SerializedName("OldPublicEndPoint")
+    @Expose
+    private String OldPublicEndPoint;
+
+    /**
     * VPC access point
 Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VpcEndPoint")
     @Expose
     private String VpcEndPoint;
+
+    /**
+    * Old VPC access point
+    */
+    @SerializedName("OldVpcEndPoint")
+    @Expose
+    private String OldVpcEndPoint;
 
     /**
     * Number of namespaces
@@ -220,9 +234,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private Tag [] Tags;
 
     /**
+    * Old support network Pulsar access point
+    */
+    @SerializedName("OldInternalPulsarEndPoint")
+    @Expose
+    private String OldInternalPulsarEndPoint;
+
+    /**
+    * Old support network HTTP access point
+    */
+    @SerializedName("OldInternalHttpEndPoint")
+    @Expose
+    private String OldInternalHttpEndPoint;
+
+    /**
     * Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("PayMode")
@@ -505,6 +533,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Old public network access point 
+     * @return OldPublicEndPoint Old public network access point
+     */
+    public String getOldPublicEndPoint() {
+        return this.OldPublicEndPoint;
+    }
+
+    /**
+     * Set Old public network access point
+     * @param OldPublicEndPoint Old public network access point
+     */
+    public void setOldPublicEndPoint(String OldPublicEndPoint) {
+        this.OldPublicEndPoint = OldPublicEndPoint;
+    }
+
+    /**
      * Get VPC access point
 Note: this field may return null, indicating that no valid values can be obtained. 
      * @return VpcEndPoint VPC access point
@@ -522,6 +566,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
      */
     public void setVpcEndPoint(String VpcEndPoint) {
         this.VpcEndPoint = VpcEndPoint;
+    }
+
+    /**
+     * Get Old VPC access point 
+     * @return OldVpcEndPoint Old VPC access point
+     */
+    public String getOldVpcEndPoint() {
+        return this.OldVpcEndPoint;
+    }
+
+    /**
+     * Set Old VPC access point
+     * @param OldVpcEndPoint Old VPC access point
+     */
+    public void setOldVpcEndPoint(String OldVpcEndPoint) {
+        this.OldVpcEndPoint = OldVpcEndPoint;
     }
 
     /**
@@ -725,13 +785,45 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
+     * Get Old support network Pulsar access point 
+     * @return OldInternalPulsarEndPoint Old support network Pulsar access point
+     */
+    public String getOldInternalPulsarEndPoint() {
+        return this.OldInternalPulsarEndPoint;
+    }
+
+    /**
+     * Set Old support network Pulsar access point
+     * @param OldInternalPulsarEndPoint Old support network Pulsar access point
+     */
+    public void setOldInternalPulsarEndPoint(String OldInternalPulsarEndPoint) {
+        this.OldInternalPulsarEndPoint = OldInternalPulsarEndPoint;
+    }
+
+    /**
+     * Get Old support network HTTP access point 
+     * @return OldInternalHttpEndPoint Old support network HTTP access point
+     */
+    public String getOldInternalHttpEndPoint() {
+        return this.OldInternalHttpEndPoint;
+    }
+
+    /**
+     * Set Old support network HTTP access point
+     * @param OldInternalHttpEndPoint Old support network HTTP access point
+     */
+    public void setOldInternalHttpEndPoint(String OldInternalHttpEndPoint) {
+        this.OldInternalHttpEndPoint = OldInternalHttpEndPoint;
+    }
+
+    /**
      * Get Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return PayMode Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public Long getPayMode() {
@@ -741,11 +833,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     /**
      * Set Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param PayMode Billing mode:
 `0`: Pay-as-you-go
-`1`: Monthly subscription
+`1`: Yearly/Monthly subscription
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public void setPayMode(Long PayMode) {
@@ -861,8 +953,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.PublicEndPoint != null) {
             this.PublicEndPoint = new String(source.PublicEndPoint);
         }
+        if (source.OldPublicEndPoint != null) {
+            this.OldPublicEndPoint = new String(source.OldPublicEndPoint);
+        }
         if (source.VpcEndPoint != null) {
             this.VpcEndPoint = new String(source.VpcEndPoint);
+        }
+        if (source.OldVpcEndPoint != null) {
+            this.OldVpcEndPoint = new String(source.OldVpcEndPoint);
         }
         if (source.NamespaceNum != null) {
             this.NamespaceNum = new Long(source.NamespaceNum);
@@ -896,6 +994,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
             for (int i = 0; i < source.Tags.length; i++) {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
+        }
+        if (source.OldInternalPulsarEndPoint != null) {
+            this.OldInternalPulsarEndPoint = new String(source.OldInternalPulsarEndPoint);
+        }
+        if (source.OldInternalHttpEndPoint != null) {
+            this.OldInternalHttpEndPoint = new String(source.OldInternalHttpEndPoint);
         }
         if (source.PayMode != null) {
             this.PayMode = new Long(source.PayMode);
@@ -931,7 +1035,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MaxStorageCapacity", this.MaxStorageCapacity);
         this.setParamSimple(map, prefix + "Version", this.Version);
         this.setParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
+        this.setParamSimple(map, prefix + "OldPublicEndPoint", this.OldPublicEndPoint);
         this.setParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
+        this.setParamSimple(map, prefix + "OldVpcEndPoint", this.OldVpcEndPoint);
         this.setParamSimple(map, prefix + "NamespaceNum", this.NamespaceNum);
         this.setParamSimple(map, prefix + "UsedStorageBudget", this.UsedStorageBudget);
         this.setParamSimple(map, prefix + "MaxPublishRateInMessages", this.MaxPublishRateInMessages);
@@ -942,6 +1048,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MaxMessageDelayInSeconds", this.MaxMessageDelayInSeconds);
         this.setParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "OldInternalPulsarEndPoint", this.OldInternalPulsarEndPoint);
+        this.setParamSimple(map, prefix + "OldInternalHttpEndPoint", this.OldInternalHttpEndPoint);
         this.setParamSimple(map, prefix + "PayMode", this.PayMode);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "ProjectName", this.ProjectName);

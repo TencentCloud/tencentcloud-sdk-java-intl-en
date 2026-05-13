@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyDiskBackupQuotaRequest extends AbstractModel {
 
     /**
-    * Cloud disk ID.
+    * Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * Cloud disk backup point quota after the adjustment
+    * Adjusted cloud disk backup point quota. value range: 1-1024.
     */
     @SerializedName("DiskBackupQuota")
     @Expose
     private Long DiskBackupQuota;
 
     /**
-     * Get Cloud disk ID. 
-     * @return DiskId Cloud disk ID.
+     * Get Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. 
+     * @return DiskId Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set Cloud disk ID.
-     * @param DiskId Cloud disk ID.
+     * Set Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+     * @param DiskId Cloud disk ID. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get Cloud disk backup point quota after the adjustment 
-     * @return DiskBackupQuota Cloud disk backup point quota after the adjustment
+     * Get Adjusted cloud disk backup point quota. value range: 1-1024. 
+     * @return DiskBackupQuota Adjusted cloud disk backup point quota. value range: 1-1024.
      */
     public Long getDiskBackupQuota() {
         return this.DiskBackupQuota;
     }
 
     /**
-     * Set Cloud disk backup point quota after the adjustment
-     * @param DiskBackupQuota Cloud disk backup point quota after the adjustment
+     * Set Adjusted cloud disk backup point quota. value range: 1-1024.
+     * @param DiskBackupQuota Adjusted cloud disk backup point quota. value range: 1-1024.
      */
     public void setDiskBackupQuota(Long DiskBackupQuota) {
         this.DiskBackupQuota = DiskBackupQuota;

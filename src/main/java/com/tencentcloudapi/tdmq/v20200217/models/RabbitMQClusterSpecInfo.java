@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class RabbitMQClusterSpecInfo extends AbstractModel {
 
     /**
-    * Cluster Specification Name
+    * 
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * Number of Nodes
+    * 
     */
     @SerializedName("NodeCount")
     @Expose
     private Long NodeCount;
 
     /**
-    * Peak tps
+    * 
     */
     @SerializedName("MaxTps")
     @Expose
     private Long MaxTps;
 
     /**
-    * Peak bandwidth Unit: mbps
+    * 
     */
     @SerializedName("MaxBandWidth")
     @Expose
     private Long MaxBandWidth;
 
     /**
-    * Storage capacity Unit: GB
+    * 
     */
     @SerializedName("MaxStorage")
     @Expose
     private Long MaxStorage;
 
     /**
-    * public network bandwidth tps. Unit: Mbps
+    * 
     */
     @SerializedName("PublicNetworkTps")
     @Expose
     private Long PublicNetworkTps;
 
     /**
-     * Get Cluster Specification Name 
-     * @return SpecName Cluster Specification Name
+     * Get  
+     * @return SpecName 
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set Cluster Specification Name
-     * @param SpecName Cluster Specification Name
+     * Set 
+     * @param SpecName 
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get Number of Nodes 
-     * @return NodeCount Number of Nodes
+     * Get  
+     * @return NodeCount 
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set Number of Nodes
-     * @param NodeCount Number of Nodes
+     * Set 
+     * @param NodeCount 
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
     }
 
     /**
-     * Get Peak tps 
-     * @return MaxTps Peak tps
+     * Get  
+     * @return MaxTps 
      */
     public Long getMaxTps() {
         return this.MaxTps;
     }
 
     /**
-     * Set Peak tps
-     * @param MaxTps Peak tps
+     * Set 
+     * @param MaxTps 
      */
     public void setMaxTps(Long MaxTps) {
         this.MaxTps = MaxTps;
     }
 
     /**
-     * Get Peak bandwidth Unit: mbps 
-     * @return MaxBandWidth Peak bandwidth Unit: mbps
+     * Get  
+     * @return MaxBandWidth 
      */
     public Long getMaxBandWidth() {
         return this.MaxBandWidth;
     }
 
     /**
-     * Set Peak bandwidth Unit: mbps
-     * @param MaxBandWidth Peak bandwidth Unit: mbps
+     * Set 
+     * @param MaxBandWidth 
      */
     public void setMaxBandWidth(Long MaxBandWidth) {
         this.MaxBandWidth = MaxBandWidth;
     }
 
     /**
-     * Get Storage capacity Unit: GB 
-     * @return MaxStorage Storage capacity Unit: GB
+     * Get  
+     * @return MaxStorage 
      */
     public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
     /**
-     * Set Storage capacity Unit: GB
-     * @param MaxStorage Storage capacity Unit: GB
+     * Set 
+     * @param MaxStorage 
      */
     public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * Get public network bandwidth tps. Unit: Mbps 
-     * @return PublicNetworkTps public network bandwidth tps. Unit: Mbps
+     * Get  
+     * @return PublicNetworkTps 
      */
     public Long getPublicNetworkTps() {
         return this.PublicNetworkTps;
     }
 
     /**
-     * Set public network bandwidth tps. Unit: Mbps
-     * @param PublicNetworkTps public network bandwidth tps. Unit: Mbps
+     * Set 
+     * @param PublicNetworkTps 
      */
     public void setPublicNetworkTps(Long PublicNetworkTps) {
         this.PublicNetworkTps = PublicNetworkTps;

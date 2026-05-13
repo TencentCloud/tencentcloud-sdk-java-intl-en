@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopicDetailResponse extends AbstractModel {
 
     /**
-    * Returned entity of topic details
+    * <p>Returned topic detail entity</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTopicDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Returned entity of topic details 
-     * @return Result Returned entity of topic details
+     * Get <p>Returned topic detail entity</p> 
+     * @return Result <p>Returned topic detail entity</p>
      */
     public TopicDetailResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set Returned entity of topic details
-     * @param Result Returned entity of topic details
+     * Set <p>Returned topic detail entity</p>
+     * @param Result <p>Returned topic detail entity</p>
      */
     public void setResult(TopicDetailResponse Result) {
         this.Result = Result;

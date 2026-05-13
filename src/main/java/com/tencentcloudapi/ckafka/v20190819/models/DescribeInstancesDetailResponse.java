@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeInstancesDetailResponse extends AbstractModel {
 
     /**
-    * Returned result object of instance details
+    * <p>Returned instance detail result object</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeInstancesDetailResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Returned result object of instance details 
-     * @return Result Returned result object of instance details
+     * Get <p>Returned instance detail result object</p> 
+     * @return Result <p>Returned instance detail result object</p>
      */
     public InstanceDetailResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set Returned result object of instance details
-     * @param Result Returned result object of instance details
+     * Set <p>Returned instance detail result object</p>
+     * @param Result <p>Returned instance detail result object</p>
      */
     public void setResult(InstanceDetailResponse Result) {
         this.Result = Result;

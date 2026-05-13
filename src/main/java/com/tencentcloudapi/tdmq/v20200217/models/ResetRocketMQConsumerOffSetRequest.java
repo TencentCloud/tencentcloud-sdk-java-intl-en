@@ -31,7 +31,7 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Namespace name.
+    * namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -59,7 +59,7 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     private String Topic;
 
     /**
-    * The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
+    * Reset the specified timestamp. This parameter is valid only when Type is 1, in milliseconds.
     */
     @SerializedName("ResetTimestamp")
     @Expose
@@ -89,16 +89,16 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     }
 
     /**
-     * Get Namespace name. 
-     * @return NamespaceId Namespace name.
+     * Get namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default 
+     * @return NamespaceId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set Namespace name.
-     * @param NamespaceId Namespace name.
+     * Set namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
+     * @param NamespaceId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
@@ -153,16 +153,16 @@ public class ResetRocketMQConsumerOffSetRequest extends AbstractModel {
     }
 
     /**
-     * Get The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`. 
-     * @return ResetTimestamp The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
+     * Get Reset the specified timestamp. This parameter is valid only when Type is 1, in milliseconds. 
+     * @return ResetTimestamp Reset the specified timestamp. This parameter is valid only when Type is 1, in milliseconds.
      */
     public Long getResetTimestamp() {
         return this.ResetTimestamp;
     }
 
     /**
-     * Set The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
-     * @param ResetTimestamp The specified timestamp that has been reset, in milliseconds. This parameter only takes effect when the value of `Type` is `1`.
+     * Set Reset the specified timestamp. This parameter is valid only when Type is 1, in milliseconds.
+     * @param ResetTimestamp Reset the specified timestamp. This parameter is valid only when Type is 1, in milliseconds.
      */
     public void setResetTimestamp(Long ResetTimestamp) {
         this.ResetTimestamp = ResetTimestamp;

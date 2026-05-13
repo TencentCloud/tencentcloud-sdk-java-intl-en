@@ -73,6 +73,13 @@ public class DescribeMsgTraceRequest extends AbstractModel {
     private String ClusterId;
 
     /**
+    * topic name
+    */
+    @SerializedName("TopicName")
+    @Expose
+    private String TopicName;
+
+    /**
      * Get Environment (namespace). 
      * @return EnvironmentId Environment (namespace).
      */
@@ -184,6 +191,22 @@ public class DescribeMsgTraceRequest extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get topic name 
+     * @return TopicName topic name
+     */
+    public String getTopicName() {
+        return this.TopicName;
+    }
+
+    /**
+     * Set topic name
+     * @param TopicName topic name
+     */
+    public void setTopicName(String TopicName) {
+        this.TopicName = TopicName;
+    }
+
     public DescribeMsgTraceRequest() {
     }
 
@@ -213,6 +236,9 @@ public class DescribeMsgTraceRequest extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.TopicName != null) {
+            this.TopicName = new String(source.TopicName);
+        }
     }
 
 
@@ -227,6 +253,7 @@ public class DescribeMsgTraceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "TopicName", this.TopicName);
 
     }
 }

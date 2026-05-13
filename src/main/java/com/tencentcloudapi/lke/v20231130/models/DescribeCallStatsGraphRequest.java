@@ -87,6 +87,34 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
     private String [] SubScenes;
 
     /**
+    * Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+    */
+    @SerializedName("AppType")
+    @Expose
+    private String AppType;
+
+    /**
+    * Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+    */
+    @SerializedName("SpaceId")
+    @Expose
+    private String SpaceId;
+
+    /**
+    * Start time. Unix timestamp in seconds, empty by default.
+    */
+    @SerializedName("StatStartTime")
+    @Expose
+    private Long StatStartTime;
+
+    /**
+    * End time. Unix timestamp in seconds, empty by default.
+    */
+    @SerializedName("StatEndTime")
+    @Expose
+    private Long StatEndTime;
+
+    /**
      * Get uin 
      * @return UinAccount uin
      */
@@ -169,7 +197,9 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
     /**
      * Get Start timestamp, in seconds. 
      * @return StartTime Start timestamp, in seconds.
+     * @deprecated
      */
+    @Deprecated
     public String getStartTime() {
         return this.StartTime;
     }
@@ -177,7 +207,9 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
     /**
      * Set Start timestamp, in seconds.
      * @param StartTime Start timestamp, in seconds.
+     * @deprecated
      */
+    @Deprecated
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
@@ -185,7 +217,9 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
     /**
      * Get End timestamp, in seconds. 
      * @return EndTime End timestamp, in seconds.
+     * @deprecated
      */
+    @Deprecated
     public String getEndTime() {
         return this.EndTime;
     }
@@ -193,7 +227,9 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
     /**
      * Set End timestamp, in seconds.
      * @param EndTime End timestamp, in seconds.
+     * @deprecated
      */
+    @Deprecated
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
@@ -228,6 +264,70 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
      */
     public void setSubScenes(String [] SubScenes) {
         this.SubScenes = SubScenes;
+    }
+
+    /**
+     * Get Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base) 
+     * @return AppType Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+     */
+    public String getAppType() {
+        return this.AppType;
+    }
+
+    /**
+     * Set Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+     * @param AppType Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+     */
+    public void setAppType(String AppType) {
+        this.AppType = AppType;
+    }
+
+    /**
+     * Get Space ID, used to limit the query scope. If left blank, data of all spaces will be returned. 
+     * @return SpaceId Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+     */
+    public String getSpaceId() {
+        return this.SpaceId;
+    }
+
+    /**
+     * Set Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+     * @param SpaceId Space ID, used to limit the query scope. If left blank, data of all spaces will be returned.
+     */
+    public void setSpaceId(String SpaceId) {
+        this.SpaceId = SpaceId;
+    }
+
+    /**
+     * Get Start time. Unix timestamp in seconds, empty by default. 
+     * @return StatStartTime Start time. Unix timestamp in seconds, empty by default.
+     */
+    public Long getStatStartTime() {
+        return this.StatStartTime;
+    }
+
+    /**
+     * Set Start time. Unix timestamp in seconds, empty by default.
+     * @param StatStartTime Start time. Unix timestamp in seconds, empty by default.
+     */
+    public void setStatStartTime(Long StatStartTime) {
+        this.StatStartTime = StatStartTime;
+    }
+
+    /**
+     * Get End time. Unix timestamp in seconds, empty by default. 
+     * @return StatEndTime End time. Unix timestamp in seconds, empty by default.
+     */
+    public Long getStatEndTime() {
+        return this.StatEndTime;
+    }
+
+    /**
+     * Set End time. Unix timestamp in seconds, empty by default.
+     * @param StatEndTime End time. Unix timestamp in seconds, empty by default.
+     */
+    public void setStatEndTime(Long StatEndTime) {
+        this.StatEndTime = StatEndTime;
     }
 
     public DescribeCallStatsGraphRequest() {
@@ -274,6 +374,18 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
                 this.SubScenes[i] = new String(source.SubScenes[i]);
             }
         }
+        if (source.AppType != null) {
+            this.AppType = new String(source.AppType);
+        }
+        if (source.SpaceId != null) {
+            this.SpaceId = new String(source.SpaceId);
+        }
+        if (source.StatStartTime != null) {
+            this.StatStartTime = new Long(source.StatStartTime);
+        }
+        if (source.StatEndTime != null) {
+            this.StatEndTime = new Long(source.StatEndTime);
+        }
     }
 
 
@@ -290,6 +402,10 @@ public class DescribeCallStatsGraphRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
         this.setParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
+        this.setParamSimple(map, prefix + "AppType", this.AppType);
+        this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
+        this.setParamSimple(map, prefix + "StatStartTime", this.StatStartTime);
+        this.setParamSimple(map, prefix + "StatEndTime", this.StatEndTime);
 
     }
 }

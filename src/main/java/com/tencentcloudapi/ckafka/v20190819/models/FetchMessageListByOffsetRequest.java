@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class FetchMessageListByOffsetRequest extends AbstractModel {
 
     /**
-    * The ckafka cluster instance Id.
+    * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Topic name
+    * <p>Topic name</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-    * Partition ID
+    * <p>Partition id</p>
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-    * Offset information
+    * <p>Location info</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
+    * <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
     */
     @SerializedName("SinglePartitionRecordNumber")
     @Expose
     private Long SinglePartitionRecordNumber;
 
     /**
-     * Get The ckafka cluster instance Id. 
-     * @return InstanceId The ckafka cluster instance Id.
+     * Get <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id.
-     * @param InstanceId The ckafka cluster instance Id.
+     * Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Topic name 
-     * @return Topic Topic name
+     * Get <p>Topic name</p> 
+     * @return Topic <p>Topic name</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set Topic name
-     * @param Topic Topic name
+     * Set <p>Topic name</p>
+     * @param Topic <p>Topic name</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get Partition ID 
-     * @return Partition Partition ID
+     * Get <p>Partition id</p> 
+     * @return Partition <p>Partition id</p>
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set Partition ID
-     * @param Partition Partition ID
+     * Set <p>Partition id</p>
+     * @param Partition <p>Partition id</p>
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get Offset information 
-     * @return Offset Offset information
+     * Get <p>Location info</p> 
+     * @return Offset <p>Location info</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset information
-     * @param Offset Offset information
+     * Set <p>Location info</p>
+     * @param Offset <p>Location info</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The maximum number of messages that can be queried. Default value: 20. Maximum value: 20. 
-     * @return SinglePartitionRecordNumber The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
+     * Get <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p> 
+     * @return SinglePartitionRecordNumber <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
      */
     public Long getSinglePartitionRecordNumber() {
         return this.SinglePartitionRecordNumber;
     }
 
     /**
-     * Set The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
-     * @param SinglePartitionRecordNumber The maximum number of messages that can be queried. Default value: 20. Maximum value: 20.
+     * Set <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
+     * @param SinglePartitionRecordNumber <p>Maximum number of query results. Default value: 20. Maximum value: 20.</p>
      */
     public void setSinglePartitionRecordNumber(Long SinglePartitionRecordNumber) {
         this.SinglePartitionRecordNumber = SinglePartitionRecordNumber;

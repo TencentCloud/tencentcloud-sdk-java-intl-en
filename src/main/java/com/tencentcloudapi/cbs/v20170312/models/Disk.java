@@ -24,30 +24,28 @@ import java.util.HashMap;
 public class Disk extends AbstractModel {
 
     /**
-    * Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
+    * Specifies whether the cloud disk is destroyed along with the mounted instance.<br><li>true: destroy the cloud disk along with the instance. only hourly postpaid cloud disk is supported.</li><li>false: destroying instance without destroying cloud disk.</li>.
     */
     @SerializedName("DeleteWithInstance")
     @Expose
     private Boolean DeleteWithInstance;
 
     /**
-    * Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
+    * AUTO renewal flag. supported values:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY expiry AND RENEW automatically</li><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY expiry but not RENEW automatically</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: neither NOTIFY expiry nor RENEW automatically.</li>.
     */
     @SerializedName("RenewFlag")
     @Expose
     private String RenewFlag;
 
     /**
-    * Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
+    * Hard disk media type. valid values:<br><li>CLOUD_BASIC: BASIC CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_BSSD: universal type SSD CLOUD disk</li><li>CLOUD_SSD: SSD CLOUD disk</li><li>CLOUD_HSSD: enhanced SSD CLOUD disk</li><li>CLOUD_TSSD: ultra-fast SSD cbs.</li>.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
+    * Cloud disk state. valid values:<br><li>UNATTACHED: unmounted</li><li>ATTACHING: mounting</li><li>ATTACHED: mounted</li><li>DETACHING: unmounting</li><li>EXPANDING: EXPANDING</li><li>ROLLBACKING: rolling back</li><li>TORECYCLE: to be recycled</li><li>DUMPING: copying hard drive.</li>.
     */
     @SerializedName("DiskState")
     @Expose
@@ -61,15 +59,14 @@ Note: This field may return null, indicating that no valid value was found.
     private Long SnapshotCount;
 
     /**
-    * Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
+    * Cloud disk mounted to child machine, and both child machine and cloud disk are on a monthly subscription basis.<br><li>true: auto renewal flag is set for child machine, but cloud disk not set</li><li>false: cloud disk auto-renewal flag normal</li>.
     */
     @SerializedName("AutoRenewFlagError")
     @Expose
     private Boolean AutoRenewFlagError;
 
     /**
-    * Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
+    * Indicates if the cloud disk is in snapshot rollback status. valid values: <br><li>false: means not in snapshot rollback status</li><li>true: means in snapshot rollback status.</li>.
     */
     @SerializedName("Rollbacking")
     @Expose
@@ -83,7 +80,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String [] InstanceIdList;
 
     /**
-    * Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
+    * Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
     */
     @SerializedName("Encrypt")
     @Expose
@@ -104,8 +101,7 @@ Note: This field may return null, indicating that no valid value was found.
     private Boolean BackupDisk;
 
     /**
-    * The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
+    * It indicates the tag bound to the cloud disk. If the cloud disk is not bound to any tag, the value is empty.
     */
     @SerializedName("Tags")
     @Expose
@@ -119,32 +115,29 @@ Note: This field may return null, indicating that no valid value was found.
     private String InstanceId;
 
     /**
-    * Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * The mount type of the cloud disk. valid values: <br><li>PF: PF mount</li><li>VF: VF mount</li>.
     */
     @SerializedName("AttachMode")
     @Expose
     private String AttachMode;
 
     /**
-    * ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
+    * Regular snapshot ID associated with the cloud disk. return this parameter only when calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API with ReturnBindAutoSnapshotPolicy set to TRUE.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AutoSnapshotPolicyIds")
     @Expose
     private String [] AutoSnapshotPolicyIds;
 
     /**
-    * Extra performance for a cloud disk, in MB/sec.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the additional performance value of the CBS in MiB/s.
     */
     @SerializedName("ThroughputPerformance")
     @Expose
     private Long ThroughputPerformance;
 
     /**
-    * Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
-Note: This field may return null, indicating that no valid value was found.
+    * Indicates if the cloud disk is in type change. valid values: <br><li>false: means the cloud disk is not in type change</li><li>true: means the cloud disk has initiated type change and is migrating.</li>.
     */
     @SerializedName("Migrating")
     @Expose
@@ -158,7 +151,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String DiskId;
 
     /**
-    * The total capacity of the snapshots of the cloud disk. Unit: MB.
+    * Total snapshot capacity of the cloud disk. unit: MiB.
     */
     @SerializedName("SnapshotSize")
     @Expose
@@ -172,8 +165,8 @@ Note: This field may return null, indicating that no valid value was found.
     private Placement Placement;
 
     /**
-    * Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
+    * Determines if a prepaid cloud disk supports proactive return.<br><li>true: supports proactive return</li><li>false: does not support proactive return.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsReturnable")
     @Expose
@@ -187,36 +180,35 @@ Note: This field may return null, indicating that no valid value was found.
     private String DeadlineTime;
 
     /**
-    * Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
+    * Indicates whether the cloud disk is mounted to the cvm. valid values: <br><li>false: means not mounted</li><li>true: means mounted.</li>.
     */
     @SerializedName("Attached")
     @Expose
     private Boolean Attached;
 
     /**
-    * Cloud disk size (in GB).
+    * Specifies the disk capacity in GiB.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
+    * It indicates the migration progress of cloud disk type change. The value range is 0 to 100.
     */
     @SerializedName("MigratePercent")
     @Expose
     private Long MigratePercent;
 
     /**
-    * Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+    * Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><li>DATA_DISK: DATA DISK.</li>.
     */
     @SerializedName("DiskUsage")
     @Expose
     private String DiskUsage;
 
     /**
-    * Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+    * Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
     */
     @SerializedName("DiskChargeType")
     @Expose
@@ -230,15 +222,14 @@ Note: This field may return null, indicating that no valid value was found.
     private Boolean Portable;
 
     /**
-    * Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots.
+    * Specifies whether the cloud disk has the capability to create snapshots. valid values:<br><li>false: cannot create snapshots</li><li>true: can create snapshots.</li>.
     */
     @SerializedName("SnapshotAbility")
     @Expose
     private Boolean SnapshotAbility;
 
     /**
-    * This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
-Note: This field may return null, indicating that no valid value was found.
+    * Indicates whether the cloud disk expiration time is earlier than that of the instance. this field is valid only when the cloud disk is mounted to the instance and both the instance and the cloud disk are on a monthly subscription basis.<br><li>true: the expiration time of the cloud disk is earlier than that of the instance.</li><li>false: cloud disk expiration time later than instance.</li>.
     */
     @SerializedName("DeadlineError")
     @Expose
@@ -252,16 +243,15 @@ Note: This field may return null, indicating that no valid value was found.
     private Long RollbackPercent;
 
     /**
-    * Number of days from current time until disk expiration (only applicable for prepaid disks).
-Note: This field may return null, indicating that no valid value was found.
+    * The number of days from the current time to disk expiration (only applicable to prepaid cbs).
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DifferDaysOfDeadline")
     @Expose
     private Long DifferDaysOfDeadline;
 
     /**
-    * In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
+    * For prepaid cloud disks that do not support proactive return, this parameter indicates the specific reason for not supporting refund. value range: <br><li>1: the cloud disk has already been returned.</li><li>2: the cloud disk has expired.</li><li>3: the cloud disk does not support return.</li><li>8: the maximum returnable quantity is exceeded.</li><li>10: non-elastic cloud disks, system disks, and pay-as-you-go cloud disks do not support return.</li>.
     */
     @SerializedName("ReturnFailCode")
     @Expose
@@ -282,7 +272,7 @@ Note: This field may return null, indicating that no valid value was found.
     private String CreateTime;
 
     /**
-    * Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+    * Specifies whether to delete associated non-permanently retained snapshots when destroying the cloud disk. 0 indicates non-permanent snapshots are not deleted with cloud disk destruction, 1 indicates non-permanent snapshots are deleted with cloud disk destruction. default value: 0. whether a snapshot is permanently retained can be determined through the IsPermanent field in the snapshot description returned by the DescribeSnapshots API (https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1). true indicates permanent snapshot, false indicates non-permanent snapshot.
     */
     @SerializedName("DeleteSnapshot")
     @Expose
@@ -303,7 +293,7 @@ Note: This field may return null, indicating that no valid value was found.
     private Long DiskBackupCount;
 
     /**
-    * Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+    * The type of the CBS mounting instance. valid values: <br><li>CVM</li><li>EKS</li>.
     */
     @SerializedName("InstanceType")
     @Expose
@@ -318,87 +308,92 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String LastAttachInsId;
 
     /**
-    * Error message for the last operation of the cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Error prompt for the last operation on cbs.
     */
     @SerializedName("ErrorPrompt")
     @Expose
     private String ErrorPrompt;
 
     /**
-    * Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether performance burst is enabled for the cloud disk.
     */
     @SerializedName("BurstPerformance")
     @Expose
     private Boolean BurstPerformance;
 
     /**
-     * Get Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return DeleteWithInstance Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
+    * Encryption type of cbs. valid values: ENCRYPT_V1 and ENCRYPT_V2, which indicate first generation and second generation encryption technology respectively. the two kinds are incompatible.
+    */
+    @SerializedName("EncryptType")
+    @Expose
+    private String EncryptType;
+
+    /**
+    * Key ID of the encrypted disk.
+    */
+    @SerializedName("KmsKeyId")
+    @Expose
+    private String KmsKeyId;
+
+    /**
+     * Get Specifies whether the cloud disk is destroyed along with the mounted instance.<br><li>true: destroy the cloud disk along with the instance. only hourly postpaid cloud disk is supported.</li><li>false: destroying instance without destroying cloud disk.</li>. 
+     * @return DeleteWithInstance Specifies whether the cloud disk is destroyed along with the mounted instance.<br><li>true: destroy the cloud disk along with the instance. only hourly postpaid cloud disk is supported.</li><li>false: destroying instance without destroying cloud disk.</li>.
      */
     public Boolean getDeleteWithInstance() {
         return this.DeleteWithInstance;
     }
 
     /**
-     * Set Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
-     * @param DeleteWithInstance Whether the cloud disk terminates along with the instance mounted to it. <br><li>true: Cloud disk will also be terminated when instance terminates, so only hourly postpaid cloud disk are supported.<br><li>false: Cloud disk does not terminate when instance terminates.
-Note: This field may return null, indicating that no valid value was found.
+     * Set Specifies whether the cloud disk is destroyed along with the mounted instance.<br><li>true: destroy the cloud disk along with the instance. only hourly postpaid cloud disk is supported.</li><li>false: destroying instance without destroying cloud disk.</li>.
+     * @param DeleteWithInstance Specifies whether the cloud disk is destroyed along with the mounted instance.<br><li>true: destroy the cloud disk along with the instance. only hourly postpaid cloud disk is supported.</li><li>false: destroying instance without destroying cloud disk.</li>.
      */
     public void setDeleteWithInstance(Boolean DeleteWithInstance) {
         this.DeleteWithInstance = DeleteWithInstance;
     }
 
     /**
-     * Get Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return RenewFlag Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
+     * Get AUTO renewal flag. supported values:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY expiry AND RENEW automatically</li><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY expiry but not RENEW automatically</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: neither NOTIFY expiry nor RENEW automatically.</li>. 
+     * @return RenewFlag AUTO renewal flag. supported values:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY expiry AND RENEW automatically</li><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY expiry but not RENEW automatically</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: neither NOTIFY expiry nor RENEW automatically.</li>.
      */
     public String getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
-     * @param RenewFlag Auto renewal flag. Supported values:<br><li>NOTIFY_AND_AUTO_RENEW: Notify expiry and renew automatically<br><li>NOTIFY_AND_MANUAL_RENEW: Notify expiry but not renew automatically<br><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: Neither notify expiry nor renew automatically.
-Note: This field may return null, indicating that no valid value was found.
+     * Set AUTO renewal flag. supported values:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY expiry AND RENEW automatically</li><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY expiry but not RENEW automatically</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: neither NOTIFY expiry nor RENEW automatically.</li>.
+     * @param RenewFlag AUTO renewal flag. supported values:<br><li>NOTIFY_AND_AUTO_RENEW: NOTIFY expiry AND RENEW automatically</li><li>NOTIFY_AND_MANUAL_RENEW: NOTIFY expiry but not RENEW automatically</li><li>DISABLE_NOTIFY_AND_MANUAL_RENEW: neither NOTIFY expiry nor RENEW automatically.</li>.
      */
     public void setRenewFlag(String RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD 
-     * @return DiskType Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
+     * Get Hard disk media type. valid values:<br><li>CLOUD_BASIC: BASIC CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_BSSD: universal type SSD CLOUD disk</li><li>CLOUD_SSD: SSD CLOUD disk</li><li>CLOUD_HSSD: enhanced SSD CLOUD disk</li><li>CLOUD_TSSD: ultra-fast SSD cbs.</li>. 
+     * @return DiskType Hard disk media type. valid values:<br><li>CLOUD_BASIC: BASIC CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_BSSD: universal type SSD CLOUD disk</li><li>CLOUD_SSD: SSD CLOUD disk</li><li>CLOUD_HSSD: enhanced SSD CLOUD disk</li><li>CLOUD_TSSD: ultra-fast SSD cbs.</li>.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
-     * @param DiskType Cloud disk types. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk <br><li>CLOUD_PREMIUM: Premium Cloud Disk <br><li>CLOUD_BSSD: General Purpose SSD <br><li>CLOUD_SSD: SSD <br><li>CLOUD_HSSD: Enhanced SSD <br><li>CLOUD_TSSD: Tremendous SSD
+     * Set Hard disk media type. valid values:<br><li>CLOUD_BASIC: BASIC CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_BSSD: universal type SSD CLOUD disk</li><li>CLOUD_SSD: SSD CLOUD disk</li><li>CLOUD_HSSD: enhanced SSD CLOUD disk</li><li>CLOUD_TSSD: ultra-fast SSD cbs.</li>.
+     * @param DiskType Hard disk media type. valid values:<br><li>CLOUD_BASIC: BASIC CLOUD disk</li><li>CLOUD_PREMIUM: high-performance CLOUD block storage</li><li>CLOUD_BSSD: universal type SSD CLOUD disk</li><li>CLOUD_SSD: SSD CLOUD disk</li><li>CLOUD_HSSD: enhanced SSD CLOUD disk</li><li>CLOUD_TSSD: ultra-fast SSD cbs.</li>.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive. 
-     * @return DiskState The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
+     * Get Cloud disk state. valid values:<br><li>UNATTACHED: unmounted</li><li>ATTACHING: mounting</li><li>ATTACHED: mounted</li><li>DETACHING: unmounting</li><li>EXPANDING: EXPANDING</li><li>ROLLBACKING: rolling back</li><li>TORECYCLE: to be recycled</li><li>DUMPING: copying hard drive.</li>. 
+     * @return DiskState Cloud disk state. valid values:<br><li>UNATTACHED: unmounted</li><li>ATTACHING: mounting</li><li>ATTACHED: mounted</li><li>DETACHING: unmounting</li><li>EXPANDING: EXPANDING</li><li>ROLLBACKING: rolling back</li><li>TORECYCLE: to be recycled</li><li>DUMPING: copying hard drive.</li>.
      */
     public String getDiskState() {
         return this.DiskState;
     }
 
     /**
-     * Set The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
-     * @param DiskState The state of the cloud disk. Value range: <br><li>UNATTACHED: Not mounted <br><li>ATTACHING: Mounting <br><li>ATTACHED: Mounted <br><li>DETACHING: Un-mounting <br><li>EXPANDING: Expanding <br><li>ROLLBACKING: Rolling back <br><li>TORECYCE: Pending recycling. <br><li>DUMPING: Copying the hard drive.
+     * Set Cloud disk state. valid values:<br><li>UNATTACHED: unmounted</li><li>ATTACHING: mounting</li><li>ATTACHED: mounted</li><li>DETACHING: unmounting</li><li>EXPANDING: EXPANDING</li><li>ROLLBACKING: rolling back</li><li>TORECYCLE: to be recycled</li><li>DUMPING: copying hard drive.</li>.
+     * @param DiskState Cloud disk state. valid values:<br><li>UNATTACHED: unmounted</li><li>ATTACHING: mounting</li><li>ATTACHED: mounted</li><li>DETACHING: unmounting</li><li>EXPANDING: EXPANDING</li><li>ROLLBACKING: rolling back</li><li>TORECYCLE: to be recycled</li><li>DUMPING: copying hard drive.</li>.
      */
     public void setDiskState(String DiskState) {
         this.DiskState = DiskState;
@@ -421,36 +416,32 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return AutoRenewFlagError Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
+     * Get Cloud disk mounted to child machine, and both child machine and cloud disk are on a monthly subscription basis.<br><li>true: auto renewal flag is set for child machine, but cloud disk not set</li><li>false: cloud disk auto-renewal flag normal</li>. 
+     * @return AutoRenewFlagError Cloud disk mounted to child machine, and both child machine and cloud disk are on a monthly subscription basis.<br><li>true: auto renewal flag is set for child machine, but cloud disk not set</li><li>false: cloud disk auto-renewal flag normal</li>.
      */
     public Boolean getAutoRenewFlagError() {
         return this.AutoRenewFlagError;
     }
 
     /**
-     * Set Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
-     * @param AutoRenewFlagError Cloud disk already mounted to CVM, and both CVM and cloud disk use monthly subscription.<br><li>true: CVM has auto-renewal flag set up, but cloud disk does not.<br><li>false: Cloud disk auto-renewal flag set up normally.
-Note: This field may return null, indicating that no valid value was found.
+     * Set Cloud disk mounted to child machine, and both child machine and cloud disk are on a monthly subscription basis.<br><li>true: auto renewal flag is set for child machine, but cloud disk not set</li><li>false: cloud disk auto-renewal flag normal</li>.
+     * @param AutoRenewFlagError Cloud disk mounted to child machine, and both child machine and cloud disk are on a monthly subscription basis.<br><li>true: auto renewal flag is set for child machine, but cloud disk not set</li><li>false: cloud disk auto-renewal flag normal</li>.
      */
     public void setAutoRenewFlagError(Boolean AutoRenewFlagError) {
         this.AutoRenewFlagError = AutoRenewFlagError;
     }
 
     /**
-     * Get Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes 
-     * @return Rollbacking Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
+     * Get Indicates if the cloud disk is in snapshot rollback status. valid values: <br><li>false: means not in snapshot rollback status</li><li>true: means in snapshot rollback status.</li>. 
+     * @return Rollbacking Indicates if the cloud disk is in snapshot rollback status. valid values: <br><li>false: means not in snapshot rollback status</li><li>true: means in snapshot rollback status.</li>.
      */
     public Boolean getRollbacking() {
         return this.Rollbacking;
     }
 
     /**
-     * Set Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
-     * @param Rollbacking Whether the cloud disk is in the status of snapshot rollback. Value range: <br><li>false: No <br><li>true: Yes
+     * Set Indicates if the cloud disk is in snapshot rollback status. valid values: <br><li>false: means not in snapshot rollback status</li><li>true: means in snapshot rollback status.</li>.
+     * @param Rollbacking Indicates if the cloud disk is in snapshot rollback status. valid values: <br><li>false: means not in snapshot rollback status</li><li>true: means in snapshot rollback status.</li>.
      */
     public void setRollbacking(Boolean Rollbacking) {
         this.Rollbacking = Rollbacking;
@@ -473,16 +464,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted. 
-     * @return Encrypt Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
+     * Get Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>. 
+     * @return Encrypt Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
      */
     public Boolean getEncrypt() {
         return this.Encrypt;
     }
 
     /**
-     * Set Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
-     * @param Encrypt Whether the cloud disk is encrypted. Value range: <br><li>false: Not encrypted <br><li>true: Encrypted.
+     * Set Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
+     * @param Encrypt Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
      */
     public void setEncrypt(Boolean Encrypt) {
         this.Encrypt = Encrypt;
@@ -521,20 +512,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return Tags The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
+     * Get It indicates the tag bound to the cloud disk. If the cloud disk is not bound to any tag, the value is empty. 
+     * @return Tags It indicates the tag bound to the cloud disk. If the cloud disk is not bound to any tag, the value is empty.
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
-     * @param Tags The tag bound to the cloud disk. The value Null is used when no tag is bound to the cloud disk.
-Note: This field may return null, indicating that no valid value was found.
+     * Set It indicates the tag bound to the cloud disk. If the cloud disk is not bound to any tag, the value is empty.
+     * @param Tags It indicates the tag bound to the cloud disk. If the cloud disk is not bound to any tag, the value is empty.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
@@ -557,80 +544,68 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return AttachMode Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get The mount type of the cloud disk. valid values: <br><li>PF: PF mount</li><li>VF: VF mount</li>. 
+     * @return AttachMode The mount type of the cloud disk. valid values: <br><li>PF: PF mount</li><li>VF: VF mount</li>.
      */
     public String getAttachMode() {
         return this.AttachMode;
     }
 
     /**
-     * Set Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param AttachMode Cloud disk mount method. Valid values: <br><li>PF: mount as a PF (Physical Function)<br><li>VF: mount as a VF (Virtual Function)
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set The mount type of the cloud disk. valid values: <br><li>PF: PF mount</li><li>VF: VF mount</li>.
+     * @param AttachMode The mount type of the cloud disk. valid values: <br><li>PF: PF mount</li><li>VF: VF mount</li>.
      */
     public void setAttachMode(String AttachMode) {
         this.AttachMode = AttachMode;
     }
 
     /**
-     * Get ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return AutoSnapshotPolicyIds ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
+     * Get Regular snapshot ID associated with the cloud disk. return this parameter only when calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API with ReturnBindAutoSnapshotPolicy set to TRUE.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AutoSnapshotPolicyIds Regular snapshot ID associated with the cloud disk. return this parameter only when calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API with ReturnBindAutoSnapshotPolicy set to TRUE.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getAutoSnapshotPolicyIds() {
         return this.AutoSnapshotPolicyIds;
     }
 
     /**
-     * Set ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
-     * @param AutoSnapshotPolicyIds ID of the periodic snapshot associated to the cloud disk. This parameter is returned only if the value of parameter ReturnBindAutoSnapshotPolicy is TRUE when the API DescribeDisks is called.
-Note: This field may return null, indicating that no valid value was found.
+     * Set Regular snapshot ID associated with the cloud disk. return this parameter only when calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API with ReturnBindAutoSnapshotPolicy set to TRUE.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AutoSnapshotPolicyIds Regular snapshot ID associated with the cloud disk. return this parameter only when calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) API with ReturnBindAutoSnapshotPolicy set to TRUE.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAutoSnapshotPolicyIds(String [] AutoSnapshotPolicyIds) {
         this.AutoSnapshotPolicyIds = AutoSnapshotPolicyIds;
     }
 
     /**
-     * Get Extra performance for a cloud disk, in MB/sec.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ThroughputPerformance Extra performance for a cloud disk, in MB/sec.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the additional performance value of the CBS in MiB/s. 
+     * @return ThroughputPerformance Specifies the additional performance value of the CBS in MiB/s.
      */
     public Long getThroughputPerformance() {
         return this.ThroughputPerformance;
     }
 
     /**
-     * Set Extra performance for a cloud disk, in MB/sec.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ThroughputPerformance Extra performance for a cloud disk, in MB/sec.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the additional performance value of the CBS in MiB/s.
+     * @param ThroughputPerformance Specifies the additional performance value of the CBS in MiB/s.
      */
     public void setThroughputPerformance(Long ThroughputPerformance) {
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
     /**
-     * Get Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return Migrating Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
-Note: This field may return null, indicating that no valid value was found.
+     * Get Indicates if the cloud disk is in type change. valid values: <br><li>false: means the cloud disk is not in type change</li><li>true: means the cloud disk has initiated type change and is migrating.</li>. 
+     * @return Migrating Indicates if the cloud disk is in type change. valid values: <br><li>false: means the cloud disk is not in type change</li><li>true: means the cloud disk has initiated type change and is migrating.</li>.
      */
     public Boolean getMigrating() {
         return this.Migrating;
     }
 
     /**
-     * Set Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
-Note: This field may return null, indicating that no valid value was found.
-     * @param Migrating Whether cloud disk is in process of type change. Value range: <br><li>false: Cloud disk not in process of type change. <br><li>true: Cloud disk type change has been launched, and migration is in process.
-Note: This field may return null, indicating that no valid value was found.
+     * Set Indicates if the cloud disk is in type change. valid values: <br><li>false: means the cloud disk is not in type change</li><li>true: means the cloud disk has initiated type change and is migrating.</li>.
+     * @param Migrating Indicates if the cloud disk is in type change. valid values: <br><li>false: means the cloud disk is not in type change</li><li>true: means the cloud disk has initiated type change and is migrating.</li>.
      */
     public void setMigrating(Boolean Migrating) {
         this.Migrating = Migrating;
@@ -653,16 +628,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get The total capacity of the snapshots of the cloud disk. Unit: MB. 
-     * @return SnapshotSize The total capacity of the snapshots of the cloud disk. Unit: MB.
+     * Get Total snapshot capacity of the cloud disk. unit: MiB. 
+     * @return SnapshotSize Total snapshot capacity of the cloud disk. unit: MiB.
      */
     public Long getSnapshotSize() {
         return this.SnapshotSize;
     }
 
     /**
-     * Set The total capacity of the snapshots of the cloud disk. Unit: MB.
-     * @param SnapshotSize The total capacity of the snapshots of the cloud disk. Unit: MB.
+     * Set Total snapshot capacity of the cloud disk. unit: MiB.
+     * @param SnapshotSize Total snapshot capacity of the cloud disk. unit: MiB.
      */
     public void setSnapshotSize(Long SnapshotSize) {
         this.SnapshotSize = SnapshotSize;
@@ -685,20 +660,20 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return IsReturnable Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
+     * Get Determines if a prepaid cloud disk supports proactive return.<br><li>true: supports proactive return</li><li>false: does not support proactive return.</li>.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return IsReturnable Determines if a prepaid cloud disk supports proactive return.<br><li>true: supports proactive return</li><li>false: does not support proactive return.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsReturnable() {
         return this.IsReturnable;
     }
 
     /**
-     * Set Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
-     * @param IsReturnable Determines whether or not prepaid cloud disk supports active return. <br><li>true: Active return supported.<br><li>false: Active return not supported.
-Note: This field may return null, indicating that no valid value was found.
+     * Set Determines if a prepaid cloud disk supports proactive return.<br><li>true: supports proactive return</li><li>false: does not support proactive return.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param IsReturnable Determines if a prepaid cloud disk supports proactive return.<br><li>true: supports proactive return</li><li>false: does not support proactive return.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsReturnable(Boolean IsReturnable) {
         this.IsReturnable = IsReturnable;
@@ -721,84 +696,80 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted. 
-     * @return Attached Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
+     * Get Indicates whether the cloud disk is mounted to the cvm. valid values: <br><li>false: means not mounted</li><li>true: means mounted.</li>. 
+     * @return Attached Indicates whether the cloud disk is mounted to the cvm. valid values: <br><li>false: means not mounted</li><li>true: means mounted.</li>.
      */
     public Boolean getAttached() {
         return this.Attached;
     }
 
     /**
-     * Set Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
-     * @param Attached Whether the cloud disk is mounted to the CVM. Value range: <br><li>false: Unmounted <br><li>true: Mounted.
+     * Set Indicates whether the cloud disk is mounted to the cvm. valid values: <br><li>false: means not mounted</li><li>true: means mounted.</li>.
+     * @param Attached Indicates whether the cloud disk is mounted to the cvm. valid values: <br><li>false: means not mounted</li><li>true: means mounted.</li>.
      */
     public void setAttached(Boolean Attached) {
         this.Attached = Attached;
     }
 
     /**
-     * Get Cloud disk size (in GB). 
-     * @return DiskSize Cloud disk size (in GB).
+     * Get Specifies the disk capacity in GiB. 
+     * @return DiskSize Specifies the disk capacity in GiB.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Cloud disk size (in GB).
-     * @param DiskSize Cloud disk size (in GB).
+     * Set Specifies the disk capacity in GiB.
+     * @param DiskSize Specifies the disk capacity in GiB.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return MigratePercent Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
+     * Get It indicates the migration progress of cloud disk type change. The value range is 0 to 100. 
+     * @return MigratePercent It indicates the migration progress of cloud disk type change. The value range is 0 to 100.
      */
     public Long getMigratePercent() {
         return this.MigratePercent;
     }
 
     /**
-     * Set Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
-     * @param MigratePercent Migration progress of cloud disk type change, from 0 to 100.
-Note: This field may return null, indicating that no valid value was found.
+     * Set It indicates the migration progress of cloud disk type change. The value range is 0 to 100.
+     * @param MigratePercent It indicates the migration progress of cloud disk type change. The value range is 0 to 100.
      */
     public void setMigratePercent(Long MigratePercent) {
         this.MigratePercent = MigratePercent;
     }
 
     /**
-     * Get Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk. 
-     * @return DiskUsage Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+     * Get Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><li>DATA_DISK: DATA DISK.</li>. 
+     * @return DiskUsage Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><li>DATA_DISK: DATA DISK.</li>.
      */
     public String getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-     * @param DiskUsage Cloud disk type. Value range:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+     * Set Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><li>DATA_DISK: DATA DISK.</li>.
+     * @param DiskUsage Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><li>DATA_DISK: DATA DISK.</li>.
      */
     public void setDiskUsage(String DiskUsage) {
         this.DiskUsage = DiskUsage;
     }
 
     /**
-     * Get Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go. 
-     * @return DiskChargeType Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+     * Get Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>. 
+     * @return DiskChargeType Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
      */
     public String getDiskChargeType() {
         return this.DiskChargeType;
     }
 
     /**
-     * Set Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
-     * @param DiskChargeType Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+     * Set Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
+     * @param DiskChargeType Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
      */
     public void setDiskChargeType(String DiskChargeType) {
         this.DiskChargeType = DiskChargeType;
@@ -821,36 +792,32 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots. 
-     * @return SnapshotAbility Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots.
+     * Get Specifies whether the cloud disk has the capability to create snapshots. valid values:<br><li>false: cannot create snapshots</li><li>true: can create snapshots.</li>. 
+     * @return SnapshotAbility Specifies whether the cloud disk has the capability to create snapshots. valid values:<br><li>false: cannot create snapshots</li><li>true: can create snapshots.</li>.
      */
     public Boolean getSnapshotAbility() {
         return this.SnapshotAbility;
     }
 
     /**
-     * Set Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots.
-     * @param SnapshotAbility Whether the cloud disk has the capability to create snapshots. Value range: <br><li>false: Cannot create snapshots. true: Can create snapshots.
+     * Set Specifies whether the cloud disk has the capability to create snapshots. valid values:<br><li>false: cannot create snapshots</li><li>true: can create snapshots.</li>.
+     * @param SnapshotAbility Specifies whether the cloud disk has the capability to create snapshots. valid values:<br><li>false: cannot create snapshots</li><li>true: can create snapshots.</li>.
      */
     public void setSnapshotAbility(Boolean SnapshotAbility) {
         this.SnapshotAbility = SnapshotAbility;
     }
 
     /**
-     * Get This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return DeadlineError This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
-Note: This field may return null, indicating that no valid value was found.
+     * Get Indicates whether the cloud disk expiration time is earlier than that of the instance. this field is valid only when the cloud disk is mounted to the instance and both the instance and the cloud disk are on a monthly subscription basis.<br><li>true: the expiration time of the cloud disk is earlier than that of the instance.</li><li>false: cloud disk expiration time later than instance.</li>. 
+     * @return DeadlineError Indicates whether the cloud disk expiration time is earlier than that of the instance. this field is valid only when the cloud disk is mounted to the instance and both the instance and the cloud disk are on a monthly subscription basis.<br><li>true: the expiration time of the cloud disk is earlier than that of the instance.</li><li>false: cloud disk expiration time later than instance.</li>.
      */
     public Boolean getDeadlineError() {
         return this.DeadlineError;
     }
 
     /**
-     * Set This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
-Note: This field may return null, indicating that no valid value was found.
-     * @param DeadlineError This field is only applicable when the instance is already mounted to the cloud disk, and both the instance and the cloud disk use monthly subscription. <br><li>true: Expiration time of cloud disk is earlier than that of the instance.<br><li>false:Expiration time of cloud disk is later than that of the instance.
-Note: This field may return null, indicating that no valid value was found.
+     * Set Indicates whether the cloud disk expiration time is earlier than that of the instance. this field is valid only when the cloud disk is mounted to the instance and both the instance and the cloud disk are on a monthly subscription basis.<br><li>true: the expiration time of the cloud disk is earlier than that of the instance.</li><li>false: cloud disk expiration time later than instance.</li>.
+     * @param DeadlineError Indicates whether the cloud disk expiration time is earlier than that of the instance. this field is valid only when the cloud disk is mounted to the instance and both the instance and the cloud disk are on a monthly subscription basis.<br><li>true: the expiration time of the cloud disk is earlier than that of the instance.</li><li>false: cloud disk expiration time later than instance.</li>.
      */
     public void setDeadlineError(Boolean DeadlineError) {
         this.DeadlineError = DeadlineError;
@@ -873,40 +840,36 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Number of days from current time until disk expiration (only applicable for prepaid disks).
-Note: This field may return null, indicating that no valid value was found. 
-     * @return DifferDaysOfDeadline Number of days from current time until disk expiration (only applicable for prepaid disks).
-Note: This field may return null, indicating that no valid value was found.
+     * Get The number of days from the current time to disk expiration (only applicable to prepaid cbs).
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DifferDaysOfDeadline The number of days from the current time to disk expiration (only applicable to prepaid cbs).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDifferDaysOfDeadline() {
         return this.DifferDaysOfDeadline;
     }
 
     /**
-     * Set Number of days from current time until disk expiration (only applicable for prepaid disks).
-Note: This field may return null, indicating that no valid value was found.
-     * @param DifferDaysOfDeadline Number of days from current time until disk expiration (only applicable for prepaid disks).
-Note: This field may return null, indicating that no valid value was found.
+     * Set The number of days from the current time to disk expiration (only applicable to prepaid cbs).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DifferDaysOfDeadline The number of days from the current time to disk expiration (only applicable to prepaid cbs).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDifferDaysOfDeadline(Long DifferDaysOfDeadline) {
         this.DifferDaysOfDeadline = DifferDaysOfDeadline;
     }
 
     /**
-     * Get In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return ReturnFailCode In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
+     * Get For prepaid cloud disks that do not support proactive return, this parameter indicates the specific reason for not supporting refund. value range: <br><li>1: the cloud disk has already been returned.</li><li>2: the cloud disk has expired.</li><li>3: the cloud disk does not support return.</li><li>8: the maximum returnable quantity is exceeded.</li><li>10: non-elastic cloud disks, system disks, and pay-as-you-go cloud disks do not support return.</li>. 
+     * @return ReturnFailCode For prepaid cloud disks that do not support proactive return, this parameter indicates the specific reason for not supporting refund. value range: <br><li>1: the cloud disk has already been returned.</li><li>2: the cloud disk has expired.</li><li>3: the cloud disk does not support return.</li><li>8: the maximum returnable quantity is exceeded.</li><li>10: non-elastic cloud disks, system disks, and pay-as-you-go cloud disks do not support return.</li>.
      */
     public Long getReturnFailCode() {
         return this.ReturnFailCode;
     }
 
     /**
-     * Set In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
-     * @param ReturnFailCode In circumstances where the prepaid cloud disk does not support active return, this parameter indicates the reason that return is not supported. Value range: <br><li>1: The cloud disk has already been returned. <br><li>2: The cloud disk has already expired. <br><li>3: The cloud disk does not support return. <br><li> 8: The limit on the number of returns is exceeded.
-Note: This field may return null, indicating that no valid value was found.
+     * Set For prepaid cloud disks that do not support proactive return, this parameter indicates the specific reason for not supporting refund. value range: <br><li>1: the cloud disk has already been returned.</li><li>2: the cloud disk has expired.</li><li>3: the cloud disk does not support return.</li><li>8: the maximum returnable quantity is exceeded.</li><li>10: non-elastic cloud disks, system disks, and pay-as-you-go cloud disks do not support return.</li>.
+     * @param ReturnFailCode For prepaid cloud disks that do not support proactive return, this parameter indicates the specific reason for not supporting refund. value range: <br><li>1: the cloud disk has already been returned.</li><li>2: the cloud disk has expired.</li><li>3: the cloud disk does not support return.</li><li>8: the maximum returnable quantity is exceeded.</li><li>10: non-elastic cloud disks, system disks, and pay-as-you-go cloud disks do not support return.</li>.
      */
     public void setReturnFailCode(Long ReturnFailCode) {
         this.ReturnFailCode = ReturnFailCode;
@@ -945,16 +908,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API.  
-     * @return DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+     * Get Specifies whether to delete associated non-permanently retained snapshots when destroying the cloud disk. 0 indicates non-permanent snapshots are not deleted with cloud disk destruction, 1 indicates non-permanent snapshots are deleted with cloud disk destruction. default value: 0. whether a snapshot is permanently retained can be determined through the IsPermanent field in the snapshot description returned by the DescribeSnapshots API (https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1). true indicates permanent snapshot, false indicates non-permanent snapshot. 
+     * @return DeleteSnapshot Specifies whether to delete associated non-permanently retained snapshots when destroying the cloud disk. 0 indicates non-permanent snapshots are not deleted with cloud disk destruction, 1 indicates non-permanent snapshots are deleted with cloud disk destruction. default value: 0. whether a snapshot is permanently retained can be determined through the IsPermanent field in the snapshot description returned by the DescribeSnapshots API (https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1). true indicates permanent snapshot, false indicates non-permanent snapshot.
      */
     public Long getDeleteSnapshot() {
         return this.DeleteSnapshot;
     }
 
     /**
-     * Set Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
-     * @param DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+     * Set Specifies whether to delete associated non-permanently retained snapshots when destroying the cloud disk. 0 indicates non-permanent snapshots are not deleted with cloud disk destruction, 1 indicates non-permanent snapshots are deleted with cloud disk destruction. default value: 0. whether a snapshot is permanently retained can be determined through the IsPermanent field in the snapshot description returned by the DescribeSnapshots API (https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1). true indicates permanent snapshot, false indicates non-permanent snapshot.
+     * @param DeleteSnapshot Specifies whether to delete associated non-permanently retained snapshots when destroying the cloud disk. 0 indicates non-permanent snapshots are not deleted with cloud disk destruction, 1 indicates non-permanent snapshots are deleted with cloud disk destruction. default value: 0. whether a snapshot is permanently retained can be determined through the IsPermanent field in the snapshot description returned by the DescribeSnapshots API (https://www.tencentcloud.com/document/product/362/15647?from_cn_redirect=1). true indicates permanent snapshot, false indicates non-permanent snapshot.
      */
     public void setDeleteSnapshot(Long DeleteSnapshot) {
         this.DeleteSnapshot = DeleteSnapshot;
@@ -993,16 +956,16 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS 
-     * @return InstanceType Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+     * Get The type of the CBS mounting instance. valid values: <br><li>CVM</li><li>EKS</li>. 
+     * @return InstanceType The type of the CBS mounting instance. valid values: <br><li>CVM</li><li>EKS</li>.
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
-     * @param InstanceType Type of the instance mounted to the cloud disk. Valid values: <br><li>CVM<br><li>EKS
+     * Set The type of the CBS mounting instance. valid values: <br><li>CVM</li><li>EKS</li>.
+     * @param InstanceType The type of the CBS mounting instance. valid values: <br><li>CVM</li><li>EKS</li>.
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
@@ -1029,39 +992,67 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Error message for the last operation of the cloud disk
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ErrorPrompt Error message for the last operation of the cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Error prompt for the last operation on cbs. 
+     * @return ErrorPrompt Error prompt for the last operation on cbs.
      */
     public String getErrorPrompt() {
         return this.ErrorPrompt;
     }
 
     /**
-     * Set Error message for the last operation of the cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ErrorPrompt Error message for the last operation of the cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Error prompt for the last operation on cbs.
+     * @param ErrorPrompt Error prompt for the last operation on cbs.
      */
     public void setErrorPrompt(String ErrorPrompt) {
         this.ErrorPrompt = ErrorPrompt;
     }
 
     /**
-     * Get Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BurstPerformance Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether performance burst is enabled for the cloud disk. 
+     * @return BurstPerformance Whether performance burst is enabled for the cloud disk.
      */
     public Boolean getBurstPerformance() {
         return this.BurstPerformance;
     }
 
     /**
-     * Set Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BurstPerformance Whether the cloud disk has enabled disk bursting. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether performance burst is enabled for the cloud disk.
+     * @param BurstPerformance Whether performance burst is enabled for the cloud disk.
      */
     public void setBurstPerformance(Boolean BurstPerformance) {
         this.BurstPerformance = BurstPerformance;
+    }
+
+    /**
+     * Get Encryption type of cbs. valid values: ENCRYPT_V1 and ENCRYPT_V2, which indicate first generation and second generation encryption technology respectively. the two kinds are incompatible. 
+     * @return EncryptType Encryption type of cbs. valid values: ENCRYPT_V1 and ENCRYPT_V2, which indicate first generation and second generation encryption technology respectively. the two kinds are incompatible.
+     */
+    public String getEncryptType() {
+        return this.EncryptType;
+    }
+
+    /**
+     * Set Encryption type of cbs. valid values: ENCRYPT_V1 and ENCRYPT_V2, which indicate first generation and second generation encryption technology respectively. the two kinds are incompatible.
+     * @param EncryptType Encryption type of cbs. valid values: ENCRYPT_V1 and ENCRYPT_V2, which indicate first generation and second generation encryption technology respectively. the two kinds are incompatible.
+     */
+    public void setEncryptType(String EncryptType) {
+        this.EncryptType = EncryptType;
+    }
+
+    /**
+     * Get Key ID of the encrypted disk. 
+     * @return KmsKeyId Key ID of the encrypted disk.
+     */
+    public String getKmsKeyId() {
+        return this.KmsKeyId;
+    }
+
+    /**
+     * Set Key ID of the encrypted disk.
+     * @param KmsKeyId Key ID of the encrypted disk.
+     */
+    public void setKmsKeyId(String KmsKeyId) {
+        this.KmsKeyId = KmsKeyId;
     }
 
     public Disk() {
@@ -1207,6 +1198,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.BurstPerformance != null) {
             this.BurstPerformance = new Boolean(source.BurstPerformance);
         }
+        if (source.EncryptType != null) {
+            this.EncryptType = new String(source.EncryptType);
+        }
+        if (source.KmsKeyId != null) {
+            this.KmsKeyId = new String(source.KmsKeyId);
+        }
     }
 
 
@@ -1256,6 +1253,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "LastAttachInsId", this.LastAttachInsId);
         this.setParamSimple(map, prefix + "ErrorPrompt", this.ErrorPrompt);
         this.setParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
+        this.setParamSimple(map, prefix + "EncryptType", this.EncryptType);
+        this.setParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
 
     }
 }

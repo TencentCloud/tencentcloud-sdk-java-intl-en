@@ -116,7 +116,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create prepaid annual and monthly instances. It only supports creating Pro Edition instances.
+     *This API is used to create prepaid yearly/monthly subscribed instances. It only supports creating Pro Edition instances.
      * @param req CreateInstancePreRequest
      * @return CreateInstancePreResponse
      * @throws TencentCloudSDKException
@@ -479,7 +479,7 @@ public class CkafkaClient extends AbstractClient{
     }
 
     /**
-     *This API is used to enumerate regions, and can be called only in Guangzhou.
+     *Enumerate regional information
      * @param req DescribeRegionRequest
      * @return DescribeRegionResponse
      * @throws TencentCloudSDKException

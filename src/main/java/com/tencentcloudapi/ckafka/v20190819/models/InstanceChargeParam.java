@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceChargeParam extends AbstractModel {
 
     /**
-    * Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+    * Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
     */
     @SerializedName("InstanceChargeType")
     @Expose
@@ -38,16 +38,16 @@ public class InstanceChargeParam extends AbstractModel {
     private Long InstanceChargePeriod;
 
     /**
-     * Get Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go) 
-     * @return InstanceChargeType Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+     * Get Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go) 
+     * @return InstanceChargeType Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
      */
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
 
     /**
-     * Set Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
-     * @param InstanceChargeType Instance billing mode (`PREPAID`: Monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+     * Set Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
+     * @param InstanceChargeType Instance billing mode (`PREPAID`: Yearly/monthly subscription; `POSTPAID_BY_HOUR`: Pay-as-you-go)
      */
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;

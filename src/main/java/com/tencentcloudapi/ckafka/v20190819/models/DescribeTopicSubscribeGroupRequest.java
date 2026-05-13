@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeTopicSubscribeGroupRequest extends AbstractModel {
 
     /**
-    * The ckafka cluster instance Id.
+    * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Topic name
+    * <p>Topic name</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Starting position of paging
+    * <p>Starting position for pagination</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results per page
+    * <p>Count per page</p><p>Default value: 20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get The ckafka cluster instance Id. 
-     * @return InstanceId The ckafka cluster instance Id.
+     * Get <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id.
-     * @param InstanceId The ckafka cluster instance Id.
+     * Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Topic name 
-     * @return TopicName Topic name
+     * Get <p>Topic name</p> 
+     * @return TopicName <p>Topic name</p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name
-     * @param TopicName Topic name
+     * Set <p>Topic name</p>
+     * @param TopicName <p>Topic name</p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Starting position of paging 
-     * @return Offset Starting position of paging
+     * Get <p>Starting position for pagination</p> 
+     * @return Offset <p>Starting position for pagination</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Starting position of paging
-     * @param Offset Starting position of paging
+     * Set <p>Starting position for pagination</p>
+     * @param Offset <p>Starting position for pagination</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results per page 
-     * @return Limit Number of results per page
+     * Get <p>Count per page</p><p>Default value: 20</p> 
+     * @return Limit <p>Count per page</p><p>Default value: 20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page
-     * @param Limit Number of results per page
+     * Set <p>Count per page</p><p>Default value: 20</p>
+     * @param Limit <p>Count per page</p><p>Default value: 20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeTopicDetailRequest extends AbstractModel {
 
     /**
-    * The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+    * <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * (Filter) filter by `topicName`. Fuzzy search is supported
+    * <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * Offset. If this parameter is left empty, 0 will be used by default
+    * <p>Offset, which is 0 by default</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned results. default: 20. value must be above 0.
+    * <p>Number of returned results. Default value: 20. Value must be above 0.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Name of the preset ACL rule.
+    * <p>Acl preset policy name</p>
     */
     @SerializedName("AclRuleName")
     @Expose
     private String AclRuleName;
 
     /**
-    * Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+    * <p>Sort by specific attributes (Currently supports PartitionNum/CreateTime). Default value is CreateTime.</p><p>If empty, default to reverse sort by CreateTime.</p>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * 0 - sequential, 1 - reverse order. default value: 0.
+    * <p>0-sequential, 1-reverse, default value is 0.</p>
     */
     @SerializedName("OrderType")
     @Expose
     private Long OrderType;
 
     /**
-    * Currently supports ReplicaNum (number of replicas) filter criteria.
+    * <p>Currently supports filtering by ReplicaNum (number of replicas)</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-     * Get The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api. 
-     * @return InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+     * Get <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p> 
+     * @return InstanceId <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
-     * @param InstanceId The ckafka cluster instance Id, which can be obtained through the [DescribeInstances](https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1) api.
+     * Set <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
+     * @param InstanceId <p>ckafka cluster instance Id, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/597/40835?from_cn_redirect=1">DescribeInstances</a> API</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get (Filter) filter by `topicName`. Fuzzy search is supported 
-     * @return SearchWord (Filter) filter by `topicName`. Fuzzy search is supported
+     * Get <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p> 
+     * @return SearchWord <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set (Filter) filter by `topicName`. Fuzzy search is supported
-     * @param SearchWord (Filter) filter by `topicName`. Fuzzy search is supported
+     * Set <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
+     * @param SearchWord <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get Offset. If this parameter is left empty, 0 will be used by default 
-     * @return Offset Offset. If this parameter is left empty, 0 will be used by default
+     * Get <p>Offset, which is 0 by default</p> 
+     * @return Offset <p>Offset, which is 0 by default</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. If this parameter is left empty, 0 will be used by default
-     * @param Offset Offset. If this parameter is left empty, 0 will be used by default
+     * Set <p>Offset, which is 0 by default</p>
+     * @param Offset <p>Offset, which is 0 by default</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned results. default: 20. value must be above 0. 
-     * @return Limit Number of returned results. default: 20. value must be above 0.
+     * Get <p>Number of returned results. Default value: 20. Value must be above 0.</p> 
+     * @return Limit <p>Number of returned results. Default value: 20. Value must be above 0.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. default: 20. value must be above 0.
-     * @param Limit Number of returned results. default: 20. value must be above 0.
+     * Set <p>Number of returned results. Default value: 20. Value must be above 0.</p>
+     * @param Limit <p>Number of returned results. Default value: 20. Value must be above 0.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Name of the preset ACL rule. 
-     * @return AclRuleName Name of the preset ACL rule.
+     * Get <p>Acl preset policy name</p> 
+     * @return AclRuleName <p>Acl preset policy name</p>
      */
     public String getAclRuleName() {
         return this.AclRuleName;
     }
 
     /**
-     * Set Name of the preset ACL rule.
-     * @param AclRuleName Name of the preset ACL rule.
+     * Set <p>Acl preset policy name</p>
+     * @param AclRuleName <p>Acl preset policy name</p>
      */
     public void setAclRuleName(String AclRuleName) {
         this.AclRuleName = AclRuleName;
     }
 
     /**
-     * Get Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime. 
-     * @return OrderBy Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+     * Get <p>Sort by specific attributes (Currently supports PartitionNum/CreateTime). Default value is CreateTime.</p><p>If empty, default to reverse sort by CreateTime.</p> 
+     * @return OrderBy <p>Sort by specific attributes (Currently supports PartitionNum/CreateTime). Default value is CreateTime.</p><p>If empty, default to reverse sort by CreateTime.</p>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
-     * @param OrderBy Sorts based on specific attributes (currently supports PartitionNum/CreateTime). default value: CreateTime.
+     * Set <p>Sort by specific attributes (Currently supports PartitionNum/CreateTime). Default value is CreateTime.</p><p>If empty, default to reverse sort by CreateTime.</p>
+     * @param OrderBy <p>Sort by specific attributes (Currently supports PartitionNum/CreateTime). Default value is CreateTime.</p><p>If empty, default to reverse sort by CreateTime.</p>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get 0 - sequential, 1 - reverse order. default value: 0. 
-     * @return OrderType 0 - sequential, 1 - reverse order. default value: 0.
+     * Get <p>0-sequential, 1-reverse, default value is 0.</p> 
+     * @return OrderType <p>0-sequential, 1-reverse, default value is 0.</p>
      */
     public Long getOrderType() {
         return this.OrderType;
     }
 
     /**
-     * Set 0 - sequential, 1 - reverse order. default value: 0.
-     * @param OrderType 0 - sequential, 1 - reverse order. default value: 0.
+     * Set <p>0-sequential, 1-reverse, default value is 0.</p>
+     * @param OrderType <p>0-sequential, 1-reverse, default value is 0.</p>
      */
     public void setOrderType(Long OrderType) {
         this.OrderType = OrderType;
     }
 
     /**
-     * Get Currently supports ReplicaNum (number of replicas) filter criteria. 
-     * @return Filters Currently supports ReplicaNum (number of replicas) filter criteria.
+     * Get <p>Currently supports filtering by ReplicaNum (number of replicas)</p> 
+     * @return Filters <p>Currently supports filtering by ReplicaNum (number of replicas)</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Currently supports ReplicaNum (number of replicas) filter criteria.
-     * @param Filters Currently supports ReplicaNum (number of replicas) filter criteria.
+     * Set <p>Currently supports filtering by ReplicaNum (number of replicas)</p>
+     * @param Filters <p>Currently supports filtering by ReplicaNum (number of replicas)</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;

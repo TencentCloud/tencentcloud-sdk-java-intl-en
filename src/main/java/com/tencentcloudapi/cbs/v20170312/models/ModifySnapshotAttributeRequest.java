@@ -24,18 +24,11 @@ import java.util.HashMap;
 public class ModifySnapshotAttributeRequest extends AbstractModel {
 
     /**
-    * Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+    * Snapshot ID. can be queried via DescribeSnapshots (https://www.tencentcloud.com/document/api/362/15647?from_cn_redirect=1).
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
-
-    /**
-    * Name of new snapshot. Maximum length is 60 bytes.
-    */
-    @SerializedName("SnapshotName")
-    @Expose
-    private String SnapshotName;
 
     /**
     * Snapshot retention mode. Valid values: `FALSE`: non-permanent retention; `TRUE`: permanent retention.
@@ -45,42 +38,33 @@ public class ModifySnapshotAttributeRequest extends AbstractModel {
     private Boolean IsPermanent;
 
     /**
-    * Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+    * Name of new snapshot. Maximum length is 60 bytes.
+    */
+    @SerializedName("SnapshotName")
+    @Expose
+    private String SnapshotName;
+
+    /**
+    * Specifies the snapshot expiration time. the snapshot will be simultaneously set to the non-permanent retention method. snapshots exceeding the expiry time will be automatically deleted. note: this parameter is valid only when IsPermanent is False.
     */
     @SerializedName("Deadline")
     @Expose
     private String Deadline;
 
     /**
-     * Get Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1). 
-     * @return SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+     * Get Snapshot ID. can be queried via DescribeSnapshots (https://www.tencentcloud.com/document/api/362/15647?from_cn_redirect=1). 
+     * @return SnapshotId Snapshot ID. can be queried via DescribeSnapshots (https://www.tencentcloud.com/document/api/362/15647?from_cn_redirect=1).
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
-     * @param SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+     * Set Snapshot ID. can be queried via DescribeSnapshots (https://www.tencentcloud.com/document/api/362/15647?from_cn_redirect=1).
+     * @param SnapshotId Snapshot ID. can be queried via DescribeSnapshots (https://www.tencentcloud.com/document/api/362/15647?from_cn_redirect=1).
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
-    }
-
-    /**
-     * Get Name of new snapshot. Maximum length is 60 bytes. 
-     * @return SnapshotName Name of new snapshot. Maximum length is 60 bytes.
-     */
-    public String getSnapshotName() {
-        return this.SnapshotName;
-    }
-
-    /**
-     * Set Name of new snapshot. Maximum length is 60 bytes.
-     * @param SnapshotName Name of new snapshot. Maximum length is 60 bytes.
-     */
-    public void setSnapshotName(String SnapshotName) {
-        this.SnapshotName = SnapshotName;
     }
 
     /**
@@ -100,16 +84,32 @@ public class ModifySnapshotAttributeRequest extends AbstractModel {
     }
 
     /**
-     * Get Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration. 
-     * @return Deadline Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+     * Get Name of new snapshot. Maximum length is 60 bytes. 
+     * @return SnapshotName Name of new snapshot. Maximum length is 60 bytes.
+     */
+    public String getSnapshotName() {
+        return this.SnapshotName;
+    }
+
+    /**
+     * Set Name of new snapshot. Maximum length is 60 bytes.
+     * @param SnapshotName Name of new snapshot. Maximum length is 60 bytes.
+     */
+    public void setSnapshotName(String SnapshotName) {
+        this.SnapshotName = SnapshotName;
+    }
+
+    /**
+     * Get Specifies the snapshot expiration time. the snapshot will be simultaneously set to the non-permanent retention method. snapshots exceeding the expiry time will be automatically deleted. note: this parameter is valid only when IsPermanent is False. 
+     * @return Deadline Specifies the snapshot expiration time. the snapshot will be simultaneously set to the non-permanent retention method. snapshots exceeding the expiry time will be automatically deleted. note: this parameter is valid only when IsPermanent is False.
      */
     public String getDeadline() {
         return this.Deadline;
     }
 
     /**
-     * Set Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
-     * @param Deadline Expiration time of the snapshot. Setting this parameter will set the snapshot retention mode to `FALSE` (non-permanent retention) and the snapshot will be automatically deleted upon expiration.
+     * Set Specifies the snapshot expiration time. the snapshot will be simultaneously set to the non-permanent retention method. snapshots exceeding the expiry time will be automatically deleted. note: this parameter is valid only when IsPermanent is False.
+     * @param Deadline Specifies the snapshot expiration time. the snapshot will be simultaneously set to the non-permanent retention method. snapshots exceeding the expiry time will be automatically deleted. note: this parameter is valid only when IsPermanent is False.
      */
     public void setDeadline(String Deadline) {
         this.Deadline = Deadline;
@@ -126,11 +126,11 @@ public class ModifySnapshotAttributeRequest extends AbstractModel {
         if (source.SnapshotId != null) {
             this.SnapshotId = new String(source.SnapshotId);
         }
-        if (source.SnapshotName != null) {
-            this.SnapshotName = new String(source.SnapshotName);
-        }
         if (source.IsPermanent != null) {
             this.IsPermanent = new Boolean(source.IsPermanent);
+        }
+        if (source.SnapshotName != null) {
+            this.SnapshotName = new String(source.SnapshotName);
         }
         if (source.Deadline != null) {
             this.Deadline = new String(source.Deadline);
@@ -143,8 +143,8 @@ public class ModifySnapshotAttributeRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
-        this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
         this.setParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
+        this.setParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
 
     }

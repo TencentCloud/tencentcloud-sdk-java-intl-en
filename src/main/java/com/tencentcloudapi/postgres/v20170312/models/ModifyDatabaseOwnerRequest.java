@@ -31,7 +31,7 @@ public class ModifyDatabaseOwnerRequest extends AbstractModel {
     private String DBInstanceId;
 
     /**
-    * Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
+    * Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
     */
     @SerializedName("DatabaseName")
     @Expose
@@ -61,16 +61,16 @@ public class ModifyDatabaseOwnerRequest extends AbstractModel {
     }
 
     /**
-     * Get Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1). 
-     * @return DatabaseName Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
+     * Get Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118). 
+     * @return DatabaseName Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
      */
     public String getDatabaseName() {
         return this.DatabaseName;
     }
 
     /**
-     * Set Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
-     * @param DatabaseName Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/api/409/43353?from_cn_redirect=1).
+     * Set Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
+     * @param DatabaseName Database name. obtain through the api [DescribeDatabases](https://www.tencentcloud.com/document/product/409/37118).
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;

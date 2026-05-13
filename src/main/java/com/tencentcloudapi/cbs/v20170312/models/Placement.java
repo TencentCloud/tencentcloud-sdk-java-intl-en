@@ -31,22 +31,22 @@ public class Placement extends AbstractModel {
     private String Zone;
 
     /**
-    * Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+    * CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CageId")
     @Expose
     private String CageId;
 
     /**
-    * ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+    * Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Project name of the instance.
+    * Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ProjectName")
@@ -62,8 +62,8 @@ Note: This field may return null, indicating that no valid value was found.
     private String CdcName;
 
     /**
-    * ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+    * The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CdcId")
     @Expose
@@ -93,45 +93,45 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return CageId Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+     * Get CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CageId CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCageId() {
         return this.CageId;
     }
 
     /**
-     * Set Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
-     * @param CageId Cage ID. When it is an input parameter, the specified CageID resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the cage the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+     * Set CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CageId CageId, which can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it operates on resources of the specified cage Id and can be empty. as an output parameter, it indicates the cage Id to which the resource belongs and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCageId(String CageId) {
         this.CageId = CageId;
     }
 
     /**
-     * Get ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used. 
-     * @return ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+     * Get Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project. 
+     * @return ProjectId Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
-     * @param ProjectId ID of the project to which the instance belongs. This parameter can be obtained from the projectId field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+     * Set Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
+     * @param ProjectId Instance'S project ID, which can be obtained by DescribeProject. by default if left blank, it is 0, indicating the default project.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Project name of the instance.
+     * Get Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ProjectName Project name of the instance.
+     * @return ProjectName Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getProjectName() {
@@ -139,9 +139,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Project name of the instance.
+     * Set Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ProjectName Project name of the instance.
+     * @param ProjectName Project to which instance belongs. search via [DescribeProject](https://www.tencentcloud.com/document/api/651/78725?from_cn_redirect=1).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProjectName(String ProjectName) {
@@ -169,20 +169,20 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found. 
-     * @return CdcId ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+     * Get The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CdcId The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
-     * @param CdcId ID of dedicated cluster which the instance belongs to. When it is an input parameter, the specified CdcId dedicated cluster resource is operated, and it can be left blank. When it is an output parameter, it is the ID of the dedicated cluster which the resource belongs to, and it can be left blank.
-Note: This field may return null, indicating that no valid value was found.
+     * Set The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CdcId The exclusive cluster ID of the instance. can be obtained via [DescribeDiskStoragePool](https://www.tencentcloud.com/document/api/362/62143?from_cn_redirect=1). as an input parameter, it indicates operations on resources belonging to the designated CdcId exclusive cluster and can be empty. as an output parameter, it indicates the exclusive cluster ID of the resource and can be empty.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;

@@ -31,8 +31,8 @@ public class PrepayPrice extends AbstractModel {
     private Float DiscountPrice;
 
     /**
-    * Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ChargeUnit")
     @Expose
@@ -92,8 +92,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private Float UnitPrice;
 
     /**
-    * Detailed billing items
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Details list of billable items.
     */
     @SerializedName("DetailPrices")
     @Expose
@@ -116,20 +115,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ChargeUnit Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ChargeUnit Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getChargeUnit() {
         return this.ChargeUnit;
     }
 
     /**
-     * Set Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ChargeUnit Billing unit for pay-as-you-go cloud disks. Valid value: <br><li>HOUR: billed hourly.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ChargeUnit Billing unit for postpaid cloud disk. valid values:<br><li>HOUR: the billing unit for postpaid cloud disk is calculated hourly.</li>.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setChargeUnit(String ChargeUnit) {
         this.ChargeUnit = ChargeUnit;
@@ -264,20 +263,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Detailed billing items
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DetailPrices Detailed billing items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Details list of billable items. 
+     * @return DetailPrices Details list of billable items.
      */
     public DetailPrice [] getDetailPrices() {
         return this.DetailPrices;
     }
 
     /**
-     * Set Detailed billing items
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DetailPrices Detailed billing items
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Details list of billable items.
+     * @param DetailPrices Details list of billable items.
      */
     public void setDetailPrices(DetailPrice [] DetailPrices) {
         this.DetailPrices = DetailPrices;

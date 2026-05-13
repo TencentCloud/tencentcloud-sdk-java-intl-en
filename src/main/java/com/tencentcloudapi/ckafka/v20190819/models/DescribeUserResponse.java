@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeUserResponse extends AbstractModel {
 
     /**
-    * Returned result.
+    * <p>Returned result</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Returned result. 
-     * @return Result Returned result.
+     * Get <p>Returned result</p> 
+     * @return Result <p>Returned result</p>
      */
     public UserResponse getResult() {
         return this.Result;
     }
 
     /**
-     * Set Returned result.
-     * @param Result Returned result.
+     * Set <p>Returned result</p>
+     * @param Result <p>Returned result</p>
      */
     public void setResult(UserResponse Result) {
         this.Result = Result;

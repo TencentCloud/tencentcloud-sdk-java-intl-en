@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class VpcEndpointInfo extends AbstractModel {
 
     /**
-    * vpc id
+    * 
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * subnet id
+    * 
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * vpc Access Point Information
+    * 
     */
     @SerializedName("VpcEndpoint")
     @Expose
@@ -59,48 +59,55 @@ public class VpcEndpointInfo extends AbstractModel {
     private String VpcTlsEndpoint;
 
     /**
-     * Get vpc id 
-     * @return VpcId vpc id
+    * Error message for VPC access point operations.
+    */
+    @SerializedName("VpcErrorMessage")
+    @Expose
+    private String VpcErrorMessage;
+
+    /**
+     * Get  
+     * @return VpcId 
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set vpc id
-     * @param VpcId vpc id
+     * Set 
+     * @param VpcId 
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get subnet id 
-     * @return SubnetId subnet id
+     * Get  
+     * @return SubnetId 
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set subnet id
-     * @param SubnetId subnet id
+     * Set 
+     * @param SubnetId 
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get vpc Access Point Information 
-     * @return VpcEndpoint vpc Access Point Information
+     * Get  
+     * @return VpcEndpoint 
      */
     public String getVpcEndpoint() {
         return this.VpcEndpoint;
     }
 
     /**
-     * Set vpc Access Point Information
-     * @param VpcEndpoint vpc Access Point Information
+     * Set 
+     * @param VpcEndpoint 
      */
     public void setVpcEndpoint(String VpcEndpoint) {
         this.VpcEndpoint = VpcEndpoint;
@@ -138,6 +145,22 @@ public class VpcEndpointInfo extends AbstractModel {
         this.VpcTlsEndpoint = VpcTlsEndpoint;
     }
 
+    /**
+     * Get Error message for VPC access point operations. 
+     * @return VpcErrorMessage Error message for VPC access point operations.
+     */
+    public String getVpcErrorMessage() {
+        return this.VpcErrorMessage;
+    }
+
+    /**
+     * Set Error message for VPC access point operations.
+     * @param VpcErrorMessage Error message for VPC access point operations.
+     */
+    public void setVpcErrorMessage(String VpcErrorMessage) {
+        this.VpcErrorMessage = VpcErrorMessage;
+    }
+
     public VpcEndpointInfo() {
     }
 
@@ -161,6 +184,9 @@ public class VpcEndpointInfo extends AbstractModel {
         if (source.VpcTlsEndpoint != null) {
             this.VpcTlsEndpoint = new String(source.VpcTlsEndpoint);
         }
+        if (source.VpcErrorMessage != null) {
+            this.VpcErrorMessage = new String(source.VpcErrorMessage);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class VpcEndpointInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "VpcEndpoint", this.VpcEndpoint);
         this.setParamSimple(map, prefix + "VpcDataStreamEndpointStatus", this.VpcDataStreamEndpointStatus);
         this.setParamSimple(map, prefix + "VpcTlsEndpoint", this.VpcTlsEndpoint);
+        this.setParamSimple(map, prefix + "VpcErrorMessage", this.VpcErrorMessage);
 
     }
 }

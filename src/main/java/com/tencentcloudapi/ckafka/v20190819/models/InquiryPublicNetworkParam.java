@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquiryPublicNetworkParam extends AbstractModel {
 
     /**
-    * Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+    * Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
     */
     @SerializedName("PublicNetworkChargeType")
     @Expose
@@ -38,16 +38,16 @@ public class InquiryPublicNetworkParam extends AbstractModel {
     private Long PublicNetworkMonthly;
 
     /**
-     * Get Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour) 
-     * @return PublicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+     * Get Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour) 
+     * @return PublicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
      */
     public String getPublicNetworkChargeType() {
         return this.PublicNetworkChargeType;
     }
 
     /**
-     * Set Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
-     * @param PublicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+     * Set Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
+     * @param PublicNetworkChargeType Public network bandwidth billing mode (`BANDWIDTH_PREPAID`: Yearly/monthly subscription; `BANDWIDTH_POSTPAID_BY_HOUR`: Bill-by-hour)
      */
     public void setPublicNetworkChargeType(String PublicNetworkChargeType) {
         this.PublicNetworkChargeType = PublicNetworkChargeType;

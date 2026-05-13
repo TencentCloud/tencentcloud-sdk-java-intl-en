@@ -24,187 +24,210 @@ import java.util.HashMap;
 public class DescribeModifyTypeRequest extends AbstractModel {
 
     /**
-    * CKafka cluster instance ID.
+    * <p>ckafka cluster instance Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Specifies the bandwidth after upgrade. measurement unit: mb.
+    * <p>Bandwidth after upgrade, unit mb</p>
     */
     @SerializedName("BandWidth")
     @Expose
     private Long BandWidth;
 
     /**
-    * Specifies the disk after upgrade, in gb.
+    * <p>Disk capacity after upgrade, in GB</p>
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Disk type, such as CLOUD_PREMIUM.
+    * <p>Disk type, such as CLOUD_PREMIUM</p>
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Number of partitions.
+    * <p>Number of partitions</p>
     */
     @SerializedName("Partition")
     @Expose
     private Long Partition;
 
     /**
-    * Number of Topics
+    * <p>topic count</p>
     */
     @SerializedName("Topic")
     @Expose
     private Long Topic;
 
     /**
-    * Instance type, such as sp_ckafka_profession.
+    * <p>Instance type such as sp_ckafka_profession</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Configuration change portal.
+    * <p>Resize portal</p>
     */
     @SerializedName("ModifyEntry")
     @Expose
     private String ModifyEntry;
 
     /**
-     * Get CKafka cluster instance ID. 
-     * @return InstanceId CKafka cluster instance ID.
+    * <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
+    */
+    @SerializedName("ModifyZone")
+    @Expose
+    private Boolean ModifyZone;
+
+    /**
+     * Get <p>ckafka cluster instance Id</p> 
+     * @return InstanceId <p>ckafka cluster instance Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set CKafka cluster instance ID.
-     * @param InstanceId CKafka cluster instance ID.
+     * Set <p>ckafka cluster instance Id</p>
+     * @param InstanceId <p>ckafka cluster instance Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Specifies the bandwidth after upgrade. measurement unit: mb. 
-     * @return BandWidth Specifies the bandwidth after upgrade. measurement unit: mb.
+     * Get <p>Bandwidth after upgrade, unit mb</p> 
+     * @return BandWidth <p>Bandwidth after upgrade, unit mb</p>
      */
     public Long getBandWidth() {
         return this.BandWidth;
     }
 
     /**
-     * Set Specifies the bandwidth after upgrade. measurement unit: mb.
-     * @param BandWidth Specifies the bandwidth after upgrade. measurement unit: mb.
+     * Set <p>Bandwidth after upgrade, unit mb</p>
+     * @param BandWidth <p>Bandwidth after upgrade, unit mb</p>
      */
     public void setBandWidth(Long BandWidth) {
         this.BandWidth = BandWidth;
     }
 
     /**
-     * Get Specifies the disk after upgrade, in gb. 
-     * @return DiskSize Specifies the disk after upgrade, in gb.
+     * Get <p>Disk capacity after upgrade, in GB</p> 
+     * @return DiskSize <p>Disk capacity after upgrade, in GB</p>
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Specifies the disk after upgrade, in gb.
-     * @param DiskSize Specifies the disk after upgrade, in gb.
+     * Set <p>Disk capacity after upgrade, in GB</p>
+     * @param DiskSize <p>Disk capacity after upgrade, in GB</p>
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Disk type, such as CLOUD_PREMIUM. 
-     * @return DiskType Disk type, such as CLOUD_PREMIUM.
+     * Get <p>Disk type, such as CLOUD_PREMIUM</p> 
+     * @return DiskType <p>Disk type, such as CLOUD_PREMIUM</p>
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Disk type, such as CLOUD_PREMIUM.
-     * @param DiskType Disk type, such as CLOUD_PREMIUM.
+     * Set <p>Disk type, such as CLOUD_PREMIUM</p>
+     * @param DiskType <p>Disk type, such as CLOUD_PREMIUM</p>
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Number of partitions. 
-     * @return Partition Number of partitions.
+     * Get <p>Number of partitions</p> 
+     * @return Partition <p>Number of partitions</p>
      */
     public Long getPartition() {
         return this.Partition;
     }
 
     /**
-     * Set Number of partitions.
-     * @param Partition Number of partitions.
+     * Set <p>Number of partitions</p>
+     * @param Partition <p>Number of partitions</p>
      */
     public void setPartition(Long Partition) {
         this.Partition = Partition;
     }
 
     /**
-     * Get Number of Topics 
-     * @return Topic Number of Topics
+     * Get <p>topic count</p> 
+     * @return Topic <p>topic count</p>
      */
     public Long getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set Number of Topics
-     * @param Topic Number of Topics
+     * Set <p>topic count</p>
+     * @param Topic <p>topic count</p>
      */
     public void setTopic(Long Topic) {
         this.Topic = Topic;
     }
 
     /**
-     * Get Instance type, such as sp_ckafka_profession. 
-     * @return Type Instance type, such as sp_ckafka_profession.
+     * Get <p>Instance type such as sp_ckafka_profession</p> 
+     * @return Type <p>Instance type such as sp_ckafka_profession</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Instance type, such as sp_ckafka_profession.
-     * @param Type Instance type, such as sp_ckafka_profession.
+     * Set <p>Instance type such as sp_ckafka_profession</p>
+     * @param Type <p>Instance type such as sp_ckafka_profession</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Configuration change portal. 
-     * @return ModifyEntry Configuration change portal.
+     * Get <p>Resize portal</p> 
+     * @return ModifyEntry <p>Resize portal</p>
      */
     public String getModifyEntry() {
         return this.ModifyEntry;
     }
 
     /**
-     * Set Configuration change portal.
-     * @param ModifyEntry Configuration change portal.
+     * Set <p>Resize portal</p>
+     * @param ModifyEntry <p>Resize portal</p>
      */
     public void setModifyEntry(String ModifyEntry) {
         this.ModifyEntry = ModifyEntry;
+    }
+
+    /**
+     * Get <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p> 
+     * @return ModifyZone <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
+     */
+    public Boolean getModifyZone() {
+        return this.ModifyZone;
+    }
+
+    /**
+     * Set <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
+     * @param ModifyZone <p>Whether to modify AZ  false: Not modify AZ  true: Modify AZ  Default false</p>
+     */
+    public void setModifyZone(Boolean ModifyZone) {
+        this.ModifyZone = ModifyZone;
     }
 
     public DescribeModifyTypeRequest() {
@@ -239,6 +262,9 @@ public class DescribeModifyTypeRequest extends AbstractModel {
         if (source.ModifyEntry != null) {
             this.ModifyEntry = new String(source.ModifyEntry);
         }
+        if (source.ModifyZone != null) {
+            this.ModifyZone = new Boolean(source.ModifyZone);
+        }
     }
 
 
@@ -254,6 +280,7 @@ public class DescribeModifyTypeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Topic", this.Topic);
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamSimple(map, prefix + "ModifyEntry", this.ModifyEntry);
+        this.setParamSimple(map, prefix + "ModifyZone", this.ModifyZone);
 
     }
 }

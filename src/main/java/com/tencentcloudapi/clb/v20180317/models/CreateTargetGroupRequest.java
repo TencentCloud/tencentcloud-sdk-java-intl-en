@@ -125,6 +125,13 @@ public class CreateTargetGroupRequest extends AbstractModel {
     private String IpVersion;
 
     /**
+    * 
+    */
+    @SerializedName("SnatEnable")
+    @Expose
+    private Boolean SnatEnable;
+
+    /**
      * Get Target group name (up to 50 characters) 
      * @return TargetGroupName Target group name (up to 50 characters)
      */
@@ -360,6 +367,22 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.IpVersion = IpVersion;
     }
 
+    /**
+     * Get  
+     * @return SnatEnable 
+     */
+    public Boolean getSnatEnable() {
+        return this.SnatEnable;
+    }
+
+    /**
+     * Set 
+     * @param SnatEnable 
+     */
+    public void setSnatEnable(Boolean SnatEnable) {
+        this.SnatEnable = SnatEnable;
+    }
+
     public CreateTargetGroupRequest() {
     }
 
@@ -416,6 +439,9 @@ public class CreateTargetGroupRequest extends AbstractModel {
         if (source.IpVersion != null) {
             this.IpVersion = new String(source.IpVersion);
         }
+        if (source.SnatEnable != null) {
+            this.SnatEnable = new Boolean(source.SnatEnable);
+        }
     }
 
 
@@ -437,6 +463,7 @@ public class CreateTargetGroupRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
         this.setParamSimple(map, prefix + "IpVersion", this.IpVersion);
+        this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
 
     }
 }

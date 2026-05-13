@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class UnbindAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * List of cloud disk IDs scheduled snapshot policy to be unbound from.
-    */
-    @SerializedName("DiskIds")
-    @Expose
-    private String [] DiskIds;
-
-    /**
     * ID of scheduled snapshot policy to be unbound.
     */
     @SerializedName("AutoSnapshotPolicyId")
@@ -38,20 +31,18 @@ public class UnbindAutoSnapshotPolicyRequest extends AbstractModel {
     private String AutoSnapshotPolicyId;
 
     /**
-     * Get List of cloud disk IDs scheduled snapshot policy to be unbound from. 
-     * @return DiskIds List of cloud disk IDs scheduled snapshot policy to be unbound from.
-     */
-    public String [] getDiskIds() {
-        return this.DiskIds;
-    }
+    * ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+    */
+    @SerializedName("DiskIds")
+    @Expose
+    private String [] DiskIds;
 
     /**
-     * Set List of cloud disk IDs scheduled snapshot policy to be unbound from.
-     * @param DiskIds List of cloud disk IDs scheduled snapshot policy to be unbound from.
-     */
-    public void setDiskIds(String [] DiskIds) {
-        this.DiskIds = DiskIds;
-    }
+    * Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
+    */
+    @SerializedName("InstanceIds")
+    @Expose
+    private String [] InstanceIds;
 
     /**
      * Get ID of scheduled snapshot policy to be unbound. 
@@ -69,6 +60,38 @@ public class UnbindAutoSnapshotPolicyRequest extends AbstractModel {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;
     }
 
+    /**
+     * Get ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required. 
+     * @return DiskIds ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+     */
+    public String [] getDiskIds() {
+        return this.DiskIds;
+    }
+
+    /**
+     * Set ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+     * @param DiskIds ID list of cloud disks from which the regular snapshot policy is unbound. specifies this parameter or the InstanceIds parameter. a minimum of one is required.
+     */
+    public void setDiskIds(String [] DiskIds) {
+        this.DiskIds = DiskIds;
+    }
+
+    /**
+     * Get Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input. 
+     * @return InstanceIds Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
+     */
+    public String [] getInstanceIds() {
+        return this.InstanceIds;
+    }
+
+    /**
+     * Set Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
+     * @param InstanceIds Instance ID list to unbind the periodic snapshot policy. this parameter or the DiskIds parameter requires a minimum of one input.
+     */
+    public void setInstanceIds(String [] InstanceIds) {
+        this.InstanceIds = InstanceIds;
+    }
+
     public UnbindAutoSnapshotPolicyRequest() {
     }
 
@@ -77,14 +100,20 @@ public class UnbindAutoSnapshotPolicyRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public UnbindAutoSnapshotPolicyRequest(UnbindAutoSnapshotPolicyRequest source) {
+        if (source.AutoSnapshotPolicyId != null) {
+            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
+        }
         if (source.DiskIds != null) {
             this.DiskIds = new String[source.DiskIds.length];
             for (int i = 0; i < source.DiskIds.length; i++) {
                 this.DiskIds[i] = new String(source.DiskIds[i]);
             }
         }
-        if (source.AutoSnapshotPolicyId != null) {
-            this.AutoSnapshotPolicyId = new String(source.AutoSnapshotPolicyId);
+        if (source.InstanceIds != null) {
+            this.InstanceIds = new String[source.InstanceIds.length];
+            for (int i = 0; i < source.InstanceIds.length; i++) {
+                this.InstanceIds[i] = new String(source.InstanceIds[i]);
+            }
         }
     }
 
@@ -93,8 +122,9 @@ public class UnbindAutoSnapshotPolicyRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
         this.setParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+        this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+        this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
 
     }
 }

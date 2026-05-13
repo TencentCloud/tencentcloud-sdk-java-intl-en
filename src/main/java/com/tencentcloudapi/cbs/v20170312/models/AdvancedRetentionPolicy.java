@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class AdvancedRetentionPolicy extends AbstractModel {
 
     /**
-    * Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
     */
     @SerializedName("Days")
     @Expose
     private Long Days;
 
     /**
-    * Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
     */
     @SerializedName("Weeks")
     @Expose
     private Long Weeks;
 
     /**
-    * Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
     */
     @SerializedName("Months")
     @Expose
     private Long Months;
 
     /**
-    * Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
     */
     @SerializedName("Years")
     @Expose
     private Long Years;
 
     /**
-     * Get Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Days Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100]. 
+     * @return Days Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
      */
     public Long getDays() {
         return this.Days;
     }
 
     /**
-     * Set Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Days Retains one latest snapshot each day within `Days` days. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
+     * @param Days Retains the latest snapshot of each day within the specified number of Days. value range: [0, 100].
      */
     public void setDays(Long Days) {
         this.Days = Days;
     }
 
     /**
-     * Get Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Weeks Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reserve the latest snapshot of each week for Weeks. value range: [0, 100]. 
+     * @return Weeks Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
      */
     public Long getWeeks() {
         return this.Weeks;
     }
 
     /**
-     * Set Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Weeks Retains one latest snapshot each week within `Weeks` weeks. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
+     * @param Weeks Reserve the latest snapshot of each week for Weeks. value range: [0, 100].
      */
     public void setWeeks(Long Weeks) {
         this.Weeks = Weeks;
     }
 
     /**
-     * Get Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Months Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reserve the latest snapshot of each month within Months Months. value range: [0, 100]. 
+     * @return Months Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
      */
     public Long getMonths() {
         return this.Months;
     }
 
     /**
-     * Set Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Months Retains one latest snapshot each month within `Months` months. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
+     * @param Months Reserve the latest snapshot of each month within Months Months. value range: [0, 100].
      */
     public void setMonths(Long Months) {
         this.Months = Months;
     }
 
     /**
-     * Get Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Years Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Reserve the latest snapshot of each year within Years Years. value range: [0, 100]. 
+     * @return Years Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
      */
     public Long getYears() {
         return this.Years;
     }
 
     /**
-     * Set Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Years Retains one latest snapshot each year within `Years` years. Value range: [0, 100].
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
+     * @param Years Reserve the latest snapshot of each year within Years Years. value range: [0, 100].
      */
     public void setYears(Long Years) {
         this.Years = Years;

@@ -24,25 +24,11 @@ import java.util.HashMap;
 public class DescribeDisksRequest extends AbstractModel {
 
     /**
-    * Query by one or more cloud disk IDs, such as `disk-11112222`. For the format of this parameter, please see the ids.N section of the API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). This parameter does not support specifying both `DiskIds` and `Filters`.
-    */
-    @SerializedName("DiskIds")
-    @Expose
-    private String [] DiskIds;
-
-    /**
     * Filters. You cannot specify `DiskIds` and `Filters` at the same time. <br><li>disk-usage - Array of String - Optional - Filters by cloud disk type. (SYSTEM_DISK: system disk | DATA_DISK: data disk) <br><li>disk-charge-type - Array of String - Optional - Filters by cloud disk billing method. (POSTPAID_BY_HOUR: pay-as-you-go) <br><li>portable - Array of String- Optional - Filters by whether the cloud disk is elastic or not. (TRUE: elastic | FALSE: non-elastic) <br><li>project-id - Array of Integer - Optional - Filters by the ID of the project to which a cloud disk belongs. <br><li>disk-id - Array of String - Optional - Filters by cloud disk ID, such as `disk-11112222`. <br><li>disk-name - Array of String - Optional - Filters by cloud disk name. <br><li>disk-type - Array of String - Optional - Filters by cloud disk media type (CLOUD_BASIC: HDD cloud disk | CLOUD_PREMIUM: Premium Cloud Storage | CLOUD_SSD: SSD cloud disk.) <br><li>disk-state - Array of String - Optional - Filters by cloud disk state. (UNATTACHED: not mounted | ATTACHING: being mounted | ATTACHED: mounted | DETACHING: being unmounted | EXPANDING: being expanded | ROLLBACKING: being rolled back | TORECYCLE: to be repossessed.) <br><li>instance-id - Array of String - Optional - Filters by the ID of the CVM instance on which a cloud disk is mounted. You can use this parameter to query the cloud disks mounted on specific CVMs. <br><li>zone - Array of String - Optional - Filters by [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) <br><li>instance-ip-address - Array of String - Optional - Filters by the private or public IP of the CVM on which a cloud disk is mounted. <br><li>instance-name - Array of String - Optional - Filters by the name of the instance on which a cloud disk is mounted. <br><li>tag-key - Array of String - Optional - Filters by tag key. <br><li>tag-value - Array of String - Optional - Filters by tag value. <br><li>tag:tag-key - Array of String - Optional - Filters by tag key-value pair. Please replace `tag-key` with a specific tag key.
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
-
-    /**
-    * Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
-    */
-    @SerializedName("Offset")
-    @Expose
-    private Long Offset;
 
     /**
     * Number of results to be returned. Default is 20. Maximum is 100. For more information on `Limit`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
@@ -52,18 +38,18 @@ public class DescribeDisksRequest extends AbstractModel {
     private Long Limit;
 
     /**
-    * Outputs the ordering of the cloud disk list. Value range: <br><li>ASC: Ascending order <br><li>DESC: Descending order.
-    */
-    @SerializedName("Order")
-    @Expose
-    private String Order;
-
-    /**
-    * The field by which the cloud disk list is sorted. Value range: <br><li>CREATE_TIME: sorted by the creation time of cloud disks <br><li>DEADLINE: sorted by the expiration time of cloud disks<br>By default, the cloud disk list is sorted by the creation time of cloud disks.
+    * Field on which the list of cloud disks is sorted. valid values: <br><li>CREATE_TIME: sort by creation TIME of the cloud disk</li><br><li>DEADLINE: sort by expiration TIME of the cloud disk</li><br>sort by creation TIME by default.
     */
     @SerializedName("OrderField")
     @Expose
     private String OrderField;
+
+    /**
+    * Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
 
     /**
     * Whether the ID of the periodic snapshot policy bound to the cloud disk needs to be returned in the cloud disk details. TRUE: return; FALSE: do not return.
@@ -73,20 +59,18 @@ public class DescribeDisksRequest extends AbstractModel {
     private Boolean ReturnBindAutoSnapshotPolicy;
 
     /**
-     * Get Query by one or more cloud disk IDs, such as `disk-11112222`. For the format of this parameter, please see the ids.N section of the API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). This parameter does not support specifying both `DiskIds` and `Filters`. 
-     * @return DiskIds Query by one or more cloud disk IDs, such as `disk-11112222`. For the format of this parameter, please see the ids.N section of the API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). This parameter does not support specifying both `DiskIds` and `Filters`.
-     */
-    public String [] getDiskIds() {
-        return this.DiskIds;
-    }
+    * Query by one or more cloud disk IDs, such as `disk-11112222`. For the format of this parameter, please see the ids.N section of the API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). This parameter does not support specifying both `DiskIds` and `Filters`.
+    */
+    @SerializedName("DiskIds")
+    @Expose
+    private String [] DiskIds;
 
     /**
-     * Set Query by one or more cloud disk IDs, such as `disk-11112222`. For the format of this parameter, please see the ids.N section of the API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). This parameter does not support specifying both `DiskIds` and `Filters`.
-     * @param DiskIds Query by one or more cloud disk IDs, such as `disk-11112222`. For the format of this parameter, please see the ids.N section of the API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). This parameter does not support specifying both `DiskIds` and `Filters`.
-     */
-    public void setDiskIds(String [] DiskIds) {
-        this.DiskIds = DiskIds;
-    }
+    * Specifies the sorting order of the cloud disk list. valid values: <br><li>ASC: ascending order</li><br><li>DESC: descending order.</li>.
+    */
+    @SerializedName("Order")
+    @Expose
+    private String Order;
 
     /**
      * Get Filters. You cannot specify `DiskIds` and `Filters` at the same time. <br><li>disk-usage - Array of String - Optional - Filters by cloud disk type. (SYSTEM_DISK: system disk | DATA_DISK: data disk) <br><li>disk-charge-type - Array of String - Optional - Filters by cloud disk billing method. (POSTPAID_BY_HOUR: pay-as-you-go) <br><li>portable - Array of String- Optional - Filters by whether the cloud disk is elastic or not. (TRUE: elastic | FALSE: non-elastic) <br><li>project-id - Array of Integer - Optional - Filters by the ID of the project to which a cloud disk belongs. <br><li>disk-id - Array of String - Optional - Filters by cloud disk ID, such as `disk-11112222`. <br><li>disk-name - Array of String - Optional - Filters by cloud disk name. <br><li>disk-type - Array of String - Optional - Filters by cloud disk media type (CLOUD_BASIC: HDD cloud disk | CLOUD_PREMIUM: Premium Cloud Storage | CLOUD_SSD: SSD cloud disk.) <br><li>disk-state - Array of String - Optional - Filters by cloud disk state. (UNATTACHED: not mounted | ATTACHING: being mounted | ATTACHED: mounted | DETACHING: being unmounted | EXPANDING: being expanded | ROLLBACKING: being rolled back | TORECYCLE: to be repossessed.) <br><li>instance-id - Array of String - Optional - Filters by the ID of the CVM instance on which a cloud disk is mounted. You can use this parameter to query the cloud disks mounted on specific CVMs. <br><li>zone - Array of String - Optional - Filters by [availability zone](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#ZoneInfo) <br><li>instance-ip-address - Array of String - Optional - Filters by the private or public IP of the CVM on which a cloud disk is mounted. <br><li>instance-name - Array of String - Optional - Filters by the name of the instance on which a cloud disk is mounted. <br><li>tag-key - Array of String - Optional - Filters by tag key. <br><li>tag-value - Array of String - Optional - Filters by tag value. <br><li>tag:tag-key - Array of String - Optional - Filters by tag key-value pair. Please replace `tag-key` with a specific tag key. 
@@ -102,22 +86,6 @@ public class DescribeDisksRequest extends AbstractModel {
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
-    }
-
-    /**
-     * Get Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). 
-     * @return Offset Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
-     */
-    public Long getOffset() {
-        return this.Offset;
-    }
-
-    /**
-     * Set Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
-     * @param Offset Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
-     */
-    public void setOffset(Long Offset) {
-        this.Offset = Offset;
     }
 
     /**
@@ -137,35 +105,35 @@ public class DescribeDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get Outputs the ordering of the cloud disk list. Value range: <br><li>ASC: Ascending order <br><li>DESC: Descending order. 
-     * @return Order Outputs the ordering of the cloud disk list. Value range: <br><li>ASC: Ascending order <br><li>DESC: Descending order.
-     */
-    public String getOrder() {
-        return this.Order;
-    }
-
-    /**
-     * Set Outputs the ordering of the cloud disk list. Value range: <br><li>ASC: Ascending order <br><li>DESC: Descending order.
-     * @param Order Outputs the ordering of the cloud disk list. Value range: <br><li>ASC: Ascending order <br><li>DESC: Descending order.
-     */
-    public void setOrder(String Order) {
-        this.Order = Order;
-    }
-
-    /**
-     * Get The field by which the cloud disk list is sorted. Value range: <br><li>CREATE_TIME: sorted by the creation time of cloud disks <br><li>DEADLINE: sorted by the expiration time of cloud disks<br>By default, the cloud disk list is sorted by the creation time of cloud disks. 
-     * @return OrderField The field by which the cloud disk list is sorted. Value range: <br><li>CREATE_TIME: sorted by the creation time of cloud disks <br><li>DEADLINE: sorted by the expiration time of cloud disks<br>By default, the cloud disk list is sorted by the creation time of cloud disks.
+     * Get Field on which the list of cloud disks is sorted. valid values: <br><li>CREATE_TIME: sort by creation TIME of the cloud disk</li><br><li>DEADLINE: sort by expiration TIME of the cloud disk</li><br>sort by creation TIME by default. 
+     * @return OrderField Field on which the list of cloud disks is sorted. valid values: <br><li>CREATE_TIME: sort by creation TIME of the cloud disk</li><br><li>DEADLINE: sort by expiration TIME of the cloud disk</li><br>sort by creation TIME by default.
      */
     public String getOrderField() {
         return this.OrderField;
     }
 
     /**
-     * Set The field by which the cloud disk list is sorted. Value range: <br><li>CREATE_TIME: sorted by the creation time of cloud disks <br><li>DEADLINE: sorted by the expiration time of cloud disks<br>By default, the cloud disk list is sorted by the creation time of cloud disks.
-     * @param OrderField The field by which the cloud disk list is sorted. Value range: <br><li>CREATE_TIME: sorted by the creation time of cloud disks <br><li>DEADLINE: sorted by the expiration time of cloud disks<br>By default, the cloud disk list is sorted by the creation time of cloud disks.
+     * Set Field on which the list of cloud disks is sorted. valid values: <br><li>CREATE_TIME: sort by creation TIME of the cloud disk</li><br><li>DEADLINE: sort by expiration TIME of the cloud disk</li><br>sort by creation TIME by default.
+     * @param OrderField Field on which the list of cloud disks is sorted. valid values: <br><li>CREATE_TIME: sort by creation TIME of the cloud disk</li><br><li>DEADLINE: sort by expiration TIME of the cloud disk</li><br>sort by creation TIME by default.
      */
     public void setOrderField(String OrderField) {
         this.OrderField = OrderField;
+    }
+
+    /**
+     * Get Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). 
+     * @return Offset Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+     * @param Offset Offset. Default is 0. For more information on `Offset`, please see relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1).
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
     }
 
     /**
@@ -184,6 +152,38 @@ public class DescribeDisksRequest extends AbstractModel {
         this.ReturnBindAutoSnapshotPolicy = ReturnBindAutoSnapshotPolicy;
     }
 
+    /**
+     * Get Query by one or more cloud disk IDs, such as `disk-11112222`. For the format of this parameter, please see the ids.N section of the API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). This parameter does not support specifying both `DiskIds` and `Filters`. 
+     * @return DiskIds Query by one or more cloud disk IDs, such as `disk-11112222`. For the format of this parameter, please see the ids.N section of the API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). This parameter does not support specifying both `DiskIds` and `Filters`.
+     */
+    public String [] getDiskIds() {
+        return this.DiskIds;
+    }
+
+    /**
+     * Set Query by one or more cloud disk IDs, such as `disk-11112222`. For the format of this parameter, please see the ids.N section of the API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). This parameter does not support specifying both `DiskIds` and `Filters`.
+     * @param DiskIds Query by one or more cloud disk IDs, such as `disk-11112222`. For the format of this parameter, please see the ids.N section of the API [Introduction](https://intl.cloud.tencent.com/document/product/362/15633?from_cn_redirect=1). This parameter does not support specifying both `DiskIds` and `Filters`.
+     */
+    public void setDiskIds(String [] DiskIds) {
+        this.DiskIds = DiskIds;
+    }
+
+    /**
+     * Get Specifies the sorting order of the cloud disk list. valid values: <br><li>ASC: ascending order</li><br><li>DESC: descending order.</li>. 
+     * @return Order Specifies the sorting order of the cloud disk list. valid values: <br><li>ASC: ascending order</li><br><li>DESC: descending order.</li>.
+     */
+    public String getOrder() {
+        return this.Order;
+    }
+
+    /**
+     * Set Specifies the sorting order of the cloud disk list. valid values: <br><li>ASC: ascending order</li><br><li>DESC: descending order.</li>.
+     * @param Order Specifies the sorting order of the cloud disk list. valid values: <br><li>ASC: ascending order</li><br><li>DESC: descending order.</li>.
+     */
+    public void setOrder(String Order) {
+        this.Order = Order;
+    }
+
     public DescribeDisksRequest() {
     }
 
@@ -192,32 +192,32 @@ public class DescribeDisksRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public DescribeDisksRequest(DescribeDisksRequest source) {
-        if (source.DiskIds != null) {
-            this.DiskIds = new String[source.DiskIds.length];
-            for (int i = 0; i < source.DiskIds.length; i++) {
-                this.DiskIds[i] = new String(source.DiskIds[i]);
-            }
-        }
         if (source.Filters != null) {
             this.Filters = new Filter[source.Filters.length];
             for (int i = 0; i < source.Filters.length; i++) {
                 this.Filters[i] = new Filter(source.Filters[i]);
             }
         }
-        if (source.Offset != null) {
-            this.Offset = new Long(source.Offset);
-        }
         if (source.Limit != null) {
             this.Limit = new Long(source.Limit);
-        }
-        if (source.Order != null) {
-            this.Order = new String(source.Order);
         }
         if (source.OrderField != null) {
             this.OrderField = new String(source.OrderField);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
         if (source.ReturnBindAutoSnapshotPolicy != null) {
             this.ReturnBindAutoSnapshotPolicy = new Boolean(source.ReturnBindAutoSnapshotPolicy);
+        }
+        if (source.DiskIds != null) {
+            this.DiskIds = new String[source.DiskIds.length];
+            for (int i = 0; i < source.DiskIds.length; i++) {
+                this.DiskIds[i] = new String(source.DiskIds[i]);
+            }
+        }
+        if (source.Order != null) {
+            this.Order = new String(source.Order);
         }
     }
 
@@ -226,13 +226,13 @@ public class DescribeDisksRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
         this.setParamArrayObj(map, prefix + "Filters.", this.Filters);
-        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
-        this.setParamSimple(map, prefix + "Order", this.Order);
         this.setParamSimple(map, prefix + "OrderField", this.OrderField);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
         this.setParamSimple(map, prefix + "ReturnBindAutoSnapshotPolicy", this.ReturnBindAutoSnapshotPolicy);
+        this.setParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+        this.setParamSimple(map, prefix + "Order", this.Order);
 
     }
 }

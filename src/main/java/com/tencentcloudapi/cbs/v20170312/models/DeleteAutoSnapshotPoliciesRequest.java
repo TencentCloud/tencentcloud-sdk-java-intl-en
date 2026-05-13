@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteAutoSnapshotPoliciesRequest extends AbstractModel {
 
     /**
-    * List of scheduled snapshot policy IDs to be deleted.
+    * Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
     */
     @SerializedName("AutoSnapshotPolicyIds")
     @Expose
     private String [] AutoSnapshotPolicyIds;
 
     /**
-     * Get List of scheduled snapshot policy IDs to be deleted. 
-     * @return AutoSnapshotPolicyIds List of scheduled snapshot policy IDs to be deleted.
+     * Get Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1). 
+     * @return AutoSnapshotPolicyIds Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
      */
     public String [] getAutoSnapshotPolicyIds() {
         return this.AutoSnapshotPolicyIds;
     }
 
     /**
-     * Set List of scheduled snapshot policy IDs to be deleted.
-     * @param AutoSnapshotPolicyIds List of scheduled snapshot policy IDs to be deleted.
+     * Set Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
+     * @param AutoSnapshotPolicyIds Specifies the ID list of the regular snapshot policies to delete. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
      */
     public void setAutoSnapshotPolicyIds(String [] AutoSnapshotPolicyIds) {
         this.AutoSnapshotPolicyIds = AutoSnapshotPolicyIds;

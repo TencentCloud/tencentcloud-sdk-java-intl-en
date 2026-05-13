@@ -24,13 +24,6 @@ import java.util.HashMap;
 public class ResizeDiskRequest extends AbstractModel {
 
     /**
-    * ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-    */
-    @SerializedName("DiskId")
-    @Expose
-    private String DiskId;
-
-    /**
     * Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
     */
     @SerializedName("DiskSize")
@@ -38,20 +31,11 @@ public class ResizeDiskRequest extends AbstractModel {
     private Long DiskSize;
 
     /**
-     * Get ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). 
-     * @return DiskId ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-     */
-    public String getDiskId() {
-        return this.DiskId;
-    }
-
-    /**
-     * Set ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-     * @param DiskId ID of the cloud disk, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-     */
-    public void setDiskId(String DiskId) {
-        this.DiskId = DiskId;
-    }
+    * Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. this field is only required when expanding a single cloud disk.
+    */
+    @SerializedName("DiskId")
+    @Expose
+    private String DiskId;
 
     /**
      * Get Cloud disk size after scale out (in GB). This must be larger than the current size of the cloud disk. For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). 
@@ -69,6 +53,22 @@ public class ResizeDiskRequest extends AbstractModel {
         this.DiskSize = DiskSize;
     }
 
+    /**
+     * Get Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. this field is only required when expanding a single cloud disk. 
+     * @return DiskId Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. this field is only required when expanding a single cloud disk.
+     */
+    public String getDiskId() {
+        return this.DiskId;
+    }
+
+    /**
+     * Set Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. this field is only required when expanding a single cloud disk.
+     * @param DiskId Cloud disk ID, which can be queried by calling the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. this field is only required when expanding a single cloud disk.
+     */
+    public void setDiskId(String DiskId) {
+        this.DiskId = DiskId;
+    }
+
     public ResizeDiskRequest() {
     }
 
@@ -77,11 +77,11 @@ public class ResizeDiskRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ResizeDiskRequest(ResizeDiskRequest source) {
-        if (source.DiskId != null) {
-            this.DiskId = new String(source.DiskId);
-        }
         if (source.DiskSize != null) {
             this.DiskSize = new Long(source.DiskSize);
+        }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
         }
     }
 
@@ -90,8 +90,8 @@ public class ResizeDiskRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
+        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
 
     }
 }

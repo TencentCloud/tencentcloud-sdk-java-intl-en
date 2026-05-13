@@ -88,6 +88,13 @@ public class ModifyTopicRequest extends AbstractModel {
     private Long AckTimeOut;
 
     /**
+    * defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+    */
+    @SerializedName("DelayMessagePolicy")
+    @Expose
+    private String DelayMessagePolicy;
+
+    /**
      * Get Environment (namespace) name. 
      * @return EnvironmentId Environment (namespace) name.
      */
@@ -235,6 +242,22 @@ public class ModifyTopicRequest extends AbstractModel {
         this.AckTimeOut = AckTimeOut;
     }
 
+    /**
+     * Get defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed 
+     * @return DelayMessagePolicy defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+     */
+    public String getDelayMessagePolicy() {
+        return this.DelayMessagePolicy;
+    }
+
+    /**
+     * Set defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+     * @param DelayMessagePolicy defaultPolicy/timingwheelPolicy defaults to the community edition delayed message delivery policy if not passed
+     */
+    public void setDelayMessagePolicy(String DelayMessagePolicy) {
+        this.DelayMessagePolicy = DelayMessagePolicy;
+    }
+
     public ModifyTopicRequest() {
     }
 
@@ -270,6 +293,9 @@ public class ModifyTopicRequest extends AbstractModel {
         if (source.AckTimeOut != null) {
             this.AckTimeOut = new Long(source.AckTimeOut);
         }
+        if (source.DelayMessagePolicy != null) {
+            this.DelayMessagePolicy = new String(source.DelayMessagePolicy);
+        }
     }
 
 
@@ -286,6 +312,7 @@ public class ModifyTopicRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UnackPolicy", this.UnackPolicy);
         this.setParamSimple(map, prefix + "IsolateConsumerEnable", this.IsolateConsumerEnable);
         this.setParamSimple(map, prefix + "AckTimeOut", this.AckTimeOut);
+        this.setParamSimple(map, prefix + "DelayMessagePolicy", this.DelayMessagePolicy);
 
     }
 }

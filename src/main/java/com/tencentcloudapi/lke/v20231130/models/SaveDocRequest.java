@@ -144,37 +144,34 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
     private String CateBizId;
 
     /**
-    * Whether it can be downloaded. This value is meaningful only when IsRefer is true and ReferUrlType is 0.
+    * Downloadable or not. This parameter is only valid when `IsRefer` is **true** and `ReferUrlType` is 0.
     */
     @SerializedName("IsDownload")
     @Expose
     private Boolean IsDownload;
 
     /**
-    * Duplicate document handling method, processed by sequentially matching the first condition that is met
+    * Duplicate document processing method; match the first eligible method in sequence for processing.
     */
     @SerializedName("DuplicateFileHandles")
     @Expose
     private DuplicateFileHandle [] DuplicateFileHandles;
 
     /**
-    * Custom Segmentation Rules
+    * # Custom Splitting Rules
+The request parameter is a **JSON Object**. Refer to the API sample value for the specific format. It contains the following core fields:
 
-The request parameter is a **JSON Object**. For specific format, refer to the interface sample value. It contains the following main fields:
-
-| Field Name          | Type     | Description                                  |
-|--------------------|----------|---------------------------------------------|
-| `xlsx_splitter`    | Object   | **Excel (xlsx) file segmentation policy configuration**, valid only when processing Excel files |
-| `common_splitter`  | Object   | **General file (e.g., txt, pdf) segmentation policy configuration**, segmented by page or tag |
-| `table_style`      | String   | Output format of table content, e.g., HTML or Markdown |
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `xlsx_splitter` | Object | **Excel (xlsx) file splitting policy configuration**, valid only when processing Excel files |
+| `common_splitter` | Object | **General file splitting policy configuration** (for TXT, PDF and other files), supports splitting by page or by tag |
+| `table_style` | String | Output format of table content, e.g., HTML or Markdown |
 
 ---
 
-## `xlsx_splitter` (Excel Segmentation Policy)
-
-Used to configure **segmentation methods for spreadsheet files**.
+## `xlsx_splitter` (Excel Splitting Policy)
+Used to configure the **splitting method for table files**.
 **Type: Object**
-
 ```json
 "xlsx_splitter": {
   "header_interval": [1, 2],
@@ -183,24 +180,18 @@ Used to configure **segmentation methods for spreadsheet files**.
 }
 ```
 
-### Field Description:
-
-| Field Name         | Type          | Description                                                                
-   |
-|--------------------|---------------|-----------------------------------------------------------------------------|
-| `header_interval` | Array\<Number\> | Row range of headers, formatted as `[start_row, end_row]`, **row numbers start from 1**. E.g., `[1, 2]` indicates rows 1-2 are headers. |
-| `content_start`   | Number        | **Starting row number of table content (1-based)**.                        
-   |
-| `split_row`       | Number        | **Number of rows per segment**.                                            
-   |
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `header_interval` | Array\<Number\> | Row range of the table header, formatted as `[start row, end row]`. **Row numbers start from 1**. For example, `[1, 2]` means rows 1 to 2 are table headers. |
+| `content_start` | Number | **Start row number of table content (starting from 1)** |
+| `split_row` | Number | **Number of rows per split** |
 
 ---
-## `common_splitter` (General File Segmentation Policy)
 
-Used to configure **segmentation methods for non-Excel files (e.g., TXT, PDF, DOCX)**, supporting two strategies: **by-page segmentation** or **by-tag segmentation**.
-
+## `common_splitter` (General File Splitting Policy)
+Used to configure the splitting method for **non-Excel files (TXT, PDF, DOCX, etc.)**. Two strategies are supported: **page-based splitting** or **identifier-based splitting**.
 **Type: Object**
-
 ```json
 "common_splitter": {
   "splitter": "page",
@@ -211,59 +202,60 @@ Used to configure **segmentation methods for non-Excel files (e.g., TXT, PDF, DO
 }
 ```
 
-### Field Description:
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `splitter` | String | Splitting strategy type. Optional values: `"page"` (split by page), `"tag"` (split by identifier). |
+| `page_splitter` | Object | Configuration for **page-based splitting** |
+| `page_splitter.chunk_length` | Number | **Maximum chunk length** |
+| `page_splitter.chunk_overlap_length` | Number | **Chunk overlap length** |
+| `tag_splitter` | Object | Configuration for **custom splitting** |
+| `tag_splitter.tag` | Array\<String\> | **Splitting identifiers** |
+| `tag_splitter.chunk_length` | Number | **Maximum chunk length** |
+| `tag_splitter.chunk_overlap_length` | Number | **Chunk overlap length** |
 
-| Field Name                     | Type          | Description                                                                
-   |
-|--------------------------------|---------------|-----------------------------------------------------------------------------|
-| `splitter`                     | String        | Segmentation strategy type. Valid values: `"page"` (by-page) or `"tag"` (by-tag). |
-| `page_splitter`                | Object        | **By-page segmentation configuration**.                                     |
-| `page_splitter.chunk_length`   | Number        | **Maximum chunk length**.                                                  
-   |
-| `page_splitter.chunk_overlap_length` | Number | **Chunk overlap length**.                                                  
-   |
-| `tag_splitter`                 | Object        | **Custom segmentation configuration**.                                      |
-| `tag_splitter.tag`             | Array\<String\> | **Segmentation tags**.                                                     
-   |
-| `tag_splitter.chunk_length`    | Number        | **Maximum chunk length**.                                                  
-   |
-| `tag_splitter.chunk_overlap_length` | Number | **Chunk overlap length**.                                                  
-   |
+### Supplementary Notes
+- Valid values for the `splitter` field:
+  - `"page"`: Only page-based splitting is used; only configure fields under `page_splitter`.
+  - `"tag"`: Only identifier-based splitting (semicolon, line break, etc.) is used; only configure fields under `tag_splitter`.
 
-🔹 **Additional Notes:**
-
-- Valid values for `splitter`:
-    - `"page"`: Only use by-page segmentation logic. Only `page_splitter` fields are relevant.
-    - `"tag"`: Only use by-tag segmentation logic (e.g., using delimiters like semicolons or line breaks). Only `tag_splitter` fields are relevant.
 ---
 
 ## `table_style` (Table Output Style)
-
-Specifies **the format in which tabular content (e.g., tables extracted from Excel or CSV) is returned**, facilitating frontend display or subsequent processing.
-
+Specifies the final return format of **table content extracted from Excel / CSV**, for front-end display and subsequent processing.
 **Type: String**
-
 ```json
 "table_style": "md"
 ```
 
-### Field Description:
-
-| Field Name     | Type   | Description                                                                
-   |
-|----------------|--------|-----------------------------------------------------------------------------|
-| `table_style`  | String | Output format of table content. Valid values:<br>• `"html"`: Returns as HTML tables, suitable for web display.<br>• `"md"`: Returns in Markdown table syntax, suitable for documentation or Markdown rendering environments. |
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `table_style` | String | Specifies the output format of table content. Available values:<br> `"html"`: Return as HTML table, suitable for web page display.<br> `"md"`: Return as Markdown table syntax, suitable for documents and Markdown rendering environments. |
     */
     @SerializedName("SplitRule")
     @Expose
     private String SplitRule;
 
     /**
-    * Document update frequency, default value is 0 (no updates)
+    * Document update frequency. Default value 0 means no update.
     */
     @SerializedName("UpdatePeriodInfo")
     @Expose
     private UpdatePeriodInfo UpdatePeriodInfo;
+
+    /**
+    * Document Effective Scope:
+1 - Not effective;
+2 - Effective only in development scope;
+3 - Effective only in release scope;
+4 - Effective in both development and release scopes.
+
+Default value: The default knowledge base within the application is 2, and the shared knowledge base is 4.
+    */
+    @SerializedName("EnableScope")
+    @Expose
+    private Long EnableScope;
 
     /**
      * Get Application ID. 
@@ -542,55 +534,52 @@ When the value is 1, the weburl field cannot be empty; otherwise, it will not ta
     }
 
     /**
-     * Get Whether it can be downloaded. This value is meaningful only when IsRefer is true and ReferUrlType is 0. 
-     * @return IsDownload Whether it can be downloaded. This value is meaningful only when IsRefer is true and ReferUrlType is 0.
+     * Get Downloadable or not. This parameter is only valid when `IsRefer` is **true** and `ReferUrlType` is 0. 
+     * @return IsDownload Downloadable or not. This parameter is only valid when `IsRefer` is **true** and `ReferUrlType` is 0.
      */
     public Boolean getIsDownload() {
         return this.IsDownload;
     }
 
     /**
-     * Set Whether it can be downloaded. This value is meaningful only when IsRefer is true and ReferUrlType is 0.
-     * @param IsDownload Whether it can be downloaded. This value is meaningful only when IsRefer is true and ReferUrlType is 0.
+     * Set Downloadable or not. This parameter is only valid when `IsRefer` is **true** and `ReferUrlType` is 0.
+     * @param IsDownload Downloadable or not. This parameter is only valid when `IsRefer` is **true** and `ReferUrlType` is 0.
      */
     public void setIsDownload(Boolean IsDownload) {
         this.IsDownload = IsDownload;
     }
 
     /**
-     * Get Duplicate document handling method, processed by sequentially matching the first condition that is met 
-     * @return DuplicateFileHandles Duplicate document handling method, processed by sequentially matching the first condition that is met
+     * Get Duplicate document processing method; match the first eligible method in sequence for processing. 
+     * @return DuplicateFileHandles Duplicate document processing method; match the first eligible method in sequence for processing.
      */
     public DuplicateFileHandle [] getDuplicateFileHandles() {
         return this.DuplicateFileHandles;
     }
 
     /**
-     * Set Duplicate document handling method, processed by sequentially matching the first condition that is met
-     * @param DuplicateFileHandles Duplicate document handling method, processed by sequentially matching the first condition that is met
+     * Set Duplicate document processing method; match the first eligible method in sequence for processing.
+     * @param DuplicateFileHandles Duplicate document processing method; match the first eligible method in sequence for processing.
      */
     public void setDuplicateFileHandles(DuplicateFileHandle [] DuplicateFileHandles) {
         this.DuplicateFileHandles = DuplicateFileHandles;
     }
 
     /**
-     * Get Custom Segmentation Rules
+     * Get # Custom Splitting Rules
+The request parameter is a **JSON Object**. Refer to the API sample value for the specific format. It contains the following core fields:
 
-The request parameter is a **JSON Object**. For specific format, refer to the interface sample value. It contains the following main fields:
-
-| Field Name          | Type     | Description                                  |
-|--------------------|----------|---------------------------------------------|
-| `xlsx_splitter`    | Object   | **Excel (xlsx) file segmentation policy configuration**, valid only when processing Excel files |
-| `common_splitter`  | Object   | **General file (e.g., txt, pdf) segmentation policy configuration**, segmented by page or tag |
-| `table_style`      | String   | Output format of table content, e.g., HTML or Markdown |
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `xlsx_splitter` | Object | **Excel (xlsx) file splitting policy configuration**, valid only when processing Excel files |
+| `common_splitter` | Object | **General file splitting policy configuration** (for TXT, PDF and other files), supports splitting by page or by tag |
+| `table_style` | String | Output format of table content, e.g., HTML or Markdown |
 
 ---
 
-## `xlsx_splitter` (Excel Segmentation Policy)
-
-Used to configure **segmentation methods for spreadsheet files**.
+## `xlsx_splitter` (Excel Splitting Policy)
+Used to configure the **splitting method for table files**.
 **Type: Object**
-
 ```json
 "xlsx_splitter": {
   "header_interval": [1, 2],
@@ -599,24 +588,18 @@ Used to configure **segmentation methods for spreadsheet files**.
 }
 ```
 
-### Field Description:
-
-| Field Name         | Type          | Description                                                                
-   |
-|--------------------|---------------|-----------------------------------------------------------------------------|
-| `header_interval` | Array\<Number\> | Row range of headers, formatted as `[start_row, end_row]`, **row numbers start from 1**. E.g., `[1, 2]` indicates rows 1-2 are headers. |
-| `content_start`   | Number        | **Starting row number of table content (1-based)**.                        
-   |
-| `split_row`       | Number        | **Number of rows per segment**.                                            
-   |
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `header_interval` | Array\<Number\> | Row range of the table header, formatted as `[start row, end row]`. **Row numbers start from 1**. For example, `[1, 2]` means rows 1 to 2 are table headers. |
+| `content_start` | Number | **Start row number of table content (starting from 1)** |
+| `split_row` | Number | **Number of rows per split** |
 
 ---
-## `common_splitter` (General File Segmentation Policy)
 
-Used to configure **segmentation methods for non-Excel files (e.g., TXT, PDF, DOCX)**, supporting two strategies: **by-page segmentation** or **by-tag segmentation**.
-
+## `common_splitter` (General File Splitting Policy)
+Used to configure the splitting method for **non-Excel files (TXT, PDF, DOCX, etc.)**. Two strategies are supported: **page-based splitting** or **identifier-based splitting**.
 **Type: Object**
-
 ```json
 "common_splitter": {
   "splitter": "page",
@@ -627,65 +610,50 @@ Used to configure **segmentation methods for non-Excel files (e.g., TXT, PDF, DO
 }
 ```
 
-### Field Description:
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `splitter` | String | Splitting strategy type. Optional values: `"page"` (split by page), `"tag"` (split by identifier). |
+| `page_splitter` | Object | Configuration for **page-based splitting** |
+| `page_splitter.chunk_length` | Number | **Maximum chunk length** |
+| `page_splitter.chunk_overlap_length` | Number | **Chunk overlap length** |
+| `tag_splitter` | Object | Configuration for **custom splitting** |
+| `tag_splitter.tag` | Array\<String\> | **Splitting identifiers** |
+| `tag_splitter.chunk_length` | Number | **Maximum chunk length** |
+| `tag_splitter.chunk_overlap_length` | Number | **Chunk overlap length** |
 
-| Field Name                     | Type          | Description                                                                
-   |
-|--------------------------------|---------------|-----------------------------------------------------------------------------|
-| `splitter`                     | String        | Segmentation strategy type. Valid values: `"page"` (by-page) or `"tag"` (by-tag). |
-| `page_splitter`                | Object        | **By-page segmentation configuration**.                                     |
-| `page_splitter.chunk_length`   | Number        | **Maximum chunk length**.                                                  
-   |
-| `page_splitter.chunk_overlap_length` | Number | **Chunk overlap length**.                                                  
-   |
-| `tag_splitter`                 | Object        | **Custom segmentation configuration**.                                      |
-| `tag_splitter.tag`             | Array\<String\> | **Segmentation tags**.                                                     
-   |
-| `tag_splitter.chunk_length`    | Number        | **Maximum chunk length**.                                                  
-   |
-| `tag_splitter.chunk_overlap_length` | Number | **Chunk overlap length**.                                                  
-   |
+### Supplementary Notes
+- Valid values for the `splitter` field:
+  - `"page"`: Only page-based splitting is used; only configure fields under `page_splitter`.
+  - `"tag"`: Only identifier-based splitting (semicolon, line break, etc.) is used; only configure fields under `tag_splitter`.
 
-🔹 **Additional Notes:**
-
-- Valid values for `splitter`:
-    - `"page"`: Only use by-page segmentation logic. Only `page_splitter` fields are relevant.
-    - `"tag"`: Only use by-tag segmentation logic (e.g., using delimiters like semicolons or line breaks). Only `tag_splitter` fields are relevant.
 ---
 
 ## `table_style` (Table Output Style)
-
-Specifies **the format in which tabular content (e.g., tables extracted from Excel or CSV) is returned**, facilitating frontend display or subsequent processing.
-
+Specifies the final return format of **table content extracted from Excel / CSV**, for front-end display and subsequent processing.
 **Type: String**
-
 ```json
 "table_style": "md"
 ```
 
-### Field Description:
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `table_style` | String | Specifies the output format of table content. Available values:<br> `"html"`: Return as HTML table, suitable for web page display.<br> `"md"`: Return as Markdown table syntax, suitable for documents and Markdown rendering environments. | 
+     * @return SplitRule # Custom Splitting Rules
+The request parameter is a **JSON Object**. Refer to the API sample value for the specific format. It contains the following core fields:
 
-| Field Name     | Type   | Description                                                                
-   |
-|----------------|--------|-----------------------------------------------------------------------------|
-| `table_style`  | String | Output format of table content. Valid values:<br>• `"html"`: Returns as HTML tables, suitable for web display.<br>• `"md"`: Returns in Markdown table syntax, suitable for documentation or Markdown rendering environments. | 
-     * @return SplitRule Custom Segmentation Rules
-
-The request parameter is a **JSON Object**. For specific format, refer to the interface sample value. It contains the following main fields:
-
-| Field Name          | Type     | Description                                  |
-|--------------------|----------|---------------------------------------------|
-| `xlsx_splitter`    | Object   | **Excel (xlsx) file segmentation policy configuration**, valid only when processing Excel files |
-| `common_splitter`  | Object   | **General file (e.g., txt, pdf) segmentation policy configuration**, segmented by page or tag |
-| `table_style`      | String   | Output format of table content, e.g., HTML or Markdown |
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `xlsx_splitter` | Object | **Excel (xlsx) file splitting policy configuration**, valid only when processing Excel files |
+| `common_splitter` | Object | **General file splitting policy configuration** (for TXT, PDF and other files), supports splitting by page or by tag |
+| `table_style` | String | Output format of table content, e.g., HTML or Markdown |
 
 ---
 
-## `xlsx_splitter` (Excel Segmentation Policy)
-
-Used to configure **segmentation methods for spreadsheet files**.
+## `xlsx_splitter` (Excel Splitting Policy)
+Used to configure the **splitting method for table files**.
 **Type: Object**
-
 ```json
 "xlsx_splitter": {
   "header_interval": [1, 2],
@@ -694,24 +662,18 @@ Used to configure **segmentation methods for spreadsheet files**.
 }
 ```
 
-### Field Description:
-
-| Field Name         | Type          | Description                                                                
-   |
-|--------------------|---------------|-----------------------------------------------------------------------------|
-| `header_interval` | Array\<Number\> | Row range of headers, formatted as `[start_row, end_row]`, **row numbers start from 1**. E.g., `[1, 2]` indicates rows 1-2 are headers. |
-| `content_start`   | Number        | **Starting row number of table content (1-based)**.                        
-   |
-| `split_row`       | Number        | **Number of rows per segment**.                                            
-   |
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `header_interval` | Array\<Number\> | Row range of the table header, formatted as `[start row, end row]`. **Row numbers start from 1**. For example, `[1, 2]` means rows 1 to 2 are table headers. |
+| `content_start` | Number | **Start row number of table content (starting from 1)** |
+| `split_row` | Number | **Number of rows per split** |
 
 ---
-## `common_splitter` (General File Segmentation Policy)
 
-Used to configure **segmentation methods for non-Excel files (e.g., TXT, PDF, DOCX)**, supporting two strategies: **by-page segmentation** or **by-tag segmentation**.
-
+## `common_splitter` (General File Splitting Policy)
+Used to configure the splitting method for **non-Excel files (TXT, PDF, DOCX, etc.)**. Two strategies are supported: **page-based splitting** or **identifier-based splitting**.
 **Type: Object**
-
 ```json
 "common_splitter": {
   "splitter": "page",
@@ -722,71 +684,56 @@ Used to configure **segmentation methods for non-Excel files (e.g., TXT, PDF, DO
 }
 ```
 
-### Field Description:
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `splitter` | String | Splitting strategy type. Optional values: `"page"` (split by page), `"tag"` (split by identifier). |
+| `page_splitter` | Object | Configuration for **page-based splitting** |
+| `page_splitter.chunk_length` | Number | **Maximum chunk length** |
+| `page_splitter.chunk_overlap_length` | Number | **Chunk overlap length** |
+| `tag_splitter` | Object | Configuration for **custom splitting** |
+| `tag_splitter.tag` | Array\<String\> | **Splitting identifiers** |
+| `tag_splitter.chunk_length` | Number | **Maximum chunk length** |
+| `tag_splitter.chunk_overlap_length` | Number | **Chunk overlap length** |
 
-| Field Name                     | Type          | Description                                                                
-   |
-|--------------------------------|---------------|-----------------------------------------------------------------------------|
-| `splitter`                     | String        | Segmentation strategy type. Valid values: `"page"` (by-page) or `"tag"` (by-tag). |
-| `page_splitter`                | Object        | **By-page segmentation configuration**.                                     |
-| `page_splitter.chunk_length`   | Number        | **Maximum chunk length**.                                                  
-   |
-| `page_splitter.chunk_overlap_length` | Number | **Chunk overlap length**.                                                  
-   |
-| `tag_splitter`                 | Object        | **Custom segmentation configuration**.                                      |
-| `tag_splitter.tag`             | Array\<String\> | **Segmentation tags**.                                                     
-   |
-| `tag_splitter.chunk_length`    | Number        | **Maximum chunk length**.                                                  
-   |
-| `tag_splitter.chunk_overlap_length` | Number | **Chunk overlap length**.                                                  
-   |
+### Supplementary Notes
+- Valid values for the `splitter` field:
+  - `"page"`: Only page-based splitting is used; only configure fields under `page_splitter`.
+  - `"tag"`: Only identifier-based splitting (semicolon, line break, etc.) is used; only configure fields under `tag_splitter`.
 
-🔹 **Additional Notes:**
-
-- Valid values for `splitter`:
-    - `"page"`: Only use by-page segmentation logic. Only `page_splitter` fields are relevant.
-    - `"tag"`: Only use by-tag segmentation logic (e.g., using delimiters like semicolons or line breaks). Only `tag_splitter` fields are relevant.
 ---
 
 ## `table_style` (Table Output Style)
-
-Specifies **the format in which tabular content (e.g., tables extracted from Excel or CSV) is returned**, facilitating frontend display or subsequent processing.
-
+Specifies the final return format of **table content extracted from Excel / CSV**, for front-end display and subsequent processing.
 **Type: String**
-
 ```json
 "table_style": "md"
 ```
 
-### Field Description:
-
-| Field Name     | Type   | Description                                                                
-   |
-|----------------|--------|-----------------------------------------------------------------------------|
-| `table_style`  | String | Output format of table content. Valid values:<br>• `"html"`: Returns as HTML tables, suitable for web display.<br>• `"md"`: Returns in Markdown table syntax, suitable for documentation or Markdown rendering environments. |
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `table_style` | String | Specifies the output format of table content. Available values:<br> `"html"`: Return as HTML table, suitable for web page display.<br> `"md"`: Return as Markdown table syntax, suitable for documents and Markdown rendering environments. |
      */
     public String getSplitRule() {
         return this.SplitRule;
     }
 
     /**
-     * Set Custom Segmentation Rules
+     * Set # Custom Splitting Rules
+The request parameter is a **JSON Object**. Refer to the API sample value for the specific format. It contains the following core fields:
 
-The request parameter is a **JSON Object**. For specific format, refer to the interface sample value. It contains the following main fields:
-
-| Field Name          | Type     | Description                                  |
-|--------------------|----------|---------------------------------------------|
-| `xlsx_splitter`    | Object   | **Excel (xlsx) file segmentation policy configuration**, valid only when processing Excel files |
-| `common_splitter`  | Object   | **General file (e.g., txt, pdf) segmentation policy configuration**, segmented by page or tag |
-| `table_style`      | String   | Output format of table content, e.g., HTML or Markdown |
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `xlsx_splitter` | Object | **Excel (xlsx) file splitting policy configuration**, valid only when processing Excel files |
+| `common_splitter` | Object | **General file splitting policy configuration** (for TXT, PDF and other files), supports splitting by page or by tag |
+| `table_style` | String | Output format of table content, e.g., HTML or Markdown |
 
 ---
 
-## `xlsx_splitter` (Excel Segmentation Policy)
-
-Used to configure **segmentation methods for spreadsheet files**.
+## `xlsx_splitter` (Excel Splitting Policy)
+Used to configure the **splitting method for table files**.
 **Type: Object**
-
 ```json
 "xlsx_splitter": {
   "header_interval": [1, 2],
@@ -795,24 +742,18 @@ Used to configure **segmentation methods for spreadsheet files**.
 }
 ```
 
-### Field Description:
-
-| Field Name         | Type          | Description                                                                
-   |
-|--------------------|---------------|-----------------------------------------------------------------------------|
-| `header_interval` | Array\<Number\> | Row range of headers, formatted as `[start_row, end_row]`, **row numbers start from 1**. E.g., `[1, 2]` indicates rows 1-2 are headers. |
-| `content_start`   | Number        | **Starting row number of table content (1-based)**.                        
-   |
-| `split_row`       | Number        | **Number of rows per segment**.                                            
-   |
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `header_interval` | Array\<Number\> | Row range of the table header, formatted as `[start row, end row]`. **Row numbers start from 1**. For example, `[1, 2]` means rows 1 to 2 are table headers. |
+| `content_start` | Number | **Start row number of table content (starting from 1)** |
+| `split_row` | Number | **Number of rows per split** |
 
 ---
-## `common_splitter` (General File Segmentation Policy)
 
-Used to configure **segmentation methods for non-Excel files (e.g., TXT, PDF, DOCX)**, supporting two strategies: **by-page segmentation** or **by-tag segmentation**.
-
+## `common_splitter` (General File Splitting Policy)
+Used to configure the splitting method for **non-Excel files (TXT, PDF, DOCX, etc.)**. Two strategies are supported: **page-based splitting** or **identifier-based splitting**.
 **Type: Object**
-
 ```json
 "common_splitter": {
   "splitter": "page",
@@ -823,65 +764,50 @@ Used to configure **segmentation methods for non-Excel files (e.g., TXT, PDF, DO
 }
 ```
 
-### Field Description:
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `splitter` | String | Splitting strategy type. Optional values: `"page"` (split by page), `"tag"` (split by identifier). |
+| `page_splitter` | Object | Configuration for **page-based splitting** |
+| `page_splitter.chunk_length` | Number | **Maximum chunk length** |
+| `page_splitter.chunk_overlap_length` | Number | **Chunk overlap length** |
+| `tag_splitter` | Object | Configuration for **custom splitting** |
+| `tag_splitter.tag` | Array\<String\> | **Splitting identifiers** |
+| `tag_splitter.chunk_length` | Number | **Maximum chunk length** |
+| `tag_splitter.chunk_overlap_length` | Number | **Chunk overlap length** |
 
-| Field Name                     | Type          | Description                                                                
-   |
-|--------------------------------|---------------|-----------------------------------------------------------------------------|
-| `splitter`                     | String        | Segmentation strategy type. Valid values: `"page"` (by-page) or `"tag"` (by-tag). |
-| `page_splitter`                | Object        | **By-page segmentation configuration**.                                     |
-| `page_splitter.chunk_length`   | Number        | **Maximum chunk length**.                                                  
-   |
-| `page_splitter.chunk_overlap_length` | Number | **Chunk overlap length**.                                                  
-   |
-| `tag_splitter`                 | Object        | **Custom segmentation configuration**.                                      |
-| `tag_splitter.tag`             | Array\<String\> | **Segmentation tags**.                                                     
-   |
-| `tag_splitter.chunk_length`    | Number        | **Maximum chunk length**.                                                  
-   |
-| `tag_splitter.chunk_overlap_length` | Number | **Chunk overlap length**.                                                  
-   |
+### Supplementary Notes
+- Valid values for the `splitter` field:
+  - `"page"`: Only page-based splitting is used; only configure fields under `page_splitter`.
+  - `"tag"`: Only identifier-based splitting (semicolon, line break, etc.) is used; only configure fields under `tag_splitter`.
 
-🔹 **Additional Notes:**
-
-- Valid values for `splitter`:
-    - `"page"`: Only use by-page segmentation logic. Only `page_splitter` fields are relevant.
-    - `"tag"`: Only use by-tag segmentation logic (e.g., using delimiters like semicolons or line breaks). Only `tag_splitter` fields are relevant.
 ---
 
 ## `table_style` (Table Output Style)
-
-Specifies **the format in which tabular content (e.g., tables extracted from Excel or CSV) is returned**, facilitating frontend display or subsequent processing.
-
+Specifies the final return format of **table content extracted from Excel / CSV**, for front-end display and subsequent processing.
 **Type: String**
-
 ```json
 "table_style": "md"
 ```
 
-### Field Description:
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `table_style` | String | Specifies the output format of table content. Available values:<br> `"html"`: Return as HTML table, suitable for web page display.<br> `"md"`: Return as Markdown table syntax, suitable for documents and Markdown rendering environments. |
+     * @param SplitRule # Custom Splitting Rules
+The request parameter is a **JSON Object**. Refer to the API sample value for the specific format. It contains the following core fields:
 
-| Field Name     | Type   | Description                                                                
-   |
-|----------------|--------|-----------------------------------------------------------------------------|
-| `table_style`  | String | Output format of table content. Valid values:<br>• `"html"`: Returns as HTML tables, suitable for web display.<br>• `"md"`: Returns in Markdown table syntax, suitable for documentation or Markdown rendering environments. |
-     * @param SplitRule Custom Segmentation Rules
-
-The request parameter is a **JSON Object**. For specific format, refer to the interface sample value. It contains the following main fields:
-
-| Field Name          | Type     | Description                                  |
-|--------------------|----------|---------------------------------------------|
-| `xlsx_splitter`    | Object   | **Excel (xlsx) file segmentation policy configuration**, valid only when processing Excel files |
-| `common_splitter`  | Object   | **General file (e.g., txt, pdf) segmentation policy configuration**, segmented by page or tag |
-| `table_style`      | String   | Output format of table content, e.g., HTML or Markdown |
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `xlsx_splitter` | Object | **Excel (xlsx) file splitting policy configuration**, valid only when processing Excel files |
+| `common_splitter` | Object | **General file splitting policy configuration** (for TXT, PDF and other files), supports splitting by page or by tag |
+| `table_style` | String | Output format of table content, e.g., HTML or Markdown |
 
 ---
 
-## `xlsx_splitter` (Excel Segmentation Policy)
-
-Used to configure **segmentation methods for spreadsheet files**.
+## `xlsx_splitter` (Excel Splitting Policy)
+Used to configure the **splitting method for table files**.
 **Type: Object**
-
 ```json
 "xlsx_splitter": {
   "header_interval": [1, 2],
@@ -890,24 +816,18 @@ Used to configure **segmentation methods for spreadsheet files**.
 }
 ```
 
-### Field Description:
-
-| Field Name         | Type          | Description                                                                
-   |
-|--------------------|---------------|-----------------------------------------------------------------------------|
-| `header_interval` | Array\<Number\> | Row range of headers, formatted as `[start_row, end_row]`, **row numbers start from 1**. E.g., `[1, 2]` indicates rows 1-2 are headers. |
-| `content_start`   | Number        | **Starting row number of table content (1-based)**.                        
-   |
-| `split_row`       | Number        | **Number of rows per segment**.                                            
-   |
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `header_interval` | Array\<Number\> | Row range of the table header, formatted as `[start row, end row]`. **Row numbers start from 1**. For example, `[1, 2]` means rows 1 to 2 are table headers. |
+| `content_start` | Number | **Start row number of table content (starting from 1)** |
+| `split_row` | Number | **Number of rows per split** |
 
 ---
-## `common_splitter` (General File Segmentation Policy)
 
-Used to configure **segmentation methods for non-Excel files (e.g., TXT, PDF, DOCX)**, supporting two strategies: **by-page segmentation** or **by-tag segmentation**.
-
+## `common_splitter` (General File Splitting Policy)
+Used to configure the splitting method for **non-Excel files (TXT, PDF, DOCX, etc.)**. Two strategies are supported: **page-based splitting** or **identifier-based splitting**.
 **Type: Object**
-
 ```json
 "common_splitter": {
   "splitter": "page",
@@ -918,67 +838,95 @@ Used to configure **segmentation methods for non-Excel files (e.g., TXT, PDF, DO
 }
 ```
 
-### Field Description:
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `splitter` | String | Splitting strategy type. Optional values: `"page"` (split by page), `"tag"` (split by identifier). |
+| `page_splitter` | Object | Configuration for **page-based splitting** |
+| `page_splitter.chunk_length` | Number | **Maximum chunk length** |
+| `page_splitter.chunk_overlap_length` | Number | **Chunk overlap length** |
+| `tag_splitter` | Object | Configuration for **custom splitting** |
+| `tag_splitter.tag` | Array\<String\> | **Splitting identifiers** |
+| `tag_splitter.chunk_length` | Number | **Maximum chunk length** |
+| `tag_splitter.chunk_overlap_length` | Number | **Chunk overlap length** |
 
-| Field Name                     | Type          | Description                                                                
-   |
-|--------------------------------|---------------|-----------------------------------------------------------------------------|
-| `splitter`                     | String        | Segmentation strategy type. Valid values: `"page"` (by-page) or `"tag"` (by-tag). |
-| `page_splitter`                | Object        | **By-page segmentation configuration**.                                     |
-| `page_splitter.chunk_length`   | Number        | **Maximum chunk length**.                                                  
-   |
-| `page_splitter.chunk_overlap_length` | Number | **Chunk overlap length**.                                                  
-   |
-| `tag_splitter`                 | Object        | **Custom segmentation configuration**.                                      |
-| `tag_splitter.tag`             | Array\<String\> | **Segmentation tags**.                                                     
-   |
-| `tag_splitter.chunk_length`    | Number        | **Maximum chunk length**.                                                  
-   |
-| `tag_splitter.chunk_overlap_length` | Number | **Chunk overlap length**.                                                  
-   |
+### Supplementary Notes
+- Valid values for the `splitter` field:
+  - `"page"`: Only page-based splitting is used; only configure fields under `page_splitter`.
+  - `"tag"`: Only identifier-based splitting (semicolon, line break, etc.) is used; only configure fields under `tag_splitter`.
 
-🔹 **Additional Notes:**
-
-- Valid values for `splitter`:
-    - `"page"`: Only use by-page segmentation logic. Only `page_splitter` fields are relevant.
-    - `"tag"`: Only use by-tag segmentation logic (e.g., using delimiters like semicolons or line breaks). Only `tag_splitter` fields are relevant.
 ---
 
 ## `table_style` (Table Output Style)
-
-Specifies **the format in which tabular content (e.g., tables extracted from Excel or CSV) is returned**, facilitating frontend display or subsequent processing.
-
+Specifies the final return format of **table content extracted from Excel / CSV**, for front-end display and subsequent processing.
 **Type: String**
-
 ```json
 "table_style": "md"
 ```
 
-### Field Description:
-
-| Field Name     | Type   | Description                                                                
-   |
-|----------------|--------|-----------------------------------------------------------------------------|
-| `table_style`  | String | Output format of table content. Valid values:<br>• `"html"`: Returns as HTML tables, suitable for web display.<br>• `"md"`: Returns in Markdown table syntax, suitable for documentation or Markdown rendering environments. |
+### Field Description
+| Field Name | Type | Description |
+|------------|------|-------------|
+| `table_style` | String | Specifies the output format of table content. Available values:<br> `"html"`: Return as HTML table, suitable for web page display.<br> `"md"`: Return as Markdown table syntax, suitable for documents and Markdown rendering environments. |
      */
     public void setSplitRule(String SplitRule) {
         this.SplitRule = SplitRule;
     }
 
     /**
-     * Get Document update frequency, default value is 0 (no updates) 
-     * @return UpdatePeriodInfo Document update frequency, default value is 0 (no updates)
+     * Get Document update frequency. Default value 0 means no update. 
+     * @return UpdatePeriodInfo Document update frequency. Default value 0 means no update.
      */
     public UpdatePeriodInfo getUpdatePeriodInfo() {
         return this.UpdatePeriodInfo;
     }
 
     /**
-     * Set Document update frequency, default value is 0 (no updates)
-     * @param UpdatePeriodInfo Document update frequency, default value is 0 (no updates)
+     * Set Document update frequency. Default value 0 means no update.
+     * @param UpdatePeriodInfo Document update frequency. Default value 0 means no update.
      */
     public void setUpdatePeriodInfo(UpdatePeriodInfo UpdatePeriodInfo) {
         this.UpdatePeriodInfo = UpdatePeriodInfo;
+    }
+
+    /**
+     * Get Document Effective Scope:
+1 - Not effective;
+2 - Effective only in development scope;
+3 - Effective only in release scope;
+4 - Effective in both development and release scopes.
+
+Default value: The default knowledge base within the application is 2, and the shared knowledge base is 4. 
+     * @return EnableScope Document Effective Scope:
+1 - Not effective;
+2 - Effective only in development scope;
+3 - Effective only in release scope;
+4 - Effective in both development and release scopes.
+
+Default value: The default knowledge base within the application is 2, and the shared knowledge base is 4.
+     */
+    public Long getEnableScope() {
+        return this.EnableScope;
+    }
+
+    /**
+     * Set Document Effective Scope:
+1 - Not effective;
+2 - Effective only in development scope;
+3 - Effective only in release scope;
+4 - Effective in both development and release scopes.
+
+Default value: The default knowledge base within the application is 2, and the shared knowledge base is 4.
+     * @param EnableScope Document Effective Scope:
+1 - Not effective;
+2 - Effective only in development scope;
+3 - Effective only in release scope;
+4 - Effective in both development and release scopes.
+
+Default value: The default knowledge base within the application is 2, and the shared knowledge base is 4.
+     */
+    public void setEnableScope(Long EnableScope) {
+        this.EnableScope = EnableScope;
     }
 
     public SaveDocRequest() {
@@ -1058,6 +1006,9 @@ Specifies **the format in which tabular content (e.g., tables extracted from Exc
         if (source.UpdatePeriodInfo != null) {
             this.UpdatePeriodInfo = new UpdatePeriodInfo(source.UpdatePeriodInfo);
         }
+        if (source.EnableScope != null) {
+            this.EnableScope = new Long(source.EnableScope);
+        }
     }
 
 
@@ -1086,6 +1037,7 @@ Specifies **the format in which tabular content (e.g., tables extracted from Exc
         this.setParamArrayObj(map, prefix + "DuplicateFileHandles.", this.DuplicateFileHandles);
         this.setParamSimple(map, prefix + "SplitRule", this.SplitRule);
         this.setParamObj(map, prefix + "UpdatePeriodInfo.", this.UpdatePeriodInfo);
+        this.setParamSimple(map, prefix + "EnableScope", this.EnableScope);
 
     }
 }

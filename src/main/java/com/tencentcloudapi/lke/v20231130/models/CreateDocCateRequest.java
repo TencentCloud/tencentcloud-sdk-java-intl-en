@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateDocCateRequest extends AbstractModel {
 
     /**
-    * Application ID.
+    * Application ID
     */
     @SerializedName("BotBizId")
     @Expose
@@ -46,16 +46,16 @@ public class CreateDocCateRequest extends AbstractModel {
     private String Name;
 
     /**
-     * Get Application ID. 
-     * @return BotBizId Application ID.
+     * Get Application ID 
+     * @return BotBizId Application ID
      */
     public String getBotBizId() {
         return this.BotBizId;
     }
 
     /**
-     * Set Application ID.
-     * @param BotBizId Application ID.
+     * Set Application ID
+     * @param BotBizId Application ID
      */
     public void setBotBizId(String BotBizId) {
         this.BotBizId = BotBizId;

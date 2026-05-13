@@ -24,141 +24,187 @@ import java.util.HashMap;
 public class WorkflowInfo extends AbstractModel {
 
     /**
-    * Workflow ID
+    * 
     */
     @SerializedName("WorkflowId")
     @Expose
     private String WorkflowId;
 
     /**
-    * Workflow Name
+    * 
     */
     @SerializedName("WorkflowName")
     @Expose
     private String WorkflowName;
 
     /**
-    * Workflow Run ID
+    * 
     */
     @SerializedName("WorkflowRunId")
     @Expose
     private String WorkflowRunId;
 
     /**
-    * Tab
+    * 
     */
     @SerializedName("OptionCards")
     @Expose
     private String [] OptionCards;
 
     /**
-    * Multi-bubble output results
+    * 
     */
     @SerializedName("Outputs")
     @Expose
     private String [] Outputs;
 
     /**
-    * Workflow Publish Time, unix timestamp
+    * 
     */
     @SerializedName("WorkflowReleaseTime")
     @Expose
     private String WorkflowReleaseTime;
 
     /**
-     * Get Workflow ID 
-     * @return WorkflowId Workflow ID
+    * 
+    */
+    @SerializedName("Contents")
+    @Expose
+    private Content [] Contents;
+
+    /**
+    * 
+    */
+    @SerializedName("OptionMode")
+    @Expose
+    private Long OptionMode;
+
+    /**
+     * Get  
+     * @return WorkflowId 
      */
     public String getWorkflowId() {
         return this.WorkflowId;
     }
 
     /**
-     * Set Workflow ID
-     * @param WorkflowId Workflow ID
+     * Set 
+     * @param WorkflowId 
      */
     public void setWorkflowId(String WorkflowId) {
         this.WorkflowId = WorkflowId;
     }
 
     /**
-     * Get Workflow Name 
-     * @return WorkflowName Workflow Name
+     * Get  
+     * @return WorkflowName 
      */
     public String getWorkflowName() {
         return this.WorkflowName;
     }
 
     /**
-     * Set Workflow Name
-     * @param WorkflowName Workflow Name
+     * Set 
+     * @param WorkflowName 
      */
     public void setWorkflowName(String WorkflowName) {
         this.WorkflowName = WorkflowName;
     }
 
     /**
-     * Get Workflow Run ID 
-     * @return WorkflowRunId Workflow Run ID
+     * Get  
+     * @return WorkflowRunId 
      */
     public String getWorkflowRunId() {
         return this.WorkflowRunId;
     }
 
     /**
-     * Set Workflow Run ID
-     * @param WorkflowRunId Workflow Run ID
+     * Set 
+     * @param WorkflowRunId 
      */
     public void setWorkflowRunId(String WorkflowRunId) {
         this.WorkflowRunId = WorkflowRunId;
     }
 
     /**
-     * Get Tab 
-     * @return OptionCards Tab
+     * Get  
+     * @return OptionCards 
      */
     public String [] getOptionCards() {
         return this.OptionCards;
     }
 
     /**
-     * Set Tab
-     * @param OptionCards Tab
+     * Set 
+     * @param OptionCards 
      */
     public void setOptionCards(String [] OptionCards) {
         this.OptionCards = OptionCards;
     }
 
     /**
-     * Get Multi-bubble output results 
-     * @return Outputs Multi-bubble output results
+     * Get  
+     * @return Outputs 
      */
     public String [] getOutputs() {
         return this.Outputs;
     }
 
     /**
-     * Set Multi-bubble output results
-     * @param Outputs Multi-bubble output results
+     * Set 
+     * @param Outputs 
      */
     public void setOutputs(String [] Outputs) {
         this.Outputs = Outputs;
     }
 
     /**
-     * Get Workflow Publish Time, unix timestamp 
-     * @return WorkflowReleaseTime Workflow Publish Time, unix timestamp
+     * Get  
+     * @return WorkflowReleaseTime 
      */
     public String getWorkflowReleaseTime() {
         return this.WorkflowReleaseTime;
     }
 
     /**
-     * Set Workflow Publish Time, unix timestamp
-     * @param WorkflowReleaseTime Workflow Publish Time, unix timestamp
+     * Set 
+     * @param WorkflowReleaseTime 
      */
     public void setWorkflowReleaseTime(String WorkflowReleaseTime) {
         this.WorkflowReleaseTime = WorkflowReleaseTime;
+    }
+
+    /**
+     * Get  
+     * @return Contents 
+     */
+    public Content [] getContents() {
+        return this.Contents;
+    }
+
+    /**
+     * Set 
+     * @param Contents 
+     */
+    public void setContents(Content [] Contents) {
+        this.Contents = Contents;
+    }
+
+    /**
+     * Get  
+     * @return OptionMode 
+     */
+    public Long getOptionMode() {
+        return this.OptionMode;
+    }
+
+    /**
+     * Set 
+     * @param OptionMode 
+     */
+    public void setOptionMode(Long OptionMode) {
+        this.OptionMode = OptionMode;
     }
 
     public WorkflowInfo() {
@@ -193,6 +239,15 @@ public class WorkflowInfo extends AbstractModel {
         if (source.WorkflowReleaseTime != null) {
             this.WorkflowReleaseTime = new String(source.WorkflowReleaseTime);
         }
+        if (source.Contents != null) {
+            this.Contents = new Content[source.Contents.length];
+            for (int i = 0; i < source.Contents.length; i++) {
+                this.Contents[i] = new Content(source.Contents[i]);
+            }
+        }
+        if (source.OptionMode != null) {
+            this.OptionMode = new Long(source.OptionMode);
+        }
     }
 
 
@@ -206,6 +261,8 @@ public class WorkflowInfo extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OptionCards.", this.OptionCards);
         this.setParamArraySimple(map, prefix + "Outputs.", this.Outputs);
         this.setParamSimple(map, prefix + "WorkflowReleaseTime", this.WorkflowReleaseTime);
+        this.setParamArrayObj(map, prefix + "Contents.", this.Contents);
+        this.setParamSimple(map, prefix + "OptionMode", this.OptionMode);
 
     }
 }

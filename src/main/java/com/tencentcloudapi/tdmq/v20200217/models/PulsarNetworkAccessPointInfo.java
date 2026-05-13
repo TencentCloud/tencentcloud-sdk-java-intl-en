@@ -130,6 +130,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CustomUrl;
 
     /**
+    * id list of the bound security group for the access point. Only valid for vpc access points.
+    */
+    @SerializedName("SecurityGroupIds")
+    @Expose
+    private String [] SecurityGroupIds;
+
+    /**
      * Get VPC ID. This field is left empty for supporting network and public network access points.
 Note: This field may return null, indicating that no valid values can be obtained. 
      * @return VpcId VPC ID. This field is left empty for supporting network and public network access points.
@@ -397,6 +404,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.CustomUrl = CustomUrl;
     }
 
+    /**
+     * Get id list of the bound security group for the access point. Only valid for vpc access points. 
+     * @return SecurityGroupIds id list of the bound security group for the access point. Only valid for vpc access points.
+     */
+    public String [] getSecurityGroupIds() {
+        return this.SecurityGroupIds;
+    }
+
+    /**
+     * Set id list of the bound security group for the access point. Only valid for vpc access points.
+     * @param SecurityGroupIds id list of the bound security group for the access point. Only valid for vpc access points.
+     */
+    public void setSecurityGroupIds(String [] SecurityGroupIds) {
+        this.SecurityGroupIds = SecurityGroupIds;
+    }
+
     public PulsarNetworkAccessPointInfo() {
     }
 
@@ -447,6 +470,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.CustomUrl != null) {
             this.CustomUrl = new String(source.CustomUrl);
         }
+        if (source.SecurityGroupIds != null) {
+            this.SecurityGroupIds = new String[source.SecurityGroupIds.length];
+            for (int i = 0; i < source.SecurityGroupIds.length; i++) {
+                this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
+            }
+        }
     }
 
 
@@ -467,6 +496,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ZoneName", this.ZoneName);
         this.setParamSimple(map, prefix + "Tls", this.Tls);
         this.setParamSimple(map, prefix + "CustomUrl", this.CustomUrl);
+        this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
 
     }
 }

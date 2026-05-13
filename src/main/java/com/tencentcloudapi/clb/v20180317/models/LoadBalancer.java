@@ -229,7 +229,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ExpireTime;
 
     /**
-    * Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+    * Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("ChargeType")
@@ -480,6 +480,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("AssociateEndpoint")
     @Expose
     private String AssociateEndpoint;
+
+    /**
+    * 
+    */
+    @SerializedName("AvailableZoneAffinityInfo")
+    @Expose
+    private AvailableZoneAffinityInfo AvailableZoneAffinityInfo;
 
     /**
      * Get CLB instance ID. 
@@ -982,9 +989,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+     * Get Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ChargeType Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+     * @return ChargeType Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getChargeType() {
@@ -992,9 +999,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Set Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+     * Set Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ChargeType Billing mode of CLB instance. Valid values: PREPAID (monthly subscription), POSTPAID_BY_HOUR (pay as you go).
+     * @param ChargeType Billing mode of CLB instance. Valid values: PREPAID (yearly/monthly subscription), POSTPAID_BY_HOUR (pay as you go).
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setChargeType(String ChargeType) {
@@ -1621,6 +1628,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AssociateEndpoint = AssociateEndpoint;
     }
 
+    /**
+     * Get  
+     * @return AvailableZoneAffinityInfo 
+     */
+    public AvailableZoneAffinityInfo getAvailableZoneAffinityInfo() {
+        return this.AvailableZoneAffinityInfo;
+    }
+
+    /**
+     * Set 
+     * @param AvailableZoneAffinityInfo 
+     */
+    public void setAvailableZoneAffinityInfo(AvailableZoneAffinityInfo AvailableZoneAffinityInfo) {
+        this.AvailableZoneAffinityInfo = AvailableZoneAffinityInfo;
+    }
+
     public LoadBalancer() {
     }
 
@@ -1827,6 +1850,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AssociateEndpoint != null) {
             this.AssociateEndpoint = new String(source.AssociateEndpoint);
         }
+        if (source.AvailableZoneAffinityInfo != null) {
+            this.AvailableZoneAffinityInfo = new AvailableZoneAffinityInfo(source.AvailableZoneAffinityInfo);
+        }
     }
 
 
@@ -1892,6 +1918,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Exclusive", this.Exclusive);
         this.setParamSimple(map, prefix + "TargetCount", this.TargetCount);
         this.setParamSimple(map, prefix + "AssociateEndpoint", this.AssociateEndpoint);
+        this.setParamObj(map, prefix + "AvailableZoneAffinityInfo.", this.AvailableZoneAffinityInfo);
 
     }
 }

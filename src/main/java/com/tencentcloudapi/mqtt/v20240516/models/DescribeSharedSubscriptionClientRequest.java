@@ -1,0 +1,125 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.mqtt.v20240516.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class DescribeSharedSubscriptionClientRequest extends AbstractModel {
+
+    /**
+    * Tencent Cloud MQTT instance ID can be obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or the console.
+    */
+    @SerializedName("InstanceId")
+    @Expose
+    private String InstanceId;
+
+    /**
+    * Shared subscription group name
+    */
+    @SerializedName("SharedName")
+    @Expose
+    private String SharedName;
+
+    /**
+    * Subscription expression.
+    */
+    @SerializedName("TopicFilter")
+    @Expose
+    private String TopicFilter;
+
+    /**
+     * Get Tencent Cloud MQTT instance ID can be obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or the console. 
+     * @return InstanceId Tencent Cloud MQTT instance ID can be obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or the console.
+     */
+    public String getInstanceId() {
+        return this.InstanceId;
+    }
+
+    /**
+     * Set Tencent Cloud MQTT instance ID can be obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or the console.
+     * @param InstanceId Tencent Cloud MQTT instance ID can be obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or the console.
+     */
+    public void setInstanceId(String InstanceId) {
+        this.InstanceId = InstanceId;
+    }
+
+    /**
+     * Get Shared subscription group name 
+     * @return SharedName Shared subscription group name
+     */
+    public String getSharedName() {
+        return this.SharedName;
+    }
+
+    /**
+     * Set Shared subscription group name
+     * @param SharedName Shared subscription group name
+     */
+    public void setSharedName(String SharedName) {
+        this.SharedName = SharedName;
+    }
+
+    /**
+     * Get Subscription expression. 
+     * @return TopicFilter Subscription expression.
+     */
+    public String getTopicFilter() {
+        return this.TopicFilter;
+    }
+
+    /**
+     * Set Subscription expression.
+     * @param TopicFilter Subscription expression.
+     */
+    public void setTopicFilter(String TopicFilter) {
+        this.TopicFilter = TopicFilter;
+    }
+
+    public DescribeSharedSubscriptionClientRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public DescribeSharedSubscriptionClientRequest(DescribeSharedSubscriptionClientRequest source) {
+        if (source.InstanceId != null) {
+            this.InstanceId = new String(source.InstanceId);
+        }
+        if (source.SharedName != null) {
+            this.SharedName = new String(source.SharedName);
+        }
+        if (source.TopicFilter != null) {
+            this.TopicFilter = new String(source.TopicFilter);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
+        this.setParamSimple(map, prefix + "SharedName", this.SharedName);
+        this.setParamSimple(map, prefix + "TopicFilter", this.TopicFilter);
+
+    }
+}
+

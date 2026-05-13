@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeInstanceRequest extends AbstractModel {
 
     /**
-    * tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+    * <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console. 
-     * @return InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * Get <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p> 
+     * @return InstanceId <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
-     * @param InstanceId tencent cloud MQTT instance ID, obtained from the [DescribeInstanceList](https://www.tencentcloud.com/document/api/1778/111029?from_cn_redirect=1) api or console.
+     * Set <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
+     * @param InstanceId <p>Tencent Cloud MQTT instance ID can be obtained from the api or the console.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

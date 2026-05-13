@@ -24,7 +24,14 @@ import java.util.HashMap;
 public class ModifySnapshotsSharePermissionRequest extends AbstractModel {
 
     /**
-    * List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
+    * The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+    */
+    @SerializedName("SnapshotIds")
+    @Expose
+    private String [] SnapshotIds;
+
+    /**
+    * Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
     */
     @SerializedName("AccountIds")
     @Expose
@@ -38,23 +45,32 @@ public class ModifySnapshotsSharePermissionRequest extends AbstractModel {
     private String Permission;
 
     /**
-    * The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
-    */
-    @SerializedName("SnapshotIds")
-    @Expose
-    private String [] SnapshotIds;
+     * Get The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1). 
+     * @return SnapshotIds The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+     */
+    public String [] getSnapshotIds() {
+        return this.SnapshotIds;
+    }
 
     /**
-     * Get List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer). 
-     * @return AccountIds List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
+     * Set The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+     * @param SnapshotIds The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
+     */
+    public void setSnapshotIds(String [] SnapshotIds) {
+        this.SnapshotIds = SnapshotIds;
+    }
+
+    /**
+     * Get Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer). 
+     * @return AccountIds Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
      */
     public String [] getAccountIds() {
         return this.AccountIds;
     }
 
     /**
-     * Set List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
-     * @param AccountIds List of account IDs with which a snapshot is shared. For the format of array-type parameters, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1). You can find the account ID in [Account Information](https://console.cloud.tencent.com/developer).
+     * Set Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
+     * @param AccountIds Account Id list for receiving shared snapshots. the format of array-type parameters can be found in the API overview (https://www.tencentcloud.com/document/API/213/568?from_cn_redirect=1). the account Id is different from a QQ number. to query a user account Id, view the account Id column in the account information (https://console.cloud.tencent.com/developer).
      */
     public void setAccountIds(String [] AccountIds) {
         this.AccountIds = AccountIds;
@@ -76,22 +92,6 @@ public class ModifySnapshotsSharePermissionRequest extends AbstractModel {
         this.Permission = Permission;
     }
 
-    /**
-     * Get The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1). 
-     * @return SnapshotIds The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
-     */
-    public String [] getSnapshotIds() {
-        return this.SnapshotIds;
-    }
-
-    /**
-     * Set The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
-     * @param SnapshotIds The ID of the snapshot. You can obtain this by using [DescribeSnapshots](https://intl.cloud.tencent.com/document/api/362/15647?from_cn_redirect=1).
-     */
-    public void setSnapshotIds(String [] SnapshotIds) {
-        this.SnapshotIds = SnapshotIds;
-    }
-
     public ModifySnapshotsSharePermissionRequest() {
     }
 
@@ -100,6 +100,12 @@ public class ModifySnapshotsSharePermissionRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifySnapshotsSharePermissionRequest(ModifySnapshotsSharePermissionRequest source) {
+        if (source.SnapshotIds != null) {
+            this.SnapshotIds = new String[source.SnapshotIds.length];
+            for (int i = 0; i < source.SnapshotIds.length; i++) {
+                this.SnapshotIds[i] = new String(source.SnapshotIds[i]);
+            }
+        }
         if (source.AccountIds != null) {
             this.AccountIds = new String[source.AccountIds.length];
             for (int i = 0; i < source.AccountIds.length; i++) {
@@ -109,12 +115,6 @@ public class ModifySnapshotsSharePermissionRequest extends AbstractModel {
         if (source.Permission != null) {
             this.Permission = new String(source.Permission);
         }
-        if (source.SnapshotIds != null) {
-            this.SnapshotIds = new String[source.SnapshotIds.length];
-            for (int i = 0; i < source.SnapshotIds.length; i++) {
-                this.SnapshotIds[i] = new String(source.SnapshotIds[i]);
-            }
-        }
     }
 
 
@@ -122,9 +122,9 @@ public class ModifySnapshotsSharePermissionRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
         this.setParamArraySimple(map, prefix + "AccountIds.", this.AccountIds);
         this.setParamSimple(map, prefix + "Permission", this.Permission);
-        this.setParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
 
     }
 }

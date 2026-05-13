@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRocketMQEnvironmentRolesResponse extends AbstractModel {
 
     /**
-    * Record count.
+    * Total number.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Namespace role collection.
+    * Role-based license list
     */
     @SerializedName("EnvironmentRoleSets")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRocketMQEnvironmentRolesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Record count. 
-     * @return TotalCount Record count.
+     * Get Total number. 
+     * @return TotalCount Total number.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Record count.
-     * @param TotalCount Record count.
+     * Set Total number.
+     * @param TotalCount Total number.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Namespace role collection. 
-     * @return EnvironmentRoleSets Namespace role collection.
+     * Get Role-based license list 
+     * @return EnvironmentRoleSets Role-based license list
      */
     public EnvironmentRole [] getEnvironmentRoleSets() {
         return this.EnvironmentRoleSets;
     }
 
     /**
-     * Set Namespace role collection.
-     * @param EnvironmentRoleSets Namespace role collection.
+     * Set Role-based license list
+     * @param EnvironmentRoleSets Role-based license list
      */
     public void setEnvironmentRoleSets(EnvironmentRole [] EnvironmentRoleSets) {
         this.EnvironmentRoleSets = EnvironmentRoleSets;

@@ -117,7 +117,9 @@ How to Obtain It:</br>
     /**
      * Get Knowledge label, used for search filter in the knowledge base. This field is about to be deactivated. Please use the custom_variables field in the dialogue endpoint API to replace this field. 
      * @return VisitorLabels Knowledge label, used for search filter in the knowledge base. This field is about to be deactivated. Please use the custom_variables field in the dialogue endpoint API to replace this field.
+     * @deprecated
      */
+    @Deprecated
     public GetWsTokenReq_Label [] getVisitorLabels() {
         return this.VisitorLabels;
     }
@@ -125,7 +127,9 @@ How to Obtain It:</br>
     /**
      * Set Knowledge label, used for search filter in the knowledge base. This field is about to be deactivated. Please use the custom_variables field in the dialogue endpoint API to replace this field.
      * @param VisitorLabels Knowledge label, used for search filter in the knowledge base. This field is about to be deactivated. Please use the custom_variables field in the dialogue endpoint API to replace this field.
+     * @deprecated
      */
+    @Deprecated
     public void setVisitorLabels(GetWsTokenReq_Label [] VisitorLabels) {
         this.VisitorLabels = VisitorLabels;
     }

@@ -52,7 +52,7 @@ public class SaveDocResponse extends AbstractModel {
     private String ErrorLinkText;
 
     /**
-    * 
+    * Duplication type. 0 means no duplication; for other values, refer to the CheckType field of the input parameter DuplicateFileHandle  structure.
     */
     @SerializedName("DuplicateFileCheckType")
     @Expose
@@ -130,16 +130,16 @@ public class SaveDocResponse extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return DuplicateFileCheckType 
+     * Get Duplication type. 0 means no duplication; for other values, refer to the CheckType field of the input parameter DuplicateFileHandle  structure. 
+     * @return DuplicateFileCheckType Duplication type. 0 means no duplication; for other values, refer to the CheckType field of the input parameter DuplicateFileHandle  structure.
      */
     public Long getDuplicateFileCheckType() {
         return this.DuplicateFileCheckType;
     }
 
     /**
-     * Set 
-     * @param DuplicateFileCheckType 
+     * Set Duplication type. 0 means no duplication; for other values, refer to the CheckType field of the input parameter DuplicateFileHandle  structure.
+     * @param DuplicateFileCheckType Duplication type. 0 means no duplication; for other values, refer to the CheckType field of the input parameter DuplicateFileHandle  structure.
      */
     public void setDuplicateFileCheckType(Long DuplicateFileCheckType) {
         this.DuplicateFileCheckType = DuplicateFileCheckType;

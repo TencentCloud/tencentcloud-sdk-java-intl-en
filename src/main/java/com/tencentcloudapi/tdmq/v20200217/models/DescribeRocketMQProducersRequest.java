@@ -31,7 +31,7 @@ public class DescribeRocketMQProducersRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Namespace
+    * Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -85,16 +85,16 @@ public class DescribeRocketMQProducersRequest extends AbstractModel {
     }
 
     /**
-     * Get Namespace 
-     * @return NamespaceId Namespace
+     * Get Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default 
+     * @return NamespaceId Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set Namespace
-     * @param NamespaceId Namespace
+     * Set Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
+     * @param NamespaceId Namespace of the topic. For 4.x common clusters, the Cluster Namespace is fixed as: tdmq_default
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;

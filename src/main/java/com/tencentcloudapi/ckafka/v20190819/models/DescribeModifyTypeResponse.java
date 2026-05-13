@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeModifyTypeResponse extends AbstractModel {
 
     /**
-    * Specifies the structure of the returned renewal type.
+    * <p>Returned scaling type structure</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeModifyTypeResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specifies the structure of the returned renewal type. 
-     * @return Result Specifies the structure of the returned renewal type.
+     * Get <p>Returned scaling type structure</p> 
+     * @return Result <p>Returned scaling type structure</p>
      */
     public DescModifyType getResult() {
         return this.Result;
     }
 
     /**
-     * Set Specifies the structure of the returned renewal type.
-     * @param Result Specifies the structure of the returned renewal type.
+     * Set <p>Returned scaling type structure</p>
+     * @param Result <p>Returned scaling type structure</p>
      */
     public void setResult(DescModifyType Result) {
         this.Result = Result;

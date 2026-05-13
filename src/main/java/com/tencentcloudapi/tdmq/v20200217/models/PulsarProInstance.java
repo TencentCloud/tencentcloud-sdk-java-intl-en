@@ -87,7 +87,7 @@ public class PulsarProInstance extends AbstractModel {
     private Long AutoRenewFlag;
 
     /**
-    * Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
+    * Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
     */
     @SerializedName("PayMode")
     @Expose
@@ -322,16 +322,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription). 
-     * @return PayMode Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
+     * Get Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription). 
+     * @return PayMode Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
-     * @param PayMode Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Monthly subscription).
+     * Set Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
+     * @param PayMode Payment mode. Valid values: `0` (Pay-as-you-go), `1` (Yearly/Monthly subscription).
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;

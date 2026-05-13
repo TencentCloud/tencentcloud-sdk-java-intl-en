@@ -38,14 +38,16 @@ public class DiskBackup extends AbstractModel {
     private String DiskId;
 
     /**
-    * Cloud disk size in GB.
+    * Specifies the disk capacity in GiB.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
+    * Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
     */
     @SerializedName("DiskUsage")
     @Expose
@@ -59,14 +61,19 @@ public class DiskBackup extends AbstractModel {
     private String DiskBackupName;
 
     /**
-    * Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
+    * <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
     */
     @SerializedName("DiskBackupState")
     @Expose
     private String DiskBackupState;
 
     /**
-    * Cloud disk creation progress in percentage.
+    * Specifies the creation percentage of the cloud disk backup point.
     */
     @SerializedName("Percent")
     @Expose
@@ -80,7 +87,7 @@ public class DiskBackup extends AbstractModel {
     private String CreateTime;
 
     /**
-    * Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
+    * Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
     */
     @SerializedName("Encrypt")
     @Expose
@@ -119,32 +126,40 @@ public class DiskBackup extends AbstractModel {
     }
 
     /**
-     * Get Cloud disk size in GB. 
-     * @return DiskSize Cloud disk size in GB.
+     * Get Specifies the disk capacity in GiB. 
+     * @return DiskSize Specifies the disk capacity in GiB.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Cloud disk size in GB.
-     * @param DiskSize Cloud disk size in GB.
+     * Set Specifies the disk capacity in GiB.
+     * @param DiskSize Specifies the disk capacity in GiB.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk 
-     * @return DiskUsage Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
+     * Get Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>. 
+     * @return DiskUsage Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
      */
     public String getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
-     * @param DiskUsage Cloud disk type. Valid values:<br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk
+     * Set Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
+     * @param DiskUsage Cloud disk type. value ranges from...to...<br>.
+<Li>SYSTEM_DISK: specifies the system disk.</li>.
+<Li>DATA_DISK: specifies the data disk.</li>.
      */
     public void setDiskUsage(String DiskUsage) {
         this.DiskUsage = DiskUsage;
@@ -167,32 +182,52 @@ public class DiskBackup extends AbstractModel {
     }
 
     /**
-     * Get Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back 
-     * @return DiskBackupState Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
+     * Get <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul> 
+     * @return DiskBackupState <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
      */
     public String getDiskBackupState() {
         return this.DiskBackupState;
     }
 
     /**
-     * Set Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
-     * @param DiskBackupState Cloud disk backup point status. Valid values:<br><li>NORMAL: Normal<br><li>CREATING: Creating<br><li>ROLLBACKING: Rolling back
+     * Set <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
+     * @param DiskBackupState <P>Specifies the status of the cloud disk backup point. valid values:</p>.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>CREATING: creating.</li>.
+<Li>ROLLBACKING: indicates the rollback is in progress.</li>.
+</ul>
      */
     public void setDiskBackupState(String DiskBackupState) {
         this.DiskBackupState = DiskBackupState;
     }
 
     /**
-     * Get Cloud disk creation progress in percentage. 
-     * @return Percent Cloud disk creation progress in percentage.
+     * Get Specifies the creation percentage of the cloud disk backup point. 
+     * @return Percent Specifies the creation percentage of the cloud disk backup point.
      */
     public Long getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set Cloud disk creation progress in percentage.
-     * @param Percent Cloud disk creation progress in percentage.
+     * Set Specifies the creation percentage of the cloud disk backup point.
+     * @param Percent Specifies the creation percentage of the cloud disk backup point.
      */
     public void setPercent(Long Percent) {
         this.Percent = Percent;
@@ -215,16 +250,16 @@ public class DiskBackup extends AbstractModel {
     }
 
     /**
-     * Get Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted 
-     * @return Encrypt Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
+     * Get Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>. 
+     * @return Encrypt Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
      */
     public Boolean getEncrypt() {
         return this.Encrypt;
     }
 
     /**
-     * Set Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
-     * @param Encrypt Whether the cloud disk is encrypted. Valid values: <br><li>false: Not encrypted <br><li>true: Encrypted
+     * Set Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
+     * @param Encrypt Indicates whether the cloud disk is encrypted. valid values:<br><li>false: non-encrypted disk</li><li>true: encrypted disk</li>.
      */
     public void setEncrypt(Boolean Encrypt) {
         this.Encrypt = Encrypt;

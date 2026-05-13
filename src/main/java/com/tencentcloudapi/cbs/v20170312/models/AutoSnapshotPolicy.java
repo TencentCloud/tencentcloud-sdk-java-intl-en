@@ -24,7 +24,9 @@ import java.util.HashMap;
 public class AutoSnapshotPolicy extends AbstractModel {
 
     /**
-    * The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+    * It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
     */
     @SerializedName("DiskIdSet")
     @Expose
@@ -38,15 +40,18 @@ public class AutoSnapshotPolicy extends AbstractModel {
     private Boolean IsActivated;
 
     /**
-    * Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+    * Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
     */
     @SerializedName("AutoSnapshotPolicyState")
     @Expose
     private String AutoSnapshotPolicyState;
 
     /**
-    * Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
     */
     @SerializedName("IsCopyToRemote")
     @Expose
@@ -110,24 +115,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CopyToAccountUin;
 
     /**
-    * List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Lists instance ids that are bound to the current periodic snapshot policy.
     */
     @SerializedName("InstanceIdSet")
     @Expose
     private String [] InstanceIdSet;
 
     /**
-    * The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the number of months snapshot can be retained.
     */
     @SerializedName("RetentionMonths")
     @Expose
     private Long RetentionMonths;
 
     /**
-    * The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the maximum retention number of snapshots created by scheduled snapshot.
     */
     @SerializedName("RetentionAmount")
     @Expose
@@ -151,23 +153,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get The list of cloud disk IDs that the current scheduled snapshot policy is bound to. 
-     * @return DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+     * Get It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty. 
+     * @return DiskIdSet It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
      */
     public String [] getDiskIdSet() {
         return this.DiskIdSet;
     }
 
     /**
-     * Set The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
-     * @param DiskIdSet The list of cloud disk IDs that the current scheduled snapshot policy is bound to.
+     * Set It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
+     * @param DiskIdSet It lists IDs of cloud disks that have been bound to the current regular snapshot policy.
+
+In the scenario of DescribeDiskAssociatedAutoSnapshotPolicy, this field returns empty.
      */
     public void setDiskIdSet(String [] DiskIdSet) {
         this.DiskIdSet = DiskIdSet;
@@ -190,36 +199,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated. 
-     * @return AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+     * Get Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul> 
+     * @return AutoSnapshotPolicyState Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
      */
     public String getAutoSnapshotPolicyState() {
         return this.AutoSnapshotPolicyState;
     }
 
     /**
-     * Set Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
-     * @param AutoSnapshotPolicyState Scheduled snapshot policy state. Value range:<br><li>NORMAL: Normal<br><li>ISOLATED: Isolated.
+     * Set Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
+     * @param AutoSnapshotPolicyState Status of regular snapshot policy. valid values:.
+<ul>
+<Li>NORMAL: specifies the scaling group is in normal state.</li>.
+<Li>ISOLATED: specifies the instance is isolated.</li>.
+</ul>
      */
     public void setAutoSnapshotPolicyState(String AutoSnapshotPolicyState) {
         this.AutoSnapshotPolicyState = AutoSnapshotPolicyState;
     }
 
     /**
-     * Get Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsCopyToRemote Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no). 
+     * @return IsCopyToRemote Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
      */
     public Long getIsCopyToRemote() {
         return this.IsCopyToRemote;
     }
 
     /**
-     * Set Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsCopyToRemote Whether it is to replicate a snapshot across accounts. `1`: yes, `0`: no.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
+     * @param IsCopyToRemote Whether it is a cross-account snapshot replication. valid values: 1 (yes), 0 (no).
      */
     public void setIsCopyToRemote(Long IsCopyToRemote) {
         this.IsCopyToRemote = IsCopyToRemote;
@@ -358,60 +379,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceIdSet List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Lists instance ids that are bound to the current periodic snapshot policy. 
+     * @return InstanceIdSet Lists instance ids that are bound to the current periodic snapshot policy.
      */
     public String [] getInstanceIdSet() {
         return this.InstanceIdSet;
     }
 
     /**
-     * Set List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceIdSet List of IDs of the instances associated with the scheduled snapshot policy.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Lists instance ids that are bound to the current periodic snapshot policy.
+     * @param InstanceIdSet Lists instance ids that are bound to the current periodic snapshot policy.
      */
     public void setInstanceIdSet(String [] InstanceIdSet) {
         this.InstanceIdSet = InstanceIdSet;
     }
 
     /**
-     * Get The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RetentionMonths The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the number of months snapshot can be retained. 
+     * @return RetentionMonths Specifies the number of months snapshot can be retained.
      */
     public Long getRetentionMonths() {
         return this.RetentionMonths;
     }
 
     /**
-     * Set The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RetentionMonths The number of months for which the snapshots created by this scheduled snapshot policy can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the number of months snapshot can be retained.
+     * @param RetentionMonths Specifies the number of months snapshot can be retained.
      */
     public void setRetentionMonths(Long RetentionMonths) {
         this.RetentionMonths = RetentionMonths;
     }
 
     /**
-     * Get The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RetentionAmount The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the maximum retention number of snapshots created by scheduled snapshot. 
+     * @return RetentionAmount Specifies the maximum retention number of snapshots created by scheduled snapshot.
      */
     public Long getRetentionAmount() {
         return this.RetentionAmount;
     }
 
     /**
-     * Set The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RetentionAmount The maximum number of snapshots created by this scheduled snapshot policy that can be retained.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the maximum retention number of snapshots created by scheduled snapshot.
+     * @param RetentionAmount Specifies the maximum retention number of snapshots created by scheduled snapshot.
      */
     public void setRetentionAmount(Long RetentionAmount) {
         this.RetentionAmount = RetentionAmount;
@@ -458,10 +467,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tag.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Tag. 
      * @return Tags Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getTags() {
         return this.Tags;
@@ -469,9 +476,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param Tags Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;

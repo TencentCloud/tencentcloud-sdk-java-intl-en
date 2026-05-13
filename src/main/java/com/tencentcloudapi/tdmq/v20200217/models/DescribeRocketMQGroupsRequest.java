@@ -31,7 +31,7 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Namespace.
+    * Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -45,7 +45,7 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * The max number of returned results.
+    * Maximum number of entries per request. Range: [0–100]. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -117,16 +117,16 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get Namespace. 
-     * @return NamespaceId Namespace.
+     * Get Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default 
+     * @return NamespaceId Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set Namespace.
-     * @param NamespaceId Namespace.
+     * Set Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
+     * @param NamespaceId Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;
@@ -149,16 +149,16 @@ public class DescribeRocketMQGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get The max number of returned results. 
-     * @return Limit The max number of returned results.
+     * Get Maximum number of entries per request. Range: [0–100]. Default value: 20. 
+     * @return Limit Maximum number of entries per request. Range: [0–100]. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The max number of returned results.
-     * @param Limit The max number of returned results.
+     * Set Maximum number of entries per request. Range: [0–100]. Default value: 20.
+     * @param Limit Maximum number of entries per request. Range: [0–100]. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

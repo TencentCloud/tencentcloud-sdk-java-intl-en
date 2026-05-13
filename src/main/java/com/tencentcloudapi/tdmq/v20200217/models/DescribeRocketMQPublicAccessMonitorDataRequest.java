@@ -24,14 +24,17 @@ import java.util.HashMap;
 public class DescribeRocketMQPublicAccessMonitorDataRequest extends AbstractModel {
 
     /**
-    * Exclusive Edition cluster ID.
+    * Cluster ID
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
+    * Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
     */
     @SerializedName("MetricName")
     @Expose
@@ -59,32 +62,44 @@ public class DescribeRocketMQPublicAccessMonitorDataRequest extends AbstractMode
     private Long Period;
 
     /**
-     * Get Exclusive Edition cluster ID. 
-     * @return InstanceId Exclusive Edition cluster ID.
+     * Get Cluster ID 
+     * @return InstanceId Cluster ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Exclusive Edition cluster ID.
-     * @param InstanceId Exclusive Edition cluster ID.
+     * Set Cluster ID
+     * @param InstanceId Cluster ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic. 
-     * @return MetricName Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
+     * Get Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic 
+     * @return MetricName Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
      */
     public String getMetricName() {
         return this.MetricName;
     }
 
     /**
-     * Set Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
-     * @param MetricName Metric name. Only single-metric pulling is supported. Currently supported metrics: ClientIntraffic and ClientOuttraffic.
+     * Set Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
+     * @param MetricName Metric name. Only single metric pull is supported. The metrics are enumerated as follows:
+
+-ClientIntraffic: Inbound traffic
+-ClientOuttraffic: Outbound traffic
      */
     public void setMetricName(String MetricName) {
         this.MetricName = MetricName;

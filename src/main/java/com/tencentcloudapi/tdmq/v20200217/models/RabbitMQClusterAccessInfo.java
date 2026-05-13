@@ -24,56 +24,56 @@ import java.util.HashMap;
 public class RabbitMQClusterAccessInfo extends AbstractModel {
 
     /**
-    * Cluster Public Network Access Address
+    * 
     */
     @SerializedName("PublicAccessEndpoint")
     @Expose
     private String PublicAccessEndpoint;
 
     /**
-    * Cluster Console Access Address
+    * 
     */
     @SerializedName("WebConsoleEndpoint")
     @Expose
     private String WebConsoleEndpoint;
 
     /**
-    * Cluster Console Login Username
+    * 
     */
     @SerializedName("WebConsoleUsername")
     @Expose
     private String WebConsoleUsername;
 
     /**
-    * Cluster Console Login Password
+    * 
     */
     @SerializedName("WebConsolePassword")
     @Expose
     private String WebConsolePassword;
 
     /**
-    * Deprecated
+    * 
     */
     @SerializedName("PublicAccessEndpointStatus")
     @Expose
     private Boolean PublicAccessEndpointStatus;
 
     /**
-    * Deprecated
+    * 
     */
     @SerializedName("PublicControlConsoleSwitchStatus")
     @Expose
     private Boolean PublicControlConsoleSwitchStatus;
 
     /**
-    * Deprecated
+    * 
     */
     @SerializedName("VpcControlConsoleSwitchStatus")
     @Expose
     private Boolean VpcControlConsoleSwitchStatus;
 
     /**
-    * Vpc management console access address, example value: http://1.1.1.1:15672
+    * 
     */
     @SerializedName("VpcWebConsoleEndpoint")
     @Expose
@@ -137,128 +137,149 @@ OFF/ON/CREATING/DELETING
     private Boolean PublicIpReused;
 
     /**
-     * Get Cluster Public Network Access Address 
-     * @return PublicAccessEndpoint Cluster Public Network Access Address
+    * Error message for public network console access point operations.
+    */
+    @SerializedName("PublicWebConsoleErrorMessage")
+    @Expose
+    private String PublicWebConsoleErrorMessage;
+
+    /**
+    * Error message for private network console access point operations.
+    */
+    @SerializedName("VpcWebConsoleErrorMessage")
+    @Expose
+    private String VpcWebConsoleErrorMessage;
+
+    /**
+    * Error message for public network access point operation failure.
+    */
+    @SerializedName("PublicDataStreamErrorMessage")
+    @Expose
+    private String PublicDataStreamErrorMessage;
+
+    /**
+     * Get  
+     * @return PublicAccessEndpoint 
      */
     public String getPublicAccessEndpoint() {
         return this.PublicAccessEndpoint;
     }
 
     /**
-     * Set Cluster Public Network Access Address
-     * @param PublicAccessEndpoint Cluster Public Network Access Address
+     * Set 
+     * @param PublicAccessEndpoint 
      */
     public void setPublicAccessEndpoint(String PublicAccessEndpoint) {
         this.PublicAccessEndpoint = PublicAccessEndpoint;
     }
 
     /**
-     * Get Cluster Console Access Address 
-     * @return WebConsoleEndpoint Cluster Console Access Address
+     * Get  
+     * @return WebConsoleEndpoint 
      */
     public String getWebConsoleEndpoint() {
         return this.WebConsoleEndpoint;
     }
 
     /**
-     * Set Cluster Console Access Address
-     * @param WebConsoleEndpoint Cluster Console Access Address
+     * Set 
+     * @param WebConsoleEndpoint 
      */
     public void setWebConsoleEndpoint(String WebConsoleEndpoint) {
         this.WebConsoleEndpoint = WebConsoleEndpoint;
     }
 
     /**
-     * Get Cluster Console Login Username 
-     * @return WebConsoleUsername Cluster Console Login Username
+     * Get  
+     * @return WebConsoleUsername 
      */
     public String getWebConsoleUsername() {
         return this.WebConsoleUsername;
     }
 
     /**
-     * Set Cluster Console Login Username
-     * @param WebConsoleUsername Cluster Console Login Username
+     * Set 
+     * @param WebConsoleUsername 
      */
     public void setWebConsoleUsername(String WebConsoleUsername) {
         this.WebConsoleUsername = WebConsoleUsername;
     }
 
     /**
-     * Get Cluster Console Login Password 
-     * @return WebConsolePassword Cluster Console Login Password
+     * Get  
+     * @return WebConsolePassword 
      */
     public String getWebConsolePassword() {
         return this.WebConsolePassword;
     }
 
     /**
-     * Set Cluster Console Login Password
-     * @param WebConsolePassword Cluster Console Login Password
+     * Set 
+     * @param WebConsolePassword 
      */
     public void setWebConsolePassword(String WebConsolePassword) {
         this.WebConsolePassword = WebConsolePassword;
     }
 
     /**
-     * Get Deprecated 
-     * @return PublicAccessEndpointStatus Deprecated
+     * Get  
+     * @return PublicAccessEndpointStatus 
      */
     public Boolean getPublicAccessEndpointStatus() {
         return this.PublicAccessEndpointStatus;
     }
 
     /**
-     * Set Deprecated
-     * @param PublicAccessEndpointStatus Deprecated
+     * Set 
+     * @param PublicAccessEndpointStatus 
      */
     public void setPublicAccessEndpointStatus(Boolean PublicAccessEndpointStatus) {
         this.PublicAccessEndpointStatus = PublicAccessEndpointStatus;
     }
 
     /**
-     * Get Deprecated 
-     * @return PublicControlConsoleSwitchStatus Deprecated
+     * Get  
+     * @return PublicControlConsoleSwitchStatus 
      */
     public Boolean getPublicControlConsoleSwitchStatus() {
         return this.PublicControlConsoleSwitchStatus;
     }
 
     /**
-     * Set Deprecated
-     * @param PublicControlConsoleSwitchStatus Deprecated
+     * Set 
+     * @param PublicControlConsoleSwitchStatus 
      */
     public void setPublicControlConsoleSwitchStatus(Boolean PublicControlConsoleSwitchStatus) {
         this.PublicControlConsoleSwitchStatus = PublicControlConsoleSwitchStatus;
     }
 
     /**
-     * Get Deprecated 
-     * @return VpcControlConsoleSwitchStatus Deprecated
+     * Get  
+     * @return VpcControlConsoleSwitchStatus 
      */
     public Boolean getVpcControlConsoleSwitchStatus() {
         return this.VpcControlConsoleSwitchStatus;
     }
 
     /**
-     * Set Deprecated
-     * @param VpcControlConsoleSwitchStatus Deprecated
+     * Set 
+     * @param VpcControlConsoleSwitchStatus 
      */
     public void setVpcControlConsoleSwitchStatus(Boolean VpcControlConsoleSwitchStatus) {
         this.VpcControlConsoleSwitchStatus = VpcControlConsoleSwitchStatus;
     }
 
     /**
-     * Get Vpc management console access address, example value: http://1.1.1.1:15672 
-     * @return VpcWebConsoleEndpoint Vpc management console access address, example value: http://1.1.1.1:15672
+     * Get  
+     * @return VpcWebConsoleEndpoint 
      */
     public String getVpcWebConsoleEndpoint() {
         return this.VpcWebConsoleEndpoint;
     }
 
     /**
-     * Set Vpc management console access address, example value: http://1.1.1.1:15672
-     * @param VpcWebConsoleEndpoint Vpc management console access address, example value: http://1.1.1.1:15672
+     * Set 
+     * @param VpcWebConsoleEndpoint 
      */
     public void setVpcWebConsoleEndpoint(String VpcWebConsoleEndpoint) {
         this.VpcWebConsoleEndpoint = VpcWebConsoleEndpoint;
@@ -396,6 +417,54 @@ OFF/ON/CREATING/DELETING
         this.PublicIpReused = PublicIpReused;
     }
 
+    /**
+     * Get Error message for public network console access point operations. 
+     * @return PublicWebConsoleErrorMessage Error message for public network console access point operations.
+     */
+    public String getPublicWebConsoleErrorMessage() {
+        return this.PublicWebConsoleErrorMessage;
+    }
+
+    /**
+     * Set Error message for public network console access point operations.
+     * @param PublicWebConsoleErrorMessage Error message for public network console access point operations.
+     */
+    public void setPublicWebConsoleErrorMessage(String PublicWebConsoleErrorMessage) {
+        this.PublicWebConsoleErrorMessage = PublicWebConsoleErrorMessage;
+    }
+
+    /**
+     * Get Error message for private network console access point operations. 
+     * @return VpcWebConsoleErrorMessage Error message for private network console access point operations.
+     */
+    public String getVpcWebConsoleErrorMessage() {
+        return this.VpcWebConsoleErrorMessage;
+    }
+
+    /**
+     * Set Error message for private network console access point operations.
+     * @param VpcWebConsoleErrorMessage Error message for private network console access point operations.
+     */
+    public void setVpcWebConsoleErrorMessage(String VpcWebConsoleErrorMessage) {
+        this.VpcWebConsoleErrorMessage = VpcWebConsoleErrorMessage;
+    }
+
+    /**
+     * Get Error message for public network access point operation failure. 
+     * @return PublicDataStreamErrorMessage Error message for public network access point operation failure.
+     */
+    public String getPublicDataStreamErrorMessage() {
+        return this.PublicDataStreamErrorMessage;
+    }
+
+    /**
+     * Set Error message for public network access point operation failure.
+     * @param PublicDataStreamErrorMessage Error message for public network access point operation failure.
+     */
+    public void setPublicDataStreamErrorMessage(String PublicDataStreamErrorMessage) {
+        this.PublicDataStreamErrorMessage = PublicDataStreamErrorMessage;
+    }
+
     public RabbitMQClusterAccessInfo() {
     }
 
@@ -452,6 +521,15 @@ OFF/ON/CREATING/DELETING
         if (source.PublicIpReused != null) {
             this.PublicIpReused = new Boolean(source.PublicIpReused);
         }
+        if (source.PublicWebConsoleErrorMessage != null) {
+            this.PublicWebConsoleErrorMessage = new String(source.PublicWebConsoleErrorMessage);
+        }
+        if (source.VpcWebConsoleErrorMessage != null) {
+            this.VpcWebConsoleErrorMessage = new String(source.VpcWebConsoleErrorMessage);
+        }
+        if (source.PublicDataStreamErrorMessage != null) {
+            this.PublicDataStreamErrorMessage = new String(source.PublicDataStreamErrorMessage);
+        }
     }
 
 
@@ -475,6 +553,9 @@ OFF/ON/CREATING/DELETING
         this.setParamObj(map, prefix + "ControlPlaneEndpointInfo.", this.ControlPlaneEndpointInfo);
         this.setParamSimple(map, prefix + "PublicTlsAccessEndpoint", this.PublicTlsAccessEndpoint);
         this.setParamSimple(map, prefix + "PublicIpReused", this.PublicIpReused);
+        this.setParamSimple(map, prefix + "PublicWebConsoleErrorMessage", this.PublicWebConsoleErrorMessage);
+        this.setParamSimple(map, prefix + "VpcWebConsoleErrorMessage", this.VpcWebConsoleErrorMessage);
+        this.setParamSimple(map, prefix + "PublicDataStreamErrorMessage", this.PublicDataStreamErrorMessage);
 
     }
 }

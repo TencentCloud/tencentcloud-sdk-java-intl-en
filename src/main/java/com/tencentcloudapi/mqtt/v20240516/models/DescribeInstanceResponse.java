@@ -24,254 +24,256 @@ import java.util.HashMap;
 public class DescribeInstanceResponse extends AbstractModel {
 
     /**
-    * Instance type
-BASIC: basic edition.
-PRO edition.
-PLATINUM edition.
+    * <p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Instance ID.
+    * <p>Instance ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * <p>Instance name</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Number of topics
+    * <p>Number of topics</p>
     */
     @SerializedName("TopicNum")
     @Expose
     private Long TopicNum;
 
     /**
-    * Maximum number of topics per instance
+    * <p>Maximum number of topics per instance</p>
     */
     @SerializedName("TopicNumLimit")
     @Expose
     private Long TopicNumLimit;
 
     /**
-    * TPS throttle value
+    * <p>TPS throttle value</p>
     */
     @SerializedName("TpsLimit")
     @Expose
     private Long TpsLimit;
 
     /**
-    * Creation time, in seconds
+    * <p>createTime, in seconds</p>
     */
     @SerializedName("CreatedTime")
     @Expose
     private Long CreatedTime;
 
     /**
-    * Remarks
+    * <p>Remarks</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting.
+    * <p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * Specifies the instance specification.
+    * <p>Instance specification</p>
     */
     @SerializedName("SkuCode")
     @Expose
     private String SkuCode;
 
     /**
-    * Maximum number of subscriptions for a single client.
+    * <p>Maximum number of subscriptions for a single client</p>
     */
     @SerializedName("MaxSubscriptionPerClient")
     @Expose
     private Long MaxSubscriptionPerClient;
 
     /**
-    * Number of authorization rules.
+    * <p>Number of authorization rule entries</p>
     */
     @SerializedName("AuthorizationPolicyLimit")
     @Expose
     private Long AuthorizationPolicyLimit;
 
     /**
-    * Maximum number of clients.
+    * <p>Number of clients cap</p>
     */
     @SerializedName("ClientNumLimit")
     @Expose
     private Long ClientNumLimit;
 
     /**
-    * Specifies the registration method for the client certificate.
-JITP: automatically register.
-API: register manually through api.
+    * <p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p>
     */
     @SerializedName("DeviceCertificateProvisionType")
     @Expose
     private String DeviceCertificateProvisionType;
 
     /**
-    * Specifies whether to automatically activate the device certificate during automatic registration.
+    * <p>Whether to automatically activate when automatically registering a device certificate</p>
     */
     @SerializedName("AutomaticActivation")
     @Expose
     private Boolean AutomaticActivation;
 
     /**
-    * Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal).
+    * <p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription.
+    * <p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p>
     */
     @SerializedName("PayMode")
     @Expose
     private String PayMode;
 
     /**
-    * Expiry time. millisecond-level timestamp.
+    * <p>Expiry time, millisecond-level timestamp</p>
     */
     @SerializedName("ExpiryTime")
     @Expose
     private Long ExpiryTime;
 
     /**
-    * Scheduled destruction time. millisecond-level timestamp.
+    * <p>Predestruction time, millisecond-level timestamp</p>
     */
     @SerializedName("DestroyTime")
     @Expose
     private Long DestroyTime;
 
     /**
-    * TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device.
+    * <p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p>
     */
     @SerializedName("X509Mode")
     @Expose
     private String X509Mode;
 
     /**
-    * Specifies the maximum Ca quota.
+    * <p>Maximum Ca quota</p>
     */
     @SerializedName("MaxCaNum")
     @Expose
     private Long MaxCaNum;
 
     /**
-    * FPS cert registration code.
+    * <p>FPS Cert Registration Code</p>
     */
     @SerializedName("RegistrationCode")
     @Expose
     private String RegistrationCode;
 
     /**
-    * Maximum number of subscriptions for a cluster.
+    * <p>Maximum number of subscriptions for a cluster</p>
     */
     @SerializedName("MaxSubscription")
     @Expose
     private Long MaxSubscription;
 
     /**
-    * Authorization policy switch.
+    * <p>Authorization policy switch</p>
     */
     @SerializedName("AuthorizationPolicy")
     @Expose
     private Boolean AuthorizationPolicy;
 
     /**
-    * Maximum limit of shared subscription groups.
+    * <p>Maximum limit of shared subscription groups</p>
     */
     @SerializedName("SharedSubscriptionGroupLimit")
     @Expose
     private Long SharedSubscriptionGroupLimit;
 
     /**
-    * Specifies the topic filter number limit for each shared subscription group.
+    * <p>Number limit of TopicFilter in one shared subscription group</p>
     */
     @SerializedName("MaxTopicFilterPerSharedSubscriptionGroup")
     @Expose
     private Long MaxTopicFilterPerSharedSubscriptionGroup;
 
     /**
-    * Specifies the limit on number of auto-subscription rules.
+    * <p>Limit on number of auto subscription rules</p>
     */
     @SerializedName("AutoSubscriptionPolicyLimit")
     @Expose
     private Long AutoSubscriptionPolicyLimit;
 
     /**
-    * Specifies the number limit of TopicFilter in a single auto-subscription rule.
+    * <p>Number limit of TopicFilter in a single auto subscription rule</p>
     */
     @SerializedName("MaxTopicFilterPerAutoSubscriptionPolicy")
     @Expose
     private Long MaxTopicFilterPerAutoSubscriptionPolicy;
 
     /**
-    * Specifies whether to use the default server certificate.
+    * <p>Whether to use the default server certificate</p>
     */
     @SerializedName("UseDefaultServerCert")
     @Expose
     private Boolean UseDefaultServerCert;
 
     /**
-    * Maximum allowed number of server cas.
+    * <p>Maximum number of server CAs</p>
     */
     @SerializedName("TrustedCaLimit")
     @Expose
     private Long TrustedCaLimit;
 
     /**
-    * Specifies the maximum allowed number of server certificates.
+    * <p>Maximum number of server certificates</p>
     */
     @SerializedName("ServerCertLimit")
     @Expose
     private Long ServerCertLimit;
 
     /**
-    * Specifies the max level of the topic prefix.
+    * <p>Max level of topic prefix</p>
     */
     @SerializedName("TopicPrefixSlashLimit")
     @Expose
     private Long TopicPrefixSlashLimit;
 
     /**
-    * Specifies the speed limit for sending messages by a single client in messages per second.
+    * <p>Single client send message rate limiting, unit messages/second</p>
     */
     @SerializedName("MessageRate")
     @Expose
     private Long MessageRate;
 
     /**
-    * Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1.
+    * <p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
     */
     @SerializedName("TransportLayerSecurity")
     @Expose
     private String TransportLayerSecurity;
 
     /**
-    * Specifies the message property enrichment rule quota.
+    * <p>Message property enhancement rule quota</p>
     */
     @SerializedName("MessageEnrichmentRuleLimit")
     @Expose
     private Long MessageEnrichmentRuleLimit;
+
+    /**
+    * <p>Maximum allowed number of blocking rules</p>
+    */
+    @SerializedName("BlockRuleLimit")
+    @Expose
+    private Long BlockRuleLimit;
 
     /**
     * The unique request ID, generated by the server, will be returned for every request (if the request fails to reach the server for other reasons, the request will not obtain a RequestId). RequestId is required for locating a problem.
@@ -281,583 +283,583 @@ API: register manually through api.
     private String RequestId;
 
     /**
-     * Get Instance type
-BASIC: basic edition.
-PRO edition.
-PLATINUM edition. 
-     * @return InstanceType Instance type
-BASIC: basic edition.
-PRO edition.
-PLATINUM edition.
+     * Get <p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p> 
+     * @return InstanceType <p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type
-BASIC: basic edition.
-PRO edition.
-PLATINUM edition.
-     * @param InstanceType Instance type
-BASIC: basic edition.
-PRO edition.
-PLATINUM edition.
+     * Set <p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p>
+     * @param InstanceType <p>Instance type<br>BASIC Basic version<br>PRO Professional Edition<br>PLATINUM Platinum version</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get <p>Instance ID</p> 
+     * @return InstanceId <p>Instance ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set <p>Instance ID</p>
+     * @param InstanceId <p>Instance ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get <p>Instance name</p> 
+     * @return InstanceName <p>Instance name</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set <p>Instance name</p>
+     * @param InstanceName <p>Instance name</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Number of topics 
-     * @return TopicNum Number of topics
+     * Get <p>Number of topics</p> 
+     * @return TopicNum <p>Number of topics</p>
      */
     public Long getTopicNum() {
         return this.TopicNum;
     }
 
     /**
-     * Set Number of topics
-     * @param TopicNum Number of topics
+     * Set <p>Number of topics</p>
+     * @param TopicNum <p>Number of topics</p>
      */
     public void setTopicNum(Long TopicNum) {
         this.TopicNum = TopicNum;
     }
 
     /**
-     * Get Maximum number of topics per instance 
-     * @return TopicNumLimit Maximum number of topics per instance
+     * Get <p>Maximum number of topics per instance</p> 
+     * @return TopicNumLimit <p>Maximum number of topics per instance</p>
      */
     public Long getTopicNumLimit() {
         return this.TopicNumLimit;
     }
 
     /**
-     * Set Maximum number of topics per instance
-     * @param TopicNumLimit Maximum number of topics per instance
+     * Set <p>Maximum number of topics per instance</p>
+     * @param TopicNumLimit <p>Maximum number of topics per instance</p>
      */
     public void setTopicNumLimit(Long TopicNumLimit) {
         this.TopicNumLimit = TopicNumLimit;
     }
 
     /**
-     * Get TPS throttle value 
-     * @return TpsLimit TPS throttle value
+     * Get <p>TPS throttle value</p> 
+     * @return TpsLimit <p>TPS throttle value</p>
      */
     public Long getTpsLimit() {
         return this.TpsLimit;
     }
 
     /**
-     * Set TPS throttle value
-     * @param TpsLimit TPS throttle value
+     * Set <p>TPS throttle value</p>
+     * @param TpsLimit <p>TPS throttle value</p>
      */
     public void setTpsLimit(Long TpsLimit) {
         this.TpsLimit = TpsLimit;
     }
 
     /**
-     * Get Creation time, in seconds 
-     * @return CreatedTime Creation time, in seconds
+     * Get <p>createTime, in seconds</p> 
+     * @return CreatedTime <p>createTime, in seconds</p>
      */
     public Long getCreatedTime() {
         return this.CreatedTime;
     }
 
     /**
-     * Set Creation time, in seconds
-     * @param CreatedTime Creation time, in seconds
+     * Set <p>createTime, in seconds</p>
+     * @param CreatedTime <p>createTime, in seconds</p>
      */
     public void setCreatedTime(Long CreatedTime) {
         this.CreatedTime = CreatedTime;
     }
 
     /**
-     * Get Remarks 
-     * @return Remark Remarks
+     * Get <p>Remarks</p> 
+     * @return Remark <p>Remarks</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-     * @param Remark Remarks
+     * Set <p>Remarks</p>
+     * @param Remark <p>Remarks</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting. 
-     * @return InstanceStatus Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting.
+     * Get <p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p> 
+     * @return InstanceStatus <p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting.
-     * @param InstanceStatus Instance status. RUNNING: running; MAINTAINING: maintaining; ABNORMAL: abnormal; OVERDUE: in arrears; DESTROYED: deleted; CREATING: creating; MODIFYING: adjusting the configuration; CREATE_FAILURE: creation failed; MODIFY_FAILURE: configuration adjustment failed; DELETING: deleting.
+     * Set <p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p>
+     * @param InstanceStatus <p>Instance status, RUNNING, running MAINTAINING, maintaining ABNORMAL, abnormal OVERDUE, arrears DESTROYED, deleted CREATING, creating MODIFYING, modifying CREATE_FAILURE, creation failure MODIFY_FAILURE, configuration change failed DELETING, deleting</p>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get Specifies the instance specification. 
-     * @return SkuCode Specifies the instance specification.
+     * Get <p>Instance specification</p> 
+     * @return SkuCode <p>Instance specification</p>
      */
     public String getSkuCode() {
         return this.SkuCode;
     }
 
     /**
-     * Set Specifies the instance specification.
-     * @param SkuCode Specifies the instance specification.
+     * Set <p>Instance specification</p>
+     * @param SkuCode <p>Instance specification</p>
      */
     public void setSkuCode(String SkuCode) {
         this.SkuCode = SkuCode;
     }
 
     /**
-     * Get Maximum number of subscriptions for a single client. 
-     * @return MaxSubscriptionPerClient Maximum number of subscriptions for a single client.
+     * Get <p>Maximum number of subscriptions for a single client</p> 
+     * @return MaxSubscriptionPerClient <p>Maximum number of subscriptions for a single client</p>
      */
     public Long getMaxSubscriptionPerClient() {
         return this.MaxSubscriptionPerClient;
     }
 
     /**
-     * Set Maximum number of subscriptions for a single client.
-     * @param MaxSubscriptionPerClient Maximum number of subscriptions for a single client.
+     * Set <p>Maximum number of subscriptions for a single client</p>
+     * @param MaxSubscriptionPerClient <p>Maximum number of subscriptions for a single client</p>
      */
     public void setMaxSubscriptionPerClient(Long MaxSubscriptionPerClient) {
         this.MaxSubscriptionPerClient = MaxSubscriptionPerClient;
     }
 
     /**
-     * Get Number of authorization rules. 
-     * @return AuthorizationPolicyLimit Number of authorization rules.
+     * Get <p>Number of authorization rule entries</p> 
+     * @return AuthorizationPolicyLimit <p>Number of authorization rule entries</p>
      */
     public Long getAuthorizationPolicyLimit() {
         return this.AuthorizationPolicyLimit;
     }
 
     /**
-     * Set Number of authorization rules.
-     * @param AuthorizationPolicyLimit Number of authorization rules.
+     * Set <p>Number of authorization rule entries</p>
+     * @param AuthorizationPolicyLimit <p>Number of authorization rule entries</p>
      */
     public void setAuthorizationPolicyLimit(Long AuthorizationPolicyLimit) {
         this.AuthorizationPolicyLimit = AuthorizationPolicyLimit;
     }
 
     /**
-     * Get Maximum number of clients. 
-     * @return ClientNumLimit Maximum number of clients.
+     * Get <p>Number of clients cap</p> 
+     * @return ClientNumLimit <p>Number of clients cap</p>
      */
     public Long getClientNumLimit() {
         return this.ClientNumLimit;
     }
 
     /**
-     * Set Maximum number of clients.
-     * @param ClientNumLimit Maximum number of clients.
+     * Set <p>Number of clients cap</p>
+     * @param ClientNumLimit <p>Number of clients cap</p>
      */
     public void setClientNumLimit(Long ClientNumLimit) {
         this.ClientNumLimit = ClientNumLimit;
     }
 
     /**
-     * Get Specifies the registration method for the client certificate.
-JITP: automatically register.
-API: register manually through api. 
-     * @return DeviceCertificateProvisionType Specifies the registration method for the client certificate.
-JITP: automatically register.
-API: register manually through api.
+     * Get <p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p> 
+     * @return DeviceCertificateProvisionType <p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p>
      */
     public String getDeviceCertificateProvisionType() {
         return this.DeviceCertificateProvisionType;
     }
 
     /**
-     * Set Specifies the registration method for the client certificate.
-JITP: automatically register.
-API: register manually through api.
-     * @param DeviceCertificateProvisionType Specifies the registration method for the client certificate.
-JITP: automatically register.
-API: register manually through api.
+     * Set <p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p>
+     * @param DeviceCertificateProvisionType <p>Client certificate registration method:<br>JITP: Automatic sign-up<br>API: Manually register through API</p>
      */
     public void setDeviceCertificateProvisionType(String DeviceCertificateProvisionType) {
         this.DeviceCertificateProvisionType = DeviceCertificateProvisionType;
     }
 
     /**
-     * Get Specifies whether to automatically activate the device certificate during automatic registration. 
-     * @return AutomaticActivation Specifies whether to automatically activate the device certificate during automatic registration.
+     * Get <p>Whether to automatically activate when automatically registering a device certificate</p> 
+     * @return AutomaticActivation <p>Whether to automatically activate when automatically registering a device certificate</p>
      */
     public Boolean getAutomaticActivation() {
         return this.AutomaticActivation;
     }
 
     /**
-     * Set Specifies whether to automatically activate the device certificate during automatic registration.
-     * @param AutomaticActivation Specifies whether to automatically activate the device certificate during automatic registration.
+     * Set <p>Whether to automatically activate when automatically registering a device certificate</p>
+     * @param AutomaticActivation <p>Whether to automatically activate when automatically registering a device certificate</p>
      */
     public void setAutomaticActivation(Boolean AutomaticActivation) {
         this.AutomaticActivation = AutomaticActivation;
     }
 
     /**
-     * Get Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal). 
-     * @return RenewFlag Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal).
+     * Get <p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p> 
+     * @return RenewFlag <p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal).
-     * @param RenewFlag Whether the instance is automatically renewed. this parameter is valid only for monthly subscription clusters. valid values: 1 (auto-renewal), 0 (non-automatic renewal).
+     * Set <p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p>
+     * @param RenewFlag <p>Whether it is automatically renewed. Only applicable to monthly subscription clusters. 1: Automatic renewal 0: Non-automatic renewal</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription. 
-     * @return PayMode Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription.
+     * Get <p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p> 
+     * @return PayMode <p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p>
      */
     public String getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription.
-     * @param PayMode Billing mode. POSTPAID: pay-as-you-go billing. PREPAID: monthly subscription.
+     * Set <p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p>
+     * @param PayMode <p>Billing mode, POSTPAID, pay-as-you-go PREPAID, annual/monthly subscription</p>
      */
     public void setPayMode(String PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Expiry time. millisecond-level timestamp. 
-     * @return ExpiryTime Expiry time. millisecond-level timestamp.
+     * Get <p>Expiry time, millisecond-level timestamp</p> 
+     * @return ExpiryTime <p>Expiry time, millisecond-level timestamp</p>
      */
     public Long getExpiryTime() {
         return this.ExpiryTime;
     }
 
     /**
-     * Set Expiry time. millisecond-level timestamp.
-     * @param ExpiryTime Expiry time. millisecond-level timestamp.
+     * Set <p>Expiry time, millisecond-level timestamp</p>
+     * @param ExpiryTime <p>Expiry time, millisecond-level timestamp</p>
      */
     public void setExpiryTime(Long ExpiryTime) {
         this.ExpiryTime = ExpiryTime;
     }
 
     /**
-     * Get Scheduled destruction time. millisecond-level timestamp. 
-     * @return DestroyTime Scheduled destruction time. millisecond-level timestamp.
+     * Get <p>Predestruction time, millisecond-level timestamp</p> 
+     * @return DestroyTime <p>Predestruction time, millisecond-level timestamp</p>
      */
     public Long getDestroyTime() {
         return this.DestroyTime;
     }
 
     /**
-     * Set Scheduled destruction time. millisecond-level timestamp.
-     * @param DestroyTime Scheduled destruction time. millisecond-level timestamp.
+     * Set <p>Predestruction time, millisecond-level timestamp</p>
+     * @param DestroyTime <p>Predestruction time, millisecond-level timestamp</p>
      */
     public void setDestroyTime(Long DestroyTime) {
         this.DestroyTime = DestroyTime;
     }
 
     /**
-     * Get TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device. 
-     * @return X509Mode TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device.
+     * Get <p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p> 
+     * @return X509Mode <p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p>
      */
     public String getX509Mode() {
         return this.X509Mode;
     }
 
     /**
-     * Set TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device.
-     * @param X509Mode TLS, one-way authentication. mTLS, mutual authentication. BYOC, one certificate per device.
+     * Set <p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p>
+     * @param X509Mode <p>TLS, one-way authentication    mTLS, mutual authentication    BYOC; one certificate per device</p>
      */
     public void setX509Mode(String X509Mode) {
         this.X509Mode = X509Mode;
     }
 
     /**
-     * Get Specifies the maximum Ca quota. 
-     * @return MaxCaNum Specifies the maximum Ca quota.
+     * Get <p>Maximum Ca quota</p> 
+     * @return MaxCaNum <p>Maximum Ca quota</p>
      */
     public Long getMaxCaNum() {
         return this.MaxCaNum;
     }
 
     /**
-     * Set Specifies the maximum Ca quota.
-     * @param MaxCaNum Specifies the maximum Ca quota.
+     * Set <p>Maximum Ca quota</p>
+     * @param MaxCaNum <p>Maximum Ca quota</p>
      */
     public void setMaxCaNum(Long MaxCaNum) {
         this.MaxCaNum = MaxCaNum;
     }
 
     /**
-     * Get FPS cert registration code. 
-     * @return RegistrationCode FPS cert registration code.
+     * Get <p>FPS Cert Registration Code</p> 
+     * @return RegistrationCode <p>FPS Cert Registration Code</p>
      */
     public String getRegistrationCode() {
         return this.RegistrationCode;
     }
 
     /**
-     * Set FPS cert registration code.
-     * @param RegistrationCode FPS cert registration code.
+     * Set <p>FPS Cert Registration Code</p>
+     * @param RegistrationCode <p>FPS Cert Registration Code</p>
      */
     public void setRegistrationCode(String RegistrationCode) {
         this.RegistrationCode = RegistrationCode;
     }
 
     /**
-     * Get Maximum number of subscriptions for a cluster. 
-     * @return MaxSubscription Maximum number of subscriptions for a cluster.
+     * Get <p>Maximum number of subscriptions for a cluster</p> 
+     * @return MaxSubscription <p>Maximum number of subscriptions for a cluster</p>
      */
     public Long getMaxSubscription() {
         return this.MaxSubscription;
     }
 
     /**
-     * Set Maximum number of subscriptions for a cluster.
-     * @param MaxSubscription Maximum number of subscriptions for a cluster.
+     * Set <p>Maximum number of subscriptions for a cluster</p>
+     * @param MaxSubscription <p>Maximum number of subscriptions for a cluster</p>
      */
     public void setMaxSubscription(Long MaxSubscription) {
         this.MaxSubscription = MaxSubscription;
     }
 
     /**
-     * Get Authorization policy switch. 
-     * @return AuthorizationPolicy Authorization policy switch.
+     * Get <p>Authorization policy switch</p> 
+     * @return AuthorizationPolicy <p>Authorization policy switch</p>
      */
     public Boolean getAuthorizationPolicy() {
         return this.AuthorizationPolicy;
     }
 
     /**
-     * Set Authorization policy switch.
-     * @param AuthorizationPolicy Authorization policy switch.
+     * Set <p>Authorization policy switch</p>
+     * @param AuthorizationPolicy <p>Authorization policy switch</p>
      */
     public void setAuthorizationPolicy(Boolean AuthorizationPolicy) {
         this.AuthorizationPolicy = AuthorizationPolicy;
     }
 
     /**
-     * Get Maximum limit of shared subscription groups. 
-     * @return SharedSubscriptionGroupLimit Maximum limit of shared subscription groups.
+     * Get <p>Maximum limit of shared subscription groups</p> 
+     * @return SharedSubscriptionGroupLimit <p>Maximum limit of shared subscription groups</p>
      */
     public Long getSharedSubscriptionGroupLimit() {
         return this.SharedSubscriptionGroupLimit;
     }
 
     /**
-     * Set Maximum limit of shared subscription groups.
-     * @param SharedSubscriptionGroupLimit Maximum limit of shared subscription groups.
+     * Set <p>Maximum limit of shared subscription groups</p>
+     * @param SharedSubscriptionGroupLimit <p>Maximum limit of shared subscription groups</p>
      */
     public void setSharedSubscriptionGroupLimit(Long SharedSubscriptionGroupLimit) {
         this.SharedSubscriptionGroupLimit = SharedSubscriptionGroupLimit;
     }
 
     /**
-     * Get Specifies the topic filter number limit for each shared subscription group. 
-     * @return MaxTopicFilterPerSharedSubscriptionGroup Specifies the topic filter number limit for each shared subscription group.
+     * Get <p>Number limit of TopicFilter in one shared subscription group</p> 
+     * @return MaxTopicFilterPerSharedSubscriptionGroup <p>Number limit of TopicFilter in one shared subscription group</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getMaxTopicFilterPerSharedSubscriptionGroup() {
         return this.MaxTopicFilterPerSharedSubscriptionGroup;
     }
 
     /**
-     * Set Specifies the topic filter number limit for each shared subscription group.
-     * @param MaxTopicFilterPerSharedSubscriptionGroup Specifies the topic filter number limit for each shared subscription group.
+     * Set <p>Number limit of TopicFilter in one shared subscription group</p>
+     * @param MaxTopicFilterPerSharedSubscriptionGroup <p>Number limit of TopicFilter in one shared subscription group</p>
+     * @deprecated
      */
+    @Deprecated
     public void setMaxTopicFilterPerSharedSubscriptionGroup(Long MaxTopicFilterPerSharedSubscriptionGroup) {
         this.MaxTopicFilterPerSharedSubscriptionGroup = MaxTopicFilterPerSharedSubscriptionGroup;
     }
 
     /**
-     * Get Specifies the limit on number of auto-subscription rules. 
-     * @return AutoSubscriptionPolicyLimit Specifies the limit on number of auto-subscription rules.
+     * Get <p>Limit on number of auto subscription rules</p> 
+     * @return AutoSubscriptionPolicyLimit <p>Limit on number of auto subscription rules</p>
      */
     public Long getAutoSubscriptionPolicyLimit() {
         return this.AutoSubscriptionPolicyLimit;
     }
 
     /**
-     * Set Specifies the limit on number of auto-subscription rules.
-     * @param AutoSubscriptionPolicyLimit Specifies the limit on number of auto-subscription rules.
+     * Set <p>Limit on number of auto subscription rules</p>
+     * @param AutoSubscriptionPolicyLimit <p>Limit on number of auto subscription rules</p>
      */
     public void setAutoSubscriptionPolicyLimit(Long AutoSubscriptionPolicyLimit) {
         this.AutoSubscriptionPolicyLimit = AutoSubscriptionPolicyLimit;
     }
 
     /**
-     * Get Specifies the number limit of TopicFilter in a single auto-subscription rule. 
-     * @return MaxTopicFilterPerAutoSubscriptionPolicy Specifies the number limit of TopicFilter in a single auto-subscription rule.
+     * Get <p>Number limit of TopicFilter in a single auto subscription rule</p> 
+     * @return MaxTopicFilterPerAutoSubscriptionPolicy <p>Number limit of TopicFilter in a single auto subscription rule</p>
      */
     public Long getMaxTopicFilterPerAutoSubscriptionPolicy() {
         return this.MaxTopicFilterPerAutoSubscriptionPolicy;
     }
 
     /**
-     * Set Specifies the number limit of TopicFilter in a single auto-subscription rule.
-     * @param MaxTopicFilterPerAutoSubscriptionPolicy Specifies the number limit of TopicFilter in a single auto-subscription rule.
+     * Set <p>Number limit of TopicFilter in a single auto subscription rule</p>
+     * @param MaxTopicFilterPerAutoSubscriptionPolicy <p>Number limit of TopicFilter in a single auto subscription rule</p>
      */
     public void setMaxTopicFilterPerAutoSubscriptionPolicy(Long MaxTopicFilterPerAutoSubscriptionPolicy) {
         this.MaxTopicFilterPerAutoSubscriptionPolicy = MaxTopicFilterPerAutoSubscriptionPolicy;
     }
 
     /**
-     * Get Specifies whether to use the default server certificate. 
-     * @return UseDefaultServerCert Specifies whether to use the default server certificate.
+     * Get <p>Whether to use the default server certificate</p> 
+     * @return UseDefaultServerCert <p>Whether to use the default server certificate</p>
      */
     public Boolean getUseDefaultServerCert() {
         return this.UseDefaultServerCert;
     }
 
     /**
-     * Set Specifies whether to use the default server certificate.
-     * @param UseDefaultServerCert Specifies whether to use the default server certificate.
+     * Set <p>Whether to use the default server certificate</p>
+     * @param UseDefaultServerCert <p>Whether to use the default server certificate</p>
      */
     public void setUseDefaultServerCert(Boolean UseDefaultServerCert) {
         this.UseDefaultServerCert = UseDefaultServerCert;
     }
 
     /**
-     * Get Maximum allowed number of server cas. 
-     * @return TrustedCaLimit Maximum allowed number of server cas.
+     * Get <p>Maximum number of server CAs</p> 
+     * @return TrustedCaLimit <p>Maximum number of server CAs</p>
      */
     public Long getTrustedCaLimit() {
         return this.TrustedCaLimit;
     }
 
     /**
-     * Set Maximum allowed number of server cas.
-     * @param TrustedCaLimit Maximum allowed number of server cas.
+     * Set <p>Maximum number of server CAs</p>
+     * @param TrustedCaLimit <p>Maximum number of server CAs</p>
      */
     public void setTrustedCaLimit(Long TrustedCaLimit) {
         this.TrustedCaLimit = TrustedCaLimit;
     }
 
     /**
-     * Get Specifies the maximum allowed number of server certificates. 
-     * @return ServerCertLimit Specifies the maximum allowed number of server certificates.
+     * Get <p>Maximum number of server certificates</p> 
+     * @return ServerCertLimit <p>Maximum number of server certificates</p>
      */
     public Long getServerCertLimit() {
         return this.ServerCertLimit;
     }
 
     /**
-     * Set Specifies the maximum allowed number of server certificates.
-     * @param ServerCertLimit Specifies the maximum allowed number of server certificates.
+     * Set <p>Maximum number of server certificates</p>
+     * @param ServerCertLimit <p>Maximum number of server certificates</p>
      */
     public void setServerCertLimit(Long ServerCertLimit) {
         this.ServerCertLimit = ServerCertLimit;
     }
 
     /**
-     * Get Specifies the max level of the topic prefix. 
-     * @return TopicPrefixSlashLimit Specifies the max level of the topic prefix.
+     * Get <p>Max level of topic prefix</p> 
+     * @return TopicPrefixSlashLimit <p>Max level of topic prefix</p>
      */
     public Long getTopicPrefixSlashLimit() {
         return this.TopicPrefixSlashLimit;
     }
 
     /**
-     * Set Specifies the max level of the topic prefix.
-     * @param TopicPrefixSlashLimit Specifies the max level of the topic prefix.
+     * Set <p>Max level of topic prefix</p>
+     * @param TopicPrefixSlashLimit <p>Max level of topic prefix</p>
      */
     public void setTopicPrefixSlashLimit(Long TopicPrefixSlashLimit) {
         this.TopicPrefixSlashLimit = TopicPrefixSlashLimit;
     }
 
     /**
-     * Get Specifies the speed limit for sending messages by a single client in messages per second. 
-     * @return MessageRate Specifies the speed limit for sending messages by a single client in messages per second.
+     * Get <p>Single client send message rate limiting, unit messages/second</p> 
+     * @return MessageRate <p>Single client send message rate limiting, unit messages/second</p>
      */
     public Long getMessageRate() {
         return this.MessageRate;
     }
 
     /**
-     * Set Specifies the speed limit for sending messages by a single client in messages per second.
-     * @param MessageRate Specifies the speed limit for sending messages by a single client in messages per second.
+     * Set <p>Single client send message rate limiting, unit messages/second</p>
+     * @param MessageRate <p>Single client send message rate limiting, unit messages/second</p>
      */
     public void setMessageRate(Long MessageRate) {
         this.MessageRate = MessageRate;
     }
 
     /**
-     * Get Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1. 
-     * @return TransportLayerSecurity Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1.
+     * Get <p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p> 
+     * @return TransportLayerSecurity <p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
      */
     public String getTransportLayerSecurity() {
         return this.TransportLayerSecurity;
     }
 
     /**
-     * Set Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1.
-     * @param TransportLayerSecurity Specifies the protocols supported by the server tls, separated by ",". example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1.
+     * Set <p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
+     * @param TransportLayerSecurity <p>Server-side tls supported protocols, separated by ",". Example: TLSv1.3,TLSv1.2,TLSv1.1,TLSv1</p>
      */
     public void setTransportLayerSecurity(String TransportLayerSecurity) {
         this.TransportLayerSecurity = TransportLayerSecurity;
     }
 
     /**
-     * Get Specifies the message property enrichment rule quota. 
-     * @return MessageEnrichmentRuleLimit Specifies the message property enrichment rule quota.
+     * Get <p>Message property enhancement rule quota</p> 
+     * @return MessageEnrichmentRuleLimit <p>Message property enhancement rule quota</p>
      */
     public Long getMessageEnrichmentRuleLimit() {
         return this.MessageEnrichmentRuleLimit;
     }
 
     /**
-     * Set Specifies the message property enrichment rule quota.
-     * @param MessageEnrichmentRuleLimit Specifies the message property enrichment rule quota.
+     * Set <p>Message property enhancement rule quota</p>
+     * @param MessageEnrichmentRuleLimit <p>Message property enhancement rule quota</p>
      */
     public void setMessageEnrichmentRuleLimit(Long MessageEnrichmentRuleLimit) {
         this.MessageEnrichmentRuleLimit = MessageEnrichmentRuleLimit;
+    }
+
+    /**
+     * Get <p>Maximum allowed number of blocking rules</p> 
+     * @return BlockRuleLimit <p>Maximum allowed number of blocking rules</p>
+     */
+    public Long getBlockRuleLimit() {
+        return this.BlockRuleLimit;
+    }
+
+    /**
+     * Set <p>Maximum allowed number of blocking rules</p>
+     * @param BlockRuleLimit <p>Maximum allowed number of blocking rules</p>
+     */
+    public void setBlockRuleLimit(Long BlockRuleLimit) {
+        this.BlockRuleLimit = BlockRuleLimit;
     }
 
     /**
@@ -989,6 +991,9 @@ API: register manually through api.
         if (source.MessageEnrichmentRuleLimit != null) {
             this.MessageEnrichmentRuleLimit = new Long(source.MessageEnrichmentRuleLimit);
         }
+        if (source.BlockRuleLimit != null) {
+            this.BlockRuleLimit = new Long(source.BlockRuleLimit);
+        }
         if (source.RequestId != null) {
             this.RequestId = new String(source.RequestId);
         }
@@ -1034,6 +1039,7 @@ API: register manually through api.
         this.setParamSimple(map, prefix + "MessageRate", this.MessageRate);
         this.setParamSimple(map, prefix + "TransportLayerSecurity", this.TransportLayerSecurity);
         this.setParamSimple(map, prefix + "MessageEnrichmentRuleLimit", this.MessageEnrichmentRuleLimit);
+        this.setParamSimple(map, prefix + "BlockRuleLimit", this.BlockRuleLimit);
         this.setParamSimple(map, prefix + "RequestId", this.RequestId);
 
     }

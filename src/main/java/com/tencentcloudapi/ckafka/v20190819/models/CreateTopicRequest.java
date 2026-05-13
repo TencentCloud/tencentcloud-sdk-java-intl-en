@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class CreateTopicRequest extends AbstractModel {
 
     /**
-    * Instance Id. you can obtain it by calling the DescribeInstances api.
+    * <p>Instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Can only contain letters, digits, underscores, "-", or ".".
+    * <p>Can only contain letters, digits, underscore, "-", ".". </p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Number of partitions, which should be greater than 0
+    * <p>Number of partitions, more than 0</p>
     */
     @SerializedName("PartitionNum")
     @Expose
     private Long PartitionNum;
 
     /**
-    * Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3
+    * <p>Replica count cannot be over the number of brokers, with a maximum of 3</p>
     */
     @SerializedName("ReplicaNum")
     @Expose
     private Long ReplicaNum;
 
     /**
-    * IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
+    * <p>ip allowlist switch, 1: on; 0: off, default off</p>
     */
     @SerializedName("EnableWhiteList")
     @Expose
     private Long EnableWhiteList;
 
     /**
-    * IP allowlist list for quota limit, which is required if `enableWhileList` is 1
+    * <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
     */
     @SerializedName("IpWhiteList")
     @Expose
     private String [] IpWhiteList;
 
     /**
-    * Log cleanup policy, which is `delete` by default. `delete`: logs will be deleted by save time; `compact`: logs will be compressed by key; `compact, delete`: logs will be compressed by key and deleted by save time.
+    * <p>Log cleanup policy. Log cleanup mode, defaults to "delete". "delete": logs are deleted by retention time. "compact": logs are compressed by key. "compact, delete": logs are compressed by key and deleted by retention time.</p>
     */
     @SerializedName("CleanUpPolicy")
     @Expose
     private String CleanUpPolicy;
 
     /**
-    * Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
+    * <p>Topic remark</p><p>Input parameter limit: No more than 64 characters</p>
     */
     @SerializedName("Note")
     @Expose
     private String Note;
 
     /**
-    * Minimum number of synchronous replicas, defaults to 1.
+    * <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
     */
     @SerializedName("MinInsyncReplicas")
     @Expose
     private Long MinInsyncReplicas;
 
     /**
-    * Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
+    * <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
     */
     @SerializedName("UncleanLeaderElectionEnable")
     @Expose
     private Long UncleanLeaderElectionEnable;
 
     /**
-    * Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
+    * <p>Optional parameter, message retention period</p><p>Value ranges from 60000 to 7776000000</p><p>Unit: ms</p><p>Default value: 7200000</p>
     */
     @SerializedName("RetentionMs")
     @Expose
     private Long RetentionMs;
 
     /**
-    * Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
+    * <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
     */
     @SerializedName("SegmentMs")
     @Expose
     private Long SegmentMs;
 
     /**
-    * Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
+    * <p>Maximum topic messages in Bytes, minimum value 1024 Bytes (1 KB), maximum value 12582912 Bytes (12 MB)</p>
     */
     @SerializedName("MaxMessageBytes")
     @Expose
     private Long MaxMessageBytes;
 
     /**
-    * Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+    * <p>Preset ACL rule, 1: on 0: off, default is off</p>
     */
     @SerializedName("EnableAclRule")
     @Expose
     private Long EnableAclRule;
 
     /**
-    * Name of the preset ACL rule.
+    * <p>Preset ACL rule name</p>
     */
     @SerializedName("AclRuleName")
     @Expose
     private String AclRuleName;
 
     /**
-    * Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
+    * <p>Option, retain file size. Defaults to -1, unit Byte, current min value is 1073741824.</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Byte</p><p>Special value: -1 indicates unlimited</p>
     */
     @SerializedName("RetentionBytes")
     @Expose
     private Long RetentionBytes;
 
     /**
-    * Tag list.
+    * <p>Tag list</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Time type for message saving. valid values: CreateTime/LogAppendTime.
+    * <p>Time type for message saving: CreateTime/LogAppendTime</p>
     */
     @SerializedName("LogMsgTimestampType")
     @Expose
     private String LogMsgTimestampType;
 
     /**
-     * Get Instance Id. you can obtain it by calling the DescribeInstances api. 
-     * @return InstanceId Instance Id. you can obtain it by calling the DescribeInstances api.
+     * Get <p>Instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p> 
+     * @return InstanceId <p>Instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance Id. you can obtain it by calling the DescribeInstances api.
-     * @param InstanceId Instance Id. you can obtain it by calling the DescribeInstances api.
+     * Set <p>Instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param InstanceId <p>Instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Can only contain letters, digits, underscores, "-", or ".". 
-     * @return TopicName Can only contain letters, digits, underscores, "-", or ".".
+     * Get <p>Can only contain letters, digits, underscore, "-", ".". </p> 
+     * @return TopicName <p>Can only contain letters, digits, underscore, "-", ".". </p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Can only contain letters, digits, underscores, "-", or ".".
-     * @param TopicName Can only contain letters, digits, underscores, "-", or ".".
+     * Set <p>Can only contain letters, digits, underscore, "-", ".". </p>
+     * @param TopicName <p>Can only contain letters, digits, underscore, "-", ".". </p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Number of partitions, which should be greater than 0 
-     * @return PartitionNum Number of partitions, which should be greater than 0
+     * Get <p>Number of partitions, more than 0</p> 
+     * @return PartitionNum <p>Number of partitions, more than 0</p>
      */
     public Long getPartitionNum() {
         return this.PartitionNum;
     }
 
     /**
-     * Set Number of partitions, which should be greater than 0
-     * @param PartitionNum Number of partitions, which should be greater than 0
+     * Set <p>Number of partitions, more than 0</p>
+     * @param PartitionNum <p>Number of partitions, more than 0</p>
      */
     public void setPartitionNum(Long PartitionNum) {
         this.PartitionNum = PartitionNum;
     }
 
     /**
-     * Get Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3 
-     * @return ReplicaNum Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3
+     * Get <p>Replica count cannot be over the number of brokers, with a maximum of 3</p> 
+     * @return ReplicaNum <p>Replica count cannot be over the number of brokers, with a maximum of 3</p>
      */
     public Long getReplicaNum() {
         return this.ReplicaNum;
     }
 
     /**
-     * Set Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3
-     * @param ReplicaNum Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3
+     * Set <p>Replica count cannot be over the number of brokers, with a maximum of 3</p>
+     * @param ReplicaNum <p>Replica count cannot be over the number of brokers, with a maximum of 3</p>
      */
     public void setReplicaNum(Long ReplicaNum) {
         this.ReplicaNum = ReplicaNum;
     }
 
     /**
-     * Get IP allowlist switch. 1: enabled, 0: disabled. Default value: 0 
-     * @return EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
+     * Get <p>ip allowlist switch, 1: on; 0: off, default off</p> 
+     * @return EnableWhiteList <p>ip allowlist switch, 1: on; 0: off, default off</p>
      */
     public Long getEnableWhiteList() {
         return this.EnableWhiteList;
     }
 
     /**
-     * Set IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
-     * @param EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
+     * Set <p>ip allowlist switch, 1: on; 0: off, default off</p>
+     * @param EnableWhiteList <p>ip allowlist switch, 1: on; 0: off, default off</p>
      */
     public void setEnableWhiteList(Long EnableWhiteList) {
         this.EnableWhiteList = EnableWhiteList;
     }
 
     /**
-     * Get IP allowlist list for quota limit, which is required if `enableWhileList` is 1 
-     * @return IpWhiteList IP allowlist list for quota limit, which is required if `enableWhileList` is 1
+     * Get <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p> 
+     * @return IpWhiteList <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
      */
     public String [] getIpWhiteList() {
         return this.IpWhiteList;
     }
 
     /**
-     * Set IP allowlist list for quota limit, which is required if `enableWhileList` is 1
-     * @param IpWhiteList IP allowlist list for quota limit, which is required if `enableWhileList` is 1
+     * Set <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
+     * @param IpWhiteList <p>Ip whitelist, Quota limit, essential when enableWhileList=1</p>
      */
     public void setIpWhiteList(String [] IpWhiteList) {
         this.IpWhiteList = IpWhiteList;
     }
 
     /**
-     * Get Log cleanup policy, which is `delete` by default. `delete`: logs will be deleted by save time; `compact`: logs will be compressed by key; `compact, delete`: logs will be compressed by key and deleted by save time. 
-     * @return CleanUpPolicy Log cleanup policy, which is `delete` by default. `delete`: logs will be deleted by save time; `compact`: logs will be compressed by key; `compact, delete`: logs will be compressed by key and deleted by save time.
+     * Get <p>Log cleanup policy. Log cleanup mode, defaults to "delete". "delete": logs are deleted by retention time. "compact": logs are compressed by key. "compact, delete": logs are compressed by key and deleted by retention time.</p> 
+     * @return CleanUpPolicy <p>Log cleanup policy. Log cleanup mode, defaults to "delete". "delete": logs are deleted by retention time. "compact": logs are compressed by key. "compact, delete": logs are compressed by key and deleted by retention time.</p>
      */
     public String getCleanUpPolicy() {
         return this.CleanUpPolicy;
     }
 
     /**
-     * Set Log cleanup policy, which is `delete` by default. `delete`: logs will be deleted by save time; `compact`: logs will be compressed by key; `compact, delete`: logs will be compressed by key and deleted by save time.
-     * @param CleanUpPolicy Log cleanup policy, which is `delete` by default. `delete`: logs will be deleted by save time; `compact`: logs will be compressed by key; `compact, delete`: logs will be compressed by key and deleted by save time.
+     * Set <p>Log cleanup policy. Log cleanup mode, defaults to "delete". "delete": logs are deleted by retention time. "compact": logs are compressed by key. "compact, delete": logs are compressed by key and deleted by retention time.</p>
+     * @param CleanUpPolicy <p>Log cleanup policy. Log cleanup mode, defaults to "delete". "delete": logs are deleted by retention time. "compact": logs are compressed by key. "compact, delete": logs are compressed by key and deleted by retention time.</p>
      */
     public void setCleanUpPolicy(String CleanUpPolicy) {
         this.CleanUpPolicy = CleanUpPolicy;
     }
 
     /**
-     * Get Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-). 
-     * @return Note Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
+     * Get <p>Topic remark</p><p>Input parameter limit: No more than 64 characters</p> 
+     * @return Note <p>Topic remark</p><p>Input parameter limit: No more than 64 characters</p>
      */
     public String getNote() {
         return this.Note;
     }
 
     /**
-     * Set Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
-     * @param Note Topic remark is a string of no more than 64 characters. the first character can be a letter or digit, and the remaining part can contain letters, digits, and hyphens (-).
+     * Set <p>Topic remark</p><p>Input parameter limit: No more than 64 characters</p>
+     * @param Note <p>Topic remark</p><p>Input parameter limit: No more than 64 characters</p>
      */
     public void setNote(String Note) {
         this.Note = Note;
     }
 
     /**
-     * Get Minimum number of synchronous replicas, defaults to 1. 
-     * @return MinInsyncReplicas Minimum number of synchronous replicas, defaults to 1.
+     * Get <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p> 
+     * @return MinInsyncReplicas <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
      */
     public Long getMinInsyncReplicas() {
         return this.MinInsyncReplicas;
     }
 
     /**
-     * Set Minimum number of synchronous replicas, defaults to 1.
-     * @param MinInsyncReplicas Minimum number of synchronous replicas, defaults to 1.
+     * Set <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
+     * @param MinInsyncReplicas <p>Minimum sync replica count</p><p>Default value: 1</p><p>Minimum value: 1</p>
      */
     public void setMinInsyncReplicas(Long MinInsyncReplicas) {
         this.MinInsyncReplicas = MinInsyncReplicas;
     }
 
     /**
-     * Get Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed. 
-     * @return UncleanLeaderElectionEnable Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
+     * Get <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p> 
+     * @return UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
      */
     public Long getUncleanLeaderElectionEnable() {
         return this.UncleanLeaderElectionEnable;
     }
 
     /**
-     * Set Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
-     * @param UncleanLeaderElectionEnable Whether to allow unsynchronized replicas to be elected as leader. valid values: 0 (not allowed), 1 (allowed). default: not allowed.
+     * Set <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
+     * @param UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
      */
     public void setUncleanLeaderElectionEnable(Long UncleanLeaderElectionEnable) {
         this.UncleanLeaderElectionEnable = UncleanLeaderElectionEnable;
     }
 
     /**
-     * Get Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days). 
-     * @return RetentionMs Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
+     * Get <p>Optional parameter, message retention period</p><p>Value ranges from 60000 to 7776000000</p><p>Unit: ms</p><p>Default value: 7200000</p> 
+     * @return RetentionMs <p>Optional parameter, message retention period</p><p>Value ranges from 60000 to 7776000000</p><p>Unit: ms</p><p>Default value: 7200000</p>
      */
     public Long getRetentionMs() {
         return this.RetentionMs;
     }
 
     /**
-     * Set Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
-     * @param RetentionMs Optional parameter. specifies the message retention period in milliseconds. current min value is 60000. default value is 7200000 ms (2 hours). maximum value is 7776000000 ms (90 days).
+     * Set <p>Optional parameter, message retention period</p><p>Value ranges from 60000 to 7776000000</p><p>Unit: ms</p><p>Default value: 7200000</p>
+     * @param RetentionMs <p>Optional parameter, message retention period</p><p>Value ranges from 60000 to 7776000000</p><p>Unit: ms</p><p>Default value: 7200000</p>
      */
     public void setRetentionMs(Long RetentionMs) {
         this.RetentionMs = RetentionMs;
     }
 
     /**
-     * Get Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day). 
-     * @return SegmentMs Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
+     * Get <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p> 
+     * @return SegmentMs <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
      */
     public Long getSegmentMs() {
         return this.SegmentMs;
     }
 
     /**
-     * Set Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
-     * @param SegmentMs Duration of Segment shard scrolling in milliseconds. minimum value is 86400000 ms (1 day).
+     * Set <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
+     * @param SegmentMs <p>Duration of Segment shard scrolling</p><p>Unit: ms</p><p>Default value: 86400000</p><p>Minimum value: 86400000ms (1 day)</p>
      */
     public void setSegmentMs(Long SegmentMs) {
         this.SegmentMs = SegmentMs;
     }
 
     /**
-     * Get Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB). 
-     * @return MaxMessageBytes Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
+     * Get <p>Maximum topic messages in Bytes, minimum value 1024 Bytes (1 KB), maximum value 12582912 Bytes (12 MB)</p> 
+     * @return MaxMessageBytes <p>Maximum topic messages in Bytes, minimum value 1024 Bytes (1 KB), maximum value 12582912 Bytes (12 MB)</p>
      */
     public Long getMaxMessageBytes() {
         return this.MaxMessageBytes;
     }
 
     /**
-     * Set Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
-     * @param MaxMessageBytes Maximum topic messages in Bytes. value range: 1024 (1 KB) to 12582912 (12 MB).
+     * Set <p>Maximum topic messages in Bytes, minimum value 1024 Bytes (1 KB), maximum value 12582912 Bytes (12 MB)</p>
+     * @param MaxMessageBytes <p>Maximum topic messages in Bytes, minimum value 1024 Bytes (1 KB), maximum value 12582912 Bytes (12 MB)</p>
      */
     public void setMaxMessageBytes(Long MaxMessageBytes) {
         this.MaxMessageBytes = MaxMessageBytes;
     }
 
     /**
-     * Get Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`. 
-     * @return EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     * Get <p>Preset ACL rule, 1: on 0: off, default is off</p> 
+     * @return EnableAclRule <p>Preset ACL rule, 1: on 0: off, default is off</p>
      */
     public Long getEnableAclRule() {
         return this.EnableAclRule;
     }
 
     /**
-     * Set Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
-     * @param EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     * Set <p>Preset ACL rule, 1: on 0: off, default is off</p>
+     * @param EnableAclRule <p>Preset ACL rule, 1: on 0: off, default is off</p>
      */
     public void setEnableAclRule(Long EnableAclRule) {
         this.EnableAclRule = EnableAclRule;
     }
 
     /**
-     * Get Name of the preset ACL rule. 
-     * @return AclRuleName Name of the preset ACL rule.
+     * Get <p>Preset ACL rule name</p> 
+     * @return AclRuleName <p>Preset ACL rule name</p>
      */
     public String getAclRuleName() {
         return this.AclRuleName;
     }
 
     /**
-     * Set Name of the preset ACL rule.
-     * @param AclRuleName Name of the preset ACL rule.
+     * Set <p>Preset ACL rule name</p>
+     * @param AclRuleName <p>Preset ACL rule name</p>
      */
     public void setAclRuleName(String AclRuleName) {
         this.AclRuleName = AclRuleName;
     }
 
     /**
-     * Get Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824. 
-     * @return RetentionBytes Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
+     * Get <p>Option, retain file size. Defaults to -1, unit Byte, current min value is 1073741824.</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Byte</p><p>Special value: -1 indicates unlimited</p> 
+     * @return RetentionBytes <p>Option, retain file size. Defaults to -1, unit Byte, current min value is 1073741824.</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Byte</p><p>Special value: -1 indicates unlimited</p>
      */
     public Long getRetentionBytes() {
         return this.RetentionBytes;
     }
 
     /**
-     * Set Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
-     * @param RetentionBytes Optional. retain file size. defaults to -1, unit Byte. current min value is 1073741824.
+     * Set <p>Option, retain file size. Defaults to -1, unit Byte, current min value is 1073741824.</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Byte</p><p>Special value: -1 indicates unlimited</p>
+     * @param RetentionBytes <p>Option, retain file size. Defaults to -1, unit Byte, current min value is 1073741824.</p><p>Value ranges from [1073741824, 1099511627776]</p><p>Unit: Byte</p><p>Special value: -1 indicates unlimited</p>
      */
     public void setRetentionBytes(Long RetentionBytes) {
         this.RetentionBytes = RetentionBytes;
     }
 
     /**
-     * Get Tag list. 
-     * @return Tags Tag list.
+     * Get <p>Tag list</p> 
+     * @return Tags <p>Tag list</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag list.
-     * @param Tags Tag list.
+     * Set <p>Tag list</p>
+     * @param Tags <p>Tag list</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Time type for message saving. valid values: CreateTime/LogAppendTime. 
-     * @return LogMsgTimestampType Time type for message saving. valid values: CreateTime/LogAppendTime.
+     * Get <p>Time type for message saving: CreateTime/LogAppendTime</p> 
+     * @return LogMsgTimestampType <p>Time type for message saving: CreateTime/LogAppendTime</p>
      */
     public String getLogMsgTimestampType() {
         return this.LogMsgTimestampType;
     }
 
     /**
-     * Set Time type for message saving. valid values: CreateTime/LogAppendTime.
-     * @param LogMsgTimestampType Time type for message saving. valid values: CreateTime/LogAppendTime.
+     * Set <p>Time type for message saving: CreateTime/LogAppendTime</p>
+     * @param LogMsgTimestampType <p>Time type for message saving: CreateTime/LogAppendTime</p>
      */
     public void setLogMsgTimestampType(String LogMsgTimestampType) {
         this.LogMsgTimestampType = LogMsgTimestampType;

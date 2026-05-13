@@ -45,7 +45,7 @@ public class AttachDisksRequest extends AbstractModel {
     private Boolean DeleteWithInstance;
 
     /**
-    * (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+    * Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
     */
     @SerializedName("AttachMode")
     @Expose
@@ -100,16 +100,16 @@ public class AttachDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF 
-     * @return AttachMode (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+     * Get Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>. 
+     * @return AttachMode Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
      */
     public String getAttachMode() {
         return this.AttachMode;
     }
 
     /**
-     * Set (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
-     * @param AttachMode (Optional) Specifies the cloud disk mounting method. It’s only valid for BM models. Valid values: <br><li>PF<br><li>VF
+     * Set Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
+     * @param AttachMode Optional parameter, used to control the mount mode used in cloud disk mounting, currently only applicable to blackstone bare metal model. valid values: <br><li>PF</li><br><li>VF</li>.
      */
     public void setAttachMode(String AttachMode) {
         this.AttachMode = AttachMode;

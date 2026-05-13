@@ -80,6 +80,27 @@ public class DescribeConcurrencyUsageGraphRequest extends AbstractModel {
     private String [] AppBizIds;
 
     /**
+    * Space ID
+    */
+    @SerializedName("SpaceId")
+    @Expose
+    private String SpaceId;
+
+    /**
+    * Start timestamp, unit: seconds
+    */
+    @SerializedName("StatStartTime")
+    @Expose
+    private Long StatStartTime;
+
+    /**
+    * End timestamp, unit: seconds
+    */
+    @SerializedName("StatEndTime")
+    @Expose
+    private Long StatEndTime;
+
+    /**
      * Get Model identifier. 
      * @return ModelName Model identifier.
      */
@@ -207,6 +228,54 @@ public class DescribeConcurrencyUsageGraphRequest extends AbstractModel {
         this.AppBizIds = AppBizIds;
     }
 
+    /**
+     * Get Space ID 
+     * @return SpaceId Space ID
+     */
+    public String getSpaceId() {
+        return this.SpaceId;
+    }
+
+    /**
+     * Set Space ID
+     * @param SpaceId Space ID
+     */
+    public void setSpaceId(String SpaceId) {
+        this.SpaceId = SpaceId;
+    }
+
+    /**
+     * Get Start timestamp, unit: seconds 
+     * @return StatStartTime Start timestamp, unit: seconds
+     */
+    public Long getStatStartTime() {
+        return this.StatStartTime;
+    }
+
+    /**
+     * Set Start timestamp, unit: seconds
+     * @param StatStartTime Start timestamp, unit: seconds
+     */
+    public void setStatStartTime(Long StatStartTime) {
+        this.StatStartTime = StatStartTime;
+    }
+
+    /**
+     * Get End timestamp, unit: seconds 
+     * @return StatEndTime End timestamp, unit: seconds
+     */
+    public Long getStatEndTime() {
+        return this.StatEndTime;
+    }
+
+    /**
+     * Set End timestamp, unit: seconds
+     * @param StatEndTime End timestamp, unit: seconds
+     */
+    public void setStatEndTime(Long StatEndTime) {
+        this.StatEndTime = StatEndTime;
+    }
+
     public DescribeConcurrencyUsageGraphRequest() {
     }
 
@@ -245,6 +314,15 @@ public class DescribeConcurrencyUsageGraphRequest extends AbstractModel {
                 this.AppBizIds[i] = new String(source.AppBizIds[i]);
             }
         }
+        if (source.SpaceId != null) {
+            this.SpaceId = new String(source.SpaceId);
+        }
+        if (source.StatStartTime != null) {
+            this.StatStartTime = new Long(source.StatStartTime);
+        }
+        if (source.StatEndTime != null) {
+            this.StatEndTime = new Long(source.StatEndTime);
+        }
     }
 
 
@@ -260,6 +338,9 @@ public class DescribeConcurrencyUsageGraphRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "LoginSubAccountUin", this.LoginSubAccountUin);
         this.setParamSimple(map, prefix + "SubBizType", this.SubBizType);
         this.setParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
+        this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
+        this.setParamSimple(map, prefix + "StatStartTime", this.StatStartTime);
+        this.setParamSimple(map, prefix + "StatEndTime", this.StatEndTime);
 
     }
 }

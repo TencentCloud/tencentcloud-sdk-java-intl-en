@@ -24,95 +24,118 @@ import java.util.HashMap;
 public class CreateInstancePostData extends AbstractModel {
 
     /**
-    * CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
+    * <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * Order ID list
+    * <p>Order number list</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
+    * <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Order and purchase mapping list corresponding to the instance.
+    * <p>Order and purchase mapping list corresponding to the instance</p>
     */
     @SerializedName("DealNameInstanceIdMapping")
     @Expose
     private DealInstanceDTO [] DealNameInstanceIdMapping;
 
     /**
-     * Get CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure. 
-     * @return FlowId CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
+    * <p>Event ID returned by CAM authentication</p>
+    */
+    @SerializedName("EventId")
+    @Expose
+    private String EventId;
+
+    /**
+     * Get <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p> 
+     * @return FlowId <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
-     * @param FlowId CreateInstancePre returns fixed as 0. it cannot be used as a query condition for CheckTaskStatus. this is merely to ensure alignment with the backend data structure.
+     * Set <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
+     * @param FlowId <p>CreateInstancePre returns fixed as 0 and cannot be used as a query condition for CheckTaskStatus. It is merely to ensure alignment with the backend data structure.</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Order ID list 
-     * @return DealNames Order ID list
+     * Get <p>Order number list</p> 
+     * @return DealNames <p>Order number list</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Order ID list
-     * @param DealNames Order ID list
+     * Set <p>Order number list</p>
+     * @param DealNames <p>Order number list</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances. 
-     * @return InstanceId The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
+     * Get <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p> 
+     * @return InstanceId <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
-     * @param InstanceId The ckafka cluster instance Id. by default, returns the Id of the first purchased instance when purchasing multiple instances.
+     * Set <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
+     * @param InstanceId <p>Cluster instance Id of ckafka. When you purchase multiple instances, the first instance Id is returned by default.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Order and purchase mapping list corresponding to the instance. 
-     * @return DealNameInstanceIdMapping Order and purchase mapping list corresponding to the instance.
+     * Get <p>Order and purchase mapping list corresponding to the instance</p> 
+     * @return DealNameInstanceIdMapping <p>Order and purchase mapping list corresponding to the instance</p>
      */
     public DealInstanceDTO [] getDealNameInstanceIdMapping() {
         return this.DealNameInstanceIdMapping;
     }
 
     /**
-     * Set Order and purchase mapping list corresponding to the instance.
-     * @param DealNameInstanceIdMapping Order and purchase mapping list corresponding to the instance.
+     * Set <p>Order and purchase mapping list corresponding to the instance</p>
+     * @param DealNameInstanceIdMapping <p>Order and purchase mapping list corresponding to the instance</p>
      */
     public void setDealNameInstanceIdMapping(DealInstanceDTO [] DealNameInstanceIdMapping) {
         this.DealNameInstanceIdMapping = DealNameInstanceIdMapping;
+    }
+
+    /**
+     * Get <p>Event ID returned by CAM authentication</p> 
+     * @return EventId <p>Event ID returned by CAM authentication</p>
+     */
+    public String getEventId() {
+        return this.EventId;
+    }
+
+    /**
+     * Set <p>Event ID returned by CAM authentication</p>
+     * @param EventId <p>Event ID returned by CAM authentication</p>
+     */
+    public void setEventId(String EventId) {
+        this.EventId = EventId;
     }
 
     public CreateInstancePostData() {
@@ -141,6 +164,9 @@ public class CreateInstancePostData extends AbstractModel {
                 this.DealNameInstanceIdMapping[i] = new DealInstanceDTO(source.DealNameInstanceIdMapping[i]);
             }
         }
+        if (source.EventId != null) {
+            this.EventId = new String(source.EventId);
+        }
     }
 
 
@@ -152,6 +178,7 @@ public class CreateInstancePostData extends AbstractModel {
         this.setParamArraySimple(map, prefix + "DealNames.", this.DealNames);
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "DealNameInstanceIdMapping.", this.DealNameInstanceIdMapping);
+        this.setParamSimple(map, prefix + "EventId", this.EventId);
 
     }
 }

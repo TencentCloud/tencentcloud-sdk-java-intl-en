@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class FetchMessageListByOffsetResponse extends AbstractModel {
 
     /**
-    * Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
+    * <p>Return result. Note that the list does not return specific message content (key, value). If necessary, query specific message content using the FetchMessageByOffset API.</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class FetchMessageListByOffsetResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API. 
-     * @return Result Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
+     * Get <p>Return result. Note that the list does not return specific message content (key, value). If necessary, query specific message content using the FetchMessageByOffset API.</p> 
+     * @return Result <p>Return result. Note that the list does not return specific message content (key, value). If necessary, query specific message content using the FetchMessageByOffset API.</p>
      */
     public ConsumerRecord [] getResult() {
         return this.Result;
     }
 
     /**
-     * Set Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
-     * @param Result Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
+     * Set <p>Return result. Note that the list does not return specific message content (key, value). If necessary, query specific message content using the FetchMessageByOffset API.</p>
+     * @param Result <p>Return result. Note that the list does not return specific message content (key, value). If necessary, query specific message content using the FetchMessageByOffset API.</p>
      */
     public void setResult(ConsumerRecord [] Result) {
         this.Result = Result;

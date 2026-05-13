@@ -38,13 +38,6 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
     private String Spec;
 
     /**
-    * Number of nodes. Value range: 2–20.
-    */
-    @SerializedName("NodeCount")
-    @Expose
-    private Long NodeCount;
-
-    /**
     * Single-node storage space, in GB. The minimum space is 200 GB.
     */
     @SerializedName("StorageSize")
@@ -71,6 +64,20 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
+
+    /**
+    * Node count, required when creating a dedicated cluster
+    */
+    @SerializedName("NodeCount")
+    @Expose
+    private Long NodeCount;
+
+    /**
+    * Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
+    */
+    @SerializedName("GeneralSkuCode")
+    @Expose
+    private String GeneralSkuCode;
 
     /**
     * Whether it is used for cloud migration. The default value is false.
@@ -140,22 +147,6 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of nodes. Value range: 2–20. 
-     * @return NodeCount Number of nodes. Value range: 2–20.
-     */
-    public Long getNodeCount() {
-        return this.NodeCount;
-    }
-
-    /**
-     * Set Number of nodes. Value range: 2–20.
-     * @param NodeCount Number of nodes. Value range: 2–20.
-     */
-    public void setNodeCount(Long NodeCount) {
-        this.NodeCount = NodeCount;
-    }
-
-    /**
      * Get Single-node storage space, in GB. The minimum space is 200 GB. 
      * @return StorageSize Single-node storage space, in GB. The minimum space is 200 GB.
      */
@@ -217,6 +208,38 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
+    }
+
+    /**
+     * Get Node count, required when creating a dedicated cluster 
+     * @return NodeCount Node count, required when creating a dedicated cluster
+     */
+    public Long getNodeCount() {
+        return this.NodeCount;
+    }
+
+    /**
+     * Set Node count, required when creating a dedicated cluster
+     * @param NodeCount Node count, required when creating a dedicated cluster
+     */
+    public void setNodeCount(Long NodeCount) {
+        this.NodeCount = NodeCount;
+    }
+
+    /**
+     * Get Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1). 
+     * @return GeneralSkuCode Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
+     */
+    public String getGeneralSkuCode() {
+        return this.GeneralSkuCode;
+    }
+
+    /**
+     * Set Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
+     * @param GeneralSkuCode Flag of the generic cluster specification, required for new purchase. Obtain it from the GeneralSKU field in the API response of [DescribeRocketMQGeneralSKUs](https://www.tencentcloud.com/document/api/1179/127066?from_cn_redirect=1).
+     */
+    public void setGeneralSkuCode(String GeneralSkuCode) {
+        this.GeneralSkuCode = GeneralSkuCode;
     }
 
     /**
@@ -313,9 +336,6 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
         if (source.Spec != null) {
             this.Spec = new String(source.Spec);
         }
-        if (source.NodeCount != null) {
-            this.NodeCount = new Long(source.NodeCount);
-        }
         if (source.StorageSize != null) {
             this.StorageSize = new Long(source.StorageSize);
         }
@@ -330,6 +350,12 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
         }
         if (source.TimeSpan != null) {
             this.TimeSpan = new Long(source.TimeSpan);
+        }
+        if (source.NodeCount != null) {
+            this.NodeCount = new Long(source.NodeCount);
+        }
+        if (source.GeneralSkuCode != null) {
+            this.GeneralSkuCode = new String(source.GeneralSkuCode);
         }
         if (source.SupportsMigrateToCloud != null) {
             this.SupportsMigrateToCloud = new Boolean(source.SupportsMigrateToCloud);
@@ -361,11 +387,12 @@ public class CreateRocketMQVipInstanceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Spec", this.Spec);
-        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
         this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         this.setParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
         this.setParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
+        this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
+        this.setParamSimple(map, prefix + "GeneralSkuCode", this.GeneralSkuCode);
         this.setParamSimple(map, prefix + "SupportsMigrateToCloud", this.SupportsMigrateToCloud);
         this.setParamSimple(map, prefix + "EnablePublic", this.EnablePublic);
         this.setParamSimple(map, prefix + "Bandwidth", this.Bandwidth);

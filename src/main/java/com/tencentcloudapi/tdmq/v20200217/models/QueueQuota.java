@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class QueueQuota extends AbstractModel {
 
     /**
-    * Maximum number of creatable queues
+    * 
     */
     @SerializedName("MaxQueue")
     @Expose
@@ -38,16 +38,16 @@ public class QueueQuota extends AbstractModel {
     private Long UsedQueue;
 
     /**
-     * Get Maximum number of creatable queues 
-     * @return MaxQueue Maximum number of creatable queues
+     * Get  
+     * @return MaxQueue 
      */
     public Long getMaxQueue() {
         return this.MaxQueue;
     }
 
     /**
-     * Set Maximum number of creatable queues
-     * @param MaxQueue Maximum number of creatable queues
+     * Set 
+     * @param MaxQueue 
      */
     public void setMaxQueue(Long MaxQueue) {
         this.MaxQueue = MaxQueue;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteInstancePreResponse extends AbstractModel {
 
     /**
-    * Returned result
+    * <p>Returned result</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DeleteInstancePreResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Returned result 
-     * @return Result Returned result
+     * Get <p>Returned result</p> 
+     * @return Result <p>Returned result</p>
      */
     public CreateInstancePreResp getResult() {
         return this.Result;
     }
 
     /**
-     * Set Returned result
-     * @param Result Returned result
+     * Set <p>Returned result</p>
+     * @param Result <p>Returned result</p>
      */
     public void setResult(CreateInstancePreResp Result) {
         this.Result = Result;

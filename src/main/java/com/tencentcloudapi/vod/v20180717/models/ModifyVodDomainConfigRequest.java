@@ -31,7 +31,7 @@ public class ModifyVodDomainConfigRequest extends AbstractModel {
     private String Domain;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -59,6 +59,13 @@ public class ModifyVodDomainConfigRequest extends AbstractModel {
     private DomainQUICConfig QUICConfig;
 
     /**
+    * IP access restriction rules.
+    */
+    @SerializedName("IPFilterPolicy")
+    @Expose
+    private IPFilterPolicy IPFilterPolicy;
+
+    /**
      * Get Domain name 
      * @return Domain Domain name
      */
@@ -75,16 +82,16 @@ public class ModifyVodDomainConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
+     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -138,6 +145,22 @@ public class ModifyVodDomainConfigRequest extends AbstractModel {
         this.QUICConfig = QUICConfig;
     }
 
+    /**
+     * Get IP access restriction rules. 
+     * @return IPFilterPolicy IP access restriction rules.
+     */
+    public IPFilterPolicy getIPFilterPolicy() {
+        return this.IPFilterPolicy;
+    }
+
+    /**
+     * Set IP access restriction rules.
+     * @param IPFilterPolicy IP access restriction rules.
+     */
+    public void setIPFilterPolicy(IPFilterPolicy IPFilterPolicy) {
+        this.IPFilterPolicy = IPFilterPolicy;
+    }
+
     public ModifyVodDomainConfigRequest() {
     }
 
@@ -161,6 +184,9 @@ public class ModifyVodDomainConfigRequest extends AbstractModel {
         if (source.QUICConfig != null) {
             this.QUICConfig = new DomainQUICConfig(source.QUICConfig);
         }
+        if (source.IPFilterPolicy != null) {
+            this.IPFilterPolicy = new IPFilterPolicy(source.IPFilterPolicy);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyVodDomainConfigRequest extends AbstractModel {
         this.setParamObj(map, prefix + "RefererAuthPolicy.", this.RefererAuthPolicy);
         this.setParamObj(map, prefix + "UrlSignatureAuthPolicy.", this.UrlSignatureAuthPolicy);
         this.setParamObj(map, prefix + "QUICConfig.", this.QUICConfig);
+        this.setParamObj(map, prefix + "IPFilterPolicy.", this.IPFilterPolicy);
 
     }
 }

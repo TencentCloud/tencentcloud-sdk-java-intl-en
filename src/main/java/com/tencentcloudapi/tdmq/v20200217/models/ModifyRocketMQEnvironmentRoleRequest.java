@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyRocketMQEnvironmentRoleRequest extends AbstractModel {
 
     /**
-    * Environment (namespace) name.
+    * namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -59,16 +59,16 @@ public class ModifyRocketMQEnvironmentRoleRequest extends AbstractModel {
     private DetailedRolePerm [] DetailedPerms;
 
     /**
-     * Get Environment (namespace) name. 
-     * @return EnvironmentId Environment (namespace) name.
+     * Get namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default 
+     * @return EnvironmentId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set Environment (namespace) name.
-     * @param EnvironmentId Environment (namespace) name.
+     * Set namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
+     * @param EnvironmentId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;

@@ -38,6 +38,20 @@ public class CreateAppRequest extends AbstractModel {
     private BaseConfig BaseConfig;
 
     /**
+    * <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+    */
+    @SerializedName("Pattern")
+    @Expose
+    private String Pattern;
+
+    /**
+    * <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
+    */
+    @SerializedName("AgentType")
+    @Expose
+    private String AgentType;
+
+    /**
      * Get Application type; knowledge_qa - knowledge qa management. 
      * @return AppType Application type; knowledge_qa - knowledge qa management.
      */
@@ -69,6 +83,38 @@ public class CreateAppRequest extends AbstractModel {
         this.BaseConfig = BaseConfig;
     }
 
+    /**
+     * Get <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p> 
+     * @return Pattern <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+     */
+    public String getPattern() {
+        return this.Pattern;
+    }
+
+    /**
+     * Set <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+     * @param Pattern <p>Application Mode: standard - Standard Mode, agent - Agent Mode, single_workflow - Single Workflow Mode, ClawAgent - Claw Mode</p>
+     */
+    public void setPattern(String Pattern) {
+        this.Pattern = Pattern;
+    }
+
+    /**
+     * Get <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p> 
+     * @return AgentType <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
+     */
+    public String getAgentType() {
+        return this.AgentType;
+    }
+
+    /**
+     * Set <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
+     * @param AgentType <p>Agent type, used to distinguish the final agent form in which the application provides external services (dialogue) / Official Account (wechat). The current ADP creation page does not distinguish between dialogue and Official Account agents, and defaults to the dialogue agent.</p>
+     */
+    public void setAgentType(String AgentType) {
+        this.AgentType = AgentType;
+    }
+
     public CreateAppRequest() {
     }
 
@@ -83,6 +129,12 @@ public class CreateAppRequest extends AbstractModel {
         if (source.BaseConfig != null) {
             this.BaseConfig = new BaseConfig(source.BaseConfig);
         }
+        if (source.Pattern != null) {
+            this.Pattern = new String(source.Pattern);
+        }
+        if (source.AgentType != null) {
+            this.AgentType = new String(source.AgentType);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class CreateAppRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AppType", this.AppType);
         this.setParamObj(map, prefix + "BaseConfig.", this.BaseConfig);
+        this.setParamSimple(map, prefix + "Pattern", this.Pattern);
+        this.setParamSimple(map, prefix + "AgentType", this.AgentType);
 
     }
 }

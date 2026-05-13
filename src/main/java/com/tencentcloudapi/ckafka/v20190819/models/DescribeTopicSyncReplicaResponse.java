@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTopicSyncReplicaResponse extends AbstractModel {
 
     /**
-    * Returns topic replica details
+    * <p>Return topic replica detail</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTopicSyncReplicaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Returns topic replica details 
-     * @return Result Returns topic replica details
+     * Get <p>Return topic replica detail</p> 
+     * @return Result <p>Return topic replica detail</p>
      */
     public TopicInSyncReplicaResult getResult() {
         return this.Result;
     }
 
     /**
-     * Set Returns topic replica details
-     * @param Result Returns topic replica details
+     * Set <p>Return topic replica detail</p>
+     * @param Result <p>Return topic replica detail</p>
      */
     public void setResult(TopicInSyncReplicaResult Result) {
         this.Result = Result;

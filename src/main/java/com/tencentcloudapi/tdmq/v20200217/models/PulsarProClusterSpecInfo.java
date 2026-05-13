@@ -52,7 +52,7 @@ public class PulsarProClusterSpecInfo extends AbstractModel {
     private Long MaxNamespaces;
 
     /**
-    * Maximum number of topic partitions
+    * Maximum number of topics that can be created
     */
     @SerializedName("MaxTopics")
     @Expose
@@ -76,11 +76,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MaxPartitions;
 
     /**
-    * Maximum delayed message count for the product. 0 indicates no limit.	
+    * Maximum delayed message count. 0 means no limit.	
     */
     @SerializedName("MaxDelayedMessages")
     @Expose
     private Long MaxDelayedMessages;
+
+    /**
+    * Maximum number of topic partitions that can be created
+    */
+    @SerializedName("MaxTopicsPartitioned")
+    @Expose
+    private Long MaxTopicsPartitioned;
+
+    /**
+    * Maximum number of connections per broker
+    */
+    @SerializedName("BrokerMaxConnections")
+    @Expose
+    private Long BrokerMaxConnections;
+
+    /**
+    * Maximum number of connections per IP
+    */
+    @SerializedName("BrokerMaxConnectionsPerIp")
+    @Expose
+    private Long BrokerMaxConnectionsPerIp;
+
+    /**
+    * Elastic storage cluster maximum storage specification; fixed storage is 0.
+    */
+    @SerializedName("MaximumElasticStorage")
+    @Expose
+    private Long MaximumElasticStorage;
 
     /**
      * Get Cluster specification name 
@@ -147,16 +175,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Maximum number of topic partitions 
-     * @return MaxTopics Maximum number of topic partitions
+     * Get Maximum number of topics that can be created 
+     * @return MaxTopics Maximum number of topics that can be created
      */
     public Long getMaxTopics() {
         return this.MaxTopics;
     }
 
     /**
-     * Set Maximum number of topic partitions
-     * @param MaxTopics Maximum number of topic partitions
+     * Set Maximum number of topics that can be created
+     * @param MaxTopics Maximum number of topics that can be created
      */
     public void setMaxTopics(Long MaxTopics) {
         this.MaxTopics = MaxTopics;
@@ -207,19 +235,83 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Maximum delayed message count for the product. 0 indicates no limit.	 
-     * @return MaxDelayedMessages Maximum delayed message count for the product. 0 indicates no limit.	
+     * Get Maximum delayed message count. 0 means no limit.	 
+     * @return MaxDelayedMessages Maximum delayed message count. 0 means no limit.	
      */
     public Long getMaxDelayedMessages() {
         return this.MaxDelayedMessages;
     }
 
     /**
-     * Set Maximum delayed message count for the product. 0 indicates no limit.	
-     * @param MaxDelayedMessages Maximum delayed message count for the product. 0 indicates no limit.	
+     * Set Maximum delayed message count. 0 means no limit.	
+     * @param MaxDelayedMessages Maximum delayed message count. 0 means no limit.	
      */
     public void setMaxDelayedMessages(Long MaxDelayedMessages) {
         this.MaxDelayedMessages = MaxDelayedMessages;
+    }
+
+    /**
+     * Get Maximum number of topic partitions that can be created 
+     * @return MaxTopicsPartitioned Maximum number of topic partitions that can be created
+     */
+    public Long getMaxTopicsPartitioned() {
+        return this.MaxTopicsPartitioned;
+    }
+
+    /**
+     * Set Maximum number of topic partitions that can be created
+     * @param MaxTopicsPartitioned Maximum number of topic partitions that can be created
+     */
+    public void setMaxTopicsPartitioned(Long MaxTopicsPartitioned) {
+        this.MaxTopicsPartitioned = MaxTopicsPartitioned;
+    }
+
+    /**
+     * Get Maximum number of connections per broker 
+     * @return BrokerMaxConnections Maximum number of connections per broker
+     */
+    public Long getBrokerMaxConnections() {
+        return this.BrokerMaxConnections;
+    }
+
+    /**
+     * Set Maximum number of connections per broker
+     * @param BrokerMaxConnections Maximum number of connections per broker
+     */
+    public void setBrokerMaxConnections(Long BrokerMaxConnections) {
+        this.BrokerMaxConnections = BrokerMaxConnections;
+    }
+
+    /**
+     * Get Maximum number of connections per IP 
+     * @return BrokerMaxConnectionsPerIp Maximum number of connections per IP
+     */
+    public Long getBrokerMaxConnectionsPerIp() {
+        return this.BrokerMaxConnectionsPerIp;
+    }
+
+    /**
+     * Set Maximum number of connections per IP
+     * @param BrokerMaxConnectionsPerIp Maximum number of connections per IP
+     */
+    public void setBrokerMaxConnectionsPerIp(Long BrokerMaxConnectionsPerIp) {
+        this.BrokerMaxConnectionsPerIp = BrokerMaxConnectionsPerIp;
+    }
+
+    /**
+     * Get Elastic storage cluster maximum storage specification; fixed storage is 0. 
+     * @return MaximumElasticStorage Elastic storage cluster maximum storage specification; fixed storage is 0.
+     */
+    public Long getMaximumElasticStorage() {
+        return this.MaximumElasticStorage;
+    }
+
+    /**
+     * Set Elastic storage cluster maximum storage specification; fixed storage is 0.
+     * @param MaximumElasticStorage Elastic storage cluster maximum storage specification; fixed storage is 0.
+     */
+    public void setMaximumElasticStorage(Long MaximumElasticStorage) {
+        this.MaximumElasticStorage = MaximumElasticStorage;
     }
 
     public PulsarProClusterSpecInfo() {
@@ -254,6 +346,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.MaxDelayedMessages != null) {
             this.MaxDelayedMessages = new Long(source.MaxDelayedMessages);
         }
+        if (source.MaxTopicsPartitioned != null) {
+            this.MaxTopicsPartitioned = new Long(source.MaxTopicsPartitioned);
+        }
+        if (source.BrokerMaxConnections != null) {
+            this.BrokerMaxConnections = new Long(source.BrokerMaxConnections);
+        }
+        if (source.BrokerMaxConnectionsPerIp != null) {
+            this.BrokerMaxConnectionsPerIp = new Long(source.BrokerMaxConnectionsPerIp);
+        }
+        if (source.MaximumElasticStorage != null) {
+            this.MaximumElasticStorage = new Long(source.MaximumElasticStorage);
+        }
     }
 
 
@@ -269,6 +373,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "ScalableTps", this.ScalableTps);
         this.setParamSimple(map, prefix + "MaxPartitions", this.MaxPartitions);
         this.setParamSimple(map, prefix + "MaxDelayedMessages", this.MaxDelayedMessages);
+        this.setParamSimple(map, prefix + "MaxTopicsPartitioned", this.MaxTopicsPartitioned);
+        this.setParamSimple(map, prefix + "BrokerMaxConnections", this.BrokerMaxConnections);
+        this.setParamSimple(map, prefix + "BrokerMaxConnectionsPerIp", this.BrokerMaxConnectionsPerIp);
+        this.setParamSimple(map, prefix + "MaximumElasticStorage", this.MaximumElasticStorage);
 
     }
 }

@@ -31,14 +31,14 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Cluster Name
+    * 
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Region Information
+    * 
     */
     @SerializedName("Region")
     @Expose
@@ -59,7 +59,7 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private String Remark;
 
     /**
-    * VPC and network information
+    * 
     */
     @SerializedName("Vpcs")
     @Expose
@@ -73,28 +73,28 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Long [] ZoneIds;
 
     /**
-    * Virtual Host Quantity
+    * 
     */
     @SerializedName("VirtualHostNumber")
     @Expose
     private Long VirtualHostNumber;
 
     /**
-    * Number of Queues
+    * 
     */
     @SerializedName("QueueNumber")
     @Expose
     private Long QueueNumber;
 
     /**
-    * Number of messages produced per second Unit: messages/second
+    * 
     */
     @SerializedName("MessagePublishRate")
     @Expose
     private Float MessagePublishRate;
 
     /**
-    * Number of backlogged messages Unit: messages
+    * 
     */
     @SerializedName("MessageStackNumber")
     @Expose
@@ -108,28 +108,28 @@ public class RabbitMQClusterInfo extends AbstractModel {
     private Long ExpireTime;
 
     /**
-    * Channel Count
+    * 
     */
     @SerializedName("ChannelNumber")
     @Expose
     private Long ChannelNumber;
 
     /**
-    * Connection Count
+    * 
     */
     @SerializedName("ConnectionNumber")
     @Expose
     private Long ConnectionNumber;
 
     /**
-    * Consumer Count
+    * 
     */
     @SerializedName("ConsumerNumber")
     @Expose
     private Long ConsumerNumber;
 
     /**
-    * Exchange Count
+    * 
     */
     @SerializedName("ExchangeNumber")
     @Expose
@@ -221,6 +221,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean EnableDeletionProtection;
 
     /**
+    * Whether there is a risk of vhost without mirror queue enabled
+    */
+    @SerializedName("MirroredQueueRisk")
+    @Expose
+    private Boolean MirroredQueueRisk;
+
+    /**
+    * whether to indicate risk
+    */
+    @SerializedName("EnableRiskWarning")
+    @Expose
+    private Boolean EnableRiskWarning;
+
+    /**
+    * Timeout period for consumption
+    */
+    @SerializedName("ConsumeTimeout")
+    @Expose
+    private Long ConsumeTimeout;
+
+    /**
+    * Maximum number of channels
+    */
+    @SerializedName("ChannelMax")
+    @Expose
+    private Long ChannelMax;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -237,32 +265,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Cluster Name 
-     * @return ClusterName Cluster Name
+     * Get  
+     * @return ClusterName 
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster Name
-     * @param ClusterName Cluster Name
+     * Set 
+     * @param ClusterName 
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Region Information 
-     * @return Region Region Information
+     * Get  
+     * @return Region 
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region Information
-     * @param Region Region Information
+     * Set 
+     * @param Region 
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -301,16 +329,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VPC and network information 
-     * @return Vpcs VPC and network information
+     * Get  
+     * @return Vpcs 
      */
     public VpcEndpointInfo [] getVpcs() {
         return this.Vpcs;
     }
 
     /**
-     * Set VPC and network information
-     * @param Vpcs VPC and network information
+     * Set 
+     * @param Vpcs 
      */
     public void setVpcs(VpcEndpointInfo [] Vpcs) {
         this.Vpcs = Vpcs;
@@ -333,64 +361,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Virtual Host Quantity 
-     * @return VirtualHostNumber Virtual Host Quantity
+     * Get  
+     * @return VirtualHostNumber 
      */
     public Long getVirtualHostNumber() {
         return this.VirtualHostNumber;
     }
 
     /**
-     * Set Virtual Host Quantity
-     * @param VirtualHostNumber Virtual Host Quantity
+     * Set 
+     * @param VirtualHostNumber 
      */
     public void setVirtualHostNumber(Long VirtualHostNumber) {
         this.VirtualHostNumber = VirtualHostNumber;
     }
 
     /**
-     * Get Number of Queues 
-     * @return QueueNumber Number of Queues
+     * Get  
+     * @return QueueNumber 
      */
     public Long getQueueNumber() {
         return this.QueueNumber;
     }
 
     /**
-     * Set Number of Queues
-     * @param QueueNumber Number of Queues
+     * Set 
+     * @param QueueNumber 
      */
     public void setQueueNumber(Long QueueNumber) {
         this.QueueNumber = QueueNumber;
     }
 
     /**
-     * Get Number of messages produced per second Unit: messages/second 
-     * @return MessagePublishRate Number of messages produced per second Unit: messages/second
+     * Get  
+     * @return MessagePublishRate 
      */
     public Float getMessagePublishRate() {
         return this.MessagePublishRate;
     }
 
     /**
-     * Set Number of messages produced per second Unit: messages/second
-     * @param MessagePublishRate Number of messages produced per second Unit: messages/second
+     * Set 
+     * @param MessagePublishRate 
      */
     public void setMessagePublishRate(Float MessagePublishRate) {
         this.MessagePublishRate = MessagePublishRate;
     }
 
     /**
-     * Get Number of backlogged messages Unit: messages 
-     * @return MessageStackNumber Number of backlogged messages Unit: messages
+     * Get  
+     * @return MessageStackNumber 
      */
     public Long getMessageStackNumber() {
         return this.MessageStackNumber;
     }
 
     /**
-     * Set Number of backlogged messages Unit: messages
-     * @param MessageStackNumber Number of backlogged messages Unit: messages
+     * Set 
+     * @param MessageStackNumber 
      */
     public void setMessageStackNumber(Long MessageStackNumber) {
         this.MessageStackNumber = MessageStackNumber;
@@ -413,64 +441,64 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Channel Count 
-     * @return ChannelNumber Channel Count
+     * Get  
+     * @return ChannelNumber 
      */
     public Long getChannelNumber() {
         return this.ChannelNumber;
     }
 
     /**
-     * Set Channel Count
-     * @param ChannelNumber Channel Count
+     * Set 
+     * @param ChannelNumber 
      */
     public void setChannelNumber(Long ChannelNumber) {
         this.ChannelNumber = ChannelNumber;
     }
 
     /**
-     * Get Connection Count 
-     * @return ConnectionNumber Connection Count
+     * Get  
+     * @return ConnectionNumber 
      */
     public Long getConnectionNumber() {
         return this.ConnectionNumber;
     }
 
     /**
-     * Set Connection Count
-     * @param ConnectionNumber Connection Count
+     * Set 
+     * @param ConnectionNumber 
      */
     public void setConnectionNumber(Long ConnectionNumber) {
         this.ConnectionNumber = ConnectionNumber;
     }
 
     /**
-     * Get Consumer Count 
-     * @return ConsumerNumber Consumer Count
+     * Get  
+     * @return ConsumerNumber 
      */
     public Long getConsumerNumber() {
         return this.ConsumerNumber;
     }
 
     /**
-     * Set Consumer Count
-     * @param ConsumerNumber Consumer Count
+     * Set 
+     * @param ConsumerNumber 
      */
     public void setConsumerNumber(Long ConsumerNumber) {
         this.ConsumerNumber = ConsumerNumber;
     }
 
     /**
-     * Get Exchange Count 
-     * @return ExchangeNumber Exchange Count
+     * Get  
+     * @return ExchangeNumber 
      */
     public Long getExchangeNumber() {
         return this.ExchangeNumber;
     }
 
     /**
-     * Set Exchange Count
-     * @param ExchangeNumber Exchange Count
+     * Set 
+     * @param ExchangeNumber 
      */
     public void setExchangeNumber(Long ExchangeNumber) {
         this.ExchangeNumber = ExchangeNumber;
@@ -672,6 +700,70 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.EnableDeletionProtection = EnableDeletionProtection;
     }
 
+    /**
+     * Get Whether there is a risk of vhost without mirror queue enabled 
+     * @return MirroredQueueRisk Whether there is a risk of vhost without mirror queue enabled
+     */
+    public Boolean getMirroredQueueRisk() {
+        return this.MirroredQueueRisk;
+    }
+
+    /**
+     * Set Whether there is a risk of vhost without mirror queue enabled
+     * @param MirroredQueueRisk Whether there is a risk of vhost without mirror queue enabled
+     */
+    public void setMirroredQueueRisk(Boolean MirroredQueueRisk) {
+        this.MirroredQueueRisk = MirroredQueueRisk;
+    }
+
+    /**
+     * Get whether to indicate risk 
+     * @return EnableRiskWarning whether to indicate risk
+     */
+    public Boolean getEnableRiskWarning() {
+        return this.EnableRiskWarning;
+    }
+
+    /**
+     * Set whether to indicate risk
+     * @param EnableRiskWarning whether to indicate risk
+     */
+    public void setEnableRiskWarning(Boolean EnableRiskWarning) {
+        this.EnableRiskWarning = EnableRiskWarning;
+    }
+
+    /**
+     * Get Timeout period for consumption 
+     * @return ConsumeTimeout Timeout period for consumption
+     */
+    public Long getConsumeTimeout() {
+        return this.ConsumeTimeout;
+    }
+
+    /**
+     * Set Timeout period for consumption
+     * @param ConsumeTimeout Timeout period for consumption
+     */
+    public void setConsumeTimeout(Long ConsumeTimeout) {
+        this.ConsumeTimeout = ConsumeTimeout;
+    }
+
+    /**
+     * Get Maximum number of channels 
+     * @return ChannelMax Maximum number of channels
+     */
+    public Long getChannelMax() {
+        return this.ChannelMax;
+    }
+
+    /**
+     * Set Maximum number of channels
+     * @param ChannelMax Maximum number of channels
+     */
+    public void setChannelMax(Long ChannelMax) {
+        this.ChannelMax = ChannelMax;
+    }
+
     public RabbitMQClusterInfo() {
     }
 
@@ -773,6 +865,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.EnableDeletionProtection != null) {
             this.EnableDeletionProtection = new Boolean(source.EnableDeletionProtection);
         }
+        if (source.MirroredQueueRisk != null) {
+            this.MirroredQueueRisk = new Boolean(source.MirroredQueueRisk);
+        }
+        if (source.EnableRiskWarning != null) {
+            this.EnableRiskWarning = new Boolean(source.EnableRiskWarning);
+        }
+        if (source.ConsumeTimeout != null) {
+            this.ConsumeTimeout = new Long(source.ConsumeTimeout);
+        }
+        if (source.ChannelMax != null) {
+            this.ChannelMax = new Long(source.ChannelMax);
+        }
     }
 
 
@@ -808,6 +912,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Container", this.Container);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
+        this.setParamSimple(map, prefix + "MirroredQueueRisk", this.MirroredQueueRisk);
+        this.setParamSimple(map, prefix + "EnableRiskWarning", this.EnableRiskWarning);
+        this.setParamSimple(map, prefix + "ConsumeTimeout", this.ConsumeTimeout);
+        this.setParamSimple(map, prefix + "ChannelMax", this.ChannelMax);
 
     }
 }

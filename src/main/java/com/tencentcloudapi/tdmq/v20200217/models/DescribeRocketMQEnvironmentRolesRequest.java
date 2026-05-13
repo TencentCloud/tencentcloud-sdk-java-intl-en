@@ -31,7 +31,8 @@ public class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Namespace
+    * Namespace, the common Cluster Namespace for 4.x is fixed as: tdmq_default
+
     */
     @SerializedName("EnvironmentId")
     @Expose
@@ -82,16 +83,20 @@ public class DescribeRocketMQEnvironmentRolesRequest extends AbstractModel {
     }
 
     /**
-     * Get Namespace 
-     * @return EnvironmentId Namespace
+     * Get Namespace, the common Cluster Namespace for 4.x is fixed as: tdmq_default
+ 
+     * @return EnvironmentId Namespace, the common Cluster Namespace for 4.x is fixed as: tdmq_default
+
      */
     public String getEnvironmentId() {
         return this.EnvironmentId;
     }
 
     /**
-     * Set Namespace
-     * @param EnvironmentId Namespace
+     * Set Namespace, the common Cluster Namespace for 4.x is fixed as: tdmq_default
+
+     * @param EnvironmentId Namespace, the common Cluster Namespace for 4.x is fixed as: tdmq_default
+
      */
     public void setEnvironmentId(String EnvironmentId) {
         this.EnvironmentId = EnvironmentId;

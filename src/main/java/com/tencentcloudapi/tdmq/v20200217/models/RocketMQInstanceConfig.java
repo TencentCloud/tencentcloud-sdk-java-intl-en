@@ -101,7 +101,7 @@ public class RocketMQInstanceConfig extends AbstractModel {
     private RocketMQTopicDistribution [] TopicDistribution;
 
     /**
-    * Maximum number of queues per topic
+    * 
     */
     @SerializedName("MaxQueuesPerTopic")
     @Expose
@@ -153,6 +153,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     @SerializedName("SendReceiveRatio")
     @Expose
     private Float SendReceiveRatio;
+
+    /**
+    * Send and receive TPS peak cap
+    */
+    @SerializedName("TpsLimit")
+    @Expose
+    private Long TpsLimit;
+
+    /**
+    * Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("GeneralSkuCode")
+    @Expose
+    private String GeneralSkuCode;
 
     /**
      * Get Maximum TPS per namespace 
@@ -331,16 +346,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Maximum number of queues per topic 
-     * @return MaxQueuesPerTopic Maximum number of queues per topic
+     * Get  
+     * @return MaxQueuesPerTopic 
      */
     public Long getMaxQueuesPerTopic() {
         return this.MaxQueuesPerTopic;
     }
 
     /**
-     * Set Maximum number of queues per topic
-     * @param MaxQueuesPerTopic Maximum number of queues per topic
+     * Set 
+     * @param MaxQueuesPerTopic 
      */
     public void setMaxQueuesPerTopic(Long MaxQueuesPerTopic) {
         this.MaxQueuesPerTopic = MaxQueuesPerTopic;
@@ -462,6 +477,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.SendReceiveRatio = SendReceiveRatio;
     }
 
+    /**
+     * Get Send and receive TPS peak cap 
+     * @return TpsLimit Send and receive TPS peak cap
+     */
+    public Long getTpsLimit() {
+        return this.TpsLimit;
+    }
+
+    /**
+     * Set Send and receive TPS peak cap
+     * @param TpsLimit Send and receive TPS peak cap
+     */
+    public void setTpsLimit(Long TpsLimit) {
+        this.TpsLimit = TpsLimit;
+    }
+
+    /**
+     * Get Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return GeneralSkuCode Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getGeneralSkuCode() {
+        return this.GeneralSkuCode;
+    }
+
+    /**
+     * Set Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param GeneralSkuCode Generic cluster specification
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setGeneralSkuCode(String GeneralSkuCode) {
+        this.GeneralSkuCode = GeneralSkuCode;
+    }
+
     public RocketMQInstanceConfig() {
     }
 
@@ -530,6 +581,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SendReceiveRatio != null) {
             this.SendReceiveRatio = new Float(source.SendReceiveRatio);
         }
+        if (source.TpsLimit != null) {
+            this.TpsLimit = new Long(source.TpsLimit);
+        }
+        if (source.GeneralSkuCode != null) {
+            this.GeneralSkuCode = new String(source.GeneralSkuCode);
+        }
     }
 
 
@@ -555,6 +612,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TopicNumLowerLimit", this.TopicNumLowerLimit);
         this.setParamSimple(map, prefix + "TopicNumUpperLimit", this.TopicNumUpperLimit);
         this.setParamSimple(map, prefix + "SendReceiveRatio", this.SendReceiveRatio);
+        this.setParamSimple(map, prefix + "TpsLimit", this.TpsLimit);
+        this.setParamSimple(map, prefix + "GeneralSkuCode", this.GeneralSkuCode);
 
     }
 }

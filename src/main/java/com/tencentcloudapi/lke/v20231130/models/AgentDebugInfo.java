@@ -24,49 +24,72 @@ import java.util.HashMap;
 public class AgentDebugInfo extends AbstractModel {
 
     /**
-    * Input Information for Tools and Large Models, json
+    * 
     */
     @SerializedName("Input")
     @Expose
     private String Input;
 
     /**
-    * Output Information for Tools and Large Models, json
+    * 
     */
     @SerializedName("Output")
     @Expose
     private String Output;
 
     /**
-     * Get Input Information for Tools and Large Models, json 
-     * @return Input Input Information for Tools and Large Models, json
+    * 
+    */
+    @SerializedName("ModelName")
+    @Expose
+    private String ModelName;
+
+    /**
+     * Get  
+     * @return Input 
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set Input Information for Tools and Large Models, json
-     * @param Input Input Information for Tools and Large Models, json
+     * Set 
+     * @param Input 
      */
     public void setInput(String Input) {
         this.Input = Input;
     }
 
     /**
-     * Get Output Information for Tools and Large Models, json 
-     * @return Output Output Information for Tools and Large Models, json
+     * Get  
+     * @return Output 
      */
     public String getOutput() {
         return this.Output;
     }
 
     /**
-     * Set Output Information for Tools and Large Models, json
-     * @param Output Output Information for Tools and Large Models, json
+     * Set 
+     * @param Output 
      */
     public void setOutput(String Output) {
         this.Output = Output;
+    }
+
+    /**
+     * Get  
+     * @return ModelName 
+     */
+    public String getModelName() {
+        return this.ModelName;
+    }
+
+    /**
+     * Set 
+     * @param ModelName 
+     */
+    public void setModelName(String ModelName) {
+        this.ModelName = ModelName;
     }
 
     public AgentDebugInfo() {
@@ -83,6 +106,9 @@ public class AgentDebugInfo extends AbstractModel {
         if (source.Output != null) {
             this.Output = new String(source.Output);
         }
+        if (source.ModelName != null) {
+            this.ModelName = new String(source.ModelName);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class AgentDebugInfo extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Input", this.Input);
         this.setParamSimple(map, prefix + "Output", this.Output);
+        this.setParamSimple(map, prefix + "ModelName", this.ModelName);
 
     }
 }

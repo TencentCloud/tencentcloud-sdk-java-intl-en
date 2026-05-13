@@ -248,6 +248,13 @@ public class InstanceDetail extends AbstractModel {
     private String [] Features;
 
     /**
+    * <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+    */
+    @SerializedName("RetentionBytes")
+    @Expose
+    private Long RetentionBytes;
+
+    /**
      * Get <p>ckafka cluster instance Id.</p>. 
      * @return InstanceId <p>ckafka cluster instance Id.</p>.
      */
@@ -759,6 +766,22 @@ public class InstanceDetail extends AbstractModel {
         this.Features = Features;
     }
 
+    /**
+     * Get <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p> 
+     * @return RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+     */
+    public Long getRetentionBytes() {
+        return this.RetentionBytes;
+    }
+
+    /**
+     * Set <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+     * @param RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+     */
+    public void setRetentionBytes(Long RetentionBytes) {
+        this.RetentionBytes = RetentionBytes;
+    }
+
     public InstanceDetail() {
     }
 
@@ -875,6 +898,9 @@ public class InstanceDetail extends AbstractModel {
                 this.Features[i] = new String(source.Features[i]);
             }
         }
+        if (source.RetentionBytes != null) {
+            this.RetentionBytes = new Long(source.RetentionBytes);
+        }
     }
 
 
@@ -914,6 +940,7 @@ public class InstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
         this.setParamArraySimple(map, prefix + "Features.", this.Features);
+        this.setParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
 
     }
 }

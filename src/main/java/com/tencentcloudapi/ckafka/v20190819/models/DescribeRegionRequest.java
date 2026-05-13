@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeRegionRequest extends AbstractModel {
 
     /**
-    * The offset value
+    * <p>Offset</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The maximum number of results returned
+    * <p>Return the maximum number of results</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Business field, which can be ignored.
+    * <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
     */
     @SerializedName("Business")
     @Expose
     private String Business;
 
     /**
-    * CDC business field, which can be ignored.
+    * <p>cdc dedicated cluster business field, can be ignored</p>
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-     * Get The offset value 
-     * @return Offset The offset value
+     * Get <p>Offset</p> 
+     * @return Offset <p>Offset</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set The offset value
-     * @param Offset The offset value
+     * Set <p>Offset</p>
+     * @param Offset <p>Offset</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The maximum number of results returned 
-     * @return Limit The maximum number of results returned
+     * Get <p>Return the maximum number of results</p> 
+     * @return Limit <p>Return the maximum number of results</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The maximum number of results returned
-     * @param Limit The maximum number of results returned
+     * Set <p>Return the maximum number of results</p>
+     * @param Limit <p>Return the maximum number of results</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Business field, which can be ignored. 
-     * @return Business Business field, which can be ignored.
+     * Get <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p> 
+     * @return Business <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
      */
     public String getBusiness() {
         return this.Business;
     }
 
     /**
-     * Set Business field, which can be ignored.
-     * @param Business Business field, which can be ignored.
+     * Set <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
+     * @param Business <p>Business field, can be ignored</p><p>Enumeration value:</p><ul><li>ckafka: CKafka business</li><li>cmq: CMQ business</li></ul><p>Default value: ckafka</p>
      */
     public void setBusiness(String Business) {
         this.Business = Business;
     }
 
     /**
-     * Get CDC business field, which can be ignored. 
-     * @return CdcId CDC business field, which can be ignored.
+     * Get <p>cdc dedicated cluster business field, can be ignored</p> 
+     * @return CdcId <p>cdc dedicated cluster business field, can be ignored</p>
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set CDC business field, which can be ignored.
-     * @param CdcId CDC business field, which can be ignored.
+     * Set <p>cdc dedicated cluster business field, can be ignored</p>
+     * @param CdcId <p>cdc dedicated cluster business field, can be ignored</p>
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCmqQueueRequest extends AbstractModel {
 
     /**
-    * Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+    * Queue name is unique under the same account in a single region. Queue name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It is case-insensitive.
     */
     @SerializedName("QueueName")
     @Expose
@@ -143,16 +143,16 @@ public class CreateCmqQueueRequest extends AbstractModel {
     private Long RetentionSizeInMB;
 
     /**
-     * Get Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter. 
-     * @return QueueName Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * Get Queue name is unique under the same account in a single region. Queue name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It is case-insensitive. 
+     * @return QueueName Queue name is unique under the same account in a single region. Queue name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It is case-insensitive.
      */
     public String getQueueName() {
         return this.QueueName;
     }
 
     /**
-     * Set Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-     * @param QueueName Queue name, which is unique under the same account in a single region. It is a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+     * Set Queue name is unique under the same account in a single region. Queue name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It is case-insensitive.
+     * @param QueueName Queue name is unique under the same account in a single region. Queue name starts with a letter and can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It is case-insensitive.
      */
     public void setQueueName(String QueueName) {
         this.QueueName = QueueName;

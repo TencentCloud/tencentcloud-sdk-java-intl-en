@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateCmqTopicRequest extends AbstractModel {
 
     /**
-    * Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
+    * Topic name is unique under the same account in a single region. Topic name can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation and is case-insensitive.
     */
     @SerializedName("TopicName")
     @Expose
@@ -66,16 +66,16 @@ public class CreateCmqTopicRequest extends AbstractModel {
     private Tag [] Tags;
 
     /**
-     * Get Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-). 
-     * @return TopicName Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
+     * Get Topic name is unique under the same account in a single region. Topic name can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation and is case-insensitive. 
+     * @return TopicName Topic name is unique under the same account in a single region. Topic name can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation and is case-insensitive.
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
-     * @param TopicName Topic name, which must be unique under the same account in a single region. The name is a string of no more than 64 characters, starting with a letter, and the remaining part may include letters, numbers, and hyphens (-).
+     * Set Topic name is unique under the same account in a single region. Topic name can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation and is case-insensitive.
+     * @param TopicName Topic name is unique under the same account in a single region. Topic name can only contain letters, numbers, "-", and "_", with a maximum of 64 characters. It cannot be modified after creation and is case-insensitive.
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;

@@ -24,190 +24,190 @@ import java.util.HashMap;
 public class DescribeInstancesDetailRequest extends AbstractModel {
 
     /**
-    * (Filter) filter by instance ID
+    * <p>(Filtering Conditions) Filter by instance ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
+    * <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+    * <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * Offset. If this parameter is left empty, `0` will be used by default.
+    * <p>Offset, which is 0 by default.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
+    * <p>Number of returned results. Default value: 10. Maximum value: 20.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Tag key match.
+    * <p>Match the tag key.</p>
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
+    * <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * This parameter has been deprecated and replaced with `InstanceIdList`.
+    * <p>Deprecated. Use InstanceIdList.</p>
     */
     @SerializedName("InstanceIds")
     @Expose
     private String InstanceIds;
 
     /**
-    * Filter by instance ID.
+    * <p>Filter by instance ID</p>
     */
     @SerializedName("InstanceIdList")
     @Expose
     private String [] InstanceIdList;
 
     /**
-    * Filter instances by a set of tags
+    * <p>Filter instances based on tag list (take the intersection)</p>
     */
     @SerializedName("TagList")
     @Expose
     private Tag [] TagList;
 
     /**
-     * Get (Filter) filter by instance ID 
-     * @return InstanceId (Filter) filter by instance ID
+     * Get <p>(Filtering Conditions) Filter by instance ID</p> 
+     * @return InstanceId <p>(Filtering Conditions) Filter by instance ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set (Filter) filter by instance ID
-     * @param InstanceId (Filter) filter by instance ID
+     * Set <p>(Filtering Conditions) Filter by instance ID</p>
+     * @param InstanceId <p>(Filtering Conditions) Filter by instance ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported. 
-     * @return SearchWord Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
+     * Get <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p> 
+     * @return SearchWord <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
-     * @param SearchWord Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
+     * Set <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
+     * @param SearchWord <p>(Filtering Conditions) Filter by instance name, instance Id, availability zone, VPC Id, or subnet Id. Fuzzy query is supported.</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default 
-     * @return Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+     * Get <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul> 
+     * @return Status <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
-     * @param Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
+     * Set <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+     * @param Status <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Offset. If this parameter is left empty, `0` will be used by default. 
-     * @return Offset Offset. If this parameter is left empty, `0` will be used by default.
+     * Get <p>Offset, which is 0 by default.</p> 
+     * @return Offset <p>Offset, which is 0 by default.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. If this parameter is left empty, `0` will be used by default.
-     * @param Offset Offset. If this parameter is left empty, `0` will be used by default.
+     * Set <p>Offset, which is 0 by default.</p>
+     * @param Offset <p>Offset, which is 0 by default.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`. 
-     * @return Limit Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
+     * Get <p>Number of returned results. Default value: 10. Maximum value: 20.</p> 
+     * @return Limit <p>Number of returned results. Default value: 10. Maximum value: 20.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
-     * @param Limit Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
+     * Set <p>Number of returned results. Default value: 10. Maximum value: 20.</p>
+     * @param Limit <p>Number of returned results. Default value: 10. Maximum value: 20.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Tag key match. 
-     * @return TagKey Tag key match.
+     * Get <p>Match the tag key.</p> 
+     * @return TagKey <p>Match the tag key.</p>
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set Tag key match.
-     * @param TagKey Tag key match.
+     * Set <p>Match the tag key.</p>
+     * @param TagKey <p>Match the tag key.</p>
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;
     }
 
     /**
-     * Get Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`. 
-     * @return Filters Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
+     * Get <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p> 
+     * @return Filters <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
-     * @param Filters Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
+     * Set <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
+     * @param Filters <p>Filter. filter.Name supports ('Ip', 'VpcId', 'SubNetId', 'InstanceType', 'InstanceId'). filter.Values can transmit up to 10 values.</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get This parameter has been deprecated and replaced with `InstanceIdList`. 
-     * @return InstanceIds This parameter has been deprecated and replaced with `InstanceIdList`.
+     * Get <p>Deprecated. Use InstanceIdList.</p> 
+     * @return InstanceIds <p>Deprecated. Use InstanceIdList.</p>
      * @deprecated
      */
     @Deprecated
@@ -216,8 +216,8 @@ public class DescribeInstancesDetailRequest extends AbstractModel {
     }
 
     /**
-     * Set This parameter has been deprecated and replaced with `InstanceIdList`.
-     * @param InstanceIds This parameter has been deprecated and replaced with `InstanceIdList`.
+     * Set <p>Deprecated. Use InstanceIdList.</p>
+     * @param InstanceIds <p>Deprecated. Use InstanceIdList.</p>
      * @deprecated
      */
     @Deprecated
@@ -226,32 +226,32 @@ public class DescribeInstancesDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter by instance ID. 
-     * @return InstanceIdList Filter by instance ID.
+     * Get <p>Filter by instance ID</p> 
+     * @return InstanceIdList <p>Filter by instance ID</p>
      */
     public String [] getInstanceIdList() {
         return this.InstanceIdList;
     }
 
     /**
-     * Set Filter by instance ID.
-     * @param InstanceIdList Filter by instance ID.
+     * Set <p>Filter by instance ID</p>
+     * @param InstanceIdList <p>Filter by instance ID</p>
      */
     public void setInstanceIdList(String [] InstanceIdList) {
         this.InstanceIdList = InstanceIdList;
     }
 
     /**
-     * Get Filter instances by a set of tags 
-     * @return TagList Filter instances by a set of tags
+     * Get <p>Filter instances based on tag list (take the intersection)</p> 
+     * @return TagList <p>Filter instances based on tag list (take the intersection)</p>
      */
     public Tag [] getTagList() {
         return this.TagList;
     }
 
     /**
-     * Set Filter instances by a set of tags
-     * @param TagList Filter instances by a set of tags
+     * Set <p>Filter instances based on tag list (take the intersection)</p>
+     * @param TagList <p>Filter instances based on tag list (take the intersection)</p>
      */
     public void setTagList(Tag [] TagList) {
         this.TagList = TagList;

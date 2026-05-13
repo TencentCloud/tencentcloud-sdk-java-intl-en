@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeTopicSyncReplicaRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Topic name
+    * <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * Offset. If this parameter is left empty, 0 will be used by default.
+    * <p>Offset, which is 0 by default</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned results. default value: 20. must be greater than 0.
+    * <p>Number of returned results. Default value: 20. Must be greater than 0.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Filters unsynced replicas only
+    * <p>Only filter unsynced replicas</p>
     */
     @SerializedName("OutOfSyncReplicaOnly")
     @Expose
     private Boolean OutOfSyncReplicaOnly;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p> 
+     * @return InstanceId <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param InstanceId <p>Instance ID</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Topic name 
-     * @return TopicName Topic name
+     * Get <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p> 
+     * @return TopicName <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Topic name
-     * @param TopicName Topic name
+     * Set <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
+     * @param TopicName <p>Topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get Offset. If this parameter is left empty, 0 will be used by default. 
-     * @return Offset Offset. If this parameter is left empty, 0 will be used by default.
+     * Get <p>Offset, which is 0 by default</p> 
+     * @return Offset <p>Offset, which is 0 by default</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. If this parameter is left empty, 0 will be used by default.
-     * @param Offset Offset. If this parameter is left empty, 0 will be used by default.
+     * Set <p>Offset, which is 0 by default</p>
+     * @param Offset <p>Offset, which is 0 by default</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned results. default value: 20. must be greater than 0. 
-     * @return Limit Number of returned results. default value: 20. must be greater than 0.
+     * Get <p>Number of returned results. Default value: 20. Must be greater than 0.</p> 
+     * @return Limit <p>Number of returned results. Default value: 20. Must be greater than 0.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. default value: 20. must be greater than 0.
-     * @param Limit Number of returned results. default value: 20. must be greater than 0.
+     * Set <p>Number of returned results. Default value: 20. Must be greater than 0.</p>
+     * @param Limit <p>Number of returned results. Default value: 20. Must be greater than 0.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Filters unsynced replicas only 
-     * @return OutOfSyncReplicaOnly Filters unsynced replicas only
+     * Get <p>Only filter unsynced replicas</p> 
+     * @return OutOfSyncReplicaOnly <p>Only filter unsynced replicas</p>
      */
     public Boolean getOutOfSyncReplicaOnly() {
         return this.OutOfSyncReplicaOnly;
     }
 
     /**
-     * Set Filters unsynced replicas only
-     * @param OutOfSyncReplicaOnly Filters unsynced replicas only
+     * Set <p>Only filter unsynced replicas</p>
+     * @param OutOfSyncReplicaOnly <p>Only filter unsynced replicas</p>
      */
     public void setOutOfSyncReplicaOnly(Boolean OutOfSyncReplicaOnly) {
         this.OutOfSyncReplicaOnly = OutOfSyncReplicaOnly;

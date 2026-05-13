@@ -24,174 +24,174 @@ import java.util.HashMap;
 public class ZoneInfo extends AbstractModel {
 
     /**
-    * Availability zone
+    * <p>Availability zone</p>
     */
     @SerializedName("ZoneId")
     @Expose
     private String ZoneId;
 
     /**
-    * Whether it is an internal application.
+    * <p>Whether the APP is internal</p><p>Enumeration value:</p><ul><li>0: Public</li><li>1: Internal</li></ul><p>Default value: 0</p>
     */
     @SerializedName("IsInternalApp")
     @Expose
     private Long IsInternalApp;
 
     /**
-    * Application identifier
+    * <p>AppID</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
+    * <p>Flag indicating whether the availability zone is sold out. true indicates sold out, false indicates not sold out.</p>
     */
     @SerializedName("Flag")
     @Expose
     private Boolean Flag;
 
     /**
-    * Availability zone name.
+    * <p>Availability zone name</p>
     */
     @SerializedName("ZoneName")
     @Expose
     private String ZoneName;
 
     /**
-    * Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
+    * <p>Availability zone status</p><p>Enumeration value:</p><ul><li>3: Enable</li><li>4: Disable</li></ul><p>AZ status is subject to SoldOut</p>
     */
     @SerializedName("ZoneStatus")
     @Expose
     private Long ZoneStatus;
 
     /**
-    * Extra flag
+    * <p>Additional flag</p>
     */
     @SerializedName("Exflag")
     @Expose
     private String Exflag;
 
     /**
-    * Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
+    * <p>true indicates sold out, false indicates not sold out.</p>
     */
     @SerializedName("SoldOut")
     @Expose
     private String SoldOut;
 
     /**
-    * Specifies the sell-out information of the standard version.
+    * <p>Standard version sell-out information</p>
     */
     @SerializedName("SalesInfo")
     @Expose
     private SaleInfo [] SalesInfo;
 
     /**
-    * Additional flag.
+    * <p>Additional flag</p>
     */
     @SerializedName("ExtraFlag")
     @Expose
     private String ExtraFlag;
 
     /**
-     * Get Availability zone 
-     * @return ZoneId Availability zone
+     * Get <p>Availability zone</p> 
+     * @return ZoneId <p>Availability zone</p>
      */
     public String getZoneId() {
         return this.ZoneId;
     }
 
     /**
-     * Set Availability zone
-     * @param ZoneId Availability zone
+     * Set <p>Availability zone</p>
+     * @param ZoneId <p>Availability zone</p>
      */
     public void setZoneId(String ZoneId) {
         this.ZoneId = ZoneId;
     }
 
     /**
-     * Get Whether it is an internal application. 
-     * @return IsInternalApp Whether it is an internal application.
+     * Get <p>Whether the APP is internal</p><p>Enumeration value:</p><ul><li>0: Public</li><li>1: Internal</li></ul><p>Default value: 0</p> 
+     * @return IsInternalApp <p>Whether the APP is internal</p><p>Enumeration value:</p><ul><li>0: Public</li><li>1: Internal</li></ul><p>Default value: 0</p>
      */
     public Long getIsInternalApp() {
         return this.IsInternalApp;
     }
 
     /**
-     * Set Whether it is an internal application.
-     * @param IsInternalApp Whether it is an internal application.
+     * Set <p>Whether the APP is internal</p><p>Enumeration value:</p><ul><li>0: Public</li><li>1: Internal</li></ul><p>Default value: 0</p>
+     * @param IsInternalApp <p>Whether the APP is internal</p><p>Enumeration value:</p><ul><li>0: Public</li><li>1: Internal</li></ul><p>Default value: 0</p>
      */
     public void setIsInternalApp(Long IsInternalApp) {
         this.IsInternalApp = IsInternalApp;
     }
 
     /**
-     * Get Application identifier 
-     * @return AppId Application identifier
+     * Get <p>AppID</p> 
+     * @return AppId <p>AppID</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Application identifier
-     * @param AppId Application identifier
+     * Set <p>AppID</p>
+     * @param AppId <p>AppID</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out. 
-     * @return Flag Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
+     * Get <p>Flag indicating whether the availability zone is sold out. true indicates sold out, false indicates not sold out.</p> 
+     * @return Flag <p>Flag indicating whether the availability zone is sold out. true indicates sold out, false indicates not sold out.</p>
      */
     public Boolean getFlag() {
         return this.Flag;
     }
 
     /**
-     * Set Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
-     * @param Flag Indicates whether the AZ is sold out. true indicates sold out. false indicates not sold out.
+     * Set <p>Flag indicating whether the availability zone is sold out. true indicates sold out, false indicates not sold out.</p>
+     * @param Flag <p>Flag indicating whether the availability zone is sold out. true indicates sold out, false indicates not sold out.</p>
      */
     public void setFlag(Boolean Flag) {
         this.Flag = Flag;
     }
 
     /**
-     * Get Availability zone name. 
-     * @return ZoneName Availability zone name.
+     * Get <p>Availability zone name</p> 
+     * @return ZoneName <p>Availability zone name</p>
      */
     public String getZoneName() {
         return this.ZoneName;
     }
 
     /**
-     * Set Availability zone name.
-     * @param ZoneName Availability zone name.
+     * Set <p>Availability zone name</p>
+     * @param ZoneName <p>Availability zone name</p>
      */
     public void setZoneName(String ZoneName) {
         this.ZoneName = ZoneName;
     }
 
     /**
-     * Get Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut. 
-     * @return ZoneStatus Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
+     * Get <p>Availability zone status</p><p>Enumeration value:</p><ul><li>3: Enable</li><li>4: Disable</li></ul><p>AZ status is subject to SoldOut</p> 
+     * @return ZoneStatus <p>Availability zone status</p><p>Enumeration value:</p><ul><li>3: Enable</li><li>4: Disable</li></ul><p>AZ status is subject to SoldOut</p>
      */
     public Long getZoneStatus() {
         return this.ZoneStatus;
     }
 
     /**
-     * Set Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
-     * @param ZoneStatus Availability zone status. enumerates example: 3: enable, 4: disable. availability zone status is subject to SoldOut.
+     * Set <p>Availability zone status</p><p>Enumeration value:</p><ul><li>3: Enable</li><li>4: Disable</li></ul><p>AZ status is subject to SoldOut</p>
+     * @param ZoneStatus <p>Availability zone status</p><p>Enumeration value:</p><ul><li>3: Enable</li><li>4: Disable</li></ul><p>AZ status is subject to SoldOut</p>
      */
     public void setZoneStatus(Long ZoneStatus) {
         this.ZoneStatus = ZoneStatus;
     }
 
     /**
-     * Get Extra flag 
-     * @return Exflag Extra flag
+     * Get <p>Additional flag</p> 
+     * @return Exflag <p>Additional flag</p>
      * @deprecated
      */
     @Deprecated
@@ -200,8 +200,8 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Set Extra flag
-     * @param Exflag Extra flag
+     * Set <p>Additional flag</p>
+     * @param Exflag <p>Additional flag</p>
      * @deprecated
      */
     @Deprecated
@@ -210,48 +210,48 @@ public class ZoneInfo extends AbstractModel {
     }
 
     /**
-     * Get Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out). 
-     * @return SoldOut Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
+     * Get <p>true indicates sold out, false indicates not sold out.</p> 
+     * @return SoldOut <p>true indicates sold out, false indicates not sold out.</p>
      */
     public String getSoldOut() {
         return this.SoldOut;
     }
 
     /**
-     * Set Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
-     * @param SoldOut Specifies whether the item is sold-out. valid values: true (sold-out), false (not sold out).
+     * Set <p>true indicates sold out, false indicates not sold out.</p>
+     * @param SoldOut <p>true indicates sold out, false indicates not sold out.</p>
      */
     public void setSoldOut(String SoldOut) {
         this.SoldOut = SoldOut;
     }
 
     /**
-     * Get Specifies the sell-out information of the standard version. 
-     * @return SalesInfo Specifies the sell-out information of the standard version.
+     * Get <p>Standard version sell-out information</p> 
+     * @return SalesInfo <p>Standard version sell-out information</p>
      */
     public SaleInfo [] getSalesInfo() {
         return this.SalesInfo;
     }
 
     /**
-     * Set Specifies the sell-out information of the standard version.
-     * @param SalesInfo Specifies the sell-out information of the standard version.
+     * Set <p>Standard version sell-out information</p>
+     * @param SalesInfo <p>Standard version sell-out information</p>
      */
     public void setSalesInfo(SaleInfo [] SalesInfo) {
         this.SalesInfo = SalesInfo;
     }
 
     /**
-     * Get Additional flag. 
-     * @return ExtraFlag Additional flag.
+     * Get <p>Additional flag</p> 
+     * @return ExtraFlag <p>Additional flag</p>
      */
     public String getExtraFlag() {
         return this.ExtraFlag;
     }
 
     /**
-     * Set Additional flag.
-     * @param ExtraFlag Additional flag.
+     * Set <p>Additional flag</p>
+     * @param ExtraFlag <p>Additional flag</p>
      */
     public void setExtraFlag(String ExtraFlag) {
         this.ExtraFlag = ExtraFlag;

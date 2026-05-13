@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRocketMQRolesResponse extends AbstractModel {
 
     /**
-    * Record count.
+    * Total number.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Role array.
+    * This API is used to provide the role list.
     */
     @SerializedName("RoleSets")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRocketMQRolesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Record count. 
-     * @return TotalCount Record count.
+     * Get Total number. 
+     * @return TotalCount Total number.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Record count.
-     * @param TotalCount Record count.
+     * Set Total number.
+     * @param TotalCount Total number.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Role array. 
-     * @return RoleSets Role array.
+     * Get This API is used to provide the role list. 
+     * @return RoleSets This API is used to provide the role list.
      */
     public Role [] getRoleSets() {
         return this.RoleSets;
     }
 
     /**
-     * Set Role array.
-     * @param RoleSets Role array.
+     * Set This API is used to provide the role list.
+     * @param RoleSets This API is used to provide the role list.
      */
     public void setRoleSets(Role [] RoleSets) {
         this.RoleSets = RoleSets;

@@ -66,14 +66,14 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     private String [] AppBizIds;
 
     /**
-    * Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+    * 
     */
     @SerializedName("AppType")
     @Expose
     private String AppType;
 
     /**
-    * Filter Sub-scenarios
+    * 
     */
     @SerializedName("SubScenes")
     @Expose
@@ -130,7 +130,9 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     /**
      * Get Start timestamp, in seconds. 
      * @return StartTime Start timestamp, in seconds.
+     * @deprecated
      */
+    @Deprecated
     public String getStartTime() {
         return this.StartTime;
     }
@@ -138,7 +140,9 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     /**
      * Set Start timestamp, in seconds.
      * @param StartTime Start timestamp, in seconds.
+     * @deprecated
      */
+    @Deprecated
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
@@ -146,7 +150,9 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     /**
      * Get End timestamp, in seconds. 
      * @return EndTime End timestamp, in seconds.
+     * @deprecated
      */
+    @Deprecated
     public String getEndTime() {
         return this.EndTime;
     }
@@ -154,7 +160,9 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     /**
      * Set End timestamp, in seconds.
      * @param EndTime End timestamp, in seconds.
+     * @deprecated
      */
+    @Deprecated
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
@@ -176,32 +184,32 @@ public class DescribeTokenUsageGraphRequest extends AbstractModel {
     }
 
     /**
-     * Get Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types. 
-     * @return AppType Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+     * Get  
+     * @return AppType 
      */
     public String getAppType() {
         return this.AppType;
     }
 
     /**
-     * Set Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
-     * @param AppType Application type. Optional values: knowledge_qa(knowledge QA)/plugin_parsing_qa(plugin)/shared_knowledge(knowledge base)/evaluate_test(evaluation). If not filled, query all types.
+     * Set 
+     * @param AppType 
      */
     public void setAppType(String AppType) {
         this.AppType = AppType;
     }
 
     /**
-     * Get Filter Sub-scenarios 
-     * @return SubScenes Filter Sub-scenarios
+     * Get  
+     * @return SubScenes 
      */
     public String [] getSubScenes() {
         return this.SubScenes;
     }
 
     /**
-     * Set Filter Sub-scenarios
-     * @param SubScenes Filter Sub-scenarios
+     * Set 
+     * @param SubScenes 
      */
     public void setSubScenes(String [] SubScenes) {
         this.SubScenes = SubScenes;

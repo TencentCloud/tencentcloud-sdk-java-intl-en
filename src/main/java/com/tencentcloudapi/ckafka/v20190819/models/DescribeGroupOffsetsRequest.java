@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeGroupOffsetsRequest extends AbstractModel {
 
     /**
-    * The ckafka cluster instance Id.
+    * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Kafka consumer group
+    * <p>Kafka consumption group</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40840?from_cn_redirect=1">DescribeGroup</a></p>
     */
     @SerializedName("Group")
     @Expose
     private String Group;
 
     /**
-    * Array of the names of topics subscribed to by a group. If there is no such array, this parameter means the information of all topics in the specified group
+    * <p>Name array of the subscribed topics for the group. If there is no array, it means all topic info under the designated group.</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
     */
     @SerializedName("Topics")
     @Expose
     private String [] Topics;
 
     /**
-    * Fuzzy match by `topicName`
+    * <p>Fuzzy matching topicName</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * Offset position of this query. Default value: 0
+    * <p>Offset position of this query, defaults to 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50
+    * <p>Maximum number of returned results this time. Default value: 50. Maximum value: 50.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get The ckafka cluster instance Id. 
-     * @return InstanceId The ckafka cluster instance Id.
+     * Get <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id.
-     * @param InstanceId The ckafka cluster instance Id.
+     * Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Kafka consumer group 
-     * @return Group Kafka consumer group
+     * Get <p>Kafka consumption group</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40840?from_cn_redirect=1">DescribeGroup</a></p> 
+     * @return Group <p>Kafka consumption group</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40840?from_cn_redirect=1">DescribeGroup</a></p>
      */
     public String getGroup() {
         return this.Group;
     }
 
     /**
-     * Set Kafka consumer group
-     * @param Group Kafka consumer group
+     * Set <p>Kafka consumption group</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40840?from_cn_redirect=1">DescribeGroup</a></p>
+     * @param Group <p>Kafka consumption group</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40840?from_cn_redirect=1">DescribeGroup</a></p>
      */
     public void setGroup(String Group) {
         this.Group = Group;
     }
 
     /**
-     * Get Array of the names of topics subscribed to by a group. If there is no such array, this parameter means the information of all topics in the specified group 
-     * @return Topics Array of the names of topics subscribed to by a group. If there is no such array, this parameter means the information of all topics in the specified group
+     * Get <p>Name array of the subscribed topics for the group. If there is no array, it means all topic info under the designated group.</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p> 
+     * @return Topics <p>Name array of the subscribed topics for the group. If there is no array, it means all topic info under the designated group.</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
      */
     public String [] getTopics() {
         return this.Topics;
     }
 
     /**
-     * Set Array of the names of topics subscribed to by a group. If there is no such array, this parameter means the information of all topics in the specified group
-     * @param Topics Array of the names of topics subscribed to by a group. If there is no such array, this parameter means the information of all topics in the specified group
+     * Set <p>Name array of the subscribed topics for the group. If there is no array, it means all topic info under the designated group.</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
+     * @param Topics <p>Name array of the subscribed topics for the group. If there is no array, it means all topic info under the designated group.</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40847?from_cn_redirect=1">DescribeTopic</a></p>
      */
     public void setTopics(String [] Topics) {
         this.Topics = Topics;
     }
 
     /**
-     * Get Fuzzy match by `topicName` 
-     * @return SearchWord Fuzzy match by `topicName`
+     * Get <p>Fuzzy matching topicName</p> 
+     * @return SearchWord <p>Fuzzy matching topicName</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set Fuzzy match by `topicName`
-     * @param SearchWord Fuzzy match by `topicName`
+     * Set <p>Fuzzy matching topicName</p>
+     * @param SearchWord <p>Fuzzy matching topicName</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get Offset position of this query. Default value: 0 
-     * @return Offset Offset position of this query. Default value: 0
+     * Get <p>Offset position of this query, defaults to 0</p> 
+     * @return Offset <p>Offset position of this query, defaults to 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset position of this query. Default value: 0
-     * @param Offset Offset position of this query. Default value: 0
+     * Set <p>Offset position of this query, defaults to 0</p>
+     * @param Offset <p>Offset position of this query, defaults to 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50 
-     * @return Limit Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50
+     * Get <p>Maximum number of returned results this time. Default value: 50. Maximum value: 50.</p> 
+     * @return Limit <p>Maximum number of returned results this time. Default value: 50. Maximum value: 50.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50
-     * @param Limit Maximum number of results to be returned in this request. Default value: 50. Maximum value: 50
+     * Set <p>Maximum number of returned results this time. Default value: 50. Maximum value: 50.</p>
+     * @param Limit <p>Maximum number of returned results this time. Default value: 50. Maximum value: 50.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

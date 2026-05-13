@@ -31,7 +31,7 @@ public class DiskConfig extends AbstractModel {
     private Boolean Available;
 
     /**
-    * Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+    * Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
     */
     @SerializedName("DiskChargeType")
     @Expose
@@ -53,15 +53,20 @@ Note: This field may return null, indicating that no valid value was found.
     private String InstanceFamily;
 
     /**
-    * Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+    * Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
+    * Specifies the minimum step size for disk size change in GiB.
     */
     @SerializedName("StepSize")
     @Expose
@@ -84,29 +89,28 @@ Note: This field may return null, indicating that no valid value was found.
     private String DeviceClass;
 
     /**
-    * Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+    * Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
     */
     @SerializedName("DiskUsage")
     @Expose
     private String DiskUsage;
 
     /**
-    * The minimum configurable cloud disk size (in GB).
+    * Specifies the minimum configurable cloud disk size in GiB.
     */
     @SerializedName("MinDiskSize")
     @Expose
     private Long MinDiskSize;
 
     /**
-    * The maximum configurable cloud disk size (in GB).
+    * Specifies the maximum configurable cloud disk size in GiB.
     */
     @SerializedName("MaxDiskSize")
     @Expose
     private Long MaxDiskSize;
 
     /**
-    * Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Price of a prepaid or postpaid cloud disk.
     */
     @SerializedName("Price")
     @Expose
@@ -129,16 +133,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go. 
-     * @return DiskChargeType Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+     * Get Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>. 
+     * @return DiskChargeType Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
      */
     public String getDiskChargeType() {
         return this.DiskChargeType;
     }
 
     /**
-     * Set Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
-     * @param DiskChargeType Billing method. Value range: <br><li>PREPAID: Prepaid, that is, monthly subscription<br><li>POSTPAID_BY_HOUR: Postpaid, that is, pay as you go.
+     * Set Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
+     * @param DiskChargeType Payment mode. valid values: <br><li>PREPAID: PREPAID, i.e. monthly subscription</li><br><li>POSTPAID_BY_HOUR: POSTPAID, i.e. pay-as-you-go.</li>.
      */
     public void setDiskChargeType(String DiskChargeType) {
         this.DiskChargeType = DiskChargeType;
@@ -181,36 +185,56 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk. 
-     * @return DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+     * Get Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs. 
+     * @return DiskType Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
-     * @param DiskType Type of cloud disk medium. Value range: <br><li>CLOUD_BASIC: Ordinary cloud disk <br><li>CLOUD_PREMIUM: Premium cloud storage <br><li>CLOUD_SSD: SSD cloud disk.
+     * Set Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
+     * @param DiskType Cloud disk media type. valid values: <br>.
+CLOUD_BASIC: specifies the BASIC CLOUD disk.
+CLOUD_PREMIUM: indicates high-performance CLOUD block storage.
+CLOUD_BSSD: indicates a universal type SSD CLOUD disk.
+CLOUD_SSD: indicates SSD CLOUD disk.
+CLOUD_HSSD: indicates the enhanced SSD CLOUD disk.
+CLOUD_TSSD: indicates ultra-fast ssd cbs.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained. 
-     * @return StepSize Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
+     * Get Specifies the minimum step size for disk size change in GiB. 
+     * @return StepSize Specifies the minimum step size for disk size change in GiB.
      */
     public Long getStepSize() {
         return this.StepSize;
     }
 
     /**
-     * Set Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
-     * @param StepSize Minimum increment of cloud disk size adjustment in GB.
-Note: This field might return null, indicating that no valid values can be obtained.
+     * Set Specifies the minimum step size for disk size change in GiB.
+     * @param StepSize Specifies the minimum step size for disk size change in GiB.
      */
     public void setStepSize(Long StepSize) {
         this.StepSize = StepSize;
@@ -257,68 +281,64 @@ Note: This field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk. 
-     * @return DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+     * Get Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>. 
+     * @return DiskUsage Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
      */
     public String getDiskUsage() {
         return this.DiskUsage;
     }
 
     /**
-     * Set Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
-     * @param DiskUsage Cloud disk type. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
+     * Set Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
+     * @param DiskUsage Cloud DISK type. valid values:<br><li>SYSTEM_DISK: SYSTEM DISK</li><br><li>DATA_DISK: DATA DISK.</li>.
      */
     public void setDiskUsage(String DiskUsage) {
         this.DiskUsage = DiskUsage;
     }
 
     /**
-     * Get The minimum configurable cloud disk size (in GB). 
-     * @return MinDiskSize The minimum configurable cloud disk size (in GB).
+     * Get Specifies the minimum configurable cloud disk size in GiB. 
+     * @return MinDiskSize Specifies the minimum configurable cloud disk size in GiB.
      */
     public Long getMinDiskSize() {
         return this.MinDiskSize;
     }
 
     /**
-     * Set The minimum configurable cloud disk size (in GB).
-     * @param MinDiskSize The minimum configurable cloud disk size (in GB).
+     * Set Specifies the minimum configurable cloud disk size in GiB.
+     * @param MinDiskSize Specifies the minimum configurable cloud disk size in GiB.
      */
     public void setMinDiskSize(Long MinDiskSize) {
         this.MinDiskSize = MinDiskSize;
     }
 
     /**
-     * Get The maximum configurable cloud disk size (in GB). 
-     * @return MaxDiskSize The maximum configurable cloud disk size (in GB).
+     * Get Specifies the maximum configurable cloud disk size in GiB. 
+     * @return MaxDiskSize Specifies the maximum configurable cloud disk size in GiB.
      */
     public Long getMaxDiskSize() {
         return this.MaxDiskSize;
     }
 
     /**
-     * Set The maximum configurable cloud disk size (in GB).
-     * @param MaxDiskSize The maximum configurable cloud disk size (in GB).
+     * Set Specifies the maximum configurable cloud disk size in GiB.
+     * @param MaxDiskSize Specifies the maximum configurable cloud disk size in GiB.
      */
     public void setMaxDiskSize(Long MaxDiskSize) {
         this.MaxDiskSize = MaxDiskSize;
     }
 
     /**
-     * Get Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Price Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Price of a prepaid or postpaid cloud disk. 
+     * @return Price Price of a prepaid or postpaid cloud disk.
      */
     public Price getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Price Price of a monthly subscribed or pay-as-you-go cloud disk.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Price of a prepaid or postpaid cloud disk.
+     * @param Price Price of a prepaid or postpaid cloud disk.
      */
     public void setPrice(Price Price) {
         this.Price = Price;

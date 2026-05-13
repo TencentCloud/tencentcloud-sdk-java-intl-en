@@ -143,6 +143,35 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
     private Long MaxRingTimeoutSecond;
 
     /**
+    * <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+    */
+    @SerializedName("RetryHangupTypes")
+    @Expose
+    private String [] RetryHangupTypes;
+
+    /**
+    * Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+    */
+    @SerializedName("RetryTags")
+    @Expose
+    private RetryTagItem [] RetryTags;
+
+    /**
+    * <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+    */
+    @SerializedName("AvailableWorkTimeConfig")
+    @Expose
+    private AvailableTimeConfig [] AvailableWorkTimeConfig;
+
+    /**
+    * <p>Trigger Strategy</p>
+    */
+    @SerializedName("TriggerStrategy")
+    @Expose
+    private TriggerStrategyItem [] TriggerStrategy;
+
+    /**
      * Get Application id (required) can be found at https://console.cloud.tencent.com/ccc. 
      * @return SdkAppId Application id (required) can be found at https://console.cloud.tencent.com/ccc.
      */
@@ -414,6 +443,74 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.MaxRingTimeoutSecond = MaxRingTimeoutSecond;
     }
 
+    /**
+     * Get <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p> 
+     * @return RetryHangupTypes <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+     */
+    public String [] getRetryHangupTypes() {
+        return this.RetryHangupTypes;
+    }
+
+    /**
+     * Set <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+     * @param RetryHangupTypes <p>Retry according to the specified hang-up reasons (optional hang-up status codes: 202, 203, 204, 205, 206, 207, 208, 210, 212, 213, 215, 216, 217, 218, 219, 221, 222, 234). This only takes effect for tasks using AIAgentID. For the description of hang-up status codes</p>
+<p><a href="https://cloud.tencent.com/document/product/679/123938">see details</a></p>
+     */
+    public void setRetryHangupTypes(String [] RetryHangupTypes) {
+        this.RetryHangupTypes = RetryHangupTypes;
+    }
+
+    /**
+     * Get Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration. 
+     * @return RetryTags Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+     */
+    public RetryTagItem [] getRetryTags() {
+        return this.RetryTags;
+    }
+
+    /**
+     * Set Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+     * @param RetryTags Retry based on the specified post-dialogue tag. It only takes effect for AIAgentID tasks that use the dialogue model. Tag information can be queried in the agent configuration.
+     */
+    public void setRetryTags(RetryTagItem [] RetryTags) {
+        this.RetryTags = RetryTags;
+    }
+
+    /**
+     * Get <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p> 
+     * @return AvailableWorkTimeConfig <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+     */
+    public AvailableTimeConfig [] getAvailableWorkTimeConfig() {
+        return this.AvailableWorkTimeConfig;
+    }
+
+    /**
+     * Set <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+     * @param AvailableWorkTimeConfig <p>Effective working time configuration. It is recommended to use this field instead of the AvailableTime field. If both are used simultaneously, AvailableTime takes priority.</p>
+     */
+    public void setAvailableWorkTimeConfig(AvailableTimeConfig [] AvailableWorkTimeConfig) {
+        this.AvailableWorkTimeConfig = AvailableWorkTimeConfig;
+    }
+
+    /**
+     * Get <p>Trigger Strategy</p> 
+     * @return TriggerStrategy <p>Trigger Strategy</p>
+     */
+    public TriggerStrategyItem [] getTriggerStrategy() {
+        return this.TriggerStrategy;
+    }
+
+    /**
+     * Set <p>Trigger Strategy</p>
+     * @param TriggerStrategy <p>Trigger Strategy</p>
+     */
+    public void setTriggerStrategy(TriggerStrategyItem [] TriggerStrategy) {
+        this.TriggerStrategy = TriggerStrategy;
+    }
+
     public CreateAutoCalloutTaskRequest() {
     }
 
@@ -488,6 +585,30 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         if (source.MaxRingTimeoutSecond != null) {
             this.MaxRingTimeoutSecond = new Long(source.MaxRingTimeoutSecond);
         }
+        if (source.RetryHangupTypes != null) {
+            this.RetryHangupTypes = new String[source.RetryHangupTypes.length];
+            for (int i = 0; i < source.RetryHangupTypes.length; i++) {
+                this.RetryHangupTypes[i] = new String(source.RetryHangupTypes[i]);
+            }
+        }
+        if (source.RetryTags != null) {
+            this.RetryTags = new RetryTagItem[source.RetryTags.length];
+            for (int i = 0; i < source.RetryTags.length; i++) {
+                this.RetryTags[i] = new RetryTagItem(source.RetryTags[i]);
+            }
+        }
+        if (source.AvailableWorkTimeConfig != null) {
+            this.AvailableWorkTimeConfig = new AvailableTimeConfig[source.AvailableWorkTimeConfig.length];
+            for (int i = 0; i < source.AvailableWorkTimeConfig.length; i++) {
+                this.AvailableWorkTimeConfig[i] = new AvailableTimeConfig(source.AvailableWorkTimeConfig[i]);
+            }
+        }
+        if (source.TriggerStrategy != null) {
+            this.TriggerStrategy = new TriggerStrategyItem[source.TriggerStrategy.length];
+            for (int i = 0; i < source.TriggerStrategy.length; i++) {
+                this.TriggerStrategy[i] = new TriggerStrategyItem(source.TriggerStrategy[i]);
+            }
+        }
     }
 
 
@@ -512,6 +633,10 @@ public class CreateAutoCalloutTaskRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "AIAgentId", this.AIAgentId);
         this.setParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
         this.setParamSimple(map, prefix + "MaxRingTimeoutSecond", this.MaxRingTimeoutSecond);
+        this.setParamArraySimple(map, prefix + "RetryHangupTypes.", this.RetryHangupTypes);
+        this.setParamArrayObj(map, prefix + "RetryTags.", this.RetryTags);
+        this.setParamArrayObj(map, prefix + "AvailableWorkTimeConfig.", this.AvailableWorkTimeConfig);
+        this.setParamArrayObj(map, prefix + "TriggerStrategy.", this.TriggerStrategy);
 
     }
 }

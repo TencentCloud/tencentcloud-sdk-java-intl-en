@@ -39,6 +39,9 @@ public enum MqttErrorCode {
      /* The resource is occupied. */
      RESOURCEINUSE("ResourceInUse"),
      
+     /* The resource does not exist. */
+     RESOURCENOTFOUND("ResourceNotFound"),
+     
      /* Authorization policy not found. */
      RESOURCENOTFOUND_AUTHORIZATIONPOLICY("ResourceNotFound.AuthorizationPolicy"),
      

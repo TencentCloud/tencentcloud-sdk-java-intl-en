@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeTypeInstancesRequest extends AbstractModel {
 
     /**
-    * (Filter condition) filter by instance ID.
+    * <p>(Filtering Conditions) Filter by instance ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * (Filter condition) filter by instance name. fuzzy query is supported.
+    * <p>(Filtering Conditions) Filter by instance name. Fuzzy query is supported.</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * Instance status (filter condition). valid values: 0: creating, 1: running, 2: deleting. default return: all.
+    * <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * Offset. default value: 0.
+    * <p>Offset, which is 0 by default</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned results. default: 10. maximum value: 100.
+    * <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Matches the Tag key.
+    * <p>Match the tag key.</p>
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-     * Get (Filter condition) filter by instance ID. 
-     * @return InstanceId (Filter condition) filter by instance ID.
+     * Get <p>(Filtering Conditions) Filter by instance ID</p> 
+     * @return InstanceId <p>(Filtering Conditions) Filter by instance ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set (Filter condition) filter by instance ID.
-     * @param InstanceId (Filter condition) filter by instance ID.
+     * Set <p>(Filtering Conditions) Filter by instance ID</p>
+     * @param InstanceId <p>(Filtering Conditions) Filter by instance ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get (Filter condition) filter by instance name. fuzzy query is supported. 
-     * @return SearchWord (Filter condition) filter by instance name. fuzzy query is supported.
+     * Get <p>(Filtering Conditions) Filter by instance name. Fuzzy query is supported.</p> 
+     * @return SearchWord <p>(Filtering Conditions) Filter by instance name. Fuzzy query is supported.</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set (Filter condition) filter by instance name. fuzzy query is supported.
-     * @param SearchWord (Filter condition) filter by instance name. fuzzy query is supported.
+     * Set <p>(Filtering Conditions) Filter by instance name. Fuzzy query is supported.</p>
+     * @param SearchWord <p>(Filtering Conditions) Filter by instance name. Fuzzy query is supported.</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get Instance status (filter condition). valid values: 0: creating, 1: running, 2: deleting. default return: all. 
-     * @return Status Instance status (filter condition). valid values: 0: creating, 1: running, 2: deleting. default return: all.
+     * Get <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul> 
+     * @return Status <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status (filter condition). valid values: 0: creating, 1: running, 2: deleting. default return: all.
-     * @param Status Instance status (filter condition). valid values: 0: creating, 1: running, 2: deleting. default return: all.
+     * Set <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+     * @param Status <p>(Filtering Conditions) Instance status. Return all by default if left blank.</p><p>Enumeration values:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Offset. default value: 0. 
-     * @return Offset Offset. default value: 0.
+     * Get <p>Offset, which is 0 by default</p> 
+     * @return Offset <p>Offset, which is 0 by default</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. default value: 0.
-     * @param Offset Offset. default value: 0.
+     * Set <p>Offset, which is 0 by default</p>
+     * @param Offset <p>Offset, which is 0 by default</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned results. default: 10. maximum value: 100. 
-     * @return Limit Number of returned results. default: 10. maximum value: 100.
+     * Get <p>Number of returned results. Default value: 10. Maximum value: 100.</p> 
+     * @return Limit <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. default: 10. maximum value: 100.
-     * @param Limit Number of returned results. default: 10. maximum value: 100.
+     * Set <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
+     * @param Limit <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Matches the Tag key. 
-     * @return TagKey Matches the Tag key.
+     * Get <p>Match the tag key.</p> 
+     * @return TagKey <p>Match the tag key.</p>
      */
     public String getTagKey() {
         return this.TagKey;
     }
 
     /**
-     * Set Matches the Tag key.
-     * @param TagKey Matches the Tag key.
+     * Set <p>Match the tag key.</p>
+     * @param TagKey <p>Match the tag key.</p>
      */
     public void setTagKey(String TagKey) {
         this.TagKey = TagKey;

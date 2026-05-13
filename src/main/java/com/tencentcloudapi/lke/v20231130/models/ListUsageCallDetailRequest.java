@@ -31,20 +31,6 @@ public class ListUsageCallDetailRequest extends AbstractModel {
     private String ModelName;
 
     /**
-    * Start time.
-    */
-    @SerializedName("StartTime")
-    @Expose
-    private String StartTime;
-
-    /**
-    * End time.
-    */
-    @SerializedName("EndTime")
-    @Expose
-    private String EndTime;
-
-    /**
     * Page number.
     */
     @SerializedName("PageNumber")
@@ -57,6 +43,20 @@ public class ListUsageCallDetailRequest extends AbstractModel {
     @SerializedName("PageSize")
     @Expose
     private Long PageSize;
+
+    /**
+    * Start time.
+    */
+    @SerializedName("StartTime")
+    @Expose
+    private String StartTime;
+
+    /**
+    * End time.
+    */
+    @SerializedName("EndTime")
+    @Expose
+    private String EndTime;
 
     /**
     * Uin list.
@@ -87,6 +87,41 @@ public class ListUsageCallDetailRequest extends AbstractModel {
     private String [] SubScenes;
 
     /**
+    * Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+    */
+    @SerializedName("AppType")
+    @Expose
+    private String AppType;
+
+    /**
+    * Custom tag corresponding to bill details
+    */
+    @SerializedName("BillingTag")
+    @Expose
+    private String BillingTag;
+
+    /**
+    * Space ID
+    */
+    @SerializedName("SpaceId")
+    @Expose
+    private String SpaceId;
+
+    /**
+    * Start timestamp, unit: seconds
+    */
+    @SerializedName("StatStartTime")
+    @Expose
+    private Long StatStartTime;
+
+    /**
+    * Start timestamp, unit: seconds
+    */
+    @SerializedName("StatEndTime")
+    @Expose
+    private Long StatEndTime;
+
+    /**
      * Get Model identifier. 
      * @return ModelName Model identifier.
      */
@@ -100,38 +135,6 @@ public class ListUsageCallDetailRequest extends AbstractModel {
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
-    }
-
-    /**
-     * Get Start time. 
-     * @return StartTime Start time.
-     */
-    public String getStartTime() {
-        return this.StartTime;
-    }
-
-    /**
-     * Set Start time.
-     * @param StartTime Start time.
-     */
-    public void setStartTime(String StartTime) {
-        this.StartTime = StartTime;
-    }
-
-    /**
-     * Get End time. 
-     * @return EndTime End time.
-     */
-    public String getEndTime() {
-        return this.EndTime;
-    }
-
-    /**
-     * Set End time.
-     * @param EndTime End time.
-     */
-    public void setEndTime(String EndTime) {
-        this.EndTime = EndTime;
     }
 
     /**
@@ -164,6 +167,38 @@ public class ListUsageCallDetailRequest extends AbstractModel {
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
+    }
+
+    /**
+     * Get Start time. 
+     * @return StartTime Start time.
+     */
+    public String getStartTime() {
+        return this.StartTime;
+    }
+
+    /**
+     * Set Start time.
+     * @param StartTime Start time.
+     */
+    public void setStartTime(String StartTime) {
+        this.StartTime = StartTime;
+    }
+
+    /**
+     * Get End time. 
+     * @return EndTime End time.
+     */
+    public String getEndTime() {
+        return this.EndTime;
+    }
+
+    /**
+     * Set End time.
+     * @param EndTime End time.
+     */
+    public void setEndTime(String EndTime) {
+        this.EndTime = EndTime;
     }
 
     /**
@@ -230,6 +265,86 @@ public class ListUsageCallDetailRequest extends AbstractModel {
         this.SubScenes = SubScenes;
     }
 
+    /**
+     * Get Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base) 
+     * @return AppType Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+     */
+    public String getAppType() {
+        return this.AppType;
+    }
+
+    /**
+     * Set Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+     * @param AppType Application Type (knowledge_qa: Knowledge Q&A Application Management, shared_knowledge: Shared Knowledge Base)
+     */
+    public void setAppType(String AppType) {
+        this.AppType = AppType;
+    }
+
+    /**
+     * Get Custom tag corresponding to bill details 
+     * @return BillingTag Custom tag corresponding to bill details
+     */
+    public String getBillingTag() {
+        return this.BillingTag;
+    }
+
+    /**
+     * Set Custom tag corresponding to bill details
+     * @param BillingTag Custom tag corresponding to bill details
+     */
+    public void setBillingTag(String BillingTag) {
+        this.BillingTag = BillingTag;
+    }
+
+    /**
+     * Get Space ID 
+     * @return SpaceId Space ID
+     */
+    public String getSpaceId() {
+        return this.SpaceId;
+    }
+
+    /**
+     * Set Space ID
+     * @param SpaceId Space ID
+     */
+    public void setSpaceId(String SpaceId) {
+        this.SpaceId = SpaceId;
+    }
+
+    /**
+     * Get Start timestamp, unit: seconds 
+     * @return StatStartTime Start timestamp, unit: seconds
+     */
+    public Long getStatStartTime() {
+        return this.StatStartTime;
+    }
+
+    /**
+     * Set Start timestamp, unit: seconds
+     * @param StatStartTime Start timestamp, unit: seconds
+     */
+    public void setStatStartTime(Long StatStartTime) {
+        this.StatStartTime = StatStartTime;
+    }
+
+    /**
+     * Get Start timestamp, unit: seconds 
+     * @return StatEndTime Start timestamp, unit: seconds
+     */
+    public Long getStatEndTime() {
+        return this.StatEndTime;
+    }
+
+    /**
+     * Set Start timestamp, unit: seconds
+     * @param StatEndTime Start timestamp, unit: seconds
+     */
+    public void setStatEndTime(Long StatEndTime) {
+        this.StatEndTime = StatEndTime;
+    }
+
     public ListUsageCallDetailRequest() {
     }
 
@@ -241,17 +356,17 @@ public class ListUsageCallDetailRequest extends AbstractModel {
         if (source.ModelName != null) {
             this.ModelName = new String(source.ModelName);
         }
-        if (source.StartTime != null) {
-            this.StartTime = new String(source.StartTime);
-        }
-        if (source.EndTime != null) {
-            this.EndTime = new String(source.EndTime);
-        }
         if (source.PageNumber != null) {
             this.PageNumber = new Long(source.PageNumber);
         }
         if (source.PageSize != null) {
             this.PageSize = new Long(source.PageSize);
+        }
+        if (source.StartTime != null) {
+            this.StartTime = new String(source.StartTime);
+        }
+        if (source.EndTime != null) {
+            this.EndTime = new String(source.EndTime);
         }
         if (source.UinAccount != null) {
             this.UinAccount = new String[source.UinAccount.length];
@@ -274,6 +389,21 @@ public class ListUsageCallDetailRequest extends AbstractModel {
                 this.SubScenes[i] = new String(source.SubScenes[i]);
             }
         }
+        if (source.AppType != null) {
+            this.AppType = new String(source.AppType);
+        }
+        if (source.BillingTag != null) {
+            this.BillingTag = new String(source.BillingTag);
+        }
+        if (source.SpaceId != null) {
+            this.SpaceId = new String(source.SpaceId);
+        }
+        if (source.StatStartTime != null) {
+            this.StatStartTime = new Long(source.StatStartTime);
+        }
+        if (source.StatEndTime != null) {
+            this.StatEndTime = new Long(source.StatEndTime);
+        }
     }
 
 
@@ -282,14 +412,19 @@ public class ListUsageCallDetailRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ModelName", this.ModelName);
-        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
-        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamSimple(map, prefix + "PageNumber", this.PageNumber);
         this.setParamSimple(map, prefix + "PageSize", this.PageSize);
+        this.setParamSimple(map, prefix + "StartTime", this.StartTime);
+        this.setParamSimple(map, prefix + "EndTime", this.EndTime);
         this.setParamArraySimple(map, prefix + "UinAccount.", this.UinAccount);
         this.setParamArraySimple(map, prefix + "AppBizIds.", this.AppBizIds);
         this.setParamSimple(map, prefix + "CallType", this.CallType);
         this.setParamArraySimple(map, prefix + "SubScenes.", this.SubScenes);
+        this.setParamSimple(map, prefix + "AppType", this.AppType);
+        this.setParamSimple(map, prefix + "BillingTag", this.BillingTag);
+        this.setParamSimple(map, prefix + "SpaceId", this.SpaceId);
+        this.setParamSimple(map, prefix + "StatStartTime", this.StatStartTime);
+        this.setParamSimple(map, prefix + "StatEndTime", this.StatEndTime);
 
     }
 }

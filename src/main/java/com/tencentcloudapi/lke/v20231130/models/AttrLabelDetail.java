@@ -98,7 +98,9 @@ public class AttrLabelDetail extends AbstractModel {
     /**
      * Get Label identification. 
      * @return AttrKey Label identification.
+     * @deprecated
      */
+    @Deprecated
     public String getAttrKey() {
         return this.AttrKey;
     }
@@ -106,7 +108,9 @@ public class AttrLabelDetail extends AbstractModel {
     /**
      * Set Label identification.
      * @param AttrKey Label identification.
+     * @deprecated
      */
+    @Deprecated
     public void setAttrKey(String AttrKey) {
         this.AttrKey = AttrKey;
     }

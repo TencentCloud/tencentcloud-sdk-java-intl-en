@@ -24,72 +24,95 @@ import java.util.HashMap;
 public class DigitalHumanConfig extends AbstractModel {
 
     /**
-    * Digital Human Asset key
+    * 
     */
     @SerializedName("AssetKey")
     @Expose
     private String AssetKey;
 
     /**
-    * Digital Human Name
+    * 
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Image
+    * 
     */
     @SerializedName("Avatar")
     @Expose
     private String Avatar;
 
     /**
-     * Get Digital Human Asset key 
-     * @return AssetKey Digital Human Asset key
+    * 
+    */
+    @SerializedName("PreviewUrl")
+    @Expose
+    private String PreviewUrl;
+
+    /**
+     * Get  
+     * @return AssetKey 
      */
     public String getAssetKey() {
         return this.AssetKey;
     }
 
     /**
-     * Set Digital Human Asset key
-     * @param AssetKey Digital Human Asset key
+     * Set 
+     * @param AssetKey 
      */
     public void setAssetKey(String AssetKey) {
         this.AssetKey = AssetKey;
     }
 
     /**
-     * Get Digital Human Name 
-     * @return Name Digital Human Name
+     * Get  
+     * @return Name 
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Digital Human Name
-     * @param Name Digital Human Name
+     * Set 
+     * @param Name 
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Image 
-     * @return Avatar Image
+     * Get  
+     * @return Avatar 
      */
     public String getAvatar() {
         return this.Avatar;
     }
 
     /**
-     * Set Image
-     * @param Avatar Image
+     * Set 
+     * @param Avatar 
      */
     public void setAvatar(String Avatar) {
         this.Avatar = Avatar;
+    }
+
+    /**
+     * Get  
+     * @return PreviewUrl 
+     */
+    public String getPreviewUrl() {
+        return this.PreviewUrl;
+    }
+
+    /**
+     * Set 
+     * @param PreviewUrl 
+     */
+    public void setPreviewUrl(String PreviewUrl) {
+        this.PreviewUrl = PreviewUrl;
     }
 
     public DigitalHumanConfig() {
@@ -109,6 +132,9 @@ public class DigitalHumanConfig extends AbstractModel {
         if (source.Avatar != null) {
             this.Avatar = new String(source.Avatar);
         }
+        if (source.PreviewUrl != null) {
+            this.PreviewUrl = new String(source.PreviewUrl);
+        }
     }
 
 
@@ -119,6 +145,7 @@ public class DigitalHumanConfig extends AbstractModel {
         this.setParamSimple(map, prefix + "AssetKey", this.AssetKey);
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Avatar", this.Avatar);
+        this.setParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
 
     }
 }

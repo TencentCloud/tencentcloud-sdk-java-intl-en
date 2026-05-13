@@ -31,7 +31,7 @@ public class InquireCkafkaPriceRequest extends AbstractModel {
     private String InstanceType;
 
     /**
-    * Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
+    * Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
     */
     @SerializedName("InstanceChargeParam")
     @Expose
@@ -135,16 +135,16 @@ Specifies the specifications and limits that can be viewed through the following
     }
 
     /**
-     * Get Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default. 
-     * @return InstanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
+     * Get Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default. 
+     * @return InstanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
      */
     public InstanceChargeParam getInstanceChargeParam() {
         return this.InstanceChargeParam;
     }
 
     /**
-     * Set Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
-     * @param InstanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the monthly subscription mode will be displayed by default.
+     * Set Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
+     * @param InstanceChargeParam Billing mode for instance purchase/renewal. If this parameter is left empty when you purchase an instance, the fees for one month under the yearly/monthly subscription mode will be displayed by default.
      */
     public void setInstanceChargeParam(InstanceChargeParam InstanceChargeParam) {
         this.InstanceChargeParam = InstanceChargeParam;

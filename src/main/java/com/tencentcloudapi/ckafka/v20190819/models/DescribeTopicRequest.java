@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeTopicRequest extends AbstractModel {
 
     /**
-    * The ckafka cluster instance Id.
+    * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Filter by `topicName`. Fuzzy search is supported
+    * <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * Offset. If this parameter is left empty, 0 will be used by default
+    * <p>Offset, which is 0 by default</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
+    * <p>Number of returned results. Default value: 20. Maximum value: 50.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Name of the preset ACL rule.
+    * <p>Acl preset policy name</p>
     */
     @SerializedName("AclRuleName")
     @Expose
     private String AclRuleName;
 
     /**
-     * Get The ckafka cluster instance Id. 
-     * @return InstanceId The ckafka cluster instance Id.
+     * Get <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id.
-     * @param InstanceId The ckafka cluster instance Id.
+     * Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Filter by `topicName`. Fuzzy search is supported 
-     * @return SearchWord Filter by `topicName`. Fuzzy search is supported
+     * Get <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p> 
+     * @return SearchWord <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set Filter by `topicName`. Fuzzy search is supported
-     * @param SearchWord Filter by `topicName`. Fuzzy search is supported
+     * Set <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
+     * @param SearchWord <p>(Filtering Conditions) Filter by topicName. Fuzzy query is supported.</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get Offset. If this parameter is left empty, 0 will be used by default 
-     * @return Offset Offset. If this parameter is left empty, 0 will be used by default
+     * Get <p>Offset, which is 0 by default</p> 
+     * @return Offset <p>Offset, which is 0 by default</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. If this parameter is left empty, 0 will be used by default
-     * @param Offset Offset. If this parameter is left empty, 0 will be used by default
+     * Set <p>Offset, which is 0 by default</p>
+     * @param Offset <p>Offset, which is 0 by default</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50. 
-     * @return Limit The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
+     * Get <p>Number of returned results. Default value: 20. Maximum value: 50.</p> 
+     * @return Limit <p>Number of returned results. Default value: 20. Maximum value: 50.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
-     * @param Limit The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
+     * Set <p>Number of returned results. Default value: 20. Maximum value: 50.</p>
+     * @param Limit <p>Number of returned results. Default value: 20. Maximum value: 50.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Name of the preset ACL rule. 
-     * @return AclRuleName Name of the preset ACL rule.
+     * Get <p>Acl preset policy name</p> 
+     * @return AclRuleName <p>Acl preset policy name</p>
      */
     public String getAclRuleName() {
         return this.AclRuleName;
     }
 
     /**
-     * Set Name of the preset ACL rule.
-     * @param AclRuleName Name of the preset ACL rule.
+     * Set <p>Acl preset policy name</p>
+     * @param AclRuleName <p>Acl preset policy name</p>
      */
     public void setAclRuleName(String AclRuleName) {
         this.AclRuleName = AclRuleName;

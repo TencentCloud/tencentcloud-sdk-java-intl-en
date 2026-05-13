@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyAclRuleResponse extends AbstractModel {
 
     /**
-    * Unique key of a rule
+    * <p>Unique representation Key of the rule</p>
     */
     @SerializedName("Result")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyAclRuleResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Unique key of a rule 
-     * @return Result Unique key of a rule
+     * Get <p>Unique representation Key of the rule</p> 
+     * @return Result <p>Unique representation Key of the rule</p>
      */
     public Long getResult() {
         return this.Result;
     }
 
     /**
-     * Set Unique key of a rule
-     * @param Result Unique key of a rule
+     * Set <p>Unique representation Key of the rule</p>
+     * @param Result <p>Unique representation Key of the rule</p>
      */
     public void setResult(Long Result) {
         this.Result = Result;

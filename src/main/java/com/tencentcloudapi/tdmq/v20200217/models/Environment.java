@@ -97,6 +97,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean AutoSubscriptionCreation;
 
     /**
+    * Offline subscription automatic expiration cleanup time
+    */
+    @SerializedName("SubscriptionExpirationTime")
+    @Expose
+    private Long SubscriptionExpirationTime;
+
+    /**
+    * Offline subscription automatic expiration cleanup time switch
+    */
+    @SerializedName("SubscriptionExpirationTimeEnable")
+    @Expose
+    private Boolean SubscriptionExpirationTimeEnable;
+
+    /**
+    * Namespace tag
+    */
+    @SerializedName("Tags")
+    @Expose
+    private Tag [] Tags;
+
+    /**
      * Get Namespace name. 
      * @return EnvironmentId Namespace name.
      */
@@ -268,6 +289,54 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.AutoSubscriptionCreation = AutoSubscriptionCreation;
     }
 
+    /**
+     * Get Offline subscription automatic expiration cleanup time 
+     * @return SubscriptionExpirationTime Offline subscription automatic expiration cleanup time
+     */
+    public Long getSubscriptionExpirationTime() {
+        return this.SubscriptionExpirationTime;
+    }
+
+    /**
+     * Set Offline subscription automatic expiration cleanup time
+     * @param SubscriptionExpirationTime Offline subscription automatic expiration cleanup time
+     */
+    public void setSubscriptionExpirationTime(Long SubscriptionExpirationTime) {
+        this.SubscriptionExpirationTime = SubscriptionExpirationTime;
+    }
+
+    /**
+     * Get Offline subscription automatic expiration cleanup time switch 
+     * @return SubscriptionExpirationTimeEnable Offline subscription automatic expiration cleanup time switch
+     */
+    public Boolean getSubscriptionExpirationTimeEnable() {
+        return this.SubscriptionExpirationTimeEnable;
+    }
+
+    /**
+     * Set Offline subscription automatic expiration cleanup time switch
+     * @param SubscriptionExpirationTimeEnable Offline subscription automatic expiration cleanup time switch
+     */
+    public void setSubscriptionExpirationTimeEnable(Boolean SubscriptionExpirationTimeEnable) {
+        this.SubscriptionExpirationTimeEnable = SubscriptionExpirationTimeEnable;
+    }
+
+    /**
+     * Get Namespace tag 
+     * @return Tags Namespace tag
+     */
+    public Tag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set Namespace tag
+     * @param Tags Namespace tag
+     */
+    public void setTags(Tag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public Environment() {
     }
 
@@ -306,6 +375,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AutoSubscriptionCreation != null) {
             this.AutoSubscriptionCreation = new Boolean(source.AutoSubscriptionCreation);
         }
+        if (source.SubscriptionExpirationTime != null) {
+            this.SubscriptionExpirationTime = new Long(source.SubscriptionExpirationTime);
+        }
+        if (source.SubscriptionExpirationTimeEnable != null) {
+            this.SubscriptionExpirationTimeEnable = new Boolean(source.SubscriptionExpirationTimeEnable);
+        }
+        if (source.Tags != null) {
+            this.Tags = new Tag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new Tag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -323,6 +404,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "TopicNum", this.TopicNum);
         this.setParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
         this.setParamSimple(map, prefix + "AutoSubscriptionCreation", this.AutoSubscriptionCreation);
+        this.setParamSimple(map, prefix + "SubscriptionExpirationTime", this.SubscriptionExpirationTime);
+        this.setParamSimple(map, prefix + "SubscriptionExpirationTimeEnable", this.SubscriptionExpirationTimeEnable);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

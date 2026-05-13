@@ -24,62 +24,58 @@ import java.util.HashMap;
 public class Route extends AbstractModel {
 
     /**
-    * Instance connection method
-0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
+    * <p>Instance access method 0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition) 1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at data initiation, only supported by community edition) 2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition) 3: SASL_SSL (SSL encrypted communication, login authentication with SASL is performed at data initiation, only supported by community edition)</p>
     */
     @SerializedName("AccessType")
     @Expose
     private Long AccessType;
 
     /**
-    * Route ID
+    * <p>Route Id</p>
     */
     @SerializedName("RouteId")
     @Expose
     private Long RouteId;
 
     /**
-    * Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
+    * <p>Routing network type (3: vpc routing; 7: Internal support routing; 1: Public network route)</p>
     */
     @SerializedName("VipType")
     @Expose
     private Long VipType;
 
     /**
-    * Virtual IP list
+    * <p>Virtual IP list</p>
     */
     @SerializedName("VipList")
     @Expose
     private VipEntity [] VipList;
 
     /**
-    * Domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Domain name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Domain name port
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Domain name port</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DomainPort")
     @Expose
     private Long DomainPort;
 
     /**
-    * Timestamp.
+    * <p>Timestamp</p>
     */
     @SerializedName("DeleteTimestamp")
     @Expose
     private String DeleteTimestamp;
 
     /**
-    * Specifies the subnet Id.
+    * <p>Subnet Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Subnet")
@@ -87,14 +83,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Subnet;
 
     /**
-    * Virtual IP list (1:1 broker node).
+    * <p>Virtual IP list (1:1 broker node)</p>
     */
     @SerializedName("BrokerVipList")
     @Expose
     private VipEntity [] BrokerVipList;
 
     /**
-    * VPC Id. specifies the Id of the vpc.
+    * <p>VPC Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VpcId")
@@ -102,7 +98,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String VpcId;
 
     /**
-    * Remarks
+    * <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Note")
@@ -110,7 +106,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Note;
 
     /**
-    * Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+    * <p>Route status. 1: Creating, 2: Successfully created, 3: Creation failed, 4: Deleting, 6: Deletion failed</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
@@ -118,145 +114,129 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Status;
 
     /**
-     * Get Instance connection method
-0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition) 
-     * @return AccessType Instance connection method
-0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
+     * Get <p>Instance access method 0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition) 1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at data initiation, only supported by community edition) 2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition) 3: SASL_SSL (SSL encrypted communication, login authentication with SASL is performed at data initiation, only supported by community edition)</p> 
+     * @return AccessType <p>Instance access method 0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition) 1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at data initiation, only supported by community edition) 2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition) 3: SASL_SSL (SSL encrypted communication, login authentication with SASL is performed at data initiation, only supported by community edition)</p>
      */
     public Long getAccessType() {
         return this.AccessType;
     }
 
     /**
-     * Set Instance connection method
-0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
-     * @param AccessType Instance connection method
-0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
-1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
-2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
-3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
+     * Set <p>Instance access method 0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition) 1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at data initiation, only supported by community edition) 2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition) 3: SASL_SSL (SSL encrypted communication, login authentication with SASL is performed at data initiation, only supported by community edition)</p>
+     * @param AccessType <p>Instance access method 0: PLAINTEXT (plaintext mode, no user information included, supported by older versions and community edition) 1: SASL_PLAINTEXT (plaintext mode, however, login authentication with SASL is performed at data initiation, only supported by community edition) 2: SSL (SSL encrypted communication, no user information included, supported by older versions and community edition) 3: SASL_SSL (SSL encrypted communication, login authentication with SASL is performed at data initiation, only supported by community edition)</p>
      */
     public void setAccessType(Long AccessType) {
         this.AccessType = AccessType;
     }
 
     /**
-     * Get Route ID 
-     * @return RouteId Route ID
+     * Get <p>Route Id</p> 
+     * @return RouteId <p>Route Id</p>
      */
     public Long getRouteId() {
         return this.RouteId;
     }
 
     /**
-     * Set Route ID
-     * @param RouteId Route ID
+     * Set <p>Route Id</p>
+     * @param RouteId <p>Route Id</p>
      */
     public void setRouteId(Long RouteId) {
         this.RouteId = RouteId;
     }
 
     /**
-     * Get Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route). 
-     * @return VipType Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
+     * Get <p>Routing network type (3: vpc routing; 7: Internal support routing; 1: Public network route)</p> 
+     * @return VipType <p>Routing network type (3: vpc routing; 7: Internal support routing; 1: Public network route)</p>
      */
     public Long getVipType() {
         return this.VipType;
     }
 
     /**
-     * Set Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
-     * @param VipType Specifies the network type of the route (3: vpc routing; 7: internal support route; 1: public network route).
+     * Set <p>Routing network type (3: vpc routing; 7: Internal support routing; 1: Public network route)</p>
+     * @param VipType <p>Routing network type (3: vpc routing; 7: Internal support routing; 1: Public network route)</p>
      */
     public void setVipType(Long VipType) {
         this.VipType = VipType;
     }
 
     /**
-     * Get Virtual IP list 
-     * @return VipList Virtual IP list
+     * Get <p>Virtual IP list</p> 
+     * @return VipList <p>Virtual IP list</p>
      */
     public VipEntity [] getVipList() {
         return this.VipList;
     }
 
     /**
-     * Set Virtual IP list
-     * @param VipList Virtual IP list
+     * Set <p>Virtual IP list</p>
+     * @param VipList <p>Virtual IP list</p>
      */
     public void setVipList(VipEntity [] VipList) {
         this.VipList = VipList;
     }
 
     /**
-     * Get Domain name
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Domain Domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Domain name</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Domain <p>Domain name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Domain Domain name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Domain name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Domain <p>Domain name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Domain name port
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DomainPort Domain name port
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Domain name port</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DomainPort <p>Domain name port</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDomainPort() {
         return this.DomainPort;
     }
 
     /**
-     * Set Domain name port
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DomainPort Domain name port
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Domain name port</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DomainPort <p>Domain name port</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDomainPort(Long DomainPort) {
         this.DomainPort = DomainPort;
     }
 
     /**
-     * Get Timestamp. 
-     * @return DeleteTimestamp Timestamp.
+     * Get <p>Timestamp</p> 
+     * @return DeleteTimestamp <p>Timestamp</p>
      */
     public String getDeleteTimestamp() {
         return this.DeleteTimestamp;
     }
 
     /**
-     * Set Timestamp.
-     * @param DeleteTimestamp Timestamp.
+     * Set <p>Timestamp</p>
+     * @param DeleteTimestamp <p>Timestamp</p>
      */
     public void setDeleteTimestamp(String DeleteTimestamp) {
         this.DeleteTimestamp = DeleteTimestamp;
     }
 
     /**
-     * Get Specifies the subnet Id.
+     * Get <p>Subnet Id</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Subnet Specifies the subnet Id.
+     * @return Subnet <p>Subnet Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getSubnet() {
@@ -264,9 +244,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Specifies the subnet Id.
+     * Set <p>Subnet Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Subnet Specifies the subnet Id.
+     * @param Subnet <p>Subnet Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSubnet(String Subnet) {
@@ -274,25 +254,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Virtual IP list (1:1 broker node). 
-     * @return BrokerVipList Virtual IP list (1:1 broker node).
+     * Get <p>Virtual IP list (1:1 broker node)</p> 
+     * @return BrokerVipList <p>Virtual IP list (1:1 broker node)</p>
      */
     public VipEntity [] getBrokerVipList() {
         return this.BrokerVipList;
     }
 
     /**
-     * Set Virtual IP list (1:1 broker node).
-     * @param BrokerVipList Virtual IP list (1:1 broker node).
+     * Set <p>Virtual IP list (1:1 broker node)</p>
+     * @param BrokerVipList <p>Virtual IP list (1:1 broker node)</p>
      */
     public void setBrokerVipList(VipEntity [] BrokerVipList) {
         this.BrokerVipList = BrokerVipList;
     }
 
     /**
-     * Get VPC Id. specifies the Id of the vpc.
+     * Get <p>VPC Id</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VpcId VPC Id. specifies the Id of the vpc.
+     * @return VpcId <p>VPC Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getVpcId() {
@@ -300,9 +280,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set VPC Id. specifies the Id of the vpc.
+     * Set <p>VPC Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VpcId VPC Id. specifies the Id of the vpc.
+     * @param VpcId <p>VPC Id</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVpcId(String VpcId) {
@@ -310,9 +290,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Remarks
+     * Get <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Note Remarks
+     * @return Note <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getNote() {
@@ -320,9 +300,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Remarks
+     * Set <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Note Remarks
+     * @param Note <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setNote(String Note) {
@@ -330,9 +310,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+     * Get <p>Route status. 1: Creating, 2: Successfully created, 3: Creation failed, 4: Deleting, 6: Deletion failed</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+     * @return Status <p>Route status. 1: Creating, 2: Successfully created, 3: Creation failed, 4: Deleting, 6: Deletion failed</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
@@ -340,9 +320,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+     * Set <p>Route status. 1: Creating, 2: Successfully created, 3: Creation failed, 4: Deleting, 6: Deletion failed</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Route status. 1: creating, 2: creation succeeded, 3: creation failed, 4: deleting, 6: deletion failed.
+     * @param Status <p>Route status. 1: Creating, 2: Successfully created, 3: Creation failed, 4: Deleting, 6: Deletion failed</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {

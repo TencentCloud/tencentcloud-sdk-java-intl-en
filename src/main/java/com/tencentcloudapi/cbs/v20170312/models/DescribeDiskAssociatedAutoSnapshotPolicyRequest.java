@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeDiskAssociatedAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * The ID of the queried cloud disk.
+    * Specifies the cloud disk ID to query. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/362/16315?from_cn_redirect=1) api.
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-     * Get The ID of the queried cloud disk. 
-     * @return DiskId The ID of the queried cloud disk.
+     * Get Specifies the cloud disk ID to query. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/362/16315?from_cn_redirect=1) api. 
+     * @return DiskId Specifies the cloud disk ID to query. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/362/16315?from_cn_redirect=1) api.
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set The ID of the queried cloud disk.
-     * @param DiskId The ID of the queried cloud disk.
+     * Set Specifies the cloud disk ID to query. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/362/16315?from_cn_redirect=1) api.
+     * @param DiskId Specifies the cloud disk ID to query. can be queried via the [DescribeDisks](https://www.tencentcloud.com/document/api/362/16315?from_cn_redirect=1) api.
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;

@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class InquirePriceModifyDiskExtraPerformanceRequest extends AbstractModel {
 
     /**
+    * Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+    */
+    @SerializedName("ThroughputPerformance")
+    @Expose
+    private Long ThroughputPerformance;
+
+    /**
     * Cloud disk ID, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
     */
     @SerializedName("DiskId")
@@ -31,11 +38,20 @@ public class InquirePriceModifyDiskExtraPerformanceRequest extends AbstractModel
     private String DiskId;
 
     /**
-    * The extra throughput to purchase, in MB/s
-    */
-    @SerializedName("ThroughputPerformance")
-    @Expose
-    private Long ThroughputPerformance;
+     * Get Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size. 
+     * @return ThroughputPerformance Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+     */
+    public Long getThroughputPerformance() {
+        return this.ThroughputPerformance;
+    }
+
+    /**
+     * Set Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+     * @param ThroughputPerformance Specifies the additional performance value of the CBS disk in MiB/s. extra performance is only supported for enhanced SSD (CLOUD_HSSD) and ultra-fast SSD (CLOUD_TSSD) CBS disks exceeding 460GiB in size.
+     */
+    public void setThroughputPerformance(Long ThroughputPerformance) {
+        this.ThroughputPerformance = ThroughputPerformance;
+    }
 
     /**
      * Get Cloud disk ID, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. 
@@ -53,22 +69,6 @@ public class InquirePriceModifyDiskExtraPerformanceRequest extends AbstractModel
         this.DiskId = DiskId;
     }
 
-    /**
-     * Get The extra throughput to purchase, in MB/s 
-     * @return ThroughputPerformance The extra throughput to purchase, in MB/s
-     */
-    public Long getThroughputPerformance() {
-        return this.ThroughputPerformance;
-    }
-
-    /**
-     * Set The extra throughput to purchase, in MB/s
-     * @param ThroughputPerformance The extra throughput to purchase, in MB/s
-     */
-    public void setThroughputPerformance(Long ThroughputPerformance) {
-        this.ThroughputPerformance = ThroughputPerformance;
-    }
-
     public InquirePriceModifyDiskExtraPerformanceRequest() {
     }
 
@@ -77,11 +77,11 @@ public class InquirePriceModifyDiskExtraPerformanceRequest extends AbstractModel
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public InquirePriceModifyDiskExtraPerformanceRequest(InquirePriceModifyDiskExtraPerformanceRequest source) {
-        if (source.DiskId != null) {
-            this.DiskId = new String(source.DiskId);
-        }
         if (source.ThroughputPerformance != null) {
             this.ThroughputPerformance = new Long(source.ThroughputPerformance);
+        }
+        if (source.DiskId != null) {
+            this.DiskId = new String(source.DiskId);
         }
     }
 
@@ -90,8 +90,8 @@ public class InquirePriceModifyDiskExtraPerformanceRequest extends AbstractModel
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+        this.setParamSimple(map, prefix + "DiskId", this.DiskId);
 
     }
 }

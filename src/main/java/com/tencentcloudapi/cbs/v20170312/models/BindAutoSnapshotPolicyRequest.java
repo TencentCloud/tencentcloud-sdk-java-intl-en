@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BindAutoSnapshotPolicyRequest extends AbstractModel {
 
     /**
-    * ID of scheduled snapshot policy to be bound.
+    * Specifies the ID of the regular snapshot policy to bind. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
     */
     @SerializedName("AutoSnapshotPolicyId")
     @Expose
@@ -38,16 +38,16 @@ public class BindAutoSnapshotPolicyRequest extends AbstractModel {
     private String [] DiskIds;
 
     /**
-     * Get ID of scheduled snapshot policy to be bound. 
-     * @return AutoSnapshotPolicyId ID of scheduled snapshot policy to be bound.
+     * Get Specifies the ID of the regular snapshot policy to bind. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1). 
+     * @return AutoSnapshotPolicyId Specifies the ID of the regular snapshot policy to bind. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
      */
     public String getAutoSnapshotPolicyId() {
         return this.AutoSnapshotPolicyId;
     }
 
     /**
-     * Set ID of scheduled snapshot policy to be bound.
-     * @param AutoSnapshotPolicyId ID of scheduled snapshot policy to be bound.
+     * Set Specifies the ID of the regular snapshot policy to bind. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
+     * @param AutoSnapshotPolicyId Specifies the ID of the regular snapshot policy to bind. query via the DescribeAutoSnapshotPolicies api (https://www.tencentcloud.com/document/api/362/33556?from_cn_redirect=1).
      */
     public void setAutoSnapshotPolicyId(String AutoSnapshotPolicyId) {
         this.AutoSnapshotPolicyId = AutoSnapshotPolicyId;

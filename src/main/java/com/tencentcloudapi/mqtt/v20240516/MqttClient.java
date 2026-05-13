@@ -61,6 +61,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *Create a device signature for per-device secret
+     * @param req CreateDeviceIdentityRequest
+     * @return CreateDeviceIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDeviceIdentityResponse CreateDeviceIdentity(CreateDeviceIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDeviceIdentity", CreateDeviceIdentityResponse.class);
+    }
+
+    /**
      *This API is used to purchase a new MQTT instance.
      * @param req CreateInstanceRequest
      * @return CreateInstanceResponse
@@ -113,6 +124,17 @@ public class MqttClient extends AbstractClient{
     public DeleteClientSubscriptionResponse DeleteClientSubscription(DeleteClientSubscriptionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteClientSubscription", DeleteClientSubscriptionResponse.class);
+    }
+
+    /**
+     *Delete a device signature
+     * @param req DeleteDeviceIdentityRequest
+     * @return DeleteDeviceIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDeviceIdentityResponse DeleteDeviceIdentity(DeleteDeviceIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDeviceIdentity", DeleteDeviceIdentityResponse.class);
     }
 
     /**
@@ -182,6 +204,39 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *Query device certificates with paging
+     * @param req DescribeDeviceCertificatesRequest
+     * @return DescribeDeviceCertificatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceCertificatesResponse DescribeDeviceCertificates(DescribeDeviceCertificatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceCertificates", DescribeDeviceCertificatesResponse.class);
+    }
+
+    /**
+     *Query the list of device identifiers in a cluster
+     * @param req DescribeDeviceIdentitiesRequest
+     * @return DescribeDeviceIdentitiesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceIdentitiesResponse DescribeDeviceIdentities(DescribeDeviceIdentitiesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceIdentities", DescribeDeviceIdentitiesResponse.class);
+    }
+
+    /**
+     *Query device identification
+     * @param req DescribeDeviceIdentityRequest
+     * @return DescribeDeviceIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceIdentityResponse DescribeDeviceIdentity(DescribeDeviceIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceIdentity", DescribeDeviceIdentityResponse.class);
+    }
+
+    /**
      *This API is used to query instance information.
      * @param req DescribeInstanceRequest
      * @return DescribeInstanceResponse
@@ -190,6 +245,22 @@ public class MqttClient extends AbstractClient{
     public DescribeInstanceResponse DescribeInstance(DescribeInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstance", DescribeInstanceResponse.class);
+    }
+
+    /**
+     *Get instance list. Description of the Filters parameter use is as follows:
+1. InstanceName, fuzzy search by name
+2. InstanceId, query by instance ID
+3. InstanceStatus, instance status query, supports multiple selections
+
+When using the TagFilters parameter for search, the filters parameter is invalid.
+     * @param req DescribeInstanceListRequest
+     * @return DescribeInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceListResponse DescribeInstanceList(DescribeInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceList", DescribeInstanceListResponse.class);
     }
 
     /**
@@ -223,6 +294,50 @@ public class MqttClient extends AbstractClient{
     public DescribeMessageEnrichmentRulesResponse DescribeMessageEnrichmentRules(DescribeMessageEnrichmentRulesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeMessageEnrichmentRules", DescribeMessageEnrichmentRulesResponse.class);
+    }
+
+    /**
+     *This API is used to obtain product sales specifications.
+     * @param req DescribeProductSKUListRequest
+     * @return DescribeProductSKUListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeProductSKUListResponse DescribeProductSKUList(DescribeProductSKUListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeProductSKUList", DescribeProductSKUListResponse.class);
+    }
+
+    /**
+     *Query shared subscription group detailed information
+     * @param req DescribeSharedSubscriptionClientRequest
+     * @return DescribeSharedSubscriptionClientResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSharedSubscriptionClientResponse DescribeSharedSubscriptionClient(DescribeSharedSubscriptionClientRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSharedSubscriptionClient", DescribeSharedSubscriptionClientResponse.class);
+    }
+
+    /**
+     *This API is used to query the subscription group list shared within the cluster.
+     * @param req DescribeSharedSubscriptionGroupsRequest
+     * @return DescribeSharedSubscriptionGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSharedSubscriptionGroupsResponse DescribeSharedSubscriptionGroups(DescribeSharedSubscriptionGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSharedSubscriptionGroups", DescribeSharedSubscriptionGroupsResponse.class);
+    }
+
+    /**
+     *Query the subscription list of a shared subscription group
+     * @param req DescribeSharedSubscriptionsRequest
+     * @return DescribeSharedSubscriptionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSharedSubscriptionsResponse DescribeSharedSubscriptions(DescribeSharedSubscriptionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSharedSubscriptions", DescribeSharedSubscriptionsResponse.class);
     }
 
     /**
@@ -269,6 +384,17 @@ This API is used to perform Username fuzzy search.
     public ModifyAuthorizationPolicyResponse ModifyAuthorizationPolicy(ModifyAuthorizationPolicyRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAuthorizationPolicy", ModifyAuthorizationPolicyResponse.class);
+    }
+
+    /**
+     *Modify the device signature
+     * @param req ModifyDeviceIdentityRequest
+     * @return ModifyDeviceIdentityResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeviceIdentityResponse ModifyDeviceIdentity(ModifyDeviceIdentityRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDeviceIdentity", ModifyDeviceIdentityResponse.class);
     }
 
     /**

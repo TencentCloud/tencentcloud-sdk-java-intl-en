@@ -24,49 +24,95 @@ import java.util.HashMap;
 public class ApplyDiskBackupRequest extends AbstractModel {
 
     /**
-    * ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
+    * Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
     */
     @SerializedName("DiskBackupId")
     @Expose
     private String DiskBackupId;
 
     /**
-    * ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+    * Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-     * Get ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API. 
-     * @return DiskBackupId ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
+    * Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+    */
+    @SerializedName("AutoStopInstance")
+    @Expose
+    private Boolean AutoStopInstance;
+
+    /**
+    * Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
+    */
+    @SerializedName("AutoStartInstance")
+    @Expose
+    private Boolean AutoStartInstance;
+
+    /**
+     * Get Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api. 
+     * @return DiskBackupId Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
      */
     public String getDiskBackupId() {
         return this.DiskBackupId;
     }
 
     /**
-     * Set ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
-     * @param DiskBackupId ID of the cloud disk backup point, which can be queried through the `DescribeDiskBackups` API.
+     * Set Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
+     * @param DiskBackupId Cloud disk backup point ID. can be queried through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) api.
      */
     public void setDiskBackupId(String DiskBackupId) {
         this.DiskBackupId = DiskBackupId;
     }
 
     /**
-     * Get ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API. 
-     * @return DiskId ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+     * Get Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api. 
+     * @return DiskId Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
-     * @param DiskId ID of the original cloud disk of the backup point, which can be queried through the `DescribeDisks` API.
+     * Set Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
+     * @param DiskId Original cloud disk ID of the backup point. can be queried through the [DescribeDisks](https://www.tencentcloud.com/document/product/362/16315?from_cn_redirect=1) api.
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
+    }
+
+    /**
+     * Get Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown. 
+     * @return AutoStopInstance Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+     */
+    public Boolean getAutoStopInstance() {
+        return this.AutoStopInstance;
+    }
+
+    /**
+     * Set Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+     * @param AutoStopInstance Specifies whether to enable automatic shutdown before rolling back the CBS backup point. defaults to FALSE, which means no automatic shutdown.
+     */
+    public void setAutoStopInstance(Boolean AutoStopInstance) {
+        this.AutoStopInstance = AutoStopInstance;
+    }
+
+    /**
+     * Get Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true. 
+     * @return AutoStartInstance Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
+     */
+    public Boolean getAutoStartInstance() {
+        return this.AutoStartInstance;
+    }
+
+    /**
+     * Set Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
+     * @param AutoStartInstance Whether to automatically start after rolling back the cloud disk backup point, default to FALSE, means do not auto boot. the AutoStartInstance parameter can only be set to true when AutoStopInstance is true.
+     */
+    public void setAutoStartInstance(Boolean AutoStartInstance) {
+        this.AutoStartInstance = AutoStartInstance;
     }
 
     public ApplyDiskBackupRequest() {
@@ -83,6 +129,12 @@ public class ApplyDiskBackupRequest extends AbstractModel {
         if (source.DiskId != null) {
             this.DiskId = new String(source.DiskId);
         }
+        if (source.AutoStopInstance != null) {
+            this.AutoStopInstance = new Boolean(source.AutoStopInstance);
+        }
+        if (source.AutoStartInstance != null) {
+            this.AutoStartInstance = new Boolean(source.AutoStartInstance);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class ApplyDiskBackupRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
+        this.setParamSimple(map, prefix + "AutoStopInstance", this.AutoStopInstance);
+        this.setParamSimple(map, prefix + "AutoStartInstance", this.AutoStartInstance);
 
     }
 }

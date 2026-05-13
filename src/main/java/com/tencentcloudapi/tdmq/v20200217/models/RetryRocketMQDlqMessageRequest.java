@@ -31,7 +31,7 @@ public class RetryRocketMQDlqMessageRequest extends AbstractModel {
     private String ClusterId;
 
     /**
-    * Specifies the namespace name.
+    * namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
     */
     @SerializedName("NamespaceId")
     @Expose
@@ -68,16 +68,16 @@ public class RetryRocketMQDlqMessageRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies the namespace name. 
-     * @return NamespaceId Specifies the namespace name.
+     * Get namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default 
+     * @return NamespaceId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public String getNamespaceId() {
         return this.NamespaceId;
     }
 
     /**
-     * Set Specifies the namespace name.
-     * @param NamespaceId Specifies the namespace name.
+     * Set namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
+     * @param NamespaceId namespace. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public void setNamespaceId(String NamespaceId) {
         this.NamespaceId = NamespaceId;

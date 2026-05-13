@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DetailPrice extends AbstractModel {
 
     /**
-    * Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name of a billable item.
     */
     @SerializedName("PriceTitle")
     @Expose
@@ -111,20 +110,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UnitPriceDiscountHigh;
 
     /**
-     * Get Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PriceTitle Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name of a billable item. 
+     * @return PriceTitle Name of a billable item.
      */
     public String getPriceTitle() {
         return this.PriceTitle;
     }
 
     /**
-     * Set Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PriceTitle Name of the billable item.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name of a billable item.
+     * @param PriceTitle Name of a billable item.
      */
     public void setPriceTitle(String PriceTitle) {
         this.PriceTitle = PriceTitle;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeUserRequest extends AbstractModel {
 
     /**
-    * The ckafka cluster instance Id.
+    * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Filter by name
+    * <p>Filter by name</p><p>Support fuzzy matching</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * Offset.
+    * <p>Offset</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * The number of returns.
+    * <p>Number of returned results</p><p>Default value: 20</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get The ckafka cluster instance Id. 
-     * @return InstanceId The ckafka cluster instance Id.
+     * Get <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id.
-     * @param InstanceId The ckafka cluster instance Id.
+     * Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Filter by name 
-     * @return SearchWord Filter by name
+     * Get <p>Filter by name</p><p>Support fuzzy matching</p> 
+     * @return SearchWord <p>Filter by name</p><p>Support fuzzy matching</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set Filter by name
-     * @param SearchWord Filter by name
+     * Set <p>Filter by name</p><p>Support fuzzy matching</p>
+     * @param SearchWord <p>Filter by name</p><p>Support fuzzy matching</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get Offset. 
-     * @return Offset Offset.
+     * Get <p>Offset</p> 
+     * @return Offset <p>Offset</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset.
-     * @param Offset Offset.
+     * Set <p>Offset</p>
+     * @param Offset <p>Offset</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get The number of returns. 
-     * @return Limit The number of returns.
+     * Get <p>Number of returned results</p><p>Default value: 20</p> 
+     * @return Limit <p>Number of returned results</p><p>Default value: 20</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of returns.
-     * @param Limit The number of returns.
+     * Set <p>Number of returned results</p><p>Default value: 20</p>
+     * @param Limit <p>Number of returned results</p><p>Default value: 20</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

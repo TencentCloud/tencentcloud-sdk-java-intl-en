@@ -24,137 +24,137 @@ import java.util.HashMap;
 public class DescribeInstancesRequest extends AbstractModel {
 
     /**
-    * (Query condition) filter by the ckafka cluster instance Id.
+    * <p>(Query Conditions) Filter by cluster instance Id</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Search term. example: (query condition) filter by instance name. fuzzy query is supported.
+    * <p>Search term  ex: (Query condition) Filter by instance name. Fuzzy query is supported.</p>
     */
     @SerializedName("SearchWord")
     @Expose
     private String SearchWord;
 
     /**
-    * Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
+    * <p>(Query condition) Instance status. Returns all by default if left blank.</p><p>Enumeration value:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long [] Status;
 
     /**
-    * Offset. If this parameter is left empty, 0 will be used by default
+    * <p>Offset, which is 0 by default</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
+    * <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Tag key value (this field has been deprecated).
+    * <p>Abandoned. Match the tag key.</p>
     */
     @SerializedName("TagKey")
     @Expose
     private String TagKey;
 
     /**
-    * (Query condition) VPC Id.
+    * <p>(Query condition) VPC Id</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-     * Get (Query condition) filter by the ckafka cluster instance Id. 
-     * @return InstanceId (Query condition) filter by the ckafka cluster instance Id.
+     * Get <p>(Query Conditions) Filter by cluster instance Id</p> 
+     * @return InstanceId <p>(Query Conditions) Filter by cluster instance Id</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set (Query condition) filter by the ckafka cluster instance Id.
-     * @param InstanceId (Query condition) filter by the ckafka cluster instance Id.
+     * Set <p>(Query Conditions) Filter by cluster instance Id</p>
+     * @param InstanceId <p>(Query Conditions) Filter by cluster instance Id</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Search term. example: (query condition) filter by instance name. fuzzy query is supported. 
-     * @return SearchWord Search term. example: (query condition) filter by instance name. fuzzy query is supported.
+     * Get <p>Search term  ex: (Query condition) Filter by instance name. Fuzzy query is supported.</p> 
+     * @return SearchWord <p>Search term  ex: (Query condition) Filter by instance name. Fuzzy query is supported.</p>
      */
     public String getSearchWord() {
         return this.SearchWord;
     }
 
     /**
-     * Set Search term. example: (query condition) filter by instance name. fuzzy query is supported.
-     * @param SearchWord Search term. example: (query condition) filter by instance name. fuzzy query is supported.
+     * Set <p>Search term  ex: (Query condition) Filter by instance name. Fuzzy query is supported.</p>
+     * @param SearchWord <p>Search term  ex: (Query condition) Filter by instance name. Fuzzy query is supported.</p>
      */
     public void setSearchWord(String SearchWord) {
         this.SearchWord = SearchWord;
     }
 
     /**
-     * Get Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all. 
-     * @return Status Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
+     * Get <p>(Query condition) Instance status. Returns all by default if left blank.</p><p>Enumeration value:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul> 
+     * @return Status <p>(Query condition) Instance status. Returns all by default if left blank.</p><p>Enumeration value:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
      */
     public Long [] getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
-     * @param Status Instance status (query condition). valid values: 0: creating, 1: running, 2: deleting, 5: isolated, 7: upgrading. default return: all.
+     * Set <p>(Query condition) Instance status. Returns all by default if left blank.</p><p>Enumeration value:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
+     * @param Status <p>(Query condition) Instance status. Returns all by default if left blank.</p><p>Enumeration value:</p><ul><li>-1: Creation failed</li><li>0:Creating</li><li>1:Running</li><li>2:Deleting</li><li>3:Deleted</li><li>4:Deletion failure</li><li>5:Isolated</li><li>7:Upgrading</li></ul>
      */
     public void setStatus(Long [] Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Offset. If this parameter is left empty, 0 will be used by default 
-     * @return Offset Offset. If this parameter is left empty, 0 will be used by default
+     * Get <p>Offset, which is 0 by default</p> 
+     * @return Offset <p>Offset, which is 0 by default</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset. If this parameter is left empty, 0 will be used by default
-     * @param Offset Offset. If this parameter is left empty, 0 will be used by default
+     * Set <p>Offset, which is 0 by default</p>
+     * @param Offset <p>Offset, which is 0 by default</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100. 
-     * @return Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
+     * Get <p>Number of returned results. Default value: 10. Maximum value: 100.</p> 
+     * @return Limit <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
-     * @param Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
+     * Set <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
+     * @param Limit <p>Number of returned results. Default value: 10. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Tag key value (this field has been deprecated). 
-     * @return TagKey Tag key value (this field has been deprecated).
+     * Get <p>Abandoned. Match the tag key.</p> 
+     * @return TagKey <p>Abandoned. Match the tag key.</p>
      * @deprecated
      */
     @Deprecated
@@ -163,8 +163,8 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set Tag key value (this field has been deprecated).
-     * @param TagKey Tag key value (this field has been deprecated).
+     * Set <p>Abandoned. Match the tag key.</p>
+     * @param TagKey <p>Abandoned. Match the tag key.</p>
      * @deprecated
      */
     @Deprecated
@@ -173,16 +173,16 @@ public class DescribeInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get (Query condition) VPC Id. 
-     * @return VpcId (Query condition) VPC Id.
+     * Get <p>(Query condition) VPC Id</p> 
+     * @return VpcId <p>(Query condition) VPC Id</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set (Query condition) VPC Id.
-     * @param VpcId (Query condition) VPC Id.
+     * Set <p>(Query condition) VPC Id</p>
+     * @param VpcId <p>(Query condition) VPC Id</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

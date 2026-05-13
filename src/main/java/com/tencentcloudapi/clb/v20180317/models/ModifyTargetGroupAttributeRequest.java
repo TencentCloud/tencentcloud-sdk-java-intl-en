@@ -81,6 +81,13 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
     private Long SessionExpireTime;
 
     /**
+    * 
+    */
+    @SerializedName("SnatEnable")
+    @Expose
+    private Boolean SnatEnable;
+
+    /**
      * Get Target group ID 
      * @return TargetGroupId Target group ID
      */
@@ -212,6 +219,22 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
         this.SessionExpireTime = SessionExpireTime;
     }
 
+    /**
+     * Get  
+     * @return SnatEnable 
+     */
+    public Boolean getSnatEnable() {
+        return this.SnatEnable;
+    }
+
+    /**
+     * Set 
+     * @param SnatEnable 
+     */
+    public void setSnatEnable(Boolean SnatEnable) {
+        this.SnatEnable = SnatEnable;
+    }
+
     public ModifyTargetGroupAttributeRequest() {
     }
 
@@ -244,6 +267,9 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
         if (source.SessionExpireTime != null) {
             this.SessionExpireTime = new Long(source.SessionExpireTime);
         }
+        if (source.SnatEnable != null) {
+            this.SnatEnable = new Boolean(source.SnatEnable);
+        }
     }
 
 
@@ -259,6 +285,7 @@ public class ModifyTargetGroupAttributeRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Weight", this.Weight);
         this.setParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
         this.setParamSimple(map, prefix + "SessionExpireTime", this.SessionExpireTime);
+        this.setParamSimple(map, prefix + "SnatEnable", this.SnatEnable);
 
     }
 }

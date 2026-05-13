@@ -31,7 +31,7 @@ public class CreateRocketMQGroupRequest extends AbstractModel {
     private String GroupId;
 
     /**
-    * Namespace. Currently, only one namespace is supported
+    * Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
     */
     @SerializedName("Namespaces")
     @Expose
@@ -96,16 +96,16 @@ public class CreateRocketMQGroupRequest extends AbstractModel {
     }
 
     /**
-     * Get Namespace. Currently, only one namespace is supported 
-     * @return Namespaces Namespace. Currently, only one namespace is supported
+     * Get Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default 
+     * @return Namespaces Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public String [] getNamespaces() {
         return this.Namespaces;
     }
 
     /**
-     * Set Namespace. Currently, only one namespace is supported
-     * @param Namespaces Namespace. Currently, only one namespace is supported
+     * Set Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
+     * @param Namespaces Namespace of the consumption group. The 4.x common Cluster Namespace is fixed as: tdmq_default
      */
     public void setNamespaces(String [] Namespaces) {
         this.Namespaces = Namespaces;

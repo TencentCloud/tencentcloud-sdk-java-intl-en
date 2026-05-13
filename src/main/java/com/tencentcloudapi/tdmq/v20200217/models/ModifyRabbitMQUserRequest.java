@@ -31,7 +31,7 @@ public class ModifyRabbitMQUserRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username.
+    * Username, such as rabbitmq. To find an effective username, log in to the [TDMQ RabbitMQ Console](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), click a cluster in the list, enter cluster details, and find the list of users in the user and permission management tab, so as to locate the username. Modifying the admin password is not supported currently.
     */
     @SerializedName("User")
     @Expose
@@ -90,16 +90,16 @@ management: ordinary console user. monitoring: administrative console user. othe
     }
 
     /**
-     * Get Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username. 
-     * @return User Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username.
+     * Get Username, such as rabbitmq. To find an effective username, log in to the [TDMQ RabbitMQ Console](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), click a cluster in the list, enter cluster details, and find the list of users in the user and permission management tab, so as to locate the username. Modifying the admin password is not supported currently. 
+     * @return User Username, such as rabbitmq. To find an effective username, log in to the [TDMQ RabbitMQ Console](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), click a cluster in the list, enter cluster details, and find the list of users in the user and permission management tab, so as to locate the username. Modifying the admin password is not supported currently.
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username.
-     * @param User Username, such as admin. effective User names can be found by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), clicking a cluster in the cluster list, entering cluster details, and locating the list of users under the User and permission management tab, thereby finding the username.
+     * Set Username, such as rabbitmq. To find an effective username, log in to the [TDMQ RabbitMQ Console](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), click a cluster in the list, enter cluster details, and find the list of users in the user and permission management tab, so as to locate the username. Modifying the admin password is not supported currently.
+     * @param User Username, such as rabbitmq. To find an effective username, log in to the [TDMQ RabbitMQ Console](https://console.cloud.tencent.com/trabbitmq/cluster?rid=1), click a cluster in the list, enter cluster details, and find the list of users in the user and permission management tab, so as to locate the username. Modifying the admin password is not supported currently.
      */
     public void setUser(String User) {
         this.User = User;

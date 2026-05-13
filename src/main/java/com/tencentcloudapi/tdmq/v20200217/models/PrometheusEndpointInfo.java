@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class PrometheusEndpointInfo extends AbstractModel {
 
     /**
-    * Status of the Prometheus switch
+    * 
     */
     @SerializedName("PrometheusEndpointStatus")
     @Expose
     private String PrometheusEndpointStatus;
 
     /**
-    * prometheus Information
+    * 
     */
     @SerializedName("VpcPrometheusEndpoint")
     @Expose
     private String [] VpcPrometheusEndpoint;
 
     /**
-    * Node Information
+    * 
     */
     @SerializedName("NodePrometheusAddress")
     @Expose
     private String [] NodePrometheusAddress;
 
     /**
-    * vpc information
+    * 
     */
     @SerializedName("VpcEndpointInfo")
     @Expose
     private VpcEndpointInfo VpcEndpointInfo;
 
     /**
-     * Get Status of the Prometheus switch 
-     * @return PrometheusEndpointStatus Status of the Prometheus switch
+     * Get  
+     * @return PrometheusEndpointStatus 
      */
     public String getPrometheusEndpointStatus() {
         return this.PrometheusEndpointStatus;
     }
 
     /**
-     * Set Status of the Prometheus switch
-     * @param PrometheusEndpointStatus Status of the Prometheus switch
+     * Set 
+     * @param PrometheusEndpointStatus 
      */
     public void setPrometheusEndpointStatus(String PrometheusEndpointStatus) {
         this.PrometheusEndpointStatus = PrometheusEndpointStatus;
     }
 
     /**
-     * Get prometheus Information 
-     * @return VpcPrometheusEndpoint prometheus Information
+     * Get  
+     * @return VpcPrometheusEndpoint 
      */
     public String [] getVpcPrometheusEndpoint() {
         return this.VpcPrometheusEndpoint;
     }
 
     /**
-     * Set prometheus Information
-     * @param VpcPrometheusEndpoint prometheus Information
+     * Set 
+     * @param VpcPrometheusEndpoint 
      */
     public void setVpcPrometheusEndpoint(String [] VpcPrometheusEndpoint) {
         this.VpcPrometheusEndpoint = VpcPrometheusEndpoint;
     }
 
     /**
-     * Get Node Information 
-     * @return NodePrometheusAddress Node Information
+     * Get  
+     * @return NodePrometheusAddress 
      */
     public String [] getNodePrometheusAddress() {
         return this.NodePrometheusAddress;
     }
 
     /**
-     * Set Node Information
-     * @param NodePrometheusAddress Node Information
+     * Set 
+     * @param NodePrometheusAddress 
      */
     public void setNodePrometheusAddress(String [] NodePrometheusAddress) {
         this.NodePrometheusAddress = NodePrometheusAddress;
     }
 
     /**
-     * Get vpc information 
-     * @return VpcEndpointInfo vpc information
+     * Get  
+     * @return VpcEndpointInfo 
      */
     public VpcEndpointInfo getVpcEndpointInfo() {
         return this.VpcEndpointInfo;
     }
 
     /**
-     * Set vpc information
-     * @param VpcEndpointInfo vpc information
+     * Set 
+     * @param VpcEndpointInfo 
      */
     public void setVpcEndpointInfo(VpcEndpointInfo VpcEndpointInfo) {
         this.VpcEndpointInfo = VpcEndpointInfo;

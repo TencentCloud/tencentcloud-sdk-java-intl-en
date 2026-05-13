@@ -45,7 +45,7 @@ public class CreateSnapshotRequest extends AbstractModel {
     private String Deadline;
 
     /**
-    * ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+    * Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
     */
     @SerializedName("DiskBackupId")
     @Expose
@@ -57,6 +57,13 @@ public class CreateSnapshotRequest extends AbstractModel {
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
+
+    /**
+    * Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
+    */
+    @SerializedName("DiskUsage")
+    @Expose
+    private String DiskUsage;
 
     /**
      * Get ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. 
@@ -107,16 +114,16 @@ public class CreateSnapshotRequest extends AbstractModel {
     }
 
     /**
-     * Get ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point. 
-     * @return DiskBackupId ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+     * Get Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query. 
+     * @return DiskBackupId Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
      */
     public String getDiskBackupId() {
         return this.DiskBackupId;
     }
 
     /**
-     * Set ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
-     * @param DiskBackupId ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+     * Set Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
+     * @param DiskBackupId Backup point ID of the cbs. when input this parameter, a snapshot will be created through the backup point. the backup point ID can be obtained through the [DescribeDiskBackups](https://www.tencentcloud.com/document/product/362/80278?from_cn_redirect=1) API query.
      */
     public void setDiskBackupId(String DiskBackupId) {
         this.DiskBackupId = DiskBackupId;
@@ -136,6 +143,22 @@ public class CreateSnapshotRequest extends AbstractModel {
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage. 
+     * @return DiskUsage Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
+     */
+    public String getDiskUsage() {
+        return this.DiskUsage;
+    }
+
+    /**
+     * Set Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
+     * @param DiskUsage Snapshot association cloud DISK type. valid values: SYSTEM_DISK (SYSTEM DISK), DATA_DISK (DATA DISK). optional. if left empty, the snapshot type remains consistent with the cloud DISK type. this parameter is based on some scenes where users need to create a DATA DISK snapshot from a SYSTEM DISK for shared usage.
+     */
+    public void setDiskUsage(String DiskUsage) {
+        this.DiskUsage = DiskUsage;
     }
 
     public CreateSnapshotRequest() {
@@ -164,6 +187,9 @@ public class CreateSnapshotRequest extends AbstractModel {
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.DiskUsage != null) {
+            this.DiskUsage = new String(source.DiskUsage);
+        }
     }
 
 
@@ -176,6 +202,7 @@ public class CreateSnapshotRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Deadline", this.Deadline);
         this.setParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
 
     }
 }

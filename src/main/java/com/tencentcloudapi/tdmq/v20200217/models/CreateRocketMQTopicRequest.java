@@ -31,7 +31,7 @@ public class CreateRocketMQTopicRequest extends AbstractModel {
     private String Topic;
 
     /**
-    * Topic namespace. Currently, you can create topics only in one single namespace.
+    * Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
     */
     @SerializedName("Namespaces")
     @Expose
@@ -82,16 +82,16 @@ public class CreateRocketMQTopicRequest extends AbstractModel {
     }
 
     /**
-     * Get Topic namespace. Currently, you can create topics only in one single namespace. 
-     * @return Namespaces Topic namespace. Currently, you can create topics only in one single namespace.
+     * Get Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default 
+     * @return Namespaces Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
      */
     public String [] getNamespaces() {
         return this.Namespaces;
     }
 
     /**
-     * Set Topic namespace. Currently, you can create topics only in one single namespace.
-     * @param Namespaces Topic namespace. Currently, you can create topics only in one single namespace.
+     * Set Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
+     * @param Namespaces Namespace of the topic. The common Cluster Namespace for 4.x is fixed as: tdmq_default
      */
     public void setNamespaces(String [] Namespaces) {
         this.Namespaces = Namespaces;

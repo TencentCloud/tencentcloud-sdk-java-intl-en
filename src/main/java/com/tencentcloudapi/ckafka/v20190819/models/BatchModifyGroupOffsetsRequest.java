@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class BatchModifyGroupOffsetsRequest extends AbstractModel {
 
     /**
-    * Consumer group name.
+    * <p>Consumer group name</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * The ckafka cluster instance Id.
+    * <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Partition information.
+    * <p>partition info</p>
     */
     @SerializedName("Partitions")
     @Expose
     private Partitions [] Partitions;
 
     /**
-    * Name of the specified topic. Default value: names of all topics.
+    * <p>Specify topic, default to all topics</p>
     */
     @SerializedName("TopicName")
     @Expose
     private String [] TopicName;
 
     /**
-     * Get Consumer group name. 
-     * @return GroupName Consumer group name.
+     * Get <p>Consumer group name</p> 
+     * @return GroupName <p>Consumer group name</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Consumer group name.
-     * @param GroupName Consumer group name.
+     * Set <p>Consumer group name</p>
+     * @param GroupName <p>Consumer group name</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get The ckafka cluster instance Id. 
-     * @return InstanceId The ckafka cluster instance Id.
+     * Get <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p> 
+     * @return InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set The ckafka cluster instance Id.
-     * @param InstanceId The ckafka cluster instance Id.
+     * Set <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
+     * @param InstanceId <p>ckafka cluster instance Id</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/40835?from_cn_redirect=1">DescribeInstances</a></p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Partition information. 
-     * @return Partitions Partition information.
+     * Get <p>partition info</p> 
+     * @return Partitions <p>partition info</p>
      */
     public Partitions [] getPartitions() {
         return this.Partitions;
     }
 
     /**
-     * Set Partition information.
-     * @param Partitions Partition information.
+     * Set <p>partition info</p>
+     * @param Partitions <p>partition info</p>
      */
     public void setPartitions(Partitions [] Partitions) {
         this.Partitions = Partitions;
     }
 
     /**
-     * Get Name of the specified topic. Default value: names of all topics. 
-     * @return TopicName Name of the specified topic. Default value: names of all topics.
+     * Get <p>Specify topic, default to all topics</p> 
+     * @return TopicName <p>Specify topic, default to all topics</p>
      */
     public String [] getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set Name of the specified topic. Default value: names of all topics.
-     * @param TopicName Name of the specified topic. Default value: names of all topics.
+     * Set <p>Specify topic, default to all topics</p>
+     * @param TopicName <p>Specify topic, default to all topics</p>
      */
     public void setTopicName(String [] TopicName) {
         this.TopicName = TopicName;

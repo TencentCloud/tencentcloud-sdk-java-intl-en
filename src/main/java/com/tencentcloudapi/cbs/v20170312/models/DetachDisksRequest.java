@@ -31,7 +31,7 @@ public class DetachDisksRequest extends AbstractModel {
     private String [] DiskIds;
 
     /**
-    * Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+    * For non-shared cloud disks, this parameter validates whether it matches the actual mounted instance. for shared cloud disks, this parameter indicates from which CVM instance to unmount the cloud disk.
     */
     @SerializedName("InstanceId")
     @Expose
@@ -54,16 +54,16 @@ public class DetachDisksRequest extends AbstractModel {
     }
 
     /**
-     * Get Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks. 
-     * @return InstanceId Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+     * Get For non-shared cloud disks, this parameter validates whether it matches the actual mounted instance. for shared cloud disks, this parameter indicates from which CVM instance to unmount the cloud disk. 
+     * @return InstanceId For non-shared cloud disks, this parameter validates whether it matches the actual mounted instance. for shared cloud disks, this parameter indicates from which CVM instance to unmount the cloud disk.
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
-     * @param InstanceId Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+     * Set For non-shared cloud disks, this parameter validates whether it matches the actual mounted instance. for shared cloud disks, this parameter indicates from which CVM instance to unmount the cloud disk.
+     * @param InstanceId For non-shared cloud disks, this parameter validates whether it matches the actual mounted instance. for shared cloud disks, this parameter indicates from which CVM instance to unmount the cloud disk.
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

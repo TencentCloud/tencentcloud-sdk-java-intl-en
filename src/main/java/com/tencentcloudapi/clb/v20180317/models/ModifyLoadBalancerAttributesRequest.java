@@ -62,6 +62,13 @@ Specifies no modification if left blank.
     private Boolean LoadBalancerPassToTarget;
 
     /**
+    * 
+    */
+    @SerializedName("SwitchFlag")
+    @Expose
+    private Long SwitchFlag;
+
+    /**
     * Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
     */
     @SerializedName("SnatPro")
@@ -182,6 +189,22 @@ Specifies no modification if left blank.
     }
 
     /**
+     * Get  
+     * @return SwitchFlag 
+     */
+    public Long getSwitchFlag() {
+        return this.SwitchFlag;
+    }
+
+    /**
+     * Set 
+     * @param SwitchFlag 
+     */
+    public void setSwitchFlag(Long SwitchFlag) {
+        this.SwitchFlag = SwitchFlag;
+    }
+
+    /**
      * Get Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification. 
      * @return SnatPro Specifies whether the cross-region binding 2.0 feature is enabled. leave blank for no modification.
      */
@@ -268,6 +291,9 @@ Specifies no modification if left blank.
         if (source.LoadBalancerPassToTarget != null) {
             this.LoadBalancerPassToTarget = new Boolean(source.LoadBalancerPassToTarget);
         }
+        if (source.SwitchFlag != null) {
+            this.SwitchFlag = new Long(source.SwitchFlag);
+        }
         if (source.SnatPro != null) {
             this.SnatPro = new Boolean(source.SnatPro);
         }
@@ -292,6 +318,7 @@ Specifies no modification if left blank.
         this.setParamObj(map, prefix + "TargetRegionInfo.", this.TargetRegionInfo);
         this.setParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
         this.setParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
+        this.setParamSimple(map, prefix + "SwitchFlag", this.SwitchFlag);
         this.setParamSimple(map, prefix + "SnatPro", this.SnatPro);
         this.setParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
         this.setParamSimple(map, prefix + "ModifyClassicDomain", this.ModifyClassicDomain);

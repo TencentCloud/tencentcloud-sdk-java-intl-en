@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ExtraInfo extends AbstractModel {
 
     /**
-    * ECharts Information
+    * 
     */
     @SerializedName("EChartsInfo")
     @Expose
     private String [] EChartsInfo;
 
     /**
-     * Get ECharts Information 
-     * @return EChartsInfo ECharts Information
+     * Get  
+     * @return EChartsInfo 
      */
     public String [] getEChartsInfo() {
         return this.EChartsInfo;
     }
 
     /**
-     * Set ECharts Information
-     * @param EChartsInfo ECharts Information
+     * Set 
+     * @param EChartsInfo 
      */
     public void setEChartsInfo(String [] EChartsInfo) {
         this.EChartsInfo = EChartsInfo;
