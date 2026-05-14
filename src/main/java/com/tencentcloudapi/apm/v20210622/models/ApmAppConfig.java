@@ -24,140 +24,140 @@ import java.util.HashMap;
 public class ApmAppConfig extends AbstractModel {
 
     /**
-    * Instance ID.
+    * <p>Instance ID</p>
     */
     @SerializedName("InstanceKey")
     @Expose
     private String InstanceKey;
 
     /**
-    * Service name.
+    * <p>Service name</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * URL convergence switch.
+    * <p>URL convergence switch</p>
     */
     @SerializedName("UrlConvergenceSwitch")
     @Expose
     private Long UrlConvergenceSwitch;
 
     /**
-    * URL convergence threshold
+    * <p>URL convergence threshold</p>
     */
     @SerializedName("UrlConvergenceThreshold")
     @Expose
     private Long UrlConvergenceThreshold;
 
     /**
-    * URL convergence regular expression.
+    * <p>URL regular convergence</p>
     */
     @SerializedName("UrlConvergence")
     @Expose
     private String UrlConvergence;
 
     /**
-    * Exception filtering regular expression.
+    * <p>Exception filter regular</p>
     */
     @SerializedName("ExceptionFilter")
     @Expose
     private String ExceptionFilter;
 
     /**
-    * Error code filtering.
+    * <p>Error code filtering</p>
     */
     @SerializedName("ErrorCodeFilter")
     @Expose
     private String ErrorCodeFilter;
 
     /**
-    * Service component type.
+    * <p>Service component type</p>
     */
     @SerializedName("Components")
     @Expose
     private String Components;
 
     /**
-    * URL exclusion regular.
+    * <p>URL exclusion regular</p>
     */
     @SerializedName("UrlExclude")
     @Expose
     private String UrlExclude;
 
     /**
-    * Specifies the log source.
+    * <p>Log source</p>
     */
     @SerializedName("LogSource")
     @Expose
     private String LogSource;
 
     /**
-    * Log region.
+    * <p>Log region</p>
     */
     @SerializedName("LogRegion")
     @Expose
     private String LogRegion;
 
     /**
-    * Whether logging is enabled. valid values: 0 (disabled), 1 (enabled).
+    * <p>Whether logging is enabled 0 Disabled 1 Enabled</p>
     */
     @SerializedName("IsRelatedLog")
     @Expose
     private Long IsRelatedLog;
 
     /**
-    * Log topic ID
+    * <p>Log topic ID</p>
     */
     @SerializedName("LogTopicID")
     @Expose
     private String LogTopicID;
 
     /**
-    * API names to filter
+    * <p>Interface Names to Filter</p>
     */
     @SerializedName("IgnoreOperationName")
     @Expose
     private String IgnoreOperationName;
 
     /**
-    * CLS log set/ES cluster ID
+    * <p>CLS logset | ES cluster ID</p>
     */
     @SerializedName("LogSet")
     @Expose
     private String LogSet;
 
     /**
-    * Number of traces reported by the probe per second.
+    * <p>Number of traces reported by the probe per second</p>
     */
     @SerializedName("TraceRateLimit")
     @Expose
     private Long TraceRateLimit;
 
     /**
-    * Whether thread profiling is enabled.
+    * <p>Whether thread profiling is enabled</p>
     */
     @SerializedName("EnableSnapshot")
     @Expose
     private Boolean EnableSnapshot;
 
     /**
-    * Timeout threshold for thread profiling.
+    * <p>Timeout threshold for thread profiling</p>
     */
     @SerializedName("SnapshotTimeout")
     @Expose
     private Long SnapshotTimeout;
 
     /**
-    * Whether agent is enabled.
+    * <p>Whether to enable agent</p>
     */
     @SerializedName("AgentEnable")
     @Expose
     private Boolean AgentEnable;
 
     /**
-    * Component List
+    * <p>Component list</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstrumentList")
@@ -165,21 +165,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Instrument [] InstrumentList;
 
     /**
-    * Whether link compression is enabled.
+    * <p>Whether to enable link compression</p>
     */
     @SerializedName("TraceSquash")
     @Expose
     private Boolean TraceSquash;
 
     /**
-    * Whether application diagnosis is enabled.
+    * <p>Whether the application diagnosis switch is enabled</p>
     */
     @SerializedName("EventEnable")
     @Expose
     private Boolean EventEnable;
 
     /**
-    * Related configurations of the probe APIs.
+    * <p>probe API related configuration</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AgentOperationConfigView")
@@ -187,14 +187,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AgentOperationConfigView AgentOperationConfigView;
 
     /**
-    * Whether to enable application log configuration.
+    * <p>Whether the application log configuration is enabled</p>
     */
     @SerializedName("EnableLogConfig")
     @Expose
     private Boolean EnableLogConfig;
 
     /**
-    * Application ID
+    * <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceID")
@@ -202,7 +202,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ServiceID;
 
     /**
-    * Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+    * <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, hierarchical configuration)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnableDashboardConfig")
@@ -210,7 +210,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean EnableDashboardConfig;
 
     /**
-    * Whether to associate with Dashboard. 0: disabled; 1: enabled.
+    * <p>Whether dashboard is associated: 0 Disabled 1 Enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsRelatedDashboard")
@@ -218,7 +218,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsRelatedDashboard;
 
     /**
-    * dashboard ID
+    * <p>dashboard ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DashboardTopicID")
@@ -226,7 +226,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DashboardTopicID;
 
     /**
-    * Whether to enable the application-level configuration.
+    * <p>Whether the application-level configuration is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnableSecurityConfig")
@@ -234,7 +234,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean EnableSecurityConfig;
 
     /**
-    * Whether to enable detection of component vulnerability.
+    * <p>Whether the component vulnerability detection is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsInstrumentationVulnerabilityScan")
@@ -242,7 +242,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsInstrumentationVulnerabilityScan;
 
     /**
-    * Whether to enable SQL injection analysis.
+    * <p>Whether SQL injection analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsSqlInjectionAnalysis")
@@ -250,7 +250,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsSqlInjectionAnalysis;
 
     /**
-    * Whether to enable execution analysis of remote command.
+    * <p>Whether remote command execution analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsRemoteCommandExecutionAnalysis")
@@ -258,7 +258,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsRemoteCommandExecutionAnalysis;
 
     /**
-    * Whether to enable detection analysis of Java webshell.
+    * <p>Whether Java Webshell detection and analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsMemoryHijackingAnalysis")
@@ -266,21 +266,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsMemoryHijackingAnalysis;
 
     /**
-    * CLS index type. (0 = full-text index; 1 = key-value index).
+    * <p>CLS index type (0=full-text index, 1=key-value index)</p>
     */
     @SerializedName("LogIndexType")
     @Expose
     private Long LogIndexType;
 
     /**
-    * Index key of traceId. It is valid when the CLS index type is key-value index.
+    * <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
     */
     @SerializedName("LogTraceIdKey")
     @Expose
     private String LogTraceIdKey;
 
     /**
-    * Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+    * <p>Whether to enable file deletion detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsDeleteAnyFileAnalysis")
@@ -288,7 +288,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsDeleteAnyFileAnalysis;
 
     /**
-    * Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+    * <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsReadAnyFileAnalysis")
@@ -296,7 +296,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsReadAnyFileAnalysis;
 
     /**
-    * Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+    * <p>Whether to enable arbitrary file upload detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsUploadAnyFileAnalysis")
@@ -304,7 +304,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsUploadAnyFileAnalysis;
 
     /**
-    * Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+    * <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsIncludeAnyFileAnalysis")
@@ -312,7 +312,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsIncludeAnyFileAnalysis;
 
     /**
-    * Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+    * <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsDirectoryTraversalAnalysis")
@@ -320,7 +320,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsDirectoryTraversalAnalysis;
 
     /**
-    * Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+    * <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsTemplateEngineInjectionAnalysis")
@@ -328,7 +328,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsTemplateEngineInjectionAnalysis;
 
     /**
-    * Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+    * <p>Whether script engine injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsScriptEngineInjectionAnalysis")
@@ -336,7 +336,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsScriptEngineInjectionAnalysis;
 
     /**
-    * Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+    * <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsExpressionInjectionAnalysis")
@@ -344,7 +344,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsExpressionInjectionAnalysis;
 
     /**
-    * Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+    * <p>Whether JNDI injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsJNDIInjectionAnalysis")
@@ -352,7 +352,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsJNDIInjectionAnalysis;
 
     /**
-    * Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+    * <p>Whether JNI injection detection is enabled (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsJNIInjectionAnalysis")
@@ -360,7 +360,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsJNIInjectionAnalysis;
 
     /**
-    * Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+    * <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsWebshellBackdoorAnalysis")
@@ -368,7 +368,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsWebshellBackdoorAnalysis;
 
     /**
-    * Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+    * <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsDeserializationAnalysis")
@@ -376,348 +376,418 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long IsDeserializationAnalysis;
 
     /**
-    * API name automatic convergence switch (0 - disabled; 1 - enabled)
+    * <p>API name auto convergence switch (0-off, 1-on)</p>
     */
     @SerializedName("UrlAutoConvergenceEnable")
     @Expose
     private Boolean UrlAutoConvergenceEnable;
 
     /**
-    * Convergence threshold for URL long segments.
+    * <p>URL long segment convergence threshold</p>
     */
     @SerializedName("UrlLongSegmentThreshold")
     @Expose
     private Long UrlLongSegmentThreshold;
 
     /**
-    * Convergence threshold for URL numerical segments.
+    * <p>URL digit segment convergence threshold</p>
     */
     @SerializedName("UrlNumberSegmentThreshold")
     @Expose
     private Long UrlNumberSegmentThreshold;
 
     /**
-    * Specifies the memory threshold for probe fusing.
+    * <p>Fuse memory threshold of the probe</p>
     */
     @SerializedName("DisableMemoryUsed")
     @Expose
     private Long DisableMemoryUsed;
 
     /**
-    * Specifies the CPU threshold for probe fusing.
+    * <p>Probe fuse CPU threshold</p>
     */
     @SerializedName("DisableCpuUsed")
     @Expose
     private Long DisableCpuUsed;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceKey Instance ID.
+    * <p>Whether SQL parameter access is enabled</p>
+    */
+    @SerializedName("DbStatementParametersEnabled")
+    @Expose
+    private Boolean DbStatementParametersEnabled;
+
+    /**
+    * <p>Slow SQL threshold</p>
+    */
+    @SerializedName("SlowSQLThresholds")
+    @Expose
+    private ApmTag [] SlowSQLThresholds;
+
+    /**
+    * <p>Whether the masking rule is enabled</p>
+    */
+    @SerializedName("EnableDesensitizationRule")
+    @Expose
+    private Long EnableDesensitizationRule;
+
+    /**
+    * <p>Masking rule</p>
+    */
+    @SerializedName("DesensitizationRule")
+    @Expose
+    private String DesensitizationRule;
+
+    /**
+    * <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+    */
+    @SerializedName("LogSpanIdKey")
+    @Expose
+    private String LogSpanIdKey;
+
+    /**
+    * <p>Automated performance analysis configuration</p>
+    */
+    @SerializedName("AutoProfilingConfig")
+    @Expose
+    private AutoProfilingConfig AutoProfilingConfig;
+
+    /**
+    * <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+    */
+    @SerializedName("EnableThresholdConfig")
+    @Expose
+    private Boolean EnableThresholdConfig;
+
+    /**
+    * <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+    */
+    @SerializedName("ErrRateThreshold")
+    @Expose
+    private Long ErrRateThreshold;
+
+    /**
+    * <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+    */
+    @SerializedName("ResponseDurationWarningThreshold")
+    @Expose
+    private Long ResponseDurationWarningThreshold;
+
+    /**
+    * <p>Whether to use the built-in fuse threshold of the probe by default</p>
+    */
+    @SerializedName("UseDefaultFuseConfig")
+    @Expose
+    private Boolean UseDefaultFuseConfig;
+
+    /**
+     * Get <p>Instance ID</p> 
+     * @return InstanceKey <p>Instance ID</p>
      */
     public String getInstanceKey() {
         return this.InstanceKey;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceKey Instance ID.
+     * Set <p>Instance ID</p>
+     * @param InstanceKey <p>Instance ID</p>
      */
     public void setInstanceKey(String InstanceKey) {
         this.InstanceKey = InstanceKey;
     }
 
     /**
-     * Get Service name. 
-     * @return ServiceName Service name.
+     * Get <p>Service name</p> 
+     * @return ServiceName <p>Service name</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set Service name.
-     * @param ServiceName Service name.
+     * Set <p>Service name</p>
+     * @param ServiceName <p>Service name</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get URL convergence switch. 
-     * @return UrlConvergenceSwitch URL convergence switch.
+     * Get <p>URL convergence switch</p> 
+     * @return UrlConvergenceSwitch <p>URL convergence switch</p>
      */
     public Long getUrlConvergenceSwitch() {
         return this.UrlConvergenceSwitch;
     }
 
     /**
-     * Set URL convergence switch.
-     * @param UrlConvergenceSwitch URL convergence switch.
+     * Set <p>URL convergence switch</p>
+     * @param UrlConvergenceSwitch <p>URL convergence switch</p>
      */
     public void setUrlConvergenceSwitch(Long UrlConvergenceSwitch) {
         this.UrlConvergenceSwitch = UrlConvergenceSwitch;
     }
 
     /**
-     * Get URL convergence threshold 
-     * @return UrlConvergenceThreshold URL convergence threshold
+     * Get <p>URL convergence threshold</p> 
+     * @return UrlConvergenceThreshold <p>URL convergence threshold</p>
      */
     public Long getUrlConvergenceThreshold() {
         return this.UrlConvergenceThreshold;
     }
 
     /**
-     * Set URL convergence threshold
-     * @param UrlConvergenceThreshold URL convergence threshold
+     * Set <p>URL convergence threshold</p>
+     * @param UrlConvergenceThreshold <p>URL convergence threshold</p>
      */
     public void setUrlConvergenceThreshold(Long UrlConvergenceThreshold) {
         this.UrlConvergenceThreshold = UrlConvergenceThreshold;
     }
 
     /**
-     * Get URL convergence regular expression. 
-     * @return UrlConvergence URL convergence regular expression.
+     * Get <p>URL regular convergence</p> 
+     * @return UrlConvergence <p>URL regular convergence</p>
      */
     public String getUrlConvergence() {
         return this.UrlConvergence;
     }
 
     /**
-     * Set URL convergence regular expression.
-     * @param UrlConvergence URL convergence regular expression.
+     * Set <p>URL regular convergence</p>
+     * @param UrlConvergence <p>URL regular convergence</p>
      */
     public void setUrlConvergence(String UrlConvergence) {
         this.UrlConvergence = UrlConvergence;
     }
 
     /**
-     * Get Exception filtering regular expression. 
-     * @return ExceptionFilter Exception filtering regular expression.
+     * Get <p>Exception filter regular</p> 
+     * @return ExceptionFilter <p>Exception filter regular</p>
      */
     public String getExceptionFilter() {
         return this.ExceptionFilter;
     }
 
     /**
-     * Set Exception filtering regular expression.
-     * @param ExceptionFilter Exception filtering regular expression.
+     * Set <p>Exception filter regular</p>
+     * @param ExceptionFilter <p>Exception filter regular</p>
      */
     public void setExceptionFilter(String ExceptionFilter) {
         this.ExceptionFilter = ExceptionFilter;
     }
 
     /**
-     * Get Error code filtering. 
-     * @return ErrorCodeFilter Error code filtering.
+     * Get <p>Error code filtering</p> 
+     * @return ErrorCodeFilter <p>Error code filtering</p>
      */
     public String getErrorCodeFilter() {
         return this.ErrorCodeFilter;
     }
 
     /**
-     * Set Error code filtering.
-     * @param ErrorCodeFilter Error code filtering.
+     * Set <p>Error code filtering</p>
+     * @param ErrorCodeFilter <p>Error code filtering</p>
      */
     public void setErrorCodeFilter(String ErrorCodeFilter) {
         this.ErrorCodeFilter = ErrorCodeFilter;
     }
 
     /**
-     * Get Service component type. 
-     * @return Components Service component type.
+     * Get <p>Service component type</p> 
+     * @return Components <p>Service component type</p>
      */
     public String getComponents() {
         return this.Components;
     }
 
     /**
-     * Set Service component type.
-     * @param Components Service component type.
+     * Set <p>Service component type</p>
+     * @param Components <p>Service component type</p>
      */
     public void setComponents(String Components) {
         this.Components = Components;
     }
 
     /**
-     * Get URL exclusion regular. 
-     * @return UrlExclude URL exclusion regular.
+     * Get <p>URL exclusion regular</p> 
+     * @return UrlExclude <p>URL exclusion regular</p>
      */
     public String getUrlExclude() {
         return this.UrlExclude;
     }
 
     /**
-     * Set URL exclusion regular.
-     * @param UrlExclude URL exclusion regular.
+     * Set <p>URL exclusion regular</p>
+     * @param UrlExclude <p>URL exclusion regular</p>
      */
     public void setUrlExclude(String UrlExclude) {
         this.UrlExclude = UrlExclude;
     }
 
     /**
-     * Get Specifies the log source. 
-     * @return LogSource Specifies the log source.
+     * Get <p>Log source</p> 
+     * @return LogSource <p>Log source</p>
      */
     public String getLogSource() {
         return this.LogSource;
     }
 
     /**
-     * Set Specifies the log source.
-     * @param LogSource Specifies the log source.
+     * Set <p>Log source</p>
+     * @param LogSource <p>Log source</p>
      */
     public void setLogSource(String LogSource) {
         this.LogSource = LogSource;
     }
 
     /**
-     * Get Log region. 
-     * @return LogRegion Log region.
+     * Get <p>Log region</p> 
+     * @return LogRegion <p>Log region</p>
      */
     public String getLogRegion() {
         return this.LogRegion;
     }
 
     /**
-     * Set Log region.
-     * @param LogRegion Log region.
+     * Set <p>Log region</p>
+     * @param LogRegion <p>Log region</p>
      */
     public void setLogRegion(String LogRegion) {
         this.LogRegion = LogRegion;
     }
 
     /**
-     * Get Whether logging is enabled. valid values: 0 (disabled), 1 (enabled). 
-     * @return IsRelatedLog Whether logging is enabled. valid values: 0 (disabled), 1 (enabled).
+     * Get <p>Whether logging is enabled 0 Disabled 1 Enabled</p> 
+     * @return IsRelatedLog <p>Whether logging is enabled 0 Disabled 1 Enabled</p>
      */
     public Long getIsRelatedLog() {
         return this.IsRelatedLog;
     }
 
     /**
-     * Set Whether logging is enabled. valid values: 0 (disabled), 1 (enabled).
-     * @param IsRelatedLog Whether logging is enabled. valid values: 0 (disabled), 1 (enabled).
+     * Set <p>Whether logging is enabled 0 Disabled 1 Enabled</p>
+     * @param IsRelatedLog <p>Whether logging is enabled 0 Disabled 1 Enabled</p>
      */
     public void setIsRelatedLog(Long IsRelatedLog) {
         this.IsRelatedLog = IsRelatedLog;
     }
 
     /**
-     * Get Log topic ID 
-     * @return LogTopicID Log topic ID
+     * Get <p>Log topic ID</p> 
+     * @return LogTopicID <p>Log topic ID</p>
      */
     public String getLogTopicID() {
         return this.LogTopicID;
     }
 
     /**
-     * Set Log topic ID
-     * @param LogTopicID Log topic ID
+     * Set <p>Log topic ID</p>
+     * @param LogTopicID <p>Log topic ID</p>
      */
     public void setLogTopicID(String LogTopicID) {
         this.LogTopicID = LogTopicID;
     }
 
     /**
-     * Get API names to filter 
-     * @return IgnoreOperationName API names to filter
+     * Get <p>Interface Names to Filter</p> 
+     * @return IgnoreOperationName <p>Interface Names to Filter</p>
      */
     public String getIgnoreOperationName() {
         return this.IgnoreOperationName;
     }
 
     /**
-     * Set API names to filter
-     * @param IgnoreOperationName API names to filter
+     * Set <p>Interface Names to Filter</p>
+     * @param IgnoreOperationName <p>Interface Names to Filter</p>
      */
     public void setIgnoreOperationName(String IgnoreOperationName) {
         this.IgnoreOperationName = IgnoreOperationName;
     }
 
     /**
-     * Get CLS log set/ES cluster ID 
-     * @return LogSet CLS log set/ES cluster ID
+     * Get <p>CLS logset | ES cluster ID</p> 
+     * @return LogSet <p>CLS logset | ES cluster ID</p>
      */
     public String getLogSet() {
         return this.LogSet;
     }
 
     /**
-     * Set CLS log set/ES cluster ID
-     * @param LogSet CLS log set/ES cluster ID
+     * Set <p>CLS logset | ES cluster ID</p>
+     * @param LogSet <p>CLS logset | ES cluster ID</p>
      */
     public void setLogSet(String LogSet) {
         this.LogSet = LogSet;
     }
 
     /**
-     * Get Number of traces reported by the probe per second. 
-     * @return TraceRateLimit Number of traces reported by the probe per second.
+     * Get <p>Number of traces reported by the probe per second</p> 
+     * @return TraceRateLimit <p>Number of traces reported by the probe per second</p>
      */
     public Long getTraceRateLimit() {
         return this.TraceRateLimit;
     }
 
     /**
-     * Set Number of traces reported by the probe per second.
-     * @param TraceRateLimit Number of traces reported by the probe per second.
+     * Set <p>Number of traces reported by the probe per second</p>
+     * @param TraceRateLimit <p>Number of traces reported by the probe per second</p>
      */
     public void setTraceRateLimit(Long TraceRateLimit) {
         this.TraceRateLimit = TraceRateLimit;
     }
 
     /**
-     * Get Whether thread profiling is enabled. 
-     * @return EnableSnapshot Whether thread profiling is enabled.
+     * Get <p>Whether thread profiling is enabled</p> 
+     * @return EnableSnapshot <p>Whether thread profiling is enabled</p>
      */
     public Boolean getEnableSnapshot() {
         return this.EnableSnapshot;
     }
 
     /**
-     * Set Whether thread profiling is enabled.
-     * @param EnableSnapshot Whether thread profiling is enabled.
+     * Set <p>Whether thread profiling is enabled</p>
+     * @param EnableSnapshot <p>Whether thread profiling is enabled</p>
      */
     public void setEnableSnapshot(Boolean EnableSnapshot) {
         this.EnableSnapshot = EnableSnapshot;
     }
 
     /**
-     * Get Timeout threshold for thread profiling. 
-     * @return SnapshotTimeout Timeout threshold for thread profiling.
+     * Get <p>Timeout threshold for thread profiling</p> 
+     * @return SnapshotTimeout <p>Timeout threshold for thread profiling</p>
      */
     public Long getSnapshotTimeout() {
         return this.SnapshotTimeout;
     }
 
     /**
-     * Set Timeout threshold for thread profiling.
-     * @param SnapshotTimeout Timeout threshold for thread profiling.
+     * Set <p>Timeout threshold for thread profiling</p>
+     * @param SnapshotTimeout <p>Timeout threshold for thread profiling</p>
      */
     public void setSnapshotTimeout(Long SnapshotTimeout) {
         this.SnapshotTimeout = SnapshotTimeout;
     }
 
     /**
-     * Get Whether agent is enabled. 
-     * @return AgentEnable Whether agent is enabled.
+     * Get <p>Whether to enable agent</p> 
+     * @return AgentEnable <p>Whether to enable agent</p>
      */
     public Boolean getAgentEnable() {
         return this.AgentEnable;
     }
 
     /**
-     * Set Whether agent is enabled.
-     * @param AgentEnable Whether agent is enabled.
+     * Set <p>Whether to enable agent</p>
+     * @param AgentEnable <p>Whether to enable agent</p>
      */
     public void setAgentEnable(Boolean AgentEnable) {
         this.AgentEnable = AgentEnable;
     }
 
     /**
-     * Get Component List
+     * Get <p>Component list</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstrumentList Component List
+     * @return InstrumentList <p>Component list</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Instrument [] getInstrumentList() {
@@ -725,9 +795,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Component List
+     * Set <p>Component list</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstrumentList Component List
+     * @param InstrumentList <p>Component list</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstrumentList(Instrument [] InstrumentList) {
@@ -735,41 +805,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether link compression is enabled. 
-     * @return TraceSquash Whether link compression is enabled.
+     * Get <p>Whether to enable link compression</p> 
+     * @return TraceSquash <p>Whether to enable link compression</p>
      */
     public Boolean getTraceSquash() {
         return this.TraceSquash;
     }
 
     /**
-     * Set Whether link compression is enabled.
-     * @param TraceSquash Whether link compression is enabled.
+     * Set <p>Whether to enable link compression</p>
+     * @param TraceSquash <p>Whether to enable link compression</p>
      */
     public void setTraceSquash(Boolean TraceSquash) {
         this.TraceSquash = TraceSquash;
     }
 
     /**
-     * Get Whether application diagnosis is enabled. 
-     * @return EventEnable Whether application diagnosis is enabled.
+     * Get <p>Whether the application diagnosis switch is enabled</p> 
+     * @return EventEnable <p>Whether the application diagnosis switch is enabled</p>
      */
     public Boolean getEventEnable() {
         return this.EventEnable;
     }
 
     /**
-     * Set Whether application diagnosis is enabled.
-     * @param EventEnable Whether application diagnosis is enabled.
+     * Set <p>Whether the application diagnosis switch is enabled</p>
+     * @param EventEnable <p>Whether the application diagnosis switch is enabled</p>
      */
     public void setEventEnable(Boolean EventEnable) {
         this.EventEnable = EventEnable;
     }
 
     /**
-     * Get Related configurations of the probe APIs.
+     * Get <p>probe API related configuration</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AgentOperationConfigView Related configurations of the probe APIs.
+     * @return AgentOperationConfigView <p>probe API related configuration</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AgentOperationConfigView getAgentOperationConfigView() {
@@ -777,9 +847,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Related configurations of the probe APIs.
+     * Set <p>probe API related configuration</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AgentOperationConfigView Related configurations of the probe APIs.
+     * @param AgentOperationConfigView <p>probe API related configuration</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAgentOperationConfigView(AgentOperationConfigView AgentOperationConfigView) {
@@ -787,25 +857,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable application log configuration. 
-     * @return EnableLogConfig Whether to enable application log configuration.
+     * Get <p>Whether the application log configuration is enabled</p> 
+     * @return EnableLogConfig <p>Whether the application log configuration is enabled</p>
      */
     public Boolean getEnableLogConfig() {
         return this.EnableLogConfig;
     }
 
     /**
-     * Set Whether to enable application log configuration.
-     * @param EnableLogConfig Whether to enable application log configuration.
+     * Set <p>Whether the application log configuration is enabled</p>
+     * @param EnableLogConfig <p>Whether the application log configuration is enabled</p>
      */
     public void setEnableLogConfig(Boolean EnableLogConfig) {
         this.EnableLogConfig = EnableLogConfig;
     }
 
     /**
-     * Get Application ID
+     * Get <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceID Application ID
+     * @return ServiceID <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceID() {
@@ -813,9 +883,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Application ID
+     * Set <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServiceID Application ID
+     * @param ServiceID <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceID(String ServiceID) {
@@ -823,9 +893,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+     * Get <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, hierarchical configuration)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnableDashboardConfig Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+     * @return EnableDashboardConfig <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, hierarchical configuration)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getEnableDashboardConfig() {
@@ -833,9 +903,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+     * Set <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, hierarchical configuration)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnableDashboardConfig Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+     * @param EnableDashboardConfig <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, hierarchical configuration)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnableDashboardConfig(Boolean EnableDashboardConfig) {
@@ -843,9 +913,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to associate with Dashboard. 0: disabled; 1: enabled.
+     * Get <p>Whether dashboard is associated: 0 Disabled 1 Enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsRelatedDashboard Whether to associate with Dashboard. 0: disabled; 1: enabled.
+     * @return IsRelatedDashboard <p>Whether dashboard is associated: 0 Disabled 1 Enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsRelatedDashboard() {
@@ -853,9 +923,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to associate with Dashboard. 0: disabled; 1: enabled.
+     * Set <p>Whether dashboard is associated: 0 Disabled 1 Enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsRelatedDashboard Whether to associate with Dashboard. 0: disabled; 1: enabled.
+     * @param IsRelatedDashboard <p>Whether dashboard is associated: 0 Disabled 1 Enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsRelatedDashboard(Long IsRelatedDashboard) {
@@ -863,9 +933,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get dashboard ID
+     * Get <p>dashboard ID</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DashboardTopicID dashboard ID
+     * @return DashboardTopicID <p>dashboard ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDashboardTopicID() {
@@ -873,9 +943,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set dashboard ID
+     * Set <p>dashboard ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DashboardTopicID dashboard ID
+     * @param DashboardTopicID <p>dashboard ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDashboardTopicID(String DashboardTopicID) {
@@ -883,9 +953,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable the application-level configuration.
+     * Get <p>Whether the application-level configuration is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnableSecurityConfig Whether to enable the application-level configuration.
+     * @return EnableSecurityConfig <p>Whether the application-level configuration is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getEnableSecurityConfig() {
@@ -893,9 +963,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable the application-level configuration.
+     * Set <p>Whether the application-level configuration is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnableSecurityConfig Whether to enable the application-level configuration.
+     * @param EnableSecurityConfig <p>Whether the application-level configuration is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnableSecurityConfig(Boolean EnableSecurityConfig) {
@@ -903,9 +973,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable detection of component vulnerability.
+     * Get <p>Whether the component vulnerability detection is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsInstrumentationVulnerabilityScan Whether to enable detection of component vulnerability.
+     * @return IsInstrumentationVulnerabilityScan <p>Whether the component vulnerability detection is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsInstrumentationVulnerabilityScan() {
@@ -913,9 +983,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable detection of component vulnerability.
+     * Set <p>Whether the component vulnerability detection is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsInstrumentationVulnerabilityScan Whether to enable detection of component vulnerability.
+     * @param IsInstrumentationVulnerabilityScan <p>Whether the component vulnerability detection is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsInstrumentationVulnerabilityScan(Long IsInstrumentationVulnerabilityScan) {
@@ -923,9 +993,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable SQL injection analysis.
+     * Get <p>Whether SQL injection analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsSqlInjectionAnalysis Whether to enable SQL injection analysis.
+     * @return IsSqlInjectionAnalysis <p>Whether SQL injection analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsSqlInjectionAnalysis() {
@@ -933,9 +1003,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable SQL injection analysis.
+     * Set <p>Whether SQL injection analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsSqlInjectionAnalysis Whether to enable SQL injection analysis.
+     * @param IsSqlInjectionAnalysis <p>Whether SQL injection analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsSqlInjectionAnalysis(Long IsSqlInjectionAnalysis) {
@@ -943,9 +1013,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable execution analysis of remote command.
+     * Get <p>Whether remote command execution analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsRemoteCommandExecutionAnalysis Whether to enable execution analysis of remote command.
+     * @return IsRemoteCommandExecutionAnalysis <p>Whether remote command execution analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsRemoteCommandExecutionAnalysis() {
@@ -953,9 +1023,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable execution analysis of remote command.
+     * Set <p>Whether remote command execution analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsRemoteCommandExecutionAnalysis Whether to enable execution analysis of remote command.
+     * @param IsRemoteCommandExecutionAnalysis <p>Whether remote command execution analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsRemoteCommandExecutionAnalysis(Long IsRemoteCommandExecutionAnalysis) {
@@ -963,9 +1033,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable detection analysis of Java webshell.
+     * Get <p>Whether Java Webshell detection and analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsMemoryHijackingAnalysis Whether to enable detection analysis of Java webshell.
+     * @return IsMemoryHijackingAnalysis <p>Whether Java Webshell detection and analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsMemoryHijackingAnalysis() {
@@ -973,9 +1043,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable detection analysis of Java webshell.
+     * Set <p>Whether Java Webshell detection and analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsMemoryHijackingAnalysis Whether to enable detection analysis of Java webshell.
+     * @param IsMemoryHijackingAnalysis <p>Whether Java Webshell detection and analysis is enabled</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsMemoryHijackingAnalysis(Long IsMemoryHijackingAnalysis) {
@@ -983,41 +1053,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get CLS index type. (0 = full-text index; 1 = key-value index). 
-     * @return LogIndexType CLS index type. (0 = full-text index; 1 = key-value index).
+     * Get <p>CLS index type (0=full-text index, 1=key-value index)</p> 
+     * @return LogIndexType <p>CLS index type (0=full-text index, 1=key-value index)</p>
      */
     public Long getLogIndexType() {
         return this.LogIndexType;
     }
 
     /**
-     * Set CLS index type. (0 = full-text index; 1 = key-value index).
-     * @param LogIndexType CLS index type. (0 = full-text index; 1 = key-value index).
+     * Set <p>CLS index type (0=full-text index, 1=key-value index)</p>
+     * @param LogIndexType <p>CLS index type (0=full-text index, 1=key-value index)</p>
      */
     public void setLogIndexType(Long LogIndexType) {
         this.LogIndexType = LogIndexType;
     }
 
     /**
-     * Get Index key of traceId. It is valid when the CLS index type is key-value index. 
-     * @return LogTraceIdKey Index key of traceId. It is valid when the CLS index type is key-value index.
+     * Get <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p> 
+     * @return LogTraceIdKey <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
      */
     public String getLogTraceIdKey() {
         return this.LogTraceIdKey;
     }
 
     /**
-     * Set Index key of traceId. It is valid when the CLS index type is key-value index.
-     * @param LogTraceIdKey Index key of traceId. It is valid when the CLS index type is key-value index.
+     * Set <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
+     * @param LogTraceIdKey <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
      */
     public void setLogTraceIdKey(String LogTraceIdKey) {
         this.LogTraceIdKey = LogTraceIdKey;
     }
 
     /**
-     * Get Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     * Get <p>Whether to enable file deletion detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsDeleteAnyFileAnalysis Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     * @return IsDeleteAnyFileAnalysis <p>Whether to enable file deletion detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsDeleteAnyFileAnalysis() {
@@ -1025,9 +1095,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     * Set <p>Whether to enable file deletion detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsDeleteAnyFileAnalysis Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     * @param IsDeleteAnyFileAnalysis <p>Whether to enable file deletion detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsDeleteAnyFileAnalysis(Long IsDeleteAnyFileAnalysis) {
@@ -1035,9 +1105,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     * Get <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsReadAnyFileAnalysis Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     * @return IsReadAnyFileAnalysis <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsReadAnyFileAnalysis() {
@@ -1045,9 +1115,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     * Set <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsReadAnyFileAnalysis Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     * @param IsReadAnyFileAnalysis <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsReadAnyFileAnalysis(Long IsReadAnyFileAnalysis) {
@@ -1055,9 +1125,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     * Get <p>Whether to enable arbitrary file upload detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsUploadAnyFileAnalysis Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     * @return IsUploadAnyFileAnalysis <p>Whether to enable arbitrary file upload detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsUploadAnyFileAnalysis() {
@@ -1065,9 +1135,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     * Set <p>Whether to enable arbitrary file upload detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsUploadAnyFileAnalysis Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     * @param IsUploadAnyFileAnalysis <p>Whether to enable arbitrary file upload detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsUploadAnyFileAnalysis(Long IsUploadAnyFileAnalysis) {
@@ -1075,9 +1145,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     * Get <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsIncludeAnyFileAnalysis Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     * @return IsIncludeAnyFileAnalysis <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsIncludeAnyFileAnalysis() {
@@ -1085,9 +1155,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     * Set <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsIncludeAnyFileAnalysis Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     * @param IsIncludeAnyFileAnalysis <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsIncludeAnyFileAnalysis(Long IsIncludeAnyFileAnalysis) {
@@ -1095,9 +1165,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     * Get <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsDirectoryTraversalAnalysis Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     * @return IsDirectoryTraversalAnalysis <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsDirectoryTraversalAnalysis() {
@@ -1105,9 +1175,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     * Set <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsDirectoryTraversalAnalysis Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     * @param IsDirectoryTraversalAnalysis <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsDirectoryTraversalAnalysis(Long IsDirectoryTraversalAnalysis) {
@@ -1115,9 +1185,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     * Get <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsTemplateEngineInjectionAnalysis Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     * @return IsTemplateEngineInjectionAnalysis <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsTemplateEngineInjectionAnalysis() {
@@ -1125,9 +1195,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     * Set <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsTemplateEngineInjectionAnalysis Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     * @param IsTemplateEngineInjectionAnalysis <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsTemplateEngineInjectionAnalysis(Long IsTemplateEngineInjectionAnalysis) {
@@ -1135,9 +1205,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     * Get <p>Whether script engine injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsScriptEngineInjectionAnalysis Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     * @return IsScriptEngineInjectionAnalysis <p>Whether script engine injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsScriptEngineInjectionAnalysis() {
@@ -1145,9 +1215,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     * Set <p>Whether script engine injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsScriptEngineInjectionAnalysis Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     * @param IsScriptEngineInjectionAnalysis <p>Whether script engine injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsScriptEngineInjectionAnalysis(Long IsScriptEngineInjectionAnalysis) {
@@ -1155,9 +1225,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     * Get <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsExpressionInjectionAnalysis Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     * @return IsExpressionInjectionAnalysis <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsExpressionInjectionAnalysis() {
@@ -1165,9 +1235,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     * Set <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsExpressionInjectionAnalysis Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     * @param IsExpressionInjectionAnalysis <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsExpressionInjectionAnalysis(Long IsExpressionInjectionAnalysis) {
@@ -1175,9 +1245,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     * Get <p>Whether JNDI injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsJNDIInjectionAnalysis Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     * @return IsJNDIInjectionAnalysis <p>Whether JNDI injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsJNDIInjectionAnalysis() {
@@ -1185,9 +1255,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     * Set <p>Whether JNDI injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsJNDIInjectionAnalysis Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     * @param IsJNDIInjectionAnalysis <p>Whether JNDI injection detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsJNDIInjectionAnalysis(Long IsJNDIInjectionAnalysis) {
@@ -1195,9 +1265,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     * Get <p>Whether JNI injection detection is enabled (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsJNIInjectionAnalysis Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     * @return IsJNIInjectionAnalysis <p>Whether JNI injection detection is enabled (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsJNIInjectionAnalysis() {
@@ -1205,9 +1275,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     * Set <p>Whether JNI injection detection is enabled (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsJNIInjectionAnalysis Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     * @param IsJNIInjectionAnalysis <p>Whether JNI injection detection is enabled (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsJNIInjectionAnalysis(Long IsJNIInjectionAnalysis) {
@@ -1215,9 +1285,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     * Get <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsWebshellBackdoorAnalysis Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     * @return IsWebshellBackdoorAnalysis <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsWebshellBackdoorAnalysis() {
@@ -1225,9 +1295,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     * Set <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsWebshellBackdoorAnalysis Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     * @param IsWebshellBackdoorAnalysis <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsWebshellBackdoorAnalysis(Long IsWebshellBackdoorAnalysis) {
@@ -1235,9 +1305,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     * Get <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     * @return IsDeserializationAnalysis <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getIsDeserializationAnalysis() {
@@ -1245,9 +1315,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     * Set <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     * @param IsDeserializationAnalysis <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsDeserializationAnalysis(Long IsDeserializationAnalysis) {
@@ -1255,83 +1325,243 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get API name automatic convergence switch (0 - disabled; 1 - enabled) 
-     * @return UrlAutoConvergenceEnable API name automatic convergence switch (0 - disabled; 1 - enabled)
+     * Get <p>API name auto convergence switch (0-off, 1-on)</p> 
+     * @return UrlAutoConvergenceEnable <p>API name auto convergence switch (0-off, 1-on)</p>
      */
     public Boolean getUrlAutoConvergenceEnable() {
         return this.UrlAutoConvergenceEnable;
     }
 
     /**
-     * Set API name automatic convergence switch (0 - disabled; 1 - enabled)
-     * @param UrlAutoConvergenceEnable API name automatic convergence switch (0 - disabled; 1 - enabled)
+     * Set <p>API name auto convergence switch (0-off, 1-on)</p>
+     * @param UrlAutoConvergenceEnable <p>API name auto convergence switch (0-off, 1-on)</p>
      */
     public void setUrlAutoConvergenceEnable(Boolean UrlAutoConvergenceEnable) {
         this.UrlAutoConvergenceEnable = UrlAutoConvergenceEnable;
     }
 
     /**
-     * Get Convergence threshold for URL long segments. 
-     * @return UrlLongSegmentThreshold Convergence threshold for URL long segments.
+     * Get <p>URL long segment convergence threshold</p> 
+     * @return UrlLongSegmentThreshold <p>URL long segment convergence threshold</p>
      */
     public Long getUrlLongSegmentThreshold() {
         return this.UrlLongSegmentThreshold;
     }
 
     /**
-     * Set Convergence threshold for URL long segments.
-     * @param UrlLongSegmentThreshold Convergence threshold for URL long segments.
+     * Set <p>URL long segment convergence threshold</p>
+     * @param UrlLongSegmentThreshold <p>URL long segment convergence threshold</p>
      */
     public void setUrlLongSegmentThreshold(Long UrlLongSegmentThreshold) {
         this.UrlLongSegmentThreshold = UrlLongSegmentThreshold;
     }
 
     /**
-     * Get Convergence threshold for URL numerical segments. 
-     * @return UrlNumberSegmentThreshold Convergence threshold for URL numerical segments.
+     * Get <p>URL digit segment convergence threshold</p> 
+     * @return UrlNumberSegmentThreshold <p>URL digit segment convergence threshold</p>
      */
     public Long getUrlNumberSegmentThreshold() {
         return this.UrlNumberSegmentThreshold;
     }
 
     /**
-     * Set Convergence threshold for URL numerical segments.
-     * @param UrlNumberSegmentThreshold Convergence threshold for URL numerical segments.
+     * Set <p>URL digit segment convergence threshold</p>
+     * @param UrlNumberSegmentThreshold <p>URL digit segment convergence threshold</p>
      */
     public void setUrlNumberSegmentThreshold(Long UrlNumberSegmentThreshold) {
         this.UrlNumberSegmentThreshold = UrlNumberSegmentThreshold;
     }
 
     /**
-     * Get Specifies the memory threshold for probe fusing. 
-     * @return DisableMemoryUsed Specifies the memory threshold for probe fusing.
+     * Get <p>Fuse memory threshold of the probe</p> 
+     * @return DisableMemoryUsed <p>Fuse memory threshold of the probe</p>
      */
     public Long getDisableMemoryUsed() {
         return this.DisableMemoryUsed;
     }
 
     /**
-     * Set Specifies the memory threshold for probe fusing.
-     * @param DisableMemoryUsed Specifies the memory threshold for probe fusing.
+     * Set <p>Fuse memory threshold of the probe</p>
+     * @param DisableMemoryUsed <p>Fuse memory threshold of the probe</p>
      */
     public void setDisableMemoryUsed(Long DisableMemoryUsed) {
         this.DisableMemoryUsed = DisableMemoryUsed;
     }
 
     /**
-     * Get Specifies the CPU threshold for probe fusing. 
-     * @return DisableCpuUsed Specifies the CPU threshold for probe fusing.
+     * Get <p>Probe fuse CPU threshold</p> 
+     * @return DisableCpuUsed <p>Probe fuse CPU threshold</p>
      */
     public Long getDisableCpuUsed() {
         return this.DisableCpuUsed;
     }
 
     /**
-     * Set Specifies the CPU threshold for probe fusing.
-     * @param DisableCpuUsed Specifies the CPU threshold for probe fusing.
+     * Set <p>Probe fuse CPU threshold</p>
+     * @param DisableCpuUsed <p>Probe fuse CPU threshold</p>
      */
     public void setDisableCpuUsed(Long DisableCpuUsed) {
         this.DisableCpuUsed = DisableCpuUsed;
+    }
+
+    /**
+     * Get <p>Whether SQL parameter access is enabled</p> 
+     * @return DbStatementParametersEnabled <p>Whether SQL parameter access is enabled</p>
+     */
+    public Boolean getDbStatementParametersEnabled() {
+        return this.DbStatementParametersEnabled;
+    }
+
+    /**
+     * Set <p>Whether SQL parameter access is enabled</p>
+     * @param DbStatementParametersEnabled <p>Whether SQL parameter access is enabled</p>
+     */
+    public void setDbStatementParametersEnabled(Boolean DbStatementParametersEnabled) {
+        this.DbStatementParametersEnabled = DbStatementParametersEnabled;
+    }
+
+    /**
+     * Get <p>Slow SQL threshold</p> 
+     * @return SlowSQLThresholds <p>Slow SQL threshold</p>
+     */
+    public ApmTag [] getSlowSQLThresholds() {
+        return this.SlowSQLThresholds;
+    }
+
+    /**
+     * Set <p>Slow SQL threshold</p>
+     * @param SlowSQLThresholds <p>Slow SQL threshold</p>
+     */
+    public void setSlowSQLThresholds(ApmTag [] SlowSQLThresholds) {
+        this.SlowSQLThresholds = SlowSQLThresholds;
+    }
+
+    /**
+     * Get <p>Whether the masking rule is enabled</p> 
+     * @return EnableDesensitizationRule <p>Whether the masking rule is enabled</p>
+     */
+    public Long getEnableDesensitizationRule() {
+        return this.EnableDesensitizationRule;
+    }
+
+    /**
+     * Set <p>Whether the masking rule is enabled</p>
+     * @param EnableDesensitizationRule <p>Whether the masking rule is enabled</p>
+     */
+    public void setEnableDesensitizationRule(Long EnableDesensitizationRule) {
+        this.EnableDesensitizationRule = EnableDesensitizationRule;
+    }
+
+    /**
+     * Get <p>Masking rule</p> 
+     * @return DesensitizationRule <p>Masking rule</p>
+     */
+    public String getDesensitizationRule() {
+        return this.DesensitizationRule;
+    }
+
+    /**
+     * Set <p>Masking rule</p>
+     * @param DesensitizationRule <p>Masking rule</p>
+     */
+    public void setDesensitizationRule(String DesensitizationRule) {
+        this.DesensitizationRule = DesensitizationRule;
+    }
+
+    /**
+     * Get <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p> 
+     * @return LogSpanIdKey <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+     */
+    public String getLogSpanIdKey() {
+        return this.LogSpanIdKey;
+    }
+
+    /**
+     * Set <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+     * @param LogSpanIdKey <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+     */
+    public void setLogSpanIdKey(String LogSpanIdKey) {
+        this.LogSpanIdKey = LogSpanIdKey;
+    }
+
+    /**
+     * Get <p>Automated performance analysis configuration</p> 
+     * @return AutoProfilingConfig <p>Automated performance analysis configuration</p>
+     */
+    public AutoProfilingConfig getAutoProfilingConfig() {
+        return this.AutoProfilingConfig;
+    }
+
+    /**
+     * Set <p>Automated performance analysis configuration</p>
+     * @param AutoProfilingConfig <p>Automated performance analysis configuration</p>
+     */
+    public void setAutoProfilingConfig(AutoProfilingConfig AutoProfilingConfig) {
+        this.AutoProfilingConfig = AutoProfilingConfig;
+    }
+
+    /**
+     * Get <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p> 
+     * @return EnableThresholdConfig <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+     */
+    public Boolean getEnableThresholdConfig() {
+        return this.EnableThresholdConfig;
+    }
+
+    /**
+     * Set <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+     * @param EnableThresholdConfig <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+     */
+    public void setEnableThresholdConfig(Boolean EnableThresholdConfig) {
+        this.EnableThresholdConfig = EnableThresholdConfig;
+    }
+
+    /**
+     * Get <p>Error rate threshold (%) used to judge the application health status as "red".</p> 
+     * @return ErrRateThreshold <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+     */
+    public Long getErrRateThreshold() {
+        return this.ErrRateThreshold;
+    }
+
+    /**
+     * Set <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+     * @param ErrRateThreshold <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+     */
+    public void setErrRateThreshold(Long ErrRateThreshold) {
+        this.ErrRateThreshold = ErrRateThreshold;
+    }
+
+    /**
+     * Get <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p> 
+     * @return ResponseDurationWarningThreshold <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+     */
+    public Long getResponseDurationWarningThreshold() {
+        return this.ResponseDurationWarningThreshold;
+    }
+
+    /**
+     * Set <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+     * @param ResponseDurationWarningThreshold <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+     */
+    public void setResponseDurationWarningThreshold(Long ResponseDurationWarningThreshold) {
+        this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
+    }
+
+    /**
+     * Get <p>Whether to use the built-in fuse threshold of the probe by default</p> 
+     * @return UseDefaultFuseConfig <p>Whether to use the built-in fuse threshold of the probe by default</p>
+     */
+    public Boolean getUseDefaultFuseConfig() {
+        return this.UseDefaultFuseConfig;
+    }
+
+    /**
+     * Set <p>Whether to use the built-in fuse threshold of the probe by default</p>
+     * @param UseDefaultFuseConfig <p>Whether to use the built-in fuse threshold of the probe by default</p>
+     */
+    public void setUseDefaultFuseConfig(Boolean UseDefaultFuseConfig) {
+        this.UseDefaultFuseConfig = UseDefaultFuseConfig;
     }
 
     public ApmAppConfig() {
@@ -1501,6 +1731,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.DisableCpuUsed != null) {
             this.DisableCpuUsed = new Long(source.DisableCpuUsed);
         }
+        if (source.DbStatementParametersEnabled != null) {
+            this.DbStatementParametersEnabled = new Boolean(source.DbStatementParametersEnabled);
+        }
+        if (source.SlowSQLThresholds != null) {
+            this.SlowSQLThresholds = new ApmTag[source.SlowSQLThresholds.length];
+            for (int i = 0; i < source.SlowSQLThresholds.length; i++) {
+                this.SlowSQLThresholds[i] = new ApmTag(source.SlowSQLThresholds[i]);
+            }
+        }
+        if (source.EnableDesensitizationRule != null) {
+            this.EnableDesensitizationRule = new Long(source.EnableDesensitizationRule);
+        }
+        if (source.DesensitizationRule != null) {
+            this.DesensitizationRule = new String(source.DesensitizationRule);
+        }
+        if (source.LogSpanIdKey != null) {
+            this.LogSpanIdKey = new String(source.LogSpanIdKey);
+        }
+        if (source.AutoProfilingConfig != null) {
+            this.AutoProfilingConfig = new AutoProfilingConfig(source.AutoProfilingConfig);
+        }
+        if (source.EnableThresholdConfig != null) {
+            this.EnableThresholdConfig = new Boolean(source.EnableThresholdConfig);
+        }
+        if (source.ErrRateThreshold != null) {
+            this.ErrRateThreshold = new Long(source.ErrRateThreshold);
+        }
+        if (source.ResponseDurationWarningThreshold != null) {
+            this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
+        }
+        if (source.UseDefaultFuseConfig != null) {
+            this.UseDefaultFuseConfig = new Boolean(source.UseDefaultFuseConfig);
+        }
     }
 
 
@@ -1560,6 +1823,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
         this.setParamSimple(map, prefix + "DisableMemoryUsed", this.DisableMemoryUsed);
         this.setParamSimple(map, prefix + "DisableCpuUsed", this.DisableCpuUsed);
+        this.setParamSimple(map, prefix + "DbStatementParametersEnabled", this.DbStatementParametersEnabled);
+        this.setParamArrayObj(map, prefix + "SlowSQLThresholds.", this.SlowSQLThresholds);
+        this.setParamSimple(map, prefix + "EnableDesensitizationRule", this.EnableDesensitizationRule);
+        this.setParamSimple(map, prefix + "DesensitizationRule", this.DesensitizationRule);
+        this.setParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
+        this.setParamObj(map, prefix + "AutoProfilingConfig.", this.AutoProfilingConfig);
+        this.setParamSimple(map, prefix + "EnableThresholdConfig", this.EnableThresholdConfig);
+        this.setParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
+        this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+        this.setParamSimple(map, prefix + "UseDefaultFuseConfig", this.UseDefaultFuseConfig);
 
     }
 }

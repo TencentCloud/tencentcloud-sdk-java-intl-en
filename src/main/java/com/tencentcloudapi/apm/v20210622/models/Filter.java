@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class Filter extends AbstractModel {
 
     /**
-    * Filtering method (=, !=, in).
+    * <p>Filter method (=, !=, in)</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Filter dimension name.
+    * <p>Filter dimension name</p><p>For details, see the actual interface field description</p>
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-    * Filter value. uses commas to separate multiple values in in filtering method.
+    * <p>Filter value. Use comma-separated multiple values for in filtering method.</p>
     */
     @SerializedName("Value")
     @Expose
     private String Value;
 
     /**
-     * Get Filtering method (=, !=, in). 
-     * @return Type Filtering method (=, !=, in).
+     * Get <p>Filter method (=, !=, in)</p> 
+     * @return Type <p>Filter method (=, !=, in)</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Filtering method (=, !=, in).
-     * @param Type Filtering method (=, !=, in).
+     * Set <p>Filter method (=, !=, in)</p>
+     * @param Type <p>Filter method (=, !=, in)</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Filter dimension name. 
-     * @return Key Filter dimension name.
+     * Get <p>Filter dimension name</p><p>For details, see the actual interface field description</p> 
+     * @return Key <p>Filter dimension name</p><p>For details, see the actual interface field description</p>
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set Filter dimension name.
-     * @param Key Filter dimension name.
+     * Set <p>Filter dimension name</p><p>For details, see the actual interface field description</p>
+     * @param Key <p>Filter dimension name</p><p>For details, see the actual interface field description</p>
      */
     public void setKey(String Key) {
         this.Key = Key;
     }
 
     /**
-     * Get Filter value. uses commas to separate multiple values in in filtering method. 
-     * @return Value Filter value. uses commas to separate multiple values in in filtering method.
+     * Get <p>Filter value. Use comma-separated multiple values for in filtering method.</p> 
+     * @return Value <p>Filter value. Use comma-separated multiple values for in filtering method.</p>
      */
     public String getValue() {
         return this.Value;
     }
 
     /**
-     * Set Filter value. uses commas to separate multiple values in in filtering method.
-     * @param Value Filter value. uses commas to separate multiple values in in filtering method.
+     * Set <p>Filter value. Use comma-separated multiple values for in filtering method.</p>
+     * @param Value <p>Filter value. Use comma-separated multiple values for in filtering method.</p>
      */
     public void setValue(String Value) {
         this.Value = Value;

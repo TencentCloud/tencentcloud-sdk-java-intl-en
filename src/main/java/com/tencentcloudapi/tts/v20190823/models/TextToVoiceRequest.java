@@ -78,7 +78,7 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     private Long VoiceType;
 
     /**
-    * One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
+    * 
     */
     @SerializedName("FastVoiceType")
     @Expose
@@ -120,15 +120,14 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     private Long SegmentRate;
 
     /**
-    * Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
-Sample value: neutral
+    * 
     */
     @SerializedName("EmotionCategory")
     @Expose
     private String EmotionCategory;
 
     /**
-    * Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
+    * 
     */
     @SerializedName("EmotionIntensity")
     @Expose
@@ -267,16 +266,16 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     }
 
     /**
-     * Get One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice. 
-     * @return FastVoiceType One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
+     * Get  
+     * @return FastVoiceType 
      */
     public String getFastVoiceType() {
         return this.FastVoiceType;
     }
 
     /**
-     * Set One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
-     * @param FastVoiceType One-sentence version VRS Voice ID, must be filled in when using the one-sentence version VRS voice.
+     * Set 
+     * @param FastVoiceType 
      */
     public void setFastVoiceType(String FastVoiceType) {
         this.FastVoiceType = FastVoiceType;
@@ -363,36 +362,32 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     }
 
     /**
-     * Get Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
-Sample value: neutral 
-     * @return EmotionCategory Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
-Sample value: neutral
+     * Get  
+     * @return EmotionCategory 
      */
     public String getEmotionCategory() {
         return this.EmotionCategory;
     }
 
     /**
-     * Set Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
-Sample value: neutral
-     * @param EmotionCategory Controls the emotion of synthesized audio, applicable only to multi-emotion voices. Values: neutral, sad, happy, angry, fear, news, story, radio, poetry, call, sajiao (coquettish), disgusted, amaze (surprised), peaceful, exciting, aojiao (haughty), jieshuo (narration)
-Sample value: neutral
+     * Set 
+     * @param EmotionCategory 
      */
     public void setEmotionCategory(String EmotionCategory) {
         this.EmotionCategory = EmotionCategory;
     }
 
     /**
-     * Get Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty; 
-     * @return EmotionIntensity Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
+     * Get  
+     * @return EmotionIntensity 
      */
     public Long getEmotionIntensity() {
         return this.EmotionIntensity;
     }
 
     /**
-     * Set Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
-     * @param EmotionIntensity Controls the emotion intensity of synthesized audio, with a value range of [50,200], defaults to 100; takes effect only when EmotionCategory is not empty;
+     * Set 
+     * @param EmotionIntensity 
      */
     public void setEmotionIntensity(Long EmotionIntensity) {
         this.EmotionIntensity = EmotionIntensity;

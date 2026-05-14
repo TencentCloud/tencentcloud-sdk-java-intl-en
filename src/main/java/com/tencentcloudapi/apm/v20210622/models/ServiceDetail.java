@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ServiceDetail extends AbstractModel {
 
     /**
-    * Application ID
+    * <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceID")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ServiceID;
 
     /**
-    * Business system ID
+    * <p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("InstanceKey")
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String InstanceKey;
 
     /**
-    * User appid.
+    * <p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AppID")
@@ -48,7 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long AppID;
 
     /**
-    * Host account UIN
+    * <p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CreateUIN")
@@ -56,7 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String CreateUIN;
 
     /**
-    * Application name
+    * <p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceName")
@@ -64,7 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ServiceName;
 
     /**
-    * Application description
+    * <p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ServiceDescription")
@@ -72,7 +72,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ServiceDescription;
 
     /**
-    * Region.
+    * <p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Region")
@@ -80,7 +80,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Region;
 
     /**
-    * Tag.
+    * <p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tags")
@@ -88,16 +88,40 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ApmTag [] Tags;
 
     /**
-    * Business system name.
+    * <p>Business system name</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-     * Get Application ID
+    * <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("EnableThresholdConfig")
+    @Expose
+    private Boolean EnableThresholdConfig;
+
+    /**
+    * <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ErrRateThreshold")
+    @Expose
+    private Long ErrRateThreshold;
+
+    /**
+    * <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("ResponseDurationWarningThreshold")
+    @Expose
+    private Long ResponseDurationWarningThreshold;
+
+    /**
+     * Get <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceID Application ID
+     * @return ServiceID <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceID() {
@@ -105,9 +129,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Application ID
+     * Set <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServiceID Application ID
+     * @param ServiceID <p>Application ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceID(String ServiceID) {
@@ -115,9 +139,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Business system ID
+     * Get <p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceKey Business system ID
+     * @return InstanceKey <p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getInstanceKey() {
@@ -125,9 +149,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Business system ID
+     * Set <p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceKey Business system ID
+     * @param InstanceKey <p>Business system ID</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setInstanceKey(String InstanceKey) {
@@ -135,9 +159,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get User appid.
+     * Get <p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AppID User appid.
+     * @return AppID <p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getAppID() {
@@ -145,9 +169,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set User appid.
+     * Set <p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AppID User appid.
+     * @param AppID <p>User appid</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAppID(Long AppID) {
@@ -155,9 +179,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Host account UIN
+     * Get <p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return CreateUIN Host account UIN
+     * @return CreateUIN <p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getCreateUIN() {
@@ -165,9 +189,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Host account UIN
+     * Set <p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param CreateUIN Host account UIN
+     * @param CreateUIN <p>main account uin</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCreateUIN(String CreateUIN) {
@@ -175,9 +199,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Application name
+     * Get <p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceName Application name
+     * @return ServiceName <p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceName() {
@@ -185,9 +209,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Application name
+     * Set <p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServiceName Application name
+     * @param ServiceName <p>Application name</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceName(String ServiceName) {
@@ -195,9 +219,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Application description
+     * Get <p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ServiceDescription Application description
+     * @return ServiceDescription <p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getServiceDescription() {
@@ -205,9 +229,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Application description
+     * Set <p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ServiceDescription Application description
+     * @param ServiceDescription <p>Application description</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setServiceDescription(String ServiceDescription) {
@@ -215,9 +239,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Region.
+     * Get <p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Region Region.
+     * @return Region <p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRegion() {
@@ -225,9 +249,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Region.
+     * Set <p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Region Region.
+     * @param Region <p>Region</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRegion(String Region) {
@@ -235,9 +259,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Tag.
+     * Get <p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tags Tag.
+     * @return Tags <p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ApmTag [] getTags() {
@@ -245,9 +269,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Tag.
+     * Set <p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tags Tag.
+     * @param Tags <p>Tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTags(ApmTag [] Tags) {
@@ -255,19 +279,79 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Business system name. 
-     * @return InstanceName Business system name.
+     * Get <p>Business system name</p> 
+     * @return InstanceName <p>Business system name</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Business system name.
-     * @param InstanceName Business system name.
+     * Set <p>Business system name</p>
+     * @param InstanceName <p>Business system name</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
+    }
+
+    /**
+     * Get <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return EnableThresholdConfig <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Boolean getEnableThresholdConfig() {
+        return this.EnableThresholdConfig;
+    }
+
+    /**
+     * Set <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param EnableThresholdConfig <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setEnableThresholdConfig(Boolean EnableThresholdConfig) {
+        this.EnableThresholdConfig = EnableThresholdConfig;
+    }
+
+    /**
+     * Get <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ErrRateThreshold <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getErrRateThreshold() {
+        return this.ErrRateThreshold;
+    }
+
+    /**
+     * Set <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ErrRateThreshold <p>Error rate threshold (%) used to judge the application health status as "red".</p><p>Unit: %</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setErrRateThreshold(Long ErrRateThreshold) {
+        this.ErrRateThreshold = ErrRateThreshold;
+    }
+
+    /**
+     * Get <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResponseDurationWarningThreshold <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public Long getResponseDurationWarningThreshold() {
+        return this.ResponseDurationWarningThreshold;
+    }
+
+    /**
+     * Set <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResponseDurationWarningThreshold <p>Alert threshold for response time (ms), used to judge application health status as "yellow".</p><p>Unit: ms</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setResponseDurationWarningThreshold(Long ResponseDurationWarningThreshold) {
+        this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
     }
 
     public ServiceDetail() {
@@ -308,6 +392,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.InstanceName != null) {
             this.InstanceName = new String(source.InstanceName);
         }
+        if (source.EnableThresholdConfig != null) {
+            this.EnableThresholdConfig = new Boolean(source.EnableThresholdConfig);
+        }
+        if (source.ErrRateThreshold != null) {
+            this.ErrRateThreshold = new Long(source.ErrRateThreshold);
+        }
+        if (source.ResponseDurationWarningThreshold != null) {
+            this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
+        }
     }
 
 
@@ -324,6 +417,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "InstanceName", this.InstanceName);
+        this.setParamSimple(map, prefix + "EnableThresholdConfig", this.EnableThresholdConfig);
+        this.setParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
+        this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
 
     }
 }

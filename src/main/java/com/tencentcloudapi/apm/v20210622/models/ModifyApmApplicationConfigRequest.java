@@ -24,1130 +24,1360 @@ import java.util.HashMap;
 public class ModifyApmApplicationConfigRequest extends AbstractModel {
 
     /**
-    * Business system ID.
+    * <p>Business system ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Application name
+    * <p>Application name</p>
     */
     @SerializedName("ServiceName")
     @Expose
     private String ServiceName;
 
     /**
-    * URL convergence switch. 0: Off; 1: On
+    * <p>URL convergence switch, 0 Off | 1 On</p>
     */
     @SerializedName("UrlConvergenceSwitch")
     @Expose
     private Long UrlConvergenceSwitch;
 
     /**
-    * URL convergence threshold
+    * <p>URL convergence threshold</p>
     */
     @SerializedName("UrlConvergenceThreshold")
     @Expose
     private Long UrlConvergenceThreshold;
 
     /**
-    * Regex rules for exception filtering, separated by commas
+    * <p>Exception filtering regex rules, comma-separated</p>
     */
     @SerializedName("ExceptionFilter")
     @Expose
     private String ExceptionFilter;
 
     /**
-    * Regex rules for URL convergence, separated by commas
+    * <p>URL convergence regex rules, comma-separated</p>
     */
     @SerializedName("UrlConvergence")
     @Expose
     private String UrlConvergence;
 
     /**
-    * Error code filtering, separated by commas
+    * <p>Error code filtering, comma-separated</p>
     */
     @SerializedName("ErrorCodeFilter")
     @Expose
     private String ErrorCodeFilter;
 
     /**
-    * Regex rules for URL exclusion, separated by commas
+    * <p>URL exclusion regex rule, comma-separated</p>
     */
     @SerializedName("UrlExclude")
     @Expose
     private String UrlExclude;
 
     /**
-    * Log switch. 0: Off; 1: On
+    * <p>Log switch 0 Disabled 1 Enabled</p>
     */
     @SerializedName("IsRelatedLog")
     @Expose
     private Long IsRelatedLog;
 
     /**
-    * Log region.
+    * <p>Log region</p>
     */
     @SerializedName("LogRegion")
     @Expose
     private String LogRegion;
 
     /**
-    * Log topic ID
+    * <p>Log topic ID</p>
     */
     @SerializedName("LogTopicID")
     @Expose
     private String LogTopicID;
 
     /**
-    * CLS log set/ES cluster ID
+    * <p>CLS logset | ES cluster ID</p>
     */
     @SerializedName("LogSet")
     @Expose
     private String LogSet;
 
     /**
-    * Log source: CLS or ES
+    * <p>Log source CLS | ES</p>
     */
     @SerializedName("LogSource")
     @Expose
     private String LogSource;
 
     /**
-    * APIs to be filtered
+    * <p>Interfaces to Filter</p>
     */
     @SerializedName("IgnoreOperationName")
     @Expose
     private String IgnoreOperationName;
 
     /**
-    * Whether thread profiling is enabled.
+    * <p>Whether thread profiling is enabled</p>
     */
     @SerializedName("EnableSnapshot")
     @Expose
     private Boolean EnableSnapshot;
 
     /**
-    * Timeout threshold for thread profiling.
+    * <p>Timeout threshold for thread profiling</p>
     */
     @SerializedName("SnapshotTimeout")
     @Expose
     private Long SnapshotTimeout;
 
     /**
-    * Whether agent is enabled.
+    * <p>Whether to enable agent</p>
     */
     @SerializedName("AgentEnable")
     @Expose
     private Boolean AgentEnable;
 
     /**
-    * Whether link compression is enabled.
+    * <p>Whether to enable link compression</p>
     */
     @SerializedName("TraceSquash")
     @Expose
     private Boolean TraceSquash;
 
     /**
-    * Switch for enabling application diagnosis.
+    * <p>Whether the switch for enabling application diagnosis is enabled</p>
     */
     @SerializedName("EventEnable")
     @Expose
     private Boolean EventEnable;
 
     /**
-    * Component List
+    * <p>Component list</p>
     */
     @SerializedName("InstrumentList")
     @Expose
     private Instrument [] InstrumentList;
 
     /**
-    * Related configurations of the probe APIs.
+    * <p>probe API related configuration</p>
     */
     @SerializedName("AgentOperationConfigView")
     @Expose
     private AgentOperationConfigView AgentOperationConfigView;
 
     /**
-    * Whether to enable application log configuration.
+    * <p>Whether the application log configuration is enabled</p>
     */
     @SerializedName("EnableLogConfig")
     @Expose
     private Boolean EnableLogConfig;
 
     /**
-    * Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+    * <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, application-level configuration)</p>
     */
     @SerializedName("EnableDashboardConfig")
     @Expose
     private Boolean EnableDashboardConfig;
 
     /**
-    * Whether to associate with Dashboard. 0: disabled; 1: enabled.
+    * <p>Whether to associate with dashboard: 0 off 1 on</p>
     */
     @SerializedName("IsRelatedDashboard")
     @Expose
     private Long IsRelatedDashboard;
 
     /**
-    * dashboard ID
+    * <p>dashboard ID</p>
     */
     @SerializedName("DashboardTopicID")
     @Expose
     private String DashboardTopicID;
 
     /**
-    * CLS index type. (0 = full-text index; 1 = key-value index).
+    * <p>CLS index type (0=full-text index, 1=key-value index)</p>
     */
     @SerializedName("LogIndexType")
     @Expose
     private Long LogIndexType;
 
     /**
-    * Index key of traceId. It is valid when the CLS index type is key-value index.
+    * <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
     */
     @SerializedName("LogTraceIdKey")
     @Expose
     private String LogTraceIdKey;
 
     /**
-    * Whether to enable the application security configuration.
+    * <p>Whether application security configuration is enabled</p>
     */
     @SerializedName("EnableSecurityConfig")
     @Expose
     private Boolean EnableSecurityConfig;
 
     /**
-    * Whether to enable SQL injection analysis.
+    * <p>Whether SQL injection analysis is enabled</p>
     */
     @SerializedName("IsSqlInjectionAnalysis")
     @Expose
     private Long IsSqlInjectionAnalysis;
 
     /**
-    * Whether to enable detection of component vulnerability.
+    * <p>Whether component vulnerability detection is enabled</p>
     */
     @SerializedName("IsInstrumentationVulnerabilityScan")
     @Expose
     private Long IsInstrumentationVulnerabilityScan;
 
     /**
-    * Whether remote command detection is enabled.
+    * <p>Whether remote command detection is enabled</p>
     */
     @SerializedName("IsRemoteCommandExecutionAnalysis")
     @Expose
     private Long IsRemoteCommandExecutionAnalysis;
 
     /**
-    * Whether to enable detection of Java webshell.
+    * <p>Whether Java Webshell detection is enabled</p>
     */
     @SerializedName("IsMemoryHijackingAnalysis")
     @Expose
     private Long IsMemoryHijackingAnalysis;
 
     /**
-    * Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+    * <p>Whether to enable detection of any file deletion (0 - turn off, 1 - turn on)</p>
     */
     @SerializedName("IsDeleteAnyFileAnalysis")
     @Expose
     private Long IsDeleteAnyFileAnalysis;
 
     /**
-    * Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+    * <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
     */
     @SerializedName("IsReadAnyFileAnalysis")
     @Expose
     private Long IsReadAnyFileAnalysis;
 
     /**
-    * Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+    * <p>Whether to enable arbitrary file upload detection (0-disable, 1-enable)</p>
     */
     @SerializedName("IsUploadAnyFileAnalysis")
     @Expose
     private Long IsUploadAnyFileAnalysis;
 
     /**
-    * Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+    * <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
     */
     @SerializedName("IsIncludeAnyFileAnalysis")
     @Expose
     private Long IsIncludeAnyFileAnalysis;
 
     /**
-    * Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+    * <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
     */
     @SerializedName("IsDirectoryTraversalAnalysis")
     @Expose
     private Long IsDirectoryTraversalAnalysis;
 
     /**
-    * Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+    * <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
     */
     @SerializedName("IsTemplateEngineInjectionAnalysis")
     @Expose
     private Long IsTemplateEngineInjectionAnalysis;
 
     /**
-    * Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+    * <p>Whether to enable script engine injection detection (0-disable, 1-enable)</p>
     */
     @SerializedName("IsScriptEngineInjectionAnalysis")
     @Expose
     private Long IsScriptEngineInjectionAnalysis;
 
     /**
-    * Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+    * <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
     */
     @SerializedName("IsExpressionInjectionAnalysis")
     @Expose
     private Long IsExpressionInjectionAnalysis;
 
     /**
-    * Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+    * <p>Whether JNDI injection detection is enabled (0 - disabled, 1 - enabled)</p>
     */
     @SerializedName("IsJNDIInjectionAnalysis")
     @Expose
     private Long IsJNDIInjectionAnalysis;
 
     /**
-    * Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+    * <p>Whether JNI injection detection is enabled (0-disabled, 1-enabled)</p>
     */
     @SerializedName("IsJNIInjectionAnalysis")
     @Expose
     private Long IsJNIInjectionAnalysis;
 
     /**
-    * Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+    * <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
     */
     @SerializedName("IsWebshellBackdoorAnalysis")
     @Expose
     private Long IsWebshellBackdoorAnalysis;
 
     /**
-    * Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+    * <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
     */
     @SerializedName("IsDeserializationAnalysis")
     @Expose
     private Long IsDeserializationAnalysis;
 
     /**
-    * Automatic convergence switch for APIs. 0: disabled | 1: enabled.
+    * <p>API auto convergence switch, 0-off | 1-on</p>
     */
     @SerializedName("UrlAutoConvergenceEnable")
     @Expose
     private Boolean UrlAutoConvergenceEnable;
 
     /**
-    * Convergence threshold for URL long segments.
+    * <p>URL long segment convergence threshold</p>
     */
     @SerializedName("UrlLongSegmentThreshold")
     @Expose
     private Long UrlLongSegmentThreshold;
 
     /**
-    * Convergence threshold for URL numerical segments.
+    * <p>URL digit segment convergence threshold</p>
     */
     @SerializedName("UrlNumberSegmentThreshold")
     @Expose
     private Long UrlNumberSegmentThreshold;
 
     /**
-    * Specifies the memory threshold for probe fusing.
+    * <p>Fuse memory threshold of the probe</p>
     */
     @SerializedName("DisableMemoryUsed")
     @Expose
     private Long DisableMemoryUsed;
 
     /**
-    * Specifies the CPU threshold for probe fusing.
+    * <p>Probe fuse CPU threshold</p>
     */
     @SerializedName("DisableCpuUsed")
     @Expose
     private Long DisableCpuUsed;
 
     /**
-     * Get Business system ID. 
-     * @return InstanceId Business system ID.
+    * <p>Whether SQL parameter access is enabled</p>
+    */
+    @SerializedName("DbStatementParametersEnabled")
+    @Expose
+    private Boolean DbStatementParametersEnabled;
+
+    /**
+    * <p>Slow SQL threshold</p>
+    */
+    @SerializedName("SlowSQLThresholds")
+    @Expose
+    private ApmTag [] SlowSQLThresholds;
+
+    /**
+    * <p>Whether the masking rule is enabled</p>
+    */
+    @SerializedName("EnableDesensitizationRule")
+    @Expose
+    private Long EnableDesensitizationRule;
+
+    /**
+    * <p>Masking rule</p>
+    */
+    @SerializedName("DesensitizationRule")
+    @Expose
+    private String DesensitizationRule;
+
+    /**
+    * <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+    */
+    @SerializedName("LogSpanIdKey")
+    @Expose
+    private String LogSpanIdKey;
+
+    /**
+    * <p>Automated performance analysis task configuration</p>
+    */
+    @SerializedName("AutoProfilingConfig")
+    @Expose
+    private AutoProfilingConfig AutoProfilingConfig;
+
+    /**
+    * <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+    */
+    @SerializedName("EnableThresholdConfig")
+    @Expose
+    private Boolean EnableThresholdConfig;
+
+    /**
+    * <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+    */
+    @SerializedName("ErrRateThreshold")
+    @Expose
+    private Long ErrRateThreshold;
+
+    /**
+    * <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+    */
+    @SerializedName("ResponseDurationWarningThreshold")
+    @Expose
+    private Long ResponseDurationWarningThreshold;
+
+    /**
+    * <p>Whether to use the default fuse threshold of the probe</p>
+    */
+    @SerializedName("UseDefaultFuseConfig")
+    @Expose
+    private Boolean UseDefaultFuseConfig;
+
+    /**
+     * Get <p>Business system ID</p> 
+     * @return InstanceId <p>Business system ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Business system ID.
-     * @param InstanceId Business system ID.
+     * Set <p>Business system ID</p>
+     * @param InstanceId <p>Business system ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Application name 
-     * @return ServiceName Application name
+     * Get <p>Application name</p> 
+     * @return ServiceName <p>Application name</p>
      */
     public String getServiceName() {
         return this.ServiceName;
     }
 
     /**
-     * Set Application name
-     * @param ServiceName Application name
+     * Set <p>Application name</p>
+     * @param ServiceName <p>Application name</p>
      */
     public void setServiceName(String ServiceName) {
         this.ServiceName = ServiceName;
     }
 
     /**
-     * Get URL convergence switch. 0: Off; 1: On 
-     * @return UrlConvergenceSwitch URL convergence switch. 0: Off; 1: On
+     * Get <p>URL convergence switch, 0 Off | 1 On</p> 
+     * @return UrlConvergenceSwitch <p>URL convergence switch, 0 Off | 1 On</p>
      */
     public Long getUrlConvergenceSwitch() {
         return this.UrlConvergenceSwitch;
     }
 
     /**
-     * Set URL convergence switch. 0: Off; 1: On
-     * @param UrlConvergenceSwitch URL convergence switch. 0: Off; 1: On
+     * Set <p>URL convergence switch, 0 Off | 1 On</p>
+     * @param UrlConvergenceSwitch <p>URL convergence switch, 0 Off | 1 On</p>
      */
     public void setUrlConvergenceSwitch(Long UrlConvergenceSwitch) {
         this.UrlConvergenceSwitch = UrlConvergenceSwitch;
     }
 
     /**
-     * Get URL convergence threshold 
-     * @return UrlConvergenceThreshold URL convergence threshold
+     * Get <p>URL convergence threshold</p> 
+     * @return UrlConvergenceThreshold <p>URL convergence threshold</p>
      */
     public Long getUrlConvergenceThreshold() {
         return this.UrlConvergenceThreshold;
     }
 
     /**
-     * Set URL convergence threshold
-     * @param UrlConvergenceThreshold URL convergence threshold
+     * Set <p>URL convergence threshold</p>
+     * @param UrlConvergenceThreshold <p>URL convergence threshold</p>
      */
     public void setUrlConvergenceThreshold(Long UrlConvergenceThreshold) {
         this.UrlConvergenceThreshold = UrlConvergenceThreshold;
     }
 
     /**
-     * Get Regex rules for exception filtering, separated by commas 
-     * @return ExceptionFilter Regex rules for exception filtering, separated by commas
+     * Get <p>Exception filtering regex rules, comma-separated</p> 
+     * @return ExceptionFilter <p>Exception filtering regex rules, comma-separated</p>
      */
     public String getExceptionFilter() {
         return this.ExceptionFilter;
     }
 
     /**
-     * Set Regex rules for exception filtering, separated by commas
-     * @param ExceptionFilter Regex rules for exception filtering, separated by commas
+     * Set <p>Exception filtering regex rules, comma-separated</p>
+     * @param ExceptionFilter <p>Exception filtering regex rules, comma-separated</p>
      */
     public void setExceptionFilter(String ExceptionFilter) {
         this.ExceptionFilter = ExceptionFilter;
     }
 
     /**
-     * Get Regex rules for URL convergence, separated by commas 
-     * @return UrlConvergence Regex rules for URL convergence, separated by commas
+     * Get <p>URL convergence regex rules, comma-separated</p> 
+     * @return UrlConvergence <p>URL convergence regex rules, comma-separated</p>
      */
     public String getUrlConvergence() {
         return this.UrlConvergence;
     }
 
     /**
-     * Set Regex rules for URL convergence, separated by commas
-     * @param UrlConvergence Regex rules for URL convergence, separated by commas
+     * Set <p>URL convergence regex rules, comma-separated</p>
+     * @param UrlConvergence <p>URL convergence regex rules, comma-separated</p>
      */
     public void setUrlConvergence(String UrlConvergence) {
         this.UrlConvergence = UrlConvergence;
     }
 
     /**
-     * Get Error code filtering, separated by commas 
-     * @return ErrorCodeFilter Error code filtering, separated by commas
+     * Get <p>Error code filtering, comma-separated</p> 
+     * @return ErrorCodeFilter <p>Error code filtering, comma-separated</p>
      */
     public String getErrorCodeFilter() {
         return this.ErrorCodeFilter;
     }
 
     /**
-     * Set Error code filtering, separated by commas
-     * @param ErrorCodeFilter Error code filtering, separated by commas
+     * Set <p>Error code filtering, comma-separated</p>
+     * @param ErrorCodeFilter <p>Error code filtering, comma-separated</p>
      */
     public void setErrorCodeFilter(String ErrorCodeFilter) {
         this.ErrorCodeFilter = ErrorCodeFilter;
     }
 
     /**
-     * Get Regex rules for URL exclusion, separated by commas 
-     * @return UrlExclude Regex rules for URL exclusion, separated by commas
+     * Get <p>URL exclusion regex rule, comma-separated</p> 
+     * @return UrlExclude <p>URL exclusion regex rule, comma-separated</p>
      */
     public String getUrlExclude() {
         return this.UrlExclude;
     }
 
     /**
-     * Set Regex rules for URL exclusion, separated by commas
-     * @param UrlExclude Regex rules for URL exclusion, separated by commas
+     * Set <p>URL exclusion regex rule, comma-separated</p>
+     * @param UrlExclude <p>URL exclusion regex rule, comma-separated</p>
      */
     public void setUrlExclude(String UrlExclude) {
         this.UrlExclude = UrlExclude;
     }
 
     /**
-     * Get Log switch. 0: Off; 1: On 
-     * @return IsRelatedLog Log switch. 0: Off; 1: On
+     * Get <p>Log switch 0 Disabled 1 Enabled</p> 
+     * @return IsRelatedLog <p>Log switch 0 Disabled 1 Enabled</p>
      */
     public Long getIsRelatedLog() {
         return this.IsRelatedLog;
     }
 
     /**
-     * Set Log switch. 0: Off; 1: On
-     * @param IsRelatedLog Log switch. 0: Off; 1: On
+     * Set <p>Log switch 0 Disabled 1 Enabled</p>
+     * @param IsRelatedLog <p>Log switch 0 Disabled 1 Enabled</p>
      */
     public void setIsRelatedLog(Long IsRelatedLog) {
         this.IsRelatedLog = IsRelatedLog;
     }
 
     /**
-     * Get Log region. 
-     * @return LogRegion Log region.
+     * Get <p>Log region</p> 
+     * @return LogRegion <p>Log region</p>
      */
     public String getLogRegion() {
         return this.LogRegion;
     }
 
     /**
-     * Set Log region.
-     * @param LogRegion Log region.
+     * Set <p>Log region</p>
+     * @param LogRegion <p>Log region</p>
      */
     public void setLogRegion(String LogRegion) {
         this.LogRegion = LogRegion;
     }
 
     /**
-     * Get Log topic ID 
-     * @return LogTopicID Log topic ID
+     * Get <p>Log topic ID</p> 
+     * @return LogTopicID <p>Log topic ID</p>
      */
     public String getLogTopicID() {
         return this.LogTopicID;
     }
 
     /**
-     * Set Log topic ID
-     * @param LogTopicID Log topic ID
+     * Set <p>Log topic ID</p>
+     * @param LogTopicID <p>Log topic ID</p>
      */
     public void setLogTopicID(String LogTopicID) {
         this.LogTopicID = LogTopicID;
     }
 
     /**
-     * Get CLS log set/ES cluster ID 
-     * @return LogSet CLS log set/ES cluster ID
+     * Get <p>CLS logset | ES cluster ID</p> 
+     * @return LogSet <p>CLS logset | ES cluster ID</p>
      */
     public String getLogSet() {
         return this.LogSet;
     }
 
     /**
-     * Set CLS log set/ES cluster ID
-     * @param LogSet CLS log set/ES cluster ID
+     * Set <p>CLS logset | ES cluster ID</p>
+     * @param LogSet <p>CLS logset | ES cluster ID</p>
      */
     public void setLogSet(String LogSet) {
         this.LogSet = LogSet;
     }
 
     /**
-     * Get Log source: CLS or ES 
-     * @return LogSource Log source: CLS or ES
+     * Get <p>Log source CLS | ES</p> 
+     * @return LogSource <p>Log source CLS | ES</p>
      */
     public String getLogSource() {
         return this.LogSource;
     }
 
     /**
-     * Set Log source: CLS or ES
-     * @param LogSource Log source: CLS or ES
+     * Set <p>Log source CLS | ES</p>
+     * @param LogSource <p>Log source CLS | ES</p>
      */
     public void setLogSource(String LogSource) {
         this.LogSource = LogSource;
     }
 
     /**
-     * Get APIs to be filtered 
-     * @return IgnoreOperationName APIs to be filtered
+     * Get <p>Interfaces to Filter</p> 
+     * @return IgnoreOperationName <p>Interfaces to Filter</p>
      */
     public String getIgnoreOperationName() {
         return this.IgnoreOperationName;
     }
 
     /**
-     * Set APIs to be filtered
-     * @param IgnoreOperationName APIs to be filtered
+     * Set <p>Interfaces to Filter</p>
+     * @param IgnoreOperationName <p>Interfaces to Filter</p>
      */
     public void setIgnoreOperationName(String IgnoreOperationName) {
         this.IgnoreOperationName = IgnoreOperationName;
     }
 
     /**
-     * Get Whether thread profiling is enabled. 
-     * @return EnableSnapshot Whether thread profiling is enabled.
+     * Get <p>Whether thread profiling is enabled</p> 
+     * @return EnableSnapshot <p>Whether thread profiling is enabled</p>
      */
     public Boolean getEnableSnapshot() {
         return this.EnableSnapshot;
     }
 
     /**
-     * Set Whether thread profiling is enabled.
-     * @param EnableSnapshot Whether thread profiling is enabled.
+     * Set <p>Whether thread profiling is enabled</p>
+     * @param EnableSnapshot <p>Whether thread profiling is enabled</p>
      */
     public void setEnableSnapshot(Boolean EnableSnapshot) {
         this.EnableSnapshot = EnableSnapshot;
     }
 
     /**
-     * Get Timeout threshold for thread profiling. 
-     * @return SnapshotTimeout Timeout threshold for thread profiling.
+     * Get <p>Timeout threshold for thread profiling</p> 
+     * @return SnapshotTimeout <p>Timeout threshold for thread profiling</p>
      */
     public Long getSnapshotTimeout() {
         return this.SnapshotTimeout;
     }
 
     /**
-     * Set Timeout threshold for thread profiling.
-     * @param SnapshotTimeout Timeout threshold for thread profiling.
+     * Set <p>Timeout threshold for thread profiling</p>
+     * @param SnapshotTimeout <p>Timeout threshold for thread profiling</p>
      */
     public void setSnapshotTimeout(Long SnapshotTimeout) {
         this.SnapshotTimeout = SnapshotTimeout;
     }
 
     /**
-     * Get Whether agent is enabled. 
-     * @return AgentEnable Whether agent is enabled.
+     * Get <p>Whether to enable agent</p> 
+     * @return AgentEnable <p>Whether to enable agent</p>
      */
     public Boolean getAgentEnable() {
         return this.AgentEnable;
     }
 
     /**
-     * Set Whether agent is enabled.
-     * @param AgentEnable Whether agent is enabled.
+     * Set <p>Whether to enable agent</p>
+     * @param AgentEnable <p>Whether to enable agent</p>
      */
     public void setAgentEnable(Boolean AgentEnable) {
         this.AgentEnable = AgentEnable;
     }
 
     /**
-     * Get Whether link compression is enabled. 
-     * @return TraceSquash Whether link compression is enabled.
+     * Get <p>Whether to enable link compression</p> 
+     * @return TraceSquash <p>Whether to enable link compression</p>
      */
     public Boolean getTraceSquash() {
         return this.TraceSquash;
     }
 
     /**
-     * Set Whether link compression is enabled.
-     * @param TraceSquash Whether link compression is enabled.
+     * Set <p>Whether to enable link compression</p>
+     * @param TraceSquash <p>Whether to enable link compression</p>
      */
     public void setTraceSquash(Boolean TraceSquash) {
         this.TraceSquash = TraceSquash;
     }
 
     /**
-     * Get Switch for enabling application diagnosis. 
-     * @return EventEnable Switch for enabling application diagnosis.
+     * Get <p>Whether the switch for enabling application diagnosis is enabled</p> 
+     * @return EventEnable <p>Whether the switch for enabling application diagnosis is enabled</p>
      */
     public Boolean getEventEnable() {
         return this.EventEnable;
     }
 
     /**
-     * Set Switch for enabling application diagnosis.
-     * @param EventEnable Switch for enabling application diagnosis.
+     * Set <p>Whether the switch for enabling application diagnosis is enabled</p>
+     * @param EventEnable <p>Whether the switch for enabling application diagnosis is enabled</p>
      */
     public void setEventEnable(Boolean EventEnable) {
         this.EventEnable = EventEnable;
     }
 
     /**
-     * Get Component List 
-     * @return InstrumentList Component List
+     * Get <p>Component list</p> 
+     * @return InstrumentList <p>Component list</p>
      */
     public Instrument [] getInstrumentList() {
         return this.InstrumentList;
     }
 
     /**
-     * Set Component List
-     * @param InstrumentList Component List
+     * Set <p>Component list</p>
+     * @param InstrumentList <p>Component list</p>
      */
     public void setInstrumentList(Instrument [] InstrumentList) {
         this.InstrumentList = InstrumentList;
     }
 
     /**
-     * Get Related configurations of the probe APIs. 
-     * @return AgentOperationConfigView Related configurations of the probe APIs.
+     * Get <p>probe API related configuration</p> 
+     * @return AgentOperationConfigView <p>probe API related configuration</p>
      */
     public AgentOperationConfigView getAgentOperationConfigView() {
         return this.AgentOperationConfigView;
     }
 
     /**
-     * Set Related configurations of the probe APIs.
-     * @param AgentOperationConfigView Related configurations of the probe APIs.
+     * Set <p>probe API related configuration</p>
+     * @param AgentOperationConfigView <p>probe API related configuration</p>
      */
     public void setAgentOperationConfigView(AgentOperationConfigView AgentOperationConfigView) {
         this.AgentOperationConfigView = AgentOperationConfigView;
     }
 
     /**
-     * Get Whether to enable application log configuration. 
-     * @return EnableLogConfig Whether to enable application log configuration.
+     * Get <p>Whether the application log configuration is enabled</p> 
+     * @return EnableLogConfig <p>Whether the application log configuration is enabled</p>
      */
     public Boolean getEnableLogConfig() {
         return this.EnableLogConfig;
     }
 
     /**
-     * Set Whether to enable application log configuration.
-     * @param EnableLogConfig Whether to enable application log configuration.
+     * Set <p>Whether the application log configuration is enabled</p>
+     * @param EnableLogConfig <p>Whether the application log configuration is enabled</p>
      */
     public void setEnableLogConfig(Boolean EnableLogConfig) {
         this.EnableLogConfig = EnableLogConfig;
     }
 
     /**
-     * Get Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration). 
-     * @return EnableDashboardConfig Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+     * Get <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, application-level configuration)</p> 
+     * @return EnableDashboardConfig <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, application-level configuration)</p>
      */
     public Boolean getEnableDashboardConfig() {
         return this.EnableDashboardConfig;
     }
 
     /**
-     * Set Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
-     * @param EnableDashboardConfig Whether to enable the dashboard configuration for applications. false: disabled (consistent with the business system configuration); true: enabled (application-level configuration).
+     * Set <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, application-level configuration)</p>
+     * @param EnableDashboardConfig <p>Whether the dashboard configuration is enabled: false (disabled, consistent with the business system)/true (enabled, application-level configuration)</p>
      */
     public void setEnableDashboardConfig(Boolean EnableDashboardConfig) {
         this.EnableDashboardConfig = EnableDashboardConfig;
     }
 
     /**
-     * Get Whether to associate with Dashboard. 0: disabled; 1: enabled. 
-     * @return IsRelatedDashboard Whether to associate with Dashboard. 0: disabled; 1: enabled.
+     * Get <p>Whether to associate with dashboard: 0 off 1 on</p> 
+     * @return IsRelatedDashboard <p>Whether to associate with dashboard: 0 off 1 on</p>
      */
     public Long getIsRelatedDashboard() {
         return this.IsRelatedDashboard;
     }
 
     /**
-     * Set Whether to associate with Dashboard. 0: disabled; 1: enabled.
-     * @param IsRelatedDashboard Whether to associate with Dashboard. 0: disabled; 1: enabled.
+     * Set <p>Whether to associate with dashboard: 0 off 1 on</p>
+     * @param IsRelatedDashboard <p>Whether to associate with dashboard: 0 off 1 on</p>
      */
     public void setIsRelatedDashboard(Long IsRelatedDashboard) {
         this.IsRelatedDashboard = IsRelatedDashboard;
     }
 
     /**
-     * Get dashboard ID 
-     * @return DashboardTopicID dashboard ID
+     * Get <p>dashboard ID</p> 
+     * @return DashboardTopicID <p>dashboard ID</p>
      */
     public String getDashboardTopicID() {
         return this.DashboardTopicID;
     }
 
     /**
-     * Set dashboard ID
-     * @param DashboardTopicID dashboard ID
+     * Set <p>dashboard ID</p>
+     * @param DashboardTopicID <p>dashboard ID</p>
      */
     public void setDashboardTopicID(String DashboardTopicID) {
         this.DashboardTopicID = DashboardTopicID;
     }
 
     /**
-     * Get CLS index type. (0 = full-text index; 1 = key-value index). 
-     * @return LogIndexType CLS index type. (0 = full-text index; 1 = key-value index).
+     * Get <p>CLS index type (0=full-text index, 1=key-value index)</p> 
+     * @return LogIndexType <p>CLS index type (0=full-text index, 1=key-value index)</p>
      */
     public Long getLogIndexType() {
         return this.LogIndexType;
     }
 
     /**
-     * Set CLS index type. (0 = full-text index; 1 = key-value index).
-     * @param LogIndexType CLS index type. (0 = full-text index; 1 = key-value index).
+     * Set <p>CLS index type (0=full-text index, 1=key-value index)</p>
+     * @param LogIndexType <p>CLS index type (0=full-text index, 1=key-value index)</p>
      */
     public void setLogIndexType(Long LogIndexType) {
         this.LogIndexType = LogIndexType;
     }
 
     /**
-     * Get Index key of traceId. It is valid when the CLS index type is key-value index. 
-     * @return LogTraceIdKey Index key of traceId. It is valid when the CLS index type is key-value index.
+     * Get <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p> 
+     * @return LogTraceIdKey <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
      */
     public String getLogTraceIdKey() {
         return this.LogTraceIdKey;
     }
 
     /**
-     * Set Index key of traceId. It is valid when the CLS index type is key-value index.
-     * @param LogTraceIdKey Index key of traceId. It is valid when the CLS index type is key-value index.
+     * Set <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
+     * @param LogTraceIdKey <p>Index key of traceId: This parameter is valid only when the CLS index type is key-value index.</p>
      */
     public void setLogTraceIdKey(String LogTraceIdKey) {
         this.LogTraceIdKey = LogTraceIdKey;
     }
 
     /**
-     * Get Whether to enable the application security configuration. 
-     * @return EnableSecurityConfig Whether to enable the application security configuration.
+     * Get <p>Whether application security configuration is enabled</p> 
+     * @return EnableSecurityConfig <p>Whether application security configuration is enabled</p>
      */
     public Boolean getEnableSecurityConfig() {
         return this.EnableSecurityConfig;
     }
 
     /**
-     * Set Whether to enable the application security configuration.
-     * @param EnableSecurityConfig Whether to enable the application security configuration.
+     * Set <p>Whether application security configuration is enabled</p>
+     * @param EnableSecurityConfig <p>Whether application security configuration is enabled</p>
      */
     public void setEnableSecurityConfig(Boolean EnableSecurityConfig) {
         this.EnableSecurityConfig = EnableSecurityConfig;
     }
 
     /**
-     * Get Whether to enable SQL injection analysis. 
-     * @return IsSqlInjectionAnalysis Whether to enable SQL injection analysis.
+     * Get <p>Whether SQL injection analysis is enabled</p> 
+     * @return IsSqlInjectionAnalysis <p>Whether SQL injection analysis is enabled</p>
      */
     public Long getIsSqlInjectionAnalysis() {
         return this.IsSqlInjectionAnalysis;
     }
 
     /**
-     * Set Whether to enable SQL injection analysis.
-     * @param IsSqlInjectionAnalysis Whether to enable SQL injection analysis.
+     * Set <p>Whether SQL injection analysis is enabled</p>
+     * @param IsSqlInjectionAnalysis <p>Whether SQL injection analysis is enabled</p>
      */
     public void setIsSqlInjectionAnalysis(Long IsSqlInjectionAnalysis) {
         this.IsSqlInjectionAnalysis = IsSqlInjectionAnalysis;
     }
 
     /**
-     * Get Whether to enable detection of component vulnerability. 
-     * @return IsInstrumentationVulnerabilityScan Whether to enable detection of component vulnerability.
+     * Get <p>Whether component vulnerability detection is enabled</p> 
+     * @return IsInstrumentationVulnerabilityScan <p>Whether component vulnerability detection is enabled</p>
      */
     public Long getIsInstrumentationVulnerabilityScan() {
         return this.IsInstrumentationVulnerabilityScan;
     }
 
     /**
-     * Set Whether to enable detection of component vulnerability.
-     * @param IsInstrumentationVulnerabilityScan Whether to enable detection of component vulnerability.
+     * Set <p>Whether component vulnerability detection is enabled</p>
+     * @param IsInstrumentationVulnerabilityScan <p>Whether component vulnerability detection is enabled</p>
      */
     public void setIsInstrumentationVulnerabilityScan(Long IsInstrumentationVulnerabilityScan) {
         this.IsInstrumentationVulnerabilityScan = IsInstrumentationVulnerabilityScan;
     }
 
     /**
-     * Get Whether remote command detection is enabled. 
-     * @return IsRemoteCommandExecutionAnalysis Whether remote command detection is enabled.
+     * Get <p>Whether remote command detection is enabled</p> 
+     * @return IsRemoteCommandExecutionAnalysis <p>Whether remote command detection is enabled</p>
      */
     public Long getIsRemoteCommandExecutionAnalysis() {
         return this.IsRemoteCommandExecutionAnalysis;
     }
 
     /**
-     * Set Whether remote command detection is enabled.
-     * @param IsRemoteCommandExecutionAnalysis Whether remote command detection is enabled.
+     * Set <p>Whether remote command detection is enabled</p>
+     * @param IsRemoteCommandExecutionAnalysis <p>Whether remote command detection is enabled</p>
      */
     public void setIsRemoteCommandExecutionAnalysis(Long IsRemoteCommandExecutionAnalysis) {
         this.IsRemoteCommandExecutionAnalysis = IsRemoteCommandExecutionAnalysis;
     }
 
     /**
-     * Get Whether to enable detection of Java webshell. 
-     * @return IsMemoryHijackingAnalysis Whether to enable detection of Java webshell.
+     * Get <p>Whether Java Webshell detection is enabled</p> 
+     * @return IsMemoryHijackingAnalysis <p>Whether Java Webshell detection is enabled</p>
      */
     public Long getIsMemoryHijackingAnalysis() {
         return this.IsMemoryHijackingAnalysis;
     }
 
     /**
-     * Set Whether to enable detection of Java webshell.
-     * @param IsMemoryHijackingAnalysis Whether to enable detection of Java webshell.
+     * Set <p>Whether Java Webshell detection is enabled</p>
+     * @param IsMemoryHijackingAnalysis <p>Whether Java Webshell detection is enabled</p>
      */
     public void setIsMemoryHijackingAnalysis(Long IsMemoryHijackingAnalysis) {
         this.IsMemoryHijackingAnalysis = IsMemoryHijackingAnalysis;
     }
 
     /**
-     * Get Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.) 
-     * @return IsDeleteAnyFileAnalysis Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     * Get <p>Whether to enable detection of any file deletion (0 - turn off, 1 - turn on)</p> 
+     * @return IsDeleteAnyFileAnalysis <p>Whether to enable detection of any file deletion (0 - turn off, 1 - turn on)</p>
      */
     public Long getIsDeleteAnyFileAnalysis() {
         return this.IsDeleteAnyFileAnalysis;
     }
 
     /**
-     * Set Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
-     * @param IsDeleteAnyFileAnalysis Whether to enable the detection of deleting arbitrary files. (0 - disabled; 1: enabled.)
+     * Set <p>Whether to enable detection of any file deletion (0 - turn off, 1 - turn on)</p>
+     * @param IsDeleteAnyFileAnalysis <p>Whether to enable detection of any file deletion (0 - turn off, 1 - turn on)</p>
      */
     public void setIsDeleteAnyFileAnalysis(Long IsDeleteAnyFileAnalysis) {
         this.IsDeleteAnyFileAnalysis = IsDeleteAnyFileAnalysis;
     }
 
     /**
-     * Get Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.) 
-     * @return IsReadAnyFileAnalysis Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     * Get <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p> 
+     * @return IsReadAnyFileAnalysis <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
      */
     public Long getIsReadAnyFileAnalysis() {
         return this.IsReadAnyFileAnalysis;
     }
 
     /**
-     * Set Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
-     * @param IsReadAnyFileAnalysis Whether to enable the detection of reading arbitrary files. (0 - disabled; 1 - enabled.)
+     * Set <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
+     * @param IsReadAnyFileAnalysis <p>Whether to enable arbitrary file read detection (0 - disabled, 1 - enabled)</p>
      */
     public void setIsReadAnyFileAnalysis(Long IsReadAnyFileAnalysis) {
         this.IsReadAnyFileAnalysis = IsReadAnyFileAnalysis;
     }
 
     /**
-     * Get Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.) 
-     * @return IsUploadAnyFileAnalysis Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     * Get <p>Whether to enable arbitrary file upload detection (0-disable, 1-enable)</p> 
+     * @return IsUploadAnyFileAnalysis <p>Whether to enable arbitrary file upload detection (0-disable, 1-enable)</p>
      */
     public Long getIsUploadAnyFileAnalysis() {
         return this.IsUploadAnyFileAnalysis;
     }
 
     /**
-     * Set Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
-     * @param IsUploadAnyFileAnalysis Whether to enable the detection of uploading arbitrary files. (0 - disabled; 1 - enabled.)
+     * Set <p>Whether to enable arbitrary file upload detection (0-disable, 1-enable)</p>
+     * @param IsUploadAnyFileAnalysis <p>Whether to enable arbitrary file upload detection (0-disable, 1-enable)</p>
      */
     public void setIsUploadAnyFileAnalysis(Long IsUploadAnyFileAnalysis) {
         this.IsUploadAnyFileAnalysis = IsUploadAnyFileAnalysis;
     }
 
     /**
-     * Get Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.) 
-     * @return IsIncludeAnyFileAnalysis Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     * Get <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p> 
+     * @return IsIncludeAnyFileAnalysis <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
      */
     public Long getIsIncludeAnyFileAnalysis() {
         return this.IsIncludeAnyFileAnalysis;
     }
 
     /**
-     * Set Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
-     * @param IsIncludeAnyFileAnalysis Whether to enable the detection of the inclusion of arbitrary files. (0: disabled, 1: enabled.)
+     * Set <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
+     * @param IsIncludeAnyFileAnalysis <p>Whether to enable detection of arbitrary files (0 - disabled, 1 - enabled)</p>
      */
     public void setIsIncludeAnyFileAnalysis(Long IsIncludeAnyFileAnalysis) {
         this.IsIncludeAnyFileAnalysis = IsIncludeAnyFileAnalysis;
     }
 
     /**
-     * Get Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled). 
-     * @return IsDirectoryTraversalAnalysis Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     * Get <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p> 
+     * @return IsDirectoryTraversalAnalysis <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
      */
     public Long getIsDirectoryTraversalAnalysis() {
         return this.IsDirectoryTraversalAnalysis;
     }
 
     /**
-     * Set Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
-     * @param IsDirectoryTraversalAnalysis Whether to enable traversal detection of the directory. (0 - disabled; 1 - enabled).
+     * Set <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
+     * @param IsDirectoryTraversalAnalysis <p>Whether path traversal detection is enabled (0-disabled, 1-enabled)</p>
      */
     public void setIsDirectoryTraversalAnalysis(Long IsDirectoryTraversalAnalysis) {
         this.IsDirectoryTraversalAnalysis = IsDirectoryTraversalAnalysis;
     }
 
     /**
-     * Get Whether to enable template engine injection detection. (0: disabled; 1: enabled.) 
-     * @return IsTemplateEngineInjectionAnalysis Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     * Get <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p> 
+     * @return IsTemplateEngineInjectionAnalysis <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
      */
     public Long getIsTemplateEngineInjectionAnalysis() {
         return this.IsTemplateEngineInjectionAnalysis;
     }
 
     /**
-     * Set Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
-     * @param IsTemplateEngineInjectionAnalysis Whether to enable template engine injection detection. (0: disabled; 1: enabled.)
+     * Set <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
+     * @param IsTemplateEngineInjectionAnalysis <p>Whether to enable template engine injection detection (0-disable, 1-enable)</p>
      */
     public void setIsTemplateEngineInjectionAnalysis(Long IsTemplateEngineInjectionAnalysis) {
         this.IsTemplateEngineInjectionAnalysis = IsTemplateEngineInjectionAnalysis;
     }
 
     /**
-     * Get Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.) 
-     * @return IsScriptEngineInjectionAnalysis Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     * Get <p>Whether to enable script engine injection detection (0-disable, 1-enable)</p> 
+     * @return IsScriptEngineInjectionAnalysis <p>Whether to enable script engine injection detection (0-disable, 1-enable)</p>
      */
     public Long getIsScriptEngineInjectionAnalysis() {
         return this.IsScriptEngineInjectionAnalysis;
     }
 
     /**
-     * Set Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
-     * @param IsScriptEngineInjectionAnalysis Whether to enable script engine injection detection. (0 - disabled; 1 - enabled.)
+     * Set <p>Whether to enable script engine injection detection (0-disable, 1-enable)</p>
+     * @param IsScriptEngineInjectionAnalysis <p>Whether to enable script engine injection detection (0-disable, 1-enable)</p>
      */
     public void setIsScriptEngineInjectionAnalysis(Long IsScriptEngineInjectionAnalysis) {
         this.IsScriptEngineInjectionAnalysis = IsScriptEngineInjectionAnalysis;
     }
 
     /**
-     * Get Whether to enable expression injection detection. (0 - disabled; 1 - enabled.) 
-     * @return IsExpressionInjectionAnalysis Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     * Get <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p> 
+     * @return IsExpressionInjectionAnalysis <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
      */
     public Long getIsExpressionInjectionAnalysis() {
         return this.IsExpressionInjectionAnalysis;
     }
 
     /**
-     * Set Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
-     * @param IsExpressionInjectionAnalysis Whether to enable expression injection detection. (0 - disabled; 1 - enabled.)
+     * Set <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
+     * @param IsExpressionInjectionAnalysis <p>Whether expression injection detection is enabled (0-disabled, 1-enabled)</p>
      */
     public void setIsExpressionInjectionAnalysis(Long IsExpressionInjectionAnalysis) {
         this.IsExpressionInjectionAnalysis = IsExpressionInjectionAnalysis;
     }
 
     /**
-     * Get Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.) 
-     * @return IsJNDIInjectionAnalysis Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     * Get <p>Whether JNDI injection detection is enabled (0 - disabled, 1 - enabled)</p> 
+     * @return IsJNDIInjectionAnalysis <p>Whether JNDI injection detection is enabled (0 - disabled, 1 - enabled)</p>
      */
     public Long getIsJNDIInjectionAnalysis() {
         return this.IsJNDIInjectionAnalysis;
     }
 
     /**
-     * Set Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
-     * @param IsJNDIInjectionAnalysis Whether to enable JNDI injection detection. (0 - disabled; 1 - enabled.)
+     * Set <p>Whether JNDI injection detection is enabled (0 - disabled, 1 - enabled)</p>
+     * @param IsJNDIInjectionAnalysis <p>Whether JNDI injection detection is enabled (0 - disabled, 1 - enabled)</p>
      */
     public void setIsJNDIInjectionAnalysis(Long IsJNDIInjectionAnalysis) {
         this.IsJNDIInjectionAnalysis = IsJNDIInjectionAnalysis;
     }
 
     /**
-     * Get Whether to enable JNI injection detection. (0 - disabled, 1 - enabled). 
-     * @return IsJNIInjectionAnalysis Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     * Get <p>Whether JNI injection detection is enabled (0-disabled, 1-enabled)</p> 
+     * @return IsJNIInjectionAnalysis <p>Whether JNI injection detection is enabled (0-disabled, 1-enabled)</p>
      */
     public Long getIsJNIInjectionAnalysis() {
         return this.IsJNIInjectionAnalysis;
     }
 
     /**
-     * Set Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
-     * @param IsJNIInjectionAnalysis Whether to enable JNI injection detection. (0 - disabled, 1 - enabled).
+     * Set <p>Whether JNI injection detection is enabled (0-disabled, 1-enabled)</p>
+     * @param IsJNIInjectionAnalysis <p>Whether JNI injection detection is enabled (0-disabled, 1-enabled)</p>
      */
     public void setIsJNIInjectionAnalysis(Long IsJNIInjectionAnalysis) {
         this.IsJNIInjectionAnalysis = IsJNIInjectionAnalysis;
     }
 
     /**
-     * Get Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled). 
-     * @return IsWebshellBackdoorAnalysis Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     * Get <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p> 
+     * @return IsWebshellBackdoorAnalysis <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
      */
     public Long getIsWebshellBackdoorAnalysis() {
         return this.IsWebshellBackdoorAnalysis;
     }
 
     /**
-     * Set Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
-     * @param IsWebshellBackdoorAnalysis Whether to enable Webshell backdoor detection. (0 - disabled; 1 - enabled).
+     * Set <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
+     * @param IsWebshellBackdoorAnalysis <p>Whether to enable Webshell backdoor detection (0 - disabled, 1 - enabled)</p>
      */
     public void setIsWebshellBackdoorAnalysis(Long IsWebshellBackdoorAnalysis) {
         this.IsWebshellBackdoorAnalysis = IsWebshellBackdoorAnalysis;
     }
 
     /**
-     * Get Whether to enable deserialization detection. (0 - disabled; 1 - enabled). 
-     * @return IsDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     * Get <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p> 
+     * @return IsDeserializationAnalysis <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
      */
     public Long getIsDeserializationAnalysis() {
         return this.IsDeserializationAnalysis;
     }
 
     /**
-     * Set Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
-     * @param IsDeserializationAnalysis Whether to enable deserialization detection. (0 - disabled; 1 - enabled).
+     * Set <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
+     * @param IsDeserializationAnalysis <p>Whether deserialization detection is enabled (0-disabled, 1-enabled)</p>
      */
     public void setIsDeserializationAnalysis(Long IsDeserializationAnalysis) {
         this.IsDeserializationAnalysis = IsDeserializationAnalysis;
     }
 
     /**
-     * Get Automatic convergence switch for APIs. 0: disabled | 1: enabled. 
-     * @return UrlAutoConvergenceEnable Automatic convergence switch for APIs. 0: disabled | 1: enabled.
+     * Get <p>API auto convergence switch, 0-off | 1-on</p> 
+     * @return UrlAutoConvergenceEnable <p>API auto convergence switch, 0-off | 1-on</p>
      */
     public Boolean getUrlAutoConvergenceEnable() {
         return this.UrlAutoConvergenceEnable;
     }
 
     /**
-     * Set Automatic convergence switch for APIs. 0: disabled | 1: enabled.
-     * @param UrlAutoConvergenceEnable Automatic convergence switch for APIs. 0: disabled | 1: enabled.
+     * Set <p>API auto convergence switch, 0-off | 1-on</p>
+     * @param UrlAutoConvergenceEnable <p>API auto convergence switch, 0-off | 1-on</p>
      */
     public void setUrlAutoConvergenceEnable(Boolean UrlAutoConvergenceEnable) {
         this.UrlAutoConvergenceEnable = UrlAutoConvergenceEnable;
     }
 
     /**
-     * Get Convergence threshold for URL long segments. 
-     * @return UrlLongSegmentThreshold Convergence threshold for URL long segments.
+     * Get <p>URL long segment convergence threshold</p> 
+     * @return UrlLongSegmentThreshold <p>URL long segment convergence threshold</p>
      */
     public Long getUrlLongSegmentThreshold() {
         return this.UrlLongSegmentThreshold;
     }
 
     /**
-     * Set Convergence threshold for URL long segments.
-     * @param UrlLongSegmentThreshold Convergence threshold for URL long segments.
+     * Set <p>URL long segment convergence threshold</p>
+     * @param UrlLongSegmentThreshold <p>URL long segment convergence threshold</p>
      */
     public void setUrlLongSegmentThreshold(Long UrlLongSegmentThreshold) {
         this.UrlLongSegmentThreshold = UrlLongSegmentThreshold;
     }
 
     /**
-     * Get Convergence threshold for URL numerical segments. 
-     * @return UrlNumberSegmentThreshold Convergence threshold for URL numerical segments.
+     * Get <p>URL digit segment convergence threshold</p> 
+     * @return UrlNumberSegmentThreshold <p>URL digit segment convergence threshold</p>
      */
     public Long getUrlNumberSegmentThreshold() {
         return this.UrlNumberSegmentThreshold;
     }
 
     /**
-     * Set Convergence threshold for URL numerical segments.
-     * @param UrlNumberSegmentThreshold Convergence threshold for URL numerical segments.
+     * Set <p>URL digit segment convergence threshold</p>
+     * @param UrlNumberSegmentThreshold <p>URL digit segment convergence threshold</p>
      */
     public void setUrlNumberSegmentThreshold(Long UrlNumberSegmentThreshold) {
         this.UrlNumberSegmentThreshold = UrlNumberSegmentThreshold;
     }
 
     /**
-     * Get Specifies the memory threshold for probe fusing. 
-     * @return DisableMemoryUsed Specifies the memory threshold for probe fusing.
+     * Get <p>Fuse memory threshold of the probe</p> 
+     * @return DisableMemoryUsed <p>Fuse memory threshold of the probe</p>
      */
     public Long getDisableMemoryUsed() {
         return this.DisableMemoryUsed;
     }
 
     /**
-     * Set Specifies the memory threshold for probe fusing.
-     * @param DisableMemoryUsed Specifies the memory threshold for probe fusing.
+     * Set <p>Fuse memory threshold of the probe</p>
+     * @param DisableMemoryUsed <p>Fuse memory threshold of the probe</p>
      */
     public void setDisableMemoryUsed(Long DisableMemoryUsed) {
         this.DisableMemoryUsed = DisableMemoryUsed;
     }
 
     /**
-     * Get Specifies the CPU threshold for probe fusing. 
-     * @return DisableCpuUsed Specifies the CPU threshold for probe fusing.
+     * Get <p>Probe fuse CPU threshold</p> 
+     * @return DisableCpuUsed <p>Probe fuse CPU threshold</p>
      */
     public Long getDisableCpuUsed() {
         return this.DisableCpuUsed;
     }
 
     /**
-     * Set Specifies the CPU threshold for probe fusing.
-     * @param DisableCpuUsed Specifies the CPU threshold for probe fusing.
+     * Set <p>Probe fuse CPU threshold</p>
+     * @param DisableCpuUsed <p>Probe fuse CPU threshold</p>
      */
     public void setDisableCpuUsed(Long DisableCpuUsed) {
         this.DisableCpuUsed = DisableCpuUsed;
+    }
+
+    /**
+     * Get <p>Whether SQL parameter access is enabled</p> 
+     * @return DbStatementParametersEnabled <p>Whether SQL parameter access is enabled</p>
+     */
+    public Boolean getDbStatementParametersEnabled() {
+        return this.DbStatementParametersEnabled;
+    }
+
+    /**
+     * Set <p>Whether SQL parameter access is enabled</p>
+     * @param DbStatementParametersEnabled <p>Whether SQL parameter access is enabled</p>
+     */
+    public void setDbStatementParametersEnabled(Boolean DbStatementParametersEnabled) {
+        this.DbStatementParametersEnabled = DbStatementParametersEnabled;
+    }
+
+    /**
+     * Get <p>Slow SQL threshold</p> 
+     * @return SlowSQLThresholds <p>Slow SQL threshold</p>
+     */
+    public ApmTag [] getSlowSQLThresholds() {
+        return this.SlowSQLThresholds;
+    }
+
+    /**
+     * Set <p>Slow SQL threshold</p>
+     * @param SlowSQLThresholds <p>Slow SQL threshold</p>
+     */
+    public void setSlowSQLThresholds(ApmTag [] SlowSQLThresholds) {
+        this.SlowSQLThresholds = SlowSQLThresholds;
+    }
+
+    /**
+     * Get <p>Whether the masking rule is enabled</p> 
+     * @return EnableDesensitizationRule <p>Whether the masking rule is enabled</p>
+     */
+    public Long getEnableDesensitizationRule() {
+        return this.EnableDesensitizationRule;
+    }
+
+    /**
+     * Set <p>Whether the masking rule is enabled</p>
+     * @param EnableDesensitizationRule <p>Whether the masking rule is enabled</p>
+     */
+    public void setEnableDesensitizationRule(Long EnableDesensitizationRule) {
+        this.EnableDesensitizationRule = EnableDesensitizationRule;
+    }
+
+    /**
+     * Get <p>Masking rule</p> 
+     * @return DesensitizationRule <p>Masking rule</p>
+     */
+    public String getDesensitizationRule() {
+        return this.DesensitizationRule;
+    }
+
+    /**
+     * Set <p>Masking rule</p>
+     * @param DesensitizationRule <p>Masking rule</p>
+     */
+    public void setDesensitizationRule(String DesensitizationRule) {
+        this.DesensitizationRule = DesensitizationRule;
+    }
+
+    /**
+     * Get <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p> 
+     * @return LogSpanIdKey <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+     */
+    public String getLogSpanIdKey() {
+        return this.LogSpanIdKey;
+    }
+
+    /**
+     * Set <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+     * @param LogSpanIdKey <p>Index key of spanId: This parameter is valid only when the CLS index type is key-value index.</p>
+     */
+    public void setLogSpanIdKey(String LogSpanIdKey) {
+        this.LogSpanIdKey = LogSpanIdKey;
+    }
+
+    /**
+     * Get <p>Automated performance analysis task configuration</p> 
+     * @return AutoProfilingConfig <p>Automated performance analysis task configuration</p>
+     */
+    public AutoProfilingConfig getAutoProfilingConfig() {
+        return this.AutoProfilingConfig;
+    }
+
+    /**
+     * Set <p>Automated performance analysis task configuration</p>
+     * @param AutoProfilingConfig <p>Automated performance analysis task configuration</p>
+     */
+    public void setAutoProfilingConfig(AutoProfilingConfig AutoProfilingConfig) {
+        this.AutoProfilingConfig = AutoProfilingConfig;
+    }
+
+    /**
+     * Get <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p> 
+     * @return EnableThresholdConfig <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+     */
+    public Boolean getEnableThresholdConfig() {
+        return this.EnableThresholdConfig;
+    }
+
+    /**
+     * Set <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+     * @param EnableThresholdConfig <p>Threshold configuration switch. true means use application level threshold; false means use business system level threshold.</p>
+     */
+    public void setEnableThresholdConfig(Boolean EnableThresholdConfig) {
+        this.EnableThresholdConfig = EnableThresholdConfig;
+    }
+
+    /**
+     * Get <p>Error rate threshold (%) used to judge the application health status as "red".</p> 
+     * @return ErrRateThreshold <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+     */
+    public Long getErrRateThreshold() {
+        return this.ErrRateThreshold;
+    }
+
+    /**
+     * Set <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+     * @param ErrRateThreshold <p>Error rate threshold (%) used to judge the application health status as "red".</p>
+     */
+    public void setErrRateThreshold(Long ErrRateThreshold) {
+        this.ErrRateThreshold = ErrRateThreshold;
+    }
+
+    /**
+     * Get <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p> 
+     * @return ResponseDurationWarningThreshold <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+     */
+    public Long getResponseDurationWarningThreshold() {
+        return this.ResponseDurationWarningThreshold;
+    }
+
+    /**
+     * Set <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+     * @param ResponseDurationWarningThreshold <p>Alert threshold for response time (ms), used to judge the application health status as "yellow".</p>
+     */
+    public void setResponseDurationWarningThreshold(Long ResponseDurationWarningThreshold) {
+        this.ResponseDurationWarningThreshold = ResponseDurationWarningThreshold;
+    }
+
+    /**
+     * Get <p>Whether to use the default fuse threshold of the probe</p> 
+     * @return UseDefaultFuseConfig <p>Whether to use the default fuse threshold of the probe</p>
+     */
+    public Boolean getUseDefaultFuseConfig() {
+        return this.UseDefaultFuseConfig;
+    }
+
+    /**
+     * Set <p>Whether to use the default fuse threshold of the probe</p>
+     * @param UseDefaultFuseConfig <p>Whether to use the default fuse threshold of the probe</p>
+     */
+    public void setUseDefaultFuseConfig(Boolean UseDefaultFuseConfig) {
+        this.UseDefaultFuseConfig = UseDefaultFuseConfig;
     }
 
     public ModifyApmApplicationConfigRequest() {
@@ -1308,6 +1538,39 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         if (source.DisableCpuUsed != null) {
             this.DisableCpuUsed = new Long(source.DisableCpuUsed);
         }
+        if (source.DbStatementParametersEnabled != null) {
+            this.DbStatementParametersEnabled = new Boolean(source.DbStatementParametersEnabled);
+        }
+        if (source.SlowSQLThresholds != null) {
+            this.SlowSQLThresholds = new ApmTag[source.SlowSQLThresholds.length];
+            for (int i = 0; i < source.SlowSQLThresholds.length; i++) {
+                this.SlowSQLThresholds[i] = new ApmTag(source.SlowSQLThresholds[i]);
+            }
+        }
+        if (source.EnableDesensitizationRule != null) {
+            this.EnableDesensitizationRule = new Long(source.EnableDesensitizationRule);
+        }
+        if (source.DesensitizationRule != null) {
+            this.DesensitizationRule = new String(source.DesensitizationRule);
+        }
+        if (source.LogSpanIdKey != null) {
+            this.LogSpanIdKey = new String(source.LogSpanIdKey);
+        }
+        if (source.AutoProfilingConfig != null) {
+            this.AutoProfilingConfig = new AutoProfilingConfig(source.AutoProfilingConfig);
+        }
+        if (source.EnableThresholdConfig != null) {
+            this.EnableThresholdConfig = new Boolean(source.EnableThresholdConfig);
+        }
+        if (source.ErrRateThreshold != null) {
+            this.ErrRateThreshold = new Long(source.ErrRateThreshold);
+        }
+        if (source.ResponseDurationWarningThreshold != null) {
+            this.ResponseDurationWarningThreshold = new Long(source.ResponseDurationWarningThreshold);
+        }
+        if (source.UseDefaultFuseConfig != null) {
+            this.UseDefaultFuseConfig = new Boolean(source.UseDefaultFuseConfig);
+        }
     }
 
 
@@ -1364,6 +1627,16 @@ public class ModifyApmApplicationConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
         this.setParamSimple(map, prefix + "DisableMemoryUsed", this.DisableMemoryUsed);
         this.setParamSimple(map, prefix + "DisableCpuUsed", this.DisableCpuUsed);
+        this.setParamSimple(map, prefix + "DbStatementParametersEnabled", this.DbStatementParametersEnabled);
+        this.setParamArrayObj(map, prefix + "SlowSQLThresholds.", this.SlowSQLThresholds);
+        this.setParamSimple(map, prefix + "EnableDesensitizationRule", this.EnableDesensitizationRule);
+        this.setParamSimple(map, prefix + "DesensitizationRule", this.DesensitizationRule);
+        this.setParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
+        this.setParamObj(map, prefix + "AutoProfilingConfig.", this.AutoProfilingConfig);
+        this.setParamSimple(map, prefix + "EnableThresholdConfig", this.EnableThresholdConfig);
+        this.setParamSimple(map, prefix + "ErrRateThreshold", this.ErrRateThreshold);
+        this.setParamSimple(map, prefix + "ResponseDurationWarningThreshold", this.ResponseDurationWarningThreshold);
+        this.setParamSimple(map, prefix + "UseDefaultFuseConfig", this.UseDefaultFuseConfig);
 
     }
 }

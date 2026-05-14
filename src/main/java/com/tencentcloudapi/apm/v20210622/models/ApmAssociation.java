@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ApmAssociation extends AbstractModel {
 
     /**
-    * Associated product instance ID.
+    * <p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PeerId")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PeerId;
 
     /**
-    * Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+    * <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Status")
@@ -40,16 +40,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Status;
 
     /**
-    * Specifies the CKafka message topic.
+    * <p>CKafka message topic</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-     * Get Associated product instance ID.
+    * <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
+    */
+    @SerializedName("MetricTopic")
+    @Expose
+    private String MetricTopic;
+
+    /**
+     * Get <p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PeerId Associated product instance ID.
+     * @return PeerId <p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPeerId() {
@@ -57,9 +64,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Associated product instance ID.
+     * Set <p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PeerId Associated product instance ID.
+     * @param PeerId <p>Instance ID of the associated product</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPeerId(String PeerId) {
@@ -67,9 +74,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+     * Get <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+     * @return Status <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getStatus() {
@@ -77,9 +84,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+     * Set <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status Association status: 1 (enabled), 2 (disabled), 3 (invalid).
+     * @param Status <p>Association status: 1 (enabled), 2 (not enabled), 3 (invalid)</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setStatus(Long Status) {
@@ -87,19 +94,35 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Specifies the CKafka message topic. 
-     * @return Topic Specifies the CKafka message topic.
+     * Get <p>CKafka message topic</p> 
+     * @return Topic <p>CKafka message topic</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set Specifies the CKafka message topic.
-     * @param Topic Specifies the CKafka message topic.
+     * Set <p>CKafka message topic</p>
+     * @param Topic <p>CKafka message topic</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
+    }
+
+    /**
+     * Get <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p> 
+     * @return MetricTopic <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
+     */
+    public String getMetricTopic() {
+        return this.MetricTopic;
+    }
+
+    /**
+     * Set <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
+     * @param MetricTopic <p>Ckafka consumption topic</p><p>Used for Kafka metric delivery</p>
+     */
+    public void setMetricTopic(String MetricTopic) {
+        this.MetricTopic = MetricTopic;
     }
 
     public ApmAssociation() {
@@ -119,6 +142,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Topic != null) {
             this.Topic = new String(source.Topic);
         }
+        if (source.MetricTopic != null) {
+            this.MetricTopic = new String(source.MetricTopic);
+        }
     }
 
 
@@ -129,6 +155,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "PeerId", this.PeerId);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
+        this.setParamSimple(map, prefix + "MetricTopic", this.MetricTopic);
 
     }
 }

@@ -24,239 +24,184 @@ import java.util.HashMap;
 public class DescribeGeneralSpanListRequest extends AbstractModel {
 
     /**
-    * Business system id.
+    * <p>Business system ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Span query start timestamp (unit: seconds).
+    * <p>Span query start timestamp (unit: seconds)</p>
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * Span query end timestamp (unit: seconds).
+    * <p>Span query end timestamp (unit: s)</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Universal filter parameters.
+    * <p>Universal filter parameters supported filter key such as service.name</p>
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
+    * <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
     */
     @SerializedName("OrderBy")
     @Expose
     private OrderBy OrderBy;
 
     /**
-    * The service name of the business itself. console users should fill in taw.
+    * <p>Business service name. Console users please enter taw</p>
     */
     @SerializedName("BusinessName")
     @Expose
     private String BusinessName;
 
     /**
-    * Number of items per page, defaults to 10,000, valid values are 0 to 10,000.
+    * <p>Count of single-page projects. Defaults to 1000. Valid value range is 1–1000.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Pagination.
+    * <p>Page</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Business system id. 
-     * @return InstanceId Business system id.
+     * Get <p>Business system ID</p> 
+     * @return InstanceId <p>Business system ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Business system id.
-     * @param InstanceId Business system id.
+     * Set <p>Business system ID</p>
+     * @param InstanceId <p>Business system ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Span query start timestamp (unit: seconds). 
-     * @return StartTime Span query start timestamp (unit: seconds).
+     * Get <p>Span query start timestamp (unit: seconds)</p> 
+     * @return StartTime <p>Span query start timestamp (unit: seconds)</p>
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Span query start timestamp (unit: seconds).
-     * @param StartTime Span query start timestamp (unit: seconds).
+     * Set <p>Span query start timestamp (unit: seconds)</p>
+     * @param StartTime <p>Span query start timestamp (unit: seconds)</p>
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Span query end timestamp (unit: seconds). 
-     * @return EndTime Span query end timestamp (unit: seconds).
+     * Get <p>Span query end timestamp (unit: s)</p> 
+     * @return EndTime <p>Span query end timestamp (unit: s)</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Span query end timestamp (unit: seconds).
-     * @param EndTime Span query end timestamp (unit: seconds).
+     * Set <p>Span query end timestamp (unit: s)</p>
+     * @param EndTime <p>Span query end timestamp (unit: s)</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Universal filter parameters. 
-     * @return Filters Universal filter parameters.
+     * Get <p>Universal filter parameters supported filter key such as service.name</p> 
+     * @return Filters <p>Universal filter parameters supported filter key such as service.name</p>
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Universal filter parameters.
-     * @param Filters Universal filter parameters.
+     * Set <p>Universal filter parameters supported filter key such as service.name</p>
+     * @param Filters <p>Universal filter parameters supported filter key such as service.name</p>
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order. 
-     * @return OrderBy Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
+     * Get <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul> 
+     * @return OrderBy <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
      */
     public OrderBy getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
-     * @param OrderBy Sort
-.
-The currently supported keys are:.
-
--StartTime (start time).
--EndTime (end time).
--Duration (response time).
-
-The currently supported values are:.
-
-- desc: sort in descending order.
--Asc - ascending order.
+     * Set <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
+     * @param OrderBy <p>Sort<br>Keys now supported:</p><ul><li>startTime</li><li>endTime</li><li>duration</li></ul><p>Values now supported:</p><ul><li>desc (sort in descending order)</li><li>asc (ascending order)</li></ul>
      */
     public void setOrderBy(OrderBy OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get The service name of the business itself. console users should fill in taw. 
-     * @return BusinessName The service name of the business itself. console users should fill in taw.
+     * Get <p>Business service name. Console users please enter taw</p> 
+     * @return BusinessName <p>Business service name. Console users please enter taw</p>
      */
     public String getBusinessName() {
         return this.BusinessName;
     }
 
     /**
-     * Set The service name of the business itself. console users should fill in taw.
-     * @param BusinessName The service name of the business itself. console users should fill in taw.
+     * Set <p>Business service name. Console users please enter taw</p>
+     * @param BusinessName <p>Business service name. Console users please enter taw</p>
      */
     public void setBusinessName(String BusinessName) {
         this.BusinessName = BusinessName;
     }
 
     /**
-     * Get Number of items per page, defaults to 10,000, valid values are 0 to 10,000. 
-     * @return Limit Number of items per page, defaults to 10,000, valid values are 0 to 10,000.
+     * Get <p>Count of single-page projects. Defaults to 1000. Valid value range is 1–1000.</p> 
+     * @return Limit <p>Count of single-page projects. Defaults to 1000. Valid value range is 1–1000.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of items per page, defaults to 10,000, valid values are 0 to 10,000.
-     * @param Limit Number of items per page, defaults to 10,000, valid values are 0 to 10,000.
+     * Set <p>Count of single-page projects. Defaults to 1000. Valid value range is 1–1000.</p>
+     * @param Limit <p>Count of single-page projects. Defaults to 1000. Valid value range is 1–1000.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Pagination. 
-     * @return Offset Pagination.
+     * Get <p>Page</p> 
+     * @return Offset <p>Page</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination.
-     * @param Offset Pagination.
+     * Set <p>Page</p>
+     * @param Offset <p>Page</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;

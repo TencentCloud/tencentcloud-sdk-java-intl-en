@@ -24,118 +24,141 @@ import java.util.HashMap;
 public class ModifyApmAssociationRequest extends AbstractModel {
 
     /**
-    * Associated product name. currently only supports Prometheus.
+    * <p>Associated product name, currently only support Prometheus, CKafka</p>
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
+    * <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Business system ID
+    * <p>Business system ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Associated product instance ID.
+    * <p>ID of the associated product instance</p>
     */
     @SerializedName("PeerId")
     @Expose
     private String PeerId;
 
     /**
-    * Specifies the CKafka message topic.
+    * <p>CKafka message topic</p>
     */
     @SerializedName("Topic")
     @Expose
     private String Topic;
 
     /**
-     * Get Associated product name. currently only supports Prometheus. 
-     * @return ProductName Associated product name. currently only supports Prometheus.
+    * <p>Ckafka message topic</p>
+    */
+    @SerializedName("MetricTopic")
+    @Expose
+    private String MetricTopic;
+
+    /**
+     * Get <p>Associated product name, currently only support Prometheus, CKafka</p> 
+     * @return ProductName <p>Associated product name, currently only support Prometheus, CKafka</p>
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Associated product name. currently only supports Prometheus.
-     * @param ProductName Associated product name. currently only supports Prometheus.
+     * Set <p>Associated product name, currently only support Prometheus, CKafka</p>
+     * @param ProductName <p>Associated product name, currently only support Prometheus, CKafka</p>
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted). 
-     * @return Status Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
+     * Get <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p> 
+     * @return Status <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
-     * @param Status Status of the association relationship: // association status: 1 (enabled), 2 (disabled), 4 (deleted).
+     * Set <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
+     * @param Status <p>Status of the association relationship: // Association relationship status: 1 (enabled), 2 (disabled)</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Business system ID 
-     * @return InstanceId Business system ID
+     * Get <p>Business system ID</p> 
+     * @return InstanceId <p>Business system ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Business system ID
-     * @param InstanceId Business system ID
+     * Set <p>Business system ID</p>
+     * @param InstanceId <p>Business system ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Associated product instance ID. 
-     * @return PeerId Associated product instance ID.
+     * Get <p>ID of the associated product instance</p> 
+     * @return PeerId <p>ID of the associated product instance</p>
      */
     public String getPeerId() {
         return this.PeerId;
     }
 
     /**
-     * Set Associated product instance ID.
-     * @param PeerId Associated product instance ID.
+     * Set <p>ID of the associated product instance</p>
+     * @param PeerId <p>ID of the associated product instance</p>
      */
     public void setPeerId(String PeerId) {
         this.PeerId = PeerId;
     }
 
     /**
-     * Get Specifies the CKafka message topic. 
-     * @return Topic Specifies the CKafka message topic.
+     * Get <p>CKafka message topic</p> 
+     * @return Topic <p>CKafka message topic</p>
      */
     public String getTopic() {
         return this.Topic;
     }
 
     /**
-     * Set Specifies the CKafka message topic.
-     * @param Topic Specifies the CKafka message topic.
+     * Set <p>CKafka message topic</p>
+     * @param Topic <p>CKafka message topic</p>
      */
     public void setTopic(String Topic) {
         this.Topic = Topic;
+    }
+
+    /**
+     * Get <p>Ckafka message topic</p> 
+     * @return MetricTopic <p>Ckafka message topic</p>
+     */
+    public String getMetricTopic() {
+        return this.MetricTopic;
+    }
+
+    /**
+     * Set <p>Ckafka message topic</p>
+     * @param MetricTopic <p>Ckafka message topic</p>
+     */
+    public void setMetricTopic(String MetricTopic) {
+        this.MetricTopic = MetricTopic;
     }
 
     public ModifyApmAssociationRequest() {
@@ -161,6 +184,9 @@ public class ModifyApmAssociationRequest extends AbstractModel {
         if (source.Topic != null) {
             this.Topic = new String(source.Topic);
         }
+        if (source.MetricTopic != null) {
+            this.MetricTopic = new String(source.MetricTopic);
+        }
     }
 
 
@@ -173,6 +199,7 @@ public class ModifyApmAssociationRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "PeerId", this.PeerId);
         this.setParamSimple(map, prefix + "Topic", this.Topic);
+        this.setParamSimple(map, prefix + "MetricTopic", this.MetricTopic);
 
     }
 }

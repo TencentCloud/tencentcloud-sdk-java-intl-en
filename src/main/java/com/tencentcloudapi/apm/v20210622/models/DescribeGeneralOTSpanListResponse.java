@@ -24,18 +24,14 @@ import java.util.HashMap;
 public class DescribeGeneralOTSpanListResponse extends AbstractModel {
 
     /**
-    * Total number.
+    * <p>Total number</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
-Decode the text in the Spans field with Base64 to get the compressed byte[].
-Use gzip to decompress the compressed byte array and get the byte array before compression.
-Uses UTF-8 character set to convert byte[] before compression to text.
-
+    * <p>The Spans field contains all content of the link data. Since the data is compressed, perform the following three steps to restore the original text.</p><ol><li>Decode the text in the Spans field with Base64 to get the compressed byte[].</li><li>Decompress the compressed byte[] with gzip to get the byte array before compression.</li><li>Convert the byte array before compression to text using the UTF-8 character set.</li></ol>
     */
     @SerializedName("Spans")
     @Expose
@@ -49,48 +45,32 @@ Uses UTF-8 character set to convert byte[] before compression to text.
     private String RequestId;
 
     /**
-     * Get Total number. 
-     * @return TotalCount Total number.
+     * Get <p>Total number</p> 
+     * @return TotalCount <p>Total number</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number.
-     * @param TotalCount Total number.
+     * Set <p>Total number</p>
+     * @param TotalCount <p>Total number</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
-Decode the text in the Spans field with Base64 to get the compressed byte[].
-Use gzip to decompress the compressed byte array and get the byte array before compression.
-Uses UTF-8 character set to convert byte[] before compression to text.
- 
-     * @return Spans The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
-Decode the text in the Spans field with Base64 to get the compressed byte[].
-Use gzip to decompress the compressed byte array and get the byte array before compression.
-Uses UTF-8 character set to convert byte[] before compression to text.
-
+     * Get <p>The Spans field contains all content of the link data. Since the data is compressed, perform the following three steps to restore the original text.</p><ol><li>Decode the text in the Spans field with Base64 to get the compressed byte[].</li><li>Decompress the compressed byte[] with gzip to get the byte array before compression.</li><li>Convert the byte array before compression to text using the UTF-8 character set.</li></ol> 
+     * @return Spans <p>The Spans field contains all content of the link data. Since the data is compressed, perform the following three steps to restore the original text.</p><ol><li>Decode the text in the Spans field with Base64 to get the compressed byte[].</li><li>Decompress the compressed byte[] with gzip to get the byte array before compression.</li><li>Convert the byte array before compression to text using the UTF-8 character set.</li></ol>
      */
     public String getSpans() {
         return this.Spans;
     }
 
     /**
-     * Set The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
-Decode the text in the Spans field with Base64 to get the compressed byte[].
-Use gzip to decompress the compressed byte array and get the byte array before compression.
-Uses UTF-8 character set to convert byte[] before compression to text.
-
-     * @param Spans The Spans field contains the entire content of the link data. since the data is compressed, perform the following three steps to switch back to the original text.
-Decode the text in the Spans field with Base64 to get the compressed byte[].
-Use gzip to decompress the compressed byte array and get the byte array before compression.
-Uses UTF-8 character set to convert byte[] before compression to text.
-
+     * Set <p>The Spans field contains all content of the link data. Since the data is compressed, perform the following three steps to restore the original text.</p><ol><li>Decode the text in the Spans field with Base64 to get the compressed byte[].</li><li>Decompress the compressed byte[] with gzip to get the byte array before compression.</li><li>Convert the byte array before compression to text using the UTF-8 character set.</li></ol>
+     * @param Spans <p>The Spans field contains all content of the link data. Since the data is compressed, perform the following three steps to restore the original text.</p><ol><li>Decode the text in the Spans field with Base64 to get the compressed byte[].</li><li>Decompress the compressed byte[] with gzip to get the byte array before compression.</li><li>Convert the byte array before compression to text using the UTF-8 character set.</li></ol>
      */
     public void setSpans(String Spans) {
         this.Spans = Spans;

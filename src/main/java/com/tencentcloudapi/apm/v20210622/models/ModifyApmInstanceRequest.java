@@ -318,6 +318,13 @@ public class ModifyApmInstanceRequest extends AbstractModel {
     private Long UrlNumberSegmentThreshold;
 
     /**
+    * Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+    */
+    @SerializedName("LogSpanIdKey")
+    @Expose
+    private String LogSpanIdKey;
+
+    /**
      * Get Business system id. 
      * @return InstanceId Business system id.
      */
@@ -989,6 +996,22 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.UrlNumberSegmentThreshold = UrlNumberSegmentThreshold;
     }
 
+    /**
+     * Get Index key of spanId: This parameter is valid only when the CLS index type is key-value index 
+     * @return LogSpanIdKey Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+     */
+    public String getLogSpanIdKey() {
+        return this.LogSpanIdKey;
+    }
+
+    /**
+     * Set Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+     * @param LogSpanIdKey Index key of spanId: This parameter is valid only when the CLS index type is key-value index
+     */
+    public void setLogSpanIdKey(String LogSpanIdKey) {
+        this.LogSpanIdKey = LogSpanIdKey;
+    }
+
     public ModifyApmInstanceRequest() {
     }
 
@@ -1129,6 +1152,9 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         if (source.UrlNumberSegmentThreshold != null) {
             this.UrlNumberSegmentThreshold = new Long(source.UrlNumberSegmentThreshold);
         }
+        if (source.LogSpanIdKey != null) {
+            this.LogSpanIdKey = new String(source.LogSpanIdKey);
+        }
     }
 
 
@@ -1178,6 +1204,7 @@ public class ModifyApmInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "IsDeserializationAnalysis", this.IsDeserializationAnalysis);
         this.setParamSimple(map, prefix + "UrlLongSegmentThreshold", this.UrlLongSegmentThreshold);
         this.setParamSimple(map, prefix + "UrlNumberSegmentThreshold", this.UrlNumberSegmentThreshold);
+        this.setParamSimple(map, prefix + "LogSpanIdKey", this.LogSpanIdKey);
 
     }
 }

@@ -1,0 +1,152 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.tencentcloudapi.mna.v20210119.models;
+
+import com.tencentcloudapi.common.AbstractModel;
+import com.tencentcloudapi.common.SSEResponseModel;
+import com.google.gson.annotations.SerializedName;
+import com.google.gson.annotations.Expose;
+import java.util.HashMap;
+
+public class UpdateApplicationInfoRequest extends AbstractModel {
+
+    /**
+    * Application ID
+    */
+    @SerializedName("MpApplicationId")
+    @Expose
+    private String MpApplicationId;
+
+    /**
+    * Application name of the created app
+    */
+    @SerializedName("MpApplicationName")
+    @Expose
+    private String MpApplicationName;
+
+    /**
+    * Remark of the created device
+    */
+    @SerializedName("Remark")
+    @Expose
+    private String Remark;
+
+    /**
+    * Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. By default if left blank, public cloud gateway is selected. Specific meaning: Public cloud gateway: The device can only connect to public cloud gateway (Proximity access). Private gateway: The device can only connect to already launched private gateway (Proximity access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both public cloud gateway and already launched private gateway (Proximity access or fixed ip access).
+    */
+    @SerializedName("AccessScope")
+    @Expose
+    private Long AccessScope;
+
+    /**
+     * Get Application ID 
+     * @return MpApplicationId Application ID
+     */
+    public String getMpApplicationId() {
+        return this.MpApplicationId;
+    }
+
+    /**
+     * Set Application ID
+     * @param MpApplicationId Application ID
+     */
+    public void setMpApplicationId(String MpApplicationId) {
+        this.MpApplicationId = MpApplicationId;
+    }
+
+    /**
+     * Get Application name of the created app 
+     * @return MpApplicationName Application name of the created app
+     */
+    public String getMpApplicationName() {
+        return this.MpApplicationName;
+    }
+
+    /**
+     * Set Application name of the created app
+     * @param MpApplicationName Application name of the created app
+     */
+    public void setMpApplicationName(String MpApplicationName) {
+        this.MpApplicationName = MpApplicationName;
+    }
+
+    /**
+     * Get Remark of the created device 
+     * @return Remark Remark of the created device
+     */
+    public String getRemark() {
+        return this.Remark;
+    }
+
+    /**
+     * Set Remark of the created device
+     * @param Remark Remark of the created device
+     */
+    public void setRemark(String Remark) {
+        this.Remark = Remark;
+    }
+
+    /**
+     * Get Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. By default if left blank, public cloud gateway is selected. Specific meaning: Public cloud gateway: The device can only connect to public cloud gateway (Proximity access). Private gateway: The device can only connect to already launched private gateway (Proximity access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both public cloud gateway and already launched private gateway (Proximity access or fixed ip access). 
+     * @return AccessScope Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. By default if left blank, public cloud gateway is selected. Specific meaning: Public cloud gateway: The device can only connect to public cloud gateway (Proximity access). Private gateway: The device can only connect to already launched private gateway (Proximity access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both public cloud gateway and already launched private gateway (Proximity access or fixed ip access).
+     */
+    public Long getAccessScope() {
+        return this.AccessScope;
+    }
+
+    /**
+     * Set Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. By default if left blank, public cloud gateway is selected. Specific meaning: Public cloud gateway: The device can only connect to public cloud gateway (Proximity access). Private gateway: The device can only connect to already launched private gateway (Proximity access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both public cloud gateway and already launched private gateway (Proximity access or fixed ip access).
+     * @param AccessScope Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. By default if left blank, public cloud gateway is selected. Specific meaning: Public cloud gateway: The device can only connect to public cloud gateway (Proximity access). Private gateway: The device can only connect to already launched private gateway (Proximity access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both public cloud gateway and already launched private gateway (Proximity access or fixed ip access).
+     */
+    public void setAccessScope(Long AccessScope) {
+        this.AccessScope = AccessScope;
+    }
+
+    public UpdateApplicationInfoRequest() {
+    }
+
+    /**
+     * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
+     *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
+     */
+    public UpdateApplicationInfoRequest(UpdateApplicationInfoRequest source) {
+        if (source.MpApplicationId != null) {
+            this.MpApplicationId = new String(source.MpApplicationId);
+        }
+        if (source.MpApplicationName != null) {
+            this.MpApplicationName = new String(source.MpApplicationName);
+        }
+        if (source.Remark != null) {
+            this.Remark = new String(source.Remark);
+        }
+        if (source.AccessScope != null) {
+            this.AccessScope = new Long(source.AccessScope);
+        }
+    }
+
+
+    /**
+     * Internal implementation, normal users should not use it.
+     */
+    public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "MpApplicationId", this.MpApplicationId);
+        this.setParamSimple(map, prefix + "MpApplicationName", this.MpApplicationName);
+        this.setParamSimple(map, prefix + "Remark", this.Remark);
+        this.setParamSimple(map, prefix + "AccessScope", this.AccessScope);
+
+    }
+}
+

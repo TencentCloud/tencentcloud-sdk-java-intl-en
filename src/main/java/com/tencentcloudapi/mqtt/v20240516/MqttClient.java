@@ -204,6 +204,17 @@ public class MqttClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query device certificate details.
+     * @param req DescribeDeviceCertificateRequest
+     * @return DescribeDeviceCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDeviceCertificateResponse DescribeDeviceCertificate(DescribeDeviceCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDeviceCertificate", DescribeDeviceCertificateResponse.class);
+    }
+
+    /**
      *Query device certificates with paging
      * @param req DescribeDeviceCertificatesRequest
      * @return DescribeDeviceCertificatesResponse

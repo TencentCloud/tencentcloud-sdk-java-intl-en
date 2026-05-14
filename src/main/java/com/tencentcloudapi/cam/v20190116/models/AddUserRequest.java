@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddUserRequest extends AbstractModel {
 
     /**
-    * Sub-user username
+    * Sub-user username.
     */
     @SerializedName("Name")
     @Expose
@@ -87,16 +87,16 @@ public class AddUserRequest extends AbstractModel {
     private String Email;
 
     /**
-     * Get Sub-user username 
-     * @return Name Sub-user username
+     * Get Sub-user username. 
+     * @return Name Sub-user username.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Sub-user username
-     * @param Name Sub-user username
+     * Set Sub-user username.
+     * @param Name Sub-user username.
      */
     public void setName(String Name) {
         this.Name = Name;

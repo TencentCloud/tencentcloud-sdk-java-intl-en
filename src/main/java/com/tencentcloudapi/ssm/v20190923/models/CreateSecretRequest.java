@@ -59,14 +59,14 @@ public class CreateSecretRequest extends AbstractModel {
     private Long SecretType;
 
     /**
-    * Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+    * Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
     */
     @SerializedName("SecretBinary")
     @Expose
     private String SecretBinary;
 
     /**
-    * Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+    * The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
     */
     @SerializedName("SecretString")
     @Expose
@@ -167,32 +167,32 @@ public class CreateSecretRequest extends AbstractModel {
     }
 
     /**
-     * Get Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported. 
-     * @return SecretBinary Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+     * Get Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported. 
+     * @return SecretBinary Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
      */
     public String getSecretBinary() {
         return this.SecretBinary;
     }
 
     /**
-     * Set Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
-     * @param SecretBinary Base64-encoded plaintext of a binary Secret. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+     * Set Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
+     * @param SecretBinary Base64-encoded plaintext of a binary secret. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
      */
     public void setSecretBinary(String SecretBinary) {
         this.SecretBinary = SecretBinary;
     }
 
     /**
-     * Get Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported. 
-     * @return SecretString Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+     * Get The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported. 
+     * @return SecretString The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
      */
     public String getSecretString() {
         return this.SecretString;
     }
 
     /**
-     * Set Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
-     * @param SecretString Plaintext of a Secret, in text format. Base64 encoding is not required. Either `SecretBinary` or `SecretString` must be set. A maximum of 4096 bytes is supported.
+     * Set The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
+     * @param SecretString The plaintext of a Secret in text format. It does not require base64 encoding. Either `SecretBinary` or `SecretString` is required to be set but not both. A maximum of 32KB is supported.
      */
     public void setSecretString(String SecretString) {
         this.SecretString = SecretString;

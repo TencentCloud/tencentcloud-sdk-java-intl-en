@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeGeneralSpanListResponse extends AbstractModel {
 
     /**
-    * Total number.
+    * <p>Total number</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Span pagination list.
+    * <p>Span pagination list</p>
     */
     @SerializedName("Spans")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeGeneralSpanListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number. 
-     * @return TotalCount Total number.
+     * Get <p>Total number</p> 
+     * @return TotalCount <p>Total number</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number.
-     * @param TotalCount Total number.
+     * Set <p>Total number</p>
+     * @param TotalCount <p>Total number</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Span pagination list. 
-     * @return Spans Span pagination list.
+     * Get <p>Span pagination list</p> 
+     * @return Spans <p>Span pagination list</p>
      */
     public Span [] getSpans() {
         return this.Spans;
     }
 
     /**
-     * Set Span pagination list.
-     * @param Spans Span pagination list.
+     * Set <p>Span pagination list</p>
+     * @param Spans <p>Span pagination list</p>
      */
     public void setSpans(Span [] Spans) {
         this.Spans = Spans;
