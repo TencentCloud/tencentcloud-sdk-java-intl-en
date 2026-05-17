@@ -248,6 +248,17 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *Query company list
+     * @param req DescribeCompaniesRequest
+     * @return DescribeCompaniesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCompaniesResponse DescribeCompanies(DescribeCompaniesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCompanies", DescribeCompaniesResponse.class);
+    }
+
+    /**
      *This API is used to query the list of EdgeOne instances to which a certificate can be deployed.
      * @param req DescribeHostTeoInstanceListRequest
      * @return DescribeHostTeoInstanceListResponse
@@ -300,6 +311,17 @@ public class SslClient extends AbstractClient{
     public DescribeHostUploadUpdateRecordDetailResponse DescribeHostUploadUpdateRecordDetail(DescribeHostUploadUpdateRecordDetailRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeHostUploadUpdateRecordDetail", DescribeHostUploadUpdateRecordDetailResponse.class);
+    }
+
+    /**
+     *Query the list of people in charge
+     * @param req DescribeManagersRequest
+     * @return DescribeManagersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeManagersResponse DescribeManagers(DescribeManagersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeManagers", DescribeManagersResponse.class);
     }
 
     /**

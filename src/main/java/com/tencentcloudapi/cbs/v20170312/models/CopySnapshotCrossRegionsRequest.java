@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CopySnapshotCrossRegionsRequest extends AbstractModel {
 
     /**
-    * Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
+    * Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
     */
     @SerializedName("DestinationRegions")
     @Expose
@@ -38,23 +38,23 @@ public class CopySnapshotCrossRegionsRequest extends AbstractModel {
     private String SnapshotId;
 
     /**
-    * Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
+    * Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
     */
     @SerializedName("SnapshotName")
     @Expose
     private String SnapshotName;
 
     /**
-     * Get Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots. 
-     * @return DestinationRegions Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
+     * Get Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots. 
+     * @return DestinationRegions Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
      */
     public String [] getDestinationRegions() {
         return this.DestinationRegions;
     }
 
     /**
-     * Set Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
-     * @param DestinationRegions Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://intl.cloud.tencent.com/document/product/213/9456?from_cn_redirect=1) API. Note that you can only specify regions that support snapshots.
+     * Set Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
+     * @param DestinationRegions Destination regions of the replication task. You can query the value of regions by calling [DescribeRegions](https://www.tencentcloud.com/document/product/1271/71925) API. Note that you can only specify regions that support snapshots.
      */
     public void setDestinationRegions(String [] DestinationRegions) {
         this.DestinationRegions = DestinationRegions;
@@ -77,16 +77,16 @@ public class CopySnapshotCrossRegionsRequest extends AbstractModel {
     }
 
     /**
-     * Get Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]” 
-     * @return SnapshotName Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
+     * Get Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name] 
+     * @return SnapshotName Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
      */
     public String getSnapshotName() {
         return this.SnapshotName;
     }
 
     /**
-     * Set Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
-     * @param SnapshotName Name of the snapshot replica. If it’s not specified, it defaults to “Copied [source snapshot ID from [region name]”
+     * Set Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
+     * @param SnapshotName Name of the snapshot replica. If it is not specified, it defaults to Copied [source snapshot ID from [region name]
      */
     public void setSnapshotName(String SnapshotName) {
         this.SnapshotName = SnapshotName;

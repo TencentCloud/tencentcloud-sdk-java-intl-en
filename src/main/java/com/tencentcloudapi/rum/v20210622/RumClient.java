@@ -768,6 +768,17 @@ Default API request rate limit: 20 requests/sec.
     }
 
     /**
+     *This API is used to query instance information.
+     * @param req DescribeTawInstancesRequest
+     * @return DescribeTawInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeTawInstancesResponse DescribeTawInstances(DescribeTawInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeTawInstances", DescribeTawInstancesResponse.class);
+    }
+
+    /**
      *This API is used to get the list of UVs under a project.
      * @param req DescribeUvListRequest
      * @return DescribeUvListResponse
