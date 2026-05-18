@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InquirePriceCreateDBInstancesResponse extends AbstractModel {
 
     /**
-    * Price.
+    * <p>Price</p>
     */
     @SerializedName("Price")
     @Expose
@@ -38,16 +38,16 @@ public class InquirePriceCreateDBInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Price. 
-     * @return Price Price.
+     * Get <p>Price</p> 
+     * @return Price <p>Price</p>
      */
     public DBInstancePrice getPrice() {
         return this.Price;
     }
 
     /**
-     * Set Price.
-     * @param Price Price.
+     * Set <p>Price</p>
+     * @param Price <p>Price</p>
      */
     public void setPrice(DBInstancePrice Price) {
         this.Price = Price;

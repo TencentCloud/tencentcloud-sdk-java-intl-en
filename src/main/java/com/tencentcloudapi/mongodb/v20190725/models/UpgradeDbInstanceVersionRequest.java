@@ -31,14 +31,23 @@ public class UpgradeDbInstanceVersionRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
+    * The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
     */
     @SerializedName("MongoVersion")
     @Expose
     private String MongoVersion;
 
     /**
-    * Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
+    * Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
     */
     @SerializedName("InMaintenance")
     @Expose
@@ -61,32 +70,68 @@ public class UpgradeDbInstanceVersionRequest extends AbstractModel {
     }
 
     /**
-     * Get Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine). 
-     * @return MongoVersion Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
+     * Get The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0. 
+     * @return MongoVersion The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
      */
     public String getMongoVersion() {
         return this.MongoVersion;
     }
 
     /**
-     * Set Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
-     * @param MongoVersion Newly upgraded database version. Currently, it only supports MONGO_40_WT (version of the MongoDB 4.0 WiredTiger storage engine) and MONGO_42_WT (version of the MongoDB 4.2 WiredTiger storage engine).
+     * Set The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
+     * @param MongoVersion The newly upgraded database version. Currently supported versions are as follows. Upgrade from an earlier version to a high version is supported. Cross-version upgrade is not supported.
+- MONGO_40_WT: Version 4.0.
+- MONGO_42_WT: Version 4.2.
+- MONGO_44_WT: Version 4.4.
+- MONGO_50_WT: Version 5.0.
+- MONGO_60_WT: Version 6.0.
+-MONGO_70_WT: Version 7.0.
+- MONGO_80_WT: Version 8.0.
      */
     public void setMongoVersion(String MongoVersion) {
         this.MongoVersion = MongoVersion;
     }
 
     /**
-     * Get Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period. 
-     * @return InMaintenance Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
+     * Get Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window. 
+     * @return InMaintenance Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
      */
     public Long getInMaintenance() {
         return this.InMaintenance;
     }
 
     /**
-     * Set Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
-     * @param InMaintenance Whether to perform the upgrade during the maintenance period. 0 - upgrade now; 1 - upgrade during the maintenance period.
+     * Set Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
+     * @param InMaintenance Specify whether to perform the upgrade during the maintenance period.
+-0: Upgrade now.
+- 1: Upgrade during the maintenance window.
      */
     public void setInMaintenance(Long InMaintenance) {
         this.InMaintenance = InMaintenance;

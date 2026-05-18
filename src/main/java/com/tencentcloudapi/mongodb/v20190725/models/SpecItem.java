@@ -35,8 +35,8 @@ public class SpecItem extends AbstractModel {
 
     /**
     * Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
     */
     @SerializedName("Status")
     @Expose
@@ -99,6 +99,7 @@ public class SpecItem extends AbstractModel {
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
     */
     @SerializedName("MongoVersionCode")
     @Expose
@@ -106,20 +107,29 @@ public class SpecItem extends AbstractModel {
 
     /**
     * Digital version corresponding to the instance version.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
     */
     @SerializedName("MongoVersionValue")
     @Expose
     private Long MongoVersionValue;
 
     /**
-    * Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
+    * Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Storage engine.
+    * Storage engine. Only WiredTiger is supported.
     */
     @SerializedName("EngineName")
     @Expose
@@ -215,11 +225,11 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Get Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale. 
+- 0: selling stopped.
+- 1: available for sale. 
      * @return Status Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
      */
     public Long getStatus() {
         return this.Status;
@@ -227,11 +237,11 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
      * @param Status Saleable specification status flag. Valid values are as follows:
- - 0: selling stopped.
- - 1: available for sale.
+- 0: selling stopped.
+- 1: available for sale.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
@@ -356,7 +366,8 @@ public class SpecItem extends AbstractModel {
 - MONGO_44_WT: version of the MongoDB 4.4 WiredTiger storage engine.
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
-- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine. 
+- MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine. 
      * @return MongoVersionCode Storage engine version information on instances.
 - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
 - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
@@ -364,6 +375,7 @@ public class SpecItem extends AbstractModel {
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
      */
     public String getMongoVersionCode() {
         return this.MongoVersionCode;
@@ -377,6 +389,7 @@ public class SpecItem extends AbstractModel {
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
      * @param MongoVersionCode Storage engine version information on instances.
 - MONGO_40_WT: version of the MongoDB 4.0 WiredTiger storage engine.
 - MONGO_42_WT: version of the MongoDB 4.2 WiredTiger storage engine.
@@ -384,14 +397,33 @@ public class SpecItem extends AbstractModel {
 - MONGO_50_WT: version of the MongoDB 5.0 WiredTiger storage engine.
 - MONGO_60_WT: version of the MongoDB 6.0 WiredTiger storage engine.
 - MONGO_70_WT: version of the MongoDB 7.0 WiredTiger storage engine.
+- MONGO_80_WT: version of the MongoDB 8.0 WiredTiger storage engine.
      */
     public void setMongoVersionCode(String MongoVersionCode) {
         this.MongoVersionCode = MongoVersionCode;
     }
 
     /**
-     * Get Digital version corresponding to the instance version. 
+     * Get Digital version corresponding to the instance version.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14. 
      * @return MongoVersionValue Digital version corresponding to the instance version.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
      */
     public Long getMongoVersionValue() {
         return this.MongoVersionValue;
@@ -399,39 +431,57 @@ public class SpecItem extends AbstractModel {
 
     /**
      * Set Digital version corresponding to the instance version.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
      * @param MongoVersionValue Digital version corresponding to the instance version.
+- MongoDB version 3.2: 2.
+- MongoDB version 3.6: 4.
+- MongoDB version 4.0: 5.
+- MongoDB version 4.2: 9.
+- MongoDB version 4.4: 10.
+- MongoDB version 5.0: 11.
+- MongoDB version 6.0: 12.
+- MongoDB version 7.0: 13.
+- MongoDB version 8.0: 14.
      */
     public void setMongoVersionValue(Long MongoVersionValue) {
         this.MongoVersionValue = MongoVersionValue;
     }
 
     /**
-     * Get Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0. 
-     * @return Version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
+     * Get Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0. 
+     * @return Version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
-     * @param Version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, and 7.0.
+     * Set Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
+     * @param Version Instance version information. Valid values: 4.2, 4.4, 5.0, 6.0, 7.0, and 8.0.
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Storage engine. 
-     * @return EngineName Storage engine.
+     * Get Storage engine. Only WiredTiger is supported. 
+     * @return EngineName Storage engine. Only WiredTiger is supported.
      */
     public String getEngineName() {
         return this.EngineName;
     }
 
     /**
-     * Set Storage engine.
-     * @param EngineName Storage engine.
+     * Set Storage engine. Only WiredTiger is supported.
+     * @param EngineName Storage engine. Only WiredTiger is supported.
      */
     public void setEngineName(String EngineName) {
         this.EngineName = EngineName;

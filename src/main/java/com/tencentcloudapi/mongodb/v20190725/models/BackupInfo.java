@@ -24,349 +24,299 @@ import java.util.HashMap;
 public class BackupInfo extends AbstractModel {
 
     /**
-    * Instance ID.
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Backup method.
-- 0: automatic backup.
-- 1: manual backup.
+    * <p>Backup method.</p><ul><li>0: Automatic backup.</li><li>1: Manual backup.</li></ul>
     */
     @SerializedName("BackupType")
     @Expose
     private Long BackupType;
 
     /**
-    * Backup file name.
+    * <p>Backup file name.</p>
     */
     @SerializedName("BackupName")
     @Expose
     private String BackupName;
 
     /**
-    * Backup task remarks.
+    * <p>Backup task notes.</p>
     */
     @SerializedName("BackupDesc")
     @Expose
     private String BackupDesc;
 
     /**
-    * Backup file size, in KB.
+    * <p>Backup file size, in KB.</p>
     */
     @SerializedName("BackupSize")
     @Expose
     private Long BackupSize;
 
     /**
-    * Backup start time.
+    * <p>Backup start time.</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Backup end time.
+    * <p>Backup end time.</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Backup status.
-- 1: backing up.
-- 2: backup successful.
+    * <p>Backup status.</p><ul><li>1: Backup in progress.</li><li>2: Backup successful.</li></ul>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Backup method.
-- 0: logical backup.
-- 1: physical backup.
-- 3: snapshot backup.
-**Note:**
-- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
-- Physical backup is not supported when storage encryption is enabled for the instance.
+    * <p>Backup method.</p><ul><li>0: Logical backup.</li><li>1: Physical backup.</li><li>3: Snapshot backup.<br><strong>Description:</strong></li><li>The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.</li><li>If storage encryption is activated for the instance, physical backup is not supported.</li></ul>
     */
     @SerializedName("BackupMethod")
     @Expose
     private Long BackupMethod;
 
     /**
-    * Backup record ID.
+    * <p>Backup record ID.</p>
     */
     @SerializedName("BackId")
     @Expose
     private Long BackId;
 
     /**
-    * Backup deletion time.
+    * <p>Backup deletion time.</p>
     */
     @SerializedName("DeleteTime")
     @Expose
     private String DeleteTime;
 
     /**
-    * Cross-region backup region.
+    * <p>Backup region in a different location.</p>
     */
     @SerializedName("BackupRegion")
     @Expose
     private String BackupRegion;
 
     /**
-    * Rollback time supported by the backup.
+    * <p>Rollback time supported by the backup.</p>
     */
     @SerializedName("RestoreTime")
     @Expose
     private String RestoreTime;
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Backup method.
-- 0: automatic backup.
-- 1: manual backup. 
-     * @return BackupType Backup method.
-- 0: automatic backup.
-- 1: manual backup.
+     * Get <p>Backup method.</p><ul><li>0: Automatic backup.</li><li>1: Manual backup.</li></ul> 
+     * @return BackupType <p>Backup method.</p><ul><li>0: Automatic backup.</li><li>1: Manual backup.</li></ul>
      */
     public Long getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Backup method.
-- 0: automatic backup.
-- 1: manual backup.
-     * @param BackupType Backup method.
-- 0: automatic backup.
-- 1: manual backup.
+     * Set <p>Backup method.</p><ul><li>0: Automatic backup.</li><li>1: Manual backup.</li></ul>
+     * @param BackupType <p>Backup method.</p><ul><li>0: Automatic backup.</li><li>1: Manual backup.</li></ul>
      */
     public void setBackupType(Long BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get Backup file name. 
-     * @return BackupName Backup file name.
+     * Get <p>Backup file name.</p> 
+     * @return BackupName <p>Backup file name.</p>
      */
     public String getBackupName() {
         return this.BackupName;
     }
 
     /**
-     * Set Backup file name.
-     * @param BackupName Backup file name.
+     * Set <p>Backup file name.</p>
+     * @param BackupName <p>Backup file name.</p>
      */
     public void setBackupName(String BackupName) {
         this.BackupName = BackupName;
     }
 
     /**
-     * Get Backup task remarks. 
-     * @return BackupDesc Backup task remarks.
+     * Get <p>Backup task notes.</p> 
+     * @return BackupDesc <p>Backup task notes.</p>
      */
     public String getBackupDesc() {
         return this.BackupDesc;
     }
 
     /**
-     * Set Backup task remarks.
-     * @param BackupDesc Backup task remarks.
+     * Set <p>Backup task notes.</p>
+     * @param BackupDesc <p>Backup task notes.</p>
      */
     public void setBackupDesc(String BackupDesc) {
         this.BackupDesc = BackupDesc;
     }
 
     /**
-     * Get Backup file size, in KB. 
-     * @return BackupSize Backup file size, in KB.
+     * Get <p>Backup file size, in KB.</p> 
+     * @return BackupSize <p>Backup file size, in KB.</p>
      */
     public Long getBackupSize() {
         return this.BackupSize;
     }
 
     /**
-     * Set Backup file size, in KB.
-     * @param BackupSize Backup file size, in KB.
+     * Set <p>Backup file size, in KB.</p>
+     * @param BackupSize <p>Backup file size, in KB.</p>
      */
     public void setBackupSize(Long BackupSize) {
         this.BackupSize = BackupSize;
     }
 
     /**
-     * Get Backup start time. 
-     * @return StartTime Backup start time.
+     * Get <p>Backup start time.</p> 
+     * @return StartTime <p>Backup start time.</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Backup start time.
-     * @param StartTime Backup start time.
+     * Set <p>Backup start time.</p>
+     * @param StartTime <p>Backup start time.</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Backup end time. 
-     * @return EndTime Backup end time.
+     * Get <p>Backup end time.</p> 
+     * @return EndTime <p>Backup end time.</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Backup end time.
-     * @param EndTime Backup end time.
+     * Set <p>Backup end time.</p>
+     * @param EndTime <p>Backup end time.</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Backup status.
-- 1: backing up.
-- 2: backup successful. 
-     * @return Status Backup status.
-- 1: backing up.
-- 2: backup successful.
+     * Get <p>Backup status.</p><ul><li>1: Backup in progress.</li><li>2: Backup successful.</li></ul> 
+     * @return Status <p>Backup status.</p><ul><li>1: Backup in progress.</li><li>2: Backup successful.</li></ul>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Backup status.
-- 1: backing up.
-- 2: backup successful.
-     * @param Status Backup status.
-- 1: backing up.
-- 2: backup successful.
+     * Set <p>Backup status.</p><ul><li>1: Backup in progress.</li><li>2: Backup successful.</li></ul>
+     * @param Status <p>Backup status.</p><ul><li>1: Backup in progress.</li><li>2: Backup successful.</li></ul>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Backup method.
-- 0: logical backup.
-- 1: physical backup.
-- 3: snapshot backup.
-**Note:**
-- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
-- Physical backup is not supported when storage encryption is enabled for the instance. 
-     * @return BackupMethod Backup method.
-- 0: logical backup.
-- 1: physical backup.
-- 3: snapshot backup.
-**Note:**
-- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
-- Physical backup is not supported when storage encryption is enabled for the instance.
+     * Get <p>Backup method.</p><ul><li>0: Logical backup.</li><li>1: Physical backup.</li><li>3: Snapshot backup.<br><strong>Description:</strong></li><li>The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.</li><li>If storage encryption is activated for the instance, physical backup is not supported.</li></ul> 
+     * @return BackupMethod <p>Backup method.</p><ul><li>0: Logical backup.</li><li>1: Physical backup.</li><li>3: Snapshot backup.<br><strong>Description:</strong></li><li>The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.</li><li>If storage encryption is activated for the instance, physical backup is not supported.</li></ul>
      */
     public Long getBackupMethod() {
         return this.BackupMethod;
     }
 
     /**
-     * Set Backup method.
-- 0: logical backup.
-- 1: physical backup.
-- 3: snapshot backup.
-**Note:**
-- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
-- Physical backup is not supported when storage encryption is enabled for the instance.
-     * @param BackupMethod Backup method.
-- 0: logical backup.
-- 1: physical backup.
-- 3: snapshot backup.
-**Note:**
-- The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.
-- Physical backup is not supported when storage encryption is enabled for the instance.
+     * Set <p>Backup method.</p><ul><li>0: Logical backup.</li><li>1: Physical backup.</li><li>3: Snapshot backup.<br><strong>Description:</strong></li><li>The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.</li><li>If storage encryption is activated for the instance, physical backup is not supported.</li></ul>
+     * @param BackupMethod <p>Backup method.</p><ul><li>0: Logical backup.</li><li>1: Physical backup.</li><li>3: Snapshot backup.<br><strong>Description:</strong></li><li>The General Edition instance supports logical and physical backup. The Cloud Disk Edition instance supports physical and snapshot backup, but does not support logical backup currently.</li><li>If storage encryption is activated for the instance, physical backup is not supported.</li></ul>
      */
     public void setBackupMethod(Long BackupMethod) {
         this.BackupMethod = BackupMethod;
     }
 
     /**
-     * Get Backup record ID. 
-     * @return BackId Backup record ID.
+     * Get <p>Backup record ID.</p> 
+     * @return BackId <p>Backup record ID.</p>
      */
     public Long getBackId() {
         return this.BackId;
     }
 
     /**
-     * Set Backup record ID.
-     * @param BackId Backup record ID.
+     * Set <p>Backup record ID.</p>
+     * @param BackId <p>Backup record ID.</p>
      */
     public void setBackId(Long BackId) {
         this.BackId = BackId;
     }
 
     /**
-     * Get Backup deletion time. 
-     * @return DeleteTime Backup deletion time.
+     * Get <p>Backup deletion time.</p> 
+     * @return DeleteTime <p>Backup deletion time.</p>
      */
     public String getDeleteTime() {
         return this.DeleteTime;
     }
 
     /**
-     * Set Backup deletion time.
-     * @param DeleteTime Backup deletion time.
+     * Set <p>Backup deletion time.</p>
+     * @param DeleteTime <p>Backup deletion time.</p>
      */
     public void setDeleteTime(String DeleteTime) {
         this.DeleteTime = DeleteTime;
     }
 
     /**
-     * Get Cross-region backup region. 
-     * @return BackupRegion Cross-region backup region.
+     * Get <p>Backup region in a different location.</p> 
+     * @return BackupRegion <p>Backup region in a different location.</p>
      */
     public String getBackupRegion() {
         return this.BackupRegion;
     }
 
     /**
-     * Set Cross-region backup region.
-     * @param BackupRegion Cross-region backup region.
+     * Set <p>Backup region in a different location.</p>
+     * @param BackupRegion <p>Backup region in a different location.</p>
      */
     public void setBackupRegion(String BackupRegion) {
         this.BackupRegion = BackupRegion;
     }
 
     /**
-     * Get Rollback time supported by the backup. 
-     * @return RestoreTime Rollback time supported by the backup.
+     * Get <p>Rollback time supported by the backup.</p> 
+     * @return RestoreTime <p>Rollback time supported by the backup.</p>
      */
     public String getRestoreTime() {
         return this.RestoreTime;
     }
 
     /**
-     * Set Rollback time supported by the backup.
-     * @param RestoreTime Rollback time supported by the backup.
+     * Set <p>Rollback time supported by the backup.</p>
+     * @param RestoreTime <p>Rollback time supported by the backup.</p>
      */
     public void setRestoreTime(String RestoreTime) {
         this.RestoreTime = RestoreTime;

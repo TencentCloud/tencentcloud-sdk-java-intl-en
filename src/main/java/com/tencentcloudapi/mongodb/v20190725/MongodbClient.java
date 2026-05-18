@@ -50,6 +50,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to close the audit service.
+     * @param req CloseAuditServiceRequest
+     * @return CloseAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseAuditServiceResponse CloseAuditService(CloseAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseAuditService", CloseAuditServiceResponse.class);
+    }
+
+    /**
      *This API is used to customize an account to access the instance.
      * @param req CreateAccountUserRequest
      * @return CreateAccountUserResponse
@@ -83,7 +94,7 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/35767?from_cn_redirect=1) API can be called to query and obtain the supported sales specifications.
+     *This API is used to create a yearly/monthly subscription TencentDB for MongoDB instance. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/34701) API can be called to query and obtain the supported sales specifications.
      * @param req CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
      * @throws TencentCloudSDKException
@@ -146,6 +157,39 @@ public class MongodbClient extends AbstractClient{
     public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAsyncRequestInfo", DescribeAsyncRequestInfoResponse.class);
+    }
+
+    /**
+     *This API is used to query the service configurations for a TencentDB audit policy, including the audit log retention period.
+     * @param req DescribeAuditConfigRequest
+     * @return DescribeAuditConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditConfigResponse DescribeAuditConfig(DescribeAuditConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditConfig", DescribeAuditConfigResponse.class);
+    }
+
+    /**
+     *This API is used to query audit log files of a cloud database instance.
+     * @param req DescribeAuditLogFilesRequest
+     * @return DescribeAuditLogFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogFilesResponse DescribeAuditLogFiles(DescribeAuditLogFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditLogFiles", DescribeAuditLogFilesResponse.class);
+    }
+
+    /**
+     *This API is used to query database audit logs.
+     * @param req DescribeAuditLogsRequest
+     * @return DescribeAuditLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogsResponse DescribeAuditLogs(DescribeAuditLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditLogs", DescribeAuditLogsResponse.class);
     }
 
     /**
@@ -303,6 +347,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query the current domain information of the MongoDB database.
+     * @param req DescribeSRVConnectionDomainRequest
+     * @return DescribeSRVConnectionDomainResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSRVConnectionDomainResponse DescribeSRVConnectionDomain(DescribeSRVConnectionDomainRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSRVConnectionDomain", DescribeSRVConnectionDomainResponse.class);
+    }
+
+    /**
      *This API is used to query security groups bound to an instance.
      * @param req DescribeSecurityGroupRequest
      * @return DescribeSecurityGroupResponse
@@ -347,6 +402,28 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to close the SRV Access Address of the MongoDB database.
+     * @param req DisableSRVConnectionUrlRequest
+     * @return DisableSRVConnectionUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisableSRVConnectionUrlResponse DisableSRVConnectionUrl(DisableSRVConnectionUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisableSRVConnectionUrl", DisableSRVConnectionUrlResponse.class);
+    }
+
+    /**
+     *This API is used to enable the SRV Access Address for MongoDB database.
+     * @param req EnableSRVConnectionUrlRequest
+     * @return EnableSRVConnectionUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableSRVConnectionUrlResponse EnableSRVConnectionUrl(EnableSRVConnectionUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableSRVConnectionUrl", EnableSRVConnectionUrlResponse.class);
+    }
+
+    /**
      *This API is used to enable the transparent data encryption (TDE) capability for TencentDB for MongoDB.
      * @param req EnableTransparentDataEncryptionRequest
      * @return EnableTransparentDataEncryptionResponse
@@ -355,6 +432,17 @@ public class MongodbClient extends AbstractClient{
     public EnableTransparentDataEncryptionResponse EnableTransparentDataEncryption(EnableTransparentDataEncryptionRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "EnableTransparentDataEncryption", EnableTransparentDataEncryptionResponse.class);
+    }
+
+    /**
+     *This API is used to enable the public network access address of the current instance.
+     * @param req EnableWanServiceRequest
+     * @return EnableWanServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnableWanServiceResponse EnableWanService(EnableWanServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnableWanService", EnableWanServiceResponse.class);
     }
 
     /**
@@ -468,6 +556,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to adjust the availability zone distribution of MongoDB cloud database nodes. You can specify the primary AZ and total availability zone distribution info to complete node distribution adjustment.
+     * @param req ModifyInstanceAzRequest
+     * @return ModifyInstanceAzResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyInstanceAzResponse ModifyInstanceAz(ModifyInstanceAzRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyInstanceAz", ModifyInstanceAzResponse.class);
+    }
+
+    /**
      *This API is used to modify the parameter configuration of a TencentDB for MongoDB instance.
      * @param req ModifyInstanceParamsRequest
      * @return ModifyInstanceParamsResponse
@@ -476,6 +575,17 @@ public class MongodbClient extends AbstractClient{
     public ModifyInstanceParamsResponse ModifyInstanceParams(ModifyInstanceParamsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyInstanceParams", ModifyInstanceParamsResponse.class);
+    }
+
+    /**
+     *This API is used to modify the TTL duration of the SRV Access Address for a MongoDB database.
+     * @param req ModifySRVConnectionUrlRequest
+     * @return ModifySRVConnectionUrlResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySRVConnectionUrlResponse ModifySRVConnectionUrl(ModifySRVConnectionUrlRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySRVConnectionUrl", ModifySRVConnectionUrlResponse.class);
     }
 
     /**
@@ -520,6 +630,17 @@ public class MongodbClient extends AbstractClient{
     public ResetDBInstancePasswordResponse ResetDBInstancePassword(ResetDBInstancePasswordRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ResetDBInstancePassword", ResetDBInstancePasswordResponse.class);
+    }
+
+    /**
+     *This API is used to rollback the database instance to a specified time point.
+     * @param req RestoreDBInstanceRequest
+     * @return RestoreDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestoreDBInstanceResponse RestoreDBInstance(RestoreDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestoreDBInstance", RestoreDBInstanceResponse.class);
     }
 
     /**
@@ -578,7 +699,8 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to upgrade the database kernel across versions. Currently, it is only supported to upgrade from version 3.6 to 4.0, 4.0 to 4.2, 4.2 to 4.4, and 4.4 to 5.0.
+     *This API is used to upgrade database version.
+**Description**: Upgrade to version 3.6 and above is supported. Only upgrading from a lower version to a higher version step by step is allowed. Cross-version upgrade or version downgrade is not supported.
      * @param req UpgradeDbInstanceVersionRequest
      * @return UpgradeDbInstanceVersionResponse
      * @throws TencentCloudSDKException

@@ -63,6 +63,14 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
     private Long ReplicateSetNum;
 
     /**
+    * CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
+    */
+    @SerializedName("Cpu")
+    @Expose
+    private Long Cpu;
+
+    /**
      * Get Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list. 
      * @return InstanceId Instance ID. For example, cmgo-p8vn****. Log in to the [TencentDB for MongoDB console](https://console.cloud.tencent.com/mongodb), and copy the instance ID from the instance list.
      */
@@ -158,6 +166,26 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
         this.ReplicateSetNum = ReplicateSetNum;
     }
 
+    /**
+     * Get CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory. 
+     * @return Cpu CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
+     */
+    public Long getCpu() {
+        return this.Cpu;
+    }
+
+    /**
+     * Set CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
+     * @param Cpu CPU size after configuration changes, in C. The [DescribeSpecInfo](https://www.tencentcloud.com/document/product/240/38567?from_cn_redirect=1) API can be called to obtain the specific sales specifications for CPU.
+Note: For Common I Instance Type pricing, you need to pass in the CPU core size corresponding to the memory.
+     */
+    public void setCpu(Long Cpu) {
+        this.Cpu = Cpu;
+    }
+
     public InquirePriceModifyDBInstanceSpecRequest() {
     }
 
@@ -181,6 +209,9 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
         if (source.ReplicateSetNum != null) {
             this.ReplicateSetNum = new Long(source.ReplicateSetNum);
         }
+        if (source.Cpu != null) {
+            this.Cpu = new Long(source.Cpu);
+        }
     }
 
 
@@ -193,6 +224,7 @@ public class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Volume", this.Volume);
         this.setParamSimple(map, prefix + "NodeNum", this.NodeNum);
         this.setParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
+        this.setParamSimple(map, prefix + "Cpu", this.Cpu);
 
     }
 }

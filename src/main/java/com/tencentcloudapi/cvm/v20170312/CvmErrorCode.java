@@ -174,7 +174,7 @@ public enum CvmErrorCode {
      /* The specified InstanceName exceeds the maximum length of 128 bytes. */
      INVALIDINSTANCENAME_TOOLONG("InvalidInstanceName.TooLong"),
      
-     /* This instance does not meet the [Return Policy](https://intl.cloud.tencent.com/document/product/213/9711?from_cn_redirect=1) for prepaid instances. */
+     /* This instance does not meet the return policy for prepaid instances. */
      INVALIDINSTANCENOTSUPPORTEDPREPAIDINSTANCE("InvalidInstanceNotSupportedPrepaidInstance"),
      
      /* This operation cannot be performed due to the current instance status. */
@@ -215,6 +215,9 @@ public enum CvmErrorCode {
      
      /* The parameter CdcId is not supported. */
      INVALIDPARAMETER_CDCNOTSUPPORTED("InvalidParameter.CdcNotSupported"),
+     
+     /* The parameter CdzId is not currently supported. */
+     INVALIDPARAMETER_CDZNOTSUPPORTED("InvalidParameter.CdzNotSupported"),
      
      /* RootDisk ID should not be passed to DataDiskIds. */
      INVALIDPARAMETER_DATADISKIDCONTAINSROOTDISK("InvalidParameter.DataDiskIdContainsRootDisk"),
@@ -356,6 +359,15 @@ public enum CvmErrorCode {
      
      /* CDC does not support the specified billing mode. */
      INVALIDPARAMETERVALUE_DEDICATEDCLUSTERNOTSUPPORTEDCHARGETYPE("InvalidParameterValue.DedicatedClusterNotSupportedChargeType"),
+     
+     /* The specified dedicated resource pack ID is invalid. */
+     INVALIDPARAMETERVALUE_DEDICATEDRESOURCEPACKIDSNOTFOUND("InvalidParameterValue.DedicatedResourcePackIdsNotFound"),
+     
+     /* No valid dedicated resource pack was found. */
+     INVALIDPARAMETERVALUE_DEDICATEDRESOURCEPACKNOTVALID("InvalidParameterValue.DedicatedResourcePackNotValid"),
+     
+     /* The dedicated resource pack IDs do not match the tenancy. */
+     INVALIDPARAMETERVALUE_DEDICATEDRESOURCEPACKTENANCYMISMATCH("InvalidParameterValue.DedicatedResourcePackTenancyMismatch"),
      
      /* A deployment VPC already exists. */
      INVALIDPARAMETERVALUE_DEPLOYVPCALREADYEXISTS("InvalidParameterValue.DeployVpcAlreadyExists"),
@@ -918,7 +930,7 @@ public enum CvmErrorCode {
      /* A mixed payment mode is not supported. */
      UNSUPPORTEDOPERATION_INSTANCEMIXEDPRICINGMODEL("UnsupportedOperation.InstanceMixedPricingModel"),
      
-     /*  */
+     /* Mixing upgrade and downgrade operations is not supported. */
      UNSUPPORTEDOPERATION_INSTANCEMIXEDRESETINSTANCETYPE("UnsupportedOperation.InstanceMixedResetInstanceType"),
      
      /* Central AZ and edge zone instances cannot be mixed in batch operation. */

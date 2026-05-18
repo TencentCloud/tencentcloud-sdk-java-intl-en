@@ -501,6 +501,9 @@ public enum VodErrorCode {
      /* Unknown media file source. */
      INVALIDPARAMETERVALUE_SOURCETYPES("InvalidParameterValue.SourceTypes"),
      
+     /* Source file error. */
+     INVALIDPARAMETERVALUE_SRCFILE("InvalidParameterValue.SrcFile"),
+     
      /* Incorrect parameter value: invalid `StartTime`. */
      INVALIDPARAMETERVALUE_STARTTIME("InvalidParameterValue.StartTime"),
      

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceSpecResponse extends AbstractModel {
 
     /**
-    * Order ID.
+    * <p>Order ID.</p>
     */
     @SerializedName("DealId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyDBInstanceSpecResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Order ID. 
-     * @return DealId Order ID.
+     * Get <p>Order ID.</p> 
+     * @return DealId <p>Order ID.</p>
      */
     public String getDealId() {
         return this.DealId;
     }
 
     /**
-     * Set Order ID.
-     * @param DealId Order ID.
+     * Set <p>Order ID.</p>
+     * @param DealId <p>Order ID.</p>
      */
     public void setDealId(String DealId) {
         this.DealId = DealId;

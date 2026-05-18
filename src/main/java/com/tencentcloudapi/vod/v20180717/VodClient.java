@@ -196,6 +196,17 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     }
 
     /**
+     *This API is used to create a user-defined digital watermark template.
+     * @param req CreateBlindWatermarkTemplateRequest
+     * @return CreateBlindWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateBlindWatermarkTemplateResponse CreateBlindWatermarkTemplate(CreateBlindWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateBlindWatermarkTemplate", CreateBlindWatermarkTemplateResponse.class);
+    }
+
+    /**
      *This API is used for adding domain names to VOD. A user can add up to 20 domain names. 1. After the domain name is added successfully, VOD will carry out the deployment of the domain name. It takes approximately 2 minutes for the domain name to change from the deployment status to the online status.
      * @param req CreateCDNDomainRequest
      * @return CreateCDNDomainResponse
@@ -571,6 +582,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *This API is used to delete a user-defined digital watermark template.
+     * @param req DeleteBlindWatermarkTemplateRequest
+     * @return DeleteBlindWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBlindWatermarkTemplateResponse DeleteBlindWatermarkTemplate(DeleteBlindWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBlindWatermarkTemplate", DeleteBlindWatermarkTemplateResponse.class);
+    }
+
+    /**
      *Delete CDN Domain
      * @param req DeleteCDNDomainRequest
      * @return DeleteCDNDomainResponse
@@ -911,6 +933,17 @@ This API is used to delete a player configuration.
     public DescribeAnimatedGraphicsTemplatesResponse DescribeAnimatedGraphicsTemplates(DescribeAnimatedGraphicsTemplatesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAnimatedGraphicsTemplates", DescribeAnimatedGraphicsTemplatesResponse.class);
+    }
+
+    /**
+     *Query user-customized digital watermark templates.
+     * @param req DescribeBlindWatermarkTemplatesRequest
+     * @return DescribeBlindWatermarkTemplatesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBlindWatermarkTemplatesResponse DescribeBlindWatermarkTemplates(DescribeBlindWatermarkTemplatesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBlindWatermarkTemplates", DescribeBlindWatermarkTemplatesResponse.class);
     }
 
     /**
@@ -1494,6 +1527,17 @@ If event notification is used, the type of event notification is [Video editing 
     }
 
     /**
+     *This API is used to initiate a digital watermark extraction task for a video. The extraction result can be queried through DescribeTaskDetail.
+     * @param req ExtractBlindWatermarkRequest
+     * @return ExtractBlindWatermarkResponse
+     * @throws TencentCloudSDKException
+     */
+    public ExtractBlindWatermarkResponse ExtractBlindWatermark(ExtractBlindWatermarkRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ExtractBlindWatermark", ExtractBlindWatermarkResponse.class);
+    }
+
+    /**
      *Extract CopyRight Watermark.
      * @param req ExtractCopyRightWatermarkRequest
      * @return ExtractCopyRightWatermarkResponse
@@ -1662,6 +1706,17 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
     public ModifyAnimatedGraphicsTemplateResponse ModifyAnimatedGraphicsTemplate(ModifyAnimatedGraphicsTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyAnimatedGraphicsTemplate", ModifyAnimatedGraphicsTemplateResponse.class);
+    }
+
+    /**
+     *This API is used to modify a user-defined digital watermark template. The digital watermark type cannot be modified.
+     * @param req ModifyBlindWatermarkTemplateRequest
+     * @return ModifyBlindWatermarkTemplateResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBlindWatermarkTemplateResponse ModifyBlindWatermarkTemplate(ModifyBlindWatermarkTemplateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBlindWatermarkTemplate", ModifyBlindWatermarkTemplateResponse.class);
     }
 
     /**

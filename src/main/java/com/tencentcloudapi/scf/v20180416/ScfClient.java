@@ -475,6 +475,17 @@ An alias must point to a master version and can point to an additional version a
     }
 
     /**
+     *This API is used to update the function configuration based on the input parameters.
+     * @param req UpdateFunctionConfigurationRequest
+     * @return UpdateFunctionConfigurationResponse
+     * @throws TencentCloudSDKException
+     */
+    public UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(UpdateFunctionConfigurationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "UpdateFunctionConfiguration", UpdateFunctionConfigurationResponse.class);
+    }
+
+    /**
      *This API is used to update the async retry configuration of a function, including the number of retry attempts and message retention period.
      * @param req UpdateFunctionEventInvokeConfigRequest
      * @return UpdateFunctionEventInvokeConfigResponse

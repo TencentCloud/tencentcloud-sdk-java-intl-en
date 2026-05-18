@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateDBInstanceResponse extends AbstractModel {
 
     /**
-    * Order ID.
+    * <p>Order ID</p>
     */
     @SerializedName("DealId")
     @Expose
     private String DealId;
 
     /**
-    * List of IDs of created instances.
+    * <p>List of instance created IDs</p>
     */
     @SerializedName("InstanceIds")
     @Expose
@@ -45,32 +45,32 @@ public class CreateDBInstanceResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Order ID. 
-     * @return DealId Order ID.
+     * Get <p>Order ID</p> 
+     * @return DealId <p>Order ID</p>
      */
     public String getDealId() {
         return this.DealId;
     }
 
     /**
-     * Set Order ID.
-     * @param DealId Order ID.
+     * Set <p>Order ID</p>
+     * @param DealId <p>Order ID</p>
      */
     public void setDealId(String DealId) {
         this.DealId = DealId;
     }
 
     /**
-     * Get List of IDs of created instances. 
-     * @return InstanceIds List of IDs of created instances.
+     * Get <p>List of instance created IDs</p> 
+     * @return InstanceIds <p>List of instance created IDs</p>
      */
     public String [] getInstanceIds() {
         return this.InstanceIds;
     }
 
     /**
-     * Set List of IDs of created instances.
-     * @param InstanceIds List of IDs of created instances.
+     * Set <p>List of instance created IDs</p>
+     * @param InstanceIds <p>List of instance created IDs</p>
      */
     public void setInstanceIds(String [] InstanceIds) {
         this.InstanceIds = InstanceIds;
