@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyPersonSampleRequest extends AbstractModel {
 
     /**
-    * ID of a sample.
+    * Material ID.
     */
     @SerializedName("PersonId")
     @Expose
     private String PersonId;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -45,24 +45,24 @@ public class ModifyPersonSampleRequest extends AbstractModel {
     private String Name;
 
     /**
-    * Description. Length limit: 1,024 characters.
+    * Description. Length limit: 1024 characters.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Sample usage. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+    * Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
     */
     @SerializedName("Usages")
     @Expose
     private String [] Usages;
 
     /**
-    * Information of operations on facial features.
+    * Facial operation information.
     */
     @SerializedName("FaceOperationInfo")
     @Expose
@@ -76,32 +76,32 @@ public class ModifyPersonSampleRequest extends AbstractModel {
     private AiSampleTagOperation TagOperationInfo;
 
     /**
-     * Get ID of a sample. 
-     * @return PersonId ID of a sample.
+     * Get Material ID. 
+     * @return PersonId Material ID.
      */
     public String getPersonId() {
         return this.PersonId;
     }
 
     /**
-     * Set ID of a sample.
-     * @param PersonId ID of a sample.
+     * Set Material ID.
+     * @param PersonId Material ID.
      */
     public void setPersonId(String PersonId) {
         this.PersonId = PersonId;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -124,60 +124,60 @@ public class ModifyPersonSampleRequest extends AbstractModel {
     }
 
     /**
-     * Get Description. Length limit: 1,024 characters. 
-     * @return Description Description. Length limit: 1,024 characters.
+     * Get Description. Length limit: 1024 characters. 
+     * @return Description Description. Length limit: 1024 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description. Length limit: 1,024 characters.
-     * @param Description Description. Length limit: 1,024 characters.
+     * Set Description. Length limit: 1024 characters.
+     * @param Description Description. Length limit: 1024 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Sample usage. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2 
-     * @return Usages Sample usage. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+     * Get Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2. 
+     * @return Usages Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
      */
     public String [] getUsages() {
         return this.Usages;
     }
 
     /**
-     * Set Sample usage. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
-     * @param Usages Sample usage. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+     * Set Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
+     * @param Usages Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: Used for inappropriate content recognition, equivalent to Review.Face.
+3. All: Used for content recognition and inappropriate content recognition, equivalent to 1+2.
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;
     }
 
     /**
-     * Get Information of operations on facial features. 
-     * @return FaceOperationInfo Information of operations on facial features.
+     * Get Facial operation information. 
+     * @return FaceOperationInfo Facial operation information.
      */
     public AiSampleFaceOperation getFaceOperationInfo() {
         return this.FaceOperationInfo;
     }
 
     /**
-     * Set Information of operations on facial features.
-     * @param FaceOperationInfo Information of operations on facial features.
+     * Set Facial operation information.
+     * @param FaceOperationInfo Facial operation information.
      */
     public void setFaceOperationInfo(AiSampleFaceOperation FaceOperationInfo) {
         this.FaceOperationInfo = FaceOperationInfo;

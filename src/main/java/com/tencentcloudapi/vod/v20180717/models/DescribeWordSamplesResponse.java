@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeWordSamplesResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
+    * Total number of qualified records.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeWordSamplesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
+     * Get Total number of qualified records. 
+     * @return TotalCount Total number of qualified records.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
+     * Set Total number of qualified records.
+     * @param TotalCount Total number of qualified records.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

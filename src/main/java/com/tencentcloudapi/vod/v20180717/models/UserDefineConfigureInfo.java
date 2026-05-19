@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class UserDefineConfigureInfo extends AbstractModel {
 
     /**
-    * Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+    * User-defined character video moderation control parameter.
     */
     @SerializedName("FaceReviewInfo")
     @Expose
     private UserDefineFaceReviewTemplateInfo FaceReviewInfo;
 
     /**
-    * Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+    * User custom voice video moderation control parameter.
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private UserDefineAsrTextReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+    * User custom text video moderation control parameter.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private UserDefineOcrTextReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return FaceReviewInfo Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get User-defined character video moderation control parameter. 
+     * @return FaceReviewInfo User-defined character video moderation control parameter.
      */
     public UserDefineFaceReviewTemplateInfo getFaceReviewInfo() {
         return this.FaceReviewInfo;
     }
 
     /**
-     * Set Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param FaceReviewInfo Parameters for custom facial recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set User-defined character video moderation control parameter.
+     * @param FaceReviewInfo User-defined character video moderation control parameter.
      */
     public void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo FaceReviewInfo) {
         this.FaceReviewInfo = FaceReviewInfo;
     }
 
     /**
-     * Get Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return AsrReviewInfo Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get User custom voice video moderation control parameter. 
+     * @return AsrReviewInfo User custom voice video moderation control parameter.
      */
     public UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param AsrReviewInfo Parameters for custom ASR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set User custom voice video moderation control parameter.
+     * @param AsrReviewInfo User custom voice video moderation control parameter.
      */
     public void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return OcrReviewInfo Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get User custom text video moderation control parameter. 
+     * @return OcrReviewInfo User custom text video moderation control parameter.
      */
     public UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param OcrReviewInfo Parameters for custom OCR-based recognition
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set User custom text video moderation control parameter.
+     * @param OcrReviewInfo User custom text video moderation control parameter.
      */
     public void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

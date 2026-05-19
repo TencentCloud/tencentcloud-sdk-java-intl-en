@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeReviewTemplatesResponse extends AbstractModel {
 
     /**
-    * The total number of records that meet the conditions.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * The details of the moderation templates.
+    * Review template detail list.
     */
     @SerializedName("ReviewTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeReviewTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The total number of records that meet the conditions. 
-     * @return TotalCount The total number of records that meet the conditions.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The total number of records that meet the conditions.
-     * @param TotalCount The total number of records that meet the conditions.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get The details of the moderation templates. 
-     * @return ReviewTemplateSet The details of the moderation templates.
+     * Get Review template detail list. 
+     * @return ReviewTemplateSet Review template detail list.
      */
     public ReviewTemplate [] getReviewTemplateSet() {
         return this.ReviewTemplateSet;
     }
 
     /**
-     * Set The details of the moderation templates.
-     * @param ReviewTemplateSet The details of the moderation templates.
+     * Set Review template detail list.
+     * @param ReviewTemplateSet Review template detail list.
      */
     public void setReviewTemplateSet(ReviewTemplate [] ReviewTemplateSet) {
         this.ReviewTemplateSet = ReviewTemplateSet;

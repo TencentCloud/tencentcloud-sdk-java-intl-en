@@ -24,44 +24,44 @@ import java.util.HashMap;
 public class ModifyImageSpriteTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of an image sprite generating template.
+    * Unique identifier of the sprite template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Name of an image sprite generating template. Length limit: 64 characters.
+    * Sprite image template name. Length limit: 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Subimage width of an image sprite in px. Value range: [128, 4,096].
+    * Width of small images in sprite image, in the range of [32, 4096], unit: px.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Subimage height of an image sprite in px. Value range: [128, 4,096].
+    * Height of small images in sprite image, in the range of [32, 4096], unit: px.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+    * Resolution adaptation, available values:
+<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
     */
     @SerializedName("ResolutionAdaptive")
@@ -69,9 +69,9 @@ Default value: open.
     private String ResolutionAdaptive;
 
     /**
-    * Sampling type. Valid values:
+    * Sampling type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li>
+<li>Time: By time interval.</li>
     */
     @SerializedName("SampleType")
     @Expose
@@ -79,142 +79,139 @@ Default value: open.
 
     /**
     * Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
     */
     @SerializedName("SampleInterval")
     @Expose
     private Long SampleInterval;
 
     /**
-    * Subimage row count of an image sprite.
+    * Number of rows of small images in sprite image.
     */
     @SerializedName("RowCount")
     @Expose
     private Long RowCount;
 
     /**
-    * Subimage column count of an image sprite.
+    * Number of columns of small images in sprite image.
     */
     @SerializedName("ColumnCount")
     @Expose
     private Long ColumnCount;
 
     /**
-    * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+    * Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched;</li><li>black: maintain video aspect ratio, remaining edge part filled with black;</li><li>white: maintain video aspect ratio, remaining edge part filled with white;</li><li>gauss: maintain video aspect ratio, remaining edge part filled with Gaussian blur.</li>Default value: black.
     */
     @SerializedName("FillType")
     @Expose
     private String FillType;
 
     /**
-    * Template description. Length limit: 256 characters.
+    * Template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * The image format. Valid values:
-<li> jpg</li>
-<li> png</li>
-<li> webp</li>
+    * Image format. Value:
+<li> jpg: jpg format;</li>
+<li>png: png format.</li>
+<li>WEBP: webp format.</li>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-     * Get Unique ID of an image sprite generating template. 
-     * @return Definition Unique ID of an image sprite generating template.
+     * Get Unique identifier of the sprite template. 
+     * @return Definition Unique identifier of the sprite template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of an image sprite generating template.
-     * @param Definition Unique ID of an image sprite generating template.
+     * Set Unique identifier of the sprite template.
+     * @param Definition Unique identifier of the sprite template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Name of an image sprite generating template. Length limit: 64 characters. 
-     * @return Name Name of an image sprite generating template. Length limit: 64 characters.
+     * Get Sprite image template name. Length limit: 64 characters. 
+     * @return Name Sprite image template name. Length limit: 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of an image sprite generating template. Length limit: 64 characters.
-     * @param Name Name of an image sprite generating template. Length limit: 64 characters.
+     * Set Sprite image template name. Length limit: 64 characters.
+     * @param Name Sprite image template name. Length limit: 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Subimage width of an image sprite in px. Value range: [128, 4,096]. 
-     * @return Width Subimage width of an image sprite in px. Value range: [128, 4,096].
+     * Get Width of small images in sprite image, in the range of [32, 4096], unit: px. 
+     * @return Width Width of small images in sprite image, in the range of [32, 4096], unit: px.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Subimage width of an image sprite in px. Value range: [128, 4,096].
-     * @param Width Subimage width of an image sprite in px. Value range: [128, 4,096].
+     * Set Width of small images in sprite image, in the range of [32, 4096], unit: px.
+     * @param Width Width of small images in sprite image, in the range of [32, 4096], unit: px.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Subimage height of an image sprite in px. Value range: [128, 4,096]. 
-     * @return Height Subimage height of an image sprite in px. Value range: [128, 4,096].
+     * Get Height of small images in sprite image, in the range of [32, 4096], unit: px. 
+     * @return Height Height of small images in sprite image, in the range of [32, 4096], unit: px.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Subimage height of an image sprite in px. Value range: [128, 4,096].
-     * @param Height Subimage height of an image sprite in px. Value range: [128, 4,096].
+     * Set Height of small images in sprite image, in the range of [32, 4096], unit: px.
+     * @param Height Height of small images in sprite image, in the range of [32, 4096], unit: px.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * Get Resolution adaptation, available values:
+<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open. 
-     * @return ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * @return ResolutionAdaptive Resolution adaptation, available values:
+<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
      */
     public String getResolutionAdaptive() {
@@ -222,13 +219,13 @@ Default value: open.
     }
 
     /**
-     * Set Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * Set Resolution adaptation, available values:
+<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
-     * @param ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * @param ResolutionAdaptive Resolution adaptation, available values:
+<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
@@ -236,24 +233,24 @@ Default value: open.
     }
 
     /**
-     * Get Sampling type. Valid values:
+     * Get Sampling type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li> 
-     * @return SampleType Sampling type. Valid values:
+<li>Time: By time interval.</li> 
+     * @return SampleType Sampling type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li>
+<li>Time: By time interval.</li>
      */
     public String getSampleType() {
         return this.SampleType;
     }
 
     /**
-     * Set Sampling type. Valid values:
+     * Set Sampling type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li>
-     * @param SampleType Sampling type. Valid values:
+<li>Time: By time interval.</li>
+     * @param SampleType Sampling type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li>
+<li>Time: By time interval.</li>
      */
     public void setSampleType(String SampleType) {
         this.SampleType = SampleType;
@@ -261,11 +258,11 @@ Default value: open.
 
     /**
      * Get Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li> 
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li> 
      * @return SampleInterval Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
      */
     public Long getSampleInterval() {
         return this.SampleInterval;
@@ -273,115 +270,103 @@ Default value: open.
 
     /**
      * Set Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
      * @param SampleInterval Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
      */
     public void setSampleInterval(Long SampleInterval) {
         this.SampleInterval = SampleInterval;
     }
 
     /**
-     * Get Subimage row count of an image sprite. 
-     * @return RowCount Subimage row count of an image sprite.
+     * Get Number of rows of small images in sprite image. 
+     * @return RowCount Number of rows of small images in sprite image.
      */
     public Long getRowCount() {
         return this.RowCount;
     }
 
     /**
-     * Set Subimage row count of an image sprite.
-     * @param RowCount Subimage row count of an image sprite.
+     * Set Number of rows of small images in sprite image.
+     * @param RowCount Number of rows of small images in sprite image.
      */
     public void setRowCount(Long RowCount) {
         this.RowCount = RowCount;
     }
 
     /**
-     * Get Subimage column count of an image sprite. 
-     * @return ColumnCount Subimage column count of an image sprite.
+     * Get Number of columns of small images in sprite image. 
+     * @return ColumnCount Number of columns of small images in sprite image.
      */
     public Long getColumnCount() {
         return this.ColumnCount;
     }
 
     /**
-     * Set Subimage column count of an image sprite.
-     * @param ColumnCount Subimage column count of an image sprite.
+     * Set Number of columns of small images in sprite image.
+     * @param ColumnCount Number of columns of small images in sprite image.
      */
     public void setColumnCount(Long ColumnCount) {
         this.ColumnCount = ColumnCount;
     }
 
     /**
-     * Get Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black. 
-     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+     * Get Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched;</li><li>black: maintain video aspect ratio, remaining edge part filled with black;</li><li>white: maintain video aspect ratio, remaining edge part filled with white;</li><li>gauss: maintain video aspect ratio, remaining edge part filled with Gaussian blur.</li>Default value: black. 
+     * @return FillType Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched;</li><li>black: maintain video aspect ratio, remaining edge part filled with black;</li><li>white: maintain video aspect ratio, remaining edge part filled with white;</li><li>gauss: maintain video aspect ratio, remaining edge part filled with Gaussian blur.</li>Default value: black.
      */
     public String getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-     * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+     * Set Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched;</li><li>black: maintain video aspect ratio, remaining edge part filled with black;</li><li>white: maintain video aspect ratio, remaining edge part filled with white;</li><li>gauss: maintain video aspect ratio, remaining edge part filled with Gaussian blur.</li>Default value: black.
+     * @param FillType Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "fill". Optional filling modes: <li>stretch: stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched;</li><li>black: maintain video aspect ratio, remaining edge part filled with black;</li><li>white: maintain video aspect ratio, remaining edge part filled with white;</li><li>gauss: maintain video aspect ratio, remaining edge part filled with Gaussian blur.</li>Default value: black.
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;
     }
 
     /**
-     * Get Template description. Length limit: 256 characters. 
-     * @return Comment Template description. Length limit: 256 characters.
+     * Get Template description, with a length limit of 256 characters. 
+     * @return Comment Template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 characters.
-     * @param Comment Template description. Length limit: 256 characters.
+     * Set Template description, with a length limit of 256 characters.
+     * @param Comment Template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get The image format. Valid values:
-<li> jpg</li>
-<li> png</li>
-<li> webp</li> 
-     * @return Format The image format. Valid values:
-<li> jpg</li>
-<li> png</li>
-<li> webp</li>
+     * Get Image format. Value:
+<li> jpg: jpg format;</li>
+<li>png: png format.</li>
+<li>WEBP: webp format.</li> 
+     * @return Format Image format. Value:
+<li> jpg: jpg format;</li>
+<li>png: png format.</li>
+<li>WEBP: webp format.</li>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set The image format. Valid values:
-<li> jpg</li>
-<li> png</li>
-<li> webp</li>
-     * @param Format The image format. Valid values:
-<li> jpg</li>
-<li> png</li>
-<li> webp</li>
+     * Set Image format. Value:
+<li> jpg: jpg format;</li>
+<li>png: png format.</li>
+<li>WEBP: webp format.</li>
+     * @param Format Image format. Value:
+<li> jpg: jpg format;</li>
+<li>png: png format.</li>
+<li>WEBP: webp format.</li>
      */
     public void setFormat(String Format) {
         this.Format = Format;

@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private VideoEnhanceConfig VideoEnhance;
 
     /**
-    * The audio enhancement configuration.
+    * Audio enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AudioEnhance")
@@ -60,9 +60,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The audio enhancement configuration.
+     * Get Audio enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AudioEnhance The audio enhancement configuration.
+     * @return AudioEnhance Audio enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AudioEnhanceConfig getAudioEnhance() {
@@ -70,9 +70,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The audio enhancement configuration.
+     * Set Audio enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioEnhance The audio enhancement configuration.
+     * @param AudioEnhance Audio enhancement configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setAudioEnhance(AudioEnhanceConfig AudioEnhance) {

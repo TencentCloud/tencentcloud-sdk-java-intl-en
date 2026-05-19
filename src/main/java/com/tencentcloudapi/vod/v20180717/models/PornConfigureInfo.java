@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class PornConfigureInfo extends AbstractModel {
 
     /**
-    * Parameters for recognition of pornographic content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Image recognition involves control parameters for offensive information.
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PornImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-    * Parameters for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * ASR-based recognition involves control parameters for offensive information.
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PornAsrReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * Parameters for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Text recognition involves control parameters for offensive information.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PornOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get Parameters for recognition of pornographic content in images
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return ImgReviewInfo Parameters for recognition of pornographic content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Image recognition involves control parameters for offensive information. 
+     * @return ImgReviewInfo Image recognition involves control parameters for offensive information.
      */
     public PornImgReviewTemplateInfo getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Parameters for recognition of pornographic content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param ImgReviewInfo Parameters for recognition of pornographic content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Image recognition involves control parameters for offensive information.
+     * @param ImgReviewInfo Image recognition involves control parameters for offensive information.
      */
     public void setImgReviewInfo(PornImgReviewTemplateInfo ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Parameters for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return AsrReviewInfo Parameters for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get ASR-based recognition involves control parameters for offensive information. 
+     * @return AsrReviewInfo ASR-based recognition involves control parameters for offensive information.
      */
     public PornAsrReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Parameters for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param AsrReviewInfo Parameters for ASR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set ASR-based recognition involves control parameters for offensive information.
+     * @param AsrReviewInfo ASR-based recognition involves control parameters for offensive information.
      */
     public void setAsrReviewInfo(PornAsrReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Parameters for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return OcrReviewInfo Parameters for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Text recognition involves control parameters for offensive information. 
+     * @return OcrReviewInfo Text recognition involves control parameters for offensive information.
      */
     public PornOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Parameters for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param OcrReviewInfo Parameters for OCR-based recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Text recognition involves control parameters for offensive information.
+     * @param OcrReviewInfo Text recognition involves control parameters for offensive information.
      */
     public void setOcrReviewInfo(PornOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

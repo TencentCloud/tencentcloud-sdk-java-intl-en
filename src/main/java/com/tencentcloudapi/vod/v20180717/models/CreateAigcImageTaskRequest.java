@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateAigcImageTaskRequest extends AbstractModel {
 
     /**
-    * <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * <p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
+    * <p>Model name. Value:</p><li>OG</li><li>GG</li><li>SI</li><li>Qwen</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * <p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
+    * <p>Model version. Parameter value:</p><li>When ModelName is OG, available values are image2_low, image2_medium, image2_high;</li><li>When ModelName is GG, available values are 2.5, 3.0, 3.1;</li><li>When ModelName is Jimeng, available values are 4.0;</li><li>When ModelName is SI, available values are 4.0, 4.5, 5.0-lite;</li><li>When ModelName is Qwen, available values are 0925;</li><li>When ModelName is Hunyuan, available values are 3.0;</li><li>When ModelName is Vidu, available values are q2;</li><li>When ModelName is Kling, available values are 2.1, 3.0, 3.0-Omni, O1;</li>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * <p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
+    * <p>File information of the input image for the AIGC image generation task. Maximum number of reference images supported by each model:</p><ul><li>GG 2.5: 3;</li><li>GG 3.0: 14;</li><li>GG 3.1: 14;</li><li>Kling 2.1: 4;</li><li>Kling 3.0: 1;</li><li>Kling 3.0-Omni: 10;</li><li>Kling O1: 10;</li><li>SI 4.0: 14;</li><li>SI 4.5: 14;</li><li>SI 5.0-lite: 14;</li><li>Vidu q2: 7;</li><li>Hunyuan 3.0: 3;</li><li>Qwen 0925: 1;</li><li>MJ v7: 3.</li></ul>
     */
     @SerializedName("FileInfos")
     @Expose
@@ -80,21 +80,21 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private AigcImageOutputConfig OutputConfig;
 
     /**
-    * <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+    * <p>Input region information. Available values:</p><ul><li>Mainland: Chinese mainland;</li><li>Oversea: overseas;</li><li>OverseaUSWest: overseas - western United States;</li></ul>
     */
     @SerializedName("InputRegion")
     @Expose
     private String InputRegion;
 
     /**
-    * 
+    * <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
     */
     @SerializedName("SceneType")
     @Expose
     private String SceneType;
 
     /**
-    * 
+    * <p>Random seed of the model.</p>
     */
     @SerializedName("Seed")
     @Expose
@@ -122,71 +122,71 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     private Long TasksPriority;
 
     /**
-    * <p>Reserved field, used for special purpose.</p>
+    * <p>Reserved field, used for special purpose.</p><ul><li><p>Hunyuan 3.0</p><ul><li>Supports freely setting resolution width and height. Both width and height must be within [512, 2048] pixels, and the product of width and height must be ≤ 1024x1024 pixels. Example: <code>{"AdditionalParameters": "{\"size\":\"728x1024\"}"}</code></li></ul></li><li><p>SI series</p><ul><li>Supports freely setting resolution width and height:<ul><li>SI 4.0: Valid total pixel range [1280x720=921600, 4096x4096=16777216]. Example: <code>{"AdditionalParameters": "{\"size\":\"728x1356\"}"}</code></li><li>SI 4.5: Valid total pixel range [2560x1440=3686400, 4096x4096=16777216]. Example: <code>{"AdditionalParameters": "{\"size\":\"2560x1440\"}"}</code></li><li>SI 5.0-lite: Valid total pixel range [2560x1440=3686400, 3072x3072x1.1025=10404496]. Example: <code>{"AdditionalParameters": "{\"size\":\"2560x1440\"}"}</code></li></ul></li><li>Can be used to enable output of multiple images. Example: <code>{"AdditionalParameters": "{\"sequential_image_generation\":\"auto\"}"}</code>. Besides, the number of output images must be specified in <code>Prompt</code>, such as: output 3 images.</li></ul></li><li><p>Qwen 0925</p><ul><li>Supports freely setting resolution width and height. Valid total pixel range [512x512=261632, 2048x2048=4194304]. Example: <code>{"AdditionalParameters": "{\"size\":\"728*1024\"}"}</code></li></ul></li></ul>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p> 
-     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
-     * @param SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b></p>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications, whether it is the default application or a newly created application.</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get <p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li> 
-     * @return ModelName <p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
+     * Get <p>Model name. Value:</p><li>OG</li><li>GG</li><li>SI</li><li>Qwen</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li> 
+     * @return ModelName <p>Model name. Value:</p><li>OG</li><li>GG</li><li>SI</li><li>Qwen</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set <p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
-     * @param ModelName <p>Model name. Value:</p><li>Qwen: Qianwen.</li><li>Hunyuan: Hunyuan.</li><li>Vidu: Shengshu.</li><li>Kling: Keling.</li>
+     * Set <p>Model name. Value:</p><li>OG</li><li>GG</li><li>SI</li><li>Qwen</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li>
+     * @param ModelName <p>Model name. Value:</p><li>OG</li><li>GG</li><li>SI</li><li>Qwen</li><li>Hunyuan</li><li>Vidu</li><li>Kling</li>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get <p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p> 
-     * @return ModelVersion <p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
+     * Get <p>Model version. Parameter value:</p><li>When ModelName is OG, available values are image2_low, image2_medium, image2_high;</li><li>When ModelName is GG, available values are 2.5, 3.0, 3.1;</li><li>When ModelName is Jimeng, available values are 4.0;</li><li>When ModelName is SI, available values are 4.0, 4.5, 5.0-lite;</li><li>When ModelName is Qwen, available values are 0925;</li><li>When ModelName is Hunyuan, available values are 3.0;</li><li>When ModelName is Vidu, available values are q2;</li><li>When ModelName is Kling, available values are 2.1, 3.0, 3.0-Omni, O1;</li> 
+     * @return ModelVersion <p>Model version. Parameter value:</p><li>When ModelName is OG, available values are image2_low, image2_medium, image2_high;</li><li>When ModelName is GG, available values are 2.5, 3.0, 3.1;</li><li>When ModelName is Jimeng, available values are 4.0;</li><li>When ModelName is SI, available values are 4.0, 4.5, 5.0-lite;</li><li>When ModelName is Qwen, available values are 0925;</li><li>When ModelName is Hunyuan, available values are 3.0;</li><li>When ModelName is Vidu, available values are q2;</li><li>When ModelName is Kling, available values are 2.1, 3.0, 3.0-Omni, O1;</li>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set <p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
-     * @param ModelVersion <p>Model version. Parameter Value: <li>When ModelName is Qwen, optional values: 0925;</li><li>When ModelName is Hunyuan, optional values: 3.0;</li><li>When ModelName is Vidu, optional values: q2;</li><li>When ModelName is Kling, optional values: 2.1;</li></p>
+     * Set <p>Model version. Parameter value:</p><li>When ModelName is OG, available values are image2_low, image2_medium, image2_high;</li><li>When ModelName is GG, available values are 2.5, 3.0, 3.1;</li><li>When ModelName is Jimeng, available values are 4.0;</li><li>When ModelName is SI, available values are 4.0, 4.5, 5.0-lite;</li><li>When ModelName is Qwen, available values are 0925;</li><li>When ModelName is Hunyuan, available values are 3.0;</li><li>When ModelName is Vidu, available values are q2;</li><li>When ModelName is Kling, available values are 2.1, 3.0, 3.0-Omni, O1;</li>
+     * @param ModelVersion <p>Model version. Parameter value:</p><li>When ModelName is OG, available values are image2_low, image2_medium, image2_high;</li><li>When ModelName is GG, available values are 2.5, 3.0, 3.1;</li><li>When ModelName is Jimeng, available values are 4.0;</li><li>When ModelName is SI, available values are 4.0, 4.5, 5.0-lite;</li><li>When ModelName is Qwen, available values are 0925;</li><li>When ModelName is Hunyuan, available values are 3.0;</li><li>When ModelName is Vidu, available values are q2;</li><li>When ModelName is Kling, available values are 2.1, 3.0, 3.0-Omni, O1;</li>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get <p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p> 
-     * @return FileInfos <p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
+     * Get <p>File information of the input image for the AIGC image generation task. Maximum number of reference images supported by each model:</p><ul><li>GG 2.5: 3;</li><li>GG 3.0: 14;</li><li>GG 3.1: 14;</li><li>Kling 2.1: 4;</li><li>Kling 3.0: 1;</li><li>Kling 3.0-Omni: 10;</li><li>Kling O1: 10;</li><li>SI 4.0: 14;</li><li>SI 4.5: 14;</li><li>SI 5.0-lite: 14;</li><li>Vidu q2: 7;</li><li>Hunyuan 3.0: 3;</li><li>Qwen 0925: 1;</li><li>MJ v7: 3.</li></ul> 
+     * @return FileInfos <p>File information of the input image for the AIGC image generation task. Maximum number of reference images supported by each model:</p><ul><li>GG 2.5: 3;</li><li>GG 3.0: 14;</li><li>GG 3.1: 14;</li><li>Kling 2.1: 4;</li><li>Kling 3.0: 1;</li><li>Kling 3.0-Omni: 10;</li><li>Kling O1: 10;</li><li>SI 4.0: 14;</li><li>SI 4.5: 14;</li><li>SI 5.0-lite: 14;</li><li>Vidu q2: 7;</li><li>Hunyuan 3.0: 3;</li><li>Qwen 0925: 1;</li><li>MJ v7: 3.</li></ul>
      */
     public AigcImageTaskInputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set <p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
-     * @param FileInfos <p>File information of the input image for the AIGC image generation task. Only one is supported by default. The following models can accept multiple reference images: <li>GEM 2.5: 0 to 3 images;</li><li>Vidu q2: 0 to 7 images. Supported formats include png, jpeg, jpg, and webp. The image pixel size cannot be less than 128x128, and the ratio must be less than 1:4 or 4:1.</li></p>
+     * Set <p>File information of the input image for the AIGC image generation task. Maximum number of reference images supported by each model:</p><ul><li>GG 2.5: 3;</li><li>GG 3.0: 14;</li><li>GG 3.1: 14;</li><li>Kling 2.1: 4;</li><li>Kling 3.0: 1;</li><li>Kling 3.0-Omni: 10;</li><li>Kling O1: 10;</li><li>SI 4.0: 14;</li><li>SI 4.5: 14;</li><li>SI 5.0-lite: 14;</li><li>Vidu q2: 7;</li><li>Hunyuan 3.0: 3;</li><li>Qwen 0925: 1;</li><li>MJ v7: 3.</li></ul>
+     * @param FileInfos <p>File information of the input image for the AIGC image generation task. Maximum number of reference images supported by each model:</p><ul><li>GG 2.5: 3;</li><li>GG 3.0: 14;</li><li>GG 3.1: 14;</li><li>Kling 2.1: 4;</li><li>Kling 3.0: 1;</li><li>Kling 3.0-Omni: 10;</li><li>Kling O1: 10;</li><li>SI 4.0: 14;</li><li>SI 4.5: 14;</li><li>SI 5.0-lite: 14;</li><li>Vidu q2: 7;</li><li>Hunyuan 3.0: 3;</li><li>Qwen 0925: 1;</li><li>MJ v7: 3.</li></ul>
      */
     public void setFileInfos(AigcImageTaskInputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
@@ -257,48 +257,48 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p> 
-     * @return InputRegion <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+     * Get <p>Input region information. Available values:</p><ul><li>Mainland: Chinese mainland;</li><li>Oversea: overseas;</li><li>OverseaUSWest: overseas - western United States;</li></ul> 
+     * @return InputRegion <p>Input region information. Available values:</p><ul><li>Mainland: Chinese mainland;</li><li>Oversea: overseas;</li><li>OverseaUSWest: overseas - western United States;</li></ul>
      */
     public String getInputRegion() {
         return this.InputRegion;
     }
 
     /**
-     * Set <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
-     * @param InputRegion <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+     * Set <p>Input region information. Available values:</p><ul><li>Mainland: Chinese mainland;</li><li>Oversea: overseas;</li><li>OverseaUSWest: overseas - western United States;</li></ul>
+     * @param InputRegion <p>Input region information. Available values:</p><ul><li>Mainland: Chinese mainland;</li><li>Oversea: overseas;</li><li>OverseaUSWest: overseas - western United States;</li></ul>
      */
     public void setInputRegion(String InputRegion) {
         this.InputRegion = InputRegion;
     }
 
     /**
-     * Get  
-     * @return SceneType 
+     * Get <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p> 
+     * @return SceneType <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
      */
     public String getSceneType() {
         return this.SceneType;
     }
 
     /**
-     * Set 
-     * @param SceneType 
+     * Set <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
+     * @param SceneType <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
      */
     public void setSceneType(String SceneType) {
         this.SceneType = SceneType;
     }
 
     /**
-     * Get  
-     * @return Seed 
+     * Get <p>Random seed of the model.</p> 
+     * @return Seed <p>Random seed of the model.</p>
      */
     public Long getSeed() {
         return this.Seed;
     }
 
     /**
-     * Set 
-     * @param Seed 
+     * Set <p>Random seed of the model.</p>
+     * @param Seed <p>Random seed of the model.</p>
      */
     public void setSeed(Long Seed) {
         this.Seed = Seed;
@@ -353,16 +353,16 @@ public class CreateAigcImageTaskRequest extends AbstractModel {
     }
 
     /**
-     * Get <p>Reserved field, used for special purpose.</p> 
-     * @return ExtInfo <p>Reserved field, used for special purpose.</p>
+     * Get <p>Reserved field, used for special purpose.</p><ul><li><p>Hunyuan 3.0</p><ul><li>Supports freely setting resolution width and height. Both width and height must be within [512, 2048] pixels, and the product of width and height must be ≤ 1024x1024 pixels. Example: <code>{"AdditionalParameters": "{\"size\":\"728x1024\"}"}</code></li></ul></li><li><p>SI series</p><ul><li>Supports freely setting resolution width and height:<ul><li>SI 4.0: Valid total pixel range [1280x720=921600, 4096x4096=16777216]. Example: <code>{"AdditionalParameters": "{\"size\":\"728x1356\"}"}</code></li><li>SI 4.5: Valid total pixel range [2560x1440=3686400, 4096x4096=16777216]. Example: <code>{"AdditionalParameters": "{\"size\":\"2560x1440\"}"}</code></li><li>SI 5.0-lite: Valid total pixel range [2560x1440=3686400, 3072x3072x1.1025=10404496]. Example: <code>{"AdditionalParameters": "{\"size\":\"2560x1440\"}"}</code></li></ul></li><li>Can be used to enable output of multiple images. Example: <code>{"AdditionalParameters": "{\"sequential_image_generation\":\"auto\"}"}</code>. Besides, the number of output images must be specified in <code>Prompt</code>, such as: output 3 images.</li></ul></li><li><p>Qwen 0925</p><ul><li>Supports freely setting resolution width and height. Valid total pixel range [512x512=261632, 2048x2048=4194304]. Example: <code>{"AdditionalParameters": "{\"size\":\"728*1024\"}"}</code></li></ul></li></ul> 
+     * @return ExtInfo <p>Reserved field, used for special purpose.</p><ul><li><p>Hunyuan 3.0</p><ul><li>Supports freely setting resolution width and height. Both width and height must be within [512, 2048] pixels, and the product of width and height must be ≤ 1024x1024 pixels. Example: <code>{"AdditionalParameters": "{\"size\":\"728x1024\"}"}</code></li></ul></li><li><p>SI series</p><ul><li>Supports freely setting resolution width and height:<ul><li>SI 4.0: Valid total pixel range [1280x720=921600, 4096x4096=16777216]. Example: <code>{"AdditionalParameters": "{\"size\":\"728x1356\"}"}</code></li><li>SI 4.5: Valid total pixel range [2560x1440=3686400, 4096x4096=16777216]. Example: <code>{"AdditionalParameters": "{\"size\":\"2560x1440\"}"}</code></li><li>SI 5.0-lite: Valid total pixel range [2560x1440=3686400, 3072x3072x1.1025=10404496]. Example: <code>{"AdditionalParameters": "{\"size\":\"2560x1440\"}"}</code></li></ul></li><li>Can be used to enable output of multiple images. Example: <code>{"AdditionalParameters": "{\"sequential_image_generation\":\"auto\"}"}</code>. Besides, the number of output images must be specified in <code>Prompt</code>, such as: output 3 images.</li></ul></li><li><p>Qwen 0925</p><ul><li>Supports freely setting resolution width and height. Valid total pixel range [512x512=261632, 2048x2048=4194304]. Example: <code>{"AdditionalParameters": "{\"size\":\"728*1024\"}"}</code></li></ul></li></ul>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set <p>Reserved field, used for special purpose.</p>
-     * @param ExtInfo <p>Reserved field, used for special purpose.</p>
+     * Set <p>Reserved field, used for special purpose.</p><ul><li><p>Hunyuan 3.0</p><ul><li>Supports freely setting resolution width and height. Both width and height must be within [512, 2048] pixels, and the product of width and height must be ≤ 1024x1024 pixels. Example: <code>{"AdditionalParameters": "{\"size\":\"728x1024\"}"}</code></li></ul></li><li><p>SI series</p><ul><li>Supports freely setting resolution width and height:<ul><li>SI 4.0: Valid total pixel range [1280x720=921600, 4096x4096=16777216]. Example: <code>{"AdditionalParameters": "{\"size\":\"728x1356\"}"}</code></li><li>SI 4.5: Valid total pixel range [2560x1440=3686400, 4096x4096=16777216]. Example: <code>{"AdditionalParameters": "{\"size\":\"2560x1440\"}"}</code></li><li>SI 5.0-lite: Valid total pixel range [2560x1440=3686400, 3072x3072x1.1025=10404496]. Example: <code>{"AdditionalParameters": "{\"size\":\"2560x1440\"}"}</code></li></ul></li><li>Can be used to enable output of multiple images. Example: <code>{"AdditionalParameters": "{\"sequential_image_generation\":\"auto\"}"}</code>. Besides, the number of output images must be specified in <code>Prompt</code>, such as: output 3 images.</li></ul></li><li><p>Qwen 0925</p><ul><li>Supports freely setting resolution width and height. Valid total pixel range [512x512=261632, 2048x2048=4194304]. Example: <code>{"AdditionalParameters": "{\"size\":\"728*1024\"}"}</code></li></ul></li></ul>
+     * @param ExtInfo <p>Reserved field, used for special purpose.</p><ul><li><p>Hunyuan 3.0</p><ul><li>Supports freely setting resolution width and height. Both width and height must be within [512, 2048] pixels, and the product of width and height must be ≤ 1024x1024 pixels. Example: <code>{"AdditionalParameters": "{\"size\":\"728x1024\"}"}</code></li></ul></li><li><p>SI series</p><ul><li>Supports freely setting resolution width and height:<ul><li>SI 4.0: Valid total pixel range [1280x720=921600, 4096x4096=16777216]. Example: <code>{"AdditionalParameters": "{\"size\":\"728x1356\"}"}</code></li><li>SI 4.5: Valid total pixel range [2560x1440=3686400, 4096x4096=16777216]. Example: <code>{"AdditionalParameters": "{\"size\":\"2560x1440\"}"}</code></li><li>SI 5.0-lite: Valid total pixel range [2560x1440=3686400, 3072x3072x1.1025=10404496]. Example: <code>{"AdditionalParameters": "{\"size\":\"2560x1440\"}"}</code></li></ul></li><li>Can be used to enable output of multiple images. Example: <code>{"AdditionalParameters": "{\"sequential_image_generation\":\"auto\"}"}</code>. Besides, the number of output images must be specified in <code>Prompt</code>, such as: output 3 images.</li></ul></li><li><p>Qwen 0925</p><ul><li>Supports freely setting resolution width and height. Valid total pixel range [512x512=261632, 2048x2048=4194304]. Example: <code>{"AdditionalParameters": "{\"size\":\"728*1024\"}"}</code></li></ul></li></ul>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

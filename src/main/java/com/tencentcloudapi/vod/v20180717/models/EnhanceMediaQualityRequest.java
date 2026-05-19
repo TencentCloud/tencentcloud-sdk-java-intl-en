@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class EnhanceMediaQualityRequest extends AbstractModel {
 
     /**
+    * Remaster template ID, please contact Tencent Cloud for details
+    */
+    @SerializedName("Definition")
+    @Expose
+    private Long Definition;
+
+    /**
     * Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
     */
     @SerializedName("FileId")
@@ -31,11 +38,13 @@ public class EnhanceMediaQualityRequest extends AbstractModel {
     private String FileId;
 
     /**
-    * Remaster template ID, please contact Tencent Cloud for details
+    * Media storage path.
+Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
+FileId and MediaStoragePath must provide one of.
     */
-    @SerializedName("Definition")
+    @SerializedName("MediaStoragePath")
     @Expose
-    private Long Definition;
+    private String MediaStoragePath;
 
     /**
     * <b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>
@@ -73,6 +82,22 @@ public class EnhanceMediaQualityRequest extends AbstractModel {
     private Long TasksPriority;
 
     /**
+     * Get Remaster template ID, please contact Tencent Cloud for details 
+     * @return Definition Remaster template ID, please contact Tencent Cloud for details
+     */
+    public Long getDefinition() {
+        return this.Definition;
+    }
+
+    /**
+     * Set Remaster template ID, please contact Tencent Cloud for details
+     * @param Definition Remaster template ID, please contact Tencent Cloud for details
+     */
+    public void setDefinition(Long Definition) {
+        this.Definition = Definition;
+    }
+
+    /**
      * Get Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). 
      * @return FileId Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
      */
@@ -89,19 +114,27 @@ public class EnhanceMediaQualityRequest extends AbstractModel {
     }
 
     /**
-     * Get Remaster template ID, please contact Tencent Cloud for details 
-     * @return Definition Remaster template ID, please contact Tencent Cloud for details
+     * Get Media storage path.
+Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
+FileId and MediaStoragePath must provide one of. 
+     * @return MediaStoragePath Media storage path.
+Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
+FileId and MediaStoragePath must provide one of.
      */
-    public Long getDefinition() {
-        return this.Definition;
+    public String getMediaStoragePath() {
+        return this.MediaStoragePath;
     }
 
     /**
-     * Set Remaster template ID, please contact Tencent Cloud for details
-     * @param Definition Remaster template ID, please contact Tencent Cloud for details
+     * Set Media storage path.
+Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
+FileId and MediaStoragePath must provide one of.
+     * @param MediaStoragePath Media storage path.
+Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
+FileId and MediaStoragePath must provide one of.
      */
-    public void setDefinition(Long Definition) {
-        this.Definition = Definition;
+    public void setMediaStoragePath(String MediaStoragePath) {
+        this.MediaStoragePath = MediaStoragePath;
     }
 
     /**
@@ -192,11 +225,14 @@ public class EnhanceMediaQualityRequest extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public EnhanceMediaQualityRequest(EnhanceMediaQualityRequest source) {
+        if (source.Definition != null) {
+            this.Definition = new Long(source.Definition);
+        }
         if (source.FileId != null) {
             this.FileId = new String(source.FileId);
         }
-        if (source.Definition != null) {
-            this.Definition = new Long(source.Definition);
+        if (source.MediaStoragePath != null) {
+            this.MediaStoragePath = new String(source.MediaStoragePath);
         }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
@@ -220,8 +256,9 @@ public class EnhanceMediaQualityRequest extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "FileId", this.FileId);
         this.setParamSimple(map, prefix + "Definition", this.Definition);
+        this.setParamSimple(map, prefix + "FileId", this.FileId);
+        this.setParamSimple(map, prefix + "MediaStoragePath", this.MediaStoragePath);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "SessionId", this.SessionId);

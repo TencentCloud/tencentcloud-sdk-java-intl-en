@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ProcessMediaByProcedureRequest extends AbstractModel {
 
     /**
-    * [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name.
+    * [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name.
     */
     @SerializedName("ProcedureName")
     @Expose
@@ -32,6 +32,7 @@ public class ProcessMediaByProcedureRequest extends AbstractModel {
 
     /**
     * Media file ID.
+FileId or MediaStoragePath must be provided.
     */
     @SerializedName("FileId")
     @Expose
@@ -47,66 +48,68 @@ FileId or MediaStoragePath must be provided.
     private String MediaStoragePath;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+    * Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
+    * Task flow status change notification mode. Valid values: Finish, Change, and None. If left empty, it represents Finish.
     */
     @SerializedName("TasksNotifyMode")
     @Expose
     private String TasksNotifyMode;
 
     /**
-    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+    * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+    * An identifier for deduplication. If there has been a request with the same identifier within the past 7 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Reserved field for special purposes.
+    * Reserved field, used when special purpose.
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name. 
-     * @return ProcedureName [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name.
+     * Get [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. 
+     * @return ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name.
      */
     public String getProcedureName() {
         return this.ProcedureName;
     }
 
     /**
-     * Set [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name.
-     * @param ProcedureName [Task flow template](https://intl.cloud.tencent.com/document/product/266/11700?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81.E6.A8.A1.E6.9D.BF) name.
+     * Set [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name.
+     * @param ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name.
      */
     public void setProcedureName(String ProcedureName) {
         this.ProcedureName = ProcedureName;
     }
 
     /**
-     * Get Media file ID. 
+     * Get Media file ID.
+FileId or MediaStoragePath must be provided. 
      * @return FileId Media file ID.
+FileId or MediaStoragePath must be provided.
      */
     public String getFileId() {
         return this.FileId;
@@ -114,7 +117,9 @@ FileId or MediaStoragePath must be provided.
 
     /**
      * Set Media file ID.
+FileId or MediaStoragePath must be provided.
      * @param FileId Media file ID.
+FileId or MediaStoragePath must be provided.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
@@ -145,96 +150,96 @@ FileId or MediaStoragePath must be provided.
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used. 
-     * @return TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+     * Get Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0. 
+     * @return TasksPriority Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
-     * @param TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+     * Set Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+     * @param TasksPriority Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used. 
-     * @return TasksNotifyMode Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
+     * Get Task flow status change notification mode. Valid values: Finish, Change, and None. If left empty, it represents Finish. 
+     * @return TasksNotifyMode Task flow status change notification mode. Valid values: Finish, Change, and None. If left empty, it represents Finish.
      */
     public String getTasksNotifyMode() {
         return this.TasksNotifyMode;
     }
 
     /**
-     * Set Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
-     * @param TasksNotifyMode Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
+     * Set Task flow status change notification mode. Valid values: Finish, Change, and None. If left empty, it represents Finish.
+     * @param TasksNotifyMode Task flow status change notification mode. Valid values: Finish, Change, and None. If left empty, it represents Finish.
      */
     public void setTasksNotifyMode(String TasksNotifyMode) {
         this.TasksNotifyMode = TasksNotifyMode;
     }
 
     /**
-     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters. 
-     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * Get Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters. 
+     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication. 
-     * @return SessionId Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * Get An identifier for deduplication. If there has been a request with the same identifier within the past 7 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication. 
+     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 7 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
-     * @param SessionId Identification code used for deduplication. If there is a request with the same identification code within 7 days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * Set An identifier for deduplication. If there has been a request with the same identifier within the past 7 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 7 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Reserved field for special purposes. 
-     * @return ExtInfo Reserved field for special purposes.
+     * Get Reserved field, used when special purpose. 
+     * @return ExtInfo Reserved field, used when special purpose.
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set Reserved field for special purposes.
-     * @param ExtInfo Reserved field for special purposes.
+     * Set Reserved field, used when special purpose.
+     * @param ExtInfo Reserved field, used when special purpose.
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

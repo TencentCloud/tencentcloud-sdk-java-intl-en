@@ -24,129 +24,69 @@ import java.util.HashMap;
 public class DescribeMediaInfosRequest extends AbstractModel {
 
     /**
-    * List of media file IDs. N starts from 0 and can be up to 19.
+    * <p>Media file ID list. N starts from 0 with a maximum of 19.</p>
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
+    * <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
     */
     @SerializedName("Filters")
     @Expose
     private String [] Filters;
 
     /**
-     * Get List of media file IDs. N starts from 0 and can be up to 19. 
-     * @return FileIds List of media file IDs. N starts from 0 and can be up to 19.
+     * Get <p>Media file ID list. N starts from 0 with a maximum of 19.</p> 
+     * @return FileIds <p>Media file ID list. N starts from 0 with a maximum of 19.</p>
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set List of media file IDs. N starts from 0 and can be up to 19.
-     * @param FileIds List of media file IDs. N starts from 0 and can be up to 19.
+     * Set <p>Media file ID list. N starts from 0 with a maximum of 19.</p>
+     * @param FileIds <p>Media file ID list. N starts from 0 with a maximum of 19.</p>
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li> 
-     * @return Filters The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
+     * Get <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li> 
+     * @return Filters <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
      */
     public String [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
-     * @param Filters The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
-<li>`basicInfo` (basic information)</li>
-<li>`metaData` (video metadata)</li>
-<li>`transcodeInfo` (transcoding information)</li>
-<li>`animatedGraphicsInfo` (animated image information)</li>
-<li>`imageSpriteInfo` (image sprite information)</li>
-<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
-<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
-<li>`keyFrameDescInfo` (timestamp information)</li>
-<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
-<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
-<li>`subtitleInfo` (subtitle information)</li>
-<li>`reviewInfo` (moderation information)</li>
+     * Set <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
+     * @param Filters <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously, with N starting from 0. If this field is not filled in, default return all information. Options:</p><li>basicInfo (video basic information).</li><li>metaData (video metadata).</li><li>transcodeInfo (video transcoding result information).</li><li>animatedGraphicsInfo (video motion graphic result information).</li><li>imageSpriteInfo (video thumbnail information).</li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point).</li><li>sampleSnapshotInfo (sampling screenshot information).</li><li>keyFrameDescInfo (Dotting Information).</li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information).</li><li>miniProgramReviewInfo (miniProgramReviewInfo).</li><li>subtitleInfo (subtitle information).</li><li>reviewInfo (review information).</li><li>mpsAiMediaInfo (Intelligent Media Assets information).</li>
      */
     public void setFilters(String [] Filters) {
         this.Filters = Filters;

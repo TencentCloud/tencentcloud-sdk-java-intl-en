@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class DomainHTTPSConfig extends AbstractModel {
 
     /**
-    * Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+    * <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
     */
     @SerializedName("CertExpireTime")
     @Expose
     private String CertExpireTime;
 
     /**
-    * Certificate ID in Tencent Cloud SSL product.
+    * <p>Certificate ID in Tencent Cloud SSL product.</p>
     */
     @SerializedName("CloudCertId")
     @Expose
     private String CloudCertId;
 
     /**
-     * Get Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li> 
-     * @return CertExpireTime Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+     * Get <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p> 
+     * @return CertExpireTime <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
      */
     public String getCertExpireTime() {
         return this.CertExpireTime;
     }
 
     /**
-     * Set Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
-     * @param CertExpireTime Time when the certificate expires
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+     * Set <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
+     * @param CertExpireTime <p>Certificate expiration time.<li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li></p><p>Parameter format: YYYY-MM-DDThh:mm:ss+08:00</p>
      */
     public void setCertExpireTime(String CertExpireTime) {
         this.CertExpireTime = CertExpireTime;
     }
 
     /**
-     * Get Certificate ID in Tencent Cloud SSL product. 
-     * @return CloudCertId Certificate ID in Tencent Cloud SSL product.
+     * Get <p>Certificate ID in Tencent Cloud SSL product.</p> 
+     * @return CloudCertId <p>Certificate ID in Tencent Cloud SSL product.</p>
      */
     public String getCloudCertId() {
         return this.CloudCertId;
     }
 
     /**
-     * Set Certificate ID in Tencent Cloud SSL product.
-     * @param CloudCertId Certificate ID in Tencent Cloud SSL product.
+     * Set <p>Certificate ID in Tencent Cloud SSL product.</p>
+     * @param CloudCertId <p>Certificate ID in Tencent Cloud SSL product.</p>
      */
     public void setCloudCertId(String CloudCertId) {
         this.CloudCertId = CloudCertId;

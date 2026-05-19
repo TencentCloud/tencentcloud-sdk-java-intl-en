@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeContentReviewTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
+    * Filter condition for the unique identifier of the content review template. The array can contain up to 100 unique identifiers.
     */
     @SerializedName("Definitions")
     @Expose
@@ -52,32 +52,32 @@ public class DescribeContentReviewTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Unique IDs for filters of an intelligent content recognition template. Array length limit: 100. 
-     * @return Definitions Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
+     * Get Filter condition for the unique identifier of the content review template. The array can contain up to 100 unique identifiers. 
+     * @return Definitions Filter condition for the unique identifier of the content review template. The array can contain up to 100 unique identifiers.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
-     * @param Definitions Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
+     * Set Filter condition for the unique identifier of the content review template. The array can contain up to 100 unique identifiers.
+     * @param Definitions Filter condition for the unique identifier of the content review template. The array can contain up to 100 unique identifiers.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

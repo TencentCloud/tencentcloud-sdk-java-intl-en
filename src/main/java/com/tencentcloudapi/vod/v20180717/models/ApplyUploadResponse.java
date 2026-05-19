@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class ApplyUploadResponse extends AbstractModel {
 
     /**
-    * Bucket for uploading the API URL bucket_name.
+    * <p>Bucket for uploading the API URL bucket_name.</p>
     */
     @SerializedName("StorageBucket")
     @Expose
     private String StorageBucket;
 
     /**
-    * Storage campus for uploading the Host Region of the port.
+    * <p>Storage campus for uploading the Host Region of the port.</p>
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * VOD session for confirmation of API parameters VodSessionKey.
+    * <p>VOD session for confirmation of API parameters VodSessionKey.</p>
     */
     @SerializedName("VodSessionKey")
     @Expose
     private String VodSessionKey;
 
     /**
-    * Media storage path for the object key (Key) used by the upload API to store media.
+    * <p>Media storage path used for the object key (Key) of media stored by the upload API.</p>
     */
     @SerializedName("MediaStoragePath")
     @Expose
     private String MediaStoragePath;
 
     /**
-    * Cover storage path for uploading the object Key of the cover via API.
+    * <p>Cover storage path for uploading the object Key of the cover via API.</p>
     */
     @SerializedName("CoverStoragePath")
     @Expose
     private String CoverStoragePath;
 
     /**
-    * Temporary credentials for uploading API permission verification.
+    * <p>Temporary credentials for uploading API access verification.</p>
     */
     @SerializedName("TempCertificate")
     @Expose
@@ -73,96 +73,96 @@ public class ApplyUploadResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Bucket for uploading the API URL bucket_name. 
-     * @return StorageBucket Bucket for uploading the API URL bucket_name.
+     * Get <p>Bucket for uploading the API URL bucket_name.</p> 
+     * @return StorageBucket <p>Bucket for uploading the API URL bucket_name.</p>
      */
     public String getStorageBucket() {
         return this.StorageBucket;
     }
 
     /**
-     * Set Bucket for uploading the API URL bucket_name.
-     * @param StorageBucket Bucket for uploading the API URL bucket_name.
+     * Set <p>Bucket for uploading the API URL bucket_name.</p>
+     * @param StorageBucket <p>Bucket for uploading the API URL bucket_name.</p>
      */
     public void setStorageBucket(String StorageBucket) {
         this.StorageBucket = StorageBucket;
     }
 
     /**
-     * Get Storage campus for uploading the Host Region of the port. 
-     * @return StorageRegion Storage campus for uploading the Host Region of the port.
+     * Get <p>Storage campus for uploading the Host Region of the port.</p> 
+     * @return StorageRegion <p>Storage campus for uploading the Host Region of the port.</p>
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set Storage campus for uploading the Host Region of the port.
-     * @param StorageRegion Storage campus for uploading the Host Region of the port.
+     * Set <p>Storage campus for uploading the Host Region of the port.</p>
+     * @param StorageRegion <p>Storage campus for uploading the Host Region of the port.</p>
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get VOD session for confirmation of API parameters VodSessionKey. 
-     * @return VodSessionKey VOD session for confirmation of API parameters VodSessionKey.
+     * Get <p>VOD session for confirmation of API parameters VodSessionKey.</p> 
+     * @return VodSessionKey <p>VOD session for confirmation of API parameters VodSessionKey.</p>
      */
     public String getVodSessionKey() {
         return this.VodSessionKey;
     }
 
     /**
-     * Set VOD session for confirmation of API parameters VodSessionKey.
-     * @param VodSessionKey VOD session for confirmation of API parameters VodSessionKey.
+     * Set <p>VOD session for confirmation of API parameters VodSessionKey.</p>
+     * @param VodSessionKey <p>VOD session for confirmation of API parameters VodSessionKey.</p>
      */
     public void setVodSessionKey(String VodSessionKey) {
         this.VodSessionKey = VodSessionKey;
     }
 
     /**
-     * Get Media storage path for the object key (Key) used by the upload API to store media. 
-     * @return MediaStoragePath Media storage path for the object key (Key) used by the upload API to store media.
+     * Get <p>Media storage path used for the object key (Key) of media stored by the upload API.</p> 
+     * @return MediaStoragePath <p>Media storage path used for the object key (Key) of media stored by the upload API.</p>
      */
     public String getMediaStoragePath() {
         return this.MediaStoragePath;
     }
 
     /**
-     * Set Media storage path for the object key (Key) used by the upload API to store media.
-     * @param MediaStoragePath Media storage path for the object key (Key) used by the upload API to store media.
+     * Set <p>Media storage path used for the object key (Key) of media stored by the upload API.</p>
+     * @param MediaStoragePath <p>Media storage path used for the object key (Key) of media stored by the upload API.</p>
      */
     public void setMediaStoragePath(String MediaStoragePath) {
         this.MediaStoragePath = MediaStoragePath;
     }
 
     /**
-     * Get Cover storage path for uploading the object Key of the cover via API. 
-     * @return CoverStoragePath Cover storage path for uploading the object Key of the cover via API.
+     * Get <p>Cover storage path for uploading the object Key of the cover via API.</p> 
+     * @return CoverStoragePath <p>Cover storage path for uploading the object Key of the cover via API.</p>
      */
     public String getCoverStoragePath() {
         return this.CoverStoragePath;
     }
 
     /**
-     * Set Cover storage path for uploading the object Key of the cover via API.
-     * @param CoverStoragePath Cover storage path for uploading the object Key of the cover via API.
+     * Set <p>Cover storage path for uploading the object Key of the cover via API.</p>
+     * @param CoverStoragePath <p>Cover storage path for uploading the object Key of the cover via API.</p>
      */
     public void setCoverStoragePath(String CoverStoragePath) {
         this.CoverStoragePath = CoverStoragePath;
     }
 
     /**
-     * Get Temporary credentials for uploading API permission verification. 
-     * @return TempCertificate Temporary credentials for uploading API permission verification.
+     * Get <p>Temporary credentials for uploading API access verification.</p> 
+     * @return TempCertificate <p>Temporary credentials for uploading API access verification.</p>
      */
     public TempCertificate getTempCertificate() {
         return this.TempCertificate;
     }
 
     /**
-     * Set Temporary credentials for uploading API permission verification.
-     * @param TempCertificate Temporary credentials for uploading API permission verification.
+     * Set <p>Temporary credentials for uploading API access verification.</p>
+     * @param TempCertificate <p>Temporary credentials for uploading API access verification.</p>
      */
     public void setTempCertificate(TempCertificate TempCertificate) {
         this.TempCertificate = TempCertificate;

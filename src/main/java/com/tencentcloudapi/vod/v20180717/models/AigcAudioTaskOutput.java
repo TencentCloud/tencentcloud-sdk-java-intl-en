@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AigcAudioTaskOutput extends AbstractModel {
 
     /**
-    * 
+    * <p>Output audio content</p>
     */
     @SerializedName("AudioInfos")
     @Expose
     private AigcAudioTaskOutputFileInfo [] AudioInfos;
 
     /**
-    * 
+    * <p>Output video information.</p>
     */
     @SerializedName("VideoInfos")
     @Expose
     private AigcAudioTaskOutputFileInfo [] VideoInfos;
 
     /**
-     * Get  
-     * @return AudioInfos 
+     * Get <p>Output audio content</p> 
+     * @return AudioInfos <p>Output audio content</p>
      */
     public AigcAudioTaskOutputFileInfo [] getAudioInfos() {
         return this.AudioInfos;
     }
 
     /**
-     * Set 
-     * @param AudioInfos 
+     * Set <p>Output audio content</p>
+     * @param AudioInfos <p>Output audio content</p>
      */
     public void setAudioInfos(AigcAudioTaskOutputFileInfo [] AudioInfos) {
         this.AudioInfos = AudioInfos;
     }
 
     /**
-     * Get  
-     * @return VideoInfos 
+     * Get <p>Output video information.</p> 
+     * @return VideoInfos <p>Output video information.</p>
      */
     public AigcAudioTaskOutputFileInfo [] getVideoInfos() {
         return this.VideoInfos;
     }
 
     /**
-     * Set 
-     * @param VideoInfos 
+     * Set <p>Output video information.</p>
+     * @param VideoInfos <p>Output video information.</p>
      */
     public void setVideoInfos(AigcAudioTaskOutputFileInfo [] VideoInfos) {
         this.VideoInfos = VideoInfos;

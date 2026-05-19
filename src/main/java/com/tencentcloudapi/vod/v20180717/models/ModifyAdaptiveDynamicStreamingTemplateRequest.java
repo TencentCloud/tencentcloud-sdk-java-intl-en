@@ -24,252 +24,252 @@ import java.util.HashMap;
 public class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of adaptive bitrate streaming template.
+    * Unique identifier of the adaptive transcoding template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Template name. Length limit: 64 characters.
+    * Template name. The length cannot exceed 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
+    * Adaptive Transcoding Format, with a value range of
+<li>HLS;</li>
+<li>MPEG-DASH.</li>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+    * Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
     */
     @SerializedName("DisableHigherVideoBitrate")
     @Expose
     private Long DisableHigherVideoBitrate;
 
     /**
-    * Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+    * Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
     */
     @SerializedName("DisableHigherVideoResolution")
     @Expose
     private Long DisableHigherVideoResolution;
 
     /**
-    * Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of all streams must be the same; otherwise, the frame rate of the first stream will be used as the output frame rate.
+    * Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
+Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
     */
     @SerializedName("StreamInfos")
     @Expose
     private AdaptiveStreamTemplate [] StreamInfos;
 
     /**
-    * Template description. Length limit: 256 characters.
+    * Template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
+    * Segment type, valid when Format is HLS. Value range:
+<li>ts: ts slicing;</li>
+<li>fmp4: fmp4 segment.</li>
     */
     @SerializedName("SegmentType")
     @Expose
     private String SegmentType;
 
     /**
-     * Get Unique ID of adaptive bitrate streaming template. 
-     * @return Definition Unique ID of adaptive bitrate streaming template.
+     * Get Unique identifier of the adaptive transcoding template. 
+     * @return Definition Unique identifier of the adaptive transcoding template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of adaptive bitrate streaming template.
-     * @param Definition Unique ID of adaptive bitrate streaming template.
+     * Set Unique identifier of the adaptive transcoding template.
+     * @param Definition Unique identifier of the adaptive transcoding template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Template name. Length limit: 64 characters. 
-     * @return Name Template name. Length limit: 64 characters.
+     * Get Template name. The length cannot exceed 64 characters. 
+     * @return Name Template name. The length cannot exceed 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Template name. Length limit: 64 characters.
-     * @param Name Template name. Length limit: 64 characters.
+     * Set Template name. The length cannot exceed 64 characters.
+     * @param Name Template name. The length cannot exceed 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li> 
-     * @return Format The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
+     * Get Adaptive Transcoding Format, with a value range of
+<li>HLS;</li>
+<li>MPEG-DASH.</li> 
+     * @return Format Adaptive Transcoding Format, with a value range of
+<li>HLS;</li>
+<li>MPEG-DASH.</li>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
-     * @param Format The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
+     * Set Adaptive Transcoding Format, with a value range of
+<li>HLS;</li>
+<li>MPEG-DASH.</li>
+     * @param Format Adaptive Transcoding Format, with a value range of
+<li>HLS;</li>
+<li>MPEG-DASH.</li>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li> 
-     * @return DisableHigherVideoBitrate Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+     * Get Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li> 
+     * @return DisableHigherVideoBitrate Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
      */
     public Long getDisableHigherVideoBitrate() {
         return this.DisableHigherVideoBitrate;
     }
 
     /**
-     * Set Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-     * @param DisableHigherVideoBitrate Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+     * Set Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
+     * @param DisableHigherVideoBitrate Whether to prohibit video low bitrate to high bitrate conversion, value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
      */
     public void setDisableHigherVideoBitrate(Long DisableHigherVideoBitrate) {
         this.DisableHigherVideoBitrate = DisableHigherVideoBitrate;
     }
 
     /**
-     * Get Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li> 
-     * @return DisableHigherVideoResolution Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+     * Get Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li> 
+     * @return DisableHigherVideoResolution Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
      */
     public Long getDisableHigherVideoResolution() {
         return this.DisableHigherVideoResolution;
     }
 
     /**
-     * Set Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-     * @param DisableHigherVideoResolution Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
+     * Set Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
+     * @param DisableHigherVideoResolution Whether to prohibit video resolution to high resolution conversion. Value ranges from...to...
+<li>`0`: no,</li>
+<li>1: Yes.</li>
      */
     public void setDisableHigherVideoResolution(Long DisableHigherVideoResolution) {
         this.DisableHigherVideoResolution = DisableHigherVideoResolution;
     }
 
     /**
-     * Get Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of all streams must be the same; otherwise, the frame rate of the first stream will be used as the output frame rate. 
-     * @return StreamInfos Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of all streams must be the same; otherwise, the frame rate of the first stream will be used as the output frame rate.
+     * Get Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
+Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate. 
+     * @return StreamInfos Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
+Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
      */
     public AdaptiveStreamTemplate [] getStreamInfos() {
         return this.StreamInfos;
     }
 
     /**
-     * Set Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of all streams must be the same; otherwise, the frame rate of the first stream will be used as the output frame rate.
-     * @param StreamInfos Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
-Note: the frame rate of all streams must be the same; otherwise, the frame rate of the first stream will be used as the output frame rate.
+     * Set Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
+Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
+     * @param StreamInfos Adaptive Transcoding Input Stream Parameter Information, up to 10 entries.
+Note: The frame rate of each stream must remain consistent. If inconsistent, use the frame rate of the first stream as the output frame rate.
      */
     public void setStreamInfos(AdaptiveStreamTemplate [] StreamInfos) {
         this.StreamInfos = StreamInfos;
     }
 
     /**
-     * Get Template description. Length limit: 256 characters. 
-     * @return Comment Template description. Length limit: 256 characters.
+     * Get Template description, with a length limit of 256 characters. 
+     * @return Comment Template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 characters.
-     * @param Comment Template description. Length limit: 256 characters.
+     * Set Template description, with a length limit of 256 characters.
+     * @param Comment Template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li> 
-     * @return SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
+     * Get Segment type, valid when Format is HLS. Value range:
+<li>ts: ts slicing;</li>
+<li>fmp4: fmp4 segment.</li> 
+     * @return SegmentType Segment type, valid when Format is HLS. Value range:
+<li>ts: ts slicing;</li>
+<li>fmp4: fmp4 segment.</li>
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-     * @param SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
+     * Set Segment type, valid when Format is HLS. Value range:
+<li>ts: ts slicing;</li>
+<li>fmp4: fmp4 segment.</li>
+     * @param SegmentType Segment type, valid when Format is HLS. Value range:
+<li>ts: ts slicing;</li>
+<li>fmp4: fmp4 segment.</li>
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;

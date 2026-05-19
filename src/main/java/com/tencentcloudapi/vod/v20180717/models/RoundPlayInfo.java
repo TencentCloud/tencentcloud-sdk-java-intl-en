@@ -86,14 +86,14 @@ Default value: Loop.
     private String Url;
 
     /**
-    * Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+    * Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+    * Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
     */
     @SerializedName("UpdateTime")
     @Expose
@@ -259,32 +259,32 @@ Default value: Loop.
     }
 
     /**
-     * Get Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). 
-     * @return CreateTime Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * Get Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). 
+     * @return CreateTime Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
-     * @param CreateTime Creation time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * Set Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param CreateTime Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). 
-     * @return UpdateTime Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * Get Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). 
+     * @return UpdateTime Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
-     * @param UpdateTime Update time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+     * Set Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param UpdateTime Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

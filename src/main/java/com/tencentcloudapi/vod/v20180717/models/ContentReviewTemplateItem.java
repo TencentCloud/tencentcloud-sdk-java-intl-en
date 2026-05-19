@@ -45,42 +45,37 @@ public class ContentReviewTemplateItem extends AbstractModel {
     private String Comment;
 
     /**
-    * Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Authentication involves control parameters for offensive information.
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfo PornConfigure;
 
     /**
-    * Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Authentication involves control parameters for unsafe information.
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfo TerrorismConfigure;
 
     /**
-    * Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Authentication involves control parameters for inappropriate information.
     */
     @SerializedName("PoliticalConfigure")
     @Expose
     private PoliticalConfigureInfo PoliticalConfigure;
 
     /**
-    * Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
     */
     @SerializedName("ProhibitedConfigure")
     @Expose
     private ProhibitedConfigureInfo ProhibitedConfigure;
 
     /**
-    * Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Customize video moderation control parameters.
     */
     @SerializedName("UserDefineConfigure")
     @Expose
@@ -165,108 +160,88 @@ Note: This field may return `null`, indicating that no valid value can be found.
     }
 
     /**
-     * Get Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return PornConfigure Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Authentication involves control parameters for offensive information. 
+     * @return PornConfigure Authentication involves control parameters for offensive information.
      */
     public PornConfigureInfo getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param PornConfigure Parameters for recognition of pornographic content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Authentication involves control parameters for offensive information.
+     * @param PornConfigure Authentication involves control parameters for offensive information.
      */
     public void setPornConfigure(PornConfigureInfo PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return TerrorismConfigure Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Authentication involves control parameters for unsafe information. 
+     * @return TerrorismConfigure Authentication involves control parameters for unsafe information.
      */
     public TerrorismConfigureInfo getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param TerrorismConfigure Parameters for recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Authentication involves control parameters for unsafe information.
+     * @param TerrorismConfigure Authentication involves control parameters for unsafe information.
      */
     public void setTerrorismConfigure(TerrorismConfigureInfo TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return PoliticalConfigure Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Authentication involves control parameters for inappropriate information. 
+     * @return PoliticalConfigure Authentication involves control parameters for inappropriate information.
      */
     public PoliticalConfigureInfo getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param PoliticalConfigure Parameters for recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Authentication involves control parameters for inappropriate information.
+     * @param PoliticalConfigure Authentication involves control parameters for inappropriate information.
      */
     public void setPoliticalConfigure(PoliticalConfigureInfo PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
     }
 
     /**
-     * Get Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li> 
+     * @return ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
      */
     public ProhibitedConfigureInfo getProhibitedConfigure() {
         return this.ProhibitedConfigure;
     }
 
     /**
-     * Set Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
+     * @param ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related illegal activities.</li>
      */
     public void setProhibitedConfigure(ProhibitedConfigureInfo ProhibitedConfigure) {
         this.ProhibitedConfigure = ProhibitedConfigure;
     }
 
     /**
-     * Get Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return UserDefineConfigure Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Customize video moderation control parameters. 
+     * @return UserDefineConfigure Customize video moderation control parameters.
      */
     public UserDefineConfigureInfo getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param UserDefineConfigure Custom recognition parameters
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Customize video moderation control parameters.
+     * @param UserDefineConfigure Customize video moderation control parameters.
      */
     public void setUserDefineConfigure(UserDefineConfigureInfo UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;

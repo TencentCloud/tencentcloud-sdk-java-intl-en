@@ -49,7 +49,7 @@ If `Container` is `wav`, the valid value is:
     private String Codec;
 
     /**
-    * Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+    * Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
     */
     @SerializedName("Bitrate")
     @Expose
@@ -167,16 +167,16 @@ If `Container` is `wav`, the valid value is:
     }
 
     /**
-     * Get Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio. 
-     * @return Bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+     * Get Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate. 
+     * @return Bitrate Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
-     * @param Bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
+     * Set Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
+     * @param Bitrate Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps. When value is 0, it means VOD automatically sets bitrate.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;

@@ -24,168 +24,168 @@ import java.util.HashMap;
 public class DescribeCDNUsageDataRequest extends AbstractModel {
 
     /**
-    * Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+    * End date, which must be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * CDN statistics type. Valid values:
-<li>Flux: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
+    * CDN statistics data type. Valid value:
+<li>Flux: Traffic volume, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
     */
     @SerializedName("DataType")
     @Expose
     private String DataType;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
-Default value: 1440. Data at 1-day granularity will be returned.
+    * Time granularity of usage data, unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>60: Hourly granularity. Returns the data of 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Returns data with day granularity within the specified query time.</li>
+The default value is 1440, which returns data with day granularity.
     */
     @SerializedName("DataInterval")
     @Expose
     private Long DataInterval;
 
     /**
-    * List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
+    * Domain name list. Up to 20 domain names can be queried for usage data. Multiple values can be specified to query the superimposed usage data of these domains. Default returns the overlaid usage data of all domains.
     */
     @SerializedName("DomainNames")
     @Expose
     private String [] DomainNames;
 
     /**
-     * Get Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return StartTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param StartTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date. 
-     * @return EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+     * Get End date, which must be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
+     * @return EndTime End date, which must be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
-     * @param EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
+     * Set End date, which must be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param EndTime End date, which must be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get CDN statistics type. Valid values:
-<li>Flux: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li> 
-     * @return DataType CDN statistics type. Valid values:
-<li>Flux: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
+     * Get CDN statistics data type. Valid value:
+<li>Flux: Traffic volume, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li> 
+     * @return DataType CDN statistics data type. Valid value:
+<li>Flux: Traffic volume, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
      */
     public String getDataType() {
         return this.DataType;
     }
 
     /**
-     * Set CDN statistics type. Valid values:
-<li>Flux: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
-     * @param DataType CDN statistics type. Valid values:
-<li>Flux: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
+     * Set CDN statistics data type. Valid value:
+<li>Flux: Traffic volume, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
+     * @param DataType CDN statistics data type. Valid value:
+<li>Flux: Traffic volume, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
      */
     public void setDataType(String DataType) {
         this.DataType = DataType;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
-Default value: 1440. Data at 1-day granularity will be returned. 
-     * @return DataInterval Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
-Default value: 1440. Data at 1-day granularity will be returned.
+     * Get Time granularity of usage data, unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>60: Hourly granularity. Returns the data of 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Returns data with day granularity within the specified query time.</li>
+The default value is 1440, which returns data with day granularity. 
+     * @return DataInterval Time granularity of usage data, unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>60: Hourly granularity. Returns the data of 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Returns data with day granularity within the specified query time.</li>
+The default value is 1440, which returns data with day granularity.
      */
     public Long getDataInterval() {
         return this.DataInterval;
     }
 
     /**
-     * Set Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
-Default value: 1440. Data at 1-day granularity will be returned.
-     * @param DataInterval Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
-<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
-<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
-Default value: 1440. Data at 1-day granularity will be returned.
+     * Set Time granularity of usage data, unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>60: Hourly granularity. Returns the data of 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Returns data with day granularity within the specified query time.</li>
+The default value is 1440, which returns data with day granularity.
+     * @param DataInterval Time granularity of usage data, unit: minute. Valid values:
+<li>5: 5 minutes, return detailed data at a minute granularity for the specified query time.</li>
+<li>60: Hourly granularity. Returns the data of 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Returns data with day granularity within the specified query time.</li>
+The default value is 1440, which returns data with day granularity.
      */
     public void setDataInterval(Long DataInterval) {
         this.DataInterval = DataInterval;
     }
 
     /**
-     * Get List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default. 
-     * @return DomainNames List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
+     * Get Domain name list. Up to 20 domain names can be queried for usage data. Multiple values can be specified to query the superimposed usage data of these domains. Default returns the overlaid usage data of all domains. 
+     * @return DomainNames Domain name list. Up to 20 domain names can be queried for usage data. Multiple values can be specified to query the superimposed usage data of these domains. Default returns the overlaid usage data of all domains.
      */
     public String [] getDomainNames() {
         return this.DomainNames;
     }
 
     /**
-     * Set List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
-     * @param DomainNames List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
+     * Set Domain name list. Up to 20 domain names can be queried for usage data. Multiple values can be specified to query the superimposed usage data of these domains. Default returns the overlaid usage data of all domains.
+     * @param DomainNames Domain name list. Up to 20 domain names can be queried for usage data. Multiple values can be specified to query the superimposed usage data of these domains. Default returns the overlaid usage data of all domains.
      */
     public void setDomainNames(String [] DomainNames) {
         this.DomainNames = DomainNames;

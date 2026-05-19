@@ -24,102 +24,102 @@ import java.util.HashMap;
 public class SetVodDomainCertificateRequest extends AbstractModel {
 
     /**
-    * Domain name
+    * Domain name.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * The operation type of this API call, optional value:
-<li>Set: Set the certificate required for the domain name HTTPS;</li>
-<li>Clear: Clear the domain name HTTPS configuration, after clearing, the domain name cannot support </li>
+    * Operation type of this API call. Valid values:
+<li>Set: Certificate required for setting domain HTTPS.</li>
+<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * [Tencent Cloud SSL](https://intl.cloud.tencent.com/document/product/400/7572?from_cn_redirect=1) uploaded certificate ID. No need to fill in this field when clearing domain HTTPS configuration
+    * [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
     */
     @SerializedName("CertID")
     @Expose
     private String CertID;
 
     /**
-     * Get Domain name 
-     * @return Domain Domain name
+     * Get Domain name. 
+     * @return Domain Domain name.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name
-     * @param Domain Domain name
+     * Set Domain name.
+     * @param Domain Domain name.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get The operation type of this API call, optional value:
-<li>Set: Set the certificate required for the domain name HTTPS;</li>
-<li>Clear: Clear the domain name HTTPS configuration, after clearing, the domain name cannot support </li> 
-     * @return Operation The operation type of this API call, optional value:
-<li>Set: Set the certificate required for the domain name HTTPS;</li>
-<li>Clear: Clear the domain name HTTPS configuration, after clearing, the domain name cannot support </li>
+     * Get Operation type of this API call. Valid values:
+<li>Set: Certificate required for setting domain HTTPS.</li>
+<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li> 
+     * @return Operation Operation type of this API call. Valid values:
+<li>Set: Certificate required for setting domain HTTPS.</li>
+<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set The operation type of this API call, optional value:
-<li>Set: Set the certificate required for the domain name HTTPS;</li>
-<li>Clear: Clear the domain name HTTPS configuration, after clearing, the domain name cannot support </li>
-     * @param Operation The operation type of this API call, optional value:
-<li>Set: Set the certificate required for the domain name HTTPS;</li>
-<li>Clear: Clear the domain name HTTPS configuration, after clearing, the domain name cannot support </li>
+     * Set Operation type of this API call. Valid values:
+<li>Set: Certificate required for setting domain HTTPS.</li>
+<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+     * @param Operation Operation type of this API call. Valid values:
+<li>Set: Certificate required for setting domain HTTPS.</li>
+<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get [Tencent Cloud SSL](https://intl.cloud.tencent.com/document/product/400/7572?from_cn_redirect=1) uploaded certificate ID. No need to fill in this field when clearing domain HTTPS configuration 
-     * @return CertID [Tencent Cloud SSL](https://intl.cloud.tencent.com/document/product/400/7572?from_cn_redirect=1) uploaded certificate ID. No need to fill in this field when clearing domain HTTPS configuration
+     * Get [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration. 
+     * @return CertID [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
      */
     public String getCertID() {
         return this.CertID;
     }
 
     /**
-     * Set [Tencent Cloud SSL](https://intl.cloud.tencent.com/document/product/400/7572?from_cn_redirect=1) uploaded certificate ID. No need to fill in this field when clearing domain HTTPS configuration
-     * @param CertID [Tencent Cloud SSL](https://intl.cloud.tencent.com/document/product/400/7572?from_cn_redirect=1) uploaded certificate ID. No need to fill in this field when clearing domain HTTPS configuration
+     * Set [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
+     * @param CertID [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
      */
     public void setCertID(String CertID) {
         this.CertID = CertID;

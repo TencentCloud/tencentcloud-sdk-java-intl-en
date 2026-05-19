@@ -24,125 +24,148 @@ import java.util.HashMap;
 public class AttachMediaSubtitlesRequest extends AbstractModel {
 
     /**
-    * Unique ID of the media file
+    * Unique identifier of a media file.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Operation. Valid values:
-<li>`Attach`: associates subtitles.</li>
-<li>`Detach`: disassociates subtitles.</li>
+    * Operation. Values as follows:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: Remove associated subtitles.</li>
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
+    * [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
     */
     @SerializedName("AdaptiveDynamicStreamingDefinition")
     @Expose
     private Long AdaptiveDynamicStreamingDefinition;
 
     /**
-    * Unique IDs of the subtitles
+    * Unique identifier of the subtitle.
     */
     @SerializedName("SubtitleIds")
     @Expose
     private String [] SubtitleIds;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * Unique identifier for default subtitle. Leave empty to not set default subtitle.
+    */
+    @SerializedName("DefaultSubtitleId")
+    @Expose
+    private String DefaultSubtitleId;
+
+    /**
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Unique ID of the media file 
-     * @return FileId Unique ID of the media file
+     * Get Unique identifier of a media file. 
+     * @return FileId Unique identifier of a media file.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Unique ID of the media file
-     * @param FileId Unique ID of the media file
+     * Set Unique identifier of a media file.
+     * @param FileId Unique identifier of a media file.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Operation. Valid values:
-<li>`Attach`: associates subtitles.</li>
-<li>`Detach`: disassociates subtitles.</li> 
-     * @return Operation Operation. Valid values:
-<li>`Attach`: associates subtitles.</li>
-<li>`Detach`: disassociates subtitles.</li>
+     * Get Operation. Values as follows:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: Remove associated subtitles.</li> 
+     * @return Operation Operation. Values as follows:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: Remove associated subtitles.</li>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set Operation. Valid values:
-<li>`Attach`: associates subtitles.</li>
-<li>`Detach`: disassociates subtitles.</li>
-     * @param Operation Operation. Valid values:
-<li>`Attach`: associates subtitles.</li>
-<li>`Detach`: disassociates subtitles.</li>
+     * Set Operation. Values as follows:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: Remove associated subtitles.</li>
+     * @param Operation Operation. Values as follows:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: Remove associated subtitles.</li>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy) 
-     * @return AdaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
+     * Get [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy). 
+     * @return AdaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
      */
     public Long getAdaptiveDynamicStreamingDefinition() {
         return this.AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Set [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
-     * @param AdaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
+     * Set [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
+     * @param AdaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
      */
     public void setAdaptiveDynamicStreamingDefinition(Long AdaptiveDynamicStreamingDefinition) {
         this.AdaptiveDynamicStreamingDefinition = AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Get Unique IDs of the subtitles 
-     * @return SubtitleIds Unique IDs of the subtitles
+     * Get Unique identifier of the subtitle. 
+     * @return SubtitleIds Unique identifier of the subtitle.
      */
     public String [] getSubtitleIds() {
         return this.SubtitleIds;
     }
 
     /**
-     * Set Unique IDs of the subtitles
-     * @param SubtitleIds Unique IDs of the subtitles
+     * Set Unique identifier of the subtitle.
+     * @param SubtitleIds Unique identifier of the subtitle.
      */
     public void setSubtitleIds(String [] SubtitleIds) {
         this.SubtitleIds = SubtitleIds;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get Unique identifier for default subtitle. Leave empty to not set default subtitle. 
+     * @return DefaultSubtitleId Unique identifier for default subtitle. Leave empty to not set default subtitle.
+     */
+    public String getDefaultSubtitleId() {
+        return this.DefaultSubtitleId;
+    }
+
+    /**
+     * Set Unique identifier for default subtitle. Leave empty to not set default subtitle.
+     * @param DefaultSubtitleId Unique identifier for default subtitle. Leave empty to not set default subtitle.
+     */
+    public void setDefaultSubtitleId(String DefaultSubtitleId) {
+        this.DefaultSubtitleId = DefaultSubtitleId;
+    }
+
+    /**
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -171,6 +194,9 @@ public class AttachMediaSubtitlesRequest extends AbstractModel {
                 this.SubtitleIds[i] = new String(source.SubtitleIds[i]);
             }
         }
+        if (source.DefaultSubtitleId != null) {
+            this.DefaultSubtitleId = new String(source.DefaultSubtitleId);
+        }
         if (source.SubAppId != null) {
             this.SubAppId = new Long(source.SubAppId);
         }
@@ -185,6 +211,7 @@ public class AttachMediaSubtitlesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Operation", this.Operation);
         this.setParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
         this.setParamArraySimple(map, prefix + "SubtitleIds.", this.SubtitleIds);
+        this.setParamSimple(map, prefix + "DefaultSubtitleId", this.DefaultSubtitleId);
         this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
 
     }

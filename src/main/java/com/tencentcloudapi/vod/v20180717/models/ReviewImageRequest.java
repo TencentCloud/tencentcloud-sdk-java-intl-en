@@ -38,7 +38,9 @@ public class ReviewImageRequest extends AbstractModel {
     private String FileId;
 
     /**
-    * 
+    * Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
     */
     @SerializedName("MediaStoragePath")
     @Expose
@@ -84,16 +86,24 @@ public class ReviewImageRequest extends AbstractModel {
     }
 
     /**
-     * Get  
-     * @return MediaStoragePath 
+     * Get Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided. 
+     * @return MediaStoragePath Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
      */
     public String getMediaStoragePath() {
         return this.MediaStoragePath;
     }
 
     /**
-     * Set 
-     * @param MediaStoragePath 
+     * Set Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
+     * @param MediaStoragePath Storage path of the media.
+Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
+FileId or MediaStoragePath must be provided.
      */
     public void setMediaStoragePath(String MediaStoragePath) {
         this.MediaStoragePath = MediaStoragePath;

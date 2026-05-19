@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class AigcAudioTask extends AbstractModel {
 
     /**
-    * 
+    * <p>Task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * 
+    * <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * 
+    * <p>Error code. Returns a non-zero error code for source errors. For zero returns, please use the ErrCode of each specific task.</p>
     */
     @SerializedName("ErrCode")
     @Expose
     private Long ErrCode;
 
     /**
-    * 
+    * <p>Error code extension. A null string indicates success, while other values indicate failure.</p>
     */
     @SerializedName("ErrCodeExt")
     @Expose
     private String ErrCodeExt;
 
     /**
-    * 
+    * <p>Error message.</p>
     */
     @SerializedName("Message")
     @Expose
     private String Message;
 
     /**
-    * 
+    * <p>Task progress, in the range of [0-100].</p>
     */
     @SerializedName("Progress")
     @Expose
     private Long Progress;
 
     /**
-    * 
+    * <p>Input info of the AIGC audio task.</p>
     */
     @SerializedName("Input")
     @Expose
     private AigcAudioTaskInput Input;
 
     /**
-    * 
+    * <p>AIGC audio task output information.</p>
     */
     @SerializedName("Output")
     @Expose
     private AigcAudioTaskOutput Output;
 
     /**
-     * Get  
-     * @return TaskId 
+     * Get <p>Task ID.</p> 
+     * @return TaskId <p>Task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set 
-     * @param TaskId 
+     * Set <p>Task ID.</p>
+     * @param TaskId <p>Task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get  
-     * @return Status 
+     * Get <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p> 
+     * @return Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set 
-     * @param Status 
+     * Set <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
+     * @param Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get  
-     * @return ErrCode 
+     * Get <p>Error code. Returns a non-zero error code for source errors. For zero returns, please use the ErrCode of each specific task.</p> 
+     * @return ErrCode <p>Error code. Returns a non-zero error code for source errors. For zero returns, please use the ErrCode of each specific task.</p>
      */
     public Long getErrCode() {
         return this.ErrCode;
     }
 
     /**
-     * Set 
-     * @param ErrCode 
+     * Set <p>Error code. Returns a non-zero error code for source errors. For zero returns, please use the ErrCode of each specific task.</p>
+     * @param ErrCode <p>Error code. Returns a non-zero error code for source errors. For zero returns, please use the ErrCode of each specific task.</p>
      */
     public void setErrCode(Long ErrCode) {
         this.ErrCode = ErrCode;
     }
 
     /**
-     * Get  
-     * @return ErrCodeExt 
+     * Get <p>Error code extension. A null string indicates success, while other values indicate failure.</p> 
+     * @return ErrCodeExt <p>Error code extension. A null string indicates success, while other values indicate failure.</p>
      */
     public String getErrCodeExt() {
         return this.ErrCodeExt;
     }
 
     /**
-     * Set 
-     * @param ErrCodeExt 
+     * Set <p>Error code extension. A null string indicates success, while other values indicate failure.</p>
+     * @param ErrCodeExt <p>Error code extension. A null string indicates success, while other values indicate failure.</p>
      */
     public void setErrCodeExt(String ErrCodeExt) {
         this.ErrCodeExt = ErrCodeExt;
     }
 
     /**
-     * Get  
-     * @return Message 
+     * Get <p>Error message.</p> 
+     * @return Message <p>Error message.</p>
      */
     public String getMessage() {
         return this.Message;
     }
 
     /**
-     * Set 
-     * @param Message 
+     * Set <p>Error message.</p>
+     * @param Message <p>Error message.</p>
      */
     public void setMessage(String Message) {
         this.Message = Message;
     }
 
     /**
-     * Get  
-     * @return Progress 
+     * Get <p>Task progress, in the range of [0-100].</p> 
+     * @return Progress <p>Task progress, in the range of [0-100].</p>
      */
     public Long getProgress() {
         return this.Progress;
     }
 
     /**
-     * Set 
-     * @param Progress 
+     * Set <p>Task progress, in the range of [0-100].</p>
+     * @param Progress <p>Task progress, in the range of [0-100].</p>
      */
     public void setProgress(Long Progress) {
         this.Progress = Progress;
     }
 
     /**
-     * Get  
-     * @return Input 
+     * Get <p>Input info of the AIGC audio task.</p> 
+     * @return Input <p>Input info of the AIGC audio task.</p>
      */
     public AigcAudioTaskInput getInput() {
         return this.Input;
     }
 
     /**
-     * Set 
-     * @param Input 
+     * Set <p>Input info of the AIGC audio task.</p>
+     * @param Input <p>Input info of the AIGC audio task.</p>
      */
     public void setInput(AigcAudioTaskInput Input) {
         this.Input = Input;
     }
 
     /**
-     * Get  
-     * @return Output 
+     * Get <p>AIGC audio task output information.</p> 
+     * @return Output <p>AIGC audio task output information.</p>
      */
     public AigcAudioTaskOutput getOutput() {
         return this.Output;
     }
 
     /**
-     * Set 
-     * @param Output 
+     * Set <p>AIGC audio task output information.</p>
+     * @param Output <p>AIGC audio task output information.</p>
      */
     public void setOutput(AigcAudioTaskOutput Output) {
         this.Output = Output;

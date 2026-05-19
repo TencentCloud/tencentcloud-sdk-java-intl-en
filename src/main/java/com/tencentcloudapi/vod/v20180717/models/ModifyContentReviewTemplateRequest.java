@@ -24,273 +24,273 @@ import java.util.HashMap;
 public class ModifyContentReviewTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of an intelligent content recognition template.
+    * Unique identifier of a content review template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Name of an intelligent content recognition template. Length limit: 64 characters.
+    * Content review template name. The length cannot exceed 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Description of an intelligent content recognition template. Length limit: 256 characters.
+    * Content review template description information, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Control parameter for terrorism information.
+    * Control parameters for unsafe information.
     */
     @SerializedName("TerrorismConfigure")
     @Expose
     private TerrorismConfigureInfoForUpdate TerrorismConfigure;
 
     /**
-    * Control parameter for porn information.
+    * Control parameters for offensive information.
     */
     @SerializedName("PornConfigure")
     @Expose
     private PornConfigureInfoForUpdate PornConfigure;
 
     /**
-    * Control parameter for politically sensitive information.
+    * Control parameter for inappropriate information.
     */
     @SerializedName("PoliticalConfigure")
     @Expose
     private PoliticalConfigureInfoForUpdate PoliticalConfigure;
 
     /**
-    * Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
+    * Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
     */
     @SerializedName("ProhibitedConfigure")
     @Expose
     private ProhibitedConfigureInfoForUpdate ProhibitedConfigure;
 
     /**
-    * Control parameter for custom intelligent content recognition tasks.
+    * User-defined content review control parameters.
     */
     @SerializedName("UserDefineConfigure")
     @Expose
     private UserDefineConfigureInfoForUpdate UserDefineConfigure;
 
     /**
-    * Frame capturing interval in seconds. Minimum value: 0.5 seconds.
+    * Frame interception interval, unit: seconds, minimum value 0.5.
     */
     @SerializedName("ScreenshotInterval")
     @Expose
     private Float ScreenshotInterval;
 
     /**
-    * Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+    * Switch for whether the review result enters the review wall (manual recognition performed on the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
     */
     @SerializedName("ReviewWallSwitch")
     @Expose
     private String ReviewWallSwitch;
 
     /**
-     * Get Unique ID of an intelligent content recognition template. 
-     * @return Definition Unique ID of an intelligent content recognition template.
+     * Get Unique identifier of a content review template. 
+     * @return Definition Unique identifier of a content review template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of an intelligent content recognition template.
-     * @param Definition Unique ID of an intelligent content recognition template.
+     * Set Unique identifier of a content review template.
+     * @param Definition Unique identifier of a content review template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Name of an intelligent content recognition template. Length limit: 64 characters. 
-     * @return Name Name of an intelligent content recognition template. Length limit: 64 characters.
+     * Get Content review template name. The length cannot exceed 64 characters. 
+     * @return Name Content review template name. The length cannot exceed 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of an intelligent content recognition template. Length limit: 64 characters.
-     * @param Name Name of an intelligent content recognition template. Length limit: 64 characters.
+     * Set Content review template name. The length cannot exceed 64 characters.
+     * @param Name Content review template name. The length cannot exceed 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Description of an intelligent content recognition template. Length limit: 256 characters. 
-     * @return Comment Description of an intelligent content recognition template. Length limit: 256 characters.
+     * Get Content review template description information, with a length limit of 256 characters. 
+     * @return Comment Content review template description information, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Description of an intelligent content recognition template. Length limit: 256 characters.
-     * @param Comment Description of an intelligent content recognition template. Length limit: 256 characters.
+     * Set Content review template description information, with a length limit of 256 characters.
+     * @param Comment Content review template description information, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Control parameter for terrorism information. 
-     * @return TerrorismConfigure Control parameter for terrorism information.
+     * Get Control parameters for unsafe information. 
+     * @return TerrorismConfigure Control parameters for unsafe information.
      */
     public TerrorismConfigureInfoForUpdate getTerrorismConfigure() {
         return this.TerrorismConfigure;
     }
 
     /**
-     * Set Control parameter for terrorism information.
-     * @param TerrorismConfigure Control parameter for terrorism information.
+     * Set Control parameters for unsafe information.
+     * @param TerrorismConfigure Control parameters for unsafe information.
      */
     public void setTerrorismConfigure(TerrorismConfigureInfoForUpdate TerrorismConfigure) {
         this.TerrorismConfigure = TerrorismConfigure;
     }
 
     /**
-     * Get Control parameter for porn information. 
-     * @return PornConfigure Control parameter for porn information.
+     * Get Control parameters for offensive information. 
+     * @return PornConfigure Control parameters for offensive information.
      */
     public PornConfigureInfoForUpdate getPornConfigure() {
         return this.PornConfigure;
     }
 
     /**
-     * Set Control parameter for porn information.
-     * @param PornConfigure Control parameter for porn information.
+     * Set Control parameters for offensive information.
+     * @param PornConfigure Control parameters for offensive information.
      */
     public void setPornConfigure(PornConfigureInfoForUpdate PornConfigure) {
         this.PornConfigure = PornConfigure;
     }
 
     /**
-     * Get Control parameter for politically sensitive information. 
-     * @return PoliticalConfigure Control parameter for politically sensitive information.
+     * Get Control parameter for inappropriate information. 
+     * @return PoliticalConfigure Control parameter for inappropriate information.
      */
     public PoliticalConfigureInfoForUpdate getPoliticalConfigure() {
         return this.PoliticalConfigure;
     }
 
     /**
-     * Set Control parameter for politically sensitive information.
-     * @param PoliticalConfigure Control parameter for politically sensitive information.
+     * Set Control parameter for inappropriate information.
+     * @param PoliticalConfigure Control parameter for inappropriate information.
      */
     public void setPoliticalConfigure(PoliticalConfigureInfoForUpdate PoliticalConfigure) {
         this.PoliticalConfigure = PoliticalConfigure;
     }
 
     /**
-     * Get Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li> 
-     * @return ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
+     * Get Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li> 
+     * @return ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
      */
     public ProhibitedConfigureInfoForUpdate getProhibitedConfigure() {
         return this.ProhibitedConfigure;
     }
 
     /**
-     * Set Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
-     * @param ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
-<li>Abusive;</li>
-<li>Drug-related.</li>
+     * Set Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
+     * @param ProhibitedConfigure Prohibited control parameters. Prohibited content includes:
+<li>Abuse;</li>
+<li>Drug-related violation.</li>
      */
     public void setProhibitedConfigure(ProhibitedConfigureInfoForUpdate ProhibitedConfigure) {
         this.ProhibitedConfigure = ProhibitedConfigure;
     }
 
     /**
-     * Get Control parameter for custom intelligent content recognition tasks. 
-     * @return UserDefineConfigure Control parameter for custom intelligent content recognition tasks.
+     * Get User-defined content review control parameters. 
+     * @return UserDefineConfigure User-defined content review control parameters.
      */
     public UserDefineConfigureInfoForUpdate getUserDefineConfigure() {
         return this.UserDefineConfigure;
     }
 
     /**
-     * Set Control parameter for custom intelligent content recognition tasks.
-     * @param UserDefineConfigure Control parameter for custom intelligent content recognition tasks.
+     * Set User-defined content review control parameters.
+     * @param UserDefineConfigure User-defined content review control parameters.
      */
     public void setUserDefineConfigure(UserDefineConfigureInfoForUpdate UserDefineConfigure) {
         this.UserDefineConfigure = UserDefineConfigure;
     }
 
     /**
-     * Get Frame capturing interval in seconds. Minimum value: 0.5 seconds. 
-     * @return ScreenshotInterval Frame capturing interval in seconds. Minimum value: 0.5 seconds.
+     * Get Frame interception interval, unit: seconds, minimum value 0.5. 
+     * @return ScreenshotInterval Frame interception interval, unit: seconds, minimum value 0.5.
      */
     public Float getScreenshotInterval() {
         return this.ScreenshotInterval;
     }
 
     /**
-     * Set Frame capturing interval in seconds. Minimum value: 0.5 seconds.
-     * @param ScreenshotInterval Frame capturing interval in seconds. Minimum value: 0.5 seconds.
+     * Set Frame interception interval, unit: seconds, minimum value 0.5.
+     * @param ScreenshotInterval Frame interception interval, unit: seconds, minimum value 0.5.
      */
     public void setScreenshotInterval(Float ScreenshotInterval) {
         this.ScreenshotInterval = ScreenshotInterval;
     }
 
     /**
-     * Get Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+     * Get Switch for whether the review result enters the review wall (manual recognition performed on the review result).
 <li>ON: yes</li>
-<li>OFF: no</li> 
-     * @return ReviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>OFF: No.</li> 
+     * @return ReviewWallSwitch Switch for whether the review result enters the review wall (manual recognition performed on the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
      */
     public String getReviewWallSwitch() {
         return this.ReviewWallSwitch;
     }
 
     /**
-     * Set Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+     * Set Switch for whether the review result enters the review wall (manual recognition performed on the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
-     * @param ReviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>OFF: No.</li>
+     * @param ReviewWallSwitch Switch for whether the review result enters the review wall (manual recognition performed on the review result).
 <li>ON: yes</li>
-<li>OFF: no</li>
+<li>OFF: No.</li>
      */
     public void setReviewWallSwitch(String ReviewWallSwitch) {
         this.ReviewWallSwitch = ReviewWallSwitch;

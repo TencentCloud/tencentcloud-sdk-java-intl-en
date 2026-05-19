@@ -24,184 +24,239 @@ import java.util.HashMap;
 public class AdvancedSuperResolutionConfig extends AbstractModel {
 
     /**
-    * 
+    * Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li>
+Default value: ON.
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * 
+    * Type, available values:
+<li>standard: common super resolution</li>
+<li>super: advanced super-resolution.</li>
+Default value: standard.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * 
+    * Image output mode. The default value is percent.
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
+<li>percent: Super-resolution multiplication rate, which can be a decimal.</li>
     */
     @SerializedName("Mode")
     @Expose
     private String Mode;
 
     /**
-    * 
+    * Super-resolution multiplication rate, can be decimal.
     */
     @SerializedName("Percent")
     @Expose
     private Float Percent;
 
     /**
-    * 
+    * Target image width must not exceed 4096.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * 
+    * Target image height must not exceed 4096.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * 
+    * The long edge length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
     */
     @SerializedName("LongSide")
     @Expose
     private Long LongSide;
 
     /**
-    * 
+    * The short side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
     */
     @SerializedName("ShortSide")
     @Expose
     private Long ShortSide;
 
     /**
-     * Get  
-     * @return Switch 
+     * Get Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li>
+Default value: ON. 
+     * @return Switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li>
+Default value: ON.
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set 
-     * @param Switch 
+     * Set Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li>
+Default value: ON.
+     * @param Switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li>
+Default value: ON.
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get  
-     * @return Type 
+     * Get Type, available values:
+<li>standard: common super resolution</li>
+<li>super: advanced super-resolution.</li>
+Default value: standard. 
+     * @return Type Type, available values:
+<li>standard: common super resolution</li>
+<li>super: advanced super-resolution.</li>
+Default value: standard.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set 
-     * @param Type 
+     * Set Type, available values:
+<li>standard: common super resolution</li>
+<li>super: advanced super-resolution.</li>
+Default value: standard.
+     * @param Type Type, available values:
+<li>standard: common super resolution</li>
+<li>super: advanced super-resolution.</li>
+Default value: standard.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get  
-     * @return Mode 
+     * Get Image output mode. The default value is percent.
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
+<li>percent: Super-resolution multiplication rate, which can be a decimal.</li> 
+     * @return Mode Image output mode. The default value is percent.
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
+<li>percent: Super-resolution multiplication rate, which can be a decimal.</li>
      */
     public String getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 
-     * @param Mode 
+     * Set Image output mode. The default value is percent.
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
+<li>percent: Super-resolution multiplication rate, which can be a decimal.</li>
+     * @param Mode Image output mode. The default value is percent.
+<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
+<li>percent: Super-resolution multiplication rate, which can be a decimal.</li>
      */
     public void setMode(String Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get  
-     * @return Percent 
+     * Get Super-resolution multiplication rate, can be decimal. 
+     * @return Percent Super-resolution multiplication rate, can be decimal.
      */
     public Float getPercent() {
         return this.Percent;
     }
 
     /**
-     * Set 
-     * @param Percent 
+     * Set Super-resolution multiplication rate, can be decimal.
+     * @param Percent Super-resolution multiplication rate, can be decimal.
      */
     public void setPercent(Float Percent) {
         this.Percent = Percent;
     }
 
     /**
-     * Get  
-     * @return Width 
+     * Get Target image width must not exceed 4096. 
+     * @return Width Target image width must not exceed 4096.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set 
-     * @param Width 
+     * Set Target image width must not exceed 4096.
+     * @param Width Target image width must not exceed 4096.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get  
-     * @return Height 
+     * Get Target image height must not exceed 4096. 
+     * @return Height Target image height must not exceed 4096.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set 
-     * @param Height 
+     * Set Target image height must not exceed 4096.
+     * @param Height Target image height must not exceed 4096.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get  
-     * @return LongSide 
+     * Get The long edge length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured. 
+     * @return LongSide The long edge length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
      */
     public Long getLongSide() {
         return this.LongSide;
     }
 
     /**
-     * Set 
-     * @param LongSide 
+     * Set The long edge length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
+     * @param LongSide The long edge length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
      */
     public void setLongSide(Long LongSide) {
         this.LongSide = LongSide;
     }
 
     /**
-     * Get  
-     * @return ShortSide 
+     * Get The short side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured. 
+     * @return ShortSide The short side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
      */
     public Long getShortSide() {
         return this.ShortSide;
     }
 
     /**
-     * Set 
-     * @param ShortSide 
+     * Set The short side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
+     * @param ShortSide The short side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
      */
     public void setShortSide(Long ShortSide) {
         this.ShortSide = ShortSide;

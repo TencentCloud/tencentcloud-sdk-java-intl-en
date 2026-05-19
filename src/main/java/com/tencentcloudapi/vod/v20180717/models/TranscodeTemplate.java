@@ -24,88 +24,78 @@ import java.util.HashMap;
 public class TranscodeTemplate extends AbstractModel {
 
     /**
-    * Unique ID of transcoding template.
+    * <p>Unique identifier of the transcoding template.</p>
     */
     @SerializedName("Definition")
     @Expose
     private String Definition;
 
     /**
-    * Container. Valid values: mp4, flv, hls, mp3, flac, ogg.
+    * <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * Transcoding template name.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Transcoding template name.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Template description.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Template description information.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+    * <p>Template type. Value:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Whether to remove video data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+    * <p>Whether to remove video data. Value:</p><li>0: Reserved;</li><li>1: Remove.</li>
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * Whether to remove audio data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+    * <p>Remove audio data. Parameter value:</p><li>0: reserved;</li><li>1: remove.</li>
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * Video stream configuration parameter. This field is valid only when `RemoveVideo` is 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p>
     */
     @SerializedName("VideoTemplate")
     @Expose
     private VideoTemplateInfo VideoTemplate;
 
     /**
-    * Audio stream configuration parameter. This field is valid only when `RemoveAudio` is 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p>
     */
     @SerializedName("AudioTemplate")
     @Expose
     private AudioTemplateInfo AudioTemplate;
 
     /**
-    * TESHD transcoding parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>TSC transcoding parameter.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TEHDConfig")
     @Expose
     private TEHDConfig TEHDConfig;
 
     /**
-    * Audio/Video enhancement configuration.
+    * <p>Audio/Video enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EnhanceConfig")
@@ -113,243 +103,208 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private EnhanceConfig EnhanceConfig;
 
     /**
-    * Container filter. Valid values:
-<li>Video: video container that can contain both video stream and audio stream;</li>
-<li>PureAudio: audio container that can contain only audio stream.</li>
+    * <p>Container format filter criteria. Valid values:</p><li>Video: Video format, can contain both video stream and audio stream.</li><li>PureAudio: Pure audio format, can only contain audio stream.</li>
     */
     @SerializedName("ContainerType")
     @Expose
     private String ContainerType;
 
     /**
-    * Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+    * <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * The segment type. This parameter is valid only if `Container` is `hls`
+    * <p>Segment type. Valid only when Container is hls.</p>
     */
     @SerializedName("SegmentType")
     @Expose
     private String SegmentType;
 
     /**
-     * Get Unique ID of transcoding template. 
-     * @return Definition Unique ID of transcoding template.
+    * <p>Extended parameter.</p>
+    */
+    @SerializedName("StdExtInfo")
+    @Expose
+    private String StdExtInfo;
+
+    /**
+     * Get <p>Unique identifier of the transcoding template.</p> 
+     * @return Definition <p>Unique identifier of the transcoding template.</p>
      */
     public String getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of transcoding template.
-     * @param Definition Unique ID of transcoding template.
+     * Set <p>Unique identifier of the transcoding template.</p>
+     * @param Definition <p>Unique identifier of the transcoding template.</p>
      */
     public void setDefinition(String Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Container. Valid values: mp4, flv, hls, mp3, flac, ogg. 
-     * @return Container Container. Valid values: mp4, flv, hls, mp3, flac, ogg.
+     * Get <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p> 
+     * @return Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Container. Valid values: mp4, flv, hls, mp3, flac, ogg.
-     * @param Container Container. Valid values: mp4, flv, hls, mp3, flac, ogg.
+     * Set <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
+     * @param Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, and ogg.</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get Transcoding template name.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Name Transcoding template name.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Transcoding template name.</p> 
+     * @return Name <p>Transcoding template name.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Transcoding template name.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Name Transcoding template name.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Transcoding template name.</p>
+     * @param Name <p>Transcoding template name.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Template description.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Comment Template description.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Template description information.</p> 
+     * @return Comment <p>Template description information.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Comment Template description.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Template description information.</p>
+     * @param Comment <p>Template description information.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li> 
-     * @return Type Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * Get <p>Template type. Value:</p><li>Preset: preset template.</li><li>Custom: custom template.</li> 
+     * @return Type <p>Template type. Value:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
-     * @param Type Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * Set <p>Template type. Value:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+     * @param Type <p>Template type. Value:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Whether to remove video data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li> 
-     * @return RemoveVideo Whether to remove video data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+     * Get <p>Whether to remove video data. Value:</p><li>0: Reserved;</li><li>1: Remove.</li> 
+     * @return RemoveVideo <p>Whether to remove video data. Value:</p><li>0: Reserved;</li><li>1: Remove.</li>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set Whether to remove video data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
-     * @param RemoveVideo Whether to remove video data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+     * Set <p>Whether to remove video data. Value:</p><li>0: Reserved;</li><li>1: Remove.</li>
+     * @param RemoveVideo <p>Whether to remove video data. Value:</p><li>0: Reserved;</li><li>1: Remove.</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get Whether to remove audio data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li> 
-     * @return RemoveAudio Whether to remove audio data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+     * Get <p>Remove audio data. Parameter value:</p><li>0: reserved;</li><li>1: remove.</li> 
+     * @return RemoveAudio <p>Remove audio data. Parameter value:</p><li>0: reserved;</li><li>1: remove.</li>
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set Whether to remove audio data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
-     * @param RemoveAudio Whether to remove audio data. Valid values:
-<li>0: retain;</li>
-<li>1: remove.</li>
+     * Set <p>Remove audio data. Parameter value:</p><li>0: reserved;</li><li>1: remove.</li>
+     * @param RemoveAudio <p>Remove audio data. Parameter value:</p><li>0: reserved;</li><li>1: remove.</li>
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get Video stream configuration parameter. This field is valid only when `RemoveVideo` is 0.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VideoTemplate Video stream configuration parameter. This field is valid only when `RemoveVideo` is 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p> 
+     * @return VideoTemplate <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p>
      */
     public VideoTemplateInfo getVideoTemplate() {
         return this.VideoTemplate;
     }
 
     /**
-     * Set Video stream configuration parameter. This field is valid only when `RemoveVideo` is 0.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VideoTemplate Video stream configuration parameter. This field is valid only when `RemoveVideo` is 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p>
+     * @param VideoTemplate <p>Video stream configuration parameters. This field is valid only when RemoveVideo is 0.</p>
      */
     public void setVideoTemplate(VideoTemplateInfo VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get Audio stream configuration parameter. This field is valid only when `RemoveAudio` is 0.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AudioTemplate Audio stream configuration parameter. This field is valid only when `RemoveAudio` is 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p> 
+     * @return AudioTemplate <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p>
      */
     public AudioTemplateInfo getAudioTemplate() {
         return this.AudioTemplate;
     }
 
     /**
-     * Set Audio stream configuration parameter. This field is valid only when `RemoveAudio` is 0.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AudioTemplate Audio stream configuration parameter. This field is valid only when `RemoveAudio` is 0.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p>
+     * @param AudioTemplate <p>Audio stream configuration parameters. This field is valid only when RemoveAudio is 0.</p>
      */
     public void setAudioTemplate(AudioTemplateInfo AudioTemplate) {
         this.AudioTemplate = AudioTemplate;
     }
 
     /**
-     * Get TESHD transcoding parameter.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TEHDConfig TESHD transcoding parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>TSC transcoding parameter.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return TEHDConfig <p>TSC transcoding parameter.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public TEHDConfig getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set TESHD transcoding parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TEHDConfig TESHD transcoding parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>TSC transcoding parameter.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TEHDConfig <p>TSC transcoding parameter.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTEHDConfig(TEHDConfig TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
     }
 
     /**
-     * Get Audio/Video enhancement configuration.
+     * Get <p>Audio/Video enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EnhanceConfig Audio/Video enhancement configuration.
+     * @return EnhanceConfig <p>Audio/Video enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public EnhanceConfig getEnhanceConfig() {
@@ -357,9 +312,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Audio/Video enhancement configuration.
+     * Set <p>Audio/Video enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EnhanceConfig Audio/Video enhancement configuration.
+     * @param EnhanceConfig <p>Audio/Video enhancement configuration.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
@@ -367,75 +322,83 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Container filter. Valid values:
-<li>Video: video container that can contain both video stream and audio stream;</li>
-<li>PureAudio: audio container that can contain only audio stream.</li> 
-     * @return ContainerType Container filter. Valid values:
-<li>Video: video container that can contain both video stream and audio stream;</li>
-<li>PureAudio: audio container that can contain only audio stream.</li>
+     * Get <p>Container format filter criteria. Valid values:</p><li>Video: Video format, can contain both video stream and audio stream.</li><li>PureAudio: Pure audio format, can only contain audio stream.</li> 
+     * @return ContainerType <p>Container format filter criteria. Valid values:</p><li>Video: Video format, can contain both video stream and audio stream.</li><li>PureAudio: Pure audio format, can only contain audio stream.</li>
      */
     public String getContainerType() {
         return this.ContainerType;
     }
 
     /**
-     * Set Container filter. Valid values:
-<li>Video: video container that can contain both video stream and audio stream;</li>
-<li>PureAudio: audio container that can contain only audio stream.</li>
-     * @param ContainerType Container filter. Valid values:
-<li>Video: video container that can contain both video stream and audio stream;</li>
-<li>PureAudio: audio container that can contain only audio stream.</li>
+     * Set <p>Container format filter criteria. Valid values:</p><li>Video: Video format, can contain both video stream and audio stream.</li><li>PureAudio: Pure audio format, can only contain audio stream.</li>
+     * @param ContainerType <p>Container format filter criteria. Valid values:</p><li>Video: Video format, can contain both video stream and audio stream.</li><li>PureAudio: Pure audio format, can only contain audio stream.</li>
      */
     public void setContainerType(String ContainerType) {
         this.ContainerType = ContainerType;
     }
 
     /**
-     * Get Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p> 
+     * @return UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+     * @param UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get The segment type. This parameter is valid only if `Container` is `hls` 
-     * @return SegmentType The segment type. This parameter is valid only if `Container` is `hls`
+     * Get <p>Segment type. Valid only when Container is hls.</p> 
+     * @return SegmentType <p>Segment type. Valid only when Container is hls.</p>
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set The segment type. This parameter is valid only if `Container` is `hls`
-     * @param SegmentType The segment type. This parameter is valid only if `Container` is `hls`
+     * Set <p>Segment type. Valid only when Container is hls.</p>
+     * @param SegmentType <p>Segment type. Valid only when Container is hls.</p>
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;
+    }
+
+    /**
+     * Get <p>Extended parameter.</p> 
+     * @return StdExtInfo <p>Extended parameter.</p>
+     */
+    public String getStdExtInfo() {
+        return this.StdExtInfo;
+    }
+
+    /**
+     * Set <p>Extended parameter.</p>
+     * @param StdExtInfo <p>Extended parameter.</p>
+     */
+    public void setStdExtInfo(String StdExtInfo) {
+        this.StdExtInfo = StdExtInfo;
     }
 
     public TranscodeTemplate() {
@@ -491,6 +454,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.SegmentType != null) {
             this.SegmentType = new String(source.SegmentType);
         }
+        if (source.StdExtInfo != null) {
+            this.StdExtInfo = new String(source.StdExtInfo);
+        }
     }
 
 
@@ -513,6 +479,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "SegmentType", this.SegmentType);
+        this.setParamSimple(map, prefix + "StdExtInfo", this.StdExtInfo);
 
     }
 }

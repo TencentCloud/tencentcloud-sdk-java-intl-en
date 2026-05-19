@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeEnhanceMediaTemplatesResponse extends AbstractModel {
 
     /**
-    * The total number of records matching the filter criteria.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Detailed list of Rebuild Media templates.
+    * Audio and video quality rebirth template detail list.
     */
     @SerializedName("RebuildMediaTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeEnhanceMediaTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The total number of records matching the filter criteria. 
-     * @return TotalCount The total number of records matching the filter criteria.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The total number of records matching the filter criteria.
-     * @param TotalCount The total number of records matching the filter criteria.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Detailed list of Rebuild Media templates. 
-     * @return RebuildMediaTemplateSet Detailed list of Rebuild Media templates.
+     * Get Audio and video quality rebirth template detail list. 
+     * @return RebuildMediaTemplateSet Audio and video quality rebirth template detail list.
      */
     public RebuildMediaTemplate [] getRebuildMediaTemplateSet() {
         return this.RebuildMediaTemplateSet;
     }
 
     /**
-     * Set Detailed list of Rebuild Media templates.
-     * @param RebuildMediaTemplateSet Detailed list of Rebuild Media templates.
+     * Set Audio and video quality rebirth template detail list.
+     * @param RebuildMediaTemplateSet Audio and video quality rebirth template detail list.
      */
     public void setRebuildMediaTemplateSet(RebuildMediaTemplate [] RebuildMediaTemplateSet) {
         this.RebuildMediaTemplateSet = RebuildMediaTemplateSet;

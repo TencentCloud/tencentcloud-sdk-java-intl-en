@@ -31,56 +31,56 @@ public class CDNDomainConfig extends AbstractModel {
     private String Area;
 
     /**
-    * Origin Server Configuration
+    * Origin server configuration.
     */
     @SerializedName("Origin")
     @Expose
     private Origin Origin;
 
     /**
-    * IP blocklist/allowlist configuration. This is disabled by default.
+    * IP allowlist/blocklist configuration.
     */
     @SerializedName("IpFilter")
     @Expose
     private IpFilter IpFilter;
 
     /**
-    * UserAgent:blacklist/whitelist configuration.
+    * UA Blocklist/Allowlist Configuration.
     */
     @SerializedName("UserAgentFilter")
     @Expose
     private UserAgentFilter UserAgentFilter;
 
     /**
-    * Back to the source 301/302 status code automatically follows the configuration, the default is off
+    * 301/302 origin follow configuration.
     */
     @SerializedName("FollowRedirect")
     @Expose
     private FollowRedirect FollowRedirect;
 
     /**
-    * Custom request header configuration. This is disabled by default.
+    * Request header configuration.
     */
     @SerializedName("RequestHeader")
     @Expose
     private RequestHeader RequestHeader;
 
     /**
-    * Custom response header configuration. This is disabled by default.
+    * Response header configuration.
     */
     @SerializedName("ResponseHeader")
     @Expose
     private ResponseHeader ResponseHeader;
 
     /**
-    * Node cache expiration time configuration.
+    * Cache expiration time settings.
     */
     @SerializedName("Cache")
     @Expose
     private Cache Cache;
 
     /**
-    * Domain name HTTPS acceleration configuration. This is disabled by default.
+    * Https configuration.
     */
     @SerializedName("Https")
     @Expose
@@ -94,63 +94,63 @@ public class CDNDomainConfig extends AbstractModel {
     private Authentication Authentication;
 
     /**
-    * Access protocol forced redirect configuration. This is disabled by default.
+    * Access protocol force redirection configuration.
     */
     @SerializedName("ForceRedirect")
     @Expose
     private ForceRedirect ForceRedirect;
 
     /**
-    * Referer blacklist/whitelist configuration. This is disabled by default.
+    * Referer Anti-leech Configuration.
     */
     @SerializedName("Referer")
     @Expose
     private Referer Referer;
 
     /**
-    * Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
+    * Browser cache configuration.
     */
     @SerializedName("MaxAge")
     @Expose
     private MaxAge MaxAge;
 
     /**
-    * IPv6 access configuration.
+    * Ipv6 access configuration
     */
     @SerializedName("Ipv6Access")
     @Expose
     private Ipv6Access Ipv6Access;
 
     /**
-    * QUIC configuration item.
+    * Quic access configuration.
     */
     @SerializedName("Quic")
     @Expose
     private Quic Quic;
 
     /**
-    * Origin access authentication for S3 bucket.
+    * AWS S3 origin authentication configuration.
     */
     @SerializedName("AwsPrivateAccess")
     @Expose
     private AwsPrivateAccess AwsPrivateAccess;
 
     /**
-    * Access authentication configuration for OSS origin.
+    * Alibaba Cloud OSS authentication configuration.
     */
     @SerializedName("OssPrivateAccess")
     @Expose
     private OssPrivateAccess OssPrivateAccess;
 
     /**
-    * Access authentication for Huawei Cloud OBS origin
+    * Huawei cloud object storage back-to-origin authentication configuration.
     */
     @SerializedName("HwPrivateAccess")
     @Expose
     private HwPrivateAccess HwPrivateAccess;
 
     /**
-    * Origin-pull authentication for other origins.
+    * Authentication configuration for cross-origin access to object storage of other vendors.
     */
     @SerializedName("OthersPrivateAccess")
     @Expose
@@ -173,128 +173,128 @@ public class CDNDomainConfig extends AbstractModel {
     }
 
     /**
-     * Get Origin Server Configuration 
-     * @return Origin Origin Server Configuration
+     * Get Origin server configuration. 
+     * @return Origin Origin server configuration.
      */
     public Origin getOrigin() {
         return this.Origin;
     }
 
     /**
-     * Set Origin Server Configuration
-     * @param Origin Origin Server Configuration
+     * Set Origin server configuration.
+     * @param Origin Origin server configuration.
      */
     public void setOrigin(Origin Origin) {
         this.Origin = Origin;
     }
 
     /**
-     * Get IP blocklist/allowlist configuration. This is disabled by default. 
-     * @return IpFilter IP blocklist/allowlist configuration. This is disabled by default.
+     * Get IP allowlist/blocklist configuration. 
+     * @return IpFilter IP allowlist/blocklist configuration.
      */
     public IpFilter getIpFilter() {
         return this.IpFilter;
     }
 
     /**
-     * Set IP blocklist/allowlist configuration. This is disabled by default.
-     * @param IpFilter IP blocklist/allowlist configuration. This is disabled by default.
+     * Set IP allowlist/blocklist configuration.
+     * @param IpFilter IP allowlist/blocklist configuration.
      */
     public void setIpFilter(IpFilter IpFilter) {
         this.IpFilter = IpFilter;
     }
 
     /**
-     * Get UserAgent:blacklist/whitelist configuration. 
-     * @return UserAgentFilter UserAgent:blacklist/whitelist configuration.
+     * Get UA Blocklist/Allowlist Configuration. 
+     * @return UserAgentFilter UA Blocklist/Allowlist Configuration.
      */
     public UserAgentFilter getUserAgentFilter() {
         return this.UserAgentFilter;
     }
 
     /**
-     * Set UserAgent:blacklist/whitelist configuration.
-     * @param UserAgentFilter UserAgent:blacklist/whitelist configuration.
+     * Set UA Blocklist/Allowlist Configuration.
+     * @param UserAgentFilter UA Blocklist/Allowlist Configuration.
      */
     public void setUserAgentFilter(UserAgentFilter UserAgentFilter) {
         this.UserAgentFilter = UserAgentFilter;
     }
 
     /**
-     * Get Back to the source 301/302 status code automatically follows the configuration, the default is off 
-     * @return FollowRedirect Back to the source 301/302 status code automatically follows the configuration, the default is off
+     * Get 301/302 origin follow configuration. 
+     * @return FollowRedirect 301/302 origin follow configuration.
      */
     public FollowRedirect getFollowRedirect() {
         return this.FollowRedirect;
     }
 
     /**
-     * Set Back to the source 301/302 status code automatically follows the configuration, the default is off
-     * @param FollowRedirect Back to the source 301/302 status code automatically follows the configuration, the default is off
+     * Set 301/302 origin follow configuration.
+     * @param FollowRedirect 301/302 origin follow configuration.
      */
     public void setFollowRedirect(FollowRedirect FollowRedirect) {
         this.FollowRedirect = FollowRedirect;
     }
 
     /**
-     * Get Custom request header configuration. This is disabled by default. 
-     * @return RequestHeader Custom request header configuration. This is disabled by default.
+     * Get Request header configuration. 
+     * @return RequestHeader Request header configuration.
      */
     public RequestHeader getRequestHeader() {
         return this.RequestHeader;
     }
 
     /**
-     * Set Custom request header configuration. This is disabled by default.
-     * @param RequestHeader Custom request header configuration. This is disabled by default.
+     * Set Request header configuration.
+     * @param RequestHeader Request header configuration.
      */
     public void setRequestHeader(RequestHeader RequestHeader) {
         this.RequestHeader = RequestHeader;
     }
 
     /**
-     * Get Custom response header configuration. This is disabled by default. 
-     * @return ResponseHeader Custom response header configuration. This is disabled by default.
+     * Get Response header configuration. 
+     * @return ResponseHeader Response header configuration.
      */
     public ResponseHeader getResponseHeader() {
         return this.ResponseHeader;
     }
 
     /**
-     * Set Custom response header configuration. This is disabled by default.
-     * @param ResponseHeader Custom response header configuration. This is disabled by default.
+     * Set Response header configuration.
+     * @param ResponseHeader Response header configuration.
      */
     public void setResponseHeader(ResponseHeader ResponseHeader) {
         this.ResponseHeader = ResponseHeader;
     }
 
     /**
-     * Get Node cache expiration time configuration. 
-     * @return Cache Node cache expiration time configuration.
+     * Get Cache expiration time settings. 
+     * @return Cache Cache expiration time settings.
      */
     public Cache getCache() {
         return this.Cache;
     }
 
     /**
-     * Set Node cache expiration time configuration.
-     * @param Cache Node cache expiration time configuration.
+     * Set Cache expiration time settings.
+     * @param Cache Cache expiration time settings.
      */
     public void setCache(Cache Cache) {
         this.Cache = Cache;
     }
 
     /**
-     * Get Domain name HTTPS acceleration configuration. This is disabled by default. 
-     * @return Https Domain name HTTPS acceleration configuration. This is disabled by default.
+     * Get Https configuration. 
+     * @return Https Https configuration.
      */
     public Https getHttps() {
         return this.Https;
     }
 
     /**
-     * Set Domain name HTTPS acceleration configuration. This is disabled by default.
-     * @param Https Domain name HTTPS acceleration configuration. This is disabled by default.
+     * Set Https configuration.
+     * @param Https Https configuration.
      */
     public void setHttps(Https Https) {
         this.Https = Https;
@@ -317,144 +317,144 @@ public class CDNDomainConfig extends AbstractModel {
     }
 
     /**
-     * Get Access protocol forced redirect configuration. This is disabled by default. 
-     * @return ForceRedirect Access protocol forced redirect configuration. This is disabled by default.
+     * Get Access protocol force redirection configuration. 
+     * @return ForceRedirect Access protocol force redirection configuration.
      */
     public ForceRedirect getForceRedirect() {
         return this.ForceRedirect;
     }
 
     /**
-     * Set Access protocol forced redirect configuration. This is disabled by default.
-     * @param ForceRedirect Access protocol forced redirect configuration. This is disabled by default.
+     * Set Access protocol force redirection configuration.
+     * @param ForceRedirect Access protocol force redirection configuration.
      */
     public void setForceRedirect(ForceRedirect ForceRedirect) {
         this.ForceRedirect = ForceRedirect;
     }
 
     /**
-     * Get Referer blacklist/whitelist configuration. This is disabled by default. 
-     * @return Referer Referer blacklist/whitelist configuration. This is disabled by default.
+     * Get Referer Anti-leech Configuration. 
+     * @return Referer Referer Anti-leech Configuration.
      */
     public Referer getReferer() {
         return this.Referer;
     }
 
     /**
-     * Set Referer blacklist/whitelist configuration. This is disabled by default.
-     * @param Referer Referer blacklist/whitelist configuration. This is disabled by default.
+     * Set Referer Anti-leech Configuration.
+     * @param Referer Referer Anti-leech Configuration.
      */
     public void setReferer(Referer Referer) {
         this.Referer = Referer;
     }
 
     /**
-     * Get Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default. 
-     * @return MaxAge Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
+     * Get Browser cache configuration. 
+     * @return MaxAge Browser cache configuration.
      */
     public MaxAge getMaxAge() {
         return this.MaxAge;
     }
 
     /**
-     * Set Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
-     * @param MaxAge Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
+     * Set Browser cache configuration.
+     * @param MaxAge Browser cache configuration.
      */
     public void setMaxAge(MaxAge MaxAge) {
         this.MaxAge = MaxAge;
     }
 
     /**
-     * Get IPv6 access configuration. 
-     * @return Ipv6Access IPv6 access configuration.
+     * Get Ipv6 access configuration 
+     * @return Ipv6Access Ipv6 access configuration
      */
     public Ipv6Access getIpv6Access() {
         return this.Ipv6Access;
     }
 
     /**
-     * Set IPv6 access configuration.
-     * @param Ipv6Access IPv6 access configuration.
+     * Set Ipv6 access configuration
+     * @param Ipv6Access Ipv6 access configuration
      */
     public void setIpv6Access(Ipv6Access Ipv6Access) {
         this.Ipv6Access = Ipv6Access;
     }
 
     /**
-     * Get QUIC configuration item. 
-     * @return Quic QUIC configuration item.
+     * Get Quic access configuration. 
+     * @return Quic Quic access configuration.
      */
     public Quic getQuic() {
         return this.Quic;
     }
 
     /**
-     * Set QUIC configuration item.
-     * @param Quic QUIC configuration item.
+     * Set Quic access configuration.
+     * @param Quic Quic access configuration.
      */
     public void setQuic(Quic Quic) {
         this.Quic = Quic;
     }
 
     /**
-     * Get Origin access authentication for S3 bucket. 
-     * @return AwsPrivateAccess Origin access authentication for S3 bucket.
+     * Get AWS S3 origin authentication configuration. 
+     * @return AwsPrivateAccess AWS S3 origin authentication configuration.
      */
     public AwsPrivateAccess getAwsPrivateAccess() {
         return this.AwsPrivateAccess;
     }
 
     /**
-     * Set Origin access authentication for S3 bucket.
-     * @param AwsPrivateAccess Origin access authentication for S3 bucket.
+     * Set AWS S3 origin authentication configuration.
+     * @param AwsPrivateAccess AWS S3 origin authentication configuration.
      */
     public void setAwsPrivateAccess(AwsPrivateAccess AwsPrivateAccess) {
         this.AwsPrivateAccess = AwsPrivateAccess;
     }
 
     /**
-     * Get Access authentication configuration for OSS origin. 
-     * @return OssPrivateAccess Access authentication configuration for OSS origin.
+     * Get Alibaba Cloud OSS authentication configuration. 
+     * @return OssPrivateAccess Alibaba Cloud OSS authentication configuration.
      */
     public OssPrivateAccess getOssPrivateAccess() {
         return this.OssPrivateAccess;
     }
 
     /**
-     * Set Access authentication configuration for OSS origin.
-     * @param OssPrivateAccess Access authentication configuration for OSS origin.
+     * Set Alibaba Cloud OSS authentication configuration.
+     * @param OssPrivateAccess Alibaba Cloud OSS authentication configuration.
      */
     public void setOssPrivateAccess(OssPrivateAccess OssPrivateAccess) {
         this.OssPrivateAccess = OssPrivateAccess;
     }
 
     /**
-     * Get Access authentication for Huawei Cloud OBS origin 
-     * @return HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+     * Get Huawei cloud object storage back-to-origin authentication configuration. 
+     * @return HwPrivateAccess Huawei cloud object storage back-to-origin authentication configuration.
      */
     public HwPrivateAccess getHwPrivateAccess() {
         return this.HwPrivateAccess;
     }
 
     /**
-     * Set Access authentication for Huawei Cloud OBS origin
-     * @param HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+     * Set Huawei cloud object storage back-to-origin authentication configuration.
+     * @param HwPrivateAccess Huawei cloud object storage back-to-origin authentication configuration.
      */
     public void setHwPrivateAccess(HwPrivateAccess HwPrivateAccess) {
         this.HwPrivateAccess = HwPrivateAccess;
     }
 
     /**
-     * Get Origin-pull authentication for other origins. 
-     * @return OthersPrivateAccess Origin-pull authentication for other origins.
+     * Get Authentication configuration for cross-origin access to object storage of other vendors. 
+     * @return OthersPrivateAccess Authentication configuration for cross-origin access to object storage of other vendors.
      */
     public OthersPrivateAccess getOthersPrivateAccess() {
         return this.OthersPrivateAccess;
     }
 
     /**
-     * Set Origin-pull authentication for other origins.
-     * @param OthersPrivateAccess Origin-pull authentication for other origins.
+     * Set Authentication configuration for cross-origin access to object storage of other vendors.
+     * @param OthersPrivateAccess Authentication configuration for cross-origin access to object storage of other vendors.
      */
     public void setOthersPrivateAccess(OthersPrivateAccess OthersPrivateAccess) {
         this.OthersPrivateAccess = OthersPrivateAccess;

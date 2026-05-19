@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAnimatedGraphicsTemplatesResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of animated image generating template details.
+    * Rotation diagram template details list.
     */
     @SerializedName("AnimatedGraphicsTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAnimatedGraphicsTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of animated image generating template details. 
-     * @return AnimatedGraphicsTemplateSet List of animated image generating template details.
+     * Get Rotation diagram template details list. 
+     * @return AnimatedGraphicsTemplateSet Rotation diagram template details list.
      */
     public AnimatedGraphicsTemplate [] getAnimatedGraphicsTemplateSet() {
         return this.AnimatedGraphicsTemplateSet;
     }
 
     /**
-     * Set List of animated image generating template details.
-     * @param AnimatedGraphicsTemplateSet List of animated image generating template details.
+     * Set Rotation diagram template details list.
+     * @param AnimatedGraphicsTemplateSet Rotation diagram template details list.
      */
     public void setAnimatedGraphicsTemplateSet(AnimatedGraphicsTemplate [] AnimatedGraphicsTemplateSet) {
         this.AnimatedGraphicsTemplateSet = AnimatedGraphicsTemplateSet;

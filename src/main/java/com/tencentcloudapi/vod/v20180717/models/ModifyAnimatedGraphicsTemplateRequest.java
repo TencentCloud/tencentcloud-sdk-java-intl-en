@@ -24,54 +24,44 @@ import java.util.HashMap;
 public class ModifyAnimatedGraphicsTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of an animated image generating template.
+    * Unique identifier of the rotation diagram template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Name of an animated image generating template. Length limit: 64 characters.
+    * Rotating image template name. Length limit: 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+    * Maximum value of animated gif width (or long side), value ranges from 0 to [32, 4096], unit: px.<li>When Width and Height are 0, Same Resolution Source;</li><li>When Width is 0 and Height is not 0, proportionally scale Width;</li><li>When Width is not 0 and Height is 0, proportionally scale Height;</li><li>When Width and Height are not 0, resolution specified by user.</li>Default value: 0.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+    * The maximum value of animated gif height (or short side), value ranges from 0 to [32, 4096], unit: px. <li>When both Width and Height are 0, the resolution is Same Resolution Source;</li> <li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li> <li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li> <li>When both Width and Height are not 0, the resolution is specified by user.</li> Default value: 0.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+    * Resolution adaptation, available values:
+<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
     */
     @SerializedName("ResolutionAdaptive")
@@ -79,161 +69,121 @@ Default value: open.
     private String ResolutionAdaptive;
 
     /**
-    * Animated image format. Valid values: gif, webp.
+    * Animated image file format, value is gif and webp.
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * Video frame rate in Hz. Value range: [1, 30].
+    * Frame rate. Value ranges from 1 to 30. Unit: Hz.
     */
     @SerializedName("Fps")
     @Expose
     private Long Fps;
 
     /**
-    * Image quality. Value range: [1, 100]. Default value: 75.
+    * Image quality. Valid range: 1 - 100. Default value: 75.
     */
     @SerializedName("Quality")
     @Expose
     private Float Quality;
 
     /**
-    * Template description. Length limit: 256 characters.
+    * Template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-     * Get Unique ID of an animated image generating template. 
-     * @return Definition Unique ID of an animated image generating template.
+     * Get Unique identifier of the rotation diagram template. 
+     * @return Definition Unique identifier of the rotation diagram template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of an animated image generating template.
-     * @param Definition Unique ID of an animated image generating template.
+     * Set Unique identifier of the rotation diagram template.
+     * @param Definition Unique identifier of the rotation diagram template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Name of an animated image generating template. Length limit: 64 characters. 
-     * @return Name Name of an animated image generating template. Length limit: 64 characters.
+     * Get Rotating image template name. Length limit: 64 characters. 
+     * @return Name Rotating image template name. Length limit: 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of an animated image generating template. Length limit: 64 characters.
-     * @param Name Name of an animated image generating template. Length limit: 64 characters.
+     * Set Rotating image template name. Length limit: 64 characters.
+     * @param Name Rotating image template name. Length limit: 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0. 
-     * @return Width Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+     * Get Maximum value of animated gif width (or long side), value ranges from 0 to [32, 4096], unit: px.<li>When Width and Height are 0, Same Resolution Source;</li><li>When Width is 0 and Height is not 0, proportionally scale Width;</li><li>When Width is not 0 and Height is 0, proportionally scale Height;</li><li>When Width and Height are not 0, resolution specified by user.</li>Default value: 0. 
+     * @return Width Maximum value of animated gif width (or long side), value ranges from 0 to [32, 4096], unit: px.<li>When Width and Height are 0, Same Resolution Source;</li><li>When Width is 0 and Height is not 0, proportionally scale Width;</li><li>When Width is not 0 and Height is 0, proportionally scale Height;</li><li>When Width and Height are not 0, resolution specified by user.</li>Default value: 0.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-     * @param Width Maximum value of the width (or long side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+     * Set Maximum value of animated gif width (or long side), value ranges from 0 to [32, 4096], unit: px.<li>When Width and Height are 0, Same Resolution Source;</li><li>When Width is 0 and Height is not 0, proportionally scale Width;</li><li>When Width is not 0 and Height is 0, proportionally scale Height;</li><li>When Width and Height are not 0, resolution specified by user.</li>Default value: 0.
+     * @param Width Maximum value of animated gif width (or long side), value ranges from 0 to [32, 4096], unit: px.<li>When Width and Height are 0, Same Resolution Source;</li><li>When Width is 0 and Height is not 0, proportionally scale Width;</li><li>When Width is not 0 and Height is 0, proportionally scale Height;</li><li>When Width and Height are not 0, resolution specified by user.</li>Default value: 0.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0. 
-     * @return Height Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+     * Get The maximum value of animated gif height (or short side), value ranges from 0 to [32, 4096], unit: px. <li>When both Width and Height are 0, the resolution is Same Resolution Source;</li> <li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li> <li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li> <li>When both Width and Height are not 0, the resolution is specified by user.</li> Default value: 0. 
+     * @return Height The maximum value of animated gif height (or short side), value ranges from 0 to [32, 4096], unit: px. <li>When both Width and Height are 0, the resolution is Same Resolution Source;</li> <li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li> <li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li> <li>When both Width and Height are not 0, the resolution is specified by user.</li> Default value: 0.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-     * @param Height Maximum value of the height (or short side) of an animated image in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+     * Set The maximum value of animated gif height (or short side), value ranges from 0 to [32, 4096], unit: px. <li>When both Width and Height are 0, the resolution is Same Resolution Source;</li> <li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li> <li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li> <li>When both Width and Height are not 0, the resolution is specified by user.</li> Default value: 0.
+     * @param Height The maximum value of animated gif height (or short side), value ranges from 0 to [32, 4096], unit: px. <li>When both Width and Height are 0, the resolution is Same Resolution Source;</li> <li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li> <li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li> <li>When both Width and Height are not 0, the resolution is specified by user.</li> Default value: 0.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * Get Resolution adaptation, available values:
+<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open. 
-     * @return ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * @return ResolutionAdaptive Resolution adaptation, available values:
+<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
      */
     public String getResolutionAdaptive() {
@@ -241,13 +191,13 @@ Default value: open.
     }
 
     /**
-     * Set Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * Set Resolution adaptation, available values:
+<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
-     * @param ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * @param ResolutionAdaptive Resolution adaptation, available values:
+<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
 Default value: open.
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
@@ -255,64 +205,64 @@ Default value: open.
     }
 
     /**
-     * Get Animated image format. Valid values: gif, webp. 
-     * @return Format Animated image format. Valid values: gif, webp.
+     * Get Animated image file format, value is gif and webp. 
+     * @return Format Animated image file format, value is gif and webp.
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Animated image format. Valid values: gif, webp.
-     * @param Format Animated image format. Valid values: gif, webp.
+     * Set Animated image file format, value is gif and webp.
+     * @param Format Animated image file format, value is gif and webp.
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get Video frame rate in Hz. Value range: [1, 30]. 
-     * @return Fps Video frame rate in Hz. Value range: [1, 30].
+     * Get Frame rate. Value ranges from 1 to 30. Unit: Hz. 
+     * @return Fps Frame rate. Value ranges from 1 to 30. Unit: Hz.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set Video frame rate in Hz. Value range: [1, 30].
-     * @param Fps Video frame rate in Hz. Value range: [1, 30].
+     * Set Frame rate. Value ranges from 1 to 30. Unit: Hz.
+     * @param Fps Frame rate. Value ranges from 1 to 30. Unit: Hz.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
     }
 
     /**
-     * Get Image quality. Value range: [1, 100]. Default value: 75. 
-     * @return Quality Image quality. Value range: [1, 100]. Default value: 75.
+     * Get Image quality. Valid range: 1 - 100. Default value: 75. 
+     * @return Quality Image quality. Valid range: 1 - 100. Default value: 75.
      */
     public Float getQuality() {
         return this.Quality;
     }
 
     /**
-     * Set Image quality. Value range: [1, 100]. Default value: 75.
-     * @param Quality Image quality. Value range: [1, 100]. Default value: 75.
+     * Set Image quality. Valid range: 1 - 100. Default value: 75.
+     * @param Quality Image quality. Valid range: 1 - 100. Default value: 75.
      */
     public void setQuality(Float Quality) {
         this.Quality = Quality;
     }
 
     /**
-     * Get Template description. Length limit: 256 characters. 
-     * @return Comment Template description. Length limit: 256 characters.
+     * Get Template description, with a length limit of 256 characters. 
+     * @return Comment Template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 characters.
-     * @param Comment Template description. Length limit: 256 characters.
+     * Set Template description, with a length limit of 256 characters.
+     * @param Comment Template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

@@ -31,7 +31,7 @@ public class TaskSimpleInfo extends AbstractModel {
     private String TaskId;
 
     /**
-    * Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+    * Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
     */
     @SerializedName("Status")
     @Expose
@@ -114,16 +114,16 @@ Task types for v2017:
     }
 
     /**
-     * Get Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed) 
-     * @return Status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+     * Get Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated). 
+     * @return Status Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
-     * @param Status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+     * Set Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
+     * @param Status Task status. Valid values: WAITING (Waiting), PROCESSING (Processing), FINISH (Completed), ABORTED (Terminated).
      */
     public void setStatus(String Status) {
         this.Status = Status;

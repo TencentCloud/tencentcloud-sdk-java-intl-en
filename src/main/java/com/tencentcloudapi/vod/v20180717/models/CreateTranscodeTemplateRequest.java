@@ -24,321 +24,276 @@ import java.util.HashMap;
 public class CreateTranscodeTemplateRequest extends AbstractModel {
 
     /**
-    * The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
+    * <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Transcoding template name. Length limit: 64 characters.
+    * <p>Transcoding template name. The length cannot exceed 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Template description. Length limit: 256 characters.
+    * <p>Template description, with a length limit of 256 characters.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+    * <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+    * <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-    * Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+    * <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
     */
     @SerializedName("VideoTemplate")
     @Expose
     private VideoTemplateInfo VideoTemplate;
 
     /**
-    * Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+    * <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
     */
     @SerializedName("AudioTemplate")
     @Expose
     private AudioTemplateInfo AudioTemplate;
 
     /**
-    * TESHD transcoding parameter.
+    * <p>TSC transcoding parameter.</p>
     */
     @SerializedName("TEHDConfig")
     @Expose
     private TEHDConfig TEHDConfig;
 
     /**
-    * Audio/Video enhancement parameter.
+    * <p>Audio/Video enhancement configuration.</p>
     */
     @SerializedName("EnhanceConfig")
     @Expose
     private EnhanceConfig EnhanceConfig;
 
     /**
-    * The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+    * <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
     */
     @SerializedName("SegmentType")
     @Expose
     private String SegmentType;
 
     /**
-    * 
+    * <p>Extended parameter.</p>
     */
     @SerializedName("StdExtInfo")
     @Expose
     private String StdExtInfo;
 
     /**
-     * Get The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats). 
-     * @return Container The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
+     * Get <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p> 
+     * @return Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
-     * @param Container The container format. Valid values: `mp4`, `flv`, `hls`, `mp3`, `flac`, `ogg`, `m4a`, `wav` ( `mp3`, `flac`, `ogg`, `m4a`, and `wav` are audio file formats).
+     * Set <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
+     * @param Container <p>Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.</p>
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Transcoding template name. Length limit: 64 characters. 
-     * @return Name Transcoding template name. Length limit: 64 characters.
+     * Get <p>Transcoding template name. The length cannot exceed 64 characters.</p> 
+     * @return Name <p>Transcoding template name. The length cannot exceed 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Transcoding template name. Length limit: 64 characters.
-     * @param Name Transcoding template name. Length limit: 64 characters.
+     * Set <p>Transcoding template name. The length cannot exceed 64 characters.</p>
+     * @param Name <p>Transcoding template name. The length cannot exceed 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Template description. Length limit: 256 characters. 
-     * @return Comment Template description. Length limit: 256 characters.
+     * Get <p>Template description, with a length limit of 256 characters.</p> 
+     * @return Comment <p>Template description, with a length limit of 256 characters.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 characters.
-     * @param Comment Template description. Length limit: 256 characters.
+     * Set <p>Template description, with a length limit of 256 characters.</p>
+     * @param Comment <p>Template description, with a length limit of 256 characters.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0. 
-     * @return RemoveVideo Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+     * Get <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p> 
+     * @return RemoveVideo <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
-     * @param RemoveVideo Whether to remove video data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+     * Set <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
+     * @param RemoveVideo <p>Whether to remove video data. Available values:</p><li>0: reserved</li><li>1: remove</li>Default value: 0.</p>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0. 
-     * @return RemoveAudio Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+     * Get <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0. 
+     * @return RemoveAudio <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
-     * @param RemoveAudio Whether to remove audio data. Valid values:
-<li>0: retain</li>
-<li>1: remove</li>
-Default value: 0.
+     * Set <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
+     * @param RemoveAudio <p>Remove audio data. Available values:</p><li>0: Reserved</li><li>1: Remove</li>Default value: 0.
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;
     }
 
     /**
-     * Get Video stream configuration parameter. This field is required when `RemoveVideo` is 0. 
-     * @return VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+     * Get <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p> 
+     * @return VideoTemplate <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
      */
     public VideoTemplateInfo getVideoTemplate() {
         return this.VideoTemplate;
     }
 
     /**
-     * Set Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
-     * @param VideoTemplate Video stream configuration parameter. This field is required when `RemoveVideo` is 0.
+     * Set <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
+     * @param VideoTemplate <p>Video stream configuration parameters. This field is required when RemoveVideo is 0.</p>
      */
     public void setVideoTemplate(VideoTemplateInfo VideoTemplate) {
         this.VideoTemplate = VideoTemplate;
     }
 
     /**
-     * Get Audio stream configuration parameter. This field is required when `RemoveAudio` is 0. 
-     * @return AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+     * Get <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p> 
+     * @return AudioTemplate <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
      */
     public AudioTemplateInfo getAudioTemplate() {
         return this.AudioTemplate;
     }
 
     /**
-     * Set Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
-     * @param AudioTemplate Audio stream configuration parameter. This field is required when `RemoveAudio` is 0.
+     * Set <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
+     * @param AudioTemplate <p>Audio stream configuration parameters. This field is required when RemoveAudio is 0.</p>
      */
     public void setAudioTemplate(AudioTemplateInfo AudioTemplate) {
         this.AudioTemplate = AudioTemplate;
     }
 
     /**
-     * Get TESHD transcoding parameter. 
-     * @return TEHDConfig TESHD transcoding parameter.
+     * Get <p>TSC transcoding parameter.</p> 
+     * @return TEHDConfig <p>TSC transcoding parameter.</p>
      */
     public TEHDConfig getTEHDConfig() {
         return this.TEHDConfig;
     }
 
     /**
-     * Set TESHD transcoding parameter.
-     * @param TEHDConfig TESHD transcoding parameter.
+     * Set <p>TSC transcoding parameter.</p>
+     * @param TEHDConfig <p>TSC transcoding parameter.</p>
      */
     public void setTEHDConfig(TEHDConfig TEHDConfig) {
         this.TEHDConfig = TEHDConfig;
     }
 
     /**
-     * Get Audio/Video enhancement parameter. 
-     * @return EnhanceConfig Audio/Video enhancement parameter.
+     * Get <p>Audio/Video enhancement configuration.</p> 
+     * @return EnhanceConfig <p>Audio/Video enhancement configuration.</p>
      */
     public EnhanceConfig getEnhanceConfig() {
         return this.EnhanceConfig;
     }
 
     /**
-     * Set Audio/Video enhancement parameter.
-     * @param EnhanceConfig Audio/Video enhancement parameter.
+     * Set <p>Audio/Video enhancement configuration.</p>
+     * @param EnhanceConfig <p>Audio/Video enhancement configuration.</p>
      */
     public void setEnhanceConfig(EnhanceConfig EnhanceConfig) {
         this.EnhanceConfig = EnhanceConfig;
     }
 
     /**
-     * Get The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts 
-     * @return SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+     * Get <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts. 
+     * @return SegmentType <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
-     * @param SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+     * Set <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+     * @param SegmentType <p>Segment type, valid when Container is hls. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;
     }
 
     /**
-     * Get  
-     * @return StdExtInfo 
+     * Get <p>Extended parameter.</p> 
+     * @return StdExtInfo <p>Extended parameter.</p>
      */
     public String getStdExtInfo() {
         return this.StdExtInfo;
     }
 
     /**
-     * Set 
-     * @param StdExtInfo 
+     * Set <p>Extended parameter.</p>
+     * @param StdExtInfo <p>Extended parameter.</p>
      */
     public void setStdExtInfo(String StdExtInfo) {
         this.StdExtInfo = StdExtInfo;

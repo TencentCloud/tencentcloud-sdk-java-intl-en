@@ -24,97 +24,97 @@ import java.util.HashMap;
 public class DescribeVodDomainsRequest extends AbstractModel {
 
     /**
-    * Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
-<li>The maximum number of domain names is 20. </li>
+    * Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
+<li>The maximum number of domains is 20.</li>
     */
     @SerializedName("Domains")
     @Expose
     private String [] Domains;
 
     /**
-    * Maximum results to return for pulling paginated queries. Default value: 20
+    * Maximum number of results returned for pagination pull. Default value: 20.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Page number offset from the beginning of paginated queries. Default value: 0
+    * Starting offset for pagination pull. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
-<li>The maximum number of domain names is 20. </li> 
-     * @return Domains Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
-<li>The maximum number of domain names is 20. </li>
+     * Get Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
+<li>The maximum number of domains is 20.</li> 
+     * @return Domains Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
+<li>The maximum number of domains is 20.</li>
      */
     public String [] getDomains() {
         return this.Domains;
     }
 
     /**
-     * Set Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
-<li>The maximum number of domain names is 20. </li>
-     * @param Domains Domain name list. When this field is left blank, all domain name information will be listed by default. The limitations of this field are as follows:
-<li>The maximum number of domain names is 20. </li>
+     * Set Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
+<li>The maximum number of domains is 20.</li>
+     * @param Domains Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
+<li>The maximum number of domains is 20.</li>
      */
     public void setDomains(String [] Domains) {
         this.Domains = Domains;
     }
 
     /**
-     * Get Maximum results to return for pulling paginated queries. Default value: 20 
-     * @return Limit Maximum results to return for pulling paginated queries. Default value: 20
+     * Get Maximum number of results returned for pagination pull. Default value: 20. 
+     * @return Limit Maximum number of results returned for pagination pull. Default value: 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum results to return for pulling paginated queries. Default value: 20
-     * @param Limit Maximum results to return for pulling paginated queries. Default value: 20
+     * Set Maximum number of results returned for pagination pull. Default value: 20.
+     * @param Limit Maximum number of results returned for pagination pull. Default value: 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Page number offset from the beginning of paginated queries. Default value: 0 
-     * @return Offset Page number offset from the beginning of paginated queries. Default value: 0
+     * Get Starting offset for pagination pull. Default value: 0. 
+     * @return Offset Starting offset for pagination pull. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page number offset from the beginning of paginated queries. Default value: 0
-     * @param Offset Page number offset from the beginning of paginated queries. Default value: 0
+     * Set Starting offset for pagination pull. Default value: 0.
+     * @param Offset Starting offset for pagination pull. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

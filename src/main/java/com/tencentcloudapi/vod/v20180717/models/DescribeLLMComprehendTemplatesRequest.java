@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class DescribeLLMComprehendTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b>
+    * <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Filter condition for the unique identifier of the large model comprehend template. The maximum array length is 100.
+    * <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
     */
     @SerializedName("Definitions")
     @Expose
     private Long [] Definitions;
 
     /**
-    * Pagination offset. Default value: 0.
+    * <p>Paging offset. Default value: 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of returned entries. Default value: 10. Maximum value: 100.
+    * <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b> 
-     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b>
+     * Get <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p> 
+     * @return SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b>
-     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it is the default application or a newly created application).</b>
+     * Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+     * @param SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Filter condition for the unique identifier of the large model comprehend template. The maximum array length is 100. 
-     * @return Definitions Filter condition for the unique identifier of the large model comprehend template. The maximum array length is 100.
+     * Get <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p> 
+     * @return Definitions <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Filter condition for the unique identifier of the large model comprehend template. The maximum array length is 100.
-     * @param Definitions Filter condition for the unique identifier of the large model comprehend template. The maximum array length is 100.
+     * Set <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
+     * @param Definitions <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
     /**
-     * Get Pagination offset. Default value: 0. 
-     * @return Offset Pagination offset. Default value: 0.
+     * Get <p>Paging offset. Default value: 0.</p> 
+     * @return Offset <p>Paging offset. Default value: 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Pagination offset. Default value: 0.
-     * @param Offset Pagination offset. Default value: 0.
+     * Set <p>Paging offset. Default value: 0.</p>
+     * @param Offset <p>Paging offset. Default value: 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of returned entries. Default value: 10. Maximum value: 100. 
-     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * Get <p>Number of returned entries. Default value: 10. Maximum value: 100.</p> 
+     * @return Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned entries. Default value: 10. Maximum value: 100.
-     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * Set <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+     * @param Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

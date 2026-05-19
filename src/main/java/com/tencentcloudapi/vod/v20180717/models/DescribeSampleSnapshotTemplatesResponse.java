@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSampleSnapshotTemplatesResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of sampled screencapturing template details.
+    * Sampling screenshot template detail list.
     */
     @SerializedName("SampleSnapshotTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSampleSnapshotTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of sampled screencapturing template details. 
-     * @return SampleSnapshotTemplateSet List of sampled screencapturing template details.
+     * Get Sampling screenshot template detail list. 
+     * @return SampleSnapshotTemplateSet Sampling screenshot template detail list.
      */
     public SampleSnapshotTemplate [] getSampleSnapshotTemplateSet() {
         return this.SampleSnapshotTemplateSet;
     }
 
     /**
-     * Set List of sampled screencapturing template details.
-     * @param SampleSnapshotTemplateSet List of sampled screencapturing template details.
+     * Set Sampling screenshot template detail list.
+     * @param SampleSnapshotTemplateSet Sampling screenshot template detail list.
      */
     public void setSampleSnapshotTemplateSet(SampleSnapshotTemplate [] SampleSnapshotTemplateSet) {
         this.SampleSnapshotTemplateSet = SampleSnapshotTemplateSet;

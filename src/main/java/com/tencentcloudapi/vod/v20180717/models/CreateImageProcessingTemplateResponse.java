@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateImageProcessingTemplateResponse extends AbstractModel {
 
     /**
-    * The template ID.
+    * Unique identifier of the image processing template.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateImageProcessingTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The template ID. 
-     * @return Definition The template ID.
+     * Get Unique identifier of the image processing template. 
+     * @return Definition Unique identifier of the image processing template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The template ID.
-     * @param Definition The template ID.
+     * Set Unique identifier of the image processing template.
+     * @param Definition Unique identifier of the image processing template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

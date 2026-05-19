@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class ModifyEnhanceMediaTemplateRequest extends AbstractModel {
 
     /**
-    * Enhance Media Template ID.
+    * Audio and video quality rebirth template number.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Audio and video quality rebirth template name, length limit: 64 characters.
+    * Audio and video quality rebirth template name, with a length limit of 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Template description information, length limit: 256 characters.
+    * Template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Media quality Enhance video control control information.
+    * Audio-Visual Quality Revival Video Control Information.
     */
     @SerializedName("RebuildVideoInfo")
     @Expose
     private RebuildVideoInfo RebuildVideoInfo;
 
     /**
-    * Media quality Enhance audio control control information.
+    * Audio-Visual Quality Revival Audio Control Information.
     */
     @SerializedName("RebuildAudioInfo")
     @Expose
@@ -80,123 +80,123 @@ public class ModifyEnhanceMediaTemplateRequest extends AbstractModel {
     private RebuildMediaTargetAudioStream TargetAudioInfo;
 
     /**
-    * Output file encapsulation format, optional values: mp4, flv, hls.
+    * Container format. Available values: mp4, flv, and hls.
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * Whether to remove video data, optional values:
-<li>0: Keep</li>
+    * Whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
+Default value: 0.
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * Whether to remove audio data, optional values:
-<li>0: Keep</li>
+    * Remove audio data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
+Default value: 0.
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-     * Get Enhance Media Template ID. 
-     * @return Definition Enhance Media Template ID.
+     * Get Audio and video quality rebirth template number. 
+     * @return Definition Audio and video quality rebirth template number.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Enhance Media Template ID.
-     * @param Definition Enhance Media Template ID.
+     * Set Audio and video quality rebirth template number.
+     * @param Definition Audio and video quality rebirth template number.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Audio and video quality rebirth template name, length limit: 64 characters. 
-     * @return Name Audio and video quality rebirth template name, length limit: 64 characters.
+     * Get Audio and video quality rebirth template name, with a length limit of 64 characters. 
+     * @return Name Audio and video quality rebirth template name, with a length limit of 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Audio and video quality rebirth template name, length limit: 64 characters.
-     * @param Name Audio and video quality rebirth template name, length limit: 64 characters.
+     * Set Audio and video quality rebirth template name, with a length limit of 64 characters.
+     * @param Name Audio and video quality rebirth template name, with a length limit of 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Template description information, length limit: 256 characters. 
-     * @return Comment Template description information, length limit: 256 characters.
+     * Get Template description, with a length limit of 256 characters. 
+     * @return Comment Template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description information, length limit: 256 characters.
-     * @param Comment Template description information, length limit: 256 characters.
+     * Set Template description, with a length limit of 256 characters.
+     * @param Comment Template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Media quality Enhance video control control information. 
-     * @return RebuildVideoInfo Media quality Enhance video control control information.
+     * Get Audio-Visual Quality Revival Video Control Information. 
+     * @return RebuildVideoInfo Audio-Visual Quality Revival Video Control Information.
      */
     public RebuildVideoInfo getRebuildVideoInfo() {
         return this.RebuildVideoInfo;
     }
 
     /**
-     * Set Media quality Enhance video control control information.
-     * @param RebuildVideoInfo Media quality Enhance video control control information.
+     * Set Audio-Visual Quality Revival Video Control Information.
+     * @param RebuildVideoInfo Audio-Visual Quality Revival Video Control Information.
      */
     public void setRebuildVideoInfo(RebuildVideoInfo RebuildVideoInfo) {
         this.RebuildVideoInfo = RebuildVideoInfo;
     }
 
     /**
-     * Get Media quality Enhance audio control control information. 
-     * @return RebuildAudioInfo Media quality Enhance audio control control information.
+     * Get Audio-Visual Quality Revival Audio Control Information. 
+     * @return RebuildAudioInfo Audio-Visual Quality Revival Audio Control Information.
      */
     public RebuildAudioInfo getRebuildAudioInfo() {
         return this.RebuildAudioInfo;
     }
 
     /**
-     * Set Media quality Enhance audio control control information.
-     * @param RebuildAudioInfo Media quality Enhance audio control control information.
+     * Set Audio-Visual Quality Revival Audio Control Information.
+     * @param RebuildAudioInfo Audio-Visual Quality Revival Audio Control Information.
      */
     public void setRebuildAudioInfo(RebuildAudioInfo RebuildAudioInfo) {
         this.RebuildAudioInfo = RebuildAudioInfo;
@@ -235,72 +235,72 @@ Default value 0.
     }
 
     /**
-     * Get Output file encapsulation format, optional values: mp4, flv, hls. 
-     * @return Container Output file encapsulation format, optional values: mp4, flv, hls.
+     * Get Container format. Available values: mp4, flv, and hls. 
+     * @return Container Container format. Available values: mp4, flv, and hls.
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set Output file encapsulation format, optional values: mp4, flv, hls.
-     * @param Container Output file encapsulation format, optional values: mp4, flv, hls.
+     * Set Container format. Available values: mp4, flv, and hls.
+     * @param Container Container format. Available values: mp4, flv, and hls.
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get Whether to remove video data, optional values:
-<li>0: Keep</li>
+     * Get Whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0. 
-     * @return RemoveVideo Whether to remove video data, optional values:
-<li>0: Keep</li>
+Default value: 0. 
+     * @return RemoveVideo Whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
+Default value: 0.
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set Whether to remove video data, optional values:
-<li>0: Keep</li>
+     * Set Whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
-     * @param RemoveVideo Whether to remove video data, optional values:
-<li>0: Keep</li>
+Default value: 0.
+     * @param RemoveVideo Whether to remove video data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
+Default value: 0.
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get Whether to remove audio data, optional values:
-<li>0: Keep</li>
+     * Get Remove audio data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0. 
-     * @return RemoveAudio Whether to remove audio data, optional values:
-<li>0: Keep</li>
+Default value: 0. 
+     * @return RemoveAudio Remove audio data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
+Default value: 0.
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set Whether to remove audio data, optional values:
-<li>0: Keep</li>
+     * Set Remove audio data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
-     * @param RemoveAudio Whether to remove audio data, optional values:
-<li>0: Keep</li>
+Default value: 0.
+     * @param RemoveAudio Remove audio data. Available values:
+<li>`0`: reserved</li>
 <li>1: Remove</li>
-Default value 0.
+Default value: 0.
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;

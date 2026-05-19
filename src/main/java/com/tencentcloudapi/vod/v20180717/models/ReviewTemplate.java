@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ReviewTemplate extends AbstractModel {
 
     /**
-    * The unique ID of the moderation template.
+    * Unique tag of the moderation template.
     */
     @SerializedName("Definition")
     @Expose
@@ -75,16 +75,16 @@ public class ReviewTemplate extends AbstractModel {
     private String UpdateTime;
 
     /**
-     * Get The unique ID of the moderation template. 
-     * @return Definition The unique ID of the moderation template.
+     * Get Unique tag of the moderation template. 
+     * @return Definition Unique tag of the moderation template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set The unique ID of the moderation template.
-     * @param Definition The unique ID of the moderation template.
+     * Set Unique tag of the moderation template.
+     * @param Definition Unique tag of the moderation template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

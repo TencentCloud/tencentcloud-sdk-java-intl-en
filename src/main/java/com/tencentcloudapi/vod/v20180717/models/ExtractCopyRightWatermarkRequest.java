@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ExtractCopyRightWatermarkRequest extends AbstractModel {
 
     /**
-    * The media URL from which the watermark needs to be extracted.
+    * URL of media requiring watermark extraction.
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * <b> VOD [Application](/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether it is a default application or a newly created application), must fill in this field as the application ID. </b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters.
+    * Identify source context, used to pass through user request information. The ExtractCopyRightWatermarkComplete callback and task flow status change callback will return the value of this field, with a maximum of 1000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+    * An identifier for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+    * Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * Reserved fields, used for special purposes.
+    * Reserved field, used when special purpose.
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get The media URL from which the watermark needs to be extracted. 
-     * @return Url The media URL from which the watermark needs to be extracted.
+     * Get URL of media requiring watermark extraction. 
+     * @return Url URL of media requiring watermark extraction.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set The media URL from which the watermark needs to be extracted.
-     * @param Url The media URL from which the watermark needs to be extracted.
+     * Set URL of media requiring watermark extraction.
+     * @param Url URL of media requiring watermark extraction.
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get <b> VOD [Application](/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether it is a default application or a newly created application), must fill in this field as the application ID. </b> 
-     * @return SubAppId <b> VOD [Application](/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether it is a default application or a newly created application), must fill in this field as the application ID. </b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b> VOD [Application](/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether it is a default application or a newly created application), must fill in this field as the application ID. </b>
-     * @param SubAppId <b> VOD [Application](/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services from December 25, 2023, if they access resources in VOD applications (whether it is a default application or a newly created application), must fill in this field as the application ID. </b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters. 
-     * @return SessionContext Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters.
+     * Get Identify source context, used to pass through user request information. The ExtractCopyRightWatermarkComplete callback and task flow status change callback will return the value of this field, with a maximum of 1000 characters. 
+     * @return SessionContext Identify source context, used to pass through user request information. The ExtractCopyRightWatermarkComplete callback and task flow status change callback will return the value of this field, with a maximum of 1000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters.
-     * @param SessionContext Identifies the source context, which is used to transparently transmit user request information. This field value will be returned in the ExtractCopyRightWatermarkComplete callback and task flow status change callback, with a maximum length of 1000 characters.
+     * Set Identify source context, used to pass through user request information. The ExtractCopyRightWatermarkComplete callback and task flow status change callback will return the value of this field, with a maximum of 1000 characters.
+     * @param SessionContext Identify source context, used to pass through user request information. The ExtractCopyRightWatermarkComplete callback and task flow status change callback will return the value of this field, with a maximum of 1000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication. 
-     * @return SessionId The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * Get An identifier for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication. 
+     * @return SessionId An identifier for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
-     * @param SessionId The identification code used for task deduplication. If there is a request with the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * Set An identifier for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication.
+     * @param SessionId An identifier for task deduplication. If there has been a request with the same identification code within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0. 
-     * @return TasksPriority The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+     * Get Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0. 
+     * @return TasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
-     * @param TasksPriority The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+     * Set Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+     * @param TasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get Reserved fields, used for special purposes. 
-     * @return ExtInfo Reserved fields, used for special purposes.
+     * Get Reserved field, used when special purpose. 
+     * @return ExtInfo Reserved field, used when special purpose.
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set Reserved fields, used for special purposes.
-     * @param ExtInfo Reserved fields, used for special purposes.
+     * Set Reserved field, used when special purpose.
+     * @param ExtInfo Reserved field, used when special purpose.
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

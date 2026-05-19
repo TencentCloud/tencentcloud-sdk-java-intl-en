@@ -70,6 +70,30 @@ public class SubAppIdInfo extends AbstractModel {
     private String Name;
 
     /**
+    * Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+    * Storage regions enabled for the sub-app.
+    */
+    @SerializedName("StorageRegions")
+    @Expose
+    private String [] StorageRegions;
+
+    /**
+    * tag bound to the sub-application.
+    */
+    @SerializedName("Tags")
+    @Expose
+    private ResourceTag [] Tags;
+
+    /**
      * Get Subapplication ID. 
      * @return SubAppId Subapplication ID.
      */
@@ -181,6 +205,66 @@ public class SubAppIdInfo extends AbstractModel {
         this.Name = Name;
     }
 
+    /**
+     * Get Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default 
+     * @return Mode Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+     * @param Mode Mode of this application. Valid values:
+-fileid: Only in fileid mode
+-fileid+path: FileID & Path mode
+Leave empty to select FileID mode by default
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get Storage regions enabled for the sub-app. 
+     * @return StorageRegions Storage regions enabled for the sub-app.
+     */
+    public String [] getStorageRegions() {
+        return this.StorageRegions;
+    }
+
+    /**
+     * Set Storage regions enabled for the sub-app.
+     * @param StorageRegions Storage regions enabled for the sub-app.
+     */
+    public void setStorageRegions(String [] StorageRegions) {
+        this.StorageRegions = StorageRegions;
+    }
+
+    /**
+     * Get tag bound to the sub-application. 
+     * @return Tags tag bound to the sub-application.
+     */
+    public ResourceTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set tag bound to the sub-application.
+     * @param Tags tag bound to the sub-application.
+     */
+    public void setTags(ResourceTag [] Tags) {
+        this.Tags = Tags;
+    }
+
     public SubAppIdInfo() {
     }
 
@@ -207,6 +291,21 @@ public class SubAppIdInfo extends AbstractModel {
         if (source.Name != null) {
             this.Name = new String(source.Name);
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.StorageRegions != null) {
+            this.StorageRegions = new String[source.StorageRegions.length];
+            for (int i = 0; i < source.StorageRegions.length; i++) {
+                this.StorageRegions[i] = new String(source.StorageRegions[i]);
+            }
+        }
+        if (source.Tags != null) {
+            this.Tags = new ResourceTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new ResourceTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -220,6 +319,9 @@ public class SubAppIdInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamSimple(map, prefix + "Name", this.Name);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

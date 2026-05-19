@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeContentReviewTemplatesResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of intelligent content recognition template details.
+    * Review template detail list.
     */
     @SerializedName("ContentReviewTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeContentReviewTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of intelligent content recognition template details. 
-     * @return ContentReviewTemplateSet List of intelligent content recognition template details.
+     * Get Review template detail list. 
+     * @return ContentReviewTemplateSet Review template detail list.
      */
     public ContentReviewTemplateItem [] getContentReviewTemplateSet() {
         return this.ContentReviewTemplateSet;
     }
 
     /**
-     * Set List of intelligent content recognition template details.
-     * @param ContentReviewTemplateSet List of intelligent content recognition template details.
+     * Set Review template detail list.
+     * @param ContentReviewTemplateSet Review template detail list.
      */
     public void setContentReviewTemplateSet(ContentReviewTemplateItem [] ContentReviewTemplateSet) {
         this.ContentReviewTemplateSet = ContentReviewTemplateSet;

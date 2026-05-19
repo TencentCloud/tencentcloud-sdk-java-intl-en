@@ -31,8 +31,7 @@ public class RenewInstancesRequest extends AbstractModel {
     private String [] InstanceIds;
 
     /**
-    * Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
+    * Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
     */
     @SerializedName("InstanceChargePrepaid")
     @Expose
@@ -62,20 +61,16 @@ Annual and monthly subscription instances. this parameter is a required paramete
     }
 
     /**
-     * Get Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>. 
-     * @return InstanceChargePrepaid Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
+     * Get Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances. 
+     * @return InstanceChargePrepaid Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
      */
     public InstanceChargePrepaid getInstanceChargePrepaid() {
         return this.InstanceChargePrepaid;
     }
 
     /**
-     * Set Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
-     * @param InstanceChargePrepaid Prepaid mode, that is, parameter settings related to monthly/annual subscription. specifies attributes of a monthly subscription instance, such as renewal duration and whether to enable auto-renewal, by specifying this parameter. <dx-alert infotype="explain" title="">.
-Annual and monthly subscription instances. this parameter is a required parameter.</dx-alert>.
+     * Set Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
+     * @param InstanceChargePrepaid Settings for prepaid (monthly/yearly subscription) instances, including renewal duration and auto-renewal options. This parameter is required for prepaid instances.
      */
     public void setInstanceChargePrepaid(InstanceChargePrepaid InstanceChargePrepaid) {
         this.InstanceChargePrepaid = InstanceChargePrepaid;

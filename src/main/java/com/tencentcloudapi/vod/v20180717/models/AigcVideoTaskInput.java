@@ -115,6 +115,13 @@ public class AigcVideoTaskInput extends AbstractModel {
     private String SceneType;
 
     /**
+    * <p>Random seed of the model.</p>
+    */
+    @SerializedName("Seed")
+    @Expose
+    private Long Seed;
+
+    /**
      * Get <p>Model name.</p> 
      * @return ModelName <p>Model name.</p>
      */
@@ -322,6 +329,22 @@ public class AigcVideoTaskInput extends AbstractModel {
         this.SceneType = SceneType;
     }
 
+    /**
+     * Get <p>Random seed of the model.</p> 
+     * @return Seed <p>Random seed of the model.</p>
+     */
+    public Long getSeed() {
+        return this.Seed;
+    }
+
+    /**
+     * Set <p>Random seed of the model.</p>
+     * @param Seed <p>Random seed of the model.</p>
+     */
+    public void setSeed(Long Seed) {
+        this.Seed = Seed;
+    }
+
     public AigcVideoTaskInput() {
     }
 
@@ -375,6 +398,9 @@ public class AigcVideoTaskInput extends AbstractModel {
         if (source.SceneType != null) {
             this.SceneType = new String(source.SceneType);
         }
+        if (source.Seed != null) {
+            this.Seed = new Long(source.Seed);
+        }
     }
 
 
@@ -395,6 +421,7 @@ public class AigcVideoTaskInput extends AbstractModel {
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
         this.setParamSimple(map, prefix + "InputRegion", this.InputRegion);
         this.setParamSimple(map, prefix + "SceneType", this.SceneType);
+        this.setParamSimple(map, prefix + "Seed", this.Seed);
 
     }
 }

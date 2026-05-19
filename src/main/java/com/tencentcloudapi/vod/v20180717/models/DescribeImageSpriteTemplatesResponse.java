@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeImageSpriteTemplatesResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of image sprite generating template details.
+    * Sprite template details list.
     */
     @SerializedName("ImageSpriteTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeImageSpriteTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of image sprite generating template details. 
-     * @return ImageSpriteTemplateSet List of image sprite generating template details.
+     * Get Sprite template details list. 
+     * @return ImageSpriteTemplateSet Sprite template details list.
      */
     public ImageSpriteTemplate [] getImageSpriteTemplateSet() {
         return this.ImageSpriteTemplateSet;
     }
 
     /**
-     * Set List of image sprite generating template details.
-     * @param ImageSpriteTemplateSet List of image sprite generating template details.
+     * Set Sprite template details list.
+     * @param ImageSpriteTemplateSet Sprite template details list.
      */
     public void setImageSpriteTemplateSet(ImageSpriteTemplate [] ImageSpriteTemplateSet) {
         this.ImageSpriteTemplateSet = ImageSpriteTemplateSet;

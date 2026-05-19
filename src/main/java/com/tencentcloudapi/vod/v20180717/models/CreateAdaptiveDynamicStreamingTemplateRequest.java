@@ -24,348 +24,253 @@ import java.util.HashMap;
 public class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel {
 
     /**
-    * The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
+    * <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
-Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
+    * <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
     */
     @SerializedName("StreamInfos")
     @Expose
     private AdaptiveStreamTemplate [] StreamInfos;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Template name. Length limit: 64 characters.
+    * <p>Template name. The length cannot exceed 64 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * DRM scheme type, value range:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
+    * <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
     */
     @SerializedName("DrmType")
     @Expose
     private String DrmType;
 
     /**
-    * The provider of the DRM key. Valid values:
-<li>SDMC</li>
-<li>VOD</li>
-The default is `VOD`.
+    * <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
     */
     @SerializedName("DrmKeyProvider")
     @Expose
     private String DrmKeyProvider;
 
     /**
-    * 
+    * <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
     */
     @SerializedName("DrmEncryptType")
     @Expose
     private String DrmEncryptType;
 
     /**
-    * Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
+    * <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
     */
     @SerializedName("DisableHigherVideoBitrate")
     @Expose
     private Long DisableHigherVideoBitrate;
 
     /**
-    * Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
+    * <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
     */
     @SerializedName("DisableHigherVideoResolution")
     @Expose
     private Long DisableHigherVideoResolution;
 
     /**
-    * Template description. Length limit: 256 characters.
+    * <p>Template description, with a length limit of 256 characters.</p>
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+    * <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
     */
     @SerializedName("SegmentType")
     @Expose
     private String SegmentType;
 
     /**
-     * Get The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li> 
-     * @return Format The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
+     * Get <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li> 
+     * @return Format <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
-     * @param Format The adaptive bitrate streaming format. Valid values:
-<li>HLS</li>
-<li>MPEG-DASH</li>
+     * Set <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
+     * @param Format <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
-Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate. 
-     * @return StreamInfos Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
-Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
+     * Get <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p> 
+     * @return StreamInfos <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
      */
     public AdaptiveStreamTemplate [] getStreamInfos() {
         return this.StreamInfos;
     }
 
     /**
-     * Set Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
-Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
-     * @param StreamInfos Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
-Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
+     * Set <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
+     * @param StreamInfos <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
      */
     public void setStreamInfos(AdaptiveStreamTemplate [] StreamInfos) {
         this.StreamInfos = StreamInfos;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Template name. Length limit: 64 characters. 
-     * @return Name Template name. Length limit: 64 characters.
+     * Get <p>Template name. The length cannot exceed 64 characters.</p> 
+     * @return Name <p>Template name. The length cannot exceed 64 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Template name. Length limit: 64 characters.
-     * @param Name Template name. Length limit: 64 characters.
+     * Set <p>Template name. The length cannot exceed 64 characters.</p>
+     * @param Name <p>Template name. The length cannot exceed 64 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get DRM scheme type, value range:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected. 
-     * @return DrmType DRM scheme type, value range:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
+     * Get <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video. 
+     * @return DrmType <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
      */
     public String getDrmType() {
         return this.DrmType;
     }
 
     /**
-     * Set DRM scheme type, value range:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
-     * @param DrmType DRM scheme type, value range:
-<li>SimpleAES</li>
-<li>Widevine</li>
-<li>FairPlay</li>
-The default value is an empty string. It is an empty string, indicating that the video will not be DRM protected.
+     * Set <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
+     * @param DrmType <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;
     }
 
     /**
-     * Get The provider of the DRM key. Valid values:
-<li>SDMC</li>
-<li>VOD</li>
-The default is `VOD`. 
-     * @return DrmKeyProvider The provider of the DRM key. Valid values:
-<li>SDMC</li>
-<li>VOD</li>
-The default is `VOD`.
+     * Get <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p> 
+     * @return DrmKeyProvider <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
      */
     public String getDrmKeyProvider() {
         return this.DrmKeyProvider;
     }
 
     /**
-     * Set The provider of the DRM key. Valid values:
-<li>SDMC</li>
-<li>VOD</li>
-The default is `VOD`.
-     * @param DrmKeyProvider The provider of the DRM key. Valid values:
-<li>SDMC</li>
-<li>VOD</li>
-The default is `VOD`.
+     * Set <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+     * @param DrmKeyProvider <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
      */
     public void setDrmKeyProvider(String DrmKeyProvider) {
         this.DrmKeyProvider = DrmKeyProvider;
     }
 
     /**
-     * Get  
-     * @return DrmEncryptType 
+     * Get <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p> 
+     * @return DrmEncryptType <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
      */
     public String getDrmEncryptType() {
         return this.DrmEncryptType;
     }
 
     /**
-     * Set 
-     * @param DrmEncryptType 
+     * Set <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
+     * @param DrmEncryptType <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
      */
     public void setDrmEncryptType(String DrmEncryptType) {
         this.DrmEncryptType = DrmEncryptType;
     }
 
     /**
-     * Get Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no. 
-     * @return DisableHigherVideoBitrate Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
+     * Get <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no. 
+     * @return DisableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
      */
     public Long getDisableHigherVideoBitrate() {
         return this.DisableHigherVideoBitrate;
     }
 
     /**
-     * Set Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
-     * @param DisableHigherVideoBitrate Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
+     * Set <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+     * @param DisableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
      */
     public void setDisableHigherVideoBitrate(Long DisableHigherVideoBitrate) {
         this.DisableHigherVideoBitrate = DisableHigherVideoBitrate;
     }
 
     /**
-     * Get Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no. 
-     * @return DisableHigherVideoResolution Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
+     * Get <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no. 
+     * @return DisableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
      */
     public Long getDisableHigherVideoResolution() {
         return this.DisableHigherVideoResolution;
     }
 
     /**
-     * Set Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
-     * @param DisableHigherVideoResolution Whether to prohibit transcoding from low resolution to high resolution. Valid values:
-<li>0: no,</li>
-<li>1: yes.</li>
-Default value: no.
+     * Set <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+     * @param DisableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
      */
     public void setDisableHigherVideoResolution(Long DisableHigherVideoResolution) {
         this.DisableHigherVideoResolution = DisableHigherVideoResolution;
     }
 
     /**
-     * Get Template description. Length limit: 256 characters. 
-     * @return Comment Template description. Length limit: 256 characters.
+     * Get <p>Template description, with a length limit of 256 characters.</p> 
+     * @return Comment <p>Template description, with a length limit of 256 characters.</p>
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 characters.
-     * @param Comment Template description. Length limit: 256 characters.
+     * Set <p>Template description, with a length limit of 256 characters.</p>
+     * @param Comment <p>Template description, with a length limit of 256 characters.</p>
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts 
-     * @return SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+     * Get <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts. 
+     * @return SegmentType <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
-     * @param SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
-<li>ts: TS segment</li>
-<li>fmp4: fMP4 segment</li>
-Default: ts
+     * Set <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+     * @param SegmentType <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;

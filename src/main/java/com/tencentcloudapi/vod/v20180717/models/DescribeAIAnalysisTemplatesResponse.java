@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAIAnalysisTemplatesResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of video content analysis template details.
+    * Audio and video content analysis template detail list.
     */
     @SerializedName("AIAnalysisTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAIAnalysisTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of video content analysis template details. 
-     * @return AIAnalysisTemplateSet List of video content analysis template details.
+     * Get Audio and video content analysis template detail list. 
+     * @return AIAnalysisTemplateSet Audio and video content analysis template detail list.
      */
     public AIAnalysisTemplateItem [] getAIAnalysisTemplateSet() {
         return this.AIAnalysisTemplateSet;
     }
 
     /**
-     * Set List of video content analysis template details.
-     * @param AIAnalysisTemplateSet List of video content analysis template details.
+     * Set Audio and video content analysis template detail list.
+     * @param AIAnalysisTemplateSet Audio and video content analysis template detail list.
      */
     public void setAIAnalysisTemplateSet(AIAnalysisTemplateItem [] AIAnalysisTemplateSet) {
         this.AIAnalysisTemplateSet = AIAnalysisTemplateSet;

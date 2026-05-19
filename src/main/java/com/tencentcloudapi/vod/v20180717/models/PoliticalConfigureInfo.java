@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class PoliticalConfigureInfo extends AbstractModel {
 
     /**
-    * Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Image recognition involves control parameters for inappropriate information.
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private PoliticalImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-    * Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * ASR-based recognition involves control parameters for inappropriate information.
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private PoliticalAsrReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Text recognition involves control parameters for inappropriate information.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private PoliticalOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return ImgReviewInfo Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Image recognition involves control parameters for inappropriate information. 
+     * @return ImgReviewInfo Image recognition involves control parameters for inappropriate information.
      */
     public PoliticalImgReviewTemplateInfo getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param ImgReviewInfo Parameters for recognition of politically sensitive content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Image recognition involves control parameters for inappropriate information.
+     * @param ImgReviewInfo Image recognition involves control parameters for inappropriate information.
      */
     public void setImgReviewInfo(PoliticalImgReviewTemplateInfo ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get ASR-based recognition involves control parameters for inappropriate information. 
+     * @return AsrReviewInfo ASR-based recognition involves control parameters for inappropriate information.
      */
     public PoliticalAsrReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set ASR-based recognition involves control parameters for inappropriate information.
+     * @param AsrReviewInfo ASR-based recognition involves control parameters for inappropriate information.
      */
     public void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Text recognition involves control parameters for inappropriate information. 
+     * @return OcrReviewInfo Text recognition involves control parameters for inappropriate information.
      */
     public PoliticalOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Text recognition involves control parameters for inappropriate information.
+     * @param OcrReviewInfo Text recognition involves control parameters for inappropriate information.
      */
     public void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

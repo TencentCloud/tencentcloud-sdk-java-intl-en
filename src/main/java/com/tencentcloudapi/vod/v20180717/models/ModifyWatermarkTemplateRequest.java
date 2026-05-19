@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class ModifyWatermarkTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of watermarking template.
+    * Unique identifier of the watermark template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Watermarking template name. Length limit: 64 characters.
+    * Watermark template name. The length cannot exceed 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Template description. Length limit: 256 characters.
+    * Template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
@@ -53,113 +53,113 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel {
 
     /**
     * Origin position. Valid values:
-<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text;</li>
-<li>TopRight: the origin of coordinates is in the top-right corner of the video, and the origin of the watermark is in the top-right corner of the image or text;</li>
-<li>BottomLeft: the origin of coordinates is in the bottom-left corner of the video, and the origin of the watermark is in the bottom-left corner of the image or text;</li>
-<li>BottomRight: the origin of coordinates is in the bottom-right corner of the video, and the origin of the watermark is in the bottom-right corner of the image or text.</li>
+<li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
+<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
     */
     @SerializedName("CoordinateOrigin")
     @Expose
     private String CoordinateOrigin;
 
     /**
-    * The horizontal position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
-<li>If the string ends in %, the `XPos` of the watermark will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
-<li>If the string ends in px, the `XPos` of the watermark will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
+    * The horizontal position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
+<li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark XPos is specified in pixels, for example, 100px means the XPos is 100 pixels.</li>
     */
     @SerializedName("XPos")
     @Expose
     private String XPos;
 
     /**
-    * The vertical position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
-<li>If the string ends in %, the `YPos` of the watermark will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
-<li>If the string ends in px, the `YPos` of the watermark will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
+    * Vertical position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark YPos is specified in pixels, for example, 100px means YPos is 100 pixels.</li>
     */
     @SerializedName("YPos")
     @Expose
     private String YPos;
 
     /**
-    * Image watermarking template. This field is valid only for image watermarking templates.
+    * Image watermark template. This field is only applicable to image watermark templates.
     */
     @SerializedName("ImageTemplate")
     @Expose
     private ImageWatermarkInputForUpdate ImageTemplate;
 
     /**
-    * Text watermarking template. This field is valid only for text watermarking templates.
+    * Text watermarking template. This field is only applicable to text watermarking templates.
     */
     @SerializedName("TextTemplate")
     @Expose
     private TextWatermarkTemplateInputForUpdate TextTemplate;
 
     /**
-    * SVG watermarking template. This field is only valid for SVG watermarking templates.
+    * SVG watermark template. This field is only applicable to SVG watermark templates.
     */
     @SerializedName("SvgTemplate")
     @Expose
     private SvgWatermarkInputForUpdate SvgTemplate;
 
     /**
-     * Get Unique ID of watermarking template. 
-     * @return Definition Unique ID of watermarking template.
+     * Get Unique identifier of the watermark template. 
+     * @return Definition Unique identifier of the watermark template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of watermarking template.
-     * @param Definition Unique ID of watermarking template.
+     * Set Unique identifier of the watermark template.
+     * @param Definition Unique identifier of the watermark template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Watermarking template name. Length limit: 64 characters. 
-     * @return Name Watermarking template name. Length limit: 64 characters.
+     * Get Watermark template name. The length cannot exceed 64 characters. 
+     * @return Name Watermark template name. The length cannot exceed 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Watermarking template name. Length limit: 64 characters.
-     * @param Name Watermarking template name. Length limit: 64 characters.
+     * Set Watermark template name. The length cannot exceed 64 characters.
+     * @param Name Watermark template name. The length cannot exceed 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Template description. Length limit: 256 characters. 
-     * @return Comment Template description. Length limit: 256 characters.
+     * Get Template description, with a length limit of 256 characters. 
+     * @return Comment Template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 characters.
-     * @param Comment Template description. Length limit: 256 characters.
+     * Set Template description, with a length limit of 256 characters.
+     * @param Comment Template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
@@ -167,15 +167,15 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel {
 
     /**
      * Get Origin position. Valid values:
-<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text;</li>
-<li>TopRight: the origin of coordinates is in the top-right corner of the video, and the origin of the watermark is in the top-right corner of the image or text;</li>
-<li>BottomLeft: the origin of coordinates is in the bottom-left corner of the video, and the origin of the watermark is in the bottom-left corner of the image or text;</li>
-<li>BottomRight: the origin of coordinates is in the bottom-right corner of the video, and the origin of the watermark is in the bottom-right corner of the image or text.</li> 
+<li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
+<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li> 
      * @return CoordinateOrigin Origin position. Valid values:
-<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text;</li>
-<li>TopRight: the origin of coordinates is in the top-right corner of the video, and the origin of the watermark is in the top-right corner of the image or text;</li>
-<li>BottomLeft: the origin of coordinates is in the bottom-left corner of the video, and the origin of the watermark is in the bottom-left corner of the image or text;</li>
-<li>BottomRight: the origin of coordinates is in the bottom-right corner of the video, and the origin of the watermark is in the bottom-right corner of the image or text.</li>
+<li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
+<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
      */
     public String getCoordinateOrigin() {
         return this.CoordinateOrigin;
@@ -183,111 +183,111 @@ public class ModifyWatermarkTemplateRequest extends AbstractModel {
 
     /**
      * Set Origin position. Valid values:
-<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text;</li>
-<li>TopRight: the origin of coordinates is in the top-right corner of the video, and the origin of the watermark is in the top-right corner of the image or text;</li>
-<li>BottomLeft: the origin of coordinates is in the bottom-left corner of the video, and the origin of the watermark is in the bottom-left corner of the image or text;</li>
-<li>BottomRight: the origin of coordinates is in the bottom-right corner of the video, and the origin of the watermark is in the bottom-right corner of the image or text.</li>
+<li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
+<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
      * @param CoordinateOrigin Origin position. Valid values:
-<li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the watermark is in the top-left corner of the image or text;</li>
-<li>TopRight: the origin of coordinates is in the top-right corner of the video, and the origin of the watermark is in the top-right corner of the image or text;</li>
-<li>BottomLeft: the origin of coordinates is in the bottom-left corner of the video, and the origin of the watermark is in the bottom-left corner of the image or text;</li>
-<li>BottomRight: the origin of coordinates is in the bottom-right corner of the video, and the origin of the watermark is in the bottom-right corner of the image or text.</li>
+<li>TopLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>TopRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>BottomLeft: indicates that the coordinate origin is at the bottom left corner of the video image and the watermark origin is at the bottom left corner of the image or text.</li>
+<li>BottomRight: indicates that the coordinate origin is at the bottom right corner of the video image and the watermark origin is at the bottom right corner of the image or text.</li>
      */
     public void setCoordinateOrigin(String CoordinateOrigin) {
         this.CoordinateOrigin = CoordinateOrigin;
     }
 
     /**
-     * Get The horizontal position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
-<li>If the string ends in %, the `XPos` of the watermark will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
-<li>If the string ends in px, the `XPos` of the watermark will be the specified px; for example, `100px` means that `XPos` is 100 px.</li> 
-     * @return XPos The horizontal position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
-<li>If the string ends in %, the `XPos` of the watermark will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
-<li>If the string ends in px, the `XPos` of the watermark will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
+     * Get The horizontal position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
+<li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark XPos is specified in pixels, for example, 100px means the XPos is 100 pixels.</li> 
+     * @return XPos The horizontal position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
+<li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark XPos is specified in pixels, for example, 100px means the XPos is 100 pixels.</li>
      */
     public String getXPos() {
         return this.XPos;
     }
 
     /**
-     * Set The horizontal position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
-<li>If the string ends in %, the `XPos` of the watermark will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
-<li>If the string ends in px, the `XPos` of the watermark will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
-     * @param XPos The horizontal position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
-<li>If the string ends in %, the `XPos` of the watermark will be the specified percentage of the video width; for example, `10%` means that `XPos` is 10% of the video width;</li>
-<li>If the string ends in px, the `XPos` of the watermark will be the specified px; for example, `100px` means that `XPos` is 100 px.</li>
+     * Set The horizontal position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
+<li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark XPos is specified in pixels, for example, 100px means the XPos is 100 pixels.</li>
+     * @param XPos The horizontal position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
+<li>If a string ends with %, it indicates that the `XPos` of a watermark is a specified percentage of a video's width. For example, `10%` means that `XPos` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark XPos is specified in pixels, for example, 100px means the XPos is 100 pixels.</li>
      */
     public void setXPos(String XPos) {
         this.XPos = XPos;
     }
 
     /**
-     * Get The vertical position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
-<li>If the string ends in %, the `YPos` of the watermark will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
-<li>If the string ends in px, the `YPos` of the watermark will be the specified px; for example, `100px` means that `YPos` is 100 px.</li> 
-     * @return YPos The vertical position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
-<li>If the string ends in %, the `YPos` of the watermark will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
-<li>If the string ends in px, the `YPos` of the watermark will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
+     * Get Vertical position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark YPos is specified in pixels, for example, 100px means YPos is 100 pixels.</li> 
+     * @return YPos Vertical position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark YPos is specified in pixels, for example, 100px means YPos is 100 pixels.</li>
      */
     public String getYPos() {
         return this.YPos;
     }
 
     /**
-     * Set The vertical position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
-<li>If the string ends in %, the `YPos` of the watermark will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
-<li>If the string ends in px, the `YPos` of the watermark will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
-     * @param YPos The vertical position of the origin of the watermark relative to the origin of coordinates of the video. % and px formats are supported:
-<li>If the string ends in %, the `YPos` of the watermark will be the specified percentage of the video height; for example, `10%` means that `YPos` is 10% of the video height;</li>
-<li>If the string ends in px, the `YPos` of the watermark will be the specified px; for example, `100px` means that `YPos` is 100 px.</li>
+     * Set Vertical position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark YPos is specified in pixels, for example, 100px means YPos is 100 pixels.</li>
+     * @param YPos Vertical position of the watermark origin from the origin of coordinates of the video image. Support two formats: % and px.
+<li>If a string ends with %, it indicates that the `YPos` of a watermark is a specified percentage of a video's height. For example, `10%` means that `YPos` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark YPos is specified in pixels, for example, 100px means YPos is 100 pixels.</li>
      */
     public void setYPos(String YPos) {
         this.YPos = YPos;
     }
 
     /**
-     * Get Image watermarking template. This field is valid only for image watermarking templates. 
-     * @return ImageTemplate Image watermarking template. This field is valid only for image watermarking templates.
+     * Get Image watermark template. This field is only applicable to image watermark templates. 
+     * @return ImageTemplate Image watermark template. This field is only applicable to image watermark templates.
      */
     public ImageWatermarkInputForUpdate getImageTemplate() {
         return this.ImageTemplate;
     }
 
     /**
-     * Set Image watermarking template. This field is valid only for image watermarking templates.
-     * @param ImageTemplate Image watermarking template. This field is valid only for image watermarking templates.
+     * Set Image watermark template. This field is only applicable to image watermark templates.
+     * @param ImageTemplate Image watermark template. This field is only applicable to image watermark templates.
      */
     public void setImageTemplate(ImageWatermarkInputForUpdate ImageTemplate) {
         this.ImageTemplate = ImageTemplate;
     }
 
     /**
-     * Get Text watermarking template. This field is valid only for text watermarking templates. 
-     * @return TextTemplate Text watermarking template. This field is valid only for text watermarking templates.
+     * Get Text watermarking template. This field is only applicable to text watermarking templates. 
+     * @return TextTemplate Text watermarking template. This field is only applicable to text watermarking templates.
      */
     public TextWatermarkTemplateInputForUpdate getTextTemplate() {
         return this.TextTemplate;
     }
 
     /**
-     * Set Text watermarking template. This field is valid only for text watermarking templates.
-     * @param TextTemplate Text watermarking template. This field is valid only for text watermarking templates.
+     * Set Text watermarking template. This field is only applicable to text watermarking templates.
+     * @param TextTemplate Text watermarking template. This field is only applicable to text watermarking templates.
      */
     public void setTextTemplate(TextWatermarkTemplateInputForUpdate TextTemplate) {
         this.TextTemplate = TextTemplate;
     }
 
     /**
-     * Get SVG watermarking template. This field is only valid for SVG watermarking templates. 
-     * @return SvgTemplate SVG watermarking template. This field is only valid for SVG watermarking templates.
+     * Get SVG watermark template. This field is only applicable to SVG watermark templates. 
+     * @return SvgTemplate SVG watermark template. This field is only applicable to SVG watermark templates.
      */
     public SvgWatermarkInputForUpdate getSvgTemplate() {
         return this.SvgTemplate;
     }
 
     /**
-     * Set SVG watermarking template. This field is only valid for SVG watermarking templates.
-     * @param SvgTemplate SVG watermarking template. This field is only valid for SVG watermarking templates.
+     * Set SVG watermark template. This field is only applicable to SVG watermark templates.
+     * @param SvgTemplate SVG watermark template. This field is only applicable to SVG watermark templates.
      */
     public void setSvgTemplate(SvgWatermarkInputForUpdate SvgTemplate) {
         this.SvgTemplate = SvgTemplate;

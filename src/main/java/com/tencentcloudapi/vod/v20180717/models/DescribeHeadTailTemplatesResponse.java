@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeHeadTailTemplatesResponse extends AbstractModel {
 
     /**
-    * The total number of records matching the filter criteria.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Head Tail Template Details.
+    * Header and trailer template detail list.
     */
     @SerializedName("HeadTailTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeHeadTailTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The total number of records matching the filter criteria. 
-     * @return TotalCount The total number of records matching the filter criteria.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The total number of records matching the filter criteria.
-     * @param TotalCount The total number of records matching the filter criteria.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Head Tail Template Details. 
-     * @return HeadTailTemplateSet Head Tail Template Details.
+     * Get Header and trailer template detail list. 
+     * @return HeadTailTemplateSet Header and trailer template detail list.
      */
     public HeadTailTemplate [] getHeadTailTemplateSet() {
         return this.HeadTailTemplateSet;
     }
 
     /**
-     * Set Head Tail Template Details.
-     * @param HeadTailTemplateSet Head Tail Template Details.
+     * Set Header and trailer template detail list.
+     * @param HeadTailTemplateSet Header and trailer template detail list.
      */
     public void setHeadTailTemplateSet(HeadTailTemplate [] HeadTailTemplateSet) {
         this.HeadTailTemplateSet = HeadTailTemplateSet;

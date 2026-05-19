@@ -24,24 +24,21 @@ import java.util.HashMap;
 public class DescribeCdnLogsResponse extends AbstractModel {
 
     /**
-    * Total number of log download links
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * <p>Total number of log download links.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Log download list for CDN nodes outside Mainland China. If global acceleration is not enabled for the domain name, ignore this parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
     */
     @SerializedName("OverseaCdnLogs")
     @Expose
     private CdnLogInfo [] OverseaCdnLogs;
 
     /**
-    * Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * <p>Log Download List of Domestic CDN Nodes.</p>
     */
     @SerializedName("DomesticCdnLogs")
     @Expose
@@ -55,60 +52,48 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Total number of log download links
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return TotalCount Total number of log download links
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get <p>Total number of log download links.</p> 
+     * @return TotalCount <p>Total number of log download links.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of log download links
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param TotalCount Total number of log download links
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set <p>Total number of log download links.</p>
+     * @param TotalCount <p>Total number of log download links.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Log download list for CDN nodes outside Mainland China. If global acceleration is not enabled for the domain name, ignore this parameter.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OverseaCdnLogs Log download list for CDN nodes outside Mainland China. If global acceleration is not enabled for the domain name, ignore this parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p> 
+     * @return OverseaCdnLogs <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
      */
     public CdnLogInfo [] getOverseaCdnLogs() {
         return this.OverseaCdnLogs;
     }
 
     /**
-     * Set Log download list for CDN nodes outside Mainland China. If global acceleration is not enabled for the domain name, ignore this parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OverseaCdnLogs Log download list for CDN nodes outside Mainland China. If global acceleration is not enabled for the domain name, ignore this parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
+     * @param OverseaCdnLogs <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
      */
     public void setOverseaCdnLogs(CdnLogInfo [] OverseaCdnLogs) {
         this.OverseaCdnLogs = OverseaCdnLogs;
     }
 
     /**
-     * Get Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return DomesticCdnLogs Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get <p>Log Download List of Domestic CDN Nodes.</p> 
+     * @return DomesticCdnLogs <p>Log Download List of Domestic CDN Nodes.</p>
      */
     public CdnLogInfo [] getDomesticCdnLogs() {
         return this.DomesticCdnLogs;
     }
 
     /**
-     * Set Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DomesticCdnLogs Log download list for CDN nodes in Mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set <p>Log Download List of Domestic CDN Nodes.</p>
+     * @param DomesticCdnLogs <p>Log Download List of Domestic CDN Nodes.</p>
      */
     public void setDomesticCdnLogs(CdnLogInfo [] DomesticCdnLogs) {
         this.DomesticCdnLogs = DomesticCdnLogs;

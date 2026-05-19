@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class RebuildAudioInfo extends AbstractModel {
 
     /**
-    * The noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Audio noise reduction control parameters.
     */
     @SerializedName("AudioDenoiseInfo")
     @Expose
     private AudioDenoiseInfo AudioDenoiseInfo;
 
     /**
-     * Get The noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return AudioDenoiseInfo The noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Audio noise reduction control parameters. 
+     * @return AudioDenoiseInfo Audio noise reduction control parameters.
      */
     public AudioDenoiseInfo getAudioDenoiseInfo() {
         return this.AudioDenoiseInfo;
     }
 
     /**
-     * Set The noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AudioDenoiseInfo The noise removal parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Audio noise reduction control parameters.
+     * @param AudioDenoiseInfo Audio noise reduction control parameters.
      */
     public void setAudioDenoiseInfo(AudioDenoiseInfo AudioDenoiseInfo) {
         this.AudioDenoiseInfo = AudioDenoiseInfo;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAIAnalysisTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Unique ID filter of video content analysis templates. Array length limit: 100.
+    * Filter condition for the unique identifier of the audio and video content analysis template. The maximum array length is 100.
     */
     @SerializedName("Definitions")
     @Expose
@@ -52,32 +52,32 @@ public class DescribeAIAnalysisTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Unique ID filter of video content analysis templates. Array length limit: 100. 
-     * @return Definitions Unique ID filter of video content analysis templates. Array length limit: 100.
+     * Get Filter condition for the unique identifier of the audio and video content analysis template. The maximum array length is 100. 
+     * @return Definitions Filter condition for the unique identifier of the audio and video content analysis template. The maximum array length is 100.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Unique ID filter of video content analysis templates. Array length limit: 100.
-     * @param Definitions Unique ID filter of video content analysis templates. Array length limit: 100.
+     * Set Filter condition for the unique identifier of the audio and video content analysis template. The maximum array length is 100.
+     * @param Definitions Filter condition for the unique identifier of the audio and video content analysis template. The maximum array length is 100.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;

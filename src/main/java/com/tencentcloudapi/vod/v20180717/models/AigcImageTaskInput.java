@@ -24,187 +24,233 @@ import java.util.HashMap;
 public class AigcImageTaskInput extends AbstractModel {
 
     /**
-    * Model name.
+    * <p>Model name.</p>
     */
     @SerializedName("ModelName")
     @Expose
     private String ModelName;
 
     /**
-    * Model version.
+    * <p>Model version.</p>
     */
     @SerializedName("ModelVersion")
     @Expose
     private String ModelVersion;
 
     /**
-    * Input file of the AIGC image generation task.
+    * <p>File information for AIGC image generation task input.</p>
     */
     @SerializedName("FileInfos")
     @Expose
     private AigcImageTaskInputFileInfo [] FileInfos;
 
     /**
-    * Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
+    * <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
     */
     @SerializedName("Prompt")
     @Expose
     private String Prompt;
 
     /**
-    * To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
+    * <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
     */
     @SerializedName("NegativePrompt")
     @Expose
     private String NegativePrompt;
 
     /**
-    * Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
+    * <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
     */
     @SerializedName("EnhancePrompt")
     @Expose
     private String EnhancePrompt;
 
     /**
-    * Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
+    * <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
     */
     @SerializedName("GenerationMode")
     @Expose
     private String GenerationMode;
 
     /**
-    * Output the result file of the AIGC image generation.
+    * <p>Output result file for AIGC image generation.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
     private AigcImageOutputConfig OutputConfig;
 
     /**
-     * Get Model name. 
-     * @return ModelName Model name.
+    * <p>Random seed of the model.</p>
+    */
+    @SerializedName("Seed")
+    @Expose
+    private Long Seed;
+
+    /**
+    * <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
+    */
+    @SerializedName("SceneType")
+    @Expose
+    private String SceneType;
+
+    /**
+     * Get <p>Model name.</p> 
+     * @return ModelName <p>Model name.</p>
      */
     public String getModelName() {
         return this.ModelName;
     }
 
     /**
-     * Set Model name.
-     * @param ModelName Model name.
+     * Set <p>Model name.</p>
+     * @param ModelName <p>Model name.</p>
      */
     public void setModelName(String ModelName) {
         this.ModelName = ModelName;
     }
 
     /**
-     * Get Model version. 
-     * @return ModelVersion Model version.
+     * Get <p>Model version.</p> 
+     * @return ModelVersion <p>Model version.</p>
      */
     public String getModelVersion() {
         return this.ModelVersion;
     }
 
     /**
-     * Set Model version.
-     * @param ModelVersion Model version.
+     * Set <p>Model version.</p>
+     * @param ModelVersion <p>Model version.</p>
      */
     public void setModelVersion(String ModelVersion) {
         this.ModelVersion = ModelVersion;
     }
 
     /**
-     * Get Input file of the AIGC image generation task. 
-     * @return FileInfos Input file of the AIGC image generation task.
+     * Get <p>File information for AIGC image generation task input.</p> 
+     * @return FileInfos <p>File information for AIGC image generation task input.</p>
      */
     public AigcImageTaskInputFileInfo [] getFileInfos() {
         return this.FileInfos;
     }
 
     /**
-     * Set Input file of the AIGC image generation task.
-     * @param FileInfos Input file of the AIGC image generation task.
+     * Set <p>File information for AIGC image generation task input.</p>
+     * @param FileInfos <p>File information for AIGC image generation task input.</p>
      */
     public void setFileInfos(AigcImageTaskInputFileInfo [] FileInfos) {
         this.FileInfos = FileInfos;
     }
 
     /**
-     * Get Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty. 
-     * @return Prompt Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
+     * Get <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p> 
+     * @return Prompt <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
      */
     public String getPrompt() {
         return this.Prompt;
     }
 
     /**
-     * Set Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
-     * @param Prompt Prompt for image generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.
+     * Set <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+     * @param Prompt <p>Prompt for image generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
      */
     public void setPrompt(String Prompt) {
         this.Prompt = Prompt;
     }
 
     /**
-     * Get To prevent the model from generating image prompts. Supports a maximum of 1000 characters. 
-     * @return NegativePrompt To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
+     * Get <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p> 
+     * @return NegativePrompt <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
      */
     public String getNegativePrompt() {
         return this.NegativePrompt;
     }
 
     /**
-     * Set To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
-     * @param NegativePrompt To prevent the model from generating image prompts. Supports a maximum of 1000 characters.
+     * Set <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
+     * @param NegativePrompt <p>To prevent the model from generating images, set a prompt. Supports a maximum of 1000 characters.</p>
      */
     public void setNegativePrompt(String NegativePrompt) {
         this.NegativePrompt = NegativePrompt;
     }
 
     /**
-     * Get Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
-     * @return EnhancePrompt Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
+     * Get <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p> 
+     * @return EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public String getEnhancePrompt() {
         return this.EnhancePrompt;
     }
 
     /**
-     * Set Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
-     * @param EnhancePrompt Whether to optimize prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li>
+     * Set <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @param EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public void setEnhancePrompt(String EnhancePrompt) {
         this.EnhancePrompt = EnhancePrompt;
     }
 
     /**
-     * Get Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li> 
-     * @return GenerationMode Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
+     * Get <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p> 
+     * @return GenerationMode <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
      */
     public String getGenerationMode() {
         return this.GenerationMode;
     }
 
     /**
-     * Set Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
-     * @param GenerationMode Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li>
+     * Set <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
+     * @param GenerationMode <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
      */
     public void setGenerationMode(String GenerationMode) {
         this.GenerationMode = GenerationMode;
     }
 
     /**
-     * Get Output the result file of the AIGC image generation. 
-     * @return OutputConfig Output the result file of the AIGC image generation.
+     * Get <p>Output result file for AIGC image generation.</p> 
+     * @return OutputConfig <p>Output result file for AIGC image generation.</p>
      */
     public AigcImageOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set Output the result file of the AIGC image generation.
-     * @param OutputConfig Output the result file of the AIGC image generation.
+     * Set <p>Output result file for AIGC image generation.</p>
+     * @param OutputConfig <p>Output result file for AIGC image generation.</p>
      */
     public void setOutputConfig(AigcImageOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
+    }
+
+    /**
+     * Get <p>Random seed of the model.</p> 
+     * @return Seed <p>Random seed of the model.</p>
+     */
+    public Long getSeed() {
+        return this.Seed;
+    }
+
+    /**
+     * Set <p>Random seed of the model.</p>
+     * @param Seed <p>Random seed of the model.</p>
+     */
+    public void setSeed(Long Seed) {
+        this.Seed = Seed;
+    }
+
+    /**
+     * Get <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p> 
+     * @return SceneType <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
+     */
+    public String getSceneType() {
+        return this.SceneType;
+    }
+
+    /**
+     * Set <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
+     * @param SceneType <p>Scenario type. Values as follows: <li>When ModelName is Hunyuan: 3d_panorama means Panoramic View;</li> <li>Other ModelName is not currently supported.</li></p>
+     */
+    public void setSceneType(String SceneType) {
+        this.SceneType = SceneType;
     }
 
     public AigcImageTaskInput() {
@@ -242,6 +288,12 @@ public class AigcImageTaskInput extends AbstractModel {
         if (source.OutputConfig != null) {
             this.OutputConfig = new AigcImageOutputConfig(source.OutputConfig);
         }
+        if (source.Seed != null) {
+            this.Seed = new Long(source.Seed);
+        }
+        if (source.SceneType != null) {
+            this.SceneType = new String(source.SceneType);
+        }
     }
 
 
@@ -257,6 +309,8 @@ public class AigcImageTaskInput extends AbstractModel {
         this.setParamSimple(map, prefix + "EnhancePrompt", this.EnhancePrompt);
         this.setParamSimple(map, prefix + "GenerationMode", this.GenerationMode);
         this.setParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
+        this.setParamSimple(map, prefix + "Seed", this.Seed);
+        this.setParamSimple(map, prefix + "SceneType", this.SceneType);
 
     }
 }

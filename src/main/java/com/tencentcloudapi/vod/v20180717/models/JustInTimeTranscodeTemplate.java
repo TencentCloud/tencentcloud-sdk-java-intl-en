@@ -46,15 +46,13 @@ public class JustInTimeTranscodeTemplate extends AbstractModel {
 
     /**
     * Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("VideoConfigure")
     @Expose
     private VideoConfigureInfo VideoConfigure;
 
     /**
-    * Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Watermark parameter configuration.
     */
     @SerializedName("WatermarkConfigure")
     @Expose
@@ -109,10 +107,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Video parameter configuration. 
      * @return VideoConfigure Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public VideoConfigureInfo getVideoConfigure() {
         return this.VideoConfigure;
@@ -120,9 +116,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param VideoConfigure Video parameter configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setVideoConfigure(VideoConfigureInfo VideoConfigure) {
         this.VideoConfigure = VideoConfigure;
@@ -130,19 +124,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Get Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return WatermarkConfigure Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * @return WatermarkConfigure Watermark parameter configuration.
      */
     public WatermarkConfigureData getWatermarkConfigure() {
         return this.WatermarkConfigure;
     }
 
     /**
-     * Set Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param WatermarkConfigure Watermark parameter configuration. 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Watermark parameter configuration.
+     * @param WatermarkConfigure Watermark parameter configuration.
      */
     public void setWatermarkConfigure(WatermarkConfigureData WatermarkConfigure) {
         this.WatermarkConfigure = WatermarkConfigure;

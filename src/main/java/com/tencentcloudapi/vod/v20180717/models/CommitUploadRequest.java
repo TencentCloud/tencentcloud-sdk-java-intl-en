@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CommitUploadRequest extends AbstractModel {
 
     /**
-    * VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
+    * <p>VOD session takes the returned value VodSessionKey from the upload request API.</p>
     */
     @SerializedName("VodSessionKey")
     @Expose
     private String VodSessionKey;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API. 
-     * @return VodSessionKey VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
+     * Get <p>VOD session takes the returned value VodSessionKey from the upload request API.</p> 
+     * @return VodSessionKey <p>VOD session takes the returned value VodSessionKey from the upload request API.</p>
      */
     public String getVodSessionKey() {
         return this.VodSessionKey;
     }
 
     /**
-     * Set VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
-     * @param VodSessionKey VOD session, which takes the returned value (VodSessionKey) of the `ApplyUpload` API.
+     * Set <p>VOD session takes the returned value VodSessionKey from the upload request API.</p>
+     * @param VodSessionKey <p>VOD session takes the returned value VodSessionKey from the upload request API.</p>
      */
     public void setVodSessionKey(String VodSessionKey) {
         this.VodSessionKey = VodSessionKey;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

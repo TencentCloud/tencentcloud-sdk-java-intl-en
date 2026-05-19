@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeTasksResponse extends AbstractModel {
 
     /**
-    * Task overview list.
+    * Task summary list.
     */
     @SerializedName("TaskSet")
     @Expose
     private TaskSimpleInfo [] TaskSet;
 
     /**
-    * Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.
+    * Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data.
     */
     @SerializedName("ScrollToken")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeTasksResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task overview list. 
-     * @return TaskSet Task overview list.
+     * Get Task summary list. 
+     * @return TaskSet Task summary list.
      */
     public TaskSimpleInfo [] getTaskSet() {
         return this.TaskSet;
     }
 
     /**
-     * Set Task overview list.
-     * @param TaskSet Task overview list.
+     * Set Task summary list.
+     * @param TaskSet Task summary list.
      */
     public void setTaskSet(TaskSimpleInfo [] TaskSet) {
         this.TaskSet = TaskSet;
     }
 
     /**
-     * Get Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data. 
-     * @return ScrollToken Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.
+     * Get Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data. 
+     * @return ScrollToken Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data.
      */
     public String getScrollToken() {
         return this.ScrollToken;
     }
 
     /**
-     * Set Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.
-     * @param ScrollToken Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.
+     * Set Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data.
+     * @param ScrollToken Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data.
      */
     public void setScrollToken(String ScrollToken) {
         this.ScrollToken = ScrollToken;

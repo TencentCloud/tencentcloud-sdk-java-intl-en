@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeCDNUsageDataResponse extends AbstractModel {
 
     /**
-    * Time granularity in minutes.
+    * Time granularity, unit: minute.
     */
     @SerializedName("DataInterval")
     @Expose
@@ -45,16 +45,16 @@ public class DescribeCDNUsageDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Time granularity in minutes. 
-     * @return DataInterval Time granularity in minutes.
+     * Get Time granularity, unit: minute. 
+     * @return DataInterval Time granularity, unit: minute.
      */
     public Long getDataInterval() {
         return this.DataInterval;
     }
 
     /**
-     * Set Time granularity in minutes.
-     * @param DataInterval Time granularity in minutes.
+     * Set Time granularity, unit: minute.
+     * @param DataInterval Time granularity, unit: minute.
      */
     public void setDataInterval(Long DataInterval) {
         this.DataInterval = DataInterval;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ProcessMediaByProcedureResponse extends AbstractModel {
 
     /**
-    * The task ID for the task type `Procedure`, if the task flow specified by `ProcedureName` includes one or more of `MediaProcessTask`, `AiAnalysisTask`, `AiRecognitionTask`, the task specified by this parameter will be executed.
+    * Task ID of the task type Procedure. Initiate the task when the task flow template specification corresponding to the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * The task ID for the task type `ReviewAudioVideo`, if the task flow specified by `ProcedureName` includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+    * Task ID of the task with the ReviewAudioVideo task type. The task is initiated when the task flow template specified by the ProcedureName input parameter includes the ReviewAudioVideoTask.
     */
     @SerializedName("ReviewAudioVideoTaskId")
     @Expose
@@ -45,32 +45,32 @@ public class ProcessMediaByProcedureResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The task ID for the task type `Procedure`, if the task flow specified by `ProcedureName` includes one or more of `MediaProcessTask`, `AiAnalysisTask`, `AiRecognitionTask`, the task specified by this parameter will be executed. 
-     * @return TaskId The task ID for the task type `Procedure`, if the task flow specified by `ProcedureName` includes one or more of `MediaProcessTask`, `AiAnalysisTask`, `AiRecognitionTask`, the task specified by this parameter will be executed.
+     * Get Task ID of the task type Procedure. Initiate the task when the task flow template specification corresponding to the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask. 
+     * @return TaskId Task ID of the task type Procedure. Initiate the task when the task flow template specification corresponding to the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The task ID for the task type `Procedure`, if the task flow specified by `ProcedureName` includes one or more of `MediaProcessTask`, `AiAnalysisTask`, `AiRecognitionTask`, the task specified by this parameter will be executed.
-     * @param TaskId The task ID for the task type `Procedure`, if the task flow specified by `ProcedureName` includes one or more of `MediaProcessTask`, `AiAnalysisTask`, `AiRecognitionTask`, the task specified by this parameter will be executed.
+     * Set Task ID of the task type Procedure. Initiate the task when the task flow template specification corresponding to the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.
+     * @param TaskId Task ID of the task type Procedure. Initiate the task when the task flow template specification corresponding to the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get The task ID for the task type `ReviewAudioVideo`, if the task flow specified by `ProcedureName` includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed. 
-     * @return ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`, if the task flow specified by `ProcedureName` includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     * Get Task ID of the task with the ReviewAudioVideo task type. The task is initiated when the task flow template specified by the ProcedureName input parameter includes the ReviewAudioVideoTask. 
+     * @return ReviewAudioVideoTaskId Task ID of the task with the ReviewAudioVideo task type. The task is initiated when the task flow template specified by the ProcedureName input parameter includes the ReviewAudioVideoTask.
      */
     public String getReviewAudioVideoTaskId() {
         return this.ReviewAudioVideoTaskId;
     }
 
     /**
-     * Set The task ID for the task type `ReviewAudioVideo`, if the task flow specified by `ProcedureName` includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
-     * @param ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`, if the task flow specified by `ProcedureName` includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     * Set Task ID of the task with the ReviewAudioVideo task type. The task is initiated when the task flow template specified by the ProcedureName input parameter includes the ReviewAudioVideoTask.
+     * @param ReviewAudioVideoTaskId Task ID of the task with the ReviewAudioVideo task type. The task is initiated when the task flow template specified by the ProcedureName input parameter includes the ReviewAudioVideoTask.
      */
     public void setReviewAudioVideoTaskId(String ReviewAudioVideoTaskId) {
         this.ReviewAudioVideoTaskId = ReviewAudioVideoTaskId;

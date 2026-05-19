@@ -52,8 +52,7 @@ public class CDNDomainInfo extends AbstractModel {
     private String CreateTime;
 
     /**
-    * CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
+    * cdn domain configuration information.
     */
     @SerializedName("Config")
     @Expose
@@ -124,20 +123,16 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Config CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get cdn domain configuration information. 
+     * @return Config cdn domain configuration information.
      */
     public CDNDomainConfig getConfig() {
         return this.Config;
     }
 
     /**
-     * Set CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Config CDN domain name configuration information. 
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set cdn domain configuration information.
+     * @param Config cdn domain configuration information.
      */
     public void setConfig(CDNDomainConfig Config) {
         this.Config = Config;

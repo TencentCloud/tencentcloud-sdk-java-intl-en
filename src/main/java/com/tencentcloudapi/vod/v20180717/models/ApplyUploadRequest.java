@@ -24,286 +24,276 @@ import java.util.HashMap;
 public class ApplyUploadRequest extends AbstractModel {
 
     /**
-    * Media type. For available values, refer to [Upload Capability Summary](https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
+    * <p>Media type. For the value range, refer to <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
     */
     @SerializedName("MediaType")
     @Expose
     private String MediaType;
 
     /**
-    * <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Media name.
+    * <p>Media name.</p>
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * Cover Type. For available values, refer to [Upload Capability Summary](https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
+    * <p>Cover Type. For available values, refer to <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
     */
     @SerializedName("CoverType")
     @Expose
     private String CoverType;
 
     /**
-    * Subsequent media task processing operations allow automatic task initiation after media upload is completed. The parameter value is the task flow template name. VOD supports [creating a task flow template](https://www.tencentcloud.com/document/product/266/33819?from_cn_redirect=1) and template naming.
+    * <p>Subsequent media task processing operations allow automatic task initiation after media upload completion. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819?from_cn_redirect=1">creating a task flow template</a> and template naming.</p>
     */
     @SerializedName("Procedure")
     @Expose
     private String Procedure;
 
     /**
-    * Media file expiry time, format according to ISO 8601 standard representation. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F) for details.
+    * <p>The media file expiry time, format according to ISO 8601. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Designated upload park, applicable only to the user with special requirement for upload target region.
+    * <p>Designate the upload park, applicable only to the user with special requirement for upload target region.</p>
     */
     @SerializedName("StorageRegion")
     @Expose
     private String StorageRegion;
 
     /**
-    * Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, indicating other categories.</li>
+    * <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * Source context, used to pass through user request information. The [callback on upload completion](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) will return the value of this field, up to 250 characters.
+    * <p>Source context, used to pass through user request information. The <a href="/document/product/266/7830?from_cn_redirect=1">callback on upload completion</a> will return the value of this field, up to 250 characters.</p>
     */
     @SerializedName("SourceContext")
     @Expose
     private String SourceContext;
 
     /**
-    * Session context, used for passing through user request information. When specifying the Procedure parameter, the [task flow status change callback](https://www.tencentcloud.com/document/product/266/9636?from_cn_redirect=1) will return the value of this field, with a maximum of 1000 characters.
+    * <p>Session context, used to pass through user request information. When specifying the Procedure parameter, the <a href="/document/product/266/9636?from_cn_redirect=1">task flow status change callback</a> will return the value of this field, up to 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * Reserved field, used when special purpose.
+    * <p>Reserved field, used when special purpose.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-    * Media storage path, starting with /.
-Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can specify the storage path.
+    * <p>Media storage path, starting with /. <br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify the storage path.</p>
     */
     @SerializedName("MediaStoragePath")
     @Expose
     private String MediaStoragePath;
 
     /**
-     * Get Media type. For available values, refer to [Upload Capability Summary](https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B). 
-     * @return MediaType Media type. For available values, refer to [Upload Capability Summary](https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
+     * Get <p>Media type. For the value range, refer to <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p> 
+     * @return MediaType <p>Media type. For the value range, refer to <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
      */
     public String getMediaType() {
         return this.MediaType;
     }
 
     /**
-     * Set Media type. For available values, refer to [Upload Capability Summary](https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
-     * @param MediaType Media type. For available values, refer to [Upload Capability Summary](https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
+     * Set <p>Media type. For the value range, refer to <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
+     * @param MediaType <p>Media type. For the value range, refer to <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
      */
     public void setMediaType(String MediaType) {
         this.MediaType = MediaType;
     }
 
     /**
-     * Get <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p> 
+     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+     * @param SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Media name. 
-     * @return MediaName Media name.
+     * Get <p>Media name.</p> 
+     * @return MediaName <p>Media name.</p>
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Media name.
-     * @param MediaName Media name.
+     * Set <p>Media name.</p>
+     * @param MediaName <p>Media name.</p>
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get Cover Type. For available values, refer to [Upload Capability Summary](https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B). 
-     * @return CoverType Cover Type. For available values, refer to [Upload Capability Summary](https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
+     * Get <p>Cover Type. For available values, refer to <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p> 
+     * @return CoverType <p>Cover Type. For available values, refer to <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
      */
     public String getCoverType() {
         return this.CoverType;
     }
 
     /**
-     * Set Cover Type. For available values, refer to [Upload Capability Summary](https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
-     * @param CoverType Cover Type. For available values, refer to [Upload Capability Summary](https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B).
+     * Set <p>Cover Type. For available values, refer to <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
+     * @param CoverType <p>Cover Type. For available values, refer to <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
      */
     public void setCoverType(String CoverType) {
         this.CoverType = CoverType;
     }
 
     /**
-     * Get Subsequent media task processing operations allow automatic task initiation after media upload is completed. The parameter value is the task flow template name. VOD supports [creating a task flow template](https://www.tencentcloud.com/document/product/266/33819?from_cn_redirect=1) and template naming. 
-     * @return Procedure Subsequent media task processing operations allow automatic task initiation after media upload is completed. The parameter value is the task flow template name. VOD supports [creating a task flow template](https://www.tencentcloud.com/document/product/266/33819?from_cn_redirect=1) and template naming.
+     * Get <p>Subsequent media task processing operations allow automatic task initiation after media upload completion. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819?from_cn_redirect=1">creating a task flow template</a> and template naming.</p> 
+     * @return Procedure <p>Subsequent media task processing operations allow automatic task initiation after media upload completion. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819?from_cn_redirect=1">creating a task flow template</a> and template naming.</p>
      */
     public String getProcedure() {
         return this.Procedure;
     }
 
     /**
-     * Set Subsequent media task processing operations allow automatic task initiation after media upload is completed. The parameter value is the task flow template name. VOD supports [creating a task flow template](https://www.tencentcloud.com/document/product/266/33819?from_cn_redirect=1) and template naming.
-     * @param Procedure Subsequent media task processing operations allow automatic task initiation after media upload is completed. The parameter value is the task flow template name. VOD supports [creating a task flow template](https://www.tencentcloud.com/document/product/266/33819?from_cn_redirect=1) and template naming.
+     * Set <p>Subsequent media task processing operations allow automatic task initiation after media upload completion. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819?from_cn_redirect=1">creating a task flow template</a> and template naming.</p>
+     * @param Procedure <p>Subsequent media task processing operations allow automatic task initiation after media upload completion. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819?from_cn_redirect=1">creating a task flow template</a> and template naming.</p>
      */
     public void setProcedure(String Procedure) {
         this.Procedure = Procedure;
     }
 
     /**
-     * Get Media file expiry time, format according to ISO 8601 standard representation. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F) for details. 
-     * @return ExpireTime Media file expiry time, format according to ISO 8601 standard representation. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F) for details.
+     * Get <p>The media file expiry time, format according to ISO 8601. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p> 
+     * @return ExpireTime <p>The media file expiry time, format according to ISO 8601. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Media file expiry time, format according to ISO 8601 standard representation. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F) for details.
-     * @param ExpireTime Media file expiry time, format according to ISO 8601 standard representation. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F) for details.
+     * Set <p>The media file expiry time, format according to ISO 8601. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
+     * @param ExpireTime <p>The media file expiry time, format according to ISO 8601. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Designated upload park, applicable only to the user with special requirement for upload target region. 
-     * @return StorageRegion Designated upload park, applicable only to the user with special requirement for upload target region.
+     * Get <p>Designate the upload park, applicable only to the user with special requirement for upload target region.</p> 
+     * @return StorageRegion <p>Designate the upload park, applicable only to the user with special requirement for upload target region.</p>
      */
     public String getStorageRegion() {
         return this.StorageRegion;
     }
 
     /**
-     * Set Designated upload park, applicable only to the user with special requirement for upload target region.
-     * @param StorageRegion Designated upload park, applicable only to the user with special requirement for upload target region.
+     * Set <p>Designate the upload park, applicable only to the user with special requirement for upload target region.</p>
+     * @param StorageRegion <p>Designate the upload park, applicable only to the user with special requirement for upload target region.</p>
      */
     public void setStorageRegion(String StorageRegion) {
         this.StorageRegion = StorageRegion;
     }
 
     /**
-     * Get Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, indicating other categories.</li> 
-     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, indicating other categories.</li>
+     * Get <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li> 
+     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, indicating other categories.</li>
-     * @param ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, indicating other categories.</li>
+     * Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+     * @param ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get Source context, used to pass through user request information. The [callback on upload completion](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) will return the value of this field, up to 250 characters. 
-     * @return SourceContext Source context, used to pass through user request information. The [callback on upload completion](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) will return the value of this field, up to 250 characters.
+     * Get <p>Source context, used to pass through user request information. The <a href="/document/product/266/7830?from_cn_redirect=1">callback on upload completion</a> will return the value of this field, up to 250 characters.</p> 
+     * @return SourceContext <p>Source context, used to pass through user request information. The <a href="/document/product/266/7830?from_cn_redirect=1">callback on upload completion</a> will return the value of this field, up to 250 characters.</p>
      */
     public String getSourceContext() {
         return this.SourceContext;
     }
 
     /**
-     * Set Source context, used to pass through user request information. The [callback on upload completion](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) will return the value of this field, up to 250 characters.
-     * @param SourceContext Source context, used to pass through user request information. The [callback on upload completion](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) will return the value of this field, up to 250 characters.
+     * Set <p>Source context, used to pass through user request information. The <a href="/document/product/266/7830?from_cn_redirect=1">callback on upload completion</a> will return the value of this field, up to 250 characters.</p>
+     * @param SourceContext <p>Source context, used to pass through user request information. The <a href="/document/product/266/7830?from_cn_redirect=1">callback on upload completion</a> will return the value of this field, up to 250 characters.</p>
      */
     public void setSourceContext(String SourceContext) {
         this.SourceContext = SourceContext;
     }
 
     /**
-     * Get Session context, used for passing through user request information. When specifying the Procedure parameter, the [task flow status change callback](https://www.tencentcloud.com/document/product/266/9636?from_cn_redirect=1) will return the value of this field, with a maximum of 1000 characters. 
-     * @return SessionContext Session context, used for passing through user request information. When specifying the Procedure parameter, the [task flow status change callback](https://www.tencentcloud.com/document/product/266/9636?from_cn_redirect=1) will return the value of this field, with a maximum of 1000 characters.
+     * Get <p>Session context, used to pass through user request information. When specifying the Procedure parameter, the <a href="/document/product/266/9636?from_cn_redirect=1">task flow status change callback</a> will return the value of this field, up to 1000 characters.</p> 
+     * @return SessionContext <p>Session context, used to pass through user request information. When specifying the Procedure parameter, the <a href="/document/product/266/9636?from_cn_redirect=1">task flow status change callback</a> will return the value of this field, up to 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Session context, used for passing through user request information. When specifying the Procedure parameter, the [task flow status change callback](https://www.tencentcloud.com/document/product/266/9636?from_cn_redirect=1) will return the value of this field, with a maximum of 1000 characters.
-     * @param SessionContext Session context, used for passing through user request information. When specifying the Procedure parameter, the [task flow status change callback](https://www.tencentcloud.com/document/product/266/9636?from_cn_redirect=1) will return the value of this field, with a maximum of 1000 characters.
+     * Set <p>Session context, used to pass through user request information. When specifying the Procedure parameter, the <a href="/document/product/266/9636?from_cn_redirect=1">task flow status change callback</a> will return the value of this field, up to 1000 characters.</p>
+     * @param SessionContext <p>Session context, used to pass through user request information. When specifying the Procedure parameter, the <a href="/document/product/266/9636?from_cn_redirect=1">task flow status change callback</a> will return the value of this field, up to 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get Reserved field, used when special purpose. 
-     * @return ExtInfo Reserved field, used when special purpose.
+     * Get <p>Reserved field, used when special purpose.</p> 
+     * @return ExtInfo <p>Reserved field, used when special purpose.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set Reserved field, used when special purpose.
-     * @param ExtInfo Reserved field, used when special purpose.
+     * Set <p>Reserved field, used when special purpose.</p>
+     * @param ExtInfo <p>Reserved field, used when special purpose.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;
     }
 
     /**
-     * Get Media storage path, starting with /.
-Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can specify the storage path. 
-     * @return MediaStoragePath Media storage path, starting with /.
-Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can specify the storage path.
+     * Get <p>Media storage path, starting with /. <br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify the storage path.</p> 
+     * @return MediaStoragePath <p>Media storage path, starting with /. <br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify the storage path.</p>
      */
     public String getMediaStoragePath() {
         return this.MediaStoragePath;
     }
 
     /**
-     * Set Media storage path, starting with /.
-Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can specify the storage path.
-     * @param MediaStoragePath Media storage path, starting with /.
-Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can specify the storage path.
+     * Set <p>Media storage path, starting with /. <br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify the storage path.</p>
+     * @param MediaStoragePath <p>Media storage path, starting with /. <br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify the storage path.</p>
      */
     public void setMediaStoragePath(String MediaStoragePath) {
         this.MediaStoragePath = MediaStoragePath;

@@ -24,243 +24,243 @@ import java.util.HashMap;
 public class DescribeStorageDetailsRequest extends AbstractModel {
 
     /**
-    * Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+    * Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+    * End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Time granularity. Valid values:
-<li>Minute: 5-minute granularity</li>
-<li>Day: 1-day granularity</li>
-The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
+    * Statistical time granularity. Valid values:
+<li>Minute: 5 minutes.</li>
+<li>Day: day.</li>
+By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
     */
     @SerializedName("Interval")
     @Expose
     private String Interval;
 
     /**
-    * Queryed storage type, valid values:
-<li>TotalStorage: total storage amount, the sum of standard, low-frequency, archive and deep archive storage amounts, excluding early deletion amount. </li>
-<li>StandardStorage: Standard storage. </li>
-<li>InfrequentStorage: low-frequency storage. </li>
-<li>ArchiveStorage: archive storage. </li>
-<li>DeepArchiveStorage: deep archive storage. </li>
-<li>DeletedInfrequentStorage: The amount of early deletion of low-frequency storage. </li>
-<li>DeletedArchiveStorage: The amount of archives deleted in advance. </li>
-<li>DeletedDeepArchiveStorage: The amount of deep archive deletion in advance. 
-<li>ArchiveStandardRetrieval: Archive standard retrieval amount. </li>
-<li>ArchiveExpeditedRetrieval: archive quick retrieval amount. </li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount. </li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount. </li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount. </li>
-<li>InfrequentRetrieval: Low-frequency storage retrieval amount. </li>
-The default value is TotalStorage.
+    * Storage type for query. Valid values:
+<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
+<li>StandardStorage: Standard storage.</li>
+<li>InfrequentStorage: Infrequent storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
+<li>DeepArchiveStorage: deep archive storage.</li>
+<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
+<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
+<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
+<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
+<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
+<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
+<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
+<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
+Default value: TotalStorage.
     */
     @SerializedName("StorageType")
     @Expose
     private String StorageType;
 
     /**
-    * Storage region to query. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
-Default value: Chinese Mainland
+    * Storage region for query. Valid value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+Default value is Chinese Mainland.
     */
     @SerializedName("Area")
     @Expose
     private String Area;
 
     /**
-     * Get Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=). 
-     * @return StartTime Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * Get Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). 
+     * @return StartTime Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-     * @param StartTime Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * Set Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param StartTime Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=). 
-     * @return EndTime End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * Get End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52). 
+     * @return EndTime End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-     * @param EndTime End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * Set End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+     * @param EndTime End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Time granularity. Valid values:
-<li>Minute: 5-minute granularity</li>
-<li>Day: 1-day granularity</li>
-The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day. 
-     * @return Interval Time granularity. Valid values:
-<li>Minute: 5-minute granularity</li>
-<li>Day: 1-day granularity</li>
-The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
+     * Get Statistical time granularity. Valid values:
+<li>Minute: 5 minutes.</li>
+<li>Day: day.</li>
+By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day. 
+     * @return Interval Statistical time granularity. Valid values:
+<li>Minute: 5 minutes.</li>
+<li>Day: day.</li>
+By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
      */
     public String getInterval() {
         return this.Interval;
     }
 
     /**
-     * Set Time granularity. Valid values:
-<li>Minute: 5-minute granularity</li>
-<li>Day: 1-day granularity</li>
-The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
-     * @param Interval Time granularity. Valid values:
-<li>Minute: 5-minute granularity</li>
-<li>Day: 1-day granularity</li>
-The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
+     * Set Statistical time granularity. Valid values:
+<li>Minute: 5 minutes.</li>
+<li>Day: day.</li>
+By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
+     * @param Interval Statistical time granularity. Valid values:
+<li>Minute: 5 minutes.</li>
+<li>Day: day.</li>
+By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
      */
     public void setInterval(String Interval) {
         this.Interval = Interval;
     }
 
     /**
-     * Get Queryed storage type, valid values:
-<li>TotalStorage: total storage amount, the sum of standard, low-frequency, archive and deep archive storage amounts, excluding early deletion amount. </li>
-<li>StandardStorage: Standard storage. </li>
-<li>InfrequentStorage: low-frequency storage. </li>
-<li>ArchiveStorage: archive storage. </li>
-<li>DeepArchiveStorage: deep archive storage. </li>
-<li>DeletedInfrequentStorage: The amount of early deletion of low-frequency storage. </li>
-<li>DeletedArchiveStorage: The amount of archives deleted in advance. </li>
-<li>DeletedDeepArchiveStorage: The amount of deep archive deletion in advance. 
-<li>ArchiveStandardRetrieval: Archive standard retrieval amount. </li>
-<li>ArchiveExpeditedRetrieval: archive quick retrieval amount. </li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount. </li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount. </li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount. </li>
-<li>InfrequentRetrieval: Low-frequency storage retrieval amount. </li>
-The default value is TotalStorage. 
-     * @return StorageType Queryed storage type, valid values:
-<li>TotalStorage: total storage amount, the sum of standard, low-frequency, archive and deep archive storage amounts, excluding early deletion amount. </li>
-<li>StandardStorage: Standard storage. </li>
-<li>InfrequentStorage: low-frequency storage. </li>
-<li>ArchiveStorage: archive storage. </li>
-<li>DeepArchiveStorage: deep archive storage. </li>
-<li>DeletedInfrequentStorage: The amount of early deletion of low-frequency storage. </li>
-<li>DeletedArchiveStorage: The amount of archives deleted in advance. </li>
-<li>DeletedDeepArchiveStorage: The amount of deep archive deletion in advance. 
-<li>ArchiveStandardRetrieval: Archive standard retrieval amount. </li>
-<li>ArchiveExpeditedRetrieval: archive quick retrieval amount. </li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount. </li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount. </li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount. </li>
-<li>InfrequentRetrieval: Low-frequency storage retrieval amount. </li>
-The default value is TotalStorage.
+     * Get Storage type for query. Valid values:
+<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
+<li>StandardStorage: Standard storage.</li>
+<li>InfrequentStorage: Infrequent storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
+<li>DeepArchiveStorage: deep archive storage.</li>
+<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
+<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
+<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
+<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
+<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
+<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
+<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
+<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
+Default value: TotalStorage. 
+     * @return StorageType Storage type for query. Valid values:
+<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
+<li>StandardStorage: Standard storage.</li>
+<li>InfrequentStorage: Infrequent storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
+<li>DeepArchiveStorage: deep archive storage.</li>
+<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
+<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
+<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
+<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
+<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
+<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
+<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
+<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
+Default value: TotalStorage.
      */
     public String getStorageType() {
         return this.StorageType;
     }
 
     /**
-     * Set Queryed storage type, valid values:
-<li>TotalStorage: total storage amount, the sum of standard, low-frequency, archive and deep archive storage amounts, excluding early deletion amount. </li>
-<li>StandardStorage: Standard storage. </li>
-<li>InfrequentStorage: low-frequency storage. </li>
-<li>ArchiveStorage: archive storage. </li>
-<li>DeepArchiveStorage: deep archive storage. </li>
-<li>DeletedInfrequentStorage: The amount of early deletion of low-frequency storage. </li>
-<li>DeletedArchiveStorage: The amount of archives deleted in advance. </li>
-<li>DeletedDeepArchiveStorage: The amount of deep archive deletion in advance. 
-<li>ArchiveStandardRetrieval: Archive standard retrieval amount. </li>
-<li>ArchiveExpeditedRetrieval: archive quick retrieval amount. </li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount. </li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount. </li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount. </li>
-<li>InfrequentRetrieval: Low-frequency storage retrieval amount. </li>
-The default value is TotalStorage.
-     * @param StorageType Queryed storage type, valid values:
-<li>TotalStorage: total storage amount, the sum of standard, low-frequency, archive and deep archive storage amounts, excluding early deletion amount. </li>
-<li>StandardStorage: Standard storage. </li>
-<li>InfrequentStorage: low-frequency storage. </li>
-<li>ArchiveStorage: archive storage. </li>
-<li>DeepArchiveStorage: deep archive storage. </li>
-<li>DeletedInfrequentStorage: The amount of early deletion of low-frequency storage. </li>
-<li>DeletedArchiveStorage: The amount of archives deleted in advance. </li>
-<li>DeletedDeepArchiveStorage: The amount of deep archive deletion in advance. 
-<li>ArchiveStandardRetrieval: Archive standard retrieval amount. </li>
-<li>ArchiveExpeditedRetrieval: archive quick retrieval amount. </li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount. </li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval amount. </li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount. </li>
-<li>InfrequentRetrieval: Low-frequency storage retrieval amount. </li>
-The default value is TotalStorage.
+     * Set Storage type for query. Valid values:
+<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
+<li>StandardStorage: Standard storage.</li>
+<li>InfrequentStorage: Infrequent storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
+<li>DeepArchiveStorage: deep archive storage.</li>
+<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
+<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
+<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
+<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
+<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
+<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
+<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
+<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
+Default value: TotalStorage.
+     * @param StorageType Storage type for query. Valid values:
+<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
+<li>StandardStorage: Standard storage.</li>
+<li>InfrequentStorage: Infrequent storage.</li>
+<li>ArchiveStorage: Archive storage.</li>
+<li>DeepArchiveStorage: deep archive storage.</li>
+<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
+<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
+<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
+<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
+<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
+<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
+<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
+<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
+<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
+Default value: TotalStorage.
      */
     public void setStorageType(String StorageType) {
         this.StorageType = StorageType;
     }
 
     /**
-     * Get Storage region to query. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
-Default value: Chinese Mainland 
-     * @return Area Storage region to query. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
-Default value: Chinese Mainland
+     * Get Storage region for query. Valid value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+Default value is Chinese Mainland. 
+     * @return Area Storage region for query. Valid value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+Default value is Chinese Mainland.
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Storage region to query. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
-Default value: Chinese Mainland
-     * @param Area Storage region to query. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
-Default value: Chinese Mainland
+     * Set Storage region for query. Valid value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+Default value is Chinese Mainland.
+     * @param Area Storage region for query. Valid value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+Default value is Chinese Mainland.
      */
     public void setArea(String Area) {
         this.Area = Area;

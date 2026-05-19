@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AigcVideoRedrawTaskInput extends AbstractModel {
 
     /**
-    * 
+    * <p>Input info of the AIGC video conversion task.</p>
     */
     @SerializedName("FileInfo")
     @Expose
     private AigcVideoRedrawTaskInputFileInfo FileInfo;
 
     /**
-    * 
+    * <p>AIGC video conversion output configuration.</p>
     */
     @SerializedName("OutputConfig")
     @Expose
     private AigcVideoRedrawOutputConfig OutputConfig;
 
     /**
-     * Get  
-     * @return FileInfo 
+     * Get <p>Input info of the AIGC video conversion task.</p> 
+     * @return FileInfo <p>Input info of the AIGC video conversion task.</p>
      */
     public AigcVideoRedrawTaskInputFileInfo getFileInfo() {
         return this.FileInfo;
     }
 
     /**
-     * Set 
-     * @param FileInfo 
+     * Set <p>Input info of the AIGC video conversion task.</p>
+     * @param FileInfo <p>Input info of the AIGC video conversion task.</p>
      */
     public void setFileInfo(AigcVideoRedrawTaskInputFileInfo FileInfo) {
         this.FileInfo = FileInfo;
     }
 
     /**
-     * Get  
-     * @return OutputConfig 
+     * Get <p>AIGC video conversion output configuration.</p> 
+     * @return OutputConfig <p>AIGC video conversion output configuration.</p>
      */
     public AigcVideoRedrawOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set 
-     * @param OutputConfig 
+     * Set <p>AIGC video conversion output configuration.</p>
+     * @param OutputConfig <p>AIGC video conversion output configuration.</p>
      */
     public void setOutputConfig(AigcVideoRedrawOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeReviewDetailsResponse extends AbstractModel {
 
     /**
-    * Times of initiating intelligent content recognition tasks.
+    * Trigger content intelligent identification count.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Duration of intelligent recognition content.
+    * Content intelligent identification duration.
     */
     @SerializedName("TotalDuration")
     @Expose
     private Long TotalDuration;
 
     /**
-    * Data of intelligent recognition content duration. One piece of data is collected every day.
+    * Content intelligent identification duration stats, one data point per day.
     */
     @SerializedName("Data")
     @Expose
@@ -52,48 +52,48 @@ public class DescribeReviewDetailsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Times of initiating intelligent content recognition tasks. 
-     * @return TotalCount Times of initiating intelligent content recognition tasks.
+     * Get Trigger content intelligent identification count. 
+     * @return TotalCount Trigger content intelligent identification count.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Times of initiating intelligent content recognition tasks.
-     * @param TotalCount Times of initiating intelligent content recognition tasks.
+     * Set Trigger content intelligent identification count.
+     * @param TotalCount Trigger content intelligent identification count.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Duration of intelligent recognition content. 
-     * @return TotalDuration Duration of intelligent recognition content.
+     * Get Content intelligent identification duration. 
+     * @return TotalDuration Content intelligent identification duration.
      */
     public Long getTotalDuration() {
         return this.TotalDuration;
     }
 
     /**
-     * Set Duration of intelligent recognition content.
-     * @param TotalDuration Duration of intelligent recognition content.
+     * Set Content intelligent identification duration.
+     * @param TotalDuration Content intelligent identification duration.
      */
     public void setTotalDuration(Long TotalDuration) {
         this.TotalDuration = TotalDuration;
     }
 
     /**
-     * Get Data of intelligent recognition content duration. One piece of data is collected every day. 
-     * @return Data Data of intelligent recognition content duration. One piece of data is collected every day.
+     * Get Content intelligent identification duration stats, one data point per day. 
+     * @return Data Content intelligent identification duration stats, one data point per day.
      */
     public StatDataItem [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Data of intelligent recognition content duration. One piece of data is collected every day.
-     * @param Data Data of intelligent recognition content duration. One piece of data is collected every day.
+     * Set Content intelligent identification duration stats, one data point per day.
+     * @param Data Content intelligent identification duration stats, one data point per day.
      */
     public void setData(StatDataItem [] Data) {
         this.Data = Data;

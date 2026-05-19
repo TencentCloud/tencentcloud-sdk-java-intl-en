@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class ProhibitedConfigureInfo extends AbstractModel {
 
     /**
-    * Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Voice prohibition control parameter.
     */
     @SerializedName("AsrReviewInfo")
     @Expose
     private ProhibitedAsrReviewTemplateInfo AsrReviewInfo;
 
     /**
-    * Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Text prohibited control parameters.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private ProhibitedOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AsrReviewInfo Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Voice prohibition control parameter. 
+     * @return AsrReviewInfo Voice prohibition control parameter.
      */
     public ProhibitedAsrReviewTemplateInfo getAsrReviewInfo() {
         return this.AsrReviewInfo;
     }
 
     /**
-     * Set Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AsrReviewInfo Control parameter of prohibited information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Voice prohibition control parameter.
+     * @param AsrReviewInfo Voice prohibition control parameter.
      */
     public void setAsrReviewInfo(ProhibitedAsrReviewTemplateInfo AsrReviewInfo) {
         this.AsrReviewInfo = AsrReviewInfo;
     }
 
     /**
-     * Get Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OcrReviewInfo Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Text prohibited control parameters. 
+     * @return OcrReviewInfo Text prohibited control parameters.
      */
     public ProhibitedOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OcrReviewInfo Control parameter of prohibited information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Text prohibited control parameters.
+     * @param OcrReviewInfo Text prohibited control parameters.
      */
     public void setOcrReviewInfo(ProhibitedOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EditMediaResponse extends AbstractModel {
 
     /**
-    * The task ID of the video editing. You can use this ID to query the status of the editing task (task type is EditMedia).
+    * Video editing task ID. The status of the edit task (task type is EditMedia) can be queried through this ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class EditMediaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The task ID of the video editing. You can use this ID to query the status of the editing task (task type is EditMedia). 
-     * @return TaskId The task ID of the video editing. You can use this ID to query the status of the editing task (task type is EditMedia).
+     * Get Video editing task ID. The status of the edit task (task type is EditMedia) can be queried through this ID. 
+     * @return TaskId Video editing task ID. The status of the edit task (task type is EditMedia) can be queried through this ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The task ID of the video editing. You can use this ID to query the status of the editing task (task type is EditMedia).
-     * @param TaskId The task ID of the video editing. You can use this ID to query the status of the editing task (task type is EditMedia).
+     * Set Video editing task ID. The status of the edit task (task type is EditMedia) can be queried through this ID.
+     * @param TaskId Video editing task ID. The status of the edit task (task type is EditMedia) can be queried through this ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

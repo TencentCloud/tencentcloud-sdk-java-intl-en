@@ -24,16 +24,16 @@ import java.util.HashMap;
 public class ReviewImageSegmentItem extends AbstractModel {
 
     /**
-    * The confidence score for the suspicious segment.
+    * Score of offensive information involved in suspected clips.
     */
     @SerializedName("Confidence")
     @Expose
     private Float Confidence;
 
     /**
-    * The suggestion. Valid values:
-<li>`review`: The content may be non-compliant and needs to be reviewed.</li>
-<li>`block`: The content is non-compliant and should be blocked.</li>
+    * Result suggestions for identifying violations in suspected clips. Value ranges from...to...
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
     */
     @SerializedName("Suggestion")
     @Expose
@@ -47,77 +47,77 @@ public class ReviewImageSegmentItem extends AbstractModel {
     private String Label;
 
     /**
-    * The sub-label.
+    * Rule violation subtag.
     */
     @SerializedName("SubLabel")
     @Expose
     private String SubLabel;
 
     /**
-    * The type of the suspicious segment. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
+    * Suspected segment is prohibited in the form of, value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on screen.</li>
     */
     @SerializedName("Form")
     @Expose
     private String Form;
 
     /**
-    * The pixel coordinates of the suspicious people, icons, or text. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+    * Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
     */
     @SerializedName("AreaCoordSet")
     @Expose
     private Long [] AreaCoordSet;
 
     /**
-    * The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR`.
+    * Valid when Form is OCR, means the OCR Text Content that comes out.
     */
     @SerializedName("Text")
     @Expose
     private String Text;
 
     /**
-    * The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR`.
+    * Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
     */
     @SerializedName("KeywordSet")
     @Expose
     private String [] KeywordSet;
 
     /**
-     * Get The confidence score for the suspicious segment. 
-     * @return Confidence The confidence score for the suspicious segment.
+     * Get Score of offensive information involved in suspected clips. 
+     * @return Confidence Score of offensive information involved in suspected clips.
      */
     public Float getConfidence() {
         return this.Confidence;
     }
 
     /**
-     * Set The confidence score for the suspicious segment.
-     * @param Confidence The confidence score for the suspicious segment.
+     * Set Score of offensive information involved in suspected clips.
+     * @param Confidence Score of offensive information involved in suspected clips.
      */
     public void setConfidence(Float Confidence) {
         this.Confidence = Confidence;
     }
 
     /**
-     * Get The suggestion. Valid values:
-<li>`review`: The content may be non-compliant and needs to be reviewed.</li>
-<li>`block`: The content is non-compliant and should be blocked.</li> 
-     * @return Suggestion The suggestion. Valid values:
-<li>`review`: The content may be non-compliant and needs to be reviewed.</li>
-<li>`block`: The content is non-compliant and should be blocked.</li>
+     * Get Result suggestions for identifying violations in suspected clips. Value ranges from...to...
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li> 
+     * @return Suggestion Result suggestions for identifying violations in suspected clips. Value ranges from...to...
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
      */
     public String getSuggestion() {
         return this.Suggestion;
     }
 
     /**
-     * Set The suggestion. Valid values:
-<li>`review`: The content may be non-compliant and needs to be reviewed.</li>
-<li>`block`: The content is non-compliant and should be blocked.</li>
-     * @param Suggestion The suggestion. Valid values:
-<li>`review`: The content may be non-compliant and needs to be reviewed.</li>
-<li>`block`: The content is non-compliant and should be blocked.</li>
+     * Set Result suggestions for identifying violations in suspected clips. Value ranges from...to...
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
+     * @param Suggestion Result suggestions for identifying violations in suspected clips. Value ranges from...to...
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
      */
     public void setSuggestion(String Suggestion) {
         this.Suggestion = Suggestion;
@@ -140,88 +140,88 @@ public class ReviewImageSegmentItem extends AbstractModel {
     }
 
     /**
-     * Get The sub-label. 
-     * @return SubLabel The sub-label.
+     * Get Rule violation subtag. 
+     * @return SubLabel Rule violation subtag.
      */
     public String getSubLabel() {
         return this.SubLabel;
     }
 
     /**
-     * Set The sub-label.
-     * @param SubLabel The sub-label.
+     * Set Rule violation subtag.
+     * @param SubLabel Rule violation subtag.
      */
     public void setSubLabel(String SubLabel) {
         this.SubLabel = SubLabel;
     }
 
     /**
-     * Get The type of the suspicious segment. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li> 
-     * @return Form The type of the suspicious segment. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
+     * Get Suspected segment is prohibited in the form of, value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on screen.</li> 
+     * @return Form Suspected segment is prohibited in the form of, value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on screen.</li>
      */
     public String getForm() {
         return this.Form;
     }
 
     /**
-     * Set The type of the suspicious segment. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
-     * @param Form The type of the suspicious segment. Valid values:
-<li>`Image` (people or icons in images)</li>
-<li>`OCR` (text in images)</li>
+     * Set Suspected segment is prohibited in the form of, value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on screen.</li>
+     * @param Form Suspected segment is prohibited in the form of, value ranges from...to...
+<li>Image: The figure or icon on the screen;</li>
+<li>OCR: Text on screen.</li>
      */
     public void setForm(String Form) {
         this.Form = Form;
     }
 
     /**
-     * Get The pixel coordinates of the suspicious people, icons, or text. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners. 
-     * @return AreaCoordSet The pixel coordinates of the suspicious people, icons, or text. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+     * Get Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner. 
+     * @return AreaCoordSet Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
      */
     public Long [] getAreaCoordSet() {
         return this.AreaCoordSet;
     }
 
     /**
-     * Set The pixel coordinates of the suspicious people, icons, or text. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
-     * @param AreaCoordSet The pixel coordinates of the suspicious people, icons, or text. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+     * Set Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+     * @param AreaCoordSet Coordinates of the area where suspicious figures, icons, or text appear (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
      */
     public void setAreaCoordSet(Long [] AreaCoordSet) {
         this.AreaCoordSet = AreaCoordSet;
     }
 
     /**
-     * Get The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR`. 
-     * @return Text The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR`.
+     * Get Valid when Form is OCR, means the OCR Text Content that comes out. 
+     * @return Text Valid when Form is OCR, means the OCR Text Content that comes out.
      */
     public String getText() {
         return this.Text;
     }
 
     /**
-     * Set The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR`.
-     * @param Text The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR`.
+     * Set Valid when Form is OCR, means the OCR Text Content that comes out.
+     * @param Text Valid when Form is OCR, means the OCR Text Content that comes out.
      */
     public void setText(String Text) {
         this.Text = Text;
     }
 
     /**
-     * Get The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR`. 
-     * @return KeywordSet The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR`.
+     * Get Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments. 
+     * @return KeywordSet Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
      */
     public String [] getKeywordSet() {
         return this.KeywordSet;
     }
 
     /**
-     * Set The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR`.
-     * @param KeywordSet The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR`.
+     * Set Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
+     * @param KeywordSet Valid when Form is OCR, means the list of violation keywords hit by suspicious fragments.
      */
     public void setKeywordSet(String [] KeywordSet) {
         this.KeywordSet = KeywordSet;

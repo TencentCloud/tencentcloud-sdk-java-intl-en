@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class EnhanceMediaByTemplateResponse extends AbstractModel {
 
     /**
-    * The task ID of the Enhance Media. You can use this ID to query the status of the EnhanceMedia task.
+    * Task ID for Audio and Video Quality Regeneration. The state of the audio and video quality regeneration task can be queried through this ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class EnhanceMediaByTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The task ID of the Enhance Media. You can use this ID to query the status of the EnhanceMedia task. 
-     * @return TaskId The task ID of the Enhance Media. You can use this ID to query the status of the EnhanceMedia task.
+     * Get Task ID for Audio and Video Quality Regeneration. The state of the audio and video quality regeneration task can be queried through this ID. 
+     * @return TaskId Task ID for Audio and Video Quality Regeneration. The state of the audio and video quality regeneration task can be queried through this ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The task ID of the Enhance Media. You can use this ID to query the status of the EnhanceMedia task.
-     * @param TaskId The task ID of the Enhance Media. You can use this ID to query the status of the EnhanceMedia task.
+     * Set Task ID for Audio and Video Quality Regeneration. The state of the audio and video quality regeneration task can be queried through this ID.
+     * @param TaskId Task ID for Audio and Video Quality Regeneration. The state of the audio and video quality regeneration task can be queried through this ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

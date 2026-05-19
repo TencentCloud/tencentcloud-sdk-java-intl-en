@@ -39,7 +39,6 @@ public class FileVerifyInfo extends AbstractModel {
 
     /**
     * File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("FileVerifyName")
     @Expose
@@ -78,10 +77,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get File verification file name. 
      * @return FileVerifyName File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getFileVerifyName() {
         return this.FileVerifyName;
@@ -89,9 +86,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param FileVerifyName File verification file name.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setFileVerifyName(String FileVerifyName) {
         this.FileVerifyName = FileVerifyName;

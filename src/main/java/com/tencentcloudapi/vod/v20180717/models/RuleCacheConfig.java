@@ -25,33 +25,28 @@ public class RuleCacheConfig extends AbstractModel {
 
     /**
     * Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Cache")
     @Expose
     private CacheConfigCache Cache;
 
     /**
-    * Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * No cache configuration.
     */
     @SerializedName("NoCache")
     @Expose
     private CacheConfigNoCache NoCache;
 
     /**
-    * Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Follow the origin site.
     */
     @SerializedName("FollowOrigin")
     @Expose
     private CacheConfigFollowOrigin FollowOrigin;
 
     /**
-     * Get Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Cache configuration. 
      * @return Cache Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public CacheConfigCache getCache() {
         return this.Cache;
@@ -59,49 +54,39 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Cache Cache configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCache(CacheConfigCache Cache) {
         this.Cache = Cache;
     }
 
     /**
-     * Get Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return NoCache Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get No cache configuration. 
+     * @return NoCache No cache configuration.
      */
     public CacheConfigNoCache getNoCache() {
         return this.NoCache;
     }
 
     /**
-     * Set Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param NoCache Configuration is not cached.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set No cache configuration.
+     * @param NoCache No cache configuration.
      */
     public void setNoCache(CacheConfigNoCache NoCache) {
         this.NoCache = NoCache;
     }
 
     /**
-     * Get Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return FollowOrigin Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Follow the origin site. 
+     * @return FollowOrigin Follow the origin site.
      */
     public CacheConfigFollowOrigin getFollowOrigin() {
         return this.FollowOrigin;
     }
 
     /**
-     * Set Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param FollowOrigin Follow the origin configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Follow the origin site.
+     * @param FollowOrigin Follow the origin site.
      */
     public void setFollowOrigin(CacheConfigFollowOrigin FollowOrigin) {
         this.FollowOrigin = FollowOrigin;

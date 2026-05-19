@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class FastEditMediaResponse extends AbstractModel {
 
     /**
-    * The unique identification of the media file of the fast edited video
+    * Unique identifier of the media file after quick editing.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Fast-edited media playback address
+    * Media playback address after quick editing.
     */
     @SerializedName("Url")
     @Expose
@@ -45,32 +45,32 @@ public class FastEditMediaResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The unique identification of the media file of the fast edited video 
-     * @return FileId The unique identification of the media file of the fast edited video
+     * Get Unique identifier of the media file after quick editing. 
+     * @return FileId Unique identifier of the media file after quick editing.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set The unique identification of the media file of the fast edited video
-     * @param FileId The unique identification of the media file of the fast edited video
+     * Set Unique identifier of the media file after quick editing.
+     * @param FileId Unique identifier of the media file after quick editing.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Fast-edited media playback address 
-     * @return Url Fast-edited media playback address
+     * Get Media playback address after quick editing. 
+     * @return Url Media playback address after quick editing.
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Fast-edited media playback address
-     * @param Url Fast-edited media playback address
+     * Set Media playback address after quick editing.
+     * @param Url Media playback address after quick editing.
      */
     public void setUrl(String Url) {
         this.Url = Url;

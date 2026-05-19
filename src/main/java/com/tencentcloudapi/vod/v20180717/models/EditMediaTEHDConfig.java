@@ -31,6 +31,14 @@ public class EditMediaTEHDConfig extends AbstractModel {
     private String Type;
 
     /**
+    * Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+    */
+    @SerializedName("MaxVideoBitrate")
+    @Expose
+    private Long MaxVideoBitrate;
+
+    /**
      * Get TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF. 
      * @return Type TSC Transcoding type, optional values: <li>TEHD-100 means TSC Transcoding-definition-100;</li> <li>OFF means turning off TSC Transcoding-definition. </li>Leave it blank to indicate OFF.
      */
@@ -46,6 +54,26 @@ public class EditMediaTEHDConfig extends AbstractModel {
         this.Type = Type;
     }
 
+    /**
+     * Get Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap. 
+     * @return MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+     */
+    public Long getMaxVideoBitrate() {
+        return this.MaxVideoBitrate;
+    }
+
+    /**
+     * Set Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+     * @param MaxVideoBitrate Maximum video bitrate. Valid when Type is specified as top speed Codec.
+Leave it blank or enter 0 to let VOD automatically set the bitrate cap.
+     */
+    public void setMaxVideoBitrate(Long MaxVideoBitrate) {
+        this.MaxVideoBitrate = MaxVideoBitrate;
+    }
+
     public EditMediaTEHDConfig() {
     }
 
@@ -57,6 +85,9 @@ public class EditMediaTEHDConfig extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.MaxVideoBitrate != null) {
+            this.MaxVideoBitrate = new Long(source.MaxVideoBitrate);
+        }
     }
 
 
@@ -65,6 +96,7 @@ public class EditMediaTEHDConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "MaxVideoBitrate", this.MaxVideoBitrate);
 
     }
 }

@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeSnapshotByTimeOffsetTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Unique ID filter of time point screencapturing templates. Array length limit: 100.
+    * Filtering condition for the unique identifier of the screenshot template at specified time point. The array length cannot exceed 100.
     */
     @SerializedName("Definitions")
     @Expose
     private Long [] Definitions;
 
     /**
-    * Paged offset. Default value: 0.
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
@@ -52,57 +52,57 @@ public class DescribeSnapshotByTimeOffsetTemplatesRequest extends AbstractModel 
     private Long Limit;
 
     /**
-    * Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+    * Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Unique ID filter of time point screencapturing templates. Array length limit: 100. 
-     * @return Definitions Unique ID filter of time point screencapturing templates. Array length limit: 100.
+     * Get Filtering condition for the unique identifier of the screenshot template at specified time point. The array length cannot exceed 100. 
+     * @return Definitions Filtering condition for the unique identifier of the screenshot template at specified time point. The array length cannot exceed 100.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Unique ID filter of time point screencapturing templates. Array length limit: 100.
-     * @param Definitions Unique ID filter of time point screencapturing templates. Array length limit: 100.
+     * Set Filtering condition for the unique identifier of the screenshot template at specified time point. The array length cannot exceed 100.
+     * @param Definitions Filtering condition for the unique identifier of the screenshot template at specified time point. The array length cannot exceed 100.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
     /**
-     * Get Paged offset. Default value: 0. 
-     * @return Offset Paged offset. Default value: 0.
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paged offset. Default value: 0.
-     * @param Offset Paged offset. Default value: 0.
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
@@ -125,24 +125,24 @@ public class DescribeSnapshotByTimeOffsetTemplatesRequest extends AbstractModel 
     }
 
     /**
-     * Get Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li> 
-     * @return Type Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * Get Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li> 
+     * @return Type Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
-     * @param Type Template type filter. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+     * Set Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
+     * @param Type Condition for filtering templates by type. Valid values:
+<li>Preset: system preset template;</li>
+<li>Custom: User-defined template.</li>
      */
     public void setType(String Type) {
         this.Type = Type;

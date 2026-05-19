@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CommitUploadResponse extends AbstractModel {
 
     /**
-    * Unique ID of media file.
+    * <p>Unique identifier of the media file.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * The media playback URL.
+    * <p>Media playback address.</p>
     */
     @SerializedName("MediaUrl")
     @Expose
     private String MediaUrl;
 
     /**
-    * The thumbnail URL.
+    * <p>Media cover address.</p>
     */
     @SerializedName("CoverUrl")
     @Expose
@@ -52,48 +52,48 @@ public class CommitUploadResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Unique ID of media file. 
-     * @return FileId Unique ID of media file.
+     * Get <p>Unique identifier of the media file.</p> 
+     * @return FileId <p>Unique identifier of the media file.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Unique ID of media file.
-     * @param FileId Unique ID of media file.
+     * Set <p>Unique identifier of the media file.</p>
+     * @param FileId <p>Unique identifier of the media file.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get The media playback URL. 
-     * @return MediaUrl The media playback URL.
+     * Get <p>Media playback address.</p> 
+     * @return MediaUrl <p>Media playback address.</p>
      */
     public String getMediaUrl() {
         return this.MediaUrl;
     }
 
     /**
-     * Set The media playback URL.
-     * @param MediaUrl The media playback URL.
+     * Set <p>Media playback address.</p>
+     * @param MediaUrl <p>Media playback address.</p>
      */
     public void setMediaUrl(String MediaUrl) {
         this.MediaUrl = MediaUrl;
     }
 
     /**
-     * Get The thumbnail URL. 
-     * @return CoverUrl The thumbnail URL.
+     * Get <p>Media cover address.</p> 
+     * @return CoverUrl <p>Media cover address.</p>
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set The thumbnail URL.
-     * @param CoverUrl The thumbnail URL.
+     * Set <p>Media cover address.</p>
+     * @param CoverUrl <p>Media cover address.</p>
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;

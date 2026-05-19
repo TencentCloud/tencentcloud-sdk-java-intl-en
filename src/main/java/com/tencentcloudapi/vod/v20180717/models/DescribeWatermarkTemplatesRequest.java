@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeWatermarkTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -32,8 +32,9 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
 
     /**
     * Watermark type filter. Valid values:
-<li>image: image watermark;</li>
-<li>text: text watermark.</li>
+<li>image: image watermark.</li>
+<li>Text: text watermark.</li>
+<li>svg: SVG watermark.</li>
     */
     @SerializedName("Type")
     @Expose
@@ -47,7 +48,7 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Unique ID filter of watermarking templates. Array length limit: 100.
+    * Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
     */
     @SerializedName("Definitions")
     @Expose
@@ -55,7 +56,7 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
 
     /**
     * Number of returned entries
-<li>Default value: 10;</li>
+<li>Default value: 10.</li>
 <li>Maximum value: 100.</li>
     */
     @SerializedName("Limit")
@@ -63,16 +64,16 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
@@ -80,11 +81,13 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
 
     /**
      * Get Watermark type filter. Valid values:
-<li>image: image watermark;</li>
-<li>text: text watermark.</li> 
+<li>image: image watermark.</li>
+<li>Text: text watermark.</li>
+<li>svg: SVG watermark.</li> 
      * @return Type Watermark type filter. Valid values:
-<li>image: image watermark;</li>
-<li>text: text watermark.</li>
+<li>image: image watermark.</li>
+<li>Text: text watermark.</li>
+<li>svg: SVG watermark.</li>
      */
     public String getType() {
         return this.Type;
@@ -92,11 +95,13 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
 
     /**
      * Set Watermark type filter. Valid values:
-<li>image: image watermark;</li>
-<li>text: text watermark.</li>
+<li>image: image watermark.</li>
+<li>Text: text watermark.</li>
+<li>svg: SVG watermark.</li>
      * @param Type Watermark type filter. Valid values:
-<li>image: image watermark;</li>
-<li>text: text watermark.</li>
+<li>image: image watermark.</li>
+<li>Text: text watermark.</li>
+<li>svg: SVG watermark.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
@@ -119,16 +124,16 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
     }
 
     /**
-     * Get Unique ID filter of watermarking templates. Array length limit: 100. 
-     * @return Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+     * Get Filter condition for the watermark template unique identifier. The array length cannot exceed 100. 
+     * @return Definitions Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Unique ID filter of watermarking templates. Array length limit: 100.
-     * @param Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+     * Set Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
+     * @param Definitions Filter condition for the watermark template unique identifier. The array length cannot exceed 100.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
@@ -136,10 +141,10 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
 
     /**
      * Get Number of returned entries
-<li>Default value: 10;</li>
+<li>Default value: 10.</li>
 <li>Maximum value: 100.</li> 
      * @return Limit Number of returned entries
-<li>Default value: 10;</li>
+<li>Default value: 10.</li>
 <li>Maximum value: 100.</li>
      */
     public Long getLimit() {
@@ -148,10 +153,10 @@ public class DescribeWatermarkTemplatesRequest extends AbstractModel {
 
     /**
      * Set Number of returned entries
-<li>Default value: 10;</li>
+<li>Default value: 10.</li>
 <li>Maximum value: 100.</li>
      * @param Limit Number of returned entries
-<li>Default value: 10;</li>
+<li>Default value: 10.</li>
 <li>Maximum value: 100.</li>
      */
     public void setLimit(Long Limit) {

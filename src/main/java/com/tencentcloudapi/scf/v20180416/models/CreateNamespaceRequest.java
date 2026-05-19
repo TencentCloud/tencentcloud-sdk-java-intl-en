@@ -38,6 +38,13 @@ public class CreateNamespaceRequest extends AbstractModel {
     private String Description;
 
     /**
+    * 
+    */
+    @SerializedName("ResourceEnv")
+    @Expose
+    private NamespaceResourceEnv ResourceEnv;
+
+    /**
      * Get Namespace name 
      * @return Namespace Namespace name
      */
@@ -69,6 +76,22 @@ public class CreateNamespaceRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get  
+     * @return ResourceEnv 
+     */
+    public NamespaceResourceEnv getResourceEnv() {
+        return this.ResourceEnv;
+    }
+
+    /**
+     * Set 
+     * @param ResourceEnv 
+     */
+    public void setResourceEnv(NamespaceResourceEnv ResourceEnv) {
+        this.ResourceEnv = ResourceEnv;
+    }
+
     public CreateNamespaceRequest() {
     }
 
@@ -83,6 +106,9 @@ public class CreateNamespaceRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.ResourceEnv != null) {
+            this.ResourceEnv = new NamespaceResourceEnv(source.ResourceEnv);
+        }
     }
 
 
@@ -92,6 +118,7 @@ public class CreateNamespaceRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Namespace", this.Namespace);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamObj(map, prefix + "ResourceEnv.", this.ResourceEnv);
 
     }
 }

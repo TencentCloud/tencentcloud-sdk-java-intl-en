@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateWatermarkTemplateResponse extends AbstractModel {
 
     /**
-    * Unique ID of watermarking template.
+    * Unique identifier of the watermark template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * Watermark image address. This field is valid only when `Type` is `image`.
+    * URL of the image watermark. This field is valid only when Type is image.
     */
     @SerializedName("ImageUrl")
     @Expose
@@ -45,32 +45,32 @@ public class CreateWatermarkTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Unique ID of watermarking template. 
-     * @return Definition Unique ID of watermarking template.
+     * Get Unique identifier of the watermark template. 
+     * @return Definition Unique identifier of the watermark template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of watermarking template.
-     * @param Definition Unique ID of watermarking template.
+     * Set Unique identifier of the watermark template.
+     * @param Definition Unique identifier of the watermark template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get Watermark image address. This field is valid only when `Type` is `image`. 
-     * @return ImageUrl Watermark image address. This field is valid only when `Type` is `image`.
+     * Get URL of the image watermark. This field is valid only when Type is image. 
+     * @return ImageUrl URL of the image watermark. This field is valid only when Type is image.
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set Watermark image address. This field is valid only when `Type` is `image`.
-     * @param ImageUrl Watermark image address. This field is valid only when `Type` is `image`.
+     * Set URL of the image watermark. This field is valid only when Type is image.
+     * @param ImageUrl URL of the image watermark. This field is valid only when Type is image.
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;

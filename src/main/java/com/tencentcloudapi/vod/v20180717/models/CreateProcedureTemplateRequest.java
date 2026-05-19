@@ -24,188 +24,188 @@ import java.util.HashMap;
 public class CreateProcedureTemplateRequest extends AbstractModel {
 
     /**
-    * Task flow name (up to 20 characters).
+    * Task flow name (support Chinese, up to 20 characters).
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Template description. Length limit: 256 characters.
+    * Template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Parameter of video processing task.
+    * Parameters for the video processing type task.
     */
     @SerializedName("MediaProcessTask")
     @Expose
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+    * Parameters for the AI content review task.
+<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font>
     */
     @SerializedName("AiContentReviewTask")
     @Expose
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * Parameter of AI-based content analysis task.
+    * Parameters for the AI content analysis task.
     */
     @SerializedName("AiAnalysisTask")
     @Expose
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * 
+    * Parameters for the AI content recognition task.
     */
     @SerializedName("AiRecognitionTaskSet")
     @Expose
     private AiRecognitionTaskInput [] AiRecognitionTaskSet;
 
     /**
-    * Type parameter of AI-based content recognition task.
+    * This is not recommended. Recommend using AiRecognitionTaskSet.
     */
     @SerializedName("AiRecognitionTask")
     @Expose
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * The information of the moderation task.
+    * Parameters for the audio and video moderation task.
     */
     @SerializedName("ReviewAudioVideoTask")
     @Expose
     private ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask;
 
     /**
-     * Get Task flow name (up to 20 characters). 
-     * @return Name Task flow name (up to 20 characters).
+     * Get Task flow name (support Chinese, up to 20 characters). 
+     * @return Name Task flow name (support Chinese, up to 20 characters).
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Task flow name (up to 20 characters).
-     * @param Name Task flow name (up to 20 characters).
+     * Set Task flow name (support Chinese, up to 20 characters).
+     * @param Name Task flow name (support Chinese, up to 20 characters).
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Template description. Length limit: 256 characters. 
-     * @return Comment Template description. Length limit: 256 characters.
+     * Get Template description, with a length limit of 256 characters. 
+     * @return Comment Template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 characters.
-     * @param Comment Template description. Length limit: 256 characters.
+     * Set Template description, with a length limit of 256 characters.
+     * @param Comment Template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Parameter of video processing task. 
-     * @return MediaProcessTask Parameter of video processing task.
+     * Get Parameters for the video processing type task. 
+     * @return MediaProcessTask Parameters for the video processing type task.
      */
     public MediaProcessTaskInput getMediaProcessTask() {
         return this.MediaProcessTask;
     }
 
     /**
-     * Set Parameter of video processing task.
-     * @param MediaProcessTask Parameter of video processing task.
+     * Set Parameters for the video processing type task.
+     * @param MediaProcessTask Parameters for the video processing type task.
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
         this.MediaProcessTask = MediaProcessTask;
     }
 
     /**
-     * Get The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font>  
-     * @return AiContentReviewTask The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+     * Get Parameters for the AI content review task.
+<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font> 
+     * @return AiContentReviewTask Parameters for the AI content review task.
+<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font>
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-     * @param AiContentReviewTask The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+     * Set Parameters for the AI content review task.
+<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font>
+     * @param AiContentReviewTask Parameters for the AI content review task.
+<font color=red>\*: This parameter is used for legacy review initiation, not recommended. It is recommended to use the ReviewAudioVideoTask parameter to initiate review.</font>
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
     }
 
     /**
-     * Get Parameter of AI-based content analysis task. 
-     * @return AiAnalysisTask Parameter of AI-based content analysis task.
+     * Get Parameters for the AI content analysis task. 
+     * @return AiAnalysisTask Parameters for the AI content analysis task.
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set Parameter of AI-based content analysis task.
-     * @param AiAnalysisTask Parameter of AI-based content analysis task.
+     * Set Parameters for the AI content analysis task.
+     * @param AiAnalysisTask Parameters for the AI content analysis task.
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
-     * Get  
-     * @return AiRecognitionTaskSet 
+     * Get Parameters for the AI content recognition task. 
+     * @return AiRecognitionTaskSet Parameters for the AI content recognition task.
      */
     public AiRecognitionTaskInput [] getAiRecognitionTaskSet() {
         return this.AiRecognitionTaskSet;
     }
 
     /**
-     * Set 
-     * @param AiRecognitionTaskSet 
+     * Set Parameters for the AI content recognition task.
+     * @param AiRecognitionTaskSet Parameters for the AI content recognition task.
      */
     public void setAiRecognitionTaskSet(AiRecognitionTaskInput [] AiRecognitionTaskSet) {
         this.AiRecognitionTaskSet = AiRecognitionTaskSet;
     }
 
     /**
-     * Get Type parameter of AI-based content recognition task. 
-     * @return AiRecognitionTask Type parameter of AI-based content recognition task.
+     * Get This is not recommended. Recommend using AiRecognitionTaskSet. 
+     * @return AiRecognitionTask This is not recommended. Recommend using AiRecognitionTaskSet.
      * @deprecated
      */
     @Deprecated
@@ -214,8 +214,8 @@ public class CreateProcedureTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Set Type parameter of AI-based content recognition task.
-     * @param AiRecognitionTask Type parameter of AI-based content recognition task.
+     * Set This is not recommended. Recommend using AiRecognitionTaskSet.
+     * @param AiRecognitionTask This is not recommended. Recommend using AiRecognitionTaskSet.
      * @deprecated
      */
     @Deprecated
@@ -224,16 +224,16 @@ public class CreateProcedureTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get The information of the moderation task. 
-     * @return ReviewAudioVideoTask The information of the moderation task.
+     * Get Parameters for the audio and video moderation task. 
+     * @return ReviewAudioVideoTask Parameters for the audio and video moderation task.
      */
     public ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() {
         return this.ReviewAudioVideoTask;
     }
 
     /**
-     * Set The information of the moderation task.
-     * @param ReviewAudioVideoTask The information of the moderation task.
+     * Set Parameters for the audio and video moderation task.
+     * @param ReviewAudioVideoTask Parameters for the audio and video moderation task.
      */
     public void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput ReviewAudioVideoTask) {
         this.ReviewAudioVideoTask = ReviewAudioVideoTask;

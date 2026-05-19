@@ -24,106 +24,110 @@ import java.util.HashMap;
 public class AsrFullTextConfigureInfo extends AbstractModel {
 
     /**
-    * Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
+    * Voice full-text recognition task switch. Available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disable the intelligent voice full-text recognition task.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
+    * Generated subtitle file format list. Leaving it as an empty array means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD will be generated subtitles add to media assets.
     */
     @SerializedName("SubtitleFormats")
     @Expose
     private String [] SubtitleFormats;
 
     /**
-    * The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
+    * Generated subtitle file format. Leaving it as an empty string or not filling it means no subtitle file will be generated. Valid value:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormats.</font>
     */
     @SerializedName("SubtitleFormat")
     @Expose
     private String SubtitleFormat;
 
     /**
-    * Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+    * Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
+<font color=red>Note:</font> Fill in an empty string or leave the parameter blank for automatic recognition (effectiveness difficult to guarantee. Recommended to fill in the language corresponding to the original media to improve recognition accuracy).
     */
     @SerializedName("SrcLanguage")
     @Expose
     private String SrcLanguage;
 
     /**
-    * Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
-<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
-
+    * Specify subtitle name. Length limit: 64 characters. This value will be used for player display. If left blank, VOD will auto generate.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats contains vtt.
     */
     @SerializedName("SubtitleName")
     @Expose
     private String SubtitleName;
 
     /**
-     * Get Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li> 
-     * @return Switch Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
+     * Get Voice full-text recognition task switch. Available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disable the intelligent voice full-text recognition task.</li> 
+     * @return Switch Voice full-text recognition task switch. Available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disable the intelligent voice full-text recognition task.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
-     * @param Switch Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
+     * Set Voice full-text recognition task switch. Available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disable the intelligent voice full-text recognition task.</li>
+     * @param Switch Voice full-text recognition task switch. Available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disable the intelligent voice full-text recognition task.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li> 
-     * @return SubtitleFormats The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
+     * Get Generated subtitle file format list. Leaving it as an empty array means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD will be generated subtitles add to media assets. 
+     * @return SubtitleFormats Generated subtitle file format list. Leaving it as an empty array means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD will be generated subtitles add to media assets.
      */
     public String [] getSubtitleFormats() {
         return this.SubtitleFormats;
     }
 
     /**
-     * Set The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-     * @param SubtitleFormats The formats of the subtitle files generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
+     * Set Generated subtitle file format list. Leaving it as an empty array means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD will be generated subtitles add to media assets.
+     * @param SubtitleFormats Generated subtitle file format list. Leaving it as an empty array means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li><font color=red>Note:</font> VOD media asset information only supports adding vtt subtitles. When and only when SubtitleFormats includes vtt, VOD will be generated subtitles add to media assets.
      */
     public void setSubtitleFormats(String [] SubtitleFormats) {
         this.SubtitleFormats = SubtitleFormats;
     }
 
     /**
-     * Get The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font> 
-     * @return SubtitleFormat The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
+     * Get Generated subtitle file format. Leaving it as an empty string or not filling it means no subtitle file will be generated. Valid value:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormats.</font> 
+     * @return SubtitleFormat Generated subtitle file format. Leaving it as an empty string or not filling it means no subtitle file will be generated. Valid value:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormats.</font>
      * @deprecated
      */
     @Deprecated
@@ -132,14 +136,14 @@ public class AsrFullTextConfigureInfo extends AbstractModel {
     }
 
     /**
-     * Set The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
-     * @param SubtitleFormat The format of the subtitle file generated. If this parameter is not passed or an empty string is passed in, no subtitles files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormats` instead.</font>
+     * Set Generated subtitle file format. Leaving it as an empty string or not filling it means no subtitle file will be generated. Valid value:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormats.</font>
+     * @param SubtitleFormat Generated subtitle file format. Leaving it as an empty string or not filling it means no subtitle file will be generated. Valid value:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormats.</font>
      * @deprecated
      */
     @Deprecated
@@ -148,40 +152,56 @@ public class AsrFullTextConfigureInfo extends AbstractModel {
     }
 
     /**
-     * Get Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy). 
-     * @return SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+     * Get Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
+<font color=red>Note:</font> Fill in an empty string or leave the parameter blank for automatic recognition (effectiveness difficult to guarantee. Recommended to fill in the language corresponding to the original media to improve recognition accuracy). 
+     * @return SrcLanguage Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
+<font color=red>Note:</font> Fill in an empty string or leave the parameter blank for automatic recognition (effectiveness difficult to guarantee. Recommended to fill in the language corresponding to the original media to improve recognition accuracy).
      */
     public String getSrcLanguage() {
         return this.SrcLanguage;
     }
 
     /**
-     * Set Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
-     * @param SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li><font color=red>Note: </font> If it fills in an empty string or leaves this parameter blank, it will be automatically recognized (it is recommended to fill in the language corresponding to the media to improve the recognition accuracy).
+     * Set Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
+<font color=red>Note:</font> Fill in an empty string or leave the parameter blank for automatic recognition (effectiveness difficult to guarantee. Recommended to fill in the language corresponding to the original media to improve recognition accuracy).
+     * @param SrcLanguage Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
+<font color=red>Note:</font> Fill in an empty string or leave the parameter blank for automatic recognition (effectiveness difficult to guarantee. Recommended to fill in the language corresponding to the original media to improve recognition accuracy).
      */
     public void setSrcLanguage(String SrcLanguage) {
         this.SrcLanguage = SrcLanguage;
     }
 
     /**
-     * Get Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
-<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
- 
-     * @return SubtitleName Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
-<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
-
+     * Get Specify subtitle name. Length limit: 64 characters. This value will be used for player display. If left blank, VOD will auto generate.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats contains vtt. 
+     * @return SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display. If left blank, VOD will auto generate.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats contains vtt.
      */
     public String getSubtitleName() {
         return this.SubtitleName;
     }
 
     /**
-     * Set Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
-<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
-
-     * @param SubtitleName Specify subtitle name, length limit: 64 characters. This value will be displayed by the player. If not provided, VOD will automatically generate it.
-<font color=red>Note:</font> This field is valid only when SubtitleFormats includes vtt.
-
+     * Set Specify subtitle name. Length limit: 64 characters. This value will be used for player display. If left blank, VOD will auto generate.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats contains vtt.
+     * @param SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display. If left blank, VOD will auto generate.
+<font color=red>Note:</font> This field is valid only when SubtitleFormats contains vtt.
      */
     public void setSubtitleName(String SubtitleName) {
         this.SubtitleName = SubtitleName;

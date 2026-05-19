@@ -149,6 +149,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to obtain all accounts of the current instance.
+     * @param req DescribeAccountUsersRequest
+     * @return DescribeAccountUsersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccountUsersResponse DescribeAccountUsers(DescribeAccountUsersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccountUsers", DescribeAccountUsersResponse.class);
+    }
+
+    /**
      *This API is used to query the asynchronous task status.
      * @param req DescribeAsyncRequestInfoRequest
      * @return DescribeAsyncRequestInfoResponse

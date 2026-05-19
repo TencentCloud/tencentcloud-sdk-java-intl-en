@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeImageReviewUsageDataResponse extends AbstractModel {
 
     /**
-    * The image recognition usage statistics (the number of times the image recognition feature is used in the time period specified).
+    * Image moderation stats show overview data of the number of moderations within a specified time range.
     */
     @SerializedName("ImageReviewUsageDataSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeImageReviewUsageDataResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The image recognition usage statistics (the number of times the image recognition feature is used in the time period specified). 
-     * @return ImageReviewUsageDataSet The image recognition usage statistics (the number of times the image recognition feature is used in the time period specified).
+     * Get Image moderation stats show overview data of the number of moderations within a specified time range. 
+     * @return ImageReviewUsageDataSet Image moderation stats show overview data of the number of moderations within a specified time range.
      */
     public ImageReviewUsageDataItem [] getImageReviewUsageDataSet() {
         return this.ImageReviewUsageDataSet;
     }
 
     /**
-     * Set The image recognition usage statistics (the number of times the image recognition feature is used in the time period specified).
-     * @param ImageReviewUsageDataSet The image recognition usage statistics (the number of times the image recognition feature is used in the time period specified).
+     * Set Image moderation stats show overview data of the number of moderations within a specified time range.
+     * @param ImageReviewUsageDataSet Image moderation stats show overview data of the number of moderations within a specified time range.
      */
     public void setImageReviewUsageDataSet(ImageReviewUsageDataItem [] ImageReviewUsageDataSet) {
         this.ImageReviewUsageDataSet = ImageReviewUsageDataSet;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMediaInfosResponse extends AbstractModel {
 
     /**
-    * Media file information list.
+    * <p>Media file information list.</p>
     */
     @SerializedName("MediaInfoSet")
     @Expose
     private MediaInfo [] MediaInfoSet;
 
     /**
-    * List of IDs of files that do not exist.
+    * <p>Non-existent file ID list.</p>
     */
     @SerializedName("NotExistFileIdSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeMediaInfosResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Media file information list. 
-     * @return MediaInfoSet Media file information list.
+     * Get <p>Media file information list.</p> 
+     * @return MediaInfoSet <p>Media file information list.</p>
      */
     public MediaInfo [] getMediaInfoSet() {
         return this.MediaInfoSet;
     }
 
     /**
-     * Set Media file information list.
-     * @param MediaInfoSet Media file information list.
+     * Set <p>Media file information list.</p>
+     * @param MediaInfoSet <p>Media file information list.</p>
      */
     public void setMediaInfoSet(MediaInfo [] MediaInfoSet) {
         this.MediaInfoSet = MediaInfoSet;
     }
 
     /**
-     * Get List of IDs of files that do not exist. 
-     * @return NotExistFileIdSet List of IDs of files that do not exist.
+     * Get <p>Non-existent file ID list.</p> 
+     * @return NotExistFileIdSet <p>Non-existent file ID list.</p>
      */
     public String [] getNotExistFileIdSet() {
         return this.NotExistFileIdSet;
     }
 
     /**
-     * Set List of IDs of files that do not exist.
-     * @param NotExistFileIdSet List of IDs of files that do not exist.
+     * Set <p>Non-existent file ID list.</p>
+     * @param NotExistFileIdSet <p>Non-existent file ID list.</p>
      */
     public void setNotExistFileIdSet(String [] NotExistFileIdSet) {
         this.NotExistFileIdSet = NotExistFileIdSet;

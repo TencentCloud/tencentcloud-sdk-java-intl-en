@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class DescribeTranscodeTemplatesResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of transcoding template details.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Transcoding template detail list.
     */
     @SerializedName("TranscodeTemplateSet")
     @Expose
@@ -46,36 +45,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of transcoding template details.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TranscodeTemplateSet List of transcoding template details.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Transcoding template detail list. 
+     * @return TranscodeTemplateSet Transcoding template detail list.
      */
     public TranscodeTemplate [] getTranscodeTemplateSet() {
         return this.TranscodeTemplateSet;
     }
 
     /**
-     * Set List of transcoding template details.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TranscodeTemplateSet List of transcoding template details.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Transcoding template detail list.
+     * @param TranscodeTemplateSet Transcoding template detail list.
      */
     public void setTranscodeTemplateSet(TranscodeTemplate [] TranscodeTemplateSet) {
         this.TranscodeTemplateSet = TranscodeTemplateSet;

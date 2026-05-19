@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SetDrmKeyProviderInfoRequest extends AbstractModel {
 
     /**
-    * The DRM key information provided by SDMC.
+    * <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
     */
     @SerializedName("SDMCInfo")
     @Expose
     private SDMCDrmKeyProviderInfo SDMCInfo;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get The DRM key information provided by SDMC. 
-     * @return SDMCInfo The DRM key information provided by SDMC.
+     * Get <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p> 
+     * @return SDMCInfo <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
      */
     public SDMCDrmKeyProviderInfo getSDMCInfo() {
         return this.SDMCInfo;
     }
 
     /**
-     * Set The DRM key information provided by SDMC.
-     * @param SDMCInfo The DRM key information provided by SDMC.
+     * Set <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
+     * @param SDMCInfo <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
      */
     public void setSDMCInfo(SDMCDrmKeyProviderInfo SDMCInfo) {
         this.SDMCInfo = SDMCInfo;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p> 
+     * @return SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+     * @param SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

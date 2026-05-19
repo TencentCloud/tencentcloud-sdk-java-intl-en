@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSampleSnapshotTemplateResponse extends AbstractModel {
 
     /**
-    * Unique ID of a sampled screencapturing template.
+    * Unique identifier of the sampling screenshot template.
     */
     @SerializedName("Definition")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSampleSnapshotTemplateResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Unique ID of a sampled screencapturing template. 
-     * @return Definition Unique ID of a sampled screencapturing template.
+     * Get Unique identifier of the sampling screenshot template. 
+     * @return Definition Unique identifier of the sampling screenshot template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a sampled screencapturing template.
-     * @param Definition Unique ID of a sampled screencapturing template.
+     * Set Unique identifier of the sampling screenshot template.
+     * @param Definition Unique identifier of the sampling screenshot template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;

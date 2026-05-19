@@ -72,8 +72,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Parameters for the AI content recognition task.
+    */
+    @SerializedName("AiRecognitionTaskSet")
+    @Expose
+    private AiRecognitionTaskInput [] AiRecognitionTaskSet;
+
+    /**
+    * This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("AiRecognitionTask")
     @Expose
@@ -230,10 +237,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AiRecognitionTask Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Parameters for the AI content recognition task. 
+     * @return AiRecognitionTaskSet Parameters for the AI content recognition task.
+     */
+    public AiRecognitionTaskInput [] getAiRecognitionTaskSet() {
+        return this.AiRecognitionTaskSet;
+    }
+
+    /**
+     * Set Parameters for the AI content recognition task.
+     * @param AiRecognitionTaskSet Parameters for the AI content recognition task.
+     */
+    public void setAiRecognitionTaskSet(AiRecognitionTaskInput [] AiRecognitionTaskSet) {
+        this.AiRecognitionTaskSet = AiRecognitionTaskSet;
+    }
+
+    /**
+     * Get This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return AiRecognitionTask This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -242,10 +265,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiRecognitionTask Type parameter of AI-based content recognition task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiRecognitionTask This parameter is not recommended. Recommend using AiRecognitionTaskSet.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @deprecated
      */
     @Deprecated
@@ -351,6 +374,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.AiAnalysisTask != null) {
             this.AiAnalysisTask = new AiAnalysisTaskInput(source.AiAnalysisTask);
         }
+        if (source.AiRecognitionTaskSet != null) {
+            this.AiRecognitionTaskSet = new AiRecognitionTaskInput[source.AiRecognitionTaskSet.length];
+            for (int i = 0; i < source.AiRecognitionTaskSet.length; i++) {
+                this.AiRecognitionTaskSet[i] = new AiRecognitionTaskInput(source.AiRecognitionTaskSet[i]);
+            }
+        }
         if (source.AiRecognitionTask != null) {
             this.AiRecognitionTask = new AiRecognitionTaskInput(source.AiRecognitionTask);
         }
@@ -379,6 +408,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamObj(map, prefix + "MediaProcessTask.", this.MediaProcessTask);
         this.setParamObj(map, prefix + "AiContentReviewTask.", this.AiContentReviewTask);
         this.setParamObj(map, prefix + "AiAnalysisTask.", this.AiAnalysisTask);
+        this.setParamArrayObj(map, prefix + "AiRecognitionTaskSet.", this.AiRecognitionTaskSet);
         this.setParamObj(map, prefix + "AiRecognitionTask.", this.AiRecognitionTask);
         this.setParamObj(map, prefix + "MiniProgramPublishTask.", this.MiniProgramPublishTask);
         this.setParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);

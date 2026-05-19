@@ -54,7 +54,9 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     /**
      * Get The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter. 
      * @return TotalCount The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
+     * @deprecated
      */
+    @Deprecated
     public Long getTotalCount() {
         return this.TotalCount;
     }
@@ -62,7 +64,9 @@ public class DescribeRoundPlaysResponse extends AbstractModel {
     /**
      * Set The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
      * @param TotalCount The total number of carousel broadcast playlists that meet the filter criteria. deprecated. for batch inquiries, please use the scrolltoken parameter.
+     * @deprecated
      */
+    @Deprecated
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }

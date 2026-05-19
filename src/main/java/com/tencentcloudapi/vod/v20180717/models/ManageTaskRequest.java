@@ -24,74 +24,74 @@ import java.util.HashMap;
 public class ManageTaskRequest extends AbstractModel {
 
     /**
-    * Video processing task ID.
+    * Task ID of the video processing task.
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * Operation type. Valid value:
-<li>Abort: terminate a task. You can only terminate initiated tasks in `WAITING` status.</li>
+    * Operation type. Value ranges from...to...
+<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
     */
     @SerializedName("OperationType")
     @Expose
     private String OperationType;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Video processing task ID. 
-     * @return TaskId Video processing task ID.
+     * Get Task ID of the video processing task. 
+     * @return TaskId Task ID of the video processing task.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Video processing task ID.
-     * @param TaskId Video processing task ID.
+     * Set Task ID of the video processing task.
+     * @param TaskId Task ID of the video processing task.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get Operation type. Valid value:
-<li>Abort: terminate a task. You can only terminate initiated tasks in `WAITING` status.</li> 
-     * @return OperationType Operation type. Valid value:
-<li>Abort: terminate a task. You can only terminate initiated tasks in `WAITING` status.</li>
+     * Get Operation type. Value ranges from...to...
+<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li> 
+     * @return OperationType Operation type. Value ranges from...to...
+<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
      */
     public String getOperationType() {
         return this.OperationType;
     }
 
     /**
-     * Set Operation type. Valid value:
-<li>Abort: terminate a task. You can only terminate initiated tasks in `WAITING` status.</li>
-     * @param OperationType Operation type. Valid value:
-<li>Abort: terminate a task. You can only terminate initiated tasks in `WAITING` status.</li>
+     * Set Operation type. Value ranges from...to...
+<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
+     * @param OperationType Operation type. Value ranges from...to...
+<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
      */
     public void setOperationType(String OperationType) {
         this.OperationType = OperationType;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

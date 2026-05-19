@@ -24,76 +24,71 @@ import java.util.HashMap;
 public class AudioBeautifyInfo extends AbstractModel {
 
     /**
-    * Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+    * Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
+    * Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
     */
     @SerializedName("Types")
     @Expose
     private String [] Types;
 
     /**
-     * Get Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`. 
-     * @return Switch Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+     * Get Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li> 
+     * @return Switch Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
-     * @param Switch Whether to enable audio improvement. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+     * Set Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
+     * @param Switch Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disable audio beautification</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`. 
-     * @return Types The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
+     * Get Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick. 
+     * @return Types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
      */
     public String [] getTypes() {
         return this.Types;
     }
 
     /**
-     * Set The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
-     * @param Types The audio improvement options. You can specify multiple options. Valid values:
-<li>`declick`: Noise removal.</li>
-<li>`deesser`: De-essing.</li>
-Default: `declick`.
+     * Set Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
+     * @param Types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: de-ess</li>
+Default value: declick.
      */
     public void setTypes(String [] Types) {
         this.Types = Types;

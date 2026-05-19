@@ -24,122 +24,122 @@ import java.util.HashMap;
 public class RestoreMediaRequest extends AbstractModel {
 
     /**
-    * Media file unique identifier list, maximum length: 100.
+    * Unique identifier list of media files. Maximum length: 100.
     */
     @SerializedName("FileIds")
     @Expose
     private String [] FileIds;
 
     /**
-    * The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
+    * Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
     */
     @SerializedName("RestoreDay")
     @Expose
     private Long RestoreDay;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
-<li>Expedited: The files are made available in five minutes.</li>
-<li>Standard: The files are made available in five hours.</li>
-<li>Bulk: The files are made available in 12 hours.</li>
-If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
-<li>Standard: The files are made available in 24 hours.</li>
-<li>Bulk: The files are made available in 48 hours.</li>
+    * Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
+<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
+<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
+<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
+When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
+<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
     */
     @SerializedName("RestoreTier")
     @Expose
     private String RestoreTier;
 
     /**
-     * Get Media file unique identifier list, maximum length: 100. 
-     * @return FileIds Media file unique identifier list, maximum length: 100.
+     * Get Unique identifier list of media files. Maximum length: 100. 
+     * @return FileIds Unique identifier list of media files. Maximum length: 100.
      */
     public String [] getFileIds() {
         return this.FileIds;
     }
 
     /**
-     * Set Media file unique identifier list, maximum length: 100.
-     * @param FileIds Media file unique identifier list, maximum length: 100.
+     * Set Unique identifier list of media files. Maximum length: 100.
+     * @param FileIds Unique identifier list of media files. Maximum length: 100.
      */
     public void setFileIds(String [] FileIds) {
         this.FileIds = FileIds;
     }
 
     /**
-     * Get The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days". 
-     * @return RestoreDay The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
+     * Get Accessible duration of thawed temporary media files must be greater than 0. Unit: day. 
+     * @return RestoreDay Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
      */
     public Long getRestoreDay() {
         return this.RestoreDay;
     }
 
     /**
-     * Set The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
-     * @param RestoreDay The accessible duration of the unfrozen temporary media files must be greater than 0, and the unit is "days".
+     * Set Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
+     * @param RestoreDay Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
      */
     public void setRestoreDay(Long RestoreDay) {
         this.RestoreDay = RestoreDay;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
-<li>Expedited: The files are made available in five minutes.</li>
-<li>Standard: The files are made available in five hours.</li>
-<li>Bulk: The files are made available in 12 hours.</li>
-If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
-<li>Standard: The files are made available in 24 hours.</li>
-<li>Bulk: The files are made available in 48 hours.</li> 
-     * @return RestoreTier The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
-<li>Expedited: The files are made available in five minutes.</li>
-<li>Standard: The files are made available in five hours.</li>
-<li>Bulk: The files are made available in 12 hours.</li>
-If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
-<li>Standard: The files are made available in 24 hours.</li>
-<li>Bulk: The files are made available in 48 hours.</li>
+     * Get Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
+<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
+<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
+<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
+When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
+<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li> 
+     * @return RestoreTier Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
+<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
+<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
+<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
+When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
+<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
      */
     public String getRestoreTier() {
         return this.RestoreTier;
     }
 
     /**
-     * Set The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
-<li>Expedited: The files are made available in five minutes.</li>
-<li>Standard: The files are made available in five hours.</li>
-<li>Bulk: The files are made available in 12 hours.</li>
-If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
-<li>Standard: The files are made available in 24 hours.</li>
-<li>Bulk: The files are made available in 48 hours.</li>
-     * @param RestoreTier The retrieval mode. If the current storage class is ARCHIVE, the valid values for this parameter are as follows:
-<li>Expedited: The files are made available in five minutes.</li>
-<li>Standard: The files are made available in five hours.</li>
-<li>Bulk: The files are made available in 12 hours.</li>
-If the current storage class is DEEP ARCHIVE, the valid values for this parameter are as follows:
-<li>Standard: The files are made available in 24 hours.</li>
-<li>Bulk: The files are made available in 48 hours.</li>
+     * Set Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
+<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
+<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
+<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
+When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
+<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
+     * @param RestoreTier Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
+<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
+<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
+<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
+When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
+<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
+<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
      */
     public void setRestoreTier(String RestoreTier) {
         this.RestoreTier = RestoreTier;

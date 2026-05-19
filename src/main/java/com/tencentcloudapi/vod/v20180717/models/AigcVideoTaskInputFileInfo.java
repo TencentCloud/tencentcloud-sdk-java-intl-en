@@ -24,262 +24,233 @@ import java.util.HashMap;
 public class AigcVideoTaskInputFileInfo extends AbstractModel {
 
     /**
-    * Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+    * <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * File category. Valid values:
-<li>Image: image.</li>
-<li>Video: video.</li>
+    * <p>File category. Value is:</p><ul><li>Image: image. <strong>Note that the Usage field defines the image type.</strong></li><li>Video: video.</li></ul>
     */
     @SerializedName("Category")
     @Expose
     private String Category;
 
     /**
-    * The media File ID, which is the globally unique identifier (guid) of the File in vod, is assigned by the vod backend after successful upload. you can retrieve this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File. description:.
-1. recommended image size: less than 10 mb.
-2. image format value is jpeg, jpg, png.
+    * <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Accessible file URL. this parameter is valid when Type value is URL.
-Note:.
-1. recommended image size: less than 10 mb.
-2. image format value is jpeg, jpg, png.
+    * <p>Accessible file URL. This parameter is valid when the Type value is URL.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Reference Type. The GV Model applies.
-Note:
-When using the GV model, this can be used as the reference method. Available values: asset means material, style means style.
-When using the Kling model and Category as Video, the reference video type is distinguishable: feature indicates feature reference video, and base indicates video for editing.
+    * <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method, available values: asset means material, style means style;<br>When using the Kling model and Category is Video, distinct reference video types can be identified, feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, applicable to multi-image (subject) reference generation mode, available values: subject means subject, background means background;</p>
     */
     @SerializedName("ReferenceType")
     @Expose
     private String ReferenceType;
 
     /**
-    * Subject Id.
-Applicable model: Vidu-q2.
-When identifying the subject in an Image, each Image must include a subject Id, which can be used via @subject Id in subsequent generation. Valid when Category is Image.
+    * <p>Usage: Vidu subject Id.<br>Vidu subject Id: prompt can be used via @subject Id. Valid at that time when Category is Image.</p>
     */
     @SerializedName("ObjectId")
     @Expose
     private String ObjectId;
 
     /**
-    * Suitable for the Vidu-q2 model.
-When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
+    * <p>Suitable for the Vidu-q2 model.<br>When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Supported timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg</p>
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-    * Whether to retain the original sound. Valid when Category is Video. Values as follows:
-<li>Enabled: Reserved</li>
-<li>Disabled: not retain</li>
+    * <p>Whether to retain the original sound of the video. Valid when Category is Video. Values are as follows:</p><li>Enabled: Retain</li><li>Disabled: Not retain</li>
     */
     @SerializedName("KeepOriginalSound")
     @Expose
     private String KeepOriginalSound;
 
     /**
-     * Get Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li> 
-     * @return Type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+    * <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: For first (last) frame to video or image to video;</li><li>Reference: For reference to video;</li></ul><p><strong>Note: FirstFrame is selected by default</strong></p>
+    */
+    @SerializedName("Usage")
+    @Expose
+    private String Usage;
+
+    /**
+    * <p><strong>Only the multi-image (subject) reference mode of the PixVerse model takes effect</strong>. Specify a name for the image to achieve more precise results. Usage: When the field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be the same as the field value.</p>
+    */
+    @SerializedName("Text")
+    @Expose
+    private String Text;
+
+    /**
+     * Get <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p> 
+     * @return Type <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
-     * @param Type Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li>
+     * Set <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
+     * @param Type <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get File category. Valid values:
-<li>Image: image.</li>
-<li>Video: video.</li> 
-     * @return Category File category. Valid values:
-<li>Image: image.</li>
-<li>Video: video.</li>
+     * Get <p>File category. Value is:</p><ul><li>Image: image. <strong>Note that the Usage field defines the image type.</strong></li><li>Video: video.</li></ul> 
+     * @return Category <p>File category. Value is:</p><ul><li>Image: image. <strong>Note that the Usage field defines the image type.</strong></li><li>Video: video.</li></ul>
      */
     public String getCategory() {
         return this.Category;
     }
 
     /**
-     * Set File category. Valid values:
-<li>Image: image.</li>
-<li>Video: video.</li>
-     * @param Category File category. Valid values:
-<li>Image: image.</li>
-<li>Video: video.</li>
+     * Set <p>File category. Value is:</p><ul><li>Image: image. <strong>Note that the Usage field defines the image type.</strong></li><li>Video: video.</li></ul>
+     * @param Category <p>File category. Value is:</p><ul><li>Image: image. <strong>Note that the Usage field defines the image type.</strong></li><li>Video: video.</li></ul>
      */
     public void setCategory(String Category) {
         this.Category = Category;
     }
 
     /**
-     * Get The media File ID, which is the globally unique identifier (guid) of the File in vod, is assigned by the vod backend after successful upload. you can retrieve this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File. description:.
-1. recommended image size: less than 10 mb.
-2. image format value is jpeg, jpg, png. 
-     * @return FileId The media File ID, which is the globally unique identifier (guid) of the File in vod, is assigned by the vod backend after successful upload. you can retrieve this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File. description:.
-1. recommended image size: less than 10 mb.
-2. image format value is jpeg, jpg, png.
+     * Get <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol> 
+     * @return FileId <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set The media File ID, which is the globally unique identifier (guid) of the File in vod, is assigned by the vod backend after successful upload. you can retrieve this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File. description:.
-1. recommended image size: less than 10 mb.
-2. image format value is jpeg, jpg, png.
-     * @param FileId The media File ID, which is the globally unique identifier (guid) of the File in vod, is assigned by the vod backend after successful upload. you can retrieve this field in the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media). this parameter is valid when the Type value is File. description:.
-1. recommended image size: less than 10 mb.
-2. image format value is jpeg, jpg, png.
+     * Set <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
+     * @param FileId <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File. Description:</p><ol><li>Images less than 10M are recommended;</li><li>Image format values: jpeg, jpg, png.</li></ol>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Accessible file URL. this parameter is valid when Type value is URL.
-Note:.
-1. recommended image size: less than 10 mb.
-2. image format value is jpeg, jpg, png. 
-     * @return Url Accessible file URL. this parameter is valid when Type value is URL.
-Note:.
-1. recommended image size: less than 10 mb.
-2. image format value is jpeg, jpg, png.
+     * Get <p>Accessible file URL. This parameter is valid when the Type value is URL.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol> 
+     * @return Url <p>Accessible file URL. This parameter is valid when the Type value is URL.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Accessible file URL. this parameter is valid when Type value is URL.
-Note:.
-1. recommended image size: less than 10 mb.
-2. image format value is jpeg, jpg, png.
-     * @param Url Accessible file URL. this parameter is valid when Type value is URL.
-Note:.
-1. recommended image size: less than 10 mb.
-2. image format value is jpeg, jpg, png.
+     * Set <p>Accessible file URL. This parameter is valid when the Type value is URL.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
+     * @param Url <p>Accessible file URL. This parameter is valid when the Type value is URL.<br>Description:</p><ol><li>Images less than 10M are recommended.</li><li>Image format values: jpeg, jpg, png.</li></ol>
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Reference Type. The GV Model applies.
-Note:
-When using the GV model, this can be used as the reference method. Available values: asset means material, style means style.
-When using the Kling model and Category as Video, the reference video type is distinguishable: feature indicates feature reference video, and base indicates video for editing. 
-     * @return ReferenceType Reference Type. The GV Model applies.
-Note:
-When using the GV model, this can be used as the reference method. Available values: asset means material, style means style.
-When using the Kling model and Category as Video, the reference video type is distinguishable: feature indicates feature reference video, and base indicates video for editing.
+     * Get <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method, available values: asset means material, style means style;<br>When using the Kling model and Category is Video, distinct reference video types can be identified, feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, applicable to multi-image (subject) reference generation mode, available values: subject means subject, background means background;</p> 
+     * @return ReferenceType <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method, available values: asset means material, style means style;<br>When using the Kling model and Category is Video, distinct reference video types can be identified, feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, applicable to multi-image (subject) reference generation mode, available values: subject means subject, background means background;</p>
      */
     public String getReferenceType() {
         return this.ReferenceType;
     }
 
     /**
-     * Set Reference Type. The GV Model applies.
-Note:
-When using the GV model, this can be used as the reference method. Available values: asset means material, style means style.
-When using the Kling model and Category as Video, the reference video type is distinguishable: feature indicates feature reference video, and base indicates video for editing.
-     * @param ReferenceType Reference Type. The GV Model applies.
-Note:
-When using the GV model, this can be used as the reference method. Available values: asset means material, style means style.
-When using the Kling model and Category as Video, the reference video type is distinguishable: feature indicates feature reference video, and base indicates video for editing.
+     * Set <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method, available values: asset means material, style means style;<br>When using the Kling model and Category is Video, distinct reference video types can be identified, feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, applicable to multi-image (subject) reference generation mode, available values: subject means subject, background means background;</p>
+     * @param ReferenceType <p>Reference Type, applicable to GV, Kling, and PixVerse models.<br>Note:<br>When using the GV model, it can be used as a reference method, available values: asset means material, style means style;<br>When using the Kling model and Category is Video, distinct reference video types can be identified, feature means feature reference video, base means video to be edited;<br>When using the PixVerse model, applicable to multi-image (subject) reference generation mode, available values: subject means subject, background means background;</p>
      */
     public void setReferenceType(String ReferenceType) {
         this.ReferenceType = ReferenceType;
     }
 
     /**
-     * Get Subject Id.
-Applicable model: Vidu-q2.
-When identifying the subject in an Image, each Image must include a subject Id, which can be used via @subject Id in subsequent generation. Valid when Category is Image. 
-     * @return ObjectId Subject Id.
-Applicable model: Vidu-q2.
-When identifying the subject in an Image, each Image must include a subject Id, which can be used via @subject Id in subsequent generation. Valid when Category is Image.
+     * Get <p>Usage: Vidu subject Id.<br>Vidu subject Id: prompt can be used via @subject Id. Valid at that time when Category is Image.</p> 
+     * @return ObjectId <p>Usage: Vidu subject Id.<br>Vidu subject Id: prompt can be used via @subject Id. Valid at that time when Category is Image.</p>
      */
     public String getObjectId() {
         return this.ObjectId;
     }
 
     /**
-     * Set Subject Id.
-Applicable model: Vidu-q2.
-When identifying the subject in an Image, each Image must include a subject Id, which can be used via @subject Id in subsequent generation. Valid when Category is Image.
-     * @param ObjectId Subject Id.
-Applicable model: Vidu-q2.
-When identifying the subject in an Image, each Image must include a subject Id, which can be used via @subject Id in subsequent generation. Valid when Category is Image.
+     * Set <p>Usage: Vidu subject Id.<br>Vidu subject Id: prompt can be used via @subject Id. Valid at that time when Category is Image.</p>
+     * @param ObjectId <p>Usage: Vidu subject Id.<br>Vidu subject Id: prompt can be used via @subject Id. Valid at that time when Category is Image.</p>
      */
     public void setObjectId(String ObjectId) {
         this.ObjectId = ObjectId;
     }
 
     /**
-     * Get Suitable for the Vidu-q2 model.
-When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg 
-     * @return VoiceId Suitable for the Vidu-q2 model.
-When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
+     * Get <p>Suitable for the Vidu-q2 model.<br>When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Supported timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg</p> 
+     * @return VoiceId <p>Suitable for the Vidu-q2 model.<br>When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Supported timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg</p>
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set Suitable for the Vidu-q2 model.
-When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
-     * @param VoiceId Suitable for the Vidu-q2 model.
-When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg
+     * Set <p>Suitable for the Vidu-q2 model.<br>When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Supported timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg</p>
+     * @param VoiceId <p>Suitable for the Vidu-q2 model.<br>When all images carry the subject Id, you can set the timbre Id targeting the subject. Valid when Category is Image. Supported timbre list: https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg</p>
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
     }
 
     /**
-     * Get Whether to retain the original sound. Valid when Category is Video. Values as follows:
-<li>Enabled: Reserved</li>
-<li>Disabled: not retain</li> 
-     * @return KeepOriginalSound Whether to retain the original sound. Valid when Category is Video. Values as follows:
-<li>Enabled: Reserved</li>
-<li>Disabled: not retain</li>
+     * Get <p>Whether to retain the original sound of the video. Valid when Category is Video. Values are as follows:</p><li>Enabled: Retain</li><li>Disabled: Not retain</li> 
+     * @return KeepOriginalSound <p>Whether to retain the original sound of the video. Valid when Category is Video. Values are as follows:</p><li>Enabled: Retain</li><li>Disabled: Not retain</li>
      */
     public String getKeepOriginalSound() {
         return this.KeepOriginalSound;
     }
 
     /**
-     * Set Whether to retain the original sound. Valid when Category is Video. Values as follows:
-<li>Enabled: Reserved</li>
-<li>Disabled: not retain</li>
-     * @param KeepOriginalSound Whether to retain the original sound. Valid when Category is Video. Values as follows:
-<li>Enabled: Reserved</li>
-<li>Disabled: not retain</li>
+     * Set <p>Whether to retain the original sound of the video. Valid when Category is Video. Values are as follows:</p><li>Enabled: Retain</li><li>Disabled: Not retain</li>
+     * @param KeepOriginalSound <p>Whether to retain the original sound of the video. Valid when Category is Video. Values are as follows:</p><li>Enabled: Retain</li><li>Disabled: Not retain</li>
      */
     public void setKeepOriginalSound(String KeepOriginalSound) {
         this.KeepOriginalSound = KeepOriginalSound;
+    }
+
+    /**
+     * Get <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: For first (last) frame to video or image to video;</li><li>Reference: For reference to video;</li></ul><p><strong>Note: FirstFrame is selected by default</strong></p> 
+     * @return Usage <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: For first (last) frame to video or image to video;</li><li>Reference: For reference to video;</li></ul><p><strong>Note: FirstFrame is selected by default</strong></p>
+     */
+    public String getUsage() {
+        return this.Usage;
+    }
+
+    /**
+     * Set <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: For first (last) frame to video or image to video;</li><li>Reference: For reference to video;</li></ul><p><strong>Note: FirstFrame is selected by default</strong></p>
+     * @param Usage <p>Used to distinguish whether the input image is for <strong>first (last) frame to video</strong>, <strong>image to video</strong>, or <strong>reference to video</strong>. Available values:</p><ul><li>FirstFrame: For first (last) frame to video or image to video;</li><li>Reference: For reference to video;</li></ul><p><strong>Note: FirstFrame is selected by default</strong></p>
+     */
+    public void setUsage(String Usage) {
+        this.Usage = Usage;
+    }
+
+    /**
+     * Get <p><strong>Only the multi-image (subject) reference mode of the PixVerse model takes effect</strong>. Specify a name for the image to achieve more precise results. Usage: When the field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be the same as the field value.</p> 
+     * @return Text <p><strong>Only the multi-image (subject) reference mode of the PixVerse model takes effect</strong>. Specify a name for the image to achieve more precise results. Usage: When the field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be the same as the field value.</p>
+     */
+    public String getText() {
+        return this.Text;
+    }
+
+    /**
+     * Set <p><strong>Only the multi-image (subject) reference mode of the PixVerse model takes effect</strong>. Specify a name for the image to achieve more precise results. Usage: When the field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be the same as the field value.</p>
+     * @param Text <p><strong>Only the multi-image (subject) reference mode of the PixVerse model takes effect</strong>. Specify a name for the image to achieve more precise results. Usage: When the field value is "kitten", use @kitten in the Prompt to accurately describe the scenario. There must be a space after @Text, for example, @kitten run. The name referenced in the Prompt must be the same as the field value.</p>
+     */
+    public void setText(String Text) {
+        this.Text = Text;
     }
 
     public AigcVideoTaskInputFileInfo() {
@@ -314,6 +285,12 @@ When all images carry the subject Id, you can set the timbre Id targeting the su
         if (source.KeepOriginalSound != null) {
             this.KeepOriginalSound = new String(source.KeepOriginalSound);
         }
+        if (source.Usage != null) {
+            this.Usage = new String(source.Usage);
+        }
+        if (source.Text != null) {
+            this.Text = new String(source.Text);
+        }
     }
 
 
@@ -329,6 +306,8 @@ When all images carry the subject Id, you can set the timbre Id targeting the su
         this.setParamSimple(map, prefix + "ObjectId", this.ObjectId);
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
         this.setParamSimple(map, prefix + "KeepOriginalSound", this.KeepOriginalSound);
+        this.setParamSimple(map, prefix + "Usage", this.Usage);
+        this.setParamSimple(map, prefix + "Text", this.Text);
 
     }
 }

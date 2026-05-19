@@ -24,72 +24,141 @@ import java.util.HashMap;
 public class CreateSubAppIdRequest extends AbstractModel {
 
     /**
-    * Subapplication name. Length limit: 40 characters.
+    * <p>Application name, length limited to 40 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Subapplication overview. Length limit: 300 characters.
+    * <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
+    * <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Subapplication name. Length limit: 40 characters. 
-     * @return Name Subapplication name. Length limit: 40 characters.
+    * <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
+
+    /**
+    * <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+    */
+    @SerializedName("StorageRegion")
+    @Expose
+    private String StorageRegion;
+
+    /**
+    * <p>tag that needs to be bound to this application</p>
+    */
+    @SerializedName("Tags")
+    @Expose
+    private ResourceTag [] Tags;
+
+    /**
+     * Get <p>Application name, length limited to 40 characters.</p> 
+     * @return Name <p>Application name, length limited to 40 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Subapplication name. Length limit: 40 characters.
-     * @param Name Subapplication name. Length limit: 40 characters.
+     * Set <p>Application name, length limited to 40 characters.</p>
+     * @param Name <p>Application name, length limited to 40 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Subapplication overview. Length limit: 300 characters. 
-     * @return Description Subapplication overview. Length limit: 300 characters.
+     * Get <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p> 
+     * @return Description <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Subapplication overview. Length limit: 300 characters.
-     * @param Description Subapplication overview. Length limit: 300 characters.
+     * Set <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
+     * @param Description <p>Application description, length limited to 300 characters. If left blank, the application description is empty by default.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne. 
-     * @return Type Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
+     * Get <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p> 
+     * @return Type <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
-     * @param Type Application type. Available values: <li>AllInOne: All-in-one;</li><li>Professional: Professional.</li>Default value: AllInOne.
+     * Set <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
+     * @param Type <p>App type. Valid values: <li>AllInOne: integrated;</li><li>Professional: pro edition.</li>Default value: AllInOne.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
+    }
+
+    /**
+     * Get <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul> 
+     * @return Mode <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
+     * @param Mode <p>Mode of this application. Available values are:</p><ul><li>fileid: fileid mode only</li><li>fileid+path: fileid & path mode<br>Leave empty to select fileid mode by default</li></ul>
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p> 
+     * @return StorageRegion <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+     */
+    public String getStorageRegion() {
+        return this.StorageRegion;
+    }
+
+    /**
+     * Set <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+     * @param StorageRegion <p>When Mode is fileid only, it is used to set the default storage region and is selectable.<br>When Mode is fileid+path, it is used to specify the storage region and is required.</p><p>For reference: <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1">Supported region list</a></p>
+     */
+    public void setStorageRegion(String StorageRegion) {
+        this.StorageRegion = StorageRegion;
+    }
+
+    /**
+     * Get <p>tag that needs to be bound to this application</p> 
+     * @return Tags <p>tag that needs to be bound to this application</p>
+     */
+    public ResourceTag [] getTags() {
+        return this.Tags;
+    }
+
+    /**
+     * Set <p>tag that needs to be bound to this application</p>
+     * @param Tags <p>tag that needs to be bound to this application</p>
+     */
+    public void setTags(ResourceTag [] Tags) {
+        this.Tags = Tags;
     }
 
     public CreateSubAppIdRequest() {
@@ -109,6 +178,18 @@ public class CreateSubAppIdRequest extends AbstractModel {
         if (source.Type != null) {
             this.Type = new String(source.Type);
         }
+        if (source.Mode != null) {
+            this.Mode = new String(source.Mode);
+        }
+        if (source.StorageRegion != null) {
+            this.StorageRegion = new String(source.StorageRegion);
+        }
+        if (source.Tags != null) {
+            this.Tags = new ResourceTag[source.Tags.length];
+            for (int i = 0; i < source.Tags.length; i++) {
+                this.Tags[i] = new ResourceTag(source.Tags[i]);
+            }
+        }
     }
 
 
@@ -119,6 +200,9 @@ public class CreateSubAppIdRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "Type", this.Type);
+        this.setParamSimple(map, prefix + "Mode", this.Mode);
+        this.setParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
+        this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
 
     }
 }

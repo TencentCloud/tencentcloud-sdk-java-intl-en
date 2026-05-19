@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeAllClassResponse extends AbstractModel {
 
     /**
-    * Category information set
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Classification information collection
     */
     @SerializedName("ClassInfoSet")
     @Expose
@@ -39,20 +38,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Category information set
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ClassInfoSet Category information set
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Classification information collection 
+     * @return ClassInfoSet Classification information collection
      */
     public MediaClassInfo [] getClassInfoSet() {
         return this.ClassInfoSet;
     }
 
     /**
-     * Set Category information set
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ClassInfoSet Category information set
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Classification information collection
+     * @param ClassInfoSet Classification information collection
      */
     public void setClassInfoSet(MediaClassInfo [] ClassInfoSet) {
         this.ClassInfoSet = ClassInfoSet;

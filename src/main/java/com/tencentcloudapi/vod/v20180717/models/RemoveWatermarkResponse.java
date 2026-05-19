@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class RemoveWatermarkResponse extends AbstractModel {
 
     /**
-    * The task ID.
+    * Run ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class RemoveWatermarkResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The task ID. 
-     * @return TaskId The task ID.
+     * Get Run ID. 
+     * @return TaskId Run ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The task ID.
-     * @param TaskId The task ID.
+     * Set Run ID.
+     * @param TaskId Run ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

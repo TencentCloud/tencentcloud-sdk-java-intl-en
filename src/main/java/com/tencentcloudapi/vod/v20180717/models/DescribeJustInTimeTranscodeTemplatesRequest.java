@@ -24,125 +24,125 @@ import java.util.HashMap;
 public class DescribeJustInTimeTranscodeTemplatesRequest extends AbstractModel {
 
     /**
-    * Template name filter condition, array length limit: 100.
+    * Filter condition for template name, with an array length limit of 100.
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Template type filter conditions, optional values:
+    * Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
+<li>Custom: User-defined task flow template.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Paging offset, default value: 0.
+    * Pagination offset. Default value: 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Returns the number of records, default value: 10, maximum value: 100.
+    * Number of returned entries. Default value: 10. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Template name filter condition, array length limit: 100. 
-     * @return Names Template name filter condition, array length limit: 100.
+     * Get Filter condition for template name, with an array length limit of 100. 
+     * @return Names Filter condition for template name, with an array length limit of 100.
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set Template name filter condition, array length limit: 100.
-     * @param Names Template name filter condition, array length limit: 100.
+     * Set Filter condition for template name, with an array length limit of 100.
+     * @param Names Filter condition for template name, with an array length limit of 100.
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Template type filter conditions, optional values:
+     * Get Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li> 
-     * @return Type Template type filter conditions, optional values:
+<li>Custom: User-defined task flow template.</li> 
+     * @return Type Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
+<li>Custom: User-defined task flow template.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Template type filter conditions, optional values:
+     * Set Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
-     * @param Type Template type filter conditions, optional values:
+<li>Custom: User-defined task flow template.</li>
+     * @param Type Condition for filtering templates by type. Valid values:
 <li>Preset: system preset task flow template;</li>
-<li>Custom: user-defined task flow template. </li>
+<li>Custom: User-defined task flow template.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Paging offset, default value: 0. 
-     * @return Offset Paging offset, default value: 0.
+     * Get Pagination offset. Default value: 0. 
+     * @return Offset Pagination offset. Default value: 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Paging offset, default value: 0.
-     * @param Offset Paging offset, default value: 0.
+     * Set Pagination offset. Default value: 0.
+     * @param Offset Pagination offset. Default value: 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Returns the number of records, default value: 10, maximum value: 100. 
-     * @return Limit Returns the number of records, default value: 10, maximum value: 100.
+     * Get Number of returned entries. Default value: 10. Maximum value: 100. 
+     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Returns the number of records, default value: 10, maximum value: 100.
-     * @param Limit Returns the number of records, default value: 10, maximum value: 100.
+     * Set Number of returned entries. Default value: 10. Maximum value: 100.
+     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

@@ -35,8 +35,8 @@ public class EditMediaVideoStream extends AbstractModel {
     private String Codec;
 
     /**
-    * The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
-When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+    * Bitrate of video stream, value ranges from 0 to [128, 100000], measurement unit: kbps.
+When the value is 0 or left blank, VOD automatically sets the bitrate.
     */
     @SerializedName("Bitrate")
     @Expose
@@ -116,20 +116,20 @@ The default value is 0.
     }
 
     /**
-     * Get The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
-When the value is 0 or left blank, it means automatically selecting the best video bit rate. 
-     * @return Bitrate The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
-When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+     * Get Bitrate of video stream, value ranges from 0 to [128, 100000], measurement unit: kbps.
+When the value is 0 or left blank, VOD automatically sets the bitrate. 
+     * @return Bitrate Bitrate of video stream, value ranges from 0 to [128, 100000], measurement unit: kbps.
+When the value is 0 or left blank, VOD automatically sets the bitrate.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
-When the value is 0 or left blank, it means automatically selecting the best video bit rate.
-     * @param Bitrate The bit rate of the video stream, value range: 0 and [128, 35000], unit: kbps. 
-When the value is 0 or left blank, it means automatically selecting the best video bit rate.
+     * Set Bitrate of video stream, value ranges from 0 to [128, 100000], measurement unit: kbps.
+When the value is 0 or left blank, VOD automatically sets the bitrate.
+     * @param Bitrate Bitrate of video stream, value ranges from 0 to [128, 100000], measurement unit: kbps.
+When the value is 0 or left blank, VOD automatically sets the bitrate.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;

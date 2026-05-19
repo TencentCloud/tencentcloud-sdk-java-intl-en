@@ -24,105 +24,118 @@ import java.util.HashMap;
 public class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel {
 
     /**
-    * Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
+    * <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Audio stream name in the output, supporting up to 16 characters.
+    * <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
+    * <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
     */
     @SerializedName("Language")
     @Expose
     private String Language;
 
     /**
-    * Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
+    * <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
     */
     @SerializedName("Default")
     @Expose
     private String Default;
 
     /**
-     * Get Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored. 
-     * @return FileId Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
+    * <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+    */
+    @SerializedName("AudioTrackIdx")
+    @Expose
+    private Long AudioTrackIdx;
+
+    /**
+     * Get <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p> 
+     * @return FileId <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
-     * @param FileId Media ID of the input audio file. The first audio stream in the media will be fixed, while video streams and other audio streams (if any) will be ignored.
+     * Set <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
+     * @param FileId <p>Media ID of the audio source. The first audio stream in the media source file is used by default. The video stream and other audio streams (if any) will be ignored.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Audio stream name in the output, supporting up to 16 characters. 
-     * @return Name Audio stream name in the output, supporting up to 16 characters.
+     * Get <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p> 
+     * @return Name <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Audio stream name in the output, supporting up to 16 characters.
-     * @param Name Audio stream name in the output, supporting up to 16 characters.
+     * Set <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
+     * @param Name <p>Name of the audio stream in the output adaptive bitrate stream. Length limit is 16 characters.</p>
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification. 
-     * @return Language The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
+     * Get <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p> 
+     * @return Language <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
      */
     public String getLanguage() {
         return this.Language;
     }
 
     /**
-     * Set The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
-     * @param Language The language of the audio stream in the output, supporting up to 16 characters. It must comply with the RFC5646 specification.
+     * Set <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
+     * @param Language <p>The language of the audio stream in the output adaptive bitrate stream, with a length limit of 16 characters. It must comply with RFC5646.</p>
      */
     public void setLanguage(String Language) {
         this.Language = Language;
     }
 
     /**
-     * Get Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li> 
-     * @return Default Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
+     * Get <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li> 
+     * @return Default <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
      */
     public String getDefault() {
         return this.Default;
     }
 
     /**
-     * Set Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
-     * @param Default Whether to set as the default audio for adaptive bitrate streaming.
-<li>YES: Set as the default audio;</li>
-<li>NO: Not set as the default audio (default value).</li>
+     * Set <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
+     * @param Default <p>Set as default audio for adaptive bitrate. Value:</p><li>YES: Set as default audio;</li><li>NO: Do not set as default audio (default value).</li>
      */
     public void setDefault(String Default) {
         this.Default = Default;
+    }
+
+    /**
+     * Get <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p> 
+     * @return AudioTrackIdx <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+     */
+    public Long getAudioTrackIdx() {
+        return this.AudioTrackIdx;
+    }
+
+    /**
+     * Set <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+     * @param AudioTrackIdx <p>Audio track serial number, which means selecting the nth audio track in the audio source, counting begins from 0. Default value is 0, means selecting the audio track positioned towards the front.</p>
+     */
+    public void setAudioTrackIdx(Long AudioTrackIdx) {
+        this.AudioTrackIdx = AudioTrackIdx;
     }
 
     public ComplexAdaptiveDynamicStreamingTaskAudioInput() {
@@ -145,6 +158,9 @@ public class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
         if (source.Default != null) {
             this.Default = new String(source.Default);
         }
+        if (source.AudioTrackIdx != null) {
+            this.AudioTrackIdx = new Long(source.AudioTrackIdx);
+        }
     }
 
 
@@ -156,6 +172,7 @@ public class ComplexAdaptiveDynamicStreamingTaskAudioInput extends AbstractModel
         this.setParamSimple(map, prefix + "Name", this.Name);
         this.setParamSimple(map, prefix + "Language", this.Language);
         this.setParamSimple(map, prefix + "Default", this.Default);
+        this.setParamSimple(map, prefix + "AudioTrackIdx", this.AudioTrackIdx);
 
     }
 }

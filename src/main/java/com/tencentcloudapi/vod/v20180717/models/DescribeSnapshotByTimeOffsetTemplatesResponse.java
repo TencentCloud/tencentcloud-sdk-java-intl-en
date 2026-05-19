@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSnapshotByTimeOffsetTemplatesResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of time point screencapturing template details.
+    * Specified time point screenshot template detail list.
     */
     @SerializedName("SnapshotByTimeOffsetTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeSnapshotByTimeOffsetTemplatesResponse extends AbstractModel
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of time point screencapturing template details. 
-     * @return SnapshotByTimeOffsetTemplateSet List of time point screencapturing template details.
+     * Get Specified time point screenshot template detail list. 
+     * @return SnapshotByTimeOffsetTemplateSet Specified time point screenshot template detail list.
      */
     public SnapshotByTimeOffsetTemplate [] getSnapshotByTimeOffsetTemplateSet() {
         return this.SnapshotByTimeOffsetTemplateSet;
     }
 
     /**
-     * Set List of time point screencapturing template details.
-     * @param SnapshotByTimeOffsetTemplateSet List of time point screencapturing template details.
+     * Set Specified time point screenshot template detail list.
+     * @param SnapshotByTimeOffsetTemplateSet Specified time point screenshot template detail list.
      */
     public void setSnapshotByTimeOffsetTemplateSet(SnapshotByTimeOffsetTemplate [] SnapshotByTimeOffsetTemplateSet) {
         this.SnapshotByTimeOffsetTemplateSet = SnapshotByTimeOffsetTemplateSet;

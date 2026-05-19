@@ -24,98 +24,98 @@ import java.util.HashMap;
 public class CreateSuperPlayerConfigRequest extends AbstractModel {
 
     /**
-    * Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
+    * Player configuration name. Length limit: 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (such as test_ABC-123). The name is unique for the same user.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Type of audio/video played. Valid values:
-<li>AdaptiveDynamicStreaming</li>
-<li>Transcode</li>
-<li>Original</li>
-Default value: `AdaptiveDynamicStream`
+    * Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Default is AdaptiveDynamicStream.
     */
     @SerializedName("AudioVideoType")
     @Expose
     private String AudioVideoType;
 
     /**
-    * Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
-<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
-<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
-Default value: `OFF`
-This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
+    * Switch for playing DRM-protected adaptive bitstream.
+<li>ON: Enable, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
     */
     @SerializedName("DrmSwitch")
     @Expose
     private String DrmSwitch;
 
     /**
-    * ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+    * Allowed output of unencrypted adaptive bitstream template ID.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is OFF.
     */
     @SerializedName("AdaptiveDynamicStreamingDefinition")
     @Expose
     private Long AdaptiveDynamicStreamingDefinition;
 
     /**
-    * Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+    * Allowed output of DRM adaptive bitstream template content.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is ON.
     */
     @SerializedName("DrmStreamingsInfo")
     @Expose
     private DrmStreamingsInfo DrmStreamingsInfo;
 
     /**
-    * ID of the transcoding template allowed for playback
+    * Allowed output transcoding template ID.
 
-This parameter is required if `AudioVideoType` is `Transcode`.
+Required when AudioVideoType is Transcode.
     */
     @SerializedName("TranscodeDefinition")
     @Expose
     private Long TranscodeDefinition;
 
     /**
-    * ID of the image sprite generating template that allows output.
+    * Allowed output sprite template ID.
     */
     @SerializedName("ImageSpriteDefinition")
     @Expose
     private Long ImageSpriteDefinition;
 
     /**
-    * The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+    * Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array.
 <li>MinEdgeLength: 240, Name: smooth;</li>
-<li>MinEdgeLength: 480, Name: SD; </li>
-<li>MinEdgeLength: 720, Name: HD; </li>
-<li>MinEdgeLength: 1080, Name: Full HD; </li>
-<li>MinEdgeLength: 1440, Name: 2K; </li>
-<li>MinEdgeLength: 2160, Name: 4K; </li>
-<li>MinEdgeLength: 4320, Name: 8K. </li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
     */
     @SerializedName("ResolutionNames")
     @Expose
     private ResolutionNameInfo [] ResolutionNames;
 
     /**
-    * Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+    * Domain name used during playback. Leave it blank or enter Default to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+    * Scheme used during playback. Leave it blank or enter Default to indicate usage of the scheme in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
     */
@@ -124,261 +124,261 @@ This parameter is required if `AudioVideoType` is `Transcode`.
     private String Scheme;
 
     /**
-    * Template description. Length limit: 256 characters.
+    * Template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-     * Get Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user. 
-     * @return Name Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
+     * Get Player configuration name. Length limit: 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (such as test_ABC-123). The name is unique for the same user. 
+     * @return Name Player configuration name. Length limit: 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (such as test_ABC-123). The name is unique for the same user.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
-     * @param Name Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
+     * Set Player configuration name. Length limit: 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (such as test_ABC-123). The name is unique for the same user.
+     * @param Name Player configuration name. Length limit: 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (such as test_ABC-123). The name is unique for the same user.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Type of audio/video played. Valid values:
-<li>AdaptiveDynamicStreaming</li>
-<li>Transcode</li>
-<li>Original</li>
-Default value: `AdaptiveDynamicStream` 
-     * @return AudioVideoType Type of audio/video played. Valid values:
-<li>AdaptiveDynamicStreaming</li>
-<li>Transcode</li>
-<li>Original</li>
-Default value: `AdaptiveDynamicStream`
+     * Get Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Default is AdaptiveDynamicStream. 
+     * @return AudioVideoType Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Default is AdaptiveDynamicStream.
      */
     public String getAudioVideoType() {
         return this.AudioVideoType;
     }
 
     /**
-     * Set Type of audio/video played. Valid values:
-<li>AdaptiveDynamicStreaming</li>
-<li>Transcode</li>
-<li>Original</li>
-Default value: `AdaptiveDynamicStream`
-     * @param AudioVideoType Type of audio/video played. Valid values:
-<li>AdaptiveDynamicStreaming</li>
-<li>Transcode</li>
-<li>Original</li>
-Default value: `AdaptiveDynamicStream`
+     * Set Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Default is AdaptiveDynamicStream.
+     * @param AudioVideoType Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Default is AdaptiveDynamicStream.
      */
     public void setAudioVideoType(String AudioVideoType) {
         this.AudioVideoType = AudioVideoType;
     }
 
     /**
-     * Get Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
-<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
-<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
-Default value: `OFF`
-This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`. 
-     * @return DrmSwitch Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
-<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
-<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
-Default value: `OFF`
-This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
+     * Get Switch for playing DRM-protected adaptive bitstream.
+<li>ON: Enable, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream. 
+     * @return DrmSwitch Switch for playing DRM-protected adaptive bitstream.
+<li>ON: Enable, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
      */
     public String getDrmSwitch() {
         return this.DrmSwitch;
     }
 
     /**
-     * Set Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
-<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
-<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
-Default value: `OFF`
-This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
-     * @param DrmSwitch Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
-<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
-<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
-Default value: `OFF`
-This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
+     * Set Switch for playing DRM-protected adaptive bitstream.
+<li>ON: Enable, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+     * @param DrmSwitch Switch for playing DRM-protected adaptive bitstream.
+<li>ON: Enable, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
      */
     public void setDrmSwitch(String DrmSwitch) {
         this.DrmSwitch = DrmSwitch;
     }
 
     /**
-     * Get ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+     * Get Allowed output of unencrypted adaptive bitstream template ID.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`. 
-     * @return AdaptiveDynamicStreamingDefinition ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is OFF. 
+     * @return AdaptiveDynamicStreamingDefinition Allowed output of unencrypted adaptive bitstream template ID.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is OFF.
      */
     public Long getAdaptiveDynamicStreamingDefinition() {
         return this.AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Set ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+     * Set Allowed output of unencrypted adaptive bitstream template ID.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
-     * @param AdaptiveDynamicStreamingDefinition ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is OFF.
+     * @param AdaptiveDynamicStreamingDefinition Allowed output of unencrypted adaptive bitstream template ID.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is OFF.
      */
     public void setAdaptiveDynamicStreamingDefinition(Long AdaptiveDynamicStreamingDefinition) {
         this.AdaptiveDynamicStreamingDefinition = AdaptiveDynamicStreamingDefinition;
     }
 
     /**
-     * Get Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+     * Get Allowed output of DRM adaptive bitstream template content.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`. 
-     * @return DrmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is ON. 
+     * @return DrmStreamingsInfo Allowed output of DRM adaptive bitstream template content.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is ON.
      */
     public DrmStreamingsInfo getDrmStreamingsInfo() {
         return this.DrmStreamingsInfo;
     }
 
     /**
-     * Set Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+     * Set Allowed output of DRM adaptive bitstream template content.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
-     * @param DrmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is ON.
+     * @param DrmStreamingsInfo Allowed output of DRM adaptive bitstream template content.
 
-This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+This parameter is required when AudioVideoType is AdaptiveDynamicStream and DrmSwitch is ON.
      */
     public void setDrmStreamingsInfo(DrmStreamingsInfo DrmStreamingsInfo) {
         this.DrmStreamingsInfo = DrmStreamingsInfo;
     }
 
     /**
-     * Get ID of the transcoding template allowed for playback
+     * Get Allowed output transcoding template ID.
 
-This parameter is required if `AudioVideoType` is `Transcode`. 
-     * @return TranscodeDefinition ID of the transcoding template allowed for playback
+Required when AudioVideoType is Transcode. 
+     * @return TranscodeDefinition Allowed output transcoding template ID.
 
-This parameter is required if `AudioVideoType` is `Transcode`.
+Required when AudioVideoType is Transcode.
      */
     public Long getTranscodeDefinition() {
         return this.TranscodeDefinition;
     }
 
     /**
-     * Set ID of the transcoding template allowed for playback
+     * Set Allowed output transcoding template ID.
 
-This parameter is required if `AudioVideoType` is `Transcode`.
-     * @param TranscodeDefinition ID of the transcoding template allowed for playback
+Required when AudioVideoType is Transcode.
+     * @param TranscodeDefinition Allowed output transcoding template ID.
 
-This parameter is required if `AudioVideoType` is `Transcode`.
+Required when AudioVideoType is Transcode.
      */
     public void setTranscodeDefinition(Long TranscodeDefinition) {
         this.TranscodeDefinition = TranscodeDefinition;
     }
 
     /**
-     * Get ID of the image sprite generating template that allows output. 
-     * @return ImageSpriteDefinition ID of the image sprite generating template that allows output.
+     * Get Allowed output sprite template ID. 
+     * @return ImageSpriteDefinition Allowed output sprite template ID.
      */
     public Long getImageSpriteDefinition() {
         return this.ImageSpriteDefinition;
     }
 
     /**
-     * Set ID of the image sprite generating template that allows output.
-     * @param ImageSpriteDefinition ID of the image sprite generating template that allows output.
+     * Set Allowed output sprite template ID.
+     * @param ImageSpriteDefinition Allowed output sprite template ID.
      */
     public void setImageSpriteDefinition(Long ImageSpriteDefinition) {
         this.ImageSpriteDefinition = ImageSpriteDefinition;
     }
 
     /**
-     * Get The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+     * Get Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array.
 <li>MinEdgeLength: 240, Name: smooth;</li>
-<li>MinEdgeLength: 480, Name: SD; </li>
-<li>MinEdgeLength: 720, Name: HD; </li>
-<li>MinEdgeLength: 1080, Name: Full HD; </li>
-<li>MinEdgeLength: 1440, Name: 2K; </li>
-<li>MinEdgeLength: 2160, Name: 4K; </li>
-<li>MinEdgeLength: 4320, Name: 8K. </li> 
-     * @return ResolutionNames The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li> 
+     * @return ResolutionNames Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array.
 <li>MinEdgeLength: 240, Name: smooth;</li>
-<li>MinEdgeLength: 480, Name: SD; </li>
-<li>MinEdgeLength: 720, Name: HD; </li>
-<li>MinEdgeLength: 1080, Name: Full HD; </li>
-<li>MinEdgeLength: 1440, Name: 2K; </li>
-<li>MinEdgeLength: 2160, Name: 4K; </li>
-<li>MinEdgeLength: 4320, Name: 8K. </li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
      */
     public ResolutionNameInfo [] getResolutionNames() {
         return this.ResolutionNames;
     }
 
     /**
-     * Set The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+     * Set Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array.
 <li>MinEdgeLength: 240, Name: smooth;</li>
-<li>MinEdgeLength: 480, Name: SD; </li>
-<li>MinEdgeLength: 720, Name: HD; </li>
-<li>MinEdgeLength: 1080, Name: Full HD; </li>
-<li>MinEdgeLength: 1440, Name: 2K; </li>
-<li>MinEdgeLength: 2160, Name: 4K; </li>
-<li>MinEdgeLength: 4320, Name: 8K. </li>
-     * @param ResolutionNames The player displays names for substreams of different resolutions. If left unfilled or filled in a blank array, the default configuration is used:
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
+     * @param ResolutionNames Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array.
 <li>MinEdgeLength: 240, Name: smooth;</li>
-<li>MinEdgeLength: 480, Name: SD; </li>
-<li>MinEdgeLength: 720, Name: HD; </li>
-<li>MinEdgeLength: 1080, Name: Full HD; </li>
-<li>MinEdgeLength: 1440, Name: 2K; </li>
-<li>MinEdgeLength: 2160, Name: 4K; </li>
-<li>MinEdgeLength: 4320, Name: 8K. </li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
      */
     public void setResolutionNames(ResolutionNameInfo [] ResolutionNames) {
         this.ResolutionNames = ResolutionNames;
     }
 
     /**
-     * Get Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. 
-     * @return Domain Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+     * Get Domain name used during playback. Leave it blank or enter Default to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). 
+     * @return Domain Domain name used during playback. Leave it blank or enter Default to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
-     * @param Domain Domain name used for playback. If it is left empty or set to `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
+     * Set Domain name used during playback. Leave it blank or enter Default to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
+     * @param Domain Domain name used during playback. Leave it blank or enter Default to indicate usage of the domain name in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1).
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+     * Get Scheme used during playback. Leave it blank or enter Default to indicate usage of the scheme in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li> 
-     * @return Scheme Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+     * @return Scheme Scheme used during playback. Leave it blank or enter Default to indicate usage of the scheme in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
      */
@@ -387,10 +387,10 @@ This parameter is required if `AudioVideoType` is `Transcode`.
     }
 
     /**
-     * Set Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+     * Set Scheme used during playback. Leave it blank or enter Default to indicate usage of the scheme in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
-     * @param Scheme Scheme used for playback. If it is left empty or set to `Default`, the scheme configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used. Other valid values:
+     * @param Scheme Scheme used during playback. Leave it blank or enter Default to indicate usage of the scheme in the default distribution configuration (https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1). Other optional values:
 <li>HTTP;</li>
 <li>HTTPS.</li>
      */
@@ -399,16 +399,16 @@ This parameter is required if `AudioVideoType` is `Transcode`.
     }
 
     /**
-     * Get Template description. Length limit: 256 characters. 
-     * @return Comment Template description. Length limit: 256 characters.
+     * Get Template description, with a length limit of 256 characters. 
+     * @return Comment Template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 characters.
-     * @param Comment Template description. Length limit: 256 characters.
+     * Set Template description, with a length limit of 256 characters.
+     * @param Comment Template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;

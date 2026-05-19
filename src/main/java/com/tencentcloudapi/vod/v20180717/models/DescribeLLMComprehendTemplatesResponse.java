@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeLLMComprehendTemplatesResponse extends AbstractModel {
 
     /**
-    * Total number of records that meet the filtering conditions.
+    * <p>Total number of records that meet filter conditions.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of large model comprehend template details.
+    * <p>Large model parses template details list.</p>
     */
     @SerializedName("LLMComprehendTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeLLMComprehendTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number of records that meet the filtering conditions. 
-     * @return TotalCount Total number of records that meet the filtering conditions.
+     * Get <p>Total number of records that meet filter conditions.</p> 
+     * @return TotalCount <p>Total number of records that meet filter conditions.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of records that meet the filtering conditions.
-     * @param TotalCount Total number of records that meet the filtering conditions.
+     * Set <p>Total number of records that meet filter conditions.</p>
+     * @param TotalCount <p>Total number of records that meet filter conditions.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of large model comprehend template details. 
-     * @return LLMComprehendTemplateSet List of large model comprehend template details.
+     * Get <p>Large model parses template details list.</p> 
+     * @return LLMComprehendTemplateSet <p>Large model parses template details list.</p>
      */
     public LLMComprehendTemplateItem [] getLLMComprehendTemplateSet() {
         return this.LLMComprehendTemplateSet;
     }
 
     /**
-     * Set List of large model comprehend template details.
-     * @param LLMComprehendTemplateSet List of large model comprehend template details.
+     * Set <p>Large model parses template details list.</p>
+     * @param LLMComprehendTemplateSet <p>Large model parses template details list.</p>
      */
     public void setLLMComprehendTemplateSet(LLMComprehendTemplateItem [] LLMComprehendTemplateSet) {
         this.LLMComprehendTemplateSet = LLMComprehendTemplateSet;

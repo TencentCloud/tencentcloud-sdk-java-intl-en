@@ -45,32 +45,28 @@ public class AIAnalysisTemplateItem extends AbstractModel {
     private String Comment;
 
     /**
-    * Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Intelligent Classification Task Control Parameters.
     */
     @SerializedName("ClassificationConfigure")
     @Expose
     private ClassificationConfigureInfo ClassificationConfigure;
 
     /**
-    * Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Intelligent tag task control parameter.
     */
     @SerializedName("TagConfigure")
     @Expose
     private TagConfigureInfo TagConfigure;
 
     /**
-    * Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Intelligent Cover Task Control Parameters.
     */
     @SerializedName("CoverConfigure")
     @Expose
     private CoverConfigureInfo CoverConfigure;
 
     /**
-    * Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Intelligent frame tagging task control parameter.
     */
     @SerializedName("FrameTagConfigure")
     @Expose
@@ -146,80 +142,64 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ClassificationConfigure Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent Classification Task Control Parameters. 
+     * @return ClassificationConfigure Intelligent Classification Task Control Parameters.
      */
     public ClassificationConfigureInfo getClassificationConfigure() {
         return this.ClassificationConfigure;
     }
 
     /**
-     * Set Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ClassificationConfigure Control parameter of intelligent categorization task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent Classification Task Control Parameters.
+     * @param ClassificationConfigure Intelligent Classification Task Control Parameters.
      */
     public void setClassificationConfigure(ClassificationConfigureInfo ClassificationConfigure) {
         this.ClassificationConfigure = ClassificationConfigure;
     }
 
     /**
-     * Get Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return TagConfigure Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent tag task control parameter. 
+     * @return TagConfigure Intelligent tag task control parameter.
      */
     public TagConfigureInfo getTagConfigure() {
         return this.TagConfigure;
     }
 
     /**
-     * Set Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TagConfigure Control parameter of intelligent tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent tag task control parameter.
+     * @param TagConfigure Intelligent tag task control parameter.
      */
     public void setTagConfigure(TagConfigureInfo TagConfigure) {
         this.TagConfigure = TagConfigure;
     }
 
     /**
-     * Get Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return CoverConfigure Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent Cover Task Control Parameters. 
+     * @return CoverConfigure Intelligent Cover Task Control Parameters.
      */
     public CoverConfigureInfo getCoverConfigure() {
         return this.CoverConfigure;
     }
 
     /**
-     * Set Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CoverConfigure Control parameter of intelligent cover generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent Cover Task Control Parameters.
+     * @param CoverConfigure Intelligent Cover Task Control Parameters.
      */
     public void setCoverConfigure(CoverConfigureInfo CoverConfigure) {
         this.CoverConfigure = CoverConfigure;
     }
 
     /**
-     * Get Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Intelligent frame tagging task control parameter. 
+     * @return FrameTagConfigure Intelligent frame tagging task control parameter.
      */
     public FrameTagConfigureInfo getFrameTagConfigure() {
         return this.FrameTagConfigure;
     }
 
     /**
-     * Set Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Intelligent frame tagging task control parameter.
+     * @param FrameTagConfigure Intelligent frame tagging task control parameter.
      */
     public void setFrameTagConfigure(FrameTagConfigureInfo FrameTagConfigure) {
         this.FrameTagConfigure = FrameTagConfigure;

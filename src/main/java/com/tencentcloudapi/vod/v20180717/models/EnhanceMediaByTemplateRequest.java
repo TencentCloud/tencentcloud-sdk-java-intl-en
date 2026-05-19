@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class EnhanceMediaByTemplateRequest extends AbstractModel {
 
     /**
-    * File ID.
+    * Media file ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Enhance Media Template ID.
+    * Audio and video quality rebirth template ID.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Starting offset time, unit: seconds, leaving it blank means intercepting from the beginning of the video.
+    * Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * End offset time, unit: seconds, leaving it blank means intercepting to the end of the video.
+    * End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-    * File configuration after Enhance.
+    * File configuration after audio and video quality rebirth.
     */
     @SerializedName("OutputConfig")
     @Expose
     private RebuildMediaOutputConfig OutputConfig;
 
     /**
-    * The identification code used for deduplication. If there is a request for the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+    * An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication.
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+    * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+    * Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * Reserved fields, used for special purposes.
+    * Reserved field, used when special purpose.
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-     * Get File ID. 
-     * @return FileId File ID.
+     * Get Media file ID. 
+     * @return FileId Media file ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set File ID.
-     * @param FileId File ID.
+     * Set Media file ID.
+     * @param FileId Media file ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Enhance Media Template ID. 
-     * @return Definition Enhance Media Template ID.
+     * Get Audio and video quality rebirth template ID. 
+     * @return Definition Audio and video quality rebirth template ID.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Enhance Media Template ID.
-     * @param Definition Enhance Media Template ID.
+     * Set Audio and video quality rebirth template ID.
+     * @param Definition Audio and video quality rebirth template ID.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Starting offset time, unit: seconds, leaving it blank means intercepting from the beginning of the video. 
-     * @return StartTimeOffset Starting offset time, unit: seconds, leaving it blank means intercepting from the beginning of the video.
+     * Get Start offset time, in seconds. Not filled indicates cutting from the beginning of the video. 
+     * @return StartTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Starting offset time, unit: seconds, leaving it blank means intercepting from the beginning of the video.
-     * @param StartTimeOffset Starting offset time, unit: seconds, leaving it blank means intercepting from the beginning of the video.
+     * Set Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
+     * @param StartTimeOffset Start offset time, in seconds. Not filled indicates cutting from the beginning of the video.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get End offset time, unit: seconds, leaving it blank means intercepting to the end of the video. 
-     * @return EndTimeOffset End offset time, unit: seconds, leaving it blank means intercepting to the end of the video.
+     * Get End Offset Time, in seconds. Not filled indicates cutting to the end of the video. 
+     * @return EndTimeOffset End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set End offset time, unit: seconds, leaving it blank means intercepting to the end of the video.
-     * @param EndTimeOffset End offset time, unit: seconds, leaving it blank means intercepting to the end of the video.
+     * Set End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
+     * @param EndTimeOffset End Offset Time, in seconds. Not filled indicates cutting to the end of the video.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;
     }
 
     /**
-     * Get File configuration after Enhance. 
-     * @return OutputConfig File configuration after Enhance.
+     * Get File configuration after audio and video quality rebirth. 
+     * @return OutputConfig File configuration after audio and video quality rebirth.
      */
     public RebuildMediaOutputConfig getOutputConfig() {
         return this.OutputConfig;
     }
 
     /**
-     * Set File configuration after Enhance.
-     * @param OutputConfig File configuration after Enhance.
+     * Set File configuration after audio and video quality rebirth.
+     * @param OutputConfig File configuration after audio and video quality rebirth.
      */
     public void setOutputConfig(RebuildMediaOutputConfig OutputConfig) {
         this.OutputConfig = OutputConfig;
     }
 
     /**
-     * Get The identification code used for deduplication. If there is a request for the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication. 
-     * @return SessionId The identification code used for deduplication. If there is a request for the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * Get An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication. 
+     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication.
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set The identification code used for deduplication. If there is a request for the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
-     * @param SessionId The identification code used for deduplication. If there is a request for the same identification code within three days, this request will return an error. The maximum length is 50 characters, without or with an empty string to indicate no deduplication.
+     * Set An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication.
+     * @param SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or with empty string indicates no deduplication.
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters. 
-     * @return SessionContext Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+     * Get Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters. 
+     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
-     * @param SessionContext Source context, used to transparently transmit user request information. The task flow status change callback will return the value of this field, which can be up to 1000 characters.
+     * Set Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+     * @param SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0. 
-     * @return TasksPriority The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+     * Get Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0. 
+     * @return TasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
-     * @param TasksPriority The priority of the task. The larger the value, the higher the priority. The value range is -10 to 10. If left blank, it means 0.
+     * Set Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+     * @param TasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get Reserved fields, used for special purposes. 
-     * @return ExtInfo Reserved fields, used for special purposes.
+     * Get Reserved field, used when special purpose. 
+     * @return ExtInfo Reserved field, used when special purpose.
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set Reserved fields, used for special purposes.
-     * @param ExtInfo Reserved fields, used for special purposes.
+     * Set Reserved field, used when special purpose.
+     * @param ExtInfo Reserved field, used when special purpose.
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;

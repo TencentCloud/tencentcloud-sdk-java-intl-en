@@ -24,23 +24,21 @@ import java.util.HashMap;
 public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Unique ID filter of video content recognition templates. Array length limit: 100.
+    * Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
     */
     @SerializedName("Definitions")
     @Expose
     private Long [] Definitions;
 
     /**
-    * Template type filter. Optional values:
-<li>Preset: preset template;</li>
-<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+    * Filtering condition for the template type. Valid values:</li><li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave blank by default, meaning no filtering on template type.
     */
     @SerializedName("Type")
     @Expose
@@ -61,56 +59,48 @@ public class DescribeAIRecognitionTemplatesRequest extends AbstractModel {
     private Long Limit;
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Unique ID filter of video content recognition templates. Array length limit: 100. 
-     * @return Definitions Unique ID filter of video content recognition templates. Array length limit: 100.
+     * Get Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers. 
+     * @return Definitions Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
      */
     public Long [] getDefinitions() {
         return this.Definitions;
     }
 
     /**
-     * Set Unique ID filter of video content recognition templates. Array length limit: 100.
-     * @param Definitions Unique ID filter of video content recognition templates. Array length limit: 100.
+     * Set Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
+     * @param Definitions Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
      */
     public void setDefinitions(Long [] Definitions) {
         this.Definitions = Definitions;
     }
 
     /**
-     * Get Template type filter. Optional values:
-<li>Preset: preset template;</li>
-<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter. 
-     * @return Type Template type filter. Optional values:
-<li>Preset: preset template;</li>
-<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+     * Get Filtering condition for the template type. Valid values:</li><li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave blank by default, meaning no filtering on template type. 
+     * @return Type Filtering condition for the template type. Valid values:</li><li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave blank by default, meaning no filtering on template type.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Template type filter. Optional values:
-<li>Preset: preset template;</li>
-<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
-     * @param Type Template type filter. Optional values:
-<li>Preset: preset template;</li>
-<li>Custom: user-defined template.</li>If not filled default is empty, i.e., no template type filter.
+     * Set Filtering condition for the template type. Valid values:</li><li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave blank by default, meaning no filtering on template type.
+     * @param Type Filtering condition for the template type. Valid values:</li><li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave blank by default, meaning no filtering on template type.
      */
     public void setType(String Type) {
         this.Type = Type;

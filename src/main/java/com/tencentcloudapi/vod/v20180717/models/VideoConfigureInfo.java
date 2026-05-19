@@ -61,8 +61,8 @@ Default value: open.
     private String ResolutionAdaptive;
 
     /**
-    * The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
+    * Bitrate of video stream, value ranges from 0 to [128, 10000]. Measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
     */
     @SerializedName("Bitrate")
     @Expose
@@ -181,20 +181,20 @@ Default value: open.
     }
 
     /**
-     * Get The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video. 
-     * @return Bitrate The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
+     * Get Bitrate of video stream, value ranges from 0 to [128, 10000]. Measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate. 
+     * @return Bitrate Bitrate of video stream, value ranges from 0 to [128, 10000]. Measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
-     * @param Bitrate The bit rate of the video stream, value range: 0 and [128, 10000], unit: kbps. 
-When the value is 0, it means that the video bitrate remains the same as the original video.
+     * Set Bitrate of video stream, value ranges from 0 to [128, 10000]. Measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
+     * @param Bitrate Bitrate of video stream, value ranges from 0 to [128, 10000]. Measurement unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;

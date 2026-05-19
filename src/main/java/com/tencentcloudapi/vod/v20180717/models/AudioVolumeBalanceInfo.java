@@ -24,76 +24,71 @@ import java.util.HashMap;
 public class AudioVolumeBalanceInfo extends AbstractModel {
 
     /**
-    * Whether to enable volume equalization. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+    * Volume equalization control switch. Available values:
+<li>ON: enable volume equalization;</li>
+<li>OFF: Disable volume normalization.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`.
+    * Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Whether to enable volume equalization. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`. 
-     * @return Switch Whether to enable volume equalization. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+     * Get Volume equalization control switch. Available values:
+<li>ON: enable volume equalization;</li>
+<li>OFF: Disable volume normalization.</li> 
+     * @return Switch Volume equalization control switch. Available values:
+<li>ON: enable volume equalization;</li>
+<li>OFF: Disable volume normalization.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable volume equalization. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
-     * @param Switch Whether to enable volume equalization. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+     * Set Volume equalization control switch. Available values:
+<li>ON: enable volume equalization;</li>
+<li>OFF: Disable volume normalization.</li>
+     * @param Switch Volume equalization control switch. Available values:
+<li>ON: enable volume equalization;</li>
+<li>OFF: Disable volume normalization.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`. 
-     * @return Type The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`.
+     * Get Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm. 
+     * @return Type Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`.
-     * @param Type The type. Valid values:
-<li>`loudNorm`: Loudness normalization.</li>
-<li>`gainControl`: Volume leveling.</li>
-Default value: `loudNorm`.
+     * Set Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm.
+     * @param Type Type, available values:
+<li>loudNorm: Loudness normalization</li>
+<li>gainControl: Reduce abrupt change</li>
+Default value: loudNorm.
      */
     public void setType(String Type) {
         this.Type = Type;

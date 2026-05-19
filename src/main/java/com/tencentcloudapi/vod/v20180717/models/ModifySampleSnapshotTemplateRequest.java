@@ -24,54 +24,44 @@ import java.util.HashMap;
 public class ModifySampleSnapshotTemplateRequest extends AbstractModel {
 
     /**
-    * Unique ID of a sampled screencapturing template.
+    * Unique identifier of the sampling screenshot template.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Name of a sampled screencapturing template. Length limit: 64 characters.
+    * Sample screenshot template name. The length cannot exceed 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+    * The maximum value of screenshot width (or long side), value ranges from 0 to [32, 4096], measurement unit: px.<li>When both Width and Height are 0, the resolution is the same as the source.</li><li>When Width is 0 and Height is not 0, Width is scaled proportionally.</li><li>When Width is not 0 and Height is 0, Height is scaled proportionally.</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Maximum value of the height (or short side) of a screenshot in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+    * The maximum value of screenshot height (or short edge), value ranges from 0 to [32, 4096], unit: px.<li>When both Width and Height are 0, the resolution is the same as the source;</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+    * Resolution adaptation, available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li>
+<li>close: Closed. At this point, Width represents the Width of the video, and Height indicates the Height of the video.</li>
 Default value: open.
     */
     @SerializedName("ResolutionAdaptive")
@@ -79,9 +69,9 @@ Default value: open.
     private String ResolutionAdaptive;
 
     /**
-    * Sampled screencapturing type. Valid values:
+    * Sampling screenshot type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li>
+<li>Time: By time interval.</li>
     */
     @SerializedName("SampleType")
     @Expose
@@ -89,33 +79,33 @@ Default value: open.
 
     /**
     * Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
     */
     @SerializedName("SampleInterval")
     @Expose
     private Long SampleInterval;
 
     /**
-    * Image format. Valid values: jpg, png.
+    * Image format. Valid values: jpg and png.
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-    * Template description. Length limit: 256 characters.
+    * Template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+    * Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li>
+<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
+<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, use Gaussian blur for the remaining edge part.</li>
 Default value: black.
     */
     @SerializedName("FillType")
@@ -123,133 +113,93 @@ Default value: black.
     private String FillType;
 
     /**
-     * Get Unique ID of a sampled screencapturing template. 
-     * @return Definition Unique ID of a sampled screencapturing template.
+     * Get Unique identifier of the sampling screenshot template. 
+     * @return Definition Unique identifier of the sampling screenshot template.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Unique ID of a sampled screencapturing template.
-     * @param Definition Unique ID of a sampled screencapturing template.
+     * Set Unique identifier of the sampling screenshot template.
+     * @param Definition Unique identifier of the sampling screenshot template.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Name of a sampled screencapturing template. Length limit: 64 characters. 
-     * @return Name Name of a sampled screencapturing template. Length limit: 64 characters.
+     * Get Sample screenshot template name. The length cannot exceed 64 characters. 
+     * @return Name Sample screenshot template name. The length cannot exceed 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of a sampled screencapturing template. Length limit: 64 characters.
-     * @param Name Name of a sampled screencapturing template. Length limit: 64 characters.
+     * Set Sample screenshot template name. The length cannot exceed 64 characters.
+     * @param Name Sample screenshot template name. The length cannot exceed 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0. 
-     * @return Width Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+     * Get The maximum value of screenshot width (or long side), value ranges from 0 to [32, 4096], measurement unit: px.<li>When both Width and Height are 0, the resolution is the same as the source.</li><li>When Width is 0 and Height is not 0, Width is scaled proportionally.</li><li>When Width is not 0 and Height is 0, Height is scaled proportionally.</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0. 
+     * @return Width The maximum value of screenshot width (or long side), value ranges from 0 to [32, 4096], measurement unit: px.<li>When both Width and Height are 0, the resolution is the same as the source.</li><li>When Width is 0 and Height is not 0, Width is scaled proportionally.</li><li>When Width is not 0 and Height is 0, Height is scaled proportionally.</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-     * @param Width Maximum value of the width (or long side) of a screenshot in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+     * Set The maximum value of screenshot width (or long side), value ranges from 0 to [32, 4096], measurement unit: px.<li>When both Width and Height are 0, the resolution is the same as the source.</li><li>When Width is 0 and Height is not 0, Width is scaled proportionally.</li><li>When Width is not 0 and Height is 0, Height is scaled proportionally.</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
+     * @param Width The maximum value of screenshot width (or long side), value ranges from 0 to [32, 4096], measurement unit: px.<li>When both Width and Height are 0, the resolution is the same as the source.</li><li>When Width is 0 and Height is not 0, Width is scaled proportionally.</li><li>When Width is not 0 and Height is 0, Height is scaled proportionally.</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Maximum value of the height (or short side) of a screenshot in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0. 
-     * @return Height Maximum value of the height (or short side) of a screenshot in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+     * Get The maximum value of screenshot height (or short edge), value ranges from 0 to [32, 4096], unit: px.<li>When both Width and Height are 0, the resolution is the same as the source;</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0. 
+     * @return Height The maximum value of screenshot height (or short edge), value ranges from 0 to [32, 4096], unit: px.<li>When both Width and Height are 0, the resolution is the same as the source;</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Maximum value of the height (or short side) of a screenshot in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-     * @param Height Maximum value of the height (or short side) of a screenshot in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+     * Set The maximum value of screenshot height (or short edge), value ranges from 0 to [32, 4096], unit: px.<li>When both Width and Height are 0, the resolution is the same as the source;</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
+     * @param Height The maximum value of screenshot height (or short edge), value ranges from 0 to [32, 4096], unit: px.<li>When both Width and Height are 0, the resolution is the same as the source;</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled;</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled;</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * Get Resolution adaptation, available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li>
+<li>close: Closed. At this point, Width represents the Width of the video, and Height indicates the Height of the video.</li>
 Default value: open. 
-     * @return ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * @return ResolutionAdaptive Resolution adaptation, available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li>
+<li>close: Closed. At this point, Width represents the Width of the video, and Height indicates the Height of the video.</li>
 Default value: open.
      */
     public String getResolutionAdaptive() {
@@ -257,13 +207,13 @@ Default value: open.
     }
 
     /**
-     * Set Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * Set Resolution adaptation, available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li>
+<li>close: Closed. At this point, Width represents the Width of the video, and Height indicates the Height of the video.</li>
 Default value: open.
-     * @param ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * @param ResolutionAdaptive Resolution adaptation, available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li>
+<li>close: Closed. At this point, Width represents the Width of the video, and Height indicates the Height of the video.</li>
 Default value: open.
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
@@ -271,24 +221,24 @@ Default value: open.
     }
 
     /**
-     * Get Sampled screencapturing type. Valid values:
+     * Get Sampling screenshot type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li> 
-     * @return SampleType Sampled screencapturing type. Valid values:
+<li>Time: By time interval.</li> 
+     * @return SampleType Sampling screenshot type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li>
+<li>Time: By time interval.</li>
      */
     public String getSampleType() {
         return this.SampleType;
     }
 
     /**
-     * Set Sampled screencapturing type. Valid values:
+     * Set Sampling screenshot type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li>
-     * @param SampleType Sampled screencapturing type. Valid values:
+<li>Time: By time interval.</li>
+     * @param SampleType Sampling screenshot type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li>
+<li>Time: By time interval.</li>
      */
     public void setSampleType(String SampleType) {
         this.SampleType = SampleType;
@@ -296,11 +246,11 @@ Default value: open.
 
     /**
      * Get Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li> 
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li> 
      * @return SampleInterval Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
      */
     public Long getSampleInterval() {
         return this.SampleInterval;
@@ -308,60 +258,60 @@ Default value: open.
 
     /**
      * Set Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
      * @param SampleInterval Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
      */
     public void setSampleInterval(Long SampleInterval) {
         this.SampleInterval = SampleInterval;
     }
 
     /**
-     * Get Image format. Valid values: jpg, png. 
-     * @return Format Image format. Valid values: jpg, png.
+     * Get Image format. Valid values: jpg and png. 
+     * @return Format Image format. Valid values: jpg and png.
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set Image format. Valid values: jpg, png.
-     * @param Format Image format. Valid values: jpg, png.
+     * Set Image format. Valid values: jpg and png.
+     * @param Format Image format. Valid values: jpg and png.
      */
     public void setFormat(String Format) {
         this.Format = Format;
     }
 
     /**
-     * Get Template description. Length limit: 256 characters. 
-     * @return Comment Template description. Length limit: 256 characters.
+     * Get Template description, with a length limit of 256 characters. 
+     * @return Comment Template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 characters.
-     * @param Comment Template description. Length limit: 256 characters.
+     * Set Template description, with a length limit of 256 characters.
+     * @param Comment Template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+     * Get Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li>
+<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
+<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, use Gaussian blur for the remaining edge part.</li>
 Default value: black. 
-     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+     * @return FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li>
+<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
+<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, use Gaussian blur for the remaining edge part.</li>
 Default value: black.
      */
     public String getFillType() {
@@ -369,17 +319,17 @@ Default value: black.
     }
 
     /**
-     * Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+     * Set Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li>
+<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
+<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, use Gaussian blur for the remaining edge part.</li>
 Default value: black.
-     * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+     * @param FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
+<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be squashed or stretched.</li>
+<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
+<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
+<li>gauss: Gaussian blur, maintain video aspect ratio, use Gaussian blur for the remaining edge part.</li>
 Default value: black.
      */
     public void setFillType(String FillType) {

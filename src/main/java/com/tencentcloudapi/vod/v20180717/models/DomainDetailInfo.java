@@ -24,280 +24,230 @@ import java.util.HashMap;
 public class DomainDetailInfo extends AbstractModel {
 
     /**
-    * Domain name
+    * <p>Domain name.</p>
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * <p>Acceleration region information.</p>
     */
     @SerializedName("AccelerateAreaInfos")
     @Expose
     private AccelerateAreaInfo [] AccelerateAreaInfos;
 
     /**
-    * Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
+    * <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
     */
     @SerializedName("DeployStatus")
     @Expose
     private String DeployStatus;
 
     /**
-    * HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * <p>HTTPS configuration message.</p>
     */
     @SerializedName("HTTPSConfig")
     @Expose
     private DomainHTTPSConfig HTTPSConfig;
 
     /**
-    * [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
     */
     @SerializedName("UrlSignatureAuthPolicy")
     @Expose
     private UrlSignatureAuthPolicy UrlSignatureAuthPolicy;
 
     /**
-    * [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+    * <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
     */
     @SerializedName("RefererAuthPolicy")
     @Expose
     private RefererAuthPolicy RefererAuthPolicy;
 
     /**
-    * The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+    * <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Domain name QUIC configuration message.</p>
     */
     @SerializedName("QUICConfig")
     @Expose
     private DomainQUICConfig QUICConfig;
 
     /**
-    * 
+    * <p>IP access restriction configuration message.</p>
     */
     @SerializedName("IPFilterPolicy")
     @Expose
     private IPFilterPolicy IPFilterPolicy;
 
     /**
-    * Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+    * <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Domain name 
-     * @return Domain Domain name
+     * Get <p>Domain name.</p> 
+     * @return Domain <p>Domain name.</p>
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name
-     * @param Domain Domain name
+     * Set <p>Domain name.</p>
+     * @param Domain <p>Domain name.</p>
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return AccelerateAreaInfos Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get <p>Acceleration region information.</p> 
+     * @return AccelerateAreaInfos <p>Acceleration region information.</p>
      */
     public AccelerateAreaInfo [] getAccelerateAreaInfos() {
         return this.AccelerateAreaInfos;
     }
 
     /**
-     * Set Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param AccelerateAreaInfos Acceleration region information
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set <p>Acceleration region information.</p>
+     * @param AccelerateAreaInfos <p>Acceleration region information.</p>
      */
     public void setAccelerateAreaInfos(AccelerateAreaInfo [] AccelerateAreaInfos) {
         this.AccelerateAreaInfos = AccelerateAreaInfos;
     }
 
     /**
-     * Get Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li> 
-     * @return DeployStatus Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
+     * Get <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li> 
+     * @return DeployStatus <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
      */
     public String getDeployStatus() {
         return this.DeployStatus;
     }
 
     /**
-     * Set Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
-     * @param DeployStatus Deployment status. Valid values:
-<li>Online</li>
-<li>Deploying</li>
-<li>Locked: you cannot change the deployment status of locked domain names</li>
+     * Set <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
+     * @param DeployStatus <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
      */
     public void setDeployStatus(String DeployStatus) {
         this.DeployStatus = DeployStatus;
     }
 
     /**
-     * Get HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return HTTPSConfig HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get <p>HTTPS configuration message.</p> 
+     * @return HTTPSConfig <p>HTTPS configuration message.</p>
      */
     public DomainHTTPSConfig getHTTPSConfig() {
         return this.HTTPSConfig;
     }
 
     /**
-     * Set HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param HTTPSConfig HTTPS configuration information
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set <p>HTTPS configuration message.</p>
+     * @param HTTPSConfig <p>HTTPS configuration message.</p>
      */
     public void setHTTPSConfig(DomainHTTPSConfig HTTPSConfig) {
         this.HTTPSConfig = HTTPSConfig;
     }
 
     /**
-     * Get [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return UrlSignatureAuthPolicy [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p> 
+     * @return UrlSignatureAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
      */
     public UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() {
         return this.UrlSignatureAuthPolicy;
     }
 
     /**
-     * Set [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param UrlSignatureAuthPolicy [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
+     * @param UrlSignatureAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
      */
     public void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy UrlSignatureAuthPolicy) {
         this.UrlSignatureAuthPolicy = UrlSignatureAuthPolicy;
     }
 
     /**
-     * Get [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained. 
-     * @return RefererAuthPolicy [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Get <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p> 
+     * @return RefererAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
      */
     public RefererAuthPolicy getRefererAuthPolicy() {
         return this.RefererAuthPolicy;
     }
 
     /**
-     * Set [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param RefererAuthPolicy [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/33985) configuration
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * Set <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
+     * @param RefererAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
      */
     public void setRefererAuthPolicy(RefererAuthPolicy RefererAuthPolicy) {
         this.RefererAuthPolicy = RefererAuthPolicy;
     }
 
     /**
-     * Get The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li> 
-     * @return CreateTime The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+     * Get <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li> 
+     * @return CreateTime <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
-     * @param CreateTime The time when the domain name was added in the VOD system
-<li>The time is in [ISO 8601 date format](https://intl.cloud.tencent.com/document/product/266/11732).</li>
+     * Set <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
+     * @param CreateTime <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return QUICConfig The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Domain name QUIC configuration message.</p> 
+     * @return QUICConfig <p>Domain name QUIC configuration message.</p>
      */
     public DomainQUICConfig getQUICConfig() {
         return this.QUICConfig;
     }
 
     /**
-     * Set The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param QUICConfig The QUIC configuration for the domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Domain name QUIC configuration message.</p>
+     * @param QUICConfig <p>Domain name QUIC configuration message.</p>
      */
     public void setQUICConfig(DomainQUICConfig QUICConfig) {
         this.QUICConfig = QUICConfig;
     }
 
     /**
-     * Get  
-     * @return IPFilterPolicy 
+     * Get <p>IP access restriction configuration message.</p> 
+     * @return IPFilterPolicy <p>IP access restriction configuration message.</p>
      */
     public IPFilterPolicy getIPFilterPolicy() {
         return this.IPFilterPolicy;
     }
 
     /**
-     * Set 
-     * @param IPFilterPolicy 
+     * Set <p>IP access restriction configuration message.</p>
+     * @param IPFilterPolicy <p>IP access restriction configuration message.</p>
      */
     public void setIPFilterPolicy(IPFilterPolicy IPFilterPolicy) {
         this.IPFilterPolicy = IPFilterPolicy;
     }
 
     /**
-     * Get Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li> 
-     * @return Type Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+     * Get <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p> 
+     * @return Type <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
-     * @param Type Domain type. Valid values:
-<li>`VOD`: Domain name distributed using the VOD product;</li> <li>`EdgeOne`: Domain name distributed using the EdgeOne product.</li>
+     * Set <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
+     * @param Type <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
      */
     public void setType(String Type) {
         this.Type = Type;

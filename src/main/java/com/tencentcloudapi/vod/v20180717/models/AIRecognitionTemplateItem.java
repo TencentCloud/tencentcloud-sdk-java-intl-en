@@ -45,25 +45,23 @@ public class AIRecognitionTemplateItem extends AbstractModel {
     private String Comment;
 
     /**
-    * Template type, values:
+    * Template type. Valid values:
 <li>Preset: system preset template;</li>
-<li>Custom: user-defined template.</li>
+<li>Custom: User-defined template.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Control parameter of opening and closing credits recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Head and tail recognition control parameter.
     */
     @SerializedName("HeadTailConfigure")
     @Expose
     private HeadTailConfigureInfo HeadTailConfigure;
 
     /**
-    * Control parameter of splitting recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Segmentation recognition control parameter.
     */
     @SerializedName("SegmentConfigure")
     @Expose
@@ -71,15 +69,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Face recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FaceConfigure")
     @Expose
     private FaceConfigureInfo FaceConfigure;
 
     /**
-    * Full text recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Text Full-text Recognition Control Parameters.
     */
     @SerializedName("OcrFullTextConfigure")
     @Expose
@@ -87,39 +83,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
     * Text keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OcrWordsConfigure")
     @Expose
     private OcrWordsConfigureInfo OcrWordsConfigure;
 
     /**
-    * Full speech recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger speech translation recognition (when DstLanguage is empty or a fill-in string, no translation is performed, and the billing item is the same as full speech recognition).</font>
     */
     @SerializedName("AsrFullTextConfigure")
     @Expose
     private AsrFullTextConfigureInfo AsrFullTextConfigure;
 
     /**
-    * Speech keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Voice keyword recognition control parameters.
     */
     @SerializedName("AsrWordsConfigure")
     @Expose
     private AsrWordsConfigureInfo AsrWordsConfigure;
 
     /**
-    * Voice translation control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Voice translation recognition control parameters.
     */
     @SerializedName("AsrTranslateConfigure")
     @Expose
     private AsrTranslateConfigureInfo AsrTranslateConfigure;
 
     /**
-    * Control parameter of object recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Object recognition control parameter.
     */
     @SerializedName("ObjectConfigure")
     @Expose
@@ -195,74 +187,64 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Template type, values:
+     * Get Template type. Valid values:
 <li>Preset: system preset template;</li>
-<li>Custom: user-defined template.</li> 
-     * @return Type Template type, values:
+<li>Custom: User-defined template.</li> 
+     * @return Type Template type. Valid values:
 <li>Preset: system preset template;</li>
-<li>Custom: user-defined template.</li>
+<li>Custom: User-defined template.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Template type, values:
+     * Set Template type. Valid values:
 <li>Preset: system preset template;</li>
-<li>Custom: user-defined template.</li>
-     * @param Type Template type, values:
+<li>Custom: User-defined template.</li>
+     * @param Type Template type. Valid values:
 <li>Preset: system preset template;</li>
-<li>Custom: user-defined template.</li>
+<li>Custom: User-defined template.</li>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Control parameter of opening and closing credits recognition.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return HeadTailConfigure Control parameter of opening and closing credits recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Head and tail recognition control parameter. 
+     * @return HeadTailConfigure Head and tail recognition control parameter.
      */
     public HeadTailConfigureInfo getHeadTailConfigure() {
         return this.HeadTailConfigure;
     }
 
     /**
-     * Set Control parameter of opening and closing credits recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param HeadTailConfigure Control parameter of opening and closing credits recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Head and tail recognition control parameter.
+     * @param HeadTailConfigure Head and tail recognition control parameter.
      */
     public void setHeadTailConfigure(HeadTailConfigureInfo HeadTailConfigure) {
         this.HeadTailConfigure = HeadTailConfigure;
     }
 
     /**
-     * Get Control parameter of splitting recognition.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return SegmentConfigure Control parameter of splitting recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Segmentation recognition control parameter. 
+     * @return SegmentConfigure Segmentation recognition control parameter.
      */
     public SegmentConfigureInfo getSegmentConfigure() {
         return this.SegmentConfigure;
     }
 
     /**
-     * Set Control parameter of splitting recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SegmentConfigure Control parameter of splitting recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Segmentation recognition control parameter.
+     * @param SegmentConfigure Segmentation recognition control parameter.
      */
     public void setSegmentConfigure(SegmentConfigureInfo SegmentConfigure) {
         this.SegmentConfigure = SegmentConfigure;
     }
 
     /**
-     * Get Face recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Face recognition control parameter. 
      * @return FaceConfigure Face recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public FaceConfigureInfo getFaceConfigure() {
         return this.FaceConfigure;
@@ -270,39 +252,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Face recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param FaceConfigure Face recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setFaceConfigure(FaceConfigureInfo FaceConfigure) {
         this.FaceConfigure = FaceConfigure;
     }
 
     /**
-     * Get Full text recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return OcrFullTextConfigure Full text recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Text Full-text Recognition Control Parameters. 
+     * @return OcrFullTextConfigure Text Full-text Recognition Control Parameters.
      */
     public OcrFullTextConfigureInfo getOcrFullTextConfigure() {
         return this.OcrFullTextConfigure;
     }
 
     /**
-     * Set Full text recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param OcrFullTextConfigure Full text recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Text Full-text Recognition Control Parameters.
+     * @param OcrFullTextConfigure Text Full-text Recognition Control Parameters.
      */
     public void setOcrFullTextConfigure(OcrFullTextConfigureInfo OcrFullTextConfigure) {
         this.OcrFullTextConfigure = OcrFullTextConfigure;
     }
 
     /**
-     * Get Text keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained. 
+     * Get Text keyword recognition control parameter. 
      * @return OcrWordsConfigure Text keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public OcrWordsConfigureInfo getOcrWordsConfigure() {
         return this.OcrWordsConfigure;
@@ -310,89 +284,75 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Text keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param OcrWordsConfigure Text keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public void setOcrWordsConfigure(OcrWordsConfigureInfo OcrWordsConfigure) {
         this.OcrWordsConfigure = OcrWordsConfigure;
     }
 
     /**
-     * Get Full speech recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AsrFullTextConfigure Full speech recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger speech translation recognition (when DstLanguage is empty or a fill-in string, no translation is performed, and the billing item is the same as full speech recognition).</font> 
+     * @return AsrFullTextConfigure Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger speech translation recognition (when DstLanguage is empty or a fill-in string, no translation is performed, and the billing item is the same as full speech recognition).</font>
      */
     public AsrFullTextConfigureInfo getAsrFullTextConfigure() {
         return this.AsrFullTextConfigure;
     }
 
     /**
-     * Set Full speech recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AsrFullTextConfigure Full speech recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger speech translation recognition (when DstLanguage is empty or a fill-in string, no translation is performed, and the billing item is the same as full speech recognition).</font>
+     * @param AsrFullTextConfigure Voice full-text recognition control parameters.
+<font color=red>Note: This parameter is no longer maintained. Use the AsrTranslateConfigure parameter to trigger speech translation recognition (when DstLanguage is empty or a fill-in string, no translation is performed, and the billing item is the same as full speech recognition).</font>
      */
     public void setAsrFullTextConfigure(AsrFullTextConfigureInfo AsrFullTextConfigure) {
         this.AsrFullTextConfigure = AsrFullTextConfigure;
     }
 
     /**
-     * Get Speech keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AsrWordsConfigure Speech keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Voice keyword recognition control parameters. 
+     * @return AsrWordsConfigure Voice keyword recognition control parameters.
      */
     public AsrWordsConfigureInfo getAsrWordsConfigure() {
         return this.AsrWordsConfigure;
     }
 
     /**
-     * Set Speech keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AsrWordsConfigure Speech keyword recognition control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Voice keyword recognition control parameters.
+     * @param AsrWordsConfigure Voice keyword recognition control parameters.
      */
     public void setAsrWordsConfigure(AsrWordsConfigureInfo AsrWordsConfigure) {
         this.AsrWordsConfigure = AsrWordsConfigure;
     }
 
     /**
-     * Get Voice translation control parameter.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AsrTranslateConfigure Voice translation control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Voice translation recognition control parameters. 
+     * @return AsrTranslateConfigure Voice translation recognition control parameters.
      */
     public AsrTranslateConfigureInfo getAsrTranslateConfigure() {
         return this.AsrTranslateConfigure;
     }
 
     /**
-     * Set Voice translation control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AsrTranslateConfigure Voice translation control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Voice translation recognition control parameters.
+     * @param AsrTranslateConfigure Voice translation recognition control parameters.
      */
     public void setAsrTranslateConfigure(AsrTranslateConfigureInfo AsrTranslateConfigure) {
         this.AsrTranslateConfigure = AsrTranslateConfigure;
     }
 
     /**
-     * Get Control parameter of object recognition.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ObjectConfigure Control parameter of object recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Object recognition control parameter. 
+     * @return ObjectConfigure Object recognition control parameter.
      */
     public ObjectConfigureInfo getObjectConfigure() {
         return this.ObjectConfigure;
     }
 
     /**
-     * Set Control parameter of object recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ObjectConfigure Control parameter of object recognition.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Object recognition control parameter.
+     * @param ObjectConfigure Object recognition control parameter.
      */
     public void setObjectConfigure(ObjectConfigureInfo ObjectConfigure) {
         this.ObjectConfigure = ObjectConfigure;

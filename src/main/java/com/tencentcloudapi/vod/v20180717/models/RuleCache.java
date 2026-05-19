@@ -38,7 +38,7 @@ public class RuleCache extends AbstractModel {
     private String [] RulePaths;
 
     /**
-    * Cache configuration
+    * Cache configuration.
     */
     @SerializedName("CacheConfig")
     @Expose
@@ -77,16 +77,16 @@ public class RuleCache extends AbstractModel {
     }
 
     /**
-     * Get Cache configuration 
-     * @return CacheConfig Cache configuration
+     * Get Cache configuration. 
+     * @return CacheConfig Cache configuration.
      */
     public RuleCacheConfig getCacheConfig() {
         return this.CacheConfig;
     }
 
     /**
-     * Set Cache configuration
-     * @param CacheConfig Cache configuration
+     * Set Cache configuration.
+     * @param CacheConfig Cache configuration.
      */
     public void setCacheConfig(RuleCacheConfig CacheConfig) {
         this.CacheConfig = CacheConfig;

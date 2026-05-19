@@ -24,433 +24,371 @@ import java.util.HashMap;
 public class AigcVideoOutputConfig extends AbstractModel {
 
     /**
-    * Storage mode. valid values: <li>Permanent: Permanent storage. the generated video file will be stored in vod, and the FileId can be obtained from the event notification.</li> <li>Temporary: Temporary storage. the generated video file will not be stored in vod, and a Temporary access URL can be obtained from the event notification.</li>
-Default value: Temporary.
+    * <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p>
     */
     @SerializedName("StorageMode")
     @Expose
     private String StorageMode;
 
     /**
-    * Output media filename, longest 64 characters. default filename is specified by the system.
+    * <p>Output media file name, up to 64 characters. Default filename is specified by the system.</p>
     */
     @SerializedName("MediaName")
     @Expose
     private String MediaName;
 
     /**
-    * Category ID, used to categorize and manage media. you can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) api.
-<Li>Default value: 0, indicate other categories.</li>.
+    * <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li>
     */
     @SerializedName("ClassId")
     @Expose
     private Long ClassId;
 
     /**
-    * The expiry date of the output file. files will be deleted longer than this time. default is never expire. format according to ISO 8601 standard. see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+    * <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private String ExpireTime;
 
     /**
-    * Video duration, unit: seconds. <li>when ModelName is Kling, optional values: 5, 10, defaults to 5;</li> <li>when ModelName is Hailuo, optional values: 6, 10, defaults to 6;</li> <li>when ModelName is Vidu, specify 1-10;</li> <li>when ModelName is GV, optional values: 8, defaults to 8;</li> <li>when ModelName is OS, optional values: 4, 8, 12, defaults to 8;</li>
+    * <p>Duration of the generated video, unit: seconds.</p><li>When ModelName is Kling, available values are 5 and 10, default is 5;</li><li>When ModelName is Hailuo, available values are 6 and 10, default is 6;</li><li>When ModelName is Vidu, specify 1-10;</li><li>When ModelName is GV, available values are 8, default is 8;</li><li>When ModelName is OS, available values are 4, 8, and 12, default is 8;</li><li>When ModelName is PixVerse, specify 1-15, default is 5;</li>
     */
     @SerializedName("Duration")
     @Expose
     private Float Duration;
 
     /**
-    * Generated video resolution.
-<li>When ModelName is Kling, available values are 720P and 1080P, with a default value of 720P.</li>
-<li>When ModelName is Hailuo, optional values are 768P and 1080P, with a default value of 768P.</li>
-<li>When ModelName is Vidu, optional values are 720P, 1080P, defaults to 720P.</li>
-<li>When ModelName is GV, optional values are 720P, 1080P, with a default value of 720P.</li>
-<li>When ModelName is OS, the optional values are 720P.</li>
+    * <p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, default is 768P;</li><li>When ModelName is Vidu, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is OS, available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, default is 720p;</li>
     */
     @SerializedName("Resolution")
     @Expose
     private String Resolution;
 
     /**
-    * Specify the aspect ratio of the generated video.
-<li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, 1:1, default is 16:9.</li>
-<li>When ModelName is Vidu, the optional values for video generation and image generation usage reference are 16:9, 9:16, 4:3, 3:4, and 1:1. among them, only version q2 supports 4:3 and 3:4.</li>
-<li>When ModelName is GV, optional values are 16:9 and 9:16, with a default value of 16:9.</li>
-<li>When ModelName is OS, for text-to-video, optional values are 16:9, 9:16, default is 16:9;</li>
-<li>When ModelName is Hailuo, it is not currently supported.</li>
+    * <p>Specify the aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, and 1:1, with a default value of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the optional values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is OS, for text-to-video, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is Hailuo, this parameter is not currently supported.</li><li>When ModelName is PixVerse, the optional values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
     */
     @SerializedName("AspectRatio")
     @Expose
     private String AspectRatio;
 
     /**
-    * Whether to generate audio. supported models include GV, OS, Vidu. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-Default value: Disabled.
+    * <p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration value:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
     */
     @SerializedName("AudioGeneration")
     @Expose
     private String AudioGeneration;
 
     /**
-    * Whether to allow figure or human face generation. valid values: <li>AllowAdult: allow adult generation.</li> <li>Disallowed: forbid including figures or human faces in images.</li>
+    * <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p>
     */
     @SerializedName("PersonGeneration")
     @Expose
     private String PersonGeneration;
 
     /**
-    * Whether to enable compliance check for input content. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
+    * <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
     */
     @SerializedName("InputComplianceCheck")
     @Expose
     private String InputComplianceCheck;
 
     /**
-    * Whether to enable compliance check for output content. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
+    * <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
     */
     @SerializedName("OutputComplianceCheck")
     @Expose
     private String OutputComplianceCheck;
 
     /**
-    * Whether to enable video enhancement. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-Note:
-1. when the selected resolution exceeds the resolution the model can generate, enhancement is enabled by default.
-2. for resolutions that the model can directly output, you can also proactively select the model to directly output low-resolution images and use enhancement to obtain the specified resolution.
+    * <p>Whether to enable video enhancement. Valid values: <li>Enabled: Turn on;</li> <li>Disabled: Turn off;</li><br>Description:</p><ol><li>For selected resolution exceeding the resolution the model can generate, enhancement is enabled by default.</li><li>For resolutions the model can directly output, you can also proactively select the model to directly output low-resolution and use enhancement to obtain the specified resolution.</li></ol>
     */
     @SerializedName("EnhanceSwitch")
     @Expose
     private String EnhanceSwitch;
 
     /**
-    * 
+    * <p>Whether peak shaving is enabled. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
     */
     @SerializedName("OffPeak")
     @Expose
     private String OffPeak;
 
     /**
-    * Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
+    * <p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
     */
     @SerializedName("FrameInterpolate")
     @Expose
     private String FrameInterpolate;
 
     /**
-    * Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
-Currently supported models include Vidu. Other models are not currently supported.
+    * <p>Indicates whether to enable the icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li><br>Currently supported models include Vidu. Other models are not supported.</p>
     */
     @SerializedName("LogoAdd")
     @Expose
     private String LogoAdd;
 
     /**
-     * Get Storage mode. valid values: <li>Permanent: Permanent storage. the generated video file will be stored in vod, and the FileId can be obtained from the event notification.</li> <li>Temporary: Temporary storage. the generated video file will not be stored in vod, and a Temporary access URL can be obtained from the event notification.</li>
-Default value: Temporary. 
-     * @return StorageMode Storage mode. valid values: <li>Permanent: Permanent storage. the generated video file will be stored in vod, and the FileId can be obtained from the event notification.</li> <li>Temporary: Temporary storage. the generated video file will not be stored in vod, and a Temporary access URL can be obtained from the event notification.</li>
-Default value: Temporary.
+    * <p>Whether to add background music to the generated video.</p><p>Enumeration value:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
+    */
+    @SerializedName("EnableBGM")
+    @Expose
+    private String EnableBGM;
+
+    /**
+     * Get <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p> 
+     * @return StorageMode <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p>
      */
     public String getStorageMode() {
         return this.StorageMode;
     }
 
     /**
-     * Set Storage mode. valid values: <li>Permanent: Permanent storage. the generated video file will be stored in vod, and the FileId can be obtained from the event notification.</li> <li>Temporary: Temporary storage. the generated video file will not be stored in vod, and a Temporary access URL can be obtained from the event notification.</li>
-Default value: Temporary.
-     * @param StorageMode Storage mode. valid values: <li>Permanent: Permanent storage. the generated video file will be stored in vod, and the FileId can be obtained from the event notification.</li> <li>Temporary: Temporary storage. the generated video file will not be stored in vod, and a Temporary access URL can be obtained from the event notification.</li>
-Default value: Temporary.
+     * Set <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p>
+     * @param StorageMode <p>Storage mode</p><p>Enumeration value:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain the temporary access URL from event notification. The valid period is 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from event notification.</li></ul><p>Default value: Temporary</p>
      */
     public void setStorageMode(String StorageMode) {
         this.StorageMode = StorageMode;
     }
 
     /**
-     * Get Output media filename, longest 64 characters. default filename is specified by the system. 
-     * @return MediaName Output media filename, longest 64 characters. default filename is specified by the system.
+     * Get <p>Output media file name, up to 64 characters. Default filename is specified by the system.</p> 
+     * @return MediaName <p>Output media file name, up to 64 characters. Default filename is specified by the system.</p>
      */
     public String getMediaName() {
         return this.MediaName;
     }
 
     /**
-     * Set Output media filename, longest 64 characters. default filename is specified by the system.
-     * @param MediaName Output media filename, longest 64 characters. default filename is specified by the system.
+     * Set <p>Output media file name, up to 64 characters. Default filename is specified by the system.</p>
+     * @param MediaName <p>Output media file name, up to 64 characters. Default filename is specified by the system.</p>
      */
     public void setMediaName(String MediaName) {
         this.MediaName = MediaName;
     }
 
     /**
-     * Get Category ID, used to categorize and manage media. you can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) api.
-<Li>Default value: 0, indicate other categories.</li>. 
-     * @return ClassId Category ID, used to categorize and manage media. you can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) api.
-<Li>Default value: 0, indicate other categories.</li>.
+     * Get <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li> 
+     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li>
      */
     public Long getClassId() {
         return this.ClassId;
     }
 
     /**
-     * Set Category ID, used to categorize and manage media. you can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) api.
-<Li>Default value: 0, indicate other categories.</li>.
-     * @param ClassId Category ID, used to categorize and manage media. you can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) api.
-<Li>Default value: 0, indicate other categories.</li>.
+     * Set <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li>
+     * @param ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicate other categories.</li>
      */
     public void setClassId(Long ClassId) {
         this.ClassId = ClassId;
     }
 
     /**
-     * Get The expiry date of the output file. files will be deleted longer than this time. default is never expire. format according to ISO 8601 standard. see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). 
-     * @return ExpireTime The expiry date of the output file. files will be deleted longer than this time. default is never expire. format according to ISO 8601 standard. see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Get <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p> 
+     * @return ExpireTime <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public String getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set The expiry date of the output file. files will be deleted longer than this time. default is never expire. format according to ISO 8601 standard. see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param ExpireTime The expiry date of the output file. files will be deleted longer than this time. default is never expire. format according to ISO 8601 standard. see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+     * Set <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+     * @param ExpireTime <p>The expiry date of the output file. The file will be deleted longer than this time. It defaults to no expiration, format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
      */
     public void setExpireTime(String ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Video duration, unit: seconds. <li>when ModelName is Kling, optional values: 5, 10, defaults to 5;</li> <li>when ModelName is Hailuo, optional values: 6, 10, defaults to 6;</li> <li>when ModelName is Vidu, specify 1-10;</li> <li>when ModelName is GV, optional values: 8, defaults to 8;</li> <li>when ModelName is OS, optional values: 4, 8, 12, defaults to 8;</li> 
-     * @return Duration Video duration, unit: seconds. <li>when ModelName is Kling, optional values: 5, 10, defaults to 5;</li> <li>when ModelName is Hailuo, optional values: 6, 10, defaults to 6;</li> <li>when ModelName is Vidu, specify 1-10;</li> <li>when ModelName is GV, optional values: 8, defaults to 8;</li> <li>when ModelName is OS, optional values: 4, 8, 12, defaults to 8;</li>
+     * Get <p>Duration of the generated video, unit: seconds.</p><li>When ModelName is Kling, available values are 5 and 10, default is 5;</li><li>When ModelName is Hailuo, available values are 6 and 10, default is 6;</li><li>When ModelName is Vidu, specify 1-10;</li><li>When ModelName is GV, available values are 8, default is 8;</li><li>When ModelName is OS, available values are 4, 8, and 12, default is 8;</li><li>When ModelName is PixVerse, specify 1-15, default is 5;</li> 
+     * @return Duration <p>Duration of the generated video, unit: seconds.</p><li>When ModelName is Kling, available values are 5 and 10, default is 5;</li><li>When ModelName is Hailuo, available values are 6 and 10, default is 6;</li><li>When ModelName is Vidu, specify 1-10;</li><li>When ModelName is GV, available values are 8, default is 8;</li><li>When ModelName is OS, available values are 4, 8, and 12, default is 8;</li><li>When ModelName is PixVerse, specify 1-15, default is 5;</li>
      */
     public Float getDuration() {
         return this.Duration;
     }
 
     /**
-     * Set Video duration, unit: seconds. <li>when ModelName is Kling, optional values: 5, 10, defaults to 5;</li> <li>when ModelName is Hailuo, optional values: 6, 10, defaults to 6;</li> <li>when ModelName is Vidu, specify 1-10;</li> <li>when ModelName is GV, optional values: 8, defaults to 8;</li> <li>when ModelName is OS, optional values: 4, 8, 12, defaults to 8;</li>
-     * @param Duration Video duration, unit: seconds. <li>when ModelName is Kling, optional values: 5, 10, defaults to 5;</li> <li>when ModelName is Hailuo, optional values: 6, 10, defaults to 6;</li> <li>when ModelName is Vidu, specify 1-10;</li> <li>when ModelName is GV, optional values: 8, defaults to 8;</li> <li>when ModelName is OS, optional values: 4, 8, 12, defaults to 8;</li>
+     * Set <p>Duration of the generated video, unit: seconds.</p><li>When ModelName is Kling, available values are 5 and 10, default is 5;</li><li>When ModelName is Hailuo, available values are 6 and 10, default is 6;</li><li>When ModelName is Vidu, specify 1-10;</li><li>When ModelName is GV, available values are 8, default is 8;</li><li>When ModelName is OS, available values are 4, 8, and 12, default is 8;</li><li>When ModelName is PixVerse, specify 1-15, default is 5;</li>
+     * @param Duration <p>Duration of the generated video, unit: seconds.</p><li>When ModelName is Kling, available values are 5 and 10, default is 5;</li><li>When ModelName is Hailuo, available values are 6 and 10, default is 6;</li><li>When ModelName is Vidu, specify 1-10;</li><li>When ModelName is GV, available values are 8, default is 8;</li><li>When ModelName is OS, available values are 4, 8, and 12, default is 8;</li><li>When ModelName is PixVerse, specify 1-15, default is 5;</li>
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Generated video resolution.
-<li>When ModelName is Kling, available values are 720P and 1080P, with a default value of 720P.</li>
-<li>When ModelName is Hailuo, optional values are 768P and 1080P, with a default value of 768P.</li>
-<li>When ModelName is Vidu, optional values are 720P, 1080P, defaults to 720P.</li>
-<li>When ModelName is GV, optional values are 720P, 1080P, with a default value of 720P.</li>
-<li>When ModelName is OS, the optional values are 720P.</li> 
-     * @return Resolution Generated video resolution.
-<li>When ModelName is Kling, available values are 720P and 1080P, with a default value of 720P.</li>
-<li>When ModelName is Hailuo, optional values are 768P and 1080P, with a default value of 768P.</li>
-<li>When ModelName is Vidu, optional values are 720P, 1080P, defaults to 720P.</li>
-<li>When ModelName is GV, optional values are 720P, 1080P, with a default value of 720P.</li>
-<li>When ModelName is OS, the optional values are 720P.</li>
+     * Get <p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, default is 768P;</li><li>When ModelName is Vidu, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is OS, available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, default is 720p;</li> 
+     * @return Resolution <p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, default is 768P;</li><li>When ModelName is Vidu, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is OS, available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, default is 720p;</li>
      */
     public String getResolution() {
         return this.Resolution;
     }
 
     /**
-     * Set Generated video resolution.
-<li>When ModelName is Kling, available values are 720P and 1080P, with a default value of 720P.</li>
-<li>When ModelName is Hailuo, optional values are 768P and 1080P, with a default value of 768P.</li>
-<li>When ModelName is Vidu, optional values are 720P, 1080P, defaults to 720P.</li>
-<li>When ModelName is GV, optional values are 720P, 1080P, with a default value of 720P.</li>
-<li>When ModelName is OS, the optional values are 720P.</li>
-     * @param Resolution Generated video resolution.
-<li>When ModelName is Kling, available values are 720P and 1080P, with a default value of 720P.</li>
-<li>When ModelName is Hailuo, optional values are 768P and 1080P, with a default value of 768P.</li>
-<li>When ModelName is Vidu, optional values are 720P, 1080P, defaults to 720P.</li>
-<li>When ModelName is GV, optional values are 720P, 1080P, with a default value of 720P.</li>
-<li>When ModelName is OS, the optional values are 720P.</li>
+     * Set <p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, default is 768P;</li><li>When ModelName is Vidu, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is OS, available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, default is 720p;</li>
+     * @param Resolution <p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, default is 768P;</li><li>When ModelName is Vidu, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, default is 720P;</li><li>When ModelName is OS, available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, default is 720p;</li>
      */
     public void setResolution(String Resolution) {
         this.Resolution = Resolution;
     }
 
     /**
-     * Get Specify the aspect ratio of the generated video.
-<li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, 1:1, default is 16:9.</li>
-<li>When ModelName is Vidu, the optional values for video generation and image generation usage reference are 16:9, 9:16, 4:3, 3:4, and 1:1. among them, only version q2 supports 4:3 and 3:4.</li>
-<li>When ModelName is GV, optional values are 16:9 and 9:16, with a default value of 16:9.</li>
-<li>When ModelName is OS, for text-to-video, optional values are 16:9, 9:16, default is 16:9;</li>
-<li>When ModelName is Hailuo, it is not currently supported.</li> 
-     * @return AspectRatio Specify the aspect ratio of the generated video.
-<li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, 1:1, default is 16:9.</li>
-<li>When ModelName is Vidu, the optional values for video generation and image generation usage reference are 16:9, 9:16, 4:3, 3:4, and 1:1. among them, only version q2 supports 4:3 and 3:4.</li>
-<li>When ModelName is GV, optional values are 16:9 and 9:16, with a default value of 16:9.</li>
-<li>When ModelName is OS, for text-to-video, optional values are 16:9, 9:16, default is 16:9;</li>
-<li>When ModelName is Hailuo, it is not currently supported.</li>
+     * Get <p>Specify the aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, and 1:1, with a default value of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the optional values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is OS, for text-to-video, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is Hailuo, this parameter is not currently supported.</li><li>When ModelName is PixVerse, the optional values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li> 
+     * @return AspectRatio <p>Specify the aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, and 1:1, with a default value of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the optional values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is OS, for text-to-video, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is Hailuo, this parameter is not currently supported.</li><li>When ModelName is PixVerse, the optional values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
      */
     public String getAspectRatio() {
         return this.AspectRatio;
     }
 
     /**
-     * Set Specify the aspect ratio of the generated video.
-<li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, 1:1, default is 16:9.</li>
-<li>When ModelName is Vidu, the optional values for video generation and image generation usage reference are 16:9, 9:16, 4:3, 3:4, and 1:1. among them, only version q2 supports 4:3 and 3:4.</li>
-<li>When ModelName is GV, optional values are 16:9 and 9:16, with a default value of 16:9.</li>
-<li>When ModelName is OS, for text-to-video, optional values are 16:9, 9:16, default is 16:9;</li>
-<li>When ModelName is Hailuo, it is not currently supported.</li>
-     * @param AspectRatio Specify the aspect ratio of the generated video.
-<li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, 1:1, default is 16:9.</li>
-<li>When ModelName is Vidu, the optional values for video generation and image generation usage reference are 16:9, 9:16, 4:3, 3:4, and 1:1. among them, only version q2 supports 4:3 and 3:4.</li>
-<li>When ModelName is GV, optional values are 16:9 and 9:16, with a default value of 16:9.</li>
-<li>When ModelName is OS, for text-to-video, optional values are 16:9, 9:16, default is 16:9;</li>
-<li>When ModelName is Hailuo, it is not currently supported.</li>
+     * Set <p>Specify the aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, and 1:1, with a default value of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the optional values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is OS, for text-to-video, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is Hailuo, this parameter is not currently supported.</li><li>When ModelName is PixVerse, the optional values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
+     * @param AspectRatio <p>Specify the aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the optional values are 16:9, 9:16, and 1:1, with a default value of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the optional values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is OS, for text-to-video, the optional values are 16:9 and 9:16, with a default value of 16:9.</li><li>When ModelName is Hailuo, this parameter is not currently supported.</li><li>When ModelName is PixVerse, the optional values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
      */
     public void setAspectRatio(String AspectRatio) {
         this.AspectRatio = AspectRatio;
     }
 
     /**
-     * Get Whether to generate audio. supported models include GV, OS, Vidu. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-Default value: Disabled. 
-     * @return AudioGeneration Whether to generate audio. supported models include GV, OS, Vidu. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-Default value: Disabled.
+     * Get <p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration value:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p> 
+     * @return AudioGeneration <p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration value:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
      */
     public String getAudioGeneration() {
         return this.AudioGeneration;
     }
 
     /**
-     * Set Whether to generate audio. supported models include GV, OS, Vidu. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-Default value: Disabled.
-     * @param AudioGeneration Whether to generate audio. supported models include GV, OS, Vidu. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-Default value: Disabled.
+     * Set <p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration value:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
+     * @param AudioGeneration <p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration value:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
      */
     public void setAudioGeneration(String AudioGeneration) {
         this.AudioGeneration = AudioGeneration;
     }
 
     /**
-     * Get Whether to allow figure or human face generation. valid values: <li>AllowAdult: allow adult generation.</li> <li>Disallowed: forbid including figures or human faces in images.</li> 
-     * @return PersonGeneration Whether to allow figure or human face generation. valid values: <li>AllowAdult: allow adult generation.</li> <li>Disallowed: forbid including figures or human faces in images.</li>
+     * Get <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p> 
+     * @return PersonGeneration <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p>
      */
     public String getPersonGeneration() {
         return this.PersonGeneration;
     }
 
     /**
-     * Set Whether to allow figure or human face generation. valid values: <li>AllowAdult: allow adult generation.</li> <li>Disallowed: forbid including figures or human faces in images.</li>
-     * @param PersonGeneration Whether to allow figure or human face generation. valid values: <li>AllowAdult: allow adult generation.</li> <li>Disallowed: forbid including figures or human faces in images.</li>
+     * Set <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p>
+     * @param PersonGeneration <p>Whether to allow figure or human face generation. Valid values: <li>AllowAdult: Allow adult generation;</li> <li>Disallowed: Forbid including figure or human face in the image;</li></p>
      */
     public void setPersonGeneration(String PersonGeneration) {
         this.PersonGeneration = PersonGeneration;
     }
 
     /**
-     * Get Whether to enable compliance check for input content. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li> 
-     * @return InputComplianceCheck Whether to enable compliance check for input content. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
+     * Get <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p> 
+     * @return InputComplianceCheck <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public String getInputComplianceCheck() {
         return this.InputComplianceCheck;
     }
 
     /**
-     * Set Whether to enable compliance check for input content. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-     * @param InputComplianceCheck Whether to enable compliance check for input content. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
+     * Set <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @param InputComplianceCheck <p>Whether to enable compliance check for input content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public void setInputComplianceCheck(String InputComplianceCheck) {
         this.InputComplianceCheck = InputComplianceCheck;
     }
 
     /**
-     * Get Whether to enable compliance check for output content. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li> 
-     * @return OutputComplianceCheck Whether to enable compliance check for output content. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
+     * Get <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p> 
+     * @return OutputComplianceCheck <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public String getOutputComplianceCheck() {
         return this.OutputComplianceCheck;
     }
 
     /**
-     * Set Whether to enable compliance check for output content. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-     * @param OutputComplianceCheck Whether to enable compliance check for output content. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
+     * Set <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @param OutputComplianceCheck <p>Whether to enable compliance check for output content. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public void setOutputComplianceCheck(String OutputComplianceCheck) {
         this.OutputComplianceCheck = OutputComplianceCheck;
     }
 
     /**
-     * Get Whether to enable video enhancement. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-Note:
-1. when the selected resolution exceeds the resolution the model can generate, enhancement is enabled by default.
-2. for resolutions that the model can directly output, you can also proactively select the model to directly output low-resolution images and use enhancement to obtain the specified resolution. 
-     * @return EnhanceSwitch Whether to enable video enhancement. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-Note:
-1. when the selected resolution exceeds the resolution the model can generate, enhancement is enabled by default.
-2. for resolutions that the model can directly output, you can also proactively select the model to directly output low-resolution images and use enhancement to obtain the specified resolution.
+     * Get <p>Whether to enable video enhancement. Valid values: <li>Enabled: Turn on;</li> <li>Disabled: Turn off;</li><br>Description:</p><ol><li>For selected resolution exceeding the resolution the model can generate, enhancement is enabled by default.</li><li>For resolutions the model can directly output, you can also proactively select the model to directly output low-resolution and use enhancement to obtain the specified resolution.</li></ol> 
+     * @return EnhanceSwitch <p>Whether to enable video enhancement. Valid values: <li>Enabled: Turn on;</li> <li>Disabled: Turn off;</li><br>Description:</p><ol><li>For selected resolution exceeding the resolution the model can generate, enhancement is enabled by default.</li><li>For resolutions the model can directly output, you can also proactively select the model to directly output low-resolution and use enhancement to obtain the specified resolution.</li></ol>
      */
     public String getEnhanceSwitch() {
         return this.EnhanceSwitch;
     }
 
     /**
-     * Set Whether to enable video enhancement. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-Note:
-1. when the selected resolution exceeds the resolution the model can generate, enhancement is enabled by default.
-2. for resolutions that the model can directly output, you can also proactively select the model to directly output low-resolution images and use enhancement to obtain the specified resolution.
-     * @param EnhanceSwitch Whether to enable video enhancement. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-Note:
-1. when the selected resolution exceeds the resolution the model can generate, enhancement is enabled by default.
-2. for resolutions that the model can directly output, you can also proactively select the model to directly output low-resolution images and use enhancement to obtain the specified resolution.
+     * Set <p>Whether to enable video enhancement. Valid values: <li>Enabled: Turn on;</li> <li>Disabled: Turn off;</li><br>Description:</p><ol><li>For selected resolution exceeding the resolution the model can generate, enhancement is enabled by default.</li><li>For resolutions the model can directly output, you can also proactively select the model to directly output low-resolution and use enhancement to obtain the specified resolution.</li></ol>
+     * @param EnhanceSwitch <p>Whether to enable video enhancement. Valid values: <li>Enabled: Turn on;</li> <li>Disabled: Turn off;</li><br>Description:</p><ol><li>For selected resolution exceeding the resolution the model can generate, enhancement is enabled by default.</li><li>For resolutions the model can directly output, you can also proactively select the model to directly output low-resolution and use enhancement to obtain the specified resolution.</li></ol>
      */
     public void setEnhanceSwitch(String EnhanceSwitch) {
         this.EnhanceSwitch = EnhanceSwitch;
     }
 
     /**
-     * Get  
-     * @return OffPeak 
+     * Get <p>Whether peak shaving is enabled. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p> 
+     * @return OffPeak <p>Whether peak shaving is enabled. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public String getOffPeak() {
         return this.OffPeak;
     }
 
     /**
-     * Set 
-     * @param OffPeak 
+     * Set <p>Whether peak shaving is enabled. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @param OffPeak <p>Whether peak shaving is enabled. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public void setOffPeak(String OffPeak) {
         this.OffPeak = OffPeak;
     }
 
     /**
-     * Get Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li> 
-     * @return FrameInterpolate Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
+     * Get <p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p> 
+     * @return FrameInterpolate <p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public String getFrameInterpolate() {
         return this.FrameInterpolate;
     }
 
     /**
-     * Set Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
-     * @param FrameInterpolate Whether to enable vidu intelligent frame interpolation. valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li>
+     * Set <p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+     * @param FrameInterpolate <p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
      */
     public void setFrameInterpolate(String FrameInterpolate) {
         this.FrameInterpolate = FrameInterpolate;
     }
 
     /**
-     * Get Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
-Currently supported models include Vidu. Other models are not currently supported. 
-     * @return LogoAdd Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
-Currently supported models include Vidu. Other models are not currently supported.
+     * Get <p>Indicates whether to enable the icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li><br>Currently supported models include Vidu. Other models are not supported.</p> 
+     * @return LogoAdd <p>Indicates whether to enable the icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li><br>Currently supported models include Vidu. Other models are not supported.</p>
      */
     public String getLogoAdd() {
         return this.LogoAdd;
     }
 
     /**
-     * Set Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
-Currently supported models include Vidu. Other models are not currently supported.
-     * @param LogoAdd Whether to enable icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li> 
-Currently supported models include Vidu. Other models are not currently supported.
+     * Set <p>Indicates whether to enable the icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li><br>Currently supported models include Vidu. Other models are not supported.</p>
+     * @param LogoAdd <p>Indicates whether to enable the icon watermark. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li><br>Currently supported models include Vidu. Other models are not supported.</p>
      */
     public void setLogoAdd(String LogoAdd) {
         this.LogoAdd = LogoAdd;
+    }
+
+    /**
+     * Get <p>Whether to add background music to the generated video.</p><p>Enumeration value:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p> 
+     * @return EnableBGM <p>Whether to add background music to the generated video.</p><p>Enumeration value:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
+     */
+    public String getEnableBGM() {
+        return this.EnableBGM;
+    }
+
+    /**
+     * Set <p>Whether to add background music to the generated video.</p><p>Enumeration value:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
+     * @param EnableBGM <p>Whether to add background music to the generated video.</p><p>Enumeration value:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
+     */
+    public void setEnableBGM(String EnableBGM) {
+        this.EnableBGM = EnableBGM;
     }
 
     public AigcVideoOutputConfig() {
@@ -506,6 +444,9 @@ Currently supported models include Vidu. Other models are not currently supporte
         if (source.LogoAdd != null) {
             this.LogoAdd = new String(source.LogoAdd);
         }
+        if (source.EnableBGM != null) {
+            this.EnableBGM = new String(source.EnableBGM);
+        }
     }
 
 
@@ -528,6 +469,7 @@ Currently supported models include Vidu. Other models are not currently supporte
         this.setParamSimple(map, prefix + "OffPeak", this.OffPeak);
         this.setParamSimple(map, prefix + "FrameInterpolate", this.FrameInterpolate);
         this.setParamSimple(map, prefix + "LogoAdd", this.LogoAdd);
+        this.setParamSimple(map, prefix + "EnableBGM", this.EnableBGM);
 
     }
 }

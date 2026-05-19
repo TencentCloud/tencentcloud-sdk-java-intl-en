@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeQualityInspectTemplatesResponse extends AbstractModel {
 
     /**
-    * Comply with the filter conditions, the total number of records.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Media quality inspect template details list.
+    * Audio and video quality detection template details list.
     */
     @SerializedName("QualityInspectTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeQualityInspectTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Comply with the filter conditions, the total number of records. 
-     * @return TotalCount Comply with the filter conditions, the total number of records.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Comply with the filter conditions, the total number of records.
-     * @param TotalCount Comply with the filter conditions, the total number of records.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Media quality inspect template details list. 
-     * @return QualityInspectTemplateSet Media quality inspect template details list.
+     * Get Audio and video quality detection template details list. 
+     * @return QualityInspectTemplateSet Audio and video quality detection template details list.
      */
     public QualityInspectTemplateItem [] getQualityInspectTemplateSet() {
         return this.QualityInspectTemplateSet;
     }
 
     /**
-     * Set Media quality inspect template details list.
-     * @param QualityInspectTemplateSet Media quality inspect template details list.
+     * Set Audio and video quality detection template details list.
+     * @param QualityInspectTemplateSet Audio and video quality detection template details list.
      */
     public void setQualityInspectTemplateSet(QualityInspectTemplateItem [] QualityInspectTemplateSet) {
         this.QualityInspectTemplateSet = QualityInspectTemplateSet;

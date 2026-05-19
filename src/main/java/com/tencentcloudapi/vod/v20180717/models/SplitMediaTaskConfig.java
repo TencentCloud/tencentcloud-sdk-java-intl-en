@@ -44,7 +44,7 @@ public class SplitMediaTaskConfig extends AbstractModel {
     private Float EndTimeOffset;
 
     /**
-    * Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+    * [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
     */
     @SerializedName("ProcedureName")
     @Expose
@@ -114,16 +114,16 @@ public class SplitMediaTaskConfig extends AbstractModel {
     }
 
     /**
-     * Get Task flow template name, if you want Fill in when executing the task flow on the generated new video. 
-     * @return ProcedureName Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+     * Get [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video. 
+     * @return ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
      */
     public String getProcedureName() {
         return this.ProcedureName;
     }
 
     /**
-     * Set Task flow template name, if you want Fill in when executing the task flow on the generated new video.
-     * @param ProcedureName Task flow template name, if you want Fill in when executing the task flow on the generated new video.
+     * Set [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
+     * @param ProcedureName [Task flow](https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81) name. Fill in to automatically execute task flow on the generated new video.
      */
     public void setProcedureName(String ProcedureName) {
         this.ProcedureName = ProcedureName;

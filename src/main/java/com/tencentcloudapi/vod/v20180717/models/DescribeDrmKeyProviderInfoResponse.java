@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeDrmKeyProviderInfoResponse extends AbstractModel {
 
     /**
-    * The DRM key information provided by SDMC.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
     */
     @SerializedName("SDMCInfo")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get The DRM key information provided by SDMC.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return SDMCInfo The DRM key information provided by SDMC.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p> 
+     * @return SDMCInfo <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
      */
     public SDMCDrmKeyProviderInfo getSDMCInfo() {
         return this.SDMCInfo;
     }
 
     /**
-     * Set The DRM key information provided by SDMC.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param SDMCInfo The DRM key information provided by SDMC.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
+     * @param SDMCInfo <p>DRM key provider information related to SDMC.</p><p>The SDMC service will be gradually phased out subsequently. Please use the VOD DRM encryption service.</p>
      */
     public void setSDMCInfo(SDMCDrmKeyProviderInfo SDMCInfo) {
         this.SDMCInfo = SDMCInfo;

@@ -24,156 +24,164 @@ import java.util.HashMap;
 public class ModifyEventConfigRequest extends AbstractModel {
 
     /**
-    * How to receive event notifications. 
-<li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948);</li>
-<li>PULL: [Reliable notification based on message queue ](https://www.tencentcloud.com/document/product/266/33948). </li>
-    */
-    @SerializedName("Mode")
-    @Expose
-    private String Mode;
-
-    /**
-    * The address used to receive 3.0 format callbacks when using the [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948) reception method. 
-Note: If the NotificationUrl parameter is provided and the value is an empty string, the 3.0 format callback address will be cleared.
-    */
-    @SerializedName("NotificationUrl")
-    @Expose
-    private String NotificationUrl;
-
-    /**
-    * Whether to receive the [Video Upload Completed](https://www.tencentcloud.com/document/product/266/33950) event notification. The default "OFF" is to ignore the event notification, and "ON" is to receive the event notification. 
-    */
-    @SerializedName("UploadMediaCompleteEventSwitch")
-    @Expose
-    private String UploadMediaCompleteEventSwitch;
-
-    /**
-    * Whether to receive [Video deletion completed](https://www.tencentcloud.com/document/product/266/33952) event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification .
-    */
-    @SerializedName("DeleteMediaCompleteEventSwitch")
-    @Expose
-    private String DeleteMediaCompleteEventSwitch;
-
-    /**
-    * Whether to receive the Persistence completed event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification.
-    */
-    @SerializedName("PersistenceCompleteEventSwitch")
-    @Expose
-    private String PersistenceCompleteEventSwitch;
-
-    /**
-    * <b>The VOD [application](https://www.tencentcloud.com/document/product/266/33987) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get How to receive event notifications. 
-<li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948);</li>
-<li>PULL: [Reliable notification based on message queue ](https://www.tencentcloud.com/document/product/266/33948). </li> 
-     * @return Mode How to receive event notifications. 
-<li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948);</li>
-<li>PULL: [Reliable notification based on message queue ](https://www.tencentcloud.com/document/product/266/33948). </li>
-     */
-    public String getMode() {
-        return this.Mode;
-    }
+    * <p>Method of receiving event notifications.</p><li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1);</li><li>PULL: [Reliable Notification Based on Message Queue](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1).</li>
+    */
+    @SerializedName("Mode")
+    @Expose
+    private String Mode;
 
     /**
-     * Set How to receive event notifications. 
-<li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948);</li>
-<li>PULL: [Reliable notification based on message queue ](https://www.tencentcloud.com/document/product/266/33948). </li>
-     * @param Mode How to receive event notifications. 
-<li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948);</li>
-<li>PULL: [Reliable notification based on message queue ](https://www.tencentcloud.com/document/product/266/33948). </li>
-     */
-    public void setMode(String Mode) {
-        this.Mode = Mode;
-    }
+    * <p>When using the <a href="https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1">HTTP callback notification</a> reception method, this is the address for receiving format callback 3.0.<br>Note: If the NotificationUrl parameter is included with an empty string, the format callback 3.0 address will be cleared.</p>
+    */
+    @SerializedName("NotificationUrl")
+    @Expose
+    private String NotificationUrl;
 
     /**
-     * Get The address used to receive 3.0 format callbacks when using the [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948) reception method. 
-Note: If the NotificationUrl parameter is provided and the value is an empty string, the 3.0 format callback address will be cleared. 
-     * @return NotificationUrl The address used to receive 3.0 format callbacks when using the [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948) reception method. 
-Note: If the NotificationUrl parameter is provided and the value is an empty string, the 3.0 format callback address will be cleared.
-     */
-    public String getNotificationUrl() {
-        return this.NotificationUrl;
-    }
+    * <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload complete</a> event notifications. The default "OFF" means the event notification is ignored, and "ON" means to receive event notifications.</p>
+    */
+    @SerializedName("UploadMediaCompleteEventSwitch")
+    @Expose
+    private String UploadMediaCompleteEventSwitch;
 
     /**
-     * Set The address used to receive 3.0 format callbacks when using the [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948) reception method. 
-Note: If the NotificationUrl parameter is provided and the value is an empty string, the 3.0 format callback address will be cleared.
-     * @param NotificationUrl The address used to receive 3.0 format callbacks when using the [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33948) reception method. 
-Note: If the NotificationUrl parameter is provided and the value is an empty string, the 3.0 format callback address will be cleared.
-     */
-    public void setNotificationUrl(String NotificationUrl) {
-        this.NotificationUrl = NotificationUrl;
-    }
+    * <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1">video deletion completion</a> event notification. Default "OFF" means the event notification is ignored, "ON" means receive event notifications.</p>
+    */
+    @SerializedName("DeleteMediaCompleteEventSwitch")
+    @Expose
+    private String DeleteMediaCompleteEventSwitch;
 
     /**
-     * Get Whether to receive the [Video Upload Completed](https://www.tencentcloud.com/document/product/266/33950) event notification. The default "OFF" is to ignore the event notification, and "ON" is to receive the event notification.  
-     * @return UploadMediaCompleteEventSwitch Whether to receive the [Video Upload Completed](https://www.tencentcloud.com/document/product/266/33950) event notification. The default "OFF" is to ignore the event notification, and "ON" is to receive the event notification. 
-     */
-    public String getUploadMediaCompleteEventSwitch() {
-        return this.UploadMediaCompleteEventSwitch;
-    }
+    * <p>Whether to receive event notifications for clip solidification completion. Default is "OFF" to ignore the event notification, and "ON" to receive event notifications.</p>
+    */
+    @SerializedName("PersistenceCompleteEventSwitch")
+    @Expose
+    private String PersistenceCompleteEventSwitch;
 
     /**
-     * Set Whether to receive the [Video Upload Completed](https://www.tencentcloud.com/document/product/266/33950) event notification. The default "OFF" is to ignore the event notification, and "ON" is to receive the event notification. 
-     * @param UploadMediaCompleteEventSwitch Whether to receive the [Video Upload Completed](https://www.tencentcloud.com/document/product/266/33950) event notification. The default "OFF" is to ignore the event notification, and "ON" is to receive the event notification. 
-     */
-    public void setUploadMediaCompleteEventSwitch(String UploadMediaCompleteEventSwitch) {
-        this.UploadMediaCompleteEventSwitch = UploadMediaCompleteEventSwitch;
-    }
+    * <p>Callback key, consisting of upper- and lower-case letters and numbers, with a maximum length of 32 characters. After configuration, the <code>Sign</code> and <code>T</code> fields will be sent in callbacks for authentication.</p><ul><li><code>Sign</code>: string type. Event notification security signature Sign = MD5(SignKey + T). Description: Tencent Cloud calculates the Sign value by concatenating the encrypted SignKey and T and performing MD5 encryption, then places it in the notification message. Your backend server can verify whether the Sign is correct upon receiving the notification message using the same algorithm, thereby confirming whether the message is indeed from the Tencent Cloud backend.</li><li><code>T</code>: int64 type. Expiration time, the UNIX timestamp when the event notification signature expires. Notifications from Tencent Cloud default to an expiration time of 10 minutes. If the time specified by the t value in a notification message has expired, the notification can be deemed invalid, preventing network replay attacks. The format of T is a decimal UNIX timestamp, representing the seconds elapsed since January 1, 1970 (midnight UTC/GMT).</li></ul>
+    */
+    @SerializedName("SignKey")
+    @Expose
+    private String SignKey;
 
     /**
-     * Get Whether to receive [Video deletion completed](https://www.tencentcloud.com/document/product/266/33952) event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification . 
-     * @return DeleteMediaCompleteEventSwitch Whether to receive [Video deletion completed](https://www.tencentcloud.com/document/product/266/33952) event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification .
-     */
-    public String getDeleteMediaCompleteEventSwitch() {
-        return this.DeleteMediaCompleteEventSwitch;
-    }
-
-    /**
-     * Set Whether to receive [Video deletion completed](https://www.tencentcloud.com/document/product/266/33952) event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification .
-     * @param DeleteMediaCompleteEventSwitch Whether to receive [Video deletion completed](https://www.tencentcloud.com/document/product/266/33952) event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification .
-     */
-    public void setDeleteMediaCompleteEventSwitch(String DeleteMediaCompleteEventSwitch) {
-        this.DeleteMediaCompleteEventSwitch = DeleteMediaCompleteEventSwitch;
-    }
-
-    /**
-     * Get Whether to receive the Persistence completed event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification. 
-     * @return PersistenceCompleteEventSwitch Whether to receive the Persistence completed event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification.
-     */
-    public String getPersistenceCompleteEventSwitch() {
-        return this.PersistenceCompleteEventSwitch;
-    }
-
-    /**
-     * Set Whether to receive the Persistence completed event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification.
-     * @param PersistenceCompleteEventSwitch Whether to receive the Persistence completed event notification, the default "OFF" means to ignore the event notification, "ON" means to receive the event notification.
-     */
-    public void setPersistenceCompleteEventSwitch(String PersistenceCompleteEventSwitch) {
-        this.PersistenceCompleteEventSwitch = PersistenceCompleteEventSwitch;
-    }
-
-    /**
-     * Get <b>The VOD [application](https://www.tencentcloud.com/document/product/266/33987) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/33987) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p> 
+     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://www.tencentcloud.com/document/product/266/33987) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/33987) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+     * @param SubAppId <p><b>VOD <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
+    }
+
+    /**
+     * Get <p>Method of receiving event notifications.</p><li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1);</li><li>PULL: [Reliable Notification Based on Message Queue](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1).</li> 
+     * @return Mode <p>Method of receiving event notifications.</p><li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1);</li><li>PULL: [Reliable Notification Based on Message Queue](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1).</li>
+     */
+    public String getMode() {
+        return this.Mode;
+    }
+
+    /**
+     * Set <p>Method of receiving event notifications.</p><li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1);</li><li>PULL: [Reliable Notification Based on Message Queue](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1).</li>
+     * @param Mode <p>Method of receiving event notifications.</p><li>PUSH: [HTTP callback notification](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1);</li><li>PULL: [Reliable Notification Based on Message Queue](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1).</li>
+     */
+    public void setMode(String Mode) {
+        this.Mode = Mode;
+    }
+
+    /**
+     * Get <p>When using the <a href="https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1">HTTP callback notification</a> reception method, this is the address for receiving format callback 3.0.<br>Note: If the NotificationUrl parameter is included with an empty string, the format callback 3.0 address will be cleared.</p> 
+     * @return NotificationUrl <p>When using the <a href="https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1">HTTP callback notification</a> reception method, this is the address for receiving format callback 3.0.<br>Note: If the NotificationUrl parameter is included with an empty string, the format callback 3.0 address will be cleared.</p>
+     */
+    public String getNotificationUrl() {
+        return this.NotificationUrl;
+    }
+
+    /**
+     * Set <p>When using the <a href="https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1">HTTP callback notification</a> reception method, this is the address for receiving format callback 3.0.<br>Note: If the NotificationUrl parameter is included with an empty string, the format callback 3.0 address will be cleared.</p>
+     * @param NotificationUrl <p>When using the <a href="https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1">HTTP callback notification</a> reception method, this is the address for receiving format callback 3.0.<br>Note: If the NotificationUrl parameter is included with an empty string, the format callback 3.0 address will be cleared.</p>
+     */
+    public void setNotificationUrl(String NotificationUrl) {
+        this.NotificationUrl = NotificationUrl;
+    }
+
+    /**
+     * Get <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload complete</a> event notifications. The default "OFF" means the event notification is ignored, and "ON" means to receive event notifications.</p> 
+     * @return UploadMediaCompleteEventSwitch <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload complete</a> event notifications. The default "OFF" means the event notification is ignored, and "ON" means to receive event notifications.</p>
+     */
+    public String getUploadMediaCompleteEventSwitch() {
+        return this.UploadMediaCompleteEventSwitch;
+    }
+
+    /**
+     * Set <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload complete</a> event notifications. The default "OFF" means the event notification is ignored, and "ON" means to receive event notifications.</p>
+     * @param UploadMediaCompleteEventSwitch <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1">video upload complete</a> event notifications. The default "OFF" means the event notification is ignored, and "ON" means to receive event notifications.</p>
+     */
+    public void setUploadMediaCompleteEventSwitch(String UploadMediaCompleteEventSwitch) {
+        this.UploadMediaCompleteEventSwitch = UploadMediaCompleteEventSwitch;
+    }
+
+    /**
+     * Get <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1">video deletion completion</a> event notification. Default "OFF" means the event notification is ignored, "ON" means receive event notifications.</p> 
+     * @return DeleteMediaCompleteEventSwitch <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1">video deletion completion</a> event notification. Default "OFF" means the event notification is ignored, "ON" means receive event notifications.</p>
+     */
+    public String getDeleteMediaCompleteEventSwitch() {
+        return this.DeleteMediaCompleteEventSwitch;
+    }
+
+    /**
+     * Set <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1">video deletion completion</a> event notification. Default "OFF" means the event notification is ignored, "ON" means receive event notifications.</p>
+     * @param DeleteMediaCompleteEventSwitch <p>Whether to receive <a href="https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1">video deletion completion</a> event notification. Default "OFF" means the event notification is ignored, "ON" means receive event notifications.</p>
+     */
+    public void setDeleteMediaCompleteEventSwitch(String DeleteMediaCompleteEventSwitch) {
+        this.DeleteMediaCompleteEventSwitch = DeleteMediaCompleteEventSwitch;
+    }
+
+    /**
+     * Get <p>Whether to receive event notifications for clip solidification completion. Default is "OFF" to ignore the event notification, and "ON" to receive event notifications.</p> 
+     * @return PersistenceCompleteEventSwitch <p>Whether to receive event notifications for clip solidification completion. Default is "OFF" to ignore the event notification, and "ON" to receive event notifications.</p>
+     */
+    public String getPersistenceCompleteEventSwitch() {
+        return this.PersistenceCompleteEventSwitch;
+    }
+
+    /**
+     * Set <p>Whether to receive event notifications for clip solidification completion. Default is "OFF" to ignore the event notification, and "ON" to receive event notifications.</p>
+     * @param PersistenceCompleteEventSwitch <p>Whether to receive event notifications for clip solidification completion. Default is "OFF" to ignore the event notification, and "ON" to receive event notifications.</p>
+     */
+    public void setPersistenceCompleteEventSwitch(String PersistenceCompleteEventSwitch) {
+        this.PersistenceCompleteEventSwitch = PersistenceCompleteEventSwitch;
+    }
+
+    /**
+     * Get <p>Callback key, consisting of upper- and lower-case letters and numbers, with a maximum length of 32 characters. After configuration, the <code>Sign</code> and <code>T</code> fields will be sent in callbacks for authentication.</p><ul><li><code>Sign</code>: string type. Event notification security signature Sign = MD5(SignKey + T). Description: Tencent Cloud calculates the Sign value by concatenating the encrypted SignKey and T and performing MD5 encryption, then places it in the notification message. Your backend server can verify whether the Sign is correct upon receiving the notification message using the same algorithm, thereby confirming whether the message is indeed from the Tencent Cloud backend.</li><li><code>T</code>: int64 type. Expiration time, the UNIX timestamp when the event notification signature expires. Notifications from Tencent Cloud default to an expiration time of 10 minutes. If the time specified by the t value in a notification message has expired, the notification can be deemed invalid, preventing network replay attacks. The format of T is a decimal UNIX timestamp, representing the seconds elapsed since January 1, 1970 (midnight UTC/GMT).</li></ul> 
+     * @return SignKey <p>Callback key, consisting of upper- and lower-case letters and numbers, with a maximum length of 32 characters. After configuration, the <code>Sign</code> and <code>T</code> fields will be sent in callbacks for authentication.</p><ul><li><code>Sign</code>: string type. Event notification security signature Sign = MD5(SignKey + T). Description: Tencent Cloud calculates the Sign value by concatenating the encrypted SignKey and T and performing MD5 encryption, then places it in the notification message. Your backend server can verify whether the Sign is correct upon receiving the notification message using the same algorithm, thereby confirming whether the message is indeed from the Tencent Cloud backend.</li><li><code>T</code>: int64 type. Expiration time, the UNIX timestamp when the event notification signature expires. Notifications from Tencent Cloud default to an expiration time of 10 minutes. If the time specified by the t value in a notification message has expired, the notification can be deemed invalid, preventing network replay attacks. The format of T is a decimal UNIX timestamp, representing the seconds elapsed since January 1, 1970 (midnight UTC/GMT).</li></ul>
+     */
+    public String getSignKey() {
+        return this.SignKey;
+    }
+
+    /**
+     * Set <p>Callback key, consisting of upper- and lower-case letters and numbers, with a maximum length of 32 characters. After configuration, the <code>Sign</code> and <code>T</code> fields will be sent in callbacks for authentication.</p><ul><li><code>Sign</code>: string type. Event notification security signature Sign = MD5(SignKey + T). Description: Tencent Cloud calculates the Sign value by concatenating the encrypted SignKey and T and performing MD5 encryption, then places it in the notification message. Your backend server can verify whether the Sign is correct upon receiving the notification message using the same algorithm, thereby confirming whether the message is indeed from the Tencent Cloud backend.</li><li><code>T</code>: int64 type. Expiration time, the UNIX timestamp when the event notification signature expires. Notifications from Tencent Cloud default to an expiration time of 10 minutes. If the time specified by the t value in a notification message has expired, the notification can be deemed invalid, preventing network replay attacks. The format of T is a decimal UNIX timestamp, representing the seconds elapsed since January 1, 1970 (midnight UTC/GMT).</li></ul>
+     * @param SignKey <p>Callback key, consisting of upper- and lower-case letters and numbers, with a maximum length of 32 characters. After configuration, the <code>Sign</code> and <code>T</code> fields will be sent in callbacks for authentication.</p><ul><li><code>Sign</code>: string type. Event notification security signature Sign = MD5(SignKey + T). Description: Tencent Cloud calculates the Sign value by concatenating the encrypted SignKey and T and performing MD5 encryption, then places it in the notification message. Your backend server can verify whether the Sign is correct upon receiving the notification message using the same algorithm, thereby confirming whether the message is indeed from the Tencent Cloud backend.</li><li><code>T</code>: int64 type. Expiration time, the UNIX timestamp when the event notification signature expires. Notifications from Tencent Cloud default to an expiration time of 10 minutes. If the time specified by the t value in a notification message has expired, the notification can be deemed invalid, preventing network replay attacks. The format of T is a decimal UNIX timestamp, representing the seconds elapsed since January 1, 1970 (midnight UTC/GMT).</li></ul>
+     */
+    public void setSignKey(String SignKey) {
+        this.SignKey = SignKey;
     }
 
     public ModifyEventConfigRequest() {
@@ -184,6 +192,9 @@ Note: If the NotificationUrl parameter is provided and the value is an empty str
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public ModifyEventConfigRequest(ModifyEventConfigRequest source) {
+        if (source.SubAppId != null) {
+            this.SubAppId = new Long(source.SubAppId);
+        }
         if (source.Mode != null) {
             this.Mode = new String(source.Mode);
         }
@@ -199,8 +210,8 @@ Note: If the NotificationUrl parameter is provided and the value is an empty str
         if (source.PersistenceCompleteEventSwitch != null) {
             this.PersistenceCompleteEventSwitch = new String(source.PersistenceCompleteEventSwitch);
         }
-        if (source.SubAppId != null) {
-            this.SubAppId = new Long(source.SubAppId);
+        if (source.SignKey != null) {
+            this.SignKey = new String(source.SignKey);
         }
     }
 
@@ -209,12 +220,13 @@ Note: If the NotificationUrl parameter is provided and the value is an empty str
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
         this.setParamSimple(map, prefix + "Mode", this.Mode);
         this.setParamSimple(map, prefix + "NotificationUrl", this.NotificationUrl);
         this.setParamSimple(map, prefix + "UploadMediaCompleteEventSwitch", this.UploadMediaCompleteEventSwitch);
         this.setParamSimple(map, prefix + "DeleteMediaCompleteEventSwitch", this.DeleteMediaCompleteEventSwitch);
         this.setParamSimple(map, prefix + "PersistenceCompleteEventSwitch", this.PersistenceCompleteEventSwitch);
-        this.setParamSimple(map, prefix + "SubAppId", this.SubAppId);
+        this.setParamSimple(map, prefix + "SignKey", this.SignKey);
 
     }
 }

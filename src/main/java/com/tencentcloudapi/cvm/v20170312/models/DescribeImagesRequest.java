@@ -53,14 +53,14 @@ public class DescribeImagesRequest extends AbstractModel {
     private Filter [] Filters;
 
     /**
-    * Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+    * Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+    * Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
     */
     @SerializedName("Limit")
     @Expose
@@ -166,32 +166,32 @@ public class DescribeImagesRequest extends AbstractModel {
     }
 
     /**
-     * Get Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89). 
-     * @return Offset Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+     * Get Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689). 
+     * @return Offset Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
-     * @param Offset Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+     * Set Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
+     * @param Offset Offset; default value: 0. For more information on `Offset`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89). 
-     * @return Limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+     * Get Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689). 
+     * @return Limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
-     * @param Limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://intl.cloud.tencent.com/document/api/213/568?from_cn_redirect=1#.E8.BE.93.E5.85.A5.E5.8F.82.E6.95.B0.E4.B8.8E.E8.BF.94.E5.9B.9E.E5.8F.82.E6.95.B0.E9.87.8A.E4.B9.89).
+     * Set Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
+     * @param Limit Number of results returned; default value: 20; maximum: 100. For more information on `Limit`, see [API Introduction](https://www.tencentcloud.com/document/product/213/15689).
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

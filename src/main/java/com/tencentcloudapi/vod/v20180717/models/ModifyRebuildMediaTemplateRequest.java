@@ -24,273 +24,273 @@ import java.util.HashMap;
 public class ModifyRebuildMediaTemplateRequest extends AbstractModel {
 
     /**
-    * Rebuild Media Template ID.
+    * Video rebirth template number.
     */
     @SerializedName("Definition")
     @Expose
     private Long Definition;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private String SubAppId;
 
     /**
-    * Rebuild Media Template Name.
+    * Video rebirth template name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Rebuild media template description.
+    * Video rebirth template description.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Rebuild media video control information.
+    * Video Rebirth Video Control Information.
     */
     @SerializedName("RebuildVideoInfo")
     @Expose
     private RebuildVideoInfo RebuildVideoInfo;
 
     /**
-    * Rebuild media audio control information.
+    * Video Rebirth Audio Control Information.
     */
     @SerializedName("RebuildAudioInfo")
     @Expose
     private RebuildAudioInfo RebuildAudioInfo;
 
     /**
-    * The output video parameters.
+    * Output target video control information.
     */
     @SerializedName("TargetVideoInfo")
     @Expose
     private RebuildMediaTargetVideoStream TargetVideoInfo;
 
     /**
-    * The output audio parameters.
+    * Output target audio control information.
     */
     @SerializedName("TargetAudioInfo")
     @Expose
     private RebuildMediaTargetAudioStream TargetAudioInfo;
 
     /**
-    * The output container format. Valid values: `mp4`, `flv`, `hls`.
+    * Container format. Available values: mp4, flv, and hls.
     */
     @SerializedName("Container")
     @Expose
     private String Container;
 
     /**
-    * Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
+    * Whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
     */
     @SerializedName("RemoveVideo")
     @Expose
     private Long RemoveVideo;
 
     /**
-    * Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
+    * Remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
     */
     @SerializedName("RemoveAudio")
     @Expose
     private Long RemoveAudio;
 
     /**
-     * Get Rebuild Media Template ID. 
-     * @return Definition Rebuild Media Template ID.
+     * Get Video rebirth template number. 
+     * @return Definition Video rebirth template number.
      */
     public Long getDefinition() {
         return this.Definition;
     }
 
     /**
-     * Set Rebuild Media Template ID.
-     * @param Definition Rebuild Media Template ID.
+     * Set Video rebirth template number.
+     * @param Definition Video rebirth template number.
      */
     public void setDefinition(Long Definition) {
         this.Definition = Definition;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public String getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(String SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Rebuild Media Template Name. 
-     * @return Name Rebuild Media Template Name.
+     * Get Video rebirth template name. 
+     * @return Name Video rebirth template name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Rebuild Media Template Name.
-     * @param Name Rebuild Media Template Name.
+     * Set Video rebirth template name.
+     * @param Name Video rebirth template name.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Rebuild media template description. 
-     * @return Comment Rebuild media template description.
+     * Get Video rebirth template description. 
+     * @return Comment Video rebirth template description.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Rebuild media template description.
-     * @param Comment Rebuild media template description.
+     * Set Video rebirth template description.
+     * @param Comment Video rebirth template description.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Rebuild media video control information. 
-     * @return RebuildVideoInfo Rebuild media video control information.
+     * Get Video Rebirth Video Control Information. 
+     * @return RebuildVideoInfo Video Rebirth Video Control Information.
      */
     public RebuildVideoInfo getRebuildVideoInfo() {
         return this.RebuildVideoInfo;
     }
 
     /**
-     * Set Rebuild media video control information.
-     * @param RebuildVideoInfo Rebuild media video control information.
+     * Set Video Rebirth Video Control Information.
+     * @param RebuildVideoInfo Video Rebirth Video Control Information.
      */
     public void setRebuildVideoInfo(RebuildVideoInfo RebuildVideoInfo) {
         this.RebuildVideoInfo = RebuildVideoInfo;
     }
 
     /**
-     * Get Rebuild media audio control information. 
-     * @return RebuildAudioInfo Rebuild media audio control information.
+     * Get Video Rebirth Audio Control Information. 
+     * @return RebuildAudioInfo Video Rebirth Audio Control Information.
      */
     public RebuildAudioInfo getRebuildAudioInfo() {
         return this.RebuildAudioInfo;
     }
 
     /**
-     * Set Rebuild media audio control information.
-     * @param RebuildAudioInfo Rebuild media audio control information.
+     * Set Video Rebirth Audio Control Information.
+     * @param RebuildAudioInfo Video Rebirth Audio Control Information.
      */
     public void setRebuildAudioInfo(RebuildAudioInfo RebuildAudioInfo) {
         this.RebuildAudioInfo = RebuildAudioInfo;
     }
 
     /**
-     * Get The output video parameters. 
-     * @return TargetVideoInfo The output video parameters.
+     * Get Output target video control information. 
+     * @return TargetVideoInfo Output target video control information.
      */
     public RebuildMediaTargetVideoStream getTargetVideoInfo() {
         return this.TargetVideoInfo;
     }
 
     /**
-     * Set The output video parameters.
-     * @param TargetVideoInfo The output video parameters.
+     * Set Output target video control information.
+     * @param TargetVideoInfo Output target video control information.
      */
     public void setTargetVideoInfo(RebuildMediaTargetVideoStream TargetVideoInfo) {
         this.TargetVideoInfo = TargetVideoInfo;
     }
 
     /**
-     * Get The output audio parameters. 
-     * @return TargetAudioInfo The output audio parameters.
+     * Get Output target audio control information. 
+     * @return TargetAudioInfo Output target audio control information.
      */
     public RebuildMediaTargetAudioStream getTargetAudioInfo() {
         return this.TargetAudioInfo;
     }
 
     /**
-     * Set The output audio parameters.
-     * @param TargetAudioInfo The output audio parameters.
+     * Set Output target audio control information.
+     * @param TargetAudioInfo Output target audio control information.
      */
     public void setTargetAudioInfo(RebuildMediaTargetAudioStream TargetAudioInfo) {
         this.TargetAudioInfo = TargetAudioInfo;
     }
 
     /**
-     * Get The output container format. Valid values: `mp4`, `flv`, `hls`. 
-     * @return Container The output container format. Valid values: `mp4`, `flv`, `hls`.
+     * Get Container format. Available values: mp4, flv, and hls. 
+     * @return Container Container format. Available values: mp4, flv, and hls.
      */
     public String getContainer() {
         return this.Container;
     }
 
     /**
-     * Set The output container format. Valid values: `mp4`, `flv`, `hls`.
-     * @param Container The output container format. Valid values: `mp4`, `flv`, `hls`.
+     * Set Container format. Available values: mp4, flv, and hls.
+     * @param Container Container format. Available values: mp4, flv, and hls.
      */
     public void setContainer(String Container) {
         this.Container = Container;
     }
 
     /**
-     * Get Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li> 
-     * @return RemoveVideo Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
+     * Get Whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li> 
+     * @return RemoveVideo Whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
      */
     public Long getRemoveVideo() {
         return this.RemoveVideo;
     }
 
     /**
-     * Set Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-     * @param RemoveVideo Whether to remove video data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
+     * Set Whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+     * @param RemoveVideo Whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
      */
     public void setRemoveVideo(Long RemoveVideo) {
         this.RemoveVideo = RemoveVideo;
     }
 
     /**
-     * Get Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li> 
-     * @return RemoveAudio Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
+     * Get Remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li> 
+     * @return RemoveAudio Remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
      */
     public Long getRemoveAudio() {
         return this.RemoveAudio;
     }
 
     /**
-     * Set Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
-     * @param RemoveAudio Whether to remove audio data. Valid values:
-<li>`0`: No</li>
-<li>`1`: Yes</li>
+     * Set Remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+     * @param RemoveAudio Remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
      */
     public void setRemoveAudio(Long RemoveAudio) {
         this.RemoveAudio = RemoveAudio;

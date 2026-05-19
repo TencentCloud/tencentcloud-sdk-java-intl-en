@@ -24,314 +24,299 @@ import java.util.HashMap;
 public class ProcessMediaRequest extends AbstractModel {
 
     /**
-    * Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
+    * <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after a successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/33950">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide one of FileId and MediaStoragePath.</p>
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * Storage path of the media.
-Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
-FileId or MediaStoragePath must be provided.
+    * <p>Storage path of the media.<br>Only sub-applications in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate task through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p>
     */
     @SerializedName("MediaStoragePath")
     @Expose
     private String MediaStoragePath;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Parameter of video processing task.
+    * <p>Parameters for the video processing type task.</p>
     */
     @SerializedName("MediaProcessTask")
     @Expose
     private MediaProcessTaskInput MediaProcessTask;
 
     /**
-    * The information of the audio/video moderation task\*.
-This parameter is <font color=red>\*no longer recommended</font>. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
+    * <p>Audio and video content review type task parameters.<br><font color="red">* Not recommended for use</font>. It is recommended to use <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">ReviewAudioVideo</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">ReviewImage</a>.</p>
     */
     @SerializedName("AiContentReviewTask")
     @Expose
     private AiContentReviewTaskInput AiContentReviewTask;
 
     /**
-    * Video content analysis task parameter.
+    * <p>Parameters for the audio and video content analysis task.</p>
     */
     @SerializedName("AiAnalysisTask")
     @Expose
     private AiAnalysisTaskInput AiAnalysisTask;
 
     /**
-    * Type parameter of video content recognition task.
+    * <p>Parameters for the audio/video content recognition task.</p>
     */
     @SerializedName("AiRecognitionTask")
     @Expose
     private AiRecognitionTaskInput AiRecognitionTask;
 
     /**
-    * Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+    * <p>Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
     */
     @SerializedName("TasksPriority")
     @Expose
     private Long TasksPriority;
 
     /**
-    * Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
+    * <p>Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.</p>
     */
     @SerializedName("TasksNotifyMode")
     @Expose
     private String TasksNotifyMode;
 
     /**
-    * The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+    * <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
     */
     @SerializedName("SessionContext")
     @Expose
     private String SessionContext;
 
     /**
-    * Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+    * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
     */
     @SerializedName("SessionId")
     @Expose
     private String SessionId;
 
     /**
-    * Reserved field for special purposes.
+    * <p>Reserved field, used when special purpose.</p>
     */
     @SerializedName("ExtInfo")
     @Expose
     private String ExtInfo;
 
     /**
-    * 
+    * <p>Valid when FileID is empty. Pull the Url to generate new media assets and generate a new FileID. The media processing product will be affiliated with the new media assets.</p><p>Note: Storage fees will occur for new media assets.</p>
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-     * Get Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media). 
-     * @return FileId Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
+     * Get <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after a successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/33950">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide one of FileId and MediaStoragePath.</p> 
+     * @return FileId <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after a successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/33950">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide one of FileId and MediaStoragePath.</p>
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
-     * @param FileId Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
+     * Set <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after a successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/33950">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide one of FileId and MediaStoragePath.</p>
+     * @param FileId <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after a successful upload. You can get this field in the <a href="https://www.tencentcloud.com/document/product/266/33950">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.<br>You must provide one of FileId and MediaStoragePath.</p>
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get Storage path of the media.
-Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
-FileId or MediaStoragePath must be provided. 
-     * @return MediaStoragePath Storage path of the media.
-Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
-FileId or MediaStoragePath must be provided.
+     * Get <p>Storage path of the media.<br>Only sub-applications in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate task through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p> 
+     * @return MediaStoragePath <p>Storage path of the media.<br>Only sub-applications in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate task through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p>
      */
     public String getMediaStoragePath() {
         return this.MediaStoragePath;
     }
 
     /**
-     * Set Storage path of the media.
-Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
-FileId or MediaStoragePath must be provided.
-     * @param MediaStoragePath Storage path of the media.
-Only sub-apps in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate tasks through MediaStoragePath.
-FileId or MediaStoragePath must be provided.
+     * Set <p>Storage path of the media.<br>Only sub-applications in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate task through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p>
+     * @param MediaStoragePath <p>Storage path of the media.<br>Only sub-applications in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can initiate task through MediaStoragePath.<br>Either FileId or MediaStoragePath must be provided.</p>
      */
     public void setMediaStoragePath(String MediaStoragePath) {
         this.MediaStoragePath = MediaStoragePath;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p> 
+     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+     * @param SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Parameter of video processing task. 
-     * @return MediaProcessTask Parameter of video processing task.
+     * Get <p>Parameters for the video processing type task.</p> 
+     * @return MediaProcessTask <p>Parameters for the video processing type task.</p>
      */
     public MediaProcessTaskInput getMediaProcessTask() {
         return this.MediaProcessTask;
     }
 
     /**
-     * Set Parameter of video processing task.
-     * @param MediaProcessTask Parameter of video processing task.
+     * Set <p>Parameters for the video processing type task.</p>
+     * @param MediaProcessTask <p>Parameters for the video processing type task.</p>
      */
     public void setMediaProcessTask(MediaProcessTaskInput MediaProcessTask) {
         this.MediaProcessTask = MediaProcessTask;
     }
 
     /**
-     * Get The information of the audio/video moderation task\*.
-This parameter is <font color=red>\*no longer recommended</font>. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead. 
-     * @return AiContentReviewTask The information of the audio/video moderation task\*.
-This parameter is <font color=red>\*no longer recommended</font>. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
+     * Get <p>Audio and video content review type task parameters.<br><font color="red">* Not recommended for use</font>. It is recommended to use <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">ReviewAudioVideo</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">ReviewImage</a>.</p> 
+     * @return AiContentReviewTask <p>Audio and video content review type task parameters.<br><font color="red">* Not recommended for use</font>. It is recommended to use <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">ReviewAudioVideo</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">ReviewImage</a>.</p>
      */
     public AiContentReviewTaskInput getAiContentReviewTask() {
         return this.AiContentReviewTask;
     }
 
     /**
-     * Set The information of the audio/video moderation task\*.
-This parameter is <font color=red>\*no longer recommended</font>. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
-     * @param AiContentReviewTask The information of the audio/video moderation task\*.
-This parameter is <font color=red>\*no longer recommended</font>. Please use [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) instead.
+     * Set <p>Audio and video content review type task parameters.<br><font color="red">* Not recommended for use</font>. It is recommended to use <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">ReviewAudioVideo</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">ReviewImage</a>.</p>
+     * @param AiContentReviewTask <p>Audio and video content review type task parameters.<br><font color="red">* Not recommended for use</font>. It is recommended to use <a href="https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1">ReviewAudioVideo</a> or <a href="https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1">ReviewImage</a>.</p>
      */
     public void setAiContentReviewTask(AiContentReviewTaskInput AiContentReviewTask) {
         this.AiContentReviewTask = AiContentReviewTask;
     }
 
     /**
-     * Get Video content analysis task parameter. 
-     * @return AiAnalysisTask Video content analysis task parameter.
+     * Get <p>Parameters for the audio and video content analysis task.</p> 
+     * @return AiAnalysisTask <p>Parameters for the audio and video content analysis task.</p>
      */
     public AiAnalysisTaskInput getAiAnalysisTask() {
         return this.AiAnalysisTask;
     }
 
     /**
-     * Set Video content analysis task parameter.
-     * @param AiAnalysisTask Video content analysis task parameter.
+     * Set <p>Parameters for the audio and video content analysis task.</p>
+     * @param AiAnalysisTask <p>Parameters for the audio and video content analysis task.</p>
      */
     public void setAiAnalysisTask(AiAnalysisTaskInput AiAnalysisTask) {
         this.AiAnalysisTask = AiAnalysisTask;
     }
 
     /**
-     * Get Type parameter of video content recognition task. 
-     * @return AiRecognitionTask Type parameter of video content recognition task.
+     * Get <p>Parameters for the audio/video content recognition task.</p> 
+     * @return AiRecognitionTask <p>Parameters for the audio/video content recognition task.</p>
      */
     public AiRecognitionTaskInput getAiRecognitionTask() {
         return this.AiRecognitionTask;
     }
 
     /**
-     * Set Type parameter of video content recognition task.
-     * @param AiRecognitionTask Type parameter of video content recognition task.
+     * Set <p>Parameters for the audio/video content recognition task.</p>
+     * @param AiRecognitionTask <p>Parameters for the audio/video content recognition task.</p>
      */
     public void setAiRecognitionTask(AiRecognitionTaskInput AiRecognitionTask) {
         this.AiRecognitionTask = AiRecognitionTask;
     }
 
     /**
-     * Get Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used. 
-     * @return TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+     * Get <p>Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p> 
+     * @return TasksPriority <p>Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
      */
     public Long getTasksPriority() {
         return this.TasksPriority;
     }
 
     /**
-     * Set Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
-     * @param TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.
+     * Set <p>Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
+     * @param TasksPriority <p>Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
      */
     public void setTasksPriority(Long TasksPriority) {
         this.TasksPriority = TasksPriority;
     }
 
     /**
-     * Get Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used. 
-     * @return TasksNotifyMode Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
+     * Get <p>Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.</p> 
+     * @return TasksNotifyMode <p>Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.</p>
      */
     public String getTasksNotifyMode() {
         return this.TasksNotifyMode;
     }
 
     /**
-     * Set Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
-     * @param TasksNotifyMode Notification mode for task flow status change. Valid values: Finish, Change, None. If this parameter is left empty, `Finish` will be used.
+     * Set <p>Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.</p>
+     * @param TasksNotifyMode <p>Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.</p>
      */
     public void setTasksNotifyMode(String TasksNotifyMode) {
         this.TasksNotifyMode = TasksNotifyMode;
     }
 
     /**
-     * Get The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters. 
-     * @return SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * Get <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p> 
+     * @return SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public String getSessionContext() {
         return this.SessionContext;
     }
 
     /**
-     * Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-     * @param SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * Set <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
+     * @param SessionContext <p>Source context. This is used to pass user request information. The task status change callback returns the value of this field. The maximum length is 1000 characters.</p>
      */
     public void setSessionContext(String SessionContext) {
         this.SessionContext = SessionContext;
     }
 
     /**
-     * Get Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed. 
-     * @return SessionId Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+     * Get <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p> 
+     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public String getSessionId() {
         return this.SessionId;
     }
 
     /**
-     * Set Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
-     * @param SessionId Used to identify duplicate requests. After you send a request, if any request with the same `SessionId` has already been sent in the last three days (72 hours), an error message will be returned. `SessionId` contains up to 50 characters. If this parameter is not carried or is an empty string, no deduplication will be performed.
+     * Set <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+     * @param SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
      */
     public void setSessionId(String SessionId) {
         this.SessionId = SessionId;
     }
 
     /**
-     * Get Reserved field for special purposes. 
-     * @return ExtInfo Reserved field for special purposes.
+     * Get <p>Reserved field, used when special purpose.</p> 
+     * @return ExtInfo <p>Reserved field, used when special purpose.</p>
      */
     public String getExtInfo() {
         return this.ExtInfo;
     }
 
     /**
-     * Set Reserved field for special purposes.
-     * @param ExtInfo Reserved field for special purposes.
+     * Set <p>Reserved field, used when special purpose.</p>
+     * @param ExtInfo <p>Reserved field, used when special purpose.</p>
      */
     public void setExtInfo(String ExtInfo) {
         this.ExtInfo = ExtInfo;
     }
 
     /**
-     * Get  
-     * @return Url 
+     * Get <p>Valid when FileID is empty. Pull the Url to generate new media assets and generate a new FileID. The media processing product will be affiliated with the new media assets.</p><p>Note: Storage fees will occur for new media assets.</p> 
+     * @return Url <p>Valid when FileID is empty. Pull the Url to generate new media assets and generate a new FileID. The media processing product will be affiliated with the new media assets.</p><p>Note: Storage fees will occur for new media assets.</p>
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set 
-     * @param Url 
+     * Set <p>Valid when FileID is empty. Pull the Url to generate new media assets and generate a new FileID. The media processing product will be affiliated with the new media assets.</p><p>Note: Storage fees will occur for new media assets.</p>
+     * @param Url <p>Valid when FileID is empty. Pull the Url to generate new media assets and generate a new FileID. The media processing product will be affiliated with the new media assets.</p><p>Note: Storage fees will occur for new media assets.</p>
      */
     public void setUrl(String Url) {
         this.Url = Url;

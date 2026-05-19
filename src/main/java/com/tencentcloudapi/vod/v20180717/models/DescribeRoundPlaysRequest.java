@@ -178,7 +178,9 @@ public class DescribeRoundPlaysRequest extends AbstractModel {
     /**
      * Get Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries. 
      * @return Offset Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
+     * @deprecated
      */
+    @Deprecated
     public Long getOffset() {
         return this.Offset;
     }
@@ -186,7 +188,9 @@ public class DescribeRoundPlaysRequest extends AbstractModel {
     /**
      * Set Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
      * @param Offset Pagination offset, default value: 0. this field is obsolete. please use the `scrolltoken` parameter for batch queries.
+     * @deprecated
      */
+    @Deprecated
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }

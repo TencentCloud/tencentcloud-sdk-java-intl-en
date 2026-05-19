@@ -24,640 +24,605 @@ import java.util.HashMap;
 public class AsrTranslateConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Voice translation task switch, optional values:
-<li>ON: switch on;</li>
-<li>OFF: switch off.</li>
+    * Voice translation recognition task switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li><font color=red>Note:</font> The speech translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, it is forbidden to enable both speech translation recognition and ASR full text recognition feature items simultaneously.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * Media source language, value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`ms`: Malay;</li>
-<li>`th`: Thai;</li>
-<li>`pt`: Portuguese;</li>
-<li>`tr`: Turkish;</li>
-<li>`ar`: Arabic;</li>
-<li>`es`: Spanish;</li>
-<li>`hi`: Hindi;</li>
-<li>`fr`: French.</li>
+    * Media source language. Valid values:
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
     */
     @SerializedName("SrcLanguage")
     @Expose
     private String SrcLanguage;
 
     /**
-    * Translation target language.
-When SrcLanguage is zh(Chinese), value range:
-<li>`en`: English;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`id`: Indonesian;</li>
-<li>`th`: Thai;</li>
-<li>`ms`: Malay.</li>
-
-When SrcLanguage is en(English), value range:
-<li>`zh`: Chinese;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`id`: Indonesian;</li>
-<li>`th`: Thai;</li>
-<li>`ms`: Malay;</li>
-<li>`ar`: Arabic;</li>
-<li>`hi`: Hindi.</li>
-
-When SrcLanguage is ja (Japanese), value range:
-<li>zh: Chinese;</li>
+    * Target language.
+If this parameter is filled in with an empty string, it means that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
+Otherwise, the parameter value range is divided into the following cases:
+When SrcLanguage is zh (Chinese), the value ranges from...to...
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay.</li>
+When SrcLanguage is en (English), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay;</li>
+<li>ar: Arabic;</li>
+<li>hi: Hindi.</li>
+When SrcLanguage is ja (Japanese), the parameter value range is
+<li>zh: Chinese.</li>
 <li>en: English;</li>
 <li>ko: Korean.</li>
-
-When SrcLanguage is ko (Korean), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`ja`: Japanese.</li>
-
-When SrcLanguage is vi (Vietnamese) or ms (Malay) or th (Thai), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English.</li>
-
-When SrcLanguage is pt (Portuguese), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian.</li>
-
-When SrcLanguage is tr (Turkish), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
-
-When SrcLanguage is es (Spanish), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
-
-When SrcLanguage is ar (Arabic) or hi (Hindi), value range:
-<li>`en`: English.</li>
-
-When SrcLanguage is fr (French), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
+When SrcLanguage is ko (Korean), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>ja: Japanese.</li>
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English.</li>
+When SrcLanguage is pt (Portuguese), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian.</li>
+When SrcLanguage is tr (Turkish), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is es (Spanish), the parameter value range is
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is ar (Arabic) or hi (Hindi), the value ranges from...to...
+<li>en: English.</li>
+When SrcLanguage is fr (French), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
     */
     @SerializedName("DstLanguage")
     @Expose
     private String DstLanguage;
 
     /**
-    * Operation information about subtitle format list.
+    * Subtitle format list operation information.
     */
     @SerializedName("SubtitleFormatsOperation")
     @Expose
     private SubtitleFormatsOperation SubtitleFormatsOperation;
 
     /**
-    * Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+    * Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
     */
     @SerializedName("SubtitleName")
     @Expose
     private String SubtitleName;
 
     /**
-     * Get Voice translation task switch, optional values:
-<li>ON: switch on;</li>
-<li>OFF: switch off.</li> 
-     * @return Switch Voice translation task switch, optional values:
-<li>ON: switch on;</li>
-<li>OFF: switch off.</li>
+     * Get Voice translation recognition task switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li><font color=red>Note:</font> The speech translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, it is forbidden to enable both speech translation recognition and ASR full text recognition feature items simultaneously.</li> 
+     * @return Switch Voice translation recognition task switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li><font color=red>Note:</font> The speech translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, it is forbidden to enable both speech translation recognition and ASR full text recognition feature items simultaneously.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Voice translation task switch, optional values:
-<li>ON: switch on;</li>
-<li>OFF: switch off.</li>
-     * @param Switch Voice translation task switch, optional values:
-<li>ON: switch on;</li>
-<li>OFF: switch off.</li>
+     * Set Voice translation recognition task switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li><font color=red>Note:</font> The speech translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, it is forbidden to enable both speech translation recognition and ASR full text recognition feature items simultaneously.</li>
+     * @param Switch Voice translation recognition task switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disabled.</li><font color=red>Note:</font> The speech translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, it is forbidden to enable both speech translation recognition and ASR full text recognition feature items simultaneously.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get Media source language, value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`ms`: Malay;</li>
-<li>`th`: Thai;</li>
-<li>`pt`: Portuguese;</li>
-<li>`tr`: Turkish;</li>
-<li>`ar`: Arabic;</li>
-<li>`es`: Spanish;</li>
-<li>`hi`: Hindi;</li>
-<li>`fr`: French.</li> 
-     * @return SrcLanguage Media source language, value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`ms`: Malay;</li>
-<li>`th`: Thai;</li>
-<li>`pt`: Portuguese;</li>
-<li>`tr`: Turkish;</li>
-<li>`ar`: Arabic;</li>
-<li>`es`: Spanish;</li>
-<li>`hi`: Hindi;</li>
-<li>`fr`: French.</li>
+     * Get Media source language. Valid values:
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li> 
+     * @return SrcLanguage Media source language. Valid values:
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
      */
     public String getSrcLanguage() {
         return this.SrcLanguage;
     }
 
     /**
-     * Set Media source language, value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`ms`: Malay;</li>
-<li>`th`: Thai;</li>
-<li>`pt`: Portuguese;</li>
-<li>`tr`: Turkish;</li>
-<li>`ar`: Arabic;</li>
-<li>`es`: Spanish;</li>
-<li>`hi`: Hindi;</li>
-<li>`fr`: French.</li>
-     * @param SrcLanguage Media source language, value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`ms`: Malay;</li>
-<li>`th`: Thai;</li>
-<li>`pt`: Portuguese;</li>
-<li>`tr`: Turkish;</li>
-<li>`ar`: Arabic;</li>
-<li>`es`: Spanish;</li>
-<li>`hi`: Hindi;</li>
-<li>`fr`: French.</li>
+     * Set Media source language. Valid values:
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
+     * @param SrcLanguage Media source language. Valid values:
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>vi: Vietnamese;</li>
+<li>ms: Malay;</li>
+<li>th: Thai;</li>
+<li>pt: Portuguese;</li>
+<li>tr: Turkish;</li>
+<li>ar: Arabic;</li>
+<li>es: Spanish;</li>
+<li>hi: Hindi;</li>
+<li>fr: French.</li>
      */
     public void setSrcLanguage(String SrcLanguage) {
         this.SrcLanguage = SrcLanguage;
     }
 
     /**
-     * Get Translation target language.
-When SrcLanguage is zh(Chinese), value range:
-<li>`en`: English;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`id`: Indonesian;</li>
-<li>`th`: Thai;</li>
-<li>`ms`: Malay.</li>
-
-When SrcLanguage is en(English), value range:
-<li>`zh`: Chinese;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`id`: Indonesian;</li>
-<li>`th`: Thai;</li>
-<li>`ms`: Malay;</li>
-<li>`ar`: Arabic;</li>
-<li>`hi`: Hindi.</li>
-
-When SrcLanguage is ja (Japanese), value range:
-<li>zh: Chinese;</li>
+     * Get Target language.
+If this parameter is filled in with an empty string, it means that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
+Otherwise, the parameter value range is divided into the following cases:
+When SrcLanguage is zh (Chinese), the value ranges from...to...
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay.</li>
+When SrcLanguage is en (English), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay;</li>
+<li>ar: Arabic;</li>
+<li>hi: Hindi.</li>
+When SrcLanguage is ja (Japanese), the parameter value range is
+<li>zh: Chinese.</li>
 <li>en: English;</li>
 <li>ko: Korean.</li>
-
-When SrcLanguage is ko (Korean), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`ja`: Japanese.</li>
-
-When SrcLanguage is vi (Vietnamese) or ms (Malay) or th (Thai), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English.</li>
-
-When SrcLanguage is pt (Portuguese), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian.</li>
-
-When SrcLanguage is tr (Turkish), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
-
-When SrcLanguage is es (Spanish), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
-
-When SrcLanguage is ar (Arabic) or hi (Hindi), value range:
-<li>`en`: English.</li>
-
-When SrcLanguage is fr (French), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li> 
-     * @return DstLanguage Translation target language.
-When SrcLanguage is zh(Chinese), value range:
-<li>`en`: English;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`id`: Indonesian;</li>
-<li>`th`: Thai;</li>
-<li>`ms`: Malay.</li>
-
-When SrcLanguage is en(English), value range:
-<li>`zh`: Chinese;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`id`: Indonesian;</li>
-<li>`th`: Thai;</li>
-<li>`ms`: Malay;</li>
-<li>`ar`: Arabic;</li>
-<li>`hi`: Hindi.</li>
-
-When SrcLanguage is ja (Japanese), value range:
-<li>zh: Chinese;</li>
+When SrcLanguage is ko (Korean), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>ja: Japanese.</li>
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English.</li>
+When SrcLanguage is pt (Portuguese), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian.</li>
+When SrcLanguage is tr (Turkish), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is es (Spanish), the parameter value range is
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is ar (Arabic) or hi (Hindi), the value ranges from...to...
+<li>en: English.</li>
+When SrcLanguage is fr (French), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li> 
+     * @return DstLanguage Target language.
+If this parameter is filled in with an empty string, it means that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
+Otherwise, the parameter value range is divided into the following cases:
+When SrcLanguage is zh (Chinese), the value ranges from...to...
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay.</li>
+When SrcLanguage is en (English), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay;</li>
+<li>ar: Arabic;</li>
+<li>hi: Hindi.</li>
+When SrcLanguage is ja (Japanese), the parameter value range is
+<li>zh: Chinese.</li>
 <li>en: English;</li>
 <li>ko: Korean.</li>
-
-When SrcLanguage is ko (Korean), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`ja`: Japanese.</li>
-
-When SrcLanguage is vi (Vietnamese) or ms (Malay) or th (Thai), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English.</li>
-
-When SrcLanguage is pt (Portuguese), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian.</li>
-
-When SrcLanguage is tr (Turkish), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
-
-When SrcLanguage is es (Spanish), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
-
-When SrcLanguage is ar (Arabic) or hi (Hindi), value range:
-<li>`en`: English.</li>
-
-When SrcLanguage is fr (French), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
+When SrcLanguage is ko (Korean), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>ja: Japanese.</li>
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English.</li>
+When SrcLanguage is pt (Portuguese), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian.</li>
+When SrcLanguage is tr (Turkish), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is es (Spanish), the parameter value range is
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is ar (Arabic) or hi (Hindi), the value ranges from...to...
+<li>en: English.</li>
+When SrcLanguage is fr (French), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
      */
     public String getDstLanguage() {
         return this.DstLanguage;
     }
 
     /**
-     * Set Translation target language.
-When SrcLanguage is zh(Chinese), value range:
-<li>`en`: English;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`id`: Indonesian;</li>
-<li>`th`: Thai;</li>
-<li>`ms`: Malay.</li>
-
-When SrcLanguage is en(English), value range:
-<li>`zh`: Chinese;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`id`: Indonesian;</li>
-<li>`th`: Thai;</li>
-<li>`ms`: Malay;</li>
-<li>`ar`: Arabic;</li>
-<li>`hi`: Hindi.</li>
-
-When SrcLanguage is ja (Japanese), value range:
-<li>zh: Chinese;</li>
+     * Set Target language.
+If this parameter is filled in with an empty string, it means that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
+Otherwise, the parameter value range is divided into the following cases:
+When SrcLanguage is zh (Chinese), the value ranges from...to...
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay.</li>
+When SrcLanguage is en (English), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay;</li>
+<li>ar: Arabic;</li>
+<li>hi: Hindi.</li>
+When SrcLanguage is ja (Japanese), the parameter value range is
+<li>zh: Chinese.</li>
 <li>en: English;</li>
 <li>ko: Korean.</li>
-
-When SrcLanguage is ko (Korean), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`ja`: Japanese.</li>
-
-When SrcLanguage is vi (Vietnamese) or ms (Malay) or th (Thai), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English.</li>
-
-When SrcLanguage is pt (Portuguese), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian.</li>
-
-When SrcLanguage is tr (Turkish), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
-
-When SrcLanguage is es (Spanish), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
-
-When SrcLanguage is ar (Arabic) or hi (Hindi), value range:
-<li>`en`: English.</li>
-
-When SrcLanguage is fr (French), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
-     * @param DstLanguage Translation target language.
-When SrcLanguage is zh(Chinese), value range:
-<li>`en`: English;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`id`: Indonesian;</li>
-<li>`th`: Thai;</li>
-<li>`ms`: Malay.</li>
-
-When SrcLanguage is en(English), value range:
-<li>`zh`: Chinese;</li>
-<li>`ja`: Japanese;</li>
-<li>`ko`: Korean;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese;</li>
-<li>`vi`: Vietnamese;</li>
-<li>`id`: Indonesian;</li>
-<li>`th`: Thai;</li>
-<li>`ms`: Malay;</li>
-<li>`ar`: Arabic;</li>
-<li>`hi`: Hindi.</li>
-
-When SrcLanguage is ja (Japanese), value range:
-<li>zh: Chinese;</li>
+When SrcLanguage is ko (Korean), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>ja: Japanese.</li>
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English.</li>
+When SrcLanguage is pt (Portuguese), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian.</li>
+When SrcLanguage is tr (Turkish), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is es (Spanish), the parameter value range is
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is ar (Arabic) or hi (Hindi), the value ranges from...to...
+<li>en: English.</li>
+When SrcLanguage is fr (French), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+     * @param DstLanguage Target language.
+If this parameter is filled in with an empty string, it means that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
+Otherwise, the parameter value range is divided into the following cases:
+When SrcLanguage is zh (Chinese), the value ranges from...to...
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay.</li>
+When SrcLanguage is en (English), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>ja: Japanese;</li>
+<li>ko: Korean;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese;</li>
+<li>vi: Vietnamese;</li>
+<li>id: Indonesian;</li>
+<li>th: Thai;</li>
+<li>ms: Malay;</li>
+<li>ar: Arabic;</li>
+<li>hi: Hindi.</li>
+When SrcLanguage is ja (Japanese), the parameter value range is
+<li>zh: Chinese.</li>
 <li>en: English;</li>
 <li>ko: Korean.</li>
-
-When SrcLanguage is ko (Korean), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`ja`: Japanese.</li>
-
-When SrcLanguage is vi (Vietnamese) or ms (Malay) or th (Thai), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English.</li>
-
-When SrcLanguage is pt (Portuguese), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian.</li>
-
-When SrcLanguage is tr (Turkish), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
-
-When SrcLanguage is es (Spanish), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`fr`: French;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
-
-When SrcLanguage is ar (Arabic) or hi (Hindi), value range:
-<li>`en`: English.</li>
-
-When SrcLanguage is fr (French), value range:
-<li>`zh`: Chinese;</li>
-<li>`en`: English;</li>
-<li>`es`: Spanish;</li>
-<li>`it`: Italian;</li>
-<li>`de`: German;</li>
-<li>`tr`: Turkish;</li>
-<li>`ru`: Russian;</li>
-<li>`pt`: Portuguese.</li>
+When SrcLanguage is ko (Korean), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>ja: Japanese.</li>
+When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English.</li>
+When SrcLanguage is pt (Portuguese), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian.</li>
+When SrcLanguage is tr (Turkish), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is es (Spanish), the parameter value range is
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>fr: French;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
+When SrcLanguage is ar (Arabic) or hi (Hindi), the value ranges from...to...
+<li>en: English.</li>
+When SrcLanguage is fr (French), the value ranges from...to...
+<li>zh: Chinese.</li>
+<li>en: English;</li>
+<li>es: Spanish;</li>
+<li>it: Italian.</li>
+<li>de: German;</li>
+<li>tr: Turkish;</li>
+<li>ru: Russian;</li>
+<li>pt: Portuguese.</li>
      */
     public void setDstLanguage(String DstLanguage) {
         this.DstLanguage = DstLanguage;
     }
 
     /**
-     * Get Operation information about subtitle format list. 
-     * @return SubtitleFormatsOperation Operation information about subtitle format list.
+     * Get Subtitle format list operation information. 
+     * @return SubtitleFormatsOperation Subtitle format list operation information.
      */
     public SubtitleFormatsOperation getSubtitleFormatsOperation() {
         return this.SubtitleFormatsOperation;
     }
 
     /**
-     * Set Operation information about subtitle format list.
-     * @param SubtitleFormatsOperation Operation information about subtitle format list.
+     * Set Subtitle format list operation information.
+     * @param SubtitleFormatsOperation Subtitle format list operation information.
      */
     public void setSubtitleFormatsOperation(SubtitleFormatsOperation SubtitleFormatsOperation) {
         this.SubtitleFormatsOperation = SubtitleFormatsOperation;
     }
 
     /**
-     * Get Specify subtitle name, length limit: 64 characters. This value will be used for player display. 
-     * @return SubtitleName Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+     * Get Specify subtitle name. Length limit: 64 characters. This value will be used for player display. 
+     * @return SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
      */
     public String getSubtitleName() {
         return this.SubtitleName;
     }
 
     /**
-     * Set Specify subtitle name, length limit: 64 characters. This value will be used for player display.
-     * @param SubtitleName Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+     * Set Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
+     * @param SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
      */
     public void setSubtitleName(String SubtitleName) {
         this.SubtitleName = SubtitleName;

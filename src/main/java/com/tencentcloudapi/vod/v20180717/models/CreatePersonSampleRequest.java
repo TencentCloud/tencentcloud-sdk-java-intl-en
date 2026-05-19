@@ -24,168 +24,168 @@ import java.util.HashMap;
 public class CreatePersonSampleRequest extends AbstractModel {
 
     /**
-    * Name of a sample. Length limit: 20 characters.
+    * Material name, length limited to 20 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
+    * Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
     */
     @SerializedName("Usages")
     @Expose
     private String [] Usages;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Description of a sample. Length limit: 1024 characters.
+    * Material description, with a length limit of 1024 characters.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
+    * The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
     */
     @SerializedName("FaceContents")
     @Expose
     private String [] FaceContents;
 
     /**
-    * Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
+    * material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-     * Get Name of a sample. Length limit: 20 characters. 
-     * @return Name Name of a sample. Length limit: 20 characters.
+     * Get Material name, length limited to 20 characters. 
+     * @return Name Material name, length limited to 20 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of a sample. Length limit: 20 characters.
-     * @param Name Name of a sample. Length limit: 20 characters.
+     * Set Material name, length limited to 20 characters.
+     * @param Name Material name, length limited to 20 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2. 
-     * @return Usages Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
+     * Get Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2. 
+     * @return Usages Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
      */
     public String [] getUsages() {
         return this.Usages;
     }
 
     /**
-     * Set Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
-     * @param Usages Usage of a sample. Valid values:
-1. Recognition: used for content recognition; equivalent to `Recognition.Face`
-2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
-3. All: equivalent to 1+2.
+     * Set Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
+     * @param Usages Material application scenario. Available values:
+1. Recognition: Used for content recognition, equivalent to Recognition.Face.
+2. Review: For inappropriate content, equivalent to Review.Face.
+3. All: Include all of the above, equivalent to 1+2.
      */
     public void setUsages(String [] Usages) {
         this.Usages = Usages;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Description of a sample. Length limit: 1024 characters. 
-     * @return Description Description of a sample. Length limit: 1024 characters.
+     * Get Material description, with a length limit of 1024 characters. 
+     * @return Description Material description, with a length limit of 1024 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description of a sample. Length limit: 1024 characters.
-     * @param Description Description of a sample. Length limit: 1024 characters.
+     * Set Material description, with a length limit of 1024 characters.
+     * @param Description Material description, with a length limit of 1024 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200. 
-     * @return FaceContents String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
+     * Get The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels. 
+     * @return FaceContents The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
      */
     public String [] getFaceContents() {
         return this.FaceContents;
     }
 
     /**
-     * Set String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
-     * @param FaceContents String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
-Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
+     * Set The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
+     * @param FaceContents The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
+Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
      */
     public void setFaceContents(String [] FaceContents) {
         this.FaceContents = FaceContents;
     }
 
     /**
-     * Get Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li> 
-     * @return Tags Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
+     * Get material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li> 
+     * @return Tags material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
-     * @param Tags Tags of a sample
-<li>Array length limit: 20 tags</li>
-<li>Length limit of a tag: 128 characters</li>
+     * Set material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
+     * @param Tags material tag
+<li>Array length limit: 20 tags;</li>
+<li>Length limit for a single tag: 128 characters.</li>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;

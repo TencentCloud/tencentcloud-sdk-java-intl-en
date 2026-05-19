@@ -45,8 +45,8 @@ If `Container` is `hls`, the valid value is:
     private String Codec;
 
     /**
-    * The audio bitrate, in Kbps. Value range: 0 and 26-256.
-If the value is `0`, the original audio bitrate will be used.
+    * Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
     */
     @SerializedName("Bitrate")
     @Expose
@@ -150,20 +150,20 @@ If `Container` is `hls`, the valid value is:
     }
 
     /**
-     * Get The audio bitrate, in Kbps. Value range: 0 and 26-256.
-If the value is `0`, the original audio bitrate will be used. 
-     * @return Bitrate The audio bitrate, in Kbps. Value range: 0 and 26-256.
-If the value is `0`, the original audio bitrate will be used.
+     * Get Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate. 
+     * @return Bitrate Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
      */
     public Long getBitrate() {
         return this.Bitrate;
     }
 
     /**
-     * Set The audio bitrate, in Kbps. Value range: 0 and 26-256.
-If the value is `0`, the original audio bitrate will be used.
-     * @param Bitrate The audio bitrate, in Kbps. Value range: 0 and 26-256.
-If the value is `0`, the original audio bitrate will be used.
+     * Set Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+     * @param Bitrate Bitrate of the audio stream, value ranges from 0 to [26, 256], measurement unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
      */
     public void setBitrate(Long Bitrate) {
         this.Bitrate = Bitrate;

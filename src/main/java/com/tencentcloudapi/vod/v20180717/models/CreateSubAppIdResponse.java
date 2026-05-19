@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateSubAppIdResponse extends AbstractModel {
 
     /**
-    * ID of created subapplication.
+    * <p>ID of the newly created application.</p>
     */
     @SerializedName("SubAppId")
     @Expose
@@ -38,16 +38,16 @@ public class CreateSubAppIdResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get ID of created subapplication. 
-     * @return SubAppId ID of created subapplication.
+     * Get <p>ID of the newly created application.</p> 
+     * @return SubAppId <p>ID of the newly created application.</p>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set ID of created subapplication.
-     * @param SubAppId ID of created subapplication.
+     * Set <p>ID of the newly created application.</p>
+     * @param SubAppId <p>ID of the newly created application.</p>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

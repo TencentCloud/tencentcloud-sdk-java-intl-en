@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeSuperPlayerConfigsRequest extends AbstractModel {
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Player configuration name filter. Array length limit: 100.
+    * Player configuration name filter condition, with a maximum array length of 100.
     */
     @SerializedName("Names")
     @Expose
@@ -45,48 +45,48 @@ public class DescribeSuperPlayerConfigsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Number of entries to be returned. Default value: 10. Maximum value: 100.
+    * Number of returned entries. Default value: 10. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
+    * Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Player configuration name filter. Array length limit: 100. 
-     * @return Names Player configuration name filter. Array length limit: 100.
+     * Get Player configuration name filter condition, with a maximum array length of 100. 
+     * @return Names Player configuration name filter condition, with a maximum array length of 100.
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set Player configuration name filter. Array length limit: 100.
-     * @param Names Player configuration name filter. Array length limit: 100.
+     * Set Player configuration name filter condition, with a maximum array length of 100.
+     * @param Names Player configuration name filter condition, with a maximum array length of 100.
      */
     public void setNames(String [] Names) {
         this.Names = Names;
@@ -109,40 +109,40 @@ public class DescribeSuperPlayerConfigsRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of entries to be returned. Default value: 10. Maximum value: 100. 
-     * @return Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
+     * Get Number of returned entries. Default value: 10. Maximum value: 100. 
+     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries to be returned. Default value: 10. Maximum value: 100.
-     * @param Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
+     * Set Number of returned entries. Default value: 10. Maximum value: 100.
+     * @param Limit Number of returned entries. Default value: 10. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li> 
-     * @return Type Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
+     * Get Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li> 
+     * @return Type Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
-     * @param Type Player configuration type filter. Valid values:
-<li>Preset: preset configuration;</li>
-<li>Custom: custom configuration.</li>
+     * Set Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
+     * @param Type Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: User-customized configuration.</li>
      */
     public void setType(String Type) {
         this.Type = Type;

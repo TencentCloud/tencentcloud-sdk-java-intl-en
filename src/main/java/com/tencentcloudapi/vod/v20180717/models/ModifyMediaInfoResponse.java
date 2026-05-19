@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class ModifyMediaInfoResponse extends AbstractModel {
 
     /**
-    * URL of new video cover.
-* Note: this returned value is valid only if the request carries `CoverData`.*
+    * New video cover URL.
+* Note: This return value is valid only when the request carries CoverData. *
     */
     @SerializedName("CoverUrl")
     @Expose
     private String CoverUrl;
 
     /**
-    * Added subtitle information
+    * New subtitle information.
     */
     @SerializedName("AddedSubtitleSet")
     @Expose
@@ -46,36 +46,36 @@ public class ModifyMediaInfoResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get URL of new video cover.
-* Note: this returned value is valid only if the request carries `CoverData`.* 
-     * @return CoverUrl URL of new video cover.
-* Note: this returned value is valid only if the request carries `CoverData`.*
+     * Get New video cover URL.
+* Note: This return value is valid only when the request carries CoverData. * 
+     * @return CoverUrl New video cover URL.
+* Note: This return value is valid only when the request carries CoverData. *
      */
     public String getCoverUrl() {
         return this.CoverUrl;
     }
 
     /**
-     * Set URL of new video cover.
-* Note: this returned value is valid only if the request carries `CoverData`.*
-     * @param CoverUrl URL of new video cover.
-* Note: this returned value is valid only if the request carries `CoverData`.*
+     * Set New video cover URL.
+* Note: This return value is valid only when the request carries CoverData. *
+     * @param CoverUrl New video cover URL.
+* Note: This return value is valid only when the request carries CoverData. *
      */
     public void setCoverUrl(String CoverUrl) {
         this.CoverUrl = CoverUrl;
     }
 
     /**
-     * Get Added subtitle information 
-     * @return AddedSubtitleSet Added subtitle information
+     * Get New subtitle information. 
+     * @return AddedSubtitleSet New subtitle information.
      */
     public MediaSubtitleItem [] getAddedSubtitleSet() {
         return this.AddedSubtitleSet;
     }
 
     /**
-     * Set Added subtitle information
-     * @param AddedSubtitleSet Added subtitle information
+     * Set New subtitle information.
+     * @param AddedSubtitleSet New subtitle information.
      */
     public void setAddedSubtitleSet(MediaSubtitleItem [] AddedSubtitleSet) {
         this.AddedSubtitleSet = AddedSubtitleSet;

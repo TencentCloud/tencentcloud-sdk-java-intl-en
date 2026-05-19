@@ -24,114 +24,109 @@ import java.util.HashMap;
 public class AudioSeparateInfo extends AbstractModel {
 
     /**
-    * Whether to enable audio separation. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+    * Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
+    * Scenario type. Valid values:
+<li>normal: Voice background sound scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
+    * Output audio track. Available values:
+<li>vocal: output voice</li>
+<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
+Default value: vocal.
     */
     @SerializedName("Track")
     @Expose
     private String Track;
 
     /**
-     * Get Whether to enable audio separation. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`. 
-     * @return Switch Whether to enable audio separation. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+     * Get Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li> 
+     * @return Switch Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable audio separation. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
-     * @param Switch Whether to enable audio separation. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `OFF`.
+     * Set Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
+     * @param Switch Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`. 
-     * @return Type The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
+     * Get Scenario type. Valid values:
+<li>normal: Voice background sound scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal. 
+     * @return Type Scenario type. Valid values:
+<li>normal: Voice background sound scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-     * @param Type The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
+     * Set Scenario type. Valid values:
+<li>normal: Voice background sound scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
+     * @param Type Scenario type. Valid values:
+<li>normal: Voice background sound scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`. 
-     * @return Track The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
+     * Get Output audio track. Available values:
+<li>vocal: output voice</li>
+<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
+Default value: vocal. 
+     * @return Track Output audio track. Available values:
+<li>vocal: output voice</li>
+<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
+Default value: vocal.
      */
     public String getTrack() {
         return this.Track;
     }
 
     /**
-     * Set The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-     * @param Track The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
+     * Set Output audio track. Available values:
+<li>vocal: output voice</li>
+<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
+Default value: vocal.
+     * @param Track Output audio track. Available values:
+<li>vocal: output voice</li>
+<li>Background: Output background audio when the scenario is normal, and output accompaniment when the scenario is music.</li>
+Default value: vocal.
      */
     public void setTrack(String Track) {
         this.Track = Track;

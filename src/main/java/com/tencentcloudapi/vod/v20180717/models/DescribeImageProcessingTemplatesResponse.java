@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeImageProcessingTemplatesResponse extends AbstractModel {
 
     /**
-    * The total number of records that meet the conditions.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * The information of the queried image processing templates.
+    * List of image processing template details.
     */
     @SerializedName("ImageProcessingTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeImageProcessingTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The total number of records that meet the conditions. 
-     * @return TotalCount The total number of records that meet the conditions.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The total number of records that meet the conditions.
-     * @param TotalCount The total number of records that meet the conditions.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get The information of the queried image processing templates. 
-     * @return ImageProcessingTemplateSet The information of the queried image processing templates.
+     * Get List of image processing template details. 
+     * @return ImageProcessingTemplateSet List of image processing template details.
      */
     public ImageProcessingTemplate [] getImageProcessingTemplateSet() {
         return this.ImageProcessingTemplateSet;
     }
 
     /**
-     * Set The information of the queried image processing templates.
-     * @param ImageProcessingTemplateSet The information of the queried image processing templates.
+     * Set List of image processing template details.
+     * @param ImageProcessingTemplateSet List of image processing template details.
      */
     public void setImageProcessingTemplateSet(ImageProcessingTemplate [] ImageProcessingTemplateSet) {
         this.ImageProcessingTemplateSet = ImageProcessingTemplateSet;

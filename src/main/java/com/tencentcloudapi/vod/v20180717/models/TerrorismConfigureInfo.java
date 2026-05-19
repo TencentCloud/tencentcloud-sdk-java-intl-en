@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class TerrorismConfigureInfo extends AbstractModel {
 
     /**
-    * Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Image recognition involves task control parameters for unsafe information.
     */
     @SerializedName("ImgReviewInfo")
     @Expose
     private TerrorismImgReviewTemplateInfo ImgReviewInfo;
 
     /**
-    * Parameters for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+    * Text identification involves task control parameters for unsafe information.
     */
     @SerializedName("OcrReviewInfo")
     @Expose
     private TerrorismOcrReviewTemplateInfo OcrReviewInfo;
 
     /**
-     * Get Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return ImgReviewInfo Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Image recognition involves task control parameters for unsafe information. 
+     * @return ImgReviewInfo Image recognition involves task control parameters for unsafe information.
      */
     public TerrorismImgReviewTemplateInfo getImgReviewInfo() {
         return this.ImgReviewInfo;
     }
 
     /**
-     * Set Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param ImgReviewInfo Parameters for recognition of terrorism content in images
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Image recognition involves task control parameters for unsafe information.
+     * @param ImgReviewInfo Image recognition involves task control parameters for unsafe information.
      */
     public void setImgReviewInfo(TerrorismImgReviewTemplateInfo ImgReviewInfo) {
         this.ImgReviewInfo = ImgReviewInfo;
     }
 
     /**
-     * Get Parameters for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found. 
-     * @return OcrReviewInfo Parameters for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Get Text identification involves task control parameters for unsafe information. 
+     * @return OcrReviewInfo Text identification involves task control parameters for unsafe information.
      */
     public TerrorismOcrReviewTemplateInfo getOcrReviewInfo() {
         return this.OcrReviewInfo;
     }
 
     /**
-     * Set Parameters for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
-     * @param OcrReviewInfo Parameters for OCR-based recognition of terrorism content
-Note: This field may return `null`, indicating that no valid value can be found.
+     * Set Text identification involves task control parameters for unsafe information.
+     * @param OcrReviewInfo Text identification involves task control parameters for unsafe information.
      */
     public void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo OcrReviewInfo) {
         this.OcrReviewInfo = OcrReviewInfo;

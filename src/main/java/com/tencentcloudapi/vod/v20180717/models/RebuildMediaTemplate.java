@@ -54,32 +54,28 @@ public class RebuildMediaTemplate extends AbstractModel {
     private String Comment;
 
     /**
-    * The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Audio-visual quality revival video control info.
     */
     @SerializedName("RebuildVideoInfo")
     @Expose
     private RebuildVideoInfo RebuildVideoInfo;
 
     /**
-    * The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Audio-visual quality revival audio control info.
     */
     @SerializedName("RebuildAudioInfo")
     @Expose
     private RebuildAudioInfo RebuildAudioInfo;
 
     /**
-    * The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Output video control information.
     */
     @SerializedName("TargetVideoInfo")
     @Expose
     private RebuildMediaTargetVideoStream TargetVideoInfo;
 
     /**
-    * The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Output audio control information.
     */
     @SerializedName("TargetAudioInfo")
     @Expose
@@ -199,80 +195,64 @@ Default value: 0.
     }
 
     /**
-     * Get The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RebuildVideoInfo The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Audio-visual quality revival video control info. 
+     * @return RebuildVideoInfo Audio-visual quality revival video control info.
      */
     public RebuildVideoInfo getRebuildVideoInfo() {
         return this.RebuildVideoInfo;
     }
 
     /**
-     * Set The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RebuildVideoInfo The video remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Audio-visual quality revival video control info.
+     * @param RebuildVideoInfo Audio-visual quality revival video control info.
      */
     public void setRebuildVideoInfo(RebuildVideoInfo RebuildVideoInfo) {
         this.RebuildVideoInfo = RebuildVideoInfo;
     }
 
     /**
-     * Get The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RebuildAudioInfo The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Audio-visual quality revival audio control info. 
+     * @return RebuildAudioInfo Audio-visual quality revival audio control info.
      */
     public RebuildAudioInfo getRebuildAudioInfo() {
         return this.RebuildAudioInfo;
     }
 
     /**
-     * Set The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RebuildAudioInfo The audio remaster parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Audio-visual quality revival audio control info.
+     * @param RebuildAudioInfo Audio-visual quality revival audio control info.
      */
     public void setRebuildAudioInfo(RebuildAudioInfo RebuildAudioInfo) {
         this.RebuildAudioInfo = RebuildAudioInfo;
     }
 
     /**
-     * Get The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TargetVideoInfo The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Output video control information. 
+     * @return TargetVideoInfo Output video control information.
      */
     public RebuildMediaTargetVideoStream getTargetVideoInfo() {
         return this.TargetVideoInfo;
     }
 
     /**
-     * Set The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TargetVideoInfo The output video parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Output video control information.
+     * @param TargetVideoInfo Output video control information.
      */
     public void setTargetVideoInfo(RebuildMediaTargetVideoStream TargetVideoInfo) {
         this.TargetVideoInfo = TargetVideoInfo;
     }
 
     /**
-     * Get The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TargetAudioInfo The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Output audio control information. 
+     * @return TargetAudioInfo Output audio control information.
      */
     public RebuildMediaTargetAudioStream getTargetAudioInfo() {
         return this.TargetAudioInfo;
     }
 
     /**
-     * Set The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TargetAudioInfo The output audio parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Output audio control information.
+     * @param TargetAudioInfo Output audio control information.
      */
     public void setTargetAudioInfo(RebuildMediaTargetAudioStream TargetAudioInfo) {
         this.TargetAudioInfo = TargetAudioInfo;

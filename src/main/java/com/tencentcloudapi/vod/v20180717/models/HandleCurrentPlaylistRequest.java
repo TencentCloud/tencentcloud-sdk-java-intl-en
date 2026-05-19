@@ -38,21 +38,21 @@ public class HandleCurrentPlaylistRequest extends AbstractModel {
     private String RoundPlayId;
 
     /**
-    * Operation type, available options:<li>insert: insert program into the current playlist.</li> <li>inserttemporary: temporarily insert program into the current playlist. can only be inserted after the currently playing program. temporarily inserted programs are only effective during this carousel process.</li><li>delete: delete program from the playlist. cannot delete currently playing programs.</li>.
+    * Operation type. Valid values: <li>Insert: Insert a program into the current playlist. The inserted program remains valid in subsequent loop banner processes.</li> <li>InsertTemporary: Temporarily insert a program into the current playlist. Temporarily inserted programs are only effective during this loop banner process.</li><li>Delete: Delete a program from the playback list. Cannot delete currently playing programs.</li>
     */
     @SerializedName("Operation")
     @Expose
     private String Operation;
 
     /**
-    * Playlist program id. required when operation is insert, indicating the program list will be inserted after this program. the insertion position must be after the currently playing program.
+    * Playlist program ID. <li>When Operation is Insert, this field is required, indicating the program list to be inserted is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If left blank, the program will be inserted at the latest insertion point. If this field is filled and SegmentIndex is also provided, the program will be inserted behind the fragment corresponding to SegmentIndex of the program specified by ItemId; otherwise, it will be inserted after the program.</li> <li>When Operation is Delete, this field is required, indicating the program to be deleted. Cannot delete currently playing programs.</li>
     */
     @SerializedName("ItemId")
     @Expose
     private String ItemId;
 
     /**
-    * 
+    * Segment index of the M3U8 file shard. The first shard of the M3U8 file has a SegmentIndex of 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
     */
     @SerializedName("SegmentIndex")
     @Expose
@@ -98,48 +98,48 @@ public class HandleCurrentPlaylistRequest extends AbstractModel {
     }
 
     /**
-     * Get Operation type, available options:<li>insert: insert program into the current playlist.</li> <li>inserttemporary: temporarily insert program into the current playlist. can only be inserted after the currently playing program. temporarily inserted programs are only effective during this carousel process.</li><li>delete: delete program from the playlist. cannot delete currently playing programs.</li>. 
-     * @return Operation Operation type, available options:<li>insert: insert program into the current playlist.</li> <li>inserttemporary: temporarily insert program into the current playlist. can only be inserted after the currently playing program. temporarily inserted programs are only effective during this carousel process.</li><li>delete: delete program from the playlist. cannot delete currently playing programs.</li>.
+     * Get Operation type. Valid values: <li>Insert: Insert a program into the current playlist. The inserted program remains valid in subsequent loop banner processes.</li> <li>InsertTemporary: Temporarily insert a program into the current playlist. Temporarily inserted programs are only effective during this loop banner process.</li><li>Delete: Delete a program from the playback list. Cannot delete currently playing programs.</li> 
+     * @return Operation Operation type. Valid values: <li>Insert: Insert a program into the current playlist. The inserted program remains valid in subsequent loop banner processes.</li> <li>InsertTemporary: Temporarily insert a program into the current playlist. Temporarily inserted programs are only effective during this loop banner process.</li><li>Delete: Delete a program from the playback list. Cannot delete currently playing programs.</li>
      */
     public String getOperation() {
         return this.Operation;
     }
 
     /**
-     * Set Operation type, available options:<li>insert: insert program into the current playlist.</li> <li>inserttemporary: temporarily insert program into the current playlist. can only be inserted after the currently playing program. temporarily inserted programs are only effective during this carousel process.</li><li>delete: delete program from the playlist. cannot delete currently playing programs.</li>.
-     * @param Operation Operation type, available options:<li>insert: insert program into the current playlist.</li> <li>inserttemporary: temporarily insert program into the current playlist. can only be inserted after the currently playing program. temporarily inserted programs are only effective during this carousel process.</li><li>delete: delete program from the playlist. cannot delete currently playing programs.</li>.
+     * Set Operation type. Valid values: <li>Insert: Insert a program into the current playlist. The inserted program remains valid in subsequent loop banner processes.</li> <li>InsertTemporary: Temporarily insert a program into the current playlist. Temporarily inserted programs are only effective during this loop banner process.</li><li>Delete: Delete a program from the playback list. Cannot delete currently playing programs.</li>
+     * @param Operation Operation type. Valid values: <li>Insert: Insert a program into the current playlist. The inserted program remains valid in subsequent loop banner processes.</li> <li>InsertTemporary: Temporarily insert a program into the current playlist. Temporarily inserted programs are only effective during this loop banner process.</li><li>Delete: Delete a program from the playback list. Cannot delete currently playing programs.</li>
      */
     public void setOperation(String Operation) {
         this.Operation = Operation;
     }
 
     /**
-     * Get Playlist program id. required when operation is insert, indicating the program list will be inserted after this program. the insertion position must be after the currently playing program. 
-     * @return ItemId Playlist program id. required when operation is insert, indicating the program list will be inserted after this program. the insertion position must be after the currently playing program.
+     * Get Playlist program ID. <li>When Operation is Insert, this field is required, indicating the program list to be inserted is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If left blank, the program will be inserted at the latest insertion point. If this field is filled and SegmentIndex is also provided, the program will be inserted behind the fragment corresponding to SegmentIndex of the program specified by ItemId; otherwise, it will be inserted after the program.</li> <li>When Operation is Delete, this field is required, indicating the program to be deleted. Cannot delete currently playing programs.</li> 
+     * @return ItemId Playlist program ID. <li>When Operation is Insert, this field is required, indicating the program list to be inserted is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If left blank, the program will be inserted at the latest insertion point. If this field is filled and SegmentIndex is also provided, the program will be inserted behind the fragment corresponding to SegmentIndex of the program specified by ItemId; otherwise, it will be inserted after the program.</li> <li>When Operation is Delete, this field is required, indicating the program to be deleted. Cannot delete currently playing programs.</li>
      */
     public String getItemId() {
         return this.ItemId;
     }
 
     /**
-     * Set Playlist program id. required when operation is insert, indicating the program list will be inserted after this program. the insertion position must be after the currently playing program.
-     * @param ItemId Playlist program id. required when operation is insert, indicating the program list will be inserted after this program. the insertion position must be after the currently playing program.
+     * Set Playlist program ID. <li>When Operation is Insert, this field is required, indicating the program list to be inserted is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If left blank, the program will be inserted at the latest insertion point. If this field is filled and SegmentIndex is also provided, the program will be inserted behind the fragment corresponding to SegmentIndex of the program specified by ItemId; otherwise, it will be inserted after the program.</li> <li>When Operation is Delete, this field is required, indicating the program to be deleted. Cannot delete currently playing programs.</li>
+     * @param ItemId Playlist program ID. <li>When Operation is Insert, this field is required, indicating the program list to be inserted is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If left blank, the program will be inserted at the latest insertion point. If this field is filled and SegmentIndex is also provided, the program will be inserted behind the fragment corresponding to SegmentIndex of the program specified by ItemId; otherwise, it will be inserted after the program.</li> <li>When Operation is Delete, this field is required, indicating the program to be deleted. Cannot delete currently playing programs.</li>
      */
     public void setItemId(String ItemId) {
         this.ItemId = ItemId;
     }
 
     /**
-     * Get  
-     * @return SegmentIndex 
+     * Get Segment index of the M3U8 file shard. The first shard of the M3U8 file has a SegmentIndex of 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value. 
+     * @return SegmentIndex Segment index of the M3U8 file shard. The first shard of the M3U8 file has a SegmentIndex of 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
      */
     public Long getSegmentIndex() {
         return this.SegmentIndex;
     }
 
     /**
-     * Set 
-     * @param SegmentIndex 
+     * Set Segment index of the M3U8 file shard. The first shard of the M3U8 file has a SegmentIndex of 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
+     * @param SegmentIndex Segment index of the M3U8 file shard. The first shard of the M3U8 file has a SegmentIndex of 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
      */
     public void setSegmentIndex(Long SegmentIndex) {
         this.SegmentIndex = SegmentIndex;

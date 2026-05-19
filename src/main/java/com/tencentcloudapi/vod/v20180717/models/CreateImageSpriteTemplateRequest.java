@@ -24,9 +24,9 @@ import java.util.HashMap;
 public class CreateImageSpriteTemplateRequest extends AbstractModel {
 
     /**
-    * Sampling type. Valid values:
+    * Sampling type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li>
+<li>Time: By time interval.</li>
     */
     @SerializedName("SampleType")
     @Expose
@@ -34,90 +34,75 @@ public class CreateImageSpriteTemplateRequest extends AbstractModel {
 
     /**
     * Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
     */
     @SerializedName("SampleInterval")
     @Expose
     private Long SampleInterval;
 
     /**
-    * The number of rows of small images in the sprite image. 
-Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
+    * Number of rows of small images in sprite image.
+Note: The number of rows of subimages impacts the final height of the main image. The maximum height of the main image is 15000 pixels. The height of the main image is the product of the number of rows and the height of subimages.
     */
     @SerializedName("RowCount")
     @Expose
     private Long RowCount;
 
     /**
-    * The number of columns of small images in the sprite image. 
-Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
+    * Number of columns of small images in sprite image.
+Note: The columns of small images impact the final width of the large image. The maximum width of the large image is 15000 pixels. The width of the large image is the product of the columns and width of small images.
     */
     @SerializedName("ColumnCount")
     @Expose
     private Long ColumnCount;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Name of an image sprite generating template. Length limit: 64 characters.
+    * Sprite image template name. The length cannot exceed 64 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Template description. Length limit: 256 characters.
+    * Template description, with a length limit of 256 characters.
     */
     @SerializedName("Comment")
     @Expose
     private String Comment;
 
     /**
-    * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+    * Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling mode:<li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: Maintain video aspect ratio with edges filled with black.</li>Default value: black.
     */
     @SerializedName("FillType")
     @Expose
     private String FillType;
 
     /**
-    * The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
-<li>When Width and Height are both 0, the resolution is from the same source;</li>
-<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
-< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
-<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
-Default value: 0. 
-Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
+    * Maximum value of the width (or long edge) of small images in sprite image. Value ranges from 0 to [128, 4096]. Measurement unit: px.<li>When both Width and Height are 0, resolution is same as source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, resolution is specified by user.</li>Default value: 0. Note: The width of small images will impact the final width of the large image. The maximum width of the large image is 15000 pixels, where the width of the large image is the product of the number of columns and the width of small images.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
-<li>When Width and Height are both 0, the resolution is from the same source;</li>
-<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
-< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
-<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
-Default value: 0. 
-Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
+    * Maximum height (or short side) of small images in sprite image. Value ranges from 0 to [128, 4096]. Measurement unit: px.<li>When both Width and Height are 0, resolution is same as source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, resolution is specified by user.</li>Default value: 0. Note: The height of small images impacts the final height of the large image. The maximum height of the large image is 15000 pixels, where the height of the large image is the product of subimage rows and the height of small images.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+    * Resolution adaptation, available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li>
+<li>close: Closed. At this point, Width represents the Width of the video, and Height indicates the Height of the video.</li>
 Default value: open.
     */
     @SerializedName("ResolutionAdaptive")
@@ -125,35 +110,35 @@ Default value: open.
     private String ResolutionAdaptive;
 
     /**
-    * The image format. Valid values:
-<li> jpg</li>
-<li> png</li>
-<li> webp</li>
-Default: jpg
+    * Image format. Valid values:
+<li> jpg: JPG format;</li>
+<li>png: png format.</li>
+<li>WEBP: webp format.</li>
+Default value: jpg.
     */
     @SerializedName("Format")
     @Expose
     private String Format;
 
     /**
-     * Get Sampling type. Valid values:
+     * Get Sampling type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li> 
-     * @return SampleType Sampling type. Valid values:
+<li>Time: By time interval.</li> 
+     * @return SampleType Sampling type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li>
+<li>Time: By time interval.</li>
      */
     public String getSampleType() {
         return this.SampleType;
     }
 
     /**
-     * Set Sampling type. Valid values:
+     * Set Sampling type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li>
-     * @param SampleType Sampling type. Valid values:
+<li>Time: By time interval.</li>
+     * @param SampleType Sampling type, Valid value:
 <li>Percent: by percent.</li>
-<li>Time: by time interval.</li>
+<li>Time: By time interval.</li>
      */
     public void setSampleType(String SampleType) {
         this.SampleType = SampleType;
@@ -161,11 +146,11 @@ Default: jpg
 
     /**
      * Get Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li> 
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li> 
      * @return SampleInterval Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
      */
     public Long getSampleInterval() {
         return this.SampleInterval;
@@ -173,220 +158,160 @@ Default: jpg
 
     /**
      * Set Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
      * @param SampleInterval Sampling interval.
-<li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
+<li>When SampleType is Percent, specify the percentage of the sampling interval.</li>
+<li>When SampleType is Time, specify the sampling interval in seconds.</li>
      */
     public void setSampleInterval(Long SampleInterval) {
         this.SampleInterval = SampleInterval;
     }
 
     /**
-     * Get The number of rows of small images in the sprite image. 
-Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image. 
-     * @return RowCount The number of rows of small images in the sprite image. 
-Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
+     * Get Number of rows of small images in sprite image.
+Note: The number of rows of subimages impacts the final height of the main image. The maximum height of the main image is 15000 pixels. The height of the main image is the product of the number of rows and the height of subimages. 
+     * @return RowCount Number of rows of small images in sprite image.
+Note: The number of rows of subimages impacts the final height of the main image. The maximum height of the main image is 15000 pixels. The height of the main image is the product of the number of rows and the height of subimages.
      */
     public Long getRowCount() {
         return this.RowCount;
     }
 
     /**
-     * Set The number of rows of small images in the sprite image. 
-Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
-     * @param RowCount The number of rows of small images in the sprite image. 
-Note: The number of rows of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
+     * Set Number of rows of small images in sprite image.
+Note: The number of rows of subimages impacts the final height of the main image. The maximum height of the main image is 15000 pixels. The height of the main image is the product of the number of rows and the height of subimages.
+     * @param RowCount Number of rows of small images in sprite image.
+Note: The number of rows of subimages impacts the final height of the main image. The maximum height of the main image is 15000 pixels. The height of the main image is the product of the number of rows and the height of subimages.
      */
     public void setRowCount(Long RowCount) {
         this.RowCount = RowCount;
     }
 
     /**
-     * Get The number of columns of small images in the sprite image. 
-Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image. 
-     * @return ColumnCount The number of columns of small images in the sprite image. 
-Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
+     * Get Number of columns of small images in sprite image.
+Note: The columns of small images impact the final width of the large image. The maximum width of the large image is 15000 pixels. The width of the large image is the product of the columns and width of small images. 
+     * @return ColumnCount Number of columns of small images in sprite image.
+Note: The columns of small images impact the final width of the large image. The maximum width of the large image is 15000 pixels. The width of the large image is the product of the columns and width of small images.
      */
     public Long getColumnCount() {
         return this.ColumnCount;
     }
 
     /**
-     * Set The number of columns of small images in the sprite image. 
-Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
-     * @param ColumnCount The number of columns of small images in the sprite image. 
-Note: The number of columns of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
+     * Set Number of columns of small images in sprite image.
+Note: The columns of small images impact the final width of the large image. The maximum width of the large image is 15000 pixels. The width of the large image is the product of the columns and width of small images.
+     * @param ColumnCount Number of columns of small images in sprite image.
+Note: The columns of small images impact the final width of the large image. The maximum width of the large image is 15000 pixels. The width of the large image is the product of the columns and width of small images.
      */
     public void setColumnCount(Long ColumnCount) {
         this.ColumnCount = ColumnCount;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Name of an image sprite generating template. Length limit: 64 characters. 
-     * @return Name Name of an image sprite generating template. Length limit: 64 characters.
+     * Get Sprite image template name. The length cannot exceed 64 characters. 
+     * @return Name Sprite image template name. The length cannot exceed 64 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of an image sprite generating template. Length limit: 64 characters.
-     * @param Name Name of an image sprite generating template. Length limit: 64 characters.
+     * Set Sprite image template name. The length cannot exceed 64 characters.
+     * @param Name Sprite image template name. The length cannot exceed 64 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Template description. Length limit: 256 characters. 
-     * @return Comment Template description. Length limit: 256 characters.
+     * Get Template description, with a length limit of 256 characters. 
+     * @return Comment Template description, with a length limit of 256 characters.
      */
     public String getComment() {
         return this.Comment;
     }
 
     /**
-     * Set Template description. Length limit: 256 characters.
-     * @param Comment Template description. Length limit: 256 characters.
+     * Set Template description, with a length limit of 256 characters.
+     * @param Comment Template description, with a length limit of 256 characters.
      */
     public void setComment(String Comment) {
         this.Comment = Comment;
     }
 
     /**
-     * Get Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black. 
-     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+     * Get Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling mode:<li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: Maintain video aspect ratio with edges filled with black.</li>Default value: black. 
+     * @return FillType Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling mode:<li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: Maintain video aspect ratio with edges filled with black.</li>Default value: black.
      */
     public String getFillType() {
         return this.FillType;
     }
 
     /**
-     * Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-     * @param FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+     * Set Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling mode:<li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: Maintain video aspect ratio with edges filled with black.</li>Default value: black.
+     * @param FillType Filling method. When video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling mode:<li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li><li>black: Maintain video aspect ratio with edges filled with black.</li>Default value: black.
      */
     public void setFillType(String FillType) {
         this.FillType = FillType;
     }
 
     /**
-     * Get The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
-<li>When Width and Height are both 0, the resolution is from the same source;</li>
-<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
-< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
-<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
-Default value: 0. 
-Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image. 
-     * @return Width The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
-<li>When Width and Height are both 0, the resolution is from the same source;</li>
-<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
-< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
-<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
-Default value: 0. 
-Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
+     * Get Maximum value of the width (or long edge) of small images in sprite image. Value ranges from 0 to [128, 4096]. Measurement unit: px.<li>When both Width and Height are 0, resolution is same as source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, resolution is specified by user.</li>Default value: 0. Note: The width of small images will impact the final width of the large image. The maximum width of the large image is 15000 pixels, where the width of the large image is the product of the number of columns and the width of small images. 
+     * @return Width Maximum value of the width (or long edge) of small images in sprite image. Value ranges from 0 to [128, 4096]. Measurement unit: px.<li>When both Width and Height are 0, resolution is same as source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, resolution is specified by user.</li>Default value: 0. Note: The width of small images will impact the final width of the large image. The maximum width of the large image is 15000 pixels, where the width of the large image is the product of the number of columns and the width of small images.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
-<li>When Width and Height are both 0, the resolution is from the same source;</li>
-<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
-< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
-<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
-Default value: 0. 
-Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
-     * @param Width The maximum value of the width (or long side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
-<li>When Width and Height are both 0, the resolution is from the same source;</li>
-<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
-< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
-<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
-Default value: 0. 
-Note: The width of the small image will affect the width of the final large image. The maximum width of the large image is 15,000 pixels. The width of the large image is the product of the number of columns of the small image and the width of the small image.
+     * Set Maximum value of the width (or long edge) of small images in sprite image. Value ranges from 0 to [128, 4096]. Measurement unit: px.<li>When both Width and Height are 0, resolution is same as source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, resolution is specified by user.</li>Default value: 0. Note: The width of small images will impact the final width of the large image. The maximum width of the large image is 15000 pixels, where the width of the large image is the product of the number of columns and the width of small images.
+     * @param Width Maximum value of the width (or long edge) of small images in sprite image. Value ranges from 0 to [128, 4096]. Measurement unit: px.<li>When both Width and Height are 0, resolution is same as source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, resolution is specified by user.</li>Default value: 0. Note: The width of small images will impact the final width of the large image. The maximum width of the large image is 15000 pixels, where the width of the large image is the product of the number of columns and the width of small images.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
-<li>When Width and Height are both 0, the resolution is from the same source;</li>
-<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
-< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
-<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
-Default value: 0. 
-Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image. 
-     * @return Height The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
-<li>When Width and Height are both 0, the resolution is from the same source;</li>
-<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
-< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
-<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
-Default value: 0. 
-Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
+     * Get Maximum height (or short side) of small images in sprite image. Value ranges from 0 to [128, 4096]. Measurement unit: px.<li>When both Width and Height are 0, resolution is same as source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, resolution is specified by user.</li>Default value: 0. Note: The height of small images impacts the final height of the large image. The maximum height of the large image is 15000 pixels, where the height of the large image is the product of subimage rows and the height of small images. 
+     * @return Height Maximum height (or short side) of small images in sprite image. Value ranges from 0 to [128, 4096]. Measurement unit: px.<li>When both Width and Height are 0, resolution is same as source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, resolution is specified by user.</li>Default value: 0. Note: The height of small images impacts the final height of the large image. The maximum height of the large image is 15000 pixels, where the height of the large image is the product of subimage rows and the height of small images.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
-<li>When Width and Height are both 0, the resolution is from the same source;</li>
-<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
-< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
-<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
-Default value: 0. 
-Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
-     * @param Height The maximum value of the height (or short side) of the small image in the sprite image, value range: 0 and [128, 4096], unit: px. 
-<li>When Width and Height are both 0, the resolution is from the same source;</li>
-<li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li>
-< li>When Width is non-0 and Height is 0, the Height is scaled proportionally; </li>
-<li>When both Width and Height are non-0, the resolution is specified by the user. </li>
-Default value: 0. 
-Note: The height of the small image will affect the height of the final large image. The maximum height of the large image is 15,000 pixels. The height of the large image is the product of the number of rows of the small image and the height of the small image.
+     * Set Maximum height (or short side) of small images in sprite image. Value ranges from 0 to [128, 4096]. Measurement unit: px.<li>When both Width and Height are 0, resolution is same as source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, resolution is specified by user.</li>Default value: 0. Note: The height of small images impacts the final height of the large image. The maximum height of the large image is 15000 pixels, where the height of the large image is the product of subimage rows and the height of small images.
+     * @param Height Maximum height (or short side) of small images in sprite image. Value ranges from 0 to [128, 4096]. Measurement unit: px.<li>When both Width and Height are 0, resolution is same as source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, resolution is specified by user.</li>Default value: 0. Note: The height of small images impacts the final height of the large image. The maximum height of the large image is 15000 pixels, where the height of the large image is the product of subimage rows and the height of small images.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * Get Resolution adaptation, available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li>
+<li>close: Closed. At this point, Width represents the Width of the video, and Height indicates the Height of the video.</li>
 Default value: open. 
-     * @return ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * @return ResolutionAdaptive Resolution adaptation, available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li>
+<li>close: Closed. At this point, Width represents the Width of the video, and Height indicates the Height of the video.</li>
 Default value: open.
      */
     public String getResolutionAdaptive() {
@@ -394,13 +319,13 @@ Default value: open.
     }
 
     /**
-     * Set Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * Set Resolution adaptation, available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li>
+<li>close: Closed. At this point, Width represents the Width of the video, and Height indicates the Height of the video.</li>
 Default value: open.
-     * @param ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+     * @param ResolutionAdaptive Resolution adaptation, available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side.</li>
+<li>close: Closed. At this point, Width represents the Width of the video, and Height indicates the Height of the video.</li>
 Default value: open.
      */
     public void setResolutionAdaptive(String ResolutionAdaptive) {
@@ -408,32 +333,32 @@ Default value: open.
     }
 
     /**
-     * Get The image format. Valid values:
-<li> jpg</li>
-<li> png</li>
-<li> webp</li>
-Default: jpg 
-     * @return Format The image format. Valid values:
-<li> jpg</li>
-<li> png</li>
-<li> webp</li>
-Default: jpg
+     * Get Image format. Valid values:
+<li> jpg: JPG format;</li>
+<li>png: png format.</li>
+<li>WEBP: webp format.</li>
+Default value: jpg. 
+     * @return Format Image format. Valid values:
+<li> jpg: JPG format;</li>
+<li>png: png format.</li>
+<li>WEBP: webp format.</li>
+Default value: jpg.
      */
     public String getFormat() {
         return this.Format;
     }
 
     /**
-     * Set The image format. Valid values:
-<li> jpg</li>
-<li> png</li>
-<li> webp</li>
-Default: jpg
-     * @param Format The image format. Valid values:
-<li> jpg</li>
-<li> png</li>
-<li> webp</li>
-Default: jpg
+     * Set Image format. Valid values:
+<li> jpg: JPG format;</li>
+<li>png: png format.</li>
+<li>WEBP: webp format.</li>
+Default value: jpg.
+     * @param Format Image format. Valid values:
+<li> jpg: JPG format;</li>
+<li>png: png format.</li>
+<li>WEBP: webp format.</li>
+Default value: jpg.
      */
     public void setFormat(String Format) {
         this.Format = Format;

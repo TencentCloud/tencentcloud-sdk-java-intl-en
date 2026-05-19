@@ -24,15 +24,14 @@ import java.util.HashMap;
 public class DescribeWatermarkTemplatesResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of watermarking template details.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Watermark template details list.
     */
     @SerializedName("WatermarkTemplateSet")
     @Expose
@@ -46,36 +45,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of watermarking template details.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return WatermarkTemplateSet List of watermarking template details.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Watermark template details list. 
+     * @return WatermarkTemplateSet Watermark template details list.
      */
     public WatermarkTemplate [] getWatermarkTemplateSet() {
         return this.WatermarkTemplateSet;
     }
 
     /**
-     * Set List of watermarking template details.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WatermarkTemplateSet List of watermarking template details.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Watermark template details list.
+     * @param WatermarkTemplateSet Watermark template details list.
      */
     public void setWatermarkTemplateSet(WatermarkTemplate [] WatermarkTemplateSet) {
         this.WatermarkTemplateSet = WatermarkTemplateSet;

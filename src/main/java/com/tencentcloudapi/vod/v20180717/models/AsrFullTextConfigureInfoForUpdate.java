@@ -24,94 +24,98 @@ import java.util.HashMap;
 public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
 
     /**
-    * Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
+    * Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task.</li>
+<li>OFF: disable intelligent voice full-text recognition task</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The modification information of the subtitle format list.
+    * Subtitle format list operation information.
     */
     @SerializedName("SubtitleFormatsOperation")
     @Expose
     private SubtitleFormatsOperation SubtitleFormatsOperation;
 
     /**
-    * The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+    * Generated subtitle file format. <font color='red'>Fill in an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
     */
     @SerializedName("SubtitleFormat")
     @Expose
     private String SubtitleFormat;
 
     /**
-    * Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+    * Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
     */
     @SerializedName("SrcLanguage")
     @Expose
     private String SrcLanguage;
 
     /**
-    * Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+    * Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
     */
     @SerializedName("SubtitleName")
     @Expose
     private String SubtitleName;
 
     /**
-     * Get Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li> 
-     * @return Switch Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
+     * Get Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task.</li>
+<li>OFF: disable intelligent voice full-text recognition task</li> 
+     * @return Switch Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task.</li>
+<li>OFF: disable intelligent voice full-text recognition task</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
-     * @param Switch Switch of full speech recognition task. Valid values:
-<li>ON: enables intelligent full speech recognition task;</li>
-<li>OFF: disables intelligent full speech recognition task.</li>
+     * Set Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task.</li>
+<li>OFF: disable intelligent voice full-text recognition task</li>
+     * @param Switch Voice full-text recognition task switch. Available values:
+<li>ON: enable intelligent voice full-text recognition task.</li>
+<li>OFF: disable intelligent voice full-text recognition task</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The modification information of the subtitle format list. 
-     * @return SubtitleFormatsOperation The modification information of the subtitle format list.
+     * Get Subtitle format list operation information. 
+     * @return SubtitleFormatsOperation Subtitle format list operation information.
      */
     public SubtitleFormatsOperation getSubtitleFormatsOperation() {
         return this.SubtitleFormatsOperation;
     }
 
     /**
-     * Set The modification information of the subtitle format list.
-     * @param SubtitleFormatsOperation The modification information of the subtitle format list.
+     * Set Subtitle format list operation information.
+     * @param SubtitleFormatsOperation Subtitle format list operation information.
      */
     public void setSubtitleFormatsOperation(SubtitleFormatsOperation SubtitleFormatsOperation) {
         this.SubtitleFormatsOperation = SubtitleFormatsOperation;
     }
 
     /**
-     * Get The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font> 
-     * @return SubtitleFormat The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+     * Get Generated subtitle file format. <font color='red'>Fill in an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font> 
+     * @return SubtitleFormat Generated subtitle file format. <font color='red'>Fill in an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
      * @deprecated
      */
     @Deprecated
@@ -120,14 +124,14 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Set The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
-     * @param SubtitleFormat The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
-<li>vtt</li>
-<li>srt</li>
-<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+     * Set Generated subtitle file format. <font color='red'>Fill in an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
+     * @param SubtitleFormat Generated subtitle file format. <font color='red'>Fill in an empty string</font> to indicate no subtitle file generation. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+<li>srt: Generate SRT subtitle file.</li>
+<font color='red'>Note: This field is deprecated. Recommend using SubtitleFormatsOperation.</font>
      * @deprecated
      */
     @Deprecated
@@ -136,32 +140,48 @@ public class AsrFullTextConfigureInfoForUpdate extends AbstractModel {
     }
 
     /**
-     * Get Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li> 
-     * @return SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+     * Get Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li> 
+     * @return SrcLanguage Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
      */
     public String getSrcLanguage() {
         return this.SrcLanguage;
     }
 
     /**
-     * Set Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
-     * @param SrcLanguage Media source language value range: <li>zh: Mandarin </li> <li>en: English</li> <li>ja: Japanese </li> <li>zh-ca: Cantonese</li>
+     * Set Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
+     * @param SrcLanguage Media source language. Valid values:
+<li>zh: Mandarin;</li>
+<li>en: English;</li>
+<li>ja: Japanese;</li>
+<li>zh-ca: Cantonese.</li>
      */
     public void setSrcLanguage(String SrcLanguage) {
         this.SrcLanguage = SrcLanguage;
     }
 
     /**
-     * Get Specify subtitle name, length limit: 64 characters. This value will be used for player display. 
-     * @return SubtitleName Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+     * Get Specify subtitle name. Length limit: 64 characters. This value will be used for player display. 
+     * @return SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
      */
     public String getSubtitleName() {
         return this.SubtitleName;
     }
 
     /**
-     * Set Specify subtitle name, length limit: 64 characters. This value will be used for player display.
-     * @param SubtitleName Specify subtitle name, length limit: 64 characters. This value will be used for player display.
+     * Set Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
+     * @param SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
      */
     public void setSubtitleName(String SubtitleName) {
         this.SubtitleName = SubtitleName;

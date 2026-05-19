@@ -24,40 +24,40 @@ import java.util.HashMap;
 public class DescribePersonSamplesRequest extends AbstractModel {
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+    * Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * IDs of samples. Array length limit: 100.
+    * Material ID, with an array length limit of 100.
     */
     @SerializedName("PersonIds")
     @Expose
     private String [] PersonIds;
 
     /**
-    * Names of samples. Array length limit: 20.
+    * Material name. Array length limit: 20.
     */
     @SerializedName("Names")
     @Expose
     private String [] Names;
 
     /**
-    * Tags of a sample. Array length limit: 20.
+    * Material tag. Array length limit: 20.
     */
     @SerializedName("Tags")
     @Expose
@@ -71,107 +71,107 @@ Note: samples from the default library can only be pulled by providing the name 
     private Long Offset;
 
     /**
-    * Number of entries to be returned. Default value: 100. Maximum value: 100.
+    * Number of returned entries. Default value: 100. Maximum value: 100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+     * Get Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned. 
-     * @return Type Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one. 
+     * @return Type Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+     * Set Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
-     * @param Type Type of samples to pull. Valid values:
-<li>UserDefine: custom sample library</li>
-<li>Default: default sample library</li>
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+     * @param Type Pulled material type. Valid values:
+<li>UserDefine: User-customized material library;</li>
+<li>Default: Default sample library.</li>
 
-Default value: UserDefine. Samples in the custom sample library will be pulled.
-Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+Default value: UserDefine, pull user-customized material library materials.
+Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get IDs of samples. Array length limit: 100. 
-     * @return PersonIds IDs of samples. Array length limit: 100.
+     * Get Material ID, with an array length limit of 100. 
+     * @return PersonIds Material ID, with an array length limit of 100.
      */
     public String [] getPersonIds() {
         return this.PersonIds;
     }
 
     /**
-     * Set IDs of samples. Array length limit: 100.
-     * @param PersonIds IDs of samples. Array length limit: 100.
+     * Set Material ID, with an array length limit of 100.
+     * @param PersonIds Material ID, with an array length limit of 100.
      */
     public void setPersonIds(String [] PersonIds) {
         this.PersonIds = PersonIds;
     }
 
     /**
-     * Get Names of samples. Array length limit: 20. 
-     * @return Names Names of samples. Array length limit: 20.
+     * Get Material name. Array length limit: 20. 
+     * @return Names Material name. Array length limit: 20.
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set Names of samples. Array length limit: 20.
-     * @param Names Names of samples. Array length limit: 20.
+     * Set Material name. Array length limit: 20.
+     * @param Names Material name. Array length limit: 20.
      */
     public void setNames(String [] Names) {
         this.Names = Names;
     }
 
     /**
-     * Get Tags of a sample. Array length limit: 20. 
-     * @return Tags Tags of a sample. Array length limit: 20.
+     * Get Material tag. Array length limit: 20. 
+     * @return Tags Material tag. Array length limit: 20.
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tags of a sample. Array length limit: 20.
-     * @param Tags Tags of a sample. Array length limit: 20.
+     * Set Material tag. Array length limit: 20.
+     * @param Tags Material tag. Array length limit: 20.
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
@@ -194,16 +194,16 @@ Note: samples from the default library can only be pulled by providing the name 
     }
 
     /**
-     * Get Number of entries to be returned. Default value: 100. Maximum value: 100. 
-     * @return Limit Number of entries to be returned. Default value: 100. Maximum value: 100.
+     * Get Number of returned entries. Default value: 100. Maximum value: 100. 
+     * @return Limit Number of returned entries. Default value: 100. Maximum value: 100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries to be returned. Default value: 100. Maximum value: 100.
-     * @param Limit Number of entries to be returned. Default value: 100. Maximum value: 100.
+     * Set Number of returned entries. Default value: 100. Maximum value: 100.
+     * @param Limit Number of returned entries. Default value: 100. Maximum value: 100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

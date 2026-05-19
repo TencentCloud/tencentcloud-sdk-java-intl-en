@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeProcedureTemplatesResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
+    * <p>Total number of records that meet filter conditions.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of task flow template details.
+    * <p>Task flow template detail list.</p>
     */
     @SerializedName("ProcedureTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeProcedureTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
+     * Get <p>Total number of records that meet filter conditions.</p> 
+     * @return TotalCount <p>Total number of records that meet filter conditions.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
+     * Set <p>Total number of records that meet filter conditions.</p>
+     * @param TotalCount <p>Total number of records that meet filter conditions.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of task flow template details. 
-     * @return ProcedureTemplateSet List of task flow template details.
+     * Get <p>Task flow template detail list.</p> 
+     * @return ProcedureTemplateSet <p>Task flow template detail list.</p>
      */
     public ProcedureTemplate [] getProcedureTemplateSet() {
         return this.ProcedureTemplateSet;
     }
 
     /**
-     * Set List of task flow template details.
-     * @param ProcedureTemplateSet List of task flow template details.
+     * Set <p>Task flow template detail list.</p>
+     * @param ProcedureTemplateSet <p>Task flow template detail list.</p>
      */
     public void setProcedureTemplateSet(ProcedureTemplate [] ProcedureTemplateSet) {
         this.ProcedureTemplateSet = ProcedureTemplateSet;

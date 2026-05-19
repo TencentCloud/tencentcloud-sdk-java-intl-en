@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeRebuildMediaTemplatesResponse extends AbstractModel {
 
     /**
-    * The total number of records that meet the conditions.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Rebuild media template details list.
+    * Video regeneration template detail list.
     */
     @SerializedName("RebuildMediaTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeRebuildMediaTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The total number of records that meet the conditions. 
-     * @return TotalCount The total number of records that meet the conditions.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The total number of records that meet the conditions.
-     * @param TotalCount The total number of records that meet the conditions.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Rebuild media template details list. 
-     * @return RebuildMediaTemplateSet Rebuild media template details list.
+     * Get Video regeneration template detail list. 
+     * @return RebuildMediaTemplateSet Video regeneration template detail list.
      */
     public RebuildMediaTemplate [] getRebuildMediaTemplateSet() {
         return this.RebuildMediaTemplateSet;
     }
 
     /**
-     * Set Rebuild media template details list.
-     * @param RebuildMediaTemplateSet Rebuild media template details list.
+     * Set Video regeneration template detail list.
+     * @param RebuildMediaTemplateSet Video regeneration template detail list.
      */
     public void setRebuildMediaTemplateSet(RebuildMediaTemplate [] RebuildMediaTemplateSet) {
         this.RebuildMediaTemplateSet = RebuildMediaTemplateSet;

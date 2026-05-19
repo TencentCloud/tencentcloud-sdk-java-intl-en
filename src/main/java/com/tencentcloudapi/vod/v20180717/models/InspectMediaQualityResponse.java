@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InspectMediaQualityResponse extends AbstractModel {
 
     /**
-    * Media quality inspection task ID.
+    * Audio and video quality inspection task ID.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class InspectMediaQualityResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Media quality inspection task ID. 
-     * @return TaskId Media quality inspection task ID.
+     * Get Audio and video quality inspection task ID. 
+     * @return TaskId Audio and video quality inspection task ID.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Media quality inspection task ID.
-     * @param TaskId Media quality inspection task ID.
+     * Set Audio and video quality inspection task ID.
+     * @param TaskId Audio and video quality inspection task ID.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

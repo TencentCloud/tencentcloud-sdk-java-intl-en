@@ -24,17 +24,17 @@ import java.util.HashMap;
 public class ModifyVodDomainAccelerateConfigRequest extends AbstractModel {
 
     /**
-    * Domain name for acceleration setting
+    * Domains requiring acceleration configuration.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * Region. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
+    * Region, optional value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+<li>Global: global.</li>
     */
     @SerializedName("Area")
     @Expose
@@ -50,51 +50,51 @@ public class ModifyVodDomainAccelerateConfigRequest extends AbstractModel {
     private String Status;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-     * Get Domain name for acceleration setting 
-     * @return Domain Domain name for acceleration setting
+     * Get Domains requiring acceleration configuration. 
+     * @return Domain Domains requiring acceleration configuration.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name for acceleration setting
-     * @param Domain Domain name for acceleration setting
+     * Set Domains requiring acceleration configuration.
+     * @param Domain Domains requiring acceleration configuration.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Region. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li> 
-     * @return Area Region. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
+     * Get Region, optional value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+<li>Global: global.</li> 
+     * @return Area Region, optional value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+<li>Global: global.</li>
      */
     public String getArea() {
         return this.Area;
     }
 
     /**
-     * Set Region. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
-     * @param Area Region. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
+     * Set Region, optional value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+<li>Global: global.</li>
+     * @param Area Region, optional value:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+<li>Global: global.</li>
      */
     public void setArea(String Area) {
         this.Area = Area;
@@ -125,16 +125,16 @@ public class ModifyVodDomainAccelerateConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;

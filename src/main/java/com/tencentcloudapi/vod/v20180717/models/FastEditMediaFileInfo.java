@@ -24,115 +24,130 @@ import java.util.HashMap;
 public class FastEditMediaFileInfo extends AbstractModel {
 
     /**
-    * Media file ID.
+    * Media ID.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * The types of media. Valid values: <li>Transcode:Transcoded output; </li> <li>Original: Original audio and video. </li>The audio and video being operated on must be in HLS format.
+    * Audio and video type for operation. Valid values:
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
     */
     @SerializedName("AudioVideoType")
     @Expose
     private String AudioVideoType;
 
     /**
-    * When AudioVideoType is set to Transcode, it is valid and indicates the transcoding template ID for the media being operated on.
+    * Valid when AudioVideoType is Transcode. Represents the transcoding template ID for media operation.
     */
     @SerializedName("TranscodeDefinition")
     @Expose
     private Long TranscodeDefinition;
 
     /**
-    * Offset time of the start of the video clip, unit: seconds.
+    * Start time offset of media editing, in seconds.
     */
     @SerializedName("StartTimeOffset")
     @Expose
     private Float StartTimeOffset;
 
     /**
-    * Offset time at the end of the video clip, unit: seconds.
+    * End time offset of media editing, in seconds.
     */
     @SerializedName("EndTimeOffset")
     @Expose
     private Float EndTimeOffset;
 
     /**
-     * Get Media file ID. 
-     * @return FileId Media file ID.
+     * Get Media ID. 
+     * @return FileId Media ID.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Media file ID.
-     * @param FileId Media file ID.
+     * Set Media ID.
+     * @param FileId Media ID.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get The types of media. Valid values: <li>Transcode:Transcoded output; </li> <li>Original: Original audio and video. </li>The audio and video being operated on must be in HLS format. 
-     * @return AudioVideoType The types of media. Valid values: <li>Transcode:Transcoded output; </li> <li>Original: Original audio and video. </li>The audio and video being operated on must be in HLS format.
+     * Get Audio and video type for operation. Valid values:
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format. 
+     * @return AudioVideoType Audio and video type for operation. Valid values:
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
      */
     public String getAudioVideoType() {
         return this.AudioVideoType;
     }
 
     /**
-     * Set The types of media. Valid values: <li>Transcode:Transcoded output; </li> <li>Original: Original audio and video. </li>The audio and video being operated on must be in HLS format.
-     * @param AudioVideoType The types of media. Valid values: <li>Transcode:Transcoded output; </li> <li>Original: Original audio and video. </li>The audio and video being operated on must be in HLS format.
+     * Set Audio and video type for operation. Valid values:
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
+     * @param AudioVideoType Audio and video type for operation. Valid values:
+<li>Transcode: transcoding output;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
      */
     public void setAudioVideoType(String AudioVideoType) {
         this.AudioVideoType = AudioVideoType;
     }
 
     /**
-     * Get When AudioVideoType is set to Transcode, it is valid and indicates the transcoding template ID for the media being operated on. 
-     * @return TranscodeDefinition When AudioVideoType is set to Transcode, it is valid and indicates the transcoding template ID for the media being operated on.
+     * Get Valid when AudioVideoType is Transcode. Represents the transcoding template ID for media operation. 
+     * @return TranscodeDefinition Valid when AudioVideoType is Transcode. Represents the transcoding template ID for media operation.
      */
     public Long getTranscodeDefinition() {
         return this.TranscodeDefinition;
     }
 
     /**
-     * Set When AudioVideoType is set to Transcode, it is valid and indicates the transcoding template ID for the media being operated on.
-     * @param TranscodeDefinition When AudioVideoType is set to Transcode, it is valid and indicates the transcoding template ID for the media being operated on.
+     * Set Valid when AudioVideoType is Transcode. Represents the transcoding template ID for media operation.
+     * @param TranscodeDefinition Valid when AudioVideoType is Transcode. Represents the transcoding template ID for media operation.
      */
     public void setTranscodeDefinition(Long TranscodeDefinition) {
         this.TranscodeDefinition = TranscodeDefinition;
     }
 
     /**
-     * Get Offset time of the start of the video clip, unit: seconds. 
-     * @return StartTimeOffset Offset time of the start of the video clip, unit: seconds.
+     * Get Start time offset of media editing, in seconds. 
+     * @return StartTimeOffset Start time offset of media editing, in seconds.
      */
     public Float getStartTimeOffset() {
         return this.StartTimeOffset;
     }
 
     /**
-     * Set Offset time of the start of the video clip, unit: seconds.
-     * @param StartTimeOffset Offset time of the start of the video clip, unit: seconds.
+     * Set Start time offset of media editing, in seconds.
+     * @param StartTimeOffset Start time offset of media editing, in seconds.
      */
     public void setStartTimeOffset(Float StartTimeOffset) {
         this.StartTimeOffset = StartTimeOffset;
     }
 
     /**
-     * Get Offset time at the end of the video clip, unit: seconds. 
-     * @return EndTimeOffset Offset time at the end of the video clip, unit: seconds.
+     * Get End time offset of media editing, in seconds. 
+     * @return EndTimeOffset End time offset of media editing, in seconds.
      */
     public Float getEndTimeOffset() {
         return this.EndTimeOffset;
     }
 
     /**
-     * Set Offset time at the end of the video clip, unit: seconds.
-     * @param EndTimeOffset Offset time at the end of the video clip, unit: seconds.
+     * Set End time offset of media editing, in seconds.
+     * @param EndTimeOffset End time offset of media editing, in seconds.
      */
     public void setEndTimeOffset(Float EndTimeOffset) {
         this.EndTimeOffset = EndTimeOffset;

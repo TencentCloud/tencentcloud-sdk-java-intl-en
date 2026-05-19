@@ -24,20 +24,19 @@ import java.util.HashMap;
 public class ImageQualityEnhanceInfo extends AbstractModel {
 
     /**
-    * Whether to enable overall enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF.
+    * Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement</li>
+<li>OFF: disable comprehensive enhancement</li>
     */
     @SerializedName("Switch")
     @Expose
     private String Switch;
 
     /**
-    * The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+    * Comprehensive enhancement type. Valid only when the control switch is ON. Available values:
+<li>weak: light comprehensive enhancement.</li>
+<li>NORMAL: Comprehensive enhancement is normal.</li>
+<li>strong: comprehensive enhancement.</li>
 Default value: weak.
     */
     @SerializedName("Type")
@@ -45,43 +44,39 @@ Default value: weak.
     private String Type;
 
     /**
-     * Get Whether to enable overall enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF. 
-     * @return Switch Whether to enable overall enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF.
+     * Get Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement</li>
+<li>OFF: disable comprehensive enhancement</li> 
+     * @return Switch Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement</li>
+<li>OFF: disable comprehensive enhancement</li>
      */
     public String getSwitch() {
         return this.Switch;
     }
 
     /**
-     * Set Whether to enable overall enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF.
-     * @param Switch Whether to enable overall enhancement. Valid values:
-<li>ON</li>
-<li>OFF</li>
-Default value: OFF.
+     * Set Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement</li>
+<li>OFF: disable comprehensive enhancement</li>
+     * @param Switch Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement</li>
+<li>OFF: disable comprehensive enhancement</li>
      */
     public void setSwitch(String Switch) {
         this.Switch = Switch;
     }
 
     /**
-     * Get The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+     * Get Comprehensive enhancement type. Valid only when the control switch is ON. Available values:
+<li>weak: light comprehensive enhancement.</li>
+<li>NORMAL: Comprehensive enhancement is normal.</li>
+<li>strong: comprehensive enhancement.</li>
 Default value: weak. 
-     * @return Type The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+     * @return Type Comprehensive enhancement type. Valid only when the control switch is ON. Available values:
+<li>weak: light comprehensive enhancement.</li>
+<li>NORMAL: Comprehensive enhancement is normal.</li>
+<li>strong: comprehensive enhancement.</li>
 Default value: weak.
      */
     public String getType() {
@@ -89,15 +84,15 @@ Default value: weak.
     }
 
     /**
-     * Set The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+     * Set Comprehensive enhancement type. Valid only when the control switch is ON. Available values:
+<li>weak: light comprehensive enhancement.</li>
+<li>NORMAL: Comprehensive enhancement is normal.</li>
+<li>strong: comprehensive enhancement.</li>
 Default value: weak.
-     * @param Type The strength. Valid values:
-<li>weak</li>
-<li>normal</li>
-<li>strong</li>
+     * @param Type Comprehensive enhancement type. Valid only when the control switch is ON. Available values:
+<li>weak: light comprehensive enhancement.</li>
+<li>NORMAL: Comprehensive enhancement is normal.</li>
+<li>strong: comprehensive enhancement.</li>
 Default value: weak.
      */
     public void setType(String Type) {

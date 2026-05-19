@@ -32,8 +32,7 @@ public class AudioTransform extends AbstractModel {
     private String Type;
 
     /**
-    * Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Audio volume adjustment parameter. Valid when Type = Volume.
     */
     @SerializedName("VolumeParam")
     @Expose
@@ -60,20 +59,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VolumeParam Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Audio volume adjustment parameter. Valid when Type = Volume. 
+     * @return VolumeParam Audio volume adjustment parameter. Valid when Type = Volume.
      */
     public AudioVolumeParam getVolumeParam() {
         return this.VolumeParam;
     }
 
     /**
-     * Set Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VolumeParam Volume adjustment parameter, which is valid if `Type` is `Volume`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Audio volume adjustment parameter. Valid when Type = Volume.
+     * @param VolumeParam Audio volume adjustment parameter. Valid when Type = Volume.
      */
     public void setVolumeParam(AudioVolumeParam VolumeParam) {
         this.VolumeParam = VolumeParam;

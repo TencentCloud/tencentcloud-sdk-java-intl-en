@@ -34,7 +34,6 @@ public class HeuristicCache extends AbstractModel {
 
     /**
     * Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("CacheConfig")
     @Expose
@@ -65,10 +64,8 @@ Note: This field may return null, indicating that no valid value can be obtained
     }
 
     /**
-     * Get Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Custom heuristic cache time configuration. 
      * @return CacheConfig Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public HeuristicCacheConfig getCacheConfig() {
         return this.CacheConfig;
@@ -76,9 +73,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param CacheConfig Custom heuristic cache time configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCacheConfig(HeuristicCacheConfig CacheConfig) {
         this.CacheConfig = CacheConfig;

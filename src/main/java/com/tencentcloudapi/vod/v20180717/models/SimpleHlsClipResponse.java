@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class SimpleHlsClipResponse extends AbstractModel {
 
     /**
-    * Address of clipped video.
+    * Trimmed video address
     */
     @SerializedName("Url")
     @Expose
     private String Url;
 
     /**
-    * Metadata of clipped video. Currently, `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields use default value with no actual data.
+    * Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data.
     */
     @SerializedName("MetaData")
     @Expose
     private MediaMetaData MetaData;
 
     /**
-    * Unique ID of a video clip for persistent storage.
+    * Unique identifier of the media file for post-editing solidified video.
     */
     @SerializedName("FileId")
     @Expose
     private String FileId;
 
     /**
-    * The ID of the task flow to execute on the video clipped for persistent storage.
+    * Edited video task flow ID after solidification.
     */
     @SerializedName("TaskId")
     @Expose
@@ -59,64 +59,64 @@ public class SimpleHlsClipResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Address of clipped video. 
-     * @return Url Address of clipped video.
+     * Get Trimmed video address 
+     * @return Url Trimmed video address
      */
     public String getUrl() {
         return this.Url;
     }
 
     /**
-     * Set Address of clipped video.
-     * @param Url Address of clipped video.
+     * Set Trimmed video address
+     * @param Url Trimmed video address
      */
     public void setUrl(String Url) {
         this.Url = Url;
     }
 
     /**
-     * Get Metadata of clipped video. Currently, `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields use default value with no actual data. 
-     * @return MetaData Metadata of clipped video. Currently, `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields use default value with no actual data.
+     * Get Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data. 
+     * @return MetaData Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data.
      */
     public MediaMetaData getMetaData() {
         return this.MetaData;
     }
 
     /**
-     * Set Metadata of clipped video. Currently, `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields use default value with no actual data.
-     * @param MetaData Metadata of clipped video. Currently, `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields use default value with no actual data.
+     * Set Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data.
+     * @param MetaData Cropped video metadata. Currently, the `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields are temporarily default with no real data.
      */
     public void setMetaData(MediaMetaData MetaData) {
         this.MetaData = MetaData;
     }
 
     /**
-     * Get Unique ID of a video clip for persistent storage. 
-     * @return FileId Unique ID of a video clip for persistent storage.
+     * Get Unique identifier of the media file for post-editing solidified video. 
+     * @return FileId Unique identifier of the media file for post-editing solidified video.
      */
     public String getFileId() {
         return this.FileId;
     }
 
     /**
-     * Set Unique ID of a video clip for persistent storage.
-     * @param FileId Unique ID of a video clip for persistent storage.
+     * Set Unique identifier of the media file for post-editing solidified video.
+     * @param FileId Unique identifier of the media file for post-editing solidified video.
      */
     public void setFileId(String FileId) {
         this.FileId = FileId;
     }
 
     /**
-     * Get The ID of the task flow to execute on the video clipped for persistent storage. 
-     * @return TaskId The ID of the task flow to execute on the video clipped for persistent storage.
+     * Get Edited video task flow ID after solidification. 
+     * @return TaskId Edited video task flow ID after solidification.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set The ID of the task flow to execute on the video clipped for persistent storage.
-     * @param TaskId The ID of the task flow to execute on the video clipped for persistent storage.
+     * Set Edited video task flow ID after solidification.
+     * @param TaskId Edited video task flow ID after solidification.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

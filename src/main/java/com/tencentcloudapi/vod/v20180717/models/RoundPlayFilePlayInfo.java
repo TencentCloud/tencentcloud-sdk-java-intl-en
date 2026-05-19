@@ -46,7 +46,6 @@ public class RoundPlayFilePlayInfo extends AbstractModel {
 
     /**
     * Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("Duration")
     @Expose
@@ -54,7 +53,6 @@ Note: this field may return null, indicating that no valid value was found.
 
     /**
     * Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
     */
     @SerializedName("Progress")
     @Expose
@@ -109,10 +107,8 @@ Note: this field may return null, indicating that no valid value was found.
     }
 
     /**
-     * Get Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found. 
+     * Get Playback duration, in seconds. 
      * @return Duration Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
      */
     public Float getDuration() {
         return this.Duration;
@@ -120,19 +116,15 @@ Note: this field may return null, indicating that no valid value was found.
 
     /**
      * Set Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
      * @param Duration Playback duration, in seconds.
-Note: this field may return null, indicating that no valid value was found.
      */
     public void setDuration(Float Duration) {
         this.Duration = Duration;
     }
 
     /**
-     * Get Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found. 
+     * Get Playback progress, in seconds. 
      * @return Progress Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
      */
     public Float getProgress() {
         return this.Progress;
@@ -140,9 +132,7 @@ Note: this field may return null, indicating that no valid value was found.
 
     /**
      * Set Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
      * @param Progress Playback progress, in seconds.
-Note: this field may return null, indicating that no valid value was found.
      */
     public void setProgress(Float Progress) {
         this.Progress = Progress;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifySubAppIdInfoRequest extends AbstractModel {
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * Subapplication name. Length limit: 40 characters.
+    * Application name, length limited to 40 characters.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Subapplication overview. Length limit: 300 characters.
+    * Application description, length limited to 300 characters.
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get Subapplication name. Length limit: 40 characters. 
-     * @return Name Subapplication name. Length limit: 40 characters.
+     * Get Application name, length limited to 40 characters. 
+     * @return Name Application name, length limited to 40 characters.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Subapplication name. Length limit: 40 characters.
-     * @param Name Subapplication name. Length limit: 40 characters.
+     * Set Application name, length limited to 40 characters.
+     * @param Name Application name, length limited to 40 characters.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Subapplication overview. Length limit: 300 characters. 
-     * @return Description Subapplication overview. Length limit: 300 characters.
+     * Get Application description, length limited to 300 characters. 
+     * @return Description Application description, length limited to 300 characters.
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Subapplication overview. Length limit: 300 characters.
-     * @param Description Subapplication overview. Length limit: 300 characters.
+     * Set Application description, length limited to 300 characters.
+     * @param Description Application description, length limited to 300 characters.
      */
     public void setDescription(String Description) {
         this.Description = Description;

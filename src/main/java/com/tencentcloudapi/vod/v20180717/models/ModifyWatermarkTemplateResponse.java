@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class ModifyWatermarkTemplateResponse extends AbstractModel {
 
     /**
-    * Image watermark address. This field has a value only when `ImageTemplate.ImageContent` is not empty.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty.
     */
     @SerializedName("ImageUrl")
     @Expose
@@ -39,20 +38,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Image watermark address. This field has a value only when `ImageTemplate.ImageContent` is not empty.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return ImageUrl Image watermark address. This field has a value only when `ImageTemplate.ImageContent` is not empty.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty. 
+     * @return ImageUrl Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty.
      */
     public String getImageUrl() {
         return this.ImageUrl;
     }
 
     /**
-     * Set Image watermark address. This field has a value only when `ImageTemplate.ImageContent` is not empty.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ImageUrl Image watermark address. This field has a value only when `ImageTemplate.ImageContent` is not empty.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty.
+     * @param ImageUrl Image watermark address. This field has a value only when ImageTemplate.ImageContent is not empty.
      */
     public void setImageUrl(String ImageUrl) {
         this.ImageUrl = ImageUrl;

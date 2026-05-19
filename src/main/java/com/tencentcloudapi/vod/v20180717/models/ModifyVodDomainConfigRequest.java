@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ModifyVodDomainConfigRequest extends AbstractModel {
 
     /**
-    * Domain name
+    * Domain name.
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+    * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
     */
     @SerializedName("SubAppId")
     @Expose
     private Long SubAppId;
 
     /**
-    * [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/14046?from_cn_redirect=1) policy
+    * [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) rule.
     */
     @SerializedName("RefererAuthPolicy")
     @Expose
     private RefererAuthPolicy RefererAuthPolicy;
 
     /**
-    * [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/14047?from_cn_redirect=1) policy
+    * [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) rule.
     */
     @SerializedName("UrlSignatureAuthPolicy")
     @Expose
     private UrlSignatureAuthPolicy UrlSignatureAuthPolicy;
 
     /**
-    * The QUIC configuration.
+    * QUIC configuration.
     */
     @SerializedName("QUICConfig")
     @Expose
     private DomainQUICConfig QUICConfig;
 
     /**
-    * IP access restriction rules.
+    * IP access restriction rule.
     */
     @SerializedName("IPFilterPolicy")
     @Expose
     private IPFilterPolicy IPFilterPolicy;
 
     /**
-     * Get Domain name 
-     * @return Domain Domain name
+     * Get Domain name. 
+     * @return Domain Domain name.
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name
-     * @param Domain Domain name
+     * Set Domain name.
+     * @param Domain Domain name.
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b> 
-     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Get <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b> 
+     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public Long getSubAppId() {
         return this.SubAppId;
     }
 
     /**
-     * Set <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-     * @param SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+     * Set <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+     * @param SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
      */
     public void setSubAppId(Long SubAppId) {
         this.SubAppId = SubAppId;
     }
 
     /**
-     * Get [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/14046?from_cn_redirect=1) policy 
-     * @return RefererAuthPolicy [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/14046?from_cn_redirect=1) policy
+     * Get [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) rule. 
+     * @return RefererAuthPolicy [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) rule.
      */
     public RefererAuthPolicy getRefererAuthPolicy() {
         return this.RefererAuthPolicy;
     }
 
     /**
-     * Set [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/14046?from_cn_redirect=1) policy
-     * @param RefererAuthPolicy [Referer hotlink protection](https://intl.cloud.tencent.com/document/product/266/14046?from_cn_redirect=1) policy
+     * Set [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) rule.
+     * @param RefererAuthPolicy [Referer hotlink protection](https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1) rule.
      */
     public void setRefererAuthPolicy(RefererAuthPolicy RefererAuthPolicy) {
         this.RefererAuthPolicy = RefererAuthPolicy;
     }
 
     /**
-     * Get [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/14047?from_cn_redirect=1) policy 
-     * @return UrlSignatureAuthPolicy [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/14047?from_cn_redirect=1) policy
+     * Get [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) rule. 
+     * @return UrlSignatureAuthPolicy [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) rule.
      */
     public UrlSignatureAuthPolicy getUrlSignatureAuthPolicy() {
         return this.UrlSignatureAuthPolicy;
     }
 
     /**
-     * Set [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/14047?from_cn_redirect=1) policy
-     * @param UrlSignatureAuthPolicy [Key hotlink protection](https://intl.cloud.tencent.com/document/product/266/14047?from_cn_redirect=1) policy
+     * Set [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) rule.
+     * @param UrlSignatureAuthPolicy [Key hotlink protection](https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1) rule.
      */
     public void setUrlSignatureAuthPolicy(UrlSignatureAuthPolicy UrlSignatureAuthPolicy) {
         this.UrlSignatureAuthPolicy = UrlSignatureAuthPolicy;
     }
 
     /**
-     * Get The QUIC configuration. 
-     * @return QUICConfig The QUIC configuration.
+     * Get QUIC configuration. 
+     * @return QUICConfig QUIC configuration.
      */
     public DomainQUICConfig getQUICConfig() {
         return this.QUICConfig;
     }
 
     /**
-     * Set The QUIC configuration.
-     * @param QUICConfig The QUIC configuration.
+     * Set QUIC configuration.
+     * @param QUICConfig QUIC configuration.
      */
     public void setQUICConfig(DomainQUICConfig QUICConfig) {
         this.QUICConfig = QUICConfig;
     }
 
     /**
-     * Get IP access restriction rules. 
-     * @return IPFilterPolicy IP access restriction rules.
+     * Get IP access restriction rule. 
+     * @return IPFilterPolicy IP access restriction rule.
      */
     public IPFilterPolicy getIPFilterPolicy() {
         return this.IPFilterPolicy;
     }
 
     /**
-     * Set IP access restriction rules.
-     * @param IPFilterPolicy IP access restriction rules.
+     * Set IP access restriction rule.
+     * @param IPFilterPolicy IP access restriction rule.
      */
     public void setIPFilterPolicy(IPFilterPolicy IPFilterPolicy) {
         this.IPFilterPolicy = IPFilterPolicy;

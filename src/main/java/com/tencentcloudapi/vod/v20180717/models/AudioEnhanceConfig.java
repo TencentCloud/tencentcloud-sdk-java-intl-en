@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AudioEnhanceConfig extends AbstractModel {
 
     /**
-    * The audio noise reduction configuration.
+    * Audio noise reduction configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Denoise")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AudioDenoiseInfo Denoise;
 
     /**
-    * The audio separation configuration.
+    * Audio separation configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Separate")
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AudioSeparateInfo Separate;
 
     /**
-    * The volume equalization configuration.
+    * Volume equalization configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("VolumeBalance")
@@ -48,7 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AudioVolumeBalanceInfo VolumeBalance;
 
     /**
-    * The audio improvement configuration.
+    * Volume beautification configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Beautify")
@@ -56,9 +56,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AudioBeautifyInfo Beautify;
 
     /**
-     * Get The audio noise reduction configuration.
+     * Get Audio noise reduction configuration.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Denoise The audio noise reduction configuration.
+     * @return Denoise Audio noise reduction configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AudioDenoiseInfo getDenoise() {
@@ -66,9 +66,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The audio noise reduction configuration.
+     * Set Audio noise reduction configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Denoise The audio noise reduction configuration.
+     * @param Denoise Audio noise reduction configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDenoise(AudioDenoiseInfo Denoise) {
@@ -76,9 +76,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The audio separation configuration.
+     * Get Audio separation configuration.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Separate The audio separation configuration.
+     * @return Separate Audio separation configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AudioSeparateInfo getSeparate() {
@@ -86,9 +86,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The audio separation configuration.
+     * Set Audio separation configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Separate The audio separation configuration.
+     * @param Separate Audio separation configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSeparate(AudioSeparateInfo Separate) {
@@ -96,9 +96,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The volume equalization configuration.
+     * Get Volume equalization configuration.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return VolumeBalance The volume equalization configuration.
+     * @return VolumeBalance Volume equalization configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AudioVolumeBalanceInfo getVolumeBalance() {
@@ -106,9 +106,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The volume equalization configuration.
+     * Set Volume equalization configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VolumeBalance The volume equalization configuration.
+     * @param VolumeBalance Volume equalization configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setVolumeBalance(AudioVolumeBalanceInfo VolumeBalance) {
@@ -116,9 +116,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get The audio improvement configuration.
+     * Get Volume beautification configuration.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Beautify The audio improvement configuration.
+     * @return Beautify Volume beautification configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AudioBeautifyInfo getBeautify() {
@@ -126,9 +126,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The audio improvement configuration.
+     * Set Volume beautification configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Beautify The audio improvement configuration.
+     * @param Beautify Volume beautification configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBeautify(AudioBeautifyInfo Beautify) {

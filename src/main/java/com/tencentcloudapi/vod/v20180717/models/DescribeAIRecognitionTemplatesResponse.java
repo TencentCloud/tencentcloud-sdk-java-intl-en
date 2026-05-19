@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeAIRecognitionTemplatesResponse extends AbstractModel {
 
     /**
-    * Number of eligible entries.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List of video content recognition template details.
+    * Audio/video content recognition template detail list.
     */
     @SerializedName("AIRecognitionTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeAIRecognitionTemplatesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of eligible entries. 
-     * @return TotalCount Number of eligible entries.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of eligible entries.
-     * @param TotalCount Number of eligible entries.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List of video content recognition template details. 
-     * @return AIRecognitionTemplateSet List of video content recognition template details.
+     * Get Audio/video content recognition template detail list. 
+     * @return AIRecognitionTemplateSet Audio/video content recognition template detail list.
      */
     public AIRecognitionTemplateItem [] getAIRecognitionTemplateSet() {
         return this.AIRecognitionTemplateSet;
     }
 
     /**
-     * Set List of video content recognition template details.
-     * @param AIRecognitionTemplateSet List of video content recognition template details.
+     * Set Audio/video content recognition template detail list.
+     * @param AIRecognitionTemplateSet Audio/video content recognition template detail list.
      */
     public void setAIRecognitionTemplateSet(AIRecognitionTemplateItem [] AIRecognitionTemplateSet) {
         this.AIRecognitionTemplateSet = AIRecognitionTemplateSet;

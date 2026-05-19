@@ -43,7 +43,7 @@ When `Status` is set to `Enabled`, `AuthType` must be specified.
     private String AuthType;
 
     /**
-    * The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
+    * Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
     */
     @SerializedName("Referers")
     @Expose
@@ -112,16 +112,16 @@ When `Status` is set to `Enabled`, `AuthType` must be specified.
     }
 
     /**
-     * Get The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers. 
-     * @return Referers The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
+     * Get Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format. 
+     * @return Referers Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
      */
     public String [] getReferers() {
         return this.Referers;
     }
 
     /**
-     * Set The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
-     * @param Referers The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
+     * Set Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
+     * @param Referers Referer list used for verification, supports a maximum of 400 Referers. When Status value is Enabled, Referers cannot be empty array. Referer format follows reference domain format.
      */
     public void setReferers(String [] Referers) {
         this.Referers = Referers;

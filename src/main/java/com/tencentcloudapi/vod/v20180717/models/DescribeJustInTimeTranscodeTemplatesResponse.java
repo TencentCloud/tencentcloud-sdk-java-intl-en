@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeJustInTimeTranscodeTemplatesResponse extends AbstractModel {
 
     /**
-    * The total number of records matching the filter criteria.
+    * Total number of records that meet the filtering conditions.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Template details list.
+    * Template detail list.
     */
     @SerializedName("JustInTimeTranscodeTemplateSet")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeJustInTimeTranscodeTemplatesResponse extends AbstractModel 
     private String RequestId;
 
     /**
-     * Get The total number of records matching the filter criteria. 
-     * @return TotalCount The total number of records matching the filter criteria.
+     * Get Total number of records that meet the filtering conditions. 
+     * @return TotalCount Total number of records that meet the filtering conditions.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The total number of records matching the filter criteria.
-     * @param TotalCount The total number of records matching the filter criteria.
+     * Set Total number of records that meet the filtering conditions.
+     * @param TotalCount Total number of records that meet the filtering conditions.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Template details list. 
-     * @return JustInTimeTranscodeTemplateSet Template details list.
+     * Get Template detail list. 
+     * @return JustInTimeTranscodeTemplateSet Template detail list.
      */
     public JustInTimeTranscodeTemplate [] getJustInTimeTranscodeTemplateSet() {
         return this.JustInTimeTranscodeTemplateSet;
     }
 
     /**
-     * Set Template details list.
-     * @param JustInTimeTranscodeTemplateSet Template details list.
+     * Set Template detail list.
+     * @param JustInTimeTranscodeTemplateSet Template detail list.
      */
     public void setJustInTimeTranscodeTemplateSet(JustInTimeTranscodeTemplate [] JustInTimeTranscodeTemplateSet) {
         this.JustInTimeTranscodeTemplateSet = JustInTimeTranscodeTemplateSet;
