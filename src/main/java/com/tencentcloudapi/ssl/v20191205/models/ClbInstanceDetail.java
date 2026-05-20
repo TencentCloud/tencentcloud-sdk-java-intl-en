@@ -45,6 +45,13 @@ public class ClbInstanceDetail extends AbstractModel {
     private ClbListener [] Listeners;
 
     /**
+    * CLB type. 0 classic CLB; 1 application CLB.
+    */
+    @SerializedName("Forward")
+    @Expose
+    private Long Forward;
+
+    /**
      * Get The CLB instance ID. 
      * @return LoadBalancerId The CLB instance ID.
      */
@@ -92,6 +99,22 @@ public class ClbInstanceDetail extends AbstractModel {
         this.Listeners = Listeners;
     }
 
+    /**
+     * Get CLB type. 0 classic CLB; 1 application CLB. 
+     * @return Forward CLB type. 0 classic CLB; 1 application CLB.
+     */
+    public Long getForward() {
+        return this.Forward;
+    }
+
+    /**
+     * Set CLB type. 0 classic CLB; 1 application CLB.
+     * @param Forward CLB type. 0 classic CLB; 1 application CLB.
+     */
+    public void setForward(Long Forward) {
+        this.Forward = Forward;
+    }
+
     public ClbInstanceDetail() {
     }
 
@@ -112,6 +135,9 @@ public class ClbInstanceDetail extends AbstractModel {
                 this.Listeners[i] = new ClbListener(source.Listeners[i]);
             }
         }
+        if (source.Forward != null) {
+            this.Forward = new Long(source.Forward);
+        }
     }
 
 
@@ -122,6 +148,7 @@ public class ClbInstanceDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
         this.setParamSimple(map, prefix + "LoadBalancerName", this.LoadBalancerName);
         this.setParamArrayObj(map, prefix + "Listeners.", this.Listeners);
+        this.setParamSimple(map, prefix + "Forward", this.Forward);
 
     }
 }

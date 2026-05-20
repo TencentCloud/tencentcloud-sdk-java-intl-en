@@ -105,6 +105,17 @@ public class SslClient extends AbstractClient{
     }
 
     /**
+     *Check the domain validation result of the cert
+     * @param req CheckCertificateDomainVerificationRequest
+     * @return CheckCertificateDomainVerificationResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckCertificateDomainVerificationResponse CheckCertificateDomainVerification(CheckCertificateDomainVerificationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckCertificateDomainVerification", CheckCertificateDomainVerificationResponse.class);
+    }
+
+    /**
      *Submit payment certificate orders; This API does not maintain new features, and you can use the new API to submit orders. [CertificateOrderSubmit](https://intl.cloud.tencent.com/document/product/400/116032?from_cn_redirect=1).
      * @param req CommitCertificateInformationRequest
      * @return CommitCertificateInformationResponse
@@ -193,7 +204,7 @@ public class SslClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the task result of CreateCertificateBindResourceSyncTask, returning the asynchronous task result of the certificate associated with cloud resources, supporting the following cloud resources: clb, cdn, waf, live, vod, ddos, tke, apigateway, tcb, teo (edgeOne), cos.
+     *Query the task result of CreateCertificateBindResourceSyncTask, return the asynchronous task result of binding cloud resources with the certificate, support the following cloud resources: clb, cdn, waf, live, vod, ddos, tke, apigateway, tcb, teo (edgeOne), cos, gaap, mqtt, scf, tdmq.
      * @param req DescribeCertificateBindResourceTaskDetailRequest
      * @return DescribeCertificateBindResourceTaskDetailResponse
      * @throws TencentCloudSDKException
@@ -399,6 +410,17 @@ public class SslClient extends AbstractClient{
     public ReplaceCertificateResponse ReplaceCertificate(ReplaceCertificateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ReplaceCertificate", ReplaceCertificateResponse.class);
+    }
+
+    /**
+     *This API is used to revoke certificate.
+     * @param req RevokeCertificateRequest
+     * @return RevokeCertificateResponse
+     * @throws TencentCloudSDKException
+     */
+    public RevokeCertificateResponse RevokeCertificate(RevokeCertificateRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RevokeCertificate", RevokeCertificateResponse.class);
     }
 
     /**

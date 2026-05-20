@@ -25,15 +25,13 @@ public class TSEInstanceDetail extends AbstractModel {
 
     /**
     * Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("GatewayId")
     @Expose
     private String GatewayId;
 
     /**
-    * Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
+    * gateway name
     */
     @SerializedName("GatewayName")
     @Expose
@@ -41,17 +39,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("CertificateList")
     @Expose
     private GatewayCertificate [] CertificateList;
 
     /**
-     * Get Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Gateway ID 
      * @return GatewayId Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getGatewayId() {
         return this.GatewayId;
@@ -59,39 +54,31 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param GatewayId Gateway ID
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setGatewayId(String GatewayId) {
         this.GatewayId = GatewayId;
     }
 
     /**
-     * Get Gateway name
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return GatewayName Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get gateway name 
+     * @return GatewayName gateway name
      */
     public String getGatewayName() {
         return this.GatewayName;
     }
 
     /**
-     * Set Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param GatewayName Gateway name
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set gateway name
+     * @param GatewayName gateway name
      */
     public void setGatewayName(String GatewayName) {
         this.GatewayName = GatewayName;
     }
 
     /**
-     * Get Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Gateway certificate list 
      * @return CertificateList Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public GatewayCertificate [] getCertificateList() {
         return this.CertificateList;
@@ -99,9 +86,7 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param CertificateList Gateway certificate list
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCertificateList(GatewayCertificate [] CertificateList) {
         this.CertificateList = CertificateList;

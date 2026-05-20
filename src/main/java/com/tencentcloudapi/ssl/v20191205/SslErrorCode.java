@@ -18,6 +18,9 @@ public enum SslErrorCode {
      /* A CAM authentication error occurred. */
      FAILEDOPERATION_CAMAUTHORIZEDFAIL("FailedOperation.CAMAuthorizedFail"),
      
+     /*  */
+     FAILEDOPERATION_CANCELAUDITCERTIFICATEFAILED("FailedOperation.CancelAuditCertificateFailed"),
+     
      /* Failed to cancel the order. */
      FAILEDOPERATION_CANCELORDERFAILED("FailedOperation.CancelOrderFailed"),
      
@@ -32,6 +35,15 @@ public enum SslErrorCode {
      
      /* Note: the uploaded certificate content does not conform to the standard format of ca certificates. please check whether the certificate type is incorrect. */
      FAILEDOPERATION_CERTIFICATECAERROR("FailedOperation.CertificateCaError"),
+     
+     /*  */
+     FAILEDOPERATION_CERTIFICATECANCELFAILEDMULTI("FailedOperation.CertificateCancelFailedMulti"),
+     
+     /*  */
+     FAILEDOPERATION_CERTIFICATECHAINERROR("FailedOperation.CertificateChainError"),
+     
+     /*  */
+     FAILEDOPERATION_CERTIFICATECSRPARSEFAILED("FailedOperation.CertificateCsrParseFailed"),
      
      /* This operation can be performed only when the record status is Complete. */
      FAILEDOPERATION_CERTIFICATEDEPLOYDETAILROLLBACKSTATUSINVALID("FailedOperation.CertificateDeployDetailRollbackStatusInvalid"),
@@ -114,11 +126,17 @@ public enum SslErrorCode {
      /* You cannot re-submit a review application for a certificate in this status. */
      FAILEDOPERATION_CERTIFICATESTATUSNOTALLOWRESUBMIT("FailedOperation.CertificateStatusNotAllowResubmit"),
      
+     /* The certificate status does not allow domain name verification. */
+     FAILEDOPERATION_CERTIFICATESTATUSNOTALLOWVERIFY("FailedOperation.CertificateStatusNotAllowVerify"),
+     
      /* Uploaded certificate managed renewal cannot submit order manually */
      FAILEDOPERATION_CERTIFICATESUBMITHOSTINGCERTERROR("FailedOperation.CertificateSubmitHostingCertError"),
      
      /* The cert associated with the cloud resource query task id is invalid. */
      FAILEDOPERATION_CERTIFICATESYNCTASKIDINVALID("FailedOperation.CertificateSyncTaskIdInvalid"),
+     
+     /*  */
+     FAILEDOPERATION_CERTIFICATEWHITEFUNCERROR("FailedOperation.CertificateWhiteFuncError"),
      
      /* The confirmation letter file cannot exceed 1.4 MB. */
      FAILEDOPERATION_CONFIRMLETTERTOOLARGE("FailedOperation.ConfirmLetterTooLarge"),
@@ -134,6 +152,9 @@ public enum SslErrorCode {
      
      /* The number of free certificates exceeds the maximum value. */
      FAILEDOPERATION_EXCEEDSFREELIMIT("FailedOperation.ExceedsFreeLimit"),
+     
+     /*  */
+     FAILEDOPERATION_GENCSRFAIL("FailedOperation.GenCSRFail"),
      
      /* Certificate source error. */
      FAILEDOPERATION_INVALIDCERTIFICATESOURCE("FailedOperation.InvalidCertificateSource"),
@@ -180,11 +201,23 @@ public enum SslErrorCode {
      /* Cannot perform deletion when the renewed cert has not been issued. */
      FAILEDOPERATION_RENEWNOTISSUED("FailedOperation.RenewNotIssued"),
      
+     /* Certificate revocation failed. */
+     FAILEDOPERATION_REVOKEFAILED("FailedOperation.RevokeFailed"),
+     
+     /* The cert is bound to cloud resources and cannot be revoked. */
+     FAILEDOPERATION_REVOKERESOURCEFAILED("FailedOperation.RevokeResourceFailed"),
+     
      /* The role does not exist. Please authorize the role first. */
      FAILEDOPERATION_ROLENOTFOUNDAUTHORIZATION("FailedOperation.RoleNotFoundAuthorization"),
      
      /* A system error occurred. */
      FAILEDOPERATION_SYSTEMERROR("FailedOperation.SystemError"),
+     
+     /*  */
+     FAILEDOPERATION_UPLOADCONFIRMCERTIFICATENOTSUPPORT("FailedOperation.UploadConfirmCertificateNotSupport"),
+     
+     /*  */
+     FAILEDOPERATION_UPLOADCONFIRMCERTIFICATENOTSUPPORTDV("FailedOperation.UploadConfirmCertificateNotSupportDV"),
      
      /* Internal error. */
      INTERNALERROR("InternalError"),
@@ -221,6 +254,12 @@ public enum SslErrorCode {
      
      /* Invalid parameter value. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_CERTIFICATEDOMAINMAXLENGTHINVALID("InvalidParameterValue.CertificateDomainMaxLengthInvalid"),
+     
+     /*  */
+     INVALIDPARAMETERVALUE_CERTIFICATEEMAILPARSEINVALID("InvalidParameterValue.CertificateEmailParseInvalid"),
      
      /* Intermediate certificate inconsistent. */
      INVALIDPARAMETERVALUE_INTERMEDIATECERTNOTSAME("InvalidParameterValue.IntermediateCertNotSame"),

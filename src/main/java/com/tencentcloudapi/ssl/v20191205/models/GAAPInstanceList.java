@@ -21,70 +21,96 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TCBHostService extends AbstractModel {
+public class GAAPInstanceList extends AbstractModel {
 
     /**
-    * Instance list
+    * Instance details
     */
     @SerializedName("InstanceList")
     @Expose
-    private TCBHostInstance [] InstanceList;
+    private GAAPInstanceDetail [] InstanceList;
 
     /**
-    * Quantity.
+    * Total number.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get Instance list 
-     * @return InstanceList Instance list
+    * Error message	
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
+     * Get Instance details 
+     * @return InstanceList Instance details
      */
-    public TCBHostInstance [] getInstanceList() {
+    public GAAPInstanceDetail [] getInstanceList() {
         return this.InstanceList;
     }
 
     /**
-     * Set Instance list
-     * @param InstanceList Instance list
+     * Set Instance details
+     * @param InstanceList Instance details
      */
-    public void setInstanceList(TCBHostInstance [] InstanceList) {
+    public void setInstanceList(GAAPInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get Quantity. 
-     * @return TotalCount Quantity.
+     * Get Total number. 
+     * @return TotalCount Total number.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Quantity.
-     * @param TotalCount Quantity.
+     * Set Total number.
+     * @param TotalCount Total number.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
-    public TCBHostService() {
+    /**
+     * Get Error message	 
+     * @return Error Error message	
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set Error message	
+     * @param Error Error message	
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
+    public GAAPInstanceList() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TCBHostService(TCBHostService source) {
+    public GAAPInstanceList(GAAPInstanceList source) {
         if (source.InstanceList != null) {
-            this.InstanceList = new TCBHostInstance[source.InstanceList.length];
+            this.InstanceList = new GAAPInstanceDetail[source.InstanceList.length];
             for (int i = 0; i < source.InstanceList.length; i++) {
-                this.InstanceList[i] = new TCBHostInstance(source.InstanceList[i]);
+                this.InstanceList[i] = new GAAPInstanceDetail(source.InstanceList[i]);
             }
         }
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
         }
     }
 
@@ -95,6 +121,7 @@ public class TCBHostService extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

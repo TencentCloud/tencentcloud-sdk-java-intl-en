@@ -24,183 +24,153 @@ import java.util.HashMap;
 public class TCBAccessInstance extends AbstractModel {
 
     /**
-    * The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Domain
     */
     @SerializedName("Domain")
     @Expose
     private String Domain;
 
     /**
-    * The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Status.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * The unified domain status.
+    * Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UnionStatus")
     @Expose
     private Long UnionStatus;
 
     /**
-    * Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+    * Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IsPreempted")
     @Expose
     private Boolean IsPreempted;
 
     /**
-    * Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+    * icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ICPStatus")
     @Expose
     private Long ICPStatus;
 
     /**
-    * The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Bound Certificate ID
     */
     @SerializedName("OldCertificateId")
     @Expose
     private String OldCertificateId;
 
     /**
-     * Get The domain.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Domain The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Domain 
+     * @return Domain Domain
      */
     public String getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Domain The domain.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Domain
+     * @param Domain Domain
      */
     public void setDomain(String Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get The status.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status. 
+     * @return Status Status.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The status.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status.
+     * @param Status Status.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get The unified domain status.
+     * Get Unified domain status
+ 
+     * @return UnionStatus Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnionStatus The unified domain status.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getUnionStatus() {
         return this.UnionStatus;
     }
 
     /**
-     * Set The unified domain status.
+     * Set Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnionStatus The unified domain status.
+     * @param UnionStatus Unified domain status
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUnionStatus(Long UnionStatus) {
         this.UnionStatus = UnionStatus;
     }
 
     /**
-     * Get Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+     * Get Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
+ 
+     * @return IsPreempted Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IsPreempted Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getIsPreempted() {
         return this.IsPreempted;
     }
 
     /**
-     * Set Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+     * Set Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IsPreempted Whether the domain is preempted. A preempted domain is one that is already associated with another environment. It must be disassociated or re-associated first.
+     * @param IsPreempted Whether it is preempted. Preemption means the domain name is bound to another environment and must be unbound or rebound.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIsPreempted(Boolean IsPreempted) {
         this.IsPreempted = IsPreempted;
     }
 
     /**
-     * Get Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+     * Get icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
+ 
+     * @return ICPStatus icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ICPStatus Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getICPStatus() {
         return this.ICPStatus;
     }
 
     /**
-     * Set Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+     * Set icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ICPStatus Whether the domain is added to the ICP blocklist. Valid values: `0` for no and `1` for yes.
+     * @param ICPStatus icp blocklist ban status. 0 - Not blocked. 1 - Blocked.
 
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setICPStatus(Long ICPStatus) {
         this.ICPStatus = ICPStatus;
     }
 
     /**
-     * Get The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OldCertificateId The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Bound Certificate ID 
+     * @return OldCertificateId Bound Certificate ID
      */
     public String getOldCertificateId() {
         return this.OldCertificateId;
     }
 
     /**
-     * Set The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OldCertificateId The ID of the associated certificate.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Bound Certificate ID
+     * @param OldCertificateId Bound Certificate ID
      */
     public void setOldCertificateId(String OldCertificateId) {
         this.OldCertificateId = OldCertificateId;

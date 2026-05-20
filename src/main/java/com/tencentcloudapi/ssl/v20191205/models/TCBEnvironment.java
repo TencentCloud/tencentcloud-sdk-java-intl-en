@@ -24,112 +24,92 @@ import java.util.HashMap;
 public class TCBEnvironment extends AbstractModel {
 
     /**
-    * The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Unique ID
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * The source.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Source.
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * The name.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Status.
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-     * Get The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ID The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Unique ID 
+     * @return ID Unique ID
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ID The unique ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Unique ID
+     * @param ID Unique ID
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get The source.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Source The source.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Source. 
+     * @return Source Source.
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set The source.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Source The source.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Source.
+     * @param Source Source.
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get The name.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Name The name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Name 
+     * @return Name Name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set The name.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Name The name.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Name
+     * @param Name Name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get The status.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Status. 
+     * @return Status Status.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set The status.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Status The status.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Status.
+     * @param Status Status.
      */
     public void setStatus(String Status) {
         this.Status = Status;

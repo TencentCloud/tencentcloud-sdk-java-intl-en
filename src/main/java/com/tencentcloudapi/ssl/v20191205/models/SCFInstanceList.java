@@ -21,67 +21,119 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TCBHostService extends AbstractModel {
+public class SCFInstanceList extends AbstractModel {
 
     /**
-    * Instance list
+    * <p>Region.</p>
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * <p>SCF instance details</p>
     */
     @SerializedName("InstanceList")
     @Expose
-    private TCBHostInstance [] InstanceList;
+    private SCFInstanceDetail [] InstanceList;
 
     /**
-    * Quantity.
+    * <p>Error message</p>
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
+    * <p>Total count in the region</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get Instance list 
-     * @return InstanceList Instance list
+     * Get <p>Region.</p> 
+     * @return Region <p>Region.</p>
      */
-    public TCBHostInstance [] getInstanceList() {
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set <p>Region.</p>
+     * @param Region <p>Region.</p>
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get <p>SCF instance details</p> 
+     * @return InstanceList <p>SCF instance details</p>
+     */
+    public SCFInstanceDetail [] getInstanceList() {
         return this.InstanceList;
     }
 
     /**
-     * Set Instance list
-     * @param InstanceList Instance list
+     * Set <p>SCF instance details</p>
+     * @param InstanceList <p>SCF instance details</p>
      */
-    public void setInstanceList(TCBHostInstance [] InstanceList) {
+    public void setInstanceList(SCFInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get Quantity. 
-     * @return TotalCount Quantity.
+     * Get <p>Error message</p> 
+     * @return Error <p>Error message</p>
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set <p>Error message</p>
+     * @param Error <p>Error message</p>
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
+    /**
+     * Get <p>Total count in the region</p> 
+     * @return TotalCount <p>Total count in the region</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Quantity.
-     * @param TotalCount Quantity.
+     * Set <p>Total count in the region</p>
+     * @param TotalCount <p>Total count in the region</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
-    public TCBHostService() {
+    public SCFInstanceList() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TCBHostService(TCBHostService source) {
+    public SCFInstanceList(SCFInstanceList source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
         if (source.InstanceList != null) {
-            this.InstanceList = new TCBHostInstance[source.InstanceList.length];
+            this.InstanceList = new SCFInstanceDetail[source.InstanceList.length];
             for (int i = 0; i < source.InstanceList.length; i++) {
-                this.InstanceList[i] = new TCBHostInstance(source.InstanceList[i]);
+                this.InstanceList[i] = new SCFInstanceDetail(source.InstanceList[i]);
             }
+        }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
         }
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
@@ -93,7 +145,9 @@ public class TCBHostService extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
+        this.setParamSimple(map, prefix + "Error", this.Error);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
 
     }

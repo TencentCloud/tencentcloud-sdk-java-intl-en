@@ -295,6 +295,28 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     }
 
     /**
+     *Create a new logset with VOD.
+     * @param req CreateCLSLogsetRequest
+     * @return CreateCLSLogsetResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCLSLogsetResponse CreateCLSLogset(CreateCLSLogsetRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCLSLogset", CreateCLSLogsetResponse.class);
+    }
+
+    /**
+     *Create a new CLS log topic under VOD
+     * @param req CreateCLSTopicRequest
+     * @return CreateCLSTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateCLSTopicResponse CreateCLSTopic(CreateCLSTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateCLSTopic", CreateCLSTopicResponse.class);
+    }
+
+    /**
      ** This API is used to categorize media assets for management;
 * It does not affect the categories of existing media assets. If you want to modify the category of a media asset, call the [ModifyMediaInfo](https://intl.cloud.tencent.com/document/product/266/31762?from_cn_redirect=1) API.
 * There can be up to 4 levels of categories.
@@ -1233,6 +1255,19 @@ Playback statistics only target VOD domains (EdgeOne domain name distribution is
     public DescribeDailyPlayStatFileListResponse DescribeDailyPlayStatFileList(DescribeDailyPlayStatFileListRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeDailyPlayStatFileList", DescribeDailyPlayStatFileListResponse.class);
+    }
+
+    /**
+     *This API is used to query the default distribution configuration.
+* Domain name and distribution protocol, which are the domain name and protocol in the media file distribution URL. Media files are distributed according to the default distribution configuration.
+Playback key, used to calculate player signature.
+     * @param req DescribeDefaultDistributionConfigRequest
+     * @return DescribeDefaultDistributionConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDefaultDistributionConfigResponse DescribeDefaultDistributionConfig(DescribeDefaultDistributionConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDefaultDistributionConfig", DescribeDefaultDistributionConfigResponse.class);
     }
 
     /**

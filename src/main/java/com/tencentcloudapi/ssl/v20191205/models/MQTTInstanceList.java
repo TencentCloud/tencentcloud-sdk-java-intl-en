@@ -21,70 +21,122 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.annotations.Expose;
 import java.util.HashMap;
 
-public class TCBHostService extends AbstractModel {
+public class MQTTInstanceList extends AbstractModel {
 
     /**
-    * Instance list
+    * Region.
+    */
+    @SerializedName("Region")
+    @Expose
+    private String Region;
+
+    /**
+    * Instance details
     */
     @SerializedName("InstanceList")
     @Expose
-    private TCBHostInstance [] InstanceList;
+    private MQTTInstanceDetail [] InstanceList;
 
     /**
-    * Quantity.
+    * Total count in the region
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get Instance list 
-     * @return InstanceList Instance list
+    * Error message
+    */
+    @SerializedName("Error")
+    @Expose
+    private String Error;
+
+    /**
+     * Get Region. 
+     * @return Region Region.
      */
-    public TCBHostInstance [] getInstanceList() {
+    public String getRegion() {
+        return this.Region;
+    }
+
+    /**
+     * Set Region.
+     * @param Region Region.
+     */
+    public void setRegion(String Region) {
+        this.Region = Region;
+    }
+
+    /**
+     * Get Instance details 
+     * @return InstanceList Instance details
+     */
+    public MQTTInstanceDetail [] getInstanceList() {
         return this.InstanceList;
     }
 
     /**
-     * Set Instance list
-     * @param InstanceList Instance list
+     * Set Instance details
+     * @param InstanceList Instance details
      */
-    public void setInstanceList(TCBHostInstance [] InstanceList) {
+    public void setInstanceList(MQTTInstanceDetail [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get Quantity. 
-     * @return TotalCount Quantity.
+     * Get Total count in the region 
+     * @return TotalCount Total count in the region
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Quantity.
-     * @param TotalCount Quantity.
+     * Set Total count in the region
+     * @param TotalCount Total count in the region
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
-    public TCBHostService() {
+    /**
+     * Get Error message 
+     * @return Error Error message
+     */
+    public String getError() {
+        return this.Error;
+    }
+
+    /**
+     * Set Error message
+     * @param Error Error message
+     */
+    public void setError(String Error) {
+        this.Error = Error;
+    }
+
+    public MQTTInstanceList() {
     }
 
     /**
      * NOTE: Any ambiguous key set via .set("AnyKey", "value") will be a shallow copy,
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
-    public TCBHostService(TCBHostService source) {
+    public MQTTInstanceList(MQTTInstanceList source) {
+        if (source.Region != null) {
+            this.Region = new String(source.Region);
+        }
         if (source.InstanceList != null) {
-            this.InstanceList = new TCBHostInstance[source.InstanceList.length];
+            this.InstanceList = new MQTTInstanceDetail[source.InstanceList.length];
             for (int i = 0; i < source.InstanceList.length; i++) {
-                this.InstanceList[i] = new TCBHostInstance(source.InstanceList[i]);
+                this.InstanceList[i] = new MQTTInstanceDetail(source.InstanceList[i]);
             }
         }
         if (source.TotalCount != null) {
             this.TotalCount = new Long(source.TotalCount);
+        }
+        if (source.Error != null) {
+            this.Error = new String(source.Error);
         }
     }
 
@@ -93,8 +145,10 @@ public class TCBHostService extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Region", this.Region);
         this.setParamArrayObj(map, prefix + "InstanceList.", this.InstanceList);
         this.setParamSimple(map, prefix + "TotalCount", this.TotalCount);
+        this.setParamSimple(map, prefix + "Error", this.Error);
 
     }
 }

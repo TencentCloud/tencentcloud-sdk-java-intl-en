@@ -25,7 +25,7 @@ public class DescribeTaskStatusRequest extends AbstractModel {
 
     /**
     * Task ID obtained from the CreateRecTask API, which is used to obtain the task status and results.
-** Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours. **
+**Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours.**
     */
     @SerializedName("TaskId")
     @Expose
@@ -33,9 +33,9 @@ public class DescribeTaskStatusRequest extends AbstractModel {
 
     /**
      * Get Task ID obtained from the CreateRecTask API, which is used to obtain the task status and results.
-** Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours. ** 
+**Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours.** 
      * @return TaskId Task ID obtained from the CreateRecTask API, which is used to obtain the task status and results.
-** Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours. **
+**Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours.**
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -43,9 +43,9 @@ public class DescribeTaskStatusRequest extends AbstractModel {
 
     /**
      * Set Task ID obtained from the CreateRecTask API, which is used to obtain the task status and results.
-** Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours. **
+**Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours.**
      * @param TaskId Task ID obtained from the CreateRecTask API, which is used to obtain the task status and results.
-** Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours. **
+**Note: A task is valid for 24 hours. Do not query the results with the tasks that have existed for more than 24 hours.**
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

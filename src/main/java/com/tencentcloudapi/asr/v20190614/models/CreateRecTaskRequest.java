@@ -25,19 +25,19 @@ public class CreateRecTaskRequest extends AbstractModel {
 
     /**
     * Engine model type.
-Each recognition engine adopts a specific billing plan. Engines marked with "large model version" adopt the large model billing plan. For product billing instructions, [click here] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1).
+Each recognition engine adopts a specific billing plan. Engines marked with "large model version" adopt the large model billing plan. For product billing instructions, [click here](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1).
 
 
-Note: If you want to recognize telecommunication audio but find that a 16k engine is required, you can use a 16k engine as described below for recognition. However, ** the 16k engines are not trained for recognizing telecommunication audio. Therefore, the recognition results cannot be guaranteed. You need to check whether the recognition results can be used. **
+Note: If you want to recognize telecommunication audio but find that a 16k engine is required, you can use a 16k engine as described below for recognition. However, **the 16k engines are not trained for recognizing telecommunication audio. Therefore, the recognition results cannot be guaranteed. You need to check whether the recognition results can be used.**
 
 Engines for general scenarios:
-** Note: Use 16k engines for scenarios other than telecommunication. **
-** 16k_zh_large: ** Engine (large model version) for Mandarin, Chinese dialects, and English. This engine supports recognizing audio in Chinese, English, and [various Chinese dialects] (https://intl.cloud.tencent.com/document/product/1093/35682?from_cn_redirect=1). It has a large number of parameters, enhanced performance, and greatly improved recognition accuracy for low-quality audio with loud noise, too much echo, low voice volume, or faint voices. [Click here] (https://console.cloud.tencent.com/asr/demonstrate) to compare the recognition performance of the 16k_zh engine and this one.
-** 16k_multi_lang: ** Engine (large model version) for multiple languages. This engine supports recognizing audio in English, Japanese, Korean, Arabic, Filipino, French, Hindi, Indonesian, Malay, Portuguese, Spanish, Thai, Turkish, Vietnamese, and German (sentence-level or paragraph-level).
-** 16k_zh-PY: ** Engine for Chinese, English, and Cantonese. The engine supports recognizing audio in Mandarin, English, and Cantonese at the same time.
-** 16k_ms: ** Engine for Malay.
-** 16k_id: ** Engine for Indonesian.
-** 16k_th: ** Engine for Thai.
+**Note: Use 16k engines for scenarios other than telecommunication.**
+**16k_zh_large:** Engine (large model version) for Mandarin, Chinese dialects, and English. This engine supports recognizing audio in Chinese, English, and [various Chinese dialects](https://intl.cloud.tencent.com/document/product/1093/35682?from_cn_redirect=1). It has a large number of parameters, enhanced performance, and greatly improved recognition accuracy for low-quality audio with loud noise, too much echo, low voice volume, or faint voices. [Click here](https://console.cloud.tencent.com/asr/demonstrate) to compare the recognition performance of the 16k_zh engine and this one.
+**16k_multi_lang:** Engine (large model version) for multiple languages. This engine supports recognizing audio in English, Japanese, Korean, Arabic, Filipino, French, Hindi, Indonesian, Malay, Portuguese, Spanish, Thai, Turkish, Vietnamese, and German (sentence-level or paragraph-level).
+**16k_zh-PY:** Engine for Chinese, English, and Cantonese. The engine supports recognizing audio in Mandarin, English, and Cantonese at the same time.
+**16k_ms:** Engine for Malay.
+**16k_id:** Engine for Indonesian.
+**16k_th:** Engine for Thai.
     */
     @SerializedName("EngineModelType")
     @Expose
@@ -45,12 +45,12 @@ Engines for general scenarios:
 
     /**
     * Number of recognition channels.
-1: Mono. (16k engines only support mono. ** Do no t** set to stereo.)
+1: Mono. (16k engines only support mono.**Do no t** set to stereo.)
 2: Stereo. (Stereo is supported only for 8k engines, and the two channels should correspond to the respective communication parties.)
 
 Note:
-16k engines: Only support mono. ** ChannelNum should be set to 1 **.
-8k engines: Support both mono and stereo. ** It is recommended to set ChannelNum to 2 (indicating stereo) **. Stereo can physically distinguish speakers to avoid recognition mistakes caused by overlapping speech. It can provide the best speaker separation and recognition effects. Once stereo is set, the speakers are automatically separated. ** You do not need to enable the speaker separation feature **. You can use the default values for related parameters (** SpeakerDiarization and SpeakerNumber **). For speakerId in the returned ResultDetail, the value 0 represents the left channel, and the value 1 represents the right channel.
+16k engines: Only support mono.**ChannelNum should be set to 1.**
+8k engines: Support both mono and stereo. **It is recommended to set ChannelNum to 2 (indicating stereo)**. Stereo can physically distinguish speakers to avoid recognition mistakes caused by overlapping speech. It can provide the best speaker separation and recognition effects. Once stereo is set, the speakers are automatically separated. **You do not need to enable the speaker separation feature**. You can use the default values for related parameters (**SpeakerDiarization and SpeakerNumber**). For speakerId in the returned ResultDetail, the value 0 represents the left channel, and the value 1 represents the right channel.
     */
     @SerializedName("ChannelNum")
     @Expose
@@ -58,16 +58,16 @@ Note:
 
     /**
     * Format of the returned recognition result.
-0: The basic recognition result (containing only valid voice timestamps but no word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail)).
-1: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps and speech speed value but ** no punctuation **).
-2: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **).
-3: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The recognition results are segmented by punctuation. ** This format applies to subtitle scenarios **.
-4: ** [Value-added paid feature] ** The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The recognition results are segmented by NLP semantics. ** This format applies to scenarios such as meeting and court record transcription ** and is supported only for 8k_zh and 16k_zh engines.
-5: ** [Value-added paid feature] ** Basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The oral-to-written transcription result is also output, which has excluded modal particles and consecutive identical words, optimized expressions, and corrected speech mistakes. ** This format applies to scenarios of generating minutes for online and offline meetings** and is supported only for 8k_zh and 16k_zh engines.
+0: The basic recognition result (containing only valid voice timestamps but no word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail)).
+1: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps and speech speed value but **no punctuation**).
+2: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**).
+3: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The recognition results are segmented by punctuation. **This format applies to subtitle scenarios**.
+4: **[Value-added paid feature]** The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The recognition results are segmented by NLP semantics. **This format applies to scenarios such as meeting and court record transcription** and is supported only for 8k_zh and 16k_zh engines.
+5: **[Value-added paid feature]** Basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The oral-to-written transcription result is also output, which has excluded modal particles and consecutive identical words, optimized expressions, and corrected speech mistakes. **This format applies to scenarios of generating minutes for online and offline meetings** and is supported only for 8k_zh and 16k_zh engines.
 
 Notes:
-If this parameter is set to 4, make sure that a [semantics-based segmentation resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. ** If post-payment is enabled and this parameter is set to 4, [automatic billing] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply **.
-If this parameter is set to 5, make sure that an [oral-to-written resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. ** If post-payment is enabled and this parameter is set to 5, [automatic billing] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply **.
+If this parameter is set to 4, make sure that a [semantics-based segmentation resource package](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. **If post-payment is enabled and this parameter is set to 4, [automatic billing](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply**.
+If this parameter is set to 5, make sure that an [oral-to-written resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. **If post-payment is enabled and this parameter is set to 5, [automatic billing](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply**.
     */
     @SerializedName("ResTextFormat")
     @Expose
@@ -84,7 +84,7 @@ If this parameter is set to 5, make sure that an [oral-to-written resource packa
 
     /**
     * Audio file Base64 code.
-** This parameter is required if SourceType is set to 1. Otherwise, it can be left blank. **
+**This parameter is required if SourceType is set to 1. Otherwise, it can be left blank.**
 
 Note: The audio data size cannot exceed 5 MB.
     */
@@ -101,7 +101,7 @@ Note: The audio data size cannot exceed 5 MB.
 
     /**
     * Audio URL. (The audio should be downloadable via a public network browser.)
-** This parameter is required if SourceType is set to 0. Otherwise, it can be left blank. **
+**This parameter is required if SourceType is set to 0. Otherwise, it can be left blank.**
 
 Notes:
 1. Make sure that the total audio duration of recording files does not exceed 5 hours. Otherwise, recognition may fail.
@@ -115,7 +115,7 @@ Notes:
     * Callback URL
 
 User-defined service URL for receiving recognition results.
-For the callback format and content, see [Callback Description] (https://intl.cloud.tencent.com/document/product/1093/52632?from_cn_redirect=1).
+For the callback format and content, see [Callback Description](https://intl.cloud.tencent.com/document/product/1093/52632?from_cn_redirect=1).
 
 Notes:
 
@@ -133,7 +133,7 @@ Notes:
 The default value is 0.
 
 Note:
-If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default values for corresponding parameters as stated in the ** ChannelNum ** parameter description.
+If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default values for corresponding parameters as stated in the **ChannelNum** parameter description.
     */
     @SerializedName("SpeakerDiarization")
     @Expose
@@ -141,7 +141,7 @@ If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default val
 
     /**
     * Number of speakers to be separated.
-** Speaker separation must be enabled. Otherwise, this parameter does not take effect. ** Value range: 0-10.
+**Speaker separation must be enabled. Otherwise, this parameter does not take effect.** Value range: 0-10.
 0: Automatic separation. (Up to 20 speakers can be separated.)
 1-10: Specify the number of speakers.
 The default value is 0.
@@ -204,7 +204,7 @@ The default value is 1.
     * Dirty word filtering (supported only for engines for recognizing audio in Mandarin).
 0: Do not filter out dirty words.
 1: Filter out dirty words.
-2: Replace dirty words with *.
+2: Replace dirty words with .
 The default value is 0.
     */
     @SerializedName("FilterDirty")
@@ -235,7 +235,7 @@ The default value is 0.
 
     /**
     * The maximum number of characters per line (supported only for engines for recognizing audio in Mandarin). A punctuation mark is added if this limit is reached.
-** This parameter can control the maximum number of characters per line, which applies to subtitle generation scenarios. ** Value range: [6,40].
+**This parameter can control the maximum number of characters per line, which applies to subtitle generation scenarios.** Value range: [6,40].
 0: Disable this feature.
 The default value is 0.
 
@@ -246,7 +246,7 @@ Note: To enable this feature, ResTextFormat should be set to 3. The recognition 
     private Long SentenceMaxLength;
 
     /**
-    * Additional parameter. ** (This parameter is meaningless. Ignore it.) **
+    * Additional parameter. **(This parameter is meaningless. Ignore it.)**
     */
     @SerializedName("Extra")
     @Expose
@@ -294,33 +294,33 @@ Notes:
 
     /**
      * Get Engine model type.
-Each recognition engine adopts a specific billing plan. Engines marked with "large model version" adopt the large model billing plan. For product billing instructions, [click here] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1).
+Each recognition engine adopts a specific billing plan. Engines marked with "large model version" adopt the large model billing plan. For product billing instructions, [click here](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1).
 
 
-Note: If you want to recognize telecommunication audio but find that a 16k engine is required, you can use a 16k engine as described below for recognition. However, ** the 16k engines are not trained for recognizing telecommunication audio. Therefore, the recognition results cannot be guaranteed. You need to check whether the recognition results can be used. **
+Note: If you want to recognize telecommunication audio but find that a 16k engine is required, you can use a 16k engine as described below for recognition. However, **the 16k engines are not trained for recognizing telecommunication audio. Therefore, the recognition results cannot be guaranteed. You need to check whether the recognition results can be used.**
 
 Engines for general scenarios:
-** Note: Use 16k engines for scenarios other than telecommunication. **
-** 16k_zh_large: ** Engine (large model version) for Mandarin, Chinese dialects, and English. This engine supports recognizing audio in Chinese, English, and [various Chinese dialects] (https://intl.cloud.tencent.com/document/product/1093/35682?from_cn_redirect=1). It has a large number of parameters, enhanced performance, and greatly improved recognition accuracy for low-quality audio with loud noise, too much echo, low voice volume, or faint voices. [Click here] (https://console.cloud.tencent.com/asr/demonstrate) to compare the recognition performance of the 16k_zh engine and this one.
-** 16k_multi_lang: ** Engine (large model version) for multiple languages. This engine supports recognizing audio in English, Japanese, Korean, Arabic, Filipino, French, Hindi, Indonesian, Malay, Portuguese, Spanish, Thai, Turkish, Vietnamese, and German (sentence-level or paragraph-level).
-** 16k_zh-PY: ** Engine for Chinese, English, and Cantonese. The engine supports recognizing audio in Mandarin, English, and Cantonese at the same time.
-** 16k_ms: ** Engine for Malay.
-** 16k_id: ** Engine for Indonesian.
-** 16k_th: ** Engine for Thai. 
+**Note: Use 16k engines for scenarios other than telecommunication.**
+**16k_zh_large:** Engine (large model version) for Mandarin, Chinese dialects, and English. This engine supports recognizing audio in Chinese, English, and [various Chinese dialects](https://intl.cloud.tencent.com/document/product/1093/35682?from_cn_redirect=1). It has a large number of parameters, enhanced performance, and greatly improved recognition accuracy for low-quality audio with loud noise, too much echo, low voice volume, or faint voices. [Click here](https://console.cloud.tencent.com/asr/demonstrate) to compare the recognition performance of the 16k_zh engine and this one.
+**16k_multi_lang:** Engine (large model version) for multiple languages. This engine supports recognizing audio in English, Japanese, Korean, Arabic, Filipino, French, Hindi, Indonesian, Malay, Portuguese, Spanish, Thai, Turkish, Vietnamese, and German (sentence-level or paragraph-level).
+**16k_zh-PY:** Engine for Chinese, English, and Cantonese. The engine supports recognizing audio in Mandarin, English, and Cantonese at the same time.
+**16k_ms:** Engine for Malay.
+**16k_id:** Engine for Indonesian.
+**16k_th:** Engine for Thai. 
      * @return EngineModelType Engine model type.
-Each recognition engine adopts a specific billing plan. Engines marked with "large model version" adopt the large model billing plan. For product billing instructions, [click here] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1).
+Each recognition engine adopts a specific billing plan. Engines marked with "large model version" adopt the large model billing plan. For product billing instructions, [click here](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1).
 
 
-Note: If you want to recognize telecommunication audio but find that a 16k engine is required, you can use a 16k engine as described below for recognition. However, ** the 16k engines are not trained for recognizing telecommunication audio. Therefore, the recognition results cannot be guaranteed. You need to check whether the recognition results can be used. **
+Note: If you want to recognize telecommunication audio but find that a 16k engine is required, you can use a 16k engine as described below for recognition. However, **the 16k engines are not trained for recognizing telecommunication audio. Therefore, the recognition results cannot be guaranteed. You need to check whether the recognition results can be used.**
 
 Engines for general scenarios:
-** Note: Use 16k engines for scenarios other than telecommunication. **
-** 16k_zh_large: ** Engine (large model version) for Mandarin, Chinese dialects, and English. This engine supports recognizing audio in Chinese, English, and [various Chinese dialects] (https://intl.cloud.tencent.com/document/product/1093/35682?from_cn_redirect=1). It has a large number of parameters, enhanced performance, and greatly improved recognition accuracy for low-quality audio with loud noise, too much echo, low voice volume, or faint voices. [Click here] (https://console.cloud.tencent.com/asr/demonstrate) to compare the recognition performance of the 16k_zh engine and this one.
-** 16k_multi_lang: ** Engine (large model version) for multiple languages. This engine supports recognizing audio in English, Japanese, Korean, Arabic, Filipino, French, Hindi, Indonesian, Malay, Portuguese, Spanish, Thai, Turkish, Vietnamese, and German (sentence-level or paragraph-level).
-** 16k_zh-PY: ** Engine for Chinese, English, and Cantonese. The engine supports recognizing audio in Mandarin, English, and Cantonese at the same time.
-** 16k_ms: ** Engine for Malay.
-** 16k_id: ** Engine for Indonesian.
-** 16k_th: ** Engine for Thai.
+**Note: Use 16k engines for scenarios other than telecommunication.**
+**16k_zh_large:** Engine (large model version) for Mandarin, Chinese dialects, and English. This engine supports recognizing audio in Chinese, English, and [various Chinese dialects](https://intl.cloud.tencent.com/document/product/1093/35682?from_cn_redirect=1). It has a large number of parameters, enhanced performance, and greatly improved recognition accuracy for low-quality audio with loud noise, too much echo, low voice volume, or faint voices. [Click here](https://console.cloud.tencent.com/asr/demonstrate) to compare the recognition performance of the 16k_zh engine and this one.
+**16k_multi_lang:** Engine (large model version) for multiple languages. This engine supports recognizing audio in English, Japanese, Korean, Arabic, Filipino, French, Hindi, Indonesian, Malay, Portuguese, Spanish, Thai, Turkish, Vietnamese, and German (sentence-level or paragraph-level).
+**16k_zh-PY:** Engine for Chinese, English, and Cantonese. The engine supports recognizing audio in Mandarin, English, and Cantonese at the same time.
+**16k_ms:** Engine for Malay.
+**16k_id:** Engine for Indonesian.
+**16k_th:** Engine for Thai.
      */
     public String getEngineModelType() {
         return this.EngineModelType;
@@ -328,33 +328,33 @@ Engines for general scenarios:
 
     /**
      * Set Engine model type.
-Each recognition engine adopts a specific billing plan. Engines marked with "large model version" adopt the large model billing plan. For product billing instructions, [click here] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1).
+Each recognition engine adopts a specific billing plan. Engines marked with "large model version" adopt the large model billing plan. For product billing instructions, [click here](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1).
 
 
-Note: If you want to recognize telecommunication audio but find that a 16k engine is required, you can use a 16k engine as described below for recognition. However, ** the 16k engines are not trained for recognizing telecommunication audio. Therefore, the recognition results cannot be guaranteed. You need to check whether the recognition results can be used. **
+Note: If you want to recognize telecommunication audio but find that a 16k engine is required, you can use a 16k engine as described below for recognition. However, **the 16k engines are not trained for recognizing telecommunication audio. Therefore, the recognition results cannot be guaranteed. You need to check whether the recognition results can be used.**
 
 Engines for general scenarios:
-** Note: Use 16k engines for scenarios other than telecommunication. **
-** 16k_zh_large: ** Engine (large model version) for Mandarin, Chinese dialects, and English. This engine supports recognizing audio in Chinese, English, and [various Chinese dialects] (https://intl.cloud.tencent.com/document/product/1093/35682?from_cn_redirect=1). It has a large number of parameters, enhanced performance, and greatly improved recognition accuracy for low-quality audio with loud noise, too much echo, low voice volume, or faint voices. [Click here] (https://console.cloud.tencent.com/asr/demonstrate) to compare the recognition performance of the 16k_zh engine and this one.
-** 16k_multi_lang: ** Engine (large model version) for multiple languages. This engine supports recognizing audio in English, Japanese, Korean, Arabic, Filipino, French, Hindi, Indonesian, Malay, Portuguese, Spanish, Thai, Turkish, Vietnamese, and German (sentence-level or paragraph-level).
-** 16k_zh-PY: ** Engine for Chinese, English, and Cantonese. The engine supports recognizing audio in Mandarin, English, and Cantonese at the same time.
-** 16k_ms: ** Engine for Malay.
-** 16k_id: ** Engine for Indonesian.
-** 16k_th: ** Engine for Thai.
+**Note: Use 16k engines for scenarios other than telecommunication.**
+**16k_zh_large:** Engine (large model version) for Mandarin, Chinese dialects, and English. This engine supports recognizing audio in Chinese, English, and [various Chinese dialects](https://intl.cloud.tencent.com/document/product/1093/35682?from_cn_redirect=1). It has a large number of parameters, enhanced performance, and greatly improved recognition accuracy for low-quality audio with loud noise, too much echo, low voice volume, or faint voices. [Click here](https://console.cloud.tencent.com/asr/demonstrate) to compare the recognition performance of the 16k_zh engine and this one.
+**16k_multi_lang:** Engine (large model version) for multiple languages. This engine supports recognizing audio in English, Japanese, Korean, Arabic, Filipino, French, Hindi, Indonesian, Malay, Portuguese, Spanish, Thai, Turkish, Vietnamese, and German (sentence-level or paragraph-level).
+**16k_zh-PY:** Engine for Chinese, English, and Cantonese. The engine supports recognizing audio in Mandarin, English, and Cantonese at the same time.
+**16k_ms:** Engine for Malay.
+**16k_id:** Engine for Indonesian.
+**16k_th:** Engine for Thai.
      * @param EngineModelType Engine model type.
-Each recognition engine adopts a specific billing plan. Engines marked with "large model version" adopt the large model billing plan. For product billing instructions, [click here] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1).
+Each recognition engine adopts a specific billing plan. Engines marked with "large model version" adopt the large model billing plan. For product billing instructions, [click here](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1).
 
 
-Note: If you want to recognize telecommunication audio but find that a 16k engine is required, you can use a 16k engine as described below for recognition. However, ** the 16k engines are not trained for recognizing telecommunication audio. Therefore, the recognition results cannot be guaranteed. You need to check whether the recognition results can be used. **
+Note: If you want to recognize telecommunication audio but find that a 16k engine is required, you can use a 16k engine as described below for recognition. However, **the 16k engines are not trained for recognizing telecommunication audio. Therefore, the recognition results cannot be guaranteed. You need to check whether the recognition results can be used.**
 
 Engines for general scenarios:
-** Note: Use 16k engines for scenarios other than telecommunication. **
-** 16k_zh_large: ** Engine (large model version) for Mandarin, Chinese dialects, and English. This engine supports recognizing audio in Chinese, English, and [various Chinese dialects] (https://intl.cloud.tencent.com/document/product/1093/35682?from_cn_redirect=1). It has a large number of parameters, enhanced performance, and greatly improved recognition accuracy for low-quality audio with loud noise, too much echo, low voice volume, or faint voices. [Click here] (https://console.cloud.tencent.com/asr/demonstrate) to compare the recognition performance of the 16k_zh engine and this one.
-** 16k_multi_lang: ** Engine (large model version) for multiple languages. This engine supports recognizing audio in English, Japanese, Korean, Arabic, Filipino, French, Hindi, Indonesian, Malay, Portuguese, Spanish, Thai, Turkish, Vietnamese, and German (sentence-level or paragraph-level).
-** 16k_zh-PY: ** Engine for Chinese, English, and Cantonese. The engine supports recognizing audio in Mandarin, English, and Cantonese at the same time.
-** 16k_ms: ** Engine for Malay.
-** 16k_id: ** Engine for Indonesian.
-** 16k_th: ** Engine for Thai.
+**Note: Use 16k engines for scenarios other than telecommunication.**
+**16k_zh_large:** Engine (large model version) for Mandarin, Chinese dialects, and English. This engine supports recognizing audio in Chinese, English, and [various Chinese dialects](https://intl.cloud.tencent.com/document/product/1093/35682?from_cn_redirect=1). It has a large number of parameters, enhanced performance, and greatly improved recognition accuracy for low-quality audio with loud noise, too much echo, low voice volume, or faint voices. [Click here](https://console.cloud.tencent.com/asr/demonstrate) to compare the recognition performance of the 16k_zh engine and this one.
+**16k_multi_lang:** Engine (large model version) for multiple languages. This engine supports recognizing audio in English, Japanese, Korean, Arabic, Filipino, French, Hindi, Indonesian, Malay, Portuguese, Spanish, Thai, Turkish, Vietnamese, and German (sentence-level or paragraph-level).
+**16k_zh-PY:** Engine for Chinese, English, and Cantonese. The engine supports recognizing audio in Mandarin, English, and Cantonese at the same time.
+**16k_ms:** Engine for Malay.
+**16k_id:** Engine for Indonesian.
+**16k_th:** Engine for Thai.
      */
     public void setEngineModelType(String EngineModelType) {
         this.EngineModelType = EngineModelType;
@@ -362,19 +362,19 @@ Engines for general scenarios:
 
     /**
      * Get Number of recognition channels.
-1: Mono. (16k engines only support mono. ** Do no t** set to stereo.)
+1: Mono. (16k engines only support mono.**Do no t** set to stereo.)
 2: Stereo. (Stereo is supported only for 8k engines, and the two channels should correspond to the respective communication parties.)
 
 Note:
-16k engines: Only support mono. ** ChannelNum should be set to 1 **.
-8k engines: Support both mono and stereo. ** It is recommended to set ChannelNum to 2 (indicating stereo) **. Stereo can physically distinguish speakers to avoid recognition mistakes caused by overlapping speech. It can provide the best speaker separation and recognition effects. Once stereo is set, the speakers are automatically separated. ** You do not need to enable the speaker separation feature **. You can use the default values for related parameters (** SpeakerDiarization and SpeakerNumber **). For speakerId in the returned ResultDetail, the value 0 represents the left channel, and the value 1 represents the right channel. 
+16k engines: Only support mono.**ChannelNum should be set to 1.**
+8k engines: Support both mono and stereo. **It is recommended to set ChannelNum to 2 (indicating stereo)**. Stereo can physically distinguish speakers to avoid recognition mistakes caused by overlapping speech. It can provide the best speaker separation and recognition effects. Once stereo is set, the speakers are automatically separated. **You do not need to enable the speaker separation feature**. You can use the default values for related parameters (**SpeakerDiarization and SpeakerNumber**). For speakerId in the returned ResultDetail, the value 0 represents the left channel, and the value 1 represents the right channel. 
      * @return ChannelNum Number of recognition channels.
-1: Mono. (16k engines only support mono. ** Do no t** set to stereo.)
+1: Mono. (16k engines only support mono.**Do no t** set to stereo.)
 2: Stereo. (Stereo is supported only for 8k engines, and the two channels should correspond to the respective communication parties.)
 
 Note:
-16k engines: Only support mono. ** ChannelNum should be set to 1 **.
-8k engines: Support both mono and stereo. ** It is recommended to set ChannelNum to 2 (indicating stereo) **. Stereo can physically distinguish speakers to avoid recognition mistakes caused by overlapping speech. It can provide the best speaker separation and recognition effects. Once stereo is set, the speakers are automatically separated. ** You do not need to enable the speaker separation feature **. You can use the default values for related parameters (** SpeakerDiarization and SpeakerNumber **). For speakerId in the returned ResultDetail, the value 0 represents the left channel, and the value 1 represents the right channel.
+16k engines: Only support mono.**ChannelNum should be set to 1.**
+8k engines: Support both mono and stereo. **It is recommended to set ChannelNum to 2 (indicating stereo)**. Stereo can physically distinguish speakers to avoid recognition mistakes caused by overlapping speech. It can provide the best speaker separation and recognition effects. Once stereo is set, the speakers are automatically separated. **You do not need to enable the speaker separation feature**. You can use the default values for related parameters (**SpeakerDiarization and SpeakerNumber**). For speakerId in the returned ResultDetail, the value 0 represents the left channel, and the value 1 represents the right channel.
      */
     public Long getChannelNum() {
         return this.ChannelNum;
@@ -382,19 +382,19 @@ Note:
 
     /**
      * Set Number of recognition channels.
-1: Mono. (16k engines only support mono. ** Do no t** set to stereo.)
+1: Mono. (16k engines only support mono.**Do no t** set to stereo.)
 2: Stereo. (Stereo is supported only for 8k engines, and the two channels should correspond to the respective communication parties.)
 
 Note:
-16k engines: Only support mono. ** ChannelNum should be set to 1 **.
-8k engines: Support both mono and stereo. ** It is recommended to set ChannelNum to 2 (indicating stereo) **. Stereo can physically distinguish speakers to avoid recognition mistakes caused by overlapping speech. It can provide the best speaker separation and recognition effects. Once stereo is set, the speakers are automatically separated. ** You do not need to enable the speaker separation feature **. You can use the default values for related parameters (** SpeakerDiarization and SpeakerNumber **). For speakerId in the returned ResultDetail, the value 0 represents the left channel, and the value 1 represents the right channel.
+16k engines: Only support mono.**ChannelNum should be set to 1.**
+8k engines: Support both mono and stereo. **It is recommended to set ChannelNum to 2 (indicating stereo)**. Stereo can physically distinguish speakers to avoid recognition mistakes caused by overlapping speech. It can provide the best speaker separation and recognition effects. Once stereo is set, the speakers are automatically separated. **You do not need to enable the speaker separation feature**. You can use the default values for related parameters (**SpeakerDiarization and SpeakerNumber**). For speakerId in the returned ResultDetail, the value 0 represents the left channel, and the value 1 represents the right channel.
      * @param ChannelNum Number of recognition channels.
-1: Mono. (16k engines only support mono. ** Do no t** set to stereo.)
+1: Mono. (16k engines only support mono.**Do no t** set to stereo.)
 2: Stereo. (Stereo is supported only for 8k engines, and the two channels should correspond to the respective communication parties.)
 
 Note:
-16k engines: Only support mono. ** ChannelNum should be set to 1 **.
-8k engines: Support both mono and stereo. ** It is recommended to set ChannelNum to 2 (indicating stereo) **. Stereo can physically distinguish speakers to avoid recognition mistakes caused by overlapping speech. It can provide the best speaker separation and recognition effects. Once stereo is set, the speakers are automatically separated. ** You do not need to enable the speaker separation feature **. You can use the default values for related parameters (** SpeakerDiarization and SpeakerNumber **). For speakerId in the returned ResultDetail, the value 0 represents the left channel, and the value 1 represents the right channel.
+16k engines: Only support mono.**ChannelNum should be set to 1.**
+8k engines: Support both mono and stereo. **It is recommended to set ChannelNum to 2 (indicating stereo)**. Stereo can physically distinguish speakers to avoid recognition mistakes caused by overlapping speech. It can provide the best speaker separation and recognition effects. Once stereo is set, the speakers are automatically separated. **You do not need to enable the speaker separation feature**. You can use the default values for related parameters (**SpeakerDiarization and SpeakerNumber**). For speakerId in the returned ResultDetail, the value 0 represents the left channel, and the value 1 represents the right channel.
      */
     public void setChannelNum(Long ChannelNum) {
         this.ChannelNum = ChannelNum;
@@ -402,27 +402,27 @@ Note:
 
     /**
      * Get Format of the returned recognition result.
-0: The basic recognition result (containing only valid voice timestamps but no word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail)).
-1: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps and speech speed value but ** no punctuation **).
-2: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **).
-3: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The recognition results are segmented by punctuation. ** This format applies to subtitle scenarios **.
-4: ** [Value-added paid feature] ** The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The recognition results are segmented by NLP semantics. ** This format applies to scenarios such as meeting and court record transcription ** and is supported only for 8k_zh and 16k_zh engines.
-5: ** [Value-added paid feature] ** Basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The oral-to-written transcription result is also output, which has excluded modal particles and consecutive identical words, optimized expressions, and corrected speech mistakes. ** This format applies to scenarios of generating minutes for online and offline meetings** and is supported only for 8k_zh and 16k_zh engines.
+0: The basic recognition result (containing only valid voice timestamps but no word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail)).
+1: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps and speech speed value but **no punctuation**).
+2: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**).
+3: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The recognition results are segmented by punctuation. **This format applies to subtitle scenarios**.
+4: **[Value-added paid feature]** The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The recognition results are segmented by NLP semantics. **This format applies to scenarios such as meeting and court record transcription** and is supported only for 8k_zh and 16k_zh engines.
+5: **[Value-added paid feature]** Basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The oral-to-written transcription result is also output, which has excluded modal particles and consecutive identical words, optimized expressions, and corrected speech mistakes. **This format applies to scenarios of generating minutes for online and offline meetings** and is supported only for 8k_zh and 16k_zh engines.
 
 Notes:
-If this parameter is set to 4, make sure that a [semantics-based segmentation resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. ** If post-payment is enabled and this parameter is set to 4, [automatic billing] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply **.
-If this parameter is set to 5, make sure that an [oral-to-written resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. ** If post-payment is enabled and this parameter is set to 5, [automatic billing] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply **. 
+If this parameter is set to 4, make sure that a [semantics-based segmentation resource package](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. **If post-payment is enabled and this parameter is set to 4, [automatic billing](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply**.
+If this parameter is set to 5, make sure that an [oral-to-written resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. **If post-payment is enabled and this parameter is set to 5, [automatic billing](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply**. 
      * @return ResTextFormat Format of the returned recognition result.
-0: The basic recognition result (containing only valid voice timestamps but no word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail)).
-1: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps and speech speed value but ** no punctuation **).
-2: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **).
-3: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The recognition results are segmented by punctuation. ** This format applies to subtitle scenarios **.
-4: ** [Value-added paid feature] ** The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The recognition results are segmented by NLP semantics. ** This format applies to scenarios such as meeting and court record transcription ** and is supported only for 8k_zh and 16k_zh engines.
-5: ** [Value-added paid feature] ** Basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The oral-to-written transcription result is also output, which has excluded modal particles and consecutive identical words, optimized expressions, and corrected speech mistakes. ** This format applies to scenarios of generating minutes for online and offline meetings** and is supported only for 8k_zh and 16k_zh engines.
+0: The basic recognition result (containing only valid voice timestamps but no word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail)).
+1: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps and speech speed value but **no punctuation**).
+2: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**).
+3: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The recognition results are segmented by punctuation. **This format applies to subtitle scenarios**.
+4: **[Value-added paid feature]** The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The recognition results are segmented by NLP semantics. **This format applies to scenarios such as meeting and court record transcription** and is supported only for 8k_zh and 16k_zh engines.
+5: **[Value-added paid feature]** Basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The oral-to-written transcription result is also output, which has excluded modal particles and consecutive identical words, optimized expressions, and corrected speech mistakes. **This format applies to scenarios of generating minutes for online and offline meetings** and is supported only for 8k_zh and 16k_zh engines.
 
 Notes:
-If this parameter is set to 4, make sure that a [semantics-based segmentation resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. ** If post-payment is enabled and this parameter is set to 4, [automatic billing] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply **.
-If this parameter is set to 5, make sure that an [oral-to-written resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. ** If post-payment is enabled and this parameter is set to 5, [automatic billing] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply **.
+If this parameter is set to 4, make sure that a [semantics-based segmentation resource package](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. **If post-payment is enabled and this parameter is set to 4, [automatic billing](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply**.
+If this parameter is set to 5, make sure that an [oral-to-written resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. **If post-payment is enabled and this parameter is set to 5, [automatic billing](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply**.
      */
     public Long getResTextFormat() {
         return this.ResTextFormat;
@@ -430,27 +430,27 @@ If this parameter is set to 5, make sure that an [oral-to-written resource packa
 
     /**
      * Set Format of the returned recognition result.
-0: The basic recognition result (containing only valid voice timestamps but no word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail)).
-1: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps and speech speed value but ** no punctuation **).
-2: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **).
-3: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The recognition results are segmented by punctuation. ** This format applies to subtitle scenarios **.
-4: ** [Value-added paid feature] ** The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The recognition results are segmented by NLP semantics. ** This format applies to scenarios such as meeting and court record transcription ** and is supported only for 8k_zh and 16k_zh engines.
-5: ** [Value-added paid feature] ** Basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The oral-to-written transcription result is also output, which has excluded modal particles and consecutive identical words, optimized expressions, and corrected speech mistakes. ** This format applies to scenarios of generating minutes for online and offline meetings** and is supported only for 8k_zh and 16k_zh engines.
+0: The basic recognition result (containing only valid voice timestamps but no word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail)).
+1: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps and speech speed value but **no punctuation**).
+2: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**).
+3: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The recognition results are segmented by punctuation. **This format applies to subtitle scenarios**.
+4: **[Value-added paid feature]** The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The recognition results are segmented by NLP semantics. **This format applies to scenarios such as meeting and court record transcription** and is supported only for 8k_zh and 16k_zh engines.
+5: **[Value-added paid feature]** Basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The oral-to-written transcription result is also output, which has excluded modal particles and consecutive identical words, optimized expressions, and corrected speech mistakes. **This format applies to scenarios of generating minutes for online and offline meetings** and is supported only for 8k_zh and 16k_zh engines.
 
 Notes:
-If this parameter is set to 4, make sure that a [semantics-based segmentation resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. ** If post-payment is enabled and this parameter is set to 4, [automatic billing] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply **.
-If this parameter is set to 5, make sure that an [oral-to-written resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. ** If post-payment is enabled and this parameter is set to 5, [automatic billing] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply **.
+If this parameter is set to 4, make sure that a [semantics-based segmentation resource package](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. **If post-payment is enabled and this parameter is set to 4, [automatic billing](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply**.
+If this parameter is set to 5, make sure that an [oral-to-written resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. **If post-payment is enabled and this parameter is set to 5, [automatic billing](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply**.
      * @param ResTextFormat Format of the returned recognition result.
-0: The basic recognition result (containing only valid voice timestamps but no word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail)).
-1: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps and speech speed value but ** no punctuation **).
-2: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **).
-3: The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The recognition results are segmented by punctuation. ** This format applies to subtitle scenarios **.
-4: ** [Value-added paid feature] ** The basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The recognition results are segmented by NLP semantics. ** This format applies to scenarios such as meeting and court record transcription ** and is supported only for 8k_zh and 16k_zh engines.
-5: ** [Value-added paid feature] ** Basic recognition result and word-level [detailed recognition result] (https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and ** punctuation **). The oral-to-written transcription result is also output, which has excluded modal particles and consecutive identical words, optimized expressions, and corrected speech mistakes. ** This format applies to scenarios of generating minutes for online and offline meetings** and is supported only for 8k_zh and 16k_zh engines.
+0: The basic recognition result (containing only valid voice timestamps but no word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail)).
+1: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps and speech speed value but **no punctuation**).
+2: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**).
+3: The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The recognition results are segmented by punctuation. **This format applies to subtitle scenarios**.
+4: **[Value-added paid feature]** The basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The recognition results are segmented by NLP semantics. **This format applies to scenarios such as meeting and court record transcription** and is supported only for 8k_zh and 16k_zh engines.
+5: **[Value-added paid feature]** Basic recognition result and word-level [detailed recognition result](https://intl.cloud.tencent.com/document/api/1093/37824?from_cn_redirect=1#SentenceDetail) (containing word-level timestamps, speech speed value, and **punctuation**). The oral-to-written transcription result is also output, which has excluded modal particles and consecutive identical words, optimized expressions, and corrected speech mistakes. **This format applies to scenarios of generating minutes for online and offline meetings** and is supported only for 8k_zh and 16k_zh engines.
 
 Notes:
-If this parameter is set to 4, make sure that a [semantics-based segmentation resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. ** If post-payment is enabled and this parameter is set to 4, [automatic billing] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply **.
-If this parameter is set to 5, make sure that an [oral-to-written resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. ** If post-payment is enabled and this parameter is set to 5, [automatic billing] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply **.
+If this parameter is set to 4, make sure that a [semantics-based segmentation resource package](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. **If post-payment is enabled and this parameter is set to 4, [automatic billing](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply**.
+If this parameter is set to 5, make sure that an [oral-to-written resource package] (https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#97ae4aa0-29a0-4066-9f07-ccaf8856a16b) is purchased for your account or that your account has enabled post-payment. **If post-payment is enabled and this parameter is set to 5, [automatic billing](https://intl.cloud.tencent.com/document/product/1093/35686?from_cn_redirect=1#d912167d-ffd5-41a9-8b1c-2e89845a6852) will apply**.
      */
     public void setResTextFormat(Long ResTextFormat) {
         this.ResTextFormat = ResTextFormat;
@@ -482,11 +482,11 @@ If this parameter is set to 5, make sure that an [oral-to-written resource packa
 
     /**
      * Get Audio file Base64 code.
-** This parameter is required if SourceType is set to 1. Otherwise, it can be left blank. **
+**This parameter is required if SourceType is set to 1. Otherwise, it can be left blank.**
 
 Note: The audio data size cannot exceed 5 MB. 
      * @return Data Audio file Base64 code.
-** This parameter is required if SourceType is set to 1. Otherwise, it can be left blank. **
+**This parameter is required if SourceType is set to 1. Otherwise, it can be left blank.**
 
 Note: The audio data size cannot exceed 5 MB.
      */
@@ -496,11 +496,11 @@ Note: The audio data size cannot exceed 5 MB.
 
     /**
      * Set Audio file Base64 code.
-** This parameter is required if SourceType is set to 1. Otherwise, it can be left blank. **
+**This parameter is required if SourceType is set to 1. Otherwise, it can be left blank.**
 
 Note: The audio data size cannot exceed 5 MB.
      * @param Data Audio file Base64 code.
-** This parameter is required if SourceType is set to 1. Otherwise, it can be left blank. **
+**This parameter is required if SourceType is set to 1. Otherwise, it can be left blank.**
 
 Note: The audio data size cannot exceed 5 MB.
      */
@@ -526,13 +526,13 @@ Note: The audio data size cannot exceed 5 MB.
 
     /**
      * Get Audio URL. (The audio should be downloadable via a public network browser.)
-** This parameter is required if SourceType is set to 0. Otherwise, it can be left blank. **
+**This parameter is required if SourceType is set to 0. Otherwise, it can be left blank.**
 
 Notes:
 1. Make sure that the total audio duration of recording files does not exceed 5 hours. Otherwise, recognition may fail.
 2. Pay attention to file download to avoid download failure. 
      * @return Url Audio URL. (The audio should be downloadable via a public network browser.)
-** This parameter is required if SourceType is set to 0. Otherwise, it can be left blank. **
+**This parameter is required if SourceType is set to 0. Otherwise, it can be left blank.**
 
 Notes:
 1. Make sure that the total audio duration of recording files does not exceed 5 hours. Otherwise, recognition may fail.
@@ -544,13 +544,13 @@ Notes:
 
     /**
      * Set Audio URL. (The audio should be downloadable via a public network browser.)
-** This parameter is required if SourceType is set to 0. Otherwise, it can be left blank. **
+**This parameter is required if SourceType is set to 0. Otherwise, it can be left blank.**
 
 Notes:
 1. Make sure that the total audio duration of recording files does not exceed 5 hours. Otherwise, recognition may fail.
 2. Pay attention to file download to avoid download failure.
      * @param Url Audio URL. (The audio should be downloadable via a public network browser.)
-** This parameter is required if SourceType is set to 0. Otherwise, it can be left blank. **
+**This parameter is required if SourceType is set to 0. Otherwise, it can be left blank.**
 
 Notes:
 1. Make sure that the total audio duration of recording files does not exceed 5 hours. Otherwise, recognition may fail.
@@ -564,7 +564,7 @@ Notes:
      * Get Callback URL
 
 User-defined service URL for receiving recognition results.
-For the callback format and content, see [Callback Description] (https://intl.cloud.tencent.com/document/product/1093/52632?from_cn_redirect=1).
+For the callback format and content, see [Callback Description](https://intl.cloud.tencent.com/document/product/1093/52632?from_cn_redirect=1).
 
 Notes:
 
@@ -573,7 +573,7 @@ Notes:
      * @return CallbackUrl Callback URL
 
 User-defined service URL for receiving recognition results.
-For the callback format and content, see [Callback Description] (https://intl.cloud.tencent.com/document/product/1093/52632?from_cn_redirect=1).
+For the callback format and content, see [Callback Description](https://intl.cloud.tencent.com/document/product/1093/52632?from_cn_redirect=1).
 
 Notes:
 
@@ -588,7 +588,7 @@ Notes:
      * Set Callback URL
 
 User-defined service URL for receiving recognition results.
-For the callback format and content, see [Callback Description] (https://intl.cloud.tencent.com/document/product/1093/52632?from_cn_redirect=1).
+For the callback format and content, see [Callback Description](https://intl.cloud.tencent.com/document/product/1093/52632?from_cn_redirect=1).
 
 Notes:
 
@@ -597,7 +597,7 @@ Notes:
      * @param CallbackUrl Callback URL
 
 User-defined service URL for receiving recognition results.
-For the callback format and content, see [Callback Description] (https://intl.cloud.tencent.com/document/product/1093/52632?from_cn_redirect=1).
+For the callback format and content, see [Callback Description](https://intl.cloud.tencent.com/document/product/1093/52632?from_cn_redirect=1).
 
 Notes:
 
@@ -615,14 +615,14 @@ Notes:
 The default value is 0.
 
 Note:
-If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default values for corresponding parameters as stated in the ** ChannelNum ** parameter description. 
+If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default values for corresponding parameters as stated in the **ChannelNum** parameter description. 
      * @return SpeakerDiarization Whether to enable speaker separation.
 0: Disable.
 1: Enable. (This value is supported only for the following engines: 8k_zh, 16k_zh, 16k_ms, 16k_en, 16k_id, 16k_zh_large, and 16k_zh_dialect. ChannelNum should be set to 1.)
 The default value is 0.
 
 Note:
-If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default values for corresponding parameters as stated in the ** ChannelNum ** parameter description.
+If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default values for corresponding parameters as stated in the **ChannelNum** parameter description.
      */
     public Long getSpeakerDiarization() {
         return this.SpeakerDiarization;
@@ -635,14 +635,14 @@ If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default val
 The default value is 0.
 
 Note:
-If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default values for corresponding parameters as stated in the ** ChannelNum ** parameter description.
+If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default values for corresponding parameters as stated in the **ChannelNum** parameter description.
      * @param SpeakerDiarization Whether to enable speaker separation.
 0: Disable.
 1: Enable. (This value is supported only for the following engines: 8k_zh, 16k_zh, 16k_ms, 16k_en, 16k_id, 16k_zh_large, and 16k_zh_dialect. ChannelNum should be set to 1.)
 The default value is 0.
 
 Note:
-If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default values for corresponding parameters as stated in the ** ChannelNum ** parameter description.
+If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default values for corresponding parameters as stated in the **ChannelNum** parameter description.
      */
     public void setSpeakerDiarization(Long SpeakerDiarization) {
         this.SpeakerDiarization = SpeakerDiarization;
@@ -650,12 +650,12 @@ If an 8k engine is used and ChannelNum is set to 2 (stereo), use the default val
 
     /**
      * Get Number of speakers to be separated.
-** Speaker separation must be enabled. Otherwise, this parameter does not take effect. ** Value range: 0-10.
+**Speaker separation must be enabled. Otherwise, this parameter does not take effect.** Value range: 0-10.
 0: Automatic separation. (Up to 20 speakers can be separated.)
 1-10: Specify the number of speakers.
 The default value is 0. 
      * @return SpeakerNumber Number of speakers to be separated.
-** Speaker separation must be enabled. Otherwise, this parameter does not take effect. ** Value range: 0-10.
+**Speaker separation must be enabled. Otherwise, this parameter does not take effect.** Value range: 0-10.
 0: Automatic separation. (Up to 20 speakers can be separated.)
 1-10: Specify the number of speakers.
 The default value is 0.
@@ -666,12 +666,12 @@ The default value is 0.
 
     /**
      * Set Number of speakers to be separated.
-** Speaker separation must be enabled. Otherwise, this parameter does not take effect. ** Value range: 0-10.
+**Speaker separation must be enabled. Otherwise, this parameter does not take effect.** Value range: 0-10.
 0: Automatic separation. (Up to 20 speakers can be separated.)
 1-10: Specify the number of speakers.
 The default value is 0.
      * @param SpeakerNumber Number of speakers to be separated.
-** Speaker separation must be enabled. Otherwise, this parameter does not take effect. ** Value range: 0-10.
+**Speaker separation must be enabled. Otherwise, this parameter does not take effect.** Value range: 0-10.
 0: Automatic separation. (Up to 20 speakers can be separated.)
 1-10: Specify the number of speakers.
 The default value is 0.
@@ -816,12 +816,12 @@ The default value is 1.
      * Get Dirty word filtering (supported only for engines for recognizing audio in Mandarin).
 0: Do not filter out dirty words.
 1: Filter out dirty words.
-2: Replace dirty words with *.
+2: Replace dirty words with .
 The default value is 0. 
      * @return FilterDirty Dirty word filtering (supported only for engines for recognizing audio in Mandarin).
 0: Do not filter out dirty words.
 1: Filter out dirty words.
-2: Replace dirty words with *.
+2: Replace dirty words with .
 The default value is 0.
      */
     public Long getFilterDirty() {
@@ -832,12 +832,12 @@ The default value is 0.
      * Set Dirty word filtering (supported only for engines for recognizing audio in Mandarin).
 0: Do not filter out dirty words.
 1: Filter out dirty words.
-2: Replace dirty words with *.
+2: Replace dirty words with .
 The default value is 0.
      * @param FilterDirty Dirty word filtering (supported only for engines for recognizing audio in Mandarin).
 0: Do not filter out dirty words.
 1: Filter out dirty words.
-2: Replace dirty words with *.
+2: Replace dirty words with .
 The default value is 0.
      */
     public void setFilterDirty(Long FilterDirty) {
@@ -910,13 +910,13 @@ The default value is 0.
 
     /**
      * Get The maximum number of characters per line (supported only for engines for recognizing audio in Mandarin). A punctuation mark is added if this limit is reached.
-** This parameter can control the maximum number of characters per line, which applies to subtitle generation scenarios. ** Value range: [6,40].
+**This parameter can control the maximum number of characters per line, which applies to subtitle generation scenarios.** Value range: [6,40].
 0: Disable this feature.
 The default value is 0.
 
 Note: To enable this feature, ResTextFormat should be set to 3. The recognition result can be obtained from FinalSentence by parsing the list in the returned ResultDetail. 
      * @return SentenceMaxLength The maximum number of characters per line (supported only for engines for recognizing audio in Mandarin). A punctuation mark is added if this limit is reached.
-** This parameter can control the maximum number of characters per line, which applies to subtitle generation scenarios. ** Value range: [6,40].
+**This parameter can control the maximum number of characters per line, which applies to subtitle generation scenarios.** Value range: [6,40].
 0: Disable this feature.
 The default value is 0.
 
@@ -928,13 +928,13 @@ Note: To enable this feature, ResTextFormat should be set to 3. The recognition 
 
     /**
      * Set The maximum number of characters per line (supported only for engines for recognizing audio in Mandarin). A punctuation mark is added if this limit is reached.
-** This parameter can control the maximum number of characters per line, which applies to subtitle generation scenarios. ** Value range: [6,40].
+**This parameter can control the maximum number of characters per line, which applies to subtitle generation scenarios.** Value range: [6,40].
 0: Disable this feature.
 The default value is 0.
 
 Note: To enable this feature, ResTextFormat should be set to 3. The recognition result can be obtained from FinalSentence by parsing the list in the returned ResultDetail.
      * @param SentenceMaxLength The maximum number of characters per line (supported only for engines for recognizing audio in Mandarin). A punctuation mark is added if this limit is reached.
-** This parameter can control the maximum number of characters per line, which applies to subtitle generation scenarios. ** Value range: [6,40].
+**This parameter can control the maximum number of characters per line, which applies to subtitle generation scenarios.** Value range: [6,40].
 0: Disable this feature.
 The default value is 0.
 
@@ -945,16 +945,16 @@ Note: To enable this feature, ResTextFormat should be set to 3. The recognition 
     }
 
     /**
-     * Get Additional parameter. ** (This parameter is meaningless. Ignore it.) ** 
-     * @return Extra Additional parameter. ** (This parameter is meaningless. Ignore it.) **
+     * Get Additional parameter. **(This parameter is meaningless. Ignore it.)** 
+     * @return Extra Additional parameter. **(This parameter is meaningless. Ignore it.)**
      */
     public String getExtra() {
         return this.Extra;
     }
 
     /**
-     * Set Additional parameter. ** (This parameter is meaningless. Ignore it.) **
-     * @param Extra Additional parameter. ** (This parameter is meaningless. Ignore it.) **
+     * Set Additional parameter. **(This parameter is meaningless. Ignore it.)**
+     * @param Extra Additional parameter. **(This parameter is meaningless. Ignore it.)**
      */
     public void setExtra(String Extra) {
         this.Extra = Extra;

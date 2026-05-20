@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class Task extends AbstractModel {
 
     /**
-    * Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
+    * Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
     */
     @SerializedName("TaskId")
     @Expose
     private Long TaskId;
 
     /**
-     * Get Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. ** 
-     * @return TaskId Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
+     * Get Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system.  
+     * @return TaskId Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
      */
     public Long getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
-     * @param TaskId Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is ** uint64 **.
-** Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. **
+     * Set Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
+     * @param TaskId Task ID. This ID can be used to obtain the recognition status and results through polling. The data type of TaskId is uint64 .
+Note: The task ID is valid for 24 hours, and duplicate task IDs of different dates may exist. Do not use task ID as the unique ID in your business system. 
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

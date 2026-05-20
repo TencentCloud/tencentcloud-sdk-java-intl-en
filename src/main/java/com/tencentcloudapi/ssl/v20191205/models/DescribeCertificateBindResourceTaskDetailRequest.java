@@ -24,175 +24,115 @@ import java.util.HashMap;
 public class DescribeCertificateBindResourceTaskDetailRequest extends AbstractModel {
 
     /**
-    * Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
+    * <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
+    * <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
     */
     @SerializedName("Limit")
     @Expose
     private String Limit;
 
     /**
-    * Current offset, default is 0.
+    * <p>Offset, defaults to 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private String Offset;
 
     /**
-    * Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
+    * <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
     */
     @SerializedName("ResourceTypes")
     @Expose
     private String [] ResourceTypes;
 
     /**
-    * Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+    * <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
     */
     @SerializedName("Regions")
     @Expose
     private String [] Regions;
 
     /**
-     * Get Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask. 
-     * @return TaskId Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
+     * Get <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p> 
+     * @return TaskId <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
-     * @param TaskId Task id, which can be used to query the result of binding cloud resources according to the task id obtained from createcertificatebindresourcesynctask.
+     * Set <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
+     * @param TaskId <p>Task ID. Query the result of binding cloud resources based on the task ID obtained from CreateCertificateBindResourceSyncTask.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100. 
-     * @return Limit The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
+     * Get <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p> 
+     * @return Limit <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
      */
     public String getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
-     * @param Limit The number of cloud resources displayed on each page. The default value is 10, and the maximum value is 100.
+     * Set <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
+     * @param Limit <p>Number of items per page, default 10, maximum value 100; total pages is the total number of instances in the resource region, that is, page 1 will pull the number of instances under each Tencent Cloud resource region up to the Limit</p>
      */
     public void setLimit(String Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Current offset, default is 0. 
-     * @return Offset Current offset, default is 0.
+     * Get <p>Offset, defaults to 0</p> 
+     * @return Offset <p>Offset, defaults to 0</p>
      */
     public String getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Current offset, default is 0.
-     * @param Offset Current offset, default is 0.
+     * Set <p>Offset, defaults to 0</p>
+     * @param Offset <p>Offset, defaults to 0</p>
      */
     public void setOffset(String Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb. 
-     * @return ResourceTypes Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
+     * Get <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p> 
+     * @return ResourceTypes <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
      */
     public String [] getResourceTypes() {
         return this.ResourceTypes;
     }
 
     /**
-     * Set Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
-     * @param ResourceTypes Result detail of queried resource type. if not provided, all will be queried. valid values include:.
-- clb.
-- cdn.
-- ddos.
-- live.
-- vod.
-- waf.
-- apigateway.
-- teo.
-- tke.
-- cos.
-- tse.
-- tcb.
+     * Set <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
+     * @param ResourceTypes <p>Query result details of the resource type. Query all if not specified. Supported values: - clb- cdn- ddos- live- vod- waf- apigateway- teo- tke- cos- tse- tcb</p>
      */
     public void setResourceTypes(String [] ResourceTypes) {
         this.ResourceTypes = ResourceTypes;
     }
 
     /**
-     * Get Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support. 
-     * @return Regions Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+     * Get <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p> 
+     * @return Regions <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
      */
     public String [] getRegions() {
         return this.Regions;
     }
 
     /**
-     * Set Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
-     * @param Regions Data of querying region list. clb, tke, waf, api gateway, tcb, cos, and tse support region query, while other resource types do not support.
+     * Set <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
+     * @param Regions <p>Query the data of region list. clb, tke, waf, API Gateway, tcb, cos, and tse support query region. Other resource types are unsupported.</p>
      */
     public void setRegions(String [] Regions) {
         this.Regions = Regions;

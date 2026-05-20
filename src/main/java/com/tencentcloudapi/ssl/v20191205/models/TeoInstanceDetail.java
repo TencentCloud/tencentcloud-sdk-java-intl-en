@@ -58,6 +58,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Status;
 
     /**
+    * Certificate encryption algorithm
+    */
+    @SerializedName("Algorithm")
+    @Expose
+    private String Algorithm;
+
+    /**
      * Get The domain. 
      * @return Host The domain.
      */
@@ -145,6 +152,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.Status = Status;
     }
 
+    /**
+     * Get Certificate encryption algorithm 
+     * @return Algorithm Certificate encryption algorithm
+     */
+    public String getAlgorithm() {
+        return this.Algorithm;
+    }
+
+    /**
+     * Set Certificate encryption algorithm
+     * @param Algorithm Certificate encryption algorithm
+     */
+    public void setAlgorithm(String Algorithm) {
+        this.Algorithm = Algorithm;
+    }
+
     public TeoInstanceDetail() {
     }
 
@@ -165,6 +188,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.Status != null) {
             this.Status = new String(source.Status);
         }
+        if (source.Algorithm != null) {
+            this.Algorithm = new String(source.Algorithm);
+        }
     }
 
 
@@ -176,6 +202,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "CertId", this.CertId);
         this.setParamSimple(map, prefix + "ZoneId", this.ZoneId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "Algorithm", this.Algorithm);
 
     }
 }

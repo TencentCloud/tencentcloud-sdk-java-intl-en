@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartAIConversationResponse extends AbstractModel {
 
     /**
-    * Used to uniquely identify a conversation task.
+    * For uniquely identifying a conversation task.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class StartAIConversationResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Used to uniquely identify a conversation task. 
-     * @return TaskId Used to uniquely identify a conversation task.
+     * Get For uniquely identifying a conversation task. 
+     * @return TaskId For uniquely identifying a conversation task.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Used to uniquely identify a conversation task.
-     * @param TaskId Used to uniquely identify a conversation task.
+     * Set For uniquely identifying a conversation task.
+     * @param TaskId For uniquely identifying a conversation task.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

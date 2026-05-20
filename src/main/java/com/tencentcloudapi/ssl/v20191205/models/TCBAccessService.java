@@ -24,56 +24,46 @@ import java.util.HashMap;
 public class TCBAccessService extends AbstractModel {
 
     /**
-    * The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Instance list
     */
     @SerializedName("InstanceList")
     @Expose
     private TCBAccessInstance [] InstanceList;
 
     /**
-    * The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Quantity.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-     * Get The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return InstanceList The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Instance list 
+     * @return InstanceList Instance list
      */
     public TCBAccessInstance [] getInstanceList() {
         return this.InstanceList;
     }
 
     /**
-     * Set The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param InstanceList The list of instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Instance list
+     * @param InstanceList Instance list
      */
     public void setInstanceList(TCBAccessInstance [] InstanceList) {
         this.InstanceList = InstanceList;
     }
 
     /**
-     * Get The instance count.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Quantity. 
+     * @return TotalCount Quantity.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount The instance count.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Quantity.
+     * @param TotalCount Quantity.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;

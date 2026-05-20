@@ -25,23 +25,20 @@ public class GatewayCertificate extends AbstractModel {
 
     /**
     * Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
+    * gateway certificate name
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Bind Domain Name
     */
     @SerializedName("BindDomains")
     @Expose
@@ -49,25 +46,21 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
     * Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
     */
     @SerializedName("CertSource")
     @Expose
     private String CertSource;
 
     /**
-    * SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
+    * Currently bound SSL certificate ID
     */
     @SerializedName("CertId")
     @Expose
     private String CertId;
 
     /**
-     * Get Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Gateway certificate ID 
      * @return Id Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getId() {
         return this.Id;
@@ -75,59 +68,47 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param Id Gateway certificate ID
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return Name Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get gateway certificate name 
+     * @return Name gateway certificate name
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param Name Gateway certificate information
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set gateway certificate name
+     * @param Name gateway certificate name
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return BindDomains Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Bind Domain Name 
+     * @return BindDomains Bind Domain Name
      */
     public String [] getBindDomains() {
         return this.BindDomains;
     }
 
     /**
-     * Set Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param BindDomains Bound domain name
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Bind Domain Name
+     * @param BindDomains Bind Domain Name
      */
     public void setBindDomains(String [] BindDomains) {
         this.BindDomains = BindDomains;
     }
 
     /**
-     * Get Certificate source
-Note: This field may return null, indicating that no valid value can be obtained. 
+     * Get Certificate source 
      * @return CertSource Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public String getCertSource() {
         return this.CertSource;
@@ -135,29 +116,23 @@ Note: This field may return null, indicating that no valid value can be obtained
 
     /**
      * Set Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
      * @param CertSource Certificate source
-Note: This field may return null, indicating that no valid value can be obtained.
      */
     public void setCertSource(String CertSource) {
         this.CertSource = CertSource;
     }
 
     /**
-     * Get SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return CertId SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get Currently bound SSL certificate ID 
+     * @return CertId Currently bound SSL certificate ID
      */
     public String getCertId() {
         return this.CertId;
     }
 
     /**
-     * Set SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param CertId SSL certificate ID that is currently bound
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set Currently bound SSL certificate ID
+     * @param CertId Currently bound SSL certificate ID
      */
     public void setCertId(String CertId) {
         this.CertId = CertId;
