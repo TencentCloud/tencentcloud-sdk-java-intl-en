@@ -24,20 +24,14 @@ import java.util.HashMap;
 public class PermitOCRRequest extends AbstractModel {
 
     /**
-    * The Base64-encoded value of the image.
-Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` is used.
+    * The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
     */
     @SerializedName("ImageBase64")
     @Expose
     private String ImageBase64;
 
     /**
-    * The URL of the image.
-Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-We recommend that you store the image in Tencent Cloud for higher download speed and stability.
+    * The URL of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: no more than 7M after Base64 encoding. Image download time: no more than 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
     */
     @SerializedName("ImageUrl")
@@ -45,50 +39,32 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     private String ImageUrl;
 
     /**
-    * Whether to return the profile photo, default is false.
+    * Whether to return the avatar image. Default is false.
     */
     @SerializedName("CropPortrait")
     @Expose
     private Boolean CropPortrait;
 
     /**
-     * Get The Base64-encoded value of the image.
-Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` is used. 
-     * @return ImageBase64 The Base64-encoded value of the image.
-Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` is used.
+     * Get The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl. 
+     * @return ImageBase64 The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
      */
     public String getImageBase64() {
         return this.ImageBase64;
     }
 
     /**
-     * Set The Base64-encoded value of the image.
-Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` is used.
-     * @param ImageBase64 The Base64-encoded value of the image.
-Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-Either `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` is used.
+     * Set The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
+     * @param ImageBase64 The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
      */
     public void setImageBase64(String ImageBase64) {
         this.ImageBase64 = ImageBase64;
     }
 
     /**
-     * Get The URL of the image.
-Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-We recommend that you store the image in Tencent Cloud for higher download speed and stability.
+     * Get The URL of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: no more than 7M after Base64 encoding. Image download time: no more than 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low. 
-     * @return ImageUrl The URL of the image.
-Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-We recommend that you store the image in Tencent Cloud for higher download speed and stability.
+     * @return ImageUrl The URL of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: no more than 7M after Base64 encoding. Image download time: no more than 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     public String getImageUrl() {
@@ -96,15 +72,9 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     }
 
     /**
-     * Set The URL of the image.
-Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-We recommend that you store the image in Tencent Cloud for higher download speed and stability.
+     * Set The URL of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: no more than 7M after Base64 encoding. Image download time: no more than 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
-     * @param ImageUrl The URL of the image.
-Supported image formats: PNG, JPG, and JPEG. GIF is currently not supported.
-Supported image size: The downloaded image after Base64 encoding can be up to 7 MB. The download time of the image cannot exceed 3s.
-We recommend that you store the image in Tencent Cloud for higher download speed and stability.
+     * @param ImageUrl The URL of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: no more than 7M after Base64 encoding. Image download time: no more than 3 seconds. We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
      */
     public void setImageUrl(String ImageUrl) {
@@ -112,16 +82,16 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     }
 
     /**
-     * Get Whether to return the profile photo, default is false. 
-     * @return CropPortrait Whether to return the profile photo, default is false.
+     * Get Whether to return the avatar image. Default is false. 
+     * @return CropPortrait Whether to return the avatar image. Default is false.
      */
     public Boolean getCropPortrait() {
         return this.CropPortrait;
     }
 
     /**
-     * Set Whether to return the profile photo, default is false.
-     * @param CropPortrait Whether to return the profile photo, default is false.
+     * Set Whether to return the avatar image. Default is false.
+     * @param CropPortrait Whether to return the avatar image. Default is false.
      */
     public void setCropPortrait(Boolean CropPortrait) {
         this.CropPortrait = CropPortrait;
