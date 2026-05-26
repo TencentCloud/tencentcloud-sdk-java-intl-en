@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AddTeamMemberRequest extends AbstractModel {
 
     /**
-    * Team ID
+    * Team ID.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Members to be added
+    * List of new team members.
     */
     @SerializedName("MemberList")
     @Expose
     private CreateTeamMemberInfoReq [] MemberList;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get Team ID 
-     * @return TeamId Team ID
+     * Get Team ID. 
+     * @return TeamId Team ID.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID
-     * @param TeamId Team ID
+     * Set Team ID.
+     * @param TeamId Team ID.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Members to be added 
-     * @return MemberList Members to be added
+     * Get List of new team members. 
+     * @return MemberList List of new team members.
      */
     public CreateTeamMemberInfoReq [] getMemberList() {
         return this.MemberList;
     }
 
     /**
-     * Set Members to be added
-     * @param MemberList Members to be added
+     * Set List of new team members.
+     * @param MemberList List of new team members.
      */
     public void setMemberList(CreateTeamMemberInfoReq [] MemberList) {
         this.MemberList = MemberList;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

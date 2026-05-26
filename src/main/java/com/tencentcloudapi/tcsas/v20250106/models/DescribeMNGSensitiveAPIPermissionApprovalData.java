@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeMNGSensitiveAPIPermissionApprovalData extends AbstractModel {
 
     /**
-    * <p>API ID</p>
+    * <p>API ID.</p>
     */
     @SerializedName("APIId")
     @Expose
     private String APIId;
 
     /**
-    * <p>API method</p>
+    * <p>API method.</p>
     */
     @SerializedName("APIMethod")
     @Expose
     private String APIMethod;
 
     /**
-    * <p>Reason for request</p>
+    * <p>Reason for request.</p>
     */
     @SerializedName("ApplyReason")
     @Expose
     private String ApplyReason;
 
     /**
-    * <p>Reason for rejection</p>
+    * <p>Reason for rejection.</p>
     */
     @SerializedName("RejectReason")
     @Expose
     private String RejectReason;
 
     /**
-    * <p>Approval status. 20: Rejected; 30: Approved</p>
+    * <p>Approval status. Valid values: 20: Rejected; 30: Approved.</p>
     */
     @SerializedName("ApprovalStatus")
     @Expose
     private Long ApprovalStatus;
 
     /**
-    * <p>API feature description</p>
+    * <p>API feature description.</p>
     */
     @SerializedName("APIDesc")
     @Expose
     private String APIDesc;
 
     /**
-    * <p>API type. Valid values: 1: System; 2: Custom</p>
+    * <p>API type. Valid values: 1: System; 2: Custom.</p>
     */
     @SerializedName("APIType")
     @Expose
     private Long APIType;
 
     /**
-     * Get <p>API ID</p> 
-     * @return APIId <p>API ID</p>
+     * Get <p>API ID.</p> 
+     * @return APIId <p>API ID.</p>
      */
     public String getAPIId() {
         return this.APIId;
     }
 
     /**
-     * Set <p>API ID</p>
-     * @param APIId <p>API ID</p>
+     * Set <p>API ID.</p>
+     * @param APIId <p>API ID.</p>
      */
     public void setAPIId(String APIId) {
         this.APIId = APIId;
     }
 
     /**
-     * Get <p>API method</p> 
-     * @return APIMethod <p>API method</p>
+     * Get <p>API method.</p> 
+     * @return APIMethod <p>API method.</p>
      */
     public String getAPIMethod() {
         return this.APIMethod;
     }
 
     /**
-     * Set <p>API method</p>
-     * @param APIMethod <p>API method</p>
+     * Set <p>API method.</p>
+     * @param APIMethod <p>API method.</p>
      */
     public void setAPIMethod(String APIMethod) {
         this.APIMethod = APIMethod;
     }
 
     /**
-     * Get <p>Reason for request</p> 
-     * @return ApplyReason <p>Reason for request</p>
+     * Get <p>Reason for request.</p> 
+     * @return ApplyReason <p>Reason for request.</p>
      */
     public String getApplyReason() {
         return this.ApplyReason;
     }
 
     /**
-     * Set <p>Reason for request</p>
-     * @param ApplyReason <p>Reason for request</p>
+     * Set <p>Reason for request.</p>
+     * @param ApplyReason <p>Reason for request.</p>
      */
     public void setApplyReason(String ApplyReason) {
         this.ApplyReason = ApplyReason;
     }
 
     /**
-     * Get <p>Reason for rejection</p> 
-     * @return RejectReason <p>Reason for rejection</p>
+     * Get <p>Reason for rejection.</p> 
+     * @return RejectReason <p>Reason for rejection.</p>
      */
     public String getRejectReason() {
         return this.RejectReason;
     }
 
     /**
-     * Set <p>Reason for rejection</p>
-     * @param RejectReason <p>Reason for rejection</p>
+     * Set <p>Reason for rejection.</p>
+     * @param RejectReason <p>Reason for rejection.</p>
      */
     public void setRejectReason(String RejectReason) {
         this.RejectReason = RejectReason;
     }
 
     /**
-     * Get <p>Approval status. 20: Rejected; 30: Approved</p> 
-     * @return ApprovalStatus <p>Approval status. 20: Rejected; 30: Approved</p>
+     * Get <p>Approval status. Valid values: 20: Rejected; 30: Approved.</p> 
+     * @return ApprovalStatus <p>Approval status. Valid values: 20: Rejected; 30: Approved.</p>
      */
     public Long getApprovalStatus() {
         return this.ApprovalStatus;
     }
 
     /**
-     * Set <p>Approval status. 20: Rejected; 30: Approved</p>
-     * @param ApprovalStatus <p>Approval status. 20: Rejected; 30: Approved</p>
+     * Set <p>Approval status. Valid values: 20: Rejected; 30: Approved.</p>
+     * @param ApprovalStatus <p>Approval status. Valid values: 20: Rejected; 30: Approved.</p>
      */
     public void setApprovalStatus(Long ApprovalStatus) {
         this.ApprovalStatus = ApprovalStatus;
     }
 
     /**
-     * Get <p>API feature description</p> 
-     * @return APIDesc <p>API feature description</p>
+     * Get <p>API feature description.</p> 
+     * @return APIDesc <p>API feature description.</p>
      */
     public String getAPIDesc() {
         return this.APIDesc;
     }
 
     /**
-     * Set <p>API feature description</p>
-     * @param APIDesc <p>API feature description</p>
+     * Set <p>API feature description.</p>
+     * @param APIDesc <p>API feature description.</p>
      */
     public void setAPIDesc(String APIDesc) {
         this.APIDesc = APIDesc;
     }
 
     /**
-     * Get <p>API type. Valid values: 1: System; 2: Custom</p> 
-     * @return APIType <p>API type. Valid values: 1: System; 2: Custom</p>
+     * Get <p>API type. Valid values: 1: System; 2: Custom.</p> 
+     * @return APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
      */
     public Long getAPIType() {
         return this.APIType;
     }
 
     /**
-     * Set <p>API type. Valid values: 1: System; 2: Custom</p>
-     * @param APIType <p>API type. Valid values: 1: System; 2: Custom</p>
+     * Set <p>API type. Valid values: 1: System; 2: Custom.</p>
+     * @param APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
      */
     public void setAPIType(Long APIType) {
         this.APIType = APIType;

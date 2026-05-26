@@ -24,69 +24,84 @@ import java.util.HashMap;
 public class RetrievalLivenessExtraInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HitGroup")
     @Expose
     private String HitGroup;
 
     /**
-    * 
+    * <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SimilarityScore")
     @Expose
     private Float SimilarityScore;
 
     /**
-    * 
+    * <p>Template id of the cache hit</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("HitTemplate")
     @Expose
     private String HitTemplate;
 
     /**
-     * Get  
-     * @return HitGroup 
+     * Get <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HitGroup <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHitGroup() {
         return this.HitGroup;
     }
 
     /**
-     * Set 
-     * @param HitGroup 
+     * Set <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HitGroup <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHitGroup(String HitGroup) {
         this.HitGroup = HitGroup;
     }
 
     /**
-     * Get  
-     * @return SimilarityScore 
+     * Get <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SimilarityScore <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Float getSimilarityScore() {
         return this.SimilarityScore;
     }
 
     /**
-     * Set 
-     * @param SimilarityScore 
+     * Set <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SimilarityScore <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSimilarityScore(Float SimilarityScore) {
         this.SimilarityScore = SimilarityScore;
     }
 
     /**
-     * Get  
-     * @return HitTemplate 
+     * Get <p>Template id of the cache hit</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return HitTemplate <p>Template id of the cache hit</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getHitTemplate() {
         return this.HitTemplate;
     }
 
     /**
-     * Set 
-     * @param HitTemplate 
+     * Set <p>Template id of the cache hit</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HitTemplate <p>Template id of the cache hit</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setHitTemplate(String HitTemplate) {
         this.HitTemplate = HitTemplate;

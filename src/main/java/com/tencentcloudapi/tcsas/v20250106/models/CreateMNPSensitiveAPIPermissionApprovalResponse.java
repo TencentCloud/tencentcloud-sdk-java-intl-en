@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateMNPSensitiveAPIPermissionApprovalResponse extends AbstractModel {
 
     /**
-    * Response data
+    * Response data.
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateMNPSensitiveAPIPermissionApprovalResponse extends AbstractMod
     private String RequestId;
 
     /**
-     * Get Response data 
-     * @return Data Response data
+     * Get Response data. 
+     * @return Data Response data.
      */
     public ResourceIdStringInfo getData() {
         return this.Data;
     }
 
     /**
-     * Set Response data
-     * @param Data Response data
+     * Set Response data.
+     * @param Data Response data.
      */
     public void setData(ResourceIdStringInfo Data) {
         this.Data = Data;

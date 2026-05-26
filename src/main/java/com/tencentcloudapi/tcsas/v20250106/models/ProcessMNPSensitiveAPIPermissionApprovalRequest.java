@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ProcessMNPSensitiveAPIPermissionApprovalRequest extends AbstractModel {
 
     /**
-    * Approval ID
+    * Approval number.
     */
     @SerializedName("ApprovalNo")
     @Expose
     private String ApprovalNo;
 
     /**
-    * Approval status. 20: Rejected; 30: Approved
+    * Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
     */
     @SerializedName("ApprovalStatus")
     @Expose
     private Long ApprovalStatus;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Approval notes
+    * Approval note.
     */
     @SerializedName("ApprovalNote")
     @Expose
     private String ApprovalNote;
 
     /**
-     * Get Approval ID 
-     * @return ApprovalNo Approval ID
+     * Get Approval number. 
+     * @return ApprovalNo Approval number.
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set Approval ID
-     * @param ApprovalNo Approval ID
+     * Set Approval number.
+     * @param ApprovalNo Approval number.
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;
     }
 
     /**
-     * Get Approval status. 20: Rejected; 30: Approved 
-     * @return ApprovalStatus Approval status. 20: Rejected; 30: Approved
+     * Get Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved. 
+     * @return ApprovalStatus Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
      */
     public Long getApprovalStatus() {
         return this.ApprovalStatus;
     }
 
     /**
-     * Set Approval status. 20: Rejected; 30: Approved
-     * @param ApprovalStatus Approval status. 20: Rejected; 30: Approved
+     * Set Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+     * @param ApprovalStatus Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
      */
     public void setApprovalStatus(Long ApprovalStatus) {
         this.ApprovalStatus = ApprovalStatus;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Approval notes 
-     * @return ApprovalNote Approval notes
+     * Get Approval note. 
+     * @return ApprovalNote Approval note.
      */
     public String getApprovalNote() {
         return this.ApprovalNote;
     }
 
     /**
-     * Set Approval notes
-     * @param ApprovalNote Approval notes
+     * Set Approval note.
+     * @param ApprovalNote Approval note.
      */
     public void setApprovalNote(String ApprovalNote) {
         this.ApprovalNote = ApprovalNote;

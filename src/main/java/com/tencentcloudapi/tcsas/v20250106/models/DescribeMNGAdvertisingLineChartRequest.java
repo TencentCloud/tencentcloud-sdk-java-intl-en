@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeMNGAdvertisingLineChartRequest extends AbstractModel {
 
     /**
-    * Start time in YYYYMMDD format
+    * Start time in YYYYMMDD format.
     */
     @SerializedName("TimeBegin")
     @Expose
     private String TimeBegin;
 
     /**
-    * Mini program appid
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Tenant ID
+    * Tenant ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * End time in YYYYMMDD format
+    * End time in YYYYMMDD format.
     */
     @SerializedName("TimeEnd")
     @Expose
     private String TimeEnd;
 
     /**
-    * //1-BANNER  2-REWARDED
+    * Ad unit type. Valid values: 1: Banner; 2: Rewarded.
     */
     @SerializedName("AdUnitType")
     @Expose
     private String AdUnitType;
 
     /**
-    * // 2 Android, 3 iOS
+    * Operating system. Valid values: 2: Android; 3: iOS.
     */
     @SerializedName("Platform")
     @Expose
     private Long Platform;
 
     /**
-     * Get Start time in YYYYMMDD format 
-     * @return TimeBegin Start time in YYYYMMDD format
+     * Get Start time in YYYYMMDD format. 
+     * @return TimeBegin Start time in YYYYMMDD format.
      */
     public String getTimeBegin() {
         return this.TimeBegin;
     }
 
     /**
-     * Set Start time in YYYYMMDD format
-     * @param TimeBegin Start time in YYYYMMDD format
+     * Set Start time in YYYYMMDD format.
+     * @param TimeBegin Start time in YYYYMMDD format.
      */
     public void setTimeBegin(String TimeBegin) {
         this.TimeBegin = TimeBegin;
     }
 
     /**
-     * Get Mini program appid 
-     * @return MNPId Mini program appid
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program appid
-     * @param MNPId Mini program appid
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Tenant ID 
-     * @return PlatformId Tenant ID
+     * Get Tenant ID. 
+     * @return PlatformId Tenant ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Tenant ID
-     * @param PlatformId Tenant ID
+     * Set Tenant ID.
+     * @param PlatformId Tenant ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get End time in YYYYMMDD format 
-     * @return TimeEnd End time in YYYYMMDD format
+     * Get End time in YYYYMMDD format. 
+     * @return TimeEnd End time in YYYYMMDD format.
      */
     public String getTimeEnd() {
         return this.TimeEnd;
     }
 
     /**
-     * Set End time in YYYYMMDD format
-     * @param TimeEnd End time in YYYYMMDD format
+     * Set End time in YYYYMMDD format.
+     * @param TimeEnd End time in YYYYMMDD format.
      */
     public void setTimeEnd(String TimeEnd) {
         this.TimeEnd = TimeEnd;
     }
 
     /**
-     * Get //1-BANNER  2-REWARDED 
-     * @return AdUnitType //1-BANNER  2-REWARDED
+     * Get Ad unit type. Valid values: 1: Banner; 2: Rewarded. 
+     * @return AdUnitType Ad unit type. Valid values: 1: Banner; 2: Rewarded.
      */
     public String getAdUnitType() {
         return this.AdUnitType;
     }
 
     /**
-     * Set //1-BANNER  2-REWARDED
-     * @param AdUnitType //1-BANNER  2-REWARDED
+     * Set Ad unit type. Valid values: 1: Banner; 2: Rewarded.
+     * @param AdUnitType Ad unit type. Valid values: 1: Banner; 2: Rewarded.
      */
     public void setAdUnitType(String AdUnitType) {
         this.AdUnitType = AdUnitType;
     }
 
     /**
-     * Get // 2 Android, 3 iOS 
-     * @return Platform // 2 Android, 3 iOS
+     * Get Operating system. Valid values: 2: Android; 3: iOS. 
+     * @return Platform Operating system. Valid values: 2: Android; 3: iOS.
      */
     public Long getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set // 2 Android, 3 iOS
-     * @param Platform // 2 Android, 3 iOS
+     * Set Operating system. Valid values: 2: Android; 3: iOS.
+     * @param Platform Operating system. Valid values: 2: Android; 3: iOS.
      */
     public void setPlatform(Long Platform) {
         this.Platform = Platform;

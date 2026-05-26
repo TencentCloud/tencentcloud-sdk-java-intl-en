@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBErrlogsResponse extends AbstractModel {
 
     /**
-    * Number of logs returned in a single query. Maximum value: `10000`.
+    * <p>The number of logs queried. Maximum value is 10,000.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Detailed sets of error logs
+    * <p>Error log details collection.</p>
     */
     @SerializedName("Details")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDBErrlogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of logs returned in a single query. Maximum value: `10000`. 
-     * @return TotalCount Number of logs returned in a single query. Maximum value: `10000`.
+     * Get <p>The number of logs queried. Maximum value is 10,000.</p> 
+     * @return TotalCount <p>The number of logs queried. Maximum value is 10,000.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of logs returned in a single query. Maximum value: `10000`.
-     * @param TotalCount Number of logs returned in a single query. Maximum value: `10000`.
+     * Set <p>The number of logs queried. Maximum value is 10,000.</p>
+     * @param TotalCount <p>The number of logs queried. Maximum value is 10,000.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Detailed sets of error logs 
-     * @return Details Detailed sets of error logs
+     * Get <p>Error log details collection.</p> 
+     * @return Details <p>Error log details collection.</p>
      */
     public ErrLogDetail [] getDetails() {
         return this.Details;
     }
 
     /**
-     * Set Detailed sets of error logs
-     * @param Details Detailed sets of error logs
+     * Set <p>Error log details collection.</p>
+     * @param Details <p>Error log details collection.</p>
      */
     public void setDetails(ErrLogDetail [] Details) {
         this.Details = Details;

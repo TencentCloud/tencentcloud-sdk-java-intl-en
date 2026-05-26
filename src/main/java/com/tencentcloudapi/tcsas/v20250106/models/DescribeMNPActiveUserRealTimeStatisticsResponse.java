@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMNPActiveUserRealTimeStatisticsResponse extends AbstractModel {
 
     /**
-    * Data display
+    * Data display.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Data display
+     * Get Data display.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Data display
+     * @return Data Data display.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ReportDataResult [] getData() {
@@ -49,9 +49,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Data display
+     * Set Data display.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Data display
+     * @param Data Data display.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setData(ReportDataResult [] Data) {

@@ -24,77 +24,77 @@ import java.util.HashMap;
 public class DescribeMNPSensitiveAPIPermissionApprovalListData extends AbstractModel {
 
     /**
-    * Approval ID
+    * Approval number.
     */
     @SerializedName("ApprovalNo")
     @Expose
     private String ApprovalNo;
 
     /**
-    * Sensitive API ID
+    * Sensitive API ID.
     */
     @SerializedName("APIId")
     @Expose
     private String APIId;
 
     /**
-    * API name
+    * API name.
     */
     @SerializedName("APIName")
     @Expose
     private String APIName;
 
     /**
-    * API request method
+    * API method.
     */
     @SerializedName("APIMethod")
     @Expose
     private String APIMethod;
 
     /**
-    * Mini program ID
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Mini program name
+    * Mini program name.
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Applicant
+    * Applicant.
     */
     @SerializedName("ApplyUser")
     @Expose
     private String ApplyUser;
 
     /**
-    * Application time
+    * Application time.
     */
     @SerializedName("ApplyTime")
     @Expose
     private String ApplyTime;
 
     /**
-    * Application notes
+    * Application note.
     */
     @SerializedName("ApplyNote")
     @Expose
     private String ApplyNote;
 
     /**
-    * Approval status. 1: Processing; 20: Rejected; 30: Approved
+    * Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
     */
     @SerializedName("ApprovalStatus")
     @Expose
     private Long ApprovalStatus;
 
     /**
-    * Specifies the review user.
+    * Approver.
     */
     @SerializedName("ApprovalUser")
     @Expose
@@ -108,35 +108,35 @@ public class DescribeMNPSensitiveAPIPermissionApprovalListData extends AbstractM
     private String ApprovalTime;
 
     /**
-    * Approval notes
+    * Approval note.
     */
     @SerializedName("ApprovalNote")
     @Expose
     private String ApprovalNote;
 
     /**
-    * Application ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Application name
+    * Superapp name.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Specifies the application icon.
+    * Superapp icon.
     */
     @SerializedName("ApplicationLogo")
     @Expose
     private String ApplicationLogo;
 
     /**
-    * API type. 1: system; 2: custom.
+    * API type. Valid values: 1: System; 2: Custom.
     */
     @SerializedName("APIType")
     @Expose
@@ -150,176 +150,176 @@ public class DescribeMNPSensitiveAPIPermissionApprovalListData extends AbstractM
     private String APIDesc;
 
     /**
-     * Get Approval ID 
-     * @return ApprovalNo Approval ID
+     * Get Approval number. 
+     * @return ApprovalNo Approval number.
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set Approval ID
-     * @param ApprovalNo Approval ID
+     * Set Approval number.
+     * @param ApprovalNo Approval number.
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;
     }
 
     /**
-     * Get Sensitive API ID 
-     * @return APIId Sensitive API ID
+     * Get Sensitive API ID. 
+     * @return APIId Sensitive API ID.
      */
     public String getAPIId() {
         return this.APIId;
     }
 
     /**
-     * Set Sensitive API ID
-     * @param APIId Sensitive API ID
+     * Set Sensitive API ID.
+     * @param APIId Sensitive API ID.
      */
     public void setAPIId(String APIId) {
         this.APIId = APIId;
     }
 
     /**
-     * Get API name 
-     * @return APIName API name
+     * Get API name. 
+     * @return APIName API name.
      */
     public String getAPIName() {
         return this.APIName;
     }
 
     /**
-     * Set API name
-     * @param APIName API name
+     * Set API name.
+     * @param APIName API name.
      */
     public void setAPIName(String APIName) {
         this.APIName = APIName;
     }
 
     /**
-     * Get API request method 
-     * @return APIMethod API request method
+     * Get API method. 
+     * @return APIMethod API method.
      */
     public String getAPIMethod() {
         return this.APIMethod;
     }
 
     /**
-     * Set API request method
-     * @param APIMethod API request method
+     * Set API method.
+     * @param APIMethod API method.
      */
     public void setAPIMethod(String APIMethod) {
         this.APIMethod = APIMethod;
     }
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program name 
-     * @return MNPName Mini program name
+     * Get Mini program name. 
+     * @return MNPName Mini program name.
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name
-     * @param MNPName Mini program name
+     * Set Mini program name.
+     * @param MNPName Mini program name.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Applicant 
-     * @return ApplyUser Applicant
+     * Get Applicant. 
+     * @return ApplyUser Applicant.
      */
     public String getApplyUser() {
         return this.ApplyUser;
     }
 
     /**
-     * Set Applicant
-     * @param ApplyUser Applicant
+     * Set Applicant.
+     * @param ApplyUser Applicant.
      */
     public void setApplyUser(String ApplyUser) {
         this.ApplyUser = ApplyUser;
     }
 
     /**
-     * Get Application time 
-     * @return ApplyTime Application time
+     * Get Application time. 
+     * @return ApplyTime Application time.
      */
     public String getApplyTime() {
         return this.ApplyTime;
     }
 
     /**
-     * Set Application time
-     * @param ApplyTime Application time
+     * Set Application time.
+     * @param ApplyTime Application time.
      */
     public void setApplyTime(String ApplyTime) {
         this.ApplyTime = ApplyTime;
     }
 
     /**
-     * Get Application notes 
-     * @return ApplyNote Application notes
+     * Get Application note. 
+     * @return ApplyNote Application note.
      */
     public String getApplyNote() {
         return this.ApplyNote;
     }
 
     /**
-     * Set Application notes
-     * @param ApplyNote Application notes
+     * Set Application note.
+     * @param ApplyNote Application note.
      */
     public void setApplyNote(String ApplyNote) {
         this.ApplyNote = ApplyNote;
     }
 
     /**
-     * Get Approval status. 1: Processing; 20: Rejected; 30: Approved 
-     * @return ApprovalStatus Approval status. 1: Processing; 20: Rejected; 30: Approved
+     * Get Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved. 
+     * @return ApprovalStatus Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
      */
     public Long getApprovalStatus() {
         return this.ApprovalStatus;
     }
 
     /**
-     * Set Approval status. 1: Processing; 20: Rejected; 30: Approved
-     * @param ApprovalStatus Approval status. 1: Processing; 20: Rejected; 30: Approved
+     * Set Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+     * @param ApprovalStatus Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
      */
     public void setApprovalStatus(Long ApprovalStatus) {
         this.ApprovalStatus = ApprovalStatus;
     }
 
     /**
-     * Get Specifies the review user. 
-     * @return ApprovalUser Specifies the review user.
+     * Get Approver. 
+     * @return ApprovalUser Approver.
      */
     public String getApprovalUser() {
         return this.ApprovalUser;
     }
 
     /**
-     * Set Specifies the review user.
-     * @param ApprovalUser Specifies the review user.
+     * Set Approver.
+     * @param ApprovalUser Approver.
      */
     public void setApprovalUser(String ApprovalUser) {
         this.ApprovalUser = ApprovalUser;
@@ -342,80 +342,80 @@ public class DescribeMNPSensitiveAPIPermissionApprovalListData extends AbstractM
     }
 
     /**
-     * Get Approval notes 
-     * @return ApprovalNote Approval notes
+     * Get Approval note. 
+     * @return ApprovalNote Approval note.
      */
     public String getApprovalNote() {
         return this.ApprovalNote;
     }
 
     /**
-     * Set Approval notes
-     * @param ApprovalNote Approval notes
+     * Set Approval note.
+     * @param ApprovalNote Approval note.
      */
     public void setApprovalNote(String ApprovalNote) {
         this.ApprovalNote = ApprovalNote;
     }
 
     /**
-     * Get Application ID 
-     * @return ApplicationId Application ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Application ID
-     * @param ApplicationId Application ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Application name 
-     * @return ApplicationName Application name
+     * Get Superapp name. 
+     * @return ApplicationName Superapp name.
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Application name
-     * @param ApplicationName Application name
+     * Set Superapp name.
+     * @param ApplicationName Superapp name.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Specifies the application icon. 
-     * @return ApplicationLogo Specifies the application icon.
+     * Get Superapp icon. 
+     * @return ApplicationLogo Superapp icon.
      */
     public String getApplicationLogo() {
         return this.ApplicationLogo;
     }
 
     /**
-     * Set Specifies the application icon.
-     * @param ApplicationLogo Specifies the application icon.
+     * Set Superapp icon.
+     * @param ApplicationLogo Superapp icon.
      */
     public void setApplicationLogo(String ApplicationLogo) {
         this.ApplicationLogo = ApplicationLogo;
     }
 
     /**
-     * Get API type. 1: system; 2: custom. 
-     * @return APIType API type. 1: system; 2: custom.
+     * Get API type. Valid values: 1: System; 2: Custom. 
+     * @return APIType API type. Valid values: 1: System; 2: Custom.
      */
     public Long getAPIType() {
         return this.APIType;
     }
 
     /**
-     * Set API type. 1: system; 2: custom.
-     * @param APIType API type. 1: system; 2: custom.
+     * Set API type. Valid values: 1: System; 2: Custom.
+     * @param APIType API type. Valid values: 1: System; 2: Custom.
      */
     public void setAPIType(Long APIType) {
         this.APIType = APIType;

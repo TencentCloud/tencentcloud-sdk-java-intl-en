@@ -116,9 +116,8 @@ public class NamedComputeEnv extends AbstractModel {
 
     /**
     * Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
     */
     @SerializedName("NotificationTarget")
     @Expose
@@ -334,13 +333,11 @@ Values: `CMQ`, `TDMQ_CMQ`
 
     /**
      * Get Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1) 
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ. 
      * @return NotificationTarget Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
      */
     public String getNotificationTarget() {
         return this.NotificationTarget;
@@ -348,13 +345,11 @@ Values: `CMQ`, `TDMQ_CMQ`
 
     /**
      * Set Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
      * @param NotificationTarget Target of the notification
-Values: `CMQ`, `TDMQ_CMQ`
-`CMQ`: Tencent Cloud CMQ (default)
-`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.<br/>Note: CMQ has been discontinued. Please use `TDMQ_CMQ`. See [CMQ Queue Migration to TDMQ for CMQ](https://intl.cloud.tencent.com/document/product/406/60860?from_cn_redirect=1)
+Values: `TDMQ_CMQ`
+`TDMQ_CMQ`: Tencent Cloud TDMQ_CMQ.
      */
     public void setNotificationTarget(String NotificationTarget) {
         this.NotificationTarget = NotificationTarget;

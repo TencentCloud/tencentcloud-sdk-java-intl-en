@@ -24,92 +24,102 @@ import java.util.HashMap;
 public class TranslationConfig extends AbstractModel {
 
     /**
-    * Target language, target language list (ISO 639-1).
+    * Target language for translation, target language list (ISO 639-1).
+
     */
     @SerializedName("TargetLanguages")
     @Expose
     private String [] TargetLanguages;
 
     /**
-    * 1: Only text translation, 2: Voice simultaneous interpretation.
+    * 1: text translation only 2: speech simultaneous interpretation.
+
     */
     @SerializedName("Mode")
     @Expose
     private Long Mode;
 
     /**
-    * Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
+    * Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
     */
     @SerializedName("TTSConfig")
     @Expose
     private TTSConfig TTSConfig;
 
     /**
-    * Translation terminology.
+    * Translation terminology collection.
     */
     @SerializedName("Terminology")
     @Expose
     private Terminology [] Terminology;
 
     /**
-     * Get Target language, target language list (ISO 639-1). 
-     * @return TargetLanguages Target language, target language list (ISO 639-1).
+     * Get Target language for translation, target language list (ISO 639-1).
+ 
+     * @return TargetLanguages Target language for translation, target language list (ISO 639-1).
+
      */
     public String [] getTargetLanguages() {
         return this.TargetLanguages;
     }
 
     /**
-     * Set Target language, target language list (ISO 639-1).
-     * @param TargetLanguages Target language, target language list (ISO 639-1).
+     * Set Target language for translation, target language list (ISO 639-1).
+
+     * @param TargetLanguages Target language for translation, target language list (ISO 639-1).
+
      */
     public void setTargetLanguages(String [] TargetLanguages) {
         this.TargetLanguages = TargetLanguages;
     }
 
     /**
-     * Get 1: Only text translation, 2: Voice simultaneous interpretation. 
-     * @return Mode 1: Only text translation, 2: Voice simultaneous interpretation.
+     * Get 1: text translation only 2: speech simultaneous interpretation.
+ 
+     * @return Mode 1: text translation only 2: speech simultaneous interpretation.
+
      */
     public Long getMode() {
         return this.Mode;
     }
 
     /**
-     * Set 1: Only text translation, 2: Voice simultaneous interpretation.
-     * @param Mode 1: Only text translation, 2: Voice simultaneous interpretation.
+     * Set 1: text translation only 2: speech simultaneous interpretation.
+
+     * @param Mode 1: text translation only 2: speech simultaneous interpretation.
+
      */
     public void setMode(Long Mode) {
         this.Mode = Mode;
     }
 
     /**
-     * Get Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed. 
-     * @return TTSConfig Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
+     * Get Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required. 
+     * @return TTSConfig Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
      */
     public TTSConfig getTTSConfig() {
         return this.TTSConfig;
     }
 
     /**
-     * Set Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
-     * @param TTSConfig Voice simultaneous interpretation configuration: When enabling simultaneous interpretation, this parameter needs to be passed.
+     * Set Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
+     * @param TTSConfig Speech simultaneous interpretation configuration. when enabling simultaneous interpretation, transmission is required.
      */
     public void setTTSConfig(TTSConfig TTSConfig) {
         this.TTSConfig = TTSConfig;
     }
 
     /**
-     * Get Translation terminology. 
-     * @return Terminology Translation terminology.
+     * Get Translation terminology collection. 
+     * @return Terminology Translation terminology collection.
      */
     public Terminology [] getTerminology() {
         return this.Terminology;
     }
 
     /**
-     * Set Translation terminology.
-     * @param Terminology Translation terminology.
+     * Set Translation terminology collection.
+     * @param Terminology Translation terminology collection.
      */
     public void setTerminology(Terminology [] Terminology) {
         this.Terminology = Terminology;

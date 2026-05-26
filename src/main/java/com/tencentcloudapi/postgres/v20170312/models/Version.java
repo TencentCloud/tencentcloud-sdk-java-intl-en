@@ -62,9 +62,10 @@ TDE: Supports data encryption.
     private String [] SupportedFeatureNames;
 
     /**
-    * Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
+    * Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
     */
     @SerializedName("Status")
     @Expose
@@ -170,24 +171,28 @@ TDE: Supports data encryption.
     }
 
     /**
-     * Get Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`. 
-     * @return Status Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
+     * Get Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED. 
+     * @return Status Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
-     * @param Status Database version status. Valid values:
-`AVAILABLE`.
-`DEPRECATED`.
+     * Set Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
+     * @param Status Database version status, including:.
+AVAILABLE: available.
+UPGRADE_ONLY: specifies that creation is not allowed. this version is only available for upgrade to a higher version.
+DEPRECATED.
      */
     public void setStatus(String Status) {
         this.Status = Status;

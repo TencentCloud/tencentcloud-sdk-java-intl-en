@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MNPPaymentOverview extends AbstractModel {
 
     /**
-    * Number of mini programs involved in the order
+    * Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OrderMNPNum")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long OrderMNPNum;
 
     /**
-    * Total orders
+    * Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -41,7 +41,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long OrderNum;
 
     /**
-    * Total paid orders
+    * Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -50,7 +50,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long OrderPaidNum;
 
     /**
-    * Total refunded orders
+    * Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
     */
@@ -59,7 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long OrderRefundNum;
 
     /**
-    * Total unpaid orders
+    * Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OrderUnpaidNum")
@@ -67,7 +67,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long OrderUnpaidNum;
 
     /**
-    * Total order users
+    * Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OrderUserNum")
@@ -75,7 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long OrderUserNum;
 
     /**
-    * Total paying users
+    * Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PaidUserNum")
@@ -83,7 +83,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long PaidUserNum;
 
     /**
-    * Amount paid
+    * Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PaidAmount")
@@ -91,7 +91,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PaidAmount;
 
     /**
-    * Total amount refunded
+    * Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RefundAmount")
@@ -99,7 +99,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RefundAmount;
 
     /**
-    * Total order amount
+    * Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TotalAmount")
@@ -107,7 +107,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TotalAmount;
 
     /**
-    * Unpaid amount
+    * Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UnpaidAmount")
@@ -115,7 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String UnpaidAmount;
 
     /**
-    * Timestamp
+    * Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("UpdateTime")
@@ -123,7 +123,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long UpdateTime;
 
     /**
-    * Data date
+    * Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataTime")
@@ -131,9 +131,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String DataTime;
 
     /**
-     * Get Number of mini programs involved in the order
+     * Get Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrderMNPNum Number of mini programs involved in the order
+     * @return OrderMNPNum Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getOrderMNPNum() {
@@ -141,9 +141,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Number of mini programs involved in the order
+     * Set Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrderMNPNum Number of mini programs involved in the order
+     * @param OrderMNPNum Mini program count with orders.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOrderMNPNum(Long OrderMNPNum) {
@@ -151,10 +151,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total orders
+     * Get Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrderNum Total orders
+     * @return OrderNum Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -163,10 +163,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Total orders
+     * Set Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrderNum Total orders
+     * @param OrderNum Total orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -175,10 +175,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total paid orders
+     * Get Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrderPaidNum Total paid orders
+     * @return OrderPaidNum Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -187,10 +187,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Total paid orders
+     * Set Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrderPaidNum Total paid orders
+     * @param OrderPaidNum Total paid orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -199,10 +199,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total refunded orders
+     * Get Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrderRefundNum Total refunded orders
+     * @return OrderRefundNum Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -211,10 +211,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Total refunded orders
+     * Set Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrderRefundNum Total refunded orders
+     * @param OrderRefundNum Number of refund orders.
 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -223,9 +223,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total unpaid orders
+     * Get Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrderUnpaidNum Total unpaid orders
+     * @return OrderUnpaidNum Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getOrderUnpaidNum() {
@@ -233,9 +233,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Total unpaid orders
+     * Set Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrderUnpaidNum Total unpaid orders
+     * @param OrderUnpaidNum Total unpaid orders.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOrderUnpaidNum(Long OrderUnpaidNum) {
@@ -243,9 +243,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total order users
+     * Get Total order users.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OrderUserNum Total order users
+     * @return OrderUserNum Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getOrderUserNum() {
@@ -253,9 +253,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Total order users
+     * Set Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OrderUserNum Total order users
+     * @param OrderUserNum Total order users.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOrderUserNum(Long OrderUserNum) {
@@ -263,9 +263,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total paying users
+     * Get Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PaidUserNum Total paying users
+     * @return PaidUserNum Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getPaidUserNum() {
@@ -273,9 +273,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Total paying users
+     * Set Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PaidUserNum Total paying users
+     * @param PaidUserNum Total paying users.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPaidUserNum(Long PaidUserNum) {
@@ -283,9 +283,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Amount paid
+     * Get Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PaidAmount Amount paid
+     * @return PaidAmount Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPaidAmount() {
@@ -293,9 +293,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Amount paid
+     * Set Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PaidAmount Amount paid
+     * @param PaidAmount Amount paid.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPaidAmount(String PaidAmount) {
@@ -303,9 +303,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total amount refunded
+     * Get Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RefundAmount Total amount refunded
+     * @return RefundAmount Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRefundAmount() {
@@ -313,9 +313,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Total amount refunded
+     * Set Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RefundAmount Total amount refunded
+     * @param RefundAmount Total amount refunded.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRefundAmount(String RefundAmount) {
@@ -323,9 +323,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Total order amount
+     * Get Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalAmount Total order amount
+     * @return TotalAmount Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTotalAmount() {
@@ -333,9 +333,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Total order amount
+     * Set Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalAmount Total order amount
+     * @param TotalAmount Total order amount.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTotalAmount(String TotalAmount) {
@@ -343,9 +343,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Unpaid amount
+     * Get Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UnpaidAmount Unpaid amount
+     * @return UnpaidAmount Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getUnpaidAmount() {
@@ -353,9 +353,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Unpaid amount
+     * Set Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UnpaidAmount Unpaid amount
+     * @param UnpaidAmount Unpaid amount.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUnpaidAmount(String UnpaidAmount) {
@@ -363,9 +363,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Timestamp
+     * Get Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return UpdateTime Timestamp
+     * @return UpdateTime Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getUpdateTime() {
@@ -373,9 +373,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Timestamp
+     * Set Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param UpdateTime Timestamp
+     * @param UpdateTime Timestamp.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setUpdateTime(Long UpdateTime) {
@@ -383,9 +383,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Data date
+     * Get Data time.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataTime Data date
+     * @return DataTime Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getDataTime() {
@@ -393,9 +393,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Data date
+     * Set Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataTime Data date
+     * @param DataTime Data time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataTime(String DataTime) {

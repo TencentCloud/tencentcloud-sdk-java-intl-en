@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateMNGVersionResponse extends AbstractModel {
 
     /**
-    * <p>Response data</p>
+    * <p>Response data.</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateMNGVersionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>Response data</p> 
-     * @return Data <p>Response data</p>
+     * Get <p>Response data.</p> 
+     * @return Data <p>Response data.</p>
      */
     public CreateMNGVersionResp getData() {
         return this.Data;
     }
 
     /**
-     * Set <p>Response data</p>
-     * @param Data <p>Response data</p>
+     * Set <p>Response data.</p>
+     * @param Data <p>Response data.</p>
      */
     public void setData(CreateMNGVersionResp Data) {
         this.Data = Data;

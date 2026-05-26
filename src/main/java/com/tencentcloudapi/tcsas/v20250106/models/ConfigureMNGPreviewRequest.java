@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ConfigureMNGPreviewRequest extends AbstractModel {
 
     /**
-    * <p>Mini game appid</p>
+    * <p>Mini game appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * <p>1 Set 2 Cancel</p>
+    * <p>Action type. Valid values: 1: Set; 2: Cancel.</p>
     */
     @SerializedName("ActionType")
     @Expose
     private Long ActionType;
 
     /**
-    * <p>Mini game version ID</p>
+    * <p>Mini game version ID.</p>
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-    * <p>Platform ID</p>
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * <p>Preview path</p>
+    * <p>Preview path.</p>
     */
     @SerializedName("PreviewEntrancePath")
     @Expose
     private String PreviewEntrancePath;
 
     /**
-     * Get <p>Mini game appid</p> 
-     * @return MNPId <p>Mini game appid</p>
+     * Get <p>Mini game appid.</p> 
+     * @return MNPId <p>Mini game appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set <p>Mini game appid</p>
-     * @param MNPId <p>Mini game appid</p>
+     * Set <p>Mini game appid.</p>
+     * @param MNPId <p>Mini game appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get <p>1 Set 2 Cancel</p> 
-     * @return ActionType <p>1 Set 2 Cancel</p>
+     * Get <p>Action type. Valid values: 1: Set; 2: Cancel.</p> 
+     * @return ActionType <p>Action type. Valid values: 1: Set; 2: Cancel.</p>
      */
     public Long getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set <p>1 Set 2 Cancel</p>
-     * @param ActionType <p>1 Set 2 Cancel</p>
+     * Set <p>Action type. Valid values: 1: Set; 2: Cancel.</p>
+     * @param ActionType <p>Action type. Valid values: 1: Set; 2: Cancel.</p>
      */
     public void setActionType(Long ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get <p>Mini game version ID</p> 
-     * @return MNPVersionId <p>Mini game version ID</p>
+     * Get <p>Mini game version ID.</p> 
+     * @return MNPVersionId <p>Mini game version ID.</p>
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set <p>Mini game version ID</p>
-     * @param MNPVersionId <p>Mini game version ID</p>
+     * Set <p>Mini game version ID.</p>
+     * @param MNPVersionId <p>Mini game version ID.</p>
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get <p>Platform ID</p> 
-     * @return PlatformId <p>Platform ID</p>
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set <p>Platform ID</p>
-     * @param PlatformId <p>Platform ID</p>
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get <p>Preview path</p> 
-     * @return PreviewEntrancePath <p>Preview path</p>
+     * Get <p>Preview path.</p> 
+     * @return PreviewEntrancePath <p>Preview path.</p>
      */
     public String getPreviewEntrancePath() {
         return this.PreviewEntrancePath;
     }
 
     /**
-     * Set <p>Preview path</p>
-     * @param PreviewEntrancePath <p>Preview path</p>
+     * Set <p>Preview path.</p>
+     * @param PreviewEntrancePath <p>Preview path.</p>
      */
     public void setPreviewEntrancePath(String PreviewEntrancePath) {
         this.PreviewEntrancePath = PreviewEntrancePath;

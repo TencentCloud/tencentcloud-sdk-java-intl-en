@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class ModifyMNPRequest extends AbstractModel {
 
     /**
-    * Mini program type
+    * Mini program category.
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * Mini program name
+    * Mini program name.
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Mini program introduction
+    * Mini program introduction.
     */
     @SerializedName("MNPIntro")
     @Expose
     private String MNPIntro;
 
     /**
-    * Mini program description
+    * Mini program description.
     */
     @SerializedName("MNPDesc")
     @Expose
     private String MNPDesc;
 
     /**
-    * Mini program ID
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Mini program icon
+    * Mini program icon.
     */
     @SerializedName("MNPIcon")
     @Expose
     private String MNPIcon;
 
     /**
-     * Get Mini program type 
-     * @return MNPType Mini program type
+    * <p>The mini program name and description in multiple languages.</p>
+    */
+    @SerializedName("I18nList")
+    @Expose
+    private MNPI18NSyncDto [] I18nList;
+
+    /**
+     * Get Mini program category. 
+     * @return MNPType Mini program category.
      */
     public String getMNPType() {
         return this.MNPType;
     }
 
     /**
-     * Set Mini program type
-     * @param MNPType Mini program type
+     * Set Mini program category.
+     * @param MNPType Mini program category.
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get Mini program name 
-     * @return MNPName Mini program name
+     * Get Mini program name. 
+     * @return MNPName Mini program name.
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name
-     * @param MNPName Mini program name
+     * Set Mini program name.
+     * @param MNPName Mini program name.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program introduction 
-     * @return MNPIntro Mini program introduction
+     * Get Mini program introduction. 
+     * @return MNPIntro Mini program introduction.
      */
     public String getMNPIntro() {
         return this.MNPIntro;
     }
 
     /**
-     * Set Mini program introduction
-     * @param MNPIntro Mini program introduction
+     * Set Mini program introduction.
+     * @param MNPIntro Mini program introduction.
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get Mini program description 
-     * @return MNPDesc Mini program description
+     * Get Mini program description. 
+     * @return MNPDesc Mini program description.
      */
     public String getMNPDesc() {
         return this.MNPDesc;
     }
 
     /**
-     * Set Mini program description
-     * @param MNPDesc Mini program description
+     * Set Mini program description.
+     * @param MNPDesc Mini program description.
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
     }
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Mini program icon 
-     * @return MNPIcon Mini program icon
+     * Get Mini program icon. 
+     * @return MNPIcon Mini program icon.
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set Mini program icon
-     * @param MNPIcon Mini program icon
+     * Set Mini program icon.
+     * @param MNPIcon Mini program icon.
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
+    }
+
+    /**
+     * Get <p>The mini program name and description in multiple languages.</p> 
+     * @return I18nList <p>The mini program name and description in multiple languages.</p>
+     */
+    public MNPI18NSyncDto [] getI18nList() {
+        return this.I18nList;
+    }
+
+    /**
+     * Set <p>The mini program name and description in multiple languages.</p>
+     * @param I18nList <p>The mini program name and description in multiple languages.</p>
+     */
+    public void setI18nList(MNPI18NSyncDto [] I18nList) {
+        this.I18nList = I18nList;
     }
 
     public ModifyMNPRequest() {
@@ -213,6 +236,12 @@ public class ModifyMNPRequest extends AbstractModel {
         if (source.MNPIcon != null) {
             this.MNPIcon = new String(source.MNPIcon);
         }
+        if (source.I18nList != null) {
+            this.I18nList = new MNPI18NSyncDto[source.I18nList.length];
+            for (int i = 0; i < source.I18nList.length; i++) {
+                this.I18nList[i] = new MNPI18NSyncDto(source.I18nList[i]);
+            }
+        }
     }
 
 
@@ -227,6 +256,7 @@ public class ModifyMNPRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MNPId", this.MNPId);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
         this.setParamSimple(map, prefix + "MNPIcon", this.MNPIcon);
+        this.setParamArrayObj(map, prefix + "I18nList.", this.I18nList);
 
     }
 }

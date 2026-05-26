@@ -52,6 +52,27 @@ public class CreateTargetRequest extends AbstractModel {
     private String RuleId;
 
     /**
+    * 
+    */
+    @SerializedName("BatchTimeout")
+    @Expose
+    private Long BatchTimeout;
+
+    /**
+    * 
+    */
+    @SerializedName("BatchEventCount")
+    @Expose
+    private Long BatchEventCount;
+
+    /**
+    * 
+    */
+    @SerializedName("EnableBatchDelivery")
+    @Expose
+    private Boolean EnableBatchDelivery;
+
+    /**
      * Get Event bus ID 
      * @return EventBusId Event bus ID
      */
@@ -115,6 +136,54 @@ public class CreateTargetRequest extends AbstractModel {
         this.RuleId = RuleId;
     }
 
+    /**
+     * Get  
+     * @return BatchTimeout 
+     */
+    public Long getBatchTimeout() {
+        return this.BatchTimeout;
+    }
+
+    /**
+     * Set 
+     * @param BatchTimeout 
+     */
+    public void setBatchTimeout(Long BatchTimeout) {
+        this.BatchTimeout = BatchTimeout;
+    }
+
+    /**
+     * Get  
+     * @return BatchEventCount 
+     */
+    public Long getBatchEventCount() {
+        return this.BatchEventCount;
+    }
+
+    /**
+     * Set 
+     * @param BatchEventCount 
+     */
+    public void setBatchEventCount(Long BatchEventCount) {
+        this.BatchEventCount = BatchEventCount;
+    }
+
+    /**
+     * Get  
+     * @return EnableBatchDelivery 
+     */
+    public Boolean getEnableBatchDelivery() {
+        return this.EnableBatchDelivery;
+    }
+
+    /**
+     * Set 
+     * @param EnableBatchDelivery 
+     */
+    public void setEnableBatchDelivery(Boolean EnableBatchDelivery) {
+        this.EnableBatchDelivery = EnableBatchDelivery;
+    }
+
     public CreateTargetRequest() {
     }
 
@@ -135,6 +204,15 @@ public class CreateTargetRequest extends AbstractModel {
         if (source.RuleId != null) {
             this.RuleId = new String(source.RuleId);
         }
+        if (source.BatchTimeout != null) {
+            this.BatchTimeout = new Long(source.BatchTimeout);
+        }
+        if (source.BatchEventCount != null) {
+            this.BatchEventCount = new Long(source.BatchEventCount);
+        }
+        if (source.EnableBatchDelivery != null) {
+            this.EnableBatchDelivery = new Boolean(source.EnableBatchDelivery);
+        }
     }
 
 
@@ -146,6 +224,9 @@ public class CreateTargetRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Type", this.Type);
         this.setParamObj(map, prefix + "TargetDescription.", this.TargetDescription);
         this.setParamSimple(map, prefix + "RuleId", this.RuleId);
+        this.setParamSimple(map, prefix + "BatchTimeout", this.BatchTimeout);
+        this.setParamSimple(map, prefix + "BatchEventCount", this.BatchEventCount);
+        this.setParamSimple(map, prefix + "EnableBatchDelivery", this.EnableBatchDelivery);
 
     }
 }

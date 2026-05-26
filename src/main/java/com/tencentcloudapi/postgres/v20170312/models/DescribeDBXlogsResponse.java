@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeDBXlogsResponse extends AbstractModel {
 
     /**
-    * Number of date entries returned this time.
+    * Indicates how many data entries are returned.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Xlog list
+    * Xlog list.
     */
     @SerializedName("XlogList")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeDBXlogsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Number of date entries returned this time. 
-     * @return TotalCount Number of date entries returned this time.
+     * Get Indicates how many data entries are returned. 
+     * @return TotalCount Indicates how many data entries are returned.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of date entries returned this time.
-     * @param TotalCount Number of date entries returned this time.
+     * Set Indicates how many data entries are returned.
+     * @param TotalCount Indicates how many data entries are returned.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Xlog list 
-     * @return XlogList Xlog list
+     * Get Xlog list. 
+     * @return XlogList Xlog list.
      */
     public Xlog [] getXlogList() {
         return this.XlogList;
     }
 
     /**
-     * Set Xlog list
-     * @param XlogList Xlog list
+     * Set Xlog list.
+     * @param XlogList Xlog list.
      */
     public void setXlogList(Xlog [] XlogList) {
         this.XlogList = XlogList;

@@ -31,7 +31,7 @@ public class CreateParameterTemplateRequest extends AbstractModel {
     private String TemplateName;
 
     /**
-    * The major database version number, such as 11, 12, 13.
+    * Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
     */
     @SerializedName("DBMajorVersion")
     @Expose
@@ -68,16 +68,16 @@ public class CreateParameterTemplateRequest extends AbstractModel {
     }
 
     /**
-     * Get The major database version number, such as 11, 12, 13. 
-     * @return DBMajorVersion The major database version number, such as 11, 12, 13.
+     * Get Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api. 
+     * @return DBMajorVersion Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
     }
 
     /**
-     * Set The major database version number, such as 11, 12, 13.
-     * @param DBMajorVersion The major database version number, such as 11, 12, 13.
+     * Set Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
+     * @param DBMajorVersion Specifies the major version of database, such as 11, 12, 13. can be obtained through the [DescribeDBVersions](https://www.tencentcloud.com/document/api/409/89018?from_cn_redirect=1) api.
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;

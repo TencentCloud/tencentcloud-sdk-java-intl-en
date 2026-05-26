@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BooleanInfo extends AbstractModel {
 
     /**
-    * Bool type response object
+    * The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Result")
@@ -32,9 +32,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean Result;
 
     /**
-     * Get Bool type response object
+     * Get The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Result Bool type response object
+     * @return Result The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getResult() {
@@ -42,9 +42,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Bool type response object
+     * Set The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Result Bool type response object
+     * @param Result The Boolean response object. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResult(Boolean Result) {

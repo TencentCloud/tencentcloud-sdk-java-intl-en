@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ReportDataResult extends AbstractModel {
 
     /**
-    * Base64-encoded result data
+    * Result data in Base64 encoding.
     */
     @SerializedName("DataResult")
     @Expose
     private String DataResult;
 
     /**
-    * Executed SQL
+    * Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExecSql")
@@ -39,7 +39,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ExecSql;
 
     /**
-    * Execution time
+    * Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExecTime")
@@ -47,7 +47,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ExecTime;
 
     /**
-    * Query index ID
+    * Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("IndexId")
@@ -55,25 +55,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String IndexId;
 
     /**
-     * Get Base64-encoded result data 
-     * @return DataResult Base64-encoded result data
+     * Get Result data in Base64 encoding. 
+     * @return DataResult Result data in Base64 encoding.
      */
     public String getDataResult() {
         return this.DataResult;
     }
 
     /**
-     * Set Base64-encoded result data
-     * @param DataResult Base64-encoded result data
+     * Set Result data in Base64 encoding.
+     * @param DataResult Result data in Base64 encoding.
      */
     public void setDataResult(String DataResult) {
         this.DataResult = DataResult;
     }
 
     /**
-     * Get Executed SQL
+     * Get Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExecSql Executed SQL
+     * @return ExecSql Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExecSql() {
@@ -81,9 +81,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Executed SQL
+     * Set Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExecSql Executed SQL
+     * @param ExecSql Executed SQL.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExecSql(String ExecSql) {
@@ -91,9 +91,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Execution time
+     * Get Execution time.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExecTime Execution time
+     * @return ExecTime Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getExecTime() {
@@ -101,9 +101,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Execution time
+     * Set Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExecTime Execution time
+     * @param ExecTime Execution time.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExecTime(Long ExecTime) {
@@ -111,9 +111,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Query index ID
+     * Get Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IndexId Query index ID
+     * @return IndexId Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getIndexId() {
@@ -121,9 +121,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Query index ID
+     * Set Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IndexId Query index ID
+     * @param IndexId Query index ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setIndexId(String IndexId) {

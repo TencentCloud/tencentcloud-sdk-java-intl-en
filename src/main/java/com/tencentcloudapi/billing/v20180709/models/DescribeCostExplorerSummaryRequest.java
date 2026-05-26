@@ -83,7 +83,7 @@ zone = Availability zoneactionType = Transaction typepayMode = Billing modetags 
     private Long PageNo;
 
     /**
-    * Cost allocation tag value
+    * Cost allocation tag key
     */
     @SerializedName("TagKeyStr")
     @Expose
@@ -244,16 +244,16 @@ zone = Availability zoneactionType = Transaction typepayMode = Billing modetags 
     }
 
     /**
-     * Get Cost allocation tag value 
-     * @return TagKeyStr Cost allocation tag value
+     * Get Cost allocation tag key 
+     * @return TagKeyStr Cost allocation tag key
      */
     public String getTagKeyStr() {
         return this.TagKeyStr;
     }
 
     /**
-     * Set Cost allocation tag value
-     * @param TagKeyStr Cost allocation tag value
+     * Set Cost allocation tag key
+     * @param TagKeyStr Cost allocation tag key
      */
     public void setTagKeyStr(String TagKeyStr) {
         this.TagKeyStr = TagKeyStr;

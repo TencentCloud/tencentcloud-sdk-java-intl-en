@@ -24,61 +24,61 @@ import java.util.HashMap;
 public class DescribeApplicationConfigFileRequest extends AbstractModel {
 
     /**
-    * Application ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Application platform. 2: Android; 3: iOS
+    * Superapp type. Valid values: 1: Test; 2: Production.
     */
     @SerializedName("AppType")
     @Expose
     private Long AppType;
 
     /**
-     * Get Application ID 
-     * @return ApplicationId Application ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Application ID
-     * @param ApplicationId Application ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Application platform. 2: Android; 3: iOS 
-     * @return AppType Application platform. 2: Android; 3: iOS
+     * Get Superapp type. Valid values: 1: Test; 2: Production. 
+     * @return AppType Superapp type. Valid values: 1: Test; 2: Production.
      * @deprecated
      */
     @Deprecated
@@ -87,8 +87,8 @@ public class DescribeApplicationConfigFileRequest extends AbstractModel {
     }
 
     /**
-     * Set Application platform. 2: Android; 3: iOS
-     * @param AppType Application platform. 2: Android; 3: iOS
+     * Set Superapp type. Valid values: 1: Test; 2: Production.
+     * @param AppType Superapp type. Valid values: 1: Test; 2: Production.
      * @deprecated
      */
     @Deprecated

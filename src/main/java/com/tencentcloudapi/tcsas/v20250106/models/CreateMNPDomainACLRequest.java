@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateMNPDomainACLRequest extends AbstractModel {
 
     /**
-    * Mini program ID
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Domain name list
+    * List of domains.
     */
     @SerializedName("Domain")
     @Expose
     private CreateDomainParam [] Domain;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Domain name list 
-     * @return Domain Domain name list
+     * Get List of domains. 
+     * @return Domain List of domains.
      */
     public CreateDomainParam [] getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain name list
-     * @param Domain Domain name list
+     * Set List of domains.
+     * @param Domain List of domains.
      */
     public void setDomain(CreateDomainParam [] Domain) {
         this.Domain = Domain;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

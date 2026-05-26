@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeApplicationConfigInfo extends AbstractModel {
 
     /**
-    * Android configuration list
+    * Android configuration list.
     */
     @SerializedName("AndroidConfig")
     @Expose
     private ApplicationConfigInfo [] AndroidConfig;
 
     /**
-    * iOS configuration list
+    * iOS configuration list.
     */
     @SerializedName("IosConfig")
     @Expose
     private ApplicationConfigInfo [] IosConfig;
 
     /**
-     * Get Android configuration list 
-     * @return AndroidConfig Android configuration list
+     * Get Android configuration list. 
+     * @return AndroidConfig Android configuration list.
      */
     public ApplicationConfigInfo [] getAndroidConfig() {
         return this.AndroidConfig;
     }
 
     /**
-     * Set Android configuration list
-     * @param AndroidConfig Android configuration list
+     * Set Android configuration list.
+     * @param AndroidConfig Android configuration list.
      */
     public void setAndroidConfig(ApplicationConfigInfo [] AndroidConfig) {
         this.AndroidConfig = AndroidConfig;
     }
 
     /**
-     * Get iOS configuration list 
-     * @return IosConfig iOS configuration list
+     * Get iOS configuration list. 
+     * @return IosConfig iOS configuration list.
      */
     public ApplicationConfigInfo [] getIosConfig() {
         return this.IosConfig;
     }
 
     /**
-     * Set iOS configuration list
-     * @param IosConfig iOS configuration list
+     * Set iOS configuration list.
+     * @param IosConfig iOS configuration list.
      */
     public void setIosConfig(ApplicationConfigInfo [] IosConfig) {
         this.IosConfig = IosConfig;

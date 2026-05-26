@@ -212,6 +212,17 @@ To delete a job, the job and all its task instances must be in SUCCEED or FAILED
     }
 
     /**
+     *Query the resource usage monitoring information of Job task instances. This API only supports querying elastic node tasks and undeleted jobs. Computing environment tasks are not currently supported. This interface only supports querying the resource utilization of Job instances within a time range.
+     * @param req DescribeJobMonitorDataRequest
+     * @return DescribeJobMonitorDataResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeJobMonitorDataResponse DescribeJobMonitorData(DescribeJobMonitorDataRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeJobMonitorData", DescribeJobMonitorDataResponse.class);
+    }
+
+    /**
      *This API is used to query the submission information of the specified job, with the return including the job submission information used as input parameters in the JobId and SubmitJob APIs.
      * @param req DescribeJobSubmitInfoRequest
      * @return DescribeJobSubmitInfoResponse

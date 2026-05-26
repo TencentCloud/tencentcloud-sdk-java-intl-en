@@ -442,42 +442,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean IsPhysicalReplicationSupported;
 
     /**
-    * 
+    * <p>Whether strong-sync DCN is supported</p>
     */
     @SerializedName("IsDcnStrongSyncSupported")
     @Expose
     private Long IsDcnStrongSyncSupported;
 
     /**
-    * 
+    * <p>Whether DCN switching is supported</p>
     */
     @SerializedName("IsDcnSwitchSupported")
     @Expose
     private Long IsDcnSwitchSupported;
 
     /**
-    * 
+    * <p>Proxy version</p>
     */
     @SerializedName("ProxyVersion")
     @Expose
     private String ProxyVersion;
 
     /**
-    * 
+    * <p>CPU type. Examples: Intel/AMD for Intel, Hygon for Hygon.</p>
     */
     @SerializedName("CpuType")
     @Expose
     private String CpuType;
 
     /**
-    * 
+    * <p>Deletion protection flag. 1: Deletion protection enabled, 0: Deletion protection disabled.</p>
     */
     @SerializedName("ProtectedProperty")
     @Expose
     private Long ProtectedProperty;
 
     /**
-    * 
+    * <p>Flow ID, which identifies the ongoing asynchronous task of the instance.</p>
     */
     @SerializedName("FlowId")
     @Expose
@@ -1479,96 +1479,96 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get  
-     * @return IsDcnStrongSyncSupported 
+     * Get <p>Whether strong-sync DCN is supported</p> 
+     * @return IsDcnStrongSyncSupported <p>Whether strong-sync DCN is supported</p>
      */
     public Long getIsDcnStrongSyncSupported() {
         return this.IsDcnStrongSyncSupported;
     }
 
     /**
-     * Set 
-     * @param IsDcnStrongSyncSupported 
+     * Set <p>Whether strong-sync DCN is supported</p>
+     * @param IsDcnStrongSyncSupported <p>Whether strong-sync DCN is supported</p>
      */
     public void setIsDcnStrongSyncSupported(Long IsDcnStrongSyncSupported) {
         this.IsDcnStrongSyncSupported = IsDcnStrongSyncSupported;
     }
 
     /**
-     * Get  
-     * @return IsDcnSwitchSupported 
+     * Get <p>Whether DCN switching is supported</p> 
+     * @return IsDcnSwitchSupported <p>Whether DCN switching is supported</p>
      */
     public Long getIsDcnSwitchSupported() {
         return this.IsDcnSwitchSupported;
     }
 
     /**
-     * Set 
-     * @param IsDcnSwitchSupported 
+     * Set <p>Whether DCN switching is supported</p>
+     * @param IsDcnSwitchSupported <p>Whether DCN switching is supported</p>
      */
     public void setIsDcnSwitchSupported(Long IsDcnSwitchSupported) {
         this.IsDcnSwitchSupported = IsDcnSwitchSupported;
     }
 
     /**
-     * Get  
-     * @return ProxyVersion 
+     * Get <p>Proxy version</p> 
+     * @return ProxyVersion <p>Proxy version</p>
      */
     public String getProxyVersion() {
         return this.ProxyVersion;
     }
 
     /**
-     * Set 
-     * @param ProxyVersion 
+     * Set <p>Proxy version</p>
+     * @param ProxyVersion <p>Proxy version</p>
      */
     public void setProxyVersion(String ProxyVersion) {
         this.ProxyVersion = ProxyVersion;
     }
 
     /**
-     * Get  
-     * @return CpuType 
+     * Get <p>CPU type. Examples: Intel/AMD for Intel, Hygon for Hygon.</p> 
+     * @return CpuType <p>CPU type. Examples: Intel/AMD for Intel, Hygon for Hygon.</p>
      */
     public String getCpuType() {
         return this.CpuType;
     }
 
     /**
-     * Set 
-     * @param CpuType 
+     * Set <p>CPU type. Examples: Intel/AMD for Intel, Hygon for Hygon.</p>
+     * @param CpuType <p>CPU type. Examples: Intel/AMD for Intel, Hygon for Hygon.</p>
      */
     public void setCpuType(String CpuType) {
         this.CpuType = CpuType;
     }
 
     /**
-     * Get  
-     * @return ProtectedProperty 
+     * Get <p>Deletion protection flag. 1: Deletion protection enabled, 0: Deletion protection disabled.</p> 
+     * @return ProtectedProperty <p>Deletion protection flag. 1: Deletion protection enabled, 0: Deletion protection disabled.</p>
      */
     public Long getProtectedProperty() {
         return this.ProtectedProperty;
     }
 
     /**
-     * Set 
-     * @param ProtectedProperty 
+     * Set <p>Deletion protection flag. 1: Deletion protection enabled, 0: Deletion protection disabled.</p>
+     * @param ProtectedProperty <p>Deletion protection flag. 1: Deletion protection enabled, 0: Deletion protection disabled.</p>
      */
     public void setProtectedProperty(Long ProtectedProperty) {
         this.ProtectedProperty = ProtectedProperty;
     }
 
     /**
-     * Get  
-     * @return FlowId 
+     * Get <p>Flow ID, which identifies the ongoing asynchronous task of the instance.</p> 
+     * @return FlowId <p>Flow ID, which identifies the ongoing asynchronous task of the instance.</p>
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set 
-     * @param FlowId 
+     * Set <p>Flow ID, which identifies the ongoing asynchronous task of the instance.</p>
+     * @param FlowId <p>Flow ID, which identifies the ongoing asynchronous task of the instance.</p>
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

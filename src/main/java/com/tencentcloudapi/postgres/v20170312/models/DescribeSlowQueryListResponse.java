@@ -31,8 +31,7 @@ public class DescribeSlowQueryListResponse extends AbstractModel {
     private Long TotalCount;
 
     /**
-    * Segmented analysis results of the time consumption of the slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Describes the segmented analysis results of the duration of the queried slow logs.
     */
     @SerializedName("DurationAnalysis")
     @Expose
@@ -40,7 +39,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Collection of detailed information on slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RawSlowQueryList")
     @Expose
@@ -70,30 +68,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Segmented analysis results of the time consumption of the slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DurationAnalysis Segmented analysis results of the time consumption of the slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Describes the segmented analysis results of the duration of the queried slow logs. 
+     * @return DurationAnalysis Describes the segmented analysis results of the duration of the queried slow logs.
      */
     public DurationAnalysis [] getDurationAnalysis() {
         return this.DurationAnalysis;
     }
 
     /**
-     * Set Segmented analysis results of the time consumption of the slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DurationAnalysis Segmented analysis results of the time consumption of the slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Describes the segmented analysis results of the duration of the queried slow logs.
+     * @param DurationAnalysis Describes the segmented analysis results of the duration of the queried slow logs.
      */
     public void setDurationAnalysis(DurationAnalysis [] DurationAnalysis) {
         this.DurationAnalysis = DurationAnalysis;
     }
 
     /**
-     * Get Collection of detailed information on slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Collection of detailed information on slow logs found. 
      * @return RawSlowQueryList Collection of detailed information on slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public RawSlowQuery [] getRawSlowQueryList() {
         return this.RawSlowQueryList;
@@ -101,9 +93,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Collection of detailed information on slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param RawSlowQueryList Collection of detailed information on slow logs found.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRawSlowQueryList(RawSlowQuery [] RawSlowQueryList) {
         this.RawSlowQueryList = RawSlowQueryList;

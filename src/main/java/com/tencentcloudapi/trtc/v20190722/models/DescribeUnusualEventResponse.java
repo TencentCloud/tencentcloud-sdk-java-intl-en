@@ -24,15 +24,15 @@ import java.util.HashMap;
 public class DescribeUnusualEventResponse extends AbstractModel {
 
     /**
-    * The number of records returned.
-Value range: 0-20.
+    * Total number of returned data entries.
+Value range: [0, 20].
     */
     @SerializedName("Total")
     @Expose
     private Long Total;
 
     /**
-    * The information of the abnormal user experiences.
+    * Abnormal experience list.
     */
     @SerializedName("AbnormalExperienceList")
     @Expose
@@ -46,36 +46,36 @@ Value range: 0-20.
     private String RequestId;
 
     /**
-     * Get The number of records returned.
-Value range: 0-20. 
-     * @return Total The number of records returned.
-Value range: 0-20.
+     * Get Total number of returned data entries.
+Value range: [0, 20]. 
+     * @return Total Total number of returned data entries.
+Value range: [0, 20].
      */
     public Long getTotal() {
         return this.Total;
     }
 
     /**
-     * Set The number of records returned.
-Value range: 0-20.
-     * @param Total The number of records returned.
-Value range: 0-20.
+     * Set Total number of returned data entries.
+Value range: [0, 20].
+     * @param Total Total number of returned data entries.
+Value range: [0, 20].
      */
     public void setTotal(Long Total) {
         this.Total = Total;
     }
 
     /**
-     * Get The information of the abnormal user experiences. 
-     * @return AbnormalExperienceList The information of the abnormal user experiences.
+     * Get Abnormal experience list. 
+     * @return AbnormalExperienceList Abnormal experience list.
      */
     public AbnormalExperience [] getAbnormalExperienceList() {
         return this.AbnormalExperienceList;
     }
 
     /**
-     * Set The information of the abnormal user experiences.
-     * @param AbnormalExperienceList The information of the abnormal user experiences.
+     * Set Abnormal experience list.
+     * @param AbnormalExperienceList Abnormal experience list.
      */
     public void setAbnormalExperienceList(AbnormalExperience [] AbnormalExperienceList) {
         this.AbnormalExperienceList = AbnormalExperienceList;

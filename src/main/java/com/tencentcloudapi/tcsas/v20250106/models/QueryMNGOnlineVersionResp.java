@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class QueryMNGOnlineVersionResp extends AbstractModel {
 
     /**
-    * <p>Mini game appid</p>
+    * <p>Mini game appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * <p>Version number</p>
+    * <p>Version number.</p>
     */
     @SerializedName("MNPVersion")
     @Expose
     private String MNPVersion;
 
     /**
-    * <p>Version ID</p>
+    * <p>Version ID.</p>
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-    * <p>Version remarks</p>
+    * <p>Version note.</p>
     */
     @SerializedName("MNPVersionNote")
     @Expose
     private String MNPVersionNote;
 
     /**
-    * <p>Update time</p>
+    * <p>Last modified time.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get <p>Mini game appid</p> 
-     * @return MNPId <p>Mini game appid</p>
+     * Get <p>Mini game appid.</p> 
+     * @return MNPId <p>Mini game appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set <p>Mini game appid</p>
-     * @param MNPId <p>Mini game appid</p>
+     * Set <p>Mini game appid.</p>
+     * @param MNPId <p>Mini game appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get <p>Version number</p> 
-     * @return MNPVersion <p>Version number</p>
+     * Get <p>Version number.</p> 
+     * @return MNPVersion <p>Version number.</p>
      */
     public String getMNPVersion() {
         return this.MNPVersion;
     }
 
     /**
-     * Set <p>Version number</p>
-     * @param MNPVersion <p>Version number</p>
+     * Set <p>Version number.</p>
+     * @param MNPVersion <p>Version number.</p>
      */
     public void setMNPVersion(String MNPVersion) {
         this.MNPVersion = MNPVersion;
     }
 
     /**
-     * Get <p>Version ID</p> 
-     * @return MNPVersionId <p>Version ID</p>
+     * Get <p>Version ID.</p> 
+     * @return MNPVersionId <p>Version ID.</p>
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set <p>Version ID</p>
-     * @param MNPVersionId <p>Version ID</p>
+     * Set <p>Version ID.</p>
+     * @param MNPVersionId <p>Version ID.</p>
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get <p>Version remarks</p> 
-     * @return MNPVersionNote <p>Version remarks</p>
+     * Get <p>Version note.</p> 
+     * @return MNPVersionNote <p>Version note.</p>
      */
     public String getMNPVersionNote() {
         return this.MNPVersionNote;
     }
 
     /**
-     * Set <p>Version remarks</p>
-     * @param MNPVersionNote <p>Version remarks</p>
+     * Set <p>Version note.</p>
+     * @param MNPVersionNote <p>Version note.</p>
      */
     public void setMNPVersionNote(String MNPVersionNote) {
         this.MNPVersionNote = MNPVersionNote;
     }
 
     /**
-     * Get <p>Update time</p> 
-     * @return UpdateTime <p>Update time</p>
+     * Get <p>Last modified time.</p> 
+     * @return UpdateTime <p>Last modified time.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set <p>Update time</p>
-     * @param UpdateTime <p>Update time</p>
+     * Set <p>Last modified time.</p>
+     * @param UpdateTime <p>Last modified time.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

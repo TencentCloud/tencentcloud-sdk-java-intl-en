@@ -24,14 +24,17 @@ import java.util.HashMap;
 public class DescribeReadOnlyGroupsRequest extends AbstractModel {
 
     /**
-    * Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
+    * Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * The number of results per page. Default value: 10.
+    * Specifies the number of items per page. default value: 10. maximum value: 99.
     */
     @SerializedName("PageSize")
     @Expose
@@ -45,46 +48,58 @@ public class DescribeReadOnlyGroupsRequest extends AbstractModel {
     private Long PageNumber;
 
     /**
-    * Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
+    * Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values: `desc`, `asc`.
+    * Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-     * Get Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string), 
-     * @return Filters Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
+     * Get Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified. 
+     * @return Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
-     * @param Filters Filter instances by using one or more filters. Valid values:  `db-master-instance-id` (filter by the primary instance ID in string), `read-only-group-id` (filter by the read-only group ID in string),
+     * Set Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
+     * @param Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-master-instance-id: specifies the primary instance to filter by (in string format).
+read-only-group-id: Filter by read-only group ID, type string.
+Note: in the filter criteria of this parameter, db-master-instance-id must be specified.
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get The number of results per page. Default value: 10. 
-     * @return PageSize The number of results per page. Default value: 10.
+     * Get Specifies the number of items per page. default value: 10. maximum value: 99. 
+     * @return PageSize Specifies the number of items per page. default value: 10. maximum value: 99.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set The number of results per page. Default value: 10.
-     * @param PageSize The number of results per page. Default value: 10.
+     * Set Specifies the number of items per page. default value: 10. maximum value: 99.
+     * @param PageSize Specifies the number of items per page. default value: 10. maximum value: 99.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;
@@ -107,32 +122,32 @@ public class DescribeReadOnlyGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`. 
-     * @return OrderBy Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
+     * Get Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime. 
+     * @return OrderBy Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
-     * @param OrderBy Sorting criterion. Valid values: `ROGroupId`, `CreateTime`, `Name`.
+     * Set Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
+     * @param OrderBy Specifies the sorting basis for queries. currently supports: ROGroupId, CreateTime, Name. default value: CreateTime.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values: `desc`, `asc`. 
-     * @return OrderByType Sorting order. Valid values: `desc`, `asc`.
+     * Get Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc. 
+     * @return OrderByType Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting order. Valid values: `desc`, `asc`.
-     * @param OrderByType Sorting order. Valid values: `desc`, `asc`.
+     * Set Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
+     * @param OrderByType Specifies the sorting basis type for queries. currently supports: desc, asc. default value: asc.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

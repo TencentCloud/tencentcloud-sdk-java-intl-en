@@ -24,345 +24,345 @@ import java.util.HashMap;
 public class DescribeMNPListData extends AbstractModel {
 
     /**
-    * Mini program ID
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Mini program icon
+    * Mini program icon.
     */
     @SerializedName("MNPIcon")
     @Expose
     private String MNPIcon;
 
     /**
-    * Mini program name
+    * Mini program name.
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Name of the associated team
+    * Team name. 
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Mini program type
+    * Mini program category.
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+    * Mini program available status. Valid values: 1: Available; 2: Removed.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Mini program introduction
+    * Mini program introduction.
     */
     @SerializedName("MNPIntro")
     @Expose
     private String MNPIntro;
 
     /**
-    * Creator
+    * Creator.
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Specifies the updater.
+    * Last modifier.
     */
     @SerializedName("UpdateUser")
     @Expose
     private String UpdateUser;
 
     /**
-    * Update time
+    * Last modified time.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Application name
+    * Superapp name.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+    * Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
     */
     @SerializedName("EffectStatus")
     @Expose
     private Long EffectStatus;
 
     /**
-    * Specifies the ID of the application bound with the mini program.
+    * Effective mini program version ID bound to the superapp. 
     */
     @SerializedName("EffectMNPVersionId")
     @Expose
     private Long EffectMNPVersionId;
 
     /**
-    * Specifies the effective version number of the application bound to the mini program.
+    * Effective mini program version number bound to the superapp. 
     */
     @SerializedName("EffectMNPVersion")
     @Expose
     private String EffectMNPVersion;
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program icon 
-     * @return MNPIcon Mini program icon
+     * Get Mini program icon. 
+     * @return MNPIcon Mini program icon.
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set Mini program icon
-     * @param MNPIcon Mini program icon
+     * Set Mini program icon.
+     * @param MNPIcon Mini program icon.
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get Mini program name 
-     * @return MNPName Mini program name
+     * Get Mini program name. 
+     * @return MNPName Mini program name.
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name
-     * @param MNPName Mini program name
+     * Set Mini program name.
+     * @param MNPName Mini program name.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Name of the associated team 
-     * @return TeamName Name of the associated team
+     * Get Team name.  
+     * @return TeamName Team name. 
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Name of the associated team
-     * @param TeamName Name of the associated team
+     * Set Team name. 
+     * @param TeamName Team name. 
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Mini program type 
-     * @return MNPType Mini program type
+     * Get Mini program category. 
+     * @return MNPType Mini program category.
      */
     public String getMNPType() {
         return this.MNPType;
     }
 
     /**
-     * Set Mini program type
-     * @param MNPType Mini program type
+     * Set Mini program category.
+     * @param MNPType Mini program category.
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed). 
-     * @return Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+     * Get Mini program available status. Valid values: 1: Available; 2: Removed. 
+     * @return Status Mini program available status. Valid values: 1: Available; 2: Removed.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
-     * @param Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+     * Set Mini program available status. Valid values: 1: Available; 2: Removed.
+     * @param Status Mini program available status. Valid values: 1: Available; 2: Removed.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Mini program introduction 
-     * @return MNPIntro Mini program introduction
+     * Get Mini program introduction. 
+     * @return MNPIntro Mini program introduction.
      */
     public String getMNPIntro() {
         return this.MNPIntro;
     }
 
     /**
-     * Set Mini program introduction
-     * @param MNPIntro Mini program introduction
+     * Set Mini program introduction.
+     * @param MNPIntro Mini program introduction.
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get Creator 
-     * @return CreateUser Creator
+     * Get Creator. 
+     * @return CreateUser Creator.
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Creator
-     * @param CreateUser Creator
+     * Set Creator.
+     * @param CreateUser Creator.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Specifies the updater. 
-     * @return UpdateUser Specifies the updater.
+     * Get Last modifier. 
+     * @return UpdateUser Last modifier.
      */
     public String getUpdateUser() {
         return this.UpdateUser;
     }
 
     /**
-     * Set Specifies the updater.
-     * @param UpdateUser Specifies the updater.
+     * Set Last modifier.
+     * @param UpdateUser Last modifier.
      */
     public void setUpdateUser(String UpdateUser) {
         this.UpdateUser = UpdateUser;
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get Last modified time. 
+     * @return UpdateTime Last modified time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set Last modified time.
+     * @param UpdateTime Last modified time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Application name 
-     * @return ApplicationName Application name
+     * Get Superapp name. 
+     * @return ApplicationName Superapp name.
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Application name
-     * @param ApplicationName Application name
+     * Set Superapp name.
+     * @param ApplicationName Superapp name.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Effective status of the bound application. valid values: 1 (not effective), 2 (effective). 
-     * @return EffectStatus Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+     * Get Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective. 
+     * @return EffectStatus Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
      */
     public Long getEffectStatus() {
         return this.EffectStatus;
     }
 
     /**
-     * Set Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
-     * @param EffectStatus Effective status of the bound application. valid values: 1 (not effective), 2 (effective).
+     * Set Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
+     * @param EffectStatus Binding effective status for the superapp. Valid values: 1: Not effective; 2: Effective.
      */
     public void setEffectStatus(Long EffectStatus) {
         this.EffectStatus = EffectStatus;
     }
 
     /**
-     * Get Specifies the ID of the application bound with the mini program. 
-     * @return EffectMNPVersionId Specifies the ID of the application bound with the mini program.
+     * Get Effective mini program version ID bound to the superapp.  
+     * @return EffectMNPVersionId Effective mini program version ID bound to the superapp. 
      */
     public Long getEffectMNPVersionId() {
         return this.EffectMNPVersionId;
     }
 
     /**
-     * Set Specifies the ID of the application bound with the mini program.
-     * @param EffectMNPVersionId Specifies the ID of the application bound with the mini program.
+     * Set Effective mini program version ID bound to the superapp. 
+     * @param EffectMNPVersionId Effective mini program version ID bound to the superapp. 
      */
     public void setEffectMNPVersionId(Long EffectMNPVersionId) {
         this.EffectMNPVersionId = EffectMNPVersionId;
     }
 
     /**
-     * Get Specifies the effective version number of the application bound to the mini program. 
-     * @return EffectMNPVersion Specifies the effective version number of the application bound to the mini program.
+     * Get Effective mini program version number bound to the superapp.  
+     * @return EffectMNPVersion Effective mini program version number bound to the superapp. 
      */
     public String getEffectMNPVersion() {
         return this.EffectMNPVersion;
     }
 
     /**
-     * Set Specifies the effective version number of the application bound to the mini program.
-     * @param EffectMNPVersion Specifies the effective version number of the application bound to the mini program.
+     * Set Effective mini program version number bound to the superapp. 
+     * @param EffectMNPVersion Effective mini program version number bound to the superapp. 
      */
     public void setEffectMNPVersion(String EffectMNPVersion) {
         this.EffectMNPVersion = EffectMNPVersion;

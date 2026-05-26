@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DestroyDBInstanceRequest extends AbstractModel {
 
     /**
-    * The ID of the instance to be eliminated
+    * <p>ID of the instance to be shut down</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-     * Get The ID of the instance to be eliminated 
-     * @return DBInstanceId The ID of the instance to be eliminated
+     * Get <p>ID of the instance to be shut down</p> 
+     * @return DBInstanceId <p>ID of the instance to be shut down</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set The ID of the instance to be eliminated
-     * @param DBInstanceId The ID of the instance to be eliminated
+     * Set <p>ID of the instance to be shut down</p>
+     * @param DBInstanceId <p>ID of the instance to be shut down</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;

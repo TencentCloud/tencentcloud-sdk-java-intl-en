@@ -24,207 +24,207 @@ import java.util.HashMap;
 public class DescribeApplicationMNPListRequest extends AbstractModel {
 
     /**
-    * Page offset
+    * Pagination offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results per page
+    * Number of entries per page.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Superapp ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Online status. 0 All (default); 1 Available; 2 In canary release
+    * Available status. Valid value: 0: All; 1 Available; 2: In canary release.
     */
     @SerializedName("OnlineStatus")
     @Expose
     private Long OnlineStatus;
 
     /**
-    * Engine type. 0 Mini program; 1 Mini game
+    * Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
     */
     @SerializedName("EngineTypeList")
     @Expose
     private Long [] EngineTypeList;
 
     /**
-    * Secondary category name
+    * Secondary category name.
     */
     @SerializedName("SubCategory")
     @Expose
     private String SubCategory;
 
     /**
-    * Primary category name
+    * Primary category name.
     */
     @SerializedName("PrimaryCategory")
     @Expose
     private String PrimaryCategory;
 
     /**
-    * Keywords
+    * Keyword.
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-     * Get Page offset 
-     * @return Offset Page offset
+     * Get Pagination offset. 
+     * @return Offset Pagination offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page offset
-     * @param Offset Page offset
+     * Set Pagination offset.
+     * @param Offset Pagination offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results per page 
-     * @return Limit Number of results per page
+     * Get Number of entries per page. 
+     * @return Limit Number of entries per page.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page
-     * @param Limit Number of results per page
+     * Set Number of entries per page.
+     * @param Limit Number of entries per page.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Superapp ID 
-     * @return ApplicationId Superapp ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Superapp ID
-     * @param ApplicationId Superapp ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Online status. 0 All (default); 1 Available; 2 In canary release 
-     * @return OnlineStatus Online status. 0 All (default); 1 Available; 2 In canary release
+     * Get Available status. Valid value: 0: All; 1 Available; 2: In canary release. 
+     * @return OnlineStatus Available status. Valid value: 0: All; 1 Available; 2: In canary release.
      */
     public Long getOnlineStatus() {
         return this.OnlineStatus;
     }
 
     /**
-     * Set Online status. 0 All (default); 1 Available; 2 In canary release
-     * @param OnlineStatus Online status. 0 All (default); 1 Available; 2 In canary release
+     * Set Available status. Valid value: 0: All; 1 Available; 2: In canary release.
+     * @param OnlineStatus Available status. Valid value: 0: All; 1 Available; 2: In canary release.
      */
     public void setOnlineStatus(Long OnlineStatus) {
         this.OnlineStatus = OnlineStatus;
     }
 
     /**
-     * Get Engine type. 0 Mini program; 1 Mini game 
-     * @return EngineTypeList Engine type. 0 Mini program; 1 Mini game
+     * Get Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game. 
+     * @return EngineTypeList Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
      */
     public Long [] getEngineTypeList() {
         return this.EngineTypeList;
     }
 
     /**
-     * Set Engine type. 0 Mini program; 1 Mini game
-     * @param EngineTypeList Engine type. 0 Mini program; 1 Mini game
+     * Set Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
+     * @param EngineTypeList Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
      */
     public void setEngineTypeList(Long [] EngineTypeList) {
         this.EngineTypeList = EngineTypeList;
     }
 
     /**
-     * Get Secondary category name 
-     * @return SubCategory Secondary category name
+     * Get Secondary category name. 
+     * @return SubCategory Secondary category name.
      */
     public String getSubCategory() {
         return this.SubCategory;
     }
 
     /**
-     * Set Secondary category name
-     * @param SubCategory Secondary category name
+     * Set Secondary category name.
+     * @param SubCategory Secondary category name.
      */
     public void setSubCategory(String SubCategory) {
         this.SubCategory = SubCategory;
     }
 
     /**
-     * Get Primary category name 
-     * @return PrimaryCategory Primary category name
+     * Get Primary category name. 
+     * @return PrimaryCategory Primary category name.
      */
     public String getPrimaryCategory() {
         return this.PrimaryCategory;
     }
 
     /**
-     * Set Primary category name
-     * @param PrimaryCategory Primary category name
+     * Set Primary category name.
+     * @param PrimaryCategory Primary category name.
      */
     public void setPrimaryCategory(String PrimaryCategory) {
         this.PrimaryCategory = PrimaryCategory;
     }
 
     /**
-     * Get Keywords 
-     * @return Keyword Keywords
+     * Get Keyword. 
+     * @return Keyword Keyword.
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set Keywords
-     * @param Keyword Keywords
+     * Set Keyword.
+     * @param Keyword Keyword.
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;

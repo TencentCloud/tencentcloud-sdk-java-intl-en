@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class DescribeMNGSensitiveAPIPermissionListData extends AbstractModel {
 
     /**
-    * <p>API ID</p>
+    * <p>API ID.</p>
     */
     @SerializedName("APIId")
     @Expose
     private String APIId;
 
     /**
-    * <p>API name</p>
+    * <p>API name.</p>
     */
     @SerializedName("APIName")
     @Expose
     private String APIName;
 
     /**
-    * <p>API method</p>
+    * <p>API method.</p>
     */
     @SerializedName("APIMethod")
     @Expose
     private String APIMethod;
 
     /**
-    * <p>API status</p>
+    * <p>API status.</p>
     */
     @SerializedName("APIStatus")
     @Expose
     private Long APIStatus;
 
     /**
-    * <p>API request status</p>
+    * <p>API request status.</p>
     */
     @SerializedName("APIApplyStatus")
     @Expose
     private Long APIApplyStatus;
 
     /**
-    * <p>Reason for rejection</p>
+    * <p>Reason for rejection.</p>
     */
     @SerializedName("RejectReason")
     @Expose
     private String RejectReason;
 
     /**
-    * <p>Approval number</p>
+    * <p>Approval number.</p>
     */
     @SerializedName("ApprovalNo")
     @Expose
     private String ApprovalNo;
 
     /**
-    * <p>Superapp ID</p>
+    * <p>Superapp ID.</p>
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * <p>Superapp icon</p>
+    * <p>Superapp icon.</p>
     */
     @SerializedName("ApplicationIcon")
     @Expose
     private String ApplicationIcon;
 
     /**
-    * <p>Superapp name</p>
+    * <p>Superapp name.</p>
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * <p>API type. Valid values: 1: System; 2: Custom
+    * <p>API type. Valid values: 1: System; 2: Custom.</p>
     */
     @SerializedName("APIType")
     @Expose
     private Long APIType;
 
     /**
-    * <p>API feature description</p>
+    * <p>API feature description.</p>
     */
     @SerializedName("APIDesc")
     @Expose
     private String APIDesc;
 
     /**
-     * Get <p>API ID</p> 
-     * @return APIId <p>API ID</p>
+     * Get <p>API ID.</p> 
+     * @return APIId <p>API ID.</p>
      */
     public String getAPIId() {
         return this.APIId;
     }
 
     /**
-     * Set <p>API ID</p>
-     * @param APIId <p>API ID</p>
+     * Set <p>API ID.</p>
+     * @param APIId <p>API ID.</p>
      */
     public void setAPIId(String APIId) {
         this.APIId = APIId;
     }
 
     /**
-     * Get <p>API name</p> 
-     * @return APIName <p>API name</p>
+     * Get <p>API name.</p> 
+     * @return APIName <p>API name.</p>
      */
     public String getAPIName() {
         return this.APIName;
     }
 
     /**
-     * Set <p>API name</p>
-     * @param APIName <p>API name</p>
+     * Set <p>API name.</p>
+     * @param APIName <p>API name.</p>
      */
     public void setAPIName(String APIName) {
         this.APIName = APIName;
     }
 
     /**
-     * Get <p>API method</p> 
-     * @return APIMethod <p>API method</p>
+     * Get <p>API method.</p> 
+     * @return APIMethod <p>API method.</p>
      */
     public String getAPIMethod() {
         return this.APIMethod;
     }
 
     /**
-     * Set <p>API method</p>
-     * @param APIMethod <p>API method</p>
+     * Set <p>API method.</p>
+     * @param APIMethod <p>API method.</p>
      */
     public void setAPIMethod(String APIMethod) {
         this.APIMethod = APIMethod;
     }
 
     /**
-     * Get <p>API status</p> 
-     * @return APIStatus <p>API status</p>
+     * Get <p>API status.</p> 
+     * @return APIStatus <p>API status.</p>
      */
     public Long getAPIStatus() {
         return this.APIStatus;
     }
 
     /**
-     * Set <p>API status</p>
-     * @param APIStatus <p>API status</p>
+     * Set <p>API status.</p>
+     * @param APIStatus <p>API status.</p>
      */
     public void setAPIStatus(Long APIStatus) {
         this.APIStatus = APIStatus;
     }
 
     /**
-     * Get <p>API request status</p> 
-     * @return APIApplyStatus <p>API request status</p>
+     * Get <p>API request status.</p> 
+     * @return APIApplyStatus <p>API request status.</p>
      */
     public Long getAPIApplyStatus() {
         return this.APIApplyStatus;
     }
 
     /**
-     * Set <p>API request status</p>
-     * @param APIApplyStatus <p>API request status</p>
+     * Set <p>API request status.</p>
+     * @param APIApplyStatus <p>API request status.</p>
      */
     public void setAPIApplyStatus(Long APIApplyStatus) {
         this.APIApplyStatus = APIApplyStatus;
     }
 
     /**
-     * Get <p>Reason for rejection</p> 
-     * @return RejectReason <p>Reason for rejection</p>
+     * Get <p>Reason for rejection.</p> 
+     * @return RejectReason <p>Reason for rejection.</p>
      */
     public String getRejectReason() {
         return this.RejectReason;
     }
 
     /**
-     * Set <p>Reason for rejection</p>
-     * @param RejectReason <p>Reason for rejection</p>
+     * Set <p>Reason for rejection.</p>
+     * @param RejectReason <p>Reason for rejection.</p>
      */
     public void setRejectReason(String RejectReason) {
         this.RejectReason = RejectReason;
     }
 
     /**
-     * Get <p>Approval number</p> 
-     * @return ApprovalNo <p>Approval number</p>
+     * Get <p>Approval number.</p> 
+     * @return ApprovalNo <p>Approval number.</p>
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set <p>Approval number</p>
-     * @param ApprovalNo <p>Approval number</p>
+     * Set <p>Approval number.</p>
+     * @param ApprovalNo <p>Approval number.</p>
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;
     }
 
     /**
-     * Get <p>Superapp ID</p> 
-     * @return ApplicationId <p>Superapp ID</p>
+     * Get <p>Superapp ID.</p> 
+     * @return ApplicationId <p>Superapp ID.</p>
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set <p>Superapp ID</p>
-     * @param ApplicationId <p>Superapp ID</p>
+     * Set <p>Superapp ID.</p>
+     * @param ApplicationId <p>Superapp ID.</p>
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get <p>Superapp icon</p> 
-     * @return ApplicationIcon <p>Superapp icon</p>
+     * Get <p>Superapp icon.</p> 
+     * @return ApplicationIcon <p>Superapp icon.</p>
      */
     public String getApplicationIcon() {
         return this.ApplicationIcon;
     }
 
     /**
-     * Set <p>Superapp icon</p>
-     * @param ApplicationIcon <p>Superapp icon</p>
+     * Set <p>Superapp icon.</p>
+     * @param ApplicationIcon <p>Superapp icon.</p>
      */
     public void setApplicationIcon(String ApplicationIcon) {
         this.ApplicationIcon = ApplicationIcon;
     }
 
     /**
-     * Get <p>Superapp name</p> 
-     * @return ApplicationName <p>Superapp name</p>
+     * Get <p>Superapp name.</p> 
+     * @return ApplicationName <p>Superapp name.</p>
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set <p>Superapp name</p>
-     * @param ApplicationName <p>Superapp name</p>
+     * Set <p>Superapp name.</p>
+     * @param ApplicationName <p>Superapp name.</p>
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get <p>API type. Valid values: 1: System; 2: Custom 
-     * @return APIType <p>API type. Valid values: 1: System; 2: Custom
+     * Get <p>API type. Valid values: 1: System; 2: Custom.</p> 
+     * @return APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
      */
     public Long getAPIType() {
         return this.APIType;
     }
 
     /**
-     * Set <p>API type. Valid values: 1: System; 2: Custom
-     * @param APIType <p>API type. Valid values: 1: System; 2: Custom
+     * Set <p>API type. Valid values: 1: System; 2: Custom.</p>
+     * @param APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
      */
     public void setAPIType(Long APIType) {
         this.APIType = APIType;
     }
 
     /**
-     * Get <p>API feature description</p> 
-     * @return APIDesc <p>API feature description</p>
+     * Get <p>API feature description.</p> 
+     * @return APIDesc <p>API feature description.</p>
      */
     public String getAPIDesc() {
         return this.APIDesc;
     }
 
     /**
-     * Set <p>API feature description</p>
-     * @param APIDesc <p>API feature description</p>
+     * Set <p>API feature description.</p>
+     * @param APIDesc <p>API feature description.</p>
      */
     public void setAPIDesc(String APIDesc) {
         this.APIDesc = APIDesc;

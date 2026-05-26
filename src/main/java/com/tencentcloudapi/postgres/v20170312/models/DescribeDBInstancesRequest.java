@@ -24,21 +24,22 @@ import java.util.HashMap;
 public class DescribeDBInstancesRequest extends AbstractModel {
 
     /**
-    * Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+    * Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
+db-dedicated-cluster-id: Filter by private cluster Id, type string
     */
     @SerializedName("Filters")
     @Expose
     private Filter [] Filters;
 
     /**
-    * The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+    * Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
     */
     @SerializedName("Limit")
     @Expose
@@ -52,74 +53,78 @@ db-public-address: filter by instance public network address (in string format)
     private Long Offset;
 
     /**
-    * Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
+    * Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+    * Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-     * Get Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
-db-public-address: filter by instance public network address (in string format) 
-     * @return Filters Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+     * Get Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
+db-dedicated-cluster-id: Filter by private cluster Id, type string 
+     * @return Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
+db-public-address: filter by instance public network address (in string format)
+db-dedicated-cluster-id: Filter by private cluster Id, type string
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+     * Set Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
-     * @param Filters Query using one or more filter criteria. Filter criteria currently supported include:
-db-instance-id: filter by instance ID (in string format)
-db-instance-name: filter by instance name (in string format)
-db-project-id: filter by project ID (in string format)
-db-pay-mode: filter by instance billing mode (in string format)
-db-tag-key: filter by tag key (in string format)
-db-private-ip: filter by instance VPC IP (in string format)
+db-dedicated-cluster-id: Filter by private cluster Id, type string
+     * @param Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: Filter by instance ID, type string
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-project-id: Filter by project ID, type integer
+db-pay-mode: filter by instance billing mode (prepaid - prepayment; postpaid - postpayment). string type.
+db-tag-key: specifies the tag key to filter by (string type).
+db-private-ip: Filter by instance Private Cloud IP, type string
 db-public-address: filter by instance public network address (in string format)
+db-dedicated-cluster-id: Filter by private cluster Id, type string
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
     }
 
     /**
-     * Get The maximum number of results returned per page. Value range: 1-100. Default: `10`. 
-     * @return Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+     * Get Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10. 
+     * @return Limit Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set The maximum number of results returned per page. Value range: 1-100. Default: `10`.
-     * @param Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`.
+     * Set Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
+     * @param Limit Number of results displayed per page. value range: 0-100. input 0 to use the default configuration. default is 10.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
@@ -142,32 +147,32 @@ db-public-address: filter by instance public network address (in string format)
     }
 
     /**
-     * Get Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime. 
-     * @return OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
+     * Get Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime. 
+     * @return OrderBy Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
-     * @param OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime.
+     * Set Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
+     * @param OrderBy Specifies the sorting index, such as instance Name and creation time. supports DBInstanceId, CreateTime, Name, and EndTime. default value: CreateTime.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values: `asc` (ascending), `desc` (descending) 
-     * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+     * Get Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`. 
+     * @return OrderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting order. Valid values: `asc` (ascending), `desc` (descending)
-     * @param OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+     * Set Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
+     * @param OrderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `asc`.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

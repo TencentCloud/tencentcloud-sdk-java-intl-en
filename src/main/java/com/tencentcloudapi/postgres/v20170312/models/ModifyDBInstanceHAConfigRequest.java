@@ -24,16 +24,16 @@ import java.util.HashMap;
 public class ModifyDBInstanceHAConfigRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
+    * Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
 
     */
     @SerializedName("SyncMode")
@@ -41,18 +41,18 @@ public class ModifyDBInstanceHAConfigRequest extends AbstractModel {
     private String SyncMode;
 
     /**
-    * Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
+    * Maximum delayed data volume for high-availability standby server. switchover to primary node is allowed when backup node latency is less than or equal to this value and standby lag time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte.</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
     */
     @SerializedName("MaxStandbyLatency")
     @Expose
     private Long MaxStandbyLatency;
 
     /**
-    * The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
+    * Maximum delay time for high-availability standby servers. a backup node can switchover to the primary node when its latency is less than or equal to this value and its data volume is less than or equal to MaxStandbyLatency.
+<Li>Unit: s.</li>.
+<Li>Value range: [5, 10]</li>.
     */
     @SerializedName("MaxStandbyLag")
     @Expose
@@ -79,29 +79,29 @@ When the semi-sync instance is allowed to downgrade to async replication, `MaxSy
     private Long MaxSyncStandbyLag;
 
     /**
-     * Get Instance ID 
-     * @return DBInstanceId Instance ID
+     * Get Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param DBInstanceId Instance ID
+     * Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
+     * Get Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
  
-     * @return SyncMode Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
+     * @return SyncMode Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
 
      */
     public String getSyncMode() {
@@ -109,13 +109,13 @@ When the semi-sync instance is allowed to downgrade to async replication, `MaxSy
     }
 
     /**
-     * Set Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
+     * Set Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
 
-     * @param SyncMode Primary-standby sync mode. Valid values:
-<li>`Semi-sync`
-<li>`Async`
+     * @param SyncMode Primary-Standby sync mode.
+<Li>Semi-Sync: semi-sync</li>.
+<Li>Async: asynchronous</li>.
 
      */
     public void setSyncMode(String SyncMode) {
@@ -123,48 +123,48 @@ When the semi-sync instance is allowed to downgrade to async replication, `MaxSy
     }
 
     /**
-     * Get Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200 
-     * @return MaxStandbyLatency Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
+     * Get Maximum delayed data volume for high-availability standby server. switchover to primary node is allowed when backup node latency is less than or equal to this value and standby lag time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte.</li>.
+<Li>Value range: [1073741824, 322122547200]</li>. 
+     * @return MaxStandbyLatency Maximum delayed data volume for high-availability standby server. switchover to primary node is allowed when backup node latency is less than or equal to this value and standby lag time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte.</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
      */
     public Long getMaxStandbyLatency() {
         return this.MaxStandbyLatency;
     }
 
     /**
-     * Set Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
-     * @param MaxStandbyLatency Maximum data lag for high-availability standby server. The standby node can be promoted to the primary node when its data lag and the delay time are both less than the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: byte
-<li>Value range: 1073741824-322122547200
+     * Set Maximum delayed data volume for high-availability standby server. switchover to primary node is allowed when backup node latency is less than or equal to this value and standby lag time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte.</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
+     * @param MaxStandbyLatency Maximum delayed data volume for high-availability standby server. switchover to primary node is allowed when backup node latency is less than or equal to this value and standby lag time is less than or equal to MaxStandbyLag.
+<Li>Unit: byte.</li>.
+<Li>Value range: [1073741824, 322122547200]</li>.
      */
     public void setMaxStandbyLatency(Long MaxStandbyLatency) {
         this.MaxStandbyLatency = MaxStandbyLatency;
     }
 
     /**
-     * Get The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10 
-     * @return MaxStandbyLag The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
+     * Get Maximum delay time for high-availability standby servers. a backup node can switchover to the primary node when its latency is less than or equal to this value and its data volume is less than or equal to MaxStandbyLatency.
+<Li>Unit: s.</li>.
+<Li>Value range: [5, 10]</li>. 
+     * @return MaxStandbyLag Maximum delay time for high-availability standby servers. a backup node can switchover to the primary node when its latency is less than or equal to this value and its data volume is less than or equal to MaxStandbyLatency.
+<Li>Unit: s.</li>.
+<Li>Value range: [5, 10]</li>.
      */
     public Long getMaxStandbyLag() {
         return this.MaxStandbyLag;
     }
 
     /**
-     * Set The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
-     * @param MaxStandbyLag The maximum delay for high-availability standby server The standby node can be promoted to the primary node when its data lag and the delay time are both less or equals to the value of `MaxStandbyLatency` and `MaxStandbyLag` respectively.
-<li>Unit: s
-<li>Value range: 5-10
+     * Set Maximum delay time for high-availability standby servers. a backup node can switchover to the primary node when its latency is less than or equal to this value and its data volume is less than or equal to MaxStandbyLatency.
+<Li>Unit: s.</li>.
+<Li>Value range: [5, 10]</li>.
+     * @param MaxStandbyLag Maximum delay time for high-availability standby servers. a backup node can switchover to the primary node when its latency is less than or equal to this value and its data volume is less than or equal to MaxStandbyLatency.
+<Li>Unit: s.</li>.
+<Li>Value range: [5, 10]</li>.
      */
     public void setMaxStandbyLag(Long MaxStandbyLag) {
         this.MaxStandbyLag = MaxStandbyLag;

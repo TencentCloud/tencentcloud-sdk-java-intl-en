@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ResourceIdStringInfo extends AbstractModel {
 
     /**
-    * The ID of the resource returned
+    * Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceId")
@@ -32,9 +32,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ResourceId;
 
     /**
-     * Get The ID of the resource returned
+     * Get Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResourceId The ID of the resource returned
+     * @return ResourceId Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getResourceId() {
@@ -42,9 +42,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The ID of the resource returned
+     * Set Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourceId The ID of the resource returned
+     * @param ResourceId Resource ID returned by the operation.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceId(String ResourceId) {

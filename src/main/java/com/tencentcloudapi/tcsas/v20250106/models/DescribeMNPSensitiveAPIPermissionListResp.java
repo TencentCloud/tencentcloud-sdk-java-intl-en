@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMNPSensitiveAPIPermissionListResp extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total number of entries.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List data
+    * List data.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataList")
@@ -39,25 +39,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DescribeMNPSensitiveAPIPermissionListData [] DataList;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total number of entries. 
+     * @return TotalCount Total number of entries.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total number of entries.
+     * @param TotalCount Total number of entries.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List data
+     * Get List data.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataList List data
+     * @return DataList List data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DescribeMNPSensitiveAPIPermissionListData [] getDataList() {
@@ -65,9 +65,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set List data
+     * Set List data.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataList List data
+     * @param DataList List data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataList(DescribeMNPSensitiveAPIPermissionListData [] DataList) {

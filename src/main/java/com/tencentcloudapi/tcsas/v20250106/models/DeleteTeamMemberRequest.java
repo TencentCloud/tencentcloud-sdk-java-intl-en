@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DeleteTeamMemberRequest extends AbstractModel {
 
     /**
-    * Team ID
+    * Team ID.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * User ID
+    * User ID.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get Team ID 
-     * @return TeamId Team ID
+     * Get Team ID. 
+     * @return TeamId Team ID.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID
-     * @param TeamId Team ID
+     * Set Team ID.
+     * @param TeamId Team ID.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get User ID 
-     * @return UserId User ID
+     * Get User ID. 
+     * @return UserId User ID.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User ID
-     * @param UserId User ID
+     * Set User ID.
+     * @param UserId User ID.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

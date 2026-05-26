@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateApplicationSensitiveAPIReq extends AbstractModel {
 
     /**
-    * <p>API name</p>
+    * <p>API name.</p>
     */
     @SerializedName("APIName")
     @Expose
     private String APIName;
 
     /**
-    * <p>API description</p>
+    * <p>API description.</p>
     */
     @SerializedName("APIDesc")
     @Expose
     private String APIDesc;
 
     /**
-    * <p>API type. Valid values: 1: System; 2: Custom</p>
+    * <p>API type. Valid values: 1: System; 2: Custom.</p>
     */
     @SerializedName("APIType")
     @Expose
     private Long APIType;
 
     /**
-    * <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
+    * <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
     */
     @SerializedName("UseScope")
     @Expose
     private Long UseScope;
 
     /**
-     * Get <p>API name</p> 
-     * @return APIName <p>API name</p>
+     * Get <p>API name.</p> 
+     * @return APIName <p>API name.</p>
      */
     public String getAPIName() {
         return this.APIName;
     }
 
     /**
-     * Set <p>API name</p>
-     * @param APIName <p>API name</p>
+     * Set <p>API name.</p>
+     * @param APIName <p>API name.</p>
      */
     public void setAPIName(String APIName) {
         this.APIName = APIName;
     }
 
     /**
-     * Get <p>API description</p> 
-     * @return APIDesc <p>API description</p>
+     * Get <p>API description.</p> 
+     * @return APIDesc <p>API description.</p>
      */
     public String getAPIDesc() {
         return this.APIDesc;
     }
 
     /**
-     * Set <p>API description</p>
-     * @param APIDesc <p>API description</p>
+     * Set <p>API description.</p>
+     * @param APIDesc <p>API description.</p>
      */
     public void setAPIDesc(String APIDesc) {
         this.APIDesc = APIDesc;
     }
 
     /**
-     * Get <p>API type. Valid values: 1: System; 2: Custom</p> 
-     * @return APIType <p>API type. Valid values: 1: System; 2: Custom</p>
+     * Get <p>API type. Valid values: 1: System; 2: Custom.</p> 
+     * @return APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
      */
     public Long getAPIType() {
         return this.APIType;
     }
 
     /**
-     * Set <p>API type. Valid values: 1: System; 2: Custom</p>
-     * @param APIType <p>API type. Valid values: 1: System; 2: Custom</p>
+     * Set <p>API type. Valid values: 1: System; 2: Custom.</p>
+     * @param APIType <p>API type. Valid values: 1: System; 2: Custom.</p>
      */
     public void setAPIType(Long APIType) {
         this.APIType = APIType;
     }
 
     /**
-     * Get <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p> 
-     * @return UseScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
+     * Get <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p> 
+     * @return UseScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
      */
     public Long getUseScope() {
         return this.UseScope;
     }
 
     /**
-     * Set <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
-     * @param UseScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Universal</p>
+     * Set <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
+     * @param UseScope <p>Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.</p>
      */
     public void setUseScope(Long UseScope) {
         this.UseScope = UseScope;

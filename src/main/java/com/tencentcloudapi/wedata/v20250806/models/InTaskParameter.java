@@ -24,115 +24,143 @@ import java.util.HashMap;
 public class InTaskParameter extends AbstractModel {
 
     /**
-    * Parameter name.
-
+    * <p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ParamKey")
     @Expose
     private String ParamKey;
 
     /**
-    * Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
+    * <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ParamDesc")
     @Expose
     private String ParamDesc;
 
     /**
-    * Parent Task ID
-
+    * <p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FromTaskId")
     @Expose
     private String FromTaskId;
 
     /**
-    * Parent task parameter key.
-
+    * <p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FromParamKey")
     @Expose
     private String FromParamKey;
 
     /**
-     * Get Parameter name.
- 
-     * @return ParamKey Parameter name.
+    * <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("Type")
+    @Expose
+    private String Type;
 
+    /**
+     * Get <p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ParamKey <p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getParamKey() {
         return this.ParamKey;
     }
 
     /**
-     * Set Parameter name.
-
-     * @param ParamKey Parameter name.
-
+     * Set <p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ParamKey <p>Parameter name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setParamKey(String ParamKey) {
         this.ParamKey = ParamKey;
     }
 
     /**
-     * Get Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out 
-     * @return ParamDesc Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
+     * Get <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ParamDesc <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getParamDesc() {
         return this.ParamDesc;
     }
 
     /**
-     * Set Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
-     * @param ParamDesc Parameter Description: The format is ProjectIdentifier.TaskName.ParameterName
-Example: project_wedata_1.sh_250820_104107.pp_out
+     * Set <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ParamDesc <p>Parameter description: Format is project ID.task name.parameter name; for example: project_wedata_1.sh_250820_104107.pp_out</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setParamDesc(String ParamDesc) {
         this.ParamDesc = ParamDesc;
     }
 
     /**
-     * Get Parent Task ID
- 
-     * @return FromTaskId Parent Task ID
-
+     * Get <p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FromTaskId <p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFromTaskId() {
         return this.FromTaskId;
     }
 
     /**
-     * Set Parent Task ID
-
-     * @param FromTaskId Parent Task ID
-
+     * Set <p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FromTaskId <p>Parent task ID.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFromTaskId(String FromTaskId) {
         this.FromTaskId = FromTaskId;
     }
 
     /**
-     * Get Parent task parameter key.
- 
-     * @return FromParamKey Parent task parameter key.
-
+     * Get <p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return FromParamKey <p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFromParamKey() {
         return this.FromParamKey;
     }
 
     /**
-     * Set Parent task parameter key.
-
-     * @param FromParamKey Parent task parameter key.
-
+     * Set <p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param FromParamKey <p>Parent task parameter key</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFromParamKey(String FromParamKey) {
         this.FromParamKey = FromParamKey;
+    }
+
+    /**
+     * Get <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Type <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getType() {
+        return this.Type;
+    }
+
+    /**
+     * Set <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Type <p>Task input type, by default uses TASK.</p><p>Enumeration value:</p><ul><li>TASK: Source is the parent task.</li><li>CONSTANT: Constant value, currently only supported by for-each node.</li></ul>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setType(String Type) {
+        this.Type = Type;
     }
 
     public InTaskParameter() {
@@ -155,6 +183,9 @@ Example: project_wedata_1.sh_250820_104107.pp_out
         if (source.FromParamKey != null) {
             this.FromParamKey = new String(source.FromParamKey);
         }
+        if (source.Type != null) {
+            this.Type = new String(source.Type);
+        }
     }
 
 
@@ -166,6 +197,7 @@ Example: project_wedata_1.sh_250820_104107.pp_out
         this.setParamSimple(map, prefix + "ParamDesc", this.ParamDesc);
         this.setParamSimple(map, prefix + "FromTaskId", this.FromTaskId);
         this.setParamSimple(map, prefix + "FromParamKey", this.FromParamKey);
+        this.setParamSimple(map, prefix + "Type", this.Type);
 
     }
 }

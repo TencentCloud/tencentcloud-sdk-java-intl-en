@@ -24,18 +24,14 @@ import java.util.HashMap;
 public class GetNetMonitorResponse extends AbstractModel {
 
     /**
-    * monitoring data
+    * <p>Monitoring data.</p>
     */
     @SerializedName("MonitorData")
     @Expose
     private MonitorData [] MonitorData;
 
     /**
-    * Access region. Valid values: ['MC','AP','EU','AM'].
-MC=Chinese mainland
-AP=Asia Pacific
-EU=Europe
-AM=Americas
+    * <p>Access region. Value ranges from 'MC' to 'AM'<br>MC=Chinese mainland<br>AP=Asia Pacific<br>EU=Europe<br>AM=Americas</p>
     */
     @SerializedName("AccessRegion")
     @Expose
@@ -49,48 +45,32 @@ AM=Americas
     private String RequestId;
 
     /**
-     * Get monitoring data 
-     * @return MonitorData monitoring data
+     * Get <p>Monitoring data.</p> 
+     * @return MonitorData <p>Monitoring data.</p>
      */
     public MonitorData [] getMonitorData() {
         return this.MonitorData;
     }
 
     /**
-     * Set monitoring data
-     * @param MonitorData monitoring data
+     * Set <p>Monitoring data.</p>
+     * @param MonitorData <p>Monitoring data.</p>
      */
     public void setMonitorData(MonitorData [] MonitorData) {
         this.MonitorData = MonitorData;
     }
 
     /**
-     * Get Access region. Valid values: ['MC','AP','EU','AM'].
-MC=Chinese mainland
-AP=Asia Pacific
-EU=Europe
-AM=Americas 
-     * @return AccessRegion Access region. Valid values: ['MC','AP','EU','AM'].
-MC=Chinese mainland
-AP=Asia Pacific
-EU=Europe
-AM=Americas
+     * Get <p>Access region. Value ranges from 'MC' to 'AM'<br>MC=Chinese mainland<br>AP=Asia Pacific<br>EU=Europe<br>AM=Americas</p> 
+     * @return AccessRegion <p>Access region. Value ranges from 'MC' to 'AM'<br>MC=Chinese mainland<br>AP=Asia Pacific<br>EU=Europe<br>AM=Americas</p>
      */
     public String getAccessRegion() {
         return this.AccessRegion;
     }
 
     /**
-     * Set Access region. Valid values: ['MC','AP','EU','AM'].
-MC=Chinese mainland
-AP=Asia Pacific
-EU=Europe
-AM=Americas
-     * @param AccessRegion Access region. Valid values: ['MC','AP','EU','AM'].
-MC=Chinese mainland
-AP=Asia Pacific
-EU=Europe
-AM=Americas
+     * Set <p>Access region. Value ranges from 'MC' to 'AM'<br>MC=Chinese mainland<br>AP=Asia Pacific<br>EU=Europe<br>AM=Americas</p>
+     * @param AccessRegion <p>Access region. Value ranges from 'MC' to 'AM'<br>MC=Chinese mainland<br>AP=Asia Pacific<br>EU=Europe<br>AM=Americas</p>
      */
     public void setAccessRegion(String AccessRegion) {
         this.AccessRegion = AccessRegion;

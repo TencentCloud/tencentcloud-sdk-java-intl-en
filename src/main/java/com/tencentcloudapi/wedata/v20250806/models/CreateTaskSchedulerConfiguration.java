@@ -24,578 +24,497 @@ import java.util.HashMap;
 public class CreateTaskSchedulerConfiguration extends AbstractModel {
 
     /**
-    * Period type: defaults to DAY_CYCLE.
-
-Supported types. 
-
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
+    * <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
     */
     @SerializedName("CycleType")
     @Expose
     private String CycleType;
 
     /**
-    * Time zone, defaults to UTC+8.
+    * <p>Time zone, defaults to UTC+8</p>
     */
     @SerializedName("ScheduleTimeZone")
     @Expose
     private String ScheduleTimeZone;
 
     /**
-    * Cron expression, defaults to 0 0 0 * * ? *.
+    * <p>Cron expression, defaults to 0 0 0 * * ? *</p>
     */
     @SerializedName("CrontabExpression")
     @Expose
     private String CrontabExpression;
 
     /**
-    * Effective date, defaults to 00:00:00 of the current date.
+    * <p>Effective date, defaults to 00:00:00 of the current date</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * End date, defaults to 2099-12-31 23:59:59.
+    * <p>End date, defaults to 2099-12-31 23:59:59</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Execution time: the left-closed interval. Default: 00:00.
+    * <p>Execution time left-closed interval, default 00:00</p>
     */
     @SerializedName("ExecutionStartTime")
     @Expose
     private String ExecutionStartTime;
 
     /**
-    * Execution time: the right closed interval. Default: 23:59.
+    * <p>Execution time right closed interval, default 23:59</p>
     */
     @SerializedName("ExecutionEndTime")
     @Expose
     private String ExecutionEndTime;
 
     /**
-    * Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
+    * <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
     */
     @SerializedName("CalendarOpen")
     @Expose
     private String CalendarOpen;
 
     /**
-    * Calendar scheduling:  the calendar ID.
+    * <p>Calendar scheduling Calendar ID</p>
     */
     @SerializedName("CalendarId")
     @Expose
     private String CalendarId;
 
     /**
-    * Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
+    * <p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
     */
     @SerializedName("SelfDepend")
     @Expose
     private String SelfDepend;
 
     /**
-    * Specifies the upstream dependency list.
+    * <p>Upstream dependency array</p>
     */
     @SerializedName("UpstreamDependencyConfigList")
     @Expose
     private DependencyTaskBrief [] UpstreamDependencyConfigList;
 
     /**
-    * List of Events
+    * <p>Event array</p>
     */
     @SerializedName("EventListenerList")
     @Expose
     private EventListener [] EventListenerList;
 
     /**
-    * Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
+    * <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
     */
     @SerializedName("AllowRedoType")
     @Expose
     private String AllowRedoType;
 
     /**
-    * Output parameter list.
+    * <p>Output parameter array</p>
     */
     @SerializedName("ParamTaskOutList")
     @Expose
     private OutTaskParameter [] ParamTaskOutList;
 
     /**
-    * Input parameter list.
+    * <p>Input parameter array</p>
     */
     @SerializedName("ParamTaskInList")
     @Expose
     private InTaskParameter [] ParamTaskInList;
 
     /**
-    * Output registration.
+    * <p>Output registration</p>
     */
     @SerializedName("TaskOutputRegistryList")
     @Expose
     private TaskDataRegistry [] TaskOutputRegistryList;
 
     /**
-    * **Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
+    * <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
     */
     @SerializedName("InitStrategy")
     @Expose
     private String InitStrategy;
 
     /**
-    * Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
+    * <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
     */
     @SerializedName("ScheduleRunType")
     @Expose
     private String ScheduleRunType;
 
     /**
-    * Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
+    * <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
     */
     @SerializedName("RunPriority")
     @Expose
     private String RunPriority;
 
     /**
-    * Retry Policy: Retry Wait Time (in minutes): Default 5
+    * <p>Retry policy Retry wait time, in minutes: Default: 5</p>
     */
     @SerializedName("RetryWait")
     @Expose
     private String RetryWait;
 
     /**
-    * Retry Policy: maximum attempts. Default: 4.
+    * <p>Retry policy Maximum attempts, Default: 4</p>
     */
     @SerializedName("MaxRetryAttempts")
     @Expose
     private String MaxRetryAttempts;
 
     /**
-    * Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+    * <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
     */
     @SerializedName("ExecutionTTL")
     @Expose
     private String ExecutionTTL;
 
     /**
-    * Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+    * <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
     */
     @SerializedName("WaitExecutionTotalTTL")
     @Expose
     private String WaitExecutionTotalTTL;
 
     /**
-    * Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+    * <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
     */
     @SerializedName("ScheduleType")
     @Expose
     private Long ScheduleType;
 
     /**
-    * Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+    * <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
     */
     @SerializedName("RunPriorityType")
     @Expose
     private Long RunPriorityType;
 
     /**
-    * Retry policy retry wait time, in minutes: default: 5.
+    * <p>Retry policy Retry wait time, in minutes: Default: 5</p>
     */
     @SerializedName("RetryWaitMinute")
     @Expose
     private Long RetryWaitMinute;
 
     /**
-    * Maximum attempts of the retry policy. default: 4.
+    * <p>Retry policy Maximum attempts, Default: 4</p>
     */
     @SerializedName("MaxRetryNumber")
     @Expose
     private Long MaxRetryNumber;
 
     /**
-    * Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+    * <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
     */
     @SerializedName("ExecutionTTLMinute")
     @Expose
     private Long ExecutionTTLMinute;
 
     /**
-    * Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+    * <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
     */
     @SerializedName("WaitExecutionTotalTTLMinute")
     @Expose
     private Long WaitExecutionTotalTTLMinute;
 
     /**
-     * Get Period type: defaults to DAY_CYCLE.
+    * <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+    */
+    @SerializedName("DependencyTriggerPolicy")
+    @Expose
+    private String DependencyTriggerPolicy;
 
-Supported types. 
+    /**
+    * <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
+    */
+    @SerializedName("AllowDownstreamDependency")
+    @Expose
+    private Long AllowDownstreamDependency;
 
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type. 
-     * @return CycleType Period type: defaults to DAY_CYCLE.
-
-Supported types. 
-
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
+    /**
+     * Get <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul> 
+     * @return CycleType <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
      */
     public String getCycleType() {
         return this.CycleType;
     }
 
     /**
-     * Set Period type: defaults to DAY_CYCLE.
-
-Supported types. 
-
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
-     * @param CycleType Period type: defaults to DAY_CYCLE.
-
-Supported types. 
-
-ONEOFF_CYCLE: specifies a one-time cycle.
-YEAR_CYCLE: specifies the year cycle.
-MONTH_CYCLE: specifies the monthly cycle.
-WEEK_CYCLE: specifies the week cycle.
-DAY_CYCLE: specifies the day cycle.
-HOUR_CYCLE: specifies the hour cycle.
-MINUTE_CYCLE: specifies the minute cycle.
-CRONTAB_CYCLE: specifies the crontab expression type.
+     * Set <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
+     * @param CycleType <p>Period type: Defaults to DAY_CYCLE</p><p>Supported types are </p><ul><li>ONEOFF_CYCLE: One-time</li><li>YEAR_CYCLE: Year</li><li>MONTH_CYCLE: Month</li><li>WEEK_CYCLE: Week</li><li>DAY_CYCLE: Day</li><li>HOUR_CYCLE: Hour</li><li>MINUTE_CYCLE: Minute</li><li>CRONTAB_CYCLE: crontab expression</li></ul>
      */
     public void setCycleType(String CycleType) {
         this.CycleType = CycleType;
     }
 
     /**
-     * Get Time zone, defaults to UTC+8. 
-     * @return ScheduleTimeZone Time zone, defaults to UTC+8.
+     * Get <p>Time zone, defaults to UTC+8</p> 
+     * @return ScheduleTimeZone <p>Time zone, defaults to UTC+8</p>
      */
     public String getScheduleTimeZone() {
         return this.ScheduleTimeZone;
     }
 
     /**
-     * Set Time zone, defaults to UTC+8.
-     * @param ScheduleTimeZone Time zone, defaults to UTC+8.
+     * Set <p>Time zone, defaults to UTC+8</p>
+     * @param ScheduleTimeZone <p>Time zone, defaults to UTC+8</p>
      */
     public void setScheduleTimeZone(String ScheduleTimeZone) {
         this.ScheduleTimeZone = ScheduleTimeZone;
     }
 
     /**
-     * Get Cron expression, defaults to 0 0 0 * * ? *. 
-     * @return CrontabExpression Cron expression, defaults to 0 0 0 * * ? *.
+     * Get <p>Cron expression, defaults to 0 0 0 * * ? *</p> 
+     * @return CrontabExpression <p>Cron expression, defaults to 0 0 0 * * ? *</p>
      */
     public String getCrontabExpression() {
         return this.CrontabExpression;
     }
 
     /**
-     * Set Cron expression, defaults to 0 0 0 * * ? *.
-     * @param CrontabExpression Cron expression, defaults to 0 0 0 * * ? *.
+     * Set <p>Cron expression, defaults to 0 0 0 * * ? *</p>
+     * @param CrontabExpression <p>Cron expression, defaults to 0 0 0 * * ? *</p>
      */
     public void setCrontabExpression(String CrontabExpression) {
         this.CrontabExpression = CrontabExpression;
     }
 
     /**
-     * Get Effective date, defaults to 00:00:00 of the current date. 
-     * @return StartTime Effective date, defaults to 00:00:00 of the current date.
+     * Get <p>Effective date, defaults to 00:00:00 of the current date</p> 
+     * @return StartTime <p>Effective date, defaults to 00:00:00 of the current date</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Effective date, defaults to 00:00:00 of the current date.
-     * @param StartTime Effective date, defaults to 00:00:00 of the current date.
+     * Set <p>Effective date, defaults to 00:00:00 of the current date</p>
+     * @param StartTime <p>Effective date, defaults to 00:00:00 of the current date</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get End date, defaults to 2099-12-31 23:59:59. 
-     * @return EndTime End date, defaults to 2099-12-31 23:59:59.
+     * Get <p>End date, defaults to 2099-12-31 23:59:59</p> 
+     * @return EndTime <p>End date, defaults to 2099-12-31 23:59:59</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End date, defaults to 2099-12-31 23:59:59.
-     * @param EndTime End date, defaults to 2099-12-31 23:59:59.
+     * Set <p>End date, defaults to 2099-12-31 23:59:59</p>
+     * @param EndTime <p>End date, defaults to 2099-12-31 23:59:59</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Execution time: the left-closed interval. Default: 00:00. 
-     * @return ExecutionStartTime Execution time: the left-closed interval. Default: 00:00.
+     * Get <p>Execution time left-closed interval, default 00:00</p> 
+     * @return ExecutionStartTime <p>Execution time left-closed interval, default 00:00</p>
      */
     public String getExecutionStartTime() {
         return this.ExecutionStartTime;
     }
 
     /**
-     * Set Execution time: the left-closed interval. Default: 00:00.
-     * @param ExecutionStartTime Execution time: the left-closed interval. Default: 00:00.
+     * Set <p>Execution time left-closed interval, default 00:00</p>
+     * @param ExecutionStartTime <p>Execution time left-closed interval, default 00:00</p>
      */
     public void setExecutionStartTime(String ExecutionStartTime) {
         this.ExecutionStartTime = ExecutionStartTime;
     }
 
     /**
-     * Get Execution time: the right closed interval. Default: 23:59. 
-     * @return ExecutionEndTime Execution time: the right closed interval. Default: 23:59.
+     * Get <p>Execution time right closed interval, default 23:59</p> 
+     * @return ExecutionEndTime <p>Execution time right closed interval, default 23:59</p>
      */
     public String getExecutionEndTime() {
         return this.ExecutionEndTime;
     }
 
     /**
-     * Set Execution time: the right closed interval. Default: 23:59.
-     * @param ExecutionEndTime Execution time: the right closed interval. Default: 23:59.
+     * Set <p>Execution time right closed interval, default 23:59</p>
+     * @param ExecutionEndTime <p>Execution time right closed interval, default 23:59</p>
      */
     public void setExecutionEndTime(String ExecutionEndTime) {
         this.ExecutionEndTime = ExecutionEndTime;
     }
 
     /**
-     * Get Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0. 
-     * @return CalendarOpen Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
+     * Get <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p> 
+     * @return CalendarOpen <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
      */
     public String getCalendarOpen() {
         return this.CalendarOpen;
     }
 
     /**
-     * Set Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
-     * @param CalendarOpen Calendar scheduling value: 0 or 1, where 1 means ON and 0 means OFF. Default is 0.
+     * Set <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
+     * @param CalendarOpen <p>Calendar scheduling value is 0 and 1, where 1 is on and 0 is shutdown, with a default value of 0.</p>
      */
     public void setCalendarOpen(String CalendarOpen) {
         this.CalendarOpen = CalendarOpen;
     }
 
     /**
-     * Get Calendar scheduling:  the calendar ID. 
-     * @return CalendarId Calendar scheduling:  the calendar ID.
+     * Get <p>Calendar scheduling Calendar ID</p> 
+     * @return CalendarId <p>Calendar scheduling Calendar ID</p>
      */
     public String getCalendarId() {
         return this.CalendarId;
     }
 
     /**
-     * Set Calendar scheduling:  the calendar ID.
-     * @param CalendarId Calendar scheduling:  the calendar ID.
+     * Set <p>Calendar scheduling Calendar ID</p>
+     * @param CalendarId <p>Calendar scheduling Calendar ID</p>
      */
     public void setCalendarId(String CalendarId) {
         this.CalendarId = CalendarId;
     }
 
     /**
-     * Get Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial.  
-     * @return SelfDepend Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
+     * Get <p>Self-dependent, default value serial, value: parallel, serial, orderly</p> 
+     * @return SelfDepend <p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
      */
     public String getSelfDepend() {
         return this.SelfDepend;
     }
 
     /**
-     * Set Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
-     * @param SelfDepend Self-Dependent. Valid values: parallel, serial, orderly. Default value: serial. 
+     * Set <p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
+     * @param SelfDepend <p>Self-dependent, default value serial, value: parallel, serial, orderly</p>
      */
     public void setSelfDepend(String SelfDepend) {
         this.SelfDepend = SelfDepend;
     }
 
     /**
-     * Get Specifies the upstream dependency list. 
-     * @return UpstreamDependencyConfigList Specifies the upstream dependency list.
+     * Get <p>Upstream dependency array</p> 
+     * @return UpstreamDependencyConfigList <p>Upstream dependency array</p>
      */
     public DependencyTaskBrief [] getUpstreamDependencyConfigList() {
         return this.UpstreamDependencyConfigList;
     }
 
     /**
-     * Set Specifies the upstream dependency list.
-     * @param UpstreamDependencyConfigList Specifies the upstream dependency list.
+     * Set <p>Upstream dependency array</p>
+     * @param UpstreamDependencyConfigList <p>Upstream dependency array</p>
      */
     public void setUpstreamDependencyConfigList(DependencyTaskBrief [] UpstreamDependencyConfigList) {
         this.UpstreamDependencyConfigList = UpstreamDependencyConfigList;
     }
 
     /**
-     * Get List of Events 
-     * @return EventListenerList List of Events
+     * Get <p>Event array</p> 
+     * @return EventListenerList <p>Event array</p>
      */
     public EventListener [] getEventListenerList() {
         return this.EventListenerList;
     }
 
     /**
-     * Set List of Events
-     * @param EventListenerList List of Events
+     * Set <p>Event array</p>
+     * @param EventListenerList <p>Event array</p>
      */
     public void setEventListenerList(EventListener [] EventListenerList) {
         this.EventListenerList = EventListenerList;
     }
 
     /**
-     * Get Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure. 
-     * @return AllowRedoType Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
+     * Get <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p> 
+     * @return AllowRedoType <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
      */
     public String getAllowRedoType() {
         return this.AllowRedoType;
     }
 
     /**
-     * Set Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
-     * @param AllowRedoType Rerun & Refill Configuration: Default: ALL;
-
-* ALL: Rerun or refill is allowed regardless of whether the task succeeds or fails.
-
-* FAILURE: Rerun or refill is allowed only if the task fails; not allowed if the task succeeds.
-
-* NONE: Rerun or refill is not allowed regardless of success or failure.
+     * Set <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
+     * @param AllowRedoType <p>Rerun & replenishment configuration, defaults to ALL; , ALL allows rerun or replenishment after successful or failed running, FAILURE cannot rerun or replenish after successful running but allows rerun or replenishment after running FAILURE, NONE does not allow rerun or replenishment after either successful or failed running;</p>
      */
     public void setAllowRedoType(String AllowRedoType) {
         this.AllowRedoType = AllowRedoType;
     }
 
     /**
-     * Get Output parameter list. 
-     * @return ParamTaskOutList Output parameter list.
+     * Get <p>Output parameter array</p> 
+     * @return ParamTaskOutList <p>Output parameter array</p>
      */
     public OutTaskParameter [] getParamTaskOutList() {
         return this.ParamTaskOutList;
     }
 
     /**
-     * Set Output parameter list.
-     * @param ParamTaskOutList Output parameter list.
+     * Set <p>Output parameter array</p>
+     * @param ParamTaskOutList <p>Output parameter array</p>
      */
     public void setParamTaskOutList(OutTaskParameter [] ParamTaskOutList) {
         this.ParamTaskOutList = ParamTaskOutList;
     }
 
     /**
-     * Get Input parameter list. 
-     * @return ParamTaskInList Input parameter list.
+     * Get <p>Input parameter array</p> 
+     * @return ParamTaskInList <p>Input parameter array</p>
      */
     public InTaskParameter [] getParamTaskInList() {
         return this.ParamTaskInList;
     }
 
     /**
-     * Set Input parameter list.
-     * @param ParamTaskInList Input parameter list.
+     * Set <p>Input parameter array</p>
+     * @param ParamTaskInList <p>Input parameter array</p>
      */
     public void setParamTaskInList(InTaskParameter [] ParamTaskInList) {
         this.ParamTaskInList = ParamTaskInList;
     }
 
     /**
-     * Get Output registration. 
-     * @return TaskOutputRegistryList Output registration.
+     * Get <p>Output registration</p> 
+     * @return TaskOutputRegistryList <p>Output registration</p>
      */
     public TaskDataRegistry [] getTaskOutputRegistryList() {
         return this.TaskOutputRegistryList;
     }
 
     /**
-     * Set Output registration.
-     * @param TaskOutputRegistryList Output registration.
+     * Set <p>Output registration</p>
+     * @param TaskOutputRegistryList <p>Output registration</p>
      */
     public void setTaskOutputRegistryList(TaskDataRegistry [] TaskOutputRegistryList) {
         this.TaskOutputRegistryList = TaskOutputRegistryList;
     }
 
     /**
-     * Get **Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation. 
-     * @return InitStrategy **Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
+     * Get <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul> 
+     * @return InitStrategy <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
      */
     public String getInitStrategy() {
         return this.InitStrategy;
     }
 
     /**
-     * Set **Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
-     * @param InitStrategy **Instance generation policy**.
-T_PLUS_0: specifies t+0 generation. default policy.
-T_PLUS_1: specifies t+1 generation.
+     * Set <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
+     * @param InitStrategy <p><strong>Instance Generation Policy</strong></p><ul><li>T_PLUS_0: T+0 generation, default policy</li><li>T_PLUS_1: T+1 generation</li></ul>
      */
     public void setInitStrategy(String InitStrategy) {
         this.InitStrategy = InitStrategy;
     }
 
     /**
-     * Get Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0. 
-     * @return ScheduleRunType Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
+     * Get <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p> 
+     * @return ScheduleRunType <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
      * @deprecated
      */
     @Deprecated
@@ -604,8 +523,8 @@ T_PLUS_1: specifies t+1 generation.
     }
 
     /**
-     * Set Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
-     * @param ScheduleRunType Scheduling type: 0 for normal scheduling, 1 for dry-run scheduling. Default is 0.
+     * Set <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
+     * @param ScheduleRunType <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
      * @deprecated
      */
     @Deprecated
@@ -614,8 +533,8 @@ T_PLUS_1: specifies t+1 generation.
     }
 
     /**
-     * Get Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6. 
-     * @return RunPriority Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
+     * Get <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p> 
+     * @return RunPriority <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
      * @deprecated
      */
     @Deprecated
@@ -624,8 +543,8 @@ T_PLUS_1: specifies t+1 generation.
     }
 
     /**
-     * Set Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
-     * @param RunPriority Task scheduling priority. Valid values: 4 (high), 5 (medium), 6 (low). Default: 6.
+     * Set <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
+     * @param RunPriority <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
      * @deprecated
      */
     @Deprecated
@@ -634,8 +553,8 @@ T_PLUS_1: specifies t+1 generation.
     }
 
     /**
-     * Get Retry Policy: Retry Wait Time (in minutes): Default 5 
-     * @return RetryWait Retry Policy: Retry Wait Time (in minutes): Default 5
+     * Get <p>Retry policy Retry wait time, in minutes: Default: 5</p> 
+     * @return RetryWait <p>Retry policy Retry wait time, in minutes: Default: 5</p>
      * @deprecated
      */
     @Deprecated
@@ -644,8 +563,8 @@ T_PLUS_1: specifies t+1 generation.
     }
 
     /**
-     * Set Retry Policy: Retry Wait Time (in minutes): Default 5
-     * @param RetryWait Retry Policy: Retry Wait Time (in minutes): Default 5
+     * Set <p>Retry policy Retry wait time, in minutes: Default: 5</p>
+     * @param RetryWait <p>Retry policy Retry wait time, in minutes: Default: 5</p>
      * @deprecated
      */
     @Deprecated
@@ -654,8 +573,8 @@ T_PLUS_1: specifies t+1 generation.
     }
 
     /**
-     * Get Retry Policy: maximum attempts. Default: 4. 
-     * @return MaxRetryAttempts Retry Policy: maximum attempts. Default: 4.
+     * Get <p>Retry policy Maximum attempts, Default: 4</p> 
+     * @return MaxRetryAttempts <p>Retry policy Maximum attempts, Default: 4</p>
      * @deprecated
      */
     @Deprecated
@@ -664,8 +583,8 @@ T_PLUS_1: specifies t+1 generation.
     }
 
     /**
-     * Set Retry Policy: maximum attempts. Default: 4.
-     * @param MaxRetryAttempts Retry Policy: maximum attempts. Default: 4.
+     * Set <p>Retry policy Maximum attempts, Default: 4</p>
+     * @param MaxRetryAttempts <p>Retry policy Maximum attempts, Default: 4</p>
      * @deprecated
      */
     @Deprecated
@@ -674,8 +593,8 @@ T_PLUS_1: specifies t+1 generation.
     }
 
     /**
-     * Get Timeout Handling Policy: Execution Timeout (in minutes), default: -1 
-     * @return ExecutionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+     * Get <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p> 
+     * @return ExecutionTTL <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
      * @deprecated
      */
     @Deprecated
@@ -684,8 +603,8 @@ T_PLUS_1: specifies t+1 generation.
     }
 
     /**
-     * Set Timeout Handling Policy: Execution Timeout (in minutes), default: -1
-     * @param ExecutionTTL Timeout Handling Policy: Execution Timeout (in minutes), default: -1
+     * Set <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
+     * @param ExecutionTTL <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
      * @deprecated
      */
     @Deprecated
@@ -694,8 +613,8 @@ T_PLUS_1: specifies t+1 generation.
     }
 
     /**
-     * Get Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1 
-     * @return WaitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+     * Get <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p> 
+     * @return WaitExecutionTotalTTL <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
      * @deprecated
      */
     @Deprecated
@@ -704,8 +623,8 @@ T_PLUS_1: specifies t+1 generation.
     }
 
     /**
-     * Set Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
-     * @param WaitExecutionTotalTTL Timeout Handling Policy: Wait Duration Timeout  (in minutes), default: -1
+     * Set <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
+     * @param WaitExecutionTotalTTL <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
      * @deprecated
      */
     @Deprecated
@@ -714,99 +633,135 @@ T_PLUS_1: specifies t+1 generation.
     }
 
     /**
-     * Get Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0. 
-     * @return ScheduleType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+     * Get <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p> 
+     * @return ScheduleType <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
      */
     public Long getScheduleType() {
         return this.ScheduleType;
     }
 
     /**
-     * Set Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
-     * @param ScheduleType Scheduling type: 0 normal scheduling 1 dry-run scheduling, defaults to 0.
+     * Set <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
+     * @param ScheduleType <p>Scheduling type: 0 normal scheduling 1 dry-run scheduling, default is 0</p>
      */
     public void setScheduleType(Long ScheduleType) {
         this.ScheduleType = ScheduleType;
     }
 
     /**
-     * Get Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6. 
-     * @return RunPriorityType Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+     * Get <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p> 
+     * @return RunPriorityType <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
      */
     public Long getRunPriorityType() {
         return this.RunPriorityType;
     }
 
     /**
-     * Set Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
-     * @param RunPriorityType Task scheduling priority. execution priority. valid values: 4 (high), 5 (medium), 6 (low). default: 6.
+     * Set <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
+     * @param RunPriorityType <p>Task scheduling priority Execution priority 4 High 5 Medium 6 Low, Default:6</p>
      */
     public void setRunPriorityType(Long RunPriorityType) {
         this.RunPriorityType = RunPriorityType;
     }
 
     /**
-     * Get Retry policy retry wait time, in minutes: default: 5. 
-     * @return RetryWaitMinute Retry policy retry wait time, in minutes: default: 5.
+     * Get <p>Retry policy Retry wait time, in minutes: Default: 5</p> 
+     * @return RetryWaitMinute <p>Retry policy Retry wait time, in minutes: Default: 5</p>
      */
     public Long getRetryWaitMinute() {
         return this.RetryWaitMinute;
     }
 
     /**
-     * Set Retry policy retry wait time, in minutes: default: 5.
-     * @param RetryWaitMinute Retry policy retry wait time, in minutes: default: 5.
+     * Set <p>Retry policy Retry wait time, in minutes: Default: 5</p>
+     * @param RetryWaitMinute <p>Retry policy Retry wait time, in minutes: Default: 5</p>
      */
     public void setRetryWaitMinute(Long RetryWaitMinute) {
         this.RetryWaitMinute = RetryWaitMinute;
     }
 
     /**
-     * Get Maximum attempts of the retry policy. default: 4. 
-     * @return MaxRetryNumber Maximum attempts of the retry policy. default: 4.
+     * Get <p>Retry policy Maximum attempts, Default: 4</p> 
+     * @return MaxRetryNumber <p>Retry policy Maximum attempts, Default: 4</p>
      */
     public Long getMaxRetryNumber() {
         return this.MaxRetryNumber;
     }
 
     /**
-     * Set Maximum attempts of the retry policy. default: 4.
-     * @param MaxRetryNumber Maximum attempts of the retry policy. default: 4.
+     * Set <p>Retry policy Maximum attempts, Default: 4</p>
+     * @param MaxRetryNumber <p>Retry policy Maximum attempts, Default: 4</p>
      */
     public void setMaxRetryNumber(Long MaxRetryNumber) {
         this.MaxRetryNumber = MaxRetryNumber;
     }
 
     /**
-     * Get Timeout handling strategy runtime timeout (unit: minutes) defaults to -1. 
-     * @return ExecutionTTLMinute Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+     * Get <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p> 
+     * @return ExecutionTTLMinute <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
      */
     public Long getExecutionTTLMinute() {
         return this.ExecutionTTLMinute;
     }
 
     /**
-     * Set Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
-     * @param ExecutionTTLMinute Timeout handling strategy runtime timeout (unit: minutes) defaults to -1.
+     * Set <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
+     * @param ExecutionTTLMinute <p>Timeout handling strategy Runtime timeout (unit: minutes) Default is -1</p>
      */
     public void setExecutionTTLMinute(Long ExecutionTTLMinute) {
         this.ExecutionTTLMinute = ExecutionTTLMinute;
     }
 
     /**
-     * Get Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1. 
-     * @return WaitExecutionTotalTTLMinute Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+     * Get <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p> 
+     * @return WaitExecutionTotalTTLMinute <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
      */
     public Long getWaitExecutionTotalTTLMinute() {
         return this.WaitExecutionTotalTTLMinute;
     }
 
     /**
-     * Set Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
-     * @param WaitExecutionTotalTTLMinute Timeout handling strategy wait duration timeout (unit: minutes) defaults to -1.
+     * Set <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
+     * @param WaitExecutionTotalTTLMinute <p>Timeout handling strategy Wait duration timeout (unit: minutes) Default value is -1</p>
      */
     public void setWaitExecutionTotalTTLMinute(Long WaitExecutionTotalTTLMinute) {
         this.WaitExecutionTotalTTLMinute = WaitExecutionTotalTTLMinute;
+    }
+
+    /**
+     * Get <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul> 
+     * @return DependencyTriggerPolicy <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+     */
+    public String getDependencyTriggerPolicy() {
+        return this.DependencyTriggerPolicy;
+    }
+
+    /**
+     * Set <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+     * @param DependencyTriggerPolicy <ul><li>The task dependency run condition defaults to ALL_SUCCESS. Currently, only workflow scheduling under the project supports configuration.</li><li>ALL_SUCCESS: All successful: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful, the dependency check passes. Otherwise, if one upstream task skips running, it is marked as skipped. In other cases, it is marked as upstream failure.</li><li>ALL_FAILED: All failed: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a failed state or marked as upstream failure, the dependency check passes. Otherwise, it is marked as skipped.</li><li>ALL_DONE: All completed: When all upstream dependency tasks reach the final state, perform a dependency check, and the dependency check passes directly.</li><li>ALL_DONE_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one is successful, the dependency check passes. Otherwise, it skips running.</li><li>ALL_SKIPPED: All upstream tasks skipped: When all upstream dependency tasks reach the final state, perform a dependency check. Only if all upstream tasks are in a skipped state does the dependency check pass. Otherwise, the current node skips running.</li><li>ONE_FAILED: At least one failed: If at least one upstream task fails, perform a dependency check, and the check passes. If all upstream tasks complete but none fail, it skips running.</li><li>ONE_SUCCESS: At least one success: If at least one upstream task succeeds, perform a dependency check, and the check passes. If all upstream tasks complete but none succeed, it skips running.</li><li>ONE_DONE: At least one completed: If at least one upstream task completes, perform a dependency check, and the check passes. Otherwise, it continues waiting for upstream.</li><li>NONE_FAILED: All upstream tasks completed with no failure: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are successful or skipped, the check passes. Otherwise, it is marked as upstream failure.</li><li>ALL_DONE_NONE_FAILED_AT_LEAST_ONE_SUCCESS: All upstream tasks completed with no failure and at least one success: When all upstream dependency tasks reach the final state, perform a dependency check. If no upstream task fails and at least one succeeds, the check passes. Otherwise, it skips running.</li><li>NONE_SKIPPED: All upstream tasks completed with no skipped runs: When all upstream dependency tasks reach the final state, perform a dependency check. If all upstream tasks are in a successful, failed, or upstream failure state, the check passes. Otherwise, it skips running.</li><li>ALL_DONE_AT_LEAST_ONE_FAILED: All upstream tasks completed with at least one failure: When all upstream dependency tasks reach the final state, perform a dependency check. If at least one fails, the check passes. Otherwise, it skips running.</li></ul>
+     */
+    public void setDependencyTriggerPolicy(String DependencyTriggerPolicy) {
+        this.DependencyTriggerPolicy = DependencyTriggerPolicy;
+    }
+
+    /**
+     * Get <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p> 
+     * @return AllowDownstreamDependency <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
+     * @deprecated
+     */
+    @Deprecated
+    public Long getAllowDownstreamDependency() {
+        return this.AllowDownstreamDependency;
+    }
+
+    /**
+     * Set <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
+     * @param AllowDownstreamDependency <p>Whether to allow downstream dependency 1 Allow 0 Do not allow</p><p>Value ranges from 0 to 1</p><p>Default value: 1</p>
+     * @deprecated
+     */
+    @Deprecated
+    public void setAllowDownstreamDependency(Long AllowDownstreamDependency) {
+        this.AllowDownstreamDependency = AllowDownstreamDependency;
     }
 
     public CreateTaskSchedulerConfiguration() {
@@ -919,6 +874,12 @@ T_PLUS_1: specifies t+1 generation.
         if (source.WaitExecutionTotalTTLMinute != null) {
             this.WaitExecutionTotalTTLMinute = new Long(source.WaitExecutionTotalTTLMinute);
         }
+        if (source.DependencyTriggerPolicy != null) {
+            this.DependencyTriggerPolicy = new String(source.DependencyTriggerPolicy);
+        }
+        if (source.AllowDownstreamDependency != null) {
+            this.AllowDownstreamDependency = new Long(source.AllowDownstreamDependency);
+        }
     }
 
 
@@ -955,6 +916,8 @@ T_PLUS_1: specifies t+1 generation.
         this.setParamSimple(map, prefix + "MaxRetryNumber", this.MaxRetryNumber);
         this.setParamSimple(map, prefix + "ExecutionTTLMinute", this.ExecutionTTLMinute);
         this.setParamSimple(map, prefix + "WaitExecutionTotalTTLMinute", this.WaitExecutionTotalTTLMinute);
+        this.setParamSimple(map, prefix + "DependencyTriggerPolicy", this.DependencyTriggerPolicy);
+        this.setParamSimple(map, prefix + "AllowDownstreamDependency", this.AllowDownstreamDependency);
 
     }
 }

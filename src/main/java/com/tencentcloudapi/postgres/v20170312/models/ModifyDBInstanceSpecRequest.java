@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceSpecRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of postgres-6bwgamo3.
+    * Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -38,7 +38,7 @@ public class ModifyDBInstanceSpecRequest extends AbstractModel {
     private Long Memory;
 
     /**
-    * Instance disk size in GiB after modification.
+    * Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
     */
     @SerializedName("Storage")
     @Expose
@@ -94,23 +94,23 @@ Default value: 0
     private String SwitchEndTime;
 
     /**
-    * Instance CPU size in Cores after modification.
+    * Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-     * Get Instance ID in the format of postgres-6bwgamo3. 
-     * @return DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+     * Get Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID in the format of postgres-6bwgamo3.
-     * @param DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+     * Set Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -133,16 +133,16 @@ Default value: 0
     }
 
     /**
-     * Get Instance disk size in GiB after modification. 
-     * @return Storage Instance disk size in GiB after modification.
+     * Get Instance disk size after modification in GiB. specifies the step length for parameter settings as 10. 
+     * @return Storage Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Instance disk size in GiB after modification.
-     * @param Storage Instance disk size in GiB after modification.
+     * Set Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
+     * @param Storage Instance disk size after modification in GiB. specifies the step length for parameter settings as 10.
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
@@ -273,16 +273,16 @@ Default value: 0
     }
 
     /**
-     * Get Instance CPU size in Cores after modification. 
-     * @return Cpu Instance CPU size in Cores after modification.
+     * Get Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported. 
+     * @return Cpu Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Instance CPU size in Cores after modification.
-     * @param Cpu Instance CPU size in Cores after modification.
+     * Set Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
+     * @param Cpu Instance CPU size in cores after modification. if this parameter is not specified, the CPU size is determined based on Memory by default. for example, if Memory is 2 and the supported specifications include 1 Core 2 GiB, the default CPU value is 1 when not imported.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

@@ -87,6 +87,30 @@ Output stream:
     private String TableGuid;
 
     /**
+    * Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CatalogName")
+    @Expose
+    private String CatalogName;
+
+    /**
+    * Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("DatasourceName")
+    @Expose
+    private String DatasourceName;
+
+    /**
+    * Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("QualifiedName")
+    @Expose
+    private String QualifiedName;
+
+    /**
      * Get Data source ID. 
      * @return DatasourceId Data source ID.
      */
@@ -242,6 +266,66 @@ Output stream:
         this.TableGuid = TableGuid;
     }
 
+    /**
+     * Get Catalog name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CatalogName Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCatalogName() {
+        return this.CatalogName;
+    }
+
+    /**
+     * Set Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CatalogName Catalog name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCatalogName(String CatalogName) {
+        this.CatalogName = CatalogName;
+    }
+
+    /**
+     * Get Data source name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return DatasourceName Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getDatasourceName() {
+        return this.DatasourceName;
+    }
+
+    /**
+     * Set Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DatasourceName Data source name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setDatasourceName(String DatasourceName) {
+        this.DatasourceName = DatasourceName;
+    }
+
+    /**
+     * Get Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return QualifiedName Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getQualifiedName() {
+        return this.QualifiedName;
+    }
+
+    /**
+     * Set Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param QualifiedName Catalog (if any).Database (if any).Table name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setQualifiedName(String QualifiedName) {
+        this.QualifiedName = QualifiedName;
+    }
+
     public TaskDataRegistry() {
     }
 
@@ -274,6 +358,15 @@ Output stream:
         if (source.TableGuid != null) {
             this.TableGuid = new String(source.TableGuid);
         }
+        if (source.CatalogName != null) {
+            this.CatalogName = new String(source.CatalogName);
+        }
+        if (source.DatasourceName != null) {
+            this.DatasourceName = new String(source.DatasourceName);
+        }
+        if (source.QualifiedName != null) {
+            this.QualifiedName = new String(source.QualifiedName);
+        }
     }
 
 
@@ -289,6 +382,9 @@ Output stream:
         this.setParamSimple(map, prefix + "TablePhysicalId", this.TablePhysicalId);
         this.setParamSimple(map, prefix + "DbGuid", this.DbGuid);
         this.setParamSimple(map, prefix + "TableGuid", this.TableGuid);
+        this.setParamSimple(map, prefix + "CatalogName", this.CatalogName);
+        this.setParamSimple(map, prefix + "DatasourceName", this.DatasourceName);
+        this.setParamSimple(map, prefix + "QualifiedName", this.QualifiedName);
 
     }
 }

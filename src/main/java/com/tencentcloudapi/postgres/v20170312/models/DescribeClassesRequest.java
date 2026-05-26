@@ -24,82 +24,95 @@ import java.util.HashMap;
 public class DescribeClassesRequest extends AbstractModel {
 
     /**
-    * AZ ID, which can be obtained through the `DescribeZones` API.
+    * <p>Availability zone name, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+    * <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
     */
     @SerializedName("DBEngine")
     @Expose
     private String DBEngine;
 
     /**
-    * Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
+    * <p>Database major version number, such as 12 or 13, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1">DescribeDBVersions</a> API.</p>
     */
     @SerializedName("DBMajorVersion")
     @Expose
     private String DBMajorVersion;
 
     /**
-     * Get AZ ID, which can be obtained through the `DescribeZones` API. 
-     * @return Zone AZ ID, which can be obtained through the `DescribeZones` API.
+    * <p>Instance storage type. The supported specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
+     * Get <p>Availability zone name, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p> 
+     * @return Zone <p>Availability zone name, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ ID, which can be obtained through the `DescribeZones` API.
-     * @param Zone AZ ID, which can be obtained through the `DescribeZones` API.
+     * Set <p>Availability zone name, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
+     * @param Zone <p>Availability zone name, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/16769?from_cn_redirect=1">DescribeZones</a> API.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL) 
-     * @return DBEngine Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+     * Get <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p> 
+     * @return DBEngine <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
      */
     public String getDBEngine() {
         return this.DBEngine;
     }
 
     /**
-     * Set Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-     * @param DBEngine Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+     * Set <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
+     * @param DBEngine <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).</p>
      */
     public void setDBEngine(String DBEngine) {
         this.DBEngine = DBEngine;
     }
 
     /**
-     * Get Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API. 
-     * @return DBMajorVersion Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
+     * Get <p>Database major version number, such as 12 or 13, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1">DescribeDBVersions</a> API.</p> 
+     * @return DBMajorVersion <p>Database major version number, such as 12 or 13, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1">DescribeDBVersions</a> API.</p>
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
     }
 
     /**
-     * Set Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
-     * @param DBMajorVersion Major version of a database, such as 12 or 13, which can be obtained through the `DescribeDBVersions` API.
+     * Set <p>Database major version number, such as 12 or 13, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1">DescribeDBVersions</a> API.</p>
+     * @param DBMajorVersion <p>Database major version number, such as 12 or 13, which can be obtained through the <a href="https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1">DescribeDBVersions</a> API.</p>
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;
+    }
+
+    /**
+     * Get <p>Instance storage type. The supported specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p> 
+     * @return StorageType <p>Instance storage type. The supported specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set <p>Instance storage type. The supported specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+     * @param StorageType <p>Instance storage type. The supported specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
     }
 
     public DescribeClassesRequest() {
@@ -119,6 +132,9 @@ public class DescribeClassesRequest extends AbstractModel {
         if (source.DBMajorVersion != null) {
             this.DBMajorVersion = new String(source.DBMajorVersion);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -129,6 +145,7 @@ public class DescribeClassesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "DBEngine", this.DBEngine);
         this.setParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

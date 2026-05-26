@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateMNGSensitiveAPIPermissionApprovalRequest extends AbstractModel {
 
     /**
-    * <p>API ID</p>
+    * <p>API ID.</p>
     */
     @SerializedName("APIId")
     @Expose
     private String APIId;
 
     /**
-    * <p>Reason for request</p>
+    * <p>Reason for request.</p>
     */
     @SerializedName("ApplyReason")
     @Expose
     private String ApplyReason;
 
     /**
-    * <p>Mini game appid</p>
+    * <p>Mini game appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * <p>Platform ID</p>
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get <p>API ID</p> 
-     * @return APIId <p>API ID</p>
+     * Get <p>API ID.</p> 
+     * @return APIId <p>API ID.</p>
      */
     public String getAPIId() {
         return this.APIId;
     }
 
     /**
-     * Set <p>API ID</p>
-     * @param APIId <p>API ID</p>
+     * Set <p>API ID.</p>
+     * @param APIId <p>API ID.</p>
      */
     public void setAPIId(String APIId) {
         this.APIId = APIId;
     }
 
     /**
-     * Get <p>Reason for request</p> 
-     * @return ApplyReason <p>Reason for request</p>
+     * Get <p>Reason for request.</p> 
+     * @return ApplyReason <p>Reason for request.</p>
      */
     public String getApplyReason() {
         return this.ApplyReason;
     }
 
     /**
-     * Set <p>Reason for request</p>
-     * @param ApplyReason <p>Reason for request</p>
+     * Set <p>Reason for request.</p>
+     * @param ApplyReason <p>Reason for request.</p>
      */
     public void setApplyReason(String ApplyReason) {
         this.ApplyReason = ApplyReason;
     }
 
     /**
-     * Get <p>Mini game appid</p> 
-     * @return MNPId <p>Mini game appid</p>
+     * Get <p>Mini game appid.</p> 
+     * @return MNPId <p>Mini game appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set <p>Mini game appid</p>
-     * @param MNPId <p>Mini game appid</p>
+     * Set <p>Mini game appid.</p>
+     * @param MNPId <p>Mini game appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get <p>Platform ID</p> 
-     * @return PlatformId <p>Platform ID</p>
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set <p>Platform ID</p>
-     * @param PlatformId <p>Platform ID</p>
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

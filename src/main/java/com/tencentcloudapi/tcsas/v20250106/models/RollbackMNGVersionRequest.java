@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class RollbackMNGVersionRequest extends AbstractModel {
 
     /**
-    * <p>Mini game appid</p>
+    * <p>Mini game appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * <p>Mini game version ID</p>
+    * <p>Mini game version ID.</p>
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-    * <p>Platform ID</p>
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * <p>Mini game version number</p>
+    * <p>Mini game version number.</p>
     */
     @SerializedName("MNPVersion")
     @Expose
     private String MNPVersion;
 
     /**
-     * Get <p>Mini game appid</p> 
-     * @return MNPId <p>Mini game appid</p>
+     * Get <p>Mini game appid.</p> 
+     * @return MNPId <p>Mini game appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set <p>Mini game appid</p>
-     * @param MNPId <p>Mini game appid</p>
+     * Set <p>Mini game appid.</p>
+     * @param MNPId <p>Mini game appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get <p>Mini game version ID</p> 
-     * @return MNPVersionId <p>Mini game version ID</p>
+     * Get <p>Mini game version ID.</p> 
+     * @return MNPVersionId <p>Mini game version ID.</p>
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set <p>Mini game version ID</p>
-     * @param MNPVersionId <p>Mini game version ID</p>
+     * Set <p>Mini game version ID.</p>
+     * @param MNPVersionId <p>Mini game version ID.</p>
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get <p>Platform ID</p> 
-     * @return PlatformId <p>Platform ID</p>
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set <p>Platform ID</p>
-     * @param PlatformId <p>Platform ID</p>
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get <p>Mini game version number</p> 
-     * @return MNPVersion <p>Mini game version number</p>
+     * Get <p>Mini game version number.</p> 
+     * @return MNPVersion <p>Mini game version number.</p>
      */
     public String getMNPVersion() {
         return this.MNPVersion;
     }
 
     /**
-     * Set <p>Mini game version number</p>
-     * @param MNPVersion <p>Mini game version number</p>
+     * Set <p>Mini game version number.</p>
+     * @param MNPVersion <p>Mini game version number.</p>
      */
     public void setMNPVersion(String MNPVersion) {
         this.MNPVersion = MNPVersion;

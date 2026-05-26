@@ -24,64 +24,72 @@ import java.util.HashMap;
 public class DescribeProductConfigRequest extends AbstractModel {
 
     /**
-    * AZ name
+    * <p>Availability zone name.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
+    * <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
     */
     @SerializedName("DBEngine")
     @Expose
     private String DBEngine;
 
     /**
-     * Get AZ name 
-     * @return Zone AZ name
+    * <p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+    */
+    @SerializedName("StorageType")
+    @Expose
+    private String StorageType;
+
+    /**
+     * Get <p>Availability zone name.</p> 
+     * @return Zone <p>Availability zone name.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ name
-     * @param Zone AZ name
+     * Set <p>Availability zone name.</p>
+     * @param Zone <p>Availability zone name.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql` 
-     * @return DBEngine Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
+     * Get <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p> 
+     * @return DBEngine <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
      */
     public String getDBEngine() {
         return this.DBEngine;
     }
 
     /**
-     * Set Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
-     * @param DBEngine Database engines. Valid values:
-1. `postgresql` (TencentDB for PostgreSQL)
-2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
-Default value: `postgresql`
+     * Set <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
+     * @param DBEngine <p>Database engine. Valid values:<br>1. postgresql (TencentDB for PostgreSQL).<br>2. mssql_compatible (MSSQL compatible - TencentDB for PostgreSQL).<br>If this parameter is not specified, the default value is postgresql.</p>
      */
     public void setDBEngine(String DBEngine) {
         this.DBEngine = DBEngine;
+    }
+
+    /**
+     * Get <p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p> 
+     * @return StorageType <p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+     */
+    public String getStorageType() {
+        return this.StorageType;
+    }
+
+    /**
+     * Set <p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+     * @param StorageType <p>Instance storage type. The supported versions and specifications are returned based on the storage type.</p><p>Enumeration values:</p><ul><li>PHYSICAL_LOCAL_SSD: local SSD of physical machine.</li><li>CLOUD_PREMIUM: Premium Disk.</li><li>CLOUD_SSD: Cloud SSD.</li><li>CLOUD_HSSD: Enhanced SSD.</li></ul><p>Default value: PHYSICAL_LOCAL_SSD.</p>
+     */
+    public void setStorageType(String StorageType) {
+        this.StorageType = StorageType;
     }
 
     public DescribeProductConfigRequest() {
@@ -98,6 +106,9 @@ Default value: `postgresql`
         if (source.DBEngine != null) {
             this.DBEngine = new String(source.DBEngine);
         }
+        if (source.StorageType != null) {
+            this.StorageType = new String(source.StorageType);
+        }
     }
 
 
@@ -107,6 +118,7 @@ Default value: `postgresql`
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "Zone", this.Zone);
         this.setParamSimple(map, prefix + "DBEngine", this.DBEngine);
+        this.setParamSimple(map, prefix + "StorageType", this.StorageType);
 
     }
 }

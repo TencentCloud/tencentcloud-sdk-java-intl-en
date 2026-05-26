@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateMNGApprovalRequest extends AbstractModel {
 
     /**
-    * <p>Mini game version ID</p>
+    * <p>Mini game version ID.</p>
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-    * <p>submit: Submit for approval; cancel: Cancel approval</p>
+    * <p>submit: Submit an approval request; cancel: Cancel the approval request.</p>
     */
     @SerializedName("ApplyAction")
     @Expose
     private String ApplyAction;
 
     /**
-    * <p>Platform ID</p>
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get <p>Mini game version ID</p> 
-     * @return MNPVersionId <p>Mini game version ID</p>
+     * Get <p>Mini game version ID.</p> 
+     * @return MNPVersionId <p>Mini game version ID.</p>
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set <p>Mini game version ID</p>
-     * @param MNPVersionId <p>Mini game version ID</p>
+     * Set <p>Mini game version ID.</p>
+     * @param MNPVersionId <p>Mini game version ID.</p>
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get <p>submit: Submit for approval; cancel: Cancel approval</p> 
-     * @return ApplyAction <p>submit: Submit for approval; cancel: Cancel approval</p>
+     * Get <p>submit: Submit an approval request; cancel: Cancel the approval request.</p> 
+     * @return ApplyAction <p>submit: Submit an approval request; cancel: Cancel the approval request.</p>
      */
     public String getApplyAction() {
         return this.ApplyAction;
     }
 
     /**
-     * Set <p>submit: Submit for approval; cancel: Cancel approval</p>
-     * @param ApplyAction <p>submit: Submit for approval; cancel: Cancel approval</p>
+     * Set <p>submit: Submit an approval request; cancel: Cancel the approval request.</p>
+     * @param ApplyAction <p>submit: Submit an approval request; cancel: Cancel the approval request.</p>
      */
     public void setApplyAction(String ApplyAction) {
         this.ApplyAction = ApplyAction;
     }
 
     /**
-     * Get <p>Platform ID</p> 
-     * @return PlatformId <p>Platform ID</p>
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set <p>Platform ID</p>
-     * @param PlatformId <p>Platform ID</p>
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

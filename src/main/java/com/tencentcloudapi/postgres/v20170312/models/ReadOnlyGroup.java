@@ -24,68 +24,63 @@ import java.util.HashMap;
 public class ReadOnlyGroup extends AbstractModel {
 
     /**
-    * RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * RO group identifier.
     */
     @SerializedName("ReadOnlyGroupId")
     @Expose
     private String ReadOnlyGroupId;
 
     /**
-    * RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the read-only group name.
     */
     @SerializedName("ReadOnlyGroupName")
     @Expose
     private String ReadOnlyGroupName;
 
     /**
-    * Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Project ID.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Primary instance id.
     */
     @SerializedName("MasterDBInstanceId")
     @Expose
     private String MasterDBInstanceId;
 
     /**
-    * The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the minimum number of instances to retain.
     */
     @SerializedName("MinDelayEliminateReserve")
     @Expose
     private Long MinDelayEliminateReserve;
 
     /**
-    * Delayed log size threshold
+    * Specifies the delay threshold for space size in MB.
     */
     @SerializedName("MaxReplayLatency")
     @Expose
     private Long MaxReplayLatency;
 
     /**
-    * Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+    * Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
     */
     @SerializedName("ReplayLatencyEliminate")
     @Expose
     private Long ReplayLatencyEliminate;
 
     /**
-    * Delay threshold
+    * Delay time size threshold, in seconds.
     */
     @SerializedName("MaxReplayLag")
     @Expose
     private Float MaxReplayLag;
 
     /**
-    * Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+    * Delay time switch. 0 - turn off. 1 - turn on.
     */
     @SerializedName("ReplayLagEliminate")
     @Expose
@@ -100,7 +95,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
     * Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -121,7 +115,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String Zone;
 
     /**
-    * Status
+    * Status. valid values: creating, ok, modifying, deleting, deleted.
     */
     @SerializedName("Status")
     @Expose
@@ -157,164 +151,144 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private NetworkAccess [] NetworkAccessList;
 
     /**
-     * Get RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ReadOnlyGroupId RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get RO group identifier. 
+     * @return ReadOnlyGroupId RO group identifier.
      */
     public String getReadOnlyGroupId() {
         return this.ReadOnlyGroupId;
     }
 
     /**
-     * Set RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ReadOnlyGroupId RO group identifier
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set RO group identifier.
+     * @param ReadOnlyGroupId RO group identifier.
      */
     public void setReadOnlyGroupId(String ReadOnlyGroupId) {
         this.ReadOnlyGroupId = ReadOnlyGroupId;
     }
 
     /**
-     * Get RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ReadOnlyGroupName RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the read-only group name. 
+     * @return ReadOnlyGroupName Specifies the read-only group name.
      */
     public String getReadOnlyGroupName() {
         return this.ReadOnlyGroupName;
     }
 
     /**
-     * Set RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ReadOnlyGroupName RO group name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the read-only group name.
+     * @param ReadOnlyGroupName Specifies the read-only group name.
      */
     public void setReadOnlyGroupName(String ReadOnlyGroupName) {
         this.ReadOnlyGroupName = ReadOnlyGroupName;
     }
 
     /**
-     * Get Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ProjectId Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Project ID. 
+     * @return ProjectId Project ID.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ProjectId Project ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Project ID.
+     * @param ProjectId Project ID.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return MasterDBInstanceId Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Primary instance id. 
+     * @return MasterDBInstanceId Primary instance id.
      */
     public String getMasterDBInstanceId() {
         return this.MasterDBInstanceId;
     }
 
     /**
-     * Set Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param MasterDBInstanceId Primary instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Primary instance id.
+     * @param MasterDBInstanceId Primary instance id.
      */
     public void setMasterDBInstanceId(String MasterDBInstanceId) {
         this.MasterDBInstanceId = MasterDBInstanceId;
     }
 
     /**
-     * Get The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return MinDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the minimum number of instances to retain. 
+     * @return MinDelayEliminateReserve Specifies the minimum number of instances to retain.
      */
     public Long getMinDelayEliminateReserve() {
         return this.MinDelayEliminateReserve;
     }
 
     /**
-     * Set The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param MinDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the minimum number of instances to retain.
+     * @param MinDelayEliminateReserve Specifies the minimum number of instances to retain.
      */
     public void setMinDelayEliminateReserve(Long MinDelayEliminateReserve) {
         this.MinDelayEliminateReserve = MinDelayEliminateReserve;
     }
 
     /**
-     * Get Delayed log size threshold 
-     * @return MaxReplayLatency Delayed log size threshold
+     * Get Specifies the delay threshold for space size in MB. 
+     * @return MaxReplayLatency Specifies the delay threshold for space size in MB.
      */
     public Long getMaxReplayLatency() {
         return this.MaxReplayLatency;
     }
 
     /**
-     * Set Delayed log size threshold
-     * @param MaxReplayLatency Delayed log size threshold
+     * Set Specifies the delay threshold for space size in MB.
+     * @param MaxReplayLatency Specifies the delay threshold for space size in MB.
      */
     public void setMaxReplayLatency(Long MaxReplayLatency) {
         this.MaxReplayLatency = MaxReplayLatency;
     }
 
     /**
-     * Get Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes). 
-     * @return ReplayLatencyEliminate Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * Get Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on. 
+     * @return ReplayLatencyEliminate Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
      */
     public Long getReplayLatencyEliminate() {
         return this.ReplayLatencyEliminate;
     }
 
     /**
-     * Set Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-     * @param ReplayLatencyEliminate Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * Set Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
+     * @param ReplayLatencyEliminate Specifies the delay size switch. valid values: 0 - turn off; 1 - turn on.
      */
     public void setReplayLatencyEliminate(Long ReplayLatencyEliminate) {
         this.ReplayLatencyEliminate = ReplayLatencyEliminate;
     }
 
     /**
-     * Get Delay threshold 
-     * @return MaxReplayLag Delay threshold
+     * Get Delay time size threshold, in seconds. 
+     * @return MaxReplayLag Delay time size threshold, in seconds.
      */
     public Float getMaxReplayLag() {
         return this.MaxReplayLag;
     }
 
     /**
-     * Set Delay threshold
-     * @param MaxReplayLag Delay threshold
+     * Set Delay time size threshold, in seconds.
+     * @param MaxReplayLag Delay time size threshold, in seconds.
      */
     public void setMaxReplayLag(Float MaxReplayLag) {
         this.MaxReplayLag = MaxReplayLag;
     }
 
     /**
-     * Get Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes). 
-     * @return ReplayLagEliminate Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * Get Delay time switch. 0 - turn off. 1 - turn on. 
+     * @return ReplayLagEliminate Delay time switch. 0 - turn off. 1 - turn on.
      */
     public Long getReplayLagEliminate() {
         return this.ReplayLagEliminate;
     }
 
     /**
-     * Set Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-     * @param ReplayLagEliminate Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * Set Delay time switch. 0 - turn off. 1 - turn on.
+     * @param ReplayLagEliminate Delay time switch. 0 - turn off. 1 - turn on.
      */
     public void setReplayLagEliminate(Long ReplayLagEliminate) {
         this.ReplayLagEliminate = ReplayLagEliminate;
@@ -337,10 +311,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
+     * Get Subnet ID 
      * @return SubnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public String getSubnetId() {
         return this.SubnetId;
@@ -348,9 +320,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * Set Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param SubnetId Subnet ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -389,16 +359,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Status 
-     * @return Status Status
+     * Get Status. valid values: creating, ok, modifying, deleting, deleted. 
+     * @return Status Status. valid values: creating, ok, modifying, deleting, deleted.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status
-     * @param Status Status
+     * Set Status. valid values: creating, ok, modifying, deleting, deleted.
+     * @param Status Status. valid values: creating, ok, modifying, deleting, deleted.
      */
     public void setStatus(String Status) {
         this.Status = Status;

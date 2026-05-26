@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribePaymentDataLineChartRequest extends AbstractModel {
 
     /**
-    * Tenant ID
+    * Tenant ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Fixed value: payment_data_analysis
+    * Fixed value: payment_data_analysis.
     */
     @SerializedName("ReportId")
     @Expose
     private String ReportId;
 
     /**
-    * IndexId (optional):
+    * Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -47,53 +47,53 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
+refund_amount: Total amount refunded.
     */
     @SerializedName("IndexId")
     @Expose
     private String IndexId;
 
     /**
-    * Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
+    * Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
     */
     @SerializedName("QueryData")
     @Expose
     private String QueryData;
 
     /**
-     * Get Tenant ID 
-     * @return PlatformId Tenant ID
+     * Get Tenant ID. 
+     * @return PlatformId Tenant ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Tenant ID
-     * @param PlatformId Tenant ID
+     * Set Tenant ID.
+     * @param PlatformId Tenant ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Fixed value: payment_data_analysis 
-     * @return ReportId Fixed value: payment_data_analysis
+     * Get Fixed value: payment_data_analysis. 
+     * @return ReportId Fixed value: payment_data_analysis.
      */
     public String getReportId() {
         return this.ReportId;
     }
 
     /**
-     * Set Fixed value: payment_data_analysis
-     * @param ReportId Fixed value: payment_data_analysis
+     * Set Fixed value: payment_data_analysis.
+     * @param ReportId Fixed value: payment_data_analysis.
      */
     public void setReportId(String ReportId) {
         this.ReportId = ReportId;
     }
 
     /**
-     * Get IndexId (optional):
+     * Get Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -102,8 +102,8 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded 
-     * @return IndexId IndexId (optional):
+refund_amount: Total amount refunded. 
+     * @return IndexId Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -112,14 +112,14 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
+refund_amount: Total amount refunded.
      */
     public String getIndexId() {
         return this.IndexId;
     }
 
     /**
-     * Set IndexId (optional):
+     * Set Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -128,8 +128,8 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
-     * @param IndexId IndexId (optional):
+refund_amount: Total amount refunded.
+     * @param IndexId Index ID (optional):
 order_user_num: Number of users placing orders
 order_num: Total orders
 total_amount: Total amount
@@ -138,23 +138,23 @@ unpaid_amount: Unpaid amount
 order_paid_num: Total paid orders
 paid_amount: Amount paid
 order_refund_num: Total refunded orders
-refund_amount: Total amount refunded
+refund_amount: Total amount refunded.
      */
     public void setIndexId(String IndexId) {
         this.IndexId = IndexId;
     }
 
     /**
-     * Get Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1} 
-     * @return QueryData Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
+     * Get Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}. 
+     * @return QueryData Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
      */
     public String getQueryData() {
         return this.QueryData;
     }
 
     /**
-     * Set Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
-     * @param QueryData Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}
+     * Set Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
+     * @param QueryData Input parameter base64 string: {"Platform":0,"MnpIds":["mp9e7qluz4i3z3km"],"BeginDate":20251031,"EndDate":20251129,"DataType":"1","PaymentType":1}.
      */
     public void setQueryData(String QueryData) {
         this.QueryData = QueryData;

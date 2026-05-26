@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class Overview extends AbstractModel {
 
     /**
-    * Superapps
+    * Number of superapps.
     */
     @SerializedName("AppNum")
     @Expose
     private Long AppNum;
 
     /**
-    * Teams
+    * Number of teams.
     */
     @SerializedName("CorpNum")
     @Expose
     private Long CorpNum;
 
     /**
-    * Refresh time
+    * Refresh timestamp.
     */
     @SerializedName("FlushTime")
     @Expose
     private String FlushTime;
 
     /**
-    * Mini programs
+    * Number of mini programs.
     */
     @SerializedName("MiniAppNum")
     @Expose
     private Long MiniAppNum;
 
     /**
-    * Mini games
+    * Number of mini games.
     */
     @SerializedName("MiniGameNum")
     @Expose
     private Long MiniGameNum;
 
     /**
-    * Mini game visits
+    * Number of mini game visits.
     */
     @SerializedName("MiniGameVisitNum")
     @Expose
     private Long MiniGameVisitNum;
 
     /**
-    * Mini program updates
+    * Number of mini program updates.
     */
     @SerializedName("UpdateNum")
     @Expose
     private Long UpdateNum;
 
     /**
-    * Mini program visits
+    * Number of mini program visits.
     */
     @SerializedName("VisitNum")
     @Expose
     private Long VisitNum;
 
     /**
-     * Get Superapps 
-     * @return AppNum Superapps
+     * Get Number of superapps. 
+     * @return AppNum Number of superapps.
      */
     public Long getAppNum() {
         return this.AppNum;
     }
 
     /**
-     * Set Superapps
-     * @param AppNum Superapps
+     * Set Number of superapps.
+     * @param AppNum Number of superapps.
      */
     public void setAppNum(Long AppNum) {
         this.AppNum = AppNum;
     }
 
     /**
-     * Get Teams 
-     * @return CorpNum Teams
+     * Get Number of teams. 
+     * @return CorpNum Number of teams.
      */
     public Long getCorpNum() {
         return this.CorpNum;
     }
 
     /**
-     * Set Teams
-     * @param CorpNum Teams
+     * Set Number of teams.
+     * @param CorpNum Number of teams.
      */
     public void setCorpNum(Long CorpNum) {
         this.CorpNum = CorpNum;
     }
 
     /**
-     * Get Refresh time 
-     * @return FlushTime Refresh time
+     * Get Refresh timestamp. 
+     * @return FlushTime Refresh timestamp.
      */
     public String getFlushTime() {
         return this.FlushTime;
     }
 
     /**
-     * Set Refresh time
-     * @param FlushTime Refresh time
+     * Set Refresh timestamp.
+     * @param FlushTime Refresh timestamp.
      */
     public void setFlushTime(String FlushTime) {
         this.FlushTime = FlushTime;
     }
 
     /**
-     * Get Mini programs 
-     * @return MiniAppNum Mini programs
+     * Get Number of mini programs. 
+     * @return MiniAppNum Number of mini programs.
      */
     public Long getMiniAppNum() {
         return this.MiniAppNum;
     }
 
     /**
-     * Set Mini programs
-     * @param MiniAppNum Mini programs
+     * Set Number of mini programs.
+     * @param MiniAppNum Number of mini programs.
      */
     public void setMiniAppNum(Long MiniAppNum) {
         this.MiniAppNum = MiniAppNum;
     }
 
     /**
-     * Get Mini games 
-     * @return MiniGameNum Mini games
+     * Get Number of mini games. 
+     * @return MiniGameNum Number of mini games.
      */
     public Long getMiniGameNum() {
         return this.MiniGameNum;
     }
 
     /**
-     * Set Mini games
-     * @param MiniGameNum Mini games
+     * Set Number of mini games.
+     * @param MiniGameNum Number of mini games.
      */
     public void setMiniGameNum(Long MiniGameNum) {
         this.MiniGameNum = MiniGameNum;
     }
 
     /**
-     * Get Mini game visits 
-     * @return MiniGameVisitNum Mini game visits
+     * Get Number of mini game visits. 
+     * @return MiniGameVisitNum Number of mini game visits.
      */
     public Long getMiniGameVisitNum() {
         return this.MiniGameVisitNum;
     }
 
     /**
-     * Set Mini game visits
-     * @param MiniGameVisitNum Mini game visits
+     * Set Number of mini game visits.
+     * @param MiniGameVisitNum Number of mini game visits.
      */
     public void setMiniGameVisitNum(Long MiniGameVisitNum) {
         this.MiniGameVisitNum = MiniGameVisitNum;
     }
 
     /**
-     * Get Mini program updates 
-     * @return UpdateNum Mini program updates
+     * Get Number of mini program updates. 
+     * @return UpdateNum Number of mini program updates.
      */
     public Long getUpdateNum() {
         return this.UpdateNum;
     }
 
     /**
-     * Set Mini program updates
-     * @param UpdateNum Mini program updates
+     * Set Number of mini program updates.
+     * @param UpdateNum Number of mini program updates.
      */
     public void setUpdateNum(Long UpdateNum) {
         this.UpdateNum = UpdateNum;
     }
 
     /**
-     * Get Mini program visits 
-     * @return VisitNum Mini program visits
+     * Get Number of mini program visits. 
+     * @return VisitNum Number of mini program visits.
      */
     public Long getVisitNum() {
         return this.VisitNum;
     }
 
     /**
-     * Set Mini program visits
-     * @param VisitNum Mini program visits
+     * Set Number of mini program visits.
+     * @param VisitNum Number of mini program visits.
      */
     public void setVisitNum(Long VisitNum) {
         this.VisitNum = VisitNum;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class MAUChartData extends AbstractModel {
 
     /**
-    * Year and month: 2024-12
+    * Date in YYYYMM format.
     */
     @SerializedName("DataTime")
     @Expose
     private Long DataTime;
 
     /**
-    * Value
+    * MAU count.
     */
     @SerializedName("MAUCount")
     @Expose
     private Long MAUCount;
 
     /**
-    * Data update time, only available when MAUCount is greater than 0.
+    * Data update time. Only has a value when MAUCount is greater than 0.
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-     * Get Year and month: 2024-12 
-     * @return DataTime Year and month: 2024-12
+     * Get Date in YYYYMM format. 
+     * @return DataTime Date in YYYYMM format.
      */
     public Long getDataTime() {
         return this.DataTime;
     }
 
     /**
-     * Set Year and month: 2024-12
-     * @param DataTime Year and month: 2024-12
+     * Set Date in YYYYMM format.
+     * @param DataTime Date in YYYYMM format.
      */
     public void setDataTime(Long DataTime) {
         this.DataTime = DataTime;
     }
 
     /**
-     * Get Value 
-     * @return MAUCount Value
+     * Get MAU count. 
+     * @return MAUCount MAU count.
      */
     public Long getMAUCount() {
         return this.MAUCount;
     }
 
     /**
-     * Set Value
-     * @param MAUCount Value
+     * Set MAU count.
+     * @param MAUCount MAU count.
      */
     public void setMAUCount(Long MAUCount) {
         this.MAUCount = MAUCount;
     }
 
     /**
-     * Get Data update time, only available when MAUCount is greater than 0. 
-     * @return UpdateTime Data update time, only available when MAUCount is greater than 0.
+     * Get Data update time. Only has a value when MAUCount is greater than 0. 
+     * @return UpdateTime Data update time. Only has a value when MAUCount is greater than 0.
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Data update time, only available when MAUCount is greater than 0.
-     * @param UpdateTime Data update time, only available when MAUCount is greater than 0.
+     * Set Data update time. Only has a value when MAUCount is greater than 0.
+     * @param UpdateTime Data update time. Only has a value when MAUCount is greater than 0.
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;

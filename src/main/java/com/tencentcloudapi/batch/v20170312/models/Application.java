@@ -24,18 +24,18 @@ import java.util.HashMap;
 public class Application extends AbstractModel {
 
     /**
-    * Task execution command
-    */
-    @SerializedName("Command")
-    @Expose
-    private String Command;
-
-    /**
     * Delivery form of the application. Values: `PACKAGE` (package stored in a remote location), `LOCAL` (local computer).
     */
     @SerializedName("DeliveryForm")
     @Expose
     private String DeliveryForm;
+
+    /**
+    * Task execution command
+    */
+    @SerializedName("Command")
+    @Expose
+    private String Command;
 
     /**
     * Remote storage path of the application package
@@ -52,22 +52,6 @@ public class Application extends AbstractModel {
     private Docker Docker;
 
     /**
-     * Get Task execution command 
-     * @return Command Task execution command
-     */
-    public String getCommand() {
-        return this.Command;
-    }
-
-    /**
-     * Set Task execution command
-     * @param Command Task execution command
-     */
-    public void setCommand(String Command) {
-        this.Command = Command;
-    }
-
-    /**
      * Get Delivery form of the application. Values: `PACKAGE` (package stored in a remote location), `LOCAL` (local computer). 
      * @return DeliveryForm Delivery form of the application. Values: `PACKAGE` (package stored in a remote location), `LOCAL` (local computer).
      */
@@ -81,6 +65,22 @@ public class Application extends AbstractModel {
      */
     public void setDeliveryForm(String DeliveryForm) {
         this.DeliveryForm = DeliveryForm;
+    }
+
+    /**
+     * Get Task execution command 
+     * @return Command Task execution command
+     */
+    public String getCommand() {
+        return this.Command;
+    }
+
+    /**
+     * Set Task execution command
+     * @param Command Task execution command
+     */
+    public void setCommand(String Command) {
+        this.Command = Command;
     }
 
     /**
@@ -123,11 +123,11 @@ public class Application extends AbstractModel {
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Application(Application source) {
-        if (source.Command != null) {
-            this.Command = new String(source.Command);
-        }
         if (source.DeliveryForm != null) {
             this.DeliveryForm = new String(source.DeliveryForm);
+        }
+        if (source.Command != null) {
+            this.Command = new String(source.Command);
         }
         if (source.PackagePath != null) {
             this.PackagePath = new String(source.PackagePath);
@@ -142,8 +142,8 @@ public class Application extends AbstractModel {
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
-        this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "DeliveryForm", this.DeliveryForm);
+        this.setParamSimple(map, prefix + "Command", this.Command);
         this.setParamSimple(map, prefix + "PackagePath", this.PackagePath);
         this.setParamObj(map, prefix + "Docker.", this.Docker);
 

@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeMNPVersionResp extends AbstractModel {
 
     /**
-    * <p>Mini program appid</p>
+    * <p>Mini program appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * <p>Task ID</p>
+    * <p>Task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-    * <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
+    * Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.
     */
     @SerializedName("TaskStatus")
     @Expose
     private Long TaskStatus;
 
     /**
-    * <p>Task status information</p>
+    * <p>Task status information.</p>
     */
     @SerializedName("TaskMsg")
     @Expose
     private String TaskMsg;
 
     /**
-    * <p>Mini program version ID (returned upon successful compilation)</p>
+    * <p>Mini program version ID (returned upon successful compilation).</p>
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-     * Get <p>Mini program appid</p> 
-     * @return MNPId <p>Mini program appid</p>
+     * Get <p>Mini program appid.</p> 
+     * @return MNPId <p>Mini program appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set <p>Mini program appid</p>
-     * @param MNPId <p>Mini program appid</p>
+     * Set <p>Mini program appid.</p>
+     * @param MNPId <p>Mini program appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get <p>Task ID</p> 
-     * @return TaskId <p>Task ID</p>
+     * Get <p>Task ID.</p> 
+     * @return TaskId <p>Task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Task ID</p>
-     * @param TaskId <p>Task ID</p>
+     * Set <p>Task ID.</p>
+     * @param TaskId <p>Task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;
     }
 
     /**
-     * Get <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p> 
-     * @return TaskStatus <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
+     * Get Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded. 
+     * @return TaskStatus Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.
      */
     public Long getTaskStatus() {
         return this.TaskStatus;
     }
 
     /**
-     * Set <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
-     * @param TaskStatus <p>Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded</p>
+     * Set Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.
+     * @param TaskStatus Task status. Valid values: 1: Pending; 20: Running; 30: Failed; 60: Succeeded.
      */
     public void setTaskStatus(Long TaskStatus) {
         this.TaskStatus = TaskStatus;
     }
 
     /**
-     * Get <p>Task status information</p> 
-     * @return TaskMsg <p>Task status information</p>
+     * Get <p>Task status information.</p> 
+     * @return TaskMsg <p>Task status information.</p>
      */
     public String getTaskMsg() {
         return this.TaskMsg;
     }
 
     /**
-     * Set <p>Task status information</p>
-     * @param TaskMsg <p>Task status information</p>
+     * Set <p>Task status information.</p>
+     * @param TaskMsg <p>Task status information.</p>
      */
     public void setTaskMsg(String TaskMsg) {
         this.TaskMsg = TaskMsg;
     }
 
     /**
-     * Get <p>Mini program version ID (returned upon successful compilation)</p> 
-     * @return MNPVersionId <p>Mini program version ID (returned upon successful compilation)</p>
+     * Get <p>Mini program version ID (returned upon successful compilation).</p> 
+     * @return MNPVersionId <p>Mini program version ID (returned upon successful compilation).</p>
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set <p>Mini program version ID (returned upon successful compilation)</p>
-     * @param MNPVersionId <p>Mini program version ID (returned upon successful compilation)</p>
+     * Set <p>Mini program version ID (returned upon successful compilation).</p>
+     * @param MNPVersionId <p>Mini program version ID (returned upon successful compilation).</p>
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeGlobalOverviewDataSummaryRequest extends AbstractModel {
 
     /**
-    * string: Overview
+    * string: Overview.
     */
     @SerializedName("DataType")
     @Expose
     private String DataType;
 
     /**
-    * Tenant ID
+    * Tenant ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Date in YYYYMMDD format
+    * Date in YYYYMMDD format.
     */
     @SerializedName("DataTime")
     @Expose
     private Long DataTime;
 
     /**
-     * Get string: Overview 
-     * @return DataType string: Overview
+     * Get string: Overview. 
+     * @return DataType string: Overview.
      */
     public String getDataType() {
         return this.DataType;
     }
 
     /**
-     * Set string: Overview
-     * @param DataType string: Overview
+     * Set string: Overview.
+     * @param DataType string: Overview.
      */
     public void setDataType(String DataType) {
         this.DataType = DataType;
     }
 
     /**
-     * Get Tenant ID 
-     * @return PlatformId Tenant ID
+     * Get Tenant ID. 
+     * @return PlatformId Tenant ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Tenant ID
-     * @param PlatformId Tenant ID
+     * Set Tenant ID.
+     * @param PlatformId Tenant ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Date in YYYYMMDD format 
-     * @return DataTime Date in YYYYMMDD format
+     * Get Date in YYYYMMDD format. 
+     * @return DataTime Date in YYYYMMDD format.
      */
     public Long getDataTime() {
         return this.DataTime;
     }
 
     /**
-     * Set Date in YYYYMMDD format
-     * @param DataTime Date in YYYYMMDD format
+     * Set Date in YYYYMMDD format.
+     * @param DataTime Date in YYYYMMDD format.
      */
     public void setDataTime(Long DataTime) {
         this.DataTime = DataTime;

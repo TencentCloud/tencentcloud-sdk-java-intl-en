@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class MAUDetail extends AbstractModel {
 
     /**
-    * Mini program name
+    * Mini program name.
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * MAU details
+    * MAU details.
     */
     @SerializedName("DataList")
     @Expose
     private MAULineChartData [] DataList;
 
     /**
-     * Get Mini program name 
-     * @return MNPName Mini program name
+     * Get Mini program name. 
+     * @return MNPName Mini program name.
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name
-     * @param MNPName Mini program name
+     * Set Mini program name.
+     * @param MNPName Mini program name.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get MAU details 
-     * @return DataList MAU details
+     * Get MAU details. 
+     * @return DataList MAU details.
      */
     public MAULineChartData [] getDataList() {
         return this.DataList;
     }
 
     /**
-     * Set MAU details
-     * @param DataList MAU details
+     * Set MAU details.
+     * @param DataList MAU details.
      */
     public void setDataList(MAULineChartData [] DataList) {
         this.DataList = DataList;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyTeamRequest extends AbstractModel {
 
     /**
-    * Team ID
+    * Team ID.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Team name
+    * Team name.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Team administrator
+    * Team administrator.
     */
     @SerializedName("AdminUserId")
     @Expose
     private String AdminUserId;
 
     /**
-     * Get Team ID 
-     * @return TeamId Team ID
+     * Get Team ID. 
+     * @return TeamId Team ID.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID
-     * @param TeamId Team ID
+     * Set Team ID.
+     * @param TeamId Team ID.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name 
-     * @return TeamName Team name
+     * Get Team name. 
+     * @return TeamName Team name.
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name
-     * @param TeamName Team name
+     * Set Team name.
+     * @param TeamName Team name.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Team administrator 
-     * @return AdminUserId Team administrator
+     * Get Team administrator. 
+     * @return AdminUserId Team administrator.
      */
     public String getAdminUserId() {
         return this.AdminUserId;
     }
 
     /**
-     * Set Team administrator
-     * @param AdminUserId Team administrator
+     * Set Team administrator.
+     * @param AdminUserId Team administrator.
      */
     public void setAdminUserId(String AdminUserId) {
         this.AdminUserId = AdminUserId;

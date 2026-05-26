@@ -24,16 +24,14 @@ import java.util.HashMap;
 public class DescribeParameterTemplateAttributesResponse extends AbstractModel {
 
     /**
-    * Parameter template ID
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the parameter template ID.
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-    * Number of parameters contained in the parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the number of parameters in the parameter template.
     */
     @SerializedName("TotalCount")
     @Expose
@@ -49,23 +47,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Parameter template name
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TemplateName")
     @Expose
     private String TemplateName;
 
     /**
-    * Database version applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the database version the parameter template applies to.
     */
     @SerializedName("DBMajorVersion")
     @Expose
     private String DBMajorVersion;
 
     /**
-    * Database engine applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Specifies the database engine the parameter template applies to.
     */
     @SerializedName("DBEngine")
     @Expose
@@ -73,7 +68,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Parameter template description
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TemplateDescription")
     @Expose
@@ -87,40 +81,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Parameter template ID
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TemplateId Parameter template ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the parameter template ID. 
+     * @return TemplateId Specifies the parameter template ID.
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Parameter template ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TemplateId Parameter template ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the parameter template ID.
+     * @param TemplateId Specifies the parameter template ID.
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;
     }
 
     /**
-     * Get Number of parameters contained in the parameter template
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TotalCount Number of parameters contained in the parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the number of parameters in the parameter template. 
+     * @return TotalCount Specifies the number of parameters in the parameter template.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Number of parameters contained in the parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TotalCount Number of parameters contained in the parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the number of parameters in the parameter template.
+     * @param TotalCount Specifies the number of parameters in the parameter template.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
@@ -147,10 +133,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Parameter template name
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Parameter template name 
      * @return TemplateName Parameter template name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTemplateName() {
         return this.TemplateName;
@@ -158,59 +142,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Parameter template name
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TemplateName Parameter template name
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTemplateName(String TemplateName) {
         this.TemplateName = TemplateName;
     }
 
     /**
-     * Get Database version applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DBMajorVersion Database version applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the database version the parameter template applies to. 
+     * @return DBMajorVersion Specifies the database version the parameter template applies to.
      */
     public String getDBMajorVersion() {
         return this.DBMajorVersion;
     }
 
     /**
-     * Set Database version applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DBMajorVersion Database version applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the database version the parameter template applies to.
+     * @param DBMajorVersion Specifies the database version the parameter template applies to.
      */
     public void setDBMajorVersion(String DBMajorVersion) {
         this.DBMajorVersion = DBMajorVersion;
     }
 
     /**
-     * Get Database engine applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DBEngine Database engine applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the database engine the parameter template applies to. 
+     * @return DBEngine Specifies the database engine the parameter template applies to.
      */
     public String getDBEngine() {
         return this.DBEngine;
     }
 
     /**
-     * Set Database engine applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DBEngine Database engine applicable to a parameter template
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the database engine the parameter template applies to.
+     * @param DBEngine Specifies the database engine the parameter template applies to.
      */
     public void setDBEngine(String DBEngine) {
         this.DBEngine = DBEngine;
     }
 
     /**
-     * Get Parameter template description
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Parameter template description 
      * @return TemplateDescription Parameter template description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTemplateDescription() {
         return this.TemplateDescription;
@@ -218,9 +190,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Parameter template description
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TemplateDescription Parameter template description
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTemplateDescription(String TemplateDescription) {
         this.TemplateDescription = TemplateDescription;

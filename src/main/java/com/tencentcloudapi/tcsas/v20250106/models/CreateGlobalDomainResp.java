@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateGlobalDomainResp extends AbstractModel {
 
     /**
-    * Result
+    * Operation result. 
     */
     @SerializedName("Result")
     @Expose
     private Boolean Result;
 
     /**
-    * Indicates the duplicate domain name.
+    * Duplicate domains.
     */
     @SerializedName("RepeatUrls")
     @Expose
     private String [] RepeatUrls;
 
     /**
-    * Lists allowed domain names.
+    * Domains that already exist in the allowlist.
     */
     @SerializedName("ExistsWhiteUrls")
     @Expose
     private String [] ExistsWhiteUrls;
 
     /**
-    * Indicates the domain name already exists in the blocklist.
+    * Domains that already exist in the blocklist. 
     */
     @SerializedName("ExistsBlackUrls")
     @Expose
     private String [] ExistsBlackUrls;
 
     /**
-     * Get Result 
-     * @return Result Result
+     * Get Operation result.  
+     * @return Result Operation result. 
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set Result
-     * @param Result Result
+     * Set Operation result. 
+     * @param Result Operation result. 
      */
     public void setResult(Boolean Result) {
         this.Result = Result;
     }
 
     /**
-     * Get Indicates the duplicate domain name. 
-     * @return RepeatUrls Indicates the duplicate domain name.
+     * Get Duplicate domains. 
+     * @return RepeatUrls Duplicate domains.
      */
     public String [] getRepeatUrls() {
         return this.RepeatUrls;
     }
 
     /**
-     * Set Indicates the duplicate domain name.
-     * @param RepeatUrls Indicates the duplicate domain name.
+     * Set Duplicate domains.
+     * @param RepeatUrls Duplicate domains.
      */
     public void setRepeatUrls(String [] RepeatUrls) {
         this.RepeatUrls = RepeatUrls;
     }
 
     /**
-     * Get Lists allowed domain names. 
-     * @return ExistsWhiteUrls Lists allowed domain names.
+     * Get Domains that already exist in the allowlist. 
+     * @return ExistsWhiteUrls Domains that already exist in the allowlist.
      */
     public String [] getExistsWhiteUrls() {
         return this.ExistsWhiteUrls;
     }
 
     /**
-     * Set Lists allowed domain names.
-     * @param ExistsWhiteUrls Lists allowed domain names.
+     * Set Domains that already exist in the allowlist.
+     * @param ExistsWhiteUrls Domains that already exist in the allowlist.
      */
     public void setExistsWhiteUrls(String [] ExistsWhiteUrls) {
         this.ExistsWhiteUrls = ExistsWhiteUrls;
     }
 
     /**
-     * Get Indicates the domain name already exists in the blocklist. 
-     * @return ExistsBlackUrls Indicates the domain name already exists in the blocklist.
+     * Get Domains that already exist in the blocklist.  
+     * @return ExistsBlackUrls Domains that already exist in the blocklist. 
      */
     public String [] getExistsBlackUrls() {
         return this.ExistsBlackUrls;
     }
 
     /**
-     * Set Indicates the domain name already exists in the blocklist.
-     * @param ExistsBlackUrls Indicates the domain name already exists in the blocklist.
+     * Set Domains that already exist in the blocklist. 
+     * @param ExistsBlackUrls Domains that already exist in the blocklist. 
      */
     public void setExistsBlackUrls(String [] ExistsBlackUrls) {
         this.ExistsBlackUrls = ExistsBlackUrls;

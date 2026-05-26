@@ -24,58 +24,28 @@ import java.util.HashMap;
 public class AttackRiskDetail extends AbstractModel {
 
     /**
-    * Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
+    * <p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-     * Get Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark 
-     * @return Type Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
+     * Get <p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return Type <p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
-     * @param Type Suspected attack trace types
-SuspectedSpoofingAttack: Suspected spoofing attack
-SuspectedSynthesisImage: Suspected synthesis image
-SuspectedSynthesisVideo: Suspected synthesis video
-SuspectedeAnomalyAttack: Suspected anomaly attack
-SuspectedAdversarialAttack: Suspected adversarial attack 
-SuspectedBlackIndustry: Suspected batch generation attack
-SuspectedWatermark: Suspected watermark
+     * Set <p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Type <p>Suspected attack trace type, specific type as follows:<br>SuspectedSpoofingAttack: Rephotography attack<br>SuspectedSynthesisImage: Suspected synthesized image<br>SuspectedSynthesisVideo: Suspected synthesized video<br>SuspectedAnomalyAttack: Facial features suspected of not being real<br>SuspectedAdversarialAttack: Suspected adversarial sample attack<br>SuspectedBlackIndustry: Suspected black industry batch template attack<br>SuspectedWatermark: Suspected watermark</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setType(String Type) {
         this.Type = Type;

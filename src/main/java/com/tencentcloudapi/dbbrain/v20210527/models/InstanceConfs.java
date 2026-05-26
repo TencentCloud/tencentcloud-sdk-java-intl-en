@@ -46,6 +46,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] KeyDelimiters;
 
     /**
+    * 
+    */
+    @SerializedName("ShardNum")
+    @Expose
+    private String ShardNum;
+
+    /**
+    * 
+    */
+    @SerializedName("AnalysisTopKey")
+    @Expose
+    private String AnalysisTopKey;
+
+    /**
      * Get Whether to enable database inspection. Valid values: Yes, No. 
      * @return DailyInspection Whether to enable database inspection. Valid values: Yes, No.
      */
@@ -97,6 +111,38 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.KeyDelimiters = KeyDelimiters;
     }
 
+    /**
+     * Get  
+     * @return ShardNum 
+     */
+    public String getShardNum() {
+        return this.ShardNum;
+    }
+
+    /**
+     * Set 
+     * @param ShardNum 
+     */
+    public void setShardNum(String ShardNum) {
+        this.ShardNum = ShardNum;
+    }
+
+    /**
+     * Get  
+     * @return AnalysisTopKey 
+     */
+    public String getAnalysisTopKey() {
+        return this.AnalysisTopKey;
+    }
+
+    /**
+     * Set 
+     * @param AnalysisTopKey 
+     */
+    public void setAnalysisTopKey(String AnalysisTopKey) {
+        this.AnalysisTopKey = AnalysisTopKey;
+    }
+
     public InstanceConfs() {
     }
 
@@ -117,6 +163,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.KeyDelimiters[i] = new String(source.KeyDelimiters[i]);
             }
         }
+        if (source.ShardNum != null) {
+            this.ShardNum = new String(source.ShardNum);
+        }
+        if (source.AnalysisTopKey != null) {
+            this.AnalysisTopKey = new String(source.AnalysisTopKey);
+        }
     }
 
 
@@ -127,6 +179,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "DailyInspection", this.DailyInspection);
         this.setParamSimple(map, prefix + "OverviewDisplay", this.OverviewDisplay);
         this.setParamArraySimple(map, prefix + "KeyDelimiters.", this.KeyDelimiters);
+        this.setParamSimple(map, prefix + "ShardNum", this.ShardNum);
+        this.setParamSimple(map, prefix + "AnalysisTopKey", this.AnalysisTopKey);
 
     }
 }

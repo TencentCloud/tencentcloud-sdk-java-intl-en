@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class ClassInfo extends AbstractModel {
 
     /**
-    * Specification ID
+    * <p>Specification ID.</p>
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * Number of CPU cores
+    * <p>CPU cores.</p>
     */
     @SerializedName("CPU")
     @Expose
     private Long CPU;
 
     /**
-    * Memory size in MB
+    * <p>Memory size, in MB.</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Maximum storage capacity in GB supported by this specification
+    * <p>Maximum storage capacity supported by this specification, in GB.</p>
     */
     @SerializedName("MaxStorage")
     @Expose
     private Long MaxStorage;
 
     /**
-    * Minimum storage capacity in GB supported by this specification
+    * <p>Minimum storage capacity supported by this specification, in GB.</p>
     */
     @SerializedName("MinStorage")
     @Expose
     private Long MinStorage;
 
     /**
-    * Estimated QPS for this specification
+    * <p>Estimated QPS of the specification.</p>
     */
     @SerializedName("QPS")
     @Expose
     private Long QPS;
 
     /**
-     * Get Specification ID 
-     * @return SpecCode Specification ID
+     * Get <p>Specification ID.</p> 
+     * @return SpecCode <p>Specification ID.</p>
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set Specification ID
-     * @param SpecCode Specification ID
+     * Set <p>Specification ID.</p>
+     * @param SpecCode <p>Specification ID.</p>
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get Number of CPU cores 
-     * @return CPU Number of CPU cores
+     * Get <p>CPU cores.</p> 
+     * @return CPU <p>CPU cores.</p>
      */
     public Long getCPU() {
         return this.CPU;
     }
 
     /**
-     * Set Number of CPU cores
-     * @param CPU Number of CPU cores
+     * Set <p>CPU cores.</p>
+     * @param CPU <p>CPU cores.</p>
      */
     public void setCPU(Long CPU) {
         this.CPU = CPU;
     }
 
     /**
-     * Get Memory size in MB 
-     * @return Memory Memory size in MB
+     * Get <p>Memory size, in MB.</p> 
+     * @return Memory <p>Memory size, in MB.</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory size in MB
-     * @param Memory Memory size in MB
+     * Set <p>Memory size, in MB.</p>
+     * @param Memory <p>Memory size, in MB.</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Maximum storage capacity in GB supported by this specification 
-     * @return MaxStorage Maximum storage capacity in GB supported by this specification
+     * Get <p>Maximum storage capacity supported by this specification, in GB.</p> 
+     * @return MaxStorage <p>Maximum storage capacity supported by this specification, in GB.</p>
      */
     public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
     /**
-     * Set Maximum storage capacity in GB supported by this specification
-     * @param MaxStorage Maximum storage capacity in GB supported by this specification
+     * Set <p>Maximum storage capacity supported by this specification, in GB.</p>
+     * @param MaxStorage <p>Maximum storage capacity supported by this specification, in GB.</p>
      */
     public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * Get Minimum storage capacity in GB supported by this specification 
-     * @return MinStorage Minimum storage capacity in GB supported by this specification
+     * Get <p>Minimum storage capacity supported by this specification, in GB.</p> 
+     * @return MinStorage <p>Minimum storage capacity supported by this specification, in GB.</p>
      */
     public Long getMinStorage() {
         return this.MinStorage;
     }
 
     /**
-     * Set Minimum storage capacity in GB supported by this specification
-     * @param MinStorage Minimum storage capacity in GB supported by this specification
+     * Set <p>Minimum storage capacity supported by this specification, in GB.</p>
+     * @param MinStorage <p>Minimum storage capacity supported by this specification, in GB.</p>
      */
     public void setMinStorage(Long MinStorage) {
         this.MinStorage = MinStorage;
     }
 
     /**
-     * Get Estimated QPS for this specification 
-     * @return QPS Estimated QPS for this specification
+     * Get <p>Estimated QPS of the specification.</p> 
+     * @return QPS <p>Estimated QPS of the specification.</p>
      */
     public Long getQPS() {
         return this.QPS;
     }
 
     /**
-     * Set Estimated QPS for this specification
-     * @param QPS Estimated QPS for this specification
+     * Set <p>Estimated QPS of the specification.</p>
+     * @param QPS <p>Estimated QPS of the specification.</p>
      */
     public void setQPS(Long QPS) {
         this.QPS = QPS;

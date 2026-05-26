@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeMNGSensitiveAPIPermissionApprovalRequest extends AbstractModel {
 
     /**
-    * <p>Approval number</p>
+    * <p>Approval number.</p>
     */
     @SerializedName("ApprovalNo")
     @Expose
     private String ApprovalNo;
 
     /**
-    * <p>Platform ID</p>
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get <p>Approval number</p> 
-     * @return ApprovalNo <p>Approval number</p>
+     * Get <p>Approval number.</p> 
+     * @return ApprovalNo <p>Approval number.</p>
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set <p>Approval number</p>
-     * @param ApprovalNo <p>Approval number</p>
+     * Set <p>Approval number.</p>
+     * @param ApprovalNo <p>Approval number.</p>
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;
     }
 
     /**
-     * Get <p>Platform ID</p> 
-     * @return PlatformId <p>Platform ID</p>
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set <p>Platform ID</p>
-     * @param PlatformId <p>Platform ID</p>
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

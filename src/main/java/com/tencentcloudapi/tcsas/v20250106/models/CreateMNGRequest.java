@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class CreateMNGRequest extends AbstractModel {
 
     /**
-    * <p>Mini game type</p>
+    * <p>Mini game category.</p>
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * <p>Mini game name</p>
+    * <p>Mini game name.</p>
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * <p>Mini game icon</p>
+    * <p>Mini game icon.</p>
     */
     @SerializedName("MNPIcon")
     @Expose
     private String MNPIcon;
 
     /**
-    * <p>Mini game introduction</p>
+    * <p>Mini game introduction.</p>
     */
     @SerializedName("MNPIntro")
     @Expose
     private String MNPIntro;
 
     /**
-    * <p>Mini game description</p>
+    * <p>Mini game description.</p>
     */
     @SerializedName("MNPDesc")
     @Expose
     private String MNPDesc;
 
     /**
-    * <p>Platform ID</p>
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * <p>Team ID</p>
+    * <p>Team ID.</p>
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-     * Get <p>Mini game type</p> 
-     * @return MNPType <p>Mini game type</p>
+    * <p>The mini game name and description in multiple languages.</p>
+    */
+    @SerializedName("I18nList")
+    @Expose
+    private MNPI18NSyncDto [] I18nList;
+
+    /**
+     * Get <p>Mini game category.</p> 
+     * @return MNPType <p>Mini game category.</p>
      */
     public String getMNPType() {
         return this.MNPType;
     }
 
     /**
-     * Set <p>Mini game type</p>
-     * @param MNPType <p>Mini game type</p>
+     * Set <p>Mini game category.</p>
+     * @param MNPType <p>Mini game category.</p>
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get <p>Mini game name</p> 
-     * @return MNPName <p>Mini game name</p>
+     * Get <p>Mini game name.</p> 
+     * @return MNPName <p>Mini game name.</p>
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set <p>Mini game name</p>
-     * @param MNPName <p>Mini game name</p>
+     * Set <p>Mini game name.</p>
+     * @param MNPName <p>Mini game name.</p>
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get <p>Mini game icon</p> 
-     * @return MNPIcon <p>Mini game icon</p>
+     * Get <p>Mini game icon.</p> 
+     * @return MNPIcon <p>Mini game icon.</p>
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set <p>Mini game icon</p>
-     * @param MNPIcon <p>Mini game icon</p>
+     * Set <p>Mini game icon.</p>
+     * @param MNPIcon <p>Mini game icon.</p>
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get <p>Mini game introduction</p> 
-     * @return MNPIntro <p>Mini game introduction</p>
+     * Get <p>Mini game introduction.</p> 
+     * @return MNPIntro <p>Mini game introduction.</p>
      */
     public String getMNPIntro() {
         return this.MNPIntro;
     }
 
     /**
-     * Set <p>Mini game introduction</p>
-     * @param MNPIntro <p>Mini game introduction</p>
+     * Set <p>Mini game introduction.</p>
+     * @param MNPIntro <p>Mini game introduction.</p>
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get <p>Mini game description</p> 
-     * @return MNPDesc <p>Mini game description</p>
+     * Get <p>Mini game description.</p> 
+     * @return MNPDesc <p>Mini game description.</p>
      */
     public String getMNPDesc() {
         return this.MNPDesc;
     }
 
     /**
-     * Set <p>Mini game description</p>
-     * @param MNPDesc <p>Mini game description</p>
+     * Set <p>Mini game description.</p>
+     * @param MNPDesc <p>Mini game description.</p>
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
     }
 
     /**
-     * Get <p>Platform ID</p> 
-     * @return PlatformId <p>Platform ID</p>
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set <p>Platform ID</p>
-     * @param PlatformId <p>Platform ID</p>
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get <p>Team ID</p> 
-     * @return TeamId <p>Team ID</p>
+     * Get <p>Team ID.</p> 
+     * @return TeamId <p>Team ID.</p>
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set <p>Team ID</p>
-     * @param TeamId <p>Team ID</p>
+     * Set <p>Team ID.</p>
+     * @param TeamId <p>Team ID.</p>
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
+    }
+
+    /**
+     * Get <p>The mini game name and description in multiple languages.</p> 
+     * @return I18nList <p>The mini game name and description in multiple languages.</p>
+     */
+    public MNPI18NSyncDto [] getI18nList() {
+        return this.I18nList;
+    }
+
+    /**
+     * Set <p>The mini game name and description in multiple languages.</p>
+     * @param I18nList <p>The mini game name and description in multiple languages.</p>
+     */
+    public void setI18nList(MNPI18NSyncDto [] I18nList) {
+        this.I18nList = I18nList;
     }
 
     public CreateMNGRequest() {
@@ -213,6 +236,12 @@ public class CreateMNGRequest extends AbstractModel {
         if (source.TeamId != null) {
             this.TeamId = new String(source.TeamId);
         }
+        if (source.I18nList != null) {
+            this.I18nList = new MNPI18NSyncDto[source.I18nList.length];
+            for (int i = 0; i < source.I18nList.length; i++) {
+                this.I18nList[i] = new MNPI18NSyncDto(source.I18nList[i]);
+            }
+        }
     }
 
 
@@ -227,6 +256,7 @@ public class CreateMNGRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "MNPDesc", this.MNPDesc);
         this.setParamSimple(map, prefix + "PlatformId", this.PlatformId);
         this.setParamSimple(map, prefix + "TeamId", this.TeamId);
+        this.setParamArrayObj(map, prefix + "I18nList.", this.I18nList);
 
     }
 }

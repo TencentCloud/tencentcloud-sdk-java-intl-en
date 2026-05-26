@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class MAUDetailData extends AbstractModel {
 
     /**
-    * Date
+    * Date.
     */
     @SerializedName("DataTime")
     @Expose
     private String DataTime;
 
     /**
-    * Mini program name
+    * Mini program name.
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Mini program type
+    * Mini program category.
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * Estimated revenue
+    * Estimated revenue.
     */
     @SerializedName("EstimatedEarnings")
     @Expose
     private String EstimatedEarnings;
 
     /**
-    * Requests
+    * Number of requests.
     */
     @SerializedName("RequestsNumber")
     @Expose
     private Long RequestsNumber;
 
     /**
-    * Impressions
+    * Number of impressions.
     */
     @SerializedName("Impressions")
     @Expose
     private Long Impressions;
 
     /**
-    * Effective Cost Per Mille
+    * eCPM (effective cost per mille).
     */
     @SerializedName("ECPM")
     @Expose
     private String ECPM;
 
     /**
-    * Taps
+    * Number of taps.
     */
     @SerializedName("ClicksNumber")
     @Expose
     private Long ClicksNumber;
 
     /**
-     * Get Date 
-     * @return DataTime Date
+     * Get Date. 
+     * @return DataTime Date.
      */
     public String getDataTime() {
         return this.DataTime;
     }
 
     /**
-     * Set Date
-     * @param DataTime Date
+     * Set Date.
+     * @param DataTime Date.
      */
     public void setDataTime(String DataTime) {
         this.DataTime = DataTime;
     }
 
     /**
-     * Get Mini program name 
-     * @return MNPName Mini program name
+     * Get Mini program name. 
+     * @return MNPName Mini program name.
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name
-     * @param MNPName Mini program name
+     * Set Mini program name.
+     * @param MNPName Mini program name.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program type 
-     * @return MNPType Mini program type
+     * Get Mini program category. 
+     * @return MNPType Mini program category.
      */
     public String getMNPType() {
         return this.MNPType;
     }
 
     /**
-     * Set Mini program type
-     * @param MNPType Mini program type
+     * Set Mini program category.
+     * @param MNPType Mini program category.
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get Estimated revenue 
-     * @return EstimatedEarnings Estimated revenue
+     * Get Estimated revenue. 
+     * @return EstimatedEarnings Estimated revenue.
      */
     public String getEstimatedEarnings() {
         return this.EstimatedEarnings;
     }
 
     /**
-     * Set Estimated revenue
-     * @param EstimatedEarnings Estimated revenue
+     * Set Estimated revenue.
+     * @param EstimatedEarnings Estimated revenue.
      */
     public void setEstimatedEarnings(String EstimatedEarnings) {
         this.EstimatedEarnings = EstimatedEarnings;
     }
 
     /**
-     * Get Requests 
-     * @return RequestsNumber Requests
+     * Get Number of requests. 
+     * @return RequestsNumber Number of requests.
      */
     public Long getRequestsNumber() {
         return this.RequestsNumber;
     }
 
     /**
-     * Set Requests
-     * @param RequestsNumber Requests
+     * Set Number of requests.
+     * @param RequestsNumber Number of requests.
      */
     public void setRequestsNumber(Long RequestsNumber) {
         this.RequestsNumber = RequestsNumber;
     }
 
     /**
-     * Get Impressions 
-     * @return Impressions Impressions
+     * Get Number of impressions. 
+     * @return Impressions Number of impressions.
      */
     public Long getImpressions() {
         return this.Impressions;
     }
 
     /**
-     * Set Impressions
-     * @param Impressions Impressions
+     * Set Number of impressions.
+     * @param Impressions Number of impressions.
      */
     public void setImpressions(Long Impressions) {
         this.Impressions = Impressions;
     }
 
     /**
-     * Get Effective Cost Per Mille 
-     * @return ECPM Effective Cost Per Mille
+     * Get eCPM (effective cost per mille). 
+     * @return ECPM eCPM (effective cost per mille).
      */
     public String getECPM() {
         return this.ECPM;
     }
 
     /**
-     * Set Effective Cost Per Mille
-     * @param ECPM Effective Cost Per Mille
+     * Set eCPM (effective cost per mille).
+     * @param ECPM eCPM (effective cost per mille).
      */
     public void setECPM(String ECPM) {
         this.ECPM = ECPM;
     }
 
     /**
-     * Get Taps 
-     * @return ClicksNumber Taps
+     * Get Number of taps. 
+     * @return ClicksNumber Number of taps.
      */
     public Long getClicksNumber() {
         return this.ClicksNumber;
     }
 
     /**
-     * Set Taps
-     * @param ClicksNumber Taps
+     * Set Number of taps.
+     * @param ClicksNumber Number of taps.
      */
     public void setClicksNumber(Long ClicksNumber) {
         this.ClicksNumber = ClicksNumber;

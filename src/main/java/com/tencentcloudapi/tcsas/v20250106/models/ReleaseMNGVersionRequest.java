@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ReleaseMNGVersionRequest extends AbstractModel {
 
     /**
-    * <p>Mini game version ID</p>
+    * <p>Mini game version ID.</p>
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-    * <p>Platform ID</p>
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get <p>Mini game version ID</p> 
-     * @return MNPVersionId <p>Mini game version ID</p>
+     * Get <p>Mini game version ID.</p> 
+     * @return MNPVersionId <p>Mini game version ID.</p>
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set <p>Mini game version ID</p>
-     * @param MNPVersionId <p>Mini game version ID</p>
+     * Set <p>Mini game version ID.</p>
+     * @param MNPVersionId <p>Mini game version ID.</p>
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get <p>Platform ID</p> 
-     * @return PlatformId <p>Platform ID</p>
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set <p>Platform ID</p>
-     * @param PlatformId <p>Platform ID</p>
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

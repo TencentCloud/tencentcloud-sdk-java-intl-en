@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel {
 
     /**
-    * API ID
+    * API ID.
     */
     @SerializedName("APIId")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel
     private String APIMethod;
 
     /**
-    * Reason for application
+    * Reason for request.
     */
     @SerializedName("ApplyReason")
     @Expose
@@ -52,7 +52,7 @@ public class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel
     private String RejectReason;
 
     /**
-    * Approval status. valid values: 20 (rejected), 30 (approved).
+    * Approval status. Valid values: 20: Rejected; 30: Approved.
     */
     @SerializedName("ApprovalStatus")
     @Expose
@@ -66,23 +66,23 @@ public class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel
     private String APIDesc;
 
     /**
-    * API type. 1: system; 2: custom.
+    * API type. Valid values: 1: System; 2: Custom.
     */
     @SerializedName("APIType")
     @Expose
     private Long APIType;
 
     /**
-     * Get API ID 
-     * @return APIId API ID
+     * Get API ID. 
+     * @return APIId API ID.
      */
     public String getAPIId() {
         return this.APIId;
     }
 
     /**
-     * Set API ID
-     * @param APIId API ID
+     * Set API ID.
+     * @param APIId API ID.
      */
     public void setAPIId(String APIId) {
         this.APIId = APIId;
@@ -105,16 +105,16 @@ public class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel
     }
 
     /**
-     * Get Reason for application 
-     * @return ApplyReason Reason for application
+     * Get Reason for request. 
+     * @return ApplyReason Reason for request.
      */
     public String getApplyReason() {
         return this.ApplyReason;
     }
 
     /**
-     * Set Reason for application
-     * @param ApplyReason Reason for application
+     * Set Reason for request.
+     * @param ApplyReason Reason for request.
      */
     public void setApplyReason(String ApplyReason) {
         this.ApplyReason = ApplyReason;
@@ -137,16 +137,16 @@ public class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel
     }
 
     /**
-     * Get Approval status. valid values: 20 (rejected), 30 (approved). 
-     * @return ApprovalStatus Approval status. valid values: 20 (rejected), 30 (approved).
+     * Get Approval status. Valid values: 20: Rejected; 30: Approved. 
+     * @return ApprovalStatus Approval status. Valid values: 20: Rejected; 30: Approved.
      */
     public Long getApprovalStatus() {
         return this.ApprovalStatus;
     }
 
     /**
-     * Set Approval status. valid values: 20 (rejected), 30 (approved).
-     * @param ApprovalStatus Approval status. valid values: 20 (rejected), 30 (approved).
+     * Set Approval status. Valid values: 20: Rejected; 30: Approved.
+     * @param ApprovalStatus Approval status. Valid values: 20: Rejected; 30: Approved.
      */
     public void setApprovalStatus(Long ApprovalStatus) {
         this.ApprovalStatus = ApprovalStatus;
@@ -169,16 +169,16 @@ public class DescribeMNPSensitiveAPIPermissionApprovalData extends AbstractModel
     }
 
     /**
-     * Get API type. 1: system; 2: custom. 
-     * @return APIType API type. 1: system; 2: custom.
+     * Get API type. Valid values: 1: System; 2: Custom. 
+     * @return APIType API type. Valid values: 1: System; 2: Custom.
      */
     public Long getAPIType() {
         return this.APIType;
     }
 
     /**
-     * Set API type. 1: system; 2: custom.
-     * @param APIType API type. 1: system; 2: custom.
+     * Set API type. Valid values: 1: System; 2: Custom.
+     * @param APIType API type. Valid values: 1: System; 2: Custom.
      */
     public void setAPIType(Long APIType) {
         this.APIType = APIType;

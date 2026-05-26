@@ -24,117 +24,92 @@ import java.util.HashMap;
 public class DisIsolateDBInstancesRequest extends AbstractModel {
 
     /**
-    * Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+    * <p>Instance ID list, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Supports simultaneous de-isolation of multiple instances.</p>
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
     private String [] DBInstanceIdSet;
 
     /**
-    * Purchase duration, in months.
-<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
+    * <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: this parameter does not take effect.</li>
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-    * Whether to use vouchers.
-<li>true: use.</li>.
-<li>false: non-use.</li>.
-Default value: `false`.
+    * <p>Whether to use a voucher:</p><li>true: Use</li><li>false: Non-use</li>Default value: false
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Boolean AutoVoucher;
 
     /**
-    * Voucher ID list
+    * <p>Voucher id list.</p>
     */
     @SerializedName("VoucherIds")
     @Expose
     private String [] VoucherIds;
 
     /**
-     * Get Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously. 
-     * @return DBInstanceIdSet Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+     * Get <p>Instance ID list, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Supports simultaneous de-isolation of multiple instances.</p> 
+     * @return DBInstanceIdSet <p>Instance ID list, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Supports simultaneous de-isolation of multiple instances.</p>
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
-     * @param DBInstanceIdSet Instance ID list. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). supports de-isolating multiple instances simultaneously.
+     * Set <p>Instance ID list, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Supports simultaneous de-isolation of multiple instances.</p>
+     * @param DBInstanceIdSet <p>Instance ID list, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API. Supports simultaneous de-isolation of multiple instances.</p>
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;
     }
 
     /**
-     * Get Purchase duration, in months.
-<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>. 
-     * @return Period Purchase duration, in months.
-<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
+     * Get <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: this parameter does not take effect.</li> 
+     * @return Period <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: this parameter does not take effect.</li>
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Purchase duration, in months.
-<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
-     * @param Period Purchase duration, in months.
-<Li>Prepaid: Yearly/monthly subscription, supports `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, and `36`.</li>.
-<Li>Postpaid: Pay-as-you-go, this parameter does not take effect.</li>.
+     * Set <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: this parameter does not take effect.</li>
+     * @param Period <p>Purchase duration, in months.</p><li>Prepaid: supports 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.</li><li>Postpaid: this parameter does not take effect.</li>
      */
     public void setPeriod(Long Period) {
         this.Period = Period;
     }
 
     /**
-     * Get Whether to use vouchers.
-<li>true: use.</li>.
-<li>false: non-use.</li>.
-Default value: `false`. 
-     * @return AutoVoucher Whether to use vouchers.
-<li>true: use.</li>.
-<li>false: non-use.</li>.
-Default value: `false`.
+     * Get <p>Whether to use a voucher:</p><li>true: Use</li><li>false: Non-use</li>Default value: false 
+     * @return AutoVoucher <p>Whether to use a voucher:</p><li>true: Use</li><li>false: Non-use</li>Default value: false
      */
     public Boolean getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to use vouchers.
-<li>true: use.</li>.
-<li>false: non-use.</li>.
-Default value: `false`.
-     * @param AutoVoucher Whether to use vouchers.
-<li>true: use.</li>.
-<li>false: non-use.</li>.
-Default value: `false`.
+     * Set <p>Whether to use a voucher:</p><li>true: Use</li><li>false: Non-use</li>Default value: false
+     * @param AutoVoucher <p>Whether to use a voucher:</p><li>true: Use</li><li>false: Non-use</li>Default value: false
      */
     public void setAutoVoucher(Boolean AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get Voucher ID list 
-     * @return VoucherIds Voucher ID list
+     * Get <p>Voucher id list.</p> 
+     * @return VoucherIds <p>Voucher id list.</p>
      */
     public String [] getVoucherIds() {
         return this.VoucherIds;
     }
 
     /**
-     * Set Voucher ID list
-     * @param VoucherIds Voucher ID list
+     * Set <p>Voucher id list.</p>
+     * @param VoucherIds <p>Voucher id list.</p>
      */
     public void setVoucherIds(String [] VoucherIds) {
         this.VoucherIds = VoucherIds;

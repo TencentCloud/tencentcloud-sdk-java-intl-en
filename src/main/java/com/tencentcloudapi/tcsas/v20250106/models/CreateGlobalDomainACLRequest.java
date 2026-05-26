@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateGlobalDomainACLRequest extends AbstractModel {
 
     /**
-    * Domain name list
+    * Domain list.
     */
     @SerializedName("DomainUrlList")
     @Expose
     private String [] DomainUrlList;
 
     /**
-    * Domain type. 1: Allowed; 2: Blocked
+    * Domain type. Valid value: 1: Allowed; 2: Blocked.
     */
     @SerializedName("DomainType")
     @Expose
     private Long DomainType;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get Domain name list 
-     * @return DomainUrlList Domain name list
+     * Get Domain list. 
+     * @return DomainUrlList Domain list.
      */
     public String [] getDomainUrlList() {
         return this.DomainUrlList;
     }
 
     /**
-     * Set Domain name list
-     * @param DomainUrlList Domain name list
+     * Set Domain list.
+     * @param DomainUrlList Domain list.
      */
     public void setDomainUrlList(String [] DomainUrlList) {
         this.DomainUrlList = DomainUrlList;
     }
 
     /**
-     * Get Domain type. 1: Allowed; 2: Blocked 
-     * @return DomainType Domain type. 1: Allowed; 2: Blocked
+     * Get Domain type. Valid value: 1: Allowed; 2: Blocked. 
+     * @return DomainType Domain type. Valid value: 1: Allowed; 2: Blocked.
      */
     public Long getDomainType() {
         return this.DomainType;
     }
 
     /**
-     * Set Domain type. 1: Allowed; 2: Blocked
-     * @param DomainType Domain type. 1: Allowed; 2: Blocked
+     * Set Domain type. Valid value: 1: Allowed; 2: Blocked.
+     * @param DomainType Domain type. Valid value: 1: Allowed; 2: Blocked.
      */
     public void setDomainType(Long DomainType) {
         this.DomainType = DomainType;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

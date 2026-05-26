@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class DescribeMNGManagerDetailData extends AbstractModel {
 
     /**
-    * <p>Mini game type</p>
+    * <p>Mini game category.</p>
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * <p>Mini game appid</p>
+    * <p>Mini game appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * <p>Mini game name</p>
+    * <p>Mini game name.</p>
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * <p>Mini game icon</p>
+    * <p>Mini game icon.</p>
     */
     @SerializedName("MNPIcon")
     @Expose
     private String MNPIcon;
 
     /**
-    * <p>Mini game introduction</p>
+    * <p>Mini game introduction.</p>
     */
     @SerializedName("MNPIntro")
     @Expose
     private String MNPIntro;
 
     /**
-    * <p>Mini game description</p>
+    * <p>Mini game description.</p>
     */
     @SerializedName("MNPDesc")
     @Expose
     private String MNPDesc;
 
     /**
-    * <p>Creation time (Unix timestamp)</p>
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * <p>Creator</p>
+    * <p>Creator.</p>
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Connection status. Valid values: 1: Not connected; 2: Connected
+    * Access status. Valid values: 1: Not connected; 2: Connected. 
     */
     @SerializedName("AccessStatus")
     @Expose
     private Long AccessStatus;
 
     /**
-    * <p>Team name</p>
+    * <p>Team name.</p>
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * <p>Team ID</p>
+    * <p>Team ID.</p>
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+    * <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get <p>Mini game type</p> 
-     * @return MNPType <p>Mini game type</p>
+    * The mini game name and description in multiple languages.
+    */
+    @SerializedName("I18nList")
+    @Expose
+    private MNPDetailI18nVO [] I18nList;
+
+    /**
+     * Get <p>Mini game category.</p> 
+     * @return MNPType <p>Mini game category.</p>
      */
     public String getMNPType() {
         return this.MNPType;
     }
 
     /**
-     * Set <p>Mini game type</p>
-     * @param MNPType <p>Mini game type</p>
+     * Set <p>Mini game category.</p>
+     * @param MNPType <p>Mini game category.</p>
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get <p>Mini game appid</p> 
-     * @return MNPId <p>Mini game appid</p>
+     * Get <p>Mini game appid.</p> 
+     * @return MNPId <p>Mini game appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set <p>Mini game appid</p>
-     * @param MNPId <p>Mini game appid</p>
+     * Set <p>Mini game appid.</p>
+     * @param MNPId <p>Mini game appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get <p>Mini game name</p> 
-     * @return MNPName <p>Mini game name</p>
+     * Get <p>Mini game name.</p> 
+     * @return MNPName <p>Mini game name.</p>
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set <p>Mini game name</p>
-     * @param MNPName <p>Mini game name</p>
+     * Set <p>Mini game name.</p>
+     * @param MNPName <p>Mini game name.</p>
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get <p>Mini game icon</p> 
-     * @return MNPIcon <p>Mini game icon</p>
+     * Get <p>Mini game icon.</p> 
+     * @return MNPIcon <p>Mini game icon.</p>
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set <p>Mini game icon</p>
-     * @param MNPIcon <p>Mini game icon</p>
+     * Set <p>Mini game icon.</p>
+     * @param MNPIcon <p>Mini game icon.</p>
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get <p>Mini game introduction</p> 
-     * @return MNPIntro <p>Mini game introduction</p>
+     * Get <p>Mini game introduction.</p> 
+     * @return MNPIntro <p>Mini game introduction.</p>
      */
     public String getMNPIntro() {
         return this.MNPIntro;
     }
 
     /**
-     * Set <p>Mini game introduction</p>
-     * @param MNPIntro <p>Mini game introduction</p>
+     * Set <p>Mini game introduction.</p>
+     * @param MNPIntro <p>Mini game introduction.</p>
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get <p>Mini game description</p> 
-     * @return MNPDesc <p>Mini game description</p>
+     * Get <p>Mini game description.</p> 
+     * @return MNPDesc <p>Mini game description.</p>
      */
     public String getMNPDesc() {
         return this.MNPDesc;
     }
 
     /**
-     * Set <p>Mini game description</p>
-     * @param MNPDesc <p>Mini game description</p>
+     * Set <p>Mini game description.</p>
+     * @param MNPDesc <p>Mini game description.</p>
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
     }
 
     /**
-     * Get <p>Creation time (Unix timestamp)</p> 
-     * @return CreateTime <p>Creation time (Unix timestamp)</p>
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set <p>Creation time (Unix timestamp)</p>
-     * @param CreateTime <p>Creation time (Unix timestamp)</p>
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>Creator</p> 
-     * @return CreateUser <p>Creator</p>
+     * Get <p>Creator.</p> 
+     * @return CreateUser <p>Creator.</p>
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set <p>Creator</p>
-     * @param CreateUser <p>Creator</p>
+     * Set <p>Creator.</p>
+     * @param CreateUser <p>Creator.</p>
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Connection status. Valid values: 1: Not connected; 2: Connected 
-     * @return AccessStatus Connection status. Valid values: 1: Not connected; 2: Connected
+     * Get Access status. Valid values: 1: Not connected; 2: Connected.  
+     * @return AccessStatus Access status. Valid values: 1: Not connected; 2: Connected. 
      */
     public Long getAccessStatus() {
         return this.AccessStatus;
     }
 
     /**
-     * Set Connection status. Valid values: 1: Not connected; 2: Connected
-     * @param AccessStatus Connection status. Valid values: 1: Not connected; 2: Connected
+     * Set Access status. Valid values: 1: Not connected; 2: Connected. 
+     * @param AccessStatus Access status. Valid values: 1: Not connected; 2: Connected. 
      */
     public void setAccessStatus(Long AccessStatus) {
         this.AccessStatus = AccessStatus;
     }
 
     /**
-     * Get <p>Team name</p> 
-     * @return TeamName <p>Team name</p>
+     * Get <p>Team name.</p> 
+     * @return TeamName <p>Team name.</p>
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set <p>Team name</p>
-     * @param TeamName <p>Team name</p>
+     * Set <p>Team name.</p>
+     * @param TeamName <p>Team name.</p>
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get <p>Team ID</p> 
-     * @return TeamId <p>Team ID</p>
+     * Get <p>Team ID.</p> 
+     * @return TeamId <p>Team ID.</p>
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set <p>Team ID</p>
-     * @param TeamId <p>Team ID</p>
+     * Set <p>Team ID.</p>
+     * @param TeamId <p>Team ID.</p>
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get <p>Mini game available status. Valid values: 1: Available; 2: Not available</p> 
-     * @return Status <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+     * Get <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p> 
+     * @return Status <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
-     * @param Status <p>Mini game available status. Valid values: 1: Available; 2: Not available</p>
+     * Set <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
+     * @param Status <p>Mini game available status. Valid values: 1: Available; 2: Not available.</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get The mini game name and description in multiple languages. 
+     * @return I18nList The mini game name and description in multiple languages.
+     */
+    public MNPDetailI18nVO [] getI18nList() {
+        return this.I18nList;
+    }
+
+    /**
+     * Set The mini game name and description in multiple languages.
+     * @param I18nList The mini game name and description in multiple languages.
+     */
+    public void setI18nList(MNPDetailI18nVO [] I18nList) {
+        this.I18nList = I18nList;
     }
 
     public DescribeMNGManagerDetailData() {
@@ -343,6 +366,12 @@ public class DescribeMNGManagerDetailData extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.I18nList != null) {
+            this.I18nList = new MNPDetailI18nVO[source.I18nList.length];
+            for (int i = 0; i < source.I18nList.length; i++) {
+                this.I18nList[i] = new MNPDetailI18nVO(source.I18nList[i]);
+            }
+        }
     }
 
 
@@ -362,6 +391,7 @@ public class DescribeMNGManagerDetailData extends AbstractModel {
         this.setParamSimple(map, prefix + "TeamName", this.TeamName);
         this.setParamSimple(map, prefix + "TeamId", this.TeamId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "I18nList.", this.I18nList);
 
     }
 }

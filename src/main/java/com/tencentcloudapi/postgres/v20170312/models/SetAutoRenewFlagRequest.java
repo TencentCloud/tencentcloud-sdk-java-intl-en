@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SetAutoRenewFlagRequest extends AbstractModel {
 
     /**
-    * List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+    * Instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances. supports operating multiple instances simultaneously.
     */
     @SerializedName("DBInstanceIdSet")
     @Expose
@@ -38,16 +38,16 @@ public class SetAutoRenewFlagRequest extends AbstractModel {
     private Long AutoRenewFlag;
 
     /**
-     * Get List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here. 
-     * @return DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+     * Get Instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances. supports operating multiple instances simultaneously. 
+     * @return DBInstanceIdSet Instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances. supports operating multiple instances simultaneously.
      */
     public String [] getDBInstanceIdSet() {
         return this.DBInstanceIdSet;
     }
 
     /**
-     * Set List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
-     * @param DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+     * Set Instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances. supports operating multiple instances simultaneously.
+     * @param DBInstanceIdSet Instance ID set. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). only supports prepaid (annual/monthly subscription) instances. supports operating multiple instances simultaneously.
      */
     public void setDBInstanceIdSet(String [] DBInstanceIdSet) {
         this.DBInstanceIdSet = DBInstanceIdSet;

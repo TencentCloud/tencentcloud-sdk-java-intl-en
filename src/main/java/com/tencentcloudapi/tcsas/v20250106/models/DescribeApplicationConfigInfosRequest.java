@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeApplicationConfigInfosRequest extends AbstractModel {
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Superapp ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Superapp ID 
-     * @return ApplicationId Superapp ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Superapp ID
-     * @param ApplicationId Superapp ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;

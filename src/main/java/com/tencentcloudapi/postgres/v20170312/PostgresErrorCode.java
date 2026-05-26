@@ -39,11 +39,20 @@ public enum PostgresErrorCode {
      /* Failed to get project information. Please try again later. If the problem persists, please contact customer service. */
      FAILEDOPERATION_CDBCGWCONNECTERROR("FailedOperation.CdbCgwConnectError"),
      
+     /* Checking database account status error: the account has enabled CAM verification. the current operation is not supported. */
+     FAILEDOPERATION_CHECKACCOUNTCAMCLOSEERROR("FailedOperation.CheckAccountCAMCloseError"),
+     
+     /* Check database account status error: disabled for account CAM verification. the current operation is not supported. */
+     FAILEDOPERATION_CHECKACCOUNTCAMOPENERROR("FailedOperation.CheckAccountCAMOpenError"),
+     
      /* Classic network creation is unsupported. */
      FAILEDOPERATION_CREATEBASICNETWORKDENIEDERROR("FailedOperation.CreateBasicNetworkDeniedError"),
      
      /* Failed to create the renewal order. */
      FAILEDOPERATION_CREATEORDERFAILED("FailedOperation.CreateOrderFailed"),
+     
+     /* Database access failed. */
+     FAILEDOPERATION_DBERROR("FailedOperation.DBError"),
      
      /* Failed to access database management service. Please try again later. If the problem persists, please contact customer service. */
      FAILEDOPERATION_DATABASEACCESSERROR("FailedOperation.DatabaseAccessError"),
@@ -249,6 +258,9 @@ public enum PostgresErrorCode {
      /* Json data parsing failed. contact our customer service for assistance. */
      INTERNALERROR_JSONPARSEERROR("InternalError.JsonParseError"),
      
+     /* Instance does not exist */
+     INTERNALERROR_LISTINSTANCESERROR("InternalError.ListInstancesError"),
+     
      /* Failed to parse background data. Please contact customer service. */
      INTERNALERROR_MARSHALERROR("InternalError.MarshalError"),
      
@@ -276,8 +288,14 @@ public enum PostgresErrorCode {
      /* Parameter error. */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /* The instance name already exists. */
-     INVALIDPARAMETER_INSTANCENAMEEXIST("InvalidParameter.InstanceNameExist"),
+     /* Parameter exception. */
+     INVALIDPARAMETER_EXCEPTIONPARAM("InvalidParameter.ExceptionParam"),
+     
+     /* Invalid parameters. */
+     INVALIDPARAMETER_ILLEGALINPUTPARAMETER("InvalidParameter.IllegalInputParameter"),
+     
+     /* Invalid parameters. */
+     INVALIDPARAMETER_INVALIDPARAMETERERROR("InvalidParameter.InvalidParameterError"),
      
      /* Failed to check the parameter. */
      INVALIDPARAMETER_PARAMETERCHECKERROR("InvalidParameter.ParameterCheckError"),
@@ -329,9 +347,6 @@ public enum PostgresErrorCode {
      
      /* Invalid `Zone` parameter. */
      INVALIDPARAMETERVALUE_ILLEGALZONE("InvalidParameterValue.IllegalZone"),
-     
-     /* The account already exists. */
-     INVALIDPARAMETERVALUE_INSTANCENAMEEXIST("InvalidParameterValue.InstanceNameExist"),
      
      /* The current instance does not exist. */
      INVALIDPARAMETERVALUE_INSTANCENOTEXIST("InvalidParameterValue.InstanceNotExist"),
@@ -405,9 +420,6 @@ public enum PostgresErrorCode {
      /* The parameter is invalid. Please modify it and try again. */
      INVALIDPARAMETERVALUE_PARAMETERCHARACTERLIMITERROR("InvalidParameterValue.ParameterCharacterLimitError"),
      
-     /* The parameter prefix is invalid. Please modify it and try again. */
-     INVALIDPARAMETERVALUE_PARAMETERCHARACTERPRELIMITERROR("InvalidParameterValue.ParameterCharacterPreLimitError"),
-     
      /* Failed to process the parameter. Please check if the parameter value is valid. */
      INVALIDPARAMETERVALUE_PARAMETERHANDLEERROR("InvalidParameterValue.ParameterHandleError"),
      
@@ -450,6 +462,12 @@ public enum PostgresErrorCode {
      /* Missing parameters. */
      MISSINGPARAMETER("MissingParameter"),
      
+     /* No user permissions. */
+     OPERATIONDENIED_ACCOUNTOPERATIONDENIED("OperationDenied.AccountOperationDenied"),
+     
+     /* Download task limit exceeded. */
+     OPERATIONDENIED_AUDITFILEOVERQUOTAERROR("OperationDenied.AuditFileOverQuotaError"),
+     
      /* This operation cannot be performed. */
      OPERATIONDENIED_CAMDENIEDERROR("OperationDenied.CamDeniedError"),
      
@@ -480,11 +498,11 @@ public enum PostgresErrorCode {
      /* Insufficient account balance. */
      OPERATIONDENIED_INSUFFICIENTBALANCEERROR("OperationDenied.InsufficientBalanceError"),
      
+     /* Billing failure. */
+     OPERATIONDENIED_INTERNALTRADEERRORERR("OperationDenied.InternalTradeErrorErr"),
+     
      /* The kernel version is too low, causing the instance to fail to create a tencentDBSuper account. if you want to use this feature, upgrade the kernel. */
      OPERATIONDENIED_KERNELVERSIONERROR("OperationDenied.KernelVersionError"),
-     
-     /* Serverless is not supported in this availability zone. */
-     OPERATIONDENIED_NOTSUPPORTZONEERROR("OperationDenied.NotSupportZoneError"),
      
      /* Unsupported billing mode */
      OPERATIONDENIED_PAYMODEERROR("OperationDenied.PayModeError"),
@@ -501,6 +519,12 @@ public enum PostgresErrorCode {
      /* This operation cannot be performed on a read-only instance in this status. */
      OPERATIONDENIED_ROINSTANCESTATUSLIMITOPERROR("OperationDenied.ROInstanceStatusLimitOpError"),
      
+     /* The instance does not exist. */
+     OPERATIONDENIED_RESOURCENOTFOUNDERROR("OperationDenied.ResourceNotFoundError"),
+     
+     /* The instance does not exist. */
+     OPERATIONDENIED_RESOURCENOTFUNDERROR("OperationDenied.ResourceNotFundError"),
+     
      /* The total number of read-only nodes should not exceed the upper limit. */
      OPERATIONDENIED_ROINSTANCECOUNTEXEEDERROR("OperationDenied.RoInstanceCountExeedError"),
      
@@ -512,9 +536,6 @@ public enum PostgresErrorCode {
      
      /* User not in allowlist. */
      OPERATIONDENIED_USERNOTINWHITELISTERROR("OperationDenied.UserNotInWhiteListError"),
-     
-     /* Serverless is not supported on this version of PostgreSQL. */
-     OPERATIONDENIED_VERSIONNOTSUPPORTERROR("OperationDenied.VersionNotSupportError"),
      
      /* You do not have the permission to operate the VPC. */
      OPERATIONDENIED_VPCDENIEDERROR("OperationDenied.VpcDeniedError"),
@@ -555,8 +576,14 @@ public enum PostgresErrorCode {
      /* Unknown parameter error. */
      UNKNOWNPARAMETER("UnknownParameter"),
      
+     /* Error creating an audit log file. */
+     UNKNOWNPARAMETER_CREATEAUDITLOGFILEERROR("UnknownParameter.CreateAuditLogFileError"),
+     
      /* Service exception. please retry later. */
      UNKNOWNPARAMETER_HTTPERROR("UnknownParameter.HttpError"),
+     
+     /* Internal service exception. Please retry later. */
+     UNKNOWNPARAMETER_INTERNALINNERSERVICEERROR("UnknownParameter.InternalInnerServiceError"),
      
      /* The operation is not supported. */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),

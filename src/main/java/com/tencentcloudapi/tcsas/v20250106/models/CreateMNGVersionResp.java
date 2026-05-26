@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class CreateMNGVersionResp extends AbstractModel {
 
     /**
-    * <p>Mini game version compilation task ID</p>
+    * <p>Mini game version compilation task ID.</p>
     */
     @SerializedName("TaskId")
     @Expose
     private String TaskId;
 
     /**
-     * Get <p>Mini game version compilation task ID</p> 
-     * @return TaskId <p>Mini game version compilation task ID</p>
+     * Get <p>Mini game version compilation task ID.</p> 
+     * @return TaskId <p>Mini game version compilation task ID.</p>
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set <p>Mini game version compilation task ID</p>
-     * @param TaskId <p>Mini game version compilation task ID</p>
+     * Set <p>Mini game version compilation task ID.</p>
+     * @param TaskId <p>Mini game version compilation task ID.</p>
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

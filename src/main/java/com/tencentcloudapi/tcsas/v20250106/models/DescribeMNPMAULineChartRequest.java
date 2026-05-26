@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeMNPMAULineChartRequest extends AbstractModel {
 
     /**
-    * Type: 0 Non-production data, 1 Production data
+    * Data type. Valid values: 0: Non-production data; 1: Production data.
     */
     @SerializedName("DataType")
     @Expose
     private Long DataType;
 
     /**
-    * Tenant ID
+    * Tenant ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Superapp ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Mini program appid, required. When provided, the query is performed based on the mini program.
+    * Mini program appid. If not empty, results are filtered by mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Mini program team ID
+    * Mini program team ID.
     */
     @SerializedName("MNPTeamId")
     @Expose
     private Long MNPTeamId;
 
     /**
-     * Get Type: 0 Non-production data, 1 Production data 
-     * @return DataType Type: 0 Non-production data, 1 Production data
+     * Get Data type. Valid values: 0: Non-production data; 1: Production data. 
+     * @return DataType Data type. Valid values: 0: Non-production data; 1: Production data.
      */
     public Long getDataType() {
         return this.DataType;
     }
 
     /**
-     * Set Type: 0 Non-production data, 1 Production data
-     * @param DataType Type: 0 Non-production data, 1 Production data
+     * Set Data type. Valid values: 0: Non-production data; 1: Production data.
+     * @param DataType Data type. Valid values: 0: Non-production data; 1: Production data.
      */
     public void setDataType(Long DataType) {
         this.DataType = DataType;
     }
 
     /**
-     * Get Tenant ID 
-     * @return PlatformId Tenant ID
+     * Get Tenant ID. 
+     * @return PlatformId Tenant ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Tenant ID
-     * @param PlatformId Tenant ID
+     * Set Tenant ID.
+     * @param PlatformId Tenant ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Superapp ID 
-     * @return ApplicationId Superapp ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Superapp ID
-     * @param ApplicationId Superapp ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Mini program appid, required. When provided, the query is performed based on the mini program. 
-     * @return MNPId Mini program appid, required. When provided, the query is performed based on the mini program.
+     * Get Mini program appid. If not empty, results are filtered by mini program appid. 
+     * @return MNPId Mini program appid. If not empty, results are filtered by mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program appid, required. When provided, the query is performed based on the mini program.
-     * @param MNPId Mini program appid, required. When provided, the query is performed based on the mini program.
+     * Set Mini program appid. If not empty, results are filtered by mini program appid.
+     * @param MNPId Mini program appid. If not empty, results are filtered by mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program team ID 
-     * @return MNPTeamId Mini program team ID
+     * Get Mini program team ID. 
+     * @return MNPTeamId Mini program team ID.
      */
     public Long getMNPTeamId() {
         return this.MNPTeamId;
     }
 
     /**
-     * Set Mini program team ID
-     * @param MNPTeamId Mini program team ID
+     * Set Mini program team ID.
+     * @param MNPTeamId Mini program team ID.
      */
     public void setMNPTeamId(Long MNPTeamId) {
         this.MNPTeamId = MNPTeamId;

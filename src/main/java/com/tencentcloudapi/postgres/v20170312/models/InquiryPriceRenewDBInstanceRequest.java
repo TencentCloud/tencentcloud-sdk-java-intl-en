@@ -24,46 +24,51 @@ import java.util.HashMap;
 public class InquiryPriceRenewDBInstanceRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Renewal duration in months. Maximum value: 48
+    * Renewal period, calculated on a monthly basis.
     */
     @SerializedName("Period")
     @Expose
     private Long Period;
 
     /**
-     * Get Instance ID 
-     * @return DBInstanceId Instance ID
+     * Get Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries. 
+     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param DBInstanceId Instance ID
+     * Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
+     * @param DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+This API only supports prepaid instance queries.
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Renewal duration in months. Maximum value: 48 
-     * @return Period Renewal duration in months. Maximum value: 48
+     * Get Renewal period, calculated on a monthly basis. 
+     * @return Period Renewal period, calculated on a monthly basis.
      */
     public Long getPeriod() {
         return this.Period;
     }
 
     /**
-     * Set Renewal duration in months. Maximum value: 48
-     * @param Period Renewal duration in months. Maximum value: 48
+     * Set Renewal period, calculated on a monthly basis.
+     * @param Period Renewal period, calculated on a monthly basis.
      */
     public void setPeriod(Long Period) {
         this.Period = Period;

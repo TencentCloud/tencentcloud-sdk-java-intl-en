@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyMNGDomainRequest extends AbstractModel {
 
     /**
-    * <p>Mini game appid</p>
+    * <p>Mini game appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * <p>Platform ID</p>
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * <p>Domain list</p>
+    * <p>List of domains.</p>
     */
     @SerializedName("Domain")
     @Expose
     private CreateDomainParam [] Domain;
 
     /**
-     * Get <p>Mini game appid</p> 
-     * @return MNPId <p>Mini game appid</p>
+     * Get <p>Mini game appid.</p> 
+     * @return MNPId <p>Mini game appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set <p>Mini game appid</p>
-     * @param MNPId <p>Mini game appid</p>
+     * Set <p>Mini game appid.</p>
+     * @param MNPId <p>Mini game appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get <p>Platform ID</p> 
-     * @return PlatformId <p>Platform ID</p>
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set <p>Platform ID</p>
-     * @param PlatformId <p>Platform ID</p>
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get <p>Domain list</p> 
-     * @return Domain <p>Domain list</p>
+     * Get <p>List of domains.</p> 
+     * @return Domain <p>List of domains.</p>
      */
     public CreateDomainParam [] getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set <p>Domain list</p>
-     * @param Domain <p>Domain list</p>
+     * Set <p>List of domains.</p>
+     * @param Domain <p>List of domains.</p>
      */
     public void setDomain(CreateDomainParam [] Domain) {
         this.Domain = Domain;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeGlobalOverviewReportDetailRequest extends AbstractModel {
 
     /**
-    * Tenant ID
+    * Tenant ID.
     */
     @SerializedName("PlatformId")
     @Expose
@@ -38,30 +38,30 @@ public class DescribeGlobalOverviewReportDetailRequest extends AbstractModel {
     private String ReportId;
 
     /**
-    * Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
+    * Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv.
     */
     @SerializedName("IndexId")
     @Expose
     private String IndexId;
 
     /**
-    * Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
+    * Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}.
     */
     @SerializedName("QueryData")
     @Expose
     private String QueryData;
 
     /**
-     * Get Tenant ID 
-     * @return PlatformId Tenant ID
+     * Get Tenant ID. 
+     * @return PlatformId Tenant ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Tenant ID
-     * @param PlatformId Tenant ID
+     * Set Tenant ID.
+     * @param PlatformId Tenant ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
@@ -84,32 +84,32 @@ public class DescribeGlobalOverviewReportDetailRequest extends AbstractModel {
     }
 
     /**
-     * Get Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv 
-     * @return IndexId Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
+     * Get Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv. 
+     * @return IndexId Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv.
      */
     public String getIndexId() {
         return this.IndexId;
     }
 
     /**
-     * Set Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
-     * @param IndexId Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv
+     * Set Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv.
+     * @param IndexId Parameter value: app_num|corp_num|miniapp_num|miniapp_visit_pv|minigame_num|minigame_visit_pv.
      */
     public void setIndexId(String IndexId) {
         this.IndexId = IndexId;
     }
 
     /**
-     * Get Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125} 
-     * @return QueryData Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
+     * Get Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}. 
+     * @return QueryData Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}.
      */
     public String getQueryData() {
         return this.QueryData;
     }
 
     /**
-     * Set Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
-     * @param QueryData Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}
+     * Set Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}.
+     * @param QueryData Base64 string containing start and end time: {"BeginDate":20251111,"EndDate":20251125}.
      */
     public void setQueryData(String QueryData) {
         this.QueryData = QueryData;

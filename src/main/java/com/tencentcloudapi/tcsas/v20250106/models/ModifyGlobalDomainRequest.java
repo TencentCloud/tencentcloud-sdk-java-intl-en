@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyGlobalDomainRequest extends AbstractModel {
 
     /**
-    * Domain ID
+    * Domain ID.
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-    * Domain name
+    * Domain URL.
     */
     @SerializedName("DomainUrl")
     @Expose
     private String DomainUrl;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get Domain ID 
-     * @return DomainId Domain ID
+     * Get Domain ID. 
+     * @return DomainId Domain ID.
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set Domain ID
-     * @param DomainId Domain ID
+     * Set Domain ID.
+     * @param DomainId Domain ID.
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get Domain name 
-     * @return DomainUrl Domain name
+     * Get Domain URL. 
+     * @return DomainUrl Domain URL.
      */
     public String getDomainUrl() {
         return this.DomainUrl;
     }
 
     /**
-     * Set Domain name
-     * @param DomainUrl Domain name
+     * Set Domain URL.
+     * @param DomainUrl Domain URL.
      */
     public void setDomainUrl(String DomainUrl) {
         this.DomainUrl = DomainUrl;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

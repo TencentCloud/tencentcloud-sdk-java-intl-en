@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -39,11 +39,11 @@ public class UpgradeDBInstanceKernelVersionRequest extends AbstractModel {
     private String TargetDBKernelVersion;
 
     /**
-    * Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+    * Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
     */
     @SerializedName("SwitchTag")
     @Expose
@@ -64,9 +64,9 @@ Default value: `0`.
     private String SwitchEndTime;
 
     /**
-    * Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+    * Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
     */
     @SerializedName("DryRun")
@@ -74,16 +74,16 @@ Default value: `false`.
     private Boolean DryRun;
 
     /**
-     * Get Instance ID 
-     * @return DBInstanceId Instance ID
+     * Get Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param DBInstanceId Instance ID
+     * Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -110,32 +110,32 @@ Default value: `false`.
     }
 
     /**
-     * Get Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`.  
-     * @return SwitchTag Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+     * Get Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0   
+     * @return SwitchTag Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
-     * @param SwitchTag Switch time after the kernel version upgrade for the specified instance. Valid values:
-<li>`0`: Switch now.
-<li>`1`: Switch at the specified time.
-<li>`2`: Switch in the maintenance time.
-Default value: `0`. 
+     * Set Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
+     * @param SwitchTag Specifies the switch time after upgrading the kernel for the specified instance. valid values:.
+<Li>0: switch immediately.</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+Default value: 0  
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;
@@ -174,13 +174,13 @@ Default value: `0`.
     }
 
     /**
-     * Get Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+     * Get Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`. 
-     * @return DryRun Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+     * @return DryRun Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
      */
     public Boolean getDryRun() {
@@ -188,13 +188,13 @@ Default value: `false`.
     }
 
     /**
-     * Set Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+     * Set Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
-     * @param DryRun Whether to perform a pre-check on the current operation of upgrading the instance kernel version. Valid values:
-u200c<li>u200c`true`: Performs a pre-check without upgrading the kernel version. Check items include request parameters, kernel version compatibility, and instance parameters.
-u200cu200c<li>`false`: Sends a normal request and upgrades the kernel version directly after the check is passed.
+     * @param DryRun Specifies whether to perform a pre-check for the instance kernel version upgrade operation this time.
+<li>true: performs a pre-check without upgrading the kernel. check items include request parameters, kernel version compatibility, and instance parameters.</li>.
+<li>false: send a normal request (default value). after passing the check, directly upgrade the kernel.</li>.
 Default value: `false`.
      */
     public void setDryRun(Boolean DryRun) {

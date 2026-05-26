@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CategoryItem extends AbstractModel {
 
     /**
-    * Category ID
+    * Category ID.
     */
     @SerializedName("ID")
     @Expose
     private String ID;
 
     /**
-    * Category name
+    * Category name.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-     * Get Category ID 
-     * @return ID Category ID
+     * Get Category ID. 
+     * @return ID Category ID.
      */
     public String getID() {
         return this.ID;
     }
 
     /**
-     * Set Category ID
-     * @param ID Category ID
+     * Set Category ID.
+     * @param ID Category ID.
      */
     public void setID(String ID) {
         this.ID = ID;
     }
 
     /**
-     * Get Category name 
-     * @return Name Category name
+     * Get Category name. 
+     * @return Name Category name.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Category name
-     * @param Name Category name
+     * Set Category name.
+     * @param Name Category name.
      */
     public void setName(String Name) {
         this.Name = Name;

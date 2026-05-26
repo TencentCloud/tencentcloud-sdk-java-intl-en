@@ -24,92 +24,97 @@ import java.util.HashMap;
 public class CreateTaskRequest extends AbstractModel {
 
     /**
-    * Project ID.
+    * <p>Project ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private String ProjectId;
 
     /**
-    * The basic attributes of the task.
+    * <p>The
+basic attributes of the task.</p>
     */
     @SerializedName("TaskBaseAttribute")
     @Expose
     private CreateTaskBaseAttribute TaskBaseAttribute;
 
     /**
-    * Task configurations.
+    * <p>Task configurations.</p>
     */
     @SerializedName("TaskConfiguration")
     @Expose
     private CreateTaskConfiguration TaskConfiguration;
 
     /**
-    * Task scheduling configuration.
+    * <p>Task scheduling configuration</p>
     */
     @SerializedName("TaskSchedulerConfiguration")
     @Expose
     private CreateTaskSchedulerConfiguration TaskSchedulerConfiguration;
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get <p>Project ID</p> 
+     * @return ProjectId <p>Project ID</p>
      */
     public String getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set <p>Project ID</p>
+     * @param ProjectId <p>Project ID</p>
      */
     public void setProjectId(String ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get The basic attributes of the task. 
-     * @return TaskBaseAttribute The basic attributes of the task.
+     * Get <p>The
+basic attributes of the task.</p> 
+     * @return TaskBaseAttribute <p>The
+basic attributes of the task.</p>
      */
     public CreateTaskBaseAttribute getTaskBaseAttribute() {
         return this.TaskBaseAttribute;
     }
 
     /**
-     * Set The basic attributes of the task.
-     * @param TaskBaseAttribute The basic attributes of the task.
+     * Set <p>The
+basic attributes of the task.</p>
+     * @param TaskBaseAttribute <p>The
+basic attributes of the task.</p>
      */
     public void setTaskBaseAttribute(CreateTaskBaseAttribute TaskBaseAttribute) {
         this.TaskBaseAttribute = TaskBaseAttribute;
     }
 
     /**
-     * Get Task configurations. 
-     * @return TaskConfiguration Task configurations.
+     * Get <p>Task configurations.</p> 
+     * @return TaskConfiguration <p>Task configurations.</p>
      */
     public CreateTaskConfiguration getTaskConfiguration() {
         return this.TaskConfiguration;
     }
 
     /**
-     * Set Task configurations.
-     * @param TaskConfiguration Task configurations.
+     * Set <p>Task configurations.</p>
+     * @param TaskConfiguration <p>Task configurations.</p>
      */
     public void setTaskConfiguration(CreateTaskConfiguration TaskConfiguration) {
         this.TaskConfiguration = TaskConfiguration;
     }
 
     /**
-     * Get Task scheduling configuration. 
-     * @return TaskSchedulerConfiguration Task scheduling configuration.
+     * Get <p>Task scheduling configuration</p> 
+     * @return TaskSchedulerConfiguration <p>Task scheduling configuration</p>
      */
     public CreateTaskSchedulerConfiguration getTaskSchedulerConfiguration() {
         return this.TaskSchedulerConfiguration;
     }
 
     /**
-     * Set Task scheduling configuration.
-     * @param TaskSchedulerConfiguration Task scheduling configuration.
+     * Set <p>Task scheduling configuration</p>
+     * @param TaskSchedulerConfiguration <p>Task scheduling configuration</p>
      */
     public void setTaskSchedulerConfiguration(CreateTaskSchedulerConfiguration TaskSchedulerConfiguration) {
         this.TaskSchedulerConfiguration = TaskSchedulerConfiguration;

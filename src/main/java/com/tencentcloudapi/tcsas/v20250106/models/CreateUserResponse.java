@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateUserResponse extends AbstractModel {
 
     /**
-    * Response data, user ID
+    * Response data, containing the user ID.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Response data, user ID
+     * Get Response data, containing the user ID.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Response data, user ID
+     * @return Data Response data, containing the user ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ResourceIdStringInfo getData() {
@@ -49,9 +49,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Response data, user ID
+     * Set Response data, containing the user ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Response data, user ID
+     * @param Data Response data, containing the user ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setData(ResourceIdStringInfo Data) {

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeMNGSensitiveAPIPermissionListRequest extends AbstractModel {
 
     /**
-    * <p>Pagination offset</p>
+    * <p>Pagination offset.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <p>Pagination count</p>
+    * <p>Number of entries per page.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * <p>Mini game appid</p>
+    * <p>Mini game appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * <p>Platform ID</p>
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * <p>Superapp ID</p>
+    * <p>Superapp ID.</p>
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * <p>Keywords for search (API name)</p>
+    * <p>Search keyword (API name).</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-     * Get <p>Pagination offset</p> 
-     * @return Offset <p>Pagination offset</p>
+     * Get <p>Pagination offset.</p> 
+     * @return Offset <p>Pagination offset.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Pagination offset</p>
-     * @param Offset <p>Pagination offset</p>
+     * Set <p>Pagination offset.</p>
+     * @param Offset <p>Pagination offset.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <p>Pagination count</p> 
-     * @return Limit <p>Pagination count</p>
+     * Get <p>Number of entries per page.</p> 
+     * @return Limit <p>Number of entries per page.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>Pagination count</p>
-     * @param Limit <p>Pagination count</p>
+     * Set <p>Number of entries per page.</p>
+     * @param Limit <p>Number of entries per page.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get <p>Mini game appid</p> 
-     * @return MNPId <p>Mini game appid</p>
+     * Get <p>Mini game appid.</p> 
+     * @return MNPId <p>Mini game appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set <p>Mini game appid</p>
-     * @param MNPId <p>Mini game appid</p>
+     * Set <p>Mini game appid.</p>
+     * @param MNPId <p>Mini game appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get <p>Platform ID</p> 
-     * @return PlatformId <p>Platform ID</p>
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set <p>Platform ID</p>
-     * @param PlatformId <p>Platform ID</p>
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get <p>Superapp ID</p> 
-     * @return ApplicationId <p>Superapp ID</p>
+     * Get <p>Superapp ID.</p> 
+     * @return ApplicationId <p>Superapp ID.</p>
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set <p>Superapp ID</p>
-     * @param ApplicationId <p>Superapp ID</p>
+     * Set <p>Superapp ID.</p>
+     * @param ApplicationId <p>Superapp ID.</p>
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get <p>Keywords for search (API name)</p> 
-     * @return Keyword <p>Keywords for search (API name)</p>
+     * Get <p>Search keyword (API name).</p> 
+     * @return Keyword <p>Search keyword (API name).</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set <p>Keywords for search (API name)</p>
-     * @param Keyword <p>Keywords for search (API name)</p>
+     * Set <p>Search keyword (API name).</p>
+     * @param Keyword <p>Search keyword (API name).</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;

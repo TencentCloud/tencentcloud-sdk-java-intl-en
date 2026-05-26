@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DownloadApplicationConfigResp extends AbstractModel {
 
     /**
-    * Configuration information in Base64 format
+    * Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("File")
@@ -32,9 +32,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String File;
 
     /**
-     * Get Configuration information in Base64 format
+     * Get Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return File Configuration information in Base64 format
+     * @return File Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getFile() {
@@ -42,9 +42,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Configuration information in Base64 format
+     * Set Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param File Configuration information in Base64 format
+     * @param File Configuration information in Base64 encoding.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFile(String File) {

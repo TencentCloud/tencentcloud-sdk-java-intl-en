@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyDBInstanceDeploymentRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -39,11 +39,11 @@ The information of AZ can be obtained from the `Zone` field in the returned valu
     private DBNode [] DBNodeSet;
 
     /**
-    * Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
+    * Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
     */
     @SerializedName("SwitchTag")
     @Expose
@@ -64,16 +64,16 @@ Default value: 0
     private String SwitchEndTime;
 
     /**
-     * Get Instance ID. 
-     * @return DBInstanceId Instance ID.
+     * Get Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param DBInstanceId Instance ID.
+     * Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -100,32 +100,32 @@ The information of AZ can be obtained from the `Zone` field in the returned valu
     }
 
     /**
-     * Get Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0 
-     * @return SwitchTag Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
+     * Get Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+ 
+     * @return SwitchTag Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
-     * @param SwitchTag Switch time after instance configurations are modified.
-<li>0: Switch immediately</li>
-<li>1: Switch at specified time</li>
-<li>2: Switch during maintenance time window</li>
-Default value: 0
+     * Set Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
+     * @param SwitchTag Specifies the switch time after instance configuration change.
+<Li>0: switch immediately</li>.
+<Li>1: switch at specified time</li>.
+<Li>2: switch during maintenance time window.</li>.
+
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;

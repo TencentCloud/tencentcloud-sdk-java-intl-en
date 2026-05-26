@@ -24,414 +24,414 @@ import java.util.HashMap;
 public class DescribeMNGAllStageVersionsResp extends AbstractModel {
 
     /**
-    * <p>Mini game appid</p>
+    * <p>Mini game appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * <p>Mini game version ID</p>
+    * <p>Mini game version ID.</p>
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-    * <p>Mini game name</p>
+    * <p>Mini game name.</p>
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * <p>Mini game icon</p>
+    * <p>Mini game icon.</p>
     */
     @SerializedName("MNPIcon")
     @Expose
     private String MNPIcon;
 
     /**
-    * <p>Mini game category</p>
+    * <p>Mini game category.</p>
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * <p>Mini game introduction</p>
+    * <p>Mini game introduction.</p>
     */
     @SerializedName("MNPIntro")
     @Expose
     private String MNPIntro;
 
     /**
-    * <p>Mini game description</p>
+    * <p>Mini game description.</p>
     */
     @SerializedName("MNPDesc")
     @Expose
     private String MNPDesc;
 
     /**
-    * <p>Developer</p>
+    * <p>Creator.</p>
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * <p>Developer creation time</p>
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * <p>Mini game version</p>
+    * <p>Mini game version.</p>
     */
     @SerializedName("MNPVersion")
     @Expose
     private String MNPVersion;
 
     /**
-    * <p>Version feature description</p>
+    * <p>Version feature introduction.</p>
     */
     @SerializedName("MNPVersionIntro")
     @Expose
     private String MNPVersionIntro;
 
     /**
-    * <p>Version:</p> Develop, preview, released</p>
+    * <p>Stage: Develop, preview, available.</p>
     */
     @SerializedName("Phase")
     @Expose
     private String Phase;
 
     /**
-    * <p>Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
+    * <p>Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
     */
     @SerializedName("ApprovalStatus")
     @Expose
     private Long ApprovalStatus;
 
     /**
-    * <p>Approval number</p>
+    * <p>Approval number.</p>
     */
     @SerializedName("ApprovalNo")
     @Expose
     private String ApprovalNo;
 
     /**
-    * <p>Whether this is a preview. Valid values: 0: No; 1: Yes</p>
+    * <p>Whether this is a preview. Valid values: 0: No; 1: Yes.</p>
     */
     @SerializedName("ShowCase")
     @Expose
     private Long ShowCase;
 
     /**
-    * <p>Rollback version number</p>
+    * <p>Rollback version number.</p>
     */
     @SerializedName("RollbackVersion")
     @Expose
     private Long RollbackVersion;
 
     /**
-    * <p>Available status</p>
+    * <p>Available status.</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * <p>Primary status of the current version. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
+    * <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
     */
     @SerializedName("VersionCurrentStatus")
     @Expose
     private Long VersionCurrentStatus;
 
     /**
-     * Get <p>Mini game appid</p> 
-     * @return MNPId <p>Mini game appid</p>
+     * Get <p>Mini game appid.</p> 
+     * @return MNPId <p>Mini game appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set <p>Mini game appid</p>
-     * @param MNPId <p>Mini game appid</p>
+     * Set <p>Mini game appid.</p>
+     * @param MNPId <p>Mini game appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get <p>Mini game version ID</p> 
-     * @return MNPVersionId <p>Mini game version ID</p>
+     * Get <p>Mini game version ID.</p> 
+     * @return MNPVersionId <p>Mini game version ID.</p>
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set <p>Mini game version ID</p>
-     * @param MNPVersionId <p>Mini game version ID</p>
+     * Set <p>Mini game version ID.</p>
+     * @param MNPVersionId <p>Mini game version ID.</p>
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get <p>Mini game name</p> 
-     * @return MNPName <p>Mini game name</p>
+     * Get <p>Mini game name.</p> 
+     * @return MNPName <p>Mini game name.</p>
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set <p>Mini game name</p>
-     * @param MNPName <p>Mini game name</p>
+     * Set <p>Mini game name.</p>
+     * @param MNPName <p>Mini game name.</p>
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get <p>Mini game icon</p> 
-     * @return MNPIcon <p>Mini game icon</p>
+     * Get <p>Mini game icon.</p> 
+     * @return MNPIcon <p>Mini game icon.</p>
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set <p>Mini game icon</p>
-     * @param MNPIcon <p>Mini game icon</p>
+     * Set <p>Mini game icon.</p>
+     * @param MNPIcon <p>Mini game icon.</p>
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get <p>Mini game category</p> 
-     * @return MNPType <p>Mini game category</p>
+     * Get <p>Mini game category.</p> 
+     * @return MNPType <p>Mini game category.</p>
      */
     public String getMNPType() {
         return this.MNPType;
     }
 
     /**
-     * Set <p>Mini game category</p>
-     * @param MNPType <p>Mini game category</p>
+     * Set <p>Mini game category.</p>
+     * @param MNPType <p>Mini game category.</p>
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get <p>Mini game introduction</p> 
-     * @return MNPIntro <p>Mini game introduction</p>
+     * Get <p>Mini game introduction.</p> 
+     * @return MNPIntro <p>Mini game introduction.</p>
      */
     public String getMNPIntro() {
         return this.MNPIntro;
     }
 
     /**
-     * Set <p>Mini game introduction</p>
-     * @param MNPIntro <p>Mini game introduction</p>
+     * Set <p>Mini game introduction.</p>
+     * @param MNPIntro <p>Mini game introduction.</p>
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get <p>Mini game description</p> 
-     * @return MNPDesc <p>Mini game description</p>
+     * Get <p>Mini game description.</p> 
+     * @return MNPDesc <p>Mini game description.</p>
      */
     public String getMNPDesc() {
         return this.MNPDesc;
     }
 
     /**
-     * Set <p>Mini game description</p>
-     * @param MNPDesc <p>Mini game description</p>
+     * Set <p>Mini game description.</p>
+     * @param MNPDesc <p>Mini game description.</p>
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
     }
 
     /**
-     * Get <p>Developer</p> 
-     * @return CreateUser <p>Developer</p>
+     * Get <p>Creator.</p> 
+     * @return CreateUser <p>Creator.</p>
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set <p>Developer</p>
-     * @param CreateUser <p>Developer</p>
+     * Set <p>Creator.</p>
+     * @param CreateUser <p>Creator.</p>
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get <p>Developer creation time</p> 
-     * @return CreateTime <p>Developer creation time</p>
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set <p>Developer creation time</p>
-     * @param CreateTime <p>Developer creation time</p>
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>Mini game version</p> 
-     * @return MNPVersion <p>Mini game version</p>
+     * Get <p>Mini game version.</p> 
+     * @return MNPVersion <p>Mini game version.</p>
      */
     public String getMNPVersion() {
         return this.MNPVersion;
     }
 
     /**
-     * Set <p>Mini game version</p>
-     * @param MNPVersion <p>Mini game version</p>
+     * Set <p>Mini game version.</p>
+     * @param MNPVersion <p>Mini game version.</p>
      */
     public void setMNPVersion(String MNPVersion) {
         this.MNPVersion = MNPVersion;
     }
 
     /**
-     * Get <p>Version feature description</p> 
-     * @return MNPVersionIntro <p>Version feature description</p>
+     * Get <p>Version feature introduction.</p> 
+     * @return MNPVersionIntro <p>Version feature introduction.</p>
      */
     public String getMNPVersionIntro() {
         return this.MNPVersionIntro;
     }
 
     /**
-     * Set <p>Version feature description</p>
-     * @param MNPVersionIntro <p>Version feature description</p>
+     * Set <p>Version feature introduction.</p>
+     * @param MNPVersionIntro <p>Version feature introduction.</p>
      */
     public void setMNPVersionIntro(String MNPVersionIntro) {
         this.MNPVersionIntro = MNPVersionIntro;
     }
 
     /**
-     * Get <p>Version:</p> Develop, preview, released</p> 
-     * @return Phase <p>Version:</p> Develop, preview, released</p>
+     * Get <p>Stage: Develop, preview, available.</p> 
+     * @return Phase <p>Stage: Develop, preview, available.</p>
      */
     public String getPhase() {
         return this.Phase;
     }
 
     /**
-     * Set <p>Version:</p> Develop, preview, released</p>
-     * @param Phase <p>Version:</p> Develop, preview, released</p>
+     * Set <p>Stage: Develop, preview, available.</p>
+     * @param Phase <p>Stage: Develop, preview, available.</p>
      */
     public void setPhase(String Phase) {
         this.Phase = Phase;
     }
 
     /**
-     * Get <p>Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p> 
-     * @return ApprovalStatus <p>Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
+     * Get <p>Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p> 
+     * @return ApprovalStatus <p>Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
      */
     public Long getApprovalStatus() {
         return this.ApprovalStatus;
     }
 
     /**
-     * Set <p>Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
-     * @param ApprovalStatus <p>Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
+     * Set <p>Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
+     * @param ApprovalStatus <p>Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
      */
     public void setApprovalStatus(Long ApprovalStatus) {
         this.ApprovalStatus = ApprovalStatus;
     }
 
     /**
-     * Get <p>Approval number</p> 
-     * @return ApprovalNo <p>Approval number</p>
+     * Get <p>Approval number.</p> 
+     * @return ApprovalNo <p>Approval number.</p>
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set <p>Approval number</p>
-     * @param ApprovalNo <p>Approval number</p>
+     * Set <p>Approval number.</p>
+     * @param ApprovalNo <p>Approval number.</p>
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;
     }
 
     /**
-     * Get <p>Whether this is a preview. Valid values: 0: No; 1: Yes</p> 
-     * @return ShowCase <p>Whether this is a preview. Valid values: 0: No; 1: Yes</p>
+     * Get <p>Whether this is a preview. Valid values: 0: No; 1: Yes.</p> 
+     * @return ShowCase <p>Whether this is a preview. Valid values: 0: No; 1: Yes.</p>
      */
     public Long getShowCase() {
         return this.ShowCase;
     }
 
     /**
-     * Set <p>Whether this is a preview. Valid values: 0: No; 1: Yes</p>
-     * @param ShowCase <p>Whether this is a preview. Valid values: 0: No; 1: Yes</p>
+     * Set <p>Whether this is a preview. Valid values: 0: No; 1: Yes.</p>
+     * @param ShowCase <p>Whether this is a preview. Valid values: 0: No; 1: Yes.</p>
      */
     public void setShowCase(Long ShowCase) {
         this.ShowCase = ShowCase;
     }
 
     /**
-     * Get <p>Rollback version number</p> 
-     * @return RollbackVersion <p>Rollback version number</p>
+     * Get <p>Rollback version number.</p> 
+     * @return RollbackVersion <p>Rollback version number.</p>
      */
     public Long getRollbackVersion() {
         return this.RollbackVersion;
     }
 
     /**
-     * Set <p>Rollback version number</p>
-     * @param RollbackVersion <p>Rollback version number</p>
+     * Set <p>Rollback version number.</p>
+     * @param RollbackVersion <p>Rollback version number.</p>
      */
     public void setRollbackVersion(Long RollbackVersion) {
         this.RollbackVersion = RollbackVersion;
     }
 
     /**
-     * Get <p>Available status</p> 
-     * @return Status <p>Available status</p>
+     * Get <p>Available status.</p> 
+     * @return Status <p>Available status.</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set <p>Available status</p>
-     * @param Status <p>Available status</p>
+     * Set <p>Available status.</p>
+     * @param Status <p>Available status.</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get <p>Primary status of the current version. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p> 
-     * @return VersionCurrentStatus <p>Primary status of the current version. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
+     * Get <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p> 
+     * @return VersionCurrentStatus <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
      */
     public Long getVersionCurrentStatus() {
         return this.VersionCurrentStatus;
     }
 
     /**
-     * Set <p>Primary status of the current version. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
-     * @param VersionCurrentStatus <p>Primary status of the current version. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled</p>
+     * Set <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
+     * @param VersionCurrentStatus <p>Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.</p>
      */
     public void setVersionCurrentStatus(Long VersionCurrentStatus) {
         this.VersionCurrentStatus = VersionCurrentStatus;

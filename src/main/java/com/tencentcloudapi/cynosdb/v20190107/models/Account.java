@@ -31,6 +31,13 @@ public class Account extends AbstractModel {
     private String AccountName;
 
     /**
+    * Host
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
+
+    /**
     * Database account description
     */
     @SerializedName("Description")
@@ -52,18 +59,18 @@ public class Account extends AbstractModel {
     private String UpdateTime;
 
     /**
-    * Host
-    */
-    @SerializedName("Host")
-    @Expose
-    private String Host;
-
-    /**
     * The max connections
     */
     @SerializedName("MaxUserConnections")
     @Expose
     private Long MaxUserConnections;
+
+    /**
+    * Whether password rotation is enabled (0: turn off; 1: turn on)
+    */
+    @SerializedName("PasswordRotation")
+    @Expose
+    private Long PasswordRotation;
 
     /**
      * Get Database account name 
@@ -79,6 +86,22 @@ public class Account extends AbstractModel {
      */
     public void setAccountName(String AccountName) {
         this.AccountName = AccountName;
+    }
+
+    /**
+     * Get Host 
+     * @return Host Host
+     */
+    public String getHost() {
+        return this.Host;
+    }
+
+    /**
+     * Set Host
+     * @param Host Host
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
     }
 
     /**
@@ -130,22 +153,6 @@ public class Account extends AbstractModel {
     }
 
     /**
-     * Get Host 
-     * @return Host Host
-     */
-    public String getHost() {
-        return this.Host;
-    }
-
-    /**
-     * Set Host
-     * @param Host Host
-     */
-    public void setHost(String Host) {
-        this.Host = Host;
-    }
-
-    /**
      * Get The max connections 
      * @return MaxUserConnections The max connections
      */
@@ -161,6 +168,22 @@ public class Account extends AbstractModel {
         this.MaxUserConnections = MaxUserConnections;
     }
 
+    /**
+     * Get Whether password rotation is enabled (0: turn off; 1: turn on) 
+     * @return PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
+     */
+    public Long getPasswordRotation() {
+        return this.PasswordRotation;
+    }
+
+    /**
+     * Set Whether password rotation is enabled (0: turn off; 1: turn on)
+     * @param PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
+     */
+    public void setPasswordRotation(Long PasswordRotation) {
+        this.PasswordRotation = PasswordRotation;
+    }
+
     public Account() {
     }
 
@@ -172,6 +195,9 @@ public class Account extends AbstractModel {
         if (source.AccountName != null) {
             this.AccountName = new String(source.AccountName);
         }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -181,11 +207,11 @@ public class Account extends AbstractModel {
         if (source.UpdateTime != null) {
             this.UpdateTime = new String(source.UpdateTime);
         }
-        if (source.Host != null) {
-            this.Host = new String(source.Host);
-        }
         if (source.MaxUserConnections != null) {
             this.MaxUserConnections = new Long(source.MaxUserConnections);
+        }
+        if (source.PasswordRotation != null) {
+            this.PasswordRotation = new Long(source.PasswordRotation);
         }
     }
 
@@ -195,11 +221,12 @@ public class Account extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccountName", this.AccountName);
+        this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
-        this.setParamSimple(map, prefix + "Host", this.Host);
         this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
+        this.setParamSimple(map, prefix + "PasswordRotation", this.PasswordRotation);
 
     }
 }

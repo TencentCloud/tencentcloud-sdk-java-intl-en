@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateMNPSecretKeyResp extends AbstractModel {
 
     /**
-    * <p>Secret ID</p>
+    * <p>Key ID.</p>
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * <p>Secret key</p>
+    * <p>Secret key.</p>
     */
     @SerializedName("SecretKey")
     @Expose
     private String SecretKey;
 
     /**
-     * Get <p>Secret ID</p> 
-     * @return KeyId <p>Secret ID</p>
+     * Get <p>Key ID.</p> 
+     * @return KeyId <p>Key ID.</p>
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set <p>Secret ID</p>
-     * @param KeyId <p>Secret ID</p>
+     * Set <p>Key ID.</p>
+     * @param KeyId <p>Key ID.</p>
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get <p>Secret key</p> 
-     * @return SecretKey <p>Secret key</p>
+     * Get <p>Secret key.</p> 
+     * @return SecretKey <p>Secret key.</p>
      */
     public String getSecretKey() {
         return this.SecretKey;
     }
 
     /**
-     * Set <p>Secret key</p>
-     * @param SecretKey <p>Secret key</p>
+     * Set <p>Secret key.</p>
+     * @param SecretKey <p>Secret key.</p>
      */
     public void setSecretKey(String SecretKey) {
         this.SecretKey = SecretKey;

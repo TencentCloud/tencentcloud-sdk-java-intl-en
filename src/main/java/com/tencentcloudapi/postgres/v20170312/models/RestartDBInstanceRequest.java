@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class RestartDBInstanceRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of postgres-6r233v55
+    * Specifies the instance ID, such as postgres-6r233v55. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-     * Get Instance ID in the format of postgres-6r233v55 
-     * @return DBInstanceId Instance ID in the format of postgres-6r233v55
+     * Get Specifies the instance ID, such as postgres-6r233v55. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Specifies the instance ID, such as postgres-6r233v55. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID in the format of postgres-6r233v55
-     * @param DBInstanceId Instance ID in the format of postgres-6r233v55
+     * Set Specifies the instance ID, such as postgres-6r233v55. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Specifies the instance ID, such as postgres-6r233v55. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;

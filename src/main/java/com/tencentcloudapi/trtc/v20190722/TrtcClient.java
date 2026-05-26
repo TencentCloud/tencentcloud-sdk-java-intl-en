@@ -104,8 +104,7 @@ This API is used to achieve the following goals:
     }
 
     /**
-     *API description:
-Enable the cloud transcription feature.
+     *API description: Enable the cloud transcription feature.
      * @param req CreateCloudTranscriptionRequest
      * @return CreateCloudTranscriptionResponse
      * @throws TencentCloudSDKException
@@ -585,11 +584,16 @@ The TRTC AI dialogue function has built-in speech-to-text capability and provide
     }
 
     /**
-     *Initiate the transcription bot. The backend will pull the stream through the bot to perform real-time speech recognition and deliver subtitles and transcription messages. The transcription bot supports two stream pulling modes, controlled by the `TranscriptionMode` field:
-- Pull the stream of the entire room.
-- Pull the stream of a specific user.
+     *Start up the transcription bot. The backend will pass the robot stream pulling to perform real-time speech recognition and deliver subtitles and transcription messages.
+The transcription bot supports two stream pulling methods, controlled by the TranscriptionMode field.
+- Pull the stream of all players in the room.
+- Pull the stream for a specific user.
 
-The server delivers subtitles and transcription messages in real-time through TRTC's custom messages, with `CmdId` fixed at 1. The client only needs to listen for the callback of custom messages. For example, see the [C++ callback](https://cloud.tencent.com/document/product/647/79637#4cd82f4edb24992a15a25187089e1565). Other clients, such as Android, Web, etc., can also be found at the same link.
+The server delivers subtitles and transcription messages in real time through TRTC custom messages, with CmdId fixed to 1. Clients just need to listen to the custom message callback, such as the C++ callback (https://www.tencentcloud.com/document/product/647/79637?from_cn_redirect=1#4cd82f4edb24992a15a25187089e1565). Other clients such as Android and Web can likewise find it at the same link.
+
+
+**Note:**
+When TranscriptionMode is 0, ensure only one task is initiated in a room. If multiple tasks are initiated, robots will subscribe with each other. Unless the task is stopped proactively, it will timeout exit after 10 hours. In such cases, it is advisable to fill in SessionId to ensure subsequent repeated task failures.
      * @param req StartAITranscriptionRequest
      * @return StartAITranscriptionResponse
      * @throws TencentCloudSDKException
@@ -697,6 +701,28 @@ You can create a relay task before the anchor enters the room. When the relay ta
     }
 
     /**
+     *This API is used to perform text to speech.
+     * @param req TextToSpeechRequest
+     * @return TextToSpeechResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToSpeechResponse TextToSpeech(TextToSpeechRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToSpeech", TextToSpeechResponse.class);
+    }
+
+    /**
+     *This API is used to stream text-to-speech.
+     * @param req TextToSpeechSSERequest
+     * @return TextToSpeechSSEResponse
+     * @throws TencentCloudSDKException
+     */
+    public TextToSpeechSSEResponse TextToSpeechSSE(TextToSpeechSSERequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TextToSpeechSSE", TextToSpeechSSEResponse.class);
+    }
+
+    /**
      *Update AI conversation task parameters
      * @param req UpdateAIConversationRequest
      * @return UpdateAIConversationResponse
@@ -728,6 +754,17 @@ Note: For details about how to use this API, see the `StartPublishCdnStream` doc
     public UpdateStreamIngestResponse UpdateStreamIngest(UpdateStreamIngestRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UpdateStreamIngest", UpdateStreamIngestResponse.class);
+    }
+
+    /**
+     *This API is used to clone sound.
+     * @param req VoiceCloneRequest
+     * @return VoiceCloneResponse
+     * @throws TencentCloudSDKException
+     */
+    public VoiceCloneResponse VoiceClone(VoiceCloneRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "VoiceClone", VoiceCloneResponse.class);
     }
 
 }

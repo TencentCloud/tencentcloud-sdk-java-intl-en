@@ -52,8 +52,7 @@ public class RegionInfo extends AbstractModel {
     private String RegionState;
 
     /**
-    * Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
     */
     @SerializedName("SupportInternational")
     @Expose
@@ -124,20 +123,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return SupportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Whether the international site is supported in this region. valid values: 0 (no support), 1 (support). 
+     * @return SupportInternational Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
      */
     public Long getSupportInternational() {
         return this.SupportInternational;
     }
 
     /**
-     * Set Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param SupportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
+     * @param SupportInternational Whether the international site is supported in this region. valid values: 0 (no support), 1 (support).
      */
     public void setSupportInternational(Long SupportInternational) {
         this.SupportInternational = SupportInternational;

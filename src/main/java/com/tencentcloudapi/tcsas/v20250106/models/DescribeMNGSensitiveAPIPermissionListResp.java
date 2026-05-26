@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMNGSensitiveAPIPermissionListResp extends AbstractModel {
 
     /**
-    * <p>Total number of entries</p>
+    * <p>Total number of entries.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * <p>List data</p>
+    * <p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataList")
@@ -39,25 +39,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DescribeMNGSensitiveAPIPermissionListData [] DataList;
 
     /**
-     * Get <p>Total number of entries</p> 
-     * @return TotalCount <p>Total number of entries</p>
+     * Get <p>Total number of entries.</p> 
+     * @return TotalCount <p>Total number of entries.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total number of entries</p>
-     * @param TotalCount <p>Total number of entries</p>
+     * Set <p>Total number of entries.</p>
+     * @param TotalCount <p>Total number of entries.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get <p>List data</p>
+     * Get <p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataList <p>List data</p>
+     * @return DataList <p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DescribeMNGSensitiveAPIPermissionListData [] getDataList() {
@@ -65,9 +65,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set <p>List data</p>
+     * Set <p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataList <p>List data</p>
+     * @param DataList <p>List data.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataList(DescribeMNGSensitiveAPIPermissionListData [] DataList) {

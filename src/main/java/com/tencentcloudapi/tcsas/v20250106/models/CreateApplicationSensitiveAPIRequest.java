@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateApplicationSensitiveAPIRequest extends AbstractModel {
 
     /**
-    * Application ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
@@ -38,23 +38,23 @@ public class CreateApplicationSensitiveAPIRequest extends AbstractModel {
     private CreateApplicationSensitiveAPIReq [] APIList;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get Application ID 
-     * @return ApplicationId Application ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Application ID
-     * @param ApplicationId Application ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
@@ -77,16 +77,16 @@ public class CreateApplicationSensitiveAPIRequest extends AbstractModel {
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

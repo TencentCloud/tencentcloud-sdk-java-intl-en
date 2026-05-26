@@ -24,151 +24,151 @@ import java.util.HashMap;
 public class ModifyApplicationRequest extends AbstractModel {
 
     /**
-    * Application ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Application name
+    * Superapp name.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Application introduction
+    * Superapp introduction.
     */
     @SerializedName("Intro")
     @Expose
     private String Intro;
 
     /**
-    * Icon
+    * Superapp icon.
     */
     @SerializedName("Logo")
     @Expose
     private String Logo;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Android app package name
+    * Android app package name.
     */
     @SerializedName("AndroidAppKey")
     @Expose
     private String AndroidAppKey;
 
     /**
-    * iOS App bundleId
+    * iOS app bundle ID.
     */
     @SerializedName("IosAppKey")
     @Expose
     private String IosAppKey;
 
     /**
-    * Remarks
+    * Remarks.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Scheme
+    * Scheme.
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-     * Get Application ID 
-     * @return ApplicationId Application ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Application ID
-     * @param ApplicationId Application ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Application name 
-     * @return ApplicationName Application name
+     * Get Superapp name. 
+     * @return ApplicationName Superapp name.
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Application name
-     * @param ApplicationName Application name
+     * Set Superapp name.
+     * @param ApplicationName Superapp name.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Application introduction 
-     * @return Intro Application introduction
+     * Get Superapp introduction. 
+     * @return Intro Superapp introduction.
      */
     public String getIntro() {
         return this.Intro;
     }
 
     /**
-     * Set Application introduction
-     * @param Intro Application introduction
+     * Set Superapp introduction.
+     * @param Intro Superapp introduction.
      */
     public void setIntro(String Intro) {
         this.Intro = Intro;
     }
 
     /**
-     * Get Icon 
-     * @return Logo Icon
+     * Get Superapp icon. 
+     * @return Logo Superapp icon.
      */
     public String getLogo() {
         return this.Logo;
     }
 
     /**
-     * Set Icon
-     * @param Logo Icon
+     * Set Superapp icon.
+     * @param Logo Superapp icon.
      */
     public void setLogo(String Logo) {
         this.Logo = Logo;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Android app package name 
-     * @return AndroidAppKey Android app package name
+     * Get Android app package name. 
+     * @return AndroidAppKey Android app package name.
      * @deprecated
      */
     @Deprecated
@@ -177,8 +177,8 @@ public class ModifyApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Set Android app package name
-     * @param AndroidAppKey Android app package name
+     * Set Android app package name.
+     * @param AndroidAppKey Android app package name.
      * @deprecated
      */
     @Deprecated
@@ -187,8 +187,8 @@ public class ModifyApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get iOS App bundleId 
-     * @return IosAppKey iOS App bundleId
+     * Get iOS app bundle ID. 
+     * @return IosAppKey iOS app bundle ID.
      * @deprecated
      */
     @Deprecated
@@ -197,8 +197,8 @@ public class ModifyApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Set iOS App bundleId
-     * @param IosAppKey iOS App bundleId
+     * Set iOS app bundle ID.
+     * @param IosAppKey iOS app bundle ID.
      * @deprecated
      */
     @Deprecated
@@ -207,8 +207,8 @@ public class ModifyApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get Remarks 
-     * @return Remark Remarks
+     * Get Remarks. 
+     * @return Remark Remarks.
      * @deprecated
      */
     @Deprecated
@@ -217,8 +217,8 @@ public class ModifyApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Set Remarks
-     * @param Remark Remarks
+     * Set Remarks.
+     * @param Remark Remarks.
      * @deprecated
      */
     @Deprecated
@@ -227,16 +227,16 @@ public class ModifyApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get Scheme 
-     * @return Scheme Scheme
+     * Get Scheme. 
+     * @return Scheme Scheme.
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set Scheme
-     * @param Scheme Scheme
+     * Set Scheme.
+     * @param Scheme Scheme.
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;

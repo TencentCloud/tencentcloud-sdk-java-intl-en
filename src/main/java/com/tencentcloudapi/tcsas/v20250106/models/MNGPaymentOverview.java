@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class MNGPaymentOverview extends AbstractModel {
 
     /**
-    * Paid revenue / Number of paying users * 100%
+    * ARPPU. Calculated as: paying revenue / paying users * 100%.
     */
     @SerializedName("ARPPu")
     @Expose
     private String ARPPu;
 
     /**
-    * Data time in YYYYMMDD format
+    * Data time in YYYYMMDD format.
     */
     @SerializedName("DataTime")
     @Expose
     private String DataTime;
 
     /**
-    * New paying user ratio = NewUserNum / OrderUserNum * 100%
+    * New paying user ratio. Calculated as: NewUserNum / OrderUserNum * 100%.
     */
     @SerializedName("NewPaidUseRatio")
     @Expose
     private String NewPaidUseRatio;
 
     /**
-    * Number of new paying users
+    * Number of new paying users.
     */
     @SerializedName("NewPaidUserNum")
     @Expose
     private Long NewPaidUserNum;
 
     /**
-    * Total payment amount from new users
+    * Total payment amount from new users.
     */
     @SerializedName("NewUserPaidAmount")
     @Expose
     private String NewUserPaidAmount;
 
     /**
-    * Total payment amount
+    * Total payment amount.
     */
     @SerializedName("PaidAmount")
     @Expose
     private String PaidAmount;
 
     /**
-    * Number of paying users
+    * Number of paying users.
     */
     @SerializedName("PaidUserNum")
     @Expose
     private Long PaidUserNum;
 
     /**
-    * Refund amount
+    * Refund amount.
     */
     @SerializedName("RefundAmount")
     @Expose
     private String RefundAmount;
 
     /**
-    * Number of refund orders
+    * Number of refund orders.
     */
     @SerializedName("RefundNum")
     @Expose
     private Long RefundNum;
 
     /**
-    * Update time (timestamp in seconds)
+    * Last modified time (timestamp in seconds).
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-     * Get Paid revenue / Number of paying users * 100% 
-     * @return ARPPu Paid revenue / Number of paying users * 100%
+     * Get ARPPU. Calculated as: paying revenue / paying users * 100%. 
+     * @return ARPPu ARPPU. Calculated as: paying revenue / paying users * 100%.
      */
     public String getARPPu() {
         return this.ARPPu;
     }
 
     /**
-     * Set Paid revenue / Number of paying users * 100%
-     * @param ARPPu Paid revenue / Number of paying users * 100%
+     * Set ARPPU. Calculated as: paying revenue / paying users * 100%.
+     * @param ARPPu ARPPU. Calculated as: paying revenue / paying users * 100%.
      */
     public void setARPPu(String ARPPu) {
         this.ARPPu = ARPPu;
     }
 
     /**
-     * Get Data time in YYYYMMDD format 
-     * @return DataTime Data time in YYYYMMDD format
+     * Get Data time in YYYYMMDD format. 
+     * @return DataTime Data time in YYYYMMDD format.
      */
     public String getDataTime() {
         return this.DataTime;
     }
 
     /**
-     * Set Data time in YYYYMMDD format
-     * @param DataTime Data time in YYYYMMDD format
+     * Set Data time in YYYYMMDD format.
+     * @param DataTime Data time in YYYYMMDD format.
      */
     public void setDataTime(String DataTime) {
         this.DataTime = DataTime;
     }
 
     /**
-     * Get New paying user ratio = NewUserNum / OrderUserNum * 100% 
-     * @return NewPaidUseRatio New paying user ratio = NewUserNum / OrderUserNum * 100%
+     * Get New paying user ratio. Calculated as: NewUserNum / OrderUserNum * 100%. 
+     * @return NewPaidUseRatio New paying user ratio. Calculated as: NewUserNum / OrderUserNum * 100%.
      */
     public String getNewPaidUseRatio() {
         return this.NewPaidUseRatio;
     }
 
     /**
-     * Set New paying user ratio = NewUserNum / OrderUserNum * 100%
-     * @param NewPaidUseRatio New paying user ratio = NewUserNum / OrderUserNum * 100%
+     * Set New paying user ratio. Calculated as: NewUserNum / OrderUserNum * 100%.
+     * @param NewPaidUseRatio New paying user ratio. Calculated as: NewUserNum / OrderUserNum * 100%.
      */
     public void setNewPaidUseRatio(String NewPaidUseRatio) {
         this.NewPaidUseRatio = NewPaidUseRatio;
     }
 
     /**
-     * Get Number of new paying users 
-     * @return NewPaidUserNum Number of new paying users
+     * Get Number of new paying users. 
+     * @return NewPaidUserNum Number of new paying users.
      */
     public Long getNewPaidUserNum() {
         return this.NewPaidUserNum;
     }
 
     /**
-     * Set Number of new paying users
-     * @param NewPaidUserNum Number of new paying users
+     * Set Number of new paying users.
+     * @param NewPaidUserNum Number of new paying users.
      */
     public void setNewPaidUserNum(Long NewPaidUserNum) {
         this.NewPaidUserNum = NewPaidUserNum;
     }
 
     /**
-     * Get Total payment amount from new users 
-     * @return NewUserPaidAmount Total payment amount from new users
+     * Get Total payment amount from new users. 
+     * @return NewUserPaidAmount Total payment amount from new users.
      */
     public String getNewUserPaidAmount() {
         return this.NewUserPaidAmount;
     }
 
     /**
-     * Set Total payment amount from new users
-     * @param NewUserPaidAmount Total payment amount from new users
+     * Set Total payment amount from new users.
+     * @param NewUserPaidAmount Total payment amount from new users.
      */
     public void setNewUserPaidAmount(String NewUserPaidAmount) {
         this.NewUserPaidAmount = NewUserPaidAmount;
     }
 
     /**
-     * Get Total payment amount 
-     * @return PaidAmount Total payment amount
+     * Get Total payment amount. 
+     * @return PaidAmount Total payment amount.
      */
     public String getPaidAmount() {
         return this.PaidAmount;
     }
 
     /**
-     * Set Total payment amount
-     * @param PaidAmount Total payment amount
+     * Set Total payment amount.
+     * @param PaidAmount Total payment amount.
      */
     public void setPaidAmount(String PaidAmount) {
         this.PaidAmount = PaidAmount;
     }
 
     /**
-     * Get Number of paying users 
-     * @return PaidUserNum Number of paying users
+     * Get Number of paying users. 
+     * @return PaidUserNum Number of paying users.
      */
     public Long getPaidUserNum() {
         return this.PaidUserNum;
     }
 
     /**
-     * Set Number of paying users
-     * @param PaidUserNum Number of paying users
+     * Set Number of paying users.
+     * @param PaidUserNum Number of paying users.
      */
     public void setPaidUserNum(Long PaidUserNum) {
         this.PaidUserNum = PaidUserNum;
     }
 
     /**
-     * Get Refund amount 
-     * @return RefundAmount Refund amount
+     * Get Refund amount. 
+     * @return RefundAmount Refund amount.
      */
     public String getRefundAmount() {
         return this.RefundAmount;
     }
 
     /**
-     * Set Refund amount
-     * @param RefundAmount Refund amount
+     * Set Refund amount.
+     * @param RefundAmount Refund amount.
      */
     public void setRefundAmount(String RefundAmount) {
         this.RefundAmount = RefundAmount;
     }
 
     /**
-     * Get Number of refund orders 
-     * @return RefundNum Number of refund orders
+     * Get Number of refund orders. 
+     * @return RefundNum Number of refund orders.
      */
     public Long getRefundNum() {
         return this.RefundNum;
     }
 
     /**
-     * Set Number of refund orders
-     * @param RefundNum Number of refund orders
+     * Set Number of refund orders.
+     * @param RefundNum Number of refund orders.
      */
     public void setRefundNum(Long RefundNum) {
         this.RefundNum = RefundNum;
     }
 
     /**
-     * Get Update time (timestamp in seconds) 
-     * @return UpdateTime Update time (timestamp in seconds)
+     * Get Last modified time (timestamp in seconds). 
+     * @return UpdateTime Last modified time (timestamp in seconds).
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time (timestamp in seconds)
-     * @param UpdateTime Update time (timestamp in seconds)
+     * Set Last modified time (timestamp in seconds).
+     * @param UpdateTime Last modified time (timestamp in seconds).
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;

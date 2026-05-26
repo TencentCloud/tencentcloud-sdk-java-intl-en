@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeApplicationListResp extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total number of entries.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List information
+    * Superapp list data.
     */
     @SerializedName("DataList")
     @Expose
     private DescribeApplicationListData [] DataList;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total number of entries. 
+     * @return TotalCount Total number of entries.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total number of entries.
+     * @param TotalCount Total number of entries.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List information 
-     * @return DataList List information
+     * Get Superapp list data. 
+     * @return DataList Superapp list data.
      */
     public DescribeApplicationListData [] getDataList() {
         return this.DataList;
     }
 
     /**
-     * Set List information
-     * @param DataList List information
+     * Set Superapp list data.
+     * @param DataList Superapp list data.
      */
     public void setDataList(DescribeApplicationListData [] DataList) {
         this.DataList = DataList;

@@ -61,6 +61,28 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
+     *This API is used to disable CAM verification service for a database account.
+     * @param req CloseAccountCAMRequest
+     * @return CloseAccountCAMResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseAccountCAMResponse CloseAccountCAM(CloseAccountCAMRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseAccountCAM", CloseAccountCAMResponse.class);
+    }
+
+    /**
+     *This API is used to disable the audit feature for a database instance.
+     * @param req CloseAuditServiceRequest
+     * @return CloseAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CloseAuditServiceResponse CloseAuditService(CloseAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CloseAuditService", CloseAuditServiceResponse.class);
+    }
+
+    /**
      *This API is used to disable the public network address of an instance.
      * @param req CloseDBExtranetAccessRequest
      * @return CloseDBExtranetAccessResponse
@@ -72,17 +94,6 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to disable the public network address of a PostgreSQL for Serverless instance.
-     * @param req CloseServerlessDBExtranetAccessRequest
-     * @return CloseServerlessDBExtranetAccessResponse
-     * @throws TencentCloudSDKException
-     */
-    public CloseServerlessDBExtranetAccessResponse CloseServerlessDBExtranetAccess(CloseServerlessDBExtranetAccessRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CloseServerlessDBExtranetAccess", CloseServerlessDBExtranetAccessResponse.class);
-    }
-
-    /**
      *This API is used to create a data account. The returned Oid is the unique identifier of the account, which matches the oid recorded in the database system table pg_roles.
      * @param req CreateAccountRequest
      * @return CreateAccountResponse
@@ -91,6 +102,17 @@ public class PostgresClient extends AbstractClient{
     public CreateAccountResponse CreateAccount(CreateAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateAccount", CreateAccountResponse.class);
+    }
+
+    /**
+     *Creating an Audit Log File
+     * @param req CreateAuditLogFileRequest
+     * @return CreateAuditLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateAuditLogFileResponse CreateAuditLogFile(CreateAuditLogFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateAuditLogFile", CreateAuditLogFileResponse.class);
     }
 
     /**
@@ -124,17 +146,6 @@ public class PostgresClient extends AbstractClient{
     public CreateDBInstanceNetworkAccessResponse CreateDBInstanceNetworkAccess(CreateDBInstanceNetworkAccessRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CreateDBInstanceNetworkAccess", CreateDBInstanceNetworkAccessResponse.class);
-    }
-
-    /**
-     *This API is used to create (but not initialize) one or more TencentDB for PostgreSQL instances. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
-     * @param req CreateDBInstancesRequest
-     * @return CreateDBInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateDBInstancesResponse CreateDBInstances(CreateDBInstancesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateDBInstances", CreateDBInstancesResponse.class);
     }
 
     /**
@@ -206,17 +217,6 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a PostgreSQL for Serverless instance. If the creation succeeds, the instance ID will be returned.
-     * @param req CreateServerlessDBInstanceRequest
-     * @return CreateServerlessDBInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public CreateServerlessDBInstanceResponse CreateServerlessDBInstance(CreateServerlessDBInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "CreateServerlessDBInstance", CreateServerlessDBInstanceResponse.class);
-    }
-
-    /**
      *This API is used to delete a database account. Oid and UserName must be input simultaneously to avoid accidental deletion. Note: This API is reentrant. If the account no longer exists, calling this API to delete it will not trigger an error.
      * @param req DeleteAccountRequest
      * @return DeleteAccountResponse
@@ -225,6 +225,17 @@ public class PostgresClient extends AbstractClient{
     public DeleteAccountResponse DeleteAccount(DeleteAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAccount", DeleteAccountResponse.class);
+    }
+
+    /**
+     *Deletes an audit log file
+     * @param req DeleteAuditLogFileRequest
+     * @return DeleteAuditLogFileResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteAuditLogFileResponse DeleteAuditLogFile(DeleteAuditLogFileRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteAuditLogFile", DeleteAuditLogFileResponse.class);
     }
 
     /**
@@ -250,7 +261,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a network of an instance.
+     *This API is used to delete a network from an instance while keeping at least one network.
      * @param req DeleteDBInstanceNetworkAccessRequest
      * @return DeleteDBInstanceNetworkAccessResponse
      * @throws TencentCloudSDKException
@@ -294,7 +305,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a network of an RO group.
+     *This API is used to delete a network from an RO group (at least 1 network must remain).
      * @param req DeleteReadOnlyGroupNetworkAccessRequest
      * @return DeleteReadOnlyGroupNetworkAccessResponse
      * @throws TencentCloudSDKException
@@ -302,17 +313,6 @@ public class PostgresClient extends AbstractClient{
     public DeleteReadOnlyGroupNetworkAccessResponse DeleteReadOnlyGroupNetworkAccess(DeleteReadOnlyGroupNetworkAccessRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteReadOnlyGroupNetworkAccess", DeleteReadOnlyGroupNetworkAccessResponse.class);
-    }
-
-    /**
-     *This API is used to delete a PostgreSQL for Serverless instance.
-     * @param req DeleteServerlessDBInstanceRequest
-     * @return DeleteServerlessDBInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public DeleteServerlessDBInstanceResponse DeleteServerlessDBInstance(DeleteServerlessDBInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DeleteServerlessDBInstance", DeleteServerlessDBInstanceResponse.class);
     }
 
     /**
@@ -335,6 +335,39 @@ public class PostgresClient extends AbstractClient{
     public DescribeAccountsResponse DescribeAccounts(DescribeAccountsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeAccounts", DescribeAccountsResponse.class);
+    }
+
+    /**
+     *Query the audit instance list
+     * @param req DescribeAuditInstanceListRequest
+     * @return DescribeAuditInstanceListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditInstanceListResponse DescribeAuditInstanceList(DescribeAuditInstanceListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditInstanceList", DescribeAuditInstanceListResponse.class);
+    }
+
+    /**
+     *Queries audit log files
+     * @param req DescribeAuditLogFilesRequest
+     * @return DescribeAuditLogFilesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogFilesResponse DescribeAuditLogFiles(DescribeAuditLogFilesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditLogFiles", DescribeAuditLogFilesResponse.class);
+    }
+
+    /**
+     *This API is used to query a Database Audit log.
+     * @param req DescribeAuditLogsRequest
+     * @return DescribeAuditLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAuditLogsResponse DescribeAuditLogs(DescribeAuditLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAuditLogs", DescribeAuditLogsResponse.class);
     }
 
     /**
@@ -470,9 +503,9 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the HA configuration of an instance, which includes:
-<li>Allow a standby node to promote to a primary node.
-<li>Allow a semi-sync instance to adopt sync or async replication.
+     *This API (DescribeDBInstanceHConfig) is used to query instance HA configuration information. The HA configuration information includes:
+<li>This API is used to configure conditions for allowing a secondary node to switch over to a primary node.</li>.
+<li>This API is used to configure conditions for using synchronous or asynchronous replication in semi-sync instances.</li>.
      * @param req DescribeDBInstanceHAConfigRequest
      * @return DescribeDBInstanceHAConfigResponse
      * @throws TencentCloudSDKException
@@ -527,17 +560,6 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get a slow query log. Since it was deprecated on September 1, 2021, it has no longer returned data. You need to use the [DescribeSlowQueryList](https://intl.cloud.tencent.com/document/product/409/60540?from_cn_redirect=1) API instead to get slow query logs.
-     * @param req DescribeDBSlowlogsRequest
-     * @return DescribeDBSlowlogsResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeDBSlowlogsResponse DescribeDBSlowlogs(DescribeDBSlowlogsRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeDBSlowlogs", DescribeDBSlowlogsResponse.class);
-    }
-
-    /**
      *This API is used to query the list of supported database versions.
      * @param req DescribeDBVersionsRequest
      * @return DescribeDBVersionsResponse
@@ -549,7 +571,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to get the instance Xlog list. This API is disused and replaced by the [DescribeBaseBackups](https://www.tencentcloud.com/zh/document/product/409/54343) API.
+     *This api is used to get instance Xlog list. This interface belongs to early api and has stopped feature iteration. We recommend using api [DescribeLogBackups](https://www.tencentcloud.com/document/api/409/89021?from_cn_redirect=1) as substitution.
      * @param req DescribeDBXlogsRequest
      * @return DescribeDBXlogsResponse
      * @throws TencentCloudSDKException
@@ -681,7 +703,7 @@ public class PostgresClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the purchasable specification configuration. u200cThis API is disused and replaced by the [DescribeClasses](https://intl.cloud.tencent.com/document/api/409/89019?from_cn_redirect=1) API.
+     *This api is used to query sales specification configuration. This interface belongs to the early stage and has stopped feature iteration. It is recommended to use the new api [DescribeClasses](https://www.tencentcloud.com/document/api/409/89019?from_cn_redirect=1) as an alternative.
      * @param req DescribeProductConfigRequest
      * @return DescribeProductConfigResponse
      * @throws TencentCloudSDKException
@@ -711,17 +733,6 @@ public class PostgresClient extends AbstractClient{
     public DescribeRegionsResponse DescribeRegions(DescribeRegionsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRegions", DescribeRegionsResponse.class);
-    }
-
-    /**
-     *This API is used to query the details of one or more PostgreSQL for Serverless instances.
-     * @param req DescribeServerlessDBInstancesRequest
-     * @return DescribeServerlessDBInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public DescribeServerlessDBInstancesResponse DescribeServerlessDBInstances(DescribeServerlessDBInstancesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "DescribeServerlessDBInstances", DescribeServerlessDBInstancesResponse.class);
     }
 
     /**
@@ -789,17 +800,6 @@ This API is used to show summarized steps, which may be adjusted during version 
     public DisIsolateDBInstancesResponse DisIsolateDBInstances(DisIsolateDBInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DisIsolateDBInstances", DisIsolateDBInstancesResponse.class);
-    }
-
-    /**
-     *This API is used to initialize a TencentDB for PostgreSQL instance. This API is disused and replaced by the [CreateInstances](https://intl.cloud.tencent.com/document/api/409/56107?from_cn_redirect=1) API.
-     * @param req InitDBInstancesRequest
-     * @return InitDBInstancesResponse
-     * @throws TencentCloudSDKException
-     */
-    public InitDBInstancesResponse InitDBInstances(InitDBInstancesRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "InitDBInstances", InitDBInstancesResponse.class);
     }
 
     /**
@@ -880,6 +880,17 @@ This API is used to show summarized steps, which may be adjusted during version 
     }
 
     /**
+     *Modify the audit feature of the database instance
+     * @param req ModifyAuditServiceRequest
+     * @return ModifyAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyAuditServiceResponse ModifyAuditService(ModifyAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyAuditService", ModifyAuditServiceResponse.class);
+    }
+
+    /**
      *This API is used to modify the backup download restrictions.
      * @param req ModifyBackupDownloadRestrictionRequest
      * @return ModifyBackupDownloadRestrictionResponse
@@ -946,9 +957,9 @@ This API is used to show summarized steps, which may be adjusted during version 
     }
 
     /**
-     *This API is used to modify the HA configuration of an instance. which includes:
-<li>Allow the standby node to promote to the primary node.
-<li>Allow a semi-sync instance to adopt sync or async replication.
+     *This API is used to modify instance HA configuration info. Among them, HA configuration info includes:.
+<li>This API is used to configure conditions for allowing a secondary node to switch over to a primary node.</li>.
+<li>This API is used to configure conditions for using synchronous replication or async replication in semi-sync instances.</li>.
      * @param req ModifyDBInstanceHAConfigRequest
      * @return ModifyDBInstanceHAConfigResponse
      * @throws TencentCloudSDKException
@@ -1014,7 +1025,7 @@ This API is used to show summarized steps, which may be adjusted during version 
     }
 
     /**
-     *This API is used to modify instance specifications, including memory and disk size.
+     *This API is used to modify instance specifications, including memory, Disk and Cpu.
      * @param req ModifyDBInstanceSpecRequest
      * @return ModifyDBInstanceSpecResponse
      * @throws TencentCloudSDKException
@@ -1102,6 +1113,28 @@ This API is used to show summarized steps, which may be adjusted during version 
     }
 
     /**
+     *This API is used to enable CAM verification service for a database account.
+     * @param req OpenAccountCAMRequest
+     * @return OpenAccountCAMResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenAccountCAMResponse OpenAccountCAM(OpenAccountCAMRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenAccountCAM", OpenAccountCAMResponse.class);
+    }
+
+    /**
+     *Enable the audit feature of the database instance
+     * @param req OpenAuditServiceRequest
+     * @return OpenAuditServiceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OpenAuditServiceResponse OpenAuditService(OpenAuditServiceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OpenAuditService", OpenAuditServiceResponse.class);
+    }
+
+    /**
      *This API is used to enable the public network access of an instance.
      * @param req OpenDBExtranetAccessRequest
      * @return OpenDBExtranetAccessResponse
@@ -1113,17 +1146,6 @@ This API is used to show summarized steps, which may be adjusted during version 
     }
 
     /**
-     *This API is used to enable the public network address of a PostgreSQL for Serverless instance.
-     * @param req OpenServerlessDBExtranetAccessRequest
-     * @return OpenServerlessDBExtranetAccessResponse
-     * @throws TencentCloudSDKException
-     */
-    public OpenServerlessDBExtranetAccessResponse OpenServerlessDBExtranetAccess(OpenServerlessDBExtranetAccessRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "OpenServerlessDBExtranetAccess", OpenServerlessDBExtranetAccessResponse.class);
-    }
-
-    /**
      *This API is used to rebalance the loads of read-only replicas in an RO group. Please note that connections to those read-only replicas will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases. This operation should be performed with caution.
      * @param req RebalanceReadOnlyGroupRequest
      * @return RebalanceReadOnlyGroupResponse
@@ -1132,6 +1154,17 @@ This API is used to show summarized steps, which may be adjusted during version 
     public RebalanceReadOnlyGroupResponse RebalanceReadOnlyGroup(RebalanceReadOnlyGroupRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RebalanceReadOnlyGroup", RebalanceReadOnlyGroupResponse.class);
+    }
+
+    /**
+     *This API is used to manually reset the password for an account with CAM Verification enabled.
+     * @param req RefreshAccountPasswordRequest
+     * @return RefreshAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public RefreshAccountPasswordResponse RefreshAccountPassword(RefreshAccountPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RefreshAccountPassword", RefreshAccountPasswordResponse.class);
     }
 
     /**
@@ -1201,10 +1234,10 @@ This API is used to show summarized steps, which may be adjusted during version 
     }
 
     /**
-     *This API is used to enable the primary-standby switch of an instance.
-<li>By initiating a switch, you can verify whether the primary-standby switch is performed correctly.
-<li>By using forced switch, you can forcibly initiate the primary-standby switch when the delay of replica node failed to meet the switch requirement.
-<li>This operation can only be performed for the primary instance.
+     *This API is used to switch over primary and replica nodes.
+<li>This API is used to verify whether the business can correctly handle instance primary/backup switch scenarios by initiating switch proactively.</li>.
+<li>This API is used to force a primary-secondary switch when the backup node latency fails to satisfy the switch condition by using forced switching.</li>.
+<li>This API is used to perform this operation on the primary instance only.</li>.
      * @param req SwitchDBInstancePrimaryRequest
      * @return SwitchDBInstancePrimaryResponse
      * @throws TencentCloudSDKException
@@ -1223,17 +1256,6 @@ This API is used to show summarized steps, which may be adjusted during version 
     public UnlockAccountResponse UnlockAccount(UnlockAccountRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "UnlockAccount", UnlockAccountResponse.class);
-    }
-
-    /**
-     *This API is used to upgrade instance configurations. u200cThis API is disused and replaced by the [ModifyDBInstanceSpec](https://intl.cloud.tencent.com/document/api/409/63689?from_cn_redirect=1) API.
-     * @param req UpgradeDBInstanceRequest
-     * @return UpgradeDBInstanceResponse
-     * @throws TencentCloudSDKException
-     */
-    public UpgradeDBInstanceResponse UpgradeDBInstance(UpgradeDBInstanceRequest req) throws TencentCloudSDKException{
-        req.setSkipSign(false);
-        return this.internalRequest(req, "UpgradeDBInstance", UpgradeDBInstanceResponse.class);
     }
 
     /**

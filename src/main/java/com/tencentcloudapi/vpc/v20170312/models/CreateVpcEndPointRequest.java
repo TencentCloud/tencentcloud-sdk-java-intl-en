@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateVpcEndPointRequest extends AbstractModel {
 
     /**
-    * VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
+    * VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+    * Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
     */
     @SerializedName("SubnetId")
     @Expose
@@ -45,7 +45,7 @@ public class CreateVpcEndPointRequest extends AbstractModel {
     private String EndPointName;
 
     /**
-    * Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+    * Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
     */
     @SerializedName("EndPointServiceId")
     @Expose
@@ -59,7 +59,7 @@ public class CreateVpcEndPointRequest extends AbstractModel {
     private String EndPointVip;
 
     /**
-    * Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+    * Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
     */
     @SerializedName("SecurityGroupId")
     @Expose
@@ -80,32 +80,32 @@ public class CreateVpcEndPointRequest extends AbstractModel {
     private String IpAddressType;
 
     /**
-     * Get VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1). 
-     * @return VpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
+     * Get VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1). 
+     * @return VpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
-     * @param VpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/1108/43663?from_cn_redirect=1).
+     * Set VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
+     * @param VpcId VPC instance ID. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/1108/43663?from_cn_redirect=1).
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api. 
-     * @return SubnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+     * Get Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api. 
+     * @return SubnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
-     * @param SubnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.comom/document/product/215/15784?from_cn_redirect=1) api.
+     * Set Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
+     * @param SubnetId Subnet instance ID. can be obtained through the [DescribeSubnets](https://www.tencentcloud.com/document/product/215/15784?from_cn_redirect=1) api.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -128,16 +128,16 @@ public class CreateVpcEndPointRequest extends AbstractModel {
     }
 
     /**
-     * Get Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api. 
-     * @return EndPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+     * Get Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api. 
+     * @return EndPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
      */
     public String getEndPointServiceId() {
         return this.EndPointServiceId;
     }
 
     /**
-     * Set Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
-     * @param EndPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.comom/document/product/215/54678?from_cn_redirect=1) api.
+     * Set Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
+     * @param EndPointServiceId Endpoint service ID, which can be obtained through the [DescribeVpcEndPointService](https://www.tencentcloud.com/document/product/215/54678?from_cn_redirect=1) api.
      */
     public void setEndPointServiceId(String EndPointServiceId) {
         this.EndPointServiceId = EndPointServiceId;
@@ -160,16 +160,16 @@ public class CreateVpcEndPointRequest extends AbstractModel {
     }
 
     /**
-     * Get Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1). 
-     * @return SecurityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * Get Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1). 
+     * @return SecurityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
      */
     public String getSecurityGroupId() {
         return this.SecurityGroupId;
     }
 
     /**
-     * Set Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
-     * @param SecurityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.comom/document/product/215/15808?from_cn_redirect=1).
+     * Set Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
+     * @param SecurityGroupId Security group ID. can be obtained through the API [DescribeSecurityGroups](https://www.tencentcloud.com/document/product/215/15808?from_cn_redirect=1).
      */
     public void setSecurityGroupId(String SecurityGroupId) {
         this.SecurityGroupId = SecurityGroupId;

@@ -50,6 +50,28 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *Release the analysis cluster from quarantined state
+     * @param req ActivateLibraDBClusterRequest
+     * @return ActivateLibraDBClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateLibraDBClusterResponse ActivateLibraDBCluster(ActivateLibraDBClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActivateLibraDBCluster", ActivateLibraDBClusterResponse.class);
+    }
+
+    /**
+     *This API is used to unbind an isolated read-only analysis engine instance.
+     * @param req ActivateLibraDBInstanceRequest
+     * @return ActivateLibraDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ActivateLibraDBInstanceResponse ActivateLibraDBInstance(ActivateLibraDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ActivateLibraDBInstance", ActivateLibraDBInstanceResponse.class);
+    }
+
+    /**
      *This interface (AddClusterSlaveZone) is used to enable multi-az deployment for a cluster.
      * @param req AddClusterSlaveZoneRequest
      * @return AddClusterSlaveZoneResponse
@@ -72,6 +94,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to add read-only analysis engine to a cluster.
+     * @param req AddLibraDBInstancesRequest
+     * @return AddLibraDBInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddLibraDBInstancesResponse AddLibraDBInstances(AddLibraDBInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddLibraDBInstances", AddLibraDBInstancesResponse.class);
+    }
+
+    /**
      *This API is used to bind resource packages to a cluster.
      * @param req BindClusterResourcePackagesRequest
      * @return BindClusterResourcePackagesResponse
@@ -80,6 +113,17 @@ public class CynosdbClient extends AbstractClient{
     public BindClusterResourcePackagesResponse BindClusterResourcePackages(BindClusterResourcePackagesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "BindClusterResourcePackages", BindClusterResourcePackagesResponse.class);
+    }
+
+    /**
+     *This API is used to verify whether it is possible to add a read-only analysis engine instance to the cluster.
+     * @param req CheckCreateLibraDBInstanceRequest
+     * @return CheckCreateLibraDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckCreateLibraDBInstanceResponse CheckCreateLibraDBInstance(CheckCreateLibraDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckCreateLibraDBInstance", CheckCreateLibraDBInstanceResponse.class);
     }
 
     /**
@@ -237,6 +281,28 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create an analysis cluster account.
+     * @param req CreateLibraDBClusterAccountsRequest
+     * @return CreateLibraDBClusterAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLibraDBClusterAccountsResponse CreateLibraDBClusterAccounts(CreateLibraDBClusterAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLibraDBClusterAccounts", CreateLibraDBClusterAccountsResponse.class);
+    }
+
+    /**
+     *This API is used to create a TDSQL-C analysis cluster
+     * @param req CreateLibraDBClustersRequest
+     * @return CreateLibraDBClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateLibraDBClustersResponse CreateLibraDBClusters(CreateLibraDBClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateLibraDBClusters", CreateLibraDBClustersResponse.class);
+    }
+
+    /**
      *This API is used to create parameter templates.
      * @param req CreateParamTemplateRequest
      * @return CreateParamTemplateResponse
@@ -333,6 +399,28 @@ public class CynosdbClient extends AbstractClient{
     public DeleteClusterDatabaseResponse DeleteClusterDatabase(DeleteClusterDatabaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteClusterDatabase", DeleteClusterDatabaseResponse.class);
+    }
+
+    /**
+     *Deleting a TDSQL-C Analysis Cluster
+     * @param req DeleteLibraDBClusterRequest
+     * @return DeleteLibraDBClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLibraDBClusterResponse DeleteLibraDBCluster(DeleteLibraDBClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLibraDBCluster", DeleteLibraDBClusterResponse.class);
+    }
+
+    /**
+     *This API is used to delete cluster accounts.
+     * @param req DeleteLibraDBClusterAccountsRequest
+     * @return DeleteLibraDBClusterAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteLibraDBClusterAccountsResponse DeleteLibraDBClusterAccounts(DeleteLibraDBClusterAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteLibraDBClusterAccounts", DeleteLibraDBClusterAccountsResponse.class);
     }
 
     /**
@@ -751,6 +839,39 @@ public class CynosdbClient extends AbstractClient{
     public DescribeIsolatedInstancesResponse DescribeIsolatedInstances(DescribeIsolatedInstancesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeIsolatedInstances", DescribeIsolatedInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to query and analyze all permissions of a cluster account.
+     * @param req DescribeLibraDBClusterAccountAllPrivilegesRequest
+     * @return DescribeLibraDBClusterAccountAllPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClusterAccountAllPrivilegesResponse DescribeLibraDBClusterAccountAllPrivileges(DescribeLibraDBClusterAccountAllPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusterAccountAllPrivileges", DescribeLibraDBClusterAccountAllPrivilegesResponse.class);
+    }
+
+    /**
+     *This API is used to query the permissions of a cluster account.
+     * @param req DescribeLibraDBClusterAccountPrivilegesRequest
+     * @return DescribeLibraDBClusterAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClusterAccountPrivilegesResponse DescribeLibraDBClusterAccountPrivileges(DescribeLibraDBClusterAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusterAccountPrivileges", DescribeLibraDBClusterAccountPrivilegesResponse.class);
+    }
+
+    /**
+     *This API is used to query and analyze cluster accounts.
+     * @param req DescribeLibraDBClusterAccountsRequest
+     * @return DescribeLibraDBClusterAccountsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClusterAccountsResponse DescribeLibraDBClusterAccounts(DescribeLibraDBClusterAccountsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusterAccounts", DescribeLibraDBClusterAccountsResponse.class);
     }
 
     /**

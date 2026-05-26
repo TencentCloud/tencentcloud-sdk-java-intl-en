@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AddressTemplateSpecification extends AbstractModel {
 
     /**
-    * IP address ID, such as `eipm-2uw6ujo6`.
+    * IP address ID, such as `eipm-2uw6ujo6`. 
     */
     @SerializedName("AddressId")
     @Expose
@@ -38,16 +38,16 @@ public class AddressTemplateSpecification extends AbstractModel {
     private String AddressGroupId;
 
     /**
-     * Get IP address ID, such as `eipm-2uw6ujo6`. 
-     * @return AddressId IP address ID, such as `eipm-2uw6ujo6`.
+     * Get IP address ID, such as `eipm-2uw6ujo6`.  
+     * @return AddressId IP address ID, such as `eipm-2uw6ujo6`. 
      */
     public String getAddressId() {
         return this.AddressId;
     }
 
     /**
-     * Set IP address ID, such as `eipm-2uw6ujo6`.
-     * @param AddressId IP address ID, such as `eipm-2uw6ujo6`.
+     * Set IP address ID, such as `eipm-2uw6ujo6`. 
+     * @param AddressId IP address ID, such as `eipm-2uw6ujo6`. 
      */
     public void setAddressId(String AddressId) {
         this.AddressId = AddressId;

@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeMNPApprovalListRequest extends AbstractModel {
 
     /**
-    * Page offset
+    * Pagination offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results per page
+    * Number of entries per page.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Approval status. 1: Processing; 2: Rejected; 3: Approved; 4 Cancelled
+    * Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
     */
     @SerializedName("ApprovalStatusList")
     @Expose
     private Long [] ApprovalStatusList;
 
     /**
-    * Keywords of the mini program name to search
+    * Search keyword (mini program name).
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * Application ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Team ID
+    * Team ID.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-     * Get Page offset 
-     * @return Offset Page offset
+     * Get Pagination offset. 
+     * @return Offset Pagination offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page offset
-     * @param Offset Page offset
+     * Set Pagination offset.
+     * @param Offset Pagination offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results per page 
-     * @return Limit Number of results per page
+     * Get Number of entries per page. 
+     * @return Limit Number of entries per page.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page
-     * @param Limit Number of results per page
+     * Set Number of entries per page.
+     * @param Limit Number of entries per page.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Approval status. 1: Processing; 2: Rejected; 3: Approved; 4 Cancelled 
-     * @return ApprovalStatusList Approval status. 1: Processing; 2: Rejected; 3: Approved; 4 Cancelled
+     * Get Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled. 
+     * @return ApprovalStatusList Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     public Long [] getApprovalStatusList() {
         return this.ApprovalStatusList;
     }
 
     /**
-     * Set Approval status. 1: Processing; 2: Rejected; 3: Approved; 4 Cancelled
-     * @param ApprovalStatusList Approval status. 1: Processing; 2: Rejected; 3: Approved; 4 Cancelled
+     * Set Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+     * @param ApprovalStatusList Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     public void setApprovalStatusList(Long [] ApprovalStatusList) {
         this.ApprovalStatusList = ApprovalStatusList;
     }
 
     /**
-     * Get Keywords of the mini program name to search 
-     * @return Keyword Keywords of the mini program name to search
+     * Get Search keyword (mini program name). 
+     * @return Keyword Search keyword (mini program name).
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set Keywords of the mini program name to search
-     * @param Keyword Keywords of the mini program name to search
+     * Set Search keyword (mini program name).
+     * @param Keyword Search keyword (mini program name).
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get Application ID 
-     * @return ApplicationId Application ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Application ID
-     * @param ApplicationId Application ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Team ID 
-     * @return TeamId Team ID
+     * Get Team ID. 
+     * @return TeamId Team ID.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID
-     * @param TeamId Team ID
+     * Set Team ID.
+     * @param TeamId Team ID.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;

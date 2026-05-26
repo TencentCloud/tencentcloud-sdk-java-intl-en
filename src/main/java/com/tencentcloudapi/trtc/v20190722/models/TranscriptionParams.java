@@ -24,118 +24,164 @@ import java.util.HashMap;
 public class TranscriptionParams extends AbstractModel {
 
     /**
-    * The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
+    * The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
+    * Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
     */
     @SerializedName("UserSig")
     @Expose
     private String UserSig;
 
     /**
-    * If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
+    * After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
     */
     @SerializedName("MaxIdleTime")
     @Expose
     private Long MaxIdleTime;
 
     /**
-    * 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
+    * 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
     */
     @SerializedName("TranscriptionMode")
     @Expose
     private Long TranscriptionMode;
 
     /**
-    * Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
+    * Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
     */
     @SerializedName("TargetUserId")
     @Expose
     private String TargetUserId;
 
     /**
-     * Get The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room. 
-     * @return UserId The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
+    * Voiceprint configuration.
+    */
+    @SerializedName("VoicePrint")
+    @Expose
+    private VoicePrint VoicePrint;
+
+    /**
+    * Semantic sentence segmentation detection.
+    */
+    @SerializedName("TurnDetection")
+    @Expose
+    private TurnDetection TurnDetection;
+
+    /**
+     * Get The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room. 
+     * @return UserId The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
-     * @param UserId The robot's UserId is used to enter a room and initiate tasks. [Note] This UserId cannot be repeated with the host viewer [UserId](https://cloud.tencent.com/document/product/647/46351#userid) in the current room. If multiple tasks are initiated in a room, the robot's UserId cannot be repeated, otherwise the previous task will be interrupted. The robot's UserId must be unique in the room.
+     * Set The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
+     * @param UserId The transcription robot's UserId is used to enter the room and trigger a transcription task. note that this UserId cannot be the same as the host or audience [UserId](https://www.tencentcloud.com/document/product/647/46351?from_cn_redirect=1#UserId) in the current room. if multiple transcription tasks are initiated in a room, the robot's UserId must also be unique to avoid interrupting the previous task. ensure the transcription robot's UserId is unique in the room.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution. 
-     * @return UserSig The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
+     * Get Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating. 
+     * @return UserSig Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
      */
     public String getUserSig() {
         return this.UserSig;
     }
 
     /**
-     * Set The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
-     * @param UserSig The verification signature corresponding to the robot's UserId, that is, UserId and UserSig are equivalent to the robot's login password to enter the room. For the specific calculation method, please refer to the TRTC calculation [UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig) solution.
+     * Set Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
+     * @param UserSig Verification signature corresponding to the transcription bot's UserId, namely, the UserId and UserSig serve as the login password for the transcription bot to enter the room. for specific calculation methods, see TRTC solution for calculating.
      */
     public void setUserSig(String UserSig) {
         this.UserSig = UserSig;
     }
 
     /**
-     * Get If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s. 
-     * @return MaxIdleTime If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
+     * Get After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s. 
+     * @return MaxIdleTime After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
      */
     public Long getMaxIdleTime() {
         return this.MaxIdleTime;
     }
 
     /**
-     * Set If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
-     * @param MaxIdleTime If there is no streaming in the room for more than MaxIdleTime, the background will automatically close the task. The default value is 60s.
+     * Set After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
+     * @param MaxIdleTime After all push users exit the room and exceed MaxIdleTime seconds, the backend automation shuts down the transcription task. default value is 60s.
      */
     public void setMaxIdleTime(Long MaxIdleTime) {
         this.MaxIdleTime = MaxIdleTime;
     }
 
     /**
-     * Get 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default. 
-     * @return TranscriptionMode 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
+     * Get 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room. 
+     * @return TranscriptionMode 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
      */
     public Long getTranscriptionMode() {
         return this.TranscriptionMode;
     }
 
     /**
-     * Set 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
-     * @param TranscriptionMode 1 means the robot subscribes to the stream of only one person, 0 means the robot subscribes to the stream of the entire room. If it is not filled in, the robot subscribes to the stream of the entire room by default.
+     * Set 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
+     * @param TranscriptionMode 1 means the robot subscribes to the stream of an individual, and 0 means the robot subscribes to the stream of the entire room. if left empty, it defaults to subscribing to the stream of the entire room.
      */
     public void setTranscriptionMode(Long TranscriptionMode) {
         this.TranscriptionMode = TranscriptionMode;
     }
 
     /**
-     * Get Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room. 
-     * @return TargetUserId Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
+     * Get Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room. 
+     * @return TargetUserId Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
      */
     public String getTargetUserId() {
         return this.TargetUserId;
     }
 
     /**
-     * Set Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
-     * @param TargetUserId Required when TranscriptionMode is 1. The robot will only pull the stream of the userid and ignore other users in the room.
+     * Set Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
+     * @param TargetUserId Required when TranscriptionMode is 1, the robot only pulls streams from this userid and ignores other users in the room.
      */
     public void setTargetUserId(String TargetUserId) {
         this.TargetUserId = TargetUserId;
+    }
+
+    /**
+     * Get Voiceprint configuration. 
+     * @return VoicePrint Voiceprint configuration.
+     */
+    public VoicePrint getVoicePrint() {
+        return this.VoicePrint;
+    }
+
+    /**
+     * Set Voiceprint configuration.
+     * @param VoicePrint Voiceprint configuration.
+     */
+    public void setVoicePrint(VoicePrint VoicePrint) {
+        this.VoicePrint = VoicePrint;
+    }
+
+    /**
+     * Get Semantic sentence segmentation detection. 
+     * @return TurnDetection Semantic sentence segmentation detection.
+     */
+    public TurnDetection getTurnDetection() {
+        return this.TurnDetection;
+    }
+
+    /**
+     * Set Semantic sentence segmentation detection.
+     * @param TurnDetection Semantic sentence segmentation detection.
+     */
+    public void setTurnDetection(TurnDetection TurnDetection) {
+        this.TurnDetection = TurnDetection;
     }
 
     public TranscriptionParams() {
@@ -161,6 +207,12 @@ public class TranscriptionParams extends AbstractModel {
         if (source.TargetUserId != null) {
             this.TargetUserId = new String(source.TargetUserId);
         }
+        if (source.VoicePrint != null) {
+            this.VoicePrint = new VoicePrint(source.VoicePrint);
+        }
+        if (source.TurnDetection != null) {
+            this.TurnDetection = new TurnDetection(source.TurnDetection);
+        }
     }
 
 
@@ -173,6 +225,8 @@ public class TranscriptionParams extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxIdleTime", this.MaxIdleTime);
         this.setParamSimple(map, prefix + "TranscriptionMode", this.TranscriptionMode);
         this.setParamSimple(map, prefix + "TargetUserId", this.TargetUserId);
+        this.setParamObj(map, prefix + "VoicePrint.", this.VoicePrint);
+        this.setParamObj(map, prefix + "TurnDetection.", this.TurnDetection);
 
     }
 }

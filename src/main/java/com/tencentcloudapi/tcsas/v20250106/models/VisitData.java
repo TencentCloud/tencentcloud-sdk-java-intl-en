@@ -24,143 +24,138 @@ import java.util.HashMap;
 public class VisitData extends AbstractModel {
 
     /**
-    * Number of visits
+    * Number of visits.
     */
     @SerializedName("VisitCount")
     @Expose
     private Long VisitCount;
 
     /**
-    * Average pages per device - visit_page_count / active_device_num
+    * Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
     */
     @SerializedName("AvgDeviceVisitDeep")
     @Expose
     private String AvgDeviceVisitDeep;
 
     /**
-    * Pages per visit - visit_page_count / miniapp_open_num
+    * Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
     */
     @SerializedName("AvgCountVisitDeep")
     @Expose
     private String AvgCountVisitDeep;
 
     /**
-    * Average visit duration - miniapp_total_duration / visit_page_count
+    * Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
     */
     @SerializedName("AvgPageVisitDuration")
     @Expose
     private String AvgPageVisitDuration;
 
     /**
-    * Average visit duration per session
-miniapp_total_duration/miniapp_open_num
+    * Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
     */
     @SerializedName("AvgCountVisitDuration")
     @Expose
     private String AvgCountVisitDuration;
 
     /**
-    * Refresh time in YYYYMMDD format
+    * Refresh time in YYYYMMDD format.
     */
     @SerializedName("DataTime")
     @Expose
     private Long DataTime;
 
     /**
-     * Get Number of visits 
-     * @return VisitCount Number of visits
+     * Get Number of visits. 
+     * @return VisitCount Number of visits.
      */
     public Long getVisitCount() {
         return this.VisitCount;
     }
 
     /**
-     * Set Number of visits
-     * @param VisitCount Number of visits
+     * Set Number of visits.
+     * @param VisitCount Number of visits.
      */
     public void setVisitCount(Long VisitCount) {
         this.VisitCount = VisitCount;
     }
 
     /**
-     * Get Average pages per device - visit_page_count / active_device_num 
-     * @return AvgDeviceVisitDeep Average pages per device - visit_page_count / active_device_num
+     * Get Average pages viewed per device. Calculated as: visit_page_count / active_device_num. 
+     * @return AvgDeviceVisitDeep Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
      */
     public String getAvgDeviceVisitDeep() {
         return this.AvgDeviceVisitDeep;
     }
 
     /**
-     * Set Average pages per device - visit_page_count / active_device_num
-     * @param AvgDeviceVisitDeep Average pages per device - visit_page_count / active_device_num
+     * Set Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
+     * @param AvgDeviceVisitDeep Average pages viewed per device. Calculated as: visit_page_count / active_device_num.
      */
     public void setAvgDeviceVisitDeep(String AvgDeviceVisitDeep) {
         this.AvgDeviceVisitDeep = AvgDeviceVisitDeep;
     }
 
     /**
-     * Get Pages per visit - visit_page_count / miniapp_open_num 
-     * @return AvgCountVisitDeep Pages per visit - visit_page_count / miniapp_open_num
+     * Get Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num. 
+     * @return AvgCountVisitDeep Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
      */
     public String getAvgCountVisitDeep() {
         return this.AvgCountVisitDeep;
     }
 
     /**
-     * Set Pages per visit - visit_page_count / miniapp_open_num
-     * @param AvgCountVisitDeep Pages per visit - visit_page_count / miniapp_open_num
+     * Set Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
+     * @param AvgCountVisitDeep Average pages viewed per session. Calculated as: visit_page_count / miniapp_open_num.
      */
     public void setAvgCountVisitDeep(String AvgCountVisitDeep) {
         this.AvgCountVisitDeep = AvgCountVisitDeep;
     }
 
     /**
-     * Get Average visit duration - miniapp_total_duration / visit_page_count 
-     * @return AvgPageVisitDuration Average visit duration - miniapp_total_duration / visit_page_count
+     * Get Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count. 
+     * @return AvgPageVisitDuration Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
      */
     public String getAvgPageVisitDuration() {
         return this.AvgPageVisitDuration;
     }
 
     /**
-     * Set Average visit duration - miniapp_total_duration / visit_page_count
-     * @param AvgPageVisitDuration Average visit duration - miniapp_total_duration / visit_page_count
+     * Set Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
+     * @param AvgPageVisitDuration Average page visit duration. Calculated as: miniapp_total_duration / visit_page_count.
      */
     public void setAvgPageVisitDuration(String AvgPageVisitDuration) {
         this.AvgPageVisitDuration = AvgPageVisitDuration;
     }
 
     /**
-     * Get Average visit duration per session
-miniapp_total_duration/miniapp_open_num 
-     * @return AvgCountVisitDuration Average visit duration per session
-miniapp_total_duration/miniapp_open_num
+     * Get Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num. 
+     * @return AvgCountVisitDuration Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
      */
     public String getAvgCountVisitDuration() {
         return this.AvgCountVisitDuration;
     }
 
     /**
-     * Set Average visit duration per session
-miniapp_total_duration/miniapp_open_num
-     * @param AvgCountVisitDuration Average visit duration per session
-miniapp_total_duration/miniapp_open_num
+     * Set Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
+     * @param AvgCountVisitDuration Average visit duration per session. Calculated as: miniapp_total_duration / miniapp_open_num.
      */
     public void setAvgCountVisitDuration(String AvgCountVisitDuration) {
         this.AvgCountVisitDuration = AvgCountVisitDuration;
     }
 
     /**
-     * Get Refresh time in YYYYMMDD format 
-     * @return DataTime Refresh time in YYYYMMDD format
+     * Get Refresh time in YYYYMMDD format. 
+     * @return DataTime Refresh time in YYYYMMDD format.
      */
     public Long getDataTime() {
         return this.DataTime;
     }
 
     /**
-     * Set Refresh time in YYYYMMDD format
-     * @param DataTime Refresh time in YYYYMMDD format
+     * Set Refresh time in YYYYMMDD format.
+     * @param DataTime Refresh time in YYYYMMDD format.
      */
     public void setDataTime(Long DataTime) {
         this.DataTime = DataTime;

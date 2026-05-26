@@ -24,368 +24,368 @@ import java.util.HashMap;
 public class DescribeApplicationListData extends AbstractModel {
 
     /**
-    * Application ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * App Id.
+    * Superapp identity ID.
     */
     @SerializedName("AppIdentityId")
     @Expose
     private Long AppIdentityId;
 
     /**
-    * Name
+    * Superapp name.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Icon
+    * Superapp icon.
     */
     @SerializedName("Logo")
     @Expose
     private String Logo;
 
     /**
-    * Remarks
+    * Remarks.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Android app package name
+    * Android superapp package name. 
     */
     @SerializedName("AndroidAppKey")
     @Expose
     private String AndroidAppKey;
 
     /**
-    * iOS App bundleId
+    * iOS superapp bundle ID. 
     */
     @SerializedName("IosAppKey")
     @Expose
     private String IosAppKey;
 
     /**
-    * Creator
+    * Creator.
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Specifies the updater.
+    * Last modifier.
     */
     @SerializedName("UpdateUser")
     @Expose
     private String UpdateUser;
 
     /**
-    * Update time
+    * Last modified time. 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Introduction
+    * Superapp introduction.
     */
     @SerializedName("Intro")
     @Expose
     private String Intro;
 
     /**
-    * Team Id.
+    * Team ID.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Team name
+    * Team name.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Number of sensitive apis.
+    * Number of sensitive APIs.
     */
     @SerializedName("SensitiveApiCount")
     @Expose
     private Long SensitiveApiCount;
 
     /**
-    * Application type. 1: Test; 2: Formal
+    * Superapp type. Valid values: 1: Test; 2: Production.
     */
     @SerializedName("ApplicationType")
     @Expose
     private Long ApplicationType;
 
     /**
-     * Get Application ID 
-     * @return ApplicationId Application ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Application ID
-     * @param ApplicationId Application ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get App Id. 
-     * @return AppIdentityId App Id.
+     * Get Superapp identity ID. 
+     * @return AppIdentityId Superapp identity ID.
      */
     public Long getAppIdentityId() {
         return this.AppIdentityId;
     }
 
     /**
-     * Set App Id.
-     * @param AppIdentityId App Id.
+     * Set Superapp identity ID.
+     * @param AppIdentityId Superapp identity ID.
      */
     public void setAppIdentityId(Long AppIdentityId) {
         this.AppIdentityId = AppIdentityId;
     }
 
     /**
-     * Get Name 
-     * @return ApplicationName Name
+     * Get Superapp name. 
+     * @return ApplicationName Superapp name.
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Name
-     * @param ApplicationName Name
+     * Set Superapp name.
+     * @param ApplicationName Superapp name.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Icon 
-     * @return Logo Icon
+     * Get Superapp icon. 
+     * @return Logo Superapp icon.
      */
     public String getLogo() {
         return this.Logo;
     }
 
     /**
-     * Set Icon
-     * @param Logo Icon
+     * Set Superapp icon.
+     * @param Logo Superapp icon.
      */
     public void setLogo(String Logo) {
         this.Logo = Logo;
     }
 
     /**
-     * Get Remarks 
-     * @return Remark Remarks
+     * Get Remarks. 
+     * @return Remark Remarks.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-     * @param Remark Remarks
+     * Set Remarks.
+     * @param Remark Remarks.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Android app package name 
-     * @return AndroidAppKey Android app package name
+     * Get Android superapp package name.  
+     * @return AndroidAppKey Android superapp package name. 
      */
     public String getAndroidAppKey() {
         return this.AndroidAppKey;
     }
 
     /**
-     * Set Android app package name
-     * @param AndroidAppKey Android app package name
+     * Set Android superapp package name. 
+     * @param AndroidAppKey Android superapp package name. 
      */
     public void setAndroidAppKey(String AndroidAppKey) {
         this.AndroidAppKey = AndroidAppKey;
     }
 
     /**
-     * Get iOS App bundleId 
-     * @return IosAppKey iOS App bundleId
+     * Get iOS superapp bundle ID.  
+     * @return IosAppKey iOS superapp bundle ID. 
      */
     public String getIosAppKey() {
         return this.IosAppKey;
     }
 
     /**
-     * Set iOS App bundleId
-     * @param IosAppKey iOS App bundleId
+     * Set iOS superapp bundle ID. 
+     * @param IosAppKey iOS superapp bundle ID. 
      */
     public void setIosAppKey(String IosAppKey) {
         this.IosAppKey = IosAppKey;
     }
 
     /**
-     * Get Creator 
-     * @return CreateUser Creator
+     * Get Creator. 
+     * @return CreateUser Creator.
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Creator
-     * @param CreateUser Creator
+     * Set Creator.
+     * @param CreateUser Creator.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Specifies the updater. 
-     * @return UpdateUser Specifies the updater.
+     * Get Last modifier. 
+     * @return UpdateUser Last modifier.
      */
     public String getUpdateUser() {
         return this.UpdateUser;
     }
 
     /**
-     * Set Specifies the updater.
-     * @param UpdateUser Specifies the updater.
+     * Set Last modifier.
+     * @param UpdateUser Last modifier.
      */
     public void setUpdateUser(String UpdateUser) {
         this.UpdateUser = UpdateUser;
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get Last modified time.  
+     * @return UpdateTime Last modified time. 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set Last modified time. 
+     * @param UpdateTime Last modified time. 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Introduction 
-     * @return Intro Introduction
+     * Get Superapp introduction. 
+     * @return Intro Superapp introduction.
      */
     public String getIntro() {
         return this.Intro;
     }
 
     /**
-     * Set Introduction
-     * @param Intro Introduction
+     * Set Superapp introduction.
+     * @param Intro Superapp introduction.
      */
     public void setIntro(String Intro) {
         this.Intro = Intro;
     }
 
     /**
-     * Get Team Id. 
-     * @return TeamId Team Id.
+     * Get Team ID. 
+     * @return TeamId Team ID.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team Id.
-     * @param TeamId Team Id.
+     * Set Team ID.
+     * @param TeamId Team ID.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name 
-     * @return TeamName Team name
+     * Get Team name. 
+     * @return TeamName Team name.
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name
-     * @param TeamName Team name
+     * Set Team name.
+     * @param TeamName Team name.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Number of sensitive apis. 
-     * @return SensitiveApiCount Number of sensitive apis.
+     * Get Number of sensitive APIs. 
+     * @return SensitiveApiCount Number of sensitive APIs.
      */
     public Long getSensitiveApiCount() {
         return this.SensitiveApiCount;
     }
 
     /**
-     * Set Number of sensitive apis.
-     * @param SensitiveApiCount Number of sensitive apis.
+     * Set Number of sensitive APIs.
+     * @param SensitiveApiCount Number of sensitive APIs.
      */
     public void setSensitiveApiCount(Long SensitiveApiCount) {
         this.SensitiveApiCount = SensitiveApiCount;
     }
 
     /**
-     * Get Application type. 1: Test; 2: Formal 
-     * @return ApplicationType Application type. 1: Test; 2: Formal
+     * Get Superapp type. Valid values: 1: Test; 2: Production. 
+     * @return ApplicationType Superapp type. Valid values: 1: Test; 2: Production.
      */
     public Long getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set Application type. 1: Test; 2: Formal
-     * @param ApplicationType Application type. 1: Test; 2: Formal
+     * Set Superapp type. Valid values: 1: Test; 2: Production.
+     * @param ApplicationType Superapp type. Valid values: 1: Test; 2: Production.
      */
     public void setApplicationType(Long ApplicationType) {
         this.ApplicationType = ApplicationType;

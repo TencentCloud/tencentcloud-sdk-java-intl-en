@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class Externals extends AbstractModel {
 
     /**
-    * Release address
-Note: This field may return null, indicating that no valid value is found.
+    * Release Address
     */
     @SerializedName("ReleaseAddress")
     @Expose
     private Boolean ReleaseAddress;
 
     /**
-    * Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
+    * Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
     */
     @SerializedName("UnsupportNetworks")
     @Expose
     private String [] UnsupportNetworks;
 
     /**
-    * Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+    * Specifies the HDD local storage attributes.
     */
     @SerializedName("StorageBlockAttr")
     @Expose
     private StorageBlock StorageBlockAttr;
 
     /**
-     * Get Release address
-Note: This field may return null, indicating that no valid value is found. 
-     * @return ReleaseAddress Release address
-Note: This field may return null, indicating that no valid value is found.
+     * Get Release Address 
+     * @return ReleaseAddress Release Address
      */
     public Boolean getReleaseAddress() {
         return this.ReleaseAddress;
     }
 
     /**
-     * Set Release address
-Note: This field may return null, indicating that no valid value is found.
-     * @param ReleaseAddress Release address
-Note: This field may return null, indicating that no valid value is found.
+     * Set Release Address
+     * @param ReleaseAddress Release Address
      */
     public void setReleaseAddress(Boolean ReleaseAddress) {
         this.ReleaseAddress = ReleaseAddress;
     }
 
     /**
-     * Get Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found. 
-     * @return UnsupportNetworks Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
+     * Get Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>. 
+     * @return UnsupportNetworks Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
      */
     public String [] getUnsupportNetworks() {
         return this.UnsupportNetworks;
     }
 
     /**
-     * Set Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
-     * @param UnsupportNetworks Not supported network. Value: <br><li>BASIC: classic network<br><li>VPC1.0: VPC1.0
-Note: This field may return null, indicating that no valid value was found.
+     * Set Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
+     * @param UnsupportNetworks Unsupported network type. valid values: <br><li>BASIC: BASIC network</li><li>VPC1.0: private network VPC1.0</li>.
      */
     public void setUnsupportNetworks(String [] UnsupportNetworks) {
         this.UnsupportNetworks = UnsupportNetworks;
     }
 
     /**
-     * Get Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found. 
-     * @return StorageBlockAttr Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+     * Get Specifies the HDD local storage attributes. 
+     * @return StorageBlockAttr Specifies the HDD local storage attributes.
      */
     public StorageBlock getStorageBlockAttr() {
         return this.StorageBlockAttr;
     }
 
     /**
-     * Set Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
-     * @param StorageBlockAttr Attributes of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+     * Set Specifies the HDD local storage attributes.
+     * @param StorageBlockAttr Specifies the HDD local storage attributes.
      */
     public void setStorageBlockAttr(StorageBlock StorageBlockAttr) {
         this.StorageBlockAttr = StorageBlockAttr;

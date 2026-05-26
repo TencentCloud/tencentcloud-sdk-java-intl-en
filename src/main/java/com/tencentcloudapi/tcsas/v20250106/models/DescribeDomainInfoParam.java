@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeDomainInfoParam extends AbstractModel {
 
     /**
-    * Multiple domain separators ';'.
+    * Multiple domains concatenated with semicolons (;). 
     */
     @SerializedName("DomainUrl")
     @Expose
     private String DomainUrl;
 
     /**
-    * Domain type 1-requests domain 2-business domain.
+    * Domain type. Valid values: 1 Requests domain; 2 web-view domain.
     */
     @SerializedName("DomainType")
     @Expose
     private Long DomainType;
 
     /**
-     * Get Multiple domain separators ';'. 
-     * @return DomainUrl Multiple domain separators ';'.
+     * Get Multiple domains concatenated with semicolons (;).  
+     * @return DomainUrl Multiple domains concatenated with semicolons (;). 
      */
     public String getDomainUrl() {
         return this.DomainUrl;
     }
 
     /**
-     * Set Multiple domain separators ';'.
-     * @param DomainUrl Multiple domain separators ';'.
+     * Set Multiple domains concatenated with semicolons (;). 
+     * @param DomainUrl Multiple domains concatenated with semicolons (;). 
      */
     public void setDomainUrl(String DomainUrl) {
         this.DomainUrl = DomainUrl;
     }
 
     /**
-     * Get Domain type 1-requests domain 2-business domain. 
-     * @return DomainType Domain type 1-requests domain 2-business domain.
+     * Get Domain type. Valid values: 1 Requests domain; 2 web-view domain. 
+     * @return DomainType Domain type. Valid values: 1 Requests domain; 2 web-view domain.
      */
     public Long getDomainType() {
         return this.DomainType;
     }
 
     /**
-     * Set Domain type 1-requests domain 2-business domain.
-     * @param DomainType Domain type 1-requests domain 2-business domain.
+     * Set Domain type. Valid values: 1 Requests domain; 2 web-view domain.
+     * @param DomainType Domain type. Valid values: 1 Requests domain; 2 web-view domain.
      */
     public void setDomainType(Long DomainType) {
         this.DomainType = DomainType;

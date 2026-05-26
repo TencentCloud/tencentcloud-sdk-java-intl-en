@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class Terminology extends AbstractModel {
 
     /**
-    * Source terminology
+    * Source terminology.
     */
     @SerializedName("Source")
     @Expose
     private String Source;
 
     /**
-    * Target terminology
+    * Terminology translation result.
     */
     @SerializedName("Target")
     @Expose
     private String Target;
 
     /**
-     * Get Source terminology 
-     * @return Source Source terminology
+     * Get Source terminology. 
+     * @return Source Source terminology.
      */
     public String getSource() {
         return this.Source;
     }
 
     /**
-     * Set Source terminology
-     * @param Source Source terminology
+     * Set Source terminology.
+     * @param Source Source terminology.
      */
     public void setSource(String Source) {
         this.Source = Source;
     }
 
     /**
-     * Get Target terminology 
-     * @return Target Target terminology
+     * Get Terminology translation result. 
+     * @return Target Terminology translation result.
      */
     public String getTarget() {
         return this.Target;
     }
 
     /**
-     * Set Target terminology
-     * @param Target Target terminology
+     * Set Terminology translation result.
+     * @param Target Terminology translation result.
      */
     public void setTarget(String Target) {
         this.Target = Target;

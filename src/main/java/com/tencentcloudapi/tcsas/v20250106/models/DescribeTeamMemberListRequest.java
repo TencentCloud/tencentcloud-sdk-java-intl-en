@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeTeamMemberListRequest extends AbstractModel {
 
     /**
-    * Page offset
+    * Pagination offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results per page
+    * Number of entries per page.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Team ID
+    * Team ID.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Keywords for search (user name)
+    * Search keyword (user name).
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * Role ID
+    * Role ID.
     */
     @SerializedName("RoleIds")
     @Expose
     private Long [] RoleIds;
 
     /**
-     * Get Page offset 
-     * @return Offset Page offset
+     * Get Pagination offset. 
+     * @return Offset Pagination offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page offset
-     * @param Offset Page offset
+     * Set Pagination offset.
+     * @param Offset Pagination offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results per page 
-     * @return Limit Number of results per page
+     * Get Number of entries per page. 
+     * @return Limit Number of entries per page.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page
-     * @param Limit Number of results per page
+     * Set Number of entries per page.
+     * @param Limit Number of entries per page.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Team ID 
-     * @return TeamId Team ID
+     * Get Team ID. 
+     * @return TeamId Team ID.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID
-     * @param TeamId Team ID
+     * Set Team ID.
+     * @param TeamId Team ID.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Keywords for search (user name) 
-     * @return Keyword Keywords for search (user name)
+     * Get Search keyword (user name). 
+     * @return Keyword Search keyword (user name).
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set Keywords for search (user name)
-     * @param Keyword Keywords for search (user name)
+     * Set Search keyword (user name).
+     * @param Keyword Search keyword (user name).
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get Role ID 
-     * @return RoleIds Role ID
+     * Get Role ID. 
+     * @return RoleIds Role ID.
      */
     public Long [] getRoleIds() {
         return this.RoleIds;
     }
 
     /**
-     * Set Role ID
-     * @param RoleIds Role ID
+     * Set Role ID.
+     * @param RoleIds Role ID.
      */
     public void setRoleIds(Long [] RoleIds) {
         this.RoleIds = RoleIds;

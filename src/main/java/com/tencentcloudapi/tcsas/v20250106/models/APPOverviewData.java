@@ -24,42 +24,42 @@ import java.util.HashMap;
 public class APPOverviewData extends AbstractModel {
 
     /**
-    * Superapp active device count
+    * Superapp active device count.
     */
     @SerializedName("AllActiveDeviceNum")
     @Expose
     private Long AllActiveDeviceNum;
 
     /**
-    * Superapp new device count
+    * Superapp new device count.
     */
     @SerializedName("AllNewDeviceNum")
     @Expose
     private Long AllNewDeviceNum;
 
     /**
-    * Mini program team count
+    * Mini program team count.
     */
     @SerializedName("CorpNum")
     @Expose
     private Long CorpNum;
 
     /**
-    * Mini game active device count
+    * Mini game active device count.
     */
     @SerializedName("GameActiveDeviceNum")
     @Expose
     private Long GameActiveDeviceNum;
 
     /**
-    * Mini game new device count
+    * Mini game new device count.
     */
     @SerializedName("GameNewDeviceNum")
     @Expose
     private Long GameNewDeviceNum;
 
     /**
-    * Created mini program count
+    * Created mini program count.
 
     */
     @SerializedName("MiniAppNum")
@@ -67,7 +67,7 @@ public class APPOverviewData extends AbstractModel {
     private Long MiniAppNum;
 
     /**
-    * Created mini game count
+    * Created mini game count.
 
     */
     @SerializedName("MngNum")
@@ -75,14 +75,14 @@ public class APPOverviewData extends AbstractModel {
     private Long MngNum;
 
     /**
-    * Mini program new device count
+    * Mini program new device count.
     */
     @SerializedName("NewDeviceNum")
     @Expose
     private Long NewDeviceNum;
 
     /**
-    * Released mini program count
+    * Released mini program count.
 
     */
     @SerializedName("OnlineMiniAppNum")
@@ -90,7 +90,7 @@ public class APPOverviewData extends AbstractModel {
     private Long OnlineMiniAppNum;
 
     /**
-    * Released mini game count
+    * Released mini game count.
 
     */
     @SerializedName("OnlineMngNum")
@@ -98,103 +98,103 @@ public class APPOverviewData extends AbstractModel {
     private Long OnlineMngNum;
 
     /**
-    * Mini program active device count
+    * Mini program active device count.
     */
     @SerializedName("VisitNum")
     @Expose
     private Long VisitNum;
 
     /**
-    * Data refresh timestamp
+    * Data refresh timestamp.
     */
     @SerializedName("FlushTime")
     @Expose
     private String FlushTime;
 
     /**
-     * Get Superapp active device count 
-     * @return AllActiveDeviceNum Superapp active device count
+     * Get Superapp active device count. 
+     * @return AllActiveDeviceNum Superapp active device count.
      */
     public Long getAllActiveDeviceNum() {
         return this.AllActiveDeviceNum;
     }
 
     /**
-     * Set Superapp active device count
-     * @param AllActiveDeviceNum Superapp active device count
+     * Set Superapp active device count.
+     * @param AllActiveDeviceNum Superapp active device count.
      */
     public void setAllActiveDeviceNum(Long AllActiveDeviceNum) {
         this.AllActiveDeviceNum = AllActiveDeviceNum;
     }
 
     /**
-     * Get Superapp new device count 
-     * @return AllNewDeviceNum Superapp new device count
+     * Get Superapp new device count. 
+     * @return AllNewDeviceNum Superapp new device count.
      */
     public Long getAllNewDeviceNum() {
         return this.AllNewDeviceNum;
     }
 
     /**
-     * Set Superapp new device count
-     * @param AllNewDeviceNum Superapp new device count
+     * Set Superapp new device count.
+     * @param AllNewDeviceNum Superapp new device count.
      */
     public void setAllNewDeviceNum(Long AllNewDeviceNum) {
         this.AllNewDeviceNum = AllNewDeviceNum;
     }
 
     /**
-     * Get Mini program team count 
-     * @return CorpNum Mini program team count
+     * Get Mini program team count. 
+     * @return CorpNum Mini program team count.
      */
     public Long getCorpNum() {
         return this.CorpNum;
     }
 
     /**
-     * Set Mini program team count
-     * @param CorpNum Mini program team count
+     * Set Mini program team count.
+     * @param CorpNum Mini program team count.
      */
     public void setCorpNum(Long CorpNum) {
         this.CorpNum = CorpNum;
     }
 
     /**
-     * Get Mini game active device count 
-     * @return GameActiveDeviceNum Mini game active device count
+     * Get Mini game active device count. 
+     * @return GameActiveDeviceNum Mini game active device count.
      */
     public Long getGameActiveDeviceNum() {
         return this.GameActiveDeviceNum;
     }
 
     /**
-     * Set Mini game active device count
-     * @param GameActiveDeviceNum Mini game active device count
+     * Set Mini game active device count.
+     * @param GameActiveDeviceNum Mini game active device count.
      */
     public void setGameActiveDeviceNum(Long GameActiveDeviceNum) {
         this.GameActiveDeviceNum = GameActiveDeviceNum;
     }
 
     /**
-     * Get Mini game new device count 
-     * @return GameNewDeviceNum Mini game new device count
+     * Get Mini game new device count. 
+     * @return GameNewDeviceNum Mini game new device count.
      */
     public Long getGameNewDeviceNum() {
         return this.GameNewDeviceNum;
     }
 
     /**
-     * Set Mini game new device count
-     * @param GameNewDeviceNum Mini game new device count
+     * Set Mini game new device count.
+     * @param GameNewDeviceNum Mini game new device count.
      */
     public void setGameNewDeviceNum(Long GameNewDeviceNum) {
         this.GameNewDeviceNum = GameNewDeviceNum;
     }
 
     /**
-     * Get Created mini program count
+     * Get Created mini program count.
  
-     * @return MiniAppNum Created mini program count
+     * @return MiniAppNum Created mini program count.
 
      */
     public Long getMiniAppNum() {
@@ -202,9 +202,9 @@ public class APPOverviewData extends AbstractModel {
     }
 
     /**
-     * Set Created mini program count
+     * Set Created mini program count.
 
-     * @param MiniAppNum Created mini program count
+     * @param MiniAppNum Created mini program count.
 
      */
     public void setMiniAppNum(Long MiniAppNum) {
@@ -212,9 +212,9 @@ public class APPOverviewData extends AbstractModel {
     }
 
     /**
-     * Get Created mini game count
+     * Get Created mini game count.
  
-     * @return MngNum Created mini game count
+     * @return MngNum Created mini game count.
 
      */
     public Long getMngNum() {
@@ -222,9 +222,9 @@ public class APPOverviewData extends AbstractModel {
     }
 
     /**
-     * Set Created mini game count
+     * Set Created mini game count.
 
-     * @param MngNum Created mini game count
+     * @param MngNum Created mini game count.
 
      */
     public void setMngNum(Long MngNum) {
@@ -232,25 +232,25 @@ public class APPOverviewData extends AbstractModel {
     }
 
     /**
-     * Get Mini program new device count 
-     * @return NewDeviceNum Mini program new device count
+     * Get Mini program new device count. 
+     * @return NewDeviceNum Mini program new device count.
      */
     public Long getNewDeviceNum() {
         return this.NewDeviceNum;
     }
 
     /**
-     * Set Mini program new device count
-     * @param NewDeviceNum Mini program new device count
+     * Set Mini program new device count.
+     * @param NewDeviceNum Mini program new device count.
      */
     public void setNewDeviceNum(Long NewDeviceNum) {
         this.NewDeviceNum = NewDeviceNum;
     }
 
     /**
-     * Get Released mini program count
+     * Get Released mini program count.
  
-     * @return OnlineMiniAppNum Released mini program count
+     * @return OnlineMiniAppNum Released mini program count.
 
      */
     public Long getOnlineMiniAppNum() {
@@ -258,9 +258,9 @@ public class APPOverviewData extends AbstractModel {
     }
 
     /**
-     * Set Released mini program count
+     * Set Released mini program count.
 
-     * @param OnlineMiniAppNum Released mini program count
+     * @param OnlineMiniAppNum Released mini program count.
 
      */
     public void setOnlineMiniAppNum(Long OnlineMiniAppNum) {
@@ -268,9 +268,9 @@ public class APPOverviewData extends AbstractModel {
     }
 
     /**
-     * Get Released mini game count
+     * Get Released mini game count.
  
-     * @return OnlineMngNum Released mini game count
+     * @return OnlineMngNum Released mini game count.
 
      */
     public Long getOnlineMngNum() {
@@ -278,9 +278,9 @@ public class APPOverviewData extends AbstractModel {
     }
 
     /**
-     * Set Released mini game count
+     * Set Released mini game count.
 
-     * @param OnlineMngNum Released mini game count
+     * @param OnlineMngNum Released mini game count.
 
      */
     public void setOnlineMngNum(Long OnlineMngNum) {
@@ -288,32 +288,32 @@ public class APPOverviewData extends AbstractModel {
     }
 
     /**
-     * Get Mini program active device count 
-     * @return VisitNum Mini program active device count
+     * Get Mini program active device count. 
+     * @return VisitNum Mini program active device count.
      */
     public Long getVisitNum() {
         return this.VisitNum;
     }
 
     /**
-     * Set Mini program active device count
-     * @param VisitNum Mini program active device count
+     * Set Mini program active device count.
+     * @param VisitNum Mini program active device count.
      */
     public void setVisitNum(Long VisitNum) {
         this.VisitNum = VisitNum;
     }
 
     /**
-     * Get Data refresh timestamp 
-     * @return FlushTime Data refresh timestamp
+     * Get Data refresh timestamp. 
+     * @return FlushTime Data refresh timestamp.
      */
     public String getFlushTime() {
         return this.FlushTime;
     }
 
     /**
-     * Set Data refresh timestamp
-     * @param FlushTime Data refresh timestamp
+     * Set Data refresh timestamp.
+     * @param FlushTime Data refresh timestamp.
      */
     public void setFlushTime(String FlushTime) {
         this.FlushTime = FlushTime;

@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class CreateMNPSensitiveAPIPermissionApprovalRequest extends AbstractModel {
 
     /**
-    * API Id
+    * API ID.
     */
     @SerializedName("APIId")
     @Expose
     private String APIId;
 
     /**
-    * Reason for application
+    * Reason for request.
     */
     @SerializedName("ApplyReason")
     @Expose
     private String ApplyReason;
 
     /**
-    * Mini program ID
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get API Id 
-     * @return APIId API Id
+     * Get API ID. 
+     * @return APIId API ID.
      */
     public String getAPIId() {
         return this.APIId;
     }
 
     /**
-     * Set API Id
-     * @param APIId API Id
+     * Set API ID.
+     * @param APIId API ID.
      */
     public void setAPIId(String APIId) {
         this.APIId = APIId;
     }
 
     /**
-     * Get Reason for application 
-     * @return ApplyReason Reason for application
+     * Get Reason for request. 
+     * @return ApplyReason Reason for request.
      */
     public String getApplyReason() {
         return this.ApplyReason;
     }
 
     /**
-     * Set Reason for application
-     * @param ApplyReason Reason for application
+     * Set Reason for request.
+     * @param ApplyReason Reason for request.
      */
     public void setApplyReason(String ApplyReason) {
         this.ApplyReason = ApplyReason;
     }
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

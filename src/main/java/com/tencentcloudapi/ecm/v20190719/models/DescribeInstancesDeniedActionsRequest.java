@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeInstancesDeniedActionsRequest extends AbstractModel {
 
     /**
-    * None
+    * Nothing
     */
     @SerializedName("InstanceIdSet")
     @Expose
     private String [] InstanceIdSet;
 
     /**
-     * Get None 
-     * @return InstanceIdSet None
+     * Get Nothing 
+     * @return InstanceIdSet Nothing
      */
     public String [] getInstanceIdSet() {
         return this.InstanceIdSet;
     }
 
     /**
-     * Set None
-     * @param InstanceIdSet None
+     * Set Nothing
+     * @param InstanceIdSet Nothing
      */
     public void setInstanceIdSet(String [] InstanceIdSet) {
         this.InstanceIdSet = InstanceIdSet;

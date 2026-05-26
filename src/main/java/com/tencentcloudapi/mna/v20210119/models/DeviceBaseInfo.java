@@ -24,302 +24,325 @@ import java.util.HashMap;
 public class DeviceBaseInfo extends AbstractModel {
 
     /**
-    * Device unique ID
+    * <p>Unique ID of the device</p>
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * Device name.
+    * <p>Device name</p>
     */
     @SerializedName("DeviceName")
     @Expose
     private String DeviceName;
 
     /**
-    * The time when the device is created, in ms.
+    * <p>The time when the device is created, in ms</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last online time of the device, in ms.
+    * <p>Last online time of the device, in ms</p>
     */
     @SerializedName("LastTime")
     @Expose
     private String LastTime;
 
     /**
-    * Device remark
+    * <p>Remark of the device</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
+    * <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
     */
     @SerializedName("AccessScope")
     @Expose
     private Long AccessScope;
 
     /**
-    * Authorization validity period of license 0: Monthly authorization 1: Permanent license
+    * <p>license authorization validity period 0: monthly authorization 1: permanent license</p>
     */
     @SerializedName("LicensePayMode")
     @Expose
     private Long LicensePayMode;
 
     /**
-    * Payer 0: Manufacturer payment 1: Customer payment
+    * <p>Payment party 0: Manufacturer pays 1: Customer pays</p>
     */
     @SerializedName("Payer")
     @Expose
     private Long Payer;
 
     /**
-    * device group ID
+    * <p>device group ID</p>
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * Device group name
+    * <p>Device group name</p>
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-    * No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
+    * <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
     */
     @SerializedName("FlowTrunc")
     @Expose
     private Long FlowTrunc;
 
     /**
-    * Device sn
+    * <p>Device sn</p>
     */
     @SerializedName("Sn")
     @Expose
     private String Sn;
 
     /**
-    * manufacturer
+    * <p>Manufacturer</p>
     */
     @SerializedName("Vendor")
     @Expose
     private String Vendor;
 
     /**
-     * Get Device unique ID 
-     * @return DeviceId Device unique ID
+    * <p>Access region list.</p>
+    */
+    @SerializedName("AllowedRegions")
+    @Expose
+    private String [] AllowedRegions;
+
+    /**
+     * Get <p>Unique ID of the device</p> 
+     * @return DeviceId <p>Unique ID of the device</p>
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set Device unique ID
-     * @param DeviceId Device unique ID
+     * Set <p>Unique ID of the device</p>
+     * @param DeviceId <p>Unique ID of the device</p>
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get Device name. 
-     * @return DeviceName Device name.
+     * Get <p>Device name</p> 
+     * @return DeviceName <p>Device name</p>
      */
     public String getDeviceName() {
         return this.DeviceName;
     }
 
     /**
-     * Set Device name.
-     * @param DeviceName Device name.
+     * Set <p>Device name</p>
+     * @param DeviceName <p>Device name</p>
      */
     public void setDeviceName(String DeviceName) {
         this.DeviceName = DeviceName;
     }
 
     /**
-     * Get The time when the device is created, in ms. 
-     * @return CreateTime The time when the device is created, in ms.
+     * Get <p>The time when the device is created, in ms</p> 
+     * @return CreateTime <p>The time when the device is created, in ms</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set The time when the device is created, in ms.
-     * @param CreateTime The time when the device is created, in ms.
+     * Set <p>The time when the device is created, in ms</p>
+     * @param CreateTime <p>The time when the device is created, in ms</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last online time of the device, in ms. 
-     * @return LastTime Last online time of the device, in ms.
+     * Get <p>Last online time of the device, in ms</p> 
+     * @return LastTime <p>Last online time of the device, in ms</p>
      */
     public String getLastTime() {
         return this.LastTime;
     }
 
     /**
-     * Set Last online time of the device, in ms.
-     * @param LastTime Last online time of the device, in ms.
+     * Set <p>Last online time of the device, in ms</p>
+     * @param LastTime <p>Last online time of the device, in ms</p>
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;
     }
 
     /**
-     * Get Device remark 
-     * @return Remark Device remark
+     * Get <p>Remark of the device</p> 
+     * @return Remark <p>Remark of the device</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Device remark
-     * @param Remark Device remark
+     * Set <p>Remark of the device</p>
+     * @param Remark <p>Remark of the device</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access). 
-     * @return AccessScope Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
+     * Get <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p> 
+     * @return AccessScope <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
      */
     public Long getAccessScope() {
         return this.AccessScope;
     }
 
     /**
-     * Set Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
-     * @param AccessScope Access environment. 0: Public cloud gateway; 1: Private gateway; 2: Public cloud gateway and private gateway. Default is public cloud gateway. Specific meaning: Public cloud gateway: The device can only connect to the public cloud gateway (nearby access). Private gateway: The device can only connect to the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also connect to both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).
+     * Set <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
+     * @param AccessScope <p>Access environment. 0: public cloud gateway; 1: private gateway; 2: public cloud gateway and private gateway. Defaults to public cloud gateway. Specific meaning: Public cloud gateway: The device can only access the public cloud gateway (nearby access). Private gateway: The device can only access the already launched private gateway (nearby access or fixed ip access). Public cloud gateway and private gateway: The device can also access both the public cloud gateway and the already launched private gateway (nearby access or fixed ip access).</p>
      */
     public void setAccessScope(Long AccessScope) {
         this.AccessScope = AccessScope;
     }
 
     /**
-     * Get Authorization validity period of license 0: Monthly authorization 1: Permanent license 
-     * @return LicensePayMode Authorization validity period of license 0: Monthly authorization 1: Permanent license
+     * Get <p>license authorization validity period 0: monthly authorization 1: permanent license</p> 
+     * @return LicensePayMode <p>license authorization validity period 0: monthly authorization 1: permanent license</p>
      */
     public Long getLicensePayMode() {
         return this.LicensePayMode;
     }
 
     /**
-     * Set Authorization validity period of license 0: Monthly authorization 1: Permanent license
-     * @param LicensePayMode Authorization validity period of license 0: Monthly authorization 1: Permanent license
+     * Set <p>license authorization validity period 0: monthly authorization 1: permanent license</p>
+     * @param LicensePayMode <p>license authorization validity period 0: monthly authorization 1: permanent license</p>
      */
     public void setLicensePayMode(Long LicensePayMode) {
         this.LicensePayMode = LicensePayMode;
     }
 
     /**
-     * Get Payer 0: Manufacturer payment 1: Customer payment 
-     * @return Payer Payer 0: Manufacturer payment 1: Customer payment
+     * Get <p>Payment party 0: Manufacturer pays 1: Customer pays</p> 
+     * @return Payer <p>Payment party 0: Manufacturer pays 1: Customer pays</p>
      */
     public Long getPayer() {
         return this.Payer;
     }
 
     /**
-     * Set Payer 0: Manufacturer payment 1: Customer payment
-     * @param Payer Payer 0: Manufacturer payment 1: Customer payment
+     * Set <p>Payment party 0: Manufacturer pays 1: Customer pays</p>
+     * @param Payer <p>Payment party 0: Manufacturer pays 1: Customer pays</p>
      */
     public void setPayer(Long Payer) {
         this.Payer = Payer;
     }
 
     /**
-     * Get device group ID 
-     * @return GroupId device group ID
+     * Get <p>device group ID</p> 
+     * @return GroupId <p>device group ID</p>
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set device group ID
-     * @param GroupId device group ID
+     * Set <p>device group ID</p>
+     * @param GroupId <p>device group ID</p>
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get Device group name 
-     * @return GroupName Device group name
+     * Get <p>Device group name</p> 
+     * @return GroupName <p>Device group name</p>
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set Device group name
-     * @param GroupName Device group name
+     * Set <p>Device group name</p>
+     * @param GroupName <p>Device group name</p>
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;
     }
 
     /**
-     * Get No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate 
-     * @return FlowTrunc No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
+     * Get <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p> 
+     * @return FlowTrunc <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
      */
     public Long getFlowTrunc() {
         return this.FlowTrunc;
     }
 
     /**
-     * Set No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
-     * @param FlowTrunc No traffic processing method for the device. 0: pay-as-you-go, 1: truncate and accelerate
+     * Set <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
+     * @param FlowTrunc <p>Device data transfer plan processing method, 0: pay-as-you-go, 1: truncate acceleration</p>
      */
     public void setFlowTrunc(Long FlowTrunc) {
         this.FlowTrunc = FlowTrunc;
     }
 
     /**
-     * Get Device sn 
-     * @return Sn Device sn
+     * Get <p>Device sn</p> 
+     * @return Sn <p>Device sn</p>
      */
     public String getSn() {
         return this.Sn;
     }
 
     /**
-     * Set Device sn
-     * @param Sn Device sn
+     * Set <p>Device sn</p>
+     * @param Sn <p>Device sn</p>
      */
     public void setSn(String Sn) {
         this.Sn = Sn;
     }
 
     /**
-     * Get manufacturer 
-     * @return Vendor manufacturer
+     * Get <p>Manufacturer</p> 
+     * @return Vendor <p>Manufacturer</p>
      */
     public String getVendor() {
         return this.Vendor;
     }
 
     /**
-     * Set manufacturer
-     * @param Vendor manufacturer
+     * Set <p>Manufacturer</p>
+     * @param Vendor <p>Manufacturer</p>
      */
     public void setVendor(String Vendor) {
         this.Vendor = Vendor;
+    }
+
+    /**
+     * Get <p>Access region list.</p> 
+     * @return AllowedRegions <p>Access region list.</p>
+     */
+    public String [] getAllowedRegions() {
+        return this.AllowedRegions;
+    }
+
+    /**
+     * Set <p>Access region list.</p>
+     * @param AllowedRegions <p>Access region list.</p>
+     */
+    public void setAllowedRegions(String [] AllowedRegions) {
+        this.AllowedRegions = AllowedRegions;
     }
 
     public DeviceBaseInfo() {
@@ -369,6 +392,12 @@ public class DeviceBaseInfo extends AbstractModel {
         if (source.Vendor != null) {
             this.Vendor = new String(source.Vendor);
         }
+        if (source.AllowedRegions != null) {
+            this.AllowedRegions = new String[source.AllowedRegions.length];
+            for (int i = 0; i < source.AllowedRegions.length; i++) {
+                this.AllowedRegions[i] = new String(source.AllowedRegions[i]);
+            }
+        }
     }
 
 
@@ -389,6 +418,7 @@ public class DeviceBaseInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "FlowTrunc", this.FlowTrunc);
         this.setParamSimple(map, prefix + "Sn", this.Sn);
         this.setParamSimple(map, prefix + "Vendor", this.Vendor);
+        this.setParamArraySimple(map, prefix + "AllowedRegions.", this.AllowedRegions);
 
     }
 }

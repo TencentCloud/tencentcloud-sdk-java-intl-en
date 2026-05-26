@@ -59,7 +59,7 @@ public class AnalysisItems extends AbstractModel {
     private Long CallNum;
 
     /**
-    * The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
+    * Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
     */
     @SerializedName("CallPercent")
     @Expose
@@ -101,14 +101,14 @@ public class AnalysisItems extends AbstractModel {
     private Float AvgCostTime;
 
     /**
-    * The timestamp when the slow query statement starts to execute for the first time during the specified period of time
+    * Start execution time of the first slow SQL within the specified time range.
     */
     @SerializedName("FirstTime")
     @Expose
     private String FirstTime;
 
     /**
-    * The timestamp when the slow query statement starts to execute for the last time during the specified period of time
+    * Start execution time of the last slow SQL within the specified time range.
     */
     @SerializedName("LastTime")
     @Expose
@@ -195,16 +195,16 @@ public class AnalysisItems extends AbstractModel {
     }
 
     /**
-     * Get The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time 
-     * @return CallPercent The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
+     * Get Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL. 
+     * @return CallPercent Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
      */
     public Float getCallPercent() {
         return this.CallPercent;
     }
 
     /**
-     * Set The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
-     * @param CallPercent The ratio (in decimal form) of the number of executions of the slow query statement to that of all slow query statements during the specified period of time
+     * Set Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
+     * @param CallPercent Number of slow SQL statement executions within the specified time range as a percentage of all slow SQL.
      */
     public void setCallPercent(Float CallPercent) {
         this.CallPercent = CallPercent;
@@ -291,32 +291,32 @@ public class AnalysisItems extends AbstractModel {
     }
 
     /**
-     * Get The timestamp when the slow query statement starts to execute for the first time during the specified period of time 
-     * @return FirstTime The timestamp when the slow query statement starts to execute for the first time during the specified period of time
+     * Get Start execution time of the first slow SQL within the specified time range. 
+     * @return FirstTime Start execution time of the first slow SQL within the specified time range.
      */
     public String getFirstTime() {
         return this.FirstTime;
     }
 
     /**
-     * Set The timestamp when the slow query statement starts to execute for the first time during the specified period of time
-     * @param FirstTime The timestamp when the slow query statement starts to execute for the first time during the specified period of time
+     * Set Start execution time of the first slow SQL within the specified time range.
+     * @param FirstTime Start execution time of the first slow SQL within the specified time range.
      */
     public void setFirstTime(String FirstTime) {
         this.FirstTime = FirstTime;
     }
 
     /**
-     * Get The timestamp when the slow query statement starts to execute for the last time during the specified period of time 
-     * @return LastTime The timestamp when the slow query statement starts to execute for the last time during the specified period of time
+     * Get Start execution time of the last slow SQL within the specified time range. 
+     * @return LastTime Start execution time of the last slow SQL within the specified time range.
      */
     public String getLastTime() {
         return this.LastTime;
     }
 
     /**
-     * Set The timestamp when the slow query statement starts to execute for the last time during the specified period of time
-     * @param LastTime The timestamp when the slow query statement starts to execute for the last time during the specified period of time
+     * Set Start execution time of the last slow SQL within the specified time range.
+     * @param LastTime Start execution time of the last slow SQL within the specified time range.
      */
     public void setLastTime(String LastTime) {
         this.LastTime = LastTime;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeTeamMemberListResponse extends AbstractModel {
 
     /**
-    * Response data
+    * Response data.
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeTeamMemberListResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Response data 
-     * @return Data Response data
+     * Get Response data. 
+     * @return Data Response data.
      */
     public DescribeTeamMemberListPageResp getData() {
         return this.Data;
     }
 
     /**
-     * Set Response data
-     * @param Data Response data
+     * Set Response data.
+     * @param Data Response data.
      */
     public void setData(DescribeTeamMemberListPageResp Data) {
         this.Data = Data;

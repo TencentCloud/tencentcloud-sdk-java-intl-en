@@ -45,8 +45,7 @@ public class SpecInfo extends AbstractModel {
     private SpecItemInfo [] SpecItemInfoList;
 
     /**
-    * Regions where KMS is supported
-Note: This field may return `null`, indicating that no valid value was found.
+    * Specifies the region that supports KMS.
     */
     @SerializedName("SupportKMSRegions")
     @Expose
@@ -101,20 +100,16 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Regions where KMS is supported
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return SupportKMSRegions Regions where KMS is supported
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Specifies the region that supports KMS. 
+     * @return SupportKMSRegions Specifies the region that supports KMS.
      */
     public String [] getSupportKMSRegions() {
         return this.SupportKMSRegions;
     }
 
     /**
-     * Set Regions where KMS is supported
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param SupportKMSRegions Regions where KMS is supported
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Specifies the region that supports KMS.
+     * @param SupportKMSRegions Specifies the region that supports KMS.
      */
     public void setSupportKMSRegions(String [] SupportKMSRegions) {
         this.SupportKMSRegions = SupportKMSRegions;

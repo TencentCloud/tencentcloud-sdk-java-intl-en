@@ -293,6 +293,20 @@ If the parameter is empty, a certain number (as specified by `Limit` and 20 by d
     }
 
     /**
+     *This API is used to query the list of dedicated cloud disk clusters under the current user account.
+
+* You can query by the dedicated cloud disk cluster ID (`CdcId`) and availability zone (`zone`). Multiple filters are combined with AND. For details about filtering, please see `Filter`.
+* If the parameter is empty, a number (as specified by `Limit`; the default is 20) of dedicated cloud disk clusters are returned.
+     * @param req DescribeDiskStoragePoolRequest
+     * @return DescribeDiskStoragePoolResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDiskStoragePoolResponse DescribeDiskStoragePool(DescribeDiskStoragePoolRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDiskStoragePool", DescribeDiskStoragePoolResponse.class);
+    }
+
+    /**
      *This API (DescribeDisks) is used to query the list of cloud disks.
 
 * The details of the cloud disk can be queried based on the ID, type or status of the cloud disk. The relationship between different conditions is AND. For more information about filtering, please see the `Filter`.

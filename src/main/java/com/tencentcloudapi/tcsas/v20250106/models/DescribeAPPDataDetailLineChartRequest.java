@@ -24,150 +24,150 @@ import java.util.HashMap;
 public class DescribeAPPDataDetailLineChartRequest extends AbstractModel {
 
     /**
-    * Tenant ID
+    * Tenant ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Fixed value: mnp_data_analysis
+    * Fixed value: mnp_data_analysis.
     */
     @SerializedName("ReportId")
     @Expose
     private String ReportId;
 
     /**
-    * IndexId (optional):
+    * Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
+app_new_device_num: Number of new devices.
     */
     @SerializedName("IndexIds")
     @Expose
     private String [] IndexIds;
 
     /**
-    * Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
+    * Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
     */
     @SerializedName("QueryData")
     @Expose
     private String QueryData;
 
     /**
-    * Superapp ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationIds")
     @Expose
     private String [] ApplicationIds;
 
     /**
-     * Get Tenant ID 
-     * @return PlatformId Tenant ID
+     * Get Tenant ID. 
+     * @return PlatformId Tenant ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Tenant ID
-     * @param PlatformId Tenant ID
+     * Set Tenant ID.
+     * @param PlatformId Tenant ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Fixed value: mnp_data_analysis 
-     * @return ReportId Fixed value: mnp_data_analysis
+     * Get Fixed value: mnp_data_analysis. 
+     * @return ReportId Fixed value: mnp_data_analysis.
      */
     public String getReportId() {
         return this.ReportId;
     }
 
     /**
-     * Set Fixed value: mnp_data_analysis
-     * @param ReportId Fixed value: mnp_data_analysis
+     * Set Fixed value: mnp_data_analysis.
+     * @param ReportId Fixed value: mnp_data_analysis.
      */
     public void setReportId(String ReportId) {
         this.ReportId = ReportId;
     }
 
     /**
-     * Get IndexId (optional):
+     * Get Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices 
-     * @return IndexIds IndexId (optional):
+app_new_device_num: Number of new devices. 
+     * @return IndexIds Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
+app_new_device_num: Number of new devices.
      */
     public String [] getIndexIds() {
         return this.IndexIds;
     }
 
     /**
-     * Set IndexId (optional):
+     * Set Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
-     * @param IndexIds IndexId (optional):
+app_new_device_num: Number of new devices.
+     * @param IndexIds Index ID (optional):
 app_minigame_num: Number of created mini games
 app_online_miniapp_num: Number of available mini programs
 app_miniapp_num: Number of created mini programs
 app_related_corp_num: Mini program team data
 app_online_minigame_num: Number of available mini games
 app_active_device_num: Number of active devices
-app_new_device_num: Number of new devices
+app_new_device_num: Number of new devices.
      */
     public void setIndexIds(String [] IndexIds) {
         this.IndexIds = IndexIds;
     }
 
     /**
-     * Get Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"} 
-     * @return QueryData Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
+     * Get Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}. 
+     * @return QueryData Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
      */
     public String getQueryData() {
         return this.QueryData;
     }
 
     /**
-     * Set Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
-     * @param QueryData Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}
+     * Set Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
+     * @param QueryData Input parameter base64 string: {"BeginDate":"20251122","EndDate":"20251128"}.
      */
     public void setQueryData(String QueryData) {
         this.QueryData = QueryData;
     }
 
     /**
-     * Get Superapp ID 
-     * @return ApplicationIds Superapp ID
+     * Get Superapp ID. 
+     * @return ApplicationIds Superapp ID.
      */
     public String [] getApplicationIds() {
         return this.ApplicationIds;
     }
 
     /**
-     * Set Superapp ID
-     * @param ApplicationIds Superapp ID
+     * Set Superapp ID.
+     * @param ApplicationIds Superapp ID.
      */
     public void setApplicationIds(String [] ApplicationIds) {
         this.ApplicationIds = ApplicationIds;

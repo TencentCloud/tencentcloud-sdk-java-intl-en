@@ -116,6 +116,18 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a parameter template for TencentDB for MongoDB.
+**Description:** The CreateDBInstanceParamTpl API is in public beta. During this period, this API is only applicable to beta test participants.
+     * @param req CreateDBInstanceParamTplRequest
+     * @return CreateDBInstanceParamTplResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateDBInstanceParamTplResponse CreateDBInstanceParamTpl(CreateDBInstanceParamTplRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateDBInstanceParamTpl", CreateDBInstanceParamTplResponse.class);
+    }
+
+    /**
      *This API is used to create a log download task.
      * @param req CreateLogDownloadTaskRequest
      * @return CreateLogDownloadTaskResponse
@@ -135,6 +147,17 @@ public class MongodbClient extends AbstractClient{
     public DeleteAccountUserResponse DeleteAccountUser(DeleteAccountUserRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteAccountUser", DeleteAccountUserResponse.class);
+    }
+
+    /**
+     *This API is used to delete full backups.
+     * @param req DeleteDBBackupsRequest
+     * @return DeleteDBBackupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteDBBackupsResponse DeleteDBBackups(DeleteDBBackupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteDBBackups", DeleteDBBackupsResponse.class);
     }
 
     /**
@@ -292,6 +315,30 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to query ALL MongoDB database parameter templates under the current account.
+**Description:** The DescribeDBInstanceParamTpl API is in public beta. During this period, this API is only applicable to beta test participants.
+     * @param req DescribeDBInstanceParamTplRequest
+     * @return DescribeDBInstanceParamTplResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceParamTplResponse DescribeDBInstanceParamTpl(DescribeDBInstanceParamTplRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstanceParamTpl", DescribeDBInstanceParamTplResponse.class);
+    }
+
+    /**
+     *This API is used to query parameter template details of a cloud database instance for MongoDB.
+**Description:** The DescribeDBInstanceParamTplDetail API is in public beta. During this period, this interface is only applicable to beta test participants.
+     * @param req DescribeDBInstanceParamTplDetailRequest
+     * @return DescribeDBInstanceParamTplDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeDBInstanceParamTplDetailResponse DescribeDBInstanceParamTplDetail(DescribeDBInstanceParamTplDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeDBInstanceParamTplDetail", DescribeDBInstanceParamTplDetailResponse.class);
+    }
+
+    /**
      *This API is used to query the list of TencentDB for MongoDB instances. It supports filtering primary instances, disaster recovery instances, and read-only instances by project ID, instance ID, instance status, and other conditions.
      * @param req DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -358,6 +405,17 @@ public class MongodbClient extends AbstractClient{
     }
 
     /**
+     *Retrieve the rotation status info
+     * @param req DescribePasswordRotationRequest
+     * @return DescribePasswordRotationResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribePasswordRotationResponse DescribePasswordRotation(DescribePasswordRotationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribePasswordRotation", DescribePasswordRotationResponse.class);
+    }
+
+    /**
      *This API is used to query the current domain information of the MongoDB database.
      * @param req DescribeSRVConnectionDomainRequest
      * @return DescribeSRVConnectionDomainResponse
@@ -421,6 +479,17 @@ public class MongodbClient extends AbstractClient{
     public DisableSRVConnectionUrlResponse DisableSRVConnectionUrl(DisableSRVConnectionUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DisableSRVConnectionUrl", DisableSRVConnectionUrlResponse.class);
+    }
+
+    /**
+     *Enable password rotation
+     * @param req EnablePasswordRotationRequest
+     * @return EnablePasswordRotationResponse
+     * @throws TencentCloudSDKException
+     */
+    public EnablePasswordRotationResponse EnablePasswordRotation(EnablePasswordRotationRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "EnablePasswordRotation", EnablePasswordRotationResponse.class);
     }
 
     /**
@@ -531,6 +600,17 @@ public class MongodbClient extends AbstractClient{
     public KillOpsResponse KillOps(KillOpsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "KillOps", KillOpsResponse.class);
+    }
+
+    /**
+     *Modify backup expiration time
+     * @param req ModifyBackupExpireTimeRequest
+     * @return ModifyBackupExpireTimeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyBackupExpireTimeResponse ModifyBackupExpireTime(ModifyBackupExpireTimeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyBackupExpireTime", ModifyBackupExpireTimeResponse.class);
     }
 
     /**

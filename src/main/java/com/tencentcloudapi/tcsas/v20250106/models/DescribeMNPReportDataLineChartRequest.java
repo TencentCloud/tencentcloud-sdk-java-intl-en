@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeMNPReportDataLineChartRequest extends AbstractModel {
 
     /**
-    * Mini program appid
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Tenant ID
+    * Tenant ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Fixed value: mnp_data_analysis
+    * Fixed value: mnp_data_analysis.
     */
     @SerializedName("ReportId")
     @Expose
     private String ReportId;
 
     /**
-    * IndexId (optional):
+    * Index ID (optional):
 active_device_num: Active users
 new_device_num: New users
 total_user_num: Total users
@@ -53,69 +53,69 @@ share_num: Number of shares
 miniapp_open_num: Number of opens
 avg_device_open_num: Average opens per user
 avg_device_open_duration: Average duration per user
-avg_count_open_duration: Average duration per session
+avg_count_open_duration: Average duration per session.
     */
     @SerializedName("IndexId")
     @Expose
     private String IndexId;
 
     /**
-    * Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}
+    * Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}.
     */
     @SerializedName("QueryData")
     @Expose
     private String QueryData;
 
     /**
-     * Get Mini program appid 
-     * @return MNPId Mini program appid
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program appid
-     * @param MNPId Mini program appid
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Tenant ID 
-     * @return PlatformId Tenant ID
+     * Get Tenant ID. 
+     * @return PlatformId Tenant ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Tenant ID
-     * @param PlatformId Tenant ID
+     * Set Tenant ID.
+     * @param PlatformId Tenant ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Fixed value: mnp_data_analysis 
-     * @return ReportId Fixed value: mnp_data_analysis
+     * Get Fixed value: mnp_data_analysis. 
+     * @return ReportId Fixed value: mnp_data_analysis.
      */
     public String getReportId() {
         return this.ReportId;
     }
 
     /**
-     * Set Fixed value: mnp_data_analysis
-     * @param ReportId Fixed value: mnp_data_analysis
+     * Set Fixed value: mnp_data_analysis.
+     * @param ReportId Fixed value: mnp_data_analysis.
      */
     public void setReportId(String ReportId) {
         this.ReportId = ReportId;
     }
 
     /**
-     * Get IndexId (optional):
+     * Get Index ID (optional):
 active_device_num: Active users
 new_device_num: New users
 total_user_num: Total users
@@ -123,8 +123,8 @@ share_num: Number of shares
 miniapp_open_num: Number of opens
 avg_device_open_num: Average opens per user
 avg_device_open_duration: Average duration per user
-avg_count_open_duration: Average duration per session 
-     * @return IndexId IndexId (optional):
+avg_count_open_duration: Average duration per session. 
+     * @return IndexId Index ID (optional):
 active_device_num: Active users
 new_device_num: New users
 total_user_num: Total users
@@ -132,14 +132,14 @@ share_num: Number of shares
 miniapp_open_num: Number of opens
 avg_device_open_num: Average opens per user
 avg_device_open_duration: Average duration per user
-avg_count_open_duration: Average duration per session
+avg_count_open_duration: Average duration per session.
      */
     public String getIndexId() {
         return this.IndexId;
     }
 
     /**
-     * Set IndexId (optional):
+     * Set Index ID (optional):
 active_device_num: Active users
 new_device_num: New users
 total_user_num: Total users
@@ -147,8 +147,8 @@ share_num: Number of shares
 miniapp_open_num: Number of opens
 avg_device_open_num: Average opens per user
 avg_device_open_duration: Average duration per user
-avg_count_open_duration: Average duration per session
-     * @param IndexId IndexId (optional):
+avg_count_open_duration: Average duration per session.
+     * @param IndexId Index ID (optional):
 active_device_num: Active users
 new_device_num: New users
 total_user_num: Total users
@@ -156,23 +156,23 @@ share_num: Number of shares
 miniapp_open_num: Number of opens
 avg_device_open_num: Average opens per user
 avg_device_open_duration: Average duration per user
-avg_count_open_duration: Average duration per session
+avg_count_open_duration: Average duration per session.
      */
     public void setIndexId(String IndexId) {
         this.IndexId = IndexId;
     }
 
     /**
-     * Get Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124} 
-     * @return QueryData Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}
+     * Get Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}. 
+     * @return QueryData Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}.
      */
     public String getQueryData() {
         return this.QueryData;
     }
 
     /**
-     * Set Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}
-     * @param QueryData Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}
+     * Set Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}.
+     * @param QueryData Input parameter base64 string: {"DataType":"1","Platform":0,"BeginDate":20251118,"EndDate":20251124}.
      */
     public void setQueryData(String QueryData) {
         this.QueryData = QueryData;

@@ -24,158 +24,158 @@ import java.util.HashMap;
 public class CreateApplicationRequest extends AbstractModel {
 
     /**
-    * Application name
+    * Superapp name.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Logo address
+    * Superapp logo URL.
     */
     @SerializedName("Logo")
     @Expose
     private String Logo;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Team ID
+    * Team ID.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Introduction
+    * Superapp introduction.
     */
     @SerializedName("Intro")
     @Expose
     private String Intro;
 
     /**
-    * Application type. 1: Test; 2: Formal
+    * Superapp type. Valid values: 1: Test; 2: Production.
     */
     @SerializedName("ApplicationType")
     @Expose
     private Long ApplicationType;
 
     /**
-    * Android app package name
+    * Android app package name.
     */
     @SerializedName("AndroidAppKey")
     @Expose
     private String AndroidAppKey;
 
     /**
-    * iOS App bundleId
+    * iOS app bundle ID.
     */
     @SerializedName("IosAppKey")
     @Expose
     private String IosAppKey;
 
     /**
-    * Remarks
+    * Remarks.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Scheme
+    * Scheme.
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-     * Get Application name 
-     * @return ApplicationName Application name
+     * Get Superapp name. 
+     * @return ApplicationName Superapp name.
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Application name
-     * @param ApplicationName Application name
+     * Set Superapp name.
+     * @param ApplicationName Superapp name.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Logo address 
-     * @return Logo Logo address
+     * Get Superapp logo URL. 
+     * @return Logo Superapp logo URL.
      */
     public String getLogo() {
         return this.Logo;
     }
 
     /**
-     * Set Logo address
-     * @param Logo Logo address
+     * Set Superapp logo URL.
+     * @param Logo Superapp logo URL.
      */
     public void setLogo(String Logo) {
         this.Logo = Logo;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Team ID 
-     * @return TeamId Team ID
+     * Get Team ID. 
+     * @return TeamId Team ID.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID
-     * @param TeamId Team ID
+     * Set Team ID.
+     * @param TeamId Team ID.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Introduction 
-     * @return Intro Introduction
+     * Get Superapp introduction. 
+     * @return Intro Superapp introduction.
      */
     public String getIntro() {
         return this.Intro;
     }
 
     /**
-     * Set Introduction
-     * @param Intro Introduction
+     * Set Superapp introduction.
+     * @param Intro Superapp introduction.
      */
     public void setIntro(String Intro) {
         this.Intro = Intro;
     }
 
     /**
-     * Get Application type. 1: Test; 2: Formal 
-     * @return ApplicationType Application type. 1: Test; 2: Formal
+     * Get Superapp type. Valid values: 1: Test; 2: Production. 
+     * @return ApplicationType Superapp type. Valid values: 1: Test; 2: Production.
      * @deprecated
      */
     @Deprecated
@@ -184,8 +184,8 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Set Application type. 1: Test; 2: Formal
-     * @param ApplicationType Application type. 1: Test; 2: Formal
+     * Set Superapp type. Valid values: 1: Test; 2: Production.
+     * @param ApplicationType Superapp type. Valid values: 1: Test; 2: Production.
      * @deprecated
      */
     @Deprecated
@@ -194,8 +194,8 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get Android app package name 
-     * @return AndroidAppKey Android app package name
+     * Get Android app package name. 
+     * @return AndroidAppKey Android app package name.
      * @deprecated
      */
     @Deprecated
@@ -204,8 +204,8 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Set Android app package name
-     * @param AndroidAppKey Android app package name
+     * Set Android app package name.
+     * @param AndroidAppKey Android app package name.
      * @deprecated
      */
     @Deprecated
@@ -214,8 +214,8 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get iOS App bundleId 
-     * @return IosAppKey iOS App bundleId
+     * Get iOS app bundle ID. 
+     * @return IosAppKey iOS app bundle ID.
      * @deprecated
      */
     @Deprecated
@@ -224,8 +224,8 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Set iOS App bundleId
-     * @param IosAppKey iOS App bundleId
+     * Set iOS app bundle ID.
+     * @param IosAppKey iOS app bundle ID.
      * @deprecated
      */
     @Deprecated
@@ -234,8 +234,8 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get Remarks 
-     * @return Remark Remarks
+     * Get Remarks. 
+     * @return Remark Remarks.
      * @deprecated
      */
     @Deprecated
@@ -244,8 +244,8 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Set Remarks
-     * @param Remark Remarks
+     * Set Remarks.
+     * @param Remark Remarks.
      * @deprecated
      */
     @Deprecated
@@ -254,16 +254,16 @@ public class CreateApplicationRequest extends AbstractModel {
     }
 
     /**
-     * Get Scheme 
-     * @return Scheme Scheme
+     * Get Scheme. 
+     * @return Scheme Scheme.
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set Scheme
-     * @param Scheme Scheme
+     * Set Scheme.
+     * @param Scheme Scheme.
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;

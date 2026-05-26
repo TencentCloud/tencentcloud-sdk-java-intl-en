@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class MNGTypeDefine extends AbstractModel {
 
     /**
-    * <p>Mini game category name</p>
+    * <p>Mini game category name.</p>
     */
     @SerializedName("TypeName")
     @Expose
     private String TypeName;
 
     /**
-    * <p>Mini game category</p>
+    * <p>Mini game category.</p>
     */
     @SerializedName("TypeValue")
     @Expose
     private String [] TypeValue;
 
     /**
-    * <p>Category ID</p>
+    * <p>Category ID.</p>
     */
     @SerializedName("TypeId")
     @Expose
     private Long TypeId;
 
     /**
-    * <p>Creation time</p>
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * <p>Creator</p>
+    * <p>Creator.</p>
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * <p>Whether this is a system category</p>
+    * <p>Whether it is a system category.</p>
     */
     @SerializedName("IsSystem")
     @Expose
     private Boolean IsSystem;
 
     /**
-     * Get <p>Mini game category name</p> 
-     * @return TypeName <p>Mini game category name</p>
+     * Get <p>Mini game category name.</p> 
+     * @return TypeName <p>Mini game category name.</p>
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set <p>Mini game category name</p>
-     * @param TypeName <p>Mini game category name</p>
+     * Set <p>Mini game category name.</p>
+     * @param TypeName <p>Mini game category name.</p>
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;
     }
 
     /**
-     * Get <p>Mini game category</p> 
-     * @return TypeValue <p>Mini game category</p>
+     * Get <p>Mini game category.</p> 
+     * @return TypeValue <p>Mini game category.</p>
      */
     public String [] getTypeValue() {
         return this.TypeValue;
     }
 
     /**
-     * Set <p>Mini game category</p>
-     * @param TypeValue <p>Mini game category</p>
+     * Set <p>Mini game category.</p>
+     * @param TypeValue <p>Mini game category.</p>
      */
     public void setTypeValue(String [] TypeValue) {
         this.TypeValue = TypeValue;
     }
 
     /**
-     * Get <p>Category ID</p> 
-     * @return TypeId <p>Category ID</p>
+     * Get <p>Category ID.</p> 
+     * @return TypeId <p>Category ID.</p>
      */
     public Long getTypeId() {
         return this.TypeId;
     }
 
     /**
-     * Set <p>Category ID</p>
-     * @param TypeId <p>Category ID</p>
+     * Set <p>Category ID.</p>
+     * @param TypeId <p>Category ID.</p>
      */
     public void setTypeId(Long TypeId) {
         this.TypeId = TypeId;
     }
 
     /**
-     * Get <p>Creation time</p> 
-     * @return CreateTime <p>Creation time</p>
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set <p>Creation time</p>
-     * @param CreateTime <p>Creation time</p>
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get <p>Creator</p> 
-     * @return CreateUser <p>Creator</p>
+     * Get <p>Creator.</p> 
+     * @return CreateUser <p>Creator.</p>
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set <p>Creator</p>
-     * @param CreateUser <p>Creator</p>
+     * Set <p>Creator.</p>
+     * @param CreateUser <p>Creator.</p>
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get <p>Whether this is a system category</p> 
-     * @return IsSystem <p>Whether this is a system category</p>
+     * Get <p>Whether it is a system category.</p> 
+     * @return IsSystem <p>Whether it is a system category.</p>
      */
     public Boolean getIsSystem() {
         return this.IsSystem;
     }
 
     /**
-     * Set <p>Whether this is a system category</p>
-     * @param IsSystem <p>Whether this is a system category</p>
+     * Set <p>Whether it is a system category.</p>
+     * @param IsSystem <p>Whether it is a system category.</p>
      */
     public void setIsSystem(Boolean IsSystem) {
         this.IsSystem = IsSystem;

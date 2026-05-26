@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyBackupPlanRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -52,7 +52,7 @@ public class ModifyBackupPlanRequest extends AbstractModel {
     private Long BaseBackupRetentionPeriod;
 
     /**
-    * Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
+    * Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
     */
     @SerializedName("BackupPeriod")
     @Expose
@@ -66,16 +66,30 @@ public class ModifyBackupPlanRequest extends AbstractModel {
     private Long LogBackupRetentionPeriod;
 
     /**
-     * Get Instance ID 
-     * @return DBInstanceId Instance ID
+    * Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+    */
+    @SerializedName("PlanId")
+    @Expose
+    private String PlanId;
+
+    /**
+    * Specifies the name of the backup plan to modify.
+    */
+    @SerializedName("PlanName")
+    @Expose
+    private String PlanName;
+
+    /**
+     * Get Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param DBInstanceId Instance ID
+     * Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -130,16 +144,16 @@ public class ModifyBackupPlanRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week. 
-     * @return BackupPeriod Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
+     * Get Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"]. 
+     * @return BackupPeriod Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
      */
     public String [] getBackupPeriod() {
         return this.BackupPeriod;
     }
 
     /**
-     * Set Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
-     * @param BackupPeriod Backup cycle, which means on which days each week the instance will be backed up. The parameter value should be the lowercase names of the days of the week.
+     * Set Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
+     * @param BackupPeriod Instance backup period. if by week, format is lowercase english word of week and set at least two days for backup. if by month, format is digits such as ["1","2"].
      */
     public void setBackupPeriod(String [] BackupPeriod) {
         this.BackupPeriod = BackupPeriod;
@@ -159,6 +173,38 @@ public class ModifyBackupPlanRequest extends AbstractModel {
      */
     public void setLogBackupRetentionPeriod(Long LogBackupRetentionPeriod) {
         this.LogBackupRetentionPeriod = LogBackupRetentionPeriod;
+    }
+
+    /**
+     * Get Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified. 
+     * @return PlanId Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+     */
+    public String getPlanId() {
+        return this.PlanId;
+    }
+
+    /**
+     * Set Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+     * @param PlanId Backup plan ID. specifies which backup plan to modify. if left empty, the default backup plan will be modified.
+     */
+    public void setPlanId(String PlanId) {
+        this.PlanId = PlanId;
+    }
+
+    /**
+     * Get Specifies the name of the backup plan to modify. 
+     * @return PlanName Specifies the name of the backup plan to modify.
+     */
+    public String getPlanName() {
+        return this.PlanName;
+    }
+
+    /**
+     * Set Specifies the name of the backup plan to modify.
+     * @param PlanName Specifies the name of the backup plan to modify.
+     */
+    public void setPlanName(String PlanName) {
+        this.PlanName = PlanName;
     }
 
     public ModifyBackupPlanRequest() {
@@ -190,6 +236,12 @@ public class ModifyBackupPlanRequest extends AbstractModel {
         if (source.LogBackupRetentionPeriod != null) {
             this.LogBackupRetentionPeriod = new Long(source.LogBackupRetentionPeriod);
         }
+        if (source.PlanId != null) {
+            this.PlanId = new String(source.PlanId);
+        }
+        if (source.PlanName != null) {
+            this.PlanName = new String(source.PlanName);
+        }
     }
 
 
@@ -203,6 +255,8 @@ public class ModifyBackupPlanRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BaseBackupRetentionPeriod", this.BaseBackupRetentionPeriod);
         this.setParamArraySimple(map, prefix + "BackupPeriod.", this.BackupPeriod);
         this.setParamSimple(map, prefix + "LogBackupRetentionPeriod", this.LogBackupRetentionPeriod);
+        this.setParamSimple(map, prefix + "PlanId", this.PlanId);
+        this.setParamSimple(map, prefix + "PlanName", this.PlanName);
 
     }
 }

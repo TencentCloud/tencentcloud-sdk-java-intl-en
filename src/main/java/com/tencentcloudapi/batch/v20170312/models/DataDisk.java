@@ -24,503 +24,301 @@ import java.util.HashMap;
 public class DataDisk extends AbstractModel {
 
     /**
-    * Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+    * Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * Data disk type. For restrictions on data disk types, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br/>
-<li>
-  LOCAL_BASIC: local disk.<br/>
-  <li>
-    LOCAL_SSD: local SSD.<br/>
-    <li>
-      LOCAL_NVME: local NVMe disk, which is closely related to InstanceType, and cannot be specified.<br/>
-      <li>
-        LOCAL_PRO: local HDD, which is closely related to InstanceType, and cannot be specified.<br/>
-        <li>
-          CLOUD_BASIC: basic cloud disk.<br/>
-          <li>
-            CLOUD_PREMIUM: premium cloud disk.<br/>
-            <li>
-              CLOUD_SSD: cloud SSD.<br />
-              <li>
-                CLOUD_HSSD: enhanced SSD.<br/>
-                <li>
-                  CLOUD_TSSD: tremendous SSD.<br/>
-                  <li>
-                    CLOUD_BSSD: balanced SSD.<br/><br/>Default value: LOCAL_BASIC.<br/><br/>This parameter is invalid for the `ResizeInstanceDisk` API.
-                  </li>
-                </li>
-              </li>
-            </li>
-          </li>
-        </li>
-      </li>
-    </li>
-  </li>
-</li>
+    * Specifies the data disk type. for restrictions on data disk types, refer to [storage overview](https://www.tencentcloud.com/document/product/213/4952?from_cn_redirect=1). valid values: <br /><li>LOCAL_BASIC: LOCAL disk</li> <li>LOCAL_SSD: LOCAL SSD</li><li>LOCAL_NVME: LOCAL NVME disk, which is closely related to InstanceType and cannot be specified</li><li>LOCAL_PRO: LOCAL HDD, which is closely related to InstanceType and cannot be specified</li><li>cloud_BASIC: BASIC cloud disk</li><li>cloud_PREMIUM: high-performance cloud block storage</li><li>cloud_SSD: SSD cloud disk</li><li>cloud_HSSD: enhanced SSD cloud disk</li> <li>cloud_TSSD: ultra-fast SSD cbs</li><li>cloud_BSSD: universal SSD cloud disk</li><br />default: LOCAL_BASIC.<br/><br />this parameter is invalid for the `ResizeInstanceDisk` api.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+    * Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * Whether a data disk is terminated when the associated CVM instance is terminated. Valid values:
-<li>TRUE: The data disk is terminated when the associated CVM instance is terminated. This only supports pay-as-you-go cloud disks that are billed by hour.</li>
-<li>
-  FALSE: The data disk is retained when the associated CVM instance is terminated.<br/>
-  Default value: TRUE.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+    * Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
     */
     @SerializedName("DeleteWithInstance")
     @Expose
     private Boolean DeleteWithInstance;
 
     /**
-    * Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
+    * Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
     */
     @SerializedName("SnapshotId")
     @Expose
     private String SnapshotId;
 
     /**
-    * Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+    * Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
     */
     @SerializedName("Encrypt")
     @Expose
     private Boolean Encrypt;
 
     /**
-    * ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+    * Custom CMK ID, value is UUID or similar to kms-abcd1234. used for encrypted cloud disk.
 
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
+This parameter is currently only used for the `RunInstances` api.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("KmsKeyId")
     @Expose
     private String KmsKeyId;
 
     /**
-    * Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Cloud disk performance (unit: MiB/s). specifies additional performance for cloud disks.
+Currently only supports extreme cbs (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("ThroughputPerformance")
     @Expose
     private Long ThroughputPerformance;
 
     /**
-    * ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-    * Burst performance.
+    * Burstable performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
+<B>Note: this field is in beta test.</b>.
     */
     @SerializedName("BurstPerformance")
     @Expose
     private Boolean BurstPerformance;
 
     /**
-     * Get Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation. 
-     * @return DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+    * Disk name, with a length not exceeding 128 characters.
+    */
+    @SerializedName("DiskName")
+    @Expose
+    private String DiskName;
+
+    /**
+     * Get Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document. 
+     * @return DiskSize Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
-     * @param DiskSize Data disk size (in GB). The minimum adjustment increment is 10 GB. The value range varies by data disk type. For more information on limits, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). The default value is 0, indicating that no data disk is purchased. For more information, see the product documentation.
+     * Set Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
+     * @param DiskSize Data disk size, unit: GiB. the minimum adjustment step size is 10 GiB. the value ranges of different data disk types vary. for specific limitations, see the storage overview (https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). the default value is 0, which means no data disk purchase. for more restrictions, see the product document.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get Data disk type. For restrictions on data disk types, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br/>
-<li>
-  LOCAL_BASIC: local disk.<br/>
-  <li>
-    LOCAL_SSD: local SSD.<br/>
-    <li>
-      LOCAL_NVME: local NVMe disk, which is closely related to InstanceType, and cannot be specified.<br/>
-      <li>
-        LOCAL_PRO: local HDD, which is closely related to InstanceType, and cannot be specified.<br/>
-        <li>
-          CLOUD_BASIC: basic cloud disk.<br/>
-          <li>
-            CLOUD_PREMIUM: premium cloud disk.<br/>
-            <li>
-              CLOUD_SSD: cloud SSD.<br />
-              <li>
-                CLOUD_HSSD: enhanced SSD.<br/>
-                <li>
-                  CLOUD_TSSD: tremendous SSD.<br/>
-                  <li>
-                    CLOUD_BSSD: balanced SSD.<br/><br/>Default value: LOCAL_BASIC.<br/><br/>This parameter is invalid for the `ResizeInstanceDisk` API.
-                  </li>
-                </li>
-              </li>
-            </li>
-          </li>
-        </li>
-      </li>
-    </li>
-  </li>
-</li> 
-     * @return DiskType Data disk type. For restrictions on data disk types, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br/>
-<li>
-  LOCAL_BASIC: local disk.<br/>
-  <li>
-    LOCAL_SSD: local SSD.<br/>
-    <li>
-      LOCAL_NVME: local NVMe disk, which is closely related to InstanceType, and cannot be specified.<br/>
-      <li>
-        LOCAL_PRO: local HDD, which is closely related to InstanceType, and cannot be specified.<br/>
-        <li>
-          CLOUD_BASIC: basic cloud disk.<br/>
-          <li>
-            CLOUD_PREMIUM: premium cloud disk.<br/>
-            <li>
-              CLOUD_SSD: cloud SSD.<br />
-              <li>
-                CLOUD_HSSD: enhanced SSD.<br/>
-                <li>
-                  CLOUD_TSSD: tremendous SSD.<br/>
-                  <li>
-                    CLOUD_BSSD: balanced SSD.<br/><br/>Default value: LOCAL_BASIC.<br/><br/>This parameter is invalid for the `ResizeInstanceDisk` API.
-                  </li>
-                </li>
-              </li>
-            </li>
-          </li>
-        </li>
-      </li>
-    </li>
-  </li>
-</li>
+     * Get Specifies the data disk type. for restrictions on data disk types, refer to [storage overview](https://www.tencentcloud.com/document/product/213/4952?from_cn_redirect=1). valid values: <br /><li>LOCAL_BASIC: LOCAL disk</li> <li>LOCAL_SSD: LOCAL SSD</li><li>LOCAL_NVME: LOCAL NVME disk, which is closely related to InstanceType and cannot be specified</li><li>LOCAL_PRO: LOCAL HDD, which is closely related to InstanceType and cannot be specified</li><li>cloud_BASIC: BASIC cloud disk</li><li>cloud_PREMIUM: high-performance cloud block storage</li><li>cloud_SSD: SSD cloud disk</li><li>cloud_HSSD: enhanced SSD cloud disk</li> <li>cloud_TSSD: ultra-fast SSD cbs</li><li>cloud_BSSD: universal SSD cloud disk</li><br />default: LOCAL_BASIC.<br/><br />this parameter is invalid for the `ResizeInstanceDisk` api. 
+     * @return DiskType Specifies the data disk type. for restrictions on data disk types, refer to [storage overview](https://www.tencentcloud.com/document/product/213/4952?from_cn_redirect=1). valid values: <br /><li>LOCAL_BASIC: LOCAL disk</li> <li>LOCAL_SSD: LOCAL SSD</li><li>LOCAL_NVME: LOCAL NVME disk, which is closely related to InstanceType and cannot be specified</li><li>LOCAL_PRO: LOCAL HDD, which is closely related to InstanceType and cannot be specified</li><li>cloud_BASIC: BASIC cloud disk</li><li>cloud_PREMIUM: high-performance cloud block storage</li><li>cloud_SSD: SSD cloud disk</li><li>cloud_HSSD: enhanced SSD cloud disk</li> <li>cloud_TSSD: ultra-fast SSD cbs</li><li>cloud_BSSD: universal SSD cloud disk</li><br />default: LOCAL_BASIC.<br/><br />this parameter is invalid for the `ResizeInstanceDisk` api.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set Data disk type. For restrictions on data disk types, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br/>
-<li>
-  LOCAL_BASIC: local disk.<br/>
-  <li>
-    LOCAL_SSD: local SSD.<br/>
-    <li>
-      LOCAL_NVME: local NVMe disk, which is closely related to InstanceType, and cannot be specified.<br/>
-      <li>
-        LOCAL_PRO: local HDD, which is closely related to InstanceType, and cannot be specified.<br/>
-        <li>
-          CLOUD_BASIC: basic cloud disk.<br/>
-          <li>
-            CLOUD_PREMIUM: premium cloud disk.<br/>
-            <li>
-              CLOUD_SSD: cloud SSD.<br />
-              <li>
-                CLOUD_HSSD: enhanced SSD.<br/>
-                <li>
-                  CLOUD_TSSD: tremendous SSD.<br/>
-                  <li>
-                    CLOUD_BSSD: balanced SSD.<br/><br/>Default value: LOCAL_BASIC.<br/><br/>This parameter is invalid for the `ResizeInstanceDisk` API.
-                  </li>
-                </li>
-              </li>
-            </li>
-          </li>
-        </li>
-      </li>
-    </li>
-  </li>
-</li>
-     * @param DiskType Data disk type. For restrictions on data disk types, refer to [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br/>
-<li>
-  LOCAL_BASIC: local disk.<br/>
-  <li>
-    LOCAL_SSD: local SSD.<br/>
-    <li>
-      LOCAL_NVME: local NVMe disk, which is closely related to InstanceType, and cannot be specified.<br/>
-      <li>
-        LOCAL_PRO: local HDD, which is closely related to InstanceType, and cannot be specified.<br/>
-        <li>
-          CLOUD_BASIC: basic cloud disk.<br/>
-          <li>
-            CLOUD_PREMIUM: premium cloud disk.<br/>
-            <li>
-              CLOUD_SSD: cloud SSD.<br />
-              <li>
-                CLOUD_HSSD: enhanced SSD.<br/>
-                <li>
-                  CLOUD_TSSD: tremendous SSD.<br/>
-                  <li>
-                    CLOUD_BSSD: balanced SSD.<br/><br/>Default value: LOCAL_BASIC.<br/><br/>This parameter is invalid for the `ResizeInstanceDisk` API.
-                  </li>
-                </li>
-              </li>
-            </li>
-          </li>
-        </li>
-      </li>
-    </li>
-  </li>
-</li>
+     * Set Specifies the data disk type. for restrictions on data disk types, refer to [storage overview](https://www.tencentcloud.com/document/product/213/4952?from_cn_redirect=1). valid values: <br /><li>LOCAL_BASIC: LOCAL disk</li> <li>LOCAL_SSD: LOCAL SSD</li><li>LOCAL_NVME: LOCAL NVME disk, which is closely related to InstanceType and cannot be specified</li><li>LOCAL_PRO: LOCAL HDD, which is closely related to InstanceType and cannot be specified</li><li>cloud_BASIC: BASIC cloud disk</li><li>cloud_PREMIUM: high-performance cloud block storage</li><li>cloud_SSD: SSD cloud disk</li><li>cloud_HSSD: enhanced SSD cloud disk</li> <li>cloud_TSSD: ultra-fast SSD cbs</li><li>cloud_BSSD: universal SSD cloud disk</li><br />default: LOCAL_BASIC.<br/><br />this parameter is invalid for the `ResizeInstanceDisk` api.
+     * @param DiskType Specifies the data disk type. for restrictions on data disk types, refer to [storage overview](https://www.tencentcloud.com/document/product/213/4952?from_cn_redirect=1). valid values: <br /><li>LOCAL_BASIC: LOCAL disk</li> <li>LOCAL_SSD: LOCAL SSD</li><li>LOCAL_NVME: LOCAL NVME disk, which is closely related to InstanceType and cannot be specified</li><li>LOCAL_PRO: LOCAL HDD, which is closely related to InstanceType and cannot be specified</li><li>cloud_BASIC: BASIC cloud disk</li><li>cloud_PREMIUM: high-performance cloud block storage</li><li>cloud_SSD: SSD cloud disk</li><li>cloud_HSSD: enhanced SSD cloud disk</li> <li>cloud_TSSD: ultra-fast SSD cbs</li><li>cloud_BSSD: universal SSD cloud disk</li><br />default: LOCAL_BASIC.<br/><br />this parameter is invalid for the `ResizeInstanceDisk` api.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`. 
-     * @return DiskId Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+     * Get Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`. 
+     * @return DiskId Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
-     * @param DiskId Data disk ID. Note that it’s not available for `LOCAL_BASIC` and `LOCAL_SSD` disks.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+     * Set Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
+     * @param DiskId Specifies the data disk ID.
+This parameter currently only serves as a response parameter for query apis such as `DescribeInstances`, and cannot be used as an input parameter for write apis such as `RunInstances`.
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get Whether a data disk is terminated when the associated CVM instance is terminated. Valid values:
-<li>TRUE: The data disk is terminated when the associated CVM instance is terminated. This only supports pay-as-you-go cloud disks that are billed by hour.</li>
-<li>
-  FALSE: The data disk is retained when the associated CVM instance is terminated.<br/>
-  Default value: TRUE.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found. 
-     * @return DeleteWithInstance Whether a data disk is terminated when the associated CVM instance is terminated. Valid values:
-<li>TRUE: The data disk is terminated when the associated CVM instance is terminated. This only supports pay-as-you-go cloud disks that are billed by hour.</li>
-<li>
-  FALSE: The data disk is retained when the associated CVM instance is terminated.<br/>
-  Default value: TRUE.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+     * Get Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`. 
+     * @return DeleteWithInstance Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
      */
     public Boolean getDeleteWithInstance() {
         return this.DeleteWithInstance;
     }
 
     /**
-     * Set Whether a data disk is terminated when the associated CVM instance is terminated. Valid values:
-<li>TRUE: The data disk is terminated when the associated CVM instance is terminated. This only supports pay-as-you-go cloud disks that are billed by hour.</li>
-<li>
-  FALSE: The data disk is retained when the associated CVM instance is terminated.<br/>
-  Default value: TRUE.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
-     * @param DeleteWithInstance Whether a data disk is terminated when the associated CVM instance is terminated. Valid values:
-<li>TRUE: The data disk is terminated when the associated CVM instance is terminated. This only supports pay-as-you-go cloud disks that are billed by hour.</li>
-<li>
-  FALSE: The data disk is retained when the associated CVM instance is terminated.<br/>
-  Default value: TRUE.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+     * Set Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
+     * @param DeleteWithInstance Whether the data disk is terminated with the instance. value range: <li>true: when the instance is terminated, the data disk is also terminated. only hourly postpaid cloud disks are supported. <li>false: when the instance is terminated, the data disk is retained. <br>default value: true <br>currently, this parameter is only used for the API `RunInstances`.
      */
     public void setDeleteWithInstance(Boolean DeleteWithInstance) {
         this.DeleteWithInstance = DeleteWithInstance;
     }
 
     /**
-     * Get Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return SnapshotId Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
+     * Get Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size. 
+     * @return SnapshotId Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
      */
     public String getSnapshotId() {
         return this.SnapshotId;
     }
 
     /**
-     * Set Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
-     * @param SnapshotId Data disk snapshot ID. The size of the selected data disk snapshot must be smaller than that of the data disk.
-Note: This field may return null, indicating that no valid value is found.
+     * Set Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
+     * @param SnapshotId Data disk snapshot ID. the size of the selected data disk snapshot must be less than the data disk size.
      */
     public void setSnapshotId(String SnapshotId) {
         this.SnapshotId = SnapshotId;
     }
 
     /**
-     * Get Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Encrypt Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+     * Get Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api. 
+     * @return Encrypt Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
      */
     public Boolean getEncrypt() {
         return this.Encrypt;
     }
 
     /**
-     * Set Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
-     * @param Encrypt Whether a data disk is encrypted. Valid values:
-<li>true: encrypted.</li>
-<li>
-  false: not encrypted.<br/>
-  Default value: false.<br/>
-  This parameter is currently used only in the `RunInstances` API.
-</li>
-Note: This field may return null, indicating that no valid value is found.
+     * Set Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
+     * @param Encrypt Specifies whether the data disk is encrypted. value range: <li>true: encrypted</li> <li>false: unencrypted</li><br/> default value: false<br/> this parameter is currently only used for the `RunInstances` api.
      */
     public void setEncrypt(Boolean Encrypt) {
         this.Encrypt = Encrypt;
     }
 
     /**
-     * Get ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+     * Get Custom CMK ID, value is UUID or similar to kms-abcd1234. used for encrypted cloud disk.
 
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return KmsKeyId ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+This parameter is currently only used for the `RunInstances` api.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return KmsKeyId Custom CMK ID, value is UUID or similar to kms-abcd1234. used for encrypted cloud disk.
 
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
+This parameter is currently only used for the `RunInstances` api.
+Note: This field may return null, indicating that no valid value is found.
      */
     public String getKmsKeyId() {
         return this.KmsKeyId;
     }
 
     /**
-     * Set ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+     * Set Custom CMK ID, value is UUID or similar to kms-abcd1234. used for encrypted cloud disk.
 
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param KmsKeyId ID of the custom CMK in the format of UUID or “kms-abcd1234”. This parameter is used to encrypt cloud disks.
+This parameter is currently only used for the `RunInstances` api.
+Note: This field may return null, indicating that no valid value is found.
+     * @param KmsKeyId Custom CMK ID, value is UUID or similar to kms-abcd1234. used for encrypted cloud disk.
 
-Currently, this parameter is only used in the `RunInstances` API.
-Note: this field may return null, indicating that no valid values can be obtained.
+This parameter is currently only used for the `RunInstances` api.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setKmsKeyId(String KmsKeyId) {
         this.KmsKeyId = KmsKeyId;
     }
 
     /**
-     * Get Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return ThroughputPerformance Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Cloud disk performance (unit: MiB/s). specifies additional performance for cloud disks.
+Currently only supports extreme cbs (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+Note: This field may return null, indicating that no valid value is found. 
+     * @return ThroughputPerformance Cloud disk performance (unit: MiB/s). specifies additional performance for cloud disks.
+Currently only supports extreme cbs (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+Note: This field may return null, indicating that no valid value is found.
      */
     public Long getThroughputPerformance() {
         return this.ThroughputPerformance;
     }
 
     /**
-     * Set Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ThroughputPerformance Cloud disk performance, in MB/s
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Cloud disk performance (unit: MiB/s). specifies additional performance for cloud disks.
+Currently only supports extreme cbs (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+Note: This field may return null, indicating that no valid value is found.
+     * @param ThroughputPerformance Cloud disk performance (unit: MiB/s). specifies additional performance for cloud disks.
+Currently only supports extreme cbs (CLOUD_TSSD) and enhanced SSD CLOUD disk (CLOUD_HSSD).
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setThroughputPerformance(Long ThroughputPerformance) {
         this.ThroughputPerformance = ThroughputPerformance;
     }
 
     /**
-     * Get ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return CdcId ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return CdcId Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param CdcId ID of the dedicated cluster to which the instance belongs.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
+     * @param CdcId Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
     }
 
     /**
-     * Get Burst performance.
+     * Get Burstable performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found. 
-     * @return BurstPerformance Burst performance.
+<B>Note: this field is in beta test.</b>. 
+     * @return BurstPerformance Burstable performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
+<B>Note: this field is in beta test.</b>.
      */
     public Boolean getBurstPerformance() {
         return this.BurstPerformance;
     }
 
     /**
-     * Set Burst performance.
+     * Set Burstable performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
-     * @param BurstPerformance Burst performance.
+<B>Note: this field is in beta test.</b>.
+     * @param BurstPerformance Burstable performance.
 
- <b>Note: This field is in beta test.</b>
-Note: This field may return null, indicating that no valid value is found.
+<B>Note: this field is in beta test.</b>.
      */
     public void setBurstPerformance(Boolean BurstPerformance) {
         this.BurstPerformance = BurstPerformance;
+    }
+
+    /**
+     * Get Disk name, with a length not exceeding 128 characters. 
+     * @return DiskName Disk name, with a length not exceeding 128 characters.
+     */
+    public String getDiskName() {
+        return this.DiskName;
+    }
+
+    /**
+     * Set Disk name, with a length not exceeding 128 characters.
+     * @param DiskName Disk name, with a length not exceeding 128 characters.
+     */
+    public void setDiskName(String DiskName) {
+        this.DiskName = DiskName;
     }
 
     public DataDisk() {
@@ -561,6 +359,9 @@ Note: This field may return null, indicating that no valid value is found.
         if (source.BurstPerformance != null) {
             this.BurstPerformance = new Boolean(source.BurstPerformance);
         }
+        if (source.DiskName != null) {
+            this.DiskName = new String(source.DiskName);
+        }
     }
 
 
@@ -578,6 +379,7 @@ Note: This field may return null, indicating that no valid value is found.
         this.setParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
         this.setParamSimple(map, prefix + "BurstPerformance", this.BurstPerformance);
+        this.setParamSimple(map, prefix + "DiskName", this.DiskName);
 
     }
 }

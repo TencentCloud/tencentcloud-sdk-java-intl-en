@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class SpotMarketOptions extends AbstractModel {
 
     /**
-    * Bidding price
+    * Bid price.
     */
     @SerializedName("MaxPrice")
     @Expose
     private String MaxPrice;
 
     /**
-    * Bidding request type. Currently only "one-time" is supported.
+    * Bid request type. valid values: one-time. currently, only the one-time type is supported.
     */
     @SerializedName("SpotInstanceType")
     @Expose
     private String SpotInstanceType;
 
     /**
-     * Get Bidding price 
-     * @return MaxPrice Bidding price
+     * Get Bid price. 
+     * @return MaxPrice Bid price.
      */
     public String getMaxPrice() {
         return this.MaxPrice;
     }
 
     /**
-     * Set Bidding price
-     * @param MaxPrice Bidding price
+     * Set Bid price.
+     * @param MaxPrice Bid price.
      */
     public void setMaxPrice(String MaxPrice) {
         this.MaxPrice = MaxPrice;
     }
 
     /**
-     * Get Bidding request type. Currently only "one-time" is supported. 
-     * @return SpotInstanceType Bidding request type. Currently only "one-time" is supported.
+     * Get Bid request type. valid values: one-time. currently, only the one-time type is supported. 
+     * @return SpotInstanceType Bid request type. valid values: one-time. currently, only the one-time type is supported.
      */
     public String getSpotInstanceType() {
         return this.SpotInstanceType;
     }
 
     /**
-     * Set Bidding request type. Currently only "one-time" is supported.
-     * @param SpotInstanceType Bidding request type. Currently only "one-time" is supported.
+     * Set Bid request type. valid values: one-time. currently, only the one-time type is supported.
+     * @param SpotInstanceType Bid request type. valid values: one-time. currently, only the one-time type is supported.
      */
     public void setSpotInstanceType(String SpotInstanceType) {
         this.SpotInstanceType = SpotInstanceType;

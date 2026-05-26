@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GlobalDomainModifyRespResp extends AbstractModel {
 
     /**
-    * 0: success; 1: allowed domains exist; 2: blocked domains exist.
+    * Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
     */
     @SerializedName("Result")
     @Expose
     private Long Result;
 
     /**
-     * Get 0: success; 1: allowed domains exist; 2: blocked domains exist. 
-     * @return Result 0: success; 1: allowed domains exist; 2: blocked domains exist.
+     * Get Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist.  
+     * @return Result Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
      */
     public Long getResult() {
         return this.Result;
     }
 
     /**
-     * Set 0: success; 1: allowed domains exist; 2: blocked domains exist.
-     * @param Result 0: success; 1: allowed domains exist; 2: blocked domains exist.
+     * Set Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
+     * @param Result Operation result. Valid values: 0: Succeeded; 1: Exists in the allowlist; 2: Exists in the blocklist. 
      */
     public void setResult(Long Result) {
         this.Result = Result;

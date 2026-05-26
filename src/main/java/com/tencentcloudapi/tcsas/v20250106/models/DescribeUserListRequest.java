@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeUserListRequest extends AbstractModel {
 
     /**
-    * Page offset
+    * Pagination offset. 
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results per page
+    * Number of entries per page.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Keywords for search (username or account)
+    * Search keyword (username or account).
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * User account 1 - Super admin 2 - Platform admin 3 - Member
+    * User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
     */
     @SerializedName("AccountType")
     @Expose
     private Long AccountType;
 
     /**
-    * Team ID
+    * Team ID. If left empty, all teams are returned.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-     * Get Page offset 
-     * @return Offset Page offset
+     * Get Pagination offset.  
+     * @return Offset Pagination offset. 
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page offset
-     * @param Offset Page offset
+     * Set Pagination offset. 
+     * @param Offset Pagination offset. 
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results per page 
-     * @return Limit Number of results per page
+     * Get Number of entries per page. 
+     * @return Limit Number of entries per page.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page
-     * @param Limit Number of results per page
+     * Set Number of entries per page.
+     * @param Limit Number of entries per page.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Keywords for search (username or account) 
-     * @return Keyword Keywords for search (username or account)
+     * Get Search keyword (username or account). 
+     * @return Keyword Search keyword (username or account).
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set Keywords for search (username or account)
-     * @param Keyword Keywords for search (username or account)
+     * Set Search keyword (username or account).
+     * @param Keyword Search keyword (username or account).
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get User account 1 - Super admin 2 - Platform admin 3 - Member 
-     * @return AccountType User account 1 - Super admin 2 - Platform admin 3 - Member
+     * Get User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.  
+     * @return AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set User account 1 - Super admin 2 - Platform admin 3 - Member
-     * @param AccountType User account 1 - Super admin 2 - Platform admin 3 - Member
+     * Set User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
+     * @param AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get Team ID 
-     * @return TeamId Team ID
+     * Get Team ID. If left empty, all teams are returned. 
+     * @return TeamId Team ID. If left empty, all teams are returned.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID
-     * @param TeamId Team ID
+     * Set Team ID. If left empty, all teams are returned.
+     * @param TeamId Team ID. If left empty, all teams are returned.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;

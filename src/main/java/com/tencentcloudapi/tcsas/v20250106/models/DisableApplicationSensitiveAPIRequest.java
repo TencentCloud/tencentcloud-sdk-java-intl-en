@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DisableApplicationSensitiveAPIRequest extends AbstractModel {
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * API ID
+    * API ID.
     */
     @SerializedName("APIId")
     @Expose
     private String APIId;
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get API ID 
-     * @return APIId API ID
+     * Get API ID. 
+     * @return APIId API ID.
      */
     public String getAPIId() {
         return this.APIId;
     }
 
     /**
-     * Set API ID
-     * @param APIId API ID
+     * Set API ID.
+     * @param APIId API ID.
      */
     public void setAPIId(String APIId) {
         this.APIId = APIId;

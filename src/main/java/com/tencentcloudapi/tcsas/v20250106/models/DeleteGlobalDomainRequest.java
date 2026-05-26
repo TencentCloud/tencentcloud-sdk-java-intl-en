@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DeleteGlobalDomainRequest extends AbstractModel {
 
     /**
-    * Domain ID
+    * Domain ID.
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get Domain ID 
-     * @return DomainId Domain ID
+     * Get Domain ID. 
+     * @return DomainId Domain ID.
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set Domain ID
-     * @param DomainId Domain ID
+     * Set Domain ID.
+     * @param DomainId Domain ID.
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

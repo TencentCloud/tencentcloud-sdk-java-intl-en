@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeMNGListResp extends AbstractModel {
 
     /**
-    * <p>Total number of entries</p>
+    * <p>Total number of entries.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * <p>List information</p>
+    * <p>List data.</p>
     */
     @SerializedName("DataList")
     @Expose
     private DescribeMNGListData [] DataList;
 
     /**
-     * Get <p>Total number of entries</p> 
-     * @return TotalCount <p>Total number of entries</p>
+     * Get <p>Total number of entries.</p> 
+     * @return TotalCount <p>Total number of entries.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set <p>Total number of entries</p>
-     * @param TotalCount <p>Total number of entries</p>
+     * Set <p>Total number of entries.</p>
+     * @param TotalCount <p>Total number of entries.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get <p>List information</p> 
-     * @return DataList <p>List information</p>
+     * Get <p>List data.</p> 
+     * @return DataList <p>List data.</p>
      */
     public DescribeMNGListData [] getDataList() {
         return this.DataList;
     }
 
     /**
-     * Set <p>List information</p>
-     * @param DataList <p>List information</p>
+     * Set <p>List data.</p>
+     * @param DataList <p>List data.</p>
      */
     public void setDataList(DescribeMNGListData [] DataList) {
         this.DataList = DataList;

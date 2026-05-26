@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class CreateApplicationConfigRequest extends AbstractModel {
 
     /**
-    * Superapp ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Superapp type. 1: Test; 2: Formal
+    * Superapp type. Valid values: 1: Test; 2: Production.
     */
     @SerializedName("ApplicationType")
     @Expose
     private Long ApplicationType;
 
     /**
-    * Superapp operating system. 2 Android 3 iOS
+    * Superapp operating system type. Valid values: 2: Android; 3: iOS.
     */
     @SerializedName("ApplicationPlatformType")
     @Expose
     private Long ApplicationPlatformType;
 
     /**
-    * Package name: corresponds to packageName on Android and bundleId on iOS
+    * Package name. Corresponds to the package name on Android and the bundle ID on iOS.
     */
     @SerializedName("AppKey")
     @Expose
     private String AppKey;
 
     /**
-    * Superapp URL
+    * Superapp URL.
     */
     @SerializedName("AppURL")
     @Expose
     private String AppURL;
 
     /**
-     * Get Superapp ID 
-     * @return ApplicationId Superapp ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Superapp ID
-     * @param ApplicationId Superapp ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Superapp type. 1: Test; 2: Formal 
-     * @return ApplicationType Superapp type. 1: Test; 2: Formal
+     * Get Superapp type. Valid values: 1: Test; 2: Production. 
+     * @return ApplicationType Superapp type. Valid values: 1: Test; 2: Production.
      */
     public Long getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set Superapp type. 1: Test; 2: Formal
-     * @param ApplicationType Superapp type. 1: Test; 2: Formal
+     * Set Superapp type. Valid values: 1: Test; 2: Production.
+     * @param ApplicationType Superapp type. Valid values: 1: Test; 2: Production.
      */
     public void setApplicationType(Long ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get Superapp operating system. 2 Android 3 iOS 
-     * @return ApplicationPlatformType Superapp operating system. 2 Android 3 iOS
+     * Get Superapp operating system type. Valid values: 2: Android; 3: iOS. 
+     * @return ApplicationPlatformType Superapp operating system type. Valid values: 2: Android; 3: iOS.
      */
     public Long getApplicationPlatformType() {
         return this.ApplicationPlatformType;
     }
 
     /**
-     * Set Superapp operating system. 2 Android 3 iOS
-     * @param ApplicationPlatformType Superapp operating system. 2 Android 3 iOS
+     * Set Superapp operating system type. Valid values: 2: Android; 3: iOS.
+     * @param ApplicationPlatformType Superapp operating system type. Valid values: 2: Android; 3: iOS.
      */
     public void setApplicationPlatformType(Long ApplicationPlatformType) {
         this.ApplicationPlatformType = ApplicationPlatformType;
     }
 
     /**
-     * Get Package name: corresponds to packageName on Android and bundleId on iOS 
-     * @return AppKey Package name: corresponds to packageName on Android and bundleId on iOS
+     * Get Package name. Corresponds to the package name on Android and the bundle ID on iOS. 
+     * @return AppKey Package name. Corresponds to the package name on Android and the bundle ID on iOS.
      */
     public String getAppKey() {
         return this.AppKey;
     }
 
     /**
-     * Set Package name: corresponds to packageName on Android and bundleId on iOS
-     * @param AppKey Package name: corresponds to packageName on Android and bundleId on iOS
+     * Set Package name. Corresponds to the package name on Android and the bundle ID on iOS.
+     * @param AppKey Package name. Corresponds to the package name on Android and the bundle ID on iOS.
      */
     public void setAppKey(String AppKey) {
         this.AppKey = AppKey;
     }
 
     /**
-     * Get Superapp URL 
-     * @return AppURL Superapp URL
+     * Get Superapp URL. 
+     * @return AppURL Superapp URL.
      */
     public String getAppURL() {
         return this.AppURL;
     }
 
     /**
-     * Set Superapp URL
-     * @param AppURL Superapp URL
+     * Set Superapp URL.
+     * @param AppURL Superapp URL.
      */
     public void setAppURL(String AppURL) {
         this.AppURL = AppURL;

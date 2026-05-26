@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AccessAnalysisOverview extends AbstractModel {
 
     /**
-    * Overview of visit analysis data
+    * Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BaseData")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AccessAnalysisDetail BaseData;
 
     /**
-    * This API does not respond.
+    * Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Overview")
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Overview Overview;
 
     /**
-    * This API does not respond.
+    * Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PageData")
@@ -48,7 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AccessAnalysisDetail PageData;
 
     /**
-    * This API does not respond.
+    * Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Payment")
@@ -56,9 +56,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AccessAnalysisDetail Payment;
 
     /**
-     * Get Overview of visit analysis data
+     * Get Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BaseData Overview of visit analysis data
+     * @return BaseData Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AccessAnalysisDetail getBaseData() {
@@ -66,9 +66,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Overview of visit analysis data
+     * Set Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BaseData Overview of visit analysis data
+     * @param BaseData Access analysis overview data. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBaseData(AccessAnalysisDetail BaseData) {
@@ -76,9 +76,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This API does not respond.
+     * Get Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Overview This API does not respond.
+     * @return Overview Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Overview getOverview() {
@@ -86,9 +86,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This API does not respond.
+     * Set Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Overview This API does not respond.
+     * @param Overview Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOverview(Overview Overview) {
@@ -96,9 +96,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This API does not respond.
+     * Get Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PageData This API does not respond.
+     * @return PageData Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AccessAnalysisDetail getPageData() {
@@ -106,9 +106,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This API does not respond.
+     * Set Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PageData This API does not respond.
+     * @param PageData Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPageData(AccessAnalysisDetail PageData) {
@@ -116,9 +116,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get This API does not respond.
+     * Get Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Payment This API does not respond.
+     * @return Payment Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AccessAnalysisDetail getPayment() {
@@ -126,9 +126,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set This API does not respond.
+     * Set Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Payment This API does not respond.
+     * @param Payment Not returned by this API.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPayment(AccessAnalysisDetail Payment) {

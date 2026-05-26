@@ -174,7 +174,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
     }
 
     /**
-     *This API is used to create AIGC voice replication. Note that calling this API will incur fees. See the billing documentation (https://www.tencentcloud.com/document/product/266/95125?from_cn_redirect=1#96b3b59a-f9e1-49e9-966a-bedb70a4bf12).
+     *This API is used to create AIGC voice replication. Note that calling this API will incur fees. See the [billing documentation](https://intl.cloud.tencent.com/document/product/266/14666#87e472ca-9c95-4658-ab7b-8f2130608419).
      * @param req CreateAigcAudioCloneRequest
      * @return CreateAigcAudioCloneResponse
      * @throws TencentCloudSDKException
@@ -757,6 +757,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     }
 
     /**
+     *Delete the log topic enabled by VOD.
+     * @param req DeleteCLSTopicRequest
+     * @return DeleteCLSTopicResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteCLSTopicResponse DeleteCLSTopic(DeleteCLSTopicRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteCLSTopic", DeleteCLSTopicResponse.class);
+    }
+
+    /**
      ** A category can be deleted only if it has no subcategories and associated media files;
 * Otherwise, [delete the media files](https://intl.cloud.tencent.com/document/product/266/31764?from_cn_redirect=1) and subcategories first before deleting the category.
      * @param req DeleteClassRequest
@@ -1185,6 +1196,28 @@ Playback statistics only target VOD domains (EdgeOne domain name distribution is
     public DescribeCDNUsageDataResponse DescribeCDNUsageData(DescribeCDNUsageDataRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeCDNUsageData", DescribeCDNUsageDataResponse.class);
+    }
+
+    /**
+     *Query the CLS log set created by VOD.
+     * @param req DescribeCLSLogsetsRequest
+     * @return DescribeCLSLogsetsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCLSLogsetsResponse DescribeCLSLogsets(DescribeCLSLogsetsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCLSLogsets", DescribeCLSLogsetsResponse.class);
+    }
+
+    /**
+     *Query the log topic list created by VOD.
+     * @param req DescribeCLSTopicsRequest
+     * @return DescribeCLSTopicsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCLSTopicsResponse DescribeCLSTopics(DescribeCLSTopicsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCLSTopics", DescribeCLSTopicsResponse.class);
     }
 
     /**

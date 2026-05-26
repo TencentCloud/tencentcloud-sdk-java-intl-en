@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeRoleListResp extends AbstractModel {
 
     /**
-    * Total number of entries
+    * Total number of entries.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List data
+    * List data.
     */
     @SerializedName("DataList")
     @Expose
     private DescribeRoleListData [] DataList;
 
     /**
-     * Get Total number of entries 
-     * @return TotalCount Total number of entries
+     * Get Total number of entries. 
+     * @return TotalCount Total number of entries.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number of entries
-     * @param TotalCount Total number of entries
+     * Set Total number of entries.
+     * @param TotalCount Total number of entries.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List data 
-     * @return DataList List data
+     * Get List data. 
+     * @return DataList List data.
      */
     public DescribeRoleListData [] getDataList() {
         return this.DataList;
     }
 
     /**
-     * Set List data
-     * @param DataList List data
+     * Set List data.
+     * @param DataList List data.
      */
     public void setDataList(DescribeRoleListData [] DataList) {
         this.DataList = DataList;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyBackupDownloadRestrictionRequest extends AbstractModel {
 
     /**
-    * Type of the network restrictions for downloading a backup file. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
+    * Backup file download restriction type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc restriction and ip restriction.
     */
     @SerializedName("RestrictionType")
     @Expose
@@ -38,7 +38,8 @@ public class ModifyBackupDownloadRestrictionRequest extends AbstractModel {
     private String VpcRestrictionEffect;
 
     /**
-    * Whether it is allowed to download the VPC ID list of the backup files.
+    * Specifies the vpc id list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
     */
     @SerializedName("VpcIdSet")
     @Expose
@@ -52,23 +53,24 @@ public class ModifyBackupDownloadRestrictionRequest extends AbstractModel {
     private String IpRestrictionEffect;
 
     /**
-    * Whether it is allowed to download the IP list of the backup files.
+    * Specifies the ip list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
     */
     @SerializedName("IpSet")
     @Expose
     private String [] IpSet;
 
     /**
-     * Get Type of the network restrictions for downloading a backup file. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs). 
-     * @return RestrictionType Type of the network restrictions for downloading a backup file. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
+     * Get Backup file download restriction type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc restriction and ip restriction. 
+     * @return RestrictionType Backup file download restriction type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc restriction and ip restriction.
      */
     public String getRestrictionType() {
         return this.RestrictionType;
     }
 
     /**
-     * Set Type of the network restrictions for downloading a backup file. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
-     * @param RestrictionType Type of the network restrictions for downloading a backup file. Valid values: `NONE` (backups can be downloaded over both private and public networks), `INTRANET` (backups can only be downloaded over the private network), `CUSTOMIZE` (backups can be downloaded over specified VPCs or at specified IPs).
+     * Set Backup file download restriction type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc restriction and ip restriction.
+     * @param RestrictionType Backup file download restriction type. valid values: NONE (unlimited, allows download from both private and public networks), INTRANET (only allows private network download), CUSTOMIZE (custom limits for download by vpc or ip). when the parameter value is CUSTOMIZE, at least one item must be filled in for vpc restriction and ip restriction.
      */
     public void setRestrictionType(String RestrictionType) {
         this.RestrictionType = RestrictionType;
@@ -91,16 +93,20 @@ public class ModifyBackupDownloadRestrictionRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether it is allowed to download the VPC ID list of the backup files. 
-     * @return VpcIdSet Whether it is allowed to download the VPC ID list of the backup files.
+     * Get Specifies the vpc id list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections. 
+     * @return VpcIdSet Specifies the vpc id list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
      */
     public String [] getVpcIdSet() {
         return this.VpcIdSet;
     }
 
     /**
-     * Set Whether it is allowed to download the VPC ID list of the backup files.
-     * @param VpcIdSet Whether it is allowed to download the VPC ID list of the backup files.
+     * Set Specifies the vpc id list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+     * @param VpcIdSet Specifies the vpc id list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
      */
     public void setVpcIdSet(String [] VpcIdSet) {
         this.VpcIdSet = VpcIdSet;
@@ -123,16 +129,20 @@ public class ModifyBackupDownloadRestrictionRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether it is allowed to download the IP list of the backup files. 
-     * @return IpSet Whether it is allowed to download the IP list of the backup files.
+     * Get Specifies the ip list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections. 
+     * @return IpSet Specifies the ip list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
      */
     public String [] getIpSet() {
         return this.IpSet;
     }
 
     /**
-     * Set Whether it is allowed to download the IP list of the backup files.
-     * @param IpSet Whether it is allowed to download the IP list of the backup files.
+     * Set Specifies the ip list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
+     * @param IpSet Specifies the ip list to allow or deny downloading backup files.
+**Note:** This input parameter performs a full replacement on all existing collections but not an incremental update. To modify it, import the expected full collections.
      */
     public void setIpSet(String [] IpSet) {
         this.IpSet = IpSet;

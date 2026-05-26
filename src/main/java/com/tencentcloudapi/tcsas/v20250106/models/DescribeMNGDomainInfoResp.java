@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeMNGDomainInfoResp extends AbstractModel {
 
     /**
-    * <p>Multiple domain names are concatenated with the separator ;</p>
+    * <p>Multiple domains concatenated with semicolons (;).</p>
     */
     @SerializedName("DomainUrl")
     @Expose
     private String DomainUrl;
 
     /**
-    * <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
+    * <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
     */
     @SerializedName("DomainType")
     @Expose
     private Long DomainType;
 
     /**
-     * Get <p>Multiple domain names are concatenated with the separator ;</p> 
-     * @return DomainUrl <p>Multiple domain names are concatenated with the separator ;</p>
+     * Get <p>Multiple domains concatenated with semicolons (;).</p> 
+     * @return DomainUrl <p>Multiple domains concatenated with semicolons (;).</p>
      */
     public String getDomainUrl() {
         return this.DomainUrl;
     }
 
     /**
-     * Set <p>Multiple domain names are concatenated with the separator ;</p>
-     * @param DomainUrl <p>Multiple domain names are concatenated with the separator ;</p>
+     * Set <p>Multiple domains concatenated with semicolons (;).</p>
+     * @param DomainUrl <p>Multiple domains concatenated with semicolons (;).</p>
      */
     public void setDomainUrl(String DomainUrl) {
         this.DomainUrl = DomainUrl;
     }
 
     /**
-     * Get <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p> 
-     * @return DomainType <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
+     * Get <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p> 
+     * @return DomainType <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
      */
     public Long getDomainType() {
         return this.DomainType;
     }
 
     /**
-     * Set <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
-     * @param DomainType <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain</p>
+     * Set <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
+     * @param DomainType <p>Domain type. Valid values: 1: Requests domain; 2: web-view domain.</p>
      */
     public void setDomainType(Long DomainType) {
         this.DomainType = DomainType;

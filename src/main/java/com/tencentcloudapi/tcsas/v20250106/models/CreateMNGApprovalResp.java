@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateMNGApprovalResp extends AbstractModel {
 
     /**
-    * <p>Boolean response object</p>
+    * <p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Result")
@@ -32,16 +32,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Boolean Result;
 
     /**
-    * <p>Approval number</p>
+    * <p>Approval number.</p>
     */
     @SerializedName("ApprovalNo")
     @Expose
     private String ApprovalNo;
 
     /**
-     * Get <p>Boolean response object</p>
+     * Get <p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Result <p>Boolean response object</p>
+     * @return Result <p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Boolean getResult() {
@@ -49,9 +49,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set <p>Boolean response object</p>
+     * Set <p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Result <p>Boolean response object</p>
+     * @param Result <p>Boolean response object.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResult(Boolean Result) {
@@ -59,16 +59,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get <p>Approval number</p> 
-     * @return ApprovalNo <p>Approval number</p>
+     * Get <p>Approval number.</p> 
+     * @return ApprovalNo <p>Approval number.</p>
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set <p>Approval number</p>
-     * @param ApprovalNo <p>Approval number</p>
+     * Set <p>Approval number.</p>
+     * @param ApprovalNo <p>Approval number.</p>
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;

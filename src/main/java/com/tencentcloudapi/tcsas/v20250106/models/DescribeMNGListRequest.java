@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeMNGListRequest extends AbstractModel {
 
     /**
-    * <p>Pagination offset</p>
+    * <p>Pagination offset.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * <p>Pagination count</p>
+    * <p>Number of entries per page.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * <p>Platform ID</p>
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * <p>Keywords for search (mini game name)</p>
+    * <p>The search keyword (mini game name).</p>
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-    * <p>Team ID</p>
+    * <p>Team ID.</p>
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * <p>Superapp ID</p>
+    * <p>Superapp ID.</p>
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-     * Get <p>Pagination offset</p> 
-     * @return Offset <p>Pagination offset</p>
+     * Get <p>Pagination offset.</p> 
+     * @return Offset <p>Pagination offset.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set <p>Pagination offset</p>
-     * @param Offset <p>Pagination offset</p>
+     * Set <p>Pagination offset.</p>
+     * @param Offset <p>Pagination offset.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get <p>Pagination count</p> 
-     * @return Limit <p>Pagination count</p>
+     * Get <p>Number of entries per page.</p> 
+     * @return Limit <p>Number of entries per page.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set <p>Pagination count</p>
-     * @param Limit <p>Pagination count</p>
+     * Set <p>Number of entries per page.</p>
+     * @param Limit <p>Number of entries per page.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get <p>Platform ID</p> 
-     * @return PlatformId <p>Platform ID</p>
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set <p>Platform ID</p>
-     * @param PlatformId <p>Platform ID</p>
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get <p>Keywords for search (mini game name)</p> 
-     * @return Keyword <p>Keywords for search (mini game name)</p>
+     * Get <p>The search keyword (mini game name).</p> 
+     * @return Keyword <p>The search keyword (mini game name).</p>
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set <p>Keywords for search (mini game name)</p>
-     * @param Keyword <p>Keywords for search (mini game name)</p>
+     * Set <p>The search keyword (mini game name).</p>
+     * @param Keyword <p>The search keyword (mini game name).</p>
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;
     }
 
     /**
-     * Get <p>Team ID</p> 
-     * @return TeamId <p>Team ID</p>
+     * Get <p>Team ID.</p> 
+     * @return TeamId <p>Team ID.</p>
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set <p>Team ID</p>
-     * @param TeamId <p>Team ID</p>
+     * Set <p>Team ID.</p>
+     * @param TeamId <p>Team ID.</p>
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get <p>Superapp ID</p> 
-     * @return ApplicationId <p>Superapp ID</p>
+     * Get <p>Superapp ID.</p> 
+     * @return ApplicationId <p>Superapp ID.</p>
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set <p>Superapp ID</p>
-     * @param ApplicationId <p>Superapp ID</p>
+     * Set <p>Superapp ID.</p>
+     * @param ApplicationId <p>Superapp ID.</p>
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;

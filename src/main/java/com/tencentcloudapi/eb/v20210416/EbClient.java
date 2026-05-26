@@ -259,7 +259,7 @@ public class EbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query logs. 
+     *This API is used to query logs.
      * @param req SearchLogRequest
      * @return SearchLogResponse
      * @throws TencentCloudSDKException

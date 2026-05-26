@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateUserRequest extends AbstractModel {
 
     /**
-    * User account
+    * User account.
     */
     @SerializedName("UserAccount")
     @Expose
     private String UserAccount;
 
     /**
-    * User name
+    * User name.
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * User account type. 2: Platform admin; 3: Member.
+    * User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
     */
     @SerializedName("AccountType")
     @Expose
@@ -52,62 +52,62 @@ public class CreateUserRequest extends AbstractModel {
     private String Password;
 
     /**
-    * Call CreatePresetKey to get the keyID from RequestId
+    * Call CreatePresetKey to get the keyID from RequestId.
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get User account 
-     * @return UserAccount User account
+     * Get User account. 
+     * @return UserAccount User account.
      */
     public String getUserAccount() {
         return this.UserAccount;
     }
 
     /**
-     * Set User account
-     * @param UserAccount User account
+     * Set User account.
+     * @param UserAccount User account.
      */
     public void setUserAccount(String UserAccount) {
         this.UserAccount = UserAccount;
     }
 
     /**
-     * Get User name 
-     * @return UserName User name
+     * Get User name. 
+     * @return UserName User name.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set User name
-     * @param UserName User name
+     * Set User name.
+     * @param UserName User name.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get User account type. 2: Platform admin; 3: Member. 
-     * @return AccountType User account type. 2: Platform admin; 3: Member.
+     * Get User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned.  
+     * @return AccountType User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set User account type. 2: Platform admin; 3: Member.
-     * @param AccountType User account type. 2: Platform admin; 3: Member.
+     * Set User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
+     * @param AccountType User account type. Valid values: 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
@@ -130,32 +130,32 @@ public class CreateUserRequest extends AbstractModel {
     }
 
     /**
-     * Get Call CreatePresetKey to get the keyID from RequestId 
-     * @return KeyId Call CreatePresetKey to get the keyID from RequestId
+     * Get Call CreatePresetKey to get the keyID from RequestId. 
+     * @return KeyId Call CreatePresetKey to get the keyID from RequestId.
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Call CreatePresetKey to get the keyID from RequestId
-     * @param KeyId Call CreatePresetKey to get the keyID from RequestId
+     * Set Call CreatePresetKey to get the keyID from RequestId.
+     * @param KeyId Call CreatePresetKey to get the keyID from RequestId.
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

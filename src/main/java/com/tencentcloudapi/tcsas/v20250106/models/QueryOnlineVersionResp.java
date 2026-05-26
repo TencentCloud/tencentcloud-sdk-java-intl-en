@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class QueryOnlineVersionResp extends AbstractModel {
 
     /**
-    * Mini program ID
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Version number
+    * Version number.
     */
     @SerializedName("MNPVersion")
     @Expose
@@ -45,46 +45,46 @@ public class QueryOnlineVersionResp extends AbstractModel {
     private Long MNPVersionId;
 
     /**
-    * Version remarks.
+    * Version note.
     */
     @SerializedName("MNPVersionNote")
     @Expose
     private String MNPVersionNote;
 
     /**
-    * Update time
+    * Last modified time.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Version number 
-     * @return MNPVersion Version number
+     * Get Version number. 
+     * @return MNPVersion Version number.
      */
     public String getMNPVersion() {
         return this.MNPVersion;
     }
 
     /**
-     * Set Version number
-     * @param MNPVersion Version number
+     * Set Version number.
+     * @param MNPVersion Version number.
      */
     public void setMNPVersion(String MNPVersion) {
         this.MNPVersion = MNPVersion;
@@ -107,32 +107,32 @@ public class QueryOnlineVersionResp extends AbstractModel {
     }
 
     /**
-     * Get Version remarks. 
-     * @return MNPVersionNote Version remarks.
+     * Get Version note. 
+     * @return MNPVersionNote Version note.
      */
     public String getMNPVersionNote() {
         return this.MNPVersionNote;
     }
 
     /**
-     * Set Version remarks.
-     * @param MNPVersionNote Version remarks.
+     * Set Version note.
+     * @param MNPVersionNote Version note.
      */
     public void setMNPVersionNote(String MNPVersionNote) {
         this.MNPVersionNote = MNPVersionNote;
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get Last modified time. 
+     * @return UpdateTime Last modified time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set Last modified time.
+     * @param UpdateTime Last modified time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

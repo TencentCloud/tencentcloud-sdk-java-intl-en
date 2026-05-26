@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class RollbackMNPVersionRequest extends AbstractModel {
 
     /**
-    * Mini program ID
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Mini program version ID
+    * Mini program version ID.
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Mini program version number
+    * Mini program version number.
     */
     @SerializedName("MNPVersion")
     @Expose
     private String MNPVersion;
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program version ID 
-     * @return MNPVersionId Mini program version ID
+     * Get Mini program version ID. 
+     * @return MNPVersionId Mini program version ID.
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set Mini program version ID
-     * @param MNPVersionId Mini program version ID
+     * Set Mini program version ID.
+     * @param MNPVersionId Mini program version ID.
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Mini program version number 
-     * @return MNPVersion Mini program version number
+     * Get Mini program version number. 
+     * @return MNPVersion Mini program version number.
      */
     public String getMNPVersion() {
         return this.MNPVersion;
     }
 
     /**
-     * Set Mini program version number
-     * @param MNPVersion Mini program version number
+     * Set Mini program version number.
+     * @param MNPVersion Mini program version number.
      */
     public void setMNPVersion(String MNPVersion) {
         this.MNPVersion = MNPVersion;

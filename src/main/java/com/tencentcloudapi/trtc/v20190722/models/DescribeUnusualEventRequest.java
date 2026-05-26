@@ -24,97 +24,97 @@ import java.util.HashMap;
 public class DescribeUnusualEventRequest extends AbstractModel {
 
     /**
-    * The application ID, such as `1400xxxxxx`.
+    * User SdkAppId (for example: 1400xxxxxx).
     */
     @SerializedName("SdkAppId")
     @Expose
     private Long SdkAppId;
 
     /**
-    * The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
+    * Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
     */
     @SerializedName("StartTime")
     @Expose
     private Long StartTime;
 
     /**
-    * The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
+    * Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+    * Room number. query up to 20 abnormal experience events in the room.
     */
     @SerializedName("RoomId")
     @Expose
     private String RoomId;
 
     /**
-     * Get The application ID, such as `1400xxxxxx`. 
-     * @return SdkAppId The application ID, such as `1400xxxxxx`.
+     * Get User SdkAppId (for example: 1400xxxxxx). 
+     * @return SdkAppId User SdkAppId (for example: 1400xxxxxx).
      */
     public Long getSdkAppId() {
         return this.SdkAppId;
     }
 
     /**
-     * Set The application ID, such as `1400xxxxxx`.
-     * @param SdkAppId The application ID, such as `1400xxxxxx`.
+     * Set User SdkAppId (for example: 1400xxxxxx).
+     * @param SdkAppId User SdkAppId (for example: 1400xxxxxx).
      */
     public void setSdkAppId(Long SdkAppId) {
         this.SdkAppId = SdkAppId;
     }
 
     /**
-     * Get The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried. 
-     * @return StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
+     * Get Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days. 
+     * @return StartTime Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
      */
     public Long getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
-     * @param StartTime The start time, which is a Unix timestamp (seconds) in local time, such as `1590065777`.
-Note: Only data in the last 14 days can be queried.
+     * Set Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
+     * @param StartTime Query start time, local unix timestamp, in seconds (for example: 1590065777).
+Note: support querying data within the last 14 days.
      */
     public void setStartTime(Long StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart. 
-     * @return EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
+     * Get Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour. 
+     * @return EndTime Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
-     * @param EndTime The end time, which is a Unix timestamp (seconds) in local time, such as `1590065877`. The end time and start time cannot be more than one hour apart.
+     * Set Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
+     * @param EndTime Query end time, local unix timestamp, in seconds (for example, 1590065877). note: the time interval from StartTime should be no more than 1 hour.
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get The room ID. Up to 20 random abnormal user experiences of the specified room will be returned. 
-     * @return RoomId The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+     * Get Room number. query up to 20 abnormal experience events in the room. 
+     * @return RoomId Room number. query up to 20 abnormal experience events in the room.
      */
     public String getRoomId() {
         return this.RoomId;
     }
 
     /**
-     * Set The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
-     * @param RoomId The room ID. Up to 20 random abnormal user experiences of the specified room will be returned.
+     * Set Room number. query up to 20 abnormal experience events in the room.
+     * @param RoomId Room number. query up to 20 abnormal experience events in the room.
      */
     public void setRoomId(String RoomId) {
         this.RoomId = RoomId;

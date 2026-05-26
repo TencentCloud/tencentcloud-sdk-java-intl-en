@@ -24,84 +24,69 @@ import java.util.HashMap;
 public class StorageBlock extends AbstractModel {
 
     /**
-    * Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
+    * HDD LOCAL storage type specifies the value: LOCAL_PRO.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+    * Specifies the minimum HDD local storage capacity. measurement unit: GiB.
     */
     @SerializedName("MinSize")
     @Expose
     private Long MinSize;
 
     /**
-    * Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+    * Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
     */
     @SerializedName("MaxSize")
     @Expose
     private Long MaxSize;
 
     /**
-     * Get Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found. 
-     * @return Type Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
+     * Get HDD LOCAL storage type specifies the value: LOCAL_PRO. 
+     * @return Type HDD LOCAL storage type specifies the value: LOCAL_PRO.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
-     * @param Type Local HDD storage type. Value: LOCAL_PRO.
-Note: This field may return null, indicating that no valid value is found.
+     * Set HDD LOCAL storage type specifies the value: LOCAL_PRO.
+     * @param Type HDD LOCAL storage type specifies the value: LOCAL_PRO.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found. 
-     * @return MinSize Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+     * Get Specifies the minimum HDD local storage capacity. measurement unit: GiB. 
+     * @return MinSize Specifies the minimum HDD local storage capacity. measurement unit: GiB.
      */
     public Long getMinSize() {
         return this.MinSize;
     }
 
     /**
-     * Set Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
-     * @param MinSize Minimum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+     * Set Specifies the minimum HDD local storage capacity. measurement unit: GiB.
+     * @param MinSize Specifies the minimum HDD local storage capacity. measurement unit: GiB.
      */
     public void setMinSize(Long MinSize) {
         this.MinSize = MinSize;
     }
 
     /**
-     * Get Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found. 
-     * @return MaxSize Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+     * Get Specifies the maximum capacity of HDD local storage. measurement unit: GiB. 
+     * @return MaxSize Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
      */
     public Long getMaxSize() {
         return this.MaxSize;
     }
 
     /**
-     * Set Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
-     * @param MaxSize Maximum capacity of local HDD storage
-Note: This field may return null, indicating that no valid value is found.
+     * Set Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
+     * @param MaxSize Specifies the maximum capacity of HDD local storage. measurement unit: GiB.
      */
     public void setMaxSize(Long MaxSize) {
         this.MaxSize = MaxSize;

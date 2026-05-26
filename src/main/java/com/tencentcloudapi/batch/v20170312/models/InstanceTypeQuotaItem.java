@@ -95,7 +95,7 @@ Note: This field may return null, indicating that no valid value is found.
     private LocalDiskType [] LocalDiskTypeList;
 
     /**
-    * Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+    * Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
     */
     @SerializedName("Status")
     @Expose
@@ -166,7 +166,7 @@ Note: this field may return null, indicating that no valid value is obtained.
     private String Remark;
 
     /**
-    * The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
+    * 
     */
     @SerializedName("GpuCount")
     @Expose
@@ -178,6 +178,18 @@ Note: this field may return null, indicating that no valid value is obtained.
     @SerializedName("Frequency")
     @Expose
     private String Frequency;
+
+    /**
+    * Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+    */
+    @SerializedName("StatusCategory")
+    @Expose
+    private String StatusCategory;
 
     /**
      * Get Availability zone. 
@@ -344,16 +356,16 @@ Note: This field may return null, indicating that no valid value is found.
     }
 
     /**
-     * Get Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out 
-     * @return Status Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+     * Get Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out. 
+     * @return Status Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
-     * @param Status Whether an instance model is available. Valid values: <br><li>SELL: available <br><li>SOLD_OUT: sold out
+     * Set Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
+     * @param Status Whether an instance is for sale. Valid values:<br><li>SELL: The instance is available for purchase.<br></li>SOLD_OUT: The instance has been sold out.
      */
     public void setStatus(String Status) {
         this.Status = Status;
@@ -508,16 +520,16 @@ Note: this field may return null, indicating that no valid value is obtained.
     }
 
     /**
-     * Get The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances. 
-     * @return GpuCount The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
+     * Get  
+     * @return GpuCount 
      */
     public Float getGpuCount() {
         return this.GpuCount;
     }
 
     /**
-     * Set The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
-     * @param GpuCount The number of physical GPU cards mapped to the instance model, unit: card. For vGPU configurations, the value is less than 1; for passthrough configurations, the value is greater than or equal to 1. vGPU utilizes slicing virtualization technology to partition physical GPU cards, allowing a single GPU card to be allocated to multiple instances after virtualization. Passthrough configurations directly mount GPU devices to instances.
+     * Set 
+     * @param GpuCount 
      */
     public void setGpuCount(Float GpuCount) {
         this.GpuCount = GpuCount;
@@ -537,6 +549,42 @@ Note: this field may return null, indicating that no valid value is obtained.
      */
     public void setFrequency(String Frequency) {
         this.Frequency = Frequency;
+    }
+
+    /**
+     * Get Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found. 
+     * @return StatusCategory Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+     */
+    public String getStatusCategory() {
+        return this.StatusCategory;
+    }
+
+    /**
+     * Set Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+     * @param StatusCategory Inventory status. Valid values:
+<li>EnoughStock: Inventory is sufficient.</li> 
+<li>NormalStock: Supply is guaranteed.</li>
+<li>UnderStock: Inventory is about to sell out.</li> 
+<li>WithoutStock: Inventory is already sold out.</li>
+Note: This field may return null, indicating that no valid value is found.
+     */
+    public void setStatusCategory(String StatusCategory) {
+        this.StatusCategory = StatusCategory;
     }
 
     public InstanceTypeQuotaItem() {
@@ -616,6 +664,9 @@ Note: this field may return null, indicating that no valid value is obtained.
         if (source.Frequency != null) {
             this.Frequency = new String(source.Frequency);
         }
+        if (source.StatusCategory != null) {
+            this.StatusCategory = new String(source.StatusCategory);
+        }
     }
 
 
@@ -645,6 +696,7 @@ Note: this field may return null, indicating that no valid value is obtained.
         this.setParamSimple(map, prefix + "Remark", this.Remark);
         this.setParamSimple(map, prefix + "GpuCount", this.GpuCount);
         this.setParamSimple(map, prefix + "Frequency", this.Frequency);
+        this.setParamSimple(map, prefix + "StatusCategory", this.StatusCategory);
 
     }
 }

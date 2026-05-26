@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateTaskResponse extends AbstractModel {
 
     /**
-    * Task ID
+    * <p>Task ID.</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateTaskResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Task ID 
-     * @return Data Task ID
+     * Get <p>Task ID.</p> 
+     * @return Data <p>Task ID.</p>
      */
     public CreateTaskResult getData() {
         return this.Data;
     }
 
     /**
-     * Set Task ID
-     * @param Data Task ID
+     * Set <p>Task ID.</p>
+     * @param Data <p>Task ID.</p>
      */
     public void setData(CreateTaskResult Data) {
         this.Data = Data;

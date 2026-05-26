@@ -24,419 +24,414 @@ import java.util.HashMap;
 public class DescribeMPAllStageVersionsResp extends AbstractModel {
 
     /**
-    * Mini program ID.
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Specifies the mini program version primary key id.
+    * Mini program version primary key ID.
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-    * Mini program name
+    * Mini program name.
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Specifies the mini program avatar.
+    * Mini program icon.
     */
     @SerializedName("MNPIcon")
     @Expose
     private String MNPIcon;
 
     /**
-    * Mini program type
+    * Mini program category.
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * Mini program introduction
+    * Mini program introduction.
     */
     @SerializedName("MNPIntro")
     @Expose
     private String MNPIntro;
 
     /**
-    * Mini program description
+    * Mini program description.
     */
     @SerializedName("MNPDesc")
     @Expose
     private String MNPDesc;
 
     /**
-    * Specifies the developer.
+    * Creator.
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Developer creation time.
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Mini program version.
+    * Mini program version number.
     */
     @SerializedName("MNPVersion")
     @Expose
     private String MNPVersion;
 
     /**
-    * Describes version features.
+    * Version introduction.
     */
     @SerializedName("MNPVersionIntro")
     @Expose
     private String MNPVersionIntro;
 
     /**
-    * Development Platform Online.
+    * Stage: Develop, preview, released.
     */
     @SerializedName("Phase")
     @Expose
     private String Phase;
 
     /**
-    * 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
+    * Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
     */
     @SerializedName("ApprovalStatus")
     @Expose
     private Long ApprovalStatus;
 
     /**
-    * Approval ticket ID
+    * Approval number.
     */
     @SerializedName("ApprovalNo")
     @Expose
     private String ApprovalNo;
 
     /**
-    * Specifies whether it is a trial version.
-Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
+    * Whether this is a preview. Valid values: 0: No; 1: Yes.
     */
     @SerializedName("ShowCase")
     @Expose
     private Long ShowCase;
 
     /**
-    * Version number to roll back to.
+    * Rollback version number.
     */
     @SerializedName("RollbackVersion")
     @Expose
     private Long RollbackVersion;
 
     /**
-    * Indicates the release status.
+    * Available status. Valid value: 0: All; 1 Available; 2: In canary release.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
+    * Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
     */
     @SerializedName("VersionCurrentStatus")
     @Expose
     private Long VersionCurrentStatus;
 
     /**
-     * Get Mini program ID. 
-     * @return MNPId Mini program ID.
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID.
-     * @param MNPId Mini program ID.
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Specifies the mini program version primary key id. 
-     * @return MNPVersionId Specifies the mini program version primary key id.
+     * Get Mini program version primary key ID. 
+     * @return MNPVersionId Mini program version primary key ID.
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set Specifies the mini program version primary key id.
-     * @param MNPVersionId Specifies the mini program version primary key id.
+     * Set Mini program version primary key ID.
+     * @param MNPVersionId Mini program version primary key ID.
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get Mini program name 
-     * @return MNPName Mini program name
+     * Get Mini program name. 
+     * @return MNPName Mini program name.
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name
-     * @param MNPName Mini program name
+     * Set Mini program name.
+     * @param MNPName Mini program name.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Specifies the mini program avatar. 
-     * @return MNPIcon Specifies the mini program avatar.
+     * Get Mini program icon. 
+     * @return MNPIcon Mini program icon.
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set Specifies the mini program avatar.
-     * @param MNPIcon Specifies the mini program avatar.
+     * Set Mini program icon.
+     * @param MNPIcon Mini program icon.
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get Mini program type 
-     * @return MNPType Mini program type
+     * Get Mini program category. 
+     * @return MNPType Mini program category.
      */
     public String getMNPType() {
         return this.MNPType;
     }
 
     /**
-     * Set Mini program type
-     * @param MNPType Mini program type
+     * Set Mini program category.
+     * @param MNPType Mini program category.
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get Mini program introduction 
-     * @return MNPIntro Mini program introduction
+     * Get Mini program introduction. 
+     * @return MNPIntro Mini program introduction.
      */
     public String getMNPIntro() {
         return this.MNPIntro;
     }
 
     /**
-     * Set Mini program introduction
-     * @param MNPIntro Mini program introduction
+     * Set Mini program introduction.
+     * @param MNPIntro Mini program introduction.
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get Mini program description 
-     * @return MNPDesc Mini program description
+     * Get Mini program description. 
+     * @return MNPDesc Mini program description.
      */
     public String getMNPDesc() {
         return this.MNPDesc;
     }
 
     /**
-     * Set Mini program description
-     * @param MNPDesc Mini program description
+     * Set Mini program description.
+     * @param MNPDesc Mini program description.
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
     }
 
     /**
-     * Get Specifies the developer. 
-     * @return CreateUser Specifies the developer.
+     * Get Creator. 
+     * @return CreateUser Creator.
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Specifies the developer.
-     * @param CreateUser Specifies the developer.
+     * Set Creator.
+     * @param CreateUser Creator.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Developer creation time. 
-     * @return CreateTime Developer creation time.
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Developer creation time.
-     * @param CreateTime Developer creation time.
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Mini program version. 
-     * @return MNPVersion Mini program version.
+     * Get Mini program version number. 
+     * @return MNPVersion Mini program version number.
      */
     public String getMNPVersion() {
         return this.MNPVersion;
     }
 
     /**
-     * Set Mini program version.
-     * @param MNPVersion Mini program version.
+     * Set Mini program version number.
+     * @param MNPVersion Mini program version number.
      */
     public void setMNPVersion(String MNPVersion) {
         this.MNPVersion = MNPVersion;
     }
 
     /**
-     * Get Describes version features. 
-     * @return MNPVersionIntro Describes version features.
+     * Get Version introduction. 
+     * @return MNPVersionIntro Version introduction.
      */
     public String getMNPVersionIntro() {
         return this.MNPVersionIntro;
     }
 
     /**
-     * Set Describes version features.
-     * @param MNPVersionIntro Describes version features.
+     * Set Version introduction.
+     * @param MNPVersionIntro Version introduction.
      */
     public void setMNPVersionIntro(String MNPVersionIntro) {
         this.MNPVersionIntro = MNPVersionIntro;
     }
 
     /**
-     * Get Development Platform Online. 
-     * @return Phase Development Platform Online.
+     * Get Stage: Develop, preview, released. 
+     * @return Phase Stage: Develop, preview, released.
      */
     public String getPhase() {
         return this.Phase;
     }
 
     /**
-     * Set Development Platform Online.
-     * @param Phase Development Platform Online.
+     * Set Stage: Develop, preview, released.
+     * @param Phase Stage: Develop, preview, released.
      */
     public void setPhase(String Phase) {
         this.Phase = Phase;
     }
 
     /**
-     * Get 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation. 
-     * @return ApprovalStatus 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
+     * Get Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled. 
+     * @return ApprovalStatus Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     public Long getApprovalStatus() {
         return this.ApprovalStatus;
     }
 
     /**
-     * Set 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
-     * @param ApprovalStatus 0 pending review; 1 under review; 2 review rejection; 3 pass review; 4 review cancellation.
+     * Set Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+     * @param ApprovalStatus Approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     public void setApprovalStatus(Long ApprovalStatus) {
         this.ApprovalStatus = ApprovalStatus;
     }
 
     /**
-     * Get Approval ticket ID 
-     * @return ApprovalNo Approval ticket ID
+     * Get Approval number. 
+     * @return ApprovalNo Approval number.
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set Approval ticket ID
-     * @param ApprovalNo Approval ticket ID
+     * Set Approval number.
+     * @param ApprovalNo Approval number.
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;
     }
 
     /**
-     * Get Specifies whether it is a trial version.
-Specifies the version type. valid values: 0 (non-preview version); 1 (trial version). 
-     * @return ShowCase Specifies whether it is a trial version.
-Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
+     * Get Whether this is a preview. Valid values: 0: No; 1: Yes. 
+     * @return ShowCase Whether this is a preview. Valid values: 0: No; 1: Yes.
      */
     public Long getShowCase() {
         return this.ShowCase;
     }
 
     /**
-     * Set Specifies whether it is a trial version.
-Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
-     * @param ShowCase Specifies whether it is a trial version.
-Specifies the version type. valid values: 0 (non-preview version); 1 (trial version).
+     * Set Whether this is a preview. Valid values: 0: No; 1: Yes.
+     * @param ShowCase Whether this is a preview. Valid values: 0: No; 1: Yes.
      */
     public void setShowCase(Long ShowCase) {
         this.ShowCase = ShowCase;
     }
 
     /**
-     * Get Version number to roll back to. 
-     * @return RollbackVersion Version number to roll back to.
+     * Get Rollback version number. 
+     * @return RollbackVersion Rollback version number.
      */
     public Long getRollbackVersion() {
         return this.RollbackVersion;
     }
 
     /**
-     * Set Version number to roll back to.
-     * @param RollbackVersion Version number to roll back to.
+     * Set Rollback version number.
+     * @param RollbackVersion Rollback version number.
      */
     public void setRollbackVersion(Long RollbackVersion) {
         this.RollbackVersion = RollbackVersion;
     }
 
     /**
-     * Get Indicates the release status. 
-     * @return Status Indicates the release status.
+     * Get Available status. Valid value: 0: All; 1 Available; 2: In canary release. 
+     * @return Status Available status. Valid value: 0: All; 1 Available; 2: In canary release.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Indicates the release status.
-     * @param Status Indicates the release status.
+     * Set Available status. Valid value: 0: All; 1 Available; 2: In canary release.
+     * @param Status Available status. Valid value: 0: All; 1 Available; 2: In canary release.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation). 
-     * @return VersionCurrentStatus Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
+     * Get Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled. 
+     * @return VersionCurrentStatus Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     public Long getVersionCurrentStatus() {
         return this.VersionCurrentStatus;
     }
 
     /**
-     * Set Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
-     * @param VersionCurrentStatus Specifies the current main status of the version. valid values: "0" (pending review), "1" (under review), "2" (review rejection), "3" (pass review), "4" (review cancellation).
+     * Set Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+     * @param VersionCurrentStatus Current version approval status. Valid values: 0: Pending; 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     public void setVersionCurrentStatus(Long VersionCurrentStatus) {
         this.VersionCurrentStatus = VersionCurrentStatus;

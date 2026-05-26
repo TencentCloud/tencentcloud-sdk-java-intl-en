@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ApplicationConfigInfo extends AbstractModel {
 
     /**
-    * Superapp configuration type: 1 Non-production, 2 Production
+    * Superapp configuration type. Valid values: 1 Non-production; 2 Production.
     */
     @SerializedName("ApplicationType")
     @Expose
     private Long ApplicationType;
 
     /**
-    * Superapp package name
+    * Superapp package name.
     */
     @SerializedName("AppKey")
     @Expose
     private String AppKey;
 
     /**
-    * Superapp URL
+    * Superapp URL.
     */
     @SerializedName("AppURL")
     @Expose
     private String AppURL;
 
     /**
-    * Superapp configuration ID
+    * Superapp configuration ID.
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-     * Get Superapp configuration type: 1 Non-production, 2 Production 
-     * @return ApplicationType Superapp configuration type: 1 Non-production, 2 Production
+     * Get Superapp configuration type. Valid values: 1 Non-production; 2 Production. 
+     * @return ApplicationType Superapp configuration type. Valid values: 1 Non-production; 2 Production.
      */
     public Long getApplicationType() {
         return this.ApplicationType;
     }
 
     /**
-     * Set Superapp configuration type: 1 Non-production, 2 Production
-     * @param ApplicationType Superapp configuration type: 1 Non-production, 2 Production
+     * Set Superapp configuration type. Valid values: 1 Non-production; 2 Production.
+     * @param ApplicationType Superapp configuration type. Valid values: 1 Non-production; 2 Production.
      */
     public void setApplicationType(Long ApplicationType) {
         this.ApplicationType = ApplicationType;
     }
 
     /**
-     * Get Superapp package name 
-     * @return AppKey Superapp package name
+     * Get Superapp package name. 
+     * @return AppKey Superapp package name.
      */
     public String getAppKey() {
         return this.AppKey;
     }
 
     /**
-     * Set Superapp package name
-     * @param AppKey Superapp package name
+     * Set Superapp package name.
+     * @param AppKey Superapp package name.
      */
     public void setAppKey(String AppKey) {
         this.AppKey = AppKey;
     }
 
     /**
-     * Get Superapp URL 
-     * @return AppURL Superapp URL
+     * Get Superapp URL. 
+     * @return AppURL Superapp URL.
      */
     public String getAppURL() {
         return this.AppURL;
     }
 
     /**
-     * Set Superapp URL
-     * @param AppURL Superapp URL
+     * Set Superapp URL.
+     * @param AppURL Superapp URL.
      */
     public void setAppURL(String AppURL) {
         this.AppURL = AppURL;
     }
 
     /**
-     * Get Superapp configuration ID 
-     * @return Id Superapp configuration ID
+     * Get Superapp configuration ID. 
+     * @return Id Superapp configuration ID.
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Superapp configuration ID
-     * @param Id Superapp configuration ID
+     * Set Superapp configuration ID.
+     * @param Id Superapp configuration ID.
      */
     public void setId(Long Id) {
         this.Id = Id;

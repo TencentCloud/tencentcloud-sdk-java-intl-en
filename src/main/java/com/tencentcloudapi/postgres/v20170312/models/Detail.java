@@ -38,8 +38,7 @@ public class Detail extends AbstractModel {
     private Long TotalCallNum;
 
     /**
-    * The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * List of slow SQL statistical analysis.
     */
     @SerializedName("AnalysisItems")
     @Expose
@@ -78,20 +77,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
-     * Get The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return AnalysisItems The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get List of slow SQL statistical analysis. 
+     * @return AnalysisItems List of slow SQL statistical analysis.
      */
     public AnalysisItems [] getAnalysisItems() {
         return this.AnalysisItems;
     }
 
     /**
-     * Set The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param AnalysisItems The statistical analysis list of slow queries
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set List of slow SQL statistical analysis.
+     * @param AnalysisItems List of slow SQL statistical analysis.
      */
     public void setAnalysisItems(AnalysisItems [] AnalysisItems) {
         this.AnalysisItems = AnalysisItems;

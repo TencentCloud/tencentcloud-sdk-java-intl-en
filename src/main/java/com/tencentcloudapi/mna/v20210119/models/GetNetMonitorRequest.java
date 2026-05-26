@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class GetNetMonitorRequest extends AbstractModel {
 
     /**
-    * Device ID
+    * <p>device id</p>
     */
     @SerializedName("DeviceId")
     @Expose
     private String DeviceId;
 
     /**
-    * Start time.
+    * <p>Start time.</p>
     */
     @SerializedName("BeginTime")
     @Expose
     private Long BeginTime;
 
     /**
-    * End time.
+    * <p>End time.</p>
     */
     @SerializedName("EndTime")
     @Expose
     private Long EndTime;
 
     /**
-    * Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
+    * <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
     */
     @SerializedName("Metrics")
     @Expose
     private String Metrics;
 
     /**
-    * Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+    * <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
     */
     @SerializedName("GatewayType")
     @Expose
     private Long GatewayType;
 
     /**
-     * Get Device ID 
-     * @return DeviceId Device ID
+     * Get <p>device id</p> 
+     * @return DeviceId <p>device id</p>
      */
     public String getDeviceId() {
         return this.DeviceId;
     }
 
     /**
-     * Set Device ID
-     * @param DeviceId Device ID
+     * Set <p>device id</p>
+     * @param DeviceId <p>device id</p>
      */
     public void setDeviceId(String DeviceId) {
         this.DeviceId = DeviceId;
     }
 
     /**
-     * Get Start time. 
-     * @return BeginTime Start time.
+     * Get <p>Start time.</p> 
+     * @return BeginTime <p>Start time.</p>
      */
     public Long getBeginTime() {
         return this.BeginTime;
     }
 
     /**
-     * Set Start time.
-     * @param BeginTime Start time.
+     * Set <p>Start time.</p>
+     * @param BeginTime <p>Start time.</p>
      */
     public void setBeginTime(Long BeginTime) {
         this.BeginTime = BeginTime;
     }
 
     /**
-     * Get End time. 
-     * @return EndTime End time.
+     * Get <p>End time.</p> 
+     * @return EndTime <p>End time.</p>
      */
     public Long getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set End time.
-     * @param EndTime End time.
+     * Set <p>End time.</p>
+     * @param EndTime <p>End time.</p>
      */
     public void setEndTime(Long EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms) 
-     * @return Metrics Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
+     * Get <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p> 
+     * @return Metrics <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
      */
     public String getMetrics() {
         return this.Metrics;
     }
 
     /**
-     * Set Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
-     * @param Metrics Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet loss: "Loss": %, Latency: "RTT": ms)
+     * Set <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
+     * @param Metrics <p>Statistical metric (Uplink rate: "TxRate": bit/s, Downstream rate: "RxRate": bit/s, Packet Loss: "Loss": %, Latency: "RTT": ms)</p>
      */
     public void setMetrics(String Metrics) {
         this.Metrics = Metrics;
     }
 
     /**
-     * Get Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified. 
-     * @return GatewayType Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+     * Get <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p> 
+     * @return GatewayType <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
      */
     public Long getGatewayType() {
         return this.GatewayType;
     }
 
     /**
-     * Set Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
-     * @param GatewayType Gateway type. 0: public cloud gateway; 1: private gateway. Default is 0 if not specified.
+     * Set <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
+     * @param GatewayType <p>Gateway type. 0: public cloud gateway; 1: private gateway. Defaults to 0 if not specified.</p>
      */
     public void setGatewayType(Long GatewayType) {
         this.GatewayType = GatewayType;

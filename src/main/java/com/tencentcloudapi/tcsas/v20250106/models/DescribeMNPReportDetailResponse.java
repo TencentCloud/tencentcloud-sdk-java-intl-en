@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMNPReportDetailResponse extends AbstractModel {
 
     /**
-    * Data display at the top of the page
+    * Data display at the top of the page.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Data display at the top of the page
+     * Get Data display at the top of the page.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Data display at the top of the page
+     * @return Data Data display at the top of the page.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AccessAnalysisDetail [] getData() {
@@ -49,9 +49,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Data display at the top of the page
+     * Set Data display at the top of the page.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Data display at the top of the page
+     * @param Data Data display at the top of the page.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setData(AccessAnalysisDetail [] Data) {

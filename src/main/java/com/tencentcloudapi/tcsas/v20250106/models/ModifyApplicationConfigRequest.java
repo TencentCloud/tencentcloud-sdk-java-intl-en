@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ModifyApplicationConfigRequest extends AbstractModel {
 
     /**
-    * Superapp ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Superapp configuration ID
+    * Superapp configuration ID.
     */
     @SerializedName("Id")
     @Expose
     private Long Id;
 
     /**
-    * Package name: corresponds to packageName on Android and bundleId on iOS
+    * Package name. Corresponds to the package name on Android and the bundle ID on iOS.
     */
     @SerializedName("AppKey")
     @Expose
     private String AppKey;
 
     /**
-    * Superapp URL
+    * Superapp URL.
     */
     @SerializedName("AppURL")
     @Expose
     private String AppURL;
 
     /**
-     * Get Superapp ID 
-     * @return ApplicationId Superapp ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Superapp ID
-     * @param ApplicationId Superapp ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Superapp configuration ID 
-     * @return Id Superapp configuration ID
+     * Get Superapp configuration ID. 
+     * @return Id Superapp configuration ID.
      */
     public Long getId() {
         return this.Id;
     }
 
     /**
-     * Set Superapp configuration ID
-     * @param Id Superapp configuration ID
+     * Set Superapp configuration ID.
+     * @param Id Superapp configuration ID.
      */
     public void setId(Long Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Package name: corresponds to packageName on Android and bundleId on iOS 
-     * @return AppKey Package name: corresponds to packageName on Android and bundleId on iOS
+     * Get Package name. Corresponds to the package name on Android and the bundle ID on iOS. 
+     * @return AppKey Package name. Corresponds to the package name on Android and the bundle ID on iOS.
      */
     public String getAppKey() {
         return this.AppKey;
     }
 
     /**
-     * Set Package name: corresponds to packageName on Android and bundleId on iOS
-     * @param AppKey Package name: corresponds to packageName on Android and bundleId on iOS
+     * Set Package name. Corresponds to the package name on Android and the bundle ID on iOS.
+     * @param AppKey Package name. Corresponds to the package name on Android and the bundle ID on iOS.
      */
     public void setAppKey(String AppKey) {
         this.AppKey = AppKey;
     }
 
     /**
-     * Get Superapp URL 
-     * @return AppURL Superapp URL
+     * Get Superapp URL. 
+     * @return AppURL Superapp URL.
      */
     public String getAppURL() {
         return this.AppURL;
     }
 
     /**
-     * Set Superapp URL
-     * @param AppURL Superapp URL
+     * Set Superapp URL.
+     * @param AppURL Superapp URL.
      */
     public void setAppURL(String AppURL) {
         this.AppURL = AppURL;

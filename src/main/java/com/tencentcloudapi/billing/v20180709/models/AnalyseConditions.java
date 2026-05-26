@@ -66,7 +66,7 @@ public class AnalyseConditions extends AbstractModel {
     private String ProjectIds;
 
     /**
-    * Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+    * Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
     */
     @SerializedName("PayModes")
     @Expose
@@ -80,7 +80,7 @@ public class AnalyseConditions extends AbstractModel {
     private String ActionTypes;
 
     /**
-    * Cost allocation tag key
+    * Cost allocation tag key and value
     */
     @SerializedName("Tags")
     @Expose
@@ -216,16 +216,16 @@ costBeforeTax: pre-tax price
     }
 
     /**
-     * Get Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing) 
-     * @return PayModes Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+     * Get Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing) 
+     * @return PayModes Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
      */
     public String getPayModes() {
         return this.PayModes;
     }
 
     /**
-     * Set Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
-     * @param PayModes Billing mode prePay (monthly subscription)/postPay (pay-as-you-go billing)
+     * Set Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
+     * @param PayModes Billing mode prePay (yearly/monthly subscription)/postPay (pay-as-you-go billing)
      */
     public void setPayModes(String PayModes) {
         this.PayModes = PayModes;
@@ -248,16 +248,16 @@ costBeforeTax: pre-tax price
     }
 
     /**
-     * Get Cost allocation tag key 
-     * @return Tags Cost allocation tag key
+     * Get Cost allocation tag key and value 
+     * @return Tags Cost allocation tag key and value
      */
     public String getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Cost allocation tag key
-     * @param Tags Cost allocation tag key
+     * Set Cost allocation tag key and value
+     * @param Tags Cost allocation tag key and value
      */
     public void setTags(String Tags) {
         this.Tags = Tags;

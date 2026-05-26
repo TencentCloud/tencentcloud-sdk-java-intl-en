@@ -38,10 +38,11 @@ public class DescribeLogBackupsRequest extends AbstractModel {
     private String MaxFinishTime;
 
     /**
-    * Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+    * Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/api/409/16778?from_cn_redirect=1#DBInstance).
     */
     @SerializedName("Filters")
     @Expose
@@ -62,14 +63,14 @@ db-instance-ip: Filter by instance VPC IP (in string format).
     private Long Offset;
 
     /**
-    * Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
+    * Sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+    * Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
     */
     @SerializedName("OrderByType")
     @Expose
@@ -108,28 +109,32 @@ db-instance-ip: Filter by instance VPC IP (in string format).
     }
 
     /**
-     * Get Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format). 
-     * @return Filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+     * Get Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/api/409/16778?from_cn_redirect=1#DBInstance). 
+     * @return Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/api/409/16778?from_cn_redirect=1#DBInstance).
      */
     public Filter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
-     * @param Filters Filter instances using one or more criteria. Valid filter names:
-db-instance-id: Filter by instance ID (in string format).
-db-instance-name: Filter by instance name (in string format).
-db-instance-ip: Filter by instance VPC IP (in string format).
+     * Set Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/api/409/16778?from_cn_redirect=1#DBInstance).
+     * @param Filters Query using one or more filter criteria. filter criteria currently supported include:.
+db-instance-id: filter by instance id (string type).
+db-instance-name: specifies the instance name to filter by, supports fuzzy matching (string type).
+db-instance-ip: specifies the instance VPC ip for filtering (string type).
+db-instance-status: filter by instance status (in string format). valid values refer to the DBInstanceStatus field in the DBInstance structure (https://www.tencentcloud.com/document/api/409/16778?from_cn_redirect=1#DBInstance).
      */
     public void setFilters(Filter [] Filters) {
         this.Filters = Filters;
@@ -168,32 +173,32 @@ db-instance-ip: Filter by instance VPC IP (in string format).
     }
 
     /**
-     * Get Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`. 
-     * @return OrderBy Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
+     * Get Sorting field, supports StartTime, FinishTime, and Size. default value: StartTime. 
+     * @return OrderBy Sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
-     * @param OrderBy Sorting field. Valid values: `StartTime`, `FinishTime`, `Size`.
+     * Set Sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
+     * @param OrderBy Sorting field, supports StartTime, FinishTime, and Size. default value: StartTime.
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values: `asc` (ascending), `desc` (descending). 
-     * @return OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+     * Get Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`. 
+     * @return OrderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting order. Valid values: `asc` (ascending), `desc` (descending).
-     * @param OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+     * Set Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
+     * @param OrderByType Sorting method, including ascending: `asc` and descending: `desc`. the default value is `desc`.
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;

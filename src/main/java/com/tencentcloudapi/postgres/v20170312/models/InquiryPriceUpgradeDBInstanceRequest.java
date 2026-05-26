@@ -38,7 +38,7 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     private Long Memory;
 
     /**
-    * Instance ID in the format of postgres-hez4fh0v
+    * Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -52,7 +52,8 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     private String InstanceChargeType;
 
     /**
-    * Instance CPU size, unit: Core
+    * Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
     */
     @SerializedName("Cpu")
     @Expose
@@ -91,16 +92,16 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance ID in the format of postgres-hez4fh0v 
-     * @return DBInstanceId Instance ID in the format of postgres-hez4fh0v
+     * Get Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID in the format of postgres-hez4fh0v
-     * @param DBInstanceId Instance ID in the format of postgres-hez4fh0v
+     * Set Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Specifies the instance ID, such as postgres-hez4fh0v. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
@@ -109,7 +110,9 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     /**
      * Get Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly) 
      * @return InstanceChargeType Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
+     * @deprecated
      */
+    @Deprecated
     public String getInstanceChargeType() {
         return this.InstanceChargeType;
     }
@@ -117,22 +120,28 @@ public class InquiryPriceUpgradeDBInstanceRequest extends AbstractModel {
     /**
      * Set Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
      * @param InstanceChargeType Instance billing type. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go hourly)
+     * @deprecated
      */
+    @Deprecated
     public void setInstanceChargeType(String InstanceChargeType) {
         this.InstanceChargeType = InstanceChargeType;
     }
 
     /**
-     * Get Instance CPU size, unit: Core 
-     * @return Cpu Instance CPU size, unit: Core
+     * Get Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input. 
+     * @return Cpu Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Instance CPU size, unit: Core
-     * @param Cpu Instance CPU size, unit: Core
+     * Set Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
+     * @param Cpu Specifies the instance Cpu size in unit Core.
+If this parameter is not input, the Cpu is set based on the corresponding sales specification determined by Memory. for example, if Memory is 2 and the supported sales specification is 1-core 2GiB, the Cpu defaults to 1 when not input.
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;

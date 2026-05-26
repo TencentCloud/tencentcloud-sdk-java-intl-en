@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class CreateMNPApprovalRequest extends AbstractModel {
 
     /**
-    * Mini program version ID
+    * Mini program version ID.
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-    * submit: Submit an approval request; cancel: Cancel the approval request
+    * submit: Submit an approval request; cancel: Cancel the approval request.
     */
     @SerializedName("ApplyAction")
     @Expose
     private String ApplyAction;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get Mini program version ID 
-     * @return MNPVersionId Mini program version ID
+     * Get Mini program version ID. 
+     * @return MNPVersionId Mini program version ID.
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set Mini program version ID
-     * @param MNPVersionId Mini program version ID
+     * Set Mini program version ID.
+     * @param MNPVersionId Mini program version ID.
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get submit: Submit an approval request; cancel: Cancel the approval request 
-     * @return ApplyAction submit: Submit an approval request; cancel: Cancel the approval request
+     * Get submit: Submit an approval request; cancel: Cancel the approval request. 
+     * @return ApplyAction submit: Submit an approval request; cancel: Cancel the approval request.
      */
     public String getApplyAction() {
         return this.ApplyAction;
     }
 
     /**
-     * Set submit: Submit an approval request; cancel: Cancel the approval request
-     * @param ApplyAction submit: Submit an approval request; cancel: Cancel the approval request
+     * Set submit: Submit an approval request; cancel: Cancel the approval request.
+     * @param ApplyAction submit: Submit an approval request; cancel: Cancel the approval request.
      */
     public void setApplyAction(String ApplyAction) {
         this.ApplyAction = ApplyAction;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

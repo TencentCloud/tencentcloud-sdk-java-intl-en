@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CheckRuleRequest extends AbstractModel {
 
     /**
-    * Event Information
+    * 
     */
     @SerializedName("Event")
     @Expose
     private String Event;
 
     /**
-    * EventPattern Information
+    * 
     */
     @SerializedName("EventPattern")
     @Expose
     private String EventPattern;
 
     /**
-     * Get Event Information 
-     * @return Event Event Information
+     * Get  
+     * @return Event 
      */
     public String getEvent() {
         return this.Event;
     }
 
     /**
-     * Set Event Information
-     * @param Event Event Information
+     * Set 
+     * @param Event 
      */
     public void setEvent(String Event) {
         this.Event = Event;
     }
 
     /**
-     * Get EventPattern Information 
-     * @return EventPattern EventPattern Information
+     * Get  
+     * @return EventPattern 
      */
     public String getEventPattern() {
         return this.EventPattern;
     }
 
     /**
-     * Set EventPattern Information
-     * @param EventPattern EventPattern Information
+     * Set 
+     * @param EventPattern 
      */
     public void setEventPattern(String EventPattern) {
         this.EventPattern = EventPattern;

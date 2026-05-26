@@ -24,276 +24,276 @@ import java.util.HashMap;
 public class PaymentDetail extends AbstractModel {
 
     /**
-    * Date in YYYYMMDD format
+    * Date in YYYYMMDD format.
     */
     @SerializedName("DataTime")
     @Expose
     private String DataTime;
 
     /**
-    * Number of mini programs involved in the order
+    * Mini program count with orders.
     */
     @SerializedName("OrderMNPNum")
     @Expose
     private Long OrderMNPNum;
 
     /**
-    * Total orders
+    * Total orders.
     */
     @SerializedName("OrderNum")
     @Expose
     private Long OrderNum;
 
     /**
-    * Paid orders
+    * Paid orders.
     */
     @SerializedName("OrderPaidNum")
     @Expose
     private Long OrderPaidNum;
 
     /**
-    * Total refunded orders
+    * Number of refund orders.
     */
     @SerializedName("OrderRefundNum")
     @Expose
     private Long OrderRefundNum;
 
     /**
-    * Unpaid orders
+    * Total unpaid orders.
     */
     @SerializedName("OrderUnpaidNum")
     @Expose
     private Long OrderUnpaidNum;
 
     /**
-    * Number of users placing orders (openid)
+    * Number of ordering users (by OpenID).
     */
     @SerializedName("OrderUserNum")
     @Expose
     private Long OrderUserNum;
 
     /**
-    * Amount paid
+    * Amount paid.
     */
     @SerializedName("PaidAmount")
     @Expose
     private String PaidAmount;
 
     /**
-    * Amount refunded
+    * Amount refunded.
     */
     @SerializedName("RefundAmount")
     @Expose
     private String RefundAmount;
 
     /**
-    * Total order amount
+    * Total amount.
     */
     @SerializedName("TotalAmount")
     @Expose
     private String TotalAmount;
 
     /**
-    * Unpaid amount
+    * Unpaid amount.
     */
     @SerializedName("UnpaidAmount")
     @Expose
     private String UnpaidAmount;
 
     /**
-    * Data update timestamp
+    * Data update timestamp.
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-     * Get Date in YYYYMMDD format 
-     * @return DataTime Date in YYYYMMDD format
+     * Get Date in YYYYMMDD format. 
+     * @return DataTime Date in YYYYMMDD format.
      */
     public String getDataTime() {
         return this.DataTime;
     }
 
     /**
-     * Set Date in YYYYMMDD format
-     * @param DataTime Date in YYYYMMDD format
+     * Set Date in YYYYMMDD format.
+     * @param DataTime Date in YYYYMMDD format.
      */
     public void setDataTime(String DataTime) {
         this.DataTime = DataTime;
     }
 
     /**
-     * Get Number of mini programs involved in the order 
-     * @return OrderMNPNum Number of mini programs involved in the order
+     * Get Mini program count with orders. 
+     * @return OrderMNPNum Mini program count with orders.
      */
     public Long getOrderMNPNum() {
         return this.OrderMNPNum;
     }
 
     /**
-     * Set Number of mini programs involved in the order
-     * @param OrderMNPNum Number of mini programs involved in the order
+     * Set Mini program count with orders.
+     * @param OrderMNPNum Mini program count with orders.
      */
     public void setOrderMNPNum(Long OrderMNPNum) {
         this.OrderMNPNum = OrderMNPNum;
     }
 
     /**
-     * Get Total orders 
-     * @return OrderNum Total orders
+     * Get Total orders. 
+     * @return OrderNum Total orders.
      */
     public Long getOrderNum() {
         return this.OrderNum;
     }
 
     /**
-     * Set Total orders
-     * @param OrderNum Total orders
+     * Set Total orders.
+     * @param OrderNum Total orders.
      */
     public void setOrderNum(Long OrderNum) {
         this.OrderNum = OrderNum;
     }
 
     /**
-     * Get Paid orders 
-     * @return OrderPaidNum Paid orders
+     * Get Paid orders. 
+     * @return OrderPaidNum Paid orders.
      */
     public Long getOrderPaidNum() {
         return this.OrderPaidNum;
     }
 
     /**
-     * Set Paid orders
-     * @param OrderPaidNum Paid orders
+     * Set Paid orders.
+     * @param OrderPaidNum Paid orders.
      */
     public void setOrderPaidNum(Long OrderPaidNum) {
         this.OrderPaidNum = OrderPaidNum;
     }
 
     /**
-     * Get Total refunded orders 
-     * @return OrderRefundNum Total refunded orders
+     * Get Number of refund orders. 
+     * @return OrderRefundNum Number of refund orders.
      */
     public Long getOrderRefundNum() {
         return this.OrderRefundNum;
     }
 
     /**
-     * Set Total refunded orders
-     * @param OrderRefundNum Total refunded orders
+     * Set Number of refund orders.
+     * @param OrderRefundNum Number of refund orders.
      */
     public void setOrderRefundNum(Long OrderRefundNum) {
         this.OrderRefundNum = OrderRefundNum;
     }
 
     /**
-     * Get Unpaid orders 
-     * @return OrderUnpaidNum Unpaid orders
+     * Get Total unpaid orders. 
+     * @return OrderUnpaidNum Total unpaid orders.
      */
     public Long getOrderUnpaidNum() {
         return this.OrderUnpaidNum;
     }
 
     /**
-     * Set Unpaid orders
-     * @param OrderUnpaidNum Unpaid orders
+     * Set Total unpaid orders.
+     * @param OrderUnpaidNum Total unpaid orders.
      */
     public void setOrderUnpaidNum(Long OrderUnpaidNum) {
         this.OrderUnpaidNum = OrderUnpaidNum;
     }
 
     /**
-     * Get Number of users placing orders (openid) 
-     * @return OrderUserNum Number of users placing orders (openid)
+     * Get Number of ordering users (by OpenID). 
+     * @return OrderUserNum Number of ordering users (by OpenID).
      */
     public Long getOrderUserNum() {
         return this.OrderUserNum;
     }
 
     /**
-     * Set Number of users placing orders (openid)
-     * @param OrderUserNum Number of users placing orders (openid)
+     * Set Number of ordering users (by OpenID).
+     * @param OrderUserNum Number of ordering users (by OpenID).
      */
     public void setOrderUserNum(Long OrderUserNum) {
         this.OrderUserNum = OrderUserNum;
     }
 
     /**
-     * Get Amount paid 
-     * @return PaidAmount Amount paid
+     * Get Amount paid. 
+     * @return PaidAmount Amount paid.
      */
     public String getPaidAmount() {
         return this.PaidAmount;
     }
 
     /**
-     * Set Amount paid
-     * @param PaidAmount Amount paid
+     * Set Amount paid.
+     * @param PaidAmount Amount paid.
      */
     public void setPaidAmount(String PaidAmount) {
         this.PaidAmount = PaidAmount;
     }
 
     /**
-     * Get Amount refunded 
-     * @return RefundAmount Amount refunded
+     * Get Amount refunded. 
+     * @return RefundAmount Amount refunded.
      */
     public String getRefundAmount() {
         return this.RefundAmount;
     }
 
     /**
-     * Set Amount refunded
-     * @param RefundAmount Amount refunded
+     * Set Amount refunded.
+     * @param RefundAmount Amount refunded.
      */
     public void setRefundAmount(String RefundAmount) {
         this.RefundAmount = RefundAmount;
     }
 
     /**
-     * Get Total order amount 
-     * @return TotalAmount Total order amount
+     * Get Total amount. 
+     * @return TotalAmount Total amount.
      */
     public String getTotalAmount() {
         return this.TotalAmount;
     }
 
     /**
-     * Set Total order amount
-     * @param TotalAmount Total order amount
+     * Set Total amount.
+     * @param TotalAmount Total amount.
      */
     public void setTotalAmount(String TotalAmount) {
         this.TotalAmount = TotalAmount;
     }
 
     /**
-     * Get Unpaid amount 
-     * @return UnpaidAmount Unpaid amount
+     * Get Unpaid amount. 
+     * @return UnpaidAmount Unpaid amount.
      */
     public String getUnpaidAmount() {
         return this.UnpaidAmount;
     }
 
     /**
-     * Set Unpaid amount
-     * @param UnpaidAmount Unpaid amount
+     * Set Unpaid amount.
+     * @param UnpaidAmount Unpaid amount.
      */
     public void setUnpaidAmount(String UnpaidAmount) {
         this.UnpaidAmount = UnpaidAmount;
     }
 
     /**
-     * Get Data update timestamp 
-     * @return UpdateTime Data update timestamp
+     * Get Data update timestamp. 
+     * @return UpdateTime Data update timestamp.
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Data update timestamp
-     * @param UpdateTime Data update timestamp
+     * Set Data update timestamp.
+     * @param UpdateTime Data update timestamp.
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;

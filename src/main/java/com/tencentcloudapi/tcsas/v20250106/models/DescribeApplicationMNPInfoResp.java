@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class DescribeApplicationMNPInfoResp extends AbstractModel {
 
     /**
-    * Mini program or mini game appid
+    * Mini program or mini game appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Mini program or mini game icon
+    * Mini program or mini game icon.
     */
     @SerializedName("MNPIcon")
     @Expose
     private String MNPIcon;
 
     /**
-    * Mini program or mini game name
+    * Mini program or mini game name.
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Mini program or mini game information
+    * Mini program or mini game information.
     */
     @SerializedName("MNPIntro")
     @Expose
     private String MNPIntro;
 
     /**
-    * Creator
+    * Creator.
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Modifier
+    * Last modifier.
     */
     @SerializedName("UpdateUser")
     @Expose
     private String UpdateUser;
 
     /**
-    * Update time
+    * Last modified time.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Online status. 0 Not available; 1 Available
+    * Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
     */
     @SerializedName("OnlineStatus")
     @Expose
     private Long OnlineStatus;
 
     /**
-    * Engine type. 0 Mini program; 1 Mini game
+    * Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
     */
     @SerializedName("EngineType")
     @Expose
     private Long EngineType;
 
     /**
-    * Category information
+    * Category information.
     */
     @SerializedName("CategoryList")
     @Expose
     private CategoryInfo [] CategoryList;
 
     /**
-     * Get Mini program or mini game appid 
-     * @return MNPId Mini program or mini game appid
+     * Get Mini program or mini game appid. 
+     * @return MNPId Mini program or mini game appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program or mini game appid
-     * @param MNPId Mini program or mini game appid
+     * Set Mini program or mini game appid.
+     * @param MNPId Mini program or mini game appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program or mini game icon 
-     * @return MNPIcon Mini program or mini game icon
+     * Get Mini program or mini game icon. 
+     * @return MNPIcon Mini program or mini game icon.
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set Mini program or mini game icon
-     * @param MNPIcon Mini program or mini game icon
+     * Set Mini program or mini game icon.
+     * @param MNPIcon Mini program or mini game icon.
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get Mini program or mini game name 
-     * @return MNPName Mini program or mini game name
+     * Get Mini program or mini game name. 
+     * @return MNPName Mini program or mini game name.
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program or mini game name
-     * @param MNPName Mini program or mini game name
+     * Set Mini program or mini game name.
+     * @param MNPName Mini program or mini game name.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program or mini game information 
-     * @return MNPIntro Mini program or mini game information
+     * Get Mini program or mini game information. 
+     * @return MNPIntro Mini program or mini game information.
      */
     public String getMNPIntro() {
         return this.MNPIntro;
     }
 
     /**
-     * Set Mini program or mini game information
-     * @param MNPIntro Mini program or mini game information
+     * Set Mini program or mini game information.
+     * @param MNPIntro Mini program or mini game information.
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get Creator 
-     * @return CreateUser Creator
+     * Get Creator. 
+     * @return CreateUser Creator.
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Creator
-     * @param CreateUser Creator
+     * Set Creator.
+     * @param CreateUser Creator.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Modifier 
-     * @return UpdateUser Modifier
+     * Get Last modifier. 
+     * @return UpdateUser Last modifier.
      */
     public String getUpdateUser() {
         return this.UpdateUser;
     }
 
     /**
-     * Set Modifier
-     * @param UpdateUser Modifier
+     * Set Last modifier.
+     * @param UpdateUser Last modifier.
      */
     public void setUpdateUser(String UpdateUser) {
         this.UpdateUser = UpdateUser;
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get Last modified time. 
+     * @return UpdateTime Last modified time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set Last modified time.
+     * @param UpdateTime Last modified time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Online status. 0 Not available; 1 Available 
-     * @return OnlineStatus Online status. 0 Not available; 1 Available
+     * Get Available status. Valid value: 0: Not available; 1 Available; 2: In canary release. 
+     * @return OnlineStatus Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
      */
     public Long getOnlineStatus() {
         return this.OnlineStatus;
     }
 
     /**
-     * Set Online status. 0 Not available; 1 Available
-     * @param OnlineStatus Online status. 0 Not available; 1 Available
+     * Set Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
+     * @param OnlineStatus Available status. Valid value: 0: Not available; 1 Available; 2: In canary release.
      */
     public void setOnlineStatus(Long OnlineStatus) {
         this.OnlineStatus = OnlineStatus;
     }
 
     /**
-     * Get Engine type. 0 Mini program; 1 Mini game 
-     * @return EngineType Engine type. 0 Mini program; 1 Mini game
+     * Get Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game. 
+     * @return EngineType Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
      */
     public Long getEngineType() {
         return this.EngineType;
     }
 
     /**
-     * Set Engine type. 0 Mini program; 1 Mini game
-     * @param EngineType Engine type. 0 Mini program; 1 Mini game
+     * Set Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
+     * @param EngineType Engine type. Specifies the runtime engine by product type. Valid values: 0: Mini program; 1: Mini game.
      */
     public void setEngineType(Long EngineType) {
         this.EngineType = EngineType;
     }
 
     /**
-     * Get Category information 
-     * @return CategoryList Category information
+     * Get Category information. 
+     * @return CategoryList Category information.
      */
     public CategoryInfo [] getCategoryList() {
         return this.CategoryList;
     }
 
     /**
-     * Set Category information
-     * @param CategoryList Category information
+     * Set Category information.
+     * @param CategoryList Category information.
      */
     public void setCategoryList(CategoryInfo [] CategoryList) {
         this.CategoryList = CategoryList;

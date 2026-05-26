@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateDomainParam extends AbstractModel {
 
     /**
-    * Array of domain name URLs
+    * Array of domain URLs.
     */
     @SerializedName("DomainUrlList")
     @Expose
     private String [] DomainUrlList;
 
     /**
-    * Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
+    * Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
     */
     @SerializedName("DomainType")
     @Expose
     private Long DomainType;
 
     /**
-     * Get Array of domain name URLs 
-     * @return DomainUrlList Array of domain name URLs
+     * Get Array of domain URLs. 
+     * @return DomainUrlList Array of domain URLs.
      */
     public String [] getDomainUrlList() {
         return this.DomainUrlList;
     }
 
     /**
-     * Set Array of domain name URLs
-     * @param DomainUrlList Array of domain name URLs
+     * Set Array of domain URLs.
+     * @param DomainUrlList Array of domain URLs.
      */
     public void setDomainUrlList(String [] DomainUrlList) {
         this.DomainUrlList = DomainUrlList;
     }
 
     /**
-     * Get Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download 
-     * @return DomainType Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
+     * Get Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download.  
+     * @return DomainType Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
      */
     public Long getDomainType() {
         return this.DomainType;
     }
 
     /**
-     * Set Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
-     * @param DomainType Domain type. 1: requests domain; 2: WebView load domain, 3: sockets domain; 4: File upload; 5: File download
+     * Set Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
+     * @param DomainType Domain type. Valid values: 1: Request domain; 2: Business domain; 3: Socket domain; 4: File upload; 5: File download. 
      */
     public void setDomainType(Long DomainType) {
         this.DomainType = DomainType;

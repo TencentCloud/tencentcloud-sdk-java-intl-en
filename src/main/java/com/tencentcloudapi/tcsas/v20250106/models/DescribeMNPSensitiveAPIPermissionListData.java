@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMNPSensitiveAPIPermissionListData extends AbstractModel {
 
     /**
-    * API ID
+    * API ID.
     */
     @SerializedName("APIId")
     @Expose
@@ -38,7 +38,7 @@ public class DescribeMNPSensitiveAPIPermissionListData extends AbstractModel {
     private String APIName;
 
     /**
-    * API request method
+    * API method.
     */
     @SerializedName("APIMethod")
     @Expose
@@ -66,35 +66,35 @@ public class DescribeMNPSensitiveAPIPermissionListData extends AbstractModel {
     private String RejectReason;
 
     /**
-    * Approval ID
+    * Approval number.
     */
     @SerializedName("ApprovalNo")
     @Expose
     private String ApprovalNo;
 
     /**
-    * Application ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Specifies the application icon.
+    * Superapp icon.
     */
     @SerializedName("ApplicationIcon")
     @Expose
     private String ApplicationIcon;
 
     /**
-    * Application name
+    * Superapp name.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * API type. 1: system; 2: custom.
+    * API type. Valid values: 1: System; 2: Custom.
     */
     @SerializedName("APIType")
     @Expose
@@ -108,16 +108,16 @@ public class DescribeMNPSensitiveAPIPermissionListData extends AbstractModel {
     private String APIDesc;
 
     /**
-     * Get API ID 
-     * @return APIId API ID
+     * Get API ID. 
+     * @return APIId API ID.
      */
     public String getAPIId() {
         return this.APIId;
     }
 
     /**
-     * Set API ID
-     * @param APIId API ID
+     * Set API ID.
+     * @param APIId API ID.
      */
     public void setAPIId(String APIId) {
         this.APIId = APIId;
@@ -140,16 +140,16 @@ public class DescribeMNPSensitiveAPIPermissionListData extends AbstractModel {
     }
 
     /**
-     * Get API request method 
-     * @return APIMethod API request method
+     * Get API method. 
+     * @return APIMethod API method.
      */
     public String getAPIMethod() {
         return this.APIMethod;
     }
 
     /**
-     * Set API request method
-     * @param APIMethod API request method
+     * Set API method.
+     * @param APIMethod API method.
      */
     public void setAPIMethod(String APIMethod) {
         this.APIMethod = APIMethod;
@@ -204,80 +204,80 @@ public class DescribeMNPSensitiveAPIPermissionListData extends AbstractModel {
     }
 
     /**
-     * Get Approval ID 
-     * @return ApprovalNo Approval ID
+     * Get Approval number. 
+     * @return ApprovalNo Approval number.
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set Approval ID
-     * @param ApprovalNo Approval ID
+     * Set Approval number.
+     * @param ApprovalNo Approval number.
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;
     }
 
     /**
-     * Get Application ID 
-     * @return ApplicationId Application ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Application ID
-     * @param ApplicationId Application ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Specifies the application icon. 
-     * @return ApplicationIcon Specifies the application icon.
+     * Get Superapp icon. 
+     * @return ApplicationIcon Superapp icon.
      */
     public String getApplicationIcon() {
         return this.ApplicationIcon;
     }
 
     /**
-     * Set Specifies the application icon.
-     * @param ApplicationIcon Specifies the application icon.
+     * Set Superapp icon.
+     * @param ApplicationIcon Superapp icon.
      */
     public void setApplicationIcon(String ApplicationIcon) {
         this.ApplicationIcon = ApplicationIcon;
     }
 
     /**
-     * Get Application name 
-     * @return ApplicationName Application name
+     * Get Superapp name. 
+     * @return ApplicationName Superapp name.
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Application name
-     * @param ApplicationName Application name
+     * Set Superapp name.
+     * @param ApplicationName Superapp name.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get API type. 1: system; 2: custom. 
-     * @return APIType API type. 1: system; 2: custom.
+     * Get API type. Valid values: 1: System; 2: Custom. 
+     * @return APIType API type. Valid values: 1: System; 2: Custom.
      */
     public Long getAPIType() {
         return this.APIType;
     }
 
     /**
-     * Set API type. 1: system; 2: custom.
-     * @param APIType API type. 1: system; 2: custom.
+     * Set API type. Valid values: 1: System; 2: Custom.
+     * @param APIType API type. Valid values: 1: System; 2: Custom.
      */
     public void setAPIType(Long APIType) {
         this.APIType = APIType;

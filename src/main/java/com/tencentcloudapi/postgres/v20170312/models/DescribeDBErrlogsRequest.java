@@ -24,164 +24,187 @@ import java.util.HashMap;
 public class DescribeDBErrlogsRequest extends AbstractModel {
 
     /**
-    * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+    * <p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+    * <p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
+    * <p>Query end time, in the format of 2018-01-01 00:00:00.</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Database name
+    * <p>Database name</p>
     */
     @SerializedName("DatabaseName")
     @Expose
     private String DatabaseName;
 
     /**
-    * Keywords used for search
+    * <p>Search keywords.</p>
     */
     @SerializedName("SearchKeys")
     @Expose
     private String [] SearchKeys;
 
     /**
-    * Number of results returned per page. Value range: 1-100. Default value: `50`.	
+    * <p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Data offset, which starts from 0. Default value: `0`.	
+    * <p>Data offset, which starts from 0. The default value is 0.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-     * Get Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en). 
-     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+    * <p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
+    */
+    @SerializedName("LogFilters")
+    @Expose
+    private LogFilter [] LogFilters;
+
+    /**
+     * Get <p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p> 
+     * @return DBInstanceId <p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
-     * @param DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/product/409/16773?lang=en).
+     * Set <p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+     * @param DBInstanceId <p>Instance ID. It can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	 
-     * @return StartTime u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+     * Get <p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p> 
+     * @return StartTime <p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
-     * @param StartTime u200cu200cu200cQuery start time in the format of 2018-01-01 00:00:00. The log is retained for seven days by default, so the start time must fall within the retention period.	
+     * Set <p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
+     * @param StartTime <p>Query start time, such as 2018-01-01 00:00:00. Log retention time defaults to 7 days. Start time cannot exceed the retention period.</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	 
-     * @return EndTime u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
+     * Get <p>Query end time, in the format of 2018-01-01 00:00:00.</p> 
+     * @return EndTime <p>Query end time, in the format of 2018-01-01 00:00:00.</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
-     * @param EndTime u200cu200cu200cu200cQuery end time in the format of 2018-01-01 00:00:00	
+     * Set <p>Query end time, in the format of 2018-01-01 00:00:00.</p>
+     * @param EndTime <p>Query end time, in the format of 2018-01-01 00:00:00.</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Database name 
-     * @return DatabaseName Database name
+     * Get <p>Database name</p> 
+     * @return DatabaseName <p>Database name</p>
      */
     public String getDatabaseName() {
         return this.DatabaseName;
     }
 
     /**
-     * Set Database name
-     * @param DatabaseName Database name
+     * Set <p>Database name</p>
+     * @param DatabaseName <p>Database name</p>
      */
     public void setDatabaseName(String DatabaseName) {
         this.DatabaseName = DatabaseName;
     }
 
     /**
-     * Get Keywords used for search 
-     * @return SearchKeys Keywords used for search
+     * Get <p>Search keywords.</p> 
+     * @return SearchKeys <p>Search keywords.</p>
      */
     public String [] getSearchKeys() {
         return this.SearchKeys;
     }
 
     /**
-     * Set Keywords used for search
-     * @param SearchKeys Keywords used for search
+     * Set <p>Search keywords.</p>
+     * @param SearchKeys <p>Search keywords.</p>
      */
     public void setSearchKeys(String [] SearchKeys) {
         this.SearchKeys = SearchKeys;
     }
 
     /**
-     * Get Number of results returned per page. Value range: 1-100. Default value: `50`.	 
-     * @return Limit Number of results returned per page. Value range: 1-100. Default value: `50`.	
+     * Get <p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p> 
+     * @return Limit <p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results returned per page. Value range: 1-100. Default value: `50`.	
-     * @param Limit Number of results returned per page. Value range: 1-100. Default value: `50`.	
+     * Set <p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
+     * @param Limit <p>Number of results returned per page, with a value range of 1-100. The default value is `50`.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Data offset, which starts from 0. Default value: `0`.	 
-     * @return Offset Data offset, which starts from 0. Default value: `0`.	
+     * Get <p>Data offset, which starts from 0. The default value is 0.</p> 
+     * @return Offset <p>Data offset, which starts from 0. The default value is 0.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Data offset, which starts from 0. Default value: `0`.	
-     * @param Offset Data offset, which starts from 0. Default value: `0`.	
+     * Set <p>Data offset, which starts from 0. The default value is 0.</p>
+     * @param Offset <p>Data offset, which starts from 0. The default value is 0.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p> 
+     * @return LogFilters <p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
+     */
+    public LogFilter [] getLogFilters() {
+        return this.LogFilters;
+    }
+
+    /**
+     * Set <p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
+     * @param LogFilters <p>Log filter criteria. Format is [{Type: "ApplicationName", Compare: "INC", Value: ["123"]}].</p>
+     */
+    public void setLogFilters(LogFilter [] LogFilters) {
+        this.LogFilters = LogFilters;
     }
 
     public DescribeDBErrlogsRequest() {
@@ -216,6 +239,12 @@ public class DescribeDBErrlogsRequest extends AbstractModel {
         if (source.Offset != null) {
             this.Offset = new Long(source.Offset);
         }
+        if (source.LogFilters != null) {
+            this.LogFilters = new LogFilter[source.LogFilters.length];
+            for (int i = 0; i < source.LogFilters.length; i++) {
+                this.LogFilters[i] = new LogFilter(source.LogFilters[i]);
+            }
+        }
     }
 
 
@@ -230,6 +259,7 @@ public class DescribeDBErrlogsRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
         this.setParamSimple(map, prefix + "Limit", this.Limit);
         this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamArrayObj(map, prefix + "LogFilters.", this.LogFilters);
 
     }
 }

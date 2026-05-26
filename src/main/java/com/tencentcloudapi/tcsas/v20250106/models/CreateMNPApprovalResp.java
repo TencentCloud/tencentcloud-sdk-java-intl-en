@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateMNPApprovalResp extends AbstractModel {
 
     /**
-    * Bool type response object
+    * The Boolean response object.
     */
     @SerializedName("Result")
     @Expose
     private Boolean Result;
 
     /**
-    * Approval No.
+    * Approval nunmber.
     */
     @SerializedName("ApprovalNo")
     @Expose
     private String ApprovalNo;
 
     /**
-     * Get Bool type response object 
-     * @return Result Bool type response object
+     * Get The Boolean response object. 
+     * @return Result The Boolean response object.
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set Bool type response object
-     * @param Result Bool type response object
+     * Set The Boolean response object.
+     * @param Result The Boolean response object.
      */
     public void setResult(Boolean Result) {
         this.Result = Result;
     }
 
     /**
-     * Get Approval No. 
-     * @return ApprovalNo Approval No.
+     * Get Approval nunmber. 
+     * @return ApprovalNo Approval nunmber.
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set Approval No.
-     * @param ApprovalNo Approval No.
+     * Set Approval nunmber.
+     * @param ApprovalNo Approval nunmber.
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;

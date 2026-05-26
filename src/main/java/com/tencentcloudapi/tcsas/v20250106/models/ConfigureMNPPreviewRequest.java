@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class ConfigureMNPPreviewRequest extends AbstractModel {
 
     /**
-    * Mini program ID
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * 1: Set; 2: Cancel
+    * Action type. Valid values: 1: Set; 2: Cancel.
     */
     @SerializedName("ActionType")
     @Expose
     private Long ActionType;
 
     /**
-    * Mini program version ID
+    * Mini program version ID.
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Path to the preview page
+    * Preview path.
     */
     @SerializedName("PreivewEntrancePath")
     @Expose
     private String PreivewEntrancePath;
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get 1: Set; 2: Cancel 
-     * @return ActionType 1: Set; 2: Cancel
+     * Get Action type. Valid values: 1: Set; 2: Cancel. 
+     * @return ActionType Action type. Valid values: 1: Set; 2: Cancel.
      */
     public Long getActionType() {
         return this.ActionType;
     }
 
     /**
-     * Set 1: Set; 2: Cancel
-     * @param ActionType 1: Set; 2: Cancel
+     * Set Action type. Valid values: 1: Set; 2: Cancel.
+     * @param ActionType Action type. Valid values: 1: Set; 2: Cancel.
      */
     public void setActionType(Long ActionType) {
         this.ActionType = ActionType;
     }
 
     /**
-     * Get Mini program version ID 
-     * @return MNPVersionId Mini program version ID
+     * Get Mini program version ID. 
+     * @return MNPVersionId Mini program version ID.
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set Mini program version ID
-     * @param MNPVersionId Mini program version ID
+     * Set Mini program version ID.
+     * @param MNPVersionId Mini program version ID.
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Path to the preview page 
-     * @return PreivewEntrancePath Path to the preview page
+     * Get Preview path. 
+     * @return PreivewEntrancePath Preview path.
      */
     public String getPreivewEntrancePath() {
         return this.PreivewEntrancePath;
     }
 
     /**
-     * Set Path to the preview page
-     * @param PreivewEntrancePath Path to the preview page
+     * Set Preview path.
+     * @param PreivewEntrancePath Preview path.
      */
     public void setPreivewEntrancePath(String PreivewEntrancePath) {
         this.PreivewEntrancePath = PreivewEntrancePath;

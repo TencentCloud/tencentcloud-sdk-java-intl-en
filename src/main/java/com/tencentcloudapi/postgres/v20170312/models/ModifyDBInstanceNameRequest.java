@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyDBInstanceNameRequest extends AbstractModel {
 
     /**
-    * Database instance ID in the format of postgres-6fego161
+    * Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+    * Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
 
     */
     @SerializedName("InstanceName")
@@ -39,25 +39,25 @@ public class ModifyDBInstanceNameRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-     * Get Database instance ID in the format of postgres-6fego161 
-     * @return DBInstanceId Database instance ID in the format of postgres-6fego161
+     * Get Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Database instance ID in the format of postgres-6fego161
-     * @param DBInstanceId Database instance ID in the format of postgres-6fego161
+     * Set Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Specifies the database instance ID, such as postgres-6fego161. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+     * Get Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
  
-     * @return InstanceName Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+     * @return InstanceName Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
 
      */
     public String getInstanceName() {
@@ -65,9 +65,9 @@ public class ModifyDBInstanceNameRequest extends AbstractModel {
     }
 
     /**
-     * Set Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+     * Set Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
 
-     * @param InstanceName Instance name, which can contain up to 60 letters, digits, hyphens, and symbols (_-). If this parameter is not specified, "Unnamed" will be displayed by default.
+     * @param InstanceName Instance name. only supports chinese, english, digits, "_", or "-" with length less than 60.
 
      */
     public void setInstanceName(String InstanceName) {

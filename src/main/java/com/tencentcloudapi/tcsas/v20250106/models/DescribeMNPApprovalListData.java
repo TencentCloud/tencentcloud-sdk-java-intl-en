@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeMNPApprovalListData extends AbstractModel {
 
     /**
-    * Approval ticket ID
+    * Approval number.
     */
     @SerializedName("ApprovalNo")
     @Expose
     private String ApprovalNo;
 
     /**
-    * Application ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
+    * Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
     */
     @SerializedName("ApprovalStatus")
     @Expose
     private Long ApprovalStatus;
 
     /**
-    * Mini program ID
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
@@ -59,84 +59,84 @@ public class DescribeMNPApprovalListData extends AbstractModel {
     private String MNPVersion;
 
     /**
-    * Mini program version ID
+    * Mini program version ID.
     */
     @SerializedName("MNPVersionId")
     @Expose
     private Long MNPVersionId;
 
     /**
-    * Applicant
+    * Applicant.
     */
     @SerializedName("ApplyUser")
     @Expose
     private String ApplyUser;
 
     /**
-    * Application time
+    * Application time.
     */
     @SerializedName("ApplyTime")
     @Expose
     private String ApplyTime;
 
     /**
-    * Mini program name
+    * Mini program name.
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Mini program icon
+    * Mini program icon.
     */
     @SerializedName("MNPIcon")
     @Expose
     private String MNPIcon;
 
     /**
-    * Application name
+    * Superapp name.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Specifies the application icon.
+    * Superapp icon.
     */
     @SerializedName("ApplicationLogo")
     @Expose
     private String ApplicationLogo;
 
     /**
-    * Team ID
+    * Team ID.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Team name
+    * Team name.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Mini program review qr code.
+    * Mini program approval QR code URL.
     */
     @SerializedName("MNPQrCodeUrl")
     @Expose
     private String MNPQrCodeUrl;
 
     /**
-    * Mini program type
+    * Mini program category.
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * Specifies the reviewer.
+    * Approver.
     */
     @SerializedName("ApprovalUser")
     @Expose
@@ -150,71 +150,71 @@ public class DescribeMNPApprovalListData extends AbstractModel {
     private String ApprovalTime;
 
     /**
-    * Approval notes
+    * Approval note.
     */
     @SerializedName("ApprovalNote")
     @Expose
     private String ApprovalNote;
 
     /**
-     * Get Approval ticket ID 
-     * @return ApprovalNo Approval ticket ID
+     * Get Approval number. 
+     * @return ApprovalNo Approval number.
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set Approval ticket ID
-     * @param ApprovalNo Approval ticket ID
+     * Set Approval number.
+     * @param ApprovalNo Approval number.
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;
     }
 
     /**
-     * Get Application ID 
-     * @return ApplicationId Application ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Application ID
-     * @param ApplicationId Application ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled). 
-     * @return ApprovalStatus Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
+     * Get Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled. 
+     * @return ApprovalStatus Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     public Long getApprovalStatus() {
         return this.ApprovalStatus;
     }
 
     /**
-     * Set Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
-     * @param ApprovalStatus Approval status. valid values: 1 (processing), 2 (rejected), 3 (approved), 4 (cancelled).
+     * Set Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
+     * @param ApprovalStatus Approval status. Valid values: 1: Processing; 2: Rejected; 3: Approved; 4: Cancelled.
      */
     public void setApprovalStatus(Long ApprovalStatus) {
         this.ApprovalStatus = ApprovalStatus;
     }
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
@@ -237,192 +237,192 @@ public class DescribeMNPApprovalListData extends AbstractModel {
     }
 
     /**
-     * Get Mini program version ID 
-     * @return MNPVersionId Mini program version ID
+     * Get Mini program version ID. 
+     * @return MNPVersionId Mini program version ID.
      */
     public Long getMNPVersionId() {
         return this.MNPVersionId;
     }
 
     /**
-     * Set Mini program version ID
-     * @param MNPVersionId Mini program version ID
+     * Set Mini program version ID.
+     * @param MNPVersionId Mini program version ID.
      */
     public void setMNPVersionId(Long MNPVersionId) {
         this.MNPVersionId = MNPVersionId;
     }
 
     /**
-     * Get Applicant 
-     * @return ApplyUser Applicant
+     * Get Applicant. 
+     * @return ApplyUser Applicant.
      */
     public String getApplyUser() {
         return this.ApplyUser;
     }
 
     /**
-     * Set Applicant
-     * @param ApplyUser Applicant
+     * Set Applicant.
+     * @param ApplyUser Applicant.
      */
     public void setApplyUser(String ApplyUser) {
         this.ApplyUser = ApplyUser;
     }
 
     /**
-     * Get Application time 
-     * @return ApplyTime Application time
+     * Get Application time. 
+     * @return ApplyTime Application time.
      */
     public String getApplyTime() {
         return this.ApplyTime;
     }
 
     /**
-     * Set Application time
-     * @param ApplyTime Application time
+     * Set Application time.
+     * @param ApplyTime Application time.
      */
     public void setApplyTime(String ApplyTime) {
         this.ApplyTime = ApplyTime;
     }
 
     /**
-     * Get Mini program name 
-     * @return MNPName Mini program name
+     * Get Mini program name. 
+     * @return MNPName Mini program name.
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name
-     * @param MNPName Mini program name
+     * Set Mini program name.
+     * @param MNPName Mini program name.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program icon 
-     * @return MNPIcon Mini program icon
+     * Get Mini program icon. 
+     * @return MNPIcon Mini program icon.
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set Mini program icon
-     * @param MNPIcon Mini program icon
+     * Set Mini program icon.
+     * @param MNPIcon Mini program icon.
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get Application name 
-     * @return ApplicationName Application name
+     * Get Superapp name. 
+     * @return ApplicationName Superapp name.
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Application name
-     * @param ApplicationName Application name
+     * Set Superapp name.
+     * @param ApplicationName Superapp name.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Specifies the application icon. 
-     * @return ApplicationLogo Specifies the application icon.
+     * Get Superapp icon. 
+     * @return ApplicationLogo Superapp icon.
      */
     public String getApplicationLogo() {
         return this.ApplicationLogo;
     }
 
     /**
-     * Set Specifies the application icon.
-     * @param ApplicationLogo Specifies the application icon.
+     * Set Superapp icon.
+     * @param ApplicationLogo Superapp icon.
      */
     public void setApplicationLogo(String ApplicationLogo) {
         this.ApplicationLogo = ApplicationLogo;
     }
 
     /**
-     * Get Team ID 
-     * @return TeamId Team ID
+     * Get Team ID. 
+     * @return TeamId Team ID.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID
-     * @param TeamId Team ID
+     * Set Team ID.
+     * @param TeamId Team ID.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name 
-     * @return TeamName Team name
+     * Get Team name. 
+     * @return TeamName Team name.
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name
-     * @param TeamName Team name
+     * Set Team name.
+     * @param TeamName Team name.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Mini program review qr code. 
-     * @return MNPQrCodeUrl Mini program review qr code.
+     * Get Mini program approval QR code URL. 
+     * @return MNPQrCodeUrl Mini program approval QR code URL.
      */
     public String getMNPQrCodeUrl() {
         return this.MNPQrCodeUrl;
     }
 
     /**
-     * Set Mini program review qr code.
-     * @param MNPQrCodeUrl Mini program review qr code.
+     * Set Mini program approval QR code URL.
+     * @param MNPQrCodeUrl Mini program approval QR code URL.
      */
     public void setMNPQrCodeUrl(String MNPQrCodeUrl) {
         this.MNPQrCodeUrl = MNPQrCodeUrl;
     }
 
     /**
-     * Get Mini program type 
-     * @return MNPType Mini program type
+     * Get Mini program category. 
+     * @return MNPType Mini program category.
      */
     public String getMNPType() {
         return this.MNPType;
     }
 
     /**
-     * Set Mini program type
-     * @param MNPType Mini program type
+     * Set Mini program category.
+     * @param MNPType Mini program category.
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get Specifies the reviewer. 
-     * @return ApprovalUser Specifies the reviewer.
+     * Get Approver. 
+     * @return ApprovalUser Approver.
      */
     public String getApprovalUser() {
         return this.ApprovalUser;
     }
 
     /**
-     * Set Specifies the reviewer.
-     * @param ApprovalUser Specifies the reviewer.
+     * Set Approver.
+     * @param ApprovalUser Approver.
      */
     public void setApprovalUser(String ApprovalUser) {
         this.ApprovalUser = ApprovalUser;
@@ -445,16 +445,16 @@ public class DescribeMNPApprovalListData extends AbstractModel {
     }
 
     /**
-     * Get Approval notes 
-     * @return ApprovalNote Approval notes
+     * Get Approval note. 
+     * @return ApprovalNote Approval note.
      */
     public String getApprovalNote() {
         return this.ApprovalNote;
     }
 
     /**
-     * Set Approval notes
-     * @param ApprovalNote Approval notes
+     * Set Approval note.
+     * @param ApprovalNote Approval note.
      */
     public void setApprovalNote(String ApprovalNote) {
         this.ApprovalNote = ApprovalNote;

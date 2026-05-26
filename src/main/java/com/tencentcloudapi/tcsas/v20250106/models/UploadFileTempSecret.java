@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class UploadFileTempSecret extends AbstractModel {
 
     /**
-    * Bucket
+    * Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Bucket")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Bucket;
 
     /**
-    * Region
+    * Region.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Region")
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Region;
 
     /**
-    * Destination of upload
+    * Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Path")
@@ -48,7 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Path;
 
     /**
-    * Temporary secret ID
+    * Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TempSecretId")
@@ -56,7 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TempSecretId;
 
     /**
-    * Temporary secret key
+    * Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TempSecretKey")
@@ -64,7 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TempSecretKey;
 
     /**
-    * Token 
+    * Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Token")
@@ -72,16 +72,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String Token;
 
     /**
-    * Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
+    * Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
     */
     @SerializedName("AccelerateEnable")
     @Expose
     private Long AccelerateEnable;
 
     /**
-     * Get Bucket
+     * Get Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Bucket Bucket
+     * @return Bucket Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getBucket() {
@@ -89,9 +89,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Bucket
+     * Set Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Bucket Bucket
+     * @param Bucket Storage bucket.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBucket(String Bucket) {
@@ -99,9 +99,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Region
+     * Get Region.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Region Region
+     * @return Region Region.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRegion() {
@@ -109,9 +109,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Region
+     * Set Region.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Region Region
+     * @param Region Region.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRegion(String Region) {
@@ -119,9 +119,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Destination of upload
+     * Get Upload path.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Path Destination of upload
+     * @return Path Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPath() {
@@ -129,9 +129,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Destination of upload
+     * Set Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Path Destination of upload
+     * @param Path Upload path.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPath(String Path) {
@@ -139,9 +139,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Temporary secret ID
+     * Get Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TempSecretId Temporary secret ID
+     * @return TempSecretId Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTempSecretId() {
@@ -149,9 +149,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Temporary secret ID
+     * Set Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TempSecretId Temporary secret ID
+     * @param TempSecretId Temporary secret ID.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTempSecretId(String TempSecretId) {
@@ -159,9 +159,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Temporary secret key
+     * Get Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return TempSecretKey Temporary secret key
+     * @return TempSecretKey Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getTempSecretKey() {
@@ -169,9 +169,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Temporary secret key
+     * Set Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TempSecretKey Temporary secret key
+     * @param TempSecretKey Temporary secret key.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTempSecretKey(String TempSecretKey) {
@@ -179,9 +179,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Token 
+     * Get Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Token Token 
+     * @return Token Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getToken() {
@@ -189,9 +189,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Token 
+     * Set Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Token Token 
+     * @param Token Token credential. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setToken(String Token) {
@@ -199,16 +199,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Whether to enable global acceleration. Valid values: 0 (no), 1 (yes) 
-     * @return AccelerateEnable Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
+     * Get Whether global acceleration is enabled. Valid values: 0: No; 1: Yes. 
+     * @return AccelerateEnable Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
      */
     public Long getAccelerateEnable() {
         return this.AccelerateEnable;
     }
 
     /**
-     * Set Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
-     * @param AccelerateEnable Whether to enable global acceleration. Valid values: 0 (no), 1 (yes)
+     * Set Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
+     * @param AccelerateEnable Whether global acceleration is enabled. Valid values: 0: No; 1: Yes.
      */
     public void setAccelerateEnable(Long AccelerateEnable) {
         this.AccelerateEnable = AccelerateEnable;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class PresetResp extends AbstractModel {
 
     /**
-    * RSA encryption public key.
+    * RSA public key.
     */
     @SerializedName("Key")
     @Expose
     private String Key;
 
     /**
-     * Get RSA encryption public key. 
-     * @return Key RSA encryption public key.
+     * Get RSA public key. 
+     * @return Key RSA public key.
      */
     public String getKey() {
         return this.Key;
     }
 
     /**
-     * Set RSA encryption public key.
-     * @param Key RSA encryption public key.
+     * Set RSA public key.
+     * @param Key RSA public key.
      */
     public void setKey(String Key) {
         this.Key = Key;

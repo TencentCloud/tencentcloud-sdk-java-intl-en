@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ProcessMNPApprovalRequest extends AbstractModel {
 
     /**
-    * Approval ID
+    * Approval number.
     */
     @SerializedName("ApprovalNo")
     @Expose
     private String ApprovalNo;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Approval details
+    * Approval details.
     */
     @SerializedName("ApprovalItems")
     @Expose
     private ApprovalItem [] ApprovalItems;
 
     /**
-     * Get Approval ID 
-     * @return ApprovalNo Approval ID
+     * Get Approval number. 
+     * @return ApprovalNo Approval number.
      */
     public String getApprovalNo() {
         return this.ApprovalNo;
     }
 
     /**
-     * Set Approval ID
-     * @param ApprovalNo Approval ID
+     * Set Approval number.
+     * @param ApprovalNo Approval number.
      */
     public void setApprovalNo(String ApprovalNo) {
         this.ApprovalNo = ApprovalNo;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Approval details 
-     * @return ApprovalItems Approval details
+     * Get Approval details. 
+     * @return ApprovalItems Approval details.
      */
     public ApprovalItem [] getApprovalItems() {
         return this.ApprovalItems;
     }
 
     /**
-     * Set Approval details
-     * @param ApprovalItems Approval details
+     * Set Approval details.
+     * @param ApprovalItems Approval details.
      */
     public void setApprovalItems(ApprovalItem [] ApprovalItems) {
         this.ApprovalItems = ApprovalItems;

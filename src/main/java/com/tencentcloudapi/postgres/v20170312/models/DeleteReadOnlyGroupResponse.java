@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DeleteReadOnlyGroupResponse extends AbstractModel {
 
     /**
-    * Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * Process ID
     */
     @SerializedName("FlowId")
     @Expose
@@ -39,20 +38,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     private String RequestId;
 
     /**
-     * Get Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return FlowId Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get Process ID 
+     * @return FlowId Process ID
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param FlowId Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set Process ID
+     * @param FlowId Process ID
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;

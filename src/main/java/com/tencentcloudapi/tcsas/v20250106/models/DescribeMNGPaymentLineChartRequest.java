@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeMNGPaymentLineChartRequest extends AbstractModel {
 
     /**
-    * Tenant ID
+    * Tenant ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Fixed value: payment_data_analysis
+    * Fixed value: payment_data_analysis.
     */
     @SerializedName("ReportId")
     @Expose
@@ -46,46 +46,46 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
+mng_refund_amount: Refund amount.
     */
     @SerializedName("IndexId")
     @Expose
     private String IndexId;
 
     /**
-    * Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
+    * Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
     */
     @SerializedName("QueryData")
     @Expose
     private String QueryData;
 
     /**
-     * Get Tenant ID 
-     * @return PlatformId Tenant ID
+     * Get Tenant ID. 
+     * @return PlatformId Tenant ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Tenant ID
-     * @param PlatformId Tenant ID
+     * Set Tenant ID.
+     * @param PlatformId Tenant ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Fixed value: payment_data_analysis 
-     * @return ReportId Fixed value: payment_data_analysis
+     * Get Fixed value: payment_data_analysis. 
+     * @return ReportId Fixed value: payment_data_analysis.
      */
     public String getReportId() {
         return this.ReportId;
     }
 
     /**
-     * Set Fixed value: payment_data_analysis
-     * @param ReportId Fixed value: payment_data_analysis
+     * Set Fixed value: payment_data_analysis.
+     * @param ReportId Fixed value: payment_data_analysis.
      */
     public void setReportId(String ReportId) {
         this.ReportId = ReportId;
@@ -100,7 +100,7 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount 
+mng_refund_amount: Refund amount. 
      * @return IndexId Valid values:
 mng_paid_amount: Virtual payment amount,
 paid_user_num: Number of paying users,
@@ -109,7 +109,7 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
+mng_refund_amount: Refund amount.
      */
     public String getIndexId() {
         return this.IndexId;
@@ -124,7 +124,7 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
+mng_refund_amount: Refund amount.
      * @param IndexId Valid values:
 mng_paid_amount: Virtual payment amount,
 paid_user_num: Number of paying users,
@@ -133,23 +133,23 @@ new_paid_user_amount: Revenue from new paying users,
 new_paid_user_ratio: Percentage of new users who made payments,
 arppu: Average revenue per paying user (ARPPU),
 mng_refund_num: Number of refund orders
-mng_refund_amount: Refund amount
+mng_refund_amount: Refund amount.
      */
     public void setIndexId(String IndexId) {
         this.IndexId = IndexId;
     }
 
     /**
-     * Get Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2} 
-     * @return QueryData Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
+     * Get Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}. 
+     * @return QueryData Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
      */
     public String getQueryData() {
         return this.QueryData;
     }
 
     /**
-     * Set Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
-     * @param QueryData Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}
+     * Set Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
+     * @param QueryData Input parameter base64 string: {"Platform":0,"MnpId":"mgcp5xc2yzw8aixv","BeginDate":20251028,"EndDate":20251126,"DataType":"1","PaymentType":2}.
      */
     public void setQueryData(String QueryData) {
         this.QueryData = QueryData;

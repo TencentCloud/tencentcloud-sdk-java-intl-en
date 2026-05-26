@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeDBVersionsResponse extends AbstractModel {
 
     /**
-    * List of database versions
+    * <p>Database version information list.</p>
     */
     @SerializedName("VersionSet")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeDBVersionsResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get List of database versions 
-     * @return VersionSet List of database versions
+     * Get <p>Database version information list.</p> 
+     * @return VersionSet <p>Database version information list.</p>
      */
     public Version [] getVersionSet() {
         return this.VersionSet;
     }
 
     /**
-     * Set List of database versions
-     * @param VersionSet List of database versions
+     * Set <p>Database version information list.</p>
+     * @param VersionSet <p>Database version information list.</p>
      */
     public void setVersionSet(Version [] VersionSet) {
         this.VersionSet = VersionSet;

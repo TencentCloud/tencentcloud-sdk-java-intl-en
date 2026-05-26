@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeDBXlogsRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of postgres-4wdeb0zv.
+    * Instance ID. for example, postgres-4wdeb0zv.
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
+    * Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Query end time in the format of 2018-06-10 17:06:38
+    * Query end time, in the format of 2018-06-10 17:06:38.
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Page number for data return in paged query. Pagination starts from 0
+    * Pagination return indicates which page of entries to return. counting begins from page 0.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of entries returned per page in paged query. Value range: 1-100.
+    * Pagination return indicates how many items per page. value range: 1-100.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-     * Get Instance ID in the format of postgres-4wdeb0zv. 
-     * @return DBInstanceId Instance ID in the format of postgres-4wdeb0zv.
+     * Get Instance ID. for example, postgres-4wdeb0zv. 
+     * @return DBInstanceId Instance ID. for example, postgres-4wdeb0zv.
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID in the format of postgres-4wdeb0zv.
-     * @param DBInstanceId Instance ID in the format of postgres-4wdeb0zv.
+     * Set Instance ID. for example, postgres-4wdeb0zv.
+     * @param DBInstanceId Instance ID. for example, postgres-4wdeb0zv.
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago 
-     * @return StartTime Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
+     * Get Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago. 
+     * @return StartTime Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
-     * @param StartTime Query start time in the format of 2018-06-10 17:06:38, which cannot be more than 7 days ago
+     * Set Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
+     * @param StartTime Query start time, such as 2018-06-10 17:06:38. start time should not be less than 7 days ago.
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Query end time in the format of 2018-06-10 17:06:38 
-     * @return EndTime Query end time in the format of 2018-06-10 17:06:38
+     * Get Query end time, in the format of 2018-06-10 17:06:38. 
+     * @return EndTime Query end time, in the format of 2018-06-10 17:06:38.
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Query end time in the format of 2018-06-10 17:06:38
-     * @param EndTime Query end time in the format of 2018-06-10 17:06:38
+     * Set Query end time, in the format of 2018-06-10 17:06:38.
+     * @param EndTime Query end time, in the format of 2018-06-10 17:06:38.
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Page number for data return in paged query. Pagination starts from 0 
-     * @return Offset Page number for data return in paged query. Pagination starts from 0
+     * Get Pagination return indicates which page of entries to return. counting begins from page 0. 
+     * @return Offset Pagination return indicates which page of entries to return. counting begins from page 0.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page number for data return in paged query. Pagination starts from 0
-     * @param Offset Page number for data return in paged query. Pagination starts from 0
+     * Set Pagination return indicates which page of entries to return. counting begins from page 0.
+     * @param Offset Pagination return indicates which page of entries to return. counting begins from page 0.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of entries returned per page in paged query. Value range: 1-100. 
-     * @return Limit Number of entries returned per page in paged query. Value range: 1-100.
+     * Get Pagination return indicates how many items per page. value range: 1-100. 
+     * @return Limit Pagination return indicates how many items per page. value range: 1-100.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of entries returned per page in paged query. Value range: 1-100.
-     * @param Limit Number of entries returned per page in paged query. Value range: 1-100.
+     * Set Pagination return indicates how many items per page. value range: 1-100.
+     * @param Limit Pagination return indicates how many items per page. value range: 1-100.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

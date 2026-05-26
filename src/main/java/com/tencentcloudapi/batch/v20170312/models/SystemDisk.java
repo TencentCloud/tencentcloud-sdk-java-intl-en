@@ -24,100 +24,173 @@ import java.util.HashMap;
 public class SystemDisk extends AbstractModel {
 
     /**
-    * System disk type. For more information about the limits of system disk types, please see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: Premium cloud storage<br><li>CLOUD_BSSD: Balanced SSD<br><br>The disk currently in stock will be used by default.
+    * Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+Default value: Current disk types with inventory available.
     */
     @SerializedName("DiskType")
     @Expose
     private String DiskType;
 
     /**
-    * System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+    * System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
     */
     @SerializedName("DiskId")
     @Expose
     private String DiskId;
 
     /**
-    * System disk size; unit: GB; default value: 50 GB.
+    * System disk size; unit: GiB; default value: 50 GiB.
     */
     @SerializedName("DiskSize")
     @Expose
     private Long DiskSize;
 
     /**
-    * ID of the dedicated cluster to which the instance belongs.
+    * Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
     */
     @SerializedName("CdcId")
     @Expose
     private String CdcId;
 
     /**
-     * Get System disk type. For more information about the limits of system disk types, please see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: Premium cloud storage<br><li>CLOUD_BSSD: Balanced SSD<br><br>The disk currently in stock will be used by default. 
-     * @return DiskType System disk type. For more information about the limits of system disk types, please see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: Premium cloud storage<br><li>CLOUD_BSSD: Balanced SSD<br><br>The disk currently in stock will be used by default.
+    * Disk name, which specifies a length not exceeding 128 characters.
+    */
+    @SerializedName("DiskName")
+    @Expose
+    private String DiskName;
+
+    /**
+     * Get Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+Default value: Current disk types with inventory available. 
+     * @return DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+Default value: Current disk types with inventory available.
      */
     public String getDiskType() {
         return this.DiskType;
     }
 
     /**
-     * Set System disk type. For more information about the limits of system disk types, please see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: Premium cloud storage<br><li>CLOUD_BSSD: Balanced SSD<br><br>The disk currently in stock will be used by default.
-     * @param DiskType System disk type. For more information about the limits of system disk types, please see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD cloud disk<br><li>CLOUD_PREMIUM: Premium cloud storage<br><li>CLOUD_BSSD: Balanced SSD<br><br>The disk currently in stock will be used by default.
+     * Set Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+Default value: Current disk types with inventory available.
+     * @param DiskType Specifies the system disk type. for the restrictions on the system disk type, refer to [storage overview](https://www.tencentcloud.com/document/product/362/31636). value range:<br>
+<li>LOCAL_BASIC: Local SATA disk</li>
+<li>LOCAL_SSD: Local NVMe SSD</li>
+<li>CLOUD_BASIC: Cloud SATA disk</li>
+<li>CLOUD_SSD: Cloud SSD</li>
+<li>CLOUD_PREMIUM: Premium SSD</li>
+<li>CLOUD_BSSD: Balanced SSD</li>
+<li>CLOUD_HSSD: Enhanced SSD</li>
+<li>CLOUD_TSSD: Tremendous SSD</li>
+Default value: Current disk types with inventory available.
      */
     public void setDiskType(String DiskType) {
         this.DiskType = DiskType;
     }
 
     /**
-     * Get System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`. 
-     * @return DiskId System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+     * Get System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237). 
+     * @return DiskId System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
      */
     public String getDiskId() {
         return this.DiskId;
     }
 
     /**
-     * Set System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
-     * @param DiskId System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter.
-It is only used as a response parameter for APIs such as `DescribeInstances`, and cannot be used as a request parameter for APIs such as `RunInstances`.
+     * Set System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
+     * @param DiskId System disk ID.
+Currently, this parameter is only used for response parameters in query apis such as [DescribeInstances](https://www.tencentcloud.com/document/api/213/33258) and is not applicable to request parameters in write apis such as [RunInstances](https://www.tencentcloud.com/document/api/213/33237).
      */
     public void setDiskId(String DiskId) {
         this.DiskId = DiskId;
     }
 
     /**
-     * Get System disk size; unit: GB; default value: 50 GB. 
-     * @return DiskSize System disk size; unit: GB; default value: 50 GB.
+     * Get System disk size; unit: GiB; default value: 50 GiB. 
+     * @return DiskSize System disk size; unit: GiB; default value: 50 GiB.
      */
     public Long getDiskSize() {
         return this.DiskSize;
     }
 
     /**
-     * Set System disk size; unit: GB; default value: 50 GB.
-     * @param DiskSize System disk size; unit: GB; default value: 50 GB.
+     * Set System disk size; unit: GiB; default value: 50 GiB.
+     * @param DiskSize System disk size; unit: GiB; default value: 50 GiB.
      */
     public void setDiskSize(Long DiskSize) {
         this.DiskSize = DiskSize;
     }
 
     /**
-     * Get ID of the dedicated cluster to which the instance belongs. 
-     * @return CdcId ID of the dedicated cluster to which the instance belongs.
+     * Get Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found. 
+     * @return CdcId Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
      */
     public String getCdcId() {
         return this.CdcId;
     }
 
     /**
-     * Set ID of the dedicated cluster to which the instance belongs.
-     * @param CdcId ID of the dedicated cluster to which the instance belongs.
+     * Set Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
+     * @param CdcId Specifies the dedicated cluster ID belonging to.
+Note: This field may return null, indicating that no valid value is found.
      */
     public void setCdcId(String CdcId) {
         this.CdcId = CdcId;
+    }
+
+    /**
+     * Get Disk name, which specifies a length not exceeding 128 characters. 
+     * @return DiskName Disk name, which specifies a length not exceeding 128 characters.
+     */
+    public String getDiskName() {
+        return this.DiskName;
+    }
+
+    /**
+     * Set Disk name, which specifies a length not exceeding 128 characters.
+     * @param DiskName Disk name, which specifies a length not exceeding 128 characters.
+     */
+    public void setDiskName(String DiskName) {
+        this.DiskName = DiskName;
     }
 
     public SystemDisk() {
@@ -140,6 +213,9 @@ It is only used as a response parameter for APIs such as `DescribeInstances`, an
         if (source.CdcId != null) {
             this.CdcId = new String(source.CdcId);
         }
+        if (source.DiskName != null) {
+            this.DiskName = new String(source.DiskName);
+        }
     }
 
 
@@ -151,6 +227,7 @@ It is only used as a response parameter for APIs such as `DescribeInstances`, an
         this.setParamSimple(map, prefix + "DiskId", this.DiskId);
         this.setParamSimple(map, prefix + "DiskSize", this.DiskSize);
         this.setParamSimple(map, prefix + "CdcId", this.CdcId);
+        this.setParamSimple(map, prefix + "DiskName", this.DiskName);
 
     }
 }

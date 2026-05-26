@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribeMNGAccessAnalysisDetailRequest extends AbstractModel {
 
     /**
-    * Start time in YYYYMMDD format
+    * Start time in YYYYMMDD format.
     */
     @SerializedName("TimeBegin")
     @Expose
     private Long TimeBegin;
 
     /**
-    * Mini program appid
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Type: 0 Non-production data, 1 Production data
+    * Data type. Valid values: 0: Non-production data; 1: Production data.
     */
     @SerializedName("DataType")
     @Expose
     private Long DataType;
 
     /**
-    * Tenant ID
+    * Tenant ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * 0 All, 2 Android, 3 iOS
+    * Operating system. Valid values: 0: All; 2: Android; 3: iOS.
     */
     @SerializedName("Platform")
     @Expose
     private Long Platform;
 
     /**
-    * End time in YYYYMMDD format
+    * End time in YYYYMMDD format.
     */
     @SerializedName("TimeEnd")
     @Expose
     private Long TimeEnd;
 
     /**
-     * Get Start time in YYYYMMDD format 
-     * @return TimeBegin Start time in YYYYMMDD format
+     * Get Start time in YYYYMMDD format. 
+     * @return TimeBegin Start time in YYYYMMDD format.
      */
     public Long getTimeBegin() {
         return this.TimeBegin;
     }
 
     /**
-     * Set Start time in YYYYMMDD format
-     * @param TimeBegin Start time in YYYYMMDD format
+     * Set Start time in YYYYMMDD format.
+     * @param TimeBegin Start time in YYYYMMDD format.
      */
     public void setTimeBegin(Long TimeBegin) {
         this.TimeBegin = TimeBegin;
     }
 
     /**
-     * Get Mini program appid 
-     * @return MNPId Mini program appid
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program appid
-     * @param MNPId Mini program appid
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Type: 0 Non-production data, 1 Production data 
-     * @return DataType Type: 0 Non-production data, 1 Production data
+     * Get Data type. Valid values: 0: Non-production data; 1: Production data. 
+     * @return DataType Data type. Valid values: 0: Non-production data; 1: Production data.
      */
     public Long getDataType() {
         return this.DataType;
     }
 
     /**
-     * Set Type: 0 Non-production data, 1 Production data
-     * @param DataType Type: 0 Non-production data, 1 Production data
+     * Set Data type. Valid values: 0: Non-production data; 1: Production data.
+     * @param DataType Data type. Valid values: 0: Non-production data; 1: Production data.
      */
     public void setDataType(Long DataType) {
         this.DataType = DataType;
     }
 
     /**
-     * Get Tenant ID 
-     * @return PlatformId Tenant ID
+     * Get Tenant ID. 
+     * @return PlatformId Tenant ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Tenant ID
-     * @param PlatformId Tenant ID
+     * Set Tenant ID.
+     * @param PlatformId Tenant ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get 0 All, 2 Android, 3 iOS 
-     * @return Platform 0 All, 2 Android, 3 iOS
+     * Get Operating system. Valid values: 0: All; 2: Android; 3: iOS. 
+     * @return Platform Operating system. Valid values: 0: All; 2: Android; 3: iOS.
      */
     public Long getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set 0 All, 2 Android, 3 iOS
-     * @param Platform 0 All, 2 Android, 3 iOS
+     * Set Operating system. Valid values: 0: All; 2: Android; 3: iOS.
+     * @param Platform Operating system. Valid values: 0: All; 2: Android; 3: iOS.
      */
     public void setPlatform(Long Platform) {
         this.Platform = Platform;
     }
 
     /**
-     * Get End time in YYYYMMDD format 
-     * @return TimeEnd End time in YYYYMMDD format
+     * Get End time in YYYYMMDD format. 
+     * @return TimeEnd End time in YYYYMMDD format.
      */
     public Long getTimeEnd() {
         return this.TimeEnd;
     }
 
     /**
-     * Set End time in YYYYMMDD format
-     * @param TimeEnd End time in YYYYMMDD format
+     * Set End time in YYYYMMDD format.
+     * @param TimeEnd End time in YYYYMMDD format.
      */
     public void setTimeEnd(Long TimeEnd) {
         this.TimeEnd = TimeEnd;

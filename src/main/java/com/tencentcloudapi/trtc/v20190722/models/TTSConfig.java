@@ -24,26 +24,95 @@ import java.util.HashMap;
 public class TTSConfig extends AbstractModel {
 
     /**
-    * Voice ID
+    * Voice type ID.
     */
     @SerializedName("VoiceId")
     @Expose
     private String VoiceId;
 
     /**
-     * Get Voice ID 
-     * @return VoiceId Voice ID
+    * TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+    */
+    @SerializedName("Model")
+    @Expose
+    private String Model;
+
+    /**
+    * Speaking rate. value range: 0.5-2.0. default: 1.0.
+    */
+    @SerializedName("Speed")
+    @Expose
+    private Float Speed;
+
+    /**
+    * Value range: (0, 10]. default value: 1.0.
+    */
+    @SerializedName("Volume")
+    @Expose
+    private Float Volume;
+
+    /**
+     * Get Voice type ID. 
+     * @return VoiceId Voice type ID.
      */
     public String getVoiceId() {
         return this.VoiceId;
     }
 
     /**
-     * Set Voice ID
-     * @param VoiceId Voice ID
+     * Set Voice type ID.
+     * @param VoiceId Voice type ID.
      */
     public void setVoiceId(String VoiceId) {
         this.VoiceId = VoiceId;
+    }
+
+    /**
+     * Get TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex]. 
+     * @return Model TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+     */
+    public String getModel() {
+        return this.Model;
+    }
+
+    /**
+     * Set TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+     * @param Model TTS model: flow_01_turbo is selected by default. options: [flow_01_turbo, flow_01_ex].
+     */
+    public void setModel(String Model) {
+        this.Model = Model;
+    }
+
+    /**
+     * Get Speaking rate. value range: 0.5-2.0. default: 1.0. 
+     * @return Speed Speaking rate. value range: 0.5-2.0. default: 1.0.
+     */
+    public Float getSpeed() {
+        return this.Speed;
+    }
+
+    /**
+     * Set Speaking rate. value range: 0.5-2.0. default: 1.0.
+     * @param Speed Speaking rate. value range: 0.5-2.0. default: 1.0.
+     */
+    public void setSpeed(Float Speed) {
+        this.Speed = Speed;
+    }
+
+    /**
+     * Get Value range: (0, 10]. default value: 1.0. 
+     * @return Volume Value range: (0, 10]. default value: 1.0.
+     */
+    public Float getVolume() {
+        return this.Volume;
+    }
+
+    /**
+     * Set Value range: (0, 10]. default value: 1.0.
+     * @param Volume Value range: (0, 10]. default value: 1.0.
+     */
+    public void setVolume(Float Volume) {
+        this.Volume = Volume;
     }
 
     public TTSConfig() {
@@ -57,6 +126,15 @@ public class TTSConfig extends AbstractModel {
         if (source.VoiceId != null) {
             this.VoiceId = new String(source.VoiceId);
         }
+        if (source.Model != null) {
+            this.Model = new String(source.Model);
+        }
+        if (source.Speed != null) {
+            this.Speed = new Float(source.Speed);
+        }
+        if (source.Volume != null) {
+            this.Volume = new Float(source.Volume);
+        }
     }
 
 
@@ -65,6 +143,9 @@ public class TTSConfig extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "VoiceId", this.VoiceId);
+        this.setParamSimple(map, prefix + "Model", this.Model);
+        this.setParamSimple(map, prefix + "Speed", this.Speed);
+        this.setParamSimple(map, prefix + "Volume", this.Volume);
 
     }
 }

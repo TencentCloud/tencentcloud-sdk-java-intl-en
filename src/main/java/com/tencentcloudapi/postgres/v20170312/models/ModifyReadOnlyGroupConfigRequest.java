@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyReadOnlyGroupConfigRequest extends AbstractModel {
 
     /**
-    * RO group ID
+    * Read-Only group ID.
     */
     @SerializedName("ReadOnlyGroupId")
     @Expose
     private String ReadOnlyGroupId;
 
     /**
-    * RO group name
+    * Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
     */
     @SerializedName("ReadOnlyGroupName")
     @Expose
@@ -52,14 +52,14 @@ public class ModifyReadOnlyGroupConfigRequest extends AbstractModel {
     private Long ReplayLatencyEliminate;
 
     /**
-    * Delayed log size threshold in MB
+    * Delay log size threshold in MB. specifies a positive integer when enabling the delay log size configuration.
     */
     @SerializedName("MaxReplayLatency")
     @Expose
     private Long MaxReplayLatency;
 
     /**
-    * Delay threshold in ms
+    * Delay time size threshold, unit: s. when enabling the delay time configuration, manually input a positive integer.
     */
     @SerializedName("MaxReplayLag")
     @Expose
@@ -73,39 +73,39 @@ public class ModifyReadOnlyGroupConfigRequest extends AbstractModel {
     private Long Rebalance;
 
     /**
-    * The minimum number of read-only replicas that must be retained in an RO group
+    * Specifies the minimum number of instances to retain with delay removal. value range [0,100].
     */
     @SerializedName("MinDelayEliminateReserve")
     @Expose
     private Long MinDelayEliminateReserve;
 
     /**
-     * Get RO group ID 
-     * @return ReadOnlyGroupId RO group ID
+     * Get Read-Only group ID. 
+     * @return ReadOnlyGroupId Read-Only group ID.
      */
     public String getReadOnlyGroupId() {
         return this.ReadOnlyGroupId;
     }
 
     /**
-     * Set RO group ID
-     * @param ReadOnlyGroupId RO group ID
+     * Set Read-Only group ID.
+     * @param ReadOnlyGroupId Read-Only group ID.
      */
     public void setReadOnlyGroupId(String ReadOnlyGroupId) {
         this.ReadOnlyGroupId = ReadOnlyGroupId;
     }
 
     /**
-     * Get RO group name 
-     * @return ReadOnlyGroupName RO group name
+     * Get Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60. 
+     * @return ReadOnlyGroupName Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
      */
     public String getReadOnlyGroupName() {
         return this.ReadOnlyGroupName;
     }
 
     /**
-     * Set RO group name
-     * @param ReadOnlyGroupName RO group name
+     * Set Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
+     * @param ReadOnlyGroupName Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
      */
     public void setReadOnlyGroupName(String ReadOnlyGroupName) {
         this.ReadOnlyGroupName = ReadOnlyGroupName;
@@ -144,32 +144,32 @@ public class ModifyReadOnlyGroupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get Delayed log size threshold in MB 
-     * @return MaxReplayLatency Delayed log size threshold in MB
+     * Get Delay log size threshold in MB. specifies a positive integer when enabling the delay log size configuration. 
+     * @return MaxReplayLatency Delay log size threshold in MB. specifies a positive integer when enabling the delay log size configuration.
      */
     public Long getMaxReplayLatency() {
         return this.MaxReplayLatency;
     }
 
     /**
-     * Set Delayed log size threshold in MB
-     * @param MaxReplayLatency Delayed log size threshold in MB
+     * Set Delay log size threshold in MB. specifies a positive integer when enabling the delay log size configuration.
+     * @param MaxReplayLatency Delay log size threshold in MB. specifies a positive integer when enabling the delay log size configuration.
      */
     public void setMaxReplayLatency(Long MaxReplayLatency) {
         this.MaxReplayLatency = MaxReplayLatency;
     }
 
     /**
-     * Get Delay threshold in ms 
-     * @return MaxReplayLag Delay threshold in ms
+     * Get Delay time size threshold, unit: s. when enabling the delay time configuration, manually input a positive integer. 
+     * @return MaxReplayLag Delay time size threshold, unit: s. when enabling the delay time configuration, manually input a positive integer.
      */
     public Long getMaxReplayLag() {
         return this.MaxReplayLag;
     }
 
     /**
-     * Set Delay threshold in ms
-     * @param MaxReplayLag Delay threshold in ms
+     * Set Delay time size threshold, unit: s. when enabling the delay time configuration, manually input a positive integer.
+     * @param MaxReplayLag Delay time size threshold, unit: s. when enabling the delay time configuration, manually input a positive integer.
      */
     public void setMaxReplayLag(Long MaxReplayLag) {
         this.MaxReplayLag = MaxReplayLag;
@@ -192,16 +192,16 @@ public class ModifyReadOnlyGroupConfigRequest extends AbstractModel {
     }
 
     /**
-     * Get The minimum number of read-only replicas that must be retained in an RO group 
-     * @return MinDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
+     * Get Specifies the minimum number of instances to retain with delay removal. value range [0,100]. 
+     * @return MinDelayEliminateReserve Specifies the minimum number of instances to retain with delay removal. value range [0,100].
      */
     public Long getMinDelayEliminateReserve() {
         return this.MinDelayEliminateReserve;
     }
 
     /**
-     * Set The minimum number of read-only replicas that must be retained in an RO group
-     * @param MinDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
+     * Set Specifies the minimum number of instances to retain with delay removal. value range [0,100].
+     * @param MinDelayEliminateReserve Specifies the minimum number of instances to retain with delay removal. value range [0,100].
      */
     public void setMinDelayEliminateReserve(Long MinDelayEliminateReserve) {
         this.MinDelayEliminateReserve = MinDelayEliminateReserve;

@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class DescribeTeamListInfoResp extends AbstractModel {
 
     /**
-    * Team ID
+    * Team ID.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Team name
+    * Team name.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Administrator user ID
+    * Admin user ID.
     */
     @SerializedName("AdminUserId")
     @Expose
     private String AdminUserId;
 
     /**
-    * Administrator account
+    * Admin account.
     */
     @SerializedName("AdminUserAccount")
     @Expose
     private String AdminUserAccount;
 
     /**
-    * Administrator username
+    * Admin username.
     */
     @SerializedName("AdminUserName")
     @Expose
     private String AdminUserName;
 
     /**
-    * Number of team members
+    * Number of team members.
     */
     @SerializedName("MemberCount")
     @Expose
     private Long MemberCount;
 
     /**
-    * Team registration link
+    * Team registration link.
     */
     @SerializedName("RegisterLink")
     @Expose
     private String RegisterLink;
 
     /**
-    * Team permission type
+    * Team role types. 
     */
     @SerializedName("TeamRoleTypeList")
     @Expose
     private Long [] TeamRoleTypeList;
 
     /**
-    * Associated team ID
+    * Associated team ID.
     */
     @SerializedName("RelatedTeamId")
     @Expose
     private Long RelatedTeamId;
 
     /**
-    * Team expiration time. 0 means never expire.
+    * Team expiration time. 0 indicates no expiration.
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * Team status. valid values: 1: normal; 2: disabled; 3: expired.
+    * Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Team ID 
-     * @return TeamId Team ID
+     * Get Team ID. 
+     * @return TeamId Team ID.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID
-     * @param TeamId Team ID
+     * Set Team ID.
+     * @param TeamId Team ID.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name 
-     * @return TeamName Team name
+     * Get Team name. 
+     * @return TeamName Team name.
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name
-     * @param TeamName Team name
+     * Set Team name.
+     * @param TeamName Team name.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Administrator user ID 
-     * @return AdminUserId Administrator user ID
+     * Get Admin user ID. 
+     * @return AdminUserId Admin user ID.
      */
     public String getAdminUserId() {
         return this.AdminUserId;
     }
 
     /**
-     * Set Administrator user ID
-     * @param AdminUserId Administrator user ID
+     * Set Admin user ID.
+     * @param AdminUserId Admin user ID.
      */
     public void setAdminUserId(String AdminUserId) {
         this.AdminUserId = AdminUserId;
     }
 
     /**
-     * Get Administrator account 
-     * @return AdminUserAccount Administrator account
+     * Get Admin account. 
+     * @return AdminUserAccount Admin account.
      */
     public String getAdminUserAccount() {
         return this.AdminUserAccount;
     }
 
     /**
-     * Set Administrator account
-     * @param AdminUserAccount Administrator account
+     * Set Admin account.
+     * @param AdminUserAccount Admin account.
      */
     public void setAdminUserAccount(String AdminUserAccount) {
         this.AdminUserAccount = AdminUserAccount;
     }
 
     /**
-     * Get Administrator username 
-     * @return AdminUserName Administrator username
+     * Get Admin username. 
+     * @return AdminUserName Admin username.
      */
     public String getAdminUserName() {
         return this.AdminUserName;
     }
 
     /**
-     * Set Administrator username
-     * @param AdminUserName Administrator username
+     * Set Admin username.
+     * @param AdminUserName Admin username.
      */
     public void setAdminUserName(String AdminUserName) {
         this.AdminUserName = AdminUserName;
     }
 
     /**
-     * Get Number of team members 
-     * @return MemberCount Number of team members
+     * Get Number of team members. 
+     * @return MemberCount Number of team members.
      */
     public Long getMemberCount() {
         return this.MemberCount;
     }
 
     /**
-     * Set Number of team members
-     * @param MemberCount Number of team members
+     * Set Number of team members.
+     * @param MemberCount Number of team members.
      */
     public void setMemberCount(Long MemberCount) {
         this.MemberCount = MemberCount;
     }
 
     /**
-     * Get Team registration link 
-     * @return RegisterLink Team registration link
+     * Get Team registration link. 
+     * @return RegisterLink Team registration link.
      */
     public String getRegisterLink() {
         return this.RegisterLink;
     }
 
     /**
-     * Set Team registration link
-     * @param RegisterLink Team registration link
+     * Set Team registration link.
+     * @param RegisterLink Team registration link.
      */
     public void setRegisterLink(String RegisterLink) {
         this.RegisterLink = RegisterLink;
     }
 
     /**
-     * Get Team permission type 
-     * @return TeamRoleTypeList Team permission type
+     * Get Team role types.  
+     * @return TeamRoleTypeList Team role types. 
      */
     public Long [] getTeamRoleTypeList() {
         return this.TeamRoleTypeList;
     }
 
     /**
-     * Set Team permission type
-     * @param TeamRoleTypeList Team permission type
+     * Set Team role types. 
+     * @param TeamRoleTypeList Team role types. 
      */
     public void setTeamRoleTypeList(Long [] TeamRoleTypeList) {
         this.TeamRoleTypeList = TeamRoleTypeList;
     }
 
     /**
-     * Get Associated team ID 
-     * @return RelatedTeamId Associated team ID
+     * Get Associated team ID. 
+     * @return RelatedTeamId Associated team ID.
      */
     public Long getRelatedTeamId() {
         return this.RelatedTeamId;
     }
 
     /**
-     * Set Associated team ID
-     * @param RelatedTeamId Associated team ID
+     * Set Associated team ID.
+     * @param RelatedTeamId Associated team ID.
      */
     public void setRelatedTeamId(Long RelatedTeamId) {
         this.RelatedTeamId = RelatedTeamId;
     }
 
     /**
-     * Get Team expiration time. 0 means never expire. 
-     * @return ExpireTime Team expiration time. 0 means never expire.
+     * Get Team expiration time. 0 indicates no expiration. 
+     * @return ExpireTime Team expiration time. 0 indicates no expiration.
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Team expiration time. 0 means never expire.
-     * @param ExpireTime Team expiration time. 0 means never expire.
+     * Set Team expiration time. 0 indicates no expiration.
+     * @param ExpireTime Team expiration time. 0 indicates no expiration.
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Team status. valid values: 1: normal; 2: disabled; 3: expired. 
-     * @return Status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+     * Get Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.  
+     * @return Status Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Team status. valid values: 1: normal; 2: disabled; 3: expired.
-     * @param Status Team status. valid values: 1: normal; 2: disabled; 3: expired.
+     * Set Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+     * @param Status Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
      */
     public void setStatus(Long Status) {
         this.Status = Status;

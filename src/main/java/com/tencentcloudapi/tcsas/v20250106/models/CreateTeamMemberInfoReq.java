@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateTeamMemberInfoReq extends AbstractModel {
 
     /**
-    * User ID
+    * User ID.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * User role ID
+    * User role ID.
     */
     @SerializedName("UserRoleId")
     @Expose
     private Long UserRoleId;
 
     /**
-     * Get User ID 
-     * @return UserId User ID
+     * Get User ID. 
+     * @return UserId User ID.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User ID
-     * @param UserId User ID
+     * Set User ID.
+     * @param UserId User ID.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get User role ID 
-     * @return UserRoleId User role ID
+     * Get User role ID. 
+     * @return UserRoleId User role ID.
      */
     public Long getUserRoleId() {
         return this.UserRoleId;
     }
 
     /**
-     * Set User role ID
-     * @param UserRoleId User role ID
+     * Set User role ID.
+     * @param UserRoleId User role ID.
      */
     public void setUserRoleId(Long UserRoleId) {
         this.UserRoleId = UserRoleId;

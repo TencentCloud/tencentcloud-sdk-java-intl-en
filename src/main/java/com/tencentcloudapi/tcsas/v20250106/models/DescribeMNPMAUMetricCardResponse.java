@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMNPMAUMetricCardResponse extends AbstractModel {
 
     /**
-    * Data display at the top of the page
+    * Data display at the top of the page.
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class DescribeMNPMAUMetricCardResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Data display at the top of the page 
-     * @return Data Data display at the top of the page
+     * Get Data display at the top of the page. 
+     * @return Data Data display at the top of the page.
      */
     public MAUIndicatorCard getData() {
         return this.Data;
     }
 
     /**
-     * Set Data display at the top of the page
-     * @param Data Data display at the top of the page
+     * Set Data display at the top of the page.
+     * @param Data Data display at the top of the page.
      */
     public void setData(MAUIndicatorCard Data) {
         this.Data = Data;

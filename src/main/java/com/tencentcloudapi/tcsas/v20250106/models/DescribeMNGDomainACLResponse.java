@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeMNGDomainACLResponse extends AbstractModel {
 
     /**
-    * <p>Response data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Response data.</p>
     */
     @SerializedName("Data")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get <p>Response data</p>
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data <p>Response data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Response data.</p> 
+     * @return Data <p>Response data.</p>
      */
     public DescribeMNGDomainInfoResp [] getData() {
         return this.Data;
     }
 
     /**
-     * Set <p>Response data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data <p>Response data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Response data.</p>
+     * @param Data <p>Response data.</p>
      */
     public void setData(DescribeMNGDomainInfoResp [] Data) {
         this.Data = Data;

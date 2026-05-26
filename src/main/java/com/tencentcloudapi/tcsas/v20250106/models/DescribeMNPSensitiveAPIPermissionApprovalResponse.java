@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeMNPSensitiveAPIPermissionApprovalResponse extends AbstractModel {
 
     /**
-    * Response data
+    * Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Data")
@@ -39,9 +39,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Response data
+     * Get Response data.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Response data
+     * @return Data Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DescribeMNPSensitiveAPIPermissionApprovalData getData() {
@@ -49,9 +49,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Response data
+     * Set Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Response data
+     * @param Data Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setData(DescribeMNPSensitiveAPIPermissionApprovalData Data) {

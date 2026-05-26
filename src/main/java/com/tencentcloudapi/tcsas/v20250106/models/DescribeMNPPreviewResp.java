@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeMNPPreviewResp extends AbstractModel {
 
     /**
-    * Mini program ID
+    * Mini program appid. 
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Mini program name
+    * Mini program name.
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Mini program description
+    * Mini program description.
     */
     @SerializedName("MNPDesc")
     @Expose
@@ -52,76 +52,76 @@ public class DescribeMNPPreviewResp extends AbstractModel {
     private String MNPVersion;
 
     /**
-    * Describes the mini program version.
+    * Mini program version introduction.
     */
     @SerializedName("MNPVersionIntro")
     @Expose
     private String MNPVersionIntro;
 
     /**
-    * Specifies the mini program qr code.
+    * Mini program QR code URL.
     */
     @SerializedName("QRCodeUrl")
     @Expose
     private String QRCodeUrl;
 
     /**
-    * Specifies the path to the preview version.
+    * Preview path.
     */
     @SerializedName("PreviewEntrancePath")
     @Expose
     private String PreviewEntrancePath;
 
     /**
-    * Specifies the qr code content.
+    * Information encoded in the QR code.
     */
     @SerializedName("QRCodeContent")
     @Expose
     private String QRCodeContent;
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid.  
+     * @return MNPId Mini program appid. 
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid. 
+     * @param MNPId Mini program appid. 
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program name 
-     * @return MNPName Mini program name
+     * Get Mini program name. 
+     * @return MNPName Mini program name.
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name
-     * @param MNPName Mini program name
+     * Set Mini program name.
+     * @param MNPName Mini program name.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program description 
-     * @return MNPDesc Mini program description
+     * Get Mini program description. 
+     * @return MNPDesc Mini program description.
      */
     public String getMNPDesc() {
         return this.MNPDesc;
     }
 
     /**
-     * Set Mini program description
-     * @param MNPDesc Mini program description
+     * Set Mini program description.
+     * @param MNPDesc Mini program description.
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
@@ -144,64 +144,64 @@ public class DescribeMNPPreviewResp extends AbstractModel {
     }
 
     /**
-     * Get Describes the mini program version. 
-     * @return MNPVersionIntro Describes the mini program version.
+     * Get Mini program version introduction. 
+     * @return MNPVersionIntro Mini program version introduction.
      */
     public String getMNPVersionIntro() {
         return this.MNPVersionIntro;
     }
 
     /**
-     * Set Describes the mini program version.
-     * @param MNPVersionIntro Describes the mini program version.
+     * Set Mini program version introduction.
+     * @param MNPVersionIntro Mini program version introduction.
      */
     public void setMNPVersionIntro(String MNPVersionIntro) {
         this.MNPVersionIntro = MNPVersionIntro;
     }
 
     /**
-     * Get Specifies the mini program qr code. 
-     * @return QRCodeUrl Specifies the mini program qr code.
+     * Get Mini program QR code URL. 
+     * @return QRCodeUrl Mini program QR code URL.
      */
     public String getQRCodeUrl() {
         return this.QRCodeUrl;
     }
 
     /**
-     * Set Specifies the mini program qr code.
-     * @param QRCodeUrl Specifies the mini program qr code.
+     * Set Mini program QR code URL.
+     * @param QRCodeUrl Mini program QR code URL.
      */
     public void setQRCodeUrl(String QRCodeUrl) {
         this.QRCodeUrl = QRCodeUrl;
     }
 
     /**
-     * Get Specifies the path to the preview version. 
-     * @return PreviewEntrancePath Specifies the path to the preview version.
+     * Get Preview path. 
+     * @return PreviewEntrancePath Preview path.
      */
     public String getPreviewEntrancePath() {
         return this.PreviewEntrancePath;
     }
 
     /**
-     * Set Specifies the path to the preview version.
-     * @param PreviewEntrancePath Specifies the path to the preview version.
+     * Set Preview path.
+     * @param PreviewEntrancePath Preview path.
      */
     public void setPreviewEntrancePath(String PreviewEntrancePath) {
         this.PreviewEntrancePath = PreviewEntrancePath;
     }
 
     /**
-     * Get Specifies the qr code content. 
-     * @return QRCodeContent Specifies the qr code content.
+     * Get Information encoded in the QR code. 
+     * @return QRCodeContent Information encoded in the QR code.
      */
     public String getQRCodeContent() {
         return this.QRCodeContent;
     }
 
     /**
-     * Set Specifies the qr code content.
-     * @param QRCodeContent Specifies the qr code content.
+     * Set Information encoded in the QR code.
+     * @param QRCodeContent Information encoded in the QR code.
      */
     public void setQRCodeContent(String QRCodeContent) {
         this.QRCodeContent = QRCodeContent;

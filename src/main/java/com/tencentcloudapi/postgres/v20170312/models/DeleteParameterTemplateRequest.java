@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DeleteParameterTemplateRequest extends AbstractModel {
 
     /**
-    * Parameter template ID, which uniquely identifies the parameter template to be operated.
+    * Specifies the parameter template ID, which uniquely identifies the parameter template to be operated. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/api/409/84067?from_cn_redirect=1).
     */
     @SerializedName("TemplateId")
     @Expose
     private String TemplateId;
 
     /**
-     * Get Parameter template ID, which uniquely identifies the parameter template to be operated. 
-     * @return TemplateId Parameter template ID, which uniquely identifies the parameter template to be operated.
+     * Get Specifies the parameter template ID, which uniquely identifies the parameter template to be operated. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/api/409/84067?from_cn_redirect=1). 
+     * @return TemplateId Specifies the parameter template ID, which uniquely identifies the parameter template to be operated. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/api/409/84067?from_cn_redirect=1).
      */
     public String getTemplateId() {
         return this.TemplateId;
     }
 
     /**
-     * Set Parameter template ID, which uniquely identifies the parameter template to be operated.
-     * @param TemplateId Parameter template ID, which uniquely identifies the parameter template to be operated.
+     * Set Specifies the parameter template ID, which uniquely identifies the parameter template to be operated. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/api/409/84067?from_cn_redirect=1).
+     * @param TemplateId Specifies the parameter template ID, which uniquely identifies the parameter template to be operated. it can be obtained through the api [DescribeParameterTemplates](https://www.tencentcloud.com/document/api/409/84067?from_cn_redirect=1).
      */
     public void setTemplateId(String TemplateId) {
         this.TemplateId = TemplateId;

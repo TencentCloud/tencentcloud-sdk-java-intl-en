@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeTeamPageResp extends AbstractModel {
 
     /**
-    * Total count
+    * Total number of entries.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * List information
+    * List data.
     */
     @SerializedName("DataList")
     @Expose
     private DescribeTeamListInfoResp [] DataList;
 
     /**
-     * Get Total count 
-     * @return TotalCount Total count
+     * Get Total number of entries. 
+     * @return TotalCount Total number of entries.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total count
-     * @param TotalCount Total count
+     * Set Total number of entries.
+     * @param TotalCount Total number of entries.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get List information 
-     * @return DataList List information
+     * Get List data. 
+     * @return DataList List data.
      */
     public DescribeTeamListInfoResp [] getDataList() {
         return this.DataList;
     }
 
     /**
-     * Set List information
-     * @param DataList List information
+     * Set List data.
+     * @param DataList List data.
      */
     public void setDataList(DescribeTeamListInfoResp [] DataList) {
         this.DataList = DataList;

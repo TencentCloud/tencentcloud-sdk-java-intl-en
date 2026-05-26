@@ -31,7 +31,7 @@ public class EndPoint extends AbstractModel {
     private String EndPointId;
 
     /**
-    * The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+    * The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
     */
     @SerializedName("VpcId")
     @Expose
@@ -145,16 +145,16 @@ public class EndPoint extends AbstractModel {
     }
 
     /**
-     * Get The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1). 
-     * @return VpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+     * Get The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1). 
+     * @return VpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
-     * @param VpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.comom/document/product/215/15778?from_cn_redirect=1).
+     * Set The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
+     * @param VpcId The unique ID of the VPC. obtain through the API [DescribeVpcs](https://www.tencentcloud.com/document/product/215/15778?from_cn_redirect=1).
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;

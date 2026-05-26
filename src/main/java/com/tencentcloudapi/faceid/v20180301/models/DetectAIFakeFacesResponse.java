@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DetectAIFakeFacesResponse extends AbstractModel {
 
     /**
-    * Whether the detected image is an attack: Low: No attack risk Mid: Moderately suspected attack High: Highly suspected attack
+    * <p>Detection result for the input image/video to check the existence of face spoofing attack.</p><ul><li>Low: Low attack risk.</li><li>Mid: Moderately suspected attack.</li><li>High: Highly suspected attack.</li></ul><p>It is advisable to judge as interception when the return value is High, and pass for Mid and Low to better balance security and pass rate.</p>
     */
     @SerializedName("AttackRiskLevel")
     @Expose
     private String AttackRiskLevel;
 
     /**
-    * A list of suspected attack traces detected. Note: When no attack traces are detected, an empty array is returned. This parameter is only used as a reference for result judgment. In actual applications, it is still recommended to use the result of AttackRiskLevel.
+    * <p>List of suspected attack traces detected. It is returned only when AttackRiskLevel is High or Mid.</p><ul><li>Description: Return an empty array if no attack traces are detected.</li><li>This output parameter is for result determination reference. The result of AttackRiskLevel is still recommended for actual use.</li></ul>
     */
     @SerializedName("AttackRiskDetailList")
     @Expose
     private AttackRiskDetail [] AttackRiskDetailList;
 
     /**
-    * Additional Information
+    * <p>Return additional information (including detailed information of cache hit templates).</p>
     */
     @SerializedName("ExtraInfo")
     @Expose
@@ -52,48 +52,48 @@ public class DetectAIFakeFacesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Whether the detected image is an attack: Low: No attack risk Mid: Moderately suspected attack High: Highly suspected attack 
-     * @return AttackRiskLevel Whether the detected image is an attack: Low: No attack risk Mid: Moderately suspected attack High: Highly suspected attack
+     * Get <p>Detection result for the input image/video to check the existence of face spoofing attack.</p><ul><li>Low: Low attack risk.</li><li>Mid: Moderately suspected attack.</li><li>High: Highly suspected attack.</li></ul><p>It is advisable to judge as interception when the return value is High, and pass for Mid and Low to better balance security and pass rate.</p> 
+     * @return AttackRiskLevel <p>Detection result for the input image/video to check the existence of face spoofing attack.</p><ul><li>Low: Low attack risk.</li><li>Mid: Moderately suspected attack.</li><li>High: Highly suspected attack.</li></ul><p>It is advisable to judge as interception when the return value is High, and pass for Mid and Low to better balance security and pass rate.</p>
      */
     public String getAttackRiskLevel() {
         return this.AttackRiskLevel;
     }
 
     /**
-     * Set Whether the detected image is an attack: Low: No attack risk Mid: Moderately suspected attack High: Highly suspected attack
-     * @param AttackRiskLevel Whether the detected image is an attack: Low: No attack risk Mid: Moderately suspected attack High: Highly suspected attack
+     * Set <p>Detection result for the input image/video to check the existence of face spoofing attack.</p><ul><li>Low: Low attack risk.</li><li>Mid: Moderately suspected attack.</li><li>High: Highly suspected attack.</li></ul><p>It is advisable to judge as interception when the return value is High, and pass for Mid and Low to better balance security and pass rate.</p>
+     * @param AttackRiskLevel <p>Detection result for the input image/video to check the existence of face spoofing attack.</p><ul><li>Low: Low attack risk.</li><li>Mid: Moderately suspected attack.</li><li>High: Highly suspected attack.</li></ul><p>It is advisable to judge as interception when the return value is High, and pass for Mid and Low to better balance security and pass rate.</p>
      */
     public void setAttackRiskLevel(String AttackRiskLevel) {
         this.AttackRiskLevel = AttackRiskLevel;
     }
 
     /**
-     * Get A list of suspected attack traces detected. Note: When no attack traces are detected, an empty array is returned. This parameter is only used as a reference for result judgment. In actual applications, it is still recommended to use the result of AttackRiskLevel. 
-     * @return AttackRiskDetailList A list of suspected attack traces detected. Note: When no attack traces are detected, an empty array is returned. This parameter is only used as a reference for result judgment. In actual applications, it is still recommended to use the result of AttackRiskLevel.
+     * Get <p>List of suspected attack traces detected. It is returned only when AttackRiskLevel is High or Mid.</p><ul><li>Description: Return an empty array if no attack traces are detected.</li><li>This output parameter is for result determination reference. The result of AttackRiskLevel is still recommended for actual use.</li></ul> 
+     * @return AttackRiskDetailList <p>List of suspected attack traces detected. It is returned only when AttackRiskLevel is High or Mid.</p><ul><li>Description: Return an empty array if no attack traces are detected.</li><li>This output parameter is for result determination reference. The result of AttackRiskLevel is still recommended for actual use.</li></ul>
      */
     public AttackRiskDetail [] getAttackRiskDetailList() {
         return this.AttackRiskDetailList;
     }
 
     /**
-     * Set A list of suspected attack traces detected. Note: When no attack traces are detected, an empty array is returned. This parameter is only used as a reference for result judgment. In actual applications, it is still recommended to use the result of AttackRiskLevel.
-     * @param AttackRiskDetailList A list of suspected attack traces detected. Note: When no attack traces are detected, an empty array is returned. This parameter is only used as a reference for result judgment. In actual applications, it is still recommended to use the result of AttackRiskLevel.
+     * Set <p>List of suspected attack traces detected. It is returned only when AttackRiskLevel is High or Mid.</p><ul><li>Description: Return an empty array if no attack traces are detected.</li><li>This output parameter is for result determination reference. The result of AttackRiskLevel is still recommended for actual use.</li></ul>
+     * @param AttackRiskDetailList <p>List of suspected attack traces detected. It is returned only when AttackRiskLevel is High or Mid.</p><ul><li>Description: Return an empty array if no attack traces are detected.</li><li>This output parameter is for result determination reference. The result of AttackRiskLevel is still recommended for actual use.</li></ul>
      */
     public void setAttackRiskDetailList(AttackRiskDetail [] AttackRiskDetailList) {
         this.AttackRiskDetailList = AttackRiskDetailList;
     }
 
     /**
-     * Get Additional Information 
-     * @return ExtraInfo Additional Information
+     * Get <p>Return additional information (including detailed information of cache hit templates).</p> 
+     * @return ExtraInfo <p>Return additional information (including detailed information of cache hit templates).</p>
      */
     public ExtraInfo getExtraInfo() {
         return this.ExtraInfo;
     }
 
     /**
-     * Set Additional Information
-     * @param ExtraInfo Additional Information
+     * Set <p>Return additional information (including detailed information of cache hit templates).</p>
+     * @param ExtraInfo <p>Return additional information (including detailed information of cache hit templates).</p>
      */
     public void setExtraInfo(ExtraInfo ExtraInfo) {
         this.ExtraInfo = ExtraInfo;

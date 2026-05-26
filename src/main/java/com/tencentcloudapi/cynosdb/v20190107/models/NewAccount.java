@@ -31,6 +31,13 @@ public class NewAccount extends AbstractModel {
     private String AccountName;
 
     /**
+    * Host
+    */
+    @SerializedName("Host")
+    @Expose
+    private String Host;
+
+    /**
     * Password, which can contain 8-64 characters.
     */
     @SerializedName("AccountPassword")
@@ -38,11 +45,11 @@ public class NewAccount extends AbstractModel {
     private String AccountPassword;
 
     /**
-    * Host
+    * Whether password rotation is enabled (0: turn off; 1: turn on)
     */
-    @SerializedName("Host")
+    @SerializedName("PasswordRotation")
     @Expose
-    private String Host;
+    private Long PasswordRotation;
 
     /**
     * Description
@@ -75,6 +82,22 @@ public class NewAccount extends AbstractModel {
     }
 
     /**
+     * Get Host 
+     * @return Host Host
+     */
+    public String getHost() {
+        return this.Host;
+    }
+
+    /**
+     * Set Host
+     * @param Host Host
+     */
+    public void setHost(String Host) {
+        this.Host = Host;
+    }
+
+    /**
      * Get Password, which can contain 8-64 characters. 
      * @return AccountPassword Password, which can contain 8-64 characters.
      */
@@ -91,19 +114,19 @@ public class NewAccount extends AbstractModel {
     }
 
     /**
-     * Get Host 
-     * @return Host Host
+     * Get Whether password rotation is enabled (0: turn off; 1: turn on) 
+     * @return PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
      */
-    public String getHost() {
-        return this.Host;
+    public Long getPasswordRotation() {
+        return this.PasswordRotation;
     }
 
     /**
-     * Set Host
-     * @param Host Host
+     * Set Whether password rotation is enabled (0: turn off; 1: turn on)
+     * @param PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
      */
-    public void setHost(String Host) {
-        this.Host = Host;
+    public void setPasswordRotation(Long PasswordRotation) {
+        this.PasswordRotation = PasswordRotation;
     }
 
     /**
@@ -149,11 +172,14 @@ public class NewAccount extends AbstractModel {
         if (source.AccountName != null) {
             this.AccountName = new String(source.AccountName);
         }
+        if (source.Host != null) {
+            this.Host = new String(source.Host);
+        }
         if (source.AccountPassword != null) {
             this.AccountPassword = new String(source.AccountPassword);
         }
-        if (source.Host != null) {
-            this.Host = new String(source.Host);
+        if (source.PasswordRotation != null) {
+            this.PasswordRotation = new Long(source.PasswordRotation);
         }
         if (source.Description != null) {
             this.Description = new String(source.Description);
@@ -169,8 +195,9 @@ public class NewAccount extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "AccountName", this.AccountName);
-        this.setParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
         this.setParamSimple(map, prefix + "Host", this.Host);
+        this.setParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
+        this.setParamSimple(map, prefix + "PasswordRotation", this.PasswordRotation);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
 

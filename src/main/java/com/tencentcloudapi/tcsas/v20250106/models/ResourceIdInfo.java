@@ -24,38 +24,23 @@ import java.util.HashMap;
 public class ResourceIdInfo extends AbstractModel {
 
     /**
-    * Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
+    * Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
     */
     @SerializedName("ResourceId")
     @Expose
     private Long ResourceId;
 
     /**
-     * Get Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user. 
-     * @return ResourceId Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
+     * Get Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940. 
+     * @return ResourceId Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
      */
     public Long getResourceId() {
         return this.ResourceId;
     }
 
     /**
-     * Set Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
-     * @param ResourceId Specifies the resource ID returned by the business.
-0: no trial version available.
-A trial version is currently available and uploaded by the current user.
-2: a trial version is currently available and uploaded by another user.
+     * Set Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
+     * @param ResourceId Resource ID returned by the operation. Valid values: 0: No preview exists; 1: Preview exists and was uploaded by the current user; 2: Preview exists and was uploaded by another user. Example value: 2940.
      */
     public void setResourceId(Long ResourceId) {
         this.ResourceId = ResourceId;

@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifySwitchTimePeriodRequest extends AbstractModel {
 
     /**
-    * The ID of the instance waiting for a switch
+    * <p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Valid value: `0` (switch immediately)
+    * <p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
     */
     @SerializedName("SwitchTag")
     @Expose
     private Long SwitchTag;
 
     /**
-     * Get The ID of the instance waiting for a switch 
-     * @return DBInstanceId The ID of the instance waiting for a switch
+     * Get <p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p> 
+     * @return DBInstanceId <p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set The ID of the instance waiting for a switch
-     * @param DBInstanceId The ID of the instance waiting for a switch
+     * Set <p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
+     * @param DBInstanceId <p>ID of the instance that is waiting for a switch, which can be obtained through the <a href="https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1">DescribeDBInstances</a> API.</p>
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Valid value: `0` (switch immediately) 
-     * @return SwitchTag Valid value: `0` (switch immediately)
+     * Get <p>If the value of the input parameter is 0, it indicates to switch immediately.</p> 
+     * @return SwitchTag <p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
      */
     public Long getSwitchTag() {
         return this.SwitchTag;
     }
 
     /**
-     * Set Valid value: `0` (switch immediately)
-     * @param SwitchTag Valid value: `0` (switch immediately)
+     * Set <p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
+     * @param SwitchTag <p>If the value of the input parameter is 0, it indicates to switch immediately.</p>
      */
     public void setSwitchTag(Long SwitchTag) {
         this.SwitchTag = SwitchTag;

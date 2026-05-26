@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class AnalysisAdvertOverview extends AbstractModel {
 
     /**
-    * Advertising overview
+    * Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("OverviewData")
@@ -32,9 +32,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private AdvertDataOverview OverviewData;
 
     /**
-     * Get Advertising overview
+     * Get Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return OverviewData Advertising overview
+     * @return OverviewData Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public AdvertDataOverview getOverviewData() {
@@ -42,9 +42,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Advertising overview
+     * Set Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param OverviewData Advertising overview
+     * @param OverviewData Ad overview. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOverviewData(AdvertDataOverview OverviewData) {

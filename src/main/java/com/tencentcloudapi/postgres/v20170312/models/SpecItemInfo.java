@@ -24,314 +24,299 @@ import java.util.HashMap;
 public class SpecItemInfo extends AbstractModel {
 
     /**
-    * Specification ID
+    * <p>Specification ID.</p>
     */
     @SerializedName("SpecCode")
     @Expose
     private String SpecCode;
 
     /**
-    * PostgerSQL version number
+    * <p>PostgreSQL version number.</p>
     */
     @SerializedName("Version")
     @Expose
     private String Version;
 
     /**
-    * Full version name corresponding to kernel number
+    * <p>Full version name of the kernel number.</p>
     */
     @SerializedName("VersionName")
     @Expose
     private String VersionName;
 
     /**
-    * Number of CPU cores
+    * <p>CPU cores.</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory size in MB
+    * <p>Memory size, in MB.</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Maximum storage capacity in GB supported by this specification
+    * <p>Maximum storage capacity supported by this specification, in GB.</p>
     */
     @SerializedName("MaxStorage")
     @Expose
     private Long MaxStorage;
 
     /**
-    * Minimum storage capacity in GB supported by this specification
+    * <p>Minimum storage capacity supported by this specification, in GB.</p>
     */
     @SerializedName("MinStorage")
     @Expose
     private Long MinStorage;
 
     /**
-    * Estimated QPS for this specification
+    * <p>Estimated QPS of the specification.</p>
     */
     @SerializedName("Qps")
     @Expose
     private Long Qps;
 
     /**
-    * (Disused)
+    * <p>[Deprecated field].</p>
     */
     @SerializedName("Pid")
     @Expose
     private Long Pid;
 
     /**
-    * Machine type
+    * <p>Machine type.</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>PostgreSQL major version number.</p>
     */
     @SerializedName("MajorVersion")
     @Expose
     private String MajorVersion;
 
     /**
-    * PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+    * <p>PostgreSQL kernel version number.</p>
     */
     @SerializedName("KernelVersion")
     @Expose
     private String KernelVersion;
 
     /**
-    * Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
+    * <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
     */
     @SerializedName("IsSupportTDE")
     @Expose
     private Long IsSupportTDE;
 
     /**
-     * Get Specification ID 
-     * @return SpecCode Specification ID
+     * Get <p>Specification ID.</p> 
+     * @return SpecCode <p>Specification ID.</p>
      */
     public String getSpecCode() {
         return this.SpecCode;
     }
 
     /**
-     * Set Specification ID
-     * @param SpecCode Specification ID
+     * Set <p>Specification ID.</p>
+     * @param SpecCode <p>Specification ID.</p>
      */
     public void setSpecCode(String SpecCode) {
         this.SpecCode = SpecCode;
     }
 
     /**
-     * Get PostgerSQL version number 
-     * @return Version PostgerSQL version number
+     * Get <p>PostgreSQL version number.</p> 
+     * @return Version <p>PostgreSQL version number.</p>
      */
     public String getVersion() {
         return this.Version;
     }
 
     /**
-     * Set PostgerSQL version number
-     * @param Version PostgerSQL version number
+     * Set <p>PostgreSQL version number.</p>
+     * @param Version <p>PostgreSQL version number.</p>
      */
     public void setVersion(String Version) {
         this.Version = Version;
     }
 
     /**
-     * Get Full version name corresponding to kernel number 
-     * @return VersionName Full version name corresponding to kernel number
+     * Get <p>Full version name of the kernel number.</p> 
+     * @return VersionName <p>Full version name of the kernel number.</p>
      */
     public String getVersionName() {
         return this.VersionName;
     }
 
     /**
-     * Set Full version name corresponding to kernel number
-     * @param VersionName Full version name corresponding to kernel number
+     * Set <p>Full version name of the kernel number.</p>
+     * @param VersionName <p>Full version name of the kernel number.</p>
      */
     public void setVersionName(String VersionName) {
         this.VersionName = VersionName;
     }
 
     /**
-     * Get Number of CPU cores 
-     * @return Cpu Number of CPU cores
+     * Get <p>CPU cores.</p> 
+     * @return Cpu <p>CPU cores.</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPU cores
-     * @param Cpu Number of CPU cores
+     * Set <p>CPU cores.</p>
+     * @param Cpu <p>CPU cores.</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory size in MB 
-     * @return Memory Memory size in MB
+     * Get <p>Memory size, in MB.</p> 
+     * @return Memory <p>Memory size, in MB.</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory size in MB
-     * @param Memory Memory size in MB
+     * Set <p>Memory size, in MB.</p>
+     * @param Memory <p>Memory size, in MB.</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Maximum storage capacity in GB supported by this specification 
-     * @return MaxStorage Maximum storage capacity in GB supported by this specification
+     * Get <p>Maximum storage capacity supported by this specification, in GB.</p> 
+     * @return MaxStorage <p>Maximum storage capacity supported by this specification, in GB.</p>
      */
     public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
     /**
-     * Set Maximum storage capacity in GB supported by this specification
-     * @param MaxStorage Maximum storage capacity in GB supported by this specification
+     * Set <p>Maximum storage capacity supported by this specification, in GB.</p>
+     * @param MaxStorage <p>Maximum storage capacity supported by this specification, in GB.</p>
      */
     public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * Get Minimum storage capacity in GB supported by this specification 
-     * @return MinStorage Minimum storage capacity in GB supported by this specification
+     * Get <p>Minimum storage capacity supported by this specification, in GB.</p> 
+     * @return MinStorage <p>Minimum storage capacity supported by this specification, in GB.</p>
      */
     public Long getMinStorage() {
         return this.MinStorage;
     }
 
     /**
-     * Set Minimum storage capacity in GB supported by this specification
-     * @param MinStorage Minimum storage capacity in GB supported by this specification
+     * Set <p>Minimum storage capacity supported by this specification, in GB.</p>
+     * @param MinStorage <p>Minimum storage capacity supported by this specification, in GB.</p>
      */
     public void setMinStorage(Long MinStorage) {
         this.MinStorage = MinStorage;
     }
 
     /**
-     * Get Estimated QPS for this specification 
-     * @return Qps Estimated QPS for this specification
+     * Get <p>Estimated QPS of the specification.</p> 
+     * @return Qps <p>Estimated QPS of the specification.</p>
      */
     public Long getQps() {
         return this.Qps;
     }
 
     /**
-     * Set Estimated QPS for this specification
-     * @param Qps Estimated QPS for this specification
+     * Set <p>Estimated QPS of the specification.</p>
+     * @param Qps <p>Estimated QPS of the specification.</p>
      */
     public void setQps(Long Qps) {
         this.Qps = Qps;
     }
 
     /**
-     * Get (Disused) 
-     * @return Pid (Disused)
+     * Get <p>[Deprecated field].</p> 
+     * @return Pid <p>[Deprecated field].</p>
      */
     public Long getPid() {
         return this.Pid;
     }
 
     /**
-     * Set (Disused)
-     * @param Pid (Disused)
+     * Set <p>[Deprecated field].</p>
+     * @param Pid <p>[Deprecated field].</p>
      */
     public void setPid(Long Pid) {
         this.Pid = Pid;
     }
 
     /**
-     * Get Machine type 
-     * @return Type Machine type
+     * Get <p>Machine type.</p> 
+     * @return Type <p>Machine type.</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Machine type
-     * @param Type Machine type
+     * Set <p>Machine type.</p>
+     * @param Type <p>Machine type.</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return MajorVersion PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>PostgreSQL major version number.</p> 
+     * @return MajorVersion <p>PostgreSQL major version number.</p>
      */
     public String getMajorVersion() {
         return this.MajorVersion;
     }
 
     /**
-     * Set PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param MajorVersion PostgreSQL major version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>PostgreSQL major version number.</p>
+     * @param MajorVersion <p>PostgreSQL major version number.</p>
      */
     public void setMajorVersion(String MajorVersion) {
         this.MajorVersion = MajorVersion;
     }
 
     /**
-     * Get PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained. 
-     * @return KernelVersion PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Get <p>PostgreSQL kernel version number.</p> 
+     * @return KernelVersion <p>PostgreSQL kernel version number.</p>
      */
     public String getKernelVersion() {
         return this.KernelVersion;
     }
 
     /**
-     * Set PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param KernelVersion PostgreSQL kernel version number
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * Set <p>PostgreSQL kernel version number.</p>
+     * @param KernelVersion <p>PostgreSQL kernel version number.</p>
      */
     public void setKernelVersion(String KernelVersion) {
         this.KernelVersion = KernelVersion;
     }
 
     /**
-     * Get Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return IsSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p> 
+     * @return IsSupportTDE <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
      */
     public Long getIsSupportTDE() {
         return this.IsSupportTDE;
     }
 
     /**
-     * Set Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param IsSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
+     * @param IsSupportTDE <p>Indicates whether the TDE data encryption feature is supported. 0 - not supported. 1 - supported.</p>
      */
     public void setIsSupportTDE(Long IsSupportTDE) {
         this.IsSupportTDE = IsSupportTDE;

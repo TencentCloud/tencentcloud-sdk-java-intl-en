@@ -24,97 +24,92 @@ import java.util.HashMap;
 public class DescribeUserDetailResp extends AbstractModel {
 
     /**
-    * User iD.
+    * User ID.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * User account
+    * User account.
     */
     @SerializedName("UserAccount")
     @Expose
     private String UserAccount;
 
     /**
-    * User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
+    * User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
     */
     @SerializedName("AccountType")
     @Expose
     private Long AccountType;
 
     /**
-    * User name
+    * User name.
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-     * Get User iD. 
-     * @return UserId User iD.
+     * Get User ID. 
+     * @return UserId User ID.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User iD.
-     * @param UserId User iD.
+     * Set User ID.
+     * @param UserId User ID.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get User account 
-     * @return UserAccount User account
+     * Get User account. 
+     * @return UserAccount User account.
      */
     public String getUserAccount() {
         return this.UserAccount;
     }
 
     /**
-     * Set User account
-     * @param UserAccount User account
+     * Set User account.
+     * @param UserAccount User account.
      */
     public void setUserAccount(String UserAccount) {
         this.UserAccount = UserAccount;
     }
 
     /**
-     * Get User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all. 
-     * @return AccountType User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
+     * Get User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned. 
+     * @return AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
-     * @param AccountType User account
-1 - super admin 2 - platform admin 3 - ordinary member. not passing indicates all.
+     * Set User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
+     * @param AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. If left empty, all types are returned.
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get User name 
-     * @return UserName User name
+     * Get User name. 
+     * @return UserName User name.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set User name
-     * @param UserName User name
+     * Set User name.
+     * @param UserName User name.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;

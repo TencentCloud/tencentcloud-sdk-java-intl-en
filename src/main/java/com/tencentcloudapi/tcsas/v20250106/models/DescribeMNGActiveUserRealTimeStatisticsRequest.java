@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeMNGActiveUserRealTimeStatisticsRequest extends AbstractModel {
 
     /**
-    * Mini program appid
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Tenant ID
+    * Tenant ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Fixed value: mnp_data_analysis
+    * Fixed value: mnp_data_analysis.
     */
     @SerializedName("ReportId")
     @Expose
     private String ReportId;
 
     /**
-    * IndexId
+    * IndexId.
     */
     @SerializedName("IndexId")
     @Expose
     private String IndexId;
 
     /**
-    * Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
+    * Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
     */
     @SerializedName("QueryData")
     @Expose
     private String QueryData;
 
     /**
-     * Get Mini program appid 
-     * @return MNPId Mini program appid
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program appid
-     * @param MNPId Mini program appid
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Tenant ID 
-     * @return PlatformId Tenant ID
+     * Get Tenant ID. 
+     * @return PlatformId Tenant ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Tenant ID
-     * @param PlatformId Tenant ID
+     * Set Tenant ID.
+     * @param PlatformId Tenant ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Fixed value: mnp_data_analysis 
-     * @return ReportId Fixed value: mnp_data_analysis
+     * Get Fixed value: mnp_data_analysis. 
+     * @return ReportId Fixed value: mnp_data_analysis.
      */
     public String getReportId() {
         return this.ReportId;
     }
 
     /**
-     * Set Fixed value: mnp_data_analysis
-     * @param ReportId Fixed value: mnp_data_analysis
+     * Set Fixed value: mnp_data_analysis.
+     * @param ReportId Fixed value: mnp_data_analysis.
      */
     public void setReportId(String ReportId) {
         this.ReportId = ReportId;
     }
 
     /**
-     * Get IndexId 
-     * @return IndexId IndexId
+     * Get IndexId. 
+     * @return IndexId IndexId.
      */
     public String getIndexId() {
         return this.IndexId;
     }
 
     /**
-     * Set IndexId
-     * @param IndexId IndexId
+     * Set IndexId.
+     * @param IndexId IndexId.
      */
     public void setIndexId(String IndexId) {
         this.IndexId = IndexId;
     }
 
     /**
-     * Get Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"} 
-     * @return QueryData Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
+     * Get Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}. 
+     * @return QueryData Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
      */
     public String getQueryData() {
         return this.QueryData;
     }
 
     /**
-     * Set Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
-     * @param QueryData Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}
+     * Set Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
+     * @param QueryData Input parameter base64 string: {"Platform":0,"DataType":"1","BeginDate":"20251125","EndDate":"20251125"}.
      */
     public void setQueryData(String QueryData) {
         this.QueryData = QueryData;

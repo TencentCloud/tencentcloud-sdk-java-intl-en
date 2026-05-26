@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeMNPSensitiveAPIPermissionApprovalListRequest extends AbstractModel {
 
     /**
-    * Page offset
+    * Pagination offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results per page
+    * Number of entries per page.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Approval status. 1: Processing; 20: Rejected; 30: Approved
+    * Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
     */
     @SerializedName("ApprovalStatusList")
     @Expose
     private Long [] ApprovalStatusList;
 
     /**
-    * Keywords for search (API name, API method or application name)
+    * Search keyword (API name, API method or superapp name).
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-     * Get Page offset 
-     * @return Offset Page offset
+     * Get Pagination offset. 
+     * @return Offset Pagination offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page offset
-     * @param Offset Page offset
+     * Set Pagination offset.
+     * @param Offset Pagination offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results per page 
-     * @return Limit Number of results per page
+     * Get Number of entries per page. 
+     * @return Limit Number of entries per page.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page
-     * @param Limit Number of results per page
+     * Set Number of entries per page.
+     * @param Limit Number of entries per page.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Approval status. 1: Processing; 20: Rejected; 30: Approved 
-     * @return ApprovalStatusList Approval status. 1: Processing; 20: Rejected; 30: Approved
+     * Get Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved. 
+     * @return ApprovalStatusList Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
      */
     public Long [] getApprovalStatusList() {
         return this.ApprovalStatusList;
     }
 
     /**
-     * Set Approval status. 1: Processing; 20: Rejected; 30: Approved
-     * @param ApprovalStatusList Approval status. 1: Processing; 20: Rejected; 30: Approved
+     * Set Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
+     * @param ApprovalStatusList Approval status. Valid values: 1: Processing; 20: Rejected; 30: Approved.
      */
     public void setApprovalStatusList(Long [] ApprovalStatusList) {
         this.ApprovalStatusList = ApprovalStatusList;
     }
 
     /**
-     * Get Keywords for search (API name, API method or application name) 
-     * @return Keyword Keywords for search (API name, API method or application name)
+     * Get Search keyword (API name, API method or superapp name). 
+     * @return Keyword Search keyword (API name, API method or superapp name).
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set Keywords for search (API name, API method or application name)
-     * @param Keyword Keywords for search (API name, API method or application name)
+     * Set Search keyword (API name, API method or superapp name).
+     * @param Keyword Search keyword (API name, API method or superapp name).
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;

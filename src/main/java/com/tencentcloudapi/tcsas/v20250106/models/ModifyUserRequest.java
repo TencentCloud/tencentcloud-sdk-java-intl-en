@@ -24,92 +24,92 @@ import java.util.HashMap;
 public class ModifyUserRequest extends AbstractModel {
 
     /**
-    * User ID
+    * User ID.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * User name
+    * User name.
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Account type 2 - Platform admin 3 - Member
+    * User account type. Valid values: 2: Platform administrator; 3: Regular member.
     */
     @SerializedName("AccountType")
     @Expose
     private Long AccountType;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-     * Get User ID 
-     * @return UserId User ID
+     * Get User ID. 
+     * @return UserId User ID.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User ID
-     * @param UserId User ID
+     * Set User ID.
+     * @param UserId User ID.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get User name 
-     * @return UserName User name
+     * Get User name. 
+     * @return UserName User name.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set User name
-     * @param UserName User name
+     * Set User name.
+     * @param UserName User name.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Account type 2 - Platform admin 3 - Member 
-     * @return AccountType Account type 2 - Platform admin 3 - Member
+     * Get User account type. Valid values: 2: Platform administrator; 3: Regular member. 
+     * @return AccountType User account type. Valid values: 2: Platform administrator; 3: Regular member.
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set Account type 2 - Platform admin 3 - Member
-     * @param AccountType Account type 2 - Platform admin 3 - Member
+     * Set User account type. Valid values: 2: Platform administrator; 3: Regular member.
+     * @param AccountType User account type. Valid values: 2: Platform administrator; 3: Regular member.
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;

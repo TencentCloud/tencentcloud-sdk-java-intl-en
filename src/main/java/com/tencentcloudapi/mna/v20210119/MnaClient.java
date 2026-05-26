@@ -160,6 +160,17 @@ public class MnaClient extends AbstractClient{
     }
 
     /**
+     *Query the access region list.
+     * @param req DescribeAccessRegionsRequest
+     * @return DescribeAccessRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeAccessRegionsResponse DescribeAccessRegions(DescribeAccessRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeAccessRegions", DescribeAccessRegionsResponse.class);
+    }
+
+    /**
      *Download the number of active devices statistics
      * @param req DownloadActiveDeviceCountRequest
      * @return DownloadActiveDeviceCountResponse
@@ -465,6 +476,17 @@ public class MnaClient extends AbstractClient{
     public GroupDeleteDeviceResponse GroupDeleteDevice(GroupDeleteDeviceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GroupDeleteDevice", GroupDeleteDeviceResponse.class);
+    }
+
+    /**
+     *This API is used to modify device connectivity regions.
+     * @param req ModifyDeviceAccessRegionsRequest
+     * @return ModifyDeviceAccessRegionsResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyDeviceAccessRegionsResponse ModifyDeviceAccessRegions(ModifyDeviceAccessRegionsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyDeviceAccessRegions", ModifyDeviceAccessRegionsResponse.class);
     }
 
     /**

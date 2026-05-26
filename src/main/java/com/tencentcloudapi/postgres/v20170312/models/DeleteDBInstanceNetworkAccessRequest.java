@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteDBInstanceNetworkAccessRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of postgres-6bwgamo3.
+    * Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
@@ -52,16 +52,16 @@ public class DeleteDBInstanceNetworkAccessRequest extends AbstractModel {
     private String Vip;
 
     /**
-     * Get Instance ID in the format of postgres-6bwgamo3. 
-     * @return DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+     * Get Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID in the format of postgres-6bwgamo3.
-     * @param DBInstanceId Instance ID in the format of postgres-6bwgamo3.
+     * Set Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Specifies the instance ID, such as postgres-6bwgamo3. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;

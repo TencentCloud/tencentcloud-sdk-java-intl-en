@@ -39,7 +39,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add a team member
+     *This API is used to add a team member.
      * @param req AddTeamMemberRequest
      * @return AddTeamMemberResponse
      * @throws TencentCloudSDKException
@@ -72,7 +72,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create an application.
+     *This API is used to create a superapp.
      * @param req CreateApplicationRequest
      * @return CreateApplicationResponse
      * @throws TencentCloudSDKException
@@ -94,7 +94,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a sensitive API of an application.
+     *This API is used to create a superapp sensitive API.
      * @param req CreateApplicationSensitiveAPIRequest
      * @return CreateApplicationSensitiveAPIResponse
      * @throws TencentCloudSDKException
@@ -193,7 +193,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to add a domain name to the allowlist / blocklist of a mini program.
+     *This API is used to create a domain allowlist/blocklist for a mini program.
      * @param req CreateMNPDomainACLRequest
      * @return CreateMNPDomainACLResponse
      * @throws TencentCloudSDKException
@@ -204,7 +204,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to create a secret key for a mini program or mini game.
+     *This API is used to create a package secret key for a mini program or mini game.
      * @param req CreateMNPSecretKeyRequest
      * @return CreateMNPSecretKeyResponse
      * @throws TencentCloudSDKException
@@ -270,7 +270,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete the applications.
+     *This API is used to delete a superapp.
      * @param req DeleteApplicationRequest
      * @return DeleteApplicationResponse
      * @throws TencentCloudSDKException
@@ -281,7 +281,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to delete a sensitive API.
+     *This API is used to delete a superapp sensitive API.
      * @param req DeleteApplicationSensitiveAPIRequest
      * @return DeleteApplicationSensitiveAPIResponse
      * @throws TencentCloudSDKException
@@ -358,7 +358,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the line chart data for selected superapp metrics.
+     *This API is used to query the line chart data for selected superapp metrics.
      * @param req DescribeAPPDataDetailLineChartRequest
      * @return DescribeAPPDataDetailLineChartResponse
      * @throws TencentCloudSDKException
@@ -369,7 +369,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve an overview of the superapp data.
+     *This API is used to query the data overview for the selected superapp metrics.
      * @param req DescribeAPPDataOverviewRequest
      * @return DescribeAPPDataOverviewResponse
      * @throws TencentCloudSDKException
@@ -380,7 +380,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the advertising line chart data for a mini program within a specified date range.
+     *This API is used to query the advertising line chart data for a mini program within a specified date range.
      * @param req DescribeAdvertisingLineChartRequest
      * @return DescribeAdvertisingLineChartResponse
      * @throws TencentCloudSDKException
@@ -391,7 +391,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve an overview of mini program ad metrics within a specified date range.
+     *This API is used to query the mini program advertising overview.
      * @param req DescribeAdvertisingOverviewRequest
      * @return DescribeAdvertisingOverviewResponse
      * @throws TencentCloudSDKException
@@ -402,7 +402,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the application details.
+     *This API is used to query the superapp details.
      * @param req DescribeApplicationRequest
      * @return DescribeApplicationResponse
      * @throws TencentCloudSDKException
@@ -413,7 +413,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the configuration files of an application.
+     *This API is used to query the configuration files of a superapp.
      * @param req DescribeApplicationConfigFileRequest
      * @return DescribeApplicationConfigFileResponse
      * @throws TencentCloudSDKException
@@ -424,7 +424,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the configuration details for an superapp.
+     *This API is used to query the superapp configuration information.
      * @param req DescribeApplicationConfigInfosRequest
      * @return DescribeApplicationConfigInfosResponse
      * @throws TencentCloudSDKException
@@ -435,7 +435,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the applications.
+     *This API is used to query a list of superapps.
      * @param req DescribeApplicationListRequest
      * @return DescribeApplicationListResponse
      * @throws TencentCloudSDKException
@@ -446,7 +446,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve a list of the mini programs or mini games associated with a superapp.
+     *This API is used to query the mini program or mini game list associated with a superapp.
      * @param req DescribeApplicationMNPListRequest
      * @return DescribeApplicationMNPListResponse
      * @throws TencentCloudSDKException
@@ -457,7 +457,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to list sensitive APIs of an application.
+     *This API is used to query a list of superapp sensitive APIs.
      * @param req DescribeApplicationSensitiveAPIListRequest
      * @return DescribeApplicationSensitiveAPIListResponse
      * @throws TencentCloudSDKException
@@ -479,7 +479,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve a global overview summary of usage statistics.
+     *This API is used to query the data summary for the global overview.
      * @param req DescribeGlobalOverviewDataSummaryRequest
      * @return DescribeGlobalOverviewDataSummaryResponse
      * @throws TencentCloudSDKException
@@ -490,7 +490,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the detailed report data for global overview within a specified date range.
+     *This API is used to query the detailed report data for global overview within a specified date range.
      * @param req DescribeGlobalOverviewReportDetailRequest
      * @return DescribeGlobalOverviewReportDetailResponse
      * @throws TencentCloudSDKException
@@ -512,7 +512,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the detailed visit analysis data for a mini game within a specified date range.
+     *This API is used to query the detailed visit analysis data for a mini game within a specified date range.
      * @param req DescribeMNGAccessAnalysisDetailRequest
      * @return DescribeMNGAccessAnalysisDetailResponse
      * @throws TencentCloudSDKException
@@ -523,7 +523,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve line chart analysis data for mini game visits.
+     *This API is used to query the mini game visit analysis line chart.
      * @param req DescribeMNGAccessAnalysisLineChartRequest
      * @return DescribeMNGAccessAnalysisLineChartResponse
      * @throws TencentCloudSDKException
@@ -534,7 +534,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve an overview of visit analysis data for a mini game within a specified date range.
+     *This API is used to query an overview of visit analysis data for a mini game within a specified date range.
      * @param req DescribeMNGAccessAnalysisOverviewRequest
      * @return DescribeMNGAccessAnalysisOverviewResponse
      * @throws TencentCloudSDKException
@@ -545,7 +545,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the real-time active user statistics for a mini game.
+     *This API is used to query the mini game real-time active user statistics.
      * @param req DescribeMNGActiveUserRealTimeStatisticsRequest
      * @return DescribeMNGActiveUserRealTimeStatisticsResponse
      * @throws TencentCloudSDKException
@@ -556,7 +556,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the advertising detailed data for a mini game over a specified period.
+     *This API is used to query the detailed mini game advertising data over a specified period.
      * @param req DescribeMNGAdvertisingDetailRequest
      * @return DescribeMNGAdvertisingDetailResponse
      * @throws TencentCloudSDKException
@@ -567,7 +567,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve mini game advertising data in a line chart format.
+     *This API is used to query the mini game advertising data in a line chart format.
      * @param req DescribeMNGAdvertisingLineChartRequest
      * @return DescribeMNGAdvertisingLineChartResponse
      * @throws TencentCloudSDKException
@@ -578,7 +578,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve an overview of mini game ad metrics within a specified date range.
+     *This API is used to query an overview of mini game ad metrics within a specified date range.
      * @param req DescribeMNGAdvertisingOverviewRequest
      * @return DescribeMNGAdvertisingOverviewResponse
      * @throws TencentCloudSDKException
@@ -600,7 +600,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of mini game types.
+     *This API is used to query the mini game categories.
      * @param req DescribeMNGCategoryRequest
      * @return DescribeMNGCategoryResponse
      * @throws TencentCloudSDKException
@@ -633,7 +633,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the detailed mini game monthly active user data.
+     *This API is used to query the detailed mini game monthly active user data.
      * @param req DescribeMNGMAUDataDetailRequest
      * @return DescribeMNGMAUDataDetailResponse
      * @throws TencentCloudSDKException
@@ -644,7 +644,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve mini game monthly active user data in a line chart format.
+     *This API is used to query the mini game MAU line chart.
      * @param req DescribeMNGMAULineChartRequest
      * @return DescribeMNGMAULineChartResponse
      * @throws TencentCloudSDKException
@@ -655,7 +655,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve MAU comparison data for a mini game between two months.
+     *This API is used to query the MAU comparison data for a mini game between two months.
      * @param req DescribeMNGMAUMonthlyComparisonMetricCardRequest
      * @return DescribeMNGMAUMonthlyComparisonMetricCardResponse
      * @throws TencentCloudSDKException
@@ -677,7 +677,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the line chart data for mini game payment.
+     *This API is used to query the mini game payment line chart.
      * @param req DescribeMNGPaymentLineChartRequest
      * @return DescribeMNGPaymentLineChartResponse
      * @throws TencentCloudSDKException
@@ -688,7 +688,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve an overview of mini game payment data within a specified period.
+     *This API is used to query an overview of mini game payment data within a specified period.
      * @param req DescribeMNGPaymentOverviewRequest
      * @return DescribeMNGPaymentOverviewResponse
      * @throws TencentCloudSDKException
@@ -699,7 +699,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve a detailed payment report data for a mini game.
+     *This API is used to query a detailed payment report data for a mini game.
      * @param req DescribeMNGPaymentReportDetailRequest
      * @return DescribeMNGPaymentReportDetailResponse
      * @throws TencentCloudSDKException
@@ -710,7 +710,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the mini game payment retention data.
+     *This API is used to query the mini game payment retention data.
      * @param req DescribeMNGPaymentRetentionAnalysisRequest
      * @return DescribeMNGPaymentRetentionAnalysisResponse
      * @throws TencentCloudSDKException
@@ -732,7 +732,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the released mini game versions.
+     *This API is used to query the release version history of a mini game.
      * @param req DescribeMNGReleasedVersionHistoryRequest
      * @return DescribeMNGReleasedVersionHistoryResponse
      * @throws TencentCloudSDKException
@@ -743,7 +743,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve user retention data for a mini game within a specified date range.
+     *This API is used to query the user retention data for a mini game within a specified date range.
      * @param req DescribeMNGRetentionDataRequest
      * @return DescribeMNGRetentionDataResponse
      * @throws TencentCloudSDKException
@@ -754,7 +754,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the details of a sensitive API permission request for a mini game.
+     *This API is used to query the details of permission requests to allow a mini game to call sensitive APIs.
      * @param req DescribeMNGSensitiveAPIPermissionApprovalRequest
      * @return DescribeMNGSensitiveAPIPermissionApprovalResponse
      * @throws TencentCloudSDKException
@@ -765,7 +765,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the list of sensitive APIs that available to the mini game.
+     *This API is used to query a list of sensitive APIs that are available to the mini game.
      * @param req DescribeMNGSensitiveAPIPermissionListRequest
      * @return DescribeMNGSensitiveAPIPermissionListResponse
      * @throws TencentCloudSDKException
@@ -776,7 +776,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the creation result of a mini game version.
+     *This API is used to query the mini game version creation results.
      * @param req DescribeMNGVersionRequest
      * @return DescribeMNGVersionResponse
      * @throws TencentCloudSDKException
@@ -798,7 +798,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve an overview of visit analysis data for a mini program within a specified date range.
+     *This API is used to query the overview of mini program visit analysis data within a specified date range.
      * @param req DescribeMNPAccessAnalysisOverviewRequest
      * @return DescribeMNPAccessAnalysisOverviewResponse
      * @throws TencentCloudSDKException
@@ -809,7 +809,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the real-time active user statistics for a mini program.
+     *This API is used to query the mini program real-time active user statistics.
      * @param req DescribeMNPActiveUserRealTimeStatisticsRequest
      * @return DescribeMNPActiveUserRealTimeStatisticsResponse
      * @throws TencentCloudSDKException
@@ -820,7 +820,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the detailed advertising data for a mini program within a specified date range.
+     *This API is used to query the detailed advertising data for a mini program within a specified date range.
      * @param req DescribeMNPAdvertisingDetailRequest
      * @return DescribeMNPAdvertisingDetailResponse
      * @throws TencentCloudSDKException
@@ -831,7 +831,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the mini program version information.
+     *This API is used to query versions of a mini program across all stages.
      * @param req DescribeMNPAllStageVersionsRequest
      * @return DescribeMNPAllStageVersionsResponse
      * @throws TencentCloudSDKException
@@ -842,7 +842,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to list the approval requests related with a mini program version.
+     *This API is used to query a list of approval requests related with a mini program.
      * @param req DescribeMNPApprovalListRequest
      * @return DescribeMNPApprovalListResponse
      * @throws TencentCloudSDKException
@@ -853,7 +853,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the mini program types.
+     *This API is used to query the mini program category list.
      * @param req DescribeMNPCategoryRequest
      * @return DescribeMNPCategoryResponse
      * @throws TencentCloudSDKException
@@ -864,7 +864,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the domain allowlist / blocklist of a mini program.
+     *This API is used to query the domain allowlist/blocklist of a mini program.
      * @param req DescribeMNPDomainACLRequest
      * @return DescribeMNPDomainACLResponse
      * @throws TencentCloudSDKException
@@ -875,7 +875,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the mini programs.
+     *This API is used to query the mini program list.
      * @param req DescribeMNPListRequest
      * @return DescribeMNPListResponse
      * @throws TencentCloudSDKException
@@ -886,7 +886,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the detailed mini program monthly active user data.
+     *This API is used to query the detailed mini program monthly active user data.
      * @param req DescribeMNPMAUDataDetailRequest
      * @return DescribeMNPMAUDataDetailResponse
      * @throws TencentCloudSDKException
@@ -897,7 +897,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the mini program monthly active user data in a line chart format.
+     *This API is used to query the mini program monthly active user data in a line chart format.
      * @param req DescribeMNPMAULineChartRequest
      * @return DescribeMNPMAULineChartResponse
      * @throws TencentCloudSDKException
@@ -908,7 +908,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve MAU comparison data for a mini program between two months.
+     *This API is used to query the MAU comparison data for a mini program between two months.
      * @param req DescribeMNPMAUMetricCardRequest
      * @return DescribeMNPMAUMetricCardResponse
      * @throws TencentCloudSDKException
@@ -930,7 +930,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the detailed page visit data for a mini program over a specified period.
+     *This API is used to query the detailed mini program page visit data.
      * @param req DescribeMNPPageAnalysisDetailRequest
      * @return DescribeMNPPageAnalysisDetailResponse
      * @throws TencentCloudSDKException
@@ -952,7 +952,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to list all released versions of a mini program.
+     *This API is used to query the release version history of a mini program.
      * @param req DescribeMNPReleasedVersionHistoryRequest
      * @return DescribeMNPReleasedVersionHistoryResponse
      * @throws TencentCloudSDKException
@@ -963,7 +963,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the line chart data for mini program visit analysis within a given date range.
+     *This API is used to query the mini program visit analysis line chart within a given date range.
      * @param req DescribeMNPReportDataLineChartRequest
      * @return DescribeMNPReportDataLineChartResponse
      * @throws TencentCloudSDKException
@@ -974,7 +974,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the detailed mini program visit analysis data.
+     *This API is used to query the detailed mini program visit analysis data.
      * @param req DescribeMNPReportDetailRequest
      * @return DescribeMNPReportDetailResponse
      * @throws TencentCloudSDKException
@@ -985,7 +985,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve user retention data for a mini program within a specified date range.
+     *This API is used to query the mini program user retention data within a specified date range.
      * @param req DescribeMNPRetentionDataRequest
      * @return DescribeMNPRetentionDataResponse
      * @throws TencentCloudSDKException
@@ -996,7 +996,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query details of a specific permission request to call sensitive APIs.
+     *This API is used to query the details of a sensitive API permission request for a mini program.
      * @param req DescribeMNPSensitiveAPIPermissionApprovalRequest
      * @return DescribeMNPSensitiveAPIPermissionApprovalResponse
      * @throws TencentCloudSDKException
@@ -1007,7 +1007,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query permission requests to allow a mini program calling sensitive APIs.
+     *This API is used to query a list of permission requests to allow a mini program to call sensitive APIs.
      * @param req DescribeMNPSensitiveAPIPermissionApprovalListRequest
      * @return DescribeMNPSensitiveAPIPermissionApprovalListResponse
      * @throws TencentCloudSDKException
@@ -1040,7 +1040,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the detailed standard payment data for specified  mini programs within a specified date range.
+     *This API is used to query the mini program payment data details within a specified date range.
      * @param req DescribePaymentDataDetailRequest
      * @return DescribePaymentDataDetailResponse
      * @throws TencentCloudSDKException
@@ -1051,7 +1051,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve the line chart data related to standard payment for a mini program within a specified date range.
+     *This API is used to query the mini program payment line chart within a specified date range.
      * @param req DescribePaymentDataLineChartRequest
      * @return DescribePaymentDataLineChartResponse
      * @throws TencentCloudSDKException
@@ -1062,7 +1062,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to retrieve an overview of mini program payment data within a specified date range.
+     *This API is used to query an overview of mini program payment data within a specified date range.
      * @param req DescribePaymentDataOverviewRequest
      * @return DescribePaymentDataOverviewResponse
      * @throws TencentCloudSDKException
@@ -1073,7 +1073,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the roles.
+     *This API is used to query a list of roles.
      * @param req DescribeRoleListRequest
      * @return DescribeRoleListResponse
      * @throws TencentCloudSDKException
@@ -1095,7 +1095,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the teams.
+     *This API is used to query a list of teams.
      * @param req DescribeTeamListRequest
      * @return DescribeTeamListResponse
      * @throws TencentCloudSDKException
@@ -1106,7 +1106,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the team members.
+     *This API is used to query a list of team members.
      * @param req DescribeTeamMemberListRequest
      * @return DescribeTeamMemberListResponse
      * @throws TencentCloudSDKException
@@ -1139,7 +1139,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the users.
+     *This API is used to query a list of users.
      * @param req DescribeUserListRequest
      * @return DescribeUserListResponse
      * @throws TencentCloudSDKException
@@ -1150,7 +1150,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to set a sensitive API to restricted.
+     *This API is used to disable a superapp sensitive API.
      * @param req DisableApplicationSensitiveAPIRequest
      * @return DisableApplicationSensitiveAPIResponse
      * @throws TencentCloudSDKException
@@ -1161,7 +1161,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to set an application sensitive API to public.
+     *This API is used to enable a superapp sensitive API.
      * @param req EnableApplicationSensitiveAPIRequest
      * @return EnableApplicationSensitiveAPIResponse
      * @throws TencentCloudSDKException
@@ -1172,7 +1172,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to change the application information.
+     *This API is used to change the superapp information.
      * @param req ModifyApplicationRequest
      * @return ModifyApplicationResponse
      * @throws TencentCloudSDKException
@@ -1227,7 +1227,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to modify the mini program information.
+     *This API is used to edit the mini program information.
      * @param req ModifyMNPRequest
      * @return ModifyMNPResponse
      * @throws TencentCloudSDKException
@@ -1282,7 +1282,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to approve or reject the release of a mini program version.
+     *This API is used to process mini program approval requests.
      * @param req ProcessMNPApprovalRequest
      * @return ProcessMNPApprovalResponse
      * @throws TencentCloudSDKException
@@ -1293,7 +1293,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to approve or reject the sensitive API permission requests.
+     *This API is used to process a sensitive API permission request for a mini program.
      * @param req ProcessMNPSensitiveAPIPermissionApprovalRequest
      * @return ProcessMNPSensitiveAPIPermissionApprovalResponse
      * @throws TencentCloudSDKException
@@ -1359,7 +1359,7 @@ public class TcsasClient extends AbstractClient{
     }
 
     /**
-     *This API is used to rollback a mini program online version.
+     *This API is used to roll back the released version of a mini program to a specified version.
      * @param req RollbackMNPVersionRequest
      * @return RollbackMNPVersionResponse
      * @throws TencentCloudSDKException

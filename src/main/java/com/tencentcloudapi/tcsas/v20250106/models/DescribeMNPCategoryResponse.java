@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class DescribeMNPCategoryResponse extends AbstractModel {
 
     /**
-    * Response data
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Response data.
     */
     @SerializedName("Data")
     @Expose
@@ -39,20 +38,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Response data
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Data Response data
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Response data. 
+     * @return Data Response data.
      */
     public MNPTypeDefine [] getData() {
         return this.Data;
     }
 
     /**
-     * Set Response data
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Data Response data
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Response data.
+     * @param Data Response data.
      */
     public void setData(MNPTypeDefine [] Data) {
         this.Data = Data;

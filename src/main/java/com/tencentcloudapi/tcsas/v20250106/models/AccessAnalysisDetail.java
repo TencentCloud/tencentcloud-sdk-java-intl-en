@@ -24,230 +24,230 @@ import java.util.HashMap;
 public class AccessAnalysisDetail extends AbstractModel {
 
     /**
-    * Number of new devices
+    * Number of new devices.
     */
     @SerializedName("ActiveCount")
     @Expose
     private Long ActiveCount;
 
     /**
-    * Average visit duration per user
+    * Average visit duration per user.
     */
     @SerializedName("AvgDevice")
     @Expose
     private String AvgDevice;
 
     /**
-    * Average visit duration per session
+    * Average visit duration per session.
     */
     @SerializedName("AvgOnce")
     @Expose
     private String AvgOnce;
 
     /**
-    * Average opens per user
+    * Average opens per user.
     */
     @SerializedName("AvgOpenCount")
     @Expose
     private String AvgOpenCount;
 
     /**
-    * Date
+    * Date.
     */
     @SerializedName("DataTime")
     @Expose
     private String DataTime;
 
     /**
-    * Data time
+    * Data refresh time.
     */
     @SerializedName("FlushTime")
     @Expose
     private String FlushTime;
 
     /**
-    * Number of active devices
+    * Number of active devices.
     */
     @SerializedName("NewCount")
     @Expose
     private Long NewCount;
 
     /**
-    * Number of opens
+    * Number of opens.
     */
     @SerializedName("OpenCount")
     @Expose
     private Long OpenCount;
 
     /**
-    * Number of shares
+    * Number of shares.
     */
     @SerializedName("TotalShareNum")
     @Expose
     private Long TotalShareNum;
 
     /**
-    * Cumulative users
+    * Cumulative users.
     */
     @SerializedName("TotalUserNum")
     @Expose
     private Long TotalUserNum;
 
     /**
-     * Get Number of new devices 
-     * @return ActiveCount Number of new devices
+     * Get Number of new devices. 
+     * @return ActiveCount Number of new devices.
      */
     public Long getActiveCount() {
         return this.ActiveCount;
     }
 
     /**
-     * Set Number of new devices
-     * @param ActiveCount Number of new devices
+     * Set Number of new devices.
+     * @param ActiveCount Number of new devices.
      */
     public void setActiveCount(Long ActiveCount) {
         this.ActiveCount = ActiveCount;
     }
 
     /**
-     * Get Average visit duration per user 
-     * @return AvgDevice Average visit duration per user
+     * Get Average visit duration per user. 
+     * @return AvgDevice Average visit duration per user.
      */
     public String getAvgDevice() {
         return this.AvgDevice;
     }
 
     /**
-     * Set Average visit duration per user
-     * @param AvgDevice Average visit duration per user
+     * Set Average visit duration per user.
+     * @param AvgDevice Average visit duration per user.
      */
     public void setAvgDevice(String AvgDevice) {
         this.AvgDevice = AvgDevice;
     }
 
     /**
-     * Get Average visit duration per session 
-     * @return AvgOnce Average visit duration per session
+     * Get Average visit duration per session. 
+     * @return AvgOnce Average visit duration per session.
      */
     public String getAvgOnce() {
         return this.AvgOnce;
     }
 
     /**
-     * Set Average visit duration per session
-     * @param AvgOnce Average visit duration per session
+     * Set Average visit duration per session.
+     * @param AvgOnce Average visit duration per session.
      */
     public void setAvgOnce(String AvgOnce) {
         this.AvgOnce = AvgOnce;
     }
 
     /**
-     * Get Average opens per user 
-     * @return AvgOpenCount Average opens per user
+     * Get Average opens per user. 
+     * @return AvgOpenCount Average opens per user.
      */
     public String getAvgOpenCount() {
         return this.AvgOpenCount;
     }
 
     /**
-     * Set Average opens per user
-     * @param AvgOpenCount Average opens per user
+     * Set Average opens per user.
+     * @param AvgOpenCount Average opens per user.
      */
     public void setAvgOpenCount(String AvgOpenCount) {
         this.AvgOpenCount = AvgOpenCount;
     }
 
     /**
-     * Get Date 
-     * @return DataTime Date
+     * Get Date. 
+     * @return DataTime Date.
      */
     public String getDataTime() {
         return this.DataTime;
     }
 
     /**
-     * Set Date
-     * @param DataTime Date
+     * Set Date.
+     * @param DataTime Date.
      */
     public void setDataTime(String DataTime) {
         this.DataTime = DataTime;
     }
 
     /**
-     * Get Data time 
-     * @return FlushTime Data time
+     * Get Data refresh time. 
+     * @return FlushTime Data refresh time.
      */
     public String getFlushTime() {
         return this.FlushTime;
     }
 
     /**
-     * Set Data time
-     * @param FlushTime Data time
+     * Set Data refresh time.
+     * @param FlushTime Data refresh time.
      */
     public void setFlushTime(String FlushTime) {
         this.FlushTime = FlushTime;
     }
 
     /**
-     * Get Number of active devices 
-     * @return NewCount Number of active devices
+     * Get Number of active devices. 
+     * @return NewCount Number of active devices.
      */
     public Long getNewCount() {
         return this.NewCount;
     }
 
     /**
-     * Set Number of active devices
-     * @param NewCount Number of active devices
+     * Set Number of active devices.
+     * @param NewCount Number of active devices.
      */
     public void setNewCount(Long NewCount) {
         this.NewCount = NewCount;
     }
 
     /**
-     * Get Number of opens 
-     * @return OpenCount Number of opens
+     * Get Number of opens. 
+     * @return OpenCount Number of opens.
      */
     public Long getOpenCount() {
         return this.OpenCount;
     }
 
     /**
-     * Set Number of opens
-     * @param OpenCount Number of opens
+     * Set Number of opens.
+     * @param OpenCount Number of opens.
      */
     public void setOpenCount(Long OpenCount) {
         this.OpenCount = OpenCount;
     }
 
     /**
-     * Get Number of shares 
-     * @return TotalShareNum Number of shares
+     * Get Number of shares. 
+     * @return TotalShareNum Number of shares.
      */
     public Long getTotalShareNum() {
         return this.TotalShareNum;
     }
 
     /**
-     * Set Number of shares
-     * @param TotalShareNum Number of shares
+     * Set Number of shares.
+     * @param TotalShareNum Number of shares.
      */
     public void setTotalShareNum(Long TotalShareNum) {
         this.TotalShareNum = TotalShareNum;
     }
 
     /**
-     * Get Cumulative users 
-     * @return TotalUserNum Cumulative users
+     * Get Cumulative users. 
+     * @return TotalUserNum Cumulative users.
      */
     public Long getTotalUserNum() {
         return this.TotalUserNum;
     }
 
     /**
-     * Set Cumulative users
-     * @param TotalUserNum Cumulative users
+     * Set Cumulative users.
+     * @param TotalUserNum Cumulative users.
      */
     public void setTotalUserNum(Long TotalUserNum) {
         this.TotalUserNum = TotalUserNum;

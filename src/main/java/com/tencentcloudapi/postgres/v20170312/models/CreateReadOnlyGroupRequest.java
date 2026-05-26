@@ -24,70 +24,70 @@ import java.util.HashMap;
 public class CreateReadOnlyGroupRequest extends AbstractModel {
 
     /**
-    * Primary instance ID
+    * Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("MasterDBInstanceId")
     @Expose
     private String MasterDBInstanceId;
 
     /**
-    * RO group name
+    * Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Project ID
+    * Project ID. default value is 0, means it belongs to the default project.
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * VPC ID
+    * VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID
+    * Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+    * Delay time size switch: 0 for off, 1 for on. this parameter is required.
     */
     @SerializedName("ReplayLagEliminate")
     @Expose
     private Long ReplayLagEliminate;
 
     /**
-    * Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+    * Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
     */
     @SerializedName("ReplayLatencyEliminate")
     @Expose
     private Long ReplayLatencyEliminate;
 
     /**
-    * Delay threshold in ms
+    * The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
     */
     @SerializedName("MaxReplayLag")
     @Expose
     private Long MaxReplayLag;
 
     /**
-    * Delayed log size threshold in MB
+    * Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
     */
     @SerializedName("MaxReplayLatency")
     @Expose
     private Long MaxReplayLatency;
 
     /**
-    * The minimum number of read-only replicas that must be retained in an RO group
+    * Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
     */
     @SerializedName("MinDelayEliminateReserve")
     @Expose
@@ -101,160 +101,160 @@ public class CreateReadOnlyGroupRequest extends AbstractModel {
     private String [] SecurityGroupIds;
 
     /**
-     * Get Primary instance ID 
-     * @return MasterDBInstanceId Primary instance ID
+     * Get Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return MasterDBInstanceId Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getMasterDBInstanceId() {
         return this.MasterDBInstanceId;
     }
 
     /**
-     * Set Primary instance ID
-     * @param MasterDBInstanceId Primary instance ID
+     * Set Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param MasterDBInstanceId Primary instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setMasterDBInstanceId(String MasterDBInstanceId) {
         this.MasterDBInstanceId = MasterDBInstanceId;
     }
 
     /**
-     * Get RO group name 
-     * @return Name RO group name
+     * Get Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60. 
+     * @return Name Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set RO group name
-     * @param Name RO group name
+     * Set Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
+     * @param Name Read-Only group name. only supports chinese, english, digits, "_", or "-" with length less than 60.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get Project ID. default value is 0, means it belongs to the default project. 
+     * @return ProjectId Project ID. default value is 0, means it belongs to the default project.
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set Project ID. default value is 0, means it belongs to the default project.
+     * @param ProjectId Project ID. default value is 0, means it belongs to the default project.
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required. 
+     * @return VpcId VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
+     * @param VpcId VPC ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required. 
+     * @return SubnetId Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
+     * @param SubnetId Subnet ID. note: uses classic networks by default. currently, basic networks are not supported, so this parameter is required.
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes). 
-     * @return ReplayLagEliminate Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * Get Delay time size switch: 0 for off, 1 for on. this parameter is required. 
+     * @return ReplayLagEliminate Delay time size switch: 0 for off, 1 for on. this parameter is required.
      */
     public Long getReplayLagEliminate() {
         return this.ReplayLagEliminate;
     }
 
     /**
-     * Set Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-     * @param ReplayLagEliminate Whether to remove a read-only replica from an RO group if the delay between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * Set Delay time size switch: 0 for off, 1 for on. this parameter is required.
+     * @param ReplayLagEliminate Delay time size switch: 0 for off, 1 for on. this parameter is required.
      */
     public void setReplayLagEliminate(Long ReplayLagEliminate) {
         this.ReplayLagEliminate = ReplayLagEliminate;
     }
 
     /**
-     * Get Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes). 
-     * @return ReplayLatencyEliminate Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * Get Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate. 
+     * @return ReplayLatencyEliminate Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
      */
     public Long getReplayLatencyEliminate() {
         return this.ReplayLatencyEliminate;
     }
 
     /**
-     * Set Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
-     * @param ReplayLatencyEliminate Whether to remove a read-only replica from an RO group if the sync log size difference between the read-only replica and the primary instance exceeds the threshold. Valid values: `0` (no), `1` (yes).
+     * Set Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
+     * @param ReplayLatencyEliminate Delay space size switch: 0 for off, 1 for on. this parameter must match ReplayLagEliminate.
      */
     public void setReplayLatencyEliminate(Long ReplayLatencyEliminate) {
         this.ReplayLatencyEliminate = ReplayLatencyEliminate;
     }
 
     /**
-     * Get Delay threshold in ms 
-     * @return MaxReplayLag Delay threshold in ms
+     * Get The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0. 
+     * @return MaxReplayLag The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
      */
     public Long getMaxReplayLag() {
         return this.MaxReplayLag;
     }
 
     /**
-     * Set Delay threshold in ms
-     * @param MaxReplayLag Delay threshold in ms
+     * Set The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
+     * @param MaxReplayLag The size threshold of the delay time, a positive integer with unit: s. this parameter is required when ReplayLagEliminate is 1 and must be set to 0 when ReplayLagEliminate is 0.
      */
     public void setMaxReplayLag(Long MaxReplayLag) {
         this.MaxReplayLag = MaxReplayLag;
     }
 
     /**
-     * Get Delayed log size threshold in MB 
-     * @return MaxReplayLatency Delayed log size threshold in MB
+     * Get Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0. 
+     * @return MaxReplayLatency Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
      */
     public Long getMaxReplayLatency() {
         return this.MaxReplayLatency;
     }
 
     /**
-     * Set Delayed log size threshold in MB
-     * @param MaxReplayLatency Delayed log size threshold in MB
+     * Set Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
+     * @param MaxReplayLatency Delay threshold for space size, a positive integer in MB. this parameter is required when ReplayLatencyEliminate is 1 and must be set to 0 when ReplayLatencyEliminate is 0.
      */
     public void setMaxReplayLatency(Long MaxReplayLatency) {
         this.MaxReplayLatency = MaxReplayLatency;
     }
 
     /**
-     * Get The minimum number of read-only replicas that must be retained in an RO group 
-     * @return MinDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
+     * Get Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0. 
+     * @return MinDelayEliminateReserve Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
      */
     public Long getMinDelayEliminateReserve() {
         return this.MinDelayEliminateReserve;
     }
 
     /**
-     * Set The minimum number of read-only replicas that must be retained in an RO group
-     * @param MinDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
+     * Set Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
+     * @param MinDelayEliminateReserve Specifies the minimum number of instances to retain with delay removal. value range [0,100]. this parameter is required when ReplayLatencyEliminate is 1 and invalid when ReplayLagEliminate is 0.
      */
     public void setMinDelayEliminateReserve(Long MinDelayEliminateReserve) {
         this.MinDelayEliminateReserve = MinDelayEliminateReserve;

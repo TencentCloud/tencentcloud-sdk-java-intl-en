@@ -24,125 +24,115 @@ import java.util.HashMap;
 public class MAUIndicatorCard extends AbstractModel {
 
     /**
-    * Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
+    * Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
     */
     @SerializedName("ComparisonRatio")
     @Expose
     private String ComparisonRatio;
 
     /**
-    * 1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
+    * Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
     */
     @SerializedName("ComparisonResult")
     @Expose
     private Long ComparisonResult;
 
     /**
-    * Last month's MAU data
+    * Previous month MAU. 
     */
     @SerializedName("SourceMAUNum")
     @Expose
     private Long SourceMAUNum;
 
     /**
-    * This month's MAU data
+    * Current month MAU.
     */
     @SerializedName("TargetMAUNum")
     @Expose
     private Long TargetMAUNum;
 
     /**
-    * Data timestamp
+    * Data timestamp.
     */
     @SerializedName("FlushTime")
     @Expose
     private Long FlushTime;
 
     /**
-     * Get Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0 
-     * @return ComparisonRatio Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
+     * Get Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0. 
+     * @return ComparisonRatio Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
      */
     public String getComparisonRatio() {
         return this.ComparisonRatio;
     }
 
     /**
-     * Set Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
-     * @param ComparisonRatio Growth rate (targetData - sourceData) / sourceData, returns 0 when SourceMAUNum is 0
+     * Set Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
+     * @param ComparisonRatio Growth rate, calculated as (targetData - sourceData) / sourceData. Returns 0 when SourceMAUNum is 0.
      */
     public void setComparisonRatio(String ComparisonRatio) {
         this.ComparisonRatio = ComparisonRatio;
     }
 
     /**
-     * Get 1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0 
-     * @return ComparisonResult 1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
+     * Get Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0. 
+     * @return ComparisonResult Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
      */
     public Long getComparisonResult() {
         return this.ComparisonResult;
     }
 
     /**
-     * Set 1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
-     * @param ComparisonResult 1 Increase
-2 Decrease
-Returns 0 when SourceMAUNum is 0
+     * Set Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
+     * @param ComparisonResult Comparison result. Valid values: 1: Increase; 2: Decrease. Returns 0 when SourceMAUNum is 0.
      */
     public void setComparisonResult(Long ComparisonResult) {
         this.ComparisonResult = ComparisonResult;
     }
 
     /**
-     * Get Last month's MAU data 
-     * @return SourceMAUNum Last month's MAU data
+     * Get Previous month MAU.  
+     * @return SourceMAUNum Previous month MAU. 
      */
     public Long getSourceMAUNum() {
         return this.SourceMAUNum;
     }
 
     /**
-     * Set Last month's MAU data
-     * @param SourceMAUNum Last month's MAU data
+     * Set Previous month MAU. 
+     * @param SourceMAUNum Previous month MAU. 
      */
     public void setSourceMAUNum(Long SourceMAUNum) {
         this.SourceMAUNum = SourceMAUNum;
     }
 
     /**
-     * Get This month's MAU data 
-     * @return TargetMAUNum This month's MAU data
+     * Get Current month MAU. 
+     * @return TargetMAUNum Current month MAU.
      */
     public Long getTargetMAUNum() {
         return this.TargetMAUNum;
     }
 
     /**
-     * Set This month's MAU data
-     * @param TargetMAUNum This month's MAU data
+     * Set Current month MAU.
+     * @param TargetMAUNum Current month MAU.
      */
     public void setTargetMAUNum(Long TargetMAUNum) {
         this.TargetMAUNum = TargetMAUNum;
     }
 
     /**
-     * Get Data timestamp 
-     * @return FlushTime Data timestamp
+     * Get Data timestamp. 
+     * @return FlushTime Data timestamp.
      */
     public Long getFlushTime() {
         return this.FlushTime;
     }
 
     /**
-     * Set Data timestamp
-     * @param FlushTime Data timestamp
+     * Set Data timestamp.
+     * @param FlushTime Data timestamp.
      */
     public void setFlushTime(Long FlushTime) {
         this.FlushTime = FlushTime;

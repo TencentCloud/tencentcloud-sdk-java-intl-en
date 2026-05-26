@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class GlobalDomainDeleteResp extends AbstractModel {
 
     /**
-    * Result.
+    * Operation result.
     */
     @SerializedName("Result")
     @Expose
     private Boolean Result;
 
     /**
-     * Get Result. 
-     * @return Result Result.
+     * Get Operation result. 
+     * @return Result Operation result.
      */
     public Boolean getResult() {
         return this.Result;
     }
 
     /**
-     * Set Result.
-     * @param Result Result.
+     * Set Operation result.
+     * @param Result Operation result.
      */
     public void setResult(Boolean Result) {
         this.Result = Result;

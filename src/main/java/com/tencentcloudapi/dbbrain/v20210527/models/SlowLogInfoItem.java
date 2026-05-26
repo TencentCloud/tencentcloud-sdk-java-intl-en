@@ -65,7 +65,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     */
     @SerializedName("QueryTime")
     @Expose
-    private Long QueryTime;
+    private Float QueryTime;
 
     /**
     * Lock time in seconds
@@ -73,7 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     */
     @SerializedName("LockTime")
     @Expose
-    private Long LockTime;
+    private Float LockTime;
 
     /**
     * Number of scanned rows
@@ -183,7 +183,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Get Execution time in seconds 
      * @return QueryTime Execution time in seconds
      */
-    public Long getQueryTime() {
+    public Float getQueryTime() {
         return this.QueryTime;
     }
 
@@ -191,7 +191,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * Set Execution time in seconds
      * @param QueryTime Execution time in seconds
      */
-    public void setQueryTime(Long QueryTime) {
+    public void setQueryTime(Float QueryTime) {
         this.QueryTime = QueryTime;
     }
 
@@ -201,7 +201,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @return LockTime Lock time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public Long getLockTime() {
+    public Float getLockTime() {
         return this.LockTime;
     }
 
@@ -211,7 +211,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param LockTime Lock time in seconds
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public void setLockTime(Long LockTime) {
+    public void setLockTime(Float LockTime) {
         this.LockTime = LockTime;
     }
 
@@ -279,10 +279,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
             this.UserHost = new String(source.UserHost);
         }
         if (source.QueryTime != null) {
-            this.QueryTime = new Long(source.QueryTime);
+            this.QueryTime = new Float(source.QueryTime);
         }
         if (source.LockTime != null) {
-            this.LockTime = new Long(source.LockTime);
+            this.LockTime = new Float(source.LockTime);
         }
         if (source.RowsExamined != null) {
             this.RowsExamined = new Long(source.RowsExamined);

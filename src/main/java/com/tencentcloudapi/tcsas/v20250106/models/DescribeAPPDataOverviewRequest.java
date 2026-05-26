@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class DescribeAPPDataOverviewRequest extends AbstractModel {
 
     /**
-    * Tenant ID
+    * Tenant ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Start time in YYYYMMDD format
+    * Start time in YYYYMMDD format.
     */
     @SerializedName("DataTime")
     @Expose
     private Long DataTime;
 
     /**
-    * Superapp ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationIds")
     @Expose
     private String [] ApplicationIds;
 
     /**
-     * Get Tenant ID 
-     * @return PlatformId Tenant ID
+     * Get Tenant ID. 
+     * @return PlatformId Tenant ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Tenant ID
-     * @param PlatformId Tenant ID
+     * Set Tenant ID.
+     * @param PlatformId Tenant ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Start time in YYYYMMDD format 
-     * @return DataTime Start time in YYYYMMDD format
+     * Get Start time in YYYYMMDD format. 
+     * @return DataTime Start time in YYYYMMDD format.
      */
     public Long getDataTime() {
         return this.DataTime;
     }
 
     /**
-     * Set Start time in YYYYMMDD format
-     * @param DataTime Start time in YYYYMMDD format
+     * Set Start time in YYYYMMDD format.
+     * @param DataTime Start time in YYYYMMDD format.
      */
     public void setDataTime(Long DataTime) {
         this.DataTime = DataTime;
     }
 
     /**
-     * Get Superapp ID 
-     * @return ApplicationIds Superapp ID
+     * Get Superapp ID. 
+     * @return ApplicationIds Superapp ID.
      */
     public String [] getApplicationIds() {
         return this.ApplicationIds;
     }
 
     /**
-     * Set Superapp ID
-     * @param ApplicationIds Superapp ID
+     * Set Superapp ID.
+     * @param ApplicationIds Superapp ID.
      */
     public void setApplicationIds(String [] ApplicationIds) {
         this.ApplicationIds = ApplicationIds;

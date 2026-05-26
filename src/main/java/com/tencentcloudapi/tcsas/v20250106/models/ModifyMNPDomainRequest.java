@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class ModifyMNPDomainRequest extends AbstractModel {
 
     /**
-    * Mini program ID
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Domain list
+    * Domain list.
     */
     @SerializedName("Domain")
     @Expose
     private CreateDomainParam [] Domain;
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Domain list 
-     * @return Domain Domain list
+     * Get Domain list. 
+     * @return Domain Domain list.
      */
     public CreateDomainParam [] getDomain() {
         return this.Domain;
     }
 
     /**
-     * Set Domain list
-     * @param Domain Domain list
+     * Set Domain list.
+     * @param Domain Domain list.
      */
     public void setDomain(CreateDomainParam [] Domain) {
         this.Domain = Domain;

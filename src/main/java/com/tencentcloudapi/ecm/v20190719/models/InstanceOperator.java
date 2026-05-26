@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class InstanceOperator extends AbstractModel {
 
     /**
-    * Instance ID
+    * This is Instance ID
     */
     @SerializedName("InstanceId")
     @Expose
@@ -39,16 +39,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     private OperatorAction [] DeniedActions;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get This is Instance ID 
+     * @return InstanceId This is Instance ID
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set This is Instance ID
+     * @param InstanceId This is Instance ID
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

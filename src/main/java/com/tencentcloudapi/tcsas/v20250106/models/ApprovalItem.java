@@ -24,74 +24,69 @@ import java.util.HashMap;
 public class ApprovalItem extends AbstractModel {
 
     /**
-    * Application ID
+    * Superapp ID.
     */
     @SerializedName("AppId")
     @Expose
     private String AppId;
 
     /**
-    * Approval result. 2: Rejected;
-3: Approved
+    * Approval result. Valid value: 2: Rejected; 3: Approved.
     */
     @SerializedName("ApprovalResult")
     @Expose
     private Long ApprovalResult;
 
     /**
-    * Approval notes. It’s required when the request is rejected.
+    * Approval notes. It is required when the request is rejected.
     */
     @SerializedName("ApprovalNote")
     @Expose
     private String ApprovalNote;
 
     /**
-     * Get Application ID 
-     * @return AppId Application ID
+     * Get Superapp ID. 
+     * @return AppId Superapp ID.
      */
     public String getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set Application ID
-     * @param AppId Application ID
+     * Set Superapp ID.
+     * @param AppId Superapp ID.
      */
     public void setAppId(String AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Approval result. 2: Rejected;
-3: Approved 
-     * @return ApprovalResult Approval result. 2: Rejected;
-3: Approved
+     * Get Approval result. Valid value: 2: Rejected; 3: Approved. 
+     * @return ApprovalResult Approval result. Valid value: 2: Rejected; 3: Approved.
      */
     public Long getApprovalResult() {
         return this.ApprovalResult;
     }
 
     /**
-     * Set Approval result. 2: Rejected;
-3: Approved
-     * @param ApprovalResult Approval result. 2: Rejected;
-3: Approved
+     * Set Approval result. Valid value: 2: Rejected; 3: Approved.
+     * @param ApprovalResult Approval result. Valid value: 2: Rejected; 3: Approved.
      */
     public void setApprovalResult(Long ApprovalResult) {
         this.ApprovalResult = ApprovalResult;
     }
 
     /**
-     * Get Approval notes. It’s required when the request is rejected. 
-     * @return ApprovalNote Approval notes. It’s required when the request is rejected.
+     * Get Approval notes. It is required when the request is rejected. 
+     * @return ApprovalNote Approval notes. It is required when the request is rejected.
      */
     public String getApprovalNote() {
         return this.ApprovalNote;
     }
 
     /**
-     * Set Approval notes. It’s required when the request is rejected.
-     * @param ApprovalNote Approval notes. It’s required when the request is rejected.
+     * Set Approval notes. It is required when the request is rejected.
+     * @param ApprovalNote Approval notes. It is required when the request is rejected.
      */
     public void setApprovalNote(String ApprovalNote) {
         this.ApprovalNote = ApprovalNote;

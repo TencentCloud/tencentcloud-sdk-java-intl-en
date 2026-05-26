@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class RestoreDBInstanceObjectsRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * List of objects to be restored. If the object to be restored is named test, the restored name will be `test_bak_${LinuxTime}`. `${LinuxTime}` cannot be specified and is set by the system based on the Linux time at task initiation.
+    * List of objects to be restored. if the object to be restored is named user, the restored name is user_bak_${LinuxTime}. ${LinuxTime} cannot be specified and is set by the system based on the linux time at task initiation.
     */
     @SerializedName("RestoreObjects")
     @Expose
     private String [] RestoreObjects;
 
     /**
-    * Backup set used for recovery. Either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed.
+    * Backup set used for recovery. either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343).
     */
     @SerializedName("BackupSetId")
     @Expose
@@ -52,48 +52,48 @@ public class RestoreDBInstanceObjectsRequest extends AbstractModel {
     private String RestoreTargetTime;
 
     /**
-     * Get Instance ID. 
-     * @return DBInstanceId Instance ID.
+     * Get Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param DBInstanceId Instance ID.
+     * Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get List of objects to be restored. If the object to be restored is named test, the restored name will be `test_bak_${LinuxTime}`. `${LinuxTime}` cannot be specified and is set by the system based on the Linux time at task initiation. 
-     * @return RestoreObjects List of objects to be restored. If the object to be restored is named test, the restored name will be `test_bak_${LinuxTime}`. `${LinuxTime}` cannot be specified and is set by the system based on the Linux time at task initiation.
+     * Get List of objects to be restored. if the object to be restored is named user, the restored name is user_bak_${LinuxTime}. ${LinuxTime} cannot be specified and is set by the system based on the linux time at task initiation. 
+     * @return RestoreObjects List of objects to be restored. if the object to be restored is named user, the restored name is user_bak_${LinuxTime}. ${LinuxTime} cannot be specified and is set by the system based on the linux time at task initiation.
      */
     public String [] getRestoreObjects() {
         return this.RestoreObjects;
     }
 
     /**
-     * Set List of objects to be restored. If the object to be restored is named test, the restored name will be `test_bak_${LinuxTime}`. `${LinuxTime}` cannot be specified and is set by the system based on the Linux time at task initiation.
-     * @param RestoreObjects List of objects to be restored. If the object to be restored is named test, the restored name will be `test_bak_${LinuxTime}`. `${LinuxTime}` cannot be specified and is set by the system based on the Linux time at task initiation.
+     * Set List of objects to be restored. if the object to be restored is named user, the restored name is user_bak_${LinuxTime}. ${LinuxTime} cannot be specified and is set by the system based on the linux time at task initiation.
+     * @param RestoreObjects List of objects to be restored. if the object to be restored is named user, the restored name is user_bak_${LinuxTime}. ${LinuxTime} cannot be specified and is set by the system based on the linux time at task initiation.
      */
     public void setRestoreObjects(String [] RestoreObjects) {
         this.RestoreObjects = RestoreObjects;
     }
 
     /**
-     * Get Backup set used for recovery. Either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed. 
-     * @return BackupSetId Backup set used for recovery. Either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed.
+     * Get Backup set used for recovery. either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343). 
+     * @return BackupSetId Backup set used for recovery. either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343).
      */
     public String getBackupSetId() {
         return this.BackupSetId;
     }
 
     /**
-     * Set Backup set used for recovery. Either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed.
-     * @param BackupSetId Backup set used for recovery. Either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed.
+     * Set Backup set used for recovery. either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343).
+     * @param BackupSetId Backup set used for recovery. either `BackupSetId` or `RestoreTargetTime` must be provided, and only one can be passed. obtain through the api [DescribeBaseBackups](https://www.tencentcloud.com/document/product/409/54343).
      */
     public void setBackupSetId(String BackupSetId) {
         this.BackupSetId = BackupSetId;

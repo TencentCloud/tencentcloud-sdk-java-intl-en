@@ -31,32 +31,28 @@ public class DescribeBackupDownloadRestrictionResponse extends AbstractModel {
     private String RestrictionType;
 
     /**
-    * Whether VPC is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+    * Specifies the vpc limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
     */
     @SerializedName("VpcRestrictionEffect")
     @Expose
     private String VpcRestrictionEffect;
 
     /**
-    * Whether it is allowed to download the VPC ID list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+    * Specifies the vpc id list to allow or deny downloading backup files.
     */
     @SerializedName("VpcIdSet")
     @Expose
     private String [] VpcIdSet;
 
     /**
-    * Whether IP is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note: Note: This field may return null, indicating that no valid values can be obtained.
+    * ip limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
     */
     @SerializedName("IpRestrictionEffect")
     @Expose
     private String IpRestrictionEffect;
 
     /**
-    * Whether it is allowed to download the IP list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+    * Specifies the ip list to allow or deny downloading the backup file.
     */
     @SerializedName("IpSet")
     @Expose
@@ -86,80 +82,64 @@ Note:  This field may return null, indicating that no valid values can be obtain
     }
 
     /**
-     * Get Whether VPC is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return VpcRestrictionEffect Whether VPC is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the vpc limit effectiveness. valid values: ALLOW (permission), DENY (DENY). 
+     * @return VpcRestrictionEffect Specifies the vpc limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
      */
     public String getVpcRestrictionEffect() {
         return this.VpcRestrictionEffect;
     }
 
     /**
-     * Set Whether VPC is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param VpcRestrictionEffect Whether VPC is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the vpc limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
+     * @param VpcRestrictionEffect Specifies the vpc limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
      */
     public void setVpcRestrictionEffect(String VpcRestrictionEffect) {
         this.VpcRestrictionEffect = VpcRestrictionEffect;
     }
 
     /**
-     * Get Whether it is allowed to download the VPC ID list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return VpcIdSet Whether it is allowed to download the VPC ID list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the vpc id list to allow or deny downloading backup files. 
+     * @return VpcIdSet Specifies the vpc id list to allow or deny downloading backup files.
      */
     public String [] getVpcIdSet() {
         return this.VpcIdSet;
     }
 
     /**
-     * Set Whether it is allowed to download the VPC ID list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param VpcIdSet Whether it is allowed to download the VPC ID list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the vpc id list to allow or deny downloading backup files.
+     * @param VpcIdSet Specifies the vpc id list to allow or deny downloading backup files.
      */
     public void setVpcIdSet(String [] VpcIdSet) {
         this.VpcIdSet = VpcIdSet;
     }
 
     /**
-     * Get Whether IP is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note: Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return IpRestrictionEffect Whether IP is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note: Note: This field may return null, indicating that no valid values can be obtained.
+     * Get ip limit effectiveness. valid values: ALLOW (permission), DENY (DENY). 
+     * @return IpRestrictionEffect ip limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
      */
     public String getIpRestrictionEffect() {
         return this.IpRestrictionEffect;
     }
 
     /**
-     * Set Whether IP is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note: Note: This field may return null, indicating that no valid values can be obtained.
-     * @param IpRestrictionEffect Whether IP is allowed. Valid values: `ALLOW` (allow), `DENY` (deny). 
-Note: Note: This field may return null, indicating that no valid values can be obtained.
+     * Set ip limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
+     * @param IpRestrictionEffect ip limit effectiveness. valid values: ALLOW (permission), DENY (DENY).
      */
     public void setIpRestrictionEffect(String IpRestrictionEffect) {
         this.IpRestrictionEffect = IpRestrictionEffect;
     }
 
     /**
-     * Get Whether it is allowed to download the IP list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained. 
-     * @return IpSet Whether it is allowed to download the IP list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Get Specifies the ip list to allow or deny downloading the backup file. 
+     * @return IpSet Specifies the ip list to allow or deny downloading the backup file.
      */
     public String [] getIpSet() {
         return this.IpSet;
     }
 
     /**
-     * Set Whether it is allowed to download the IP list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
-     * @param IpSet Whether it is allowed to download the IP list of the backup files. 
-Note:  This field may return null, indicating that no valid values can be obtained.
+     * Set Specifies the ip list to allow or deny downloading the backup file.
+     * @param IpSet Specifies the ip list to allow or deny downloading the backup file.
      */
     public void setIpSet(String [] IpSet) {
         this.IpSet = IpSet;

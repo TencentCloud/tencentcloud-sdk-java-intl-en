@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DeleteReadOnlyGroupNetworkAccessRequest extends AbstractModel {
 
     /**
-    * RO group ID in the format of pgro-4t9c6g7k.
+    * ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/api/409/52599?from_cn_redirect=1).
     */
     @SerializedName("ReadOnlyGroupId")
     @Expose
@@ -52,16 +52,16 @@ public class DeleteReadOnlyGroupNetworkAccessRequest extends AbstractModel {
     private String Vip;
 
     /**
-     * Get RO group ID in the format of pgro-4t9c6g7k. 
-     * @return ReadOnlyGroupId RO group ID in the format of pgro-4t9c6g7k.
+     * Get ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/api/409/52599?from_cn_redirect=1). 
+     * @return ReadOnlyGroupId ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/api/409/52599?from_cn_redirect=1).
      */
     public String getReadOnlyGroupId() {
         return this.ReadOnlyGroupId;
     }
 
     /**
-     * Set RO group ID in the format of pgro-4t9c6g7k.
-     * @param ReadOnlyGroupId RO group ID in the format of pgro-4t9c6g7k.
+     * Set ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/api/409/52599?from_cn_redirect=1).
+     * @param ReadOnlyGroupId ROGroupId specifies the read-only group ID in the format of pgrogrp-4t9c6g7k. it can be obtained through the DescribeReadOnlyGroups api (https://www.tencentcloud.com/document/api/409/52599?from_cn_redirect=1).
      */
     public void setReadOnlyGroupId(String ReadOnlyGroupId) {
         this.ReadOnlyGroupId = ReadOnlyGroupId;

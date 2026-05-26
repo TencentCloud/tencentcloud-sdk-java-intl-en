@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class UpgradeDBInstanceMajorVersionRequest extends AbstractModel {
 
     /**
-    * Instance ID.
+    * Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
+    * Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
     */
     @SerializedName("TargetDBKernelVersion")
     @Expose
@@ -101,32 +101,32 @@ This parameter is invalid when UpgradeCheck is True.
     private String UpgradeTimeEnd;
 
     /**
-     * Get Instance ID. 
-     * @return DBInstanceId Instance ID.
+     * Get Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param DBInstanceId Instance ID.
+     * Set Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Instance ID. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions. 
-     * @return TargetDBKernelVersion Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
+     * Get Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1). 
+     * @return TargetDBKernelVersion Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
      */
     public String getTargetDBKernelVersion() {
         return this.TargetDBKernelVersion;
     }
 
     /**
-     * Set Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
-     * @param TargetDBKernelVersion Target kernel version number, where upgradeable target kernel version numbers can be acquired through API DescribeDBVersions.
+     * Set Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
+     * @param TargetDBKernelVersion Specifies the target kernel version number, where upgradeable target kernel version numbers can be obtained through API [DescribeDBVersions](https://www.tencentcloud.com/document/product/409/89018?from_cn_redirect=1).
      */
     public void setTargetDBKernelVersion(String TargetDBKernelVersion) {
         this.TargetDBKernelVersion = TargetDBKernelVersion;

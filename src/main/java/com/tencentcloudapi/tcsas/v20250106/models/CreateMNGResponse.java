@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateMNGResponse extends AbstractModel {
 
     /**
-    * <p>The mini game appid returned in the response.</p>
+    * <p>The returned mini game appid.</p>
     */
     @SerializedName("Data")
     @Expose
@@ -38,16 +38,16 @@ public class CreateMNGResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get <p>The mini game appid returned in the response.</p> 
-     * @return Data <p>The mini game appid returned in the response.</p>
+     * Get <p>The returned mini game appid.</p> 
+     * @return Data <p>The returned mini game appid.</p>
      */
     public ResourceIdStringInfo getData() {
         return this.Data;
     }
 
     /**
-     * Set <p>The mini game appid returned in the response.</p>
-     * @param Data <p>The mini game appid returned in the response.</p>
+     * Set <p>The returned mini game appid.</p>
+     * @param Data <p>The returned mini game appid.</p>
      */
     public void setData(ResourceIdStringInfo Data) {
         this.Data = Data;

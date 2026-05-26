@@ -46,6 +46,20 @@ public class InquiryPriceResizeInstanceDisksRequest extends AbstractModel {
     private Boolean ForceStop;
 
     /**
+    * Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+    */
+    @SerializedName("SystemDisk")
+    @Expose
+    private SystemDisk SystemDisk;
+
+    /**
+    * Whether to perform online resizing.
+    */
+    @SerializedName("ResizeOnline")
+    @Expose
+    private Boolean ResizeOnline;
+
+    /**
      * Get Instance ID. To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. 
      * @return InstanceId Instance ID. To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response.
      */
@@ -97,6 +111,38 @@ public class InquiryPriceResizeInstanceDisksRequest extends AbstractModel {
         this.ForceStop = ForceStop;
     }
 
+    /**
+     * Get Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both. 
+     * @return SystemDisk Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+     */
+    public SystemDisk getSystemDisk() {
+        return this.SystemDisk;
+    }
+
+    /**
+     * Set Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+     * @param SystemDisk Configuration information of the system disk to be expanded. Only cloud disks are supported for expansion. You must specify either DataDisks or SystemDisk, but not both.
+     */
+    public void setSystemDisk(SystemDisk SystemDisk) {
+        this.SystemDisk = SystemDisk;
+    }
+
+    /**
+     * Get Whether to perform online resizing. 
+     * @return ResizeOnline Whether to perform online resizing.
+     */
+    public Boolean getResizeOnline() {
+        return this.ResizeOnline;
+    }
+
+    /**
+     * Set Whether to perform online resizing.
+     * @param ResizeOnline Whether to perform online resizing.
+     */
+    public void setResizeOnline(Boolean ResizeOnline) {
+        this.ResizeOnline = ResizeOnline;
+    }
+
     public InquiryPriceResizeInstanceDisksRequest() {
     }
 
@@ -117,6 +163,12 @@ public class InquiryPriceResizeInstanceDisksRequest extends AbstractModel {
         if (source.ForceStop != null) {
             this.ForceStop = new Boolean(source.ForceStop);
         }
+        if (source.SystemDisk != null) {
+            this.SystemDisk = new SystemDisk(source.SystemDisk);
+        }
+        if (source.ResizeOnline != null) {
+            this.ResizeOnline = new Boolean(source.ResizeOnline);
+        }
     }
 
 
@@ -127,6 +179,8 @@ public class InquiryPriceResizeInstanceDisksRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         this.setParamSimple(map, prefix + "ForceStop", this.ForceStop);
+        this.setParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+        this.setParamSimple(map, prefix + "ResizeOnline", this.ResizeOnline);
 
     }
 }

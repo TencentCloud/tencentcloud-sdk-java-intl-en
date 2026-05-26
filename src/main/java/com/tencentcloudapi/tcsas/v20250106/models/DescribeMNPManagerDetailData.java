@@ -24,279 +24,302 @@ import java.util.HashMap;
 public class DescribeMNPManagerDetailData extends AbstractModel {
 
     /**
-    * Mini program type 
+    * Mini program category.
     */
     @SerializedName("MNPType")
     @Expose
     private String MNPType;
 
     /**
-    * Mini program ID
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Mini program name
+    * Mini program name.
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * Mini program icon
+    * Mini program icon.
     */
     @SerializedName("MNPIcon")
     @Expose
     private String MNPIcon;
 
     /**
-    * Mini program introduction
+    * Mini program introduction.
     */
     @SerializedName("MNPIntro")
     @Expose
     private String MNPIntro;
 
     /**
-    * Mini program description
+    * Mini program description.
     */
     @SerializedName("MNPDesc")
     @Expose
     private String MNPDesc;
 
     /**
-    * Creation time, timestamp.
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Creator
+    * Creator.
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Access status. 1: not connected; 2: connected.
+    * Access status. Valid values: 1: not connected; 2: connected.
     */
     @SerializedName("AccessStatus")
     @Expose
     private Long AccessStatus;
 
     /**
-    * Name of the associated team
+    * Team name.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Team ID
+    * Team ID.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+    * Mini program available status. Valid values: 1: Available; 2: Removed.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get Mini program type  
-     * @return MNPType Mini program type 
+    * The mini program name and description in multiple languages.
+    */
+    @SerializedName("I18nList")
+    @Expose
+    private MNPDetailI18nVO [] I18nList;
+
+    /**
+     * Get Mini program category. 
+     * @return MNPType Mini program category.
      */
     public String getMNPType() {
         return this.MNPType;
     }
 
     /**
-     * Set Mini program type 
-     * @param MNPType Mini program type 
+     * Set Mini program category.
+     * @param MNPType Mini program category.
      */
     public void setMNPType(String MNPType) {
         this.MNPType = MNPType;
     }
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Mini program name 
-     * @return MNPName Mini program name
+     * Get Mini program name. 
+     * @return MNPName Mini program name.
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set Mini program name
-     * @param MNPName Mini program name
+     * Set Mini program name.
+     * @param MNPName Mini program name.
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get Mini program icon 
-     * @return MNPIcon Mini program icon
+     * Get Mini program icon. 
+     * @return MNPIcon Mini program icon.
      */
     public String getMNPIcon() {
         return this.MNPIcon;
     }
 
     /**
-     * Set Mini program icon
-     * @param MNPIcon Mini program icon
+     * Set Mini program icon.
+     * @param MNPIcon Mini program icon.
      */
     public void setMNPIcon(String MNPIcon) {
         this.MNPIcon = MNPIcon;
     }
 
     /**
-     * Get Mini program introduction 
-     * @return MNPIntro Mini program introduction
+     * Get Mini program introduction. 
+     * @return MNPIntro Mini program introduction.
      */
     public String getMNPIntro() {
         return this.MNPIntro;
     }
 
     /**
-     * Set Mini program introduction
-     * @param MNPIntro Mini program introduction
+     * Set Mini program introduction.
+     * @param MNPIntro Mini program introduction.
      */
     public void setMNPIntro(String MNPIntro) {
         this.MNPIntro = MNPIntro;
     }
 
     /**
-     * Get Mini program description 
-     * @return MNPDesc Mini program description
+     * Get Mini program description. 
+     * @return MNPDesc Mini program description.
      */
     public String getMNPDesc() {
         return this.MNPDesc;
     }
 
     /**
-     * Set Mini program description
-     * @param MNPDesc Mini program description
+     * Set Mini program description.
+     * @param MNPDesc Mini program description.
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
     }
 
     /**
-     * Get Creation time, timestamp. 
-     * @return CreateTime Creation time, timestamp.
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time, timestamp.
-     * @param CreateTime Creation time, timestamp.
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Creator 
-     * @return CreateUser Creator
+     * Get Creator. 
+     * @return CreateUser Creator.
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Creator
-     * @param CreateUser Creator
+     * Set Creator.
+     * @param CreateUser Creator.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Access status. 1: not connected; 2: connected. 
-     * @return AccessStatus Access status. 1: not connected; 2: connected.
+     * Get Access status. Valid values: 1: not connected; 2: connected. 
+     * @return AccessStatus Access status. Valid values: 1: not connected; 2: connected.
      */
     public Long getAccessStatus() {
         return this.AccessStatus;
     }
 
     /**
-     * Set Access status. 1: not connected; 2: connected.
-     * @param AccessStatus Access status. 1: not connected; 2: connected.
+     * Set Access status. Valid values: 1: not connected; 2: connected.
+     * @param AccessStatus Access status. Valid values: 1: not connected; 2: connected.
      */
     public void setAccessStatus(Long AccessStatus) {
         this.AccessStatus = AccessStatus;
     }
 
     /**
-     * Get Name of the associated team 
-     * @return TeamName Name of the associated team
+     * Get Team name. 
+     * @return TeamName Team name.
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Name of the associated team
-     * @param TeamName Name of the associated team
+     * Set Team name.
+     * @param TeamName Team name.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Team ID 
-     * @return TeamId Team ID
+     * Get Team ID. 
+     * @return TeamId Team ID.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID
-     * @param TeamId Team ID
+     * Set Team ID.
+     * @param TeamId Team ID.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed). 
-     * @return Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+     * Get Mini program available status. Valid values: 1: Available; 2: Removed. 
+     * @return Status Mini program available status. Valid values: 1: Available; 2: Removed.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
-     * @param Status Specifies the mini program listing status. valid values: 1 (submitted), 2 (removed).
+     * Set Mini program available status. Valid values: 1: Available; 2: Removed.
+     * @param Status Mini program available status. Valid values: 1: Available; 2: Removed.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get The mini program name and description in multiple languages. 
+     * @return I18nList The mini program name and description in multiple languages.
+     */
+    public MNPDetailI18nVO [] getI18nList() {
+        return this.I18nList;
+    }
+
+    /**
+     * Set The mini program name and description in multiple languages.
+     * @param I18nList The mini program name and description in multiple languages.
+     */
+    public void setI18nList(MNPDetailI18nVO [] I18nList) {
+        this.I18nList = I18nList;
     }
 
     public DescribeMNPManagerDetailData() {
@@ -343,6 +366,12 @@ public class DescribeMNPManagerDetailData extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.I18nList != null) {
+            this.I18nList = new MNPDetailI18nVO[source.I18nList.length];
+            for (int i = 0; i < source.I18nList.length; i++) {
+                this.I18nList[i] = new MNPDetailI18nVO(source.I18nList[i]);
+            }
+        }
     }
 
 
@@ -362,6 +391,7 @@ public class DescribeMNPManagerDetailData extends AbstractModel {
         this.setParamSimple(map, prefix + "TeamName", this.TeamName);
         this.setParamSimple(map, prefix + "TeamId", this.TeamId);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamArrayObj(map, prefix + "I18nList.", this.I18nList);
 
     }
 }

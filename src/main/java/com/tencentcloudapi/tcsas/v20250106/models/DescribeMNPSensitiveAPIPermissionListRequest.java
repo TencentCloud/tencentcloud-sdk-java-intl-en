@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class DescribeMNPSensitiveAPIPermissionListRequest extends AbstractModel {
 
     /**
-    * Page offset
+    * Pagination offset.
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results per page
+    * Number of entries per page.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Mini program ID
+    * Mini program appid.
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
@@ -59,71 +59,71 @@ public class DescribeMNPSensitiveAPIPermissionListRequest extends AbstractModel 
     private String ApplicationId;
 
     /**
-    * Keywords for search (API name)
+    * Search keyword (API name).
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-     * Get Page offset 
-     * @return Offset Page offset
+     * Get Pagination offset. 
+     * @return Offset Pagination offset.
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page offset
-     * @param Offset Page offset
+     * Set Pagination offset.
+     * @param Offset Pagination offset.
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results per page 
-     * @return Limit Number of results per page
+     * Get Number of entries per page. 
+     * @return Limit Number of entries per page.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page
-     * @param Limit Number of results per page
+     * Set Number of entries per page.
+     * @param Limit Number of entries per page.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Mini program ID 
-     * @return MNPId Mini program ID
+     * Get Mini program appid. 
+     * @return MNPId Mini program appid.
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set Mini program ID
-     * @param MNPId Mini program ID
+     * Set Mini program appid.
+     * @param MNPId Mini program appid.
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
@@ -146,16 +146,16 @@ public class DescribeMNPSensitiveAPIPermissionListRequest extends AbstractModel 
     }
 
     /**
-     * Get Keywords for search (API name) 
-     * @return Keyword Keywords for search (API name)
+     * Get Search keyword (API name). 
+     * @return Keyword Search keyword (API name).
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set Keywords for search (API name)
-     * @param Keyword Keywords for search (API name)
+     * Set Search keyword (API name).
+     * @param Keyword Search keyword (API name).
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;

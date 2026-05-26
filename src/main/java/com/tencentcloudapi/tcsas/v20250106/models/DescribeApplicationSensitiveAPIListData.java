@@ -24,348 +24,371 @@ import java.util.HashMap;
 public class DescribeApplicationSensitiveAPIListData extends AbstractModel {
 
     /**
-    * APIID
+    * API ID.
     */
     @SerializedName("APIId")
     @Expose
     private String APIId;
 
     /**
-    * API name
+    * API name.
     */
     @SerializedName("APIName")
     @Expose
     private String APIName;
 
     /**
-    * API request method
+    * API request method.
     */
     @SerializedName("APIMethod")
     @Expose
     private String APIMethod;
 
     /**
-    * API description
+    * API description.
     */
     @SerializedName("APIDesc")
     @Expose
     private String APIDesc;
 
     /**
-    * Creator
+    * Creator.
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Updater
+    * Last modifier.
     */
     @SerializedName("UpdateUser")
     @Expose
     private String UpdateUser;
 
     /**
-    * Update time
+    * Last modified time.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Application ID
+    * Superapp ID.
     */
     @SerializedName("ApplicationId")
     @Expose
     private String ApplicationId;
 
     /**
-    * Application name
+    * Superapp name.
     */
     @SerializedName("ApplicationName")
     @Expose
     private String ApplicationName;
 
     /**
-    * Team ID
+    * Team ID.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Team name
+    * Team name.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Specifies the application icon.
+    * Superapp icon.
     */
     @SerializedName("ApplicationLogo")
     @Expose
     private String ApplicationLogo;
 
     /**
-    * API type. 1: system; 2: custom.
+    * API type. Valid values: 1: System; 2: Custom.
     */
     @SerializedName("APIType")
     @Expose
     private Long APIType;
 
     /**
-    * API status. 0: public; 1: restricted.
+    * API status. Valid values: 0: Public; 1: Restricted.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-     * Get APIID 
-     * @return APIId APIID
+    * Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+    */
+    @SerializedName("UseScope")
+    @Expose
+    private Long UseScope;
+
+    /**
+     * Get API ID. 
+     * @return APIId API ID.
      */
     public String getAPIId() {
         return this.APIId;
     }
 
     /**
-     * Set APIID
-     * @param APIId APIID
+     * Set API ID.
+     * @param APIId API ID.
      */
     public void setAPIId(String APIId) {
         this.APIId = APIId;
     }
 
     /**
-     * Get API name 
-     * @return APIName API name
+     * Get API name. 
+     * @return APIName API name.
      */
     public String getAPIName() {
         return this.APIName;
     }
 
     /**
-     * Set API name
-     * @param APIName API name
+     * Set API name.
+     * @param APIName API name.
      */
     public void setAPIName(String APIName) {
         this.APIName = APIName;
     }
 
     /**
-     * Get API request method 
-     * @return APIMethod API request method
+     * Get API request method. 
+     * @return APIMethod API request method.
      */
     public String getAPIMethod() {
         return this.APIMethod;
     }
 
     /**
-     * Set API request method
-     * @param APIMethod API request method
+     * Set API request method.
+     * @param APIMethod API request method.
      */
     public void setAPIMethod(String APIMethod) {
         this.APIMethod = APIMethod;
     }
 
     /**
-     * Get API description 
-     * @return APIDesc API description
+     * Get API description. 
+     * @return APIDesc API description.
      */
     public String getAPIDesc() {
         return this.APIDesc;
     }
 
     /**
-     * Set API description
-     * @param APIDesc API description
+     * Set API description.
+     * @param APIDesc API description.
      */
     public void setAPIDesc(String APIDesc) {
         this.APIDesc = APIDesc;
     }
 
     /**
-     * Get Creator 
-     * @return CreateUser Creator
+     * Get Creator. 
+     * @return CreateUser Creator.
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Creator
-     * @param CreateUser Creator
+     * Set Creator.
+     * @param CreateUser Creator.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Updater 
-     * @return UpdateUser Updater
+     * Get Last modifier. 
+     * @return UpdateUser Last modifier.
      */
     public String getUpdateUser() {
         return this.UpdateUser;
     }
 
     /**
-     * Set Updater
-     * @param UpdateUser Updater
+     * Set Last modifier.
+     * @param UpdateUser Last modifier.
      */
     public void setUpdateUser(String UpdateUser) {
         this.UpdateUser = UpdateUser;
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get Last modified time. 
+     * @return UpdateTime Last modified time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set Last modified time.
+     * @param UpdateTime Last modified time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Application ID 
-     * @return ApplicationId Application ID
+     * Get Superapp ID. 
+     * @return ApplicationId Superapp ID.
      */
     public String getApplicationId() {
         return this.ApplicationId;
     }
 
     /**
-     * Set Application ID
-     * @param ApplicationId Application ID
+     * Set Superapp ID.
+     * @param ApplicationId Superapp ID.
      */
     public void setApplicationId(String ApplicationId) {
         this.ApplicationId = ApplicationId;
     }
 
     /**
-     * Get Application name 
-     * @return ApplicationName Application name
+     * Get Superapp name. 
+     * @return ApplicationName Superapp name.
      */
     public String getApplicationName() {
         return this.ApplicationName;
     }
 
     /**
-     * Set Application name
-     * @param ApplicationName Application name
+     * Set Superapp name.
+     * @param ApplicationName Superapp name.
      */
     public void setApplicationName(String ApplicationName) {
         this.ApplicationName = ApplicationName;
     }
 
     /**
-     * Get Team ID 
-     * @return TeamId Team ID
+     * Get Team ID. 
+     * @return TeamId Team ID.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID
-     * @param TeamId Team ID
+     * Set Team ID.
+     * @param TeamId Team ID.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name 
-     * @return TeamName Team name
+     * Get Team name. 
+     * @return TeamName Team name.
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name
-     * @param TeamName Team name
+     * Set Team name.
+     * @param TeamName Team name.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Specifies the application icon. 
-     * @return ApplicationLogo Specifies the application icon.
+     * Get Superapp icon. 
+     * @return ApplicationLogo Superapp icon.
      */
     public String getApplicationLogo() {
         return this.ApplicationLogo;
     }
 
     /**
-     * Set Specifies the application icon.
-     * @param ApplicationLogo Specifies the application icon.
+     * Set Superapp icon.
+     * @param ApplicationLogo Superapp icon.
      */
     public void setApplicationLogo(String ApplicationLogo) {
         this.ApplicationLogo = ApplicationLogo;
     }
 
     /**
-     * Get API type. 1: system; 2: custom. 
-     * @return APIType API type. 1: system; 2: custom.
+     * Get API type. Valid values: 1: System; 2: Custom. 
+     * @return APIType API type. Valid values: 1: System; 2: Custom.
      */
     public Long getAPIType() {
         return this.APIType;
     }
 
     /**
-     * Set API type. 1: system; 2: custom.
-     * @param APIType API type. 1: system; 2: custom.
+     * Set API type. Valid values: 1: System; 2: Custom.
+     * @param APIType API type. Valid values: 1: System; 2: Custom.
      */
     public void setAPIType(Long APIType) {
         this.APIType = APIType;
     }
 
     /**
-     * Get API status. 0: public; 1: restricted. 
-     * @return Status API status. 0: public; 1: restricted.
+     * Get API status. Valid values: 0: Public; 1: Restricted. 
+     * @return Status API status. Valid values: 0: Public; 1: Restricted.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set API status. 0: public; 1: restricted.
-     * @param Status API status. 0: public; 1: restricted.
+     * Set API status. Valid values: 0: Public; 1: Restricted.
+     * @param Status API status. Valid values: 0: Public; 1: Restricted.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
+    }
+
+    /**
+     * Get Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both. 
+     * @return UseScope Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+     */
+    public Long getUseScope() {
+        return this.UseScope;
+    }
+
+    /**
+     * Set Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+     * @param UseScope Applicable scope: Valid values: 0: Mini program; 1: Mini game; 100: Both.
+     */
+    public void setUseScope(Long UseScope) {
+        this.UseScope = UseScope;
     }
 
     public DescribeApplicationSensitiveAPIListData() {
@@ -421,6 +444,9 @@ public class DescribeApplicationSensitiveAPIListData extends AbstractModel {
         if (source.Status != null) {
             this.Status = new Long(source.Status);
         }
+        if (source.UseScope != null) {
+            this.UseScope = new Long(source.UseScope);
+        }
     }
 
 
@@ -443,6 +469,7 @@ public class DescribeApplicationSensitiveAPIListData extends AbstractModel {
         this.setParamSimple(map, prefix + "ApplicationLogo", this.ApplicationLogo);
         this.setParamSimple(map, prefix + "APIType", this.APIType);
         this.setParamSimple(map, prefix + "Status", this.Status);
+        this.setParamSimple(map, prefix + "UseScope", this.UseScope);
 
     }
 }

@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeUserListData extends AbstractModel {
 
     /**
-    * User ID
+    * User ID.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * User account
+    * User account.
     */
     @SerializedName("UserAccount")
     @Expose
     private String UserAccount;
 
     /**
-    * Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
+    * User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
     */
     @SerializedName("AccountType")
     @Expose
     private Long AccountType;
 
     /**
-    * User name
+    * User name.
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Status. 1: normal; 2: disabled.
+    * Status. Valid values: 1: Active; 2: Disabled.
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Team name
+    * Team name.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-     * Get User ID 
-     * @return UserId User ID
+     * Get User ID. 
+     * @return UserId User ID.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User ID
-     * @param UserId User ID
+     * Set User ID.
+     * @param UserId User ID.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get User account 
-     * @return UserAccount User account
+     * Get User account. 
+     * @return UserAccount User account.
      */
     public String getUserAccount() {
         return this.UserAccount;
     }
 
     /**
-     * Set User account
-     * @param UserAccount User account
+     * Set User account.
+     * @param UserAccount User account.
      */
     public void setUserAccount(String UserAccount) {
         this.UserAccount = UserAccount;
     }
 
     /**
-     * Get Account type. 1: super administrator; 2: platform administrator; 3: ordinary member. 
-     * @return AccountType Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
+     * Get User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member. 
+     * @return AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
      */
     public Long getAccountType() {
         return this.AccountType;
     }
 
     /**
-     * Set Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
-     * @param AccountType Account type. 1: super administrator; 2: platform administrator; 3: ordinary member.
+     * Set User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
+     * @param AccountType User account type. Valid values: 1: Super admin; 2: Platform admin; 3: Regular member.
      */
     public void setAccountType(Long AccountType) {
         this.AccountType = AccountType;
     }
 
     /**
-     * Get User name 
-     * @return UserName User name
+     * Get User name. 
+     * @return UserName User name.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set User name
-     * @param UserName User name
+     * Set User name.
+     * @param UserName User name.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Status. 1: normal; 2: disabled. 
-     * @return Status Status. 1: normal; 2: disabled.
+     * Get Status. Valid values: 1: Active; 2: Disabled. 
+     * @return Status Status. Valid values: 1: Active; 2: Disabled.
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Status. 1: normal; 2: disabled.
-     * @param Status Status. 1: normal; 2: disabled.
+     * Set Status. Valid values: 1: Active; 2: Disabled.
+     * @param Status Status. Valid values: 1: Active; 2: Disabled.
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Team name 
-     * @return TeamName Team name
+     * Get Team name. 
+     * @return TeamName Team name.
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name
-     * @param TeamName Team name
+     * Set Team name.
+     * @param TeamName Team name.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;

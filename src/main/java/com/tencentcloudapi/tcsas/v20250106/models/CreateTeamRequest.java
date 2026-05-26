@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class CreateTeamRequest extends AbstractModel {
 
     /**
-    * Team name
+    * Team name.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Admin name
+    * Admin name.
     */
     @SerializedName("AdminUserId")
     @Expose
     private String AdminUserId;
 
     /**
-    * Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
+    * Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
     */
     @SerializedName("TeamRoleTypeList")
     @Expose
     private Long [] TeamRoleTypeList;
 
     /**
-    * Remarks
+    * Remark.
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Platform ID, required for API call
+    * Platform ID, required for API call.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Associated team ID
+    * Associated team ID.
     */
     @SerializedName("RelatedTeamId")
     @Expose
     private String RelatedTeamId;
 
     /**
-     * Get Team name 
-     * @return TeamName Team name
+     * Get Team name. 
+     * @return TeamName Team name.
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name
-     * @param TeamName Team name
+     * Set Team name.
+     * @param TeamName Team name.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Admin name 
-     * @return AdminUserId Admin name
+     * Get Admin name. 
+     * @return AdminUserId Admin name.
      */
     public String getAdminUserId() {
         return this.AdminUserId;
     }
 
     /**
-     * Set Admin name
-     * @param AdminUserId Admin name
+     * Set Admin name.
+     * @param AdminUserId Admin name.
      */
     public void setAdminUserId(String AdminUserId) {
         this.AdminUserId = AdminUserId;
     }
 
     /**
-     * Get Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported) 
-     * @return TeamRoleTypeList Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
+     * Get Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported). 
+     * @return TeamRoleTypeList Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
      */
     public Long [] getTeamRoleTypeList() {
         return this.TeamRoleTypeList;
     }
 
     /**
-     * Set Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
-     * @param TeamRoleTypeList Permission assigned to the team. 1: Mini program; 2: Application (only one of these types is supported)
+     * Set Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+     * @param TeamRoleTypeList Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
      */
     public void setTeamRoleTypeList(Long [] TeamRoleTypeList) {
         this.TeamRoleTypeList = TeamRoleTypeList;
     }
 
     /**
-     * Get Remarks 
-     * @return Remark Remarks
+     * Get Remark. 
+     * @return Remark Remark.
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-     * @param Remark Remarks
+     * Set Remark.
+     * @param Remark Remark.
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Platform ID, required for API call 
-     * @return PlatformId Platform ID, required for API call
+     * Get Platform ID, required for API call. 
+     * @return PlatformId Platform ID, required for API call.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID, required for API call
-     * @param PlatformId Platform ID, required for API call
+     * Set Platform ID, required for API call.
+     * @param PlatformId Platform ID, required for API call.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Associated team ID 
-     * @return RelatedTeamId Associated team ID
+     * Get Associated team ID. 
+     * @return RelatedTeamId Associated team ID.
      */
     public String getRelatedTeamId() {
         return this.RelatedTeamId;
     }
 
     /**
-     * Set Associated team ID
-     * @param RelatedTeamId Associated team ID
+     * Set Associated team ID.
+     * @param RelatedTeamId Associated team ID.
      */
     public void setRelatedTeamId(String RelatedTeamId) {
         this.RelatedTeamId = RelatedTeamId;

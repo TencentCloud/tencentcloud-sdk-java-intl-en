@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class DescribeGlobalDomainACLRequest extends AbstractModel {
 
     /**
-    * Page offset
+    * Pagination offset. 
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Number of results per page
+    * Number of entries per page.
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Platform ID
+    * Platform ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Domain type. 1: Allowed; 2: Blocked
+    * Domain type. Valid value: 1: Allowed; 2: Blocked.
     */
     @SerializedName("DomainTypes")
     @Expose
     private Long [] DomainTypes;
 
     /**
-    * Domain names to be queried
+    * Search keyword (domain).
     */
     @SerializedName("Keyword")
     @Expose
     private String Keyword;
 
     /**
-     * Get Page offset 
-     * @return Offset Page offset
+     * Get Pagination offset.  
+     * @return Offset Pagination offset. 
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Page offset
-     * @param Offset Page offset
+     * Set Pagination offset. 
+     * @param Offset Pagination offset. 
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Number of results per page 
-     * @return Limit Number of results per page
+     * Get Number of entries per page. 
+     * @return Limit Number of entries per page.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of results per page
-     * @param Limit Number of results per page
+     * Set Number of entries per page.
+     * @param Limit Number of entries per page.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Platform ID 
-     * @return PlatformId Platform ID
+     * Get Platform ID. 
+     * @return PlatformId Platform ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Platform ID
-     * @param PlatformId Platform ID
+     * Set Platform ID.
+     * @param PlatformId Platform ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Domain type. 1: Allowed; 2: Blocked 
-     * @return DomainTypes Domain type. 1: Allowed; 2: Blocked
+     * Get Domain type. Valid value: 1: Allowed; 2: Blocked. 
+     * @return DomainTypes Domain type. Valid value: 1: Allowed; 2: Blocked.
      */
     public Long [] getDomainTypes() {
         return this.DomainTypes;
     }
 
     /**
-     * Set Domain type. 1: Allowed; 2: Blocked
-     * @param DomainTypes Domain type. 1: Allowed; 2: Blocked
+     * Set Domain type. Valid value: 1: Allowed; 2: Blocked.
+     * @param DomainTypes Domain type. Valid value: 1: Allowed; 2: Blocked.
      */
     public void setDomainTypes(Long [] DomainTypes) {
         this.DomainTypes = DomainTypes;
     }
 
     /**
-     * Get Domain names to be queried 
-     * @return Keyword Domain names to be queried
+     * Get Search keyword (domain). 
+     * @return Keyword Search keyword (domain).
      */
     public String getKeyword() {
         return this.Keyword;
     }
 
     /**
-     * Set Domain names to be queried
-     * @param Keyword Domain names to be queried
+     * Set Search keyword (domain).
+     * @param Keyword Search keyword (domain).
      */
     public void setKeyword(String Keyword) {
         this.Keyword = Keyword;

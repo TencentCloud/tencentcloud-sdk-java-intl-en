@@ -24,69 +24,109 @@ import java.util.HashMap;
 public class ResetAccountPasswordRequest extends AbstractModel {
 
     /**
-    * Instance ID in the format of postgres-4wdeb0zv
+    * Specifies the instance ID, such as postgres-4wdeb0zv. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
     */
     @SerializedName("DBInstanceId")
     @Expose
     private String DBInstanceId;
 
     /**
-    * Instance account name
+    * Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * New password corresponding to `UserName` account
+    * Specifies the new password for the UserName account.
+Password settings rule specifies the following:.
+- valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
+-Must not start with "/".
+-Must include the following four items:.
+Lowercase letters a ~ z.
+Uppercase letters: A – Z.
+Digits: 0-9.
+Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-     * Get Instance ID in the format of postgres-4wdeb0zv 
-     * @return DBInstanceId Instance ID in the format of postgres-4wdeb0zv
+     * Get Specifies the instance ID, such as postgres-4wdeb0zv. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1). 
+     * @return DBInstanceId Specifies the instance ID, such as postgres-4wdeb0zv. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
     }
 
     /**
-     * Set Instance ID in the format of postgres-4wdeb0zv
-     * @param DBInstanceId Instance ID in the format of postgres-4wdeb0zv
+     * Set Specifies the instance ID, such as postgres-4wdeb0zv. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
+     * @param DBInstanceId Specifies the instance ID, such as postgres-4wdeb0zv. obtain through the api [DescribeDBInstances](https://www.tencentcloud.com/document/api/409/16773?from_cn_redirect=1).
      */
     public void setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
     }
 
     /**
-     * Get Instance account name 
-     * @return UserName Instance account name
+     * Get Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1). 
+     * @return UserName Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set Instance account name
-     * @param UserName Instance account name
+     * Set Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
+     * @param UserName Instance account name. obtain through the api [DescribeAccounts](https://www.tencentcloud.com/document/api/409/18109?from_cn_redirect=1).
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get New password corresponding to `UserName` account 
-     * @return Password New password corresponding to `UserName` account
+     * Get Specifies the new password for the UserName account.
+Password settings rule specifies the following:.
+- valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
+-Must not start with "/".
+-Must include the following four items:.
+Lowercase letters a ~ z.
+Uppercase letters: A – Z.
+Digits: 0-9.
+Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/. 
+     * @return Password Specifies the new password for the UserName account.
+Password settings rule specifies the following:.
+- valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
+-Must not start with "/".
+-Must include the following four items:.
+Lowercase letters a ~ z.
+Uppercase letters: A – Z.
+Digits: 0-9.
+Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set New password corresponding to `UserName` account
-     * @param Password New password corresponding to `UserName` account
+     * Set Specifies the new password for the UserName account.
+Password settings rule specifies the following:.
+- valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
+-Must not start with "/".
+-Must include the following four items:.
+Lowercase letters a ~ z.
+Uppercase letters: A – Z.
+Digits: 0-9.
+Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
+     * @param Password Specifies the new password for the UserName account.
+Password settings rule specifies the following:.
+- valid values: 8 to 32 characters. a password with more than 12 characters is recommended.
+-Must not start with "/".
+-Must include the following four items:.
+Lowercase letters a ~ z.
+Uppercase letters: A – Z.
+Digits: 0-9.
+Special symbols: ()`~!@#$%^&*-+=_|{}[]:<>,.?/.
      */
     public void setPassword(String Password) {
         this.Password = Password;

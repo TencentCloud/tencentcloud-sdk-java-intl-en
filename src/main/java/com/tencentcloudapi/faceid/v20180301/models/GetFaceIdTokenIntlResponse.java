@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class GetFaceIdTokenIntlResponse extends AbstractModel {
 
     /**
-    * The SDK token, which is used throughout the verification process and to get the verification result.
+    * <p>SdkToken, used to connect the identity verification process. The verification result can be retrieved with this token. Each SdkToken has a validity of 10 minutes.</p>
     */
     @SerializedName("SdkToken")
     @Expose
@@ -38,16 +38,16 @@ public class GetFaceIdTokenIntlResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get The SDK token, which is used throughout the verification process and to get the verification result. 
-     * @return SdkToken The SDK token, which is used throughout the verification process and to get the verification result.
+     * Get <p>SdkToken, used to connect the identity verification process. The verification result can be retrieved with this token. Each SdkToken has a validity of 10 minutes.</p> 
+     * @return SdkToken <p>SdkToken, used to connect the identity verification process. The verification result can be retrieved with this token. Each SdkToken has a validity of 10 minutes.</p>
      */
     public String getSdkToken() {
         return this.SdkToken;
     }
 
     /**
-     * Set The SDK token, which is used throughout the verification process and to get the verification result.
-     * @param SdkToken The SDK token, which is used throughout the verification process and to get the verification result.
+     * Set <p>SdkToken, used to connect the identity verification process. The verification result can be retrieved with this token. Each SdkToken has a validity of 10 minutes.</p>
+     * @param SdkToken <p>SdkToken, used to connect the identity verification process. The verification result can be retrieved with this token. Each SdkToken has a validity of 10 minutes.</p>
      */
     public void setSdkToken(String SdkToken) {
         this.SdkToken = SdkToken;

@@ -24,138 +24,138 @@ import java.util.HashMap;
 public class DescribePaymentDataDetailRequest extends AbstractModel {
 
     /**
-    * Start time
+    * Start time.
     */
     @SerializedName("TimeBegin")
     @Expose
     private Long TimeBegin;
 
     /**
-    * Mini program appid
+    * Mini program appid.
     */
     @SerializedName("MNPIds")
     @Expose
     private String [] MNPIds;
 
     /**
-    * Tenant ID
+    * Tenant ID.
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * Type: 0 Non-production data, 1 Production data
+    * Data type. Valid values: 0: Non-production data; 1: Production data.
     */
     @SerializedName("DataType")
     @Expose
     private Long DataType;
 
     /**
-    * End time
+    * End time.
     */
     @SerializedName("TimeEnd")
     @Expose
     private Long TimeEnd;
 
     /**
-    * Operating system: 0 All, 2 Android, 3 iOS
+    * Operating system. Valid values: 0: All; 2: Android; 3: iOS.
     */
     @SerializedName("Platform")
     @Expose
     private Long Platform;
 
     /**
-     * Get Start time 
-     * @return TimeBegin Start time
+     * Get Start time. 
+     * @return TimeBegin Start time.
      */
     public Long getTimeBegin() {
         return this.TimeBegin;
     }
 
     /**
-     * Set Start time
-     * @param TimeBegin Start time
+     * Set Start time.
+     * @param TimeBegin Start time.
      */
     public void setTimeBegin(Long TimeBegin) {
         this.TimeBegin = TimeBegin;
     }
 
     /**
-     * Get Mini program appid 
-     * @return MNPIds Mini program appid
+     * Get Mini program appid. 
+     * @return MNPIds Mini program appid.
      */
     public String [] getMNPIds() {
         return this.MNPIds;
     }
 
     /**
-     * Set Mini program appid
-     * @param MNPIds Mini program appid
+     * Set Mini program appid.
+     * @param MNPIds Mini program appid.
      */
     public void setMNPIds(String [] MNPIds) {
         this.MNPIds = MNPIds;
     }
 
     /**
-     * Get Tenant ID 
-     * @return PlatformId Tenant ID
+     * Get Tenant ID. 
+     * @return PlatformId Tenant ID.
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set Tenant ID
-     * @param PlatformId Tenant ID
+     * Set Tenant ID.
+     * @param PlatformId Tenant ID.
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get Type: 0 Non-production data, 1 Production data 
-     * @return DataType Type: 0 Non-production data, 1 Production data
+     * Get Data type. Valid values: 0: Non-production data; 1: Production data. 
+     * @return DataType Data type. Valid values: 0: Non-production data; 1: Production data.
      */
     public Long getDataType() {
         return this.DataType;
     }
 
     /**
-     * Set Type: 0 Non-production data, 1 Production data
-     * @param DataType Type: 0 Non-production data, 1 Production data
+     * Set Data type. Valid values: 0: Non-production data; 1: Production data.
+     * @param DataType Data type. Valid values: 0: Non-production data; 1: Production data.
      */
     public void setDataType(Long DataType) {
         this.DataType = DataType;
     }
 
     /**
-     * Get End time 
-     * @return TimeEnd End time
+     * Get End time. 
+     * @return TimeEnd End time.
      */
     public Long getTimeEnd() {
         return this.TimeEnd;
     }
 
     /**
-     * Set End time
-     * @param TimeEnd End time
+     * Set End time.
+     * @param TimeEnd End time.
      */
     public void setTimeEnd(Long TimeEnd) {
         this.TimeEnd = TimeEnd;
     }
 
     /**
-     * Get Operating system: 0 All, 2 Android, 3 iOS 
-     * @return Platform Operating system: 0 All, 2 Android, 3 iOS
+     * Get Operating system. Valid values: 0: All; 2: Android; 3: iOS. 
+     * @return Platform Operating system. Valid values: 0: All; 2: Android; 3: iOS.
      */
     public Long getPlatform() {
         return this.Platform;
     }
 
     /**
-     * Set Operating system: 0 All, 2 Android, 3 iOS
-     * @param Platform Operating system: 0 All, 2 Android, 3 iOS
+     * Set Operating system. Valid values: 0: All; 2: Android; 3: iOS.
+     * @param Platform Operating system. Valid values: 0: All; 2: Android; 3: iOS.
      */
     public void setPlatform(Long Platform) {
         this.Platform = Platform;

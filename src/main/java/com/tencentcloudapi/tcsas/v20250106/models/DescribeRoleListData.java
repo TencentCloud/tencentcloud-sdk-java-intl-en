@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class DescribeRoleListData extends AbstractModel {
 
     /**
-    * Role ID
+    * Role ID.
     */
     @SerializedName("RoleId")
     @Expose
@@ -38,37 +38,37 @@ public class DescribeRoleListData extends AbstractModel {
     private String RoleName;
 
     /**
-    * Team name
+    * Team name.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Role type 1-preset role 2-custom role.
+    * Role type. Valid values: 1: Preset role; 2: Custom role. 
     */
     @SerializedName("RoleType")
     @Expose
     private Long RoleType;
 
     /**
-     * Get Role ID 
-     * @return RoleId Role ID
+     * Get Role ID. 
+     * @return RoleId Role ID.
      */
     public Long getRoleId() {
         return this.RoleId;
     }
 
     /**
-     * Set Role ID
-     * @param RoleId Role ID
+     * Set Role ID.
+     * @param RoleId Role ID.
      */
     public void setRoleId(Long RoleId) {
         this.RoleId = RoleId;
@@ -91,48 +91,48 @@ public class DescribeRoleListData extends AbstractModel {
     }
 
     /**
-     * Get Team name 
-     * @return TeamName Team name
+     * Get Team name. 
+     * @return TeamName Team name.
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name
-     * @param TeamName Team name
+     * Set Team name.
+     * @param TeamName Team name.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Role type 1-preset role 2-custom role. 
-     * @return RoleType Role type 1-preset role 2-custom role.
+     * Get Role type. Valid values: 1: Preset role; 2: Custom role.  
+     * @return RoleType Role type. Valid values: 1: Preset role; 2: Custom role. 
      */
     public Long getRoleType() {
         return this.RoleType;
     }
 
     /**
-     * Set Role type 1-preset role 2-custom role.
-     * @param RoleType Role type 1-preset role 2-custom role.
+     * Set Role type. Valid values: 1: Preset role; 2: Custom role. 
+     * @param RoleType Role type. Valid values: 1: Preset role; 2: Custom role. 
      */
     public void setRoleType(Long RoleType) {
         this.RoleType = RoleType;

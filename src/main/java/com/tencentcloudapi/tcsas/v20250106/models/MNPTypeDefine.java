@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class MNPTypeDefine extends AbstractModel {
 
     /**
-    * Specifies the mini program category name.
+    * Mini program category name.
     */
     @SerializedName("TypeName")
     @Expose
     private String TypeName;
 
     /**
-    * Mini program category value.
+    * Mini program category values.
     */
     @SerializedName("TypeValue")
     @Expose
@@ -45,53 +45,53 @@ public class MNPTypeDefine extends AbstractModel {
     private Long TypeId;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Creator
+    * Creator.
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Indicates whether it is a system category.
+    * Whether it is a system category.
     */
     @SerializedName("IsSystem")
     @Expose
     private Boolean IsSystem;
 
     /**
-     * Get Specifies the mini program category name. 
-     * @return TypeName Specifies the mini program category name.
+     * Get Mini program category name. 
+     * @return TypeName Mini program category name.
      */
     public String getTypeName() {
         return this.TypeName;
     }
 
     /**
-     * Set Specifies the mini program category name.
-     * @param TypeName Specifies the mini program category name.
+     * Set Mini program category name.
+     * @param TypeName Mini program category name.
      */
     public void setTypeName(String TypeName) {
         this.TypeName = TypeName;
     }
 
     /**
-     * Get Mini program category value. 
-     * @return TypeValue Mini program category value.
+     * Get Mini program category values. 
+     * @return TypeValue Mini program category values.
      */
     public String [] getTypeValue() {
         return this.TypeValue;
     }
 
     /**
-     * Set Mini program category value.
-     * @param TypeValue Mini program category value.
+     * Set Mini program category values.
+     * @param TypeValue Mini program category values.
      */
     public void setTypeValue(String [] TypeValue) {
         this.TypeValue = TypeValue;
@@ -114,48 +114,48 @@ public class MNPTypeDefine extends AbstractModel {
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Creator 
-     * @return CreateUser Creator
+     * Get Creator. 
+     * @return CreateUser Creator.
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Creator
-     * @param CreateUser Creator
+     * Set Creator.
+     * @param CreateUser Creator.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Indicates whether it is a system category. 
-     * @return IsSystem Indicates whether it is a system category.
+     * Get Whether it is a system category. 
+     * @return IsSystem Whether it is a system category.
      */
     public Boolean getIsSystem() {
         return this.IsSystem;
     }
 
     /**
-     * Set Indicates whether it is a system category.
-     * @param IsSystem Indicates whether it is a system category.
+     * Set Whether it is a system category.
+     * @param IsSystem Whether it is a system category.
      */
     public void setIsSystem(Boolean IsSystem) {
         this.IsSystem = IsSystem;

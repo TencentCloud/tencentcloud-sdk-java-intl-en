@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class StartAITranscriptionResponse extends AbstractModel {
 
     /**
-    * Used to uniquely identify a transcription task.
+    * For unique identification of transcription task.
     */
     @SerializedName("TaskId")
     @Expose
@@ -38,16 +38,16 @@ public class StartAITranscriptionResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Used to uniquely identify a transcription task. 
-     * @return TaskId Used to uniquely identify a transcription task.
+     * Get For unique identification of transcription task. 
+     * @return TaskId For unique identification of transcription task.
      */
     public String getTaskId() {
         return this.TaskId;
     }
 
     /**
-     * Set Used to uniquely identify a transcription task.
-     * @param TaskId Used to uniquely identify a transcription task.
+     * Set For unique identification of transcription task.
+     * @param TaskId For unique identification of transcription task.
      */
     public void setTaskId(String TaskId) {
         this.TaskId = TaskId;

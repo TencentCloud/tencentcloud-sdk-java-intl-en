@@ -24,483 +24,483 @@ import java.util.HashMap;
 public class RetentionData extends AbstractModel {
 
     /**
-    * Number of active users
+    * Number of active users.
     */
     @SerializedName("ActiveUserCount")
     @Expose
     private Long ActiveUserCount;
 
     /**
-    * Day 1 retention of active users
+    * Day 1 retention of active users.
     */
     @SerializedName("OneDayRetentionUsers")
     @Expose
     private Long OneDayRetentionUsers;
 
     /**
-    * Day 2 retention of active users
+    * Day 2 retention of active users.
     */
     @SerializedName("TwoDayRetentionUsers")
     @Expose
     private Long TwoDayRetentionUsers;
 
     /**
-    * Day 3 retention of active users
+    * Day 3 retention of active users.
     */
     @SerializedName("ThreeDayRetentionUsers")
     @Expose
     private Long ThreeDayRetentionUsers;
 
     /**
-    * Day 4 retention of active users
+    * Day 4 retention of active users.
     */
     @SerializedName("FourDayRetentionUsers")
     @Expose
     private Long FourDayRetentionUsers;
 
     /**
-    * Day 5 retention of active users
+    * Day 5 retention of active users.
     */
     @SerializedName("FiveDayRetentionUsers")
     @Expose
     private Long FiveDayRetentionUsers;
 
     /**
-    * Day 6 retention of active users
+    * Day 6 retention of active users.
     */
     @SerializedName("SixDayRetentionUsers")
     @Expose
     private Long SixDayRetentionUsers;
 
     /**
-    * Day 7 retention of active users
+    * Day 7 retention of active users.
     */
     @SerializedName("SevenDayRetentionUsers")
     @Expose
     private Long SevenDayRetentionUsers;
 
     /**
-    * Day 14 retention of active users
+    * Day 14 retention of active users.
     */
     @SerializedName("FourteenDayRetentionUsers")
     @Expose
     private Long FourteenDayRetentionUsers;
 
     /**
-    * Day 30 retention of active users
+    * Day 30 retention of active users.
     */
     @SerializedName("ThirtyDayRetentionUsers")
     @Expose
     private Long ThirtyDayRetentionUsers;
 
     /**
-    * Number of new users
+    * Number of new users.
     */
     @SerializedName("NewUserCount")
     @Expose
     private Long NewUserCount;
 
     /**
-    * Day 1 retention of new users
+    * Day 1 retention of new users.
     */
     @SerializedName("OneDayRetentionNewUsers")
     @Expose
     private Long OneDayRetentionNewUsers;
 
     /**
-    * Day 2 retention of new users
+    * Day 2 retention of new users.
     */
     @SerializedName("TwoDayRetentionNewUsers")
     @Expose
     private Long TwoDayRetentionNewUsers;
 
     /**
-    * Day 3 retention of new users
+    * Day 3 retention of new users.
     */
     @SerializedName("ThreeDayRetentionNewUsers")
     @Expose
     private Long ThreeDayRetentionNewUsers;
 
     /**
-    * Day 4 retention of new users
+    * Day 4 retention of new users.
     */
     @SerializedName("FourDayRetentionNewUsers")
     @Expose
     private Long FourDayRetentionNewUsers;
 
     /**
-    * Day 5 retention of new users
+    * Day 5 retention of new users.
     */
     @SerializedName("FiveDayRetentionNewUsers")
     @Expose
     private Long FiveDayRetentionNewUsers;
 
     /**
-    * Day 6 retention of new users
+    * Day 6 retention of new users.
     */
     @SerializedName("SixDayRetentionNewUsers")
     @Expose
     private Long SixDayRetentionNewUsers;
 
     /**
-    * Day 7 retention of new users
+    * Day 7 retention of new users.
     */
     @SerializedName("SevenDayRetentionNewUsers")
     @Expose
     private Long SevenDayRetentionNewUsers;
 
     /**
-    * Day 14 retention of new users
+    * Day 14 retention of new users.
     */
     @SerializedName("FourteenDayRetentionNewUsers")
     @Expose
     private Long FourteenDayRetentionNewUsers;
 
     /**
-    * Day 30 retention of new users
+    * Day 30 retention of new users.
     */
     @SerializedName("ThirtyDayRetentionNewUsers")
     @Expose
     private Long ThirtyDayRetentionNewUsers;
 
     /**
-    * Data time in YYYYMMDD format
+    * Data time in YYYYMMDD format.
     */
     @SerializedName("DataTime")
     @Expose
     private String DataTime;
 
     /**
-     * Get Number of active users 
-     * @return ActiveUserCount Number of active users
+     * Get Number of active users. 
+     * @return ActiveUserCount Number of active users.
      */
     public Long getActiveUserCount() {
         return this.ActiveUserCount;
     }
 
     /**
-     * Set Number of active users
-     * @param ActiveUserCount Number of active users
+     * Set Number of active users.
+     * @param ActiveUserCount Number of active users.
      */
     public void setActiveUserCount(Long ActiveUserCount) {
         this.ActiveUserCount = ActiveUserCount;
     }
 
     /**
-     * Get Day 1 retention of active users 
-     * @return OneDayRetentionUsers Day 1 retention of active users
+     * Get Day 1 retention of active users. 
+     * @return OneDayRetentionUsers Day 1 retention of active users.
      */
     public Long getOneDayRetentionUsers() {
         return this.OneDayRetentionUsers;
     }
 
     /**
-     * Set Day 1 retention of active users
-     * @param OneDayRetentionUsers Day 1 retention of active users
+     * Set Day 1 retention of active users.
+     * @param OneDayRetentionUsers Day 1 retention of active users.
      */
     public void setOneDayRetentionUsers(Long OneDayRetentionUsers) {
         this.OneDayRetentionUsers = OneDayRetentionUsers;
     }
 
     /**
-     * Get Day 2 retention of active users 
-     * @return TwoDayRetentionUsers Day 2 retention of active users
+     * Get Day 2 retention of active users. 
+     * @return TwoDayRetentionUsers Day 2 retention of active users.
      */
     public Long getTwoDayRetentionUsers() {
         return this.TwoDayRetentionUsers;
     }
 
     /**
-     * Set Day 2 retention of active users
-     * @param TwoDayRetentionUsers Day 2 retention of active users
+     * Set Day 2 retention of active users.
+     * @param TwoDayRetentionUsers Day 2 retention of active users.
      */
     public void setTwoDayRetentionUsers(Long TwoDayRetentionUsers) {
         this.TwoDayRetentionUsers = TwoDayRetentionUsers;
     }
 
     /**
-     * Get Day 3 retention of active users 
-     * @return ThreeDayRetentionUsers Day 3 retention of active users
+     * Get Day 3 retention of active users. 
+     * @return ThreeDayRetentionUsers Day 3 retention of active users.
      */
     public Long getThreeDayRetentionUsers() {
         return this.ThreeDayRetentionUsers;
     }
 
     /**
-     * Set Day 3 retention of active users
-     * @param ThreeDayRetentionUsers Day 3 retention of active users
+     * Set Day 3 retention of active users.
+     * @param ThreeDayRetentionUsers Day 3 retention of active users.
      */
     public void setThreeDayRetentionUsers(Long ThreeDayRetentionUsers) {
         this.ThreeDayRetentionUsers = ThreeDayRetentionUsers;
     }
 
     /**
-     * Get Day 4 retention of active users 
-     * @return FourDayRetentionUsers Day 4 retention of active users
+     * Get Day 4 retention of active users. 
+     * @return FourDayRetentionUsers Day 4 retention of active users.
      */
     public Long getFourDayRetentionUsers() {
         return this.FourDayRetentionUsers;
     }
 
     /**
-     * Set Day 4 retention of active users
-     * @param FourDayRetentionUsers Day 4 retention of active users
+     * Set Day 4 retention of active users.
+     * @param FourDayRetentionUsers Day 4 retention of active users.
      */
     public void setFourDayRetentionUsers(Long FourDayRetentionUsers) {
         this.FourDayRetentionUsers = FourDayRetentionUsers;
     }
 
     /**
-     * Get Day 5 retention of active users 
-     * @return FiveDayRetentionUsers Day 5 retention of active users
+     * Get Day 5 retention of active users. 
+     * @return FiveDayRetentionUsers Day 5 retention of active users.
      */
     public Long getFiveDayRetentionUsers() {
         return this.FiveDayRetentionUsers;
     }
 
     /**
-     * Set Day 5 retention of active users
-     * @param FiveDayRetentionUsers Day 5 retention of active users
+     * Set Day 5 retention of active users.
+     * @param FiveDayRetentionUsers Day 5 retention of active users.
      */
     public void setFiveDayRetentionUsers(Long FiveDayRetentionUsers) {
         this.FiveDayRetentionUsers = FiveDayRetentionUsers;
     }
 
     /**
-     * Get Day 6 retention of active users 
-     * @return SixDayRetentionUsers Day 6 retention of active users
+     * Get Day 6 retention of active users. 
+     * @return SixDayRetentionUsers Day 6 retention of active users.
      */
     public Long getSixDayRetentionUsers() {
         return this.SixDayRetentionUsers;
     }
 
     /**
-     * Set Day 6 retention of active users
-     * @param SixDayRetentionUsers Day 6 retention of active users
+     * Set Day 6 retention of active users.
+     * @param SixDayRetentionUsers Day 6 retention of active users.
      */
     public void setSixDayRetentionUsers(Long SixDayRetentionUsers) {
         this.SixDayRetentionUsers = SixDayRetentionUsers;
     }
 
     /**
-     * Get Day 7 retention of active users 
-     * @return SevenDayRetentionUsers Day 7 retention of active users
+     * Get Day 7 retention of active users. 
+     * @return SevenDayRetentionUsers Day 7 retention of active users.
      */
     public Long getSevenDayRetentionUsers() {
         return this.SevenDayRetentionUsers;
     }
 
     /**
-     * Set Day 7 retention of active users
-     * @param SevenDayRetentionUsers Day 7 retention of active users
+     * Set Day 7 retention of active users.
+     * @param SevenDayRetentionUsers Day 7 retention of active users.
      */
     public void setSevenDayRetentionUsers(Long SevenDayRetentionUsers) {
         this.SevenDayRetentionUsers = SevenDayRetentionUsers;
     }
 
     /**
-     * Get Day 14 retention of active users 
-     * @return FourteenDayRetentionUsers Day 14 retention of active users
+     * Get Day 14 retention of active users. 
+     * @return FourteenDayRetentionUsers Day 14 retention of active users.
      */
     public Long getFourteenDayRetentionUsers() {
         return this.FourteenDayRetentionUsers;
     }
 
     /**
-     * Set Day 14 retention of active users
-     * @param FourteenDayRetentionUsers Day 14 retention of active users
+     * Set Day 14 retention of active users.
+     * @param FourteenDayRetentionUsers Day 14 retention of active users.
      */
     public void setFourteenDayRetentionUsers(Long FourteenDayRetentionUsers) {
         this.FourteenDayRetentionUsers = FourteenDayRetentionUsers;
     }
 
     /**
-     * Get Day 30 retention of active users 
-     * @return ThirtyDayRetentionUsers Day 30 retention of active users
+     * Get Day 30 retention of active users. 
+     * @return ThirtyDayRetentionUsers Day 30 retention of active users.
      */
     public Long getThirtyDayRetentionUsers() {
         return this.ThirtyDayRetentionUsers;
     }
 
     /**
-     * Set Day 30 retention of active users
-     * @param ThirtyDayRetentionUsers Day 30 retention of active users
+     * Set Day 30 retention of active users.
+     * @param ThirtyDayRetentionUsers Day 30 retention of active users.
      */
     public void setThirtyDayRetentionUsers(Long ThirtyDayRetentionUsers) {
         this.ThirtyDayRetentionUsers = ThirtyDayRetentionUsers;
     }
 
     /**
-     * Get Number of new users 
-     * @return NewUserCount Number of new users
+     * Get Number of new users. 
+     * @return NewUserCount Number of new users.
      */
     public Long getNewUserCount() {
         return this.NewUserCount;
     }
 
     /**
-     * Set Number of new users
-     * @param NewUserCount Number of new users
+     * Set Number of new users.
+     * @param NewUserCount Number of new users.
      */
     public void setNewUserCount(Long NewUserCount) {
         this.NewUserCount = NewUserCount;
     }
 
     /**
-     * Get Day 1 retention of new users 
-     * @return OneDayRetentionNewUsers Day 1 retention of new users
+     * Get Day 1 retention of new users. 
+     * @return OneDayRetentionNewUsers Day 1 retention of new users.
      */
     public Long getOneDayRetentionNewUsers() {
         return this.OneDayRetentionNewUsers;
     }
 
     /**
-     * Set Day 1 retention of new users
-     * @param OneDayRetentionNewUsers Day 1 retention of new users
+     * Set Day 1 retention of new users.
+     * @param OneDayRetentionNewUsers Day 1 retention of new users.
      */
     public void setOneDayRetentionNewUsers(Long OneDayRetentionNewUsers) {
         this.OneDayRetentionNewUsers = OneDayRetentionNewUsers;
     }
 
     /**
-     * Get Day 2 retention of new users 
-     * @return TwoDayRetentionNewUsers Day 2 retention of new users
+     * Get Day 2 retention of new users. 
+     * @return TwoDayRetentionNewUsers Day 2 retention of new users.
      */
     public Long getTwoDayRetentionNewUsers() {
         return this.TwoDayRetentionNewUsers;
     }
 
     /**
-     * Set Day 2 retention of new users
-     * @param TwoDayRetentionNewUsers Day 2 retention of new users
+     * Set Day 2 retention of new users.
+     * @param TwoDayRetentionNewUsers Day 2 retention of new users.
      */
     public void setTwoDayRetentionNewUsers(Long TwoDayRetentionNewUsers) {
         this.TwoDayRetentionNewUsers = TwoDayRetentionNewUsers;
     }
 
     /**
-     * Get Day 3 retention of new users 
-     * @return ThreeDayRetentionNewUsers Day 3 retention of new users
+     * Get Day 3 retention of new users. 
+     * @return ThreeDayRetentionNewUsers Day 3 retention of new users.
      */
     public Long getThreeDayRetentionNewUsers() {
         return this.ThreeDayRetentionNewUsers;
     }
 
     /**
-     * Set Day 3 retention of new users
-     * @param ThreeDayRetentionNewUsers Day 3 retention of new users
+     * Set Day 3 retention of new users.
+     * @param ThreeDayRetentionNewUsers Day 3 retention of new users.
      */
     public void setThreeDayRetentionNewUsers(Long ThreeDayRetentionNewUsers) {
         this.ThreeDayRetentionNewUsers = ThreeDayRetentionNewUsers;
     }
 
     /**
-     * Get Day 4 retention of new users 
-     * @return FourDayRetentionNewUsers Day 4 retention of new users
+     * Get Day 4 retention of new users. 
+     * @return FourDayRetentionNewUsers Day 4 retention of new users.
      */
     public Long getFourDayRetentionNewUsers() {
         return this.FourDayRetentionNewUsers;
     }
 
     /**
-     * Set Day 4 retention of new users
-     * @param FourDayRetentionNewUsers Day 4 retention of new users
+     * Set Day 4 retention of new users.
+     * @param FourDayRetentionNewUsers Day 4 retention of new users.
      */
     public void setFourDayRetentionNewUsers(Long FourDayRetentionNewUsers) {
         this.FourDayRetentionNewUsers = FourDayRetentionNewUsers;
     }
 
     /**
-     * Get Day 5 retention of new users 
-     * @return FiveDayRetentionNewUsers Day 5 retention of new users
+     * Get Day 5 retention of new users. 
+     * @return FiveDayRetentionNewUsers Day 5 retention of new users.
      */
     public Long getFiveDayRetentionNewUsers() {
         return this.FiveDayRetentionNewUsers;
     }
 
     /**
-     * Set Day 5 retention of new users
-     * @param FiveDayRetentionNewUsers Day 5 retention of new users
+     * Set Day 5 retention of new users.
+     * @param FiveDayRetentionNewUsers Day 5 retention of new users.
      */
     public void setFiveDayRetentionNewUsers(Long FiveDayRetentionNewUsers) {
         this.FiveDayRetentionNewUsers = FiveDayRetentionNewUsers;
     }
 
     /**
-     * Get Day 6 retention of new users 
-     * @return SixDayRetentionNewUsers Day 6 retention of new users
+     * Get Day 6 retention of new users. 
+     * @return SixDayRetentionNewUsers Day 6 retention of new users.
      */
     public Long getSixDayRetentionNewUsers() {
         return this.SixDayRetentionNewUsers;
     }
 
     /**
-     * Set Day 6 retention of new users
-     * @param SixDayRetentionNewUsers Day 6 retention of new users
+     * Set Day 6 retention of new users.
+     * @param SixDayRetentionNewUsers Day 6 retention of new users.
      */
     public void setSixDayRetentionNewUsers(Long SixDayRetentionNewUsers) {
         this.SixDayRetentionNewUsers = SixDayRetentionNewUsers;
     }
 
     /**
-     * Get Day 7 retention of new users 
-     * @return SevenDayRetentionNewUsers Day 7 retention of new users
+     * Get Day 7 retention of new users. 
+     * @return SevenDayRetentionNewUsers Day 7 retention of new users.
      */
     public Long getSevenDayRetentionNewUsers() {
         return this.SevenDayRetentionNewUsers;
     }
 
     /**
-     * Set Day 7 retention of new users
-     * @param SevenDayRetentionNewUsers Day 7 retention of new users
+     * Set Day 7 retention of new users.
+     * @param SevenDayRetentionNewUsers Day 7 retention of new users.
      */
     public void setSevenDayRetentionNewUsers(Long SevenDayRetentionNewUsers) {
         this.SevenDayRetentionNewUsers = SevenDayRetentionNewUsers;
     }
 
     /**
-     * Get Day 14 retention of new users 
-     * @return FourteenDayRetentionNewUsers Day 14 retention of new users
+     * Get Day 14 retention of new users. 
+     * @return FourteenDayRetentionNewUsers Day 14 retention of new users.
      */
     public Long getFourteenDayRetentionNewUsers() {
         return this.FourteenDayRetentionNewUsers;
     }
 
     /**
-     * Set Day 14 retention of new users
-     * @param FourteenDayRetentionNewUsers Day 14 retention of new users
+     * Set Day 14 retention of new users.
+     * @param FourteenDayRetentionNewUsers Day 14 retention of new users.
      */
     public void setFourteenDayRetentionNewUsers(Long FourteenDayRetentionNewUsers) {
         this.FourteenDayRetentionNewUsers = FourteenDayRetentionNewUsers;
     }
 
     /**
-     * Get Day 30 retention of new users 
-     * @return ThirtyDayRetentionNewUsers Day 30 retention of new users
+     * Get Day 30 retention of new users. 
+     * @return ThirtyDayRetentionNewUsers Day 30 retention of new users.
      */
     public Long getThirtyDayRetentionNewUsers() {
         return this.ThirtyDayRetentionNewUsers;
     }
 
     /**
-     * Set Day 30 retention of new users
-     * @param ThirtyDayRetentionNewUsers Day 30 retention of new users
+     * Set Day 30 retention of new users.
+     * @param ThirtyDayRetentionNewUsers Day 30 retention of new users.
      */
     public void setThirtyDayRetentionNewUsers(Long ThirtyDayRetentionNewUsers) {
         this.ThirtyDayRetentionNewUsers = ThirtyDayRetentionNewUsers;
     }
 
     /**
-     * Get Data time in YYYYMMDD format 
-     * @return DataTime Data time in YYYYMMDD format
+     * Get Data time in YYYYMMDD format. 
+     * @return DataTime Data time in YYYYMMDD format.
      */
     public String getDataTime() {
         return this.DataTime;
     }
 
     /**
-     * Set Data time in YYYYMMDD format
-     * @param DataTime Data time in YYYYMMDD format
+     * Set Data time in YYYYMMDD format.
+     * @param DataTime Data time in YYYYMMDD format.
      */
     public void setDataTime(String DataTime) {
         this.DataTime = DataTime;

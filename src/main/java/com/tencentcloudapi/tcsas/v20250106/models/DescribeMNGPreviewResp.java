@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeMNGPreviewResp extends AbstractModel {
 
     /**
-    * <p>Mini game appid</p>
+    * <p>Mini game appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-    * <p>Mini game name</p>
+    * <p>Mini game name.</p>
     */
     @SerializedName("MNPName")
     @Expose
     private String MNPName;
 
     /**
-    * <p>Mini game description</p>
+    * <p>Mini game description.</p>
     */
     @SerializedName("MNPDesc")
     @Expose
     private String MNPDesc;
 
     /**
-    * <p>Mini game version</p>
+    * <p>Mini game version.</p>
     */
     @SerializedName("MNPVersion")
     @Expose
     private String MNPVersion;
 
     /**
-    * <p>Mini game version description</p>
+    * <p>Mini game version description.</p>
     */
     @SerializedName("MNPVersionIntro")
     @Expose
     private String MNPVersionIntro;
 
     /**
-    * <p>Mini game version QR code</p>
+    * <p>Mini game version QR code URL.</p>
     */
     @SerializedName("QRCodeUrl")
     @Expose
     private String QRCodeUrl;
 
     /**
-    * <p>Preview path</p>
+    * <p>Preview path.</p>
     */
     @SerializedName("PreviewEntrancePath")
     @Expose
     private String PreviewEntrancePath;
 
     /**
-    * <p>Information encoded in the QR code</p>
+    * <p>Information encoded in the QR code.</p>
     */
     @SerializedName("QRCodeContent")
     @Expose
     private String QRCodeContent;
 
     /**
-     * Get <p>Mini game appid</p> 
-     * @return MNPId <p>Mini game appid</p>
+     * Get <p>Mini game appid.</p> 
+     * @return MNPId <p>Mini game appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set <p>Mini game appid</p>
-     * @param MNPId <p>Mini game appid</p>
+     * Set <p>Mini game appid.</p>
+     * @param MNPId <p>Mini game appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;
     }
 
     /**
-     * Get <p>Mini game name</p> 
-     * @return MNPName <p>Mini game name</p>
+     * Get <p>Mini game name.</p> 
+     * @return MNPName <p>Mini game name.</p>
      */
     public String getMNPName() {
         return this.MNPName;
     }
 
     /**
-     * Set <p>Mini game name</p>
-     * @param MNPName <p>Mini game name</p>
+     * Set <p>Mini game name.</p>
+     * @param MNPName <p>Mini game name.</p>
      */
     public void setMNPName(String MNPName) {
         this.MNPName = MNPName;
     }
 
     /**
-     * Get <p>Mini game description</p> 
-     * @return MNPDesc <p>Mini game description</p>
+     * Get <p>Mini game description.</p> 
+     * @return MNPDesc <p>Mini game description.</p>
      */
     public String getMNPDesc() {
         return this.MNPDesc;
     }
 
     /**
-     * Set <p>Mini game description</p>
-     * @param MNPDesc <p>Mini game description</p>
+     * Set <p>Mini game description.</p>
+     * @param MNPDesc <p>Mini game description.</p>
      */
     public void setMNPDesc(String MNPDesc) {
         this.MNPDesc = MNPDesc;
     }
 
     /**
-     * Get <p>Mini game version</p> 
-     * @return MNPVersion <p>Mini game version</p>
+     * Get <p>Mini game version.</p> 
+     * @return MNPVersion <p>Mini game version.</p>
      */
     public String getMNPVersion() {
         return this.MNPVersion;
     }
 
     /**
-     * Set <p>Mini game version</p>
-     * @param MNPVersion <p>Mini game version</p>
+     * Set <p>Mini game version.</p>
+     * @param MNPVersion <p>Mini game version.</p>
      */
     public void setMNPVersion(String MNPVersion) {
         this.MNPVersion = MNPVersion;
     }
 
     /**
-     * Get <p>Mini game version description</p> 
-     * @return MNPVersionIntro <p>Mini game version description</p>
+     * Get <p>Mini game version description.</p> 
+     * @return MNPVersionIntro <p>Mini game version description.</p>
      */
     public String getMNPVersionIntro() {
         return this.MNPVersionIntro;
     }
 
     /**
-     * Set <p>Mini game version description</p>
-     * @param MNPVersionIntro <p>Mini game version description</p>
+     * Set <p>Mini game version description.</p>
+     * @param MNPVersionIntro <p>Mini game version description.</p>
      */
     public void setMNPVersionIntro(String MNPVersionIntro) {
         this.MNPVersionIntro = MNPVersionIntro;
     }
 
     /**
-     * Get <p>Mini game version QR code</p> 
-     * @return QRCodeUrl <p>Mini game version QR code</p>
+     * Get <p>Mini game version QR code URL.</p> 
+     * @return QRCodeUrl <p>Mini game version QR code URL.</p>
      */
     public String getQRCodeUrl() {
         return this.QRCodeUrl;
     }
 
     /**
-     * Set <p>Mini game version QR code</p>
-     * @param QRCodeUrl <p>Mini game version QR code</p>
+     * Set <p>Mini game version QR code URL.</p>
+     * @param QRCodeUrl <p>Mini game version QR code URL.</p>
      */
     public void setQRCodeUrl(String QRCodeUrl) {
         this.QRCodeUrl = QRCodeUrl;
     }
 
     /**
-     * Get <p>Preview path</p> 
-     * @return PreviewEntrancePath <p>Preview path</p>
+     * Get <p>Preview path.</p> 
+     * @return PreviewEntrancePath <p>Preview path.</p>
      */
     public String getPreviewEntrancePath() {
         return this.PreviewEntrancePath;
     }
 
     /**
-     * Set <p>Preview path</p>
-     * @param PreviewEntrancePath <p>Preview path</p>
+     * Set <p>Preview path.</p>
+     * @param PreviewEntrancePath <p>Preview path.</p>
      */
     public void setPreviewEntrancePath(String PreviewEntrancePath) {
         this.PreviewEntrancePath = PreviewEntrancePath;
     }
 
     /**
-     * Get <p>Information encoded in the QR code</p> 
-     * @return QRCodeContent <p>Information encoded in the QR code</p>
+     * Get <p>Information encoded in the QR code.</p> 
+     * @return QRCodeContent <p>Information encoded in the QR code.</p>
      */
     public String getQRCodeContent() {
         return this.QRCodeContent;
     }
 
     /**
-     * Set <p>Information encoded in the QR code</p>
-     * @param QRCodeContent <p>Information encoded in the QR code</p>
+     * Set <p>Information encoded in the QR code.</p>
+     * @param QRCodeContent <p>Information encoded in the QR code.</p>
      */
     public void setQRCodeContent(String QRCodeContent) {
         this.QRCodeContent = QRCodeContent;

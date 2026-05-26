@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CreateMNPSecretKeyRequest extends AbstractModel {
 
     /**
-    * <p>Platform ID</p>
+    * <p>Platform ID.</p>
     */
     @SerializedName("PlatformId")
     @Expose
     private String PlatformId;
 
     /**
-    * <p>Mini program or mini game appid</p>
+    * <p>Mini program or mini game appid.</p>
     */
     @SerializedName("MNPId")
     @Expose
     private String MNPId;
 
     /**
-     * Get <p>Platform ID</p> 
-     * @return PlatformId <p>Platform ID</p>
+     * Get <p>Platform ID.</p> 
+     * @return PlatformId <p>Platform ID.</p>
      */
     public String getPlatformId() {
         return this.PlatformId;
     }
 
     /**
-     * Set <p>Platform ID</p>
-     * @param PlatformId <p>Platform ID</p>
+     * Set <p>Platform ID.</p>
+     * @param PlatformId <p>Platform ID.</p>
      */
     public void setPlatformId(String PlatformId) {
         this.PlatformId = PlatformId;
     }
 
     /**
-     * Get <p>Mini program or mini game appid</p> 
-     * @return MNPId <p>Mini program or mini game appid</p>
+     * Get <p>Mini program or mini game appid.</p> 
+     * @return MNPId <p>Mini program or mini game appid.</p>
      */
     public String getMNPId() {
         return this.MNPId;
     }
 
     /**
-     * Set <p>Mini program or mini game appid</p>
-     * @param MNPId <p>Mini program or mini game appid</p>
+     * Set <p>Mini program or mini game appid.</p>
+     * @param MNPId <p>Mini program or mini game appid.</p>
      */
     public void setMNPId(String MNPId) {
         this.MNPId = MNPId;

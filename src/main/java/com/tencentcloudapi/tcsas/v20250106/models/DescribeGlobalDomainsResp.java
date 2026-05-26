@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class DescribeGlobalDomainsResp extends AbstractModel {
 
     /**
-    * Total number
+    * Total number of entries.
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Describes the domain information.
+    * Domain information.
     */
     @SerializedName("DataList")
     @Expose
     private DescribeGlobalDomainsListData [] DataList;
 
     /**
-     * Get Total number 
-     * @return TotalCount Total number
+     * Get Total number of entries. 
+     * @return TotalCount Total number of entries.
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number
-     * @param TotalCount Total number
+     * Set Total number of entries.
+     * @param TotalCount Total number of entries.
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Describes the domain information. 
-     * @return DataList Describes the domain information.
+     * Get Domain information. 
+     * @return DataList Domain information.
      */
     public DescribeGlobalDomainsListData [] getDataList() {
         return this.DataList;
     }
 
     /**
-     * Set Describes the domain information.
-     * @param DataList Describes the domain information.
+     * Set Domain information.
+     * @param DataList Domain information.
      */
     public void setDataList(DescribeGlobalDomainsListData [] DataList) {
         this.DataList = DataList;

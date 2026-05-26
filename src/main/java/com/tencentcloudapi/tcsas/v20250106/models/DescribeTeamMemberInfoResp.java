@@ -24,184 +24,184 @@ import java.util.HashMap;
 public class DescribeTeamMemberInfoResp extends AbstractModel {
 
     /**
-    * User ID
+    * User ID.
     */
     @SerializedName("UserId")
     @Expose
     private String UserId;
 
     /**
-    * User account
+    * User account.
     */
     @SerializedName("UserAccount")
     @Expose
     private String UserAccount;
 
     /**
-    * User name
+    * User name.
     */
     @SerializedName("UserName")
     @Expose
     private String UserName;
 
     /**
-    * Team ID
+    * Team ID.
     */
     @SerializedName("TeamId")
     @Expose
     private String TeamId;
 
     /**
-    * Team name
+    * Team name.
     */
     @SerializedName("TeamName")
     @Expose
     private String TeamName;
 
     /**
-    * Specifies the team role name.
+    * Team role name.
     */
     @SerializedName("TeamRoleName")
     @Expose
     private String TeamRoleName;
 
     /**
-    * Specifies the team role ID.
+    * Team role ID.
     */
     @SerializedName("TeamRoleId")
     @Expose
     private Long TeamRoleId;
 
     /**
-    * Whether it is editable
+    * Whether it can be edited.
     */
     @SerializedName("CanEdit")
     @Expose
     private Boolean CanEdit;
 
     /**
-     * Get User ID 
-     * @return UserId User ID
+     * Get User ID. 
+     * @return UserId User ID.
      */
     public String getUserId() {
         return this.UserId;
     }
 
     /**
-     * Set User ID
-     * @param UserId User ID
+     * Set User ID.
+     * @param UserId User ID.
      */
     public void setUserId(String UserId) {
         this.UserId = UserId;
     }
 
     /**
-     * Get User account 
-     * @return UserAccount User account
+     * Get User account. 
+     * @return UserAccount User account.
      */
     public String getUserAccount() {
         return this.UserAccount;
     }
 
     /**
-     * Set User account
-     * @param UserAccount User account
+     * Set User account.
+     * @param UserAccount User account.
      */
     public void setUserAccount(String UserAccount) {
         this.UserAccount = UserAccount;
     }
 
     /**
-     * Get User name 
-     * @return UserName User name
+     * Get User name. 
+     * @return UserName User name.
      */
     public String getUserName() {
         return this.UserName;
     }
 
     /**
-     * Set User name
-     * @param UserName User name
+     * Set User name.
+     * @param UserName User name.
      */
     public void setUserName(String UserName) {
         this.UserName = UserName;
     }
 
     /**
-     * Get Team ID 
-     * @return TeamId Team ID
+     * Get Team ID. 
+     * @return TeamId Team ID.
      */
     public String getTeamId() {
         return this.TeamId;
     }
 
     /**
-     * Set Team ID
-     * @param TeamId Team ID
+     * Set Team ID.
+     * @param TeamId Team ID.
      */
     public void setTeamId(String TeamId) {
         this.TeamId = TeamId;
     }
 
     /**
-     * Get Team name 
-     * @return TeamName Team name
+     * Get Team name. 
+     * @return TeamName Team name.
      */
     public String getTeamName() {
         return this.TeamName;
     }
 
     /**
-     * Set Team name
-     * @param TeamName Team name
+     * Set Team name.
+     * @param TeamName Team name.
      */
     public void setTeamName(String TeamName) {
         this.TeamName = TeamName;
     }
 
     /**
-     * Get Specifies the team role name. 
-     * @return TeamRoleName Specifies the team role name.
+     * Get Team role name. 
+     * @return TeamRoleName Team role name.
      */
     public String getTeamRoleName() {
         return this.TeamRoleName;
     }
 
     /**
-     * Set Specifies the team role name.
-     * @param TeamRoleName Specifies the team role name.
+     * Set Team role name.
+     * @param TeamRoleName Team role name.
      */
     public void setTeamRoleName(String TeamRoleName) {
         this.TeamRoleName = TeamRoleName;
     }
 
     /**
-     * Get Specifies the team role ID. 
-     * @return TeamRoleId Specifies the team role ID.
+     * Get Team role ID. 
+     * @return TeamRoleId Team role ID.
      */
     public Long getTeamRoleId() {
         return this.TeamRoleId;
     }
 
     /**
-     * Set Specifies the team role ID.
-     * @param TeamRoleId Specifies the team role ID.
+     * Set Team role ID.
+     * @param TeamRoleId Team role ID.
      */
     public void setTeamRoleId(Long TeamRoleId) {
         this.TeamRoleId = TeamRoleId;
     }
 
     /**
-     * Get Whether it is editable 
-     * @return CanEdit Whether it is editable
+     * Get Whether it can be edited. 
+     * @return CanEdit Whether it can be edited.
      */
     public Boolean getCanEdit() {
         return this.CanEdit;
     }
 
     /**
-     * Set Whether it is editable
-     * @param CanEdit Whether it is editable
+     * Set Whether it can be edited.
+     * @param CanEdit Whether it can be edited.
      */
     public void setCanEdit(Boolean CanEdit) {
         this.CanEdit = CanEdit;

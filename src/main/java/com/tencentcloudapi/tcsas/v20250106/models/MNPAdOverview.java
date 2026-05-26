@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MNPAdOverview extends AbstractModel {
 
     /**
-    * Estimated revenue
+    * Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("EstimatedEarnings")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String EstimatedEarnings;
 
     /**
-    * Effective Cost Per Mille
+    * eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ECPM")
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ECPM;
 
     /**
-    * Requests
+    * Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("RequestsNumber")
@@ -48,7 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long RequestsNumber;
 
     /**
-    * Impressions
+    * Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Impressions")
@@ -56,7 +56,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long Impressions;
 
     /**
-    * Taps
+    * Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ClicksNumber")
@@ -64,9 +64,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long ClicksNumber;
 
     /**
-     * Get Estimated revenue
+     * Get Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return EstimatedEarnings Estimated revenue
+     * @return EstimatedEarnings Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getEstimatedEarnings() {
@@ -74,9 +74,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Estimated revenue
+     * Set Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EstimatedEarnings Estimated revenue
+     * @param EstimatedEarnings Estimated revenue.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setEstimatedEarnings(String EstimatedEarnings) {
@@ -84,9 +84,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Effective Cost Per Mille
+     * Get eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ECPM Effective Cost Per Mille
+     * @return ECPM eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getECPM() {
@@ -94,9 +94,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Effective Cost Per Mille
+     * Set eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ECPM Effective Cost Per Mille
+     * @param ECPM eCPM (effective cost per mille).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setECPM(String ECPM) {
@@ -104,9 +104,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Requests
+     * Get Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return RequestsNumber Requests
+     * @return RequestsNumber Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getRequestsNumber() {
@@ -114,9 +114,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Requests
+     * Set Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param RequestsNumber Requests
+     * @param RequestsNumber Number of requests.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRequestsNumber(Long RequestsNumber) {
@@ -124,9 +124,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Impressions
+     * Get Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Impressions Impressions
+     * @return Impressions Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getImpressions() {
@@ -134,9 +134,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Impressions
+     * Set Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Impressions Impressions
+     * @param Impressions Number of impressions.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setImpressions(Long Impressions) {
@@ -144,9 +144,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Taps
+     * Get Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ClicksNumber Taps
+     * @return ClicksNumber Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getClicksNumber() {
@@ -154,9 +154,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Taps
+     * Set Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClicksNumber Taps
+     * @param ClicksNumber Number of taps.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setClicksNumber(Long ClicksNumber) {

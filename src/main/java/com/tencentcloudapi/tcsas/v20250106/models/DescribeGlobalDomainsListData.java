@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class DescribeGlobalDomainsListData extends AbstractModel {
 
     /**
-    * Domain ID
+    * Domain ID.
     */
     @SerializedName("DomainId")
     @Expose
     private Long DomainId;
 
     /**
-    * Domain name
+    * Domain name.
     */
     @SerializedName("DomainUrl")
     @Expose
     private String DomainUrl;
 
     /**
-    * Type. 1: allowlist; 2: blocklist.
+    * Domain type. Valid value: 1: Allowed; 2: Blocked.
     */
     @SerializedName("DomainType")
     @Expose
     private Long DomainType;
 
     /**
-    * Creator
+    * Creator.
     */
     @SerializedName("CreateUser")
     @Expose
     private String CreateUser;
 
     /**
-    * Creation time
+    * Creation time.
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Specifies the updater.
+    * Last modifier.
     */
     @SerializedName("UpdateUser")
     @Expose
     private String UpdateUser;
 
     /**
-    * Update time
+    * Last modified time.
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-     * Get Domain ID 
-     * @return DomainId Domain ID
+     * Get Domain ID. 
+     * @return DomainId Domain ID.
      */
     public Long getDomainId() {
         return this.DomainId;
     }
 
     /**
-     * Set Domain ID
-     * @param DomainId Domain ID
+     * Set Domain ID.
+     * @param DomainId Domain ID.
      */
     public void setDomainId(Long DomainId) {
         this.DomainId = DomainId;
     }
 
     /**
-     * Get Domain name 
-     * @return DomainUrl Domain name
+     * Get Domain name. 
+     * @return DomainUrl Domain name.
      */
     public String getDomainUrl() {
         return this.DomainUrl;
     }
 
     /**
-     * Set Domain name
-     * @param DomainUrl Domain name
+     * Set Domain name.
+     * @param DomainUrl Domain name.
      */
     public void setDomainUrl(String DomainUrl) {
         this.DomainUrl = DomainUrl;
     }
 
     /**
-     * Get Type. 1: allowlist; 2: blocklist. 
-     * @return DomainType Type. 1: allowlist; 2: blocklist.
+     * Get Domain type. Valid value: 1: Allowed; 2: Blocked. 
+     * @return DomainType Domain type. Valid value: 1: Allowed; 2: Blocked.
      */
     public Long getDomainType() {
         return this.DomainType;
     }
 
     /**
-     * Set Type. 1: allowlist; 2: blocklist.
-     * @param DomainType Type. 1: allowlist; 2: blocklist.
+     * Set Domain type. Valid value: 1: Allowed; 2: Blocked.
+     * @param DomainType Domain type. Valid value: 1: Allowed; 2: Blocked.
      */
     public void setDomainType(Long DomainType) {
         this.DomainType = DomainType;
     }
 
     /**
-     * Get Creator 
-     * @return CreateUser Creator
+     * Get Creator. 
+     * @return CreateUser Creator.
      */
     public String getCreateUser() {
         return this.CreateUser;
     }
 
     /**
-     * Set Creator
-     * @param CreateUser Creator
+     * Set Creator.
+     * @param CreateUser Creator.
      */
     public void setCreateUser(String CreateUser) {
         this.CreateUser = CreateUser;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get Creation time. 
+     * @return CreateTime Creation time.
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set Creation time.
+     * @param CreateTime Creation time.
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Specifies the updater. 
-     * @return UpdateUser Specifies the updater.
+     * Get Last modifier. 
+     * @return UpdateUser Last modifier.
      */
     public String getUpdateUser() {
         return this.UpdateUser;
     }
 
     /**
-     * Set Specifies the updater.
-     * @param UpdateUser Specifies the updater.
+     * Set Last modifier.
+     * @param UpdateUser Last modifier.
      */
     public void setUpdateUser(String UpdateUser) {
         this.UpdateUser = UpdateUser;
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get Last modified time. 
+     * @return UpdateTime Last modified time.
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set Last modified time.
+     * @param UpdateTime Last modified time.
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;

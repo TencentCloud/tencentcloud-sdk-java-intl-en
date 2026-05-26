@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class APPOverview extends AbstractModel {
 
     /**
-    * No data available
+    * No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BaseData")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private APPOverviewData BaseData;
 
     /**
-    * Superapp overview summary data
+    * Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Overview")
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private APPOverviewData Overview;
 
     /**
-    * No data available
+    * No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PageData")
@@ -48,7 +48,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private APPOverviewData PageData;
 
     /**
-    * No data available
+    * No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Payment")
@@ -56,9 +56,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private APPOverviewData Payment;
 
     /**
-     * Get No data available
+     * Get No description available.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return BaseData No data available
+     * @return BaseData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public APPOverviewData getBaseData() {
@@ -66,9 +66,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set No data available
+     * Set No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param BaseData No data available
+     * @param BaseData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBaseData(APPOverviewData BaseData) {
@@ -76,9 +76,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Superapp overview summary data
+     * Get Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Overview Superapp overview summary data
+     * @return Overview Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public APPOverviewData getOverview() {
@@ -86,9 +86,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Superapp overview summary data
+     * Set Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Overview Superapp overview summary data
+     * @param Overview Superapp overview summary data.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setOverview(APPOverviewData Overview) {
@@ -96,9 +96,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get No data available
+     * Get No description available.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PageData No data available
+     * @return PageData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public APPOverviewData getPageData() {
@@ -106,9 +106,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set No data available
+     * Set No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PageData No data available
+     * @param PageData No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPageData(APPOverviewData PageData) {
@@ -116,9 +116,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get No data available
+     * Get No description available.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Payment No data available
+     * @return Payment No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public APPOverviewData getPayment() {
@@ -126,9 +126,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set No data available
+     * Set No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Payment No data available
+     * @param Payment No description available.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPayment(APPOverviewData Payment) {

@@ -24,51 +24,46 @@ import java.util.HashMap;
 public class AbnormalEvent extends AbstractModel {
 
     /**
-    * The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+    * Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
     */
     @SerializedName("AbnormalEventId")
     @Expose
     private Long AbnormalEventId;
 
     /**
-    * The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
+    * Remote user ID,"": indicates the exception event is not user-generated.
     */
     @SerializedName("PeerId")
     @Expose
     private String PeerId;
 
     /**
-     * Get The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1 
-     * @return AbnormalEventId The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+     * Get Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906) 
+     * @return AbnormalEventId Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
      */
     public Long getAbnormalEventId() {
         return this.AbnormalEventId;
     }
 
     /**
-     * Set The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
-     * @param AbnormalEventId The error event ID. For details, see https://www.tencentcloud.com/document/product/647/37906?has_map=1
+     * Set Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
+     * @param AbnormalEventId Exception event ID. view the specific value in the appendix: abnormal experience ID [mapping table](https://trtc.io/document/37906)
      */
     public void setAbnormalEventId(Long AbnormalEventId) {
         this.AbnormalEventId = AbnormalEventId;
     }
 
     /**
-     * Get The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PeerId The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Get Remote user ID,"": indicates the exception event is not user-generated. 
+     * @return PeerId Remote user ID,"": indicates the exception event is not user-generated.
      */
     public String getPeerId() {
         return this.PeerId;
     }
 
     /**
-     * Set The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PeerId The remote user ID. If this parameter is empty, it indicates that the error event is not associated with a remote user.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * Set Remote user ID,"": indicates the exception event is not user-generated.
+     * @param PeerId Remote user ID,"": indicates the exception event is not user-generated.
      */
     public void setPeerId(String PeerId) {
         this.PeerId = PeerId;

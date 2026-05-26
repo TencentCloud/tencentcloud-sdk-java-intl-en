@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class MNGMAULineChartData extends AbstractModel {
 
     /**
-    * Year-month-date data
+    * Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("DataTime")
@@ -32,7 +32,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long DataTime;
 
     /**
-    * MAU data
+    * MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MAUCount")
@@ -40,16 +40,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MAUCount;
 
     /**
-    * Update time
+    * Last modified time.
     */
     @SerializedName("UpdateTime")
     @Expose
     private Long UpdateTime;
 
     /**
-     * Get Year-month-date data
+     * Get Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return DataTime Year-month-date data
+     * @return DataTime Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getDataTime() {
@@ -57,9 +57,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Year-month-date data
+     * Set Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DataTime Year-month-date data
+     * @param DataTime Date in YYYYMM format. 
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setDataTime(Long DataTime) {
@@ -67,9 +67,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get MAU data
+     * Get MAU count.
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MAUCount MAU data
+     * @return MAUCount MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMAUCount() {
@@ -77,9 +77,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set MAU data
+     * Set MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MAUCount MAU data
+     * @param MAUCount MAU count.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMAUCount(Long MAUCount) {
@@ -87,16 +87,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get Last modified time. 
+     * @return UpdateTime Last modified time.
      */
     public Long getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set Last modified time.
+     * @param UpdateTime Last modified time.
      */
     public void setUpdateTime(Long UpdateTime) {
         this.UpdateTime = UpdateTime;

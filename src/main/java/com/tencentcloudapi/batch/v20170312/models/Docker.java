@@ -24,6 +24,13 @@ import java.util.HashMap;
 public class Docker extends AbstractModel {
 
     /**
+    * For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+    */
+    @SerializedName("Image")
+    @Expose
+    private String Image;
+
+    /**
     * Docker Hub username or Tencent Registry username
     */
     @SerializedName("User")
@@ -36,13 +43,6 @@ public class Docker extends AbstractModel {
     @SerializedName("Password")
     @Expose
     private String Password;
-
-    /**
-    * For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
-    */
-    @SerializedName("Image")
-    @Expose
-    private String Image;
 
     /**
     * For Docker Hub, this can be left blank, but please ensure public network access is present. For Tencent Registry, the server address is "ccr.ccs.tencentyun.com"
@@ -74,6 +74,22 @@ Note: This field may return `null`, indicating that no valid value was found.
     private String DockerRunOption;
 
     /**
+     * Get For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]" 
+     * @return Image For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+     */
+    public String getImage() {
+        return this.Image;
+    }
+
+    /**
+     * Set For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+     * @param Image For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
+     */
+    public void setImage(String Image) {
+        this.Image = Image;
+    }
+
+    /**
      * Get Docker Hub username or Tencent Registry username 
      * @return User Docker Hub username or Tencent Registry username
      */
@@ -103,22 +119,6 @@ Note: This field may return `null`, indicating that no valid value was found.
      */
     public void setPassword(String Password) {
         this.Password = Password;
-    }
-
-    /**
-     * Get For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]" 
-     * @return Image For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
-     */
-    public String getImage() {
-        return this.Image;
-    }
-
-    /**
-     * Set For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
-     * @param Image For Docker Hub, enter "[user/repo]:[tag]"; for Tencent Registry, enter "ccr.ccs.tencentyun.com/[namespace/repo]:[tag]"
-     */
-    public void setImage(String Image) {
-        this.Image = Image;
     }
 
     /**
@@ -197,14 +197,14 @@ Note: This field may return `null`, indicating that no valid value was found.
      *       and any explicit key, i.e Foo, set via .setFoo("value") will be a deep copy.
      */
     public Docker(Docker source) {
+        if (source.Image != null) {
+            this.Image = new String(source.Image);
+        }
         if (source.User != null) {
             this.User = new String(source.User);
         }
         if (source.Password != null) {
             this.Password = new String(source.Password);
-        }
-        if (source.Image != null) {
-            this.Image = new String(source.Image);
         }
         if (source.Server != null) {
             this.Server = new String(source.Server);
@@ -225,9 +225,9 @@ Note: This field may return `null`, indicating that no valid value was found.
      * Internal implementation, normal users should not use it.
      */
     public void toMap(HashMap<String, String> map, String prefix) {
+        this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "User", this.User);
         this.setParamSimple(map, prefix + "Password", this.Password);
-        this.setParamSimple(map, prefix + "Image", this.Image);
         this.setParamSimple(map, prefix + "Server", this.Server);
         this.setParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
         this.setParamSimple(map, prefix + "DelayOnRetry", this.DelayOnRetry);

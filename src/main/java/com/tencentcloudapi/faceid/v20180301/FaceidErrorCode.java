@@ -267,7 +267,7 @@ public enum FaceidErrorCode {
      /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
-     /*  */
+     /* Number of requests exceeds the frequency limit. */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
      /* Unauthorized operation. */
