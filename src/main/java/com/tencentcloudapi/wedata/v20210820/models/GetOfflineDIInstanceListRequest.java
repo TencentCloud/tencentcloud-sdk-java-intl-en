@@ -31,7 +31,7 @@ public class GetOfflineDIInstanceListRequest extends AbstractModel {
     private Long PageIndex;
 
     /**
-    * Number of Items per Page
+    * Number of Items per Page.
     */
     @SerializedName("PageSize")
     @Expose
@@ -68,16 +68,16 @@ public class GetOfflineDIInstanceListRequest extends AbstractModel {
     }
 
     /**
-     * Get Number of Items per Page 
-     * @return PageSize Number of Items per Page
+     * Get Number of Items per Page. 
+     * @return PageSize Number of Items per Page.
      */
     public Long getPageSize() {
         return this.PageSize;
     }
 
     /**
-     * Set Number of Items per Page
-     * @param PageSize Number of Items per Page
+     * Set Number of Items per Page.
+     * @param PageSize Number of Items per Page.
      */
     public void setPageSize(Long PageSize) {
         this.PageSize = PageSize;

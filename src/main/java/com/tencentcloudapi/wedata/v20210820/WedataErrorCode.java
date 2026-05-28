@@ -1,6 +1,6 @@
 package com.tencentcloudapi.wedata.v20210820;
 public enum WedataErrorCode {
-     /* CAM Signature/Authentication Error. */
+     /* CAM signature/authentication error. */
      AUTHFAILURE("AuthFailure"),
      
      /* Not logged in or login has expired. */
@@ -12,13 +12,13 @@ public enum WedataErrorCode {
      /* Dry Run Operation, indicating that the request would be successful, but the DryRun parameter was additionally passed. */
      DRYRUNOPERATION("DryRunOperation"),
      
-     /* Operation Failure. */
+     /* Operation failed. */
      FAILEDOPERATION("FailedOperation"),
      
      /* Query data development resource lock status - Current user does not hold the lock */
      FAILEDOPERATION_NOLOCK("FailedOperation.NoLock"),
      
-     /* An internal error occurs. */
+     /* Internal error. */
      INTERNALERROR("InternalError"),
      
      /* External System Call Exception. */
@@ -57,13 +57,13 @@ public enum WedataErrorCode {
      /* Parameter value error. */
      INVALIDPARAMETERVALUE("InvalidParameterValue"),
      
-     /* Quota limit exceeded. */
+     /* The quota limit is exceeded. */
      LIMITEXCEEDED("LimitExceeded"),
      
-     /* Missing Parameter Error. */
+     /* Parameter missing. */
      MISSINGPARAMETER("MissingParameter"),
      
-     /* Operation Rejected. */
+     /* Operation denied. */
      OPERATIONDENIED("OperationDenied"),
      
      /* The user is not in the allowlist. */
@@ -72,7 +72,7 @@ public enum WedataErrorCode {
      /* The number of requests exceeded the frequency limit. */
      REQUESTLIMITEXCEEDED("RequestLimitExceeded"),
      
-     /* Resource Occupied. */
+     /* The resource is occupied. */
      RESOURCEINUSE("ResourceInUse"),
      
      /* Insufficient resources. */
@@ -87,7 +87,7 @@ public enum WedataErrorCode {
      /* Resources sold out. */
      RESOURCESSOLDOUT("ResourcesSoldOut"),
      
-     /* Unauthorized Operation. */
+     /* Unauthorized operation. */
      UNAUTHORIZEDOPERATION("UnauthorizedOperation"),
      
      /* User is not a member of the current project. */
@@ -96,7 +96,7 @@ public enum WedataErrorCode {
      /* Unknown parameter error. */
      UNKNOWNPARAMETER("UnknownParameter"),
      
-     /* Operation not supported. */
+     /* The operation is not supported. */
      UNSUPPORTEDOPERATION("UnsupportedOperation"),
      
      /* Please configure at least one rule first. */

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class SearchConditionNew extends AbstractModel {
 
     /**
-    * Query Framework, required
+    * Query Framework, required.
     */
     @SerializedName("Instance")
     @Expose
@@ -52,16 +52,16 @@ public class SearchConditionNew extends AbstractModel {
     private String SortCol;
 
     /**
-     * Get Query Framework, required 
-     * @return Instance Query Framework, required
+     * Get Query Framework, required. 
+     * @return Instance Query Framework, required.
      */
     public SearchConditionInstanceNew getInstance() {
         return this.Instance;
     }
 
     /**
-     * Set Query Framework, required
-     * @param Instance Query Framework, required
+     * Set Query Framework, required.
+     * @param Instance Query Framework, required.
      */
     public void setInstance(SearchConditionInstanceNew Instance) {
         this.Instance = Instance;
