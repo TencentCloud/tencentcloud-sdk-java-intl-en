@@ -336,6 +336,17 @@ public class DlcClient extends AbstractClient{
     }
 
     /**
+     *This API is used to create a user role.
+     * @param req CreateUserRoleRequest
+     * @return CreateUserRoleResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateUserRoleResponse CreateUserRole(CreateUserRoleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateUserRole", CreateUserRoleResponse.class);
+    }
+
+    /**
      *This API is used to create working groups.
      * @param req CreateWorkGroupRequest
      * @return CreateWorkGroupResponse

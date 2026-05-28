@@ -229,6 +229,17 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     }
 
     /**
+     *NFC verification service, obtain Token information for the NFC identify request.
+     * @param req GetNFCTokenRequest
+     * @return GetNFCTokenResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetNFCTokenResponse GetNFCToken(GetNFCTokenRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetNFCToken", GetNFCTokenResponse.class);
+    }
+
+    /**
      *This API is used to get the verification result with the corresponding token after the SDK-based verification is completed. The token is valid for three days after issuance and can be called multiple times.
      * @param req GetSdkVerificationResultRequest
      * @return GetSdkVerificationResultResponse
@@ -248,6 +259,17 @@ The data generated with the SDK must be stored in COS, and the region of the COS
     public GetWebVerificationResultIntlResponse GetWebVerificationResultIntl(GetWebVerificationResultIntlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "GetWebVerificationResultIntl", GetWebVerificationResultIntlResponse.class);
+    }
+
+    /**
+     *Obtain document NFC data, input the Token returned by the NFC SDK (valid for 10 minutes), and return the corresponding document information retrieved via NFC. This API supports NFC recognition and verification of ID cards (second-generation resident identity card, Residence Permit for Hong Kong (China) and Macao (China), Residence Permit for Taiwan (China), Permanent Residence Permit for Foreigners) as well as travel documents (exit-entry permit for travelling to and from Hong Kong (China) and Macao (China), Taiwan travel permit, Mainland Travel Permit for Taiwan Residents, Return Home Permit).
+     * @param req GetWxNFCResultRequest
+     * @return GetWxNFCResultResponse
+     * @throws TencentCloudSDKException
+     */
+    public GetWxNFCResultResponse GetWxNFCResult(GetWxNFCResultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GetWxNFCResult", GetWxNFCResultResponse.class);
     }
 
     /**

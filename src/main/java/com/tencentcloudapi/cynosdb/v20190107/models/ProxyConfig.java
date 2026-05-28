@@ -24,184 +24,188 @@ import java.util.HashMap;
 public class ProxyConfig extends AbstractModel {
 
     /**
-    * Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+    * <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
     */
     @SerializedName("ProxyCount")
     @Expose
     private Long ProxyCount;
 
     /**
-    * Number of CPU cores
+    * <p>cpu cores</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory.
+    * <p>Memory</p>
     */
     @SerializedName("Mem")
     @Expose
     private Long Mem;
 
     /**
-    * Connection pool type: SessionConnectionPool (session-level connection pool).
+    * <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
     */
     @SerializedName("ConnectionPoolType")
     @Expose
     private String ConnectionPoolType;
 
     /**
-    * Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
+    * <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
     */
     @SerializedName("OpenConnectionPool")
     @Expose
     private String OpenConnectionPool;
 
     /**
-    * Connection pool threshold. measurement unit (seconds).
+    * <p>Connection pool threshold: Measurement unit (seconds)</p>
     */
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
     private Long ConnectionPoolTimeOut;
 
     /**
-    * Description.
+    * <p>description</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+    * <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
     */
     @SerializedName("ProxyZones")
     @Expose
     private ProxyZone [] ProxyZones;
 
     /**
-     * Get Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones. 
-     * @return ProxyCount Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+     * Get <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p> 
+     * @return ProxyCount <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
+     * @deprecated
      */
+    @Deprecated
     public Long getProxyCount() {
         return this.ProxyCount;
     }
 
     /**
-     * Set Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
-     * @param ProxyCount Number of database proxy group nodes. this parameter is no longer recommended. recommend using ProxyZones.
+     * Set <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
+     * @param ProxyCount <p>Number of database proxy group nodes. This parameter is no longer recommended. Recommend using ProxyZones.</p>
+     * @deprecated
      */
+    @Deprecated
     public void setProxyCount(Long ProxyCount) {
         this.ProxyCount = ProxyCount;
     }
 
     /**
-     * Get Number of CPU cores 
-     * @return Cpu Number of CPU cores
+     * Get <p>cpu cores</p> 
+     * @return Cpu <p>cpu cores</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPU cores
-     * @param Cpu Number of CPU cores
+     * Set <p>cpu cores</p>
+     * @param Cpu <p>cpu cores</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory. 
-     * @return Mem Memory.
+     * Get <p>Memory</p> 
+     * @return Mem <p>Memory</p>
      */
     public Long getMem() {
         return this.Mem;
     }
 
     /**
-     * Set Memory.
-     * @param Mem Memory.
+     * Set <p>Memory</p>
+     * @param Mem <p>Memory</p>
      */
     public void setMem(Long Mem) {
         this.Mem = Mem;
     }
 
     /**
-     * Get Connection pool type: SessionConnectionPool (session-level connection pool). 
-     * @return ConnectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool).
+     * Get <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p> 
+     * @return ConnectionPoolType <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
      */
     public String getConnectionPoolType() {
         return this.ConnectionPoolType;
     }
 
     /**
-     * Set Connection pool type: SessionConnectionPool (session-level connection pool).
-     * @param ConnectionPoolType Connection pool type: SessionConnectionPool (session-level connection pool).
+     * Set <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
+     * @param ConnectionPoolType <p>Connection pool type: SessionConnectionPool (session-level connection pool)</p>
      */
     public void setConnectionPoolType(String ConnectionPoolType) {
         this.ConnectionPoolType = ConnectionPoolType;
     }
 
     /**
-     * Get Whether to enable the connection pool. valid values: yes (enable), no (not enabled). 
-     * @return OpenConnectionPool Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
+     * Get <p>Whether the connection pool is enabled, yes-enable, no-disable</p> 
+     * @return OpenConnectionPool <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
      */
     public String getOpenConnectionPool() {
         return this.OpenConnectionPool;
     }
 
     /**
-     * Set Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
-     * @param OpenConnectionPool Whether to enable the connection pool. valid values: yes (enable), no (not enabled).
+     * Set <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
+     * @param OpenConnectionPool <p>Whether the connection pool is enabled, yes-enable, no-disable</p>
      */
     public void setOpenConnectionPool(String OpenConnectionPool) {
         this.OpenConnectionPool = OpenConnectionPool;
     }
 
     /**
-     * Get Connection pool threshold. measurement unit (seconds). 
-     * @return ConnectionPoolTimeOut Connection pool threshold. measurement unit (seconds).
+     * Get <p>Connection pool threshold: Measurement unit (seconds)</p> 
+     * @return ConnectionPoolTimeOut <p>Connection pool threshold: Measurement unit (seconds)</p>
      */
     public Long getConnectionPoolTimeOut() {
         return this.ConnectionPoolTimeOut;
     }
 
     /**
-     * Set Connection pool threshold. measurement unit (seconds).
-     * @param ConnectionPoolTimeOut Connection pool threshold. measurement unit (seconds).
+     * Set <p>Connection pool threshold: Measurement unit (seconds)</p>
+     * @param ConnectionPoolTimeOut <p>Connection pool threshold: Measurement unit (seconds)</p>
      */
     public void setConnectionPoolTimeOut(Long ConnectionPoolTimeOut) {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
     }
 
     /**
-     * Get Description. 
-     * @return Description Description.
+     * Get <p>description</p> 
+     * @return Description <p>description</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description.
-     * @param Description Description.
+     * Set <p>description</p>
+     * @param Description <p>description</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Database node information (this parameter is used in combination with ProxyCount, either one must be manually input). 
-     * @return ProxyZones Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+     * Get <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p> 
+     * @return ProxyZones <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
      */
     public ProxyZone [] getProxyZones() {
         return this.ProxyZones;
     }
 
     /**
-     * Set Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
-     * @param ProxyZones Database node information (this parameter is used in combination with ProxyCount, either one must be manually input).
+     * Set <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
+     * @param ProxyZones <p>Database node information (this parameter is used in combination with ProxyCount and either one must be input)</p>
      */
     public void setProxyZones(ProxyZone [] ProxyZones) {
         this.ProxyZones = ProxyZones;

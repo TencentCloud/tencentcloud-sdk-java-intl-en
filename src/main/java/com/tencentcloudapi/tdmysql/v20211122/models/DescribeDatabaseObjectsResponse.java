@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class DescribeDatabaseObjectsResponse extends AbstractModel {
 
     /**
-    * Passthrough input parameter.
+    * <p>Passthrough input parameter.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Database name.
+    * <p>Database name.</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-    * Table list.
+    * <p>Table list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Tables")
@@ -46,7 +46,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DatabaseTable [] Tables;
 
     /**
-    * View list.
+    * <p>View list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Views")
@@ -54,7 +54,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DatabaseView [] Views;
 
     /**
-    * Stored procedure list.
+    * <p>Stored procedure list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Procs")
@@ -62,7 +62,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private DatabaseProcedure [] Procs;
 
     /**
-    * Function list.
+    * <p>Function list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Funcs")
@@ -77,41 +77,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Passthrough input parameter. 
-     * @return InstanceId Passthrough input parameter.
+     * Get <p>Passthrough input parameter.</p> 
+     * @return InstanceId <p>Passthrough input parameter.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Passthrough input parameter.
-     * @param InstanceId Passthrough input parameter.
+     * Set <p>Passthrough input parameter.</p>
+     * @param InstanceId <p>Passthrough input parameter.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Database name. 
-     * @return DbName Database name.
+     * Get <p>Database name.</p> 
+     * @return DbName <p>Database name.</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set Database name.
-     * @param DbName Database name.
+     * Set <p>Database name.</p>
+     * @param DbName <p>Database name.</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
     }
 
     /**
-     * Get Table list.
+     * Get <p>Table list.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Tables Table list.
+     * @return Tables <p>Table list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DatabaseTable [] getTables() {
@@ -119,9 +119,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Table list.
+     * Set <p>Table list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Tables Table list.
+     * @param Tables <p>Table list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTables(DatabaseTable [] Tables) {
@@ -129,9 +129,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get View list.
+     * Get <p>View list.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Views View list.
+     * @return Views <p>View list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DatabaseView [] getViews() {
@@ -139,9 +139,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set View list.
+     * Set <p>View list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Views View list.
+     * @param Views <p>View list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setViews(DatabaseView [] Views) {
@@ -149,9 +149,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Stored procedure list.
+     * Get <p>Stored procedure list.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Procs Stored procedure list.
+     * @return Procs <p>Stored procedure list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DatabaseProcedure [] getProcs() {
@@ -159,9 +159,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Stored procedure list.
+     * Set <p>Stored procedure list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Procs Stored procedure list.
+     * @param Procs <p>Stored procedure list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setProcs(DatabaseProcedure [] Procs) {
@@ -169,9 +169,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Function list.
+     * Get <p>Function list.</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Funcs Function list.
+     * @return Funcs <p>Function list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public DatabaseFunction [] getFuncs() {
@@ -179,9 +179,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Function list.
+     * Set <p>Function list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Funcs Function list.
+     * @param Funcs <p>Function list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFuncs(DatabaseFunction [] Funcs) {

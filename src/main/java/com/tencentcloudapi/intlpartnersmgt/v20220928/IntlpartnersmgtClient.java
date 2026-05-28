@@ -259,6 +259,17 @@ Invocation roles: reseller, first-level distributor.
     }
 
     /**
+     *Cost analysis API advanced filtering
+     * @param req DescribeCustomerOwnCostExplorerFilterRequest
+     * @return DescribeCustomerOwnCostExplorerFilterResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeCustomerOwnCostExplorerFilterResponse DescribeCustomerOwnCostExplorerFilter(DescribeCustomerOwnCostExplorerFilterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeCustomerOwnCostExplorerFilter", DescribeCustomerOwnCostExplorerFilterResponse.class);
+    }
+
+    /**
      *This API is used to query the voucher list by Customer. 
 Callable roles: Customer.
      * @param req DescribeCustomerOwnVoucherListRequest

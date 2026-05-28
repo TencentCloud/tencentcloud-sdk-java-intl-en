@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class ModifyDBSBackupPolicyResponse extends AbstractModel {
 
     /**
-    * Success status.
+    * <p>Whether it is successful</p>
     */
     @SerializedName("IsSuccess")
     @Expose
     private Boolean IsSuccess;
 
     /**
-    * Message.
+    * <p>Message</p>
     */
     @SerializedName("Msg")
     @Expose
@@ -45,32 +45,32 @@ public class ModifyDBSBackupPolicyResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Success status. 
-     * @return IsSuccess Success status.
+     * Get <p>Whether it is successful</p> 
+     * @return IsSuccess <p>Whether it is successful</p>
      */
     public Boolean getIsSuccess() {
         return this.IsSuccess;
     }
 
     /**
-     * Set Success status.
-     * @param IsSuccess Success status.
+     * Set <p>Whether it is successful</p>
+     * @param IsSuccess <p>Whether it is successful</p>
      */
     public void setIsSuccess(Boolean IsSuccess) {
         this.IsSuccess = IsSuccess;
     }
 
     /**
-     * Get Message. 
-     * @return Msg Message.
+     * Get <p>Message</p> 
+     * @return Msg <p>Message</p>
      */
     public String getMsg() {
         return this.Msg;
     }
 
     /**
-     * Set Message.
-     * @param Msg Message.
+     * Set <p>Message</p>
+     * @param Msg <p>Message</p>
      */
     public void setMsg(String Msg) {
         this.Msg = Msg;

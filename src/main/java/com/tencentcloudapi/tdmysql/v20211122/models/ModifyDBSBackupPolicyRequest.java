@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class ModifyDBSBackupPolicyRequest extends AbstractModel {
 
     /**
-    * Backup policy.
+    * <p>Backup policy</p>
     */
     @SerializedName("BackupPolicy")
     @Expose
     private BackupPolicyModelInput BackupPolicy;
 
     /**
-    * Instance ID.
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-     * Get Backup policy. 
-     * @return BackupPolicy Backup policy.
+     * Get <p>Backup policy</p> 
+     * @return BackupPolicy <p>Backup policy</p>
      */
     public BackupPolicyModelInput getBackupPolicy() {
         return this.BackupPolicy;
     }
 
     /**
-     * Set Backup policy.
-     * @param BackupPolicy Backup policy.
+     * Set <p>Backup policy</p>
+     * @param BackupPolicy <p>Backup policy</p>
      */
     public void setBackupPolicy(BackupPolicyModelInput BackupPolicy) {
         this.BackupPolicy = BackupPolicy;
     }
 
     /**
-     * Get Instance ID. 
-     * @return InstanceId Instance ID.
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID.
-     * @param InstanceId Instance ID.
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;

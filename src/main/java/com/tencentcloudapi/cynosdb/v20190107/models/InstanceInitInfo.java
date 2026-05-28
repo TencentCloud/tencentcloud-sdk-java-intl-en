@@ -24,217 +24,207 @@ import java.util.HashMap;
 public class InstanceInitInfo extends AbstractModel {
 
     /**
-    * Instance CPU
+    * <p>Instance cpu</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Instance memory
+    * <p>Instance memory</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Instance type. Valid values:`rw`, `ro`.
+    * <p>Instance type rw/ro</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Number of the instances. Value range: 1-15.
+    * <p>Number of instances, range [1,15]</p>
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * Minimum number of serverless instances. Value range: 1-15.
+    * <p>Minimum count of Serverless instance, range [1,15]</p>
     */
     @SerializedName("MinRoCount")
     @Expose
     private Long MinRoCount;
 
     /**
-    * Maximum number of serverless instances. Value range: 1-15.
+    * <p>Maximum count of Serverless instances, range [1,15]</p>
     */
     @SerializedName("MaxRoCount")
     @Expose
     private Long MaxRoCount;
 
     /**
-    * Minimum specifications for serverless instance
+    * <p>Minimum specification of Serverless instance</p>
     */
     @SerializedName("MinRoCpu")
     @Expose
     private Float MinRoCpu;
 
     /**
-    * Maximum specifications for serverless instance
+    * <p>Maximum specification of Serverless instance</p>
     */
     @SerializedName("MaxRoCpu")
     @Expose
     private Float MaxRoCpu;
 
     /**
-    * Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
+    * <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-     * Get Instance CPU 
-     * @return Cpu Instance CPU
+     * Get <p>Instance cpu</p> 
+     * @return Cpu <p>Instance cpu</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Instance CPU
-     * @param Cpu Instance CPU
+     * Set <p>Instance cpu</p>
+     * @param Cpu <p>Instance cpu</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Instance memory 
-     * @return Memory Instance memory
+     * Get <p>Instance memory</p> 
+     * @return Memory <p>Instance memory</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Instance memory
-     * @param Memory Instance memory
+     * Set <p>Instance memory</p>
+     * @param Memory <p>Instance memory</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Instance type. Valid values:`rw`, `ro`. 
-     * @return InstanceType Instance type. Valid values:`rw`, `ro`.
+     * Get <p>Instance type rw/ro</p> 
+     * @return InstanceType <p>Instance type rw/ro</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. Valid values:`rw`, `ro`.
-     * @param InstanceType Instance type. Valid values:`rw`, `ro`.
+     * Set <p>Instance type rw/ro</p>
+     * @param InstanceType <p>Instance type rw/ro</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Number of the instances. Value range: 1-15. 
-     * @return InstanceCount Number of the instances. Value range: 1-15.
+     * Get <p>Number of instances, range [1,15]</p> 
+     * @return InstanceCount <p>Number of instances, range [1,15]</p>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set Number of the instances. Value range: 1-15.
-     * @param InstanceCount Number of the instances. Value range: 1-15.
+     * Set <p>Number of instances, range [1,15]</p>
+     * @param InstanceCount <p>Number of instances, range [1,15]</p>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get Minimum number of serverless instances. Value range: 1-15. 
-     * @return MinRoCount Minimum number of serverless instances. Value range: 1-15.
+     * Get <p>Minimum count of Serverless instance, range [1,15]</p> 
+     * @return MinRoCount <p>Minimum count of Serverless instance, range [1,15]</p>
      */
     public Long getMinRoCount() {
         return this.MinRoCount;
     }
 
     /**
-     * Set Minimum number of serverless instances. Value range: 1-15.
-     * @param MinRoCount Minimum number of serverless instances. Value range: 1-15.
+     * Set <p>Minimum count of Serverless instance, range [1,15]</p>
+     * @param MinRoCount <p>Minimum count of Serverless instance, range [1,15]</p>
      */
     public void setMinRoCount(Long MinRoCount) {
         this.MinRoCount = MinRoCount;
     }
 
     /**
-     * Get Maximum number of serverless instances. Value range: 1-15. 
-     * @return MaxRoCount Maximum number of serverless instances. Value range: 1-15.
+     * Get <p>Maximum count of Serverless instances, range [1,15]</p> 
+     * @return MaxRoCount <p>Maximum count of Serverless instances, range [1,15]</p>
      */
     public Long getMaxRoCount() {
         return this.MaxRoCount;
     }
 
     /**
-     * Set Maximum number of serverless instances. Value range: 1-15.
-     * @param MaxRoCount Maximum number of serverless instances. Value range: 1-15.
+     * Set <p>Maximum count of Serverless instances, range [1,15]</p>
+     * @param MaxRoCount <p>Maximum count of Serverless instances, range [1,15]</p>
      */
     public void setMaxRoCount(Long MaxRoCount) {
         this.MaxRoCount = MaxRoCount;
     }
 
     /**
-     * Get Minimum specifications for serverless instance 
-     * @return MinRoCpu Minimum specifications for serverless instance
+     * Get <p>Minimum specification of Serverless instance</p> 
+     * @return MinRoCpu <p>Minimum specification of Serverless instance</p>
      */
     public Float getMinRoCpu() {
         return this.MinRoCpu;
     }
 
     /**
-     * Set Minimum specifications for serverless instance
-     * @param MinRoCpu Minimum specifications for serverless instance
+     * Set <p>Minimum specification of Serverless instance</p>
+     * @param MinRoCpu <p>Minimum specification of Serverless instance</p>
      */
     public void setMinRoCpu(Float MinRoCpu) {
         this.MinRoCpu = MinRoCpu;
     }
 
     /**
-     * Get Maximum specifications for serverless instance 
-     * @return MaxRoCpu Maximum specifications for serverless instance
+     * Get <p>Maximum specification of Serverless instance</p> 
+     * @return MaxRoCpu <p>Maximum specification of Serverless instance</p>
      */
     public Float getMaxRoCpu() {
         return this.MaxRoCpu;
     }
 
     /**
-     * Set Maximum specifications for serverless instance
-     * @param MaxRoCpu Maximum specifications for serverless instance
+     * Set <p>Maximum specification of Serverless instance</p>
+     * @param MaxRoCpu <p>Maximum specification of Serverless instance</p>
      */
     public void setMaxRoCpu(Float MaxRoCpu) {
         this.MaxRoCpu = MaxRoCpu;
     }
 
     /**
-     * Get Instance machine type.
-1. common: general.
-2. exclusive: exclusive. 
-     * @return DeviceType Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
+     * Get <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol> 
+     * @return DeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
-     * @param DeviceType Instance machine type.
-1. common: general.
-2. exclusive: exclusive.
+     * Set <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+     * @param DeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

@@ -24,49 +24,118 @@ import java.util.HashMap;
 public class DescribeDatabaseObjectsRequest extends AbstractModel {
 
     /**
-    * Instance ID, for example: tdsql3-42f40429.
+    * <p>Instance ID, such as tdsql3-42f40429.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Database name, obtained via the DescribeDatabases api.
+    * <p>Database name, obtained via the DescribeDatabases API.</p>
     */
     @SerializedName("DbName")
     @Expose
     private String DbName;
 
     /**
-     * Get Instance ID, for example: tdsql3-42f40429. 
-     * @return InstanceId Instance ID, for example: tdsql3-42f40429.
+    * <p>Pagination index</p>
+    */
+    @SerializedName("Offset")
+    @Expose
+    private Long Offset;
+
+    /**
+    * <p>Number of items per page</p>
+    */
+    @SerializedName("Limit")
+    @Expose
+    private Long Limit;
+
+    /**
+    * <p>Table name matching expression</p>
+    */
+    @SerializedName("TableRegexp")
+    @Expose
+    private String TableRegexp;
+
+    /**
+     * Get <p>Instance ID, such as tdsql3-42f40429.</p> 
+     * @return InstanceId <p>Instance ID, such as tdsql3-42f40429.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID, for example: tdsql3-42f40429.
-     * @param InstanceId Instance ID, for example: tdsql3-42f40429.
+     * Set <p>Instance ID, such as tdsql3-42f40429.</p>
+     * @param InstanceId <p>Instance ID, such as tdsql3-42f40429.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Database name, obtained via the DescribeDatabases api. 
-     * @return DbName Database name, obtained via the DescribeDatabases api.
+     * Get <p>Database name, obtained via the DescribeDatabases API.</p> 
+     * @return DbName <p>Database name, obtained via the DescribeDatabases API.</p>
      */
     public String getDbName() {
         return this.DbName;
     }
 
     /**
-     * Set Database name, obtained via the DescribeDatabases api.
-     * @param DbName Database name, obtained via the DescribeDatabases api.
+     * Set <p>Database name, obtained via the DescribeDatabases API.</p>
+     * @param DbName <p>Database name, obtained via the DescribeDatabases API.</p>
      */
     public void setDbName(String DbName) {
         this.DbName = DbName;
+    }
+
+    /**
+     * Get <p>Pagination index</p> 
+     * @return Offset <p>Pagination index</p>
+     */
+    public Long getOffset() {
+        return this.Offset;
+    }
+
+    /**
+     * Set <p>Pagination index</p>
+     * @param Offset <p>Pagination index</p>
+     */
+    public void setOffset(Long Offset) {
+        this.Offset = Offset;
+    }
+
+    /**
+     * Get <p>Number of items per page</p> 
+     * @return Limit <p>Number of items per page</p>
+     */
+    public Long getLimit() {
+        return this.Limit;
+    }
+
+    /**
+     * Set <p>Number of items per page</p>
+     * @param Limit <p>Number of items per page</p>
+     */
+    public void setLimit(Long Limit) {
+        this.Limit = Limit;
+    }
+
+    /**
+     * Get <p>Table name matching expression</p> 
+     * @return TableRegexp <p>Table name matching expression</p>
+     */
+    public String getTableRegexp() {
+        return this.TableRegexp;
+    }
+
+    /**
+     * Set <p>Table name matching expression</p>
+     * @param TableRegexp <p>Table name matching expression</p>
+     */
+    public void setTableRegexp(String TableRegexp) {
+        this.TableRegexp = TableRegexp;
     }
 
     public DescribeDatabaseObjectsRequest() {
@@ -83,6 +152,15 @@ public class DescribeDatabaseObjectsRequest extends AbstractModel {
         if (source.DbName != null) {
             this.DbName = new String(source.DbName);
         }
+        if (source.Offset != null) {
+            this.Offset = new Long(source.Offset);
+        }
+        if (source.Limit != null) {
+            this.Limit = new Long(source.Limit);
+        }
+        if (source.TableRegexp != null) {
+            this.TableRegexp = new String(source.TableRegexp);
+        }
     }
 
 
@@ -92,6 +170,9 @@ public class DescribeDatabaseObjectsRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "InstanceId", this.InstanceId);
         this.setParamSimple(map, prefix + "DbName", this.DbName);
+        this.setParamSimple(map, prefix + "Offset", this.Offset);
+        this.setParamSimple(map, prefix + "Limit", this.Limit);
+        this.setParamSimple(map, prefix + "TableRegexp", this.TableRegexp);
 
     }
 }

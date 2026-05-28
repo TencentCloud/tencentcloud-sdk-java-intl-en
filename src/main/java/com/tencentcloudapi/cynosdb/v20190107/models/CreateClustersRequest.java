@@ -24,1178 +24,1081 @@ import java.util.HashMap;
 public class CreateClustersRequest extends AbstractModel {
 
     /**
-    * AZ
+    * <p>AZ.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * VPC ID
+    * <p>VPC network ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID
+    * <p>Subnet ID</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Database type. Valid values: 
-<li> MYSQL </li>
+    * <p>Database type</p><p>Enumeration value:</p><ul><li>MYSQL: MYSQL</li></ul>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
+    * <p>Database version</p><p>Enumeration value:</p><ul><li>5.7: MySQL 5.7 edition</li><li>8.0: MySQL 8.0 edition</li></ul>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-    * Project ID.
+    * <p>project-ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of normal instance
+    * <p>Required when DbMode is NORMAL or left blank<br>Cpu cores of the regular instance</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * It is required when `DbMode` is set to `NORMAL` or left empty.
-Memory of a non-serverless instance in GB
+    * <p>Required when DbMode is NORMAL or left blank<br>Ordinary instance memory in GB</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+    * <p>Instance count</p><p>Value ranges from [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n refers to one rw instance + n-1 ro instances (identical specifications).</li><li>For a more precise cluster composition collocation, please use InstanceInitInfos.</li><li>The value set by this parameter is suitable for provisioned resource cluster. If needed to set the specifications and quantity of Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul>
     */
     @SerializedName("InstanceCount")
     @Expose
     private Long InstanceCount;
 
     /**
-    * This parameter has been deprecated.
-Storage capacity in GB
+    * <p>This parameter is meaningless and abandoned.<br>Storage size, in GB.</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
+    * <p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
+    * <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
     */
     @SerializedName("AdminPassword")
     @Expose
     private String AdminPassword;
 
     /**
-    * Port. Valid range: [0, 65535). Default value: 3306
+    * <p>Port, default 3306, in the range of [0, 65535)</p>
     */
     @SerializedName("Port")
     @Expose
     private Long Port;
 
     /**
-    * Billing mode. supported values: 0 and 1. default value: 0.
-Value is 0, indicating pay-as-you-go billing.
-Value is 1, which means yearly/monthly subscription.
+    * <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Number of purchased clusters. Valid range: [1,50]. Default value: 1
+    * <p>Number of clusters to purchase. Optional value range: [1,50]. Default is 1.</p>
     */
     @SerializedName("Count")
     @Expose
     private Long Count;
 
     /**
-    * Rollback type:
-noneRollback: no rollback;
-snapRollback: rollback by snapshot;
-timeRollback: rollback by time point
+    * <p>Rollback type</p><p>Enumeration value:</p><ul><li>noneRollback: No rollback</li><li>snapRollback: Snapshot rollback</li><li>timeRollback: Point-in-time rollback</li></ul>
     */
     @SerializedName("RollbackStrategy")
     @Expose
     private String RollbackStrategy;
 
     /**
-    * `snapshotId` for snapshot rollback or `queryId` for time point rollback. 0 indicates to determine whether the time point is valid
+    * <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
     */
     @SerializedName("RollbackId")
     @Expose
     private Long RollbackId;
 
     /**
-    * The source cluster ID passed in during rollback to find the source `poolId`
+    * <p>During rollback, input the source cluster ID to search for the source poolId</p>
     */
     @SerializedName("OriginalClusterId")
     @Expose
     private String OriginalClusterId;
 
     /**
-    * Specified time for time point rollback or snapshot time for snapshot rollback
+    * <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
     */
     @SerializedName("ExpectTime")
     @Expose
     private String ExpectTime;
 
     /**
-    * This parameter has been deprecated.
-Specified allowed time range for time point rollback
+    * <p>This parameter is meaningless and abandoned.<br>Point-in-time rollback, allowed range of specified time.</p>
     */
     @SerializedName("ExpectTimeThresh")
     @Expose
     private Long ExpectTimeThresh;
 
     /**
-    * Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
+    * <p>Ordinary instance storage cap, in GB<br>When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.</p>
     */
     @SerializedName("StorageLimit")
     @Expose
     private Long StorageLimit;
 
     /**
-    * Purchase duration of yearly/monthly subscription plan
+    * <p>Annual and monthly subscription duration</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
+    * <p>Annual and monthly subscription duration unit, ['s', 'd', 'm', 'y']</p>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
-0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
+    * <p>Whether Annual/Monthly Subscription is auto-renewed</p><p>Enumeration value:</p><ul><li>0: Default renewal method</li><li>1: Auto-renewal</li><li>2: No auto-renewal</li></ul><p>Default value: 0</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
+    * <p>Whether to automatically select voucher 1 Yes 0 No Default value: 0</p><p>Enumeration value:</p><ul><li>1: Yes</li><li>0: No</li></ul><p>Default value: 0</p>
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * Number of instances (this parameter has been disused and is retained only for compatibility with existing instances)
+    * <p>Instance count (this parameter is deprecated and only for existing accommodative)</p>
     */
     @SerializedName("HaCount")
     @Expose
     private Long HaCount;
 
     /**
-    * Order source
+    * <p>Order source</p>
     */
     @SerializedName("OrderSource")
     @Expose
     private String OrderSource;
 
     /**
-    * Array of tags to be bound to the created cluster
+    * <p>tag Array info that should be bound for cluster creation</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * Database type
-Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+    * <p>Db type</p><p>Enumeration value:</p><ul><li>NORMAL: NORMAL instance</li><li>SERVERLESS: SERVERLESS instance</li></ul><p>Default value: NORMAL</p><p>Selectable when DbType is MYSQL (default NORMAL)</p>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * This parameter is required if `DbMode` is `SERVERLESS`.
-Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+    * <p>Required when DbMode is SERVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * This parameter is required if `DbMode` is `SERVERLESS`.
-Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+    * <p>Required when DbMode is SERVERLESS:<br>Maximum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs.</p>
     */
     @SerializedName("MaxCpu")
     @Expose
     private Float MaxCpu;
 
     /**
-    * This parameter specifies whether the cluster will be automatically paused if `DbMode` is `SERVERLESS`. Valid values:
-<li>yes</li>
-<li>no</li>
-Default value: yes
+    * <p>No auto pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: yes</p><p>Take effect when DbMode is SERVERLESS</p>
     */
     @SerializedName("AutoPause")
     @Expose
     private String AutoPause;
 
     /**
-    * This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: `600`
+    * <p>When DbMode is SERVERLESS, specify the delay for Cluster Auto-Pause in seconds. Optional range: [600,691200]<br>Default value: 600</p>
     */
     @SerializedName("AutoPauseDelay")
     @Expose
     private Long AutoPauseDelay;
 
     /**
-    * The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
+    * <p>The storage billing mode of the cluster. Pay-As-You-Go: 0, Monthly Subscription: 1. Default is Pay-As-You-Go.<br>When DbType is MYSQL and the compute billing mode of the cluster is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be Pay-As-You-Go.<br>Rollback and clone do not support Monthly Subscription storage.</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private Long StoragePayMode;
 
     /**
-    * Array of security group IDs
+    * <p>Security group id array</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Array of alarm policy IDs
+    * <p>Alarm policy Id array</p>
     */
     @SerializedName("AlarmPolicyIds")
     @Expose
     private String [] AlarmPolicyIds;
 
     /**
-    * Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+    * <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive</p>
     */
     @SerializedName("ClusterParams")
     @Expose
     private ParamItem [] ClusterParams;
 
     /**
-    * Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+    * <p>Transaction mode</p><p>Enumeration value:</p><ul><li>0: Place order and pay</li><li>1: Place order</li></ul><p>Default value: 0</p>
     */
     @SerializedName("DealMode")
     @Expose
     private Long DealMode;
 
     /**
-    * Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
+    * <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private Long ParamTemplateId;
 
     /**
-    * Multi-AZ address
+    * <p>Multi-AZ address</p>
     */
     @SerializedName("SlaveZone")
     @Expose
     private String SlaveZone;
 
     /**
-    * Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
+    * <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
     */
     @SerializedName("InstanceInitInfos")
     @Expose
     private InstanceInitInfo [] InstanceInitInfos;
 
     /**
-    * Global database unique identifier.
+    * <p>Global database unique ID</p>
     */
     @SerializedName("GdnId")
     @Expose
     private String GdnId;
 
     /**
-    * Database proxy configuration.
+    * <p>Database proxy configuration</p>
     */
     @SerializedName("ProxyConfig")
     @Expose
     private ProxyConfig ProxyConfig;
 
     /**
-    * Automatically archive.
+    * <p>Auto archive or not</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: no</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p>
     */
     @SerializedName("AutoArchive")
     @Expose
     private String AutoArchive;
 
     /**
-    * Archiving processing time after pausing.
+    * <p>Archiving processing time after pausing</p><p>Measurement unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS.</p>
     */
     @SerializedName("AutoArchiveDelayHours")
     @Expose
     private Long AutoArchiveDelayHours;
 
     /**
-    * Kernel minor version number.
+    * <p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p>
+    */
+    @SerializedName("ClusterLevel")
+    @Expose
+    private String ClusterLevel;
+
+    /**
+    * <p>Kernel minor version</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-     * Get AZ 
-     * @return Zone AZ
+     * Get <p>AZ.</p> 
+     * @return Zone <p>AZ.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ
-     * @param Zone AZ
+     * Set <p>AZ.</p>
+     * @param Zone <p>AZ.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get <p>VPC network ID</p> 
+     * @return VpcId <p>VPC network ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set <p>VPC network ID</p>
+     * @param VpcId <p>VPC network ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get <p>Subnet ID</p> 
+     * @return SubnetId <p>Subnet ID</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set <p>Subnet ID</p>
+     * @param SubnetId <p>Subnet ID</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Database type. Valid values: 
-<li> MYSQL </li> 
-     * @return DbType Database type. Valid values: 
-<li> MYSQL </li>
+     * Get <p>Database type</p><p>Enumeration value:</p><ul><li>MYSQL: MYSQL</li></ul> 
+     * @return DbType <p>Database type</p><p>Enumeration value:</p><ul><li>MYSQL: MYSQL</li></ul>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Database type. Valid values: 
-<li> MYSQL </li>
-     * @param DbType Database type. Valid values: 
-<li> MYSQL </li>
+     * Set <p>Database type</p><p>Enumeration value:</p><ul><li>MYSQL: MYSQL</li></ul>
+     * @param DbType <p>Database type</p><p>Enumeration value:</p><ul><li>MYSQL: MYSQL</li></ul>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 and 8.0 </li> 
-     * @return DbVersion Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
+     * Get <p>Database version</p><p>Enumeration value:</p><ul><li>5.7: MySQL 5.7 edition</li><li>8.0: MySQL 8.0 edition</li></ul> 
+     * @return DbVersion <p>Database version</p><p>Enumeration value:</p><ul><li>5.7: MySQL 5.7 edition</li><li>8.0: MySQL 8.0 edition</li></ul>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
-     * @param DbVersion Database version. Valid values: 
-<li> Valid values for `MYSQL`: 5.7 and 8.0 </li>
+     * Set <p>Database version</p><p>Enumeration value:</p><ul><li>5.7: MySQL 5.7 edition</li><li>8.0: MySQL 8.0 edition</li></ul>
+     * @param DbVersion <p>Database version</p><p>Enumeration value:</p><ul><li>5.7: MySQL 5.7 edition</li><li>8.0: MySQL 8.0 edition</li></ul>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
     }
 
     /**
-     * Get Project ID. 
-     * @return ProjectId Project ID.
+     * Get <p>project-ID</p> 
+     * @return ProjectId <p>project-ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID.
-     * @param ProjectId Project ID.
+     * Set <p>project-ID</p>
+     * @param ProjectId <p>project-ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of normal instance 
-     * @return Cpu It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of normal instance
+     * Get <p>Required when DbMode is NORMAL or left blank<br>Cpu cores of the regular instance</p> 
+     * @return Cpu <p>Required when DbMode is NORMAL or left blank<br>Cpu cores of the regular instance</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of normal instance
-     * @param Cpu It is required when `DbMode` is set to `NORMAL` or left empty.
-Number of CPU cores of normal instance
+     * Set <p>Required when DbMode is NORMAL or left blank<br>Cpu cores of the regular instance</p>
+     * @param Cpu <p>Required when DbMode is NORMAL or left blank<br>Cpu cores of the regular instance</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get It is required when `DbMode` is set to `NORMAL` or left empty.
-Memory of a non-serverless instance in GB 
-     * @return Memory It is required when `DbMode` is set to `NORMAL` or left empty.
-Memory of a non-serverless instance in GB
+     * Get <p>Required when DbMode is NORMAL or left blank<br>Ordinary instance memory in GB</p> 
+     * @return Memory <p>Required when DbMode is NORMAL or left blank<br>Ordinary instance memory in GB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set It is required when `DbMode` is set to `NORMAL` or left empty.
-Memory of a non-serverless instance in GB
-     * @param Memory It is required when `DbMode` is set to `NORMAL` or left empty.
-Memory of a non-serverless instance in GB
+     * Set <p>Required when DbMode is NORMAL or left blank<br>Ordinary instance memory in GB</p>
+     * @param Memory <p>Required when DbMode is NORMAL or left blank<br>Ordinary instance memory in GB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos. 
-     * @return InstanceCount Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+     * Get <p>Instance count</p><p>Value ranges from [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n refers to one rw instance + n-1 ro instances (identical specifications).</li><li>For a more precise cluster composition collocation, please use InstanceInitInfos.</li><li>The value set by this parameter is suitable for provisioned resource cluster. If needed to set the specifications and quantity of Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul> 
+     * @return InstanceCount <p>Instance count</p><p>Value ranges from [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n refers to one rw instance + n-1 ro instances (identical specifications).</li><li>For a more precise cluster composition collocation, please use InstanceInitInfos.</li><li>The value set by this parameter is suitable for provisioned resource cluster. If needed to set the specifications and quantity of Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul>
      */
     public Long getInstanceCount() {
         return this.InstanceCount;
     }
 
     /**
-     * Set Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
-     * @param InstanceCount Instance count. valid values: a quantity range from 0 to 16. the default value is 2 (that is, one rw instance + one ro instance). the transmitted n represents 1 rw instance + (n - 1) ro instances (with identical specifications). if a more precise cluster composition collocation is required, please use InstanceInitInfos.
+     * Set <p>Instance count</p><p>Value ranges from [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n refers to one rw instance + n-1 ro instances (identical specifications).</li><li>For a more precise cluster composition collocation, please use InstanceInitInfos.</li><li>The value set by this parameter is suitable for provisioned resource cluster. If needed to set the specifications and quantity of Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul>
+     * @param InstanceCount <p>Instance count</p><p>Value ranges from [1, 16]</p><p>Default value: 2</p><ul><li>A value of 2 means one rw instance + one ro instance.</li><li>The transmitted n refers to one rw instance + n-1 ro instances (identical specifications).</li><li>For a more precise cluster composition collocation, please use InstanceInitInfos.</li><li>The value set by this parameter is suitable for provisioned resource cluster. If needed to set the specifications and quantity of Serverless cluster, please use the InstanceInitInfo structure in InstanceInitInfos.n.</li></ul>
      */
     public void setInstanceCount(Long InstanceCount) {
         this.InstanceCount = InstanceCount;
     }
 
     /**
-     * Get This parameter has been deprecated.
-Storage capacity in GB 
-     * @return Storage This parameter has been deprecated.
-Storage capacity in GB
+     * Get <p>This parameter is meaningless and abandoned.<br>Storage size, in GB.</p> 
+     * @return Storage <p>This parameter is meaningless and abandoned.<br>Storage size, in GB.</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set This parameter has been deprecated.
-Storage capacity in GB
-     * @param Storage This parameter has been deprecated.
-Storage capacity in GB
+     * Set <p>This parameter is meaningless and abandoned.<br>Storage size, in GB.</p>
+     * @param Storage <p>This parameter is meaningless and abandoned.<br>Storage size, in GB.</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get Cluster name, which can contain less than 64 letters, digits, or symbols (-_.). 
-     * @return ClusterName Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
+     * Get <p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p> 
+     * @return ClusterName <p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
-     * @param ClusterName Cluster name, which can contain less than 64 letters, digits, or symbols (-_.).
+     * Set <p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
+     * @param ClusterName <p>Cluster name, length less than 64 characters, each character value ranges from uppercase/lowercase letters, digits, special symbols ('-', '_', '.')</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/). 
-     * @return AdminPassword Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
+     * Get <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p> 
+     * @return AdminPassword <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
      */
     public String getAdminPassword() {
         return this.AdminPassword;
     }
 
     /**
-     * Set Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
-     * @param AdminPassword Account password, which must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).
+     * Set <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
+     * @param AdminPassword <p>Account (8-64 characters, a combination of uppercase and lowercase letters, digits and symbols ~!@#$%^&amp;*_-+=`|(){}[]:;&#39;&lt;&gt;,.?/ with any three types required)</p>
      */
     public void setAdminPassword(String AdminPassword) {
         this.AdminPassword = AdminPassword;
     }
 
     /**
-     * Get Port. Valid range: [0, 65535). Default value: 3306 
-     * @return Port Port. Valid range: [0, 65535). Default value: 3306
+     * Get <p>Port, default 3306, in the range of [0, 65535)</p> 
+     * @return Port <p>Port, default 3306, in the range of [0, 65535)</p>
      */
     public Long getPort() {
         return this.Port;
     }
 
     /**
-     * Set Port. Valid range: [0, 65535). Default value: 3306
-     * @param Port Port. Valid range: [0, 65535). Default value: 3306
+     * Set <p>Port, default 3306, in the range of [0, 65535)</p>
+     * @param Port <p>Port, default 3306, in the range of [0, 65535)</p>
      */
     public void setPort(Long Port) {
         this.Port = Port;
     }
 
     /**
-     * Get Billing mode. supported values: 0 and 1. default value: 0.
-Value is 0, indicating pay-as-you-go billing.
-Value is 1, which means yearly/monthly subscription. 
-     * @return PayMode Billing mode. supported values: 0 and 1. default value: 0.
-Value is 0, indicating pay-as-you-go billing.
-Value is 1, which means yearly/monthly subscription.
+     * Get <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p> 
+     * @return PayMode <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode. supported values: 0 and 1. default value: 0.
-Value is 0, indicating pay-as-you-go billing.
-Value is 1, which means yearly/monthly subscription.
-     * @param PayMode Billing mode. supported values: 0 and 1. default value: 0.
-Value is 0, indicating pay-as-you-go billing.
-Value is 1, which means yearly/monthly subscription.
+     * Set <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p>
+     * @param PayMode <p>Billing mode</p><p>Enumeration value:</p><ul><li>0: Pay-as-you-go billing</li><li>1: Monthly Subscription</li></ul><p>Default value: 0</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Number of purchased clusters. Valid range: [1,50]. Default value: 1 
-     * @return Count Number of purchased clusters. Valid range: [1,50]. Default value: 1
+     * Get <p>Number of clusters to purchase. Optional value range: [1,50]. Default is 1.</p> 
+     * @return Count <p>Number of clusters to purchase. Optional value range: [1,50]. Default is 1.</p>
      */
     public Long getCount() {
         return this.Count;
     }
 
     /**
-     * Set Number of purchased clusters. Valid range: [1,50]. Default value: 1
-     * @param Count Number of purchased clusters. Valid range: [1,50]. Default value: 1
+     * Set <p>Number of clusters to purchase. Optional value range: [1,50]. Default is 1.</p>
+     * @param Count <p>Number of clusters to purchase. Optional value range: [1,50]. Default is 1.</p>
      */
     public void setCount(Long Count) {
         this.Count = Count;
     }
 
     /**
-     * Get Rollback type:
-noneRollback: no rollback;
-snapRollback: rollback by snapshot;
-timeRollback: rollback by time point 
-     * @return RollbackStrategy Rollback type:
-noneRollback: no rollback;
-snapRollback: rollback by snapshot;
-timeRollback: rollback by time point
+     * Get <p>Rollback type</p><p>Enumeration value:</p><ul><li>noneRollback: No rollback</li><li>snapRollback: Snapshot rollback</li><li>timeRollback: Point-in-time rollback</li></ul> 
+     * @return RollbackStrategy <p>Rollback type</p><p>Enumeration value:</p><ul><li>noneRollback: No rollback</li><li>snapRollback: Snapshot rollback</li><li>timeRollback: Point-in-time rollback</li></ul>
      */
     public String getRollbackStrategy() {
         return this.RollbackStrategy;
     }
 
     /**
-     * Set Rollback type:
-noneRollback: no rollback;
-snapRollback: rollback by snapshot;
-timeRollback: rollback by time point
-     * @param RollbackStrategy Rollback type:
-noneRollback: no rollback;
-snapRollback: rollback by snapshot;
-timeRollback: rollback by time point
+     * Set <p>Rollback type</p><p>Enumeration value:</p><ul><li>noneRollback: No rollback</li><li>snapRollback: Snapshot rollback</li><li>timeRollback: Point-in-time rollback</li></ul>
+     * @param RollbackStrategy <p>Rollback type</p><p>Enumeration value:</p><ul><li>noneRollback: No rollback</li><li>snapRollback: Snapshot rollback</li><li>timeRollback: Point-in-time rollback</li></ul>
      */
     public void setRollbackStrategy(String RollbackStrategy) {
         this.RollbackStrategy = RollbackStrategy;
     }
 
     /**
-     * Get `snapshotId` for snapshot rollback or `queryId` for time point rollback. 0 indicates to determine whether the time point is valid 
-     * @return RollbackId `snapshotId` for snapshot rollback or `queryId` for time point rollback. 0 indicates to determine whether the time point is valid
+     * Get <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p> 
+     * @return RollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
      */
     public Long getRollbackId() {
         return this.RollbackId;
     }
 
     /**
-     * Set `snapshotId` for snapshot rollback or `queryId` for time point rollback. 0 indicates to determine whether the time point is valid
-     * @param RollbackId `snapshotId` for snapshot rollback or `queryId` for time point rollback. 0 indicates to determine whether the time point is valid
+     * Set <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+     * @param RollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
      */
     public void setRollbackId(Long RollbackId) {
         this.RollbackId = RollbackId;
     }
 
     /**
-     * Get The source cluster ID passed in during rollback to find the source `poolId` 
-     * @return OriginalClusterId The source cluster ID passed in during rollback to find the source `poolId`
+     * Get <p>During rollback, input the source cluster ID to search for the source poolId</p> 
+     * @return OriginalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
      */
     public String getOriginalClusterId() {
         return this.OriginalClusterId;
     }
 
     /**
-     * Set The source cluster ID passed in during rollback to find the source `poolId`
-     * @param OriginalClusterId The source cluster ID passed in during rollback to find the source `poolId`
+     * Set <p>During rollback, input the source cluster ID to search for the source poolId</p>
+     * @param OriginalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
      */
     public void setOriginalClusterId(String OriginalClusterId) {
         this.OriginalClusterId = OriginalClusterId;
     }
 
     /**
-     * Get Specified time for time point rollback or snapshot time for snapshot rollback 
-     * @return ExpectTime Specified time for time point rollback or snapshot time for snapshot rollback
+     * Get <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p> 
+     * @return ExpectTime <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
      */
     public String getExpectTime() {
         return this.ExpectTime;
     }
 
     /**
-     * Set Specified time for time point rollback or snapshot time for snapshot rollback
-     * @param ExpectTime Specified time for time point rollback or snapshot time for snapshot rollback
+     * Set <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
+     * @param ExpectTime <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
      */
     public void setExpectTime(String ExpectTime) {
         this.ExpectTime = ExpectTime;
     }
 
     /**
-     * Get This parameter has been deprecated.
-Specified allowed time range for time point rollback 
-     * @return ExpectTimeThresh This parameter has been deprecated.
-Specified allowed time range for time point rollback
+     * Get <p>This parameter is meaningless and abandoned.<br>Point-in-time rollback, allowed range of specified time.</p> 
+     * @return ExpectTimeThresh <p>This parameter is meaningless and abandoned.<br>Point-in-time rollback, allowed range of specified time.</p>
      */
     public Long getExpectTimeThresh() {
         return this.ExpectTimeThresh;
     }
 
     /**
-     * Set This parameter has been deprecated.
-Specified allowed time range for time point rollback
-     * @param ExpectTimeThresh This parameter has been deprecated.
-Specified allowed time range for time point rollback
+     * Set <p>This parameter is meaningless and abandoned.<br>Point-in-time rollback, allowed range of specified time.</p>
+     * @param ExpectTimeThresh <p>This parameter is meaningless and abandoned.<br>Point-in-time rollback, allowed range of specified time.</p>
      */
     public void setExpectTimeThresh(Long ExpectTimeThresh) {
         this.ExpectTimeThresh = ExpectTimeThresh;
     }
 
     /**
-     * Get Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications. 
-     * @return StorageLimit Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
+     * Get <p>Ordinary instance storage cap, in GB<br>When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.</p> 
+     * @return StorageLimit <p>Ordinary instance storage cap, in GB<br>When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.</p>
      */
     public Long getStorageLimit() {
         return this.StorageLimit;
     }
 
     /**
-     * Set Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
-     * @param StorageLimit Storage upper limit of normal instance in GB
-If `DbType` is `MYSQL` and the storage billing mode is yearly/monthly subscription, the parameter value can't exceed the maximum storage corresponding to the CPU and memory specifications.
+     * Set <p>Ordinary instance storage cap, in GB<br>When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.</p>
+     * @param StorageLimit <p>Ordinary instance storage cap, in GB<br>When DbType is MYSQL and the storage billing mode is prepaid, this parameter should not exceed the maximum storage specification corresponding to cpu and memory.</p>
      */
     public void setStorageLimit(Long StorageLimit) {
         this.StorageLimit = StorageLimit;
     }
 
     /**
-     * Get Purchase duration of yearly/monthly subscription plan 
-     * @return TimeSpan Purchase duration of yearly/monthly subscription plan
+     * Get <p>Annual and monthly subscription duration</p> 
+     * @return TimeSpan <p>Annual and monthly subscription duration</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Purchase duration of yearly/monthly subscription plan
-     * @param TimeSpan Purchase duration of yearly/monthly subscription plan
+     * Set <p>Annual and monthly subscription duration</p>
+     * @param TimeSpan <p>Annual and monthly subscription duration</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y` 
-     * @return TimeUnit Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
+     * Get <p>Annual and monthly subscription duration unit, ['s', 'd', 'm', 'y']</p> 
+     * @return TimeUnit <p>Annual and monthly subscription duration unit, ['s', 'd', 'm', 'y']</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
-     * @param TimeUnit Duration unit of yearly/monthly subscription. Valid values: `s`, `d`, `m`, `y`
+     * Set <p>Annual and monthly subscription duration unit, ['s', 'd', 'm', 'y']</p>
+     * @param TimeUnit <p>Annual and monthly subscription duration unit, ['s', 'd', 'm', 'y']</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
-0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal. 
-     * @return AutoRenewFlag Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
-0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
+     * Get <p>Whether Annual/Monthly Subscription is auto-renewed</p><p>Enumeration value:</p><ul><li>0: Default renewal method</li><li>1: Auto-renewal</li><li>2: No auto-renewal</li></ul><p>Default value: 0</p> 
+     * @return AutoRenewFlag <p>Whether Annual/Monthly Subscription is auto-renewed</p><p>Enumeration value:</p><ul><li>0: Default renewal method</li><li>1: Auto-renewal</li><li>2: No auto-renewal</li></ul><p>Default value: 0</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
-0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
-     * @param AutoRenewFlag Specifies whether the annual/yearly/monthly subscription is auto-renewed. the default value is 0.
-0 indicates the default renewal method. 1 means auto-renewal. 2 means no auto-renewal.
+     * Set <p>Whether Annual/Monthly Subscription is auto-renewed</p><p>Enumeration value:</p><ul><li>0: Default renewal method</li><li>1: Auto-renewal</li><li>2: No auto-renewal</li></ul><p>Default value: 0</p>
+     * @param AutoRenewFlag <p>Whether Annual/Monthly Subscription is auto-renewed</p><p>Enumeration value:</p><ul><li>0: Default renewal method</li><li>1: Auto-renewal</li><li>2: No auto-renewal</li></ul><p>Default value: 0</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0` 
-     * @return AutoVoucher Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
+     * Get <p>Whether to automatically select voucher 1 Yes 0 No Default value: 0</p><p>Enumeration value:</p><ul><li>1: Yes</li><li>0: No</li></ul><p>Default value: 0</p> 
+     * @return AutoVoucher <p>Whether to automatically select voucher 1 Yes 0 No Default value: 0</p><p>Enumeration value:</p><ul><li>1: Yes</li><li>0: No</li></ul><p>Default value: 0</p>
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
-     * @param AutoVoucher Whether to automatically select a voucher. `1`: yes; `0`: no. Default value: `0`
+     * Set <p>Whether to automatically select voucher 1 Yes 0 No Default value: 0</p><p>Enumeration value:</p><ul><li>1: Yes</li><li>0: No</li></ul><p>Default value: 0</p>
+     * @param AutoVoucher <p>Whether to automatically select voucher 1 Yes 0 No Default value: 0</p><p>Enumeration value:</p><ul><li>1: Yes</li><li>0: No</li></ul><p>Default value: 0</p>
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get Number of instances (this parameter has been disused and is retained only for compatibility with existing instances) 
-     * @return HaCount Number of instances (this parameter has been disused and is retained only for compatibility with existing instances)
+     * Get <p>Instance count (this parameter is deprecated and only for existing accommodative)</p> 
+     * @return HaCount <p>Instance count (this parameter is deprecated and only for existing accommodative)</p>
      */
     public Long getHaCount() {
         return this.HaCount;
     }
 
     /**
-     * Set Number of instances (this parameter has been disused and is retained only for compatibility with existing instances)
-     * @param HaCount Number of instances (this parameter has been disused and is retained only for compatibility with existing instances)
+     * Set <p>Instance count (this parameter is deprecated and only for existing accommodative)</p>
+     * @param HaCount <p>Instance count (this parameter is deprecated and only for existing accommodative)</p>
      */
     public void setHaCount(Long HaCount) {
         this.HaCount = HaCount;
     }
 
     /**
-     * Get Order source 
-     * @return OrderSource Order source
+     * Get <p>Order source</p> 
+     * @return OrderSource <p>Order source</p>
      */
     public String getOrderSource() {
         return this.OrderSource;
     }
 
     /**
-     * Set Order source
-     * @param OrderSource Order source
+     * Set <p>Order source</p>
+     * @param OrderSource <p>Order source</p>
      */
     public void setOrderSource(String OrderSource) {
         this.OrderSource = OrderSource;
     }
 
     /**
-     * Get Array of tags to be bound to the created cluster 
-     * @return ResourceTags Array of tags to be bound to the created cluster
+     * Get <p>tag Array info that should be bound for cluster creation</p> 
+     * @return ResourceTags <p>tag Array info that should be bound for cluster creation</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set Array of tags to be bound to the created cluster
-     * @param ResourceTags Array of tags to be bound to the created cluster
+     * Set <p>tag Array info that should be bound for cluster creation</p>
+     * @param ResourceTags <p>tag Array info that should be bound for cluster creation</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get Database type
-Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
-<li>NORMAL</li>
-<li>SERVERLESS</li> 
-     * @return DbMode Database type
-Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+     * Get <p>Db type</p><p>Enumeration value:</p><ul><li>NORMAL: NORMAL instance</li><li>SERVERLESS: SERVERLESS instance</li></ul><p>Default value: NORMAL</p><p>Selectable when DbType is MYSQL (default NORMAL)</p> 
+     * @return DbMode <p>Db type</p><p>Enumeration value:</p><ul><li>NORMAL: NORMAL instance</li><li>SERVERLESS: SERVERLESS instance</li></ul><p>Default value: NORMAL</p><p>Selectable when DbType is MYSQL (default NORMAL)</p>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Database type
-Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
-<li>NORMAL</li>
-<li>SERVERLESS</li>
-     * @param DbMode Database type
-Valid values when `DbType` is `MYSQL` (default value: `NORMAL`):
-<li>NORMAL</li>
-<li>SERVERLESS</li>
+     * Set <p>Db type</p><p>Enumeration value:</p><ul><li>NORMAL: NORMAL instance</li><li>SERVERLESS: SERVERLESS instance</li></ul><p>Default value: NORMAL</p><p>Selectable when DbType is MYSQL (default NORMAL)</p>
+     * @param DbMode <p>Db type</p><p>Enumeration value:</p><ul><li>NORMAL: NORMAL instance</li><li>SERVERLESS: SERVERLESS instance</li></ul><p>Default value: NORMAL</p><p>Selectable when DbType is MYSQL (default NORMAL)</p>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get This parameter is required if `DbMode` is `SERVERLESS`.
-Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`. 
-     * @return MinCpu This parameter is required if `DbMode` is `SERVERLESS`.
-Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+     * Get <p>Required when DbMode is SERVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p> 
+     * @return MinCpu <p>Required when DbMode is SERVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set This parameter is required if `DbMode` is `SERVERLESS`.
-Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
-     * @param MinCpu This parameter is required if `DbMode` is `SERVERLESS`.
-Minimum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+     * Set <p>Required when DbMode is SERVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+     * @param MinCpu <p>Required when DbMode is SERVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get This parameter is required if `DbMode` is `SERVERLESS`.
-Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`. 
-     * @return MaxCpu This parameter is required if `DbMode` is `SERVERLESS`.
-Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+     * Get <p>Required when DbMode is SERVERLESS:<br>Maximum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs.</p> 
+     * @return MaxCpu <p>Required when DbMode is SERVERLESS:<br>Maximum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs.</p>
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set This parameter is required if `DbMode` is `SERVERLESS`.
-Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
-     * @param MaxCpu This parameter is required if `DbMode` is `SERVERLESS`.
-Maximum number of CPU cores. For the value range, see the returned result of `DescribeServerlessInstanceSpecs`.
+     * Set <p>Required when DbMode is SERVERLESS:<br>Maximum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs.</p>
+     * @param MaxCpu <p>Required when DbMode is SERVERLESS:<br>Maximum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs.</p>
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
     }
 
     /**
-     * Get This parameter specifies whether the cluster will be automatically paused if `DbMode` is `SERVERLESS`. Valid values:
-<li>yes</li>
-<li>no</li>
-Default value: yes 
-     * @return AutoPause This parameter specifies whether the cluster will be automatically paused if `DbMode` is `SERVERLESS`. Valid values:
-<li>yes</li>
-<li>no</li>
-Default value: yes
+     * Get <p>No auto pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: yes</p><p>Take effect when DbMode is SERVERLESS</p> 
+     * @return AutoPause <p>No auto pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: yes</p><p>Take effect when DbMode is SERVERLESS</p>
      */
     public String getAutoPause() {
         return this.AutoPause;
     }
 
     /**
-     * Set This parameter specifies whether the cluster will be automatically paused if `DbMode` is `SERVERLESS`. Valid values:
-<li>yes</li>
-<li>no</li>
-Default value: yes
-     * @param AutoPause This parameter specifies whether the cluster will be automatically paused if `DbMode` is `SERVERLESS`. Valid values:
-<li>yes</li>
-<li>no</li>
-Default value: yes
+     * Set <p>No auto pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: yes</p><p>Take effect when DbMode is SERVERLESS</p>
+     * @param AutoPause <p>No auto pause</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: yes</p><p>Take effect when DbMode is SERVERLESS</p>
      */
     public void setAutoPause(String AutoPause) {
         this.AutoPause = AutoPause;
     }
 
     /**
-     * Get This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: `600` 
-     * @return AutoPauseDelay This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: `600`
+     * Get <p>When DbMode is SERVERLESS, specify the delay for Cluster Auto-Pause in seconds. Optional range: [600,691200]<br>Default value: 600</p> 
+     * @return AutoPauseDelay <p>When DbMode is SERVERLESS, specify the delay for Cluster Auto-Pause in seconds. Optional range: [600,691200]<br>Default value: 600</p>
      */
     public Long getAutoPauseDelay() {
         return this.AutoPauseDelay;
     }
 
     /**
-     * Set This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: `600`
-     * @param AutoPauseDelay This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
-Default value: `600`
+     * Set <p>When DbMode is SERVERLESS, specify the delay for Cluster Auto-Pause in seconds. Optional range: [600,691200]<br>Default value: 600</p>
+     * @param AutoPauseDelay <p>When DbMode is SERVERLESS, specify the delay for Cluster Auto-Pause in seconds. Optional range: [600,691200]<br>Default value: 600</p>
      */
     public void setAutoPauseDelay(Long AutoPauseDelay) {
         this.AutoPauseDelay = AutoPauseDelay;
     }
 
     /**
-     * Get The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back. 
-     * @return StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
+     * Get <p>The storage billing mode of the cluster. Pay-As-You-Go: 0, Monthly Subscription: 1. Default is Pay-As-You-Go.<br>When DbType is MYSQL and the compute billing mode of the cluster is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be Pay-As-You-Go.<br>Rollback and clone do not support Monthly Subscription storage.</p> 
+     * @return StoragePayMode <p>The storage billing mode of the cluster. Pay-As-You-Go: 0, Monthly Subscription: 1. Default is Pay-As-You-Go.<br>When DbType is MYSQL and the compute billing mode of the cluster is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be Pay-As-You-Go.<br>Rollback and clone do not support Monthly Subscription storage.</p>
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
-     * @param StoragePayMode The billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (yearly/monthly subscription). Default value: `0`.
-If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be pay-as-you-go.
-Clusters with storage billed in yearly/monthly subscription can't be cloned or rolled back.
+     * Set <p>The storage billing mode of the cluster. Pay-As-You-Go: 0, Monthly Subscription: 1. Default is Pay-As-You-Go.<br>When DbType is MYSQL and the compute billing mode of the cluster is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be Pay-As-You-Go.<br>Rollback and clone do not support Monthly Subscription storage.</p>
+     * @param StoragePayMode <p>The storage billing mode of the cluster. Pay-As-You-Go: 0, Monthly Subscription: 1. Default is Pay-As-You-Go.<br>When DbType is MYSQL and the compute billing mode of the cluster is postpaid (including DbMode as SERVERLESS), the storage billing mode can only be Pay-As-You-Go.<br>Rollback and clone do not support Monthly Subscription storage.</p>
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get Array of security group IDs 
-     * @return SecurityGroupIds Array of security group IDs
+     * Get <p>Security group id array</p> 
+     * @return SecurityGroupIds <p>Security group id array</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Array of security group IDs
-     * @param SecurityGroupIds Array of security group IDs
+     * Set <p>Security group id array</p>
+     * @param SecurityGroupIds <p>Security group id array</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Array of alarm policy IDs 
-     * @return AlarmPolicyIds Array of alarm policy IDs
+     * Get <p>Alarm policy Id array</p> 
+     * @return AlarmPolicyIds <p>Alarm policy Id array</p>
      */
     public String [] getAlarmPolicyIds() {
         return this.AlarmPolicyIds;
     }
 
     /**
-     * Set Array of alarm policy IDs
-     * @param AlarmPolicyIds Array of alarm policy IDs
+     * Set <p>Alarm policy Id array</p>
+     * @param AlarmPolicyIds <p>Alarm policy Id array</p>
      */
     public void setAlarmPolicyIds(String [] AlarmPolicyIds) {
         this.AlarmPolicyIds = AlarmPolicyIds;
     }
 
     /**
-     * Get Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive). 
-     * @return ClusterParams Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+     * Get <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive</p> 
+     * @return ClusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive</p>
      */
     public ParamItem [] getClusterParams() {
         return this.ClusterParams;
     }
 
     /**
-     * Set Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
-     * @param ClusterParams Array of parameters. Valid values: `character_set_server` (utf8/latin1/gbk/utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+     * Set <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive</p>
+     * @param ClusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive</p>
      */
     public void setClusterParams(ParamItem [] ClusterParams) {
         this.ClusterParams = ClusterParams;
     }
 
     /**
-     * Get Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order) 
-     * @return DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * Get <p>Transaction mode</p><p>Enumeration value:</p><ul><li>0: Place order and pay</li><li>1: Place order</li></ul><p>Default value: 0</p> 
+     * @return DealMode <p>Transaction mode</p><p>Enumeration value:</p><ul><li>0: Place order and pay</li><li>1: Place order</li></ul><p>Default value: 0</p>
      */
     public Long getDealMode() {
         return this.DealMode;
     }
 
     /**
-     * Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
-     * @param DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * Set <p>Transaction mode</p><p>Enumeration value:</p><ul><li>0: Place order and pay</li><li>1: Place order</li></ul><p>Default value: 0</p>
+     * @param DealMode <p>Transaction mode</p><p>Enumeration value:</p><ul><li>0: Place order and pay</li><li>1: Place order</li></ul><p>Default value: 0</p>
      */
     public void setDealMode(Long DealMode) {
         this.DealMode = DealMode;
     }
 
     /**
-     * Get Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates" 
-     * @return ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
+     * Get <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p> 
+     * @return ParamTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
-     * @param ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information "DescribeParamTemplates"
+     * Set <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+     * @param ParamTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get Multi-AZ address 
-     * @return SlaveZone Multi-AZ address
+     * Get <p>Multi-AZ address</p> 
+     * @return SlaveZone <p>Multi-AZ address</p>
      */
     public String getSlaveZone() {
         return this.SlaveZone;
     }
 
     /**
-     * Set Multi-AZ address
-     * @param SlaveZone Multi-AZ address
+     * Set <p>Multi-AZ address</p>
+     * @param SlaveZone <p>Multi-AZ address</p>
      */
     public void setSlaveZone(String SlaveZone) {
         this.SlaveZone = SlaveZone;
     }
 
     /**
-     * Get Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster. 
-     * @return InstanceInitInfos Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
+     * Get <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p> 
+     * @return InstanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
      */
     public InstanceInitInfo [] getInstanceInitInfos() {
         return this.InstanceInitInfos;
     }
 
     /**
-     * Set Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
-     * @param InstanceInitInfos Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
+     * Set <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+     * @param InstanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
      */
     public void setInstanceInitInfos(InstanceInitInfo [] InstanceInitInfos) {
         this.InstanceInitInfos = InstanceInitInfos;
     }
 
     /**
-     * Get Global database unique identifier. 
-     * @return GdnId Global database unique identifier.
+     * Get <p>Global database unique ID</p> 
+     * @return GdnId <p>Global database unique ID</p>
      */
     public String getGdnId() {
         return this.GdnId;
     }
 
     /**
-     * Set Global database unique identifier.
-     * @param GdnId Global database unique identifier.
+     * Set <p>Global database unique ID</p>
+     * @param GdnId <p>Global database unique ID</p>
      */
     public void setGdnId(String GdnId) {
         this.GdnId = GdnId;
     }
 
     /**
-     * Get Database proxy configuration. 
-     * @return ProxyConfig Database proxy configuration.
+     * Get <p>Database proxy configuration</p> 
+     * @return ProxyConfig <p>Database proxy configuration</p>
      */
     public ProxyConfig getProxyConfig() {
         return this.ProxyConfig;
     }
 
     /**
-     * Set Database proxy configuration.
-     * @param ProxyConfig Database proxy configuration.
+     * Set <p>Database proxy configuration</p>
+     * @param ProxyConfig <p>Database proxy configuration</p>
      */
     public void setProxyConfig(ProxyConfig ProxyConfig) {
         this.ProxyConfig = ProxyConfig;
     }
 
     /**
-     * Get Automatically archive. 
-     * @return AutoArchive Automatically archive.
+     * Get <p>Auto archive or not</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: no</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p> 
+     * @return AutoArchive <p>Auto archive or not</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: no</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p>
      */
     public String getAutoArchive() {
         return this.AutoArchive;
     }
 
     /**
-     * Set Automatically archive.
-     * @param AutoArchive Automatically archive.
+     * Set <p>Auto archive or not</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: no</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p>
+     * @param AutoArchive <p>Auto archive or not</p><p>Enumeration value:</p><ul><li>yes: Yes</li><li>no: No</li></ul><p>Default value: no</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS</p>
      */
     public void setAutoArchive(String AutoArchive) {
         this.AutoArchive = AutoArchive;
     }
 
     /**
-     * Get Archiving processing time after pausing. 
-     * @return AutoArchiveDelayHours Archiving processing time after pausing.
+     * Get <p>Archiving processing time after pausing</p><p>Measurement unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS.</p> 
+     * @return AutoArchiveDelayHours <p>Archiving processing time after pausing</p><p>Measurement unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS.</p>
      */
     public Long getAutoArchiveDelayHours() {
         return this.AutoArchiveDelayHours;
     }
 
     /**
-     * Set Archiving processing time after pausing.
-     * @param AutoArchiveDelayHours Archiving processing time after pausing.
+     * Set <p>Archiving processing time after pausing</p><p>Measurement unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS.</p>
+     * @param AutoArchiveDelayHours <p>Archiving processing time after pausing</p><p>Measurement unit: hour</p><p>Default value: 12</p><p>This parameter takes effect only when the primary instance of the current cluster is SERVERLESS.</p>
      */
     public void setAutoArchiveDelayHours(Long AutoArchiveDelayHours) {
         this.AutoArchiveDelayHours = AutoArchiveDelayHours;
     }
 
     /**
-     * Get Kernel minor version number. 
-     * @return CynosVersion Kernel minor version number.
+     * Get <p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p> 
+     * @return ClusterLevel <p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p>
+     */
+    public String getClusterLevel() {
+        return this.ClusterLevel;
+    }
+
+    /**
+     * Set <p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p>
+     * @param ClusterLevel <p>Cluster level, optional. Example: P0, P1. (This field can be ignored)</p>
+     */
+    public void setClusterLevel(String ClusterLevel) {
+        this.ClusterLevel = ClusterLevel;
+    }
+
+    /**
+     * Get <p>Kernel minor version</p> 
+     * @return CynosVersion <p>Kernel minor version</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set Kernel minor version number.
-     * @param CynosVersion Kernel minor version number.
+     * Set <p>Kernel minor version</p>
+     * @param CynosVersion <p>Kernel minor version</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
@@ -1359,6 +1262,9 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
         if (source.AutoArchiveDelayHours != null) {
             this.AutoArchiveDelayHours = new Long(source.AutoArchiveDelayHours);
         }
+        if (source.ClusterLevel != null) {
+            this.ClusterLevel = new String(source.ClusterLevel);
+        }
         if (source.CynosVersion != null) {
             this.CynosVersion = new String(source.CynosVersion);
         }
@@ -1414,6 +1320,7 @@ Clusters with storage billed in yearly/monthly subscription can't be cloned or r
         this.setParamObj(map, prefix + "ProxyConfig.", this.ProxyConfig);
         this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
         this.setParamSimple(map, prefix + "AutoArchiveDelayHours", this.AutoArchiveDelayHours);
+        this.setParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         this.setParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
 
     }

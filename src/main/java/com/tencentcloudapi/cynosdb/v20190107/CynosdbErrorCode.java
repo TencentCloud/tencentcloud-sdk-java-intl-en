@@ -261,7 +261,10 @@ public enum CynosdbErrorCode {
      /* Task creation failed. {{1}} */
      OPERATIONDENIED_CREATETASKANDFLOWERROR("OperationDenied.CreateTaskAndFlowError"),
      
-     /*  */
+     /* Kernel version not supported for the instance */
+     OPERATIONDENIED_CYNOSDBVERSIONNOTSUPPORTERROR("OperationDenied.CynosdbVersionNotSupportError"),
+     
+     /* Multi-AZ deployment functionality for the new storage architecture is not yet available. */
      OPERATIONDENIED_DISABLENEWSTORAGEMULTIZONEDEPLOYMENTERROR("OperationDenied.DisableNewStorageMultiZoneDeploymentError"),
      
      /* Feature {{1}} is not currently supported. */
@@ -297,13 +300,13 @@ public enum CynosdbErrorCode {
      /* Parameter missing, {{1}} */
      OPERATIONDENIED_MISSINGPARAMETERERROR("OperationDenied.MissingParameterError"),
      
-     /*  */
+     /* New storage architecture 2.0 only supports 8.0 */
      OPERATIONDENIED_NEWSTORAGEONLYSUPPORT80ERROR("OperationDenied.NewStorageOnlySupport80Error"),
      
      /* No available resources. */
      OPERATIONDENIED_NOAVALIABLERESOUCEERROR("OperationDenied.NoAvaliableResouceError"),
      
-     /*  */
+     /* Only Storage Architecture 2.0 supports the compression feature */
      OPERATIONDENIED_ONLYNEWSTORAGESUPPORTSTORAGECOMPRESSIONERROR("OperationDenied.OnlyNewStorageSupportStorageCompressionError"),
      
      /* You do not have permission to operate the resource (carry out this operation). */
