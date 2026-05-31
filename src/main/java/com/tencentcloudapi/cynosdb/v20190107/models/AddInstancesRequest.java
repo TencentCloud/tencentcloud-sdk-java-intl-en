@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AddInstancesRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Number of CPU cores
+    * <p>Cpu cores</p>
     */
     @SerializedName("Cpu")
     @Expose
@@ -52,21 +52,28 @@ public class AddInstancesRequest extends AbstractModel {
     private Long ReadOnlyCount;
 
     /**
-    * Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+    * <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
+    * <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
     */
     @SerializedName("InstanceGrpId")
     @Expose
     private String InstanceGrpId;
 
     /**
-    * VPC ID
+    * <p>ID of the associated VPC network.</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID. If `VpcId` is set, `SubnetId` is required.
+    * <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
     */
     @SerializedName("SubnetId")
     @Expose
@@ -87,82 +94,88 @@ public class AddInstancesRequest extends AbstractModel {
     private String InstanceName;
 
     /**
-    * Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+    * <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * Database type. Valid values: 
-<li> MYSQL </li>
+    * <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * Order source. String length range: [0,64).
+    * <p>Order source, string length range [0,64)</p>
     */
     @SerializedName("OrderSource")
     @Expose
     private String OrderSource;
 
     /**
-    * Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+    * <p>Transaction mode. 0: place order and pay; 1: place order</p>
     */
     @SerializedName("DealMode")
     @Expose
     private Long DealMode;
 
     /**
-    * Parameter template ID
+    * <p>Parameter template ID</p>
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private Long ParamTemplateId;
 
     /**
-    * Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+    * <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
     */
     @SerializedName("InstanceParams")
     @Expose
     private ModifyParamItem [] InstanceParams;
 
     /**
-    * Security group ID. You can specify an security group when creating a read-only instance.
+    * <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+    * <p>proxy sync upgrade</p>
+    */
+    @SerializedName("UpgradeProxy")
+    @Expose
+    private UpgradeProxy UpgradeProxy;
+
+    /**
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Number of CPU cores 
-     * @return Cpu Number of CPU cores
+     * Get <p>Cpu cores</p> 
+     * @return Cpu <p>Cpu cores</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPU cores
-     * @param Cpu Number of CPU cores
+     * Set <p>Cpu cores</p>
+     * @param Cpu <p>Cpu cores</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
@@ -201,8 +214,24 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused. 
-     * @return InstanceGrpId Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+     * Get <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul> 
+     * @return DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+     * @param DeviceType <p>Instance Machine Type. Supported values are as follows:</p><ul><li>common: indicates universal type</li><li>exclusive: indicates exclusive</li></ul>
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
+    }
+
+    /**
+     * Get <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p> 
+     * @return InstanceGrpId <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
      * @deprecated
      */
     @Deprecated
@@ -211,8 +240,8 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Set Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
-     * @param InstanceGrpId Instance group ID, which will be used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created. But it is not recommended to pass in this parameter for the current version, as this version has been disused.
+     * Set <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+     * @param InstanceGrpId <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
      * @deprecated
      */
     @Deprecated
@@ -221,32 +250,32 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get <p>ID of the associated VPC network.</p> 
+     * @return VpcId <p>ID of the associated VPC network.</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set <p>ID of the associated VPC network.</p>
+     * @param VpcId <p>ID of the associated VPC network.</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID. If `VpcId` is set, `SubnetId` is required. 
-     * @return SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required.
+     * Get <p>Subnet ID. If VpcId is set up, SubnetId is required.</p> 
+     * @return SubnetId <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID. If `VpcId` is set, `SubnetId` is required.
-     * @param SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required.
+     * Set <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
+     * @param SubnetId <p>Subnet ID. If VpcId is set up, SubnetId is required.</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
@@ -285,119 +314,131 @@ public class AddInstancesRequest extends AbstractModel {
     }
 
     /**
-     * Get Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0 
-     * @return AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+     * Get <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p> 
+     * @return AutoVoucher <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
-     * @param AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
+     * Set <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
+     * @param AutoVoucher <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get Database type. Valid values: 
-<li> MYSQL </li> 
-     * @return DbType Database type. Valid values: 
-<li> MYSQL </li>
+     * Get <p>Database type, value ranges from...to...: </p><li> MYSQL </li> 
+     * @return DbType <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Database type. Valid values: 
-<li> MYSQL </li>
-     * @param DbType Database type. Valid values: 
-<li> MYSQL </li>
+     * Set <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
+     * @param DbType <p>Database type, value ranges from...to...: </p><li> MYSQL </li>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get Order source. String length range: [0,64). 
-     * @return OrderSource Order source. String length range: [0,64).
+     * Get <p>Order source, string length range [0,64)</p> 
+     * @return OrderSource <p>Order source, string length range [0,64)</p>
      */
     public String getOrderSource() {
         return this.OrderSource;
     }
 
     /**
-     * Set Order source. String length range: [0,64).
-     * @param OrderSource Order source. String length range: [0,64).
+     * Set <p>Order source, string length range [0,64)</p>
+     * @param OrderSource <p>Order source, string length range [0,64)</p>
      */
     public void setOrderSource(String OrderSource) {
         this.OrderSource = OrderSource;
     }
 
     /**
-     * Get Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order) 
-     * @return DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * Get <p>Transaction mode. 0: place order and pay; 1: place order</p> 
+     * @return DealMode <p>Transaction mode. 0: place order and pay; 1: place order</p>
      */
     public Long getDealMode() {
         return this.DealMode;
     }
 
     /**
-     * Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
-     * @param DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * Set <p>Transaction mode. 0: place order and pay; 1: place order</p>
+     * @param DealMode <p>Transaction mode. 0: place order and pay; 1: place order</p>
      */
     public void setDealMode(Long DealMode) {
         this.DealMode = DealMode;
     }
 
     /**
-     * Get Parameter template ID 
-     * @return ParamTemplateId Parameter template ID
+     * Get <p>Parameter template ID</p> 
+     * @return ParamTemplateId <p>Parameter template ID</p>
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set Parameter template ID
-     * @param ParamTemplateId Parameter template ID
+     * Set <p>Parameter template ID</p>
+     * @param ParamTemplateId <p>Parameter template ID</p>
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`. 
-     * @return InstanceParams Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+     * Get <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p> 
+     * @return InstanceParams <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
      */
     public ModifyParamItem [] getInstanceParams() {
         return this.InstanceParams;
     }
 
     /**
-     * Set Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
-     * @param InstanceParams Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+     * Set <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
+     * @param InstanceParams <p>Parameter list. InstanceParams is valid only when ParamTemplateId is passed in.</p>
      */
     public void setInstanceParams(ModifyParamItem [] InstanceParams) {
         this.InstanceParams = InstanceParams;
     }
 
     /**
-     * Get Security group ID. You can specify an security group when creating a read-only instance. 
-     * @return SecurityGroupIds Security group ID. You can specify an security group when creating a read-only instance.
+     * Get <p>Security group ID. You can specify security groups when creating a read-only instance.</p> 
+     * @return SecurityGroupIds <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group ID. You can specify an security group when creating a read-only instance.
-     * @param SecurityGroupIds Security group ID. You can specify an security group when creating a read-only instance.
+     * Set <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
+     * @param SecurityGroupIds <p>Security group ID. You can specify security groups when creating a read-only instance.</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
+    }
+
+    /**
+     * Get <p>proxy sync upgrade</p> 
+     * @return UpgradeProxy <p>proxy sync upgrade</p>
+     */
+    public UpgradeProxy getUpgradeProxy() {
+        return this.UpgradeProxy;
+    }
+
+    /**
+     * Set <p>proxy sync upgrade</p>
+     * @param UpgradeProxy <p>proxy sync upgrade</p>
+     */
+    public void setUpgradeProxy(UpgradeProxy UpgradeProxy) {
+        this.UpgradeProxy = UpgradeProxy;
     }
 
     public AddInstancesRequest() {
@@ -419,6 +460,9 @@ public class AddInstancesRequest extends AbstractModel {
         }
         if (source.ReadOnlyCount != null) {
             this.ReadOnlyCount = new Long(source.ReadOnlyCount);
+        }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
         }
         if (source.InstanceGrpId != null) {
             this.InstanceGrpId = new String(source.InstanceGrpId);
@@ -462,6 +506,9 @@ public class AddInstancesRequest extends AbstractModel {
                 this.SecurityGroupIds[i] = new String(source.SecurityGroupIds[i]);
             }
         }
+        if (source.UpgradeProxy != null) {
+            this.UpgradeProxy = new UpgradeProxy(source.UpgradeProxy);
+        }
     }
 
 
@@ -473,6 +520,7 @@ public class AddInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "ReadOnlyCount", this.ReadOnlyCount);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "InstanceGrpId", this.InstanceGrpId);
         this.setParamSimple(map, prefix + "VpcId", this.VpcId);
         this.setParamSimple(map, prefix + "SubnetId", this.SubnetId);
@@ -485,6 +533,7 @@ public class AddInstancesRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         this.setParamArrayObj(map, prefix + "InstanceParams.", this.InstanceParams);
         this.setParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+        this.setParamObj(map, prefix + "UpgradeProxy.", this.UpgradeProxy);
 
     }
 }

@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class TimedMetadataSettingInfo extends AbstractModel {
 
     /**
-    * Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+    * Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
     */
     @SerializedName("Behavior")
     @Expose
     private Long Behavior;
 
     /**
-     * Get Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0. 
-     * @return Behavior Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+     * Get Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0. 
+     * @return Behavior Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
      */
     public Long getBehavior() {
         return this.Behavior;
     }
 
     /**
-     * Set Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
-     * @param Behavior Whether to transparently transmit ID3 information, optional values: 0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+     * Set Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
+     * @param Behavior Whether to pass through ID3 info. Available values:
+0:NO_PASSTHROUGH, 1:PASSTHROUGH, default 0.
      */
     public void setBehavior(Long Behavior) {
         this.Behavior = Behavior;

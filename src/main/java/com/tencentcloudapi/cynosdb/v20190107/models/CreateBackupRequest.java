@@ -59,6 +59,13 @@ public class CreateBackupRequest extends AbstractModel {
     private String BackupName;
 
     /**
+    * 	Message sent to safe
+    */
+    @SerializedName("Vaults")
+    @Expose
+    private CreateBackupVaultItem [] Vaults;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -138,6 +145,22 @@ public class CreateBackupRequest extends AbstractModel {
         this.BackupName = BackupName;
     }
 
+    /**
+     * Get 	Message sent to safe 
+     * @return Vaults 	Message sent to safe
+     */
+    public CreateBackupVaultItem [] getVaults() {
+        return this.Vaults;
+    }
+
+    /**
+     * Set 	Message sent to safe
+     * @param Vaults 	Message sent to safe
+     */
+    public void setVaults(CreateBackupVaultItem [] Vaults) {
+        this.Vaults = Vaults;
+    }
+
     public CreateBackupRequest() {
     }
 
@@ -167,6 +190,12 @@ public class CreateBackupRequest extends AbstractModel {
         if (source.BackupName != null) {
             this.BackupName = new String(source.BackupName);
         }
+        if (source.Vaults != null) {
+            this.Vaults = new CreateBackupVaultItem[source.Vaults.length];
+            for (int i = 0; i < source.Vaults.length; i++) {
+                this.Vaults[i] = new CreateBackupVaultItem(source.Vaults[i]);
+            }
+        }
     }
 
 
@@ -179,6 +208,7 @@ public class CreateBackupRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "BackupDatabases.", this.BackupDatabases);
         this.setParamArrayObj(map, prefix + "BackupTables.", this.BackupTables);
         this.setParamSimple(map, prefix + "BackupName", this.BackupName);
+        this.setParamArrayObj(map, prefix + "Vaults.", this.Vaults);
 
     }
 }

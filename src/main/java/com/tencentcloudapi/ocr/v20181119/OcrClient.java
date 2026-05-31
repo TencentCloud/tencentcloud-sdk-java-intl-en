@@ -612,6 +612,17 @@ A maximum of 20 requests can be initiated per second for this API.
     }
 
     /**
+     *The POD intelligent review deeply integrates multimodal large model image understanding technology, targeting the logistics last-mile delivery scenario to provide high-precision POD compliance audit service. The system auto-recognizes ticket imperfections and risks of non-compliance, helping businesses achieve standardized control in the delivery process and effectively avoid customer complaints and disputes caused by non-compliant credentials.
+     * @param req PODAuditAIRequest
+     * @return PODAuditAIResponse
+     * @throws TencentCloudSDKException
+     */
+    public PODAuditAIResponse PODAuditAI(PODAuditAIRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "PODAuditAI", PODAuditAIResponse.class);
+    }
+
+    /**
      *This API is used to recognize the fields on an exit/entry permit (card) for traveling to and from Hong Kong, Macao, or Taiwan, including place of issuance, issuing authority, validity period, gender, date of birth, name in English, name in Chinese, and document number.
 
 A maximum of 10 requests can be initiated per second for this API.

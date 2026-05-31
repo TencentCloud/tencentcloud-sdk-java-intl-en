@@ -31,19 +31,16 @@ public class StreamLiveOutputGroupsInfo extends AbstractModel {
     private String Name;
 
     /**
-    * Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
+    * Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+    * Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
     */
     @SerializedName("Outputs")
     @Expose
@@ -57,40 +54,35 @@ If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is 
     private DestinationInfo [] Destinations;
 
     /**
-    * HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
+    * HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
     */
     @SerializedName("HlsRemuxSettings")
     @Expose
     private HlsRemuxSettingsInfo HlsRemuxSettings;
 
     /**
-    * DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
+    * DRM configuration message.
     */
     @SerializedName("DrmSettings")
     @Expose
     private DrmSettingsInfo DrmSettings;
 
     /**
-    * DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
+    * DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
     */
     @SerializedName("DashRemuxSettings")
     @Expose
     private DashRemuxSettingsInfo DashRemuxSettings;
 
     /**
-    * StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
+    * Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
     */
     @SerializedName("StreamPackageSettings")
     @Expose
     private StreamPackageSettingsInfo StreamPackageSettings;
 
     /**
-    * Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
+    * Time shift configuration information.
     */
     @SerializedName("TimeShiftSettings")
     @Expose
@@ -113,52 +105,40 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`. 
-     * @return Type Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
+     * Get Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS. 
+     * @return Type Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
-     * @param Type Output protocol
-Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, 
- `DASH_ARCHIVE`, `HLS_STREAM_PACKAGE`, 
- `DASH_STREAM_PACKAGE`, 
- `FRAME_CAPTURE`, `RTP`, `RTMP`, `M2TS`.
+     * Set Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
+     * @param Type Output protocol type.
+Selectable HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_STREAM_PACKAGE/DASH_STREAM_PACKAGE/FRAME_CAPTURE/RTP/RTMP/M2TS.
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed. 
-     * @return Outputs Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+     * Get Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10]. 
+     * @return Outputs Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
      */
     public OutputInfo [] getOutputs() {
         return this.Outputs;
     }
 
     /**
-     * Set Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
-     * @param Outputs Output information
-If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is HLS or DASH, 1-10 outputs are allowed.
+     * Set Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
+     * @param Outputs Output information.
+RTMP/RTP/FRAME_CAPTURE limit [1,1], HLS/DASH limit [1,10].
      */
     public void setOutputs(OutputInfo [] Outputs) {
         this.Outputs = Outputs;
@@ -181,100 +161,80 @@ If the type is RTMP, RTP or FRAME_CAPTURE, only one output is allowed; if it is 
     }
 
     /**
-     * Get HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE. 
+     * @return HlsRemuxSettings HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
      */
     public HlsRemuxSettingsInfo getHlsRemuxSettings() {
         return this.HlsRemuxSettings;
     }
 
     /**
-     * Set HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param HlsRemuxSettings HLS protocol configuration information, which takes effect only for HLS/HLS_ARCHIVE/HLS_STREAM_PACKAGE outputs.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
+     * @param HlsRemuxSettings HLS protocol configuration info, valid only for HLS/HLS_ARCHIVE.
      */
     public void setHlsRemuxSettings(HlsRemuxSettingsInfo HlsRemuxSettings) {
         this.HlsRemuxSettings = HlsRemuxSettings;
     }
 
     /**
-     * Get DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return DrmSettings DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get DRM configuration message. 
+     * @return DrmSettings DRM configuration message.
      */
     public DrmSettingsInfo getDrmSettings() {
         return this.DrmSettings;
     }
 
     /**
-     * Set DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param DrmSettings DRM configuration information
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set DRM configuration message.
+     * @param DrmSettings DRM configuration message.
      */
     public void setDrmSettings(DrmSettingsInfo DrmSettings) {
         this.DrmSettings = DrmSettings;
     }
 
     /**
-     * Get DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return DashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE. 
+     * @return DashRemuxSettings DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
      */
     public DashRemuxSettingsInfo getDashRemuxSettings() {
         return this.DashRemuxSettings;
     }
 
     /**
-     * Set DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param DashRemuxSettings DASH protocol configuration information, which takes effect only for DASH/DASH_ARCHIVE outputs
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
+     * @param DashRemuxSettings DASH protocol configuration info, valid only for DASH/DSAH_ARCHIVE.
      */
     public void setDashRemuxSettings(DashRemuxSettingsInfo DashRemuxSettings) {
         this.DashRemuxSettings = DashRemuxSettings;
     }
 
     /**
-     * Get StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return StreamPackageSettings StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage. 
+     * @return StreamPackageSettings Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
      */
     public StreamPackageSettingsInfo getStreamPackageSettings() {
         return this.StreamPackageSettings;
     }
 
     /**
-     * Set StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param StreamPackageSettings StreamPackage configuration information, which is required if the output type is StreamPackage
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
+     * @param StreamPackageSettings Configuration message for media encapsulation. Requires filling in when Type is related to StreamPackage.
      */
     public void setStreamPackageSettings(StreamPackageSettingsInfo StreamPackageSettings) {
         this.StreamPackageSettings = StreamPackageSettings;
     }
 
     /**
-     * Get Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return TimeShiftSettings Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Time shift configuration information. 
+     * @return TimeShiftSettings Time shift configuration information.
      */
     public TimeShiftSettingsInfo getTimeShiftSettings() {
         return this.TimeShiftSettings;
     }
 
     /**
-     * Set Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param TimeShiftSettings Time-shift configuration information
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Time shift configuration information.
+     * @param TimeShiftSettings Time shift configuration information.
      */
     public void setTimeShiftSettings(TimeShiftSettingsInfo TimeShiftSettings) {
         this.TimeShiftSettings = TimeShiftSettings;

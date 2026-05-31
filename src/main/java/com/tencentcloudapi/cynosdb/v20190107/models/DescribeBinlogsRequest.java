@@ -52,7 +52,7 @@ public class DescribeBinlogsRequest extends AbstractModel {
     private Long Offset;
 
     /**
-    * Maximum number
+    * Limit on the number of records. The default value is 20.
     */
     @SerializedName("Limit")
     @Expose
@@ -123,16 +123,16 @@ public class DescribeBinlogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Maximum number 
-     * @return Limit Maximum number
+     * Get Limit on the number of records. The default value is 20. 
+     * @return Limit Limit on the number of records. The default value is 20.
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number
-     * @param Limit Maximum number
+     * Set Limit on the number of records. The default value is 20.
+     * @param Limit Limit on the number of records. The default value is 20.
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;

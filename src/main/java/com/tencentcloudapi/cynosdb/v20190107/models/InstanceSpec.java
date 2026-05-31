@@ -94,6 +94,20 @@ public class InstanceSpec extends AbstractModel {
     private Long StockCount;
 
     /**
+    * Maximum cpu
+    */
+    @SerializedName("MaxCpu")
+    @Expose
+    private Float MaxCpu;
+
+    /**
+    * Minimum cpu
+    */
+    @SerializedName("MinCpu")
+    @Expose
+    private Float MinCpu;
+
+    /**
      * Get Number of instance CPU cores 
      * @return Cpu Number of instance CPU cores
      */
@@ -253,6 +267,38 @@ public class InstanceSpec extends AbstractModel {
         this.StockCount = StockCount;
     }
 
+    /**
+     * Get Maximum cpu 
+     * @return MaxCpu Maximum cpu
+     */
+    public Float getMaxCpu() {
+        return this.MaxCpu;
+    }
+
+    /**
+     * Set Maximum cpu
+     * @param MaxCpu Maximum cpu
+     */
+    public void setMaxCpu(Float MaxCpu) {
+        this.MaxCpu = MaxCpu;
+    }
+
+    /**
+     * Get Minimum cpu 
+     * @return MinCpu Minimum cpu
+     */
+    public Float getMinCpu() {
+        return this.MinCpu;
+    }
+
+    /**
+     * Set Minimum cpu
+     * @param MinCpu Minimum cpu
+     */
+    public void setMinCpu(Float MinCpu) {
+        this.MinCpu = MinCpu;
+    }
+
     public InstanceSpec() {
     }
 
@@ -294,6 +340,12 @@ public class InstanceSpec extends AbstractModel {
         if (source.StockCount != null) {
             this.StockCount = new Long(source.StockCount);
         }
+        if (source.MaxCpu != null) {
+            this.MaxCpu = new Float(source.MaxCpu);
+        }
+        if (source.MinCpu != null) {
+            this.MinCpu = new Float(source.MinCpu);
+        }
     }
 
 
@@ -311,6 +363,8 @@ public class InstanceSpec extends AbstractModel {
         this.setParamSimple(map, prefix + "MaxIoBandWidth", this.MaxIoBandWidth);
         this.setParamArrayObj(map, prefix + "ZoneStockInfos.", this.ZoneStockInfos);
         this.setParamSimple(map, prefix + "StockCount", this.StockCount);
+        this.setParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
+        this.setParamSimple(map, prefix + "MinCpu", this.MinCpu);
 
     }
 }

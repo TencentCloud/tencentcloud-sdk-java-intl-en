@@ -56,7 +56,7 @@ public class DescribeProxyNodesRequest extends AbstractModel {
     private String OrderByType;
 
     /**
-    * Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+    * Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
     */
     @SerializedName("Filters")
     @Expose
@@ -143,16 +143,16 @@ public class DescribeProxyNodesRequest extends AbstractModel {
     }
 
     /**
-     * Get Filter. If there are more than one filter, the logical relationship between these filters is `AND`. 
-     * @return Filters Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+     * Get Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName. 
+     * @return Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
      */
     public QueryFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
-     * @param Filters Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+     * Set Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
+     * @param Filters Search criteria. When multiple filters exist, the relationship between filters is logical AND. Currently supported search fields: Status, ProxyNodeId, ClusterId, OssProxyNodeName.
      */
     public void setFilters(QueryFilter [] Filters) {
         this.Filters = Filters;

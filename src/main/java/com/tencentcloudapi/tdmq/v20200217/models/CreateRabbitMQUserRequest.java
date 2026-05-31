@@ -24,169 +24,187 @@ import java.util.HashMap;
 public class CreateRabbitMQUserRequest extends AbstractModel {
 
     /**
-    * Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+    * <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Username, which is used for login.
+    * <p>Username, used when logging in</p>
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
+    * <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * Description
+    * <p>Description.</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
-Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
+    * <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number.
+    * <p>Maximum number of connections for this user. Leave it blank to set as unlimited.</p>
     */
     @SerializedName("MaxConnections")
     @Expose
     private Long MaxConnections;
 
     /**
-    * The maximum number of channels for the user. If this parameter is left empty, there's no limit for the number.
+    * <p>Maximum number of channels for the user. Not specified means no limit.</p>
     */
     @SerializedName("MaxChannels")
     @Expose
     private Long MaxChannels;
 
     /**
-     * Get Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1). 
-     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+    * <p>Whether cam authentication is enabled</p>
+    */
+    @SerializedName("EnableCamAuth")
+    @Expose
+    private Boolean EnableCamAuth;
+
+    /**
+     * Get <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p> 
+     * @return InstanceId <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
-     * @param InstanceId Instance ID, such as amqp-xxxxxxxx. valid InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * Set <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
+     * @param InstanceId <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Username, which is used for login. 
-     * @return User Username, which is used for login.
+     * Get <p>Username, used when logging in</p> 
+     * @return User <p>Username, used when logging in</p>
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set Username, which is used for login.
-     * @param User Username, which is used for login.
+     * Set <p>Username, used when logging in</p>
+     * @param User <p>Username, used when logging in</p>
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/]. 
-     * @return Password Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
+     * Get <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p> 
+     * @return Password <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
-     * @param Password Password, used when logging in. requirement: cannot be empty, 8-64 characters, must contain at least two items from lowercase letters, uppercase letters, digits, and special characters [`()~!@#$%^&*_=|{}[]:;',.?/].
+     * Set <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
+     * @param Password <p>Password, used when logging in. Requirements: Cannot be empty, 8-64 characters, must contain at least two of the following: lowercase letter, uppercase letter, digit, special character [()`~!@#$%^&*_=|{}[]:;',.?/].</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get Description 
-     * @return Description Description
+     * Get <p>Description.</p> 
+     * @return Description <p>Description.</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Description
-     * @param Description Description
+     * Set <p>Description.</p>
+     * @param Description <p>Description.</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
-Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user. 
-     * @return Tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
-Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
+     * Get <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p> 
+     * @return Tags <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
-Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
-     * @param Tags User tag, which defines a user's permission scope for accessing RabbitMQ Managementu.
-Valid values: `management` (Common console user), monitoring` (Console admin user), other values: Non-console user.
+     * Set <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
+     * @param Tags <p>User tag, used to determine the access permission of the user to RabbitMQ Management<br>management: ordinary console user, monitoring: console user with management privileges, other value: non-console user</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number. 
-     * @return MaxConnections The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number.
+     * Get <p>Maximum number of connections for this user. Leave it blank to set as unlimited.</p> 
+     * @return MaxConnections <p>Maximum number of connections for this user. Leave it blank to set as unlimited.</p>
      */
     public Long getMaxConnections() {
         return this.MaxConnections;
     }
 
     /**
-     * Set The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number.
-     * @param MaxConnections The maximum number of connections for the user. If this parameter is left empty, there's no limit for the number.
+     * Set <p>Maximum number of connections for this user. Leave it blank to set as unlimited.</p>
+     * @param MaxConnections <p>Maximum number of connections for this user. Leave it blank to set as unlimited.</p>
      */
     public void setMaxConnections(Long MaxConnections) {
         this.MaxConnections = MaxConnections;
     }
 
     /**
-     * Get The maximum number of channels for the user. If this parameter is left empty, there's no limit for the number. 
-     * @return MaxChannels The maximum number of channels for the user. If this parameter is left empty, there's no limit for the number.
+     * Get <p>Maximum number of channels for the user. Not specified means no limit.</p> 
+     * @return MaxChannels <p>Maximum number of channels for the user. Not specified means no limit.</p>
      */
     public Long getMaxChannels() {
         return this.MaxChannels;
     }
 
     /**
-     * Set The maximum number of channels for the user. If this parameter is left empty, there's no limit for the number.
-     * @param MaxChannels The maximum number of channels for the user. If this parameter is left empty, there's no limit for the number.
+     * Set <p>Maximum number of channels for the user. Not specified means no limit.</p>
+     * @param MaxChannels <p>Maximum number of channels for the user. Not specified means no limit.</p>
      */
     public void setMaxChannels(Long MaxChannels) {
         this.MaxChannels = MaxChannels;
+    }
+
+    /**
+     * Get <p>Whether cam authentication is enabled</p> 
+     * @return EnableCamAuth <p>Whether cam authentication is enabled</p>
+     */
+    public Boolean getEnableCamAuth() {
+        return this.EnableCamAuth;
+    }
+
+    /**
+     * Set <p>Whether cam authentication is enabled</p>
+     * @param EnableCamAuth <p>Whether cam authentication is enabled</p>
+     */
+    public void setEnableCamAuth(Boolean EnableCamAuth) {
+        this.EnableCamAuth = EnableCamAuth;
     }
 
     public CreateRabbitMQUserRequest() {
@@ -221,6 +239,9 @@ Valid values: `management` (Common console user), monitoring` (Console admin use
         if (source.MaxChannels != null) {
             this.MaxChannels = new Long(source.MaxChannels);
         }
+        if (source.EnableCamAuth != null) {
+            this.EnableCamAuth = new Boolean(source.EnableCamAuth);
+        }
     }
 
 
@@ -235,6 +256,7 @@ Valid values: `management` (Common console user), monitoring` (Console admin use
         this.setParamArraySimple(map, prefix + "Tags.", this.Tags);
         this.setParamSimple(map, prefix + "MaxConnections", this.MaxConnections);
         this.setParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
+        this.setParamSimple(map, prefix + "EnableCamAuth", this.EnableCamAuth);
 
     }
 }

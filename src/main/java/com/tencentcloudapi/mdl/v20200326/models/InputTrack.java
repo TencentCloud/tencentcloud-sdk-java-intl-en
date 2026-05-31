@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class InputTrack extends AbstractModel {
 
     /**
-    * Audio track index 1-based index mapping to the specified audio track integer starting from 1.
+    * Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
     */
     @SerializedName("TrackIndex")
     @Expose
     private Long TrackIndex;
 
     /**
-     * Get Audio track index 1-based index mapping to the specified audio track integer starting from 1. 
-     * @return TrackIndex Audio track index 1-based index mapping to the specified audio track integer starting from 1.
+     * Get Audio track index  1-based index mapping to the specified audio track  Integer starting from 1. 
+     * @return TrackIndex Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
      */
     public Long getTrackIndex() {
         return this.TrackIndex;
     }
 
     /**
-     * Set Audio track index 1-based index mapping to the specified audio track integer starting from 1.
-     * @param TrackIndex Audio track index 1-based index mapping to the specified audio track integer starting from 1.
+     * Set Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
+     * @param TrackIndex Audio track index  1-based index mapping to the specified audio track  Integer starting from 1.
      */
     public void setTrackIndex(Long TrackIndex) {
         this.TrackIndex = TrackIndex;

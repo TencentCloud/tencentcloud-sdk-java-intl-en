@@ -24,437 +24,440 @@ import java.util.HashMap;
 public class ClusterInstanceDetail extends AbstractModel {
 
     /**
-    * Instance ID
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * <p>Instance name</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Engine type
+    * <p>Engine type</p>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Instance status
+    * <p>Instance status</p>
     */
     @SerializedName("InstanceStatus")
     @Expose
     private String InstanceStatus;
 
     /**
-    * Instance status description
+    * <p>Instance status description</p>
     */
     @SerializedName("InstanceStatusDesc")
     @Expose
     private String InstanceStatusDesc;
 
     /**
-    * Number of CPU cores
+    * <p>cpu cores</p>
     */
     @SerializedName("InstanceCpu")
     @Expose
     private Long InstanceCpu;
 
     /**
-    * Memory
+    * <p>Memory</p>
     */
     @SerializedName("InstanceMemory")
     @Expose
     private Long InstanceMemory;
 
     /**
-    * Disk
+    * <p>hard disk</p>
     */
     @SerializedName("InstanceStorage")
     @Expose
     private Long InstanceStorage;
 
     /**
-    * Instance role
+    * <p>Instance role</p>
     */
     @SerializedName("InstanceRole")
     @Expose
     private String InstanceRole;
 
     /**
-    * Execution start time (seconds from 0 o'clock).	
+    * <p>Execution start time (seconds from 00:00).</p>
     */
     @SerializedName("MaintainStartTime")
     @Expose
     private Long MaintainStartTime;
 
     /**
-    * Specifies the continuous time. the unit is second.	
+    * <p>Duration (unit: s)</p>
     */
     @SerializedName("MaintainDuration")
     @Expose
     private Long MaintainDuration;
 
     /**
-    * Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+    * <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
     */
     @SerializedName("MaintainWeekDays")
     @Expose
     private String [] MaintainWeekDays;
 
     /**
-    * serverless instance substatus.
+    * <p>serverless instance substatus</p>
     */
     @SerializedName("ServerlessStatus")
     @Expose
     private String ServerlessStatus;
 
     /**
-    * Instance task information.
+    * <p>Instance task information</p>
     */
     @SerializedName("InstanceTasks")
     @Expose
     private ObjectTask [] InstanceTasks;
 
     /**
-    * Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
+    * <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
     */
     @SerializedName("InstanceDeviceType")
     @Expose
     private String InstanceDeviceType;
 
     /**
-    * Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
+    * <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
     */
     @SerializedName("InstanceStorageType")
     @Expose
     private String InstanceStorageType;
 
     /**
-    * Database type.
+    * <p>Database type</p>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * Node list
-Description: this parameter returns a value only when querying LibraDB resources.
+    * <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
     */
     @SerializedName("NodeList")
     @Expose
     private String [] NodeList;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * <p>AI optimizer status</p>
+    */
+    @SerializedName("AIOptimizerStatus")
+    @Expose
+    private AIOptimizerStatus AIOptimizerStatus;
+
+    /**
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get <p>Instance name</p> 
+     * @return InstanceName <p>Instance name</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set <p>Instance name</p>
+     * @param InstanceName <p>Instance name</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Engine type 
-     * @return InstanceType Engine type
+     * Get <p>Engine type</p> 
+     * @return InstanceType <p>Engine type</p>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Engine type
-     * @param InstanceType Engine type
+     * Set <p>Engine type</p>
+     * @param InstanceType <p>Engine type</p>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Instance status 
-     * @return InstanceStatus Instance status
+     * Get <p>Instance status</p> 
+     * @return InstanceStatus <p>Instance status</p>
      */
     public String getInstanceStatus() {
         return this.InstanceStatus;
     }
 
     /**
-     * Set Instance status
-     * @param InstanceStatus Instance status
+     * Set <p>Instance status</p>
+     * @param InstanceStatus <p>Instance status</p>
      */
     public void setInstanceStatus(String InstanceStatus) {
         this.InstanceStatus = InstanceStatus;
     }
 
     /**
-     * Get Instance status description 
-     * @return InstanceStatusDesc Instance status description
+     * Get <p>Instance status description</p> 
+     * @return InstanceStatusDesc <p>Instance status description</p>
      */
     public String getInstanceStatusDesc() {
         return this.InstanceStatusDesc;
     }
 
     /**
-     * Set Instance status description
-     * @param InstanceStatusDesc Instance status description
+     * Set <p>Instance status description</p>
+     * @param InstanceStatusDesc <p>Instance status description</p>
      */
     public void setInstanceStatusDesc(String InstanceStatusDesc) {
         this.InstanceStatusDesc = InstanceStatusDesc;
     }
 
     /**
-     * Get Number of CPU cores 
-     * @return InstanceCpu Number of CPU cores
+     * Get <p>cpu cores</p> 
+     * @return InstanceCpu <p>cpu cores</p>
      */
     public Long getInstanceCpu() {
         return this.InstanceCpu;
     }
 
     /**
-     * Set Number of CPU cores
-     * @param InstanceCpu Number of CPU cores
+     * Set <p>cpu cores</p>
+     * @param InstanceCpu <p>cpu cores</p>
      */
     public void setInstanceCpu(Long InstanceCpu) {
         this.InstanceCpu = InstanceCpu;
     }
 
     /**
-     * Get Memory 
-     * @return InstanceMemory Memory
+     * Get <p>Memory</p> 
+     * @return InstanceMemory <p>Memory</p>
      */
     public Long getInstanceMemory() {
         return this.InstanceMemory;
     }
 
     /**
-     * Set Memory
-     * @param InstanceMemory Memory
+     * Set <p>Memory</p>
+     * @param InstanceMemory <p>Memory</p>
      */
     public void setInstanceMemory(Long InstanceMemory) {
         this.InstanceMemory = InstanceMemory;
     }
 
     /**
-     * Get Disk 
-     * @return InstanceStorage Disk
+     * Get <p>hard disk</p> 
+     * @return InstanceStorage <p>hard disk</p>
      */
     public Long getInstanceStorage() {
         return this.InstanceStorage;
     }
 
     /**
-     * Set Disk
-     * @param InstanceStorage Disk
+     * Set <p>hard disk</p>
+     * @param InstanceStorage <p>hard disk</p>
      */
     public void setInstanceStorage(Long InstanceStorage) {
         this.InstanceStorage = InstanceStorage;
     }
 
     /**
-     * Get Instance role 
-     * @return InstanceRole Instance role
+     * Get <p>Instance role</p> 
+     * @return InstanceRole <p>Instance role</p>
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * Set Instance role
-     * @param InstanceRole Instance role
+     * Set <p>Instance role</p>
+     * @param InstanceRole <p>Instance role</p>
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;
     }
 
     /**
-     * Get Execution start time (seconds from 0 o'clock).	 
-     * @return MaintainStartTime Execution start time (seconds from 0 o'clock).	
+     * Get <p>Execution start time (seconds from 00:00).</p> 
+     * @return MaintainStartTime <p>Execution start time (seconds from 00:00).</p>
      */
     public Long getMaintainStartTime() {
         return this.MaintainStartTime;
     }
 
     /**
-     * Set Execution start time (seconds from 0 o'clock).	
-     * @param MaintainStartTime Execution start time (seconds from 0 o'clock).	
+     * Set <p>Execution start time (seconds from 00:00).</p>
+     * @param MaintainStartTime <p>Execution start time (seconds from 00:00).</p>
      */
     public void setMaintainStartTime(Long MaintainStartTime) {
         this.MaintainStartTime = MaintainStartTime;
     }
 
     /**
-     * Get Specifies the continuous time. the unit is second.	 
-     * @return MaintainDuration Specifies the continuous time. the unit is second.	
+     * Get <p>Duration (unit: s)</p> 
+     * @return MaintainDuration <p>Duration (unit: s)</p>
      */
     public Long getMaintainDuration() {
         return this.MaintainDuration;
     }
 
     /**
-     * Set Specifies the continuous time. the unit is second.	
-     * @param MaintainDuration Specifies the continuous time. the unit is second.	
+     * Set <p>Duration (unit: s)</p>
+     * @param MaintainDuration <p>Duration (unit: s)</p>
      */
     public void setMaintainDuration(Long MaintainDuration) {
         this.MaintainDuration = MaintainDuration;
     }
 
     /**
-     * Get Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]. 
-     * @return MaintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+     * Get <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p> 
+     * @return MaintainWeekDays <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
      */
     public String [] getMaintainWeekDays() {
         return this.MaintainWeekDays;
     }
 
     /**
-     * Set Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
-     * @param MaintainWeekDays Specifies the time when it can be executed. valid values: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"].
+     * Set <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
+     * @param MaintainWeekDays <p>The time when it can be executed, enumeration value: ["Mon","Tue","Wed","Thu","Fri", "Sat", "Sun"]</p>
      */
     public void setMaintainWeekDays(String [] MaintainWeekDays) {
         this.MaintainWeekDays = MaintainWeekDays;
     }
 
     /**
-     * Get serverless instance substatus. 
-     * @return ServerlessStatus serverless instance substatus.
+     * Get <p>serverless instance substatus</p> 
+     * @return ServerlessStatus <p>serverless instance substatus</p>
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set serverless instance substatus.
-     * @param ServerlessStatus serverless instance substatus.
+     * Set <p>serverless instance substatus</p>
+     * @param ServerlessStatus <p>serverless instance substatus</p>
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
-     * Get Instance task information. 
-     * @return InstanceTasks Instance task information.
+     * Get <p>Instance task information</p> 
+     * @return InstanceTasks <p>Instance task information</p>
      */
     public ObjectTask [] getInstanceTasks() {
         return this.InstanceTasks;
     }
 
     /**
-     * Set Instance task information.
-     * @param InstanceTasks Instance task information.
+     * Set <p>Instance task information</p>
+     * @param InstanceTasks <p>Instance task information</p>
      */
     public void setInstanceTasks(ObjectTask [] InstanceTasks) {
         this.InstanceTasks = InstanceTasks;
     }
 
     /**
-     * Get Instance machine type.
-1. common: general.
-2. exclusive, dedicated. 
-     * @return InstanceDeviceType Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
+     * Get <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol> 
+     * @return InstanceDeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
      */
     public String getInstanceDeviceType() {
         return this.InstanceDeviceType;
     }
 
     /**
-     * Set Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
-     * @param InstanceDeviceType Instance machine type.
-1. common: general.
-2. exclusive, dedicated.
+     * Set <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+     * @param InstanceDeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
      */
     public void setInstanceDeviceType(String InstanceDeviceType) {
         this.InstanceDeviceType = InstanceDeviceType;
     }
 
     /**
-     * Get Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB. 
-     * @return InstanceStorageType Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
+     * Get <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p> 
+     * @return InstanceStorageType <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
      */
     public String getInstanceStorageType() {
         return this.InstanceStorageType;
     }
 
     /**
-     * Set Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
-     * @param InstanceStorageType Instance storage type.
-Description: this parameter returns a value only when querying resources belonging to LibraDB.
+     * Set <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
+     * @param InstanceStorageType <p>Instance storage type<br>Description: This parameter returns a value only when the resource belonging to the query is LibraDB.</p>
      */
     public void setInstanceStorageType(String InstanceStorageType) {
         this.InstanceStorageType = InstanceStorageType;
     }
 
     /**
-     * Get Database type. 
-     * @return DbMode Database type.
+     * Get <p>Database type</p> 
+     * @return DbMode <p>Database type</p>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Database type.
-     * @param DbMode Database type.
+     * Set <p>Database type</p>
+     * @param DbMode <p>Database type</p>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get Node list
-Description: this parameter returns a value only when querying LibraDB resources. 
-     * @return NodeList Node list
-Description: this parameter returns a value only when querying LibraDB resources.
+     * Get <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p> 
+     * @return NodeList <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
      */
     public String [] getNodeList() {
         return this.NodeList;
     }
 
     /**
-     * Set Node list
-Description: this parameter returns a value only when querying LibraDB resources.
-     * @param NodeList Node list
-Description: this parameter returns a value only when querying LibraDB resources.
+     * Set <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
+     * @param NodeList <p>Node list<br>Description: This parameter returns a value only when querying resources belonging to LibraDB.</p>
      */
     public void setNodeList(String [] NodeList) {
         this.NodeList = NodeList;
+    }
+
+    /**
+     * Get <p>AI optimizer status</p> 
+     * @return AIOptimizerStatus <p>AI optimizer status</p>
+     */
+    public AIOptimizerStatus getAIOptimizerStatus() {
+        return this.AIOptimizerStatus;
+    }
+
+    /**
+     * Set <p>AI optimizer status</p>
+     * @param AIOptimizerStatus <p>AI optimizer status</p>
+     */
+    public void setAIOptimizerStatus(AIOptimizerStatus AIOptimizerStatus) {
+        this.AIOptimizerStatus = AIOptimizerStatus;
     }
 
     public ClusterInstanceDetail() {
@@ -528,6 +531,9 @@ Description: this parameter returns a value only when querying LibraDB resources
                 this.NodeList[i] = new String(source.NodeList[i]);
             }
         }
+        if (source.AIOptimizerStatus != null) {
+            this.AIOptimizerStatus = new AIOptimizerStatus(source.AIOptimizerStatus);
+        }
     }
 
 
@@ -553,6 +559,7 @@ Description: this parameter returns a value only when querying LibraDB resources
         this.setParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
         this.setParamSimple(map, prefix + "DbMode", this.DbMode);
         this.setParamArraySimple(map, prefix + "NodeList.", this.NodeList);
+        this.setParamObj(map, prefix + "AIOptimizerStatus.", this.AIOptimizerStatus);
 
     }
 }

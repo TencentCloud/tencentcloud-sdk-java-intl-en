@@ -24,253 +24,253 @@ import java.util.HashMap;
 public class DescribeInstanceSlowQueriesRequest extends AbstractModel {
 
     /**
-    * Instance ID
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Transaction start time
+    * <p>Earliest transaction start time.</p>
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Transaction end time
+    * <p>Latest transaction start time.</p>
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Maximum number
+    * <p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Offset
+    * <p>Offset.</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Username
+    * <p>Username.</p>
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * Client host
+    * <p>Client host.</p>
     */
     @SerializedName("Host")
     @Expose
     private String Host;
 
     /**
-    * Database name
+    * <p>Database name.</p>
     */
     @SerializedName("Database")
     @Expose
     private String Database;
 
     /**
-    * Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
+    * <p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values: asc, desc.
+    * <p>Sorting type. Valid values: asc and desc.</p>
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * sql statement.
+    * <p>SQL statement.</p>
     */
     @SerializedName("SqlText")
     @Expose
     private String SqlText;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Transaction start time 
-     * @return StartTime Transaction start time
+     * Get <p>Earliest transaction start time.</p> 
+     * @return StartTime <p>Earliest transaction start time.</p>
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Transaction start time
-     * @param StartTime Transaction start time
+     * Set <p>Earliest transaction start time.</p>
+     * @param StartTime <p>Earliest transaction start time.</p>
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Transaction end time 
-     * @return EndTime Transaction end time
+     * Get <p>Latest transaction start time.</p> 
+     * @return EndTime <p>Latest transaction start time.</p>
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Transaction end time
-     * @param EndTime Transaction end time
+     * Set <p>Latest transaction start time.</p>
+     * @param EndTime <p>Latest transaction start time.</p>
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Maximum number 
-     * @return Limit Maximum number
+     * Get <p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p> 
+     * @return Limit <p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Maximum number
-     * @param Limit Maximum number
+     * Set <p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
+     * @param Limit <p>Limit.</p><p>It is recommended to control the limit size. Large limits may cause truncation due to the platform's size limit for return results.</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Offset 
-     * @return Offset Offset
+     * Get <p>Offset.</p> 
+     * @return Offset <p>Offset.</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Offset
-     * @param Offset Offset
+     * Set <p>Offset.</p>
+     * @param Offset <p>Offset.</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Username 
-     * @return Username Username
+     * Get <p>Username.</p> 
+     * @return Username <p>Username.</p>
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set Username
-     * @param Username Username
+     * Set <p>Username.</p>
+     * @param Username <p>Username.</p>
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get Client host 
-     * @return Host Client host
+     * Get <p>Client host.</p> 
+     * @return Host <p>Client host.</p>
      */
     public String getHost() {
         return this.Host;
     }
 
     /**
-     * Set Client host
-     * @param Host Client host
+     * Set <p>Client host.</p>
+     * @param Host <p>Client host.</p>
      */
     public void setHost(String Host) {
         this.Host = Host;
     }
 
     /**
-     * Get Database name 
-     * @return Database Database name
+     * Get <p>Database name.</p> 
+     * @return Database <p>Database name.</p>
      */
     public String getDatabase() {
         return this.Database;
     }
 
     /**
-     * Set Database name
-     * @param Database Database name
+     * Set <p>Database name.</p>
+     * @param Database <p>Database name.</p>
      */
     public void setDatabase(String Database) {
         this.Database = Database;
     }
 
     /**
-     * Get Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent. 
-     * @return OrderBy Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
+     * Get <p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul> 
+     * @return OrderBy <p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
-     * @param OrderBy Sorting field. Valid values: QueryTime, LockTime, RowsExamined, RowsSent.
+     * Set <p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
+     * @param OrderBy <p>Sorting field.</p><p>Enumeration values:</p><ul><li>QueryTime: sorts by the total execution time of the SQL statements.</li><li>LockTime: sorts by the time consumed by the SQL statements waiting for locks (such as table locks or row locks).</li><li>RowsExamined: sorts by the number of rows scanned during SQL statement execution.</li><li>RowsSent: sorts by the number of result rows returned to the client for the SQL statements.</li><li>Timestamp: sorts by the timestamp when the slow query statement occurs.</li></ul>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values: asc, desc. 
-     * @return OrderByType Sorting order. Valid values: asc, desc.
+     * Get <p>Sorting type. Valid values: asc and desc.</p> 
+     * @return OrderByType <p>Sorting type. Valid values: asc and desc.</p>
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting order. Valid values: asc, desc.
-     * @param OrderByType Sorting order. Valid values: asc, desc.
+     * Set <p>Sorting type. Valid values: asc and desc.</p>
+     * @param OrderByType <p>Sorting type. Valid values: asc and desc.</p>
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get sql statement. 
-     * @return SqlText sql statement.
+     * Get <p>SQL statement.</p> 
+     * @return SqlText <p>SQL statement.</p>
      */
     public String getSqlText() {
         return this.SqlText;
     }
 
     /**
-     * Set sql statement.
-     * @param SqlText sql statement.
+     * Set <p>SQL statement.</p>
+     * @param SqlText <p>SQL statement.</p>
      */
     public void setSqlText(String SqlText) {
         this.SqlText = SqlText;

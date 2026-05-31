@@ -24,8 +24,7 @@ import java.util.HashMap;
 public class FailOverSettings extends AbstractModel {
 
     /**
-    * ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
+    * Input Id of the backup stream.
     */
     @SerializedName("SecondaryInputId")
     @Expose
@@ -46,20 +45,16 @@ Note: this field may return `null`, indicating that no valid value was found.
     private String RecoverBehavior;
 
     /**
-     * Get ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return SecondaryInputId ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Input Id of the backup stream. 
+     * @return SecondaryInputId Input Id of the backup stream.
      */
     public String getSecondaryInputId() {
         return this.SecondaryInputId;
     }
 
     /**
-     * Set ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param SecondaryInputId ID of the backup input
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Input Id of the backup stream.
+     * @param SecondaryInputId Input Id of the backup stream.
      */
     public void setSecondaryInputId(String SecondaryInputId) {
         this.SecondaryInputId = SecondaryInputId;

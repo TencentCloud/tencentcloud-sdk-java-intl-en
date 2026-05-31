@@ -230,6 +230,17 @@ This API is applicable to clusters: 4.x virtual cluster, 4.x dedicated cluster, 
     }
 
     /**
+     *Create a RocketMQ metadata migration task to batch create topics and consumer group data.
+     * @param req CreateRocketMQMigrationTaskRequest
+     * @return CreateRocketMQMigrationTaskResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateRocketMQMigrationTaskResponse CreateRocketMQMigrationTask(CreateRocketMQMigrationTaskRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateRocketMQMigrationTask", CreateRocketMQMigrationTaskResponse.class);
+    }
+
+    /**
      *This API is used to create a RocketMQ namespace.
 This API is applicable to clusters: 4.x virtual cluster and 4.x dedicated cluster. Other cluster types do not support this feature.
      * @param req CreateRocketMQNamespaceRequest

@@ -91,6 +91,13 @@ offlined: Instance eliminated
     private String [] InstanceIds;
 
     /**
+    * Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+    */
+    @SerializedName("ClusterType")
+    @Expose
+    private String ClusterType;
+
+    /**
      * Get Number of returned results. Default value: 20. Maximum value: 100 
      * @return Limit Number of returned results. Default value: 20. Maximum value: 100
      */
@@ -262,6 +269,22 @@ offlined: Instance eliminated
         this.InstanceIds = InstanceIds;
     }
 
+    /**
+     * Get Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL. 
+     * @return ClusterType Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+     */
+    public String getClusterType() {
+        return this.ClusterType;
+    }
+
+    /**
+     * Set Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+     * @param ClusterType Cluster type, value ranges from <li>CYNOSDB: transactional cluster</li><li>LIBRADB: analysis cluster</li><li>ALL: all</li>, default to ALL.
+     */
+    public void setClusterType(String ClusterType) {
+        this.ClusterType = ClusterType;
+    }
+
     public DescribeInstancesRequest() {
     }
 
@@ -300,6 +323,9 @@ offlined: Instance eliminated
                 this.InstanceIds[i] = new String(source.InstanceIds[i]);
             }
         }
+        if (source.ClusterType != null) {
+            this.ClusterType = new String(source.ClusterType);
+        }
     }
 
 
@@ -315,6 +341,7 @@ offlined: Instance eliminated
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "Status", this.Status);
         this.setParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+        this.setParamSimple(map, prefix + "ClusterType", this.ClusterType);
 
     }
 }

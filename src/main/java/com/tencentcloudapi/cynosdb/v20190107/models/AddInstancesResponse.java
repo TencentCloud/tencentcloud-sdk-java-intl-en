@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class AddInstancesResponse extends AbstractModel {
 
     /**
-    * Freeze transaction. one frozen transaction is activated at a time.
+    * <p>Freeze transaction. One frozen flow is activated at a time.</p>
     */
     @SerializedName("TranId")
     @Expose
     private String TranId;
 
     /**
-    * Specifies the post-paid order number.
+    * <p>Order ID for payment. Description: Recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> api to query order associated instance.</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * Delivery resource id list.
+    * <p>Delivery resource id list.</p>
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * Large order number.
+    * <p>Large order number</p>
     */
     @SerializedName("BigDealIds")
     @Expose
@@ -59,64 +59,68 @@ public class AddInstancesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Freeze transaction. one frozen transaction is activated at a time. 
-     * @return TranId Freeze transaction. one frozen transaction is activated at a time.
+     * Get <p>Freeze transaction. One frozen flow is activated at a time.</p> 
+     * @return TranId <p>Freeze transaction. One frozen flow is activated at a time.</p>
      */
     public String getTranId() {
         return this.TranId;
     }
 
     /**
-     * Set Freeze transaction. one frozen transaction is activated at a time.
-     * @param TranId Freeze transaction. one frozen transaction is activated at a time.
+     * Set <p>Freeze transaction. One frozen flow is activated at a time.</p>
+     * @param TranId <p>Freeze transaction. One frozen flow is activated at a time.</p>
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
     }
 
     /**
-     * Get Specifies the post-paid order number. 
-     * @return DealNames Specifies the post-paid order number.
+     * Get <p>Order ID for payment. Description: Recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> api to query order associated instance.</p> 
+     * @return DealNames <p>Order ID for payment. Description: Recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> api to query order associated instance.</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Specifies the post-paid order number.
-     * @param DealNames Specifies the post-paid order number.
+     * Set <p>Order ID for payment. Description: Recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> api to query order associated instance.</p>
+     * @param DealNames <p>Order ID for payment. Description: Recommend you use the <a href="https://www.tencentcloud.com/document/product/1003/52131?from_cn_redirect=1">DescribeResourcesByDealName</a> api to query order associated instance.</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get Delivery resource id list. 
-     * @return ResourceIds Delivery resource id list.
+     * Get <p>Delivery resource id list.</p> 
+     * @return ResourceIds <p>Delivery resource id list.</p>
+     * @deprecated
      */
+    @Deprecated
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set Delivery resource id list.
-     * @param ResourceIds Delivery resource id list.
+     * Set <p>Delivery resource id list.</p>
+     * @param ResourceIds <p>Delivery resource id list.</p>
+     * @deprecated
      */
+    @Deprecated
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get Large order number. 
-     * @return BigDealIds Large order number.
+     * Get <p>Large order number</p> 
+     * @return BigDealIds <p>Large order number</p>
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
     }
 
     /**
-     * Set Large order number.
-     * @param BigDealIds Large order number.
+     * Set <p>Large order number</p>
+     * @param BigDealIds <p>Large order number</p>
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;

@@ -45,21 +45,21 @@ public class VideoTemplateInfo extends AbstractModel {
     private Long VideoBitrate;
 
     /**
-    * Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+    * Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+    * Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
+    * Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
     */
     @SerializedName("Fps")
     @Expose
@@ -80,15 +80,14 @@ public class VideoTemplateInfo extends AbstractModel {
     private Long BitrateCompressionRatio;
 
     /**
-    * Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+    * Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
     */
     @SerializedName("RateControlMode")
     @Expose
     private String RateControlMode;
 
     /**
-    * Watermark ID
-Note: This field may return `null`, indicating that no valid value was found.
+    * Watermark Id.
     */
     @SerializedName("WatermarkId")
     @Expose
@@ -102,77 +101,77 @@ Note: This field may return `null`, indicating that no valid value was found.
     private Long FaceBlurringEnabled;
 
     /**
-    * This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+    * This field indicates how to specify the output video frame rate. If selected FOLLOW_SOURCE, the output video frame rate is set to equal the frame rate of the first input video. If selected SPECIFIED_FRACTION, the output video frame rate is determined by the fraction (frame rate molecular and frame rate denominator). If selected SPECIFIED_HZ, the frame rate of the output video is determined by the HZ you input.
     */
     @SerializedName("FrameRateType")
     @Expose
     private String FrameRateType;
 
     /**
-    * Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+    * Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.
     */
     @SerializedName("FrameRateNumerator")
     @Expose
     private Long FrameRateNumerator;
 
     /**
-    * Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+    * Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.
     */
     @SerializedName("FrameRateDenominator")
     @Expose
     private Long FrameRateDenominator;
 
     /**
-    * The number of B frames can be selected from 1 to 3.
+    * Number of B-frames 1-3.	
     */
     @SerializedName("BFramesNum")
     @Expose
     private Long BFramesNum;
 
     /**
-    * The number of reference frames can be selected from 1 to 16.
+    * Refer to the number of frames 1-16.	
     */
     @SerializedName("RefFramesNum")
     @Expose
     private Long RefFramesNum;
 
     /**
-    * Additional video bitrate configuration.
+    * Additional video bitrate configuration.	
     */
     @SerializedName("AdditionalRateSettings")
     @Expose
     private AdditionalRateSetting AdditionalRateSettings;
 
     /**
-    * Video encoding configuration.
+    * Video encoding configuration.	
     */
     @SerializedName("VideoCodecDetails")
     @Expose
     private VideoCodecDetail VideoCodecDetails;
 
     /**
-    * Video enhancement switch, 1: on 0: off.
+    * Video enhancement switch, 1: enable 0: disable.
     */
     @SerializedName("VideoEnhanceEnabled")
     @Expose
     private Long VideoEnhanceEnabled;
 
     /**
-    * Video enhancement parameter array.
+    * Video enhancement parameters array.
     */
     @SerializedName("VideoEnhanceSettings")
     @Expose
     private VideoEnhanceSetting [] VideoEnhanceSettings;
 
     /**
-    * Color space setting.
+    * Colorspace configuration.
     */
     @SerializedName("ColorSpaceSettings")
     @Expose
     private ColorSpaceSetting ColorSpaceSettings;
 
     /**
-    * Traceability watermark.
+    * Traceable watermark.
     */
     @SerializedName("ForensicWatermarkIds")
     @Expose
@@ -227,48 +226,48 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used. 
-     * @return Width Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+     * Get Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough. 
+     * @return Width Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
-     * @param Width Video width. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+     * Set Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
+     * @param Width Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used. 
-     * @return Height Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+     * Get Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough. 
+     * @return Height Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
-     * @param Height Video height. Value range: (0,4096]. The value can only be a multiple of 2. If this parameter is left empty, the original value will be used.
+     * Set Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
+     * @param Height Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used. 
-     * @return Fps Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
+     * Get Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough. 
+     * @return Fps Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
-     * @param Fps Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
+     * Set Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
+     * @param Fps Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
@@ -307,36 +306,32 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`. 
-     * @return RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+     * Get Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR. 
+     * @return RateControlMode Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
      */
     public String getRateControlMode() {
         return this.RateControlMode;
     }
 
     /**
-     * Set Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
-     * @param RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+     * Set Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
+     * @param RateControlMode Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
      */
     public void setRateControlMode(String RateControlMode) {
         this.RateControlMode = RateControlMode;
     }
 
     /**
-     * Get Watermark ID
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return WatermarkId Watermark ID
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Watermark Id. 
+     * @return WatermarkId Watermark Id.
      */
     public String getWatermarkId() {
         return this.WatermarkId;
     }
 
     /**
-     * Set Watermark ID
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param WatermarkId Watermark ID
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Watermark Id.
+     * @param WatermarkId Watermark Id.
      */
     public void setWatermarkId(String WatermarkId) {
         this.WatermarkId = WatermarkId;
@@ -359,176 +354,176 @@ Note: This field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter. 
-     * @return FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+     * Get This field indicates how to specify the output video frame rate. If selected FOLLOW_SOURCE, the output video frame rate is set to equal the frame rate of the first input video. If selected SPECIFIED_FRACTION, the output video frame rate is determined by the fraction (frame rate molecular and frame rate denominator). If selected SPECIFIED_HZ, the frame rate of the output video is determined by the HZ you input. 
+     * @return FrameRateType This field indicates how to specify the output video frame rate. If selected FOLLOW_SOURCE, the output video frame rate is set to equal the frame rate of the first input video. If selected SPECIFIED_FRACTION, the output video frame rate is determined by the fraction (frame rate molecular and frame rate denominator). If selected SPECIFIED_HZ, the frame rate of the output video is determined by the HZ you input.
      */
     public String getFrameRateType() {
         return this.FrameRateType;
     }
 
     /**
-     * Set This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
-     * @param FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+     * Set This field indicates how to specify the output video frame rate. If selected FOLLOW_SOURCE, the output video frame rate is set to equal the frame rate of the first input video. If selected SPECIFIED_FRACTION, the output video frame rate is determined by the fraction (frame rate molecular and frame rate denominator). If selected SPECIFIED_HZ, the frame rate of the output video is determined by the HZ you input.
+     * @param FrameRateType This field indicates how to specify the output video frame rate. If selected FOLLOW_SOURCE, the output video frame rate is set to equal the frame rate of the first input video. If selected SPECIFIED_FRACTION, the output video frame rate is determined by the fraction (frame rate molecular and frame rate denominator). If selected SPECIFIED_HZ, the frame rate of the output video is determined by the HZ you input.
      */
     public void setFrameRateType(String FrameRateType) {
         this.FrameRateType = FrameRateType;
     }
 
     /**
-     * Get Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting. 
-     * @return FrameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+     * Get Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular. 
+     * @return FrameRateNumerator Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.
      */
     public Long getFrameRateNumerator() {
         return this.FrameRateNumerator;
     }
 
     /**
-     * Set Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
-     * @param FrameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+     * Set Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.
+     * @param FrameRateNumerator Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.
      */
     public void setFrameRateNumerator(Long FrameRateNumerator) {
         this.FrameRateNumerator = FrameRateNumerator;
     }
 
     /**
-     * Get Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting. 
-     * @return FrameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+     * Get Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set. 
+     * @return FrameRateDenominator Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.
      */
     public Long getFrameRateDenominator() {
         return this.FrameRateDenominator;
     }
 
     /**
-     * Set Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
-     * @param FrameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+     * Set Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.
+     * @param FrameRateDenominator Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.
      */
     public void setFrameRateDenominator(Long FrameRateDenominator) {
         this.FrameRateDenominator = FrameRateDenominator;
     }
 
     /**
-     * Get The number of B frames can be selected from 1 to 3. 
-     * @return BFramesNum The number of B frames can be selected from 1 to 3.
+     * Get Number of B-frames 1-3.	 
+     * @return BFramesNum Number of B-frames 1-3.	
      */
     public Long getBFramesNum() {
         return this.BFramesNum;
     }
 
     /**
-     * Set The number of B frames can be selected from 1 to 3.
-     * @param BFramesNum The number of B frames can be selected from 1 to 3.
+     * Set Number of B-frames 1-3.	
+     * @param BFramesNum Number of B-frames 1-3.	
      */
     public void setBFramesNum(Long BFramesNum) {
         this.BFramesNum = BFramesNum;
     }
 
     /**
-     * Get The number of reference frames can be selected from 1 to 16. 
-     * @return RefFramesNum The number of reference frames can be selected from 1 to 16.
+     * Get Refer to the number of frames 1-16.	 
+     * @return RefFramesNum Refer to the number of frames 1-16.	
      */
     public Long getRefFramesNum() {
         return this.RefFramesNum;
     }
 
     /**
-     * Set The number of reference frames can be selected from 1 to 16.
-     * @param RefFramesNum The number of reference frames can be selected from 1 to 16.
+     * Set Refer to the number of frames 1-16.	
+     * @param RefFramesNum Refer to the number of frames 1-16.	
      */
     public void setRefFramesNum(Long RefFramesNum) {
         this.RefFramesNum = RefFramesNum;
     }
 
     /**
-     * Get Additional video bitrate configuration. 
-     * @return AdditionalRateSettings Additional video bitrate configuration.
+     * Get Additional video bitrate configuration.	 
+     * @return AdditionalRateSettings Additional video bitrate configuration.	
      */
     public AdditionalRateSetting getAdditionalRateSettings() {
         return this.AdditionalRateSettings;
     }
 
     /**
-     * Set Additional video bitrate configuration.
-     * @param AdditionalRateSettings Additional video bitrate configuration.
+     * Set Additional video bitrate configuration.	
+     * @param AdditionalRateSettings Additional video bitrate configuration.	
      */
     public void setAdditionalRateSettings(AdditionalRateSetting AdditionalRateSettings) {
         this.AdditionalRateSettings = AdditionalRateSettings;
     }
 
     /**
-     * Get Video encoding configuration. 
-     * @return VideoCodecDetails Video encoding configuration.
+     * Get Video encoding configuration.	 
+     * @return VideoCodecDetails Video encoding configuration.	
      */
     public VideoCodecDetail getVideoCodecDetails() {
         return this.VideoCodecDetails;
     }
 
     /**
-     * Set Video encoding configuration.
-     * @param VideoCodecDetails Video encoding configuration.
+     * Set Video encoding configuration.	
+     * @param VideoCodecDetails Video encoding configuration.	
      */
     public void setVideoCodecDetails(VideoCodecDetail VideoCodecDetails) {
         this.VideoCodecDetails = VideoCodecDetails;
     }
 
     /**
-     * Get Video enhancement switch, 1: on 0: off. 
-     * @return VideoEnhanceEnabled Video enhancement switch, 1: on 0: off.
+     * Get Video enhancement switch, 1: enable 0: disable. 
+     * @return VideoEnhanceEnabled Video enhancement switch, 1: enable 0: disable.
      */
     public Long getVideoEnhanceEnabled() {
         return this.VideoEnhanceEnabled;
     }
 
     /**
-     * Set Video enhancement switch, 1: on 0: off.
-     * @param VideoEnhanceEnabled Video enhancement switch, 1: on 0: off.
+     * Set Video enhancement switch, 1: enable 0: disable.
+     * @param VideoEnhanceEnabled Video enhancement switch, 1: enable 0: disable.
      */
     public void setVideoEnhanceEnabled(Long VideoEnhanceEnabled) {
         this.VideoEnhanceEnabled = VideoEnhanceEnabled;
     }
 
     /**
-     * Get Video enhancement parameter array. 
-     * @return VideoEnhanceSettings Video enhancement parameter array.
+     * Get Video enhancement parameters array. 
+     * @return VideoEnhanceSettings Video enhancement parameters array.
      */
     public VideoEnhanceSetting [] getVideoEnhanceSettings() {
         return this.VideoEnhanceSettings;
     }
 
     /**
-     * Set Video enhancement parameter array.
-     * @param VideoEnhanceSettings Video enhancement parameter array.
+     * Set Video enhancement parameters array.
+     * @param VideoEnhanceSettings Video enhancement parameters array.
      */
     public void setVideoEnhanceSettings(VideoEnhanceSetting [] VideoEnhanceSettings) {
         this.VideoEnhanceSettings = VideoEnhanceSettings;
     }
 
     /**
-     * Get Color space setting. 
-     * @return ColorSpaceSettings Color space setting.
+     * Get Colorspace configuration. 
+     * @return ColorSpaceSettings Colorspace configuration.
      */
     public ColorSpaceSetting getColorSpaceSettings() {
         return this.ColorSpaceSettings;
     }
 
     /**
-     * Set Color space setting.
-     * @param ColorSpaceSettings Color space setting.
+     * Set Colorspace configuration.
+     * @param ColorSpaceSettings Colorspace configuration.
      */
     public void setColorSpaceSettings(ColorSpaceSetting ColorSpaceSettings) {
         this.ColorSpaceSettings = ColorSpaceSettings;
     }
 
     /**
-     * Get Traceability watermark. 
-     * @return ForensicWatermarkIds Traceability watermark.
+     * Get Traceable watermark. 
+     * @return ForensicWatermarkIds Traceable watermark.
      */
     public String [] getForensicWatermarkIds() {
         return this.ForensicWatermarkIds;
     }
 
     /**
-     * Set Traceability watermark.
-     * @param ForensicWatermarkIds Traceability watermark.
+     * Set Traceable watermark.
+     * @param ForensicWatermarkIds Traceable watermark.
      */
     public void setForensicWatermarkIds(String [] ForensicWatermarkIds) {
         this.ForensicWatermarkIds = ForensicWatermarkIds;

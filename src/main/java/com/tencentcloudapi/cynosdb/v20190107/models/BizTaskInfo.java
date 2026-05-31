@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class BizTaskInfo extends AbstractModel {
 
     /**
-    * Task id
+    * 
     */
     @SerializedName("ID")
     @Expose
     private Long ID;
 
     /**
-    * User appid
+    * 
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * cluster id
+    * 
     */
     @SerializedName("ClusterId")
     @Expose
@@ -52,7 +52,7 @@ public class BizTaskInfo extends AbstractModel {
     private String Region;
 
     /**
-    * Task Creation Time
+    * 
     */
     @SerializedName("CreateTime")
     @Expose
@@ -73,133 +73,133 @@ public class BizTaskInfo extends AbstractModel {
     private String ErrMsg;
 
     /**
-    * asynchronous task flow id
+    * 
     */
     @SerializedName("FlowId")
     @Expose
     private Long FlowId;
 
     /**
-    * task input information
+    * 
     */
     @SerializedName("Input")
     @Expose
     private String Input;
 
     /**
-    * instance group id
+    * 
     */
     @SerializedName("InstanceGrpId")
     @Expose
     private String InstanceGrpId;
 
     /**
-    * instance group id
+    * 
     */
     @SerializedName("InstanceGroupId")
     @Expose
     private String InstanceGroupId;
 
     /**
-    * Instance id
+    * 
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Task Operation Target id
+    * 
     */
     @SerializedName("ObjectId")
     @Expose
     private String ObjectId;
 
     /**
-    * Task Operation Target Type
+    * 
     */
     @SerializedName("ObjectType")
     @Expose
     private String ObjectType;
 
     /**
-    * Operator uin
+    * 
     */
     @SerializedName("Operator")
     @Expose
     private String Operator;
 
     /**
-    * task output information
+    * 
     */
     @SerializedName("Output")
     @Expose
     private String Output;
 
     /**
-    * Task Status
+    * 
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * task type
+    * 
     */
     @SerializedName("TaskType")
     @Expose
     private String TaskType;
 
     /**
-    * Parent Task ID that Triggered This Task
+    * 
     */
     @SerializedName("TriggerTaskId")
     @Expose
     private Long TriggerTaskId;
 
     /**
-    * Update Time
+    * 
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Task Start Time
+    * 
     */
     @SerializedName("StartTime")
     @Expose
     private String StartTime;
 
     /**
-    * Task End Time
+    * 
     */
     @SerializedName("EndTime")
     @Expose
     private String EndTime;
 
     /**
-    * Cluster Name
+    * 
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Instance Name
+    * 
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Task Progress
+    * 
     */
     @SerializedName("Process")
     @Expose
     private Long Process;
 
     /**
-    * Parameter Modification Task Information
+    * 
     */
     @SerializedName("ModifyParamsData")
     @Expose
@@ -227,7 +227,7 @@ public class BizTaskInfo extends AbstractModel {
     private ModifyInstanceData ModifyInstanceData;
 
     /**
-    * Manual Backup Task Information
+    * 
     */
     @SerializedName("ManualBackupData")
     @Expose
@@ -248,14 +248,14 @@ public class BizTaskInfo extends AbstractModel {
     private ClusterSlaveData ClusterSlaveData;
 
     /**
-    * Cluster Log Conversion
+    * 
     */
     @SerializedName("SwitchClusterLogBin")
     @Expose
     private SwitchClusterLogBin SwitchClusterLogBin;
 
     /**
-    * Instance Parameter Modification
+    * 
     */
     @SerializedName("ModifyInstanceParamsData")
     @Expose
@@ -284,48 +284,69 @@ public class BizTaskInfo extends AbstractModel {
     private TaskProgressInfo TaskProgressInfo;
 
     /**
-     * Get Task id 
-     * @return ID Task id
+    * Global Database Network Task
+    */
+    @SerializedName("GdnTaskInfo")
+    @Expose
+    private GdnTaskInfo GdnTaskInfo;
+
+    /**
+    * Safe id
+    */
+    @SerializedName("VaultId")
+    @Expose
+    private String VaultId;
+
+    /**
+    * Safe name
+    */
+    @SerializedName("VaultName")
+    @Expose
+    private String VaultName;
+
+    /**
+     * Get  
+     * @return ID 
      */
     public Long getID() {
         return this.ID;
     }
 
     /**
-     * Set Task id
-     * @param ID Task id
+     * Set 
+     * @param ID 
      */
     public void setID(Long ID) {
         this.ID = ID;
     }
 
     /**
-     * Get User appid 
-     * @return AppId User appid
+     * Get  
+     * @return AppId 
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User appid
-     * @param AppId User appid
+     * Set 
+     * @param AppId 
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get cluster id 
-     * @return ClusterId cluster id
+     * Get  
+     * @return ClusterId 
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set cluster id
-     * @param ClusterId cluster id
+     * Set 
+     * @param ClusterId 
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
@@ -348,16 +369,16 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Task Creation Time 
-     * @return CreateTime Task Creation Time
+     * Get  
+     * @return CreateTime 
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Task Creation Time
-     * @param CreateTime Task Creation Time
+     * Set 
+     * @param CreateTime 
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
@@ -396,40 +417,40 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get asynchronous task flow id 
-     * @return FlowId asynchronous task flow id
+     * Get  
+     * @return FlowId 
      */
     public Long getFlowId() {
         return this.FlowId;
     }
 
     /**
-     * Set asynchronous task flow id
-     * @param FlowId asynchronous task flow id
+     * Set 
+     * @param FlowId 
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get task input information 
-     * @return Input task input information
+     * Get  
+     * @return Input 
      */
     public String getInput() {
         return this.Input;
     }
 
     /**
-     * Set task input information
-     * @param Input task input information
+     * Set 
+     * @param Input 
      */
     public void setInput(String Input) {
         this.Input = Input;
     }
 
     /**
-     * Get instance group id 
-     * @return InstanceGrpId instance group id
+     * Get  
+     * @return InstanceGrpId 
      * @deprecated
      */
     @Deprecated
@@ -438,8 +459,8 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set instance group id
-     * @param InstanceGrpId instance group id
+     * Set 
+     * @param InstanceGrpId 
      * @deprecated
      */
     @Deprecated
@@ -448,248 +469,248 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get instance group id 
-     * @return InstanceGroupId instance group id
+     * Get  
+     * @return InstanceGroupId 
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set instance group id
-     * @param InstanceGroupId instance group id
+     * Set 
+     * @param InstanceGroupId 
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;
     }
 
     /**
-     * Get Instance id 
-     * @return InstanceId Instance id
+     * Get  
+     * @return InstanceId 
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance id
-     * @param InstanceId Instance id
+     * Set 
+     * @param InstanceId 
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Task Operation Target id 
-     * @return ObjectId Task Operation Target id
+     * Get  
+     * @return ObjectId 
      */
     public String getObjectId() {
         return this.ObjectId;
     }
 
     /**
-     * Set Task Operation Target id
-     * @param ObjectId Task Operation Target id
+     * Set 
+     * @param ObjectId 
      */
     public void setObjectId(String ObjectId) {
         this.ObjectId = ObjectId;
     }
 
     /**
-     * Get Task Operation Target Type 
-     * @return ObjectType Task Operation Target Type
+     * Get  
+     * @return ObjectType 
      */
     public String getObjectType() {
         return this.ObjectType;
     }
 
     /**
-     * Set Task Operation Target Type
-     * @param ObjectType Task Operation Target Type
+     * Set 
+     * @param ObjectType 
      */
     public void setObjectType(String ObjectType) {
         this.ObjectType = ObjectType;
     }
 
     /**
-     * Get Operator uin 
-     * @return Operator Operator uin
+     * Get  
+     * @return Operator 
      */
     public String getOperator() {
         return this.Operator;
     }
 
     /**
-     * Set Operator uin
-     * @param Operator Operator uin
+     * Set 
+     * @param Operator 
      */
     public void setOperator(String Operator) {
         this.Operator = Operator;
     }
 
     /**
-     * Get task output information 
-     * @return Output task output information
+     * Get  
+     * @return Output 
      */
     public String getOutput() {
         return this.Output;
     }
 
     /**
-     * Set task output information
-     * @param Output task output information
+     * Set 
+     * @param Output 
      */
     public void setOutput(String Output) {
         this.Output = Output;
     }
 
     /**
-     * Get Task Status 
-     * @return Status Task Status
+     * Get  
+     * @return Status 
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Task Status
-     * @param Status Task Status
+     * Set 
+     * @param Status 
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get task type 
-     * @return TaskType task type
+     * Get  
+     * @return TaskType 
      */
     public String getTaskType() {
         return this.TaskType;
     }
 
     /**
-     * Set task type
-     * @param TaskType task type
+     * Set 
+     * @param TaskType 
      */
     public void setTaskType(String TaskType) {
         this.TaskType = TaskType;
     }
 
     /**
-     * Get Parent Task ID that Triggered This Task 
-     * @return TriggerTaskId Parent Task ID that Triggered This Task
+     * Get  
+     * @return TriggerTaskId 
      */
     public Long getTriggerTaskId() {
         return this.TriggerTaskId;
     }
 
     /**
-     * Set Parent Task ID that Triggered This Task
-     * @param TriggerTaskId Parent Task ID that Triggered This Task
+     * Set 
+     * @param TriggerTaskId 
      */
     public void setTriggerTaskId(Long TriggerTaskId) {
         this.TriggerTaskId = TriggerTaskId;
     }
 
     /**
-     * Get Update Time 
-     * @return UpdateTime Update Time
+     * Get  
+     * @return UpdateTime 
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update Time
-     * @param UpdateTime Update Time
+     * Set 
+     * @param UpdateTime 
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Task Start Time 
-     * @return StartTime Task Start Time
+     * Get  
+     * @return StartTime 
      */
     public String getStartTime() {
         return this.StartTime;
     }
 
     /**
-     * Set Task Start Time
-     * @param StartTime Task Start Time
+     * Set 
+     * @param StartTime 
      */
     public void setStartTime(String StartTime) {
         this.StartTime = StartTime;
     }
 
     /**
-     * Get Task End Time 
-     * @return EndTime Task End Time
+     * Get  
+     * @return EndTime 
      */
     public String getEndTime() {
         return this.EndTime;
     }
 
     /**
-     * Set Task End Time
-     * @param EndTime Task End Time
+     * Set 
+     * @param EndTime 
      */
     public void setEndTime(String EndTime) {
         this.EndTime = EndTime;
     }
 
     /**
-     * Get Cluster Name 
-     * @return ClusterName Cluster Name
+     * Get  
+     * @return ClusterName 
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster Name
-     * @param ClusterName Cluster Name
+     * Set 
+     * @param ClusterName 
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Instance Name 
-     * @return InstanceName Instance Name
+     * Get  
+     * @return InstanceName 
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance Name
-     * @param InstanceName Instance Name
+     * Set 
+     * @param InstanceName 
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Task Progress 
-     * @return Process Task Progress
+     * Get  
+     * @return Process 
      */
     public Long getProcess() {
         return this.Process;
     }
 
     /**
-     * Set Task Progress
-     * @param Process Task Progress
+     * Set 
+     * @param Process 
      */
     public void setProcess(Long Process) {
         this.Process = Process;
     }
 
     /**
-     * Get Parameter Modification Task Information 
-     * @return ModifyParamsData Parameter Modification Task Information
+     * Get  
+     * @return ModifyParamsData 
      * @deprecated
      */
     @Deprecated
@@ -698,8 +719,8 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Set Parameter Modification Task Information
-     * @param ModifyParamsData Parameter Modification Task Information
+     * Set 
+     * @param ModifyParamsData 
      * @deprecated
      */
     @Deprecated
@@ -756,16 +777,16 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Manual Backup Task Information 
-     * @return ManualBackupData Manual Backup Task Information
+     * Get  
+     * @return ManualBackupData 
      */
     public ManualBackupData getManualBackupData() {
         return this.ManualBackupData;
     }
 
     /**
-     * Set Manual Backup Task Information
-     * @param ManualBackupData Manual Backup Task Information
+     * Set 
+     * @param ManualBackupData 
      */
     public void setManualBackupData(ManualBackupData ManualBackupData) {
         this.ManualBackupData = ManualBackupData;
@@ -804,32 +825,32 @@ public class BizTaskInfo extends AbstractModel {
     }
 
     /**
-     * Get Cluster Log Conversion 
-     * @return SwitchClusterLogBin Cluster Log Conversion
+     * Get  
+     * @return SwitchClusterLogBin 
      */
     public SwitchClusterLogBin getSwitchClusterLogBin() {
         return this.SwitchClusterLogBin;
     }
 
     /**
-     * Set Cluster Log Conversion
-     * @param SwitchClusterLogBin Cluster Log Conversion
+     * Set 
+     * @param SwitchClusterLogBin 
      */
     public void setSwitchClusterLogBin(SwitchClusterLogBin SwitchClusterLogBin) {
         this.SwitchClusterLogBin = SwitchClusterLogBin;
     }
 
     /**
-     * Get Instance Parameter Modification 
-     * @return ModifyInstanceParamsData Instance Parameter Modification
+     * Get  
+     * @return ModifyInstanceParamsData 
      */
     public BizTaskModifyParamsData getModifyInstanceParamsData() {
         return this.ModifyInstanceParamsData;
     }
 
     /**
-     * Set Instance Parameter Modification
-     * @param ModifyInstanceParamsData Instance Parameter Modification
+     * Set 
+     * @param ModifyInstanceParamsData 
      */
     public void setModifyInstanceParamsData(BizTaskModifyParamsData ModifyInstanceParamsData) {
         this.ModifyInstanceParamsData = ModifyInstanceParamsData;
@@ -885,6 +906,54 @@ public class BizTaskInfo extends AbstractModel {
      */
     public void setTaskProgressInfo(TaskProgressInfo TaskProgressInfo) {
         this.TaskProgressInfo = TaskProgressInfo;
+    }
+
+    /**
+     * Get Global Database Network Task 
+     * @return GdnTaskInfo Global Database Network Task
+     */
+    public GdnTaskInfo getGdnTaskInfo() {
+        return this.GdnTaskInfo;
+    }
+
+    /**
+     * Set Global Database Network Task
+     * @param GdnTaskInfo Global Database Network Task
+     */
+    public void setGdnTaskInfo(GdnTaskInfo GdnTaskInfo) {
+        this.GdnTaskInfo = GdnTaskInfo;
+    }
+
+    /**
+     * Get Safe id 
+     * @return VaultId Safe id
+     */
+    public String getVaultId() {
+        return this.VaultId;
+    }
+
+    /**
+     * Set Safe id
+     * @param VaultId Safe id
+     */
+    public void setVaultId(String VaultId) {
+        this.VaultId = VaultId;
+    }
+
+    /**
+     * Get Safe name 
+     * @return VaultName Safe name
+     */
+    public String getVaultName() {
+        return this.VaultName;
+    }
+
+    /**
+     * Set Safe name
+     * @param VaultName Safe name
+     */
+    public void setVaultName(String VaultName) {
+        this.VaultName = VaultName;
     }
 
     public BizTaskInfo() {
@@ -1012,6 +1081,15 @@ public class BizTaskInfo extends AbstractModel {
         if (source.TaskProgressInfo != null) {
             this.TaskProgressInfo = new TaskProgressInfo(source.TaskProgressInfo);
         }
+        if (source.GdnTaskInfo != null) {
+            this.GdnTaskInfo = new GdnTaskInfo(source.GdnTaskInfo);
+        }
+        if (source.VaultId != null) {
+            this.VaultId = new String(source.VaultId);
+        }
+        if (source.VaultName != null) {
+            this.VaultName = new String(source.VaultName);
+        }
     }
 
 
@@ -1056,6 +1134,9 @@ public class BizTaskInfo extends AbstractModel {
         this.setParamObj(map, prefix + "TaskMaintainInfo.", this.TaskMaintainInfo);
         this.setParamArrayObj(map, prefix + "InstanceCLSDeliveryInfos.", this.InstanceCLSDeliveryInfos);
         this.setParamObj(map, prefix + "TaskProgressInfo.", this.TaskProgressInfo);
+        this.setParamObj(map, prefix + "GdnTaskInfo.", this.GdnTaskInfo);
+        this.setParamSimple(map, prefix + "VaultId", this.VaultId);
+        this.setParamSimple(map, prefix + "VaultName", this.VaultName);
 
     }
 }

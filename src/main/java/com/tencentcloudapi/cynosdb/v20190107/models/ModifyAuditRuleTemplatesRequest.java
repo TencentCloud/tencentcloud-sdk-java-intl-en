@@ -52,6 +52,20 @@ public class ModifyAuditRuleTemplatesRequest extends AbstractModel {
     private String Description;
 
     /**
+    * Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+    */
+    @SerializedName("AlarmLevel")
+    @Expose
+    private Long AlarmLevel;
+
+    /**
+    * Alert policy. 0 - No alert, 1 - Alert.
+    */
+    @SerializedName("AlarmPolicy")
+    @Expose
+    private Long AlarmPolicy;
+
+    /**
      * Get Audit rule template ID 
      * @return RuleTemplateIds Audit rule template ID
      */
@@ -115,6 +129,38 @@ public class ModifyAuditRuleTemplatesRequest extends AbstractModel {
         this.Description = Description;
     }
 
+    /**
+     * Get Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk. 
+     * @return AlarmLevel Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+     */
+    public Long getAlarmLevel() {
+        return this.AlarmLevel;
+    }
+
+    /**
+     * Set Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+     * @param AlarmLevel Alert Levels. 1 - Low Risk, 2 - Medium Risk, 3 - High Risk.
+     */
+    public void setAlarmLevel(Long AlarmLevel) {
+        this.AlarmLevel = AlarmLevel;
+    }
+
+    /**
+     * Get Alert policy. 0 - No alert, 1 - Alert. 
+     * @return AlarmPolicy Alert policy. 0 - No alert, 1 - Alert.
+     */
+    public Long getAlarmPolicy() {
+        return this.AlarmPolicy;
+    }
+
+    /**
+     * Set Alert policy. 0 - No alert, 1 - Alert.
+     * @param AlarmPolicy Alert policy. 0 - No alert, 1 - Alert.
+     */
+    public void setAlarmPolicy(Long AlarmPolicy) {
+        this.AlarmPolicy = AlarmPolicy;
+    }
+
     public ModifyAuditRuleTemplatesRequest() {
     }
 
@@ -141,6 +187,12 @@ public class ModifyAuditRuleTemplatesRequest extends AbstractModel {
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
+        if (source.AlarmLevel != null) {
+            this.AlarmLevel = new Long(source.AlarmLevel);
+        }
+        if (source.AlarmPolicy != null) {
+            this.AlarmPolicy = new Long(source.AlarmPolicy);
+        }
     }
 
 
@@ -152,6 +204,8 @@ public class ModifyAuditRuleTemplatesRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RuleFilters.", this.RuleFilters);
         this.setParamSimple(map, prefix + "RuleTemplateName", this.RuleTemplateName);
         this.setParamSimple(map, prefix + "Description", this.Description);
+        this.setParamSimple(map, prefix + "AlarmLevel", this.AlarmLevel);
+        this.setParamSimple(map, prefix + "AlarmPolicy", this.AlarmPolicy);
 
     }
 }

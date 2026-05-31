@@ -52,7 +52,7 @@ public class CreateResourcePackageRequest extends AbstractModel {
     private String PackageVersion;
 
     /**
-    * Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
+    * Resource package size. Compute resource unit: unit; storage resource: GB.
     */
     @SerializedName("PackageSpec")
     @Expose
@@ -144,16 +144,16 @@ public class CreateResourcePackageRequest extends AbstractModel {
     }
 
     /**
-     * Get Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB 
-     * @return PackageSpec Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
+     * Get Resource package size. Compute resource unit: unit; storage resource: GB. 
+     * @return PackageSpec Resource package size. Compute resource unit: unit; storage resource: GB.
      */
     public Float getPackageSpec() {
         return this.PackageSpec;
     }
 
     /**
-     * Set Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
-     * @param PackageSpec Resource pack size. Unit of the compute resource pack: Ten thousand.  Unit of the storage resource pack:  GB
+     * Set Resource package size. Compute resource unit: unit; storage resource: GB.
+     * @param PackageSpec Resource package size. Compute resource unit: unit; storage resource: GB.
      */
     public void setPackageSpec(Float PackageSpec) {
         this.PackageSpec = PackageSpec;

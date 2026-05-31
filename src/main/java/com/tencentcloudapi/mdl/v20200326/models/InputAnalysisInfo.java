@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class InputAnalysisInfo extends AbstractModel {
 
     /**
-    * Highlight configuration.
+    * Highlights configuration.
     */
     @SerializedName("HighlightSetting")
     @Expose
     private HighlightInfo HighlightSetting;
 
     /**
-     * Get Highlight configuration. 
-     * @return HighlightSetting Highlight configuration.
+     * Get Highlights configuration. 
+     * @return HighlightSetting Highlights configuration.
      */
     public HighlightInfo getHighlightSetting() {
         return this.HighlightSetting;
     }
 
     /**
-     * Set Highlight configuration.
-     * @param HighlightSetting Highlight configuration.
+     * Set Highlights configuration.
+     * @param HighlightSetting Highlights configuration.
      */
     public void setHighlightSetting(HighlightInfo HighlightSetting) {
         this.HighlightSetting = HighlightSetting;

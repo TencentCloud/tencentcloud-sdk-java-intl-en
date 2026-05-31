@@ -24,49 +24,49 @@ import java.util.HashMap;
 public class ServerlessSpec extends AbstractModel {
 
     /**
-    * Specifies the minimum value of the cpu.
+    * <p>cpu minimum value</p>
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * Maximum value of cpu.
+    * <p>Maximum value of cpu</p>
     */
     @SerializedName("MaxCpu")
     @Expose
     private Float MaxCpu;
 
     /**
-    * Maximum storage space.
+    * <p>Maximum storage space</p>
     */
     @SerializedName("MaxStorageSize")
     @Expose
     private Long MaxStorageSize;
 
     /**
-    * Specifies whether it is the default specification.
+    * <p>Is the default specification</p>
     */
     @SerializedName("IsDefault")
     @Expose
     private Long IsDefault;
 
     /**
-    * Whether there is inventory.
+    * <p>Whether there is inventory</p>
     */
     @SerializedName("HasStock")
     @Expose
     private Boolean HasStock;
 
     /**
-    * Inventory quantity.
+    * <p>Inventory quantity</p>
     */
     @SerializedName("StockCount")
     @Expose
     private Long StockCount;
 
     /**
-    * Availability zone inventory information.
+    * <p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ZoneStockInfos")
@@ -74,105 +74,105 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private ServerlessZoneStockInfo [] ZoneStockInfos;
 
     /**
-     * Get Specifies the minimum value of the cpu. 
-     * @return MinCpu Specifies the minimum value of the cpu.
+     * Get <p>cpu minimum value</p> 
+     * @return MinCpu <p>cpu minimum value</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set Specifies the minimum value of the cpu.
-     * @param MinCpu Specifies the minimum value of the cpu.
+     * Set <p>cpu minimum value</p>
+     * @param MinCpu <p>cpu minimum value</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get Maximum value of cpu. 
-     * @return MaxCpu Maximum value of cpu.
+     * Get <p>Maximum value of cpu</p> 
+     * @return MaxCpu <p>Maximum value of cpu</p>
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set Maximum value of cpu.
-     * @param MaxCpu Maximum value of cpu.
+     * Set <p>Maximum value of cpu</p>
+     * @param MaxCpu <p>Maximum value of cpu</p>
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
     }
 
     /**
-     * Get Maximum storage space. 
-     * @return MaxStorageSize Maximum storage space.
+     * Get <p>Maximum storage space</p> 
+     * @return MaxStorageSize <p>Maximum storage space</p>
      */
     public Long getMaxStorageSize() {
         return this.MaxStorageSize;
     }
 
     /**
-     * Set Maximum storage space.
-     * @param MaxStorageSize Maximum storage space.
+     * Set <p>Maximum storage space</p>
+     * @param MaxStorageSize <p>Maximum storage space</p>
      */
     public void setMaxStorageSize(Long MaxStorageSize) {
         this.MaxStorageSize = MaxStorageSize;
     }
 
     /**
-     * Get Specifies whether it is the default specification. 
-     * @return IsDefault Specifies whether it is the default specification.
+     * Get <p>Is the default specification</p> 
+     * @return IsDefault <p>Is the default specification</p>
      */
     public Long getIsDefault() {
         return this.IsDefault;
     }
 
     /**
-     * Set Specifies whether it is the default specification.
-     * @param IsDefault Specifies whether it is the default specification.
+     * Set <p>Is the default specification</p>
+     * @param IsDefault <p>Is the default specification</p>
      */
     public void setIsDefault(Long IsDefault) {
         this.IsDefault = IsDefault;
     }
 
     /**
-     * Get Whether there is inventory. 
-     * @return HasStock Whether there is inventory.
+     * Get <p>Whether there is inventory</p> 
+     * @return HasStock <p>Whether there is inventory</p>
      */
     public Boolean getHasStock() {
         return this.HasStock;
     }
 
     /**
-     * Set Whether there is inventory.
-     * @param HasStock Whether there is inventory.
+     * Set <p>Whether there is inventory</p>
+     * @param HasStock <p>Whether there is inventory</p>
      */
     public void setHasStock(Boolean HasStock) {
         this.HasStock = HasStock;
     }
 
     /**
-     * Get Inventory quantity. 
-     * @return StockCount Inventory quantity.
+     * Get <p>Inventory quantity</p> 
+     * @return StockCount <p>Inventory quantity</p>
      */
     public Long getStockCount() {
         return this.StockCount;
     }
 
     /**
-     * Set Inventory quantity.
-     * @param StockCount Inventory quantity.
+     * Set <p>Inventory quantity</p>
+     * @param StockCount <p>Inventory quantity</p>
      */
     public void setStockCount(Long StockCount) {
         this.StockCount = StockCount;
     }
 
     /**
-     * Get Availability zone inventory information.
+     * Get <p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ZoneStockInfos Availability zone inventory information.
+     * @return ZoneStockInfos <p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ServerlessZoneStockInfo [] getZoneStockInfos() {
@@ -180,9 +180,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Availability zone inventory information.
+     * Set <p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ZoneStockInfos Availability zone inventory information.
+     * @param ZoneStockInfos <p>Availability zone inventory information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setZoneStockInfos(ServerlessZoneStockInfo [] ZoneStockInfos) {

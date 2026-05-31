@@ -80,6 +80,20 @@ public class UpgradeProxyRequest extends AbstractModel {
     private ProxyZone [] ProxyZones;
 
     /**
+    * whether rolling upgrade
+    */
+    @SerializedName("IsRollUpgrade")
+    @Expose
+    private String IsRollUpgrade;
+
+    /**
+    * Rolling upgrade waiting time, unit: second
+    */
+    @SerializedName("RollUpgradeWaitingTime")
+    @Expose
+    private Long RollUpgradeWaitingTime;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -207,6 +221,38 @@ public class UpgradeProxyRequest extends AbstractModel {
         this.ProxyZones = ProxyZones;
     }
 
+    /**
+     * Get whether rolling upgrade 
+     * @return IsRollUpgrade whether rolling upgrade
+     */
+    public String getIsRollUpgrade() {
+        return this.IsRollUpgrade;
+    }
+
+    /**
+     * Set whether rolling upgrade
+     * @param IsRollUpgrade whether rolling upgrade
+     */
+    public void setIsRollUpgrade(String IsRollUpgrade) {
+        this.IsRollUpgrade = IsRollUpgrade;
+    }
+
+    /**
+     * Get Rolling upgrade waiting time, unit: second 
+     * @return RollUpgradeWaitingTime Rolling upgrade waiting time, unit: second
+     */
+    public Long getRollUpgradeWaitingTime() {
+        return this.RollUpgradeWaitingTime;
+    }
+
+    /**
+     * Set Rolling upgrade waiting time, unit: second
+     * @param RollUpgradeWaitingTime Rolling upgrade waiting time, unit: second
+     */
+    public void setRollUpgradeWaitingTime(Long RollUpgradeWaitingTime) {
+        this.RollUpgradeWaitingTime = RollUpgradeWaitingTime;
+    }
+
     public UpgradeProxyRequest() {
     }
 
@@ -242,6 +288,12 @@ public class UpgradeProxyRequest extends AbstractModel {
                 this.ProxyZones[i] = new ProxyZone(source.ProxyZones[i]);
             }
         }
+        if (source.IsRollUpgrade != null) {
+            this.IsRollUpgrade = new String(source.IsRollUpgrade);
+        }
+        if (source.RollUpgradeWaitingTime != null) {
+            this.RollUpgradeWaitingTime = new Long(source.RollUpgradeWaitingTime);
+        }
     }
 
 
@@ -257,6 +309,8 @@ public class UpgradeProxyRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ReloadBalance", this.ReloadBalance);
         this.setParamSimple(map, prefix + "IsInMaintainPeriod", this.IsInMaintainPeriod);
         this.setParamArrayObj(map, prefix + "ProxyZones.", this.ProxyZones);
+        this.setParamSimple(map, prefix + "IsRollUpgrade", this.IsRollUpgrade);
+        this.setParamSimple(map, prefix + "RollUpgradeWaitingTime", this.RollUpgradeWaitingTime);
 
     }
 }

@@ -52,6 +52,15 @@ public class UpgradeInstanceRequest extends AbstractModel {
     private String UpgradeType;
 
     /**
+    * Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
+    */
+    @SerializedName("DeviceType")
+    @Expose
+    private String DeviceType;
+
+    /**
     * This parameter has been disused.
     */
     @SerializedName("StorageLimit")
@@ -85,6 +94,13 @@ public class UpgradeInstanceRequest extends AbstractModel {
     @SerializedName("UpgradeMode")
     @Expose
     private String UpgradeMode;
+
+    /**
+    * 
+    */
+    @SerializedName("UpgradeProxy")
+    @Expose
+    private UpgradeProxy UpgradeProxy;
 
     /**
      * Get Instance ID 
@@ -148,6 +164,30 @@ public class UpgradeInstanceRequest extends AbstractModel {
      */
     public void setUpgradeType(String UpgradeType) {
         this.UpgradeType = UpgradeType;
+    }
+
+    /**
+     * Get Instance Machine Type
+1. common: general.
+2. exclusive, dedicated. 
+     * @return DeviceType Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
+     */
+    public String getDeviceType() {
+        return this.DeviceType;
+    }
+
+    /**
+     * Set Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
+     * @param DeviceType Instance Machine Type
+1. common: general.
+2. exclusive, dedicated.
+     */
+    public void setDeviceType(String DeviceType) {
+        this.DeviceType = DeviceType;
     }
 
     /**
@@ -230,6 +270,22 @@ public class UpgradeInstanceRequest extends AbstractModel {
         this.UpgradeMode = UpgradeMode;
     }
 
+    /**
+     * Get  
+     * @return UpgradeProxy 
+     */
+    public UpgradeProxy getUpgradeProxy() {
+        return this.UpgradeProxy;
+    }
+
+    /**
+     * Set 
+     * @param UpgradeProxy 
+     */
+    public void setUpgradeProxy(UpgradeProxy UpgradeProxy) {
+        this.UpgradeProxy = UpgradeProxy;
+    }
+
     public UpgradeInstanceRequest() {
     }
 
@@ -250,6 +306,9 @@ public class UpgradeInstanceRequest extends AbstractModel {
         if (source.UpgradeType != null) {
             this.UpgradeType = new String(source.UpgradeType);
         }
+        if (source.DeviceType != null) {
+            this.DeviceType = new String(source.DeviceType);
+        }
         if (source.StorageLimit != null) {
             this.StorageLimit = new Long(source.StorageLimit);
         }
@@ -265,6 +324,9 @@ public class UpgradeInstanceRequest extends AbstractModel {
         if (source.UpgradeMode != null) {
             this.UpgradeMode = new String(source.UpgradeMode);
         }
+        if (source.UpgradeProxy != null) {
+            this.UpgradeProxy = new UpgradeProxy(source.UpgradeProxy);
+        }
     }
 
 
@@ -276,11 +338,13 @@ public class UpgradeInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "Cpu", this.Cpu);
         this.setParamSimple(map, prefix + "Memory", this.Memory);
         this.setParamSimple(map, prefix + "UpgradeType", this.UpgradeType);
+        this.setParamSimple(map, prefix + "DeviceType", this.DeviceType);
         this.setParamSimple(map, prefix + "StorageLimit", this.StorageLimit);
         this.setParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
         this.setParamSimple(map, prefix + "DealMode", this.DealMode);
         this.setParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
+        this.setParamObj(map, prefix + "UpgradeProxy.", this.UpgradeProxy);
 
     }
 }

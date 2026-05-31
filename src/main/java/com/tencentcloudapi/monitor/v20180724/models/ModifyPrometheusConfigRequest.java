@@ -66,6 +66,13 @@ public class ModifyPrometheusConfigRequest extends AbstractModel {
     private PrometheusConfigItem [] RawJobs;
 
     /**
+    * 
+    */
+    @SerializedName("UpdateImage")
+    @Expose
+    private Long UpdateImage;
+
+    /**
      * Get Instance ID 
      * @return InstanceId Instance ID
      */
@@ -161,6 +168,22 @@ public class ModifyPrometheusConfigRequest extends AbstractModel {
         this.RawJobs = RawJobs;
     }
 
+    /**
+     * Get  
+     * @return UpdateImage 
+     */
+    public Long getUpdateImage() {
+        return this.UpdateImage;
+    }
+
+    /**
+     * Set 
+     * @param UpdateImage 
+     */
+    public void setUpdateImage(Long UpdateImage) {
+        this.UpdateImage = UpdateImage;
+    }
+
     public ModifyPrometheusConfigRequest() {
     }
 
@@ -196,6 +219,9 @@ public class ModifyPrometheusConfigRequest extends AbstractModel {
                 this.RawJobs[i] = new PrometheusConfigItem(source.RawJobs[i]);
             }
         }
+        if (source.UpdateImage != null) {
+            this.UpdateImage = new Long(source.UpdateImage);
+        }
     }
 
 
@@ -209,6 +235,7 @@ public class ModifyPrometheusConfigRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "ServiceMonitors.", this.ServiceMonitors);
         this.setParamArrayObj(map, prefix + "PodMonitors.", this.PodMonitors);
         this.setParamArrayObj(map, prefix + "RawJobs.", this.RawJobs);
+        this.setParamSimple(map, prefix + "UpdateImage", this.UpdateImage);
 
     }
 }

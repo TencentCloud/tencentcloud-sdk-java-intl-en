@@ -59,7 +59,8 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     private String WeightMode;
 
     /**
-    * Read-Only weight of an instance
+    * Instance Read-Only Weight.
+
     */
     @SerializedName("InstanceWeights")
     @Expose
@@ -131,6 +132,20 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     @SerializedName("ConnectionPoolTimeOut")
     @Expose
     private Long ConnectionPoolTimeOut;
+
+    /**
+    * Whether to treat the libra node as an ordinary RO node
+    */
+    @SerializedName("ApNodeAsRoNode")
+    @Expose
+    private Boolean ApNodeAsRoNode;
+
+    /**
+    * libra node fault, whether to forward to other nodes
+    */
+    @SerializedName("ApQueryToOtherNode")
+    @Expose
+    private Boolean ApQueryToOtherNode;
 
     /**
      * Get Cluster ID 
@@ -213,16 +228,20 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
     }
 
     /**
-     * Get Read-Only weight of an instance 
-     * @return InstanceWeights Read-Only weight of an instance
+     * Get Instance Read-Only Weight.
+ 
+     * @return InstanceWeights Instance Read-Only Weight.
+
      */
     public ProxyInstanceWeight [] getInstanceWeights() {
         return this.InstanceWeights;
     }
 
     /**
-     * Set Read-Only weight of an instance
-     * @param InstanceWeights Read-Only weight of an instance
+     * Set Instance Read-Only Weight.
+
+     * @param InstanceWeights Instance Read-Only Weight.
+
      */
     public void setInstanceWeights(ProxyInstanceWeight [] InstanceWeights) {
         this.InstanceWeights = InstanceWeights;
@@ -388,6 +407,38 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
         this.ConnectionPoolTimeOut = ConnectionPoolTimeOut;
     }
 
+    /**
+     * Get Whether to treat the libra node as an ordinary RO node 
+     * @return ApNodeAsRoNode Whether to treat the libra node as an ordinary RO node
+     */
+    public Boolean getApNodeAsRoNode() {
+        return this.ApNodeAsRoNode;
+    }
+
+    /**
+     * Set Whether to treat the libra node as an ordinary RO node
+     * @param ApNodeAsRoNode Whether to treat the libra node as an ordinary RO node
+     */
+    public void setApNodeAsRoNode(Boolean ApNodeAsRoNode) {
+        this.ApNodeAsRoNode = ApNodeAsRoNode;
+    }
+
+    /**
+     * Get libra node fault, whether to forward to other nodes 
+     * @return ApQueryToOtherNode libra node fault, whether to forward to other nodes
+     */
+    public Boolean getApQueryToOtherNode() {
+        return this.ApQueryToOtherNode;
+    }
+
+    /**
+     * Set libra node fault, whether to forward to other nodes
+     * @param ApQueryToOtherNode libra node fault, whether to forward to other nodes
+     */
+    public void setApQueryToOtherNode(Boolean ApQueryToOtherNode) {
+        this.ApQueryToOtherNode = ApQueryToOtherNode;
+    }
+
     public ModifyProxyRwSplitRequest() {
     }
 
@@ -444,6 +495,12 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
         if (source.ConnectionPoolTimeOut != null) {
             this.ConnectionPoolTimeOut = new Long(source.ConnectionPoolTimeOut);
         }
+        if (source.ApNodeAsRoNode != null) {
+            this.ApNodeAsRoNode = new Boolean(source.ApNodeAsRoNode);
+        }
+        if (source.ApQueryToOtherNode != null) {
+            this.ApQueryToOtherNode = new Boolean(source.ApQueryToOtherNode);
+        }
     }
 
 
@@ -466,6 +523,8 @@ public class ModifyProxyRwSplitRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "OpenConnectionPool", this.OpenConnectionPool);
         this.setParamSimple(map, prefix + "ConnectionPoolType", this.ConnectionPoolType);
         this.setParamSimple(map, prefix + "ConnectionPoolTimeOut", this.ConnectionPoolTimeOut);
+        this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+        this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
 
     }
 }

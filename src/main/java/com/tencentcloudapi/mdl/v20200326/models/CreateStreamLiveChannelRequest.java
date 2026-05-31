@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class CreateStreamLiveChannelRequest extends AbstractModel {
 
     /**
-    * Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+    * Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Inputs to attach. You can attach 1 to 5 inputs.
+    * Associated media input, limit on the number [1, 5].
     */
     @SerializedName("AttachedInputs")
     @Expose
     private AttachedInput [] AttachedInputs;
 
     /**
-    * Configuration information of the channel's output groups. Quantity: [1, 10]
+    * Configuration message of the output group for the channel. Limit on the number [1, 10].
     */
     @SerializedName("OutputGroups")
     @Expose
     private StreamLiveOutputGroupsInfo [] OutputGroups;
 
     /**
-    * Audio transcoding templates. Quantity: [1, 20]
+    * Audio transcoding template array, with the maximum number of [1, 20].
     */
     @SerializedName("AudioTemplates")
     @Expose
     private AudioTemplateInfo [] AudioTemplates;
 
     /**
-    * Video transcoding templates. Quantity: [1, 10]
+    * Video transcoding template array, with the maximum number of [1, 10].
     */
     @SerializedName("VideoTemplates")
     @Expose
     private VideoTemplateInfo [] VideoTemplates;
 
     /**
-    * Audio/Video transcoding templates. Quantity: [1, 10]
+    * Audio and video transcoding template array, with a limit on the number between 1 and 10.
     */
     @SerializedName("AVTemplates")
     @Expose
     private AVTemplate [] AVTemplates;
 
     /**
-    * Subtitle template configuration.
+    * Subtitle template configuration is only valid for joint transcoding template.
     */
     @SerializedName("CaptionTemplates")
     @Expose
     private SubtitleConf [] CaptionTemplates;
 
     /**
-    * Event settings
+    * Configuration message of the scheduled task.
     */
     @SerializedName("PlanSettings")
     @Expose
     private PlanSettings PlanSettings;
 
     /**
-    * The callback settings.
+    * Callback configuration information.
     */
     @SerializedName("EventNotifySettings")
     @Expose
@@ -101,172 +101,172 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
     private PipelineInputSettingsInfo PipelineInputSettings;
 
     /**
-    * Recognition configuration for input content.
+    * Input content identification configuration.
     */
     @SerializedName("InputAnalysisSettings")
     @Expose
     private InputAnalysisInfo InputAnalysisSettings;
 
     /**
-    * Console tag list.
+    * Console tag list
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-    * Frame capture templates.
+    * chart template
     */
     @SerializedName("FrameCaptureTemplates")
     @Expose
     private FrameCaptureTemplate [] FrameCaptureTemplates;
 
     /**
-    * General settings.
+    * Common configuration.
     */
     @SerializedName("GeneralSettings")
     @Expose
     private GeneralSetting GeneralSettings;
 
     /**
-     * Get Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level 
-     * @return Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+     * Get Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region. 
+     * @return Name Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
-     * @param Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
+     * Set Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
+     * @param Name Channel name, limited to lowercase letters, digits, and underscores, length [1, 32], unique in each Region.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Inputs to attach. You can attach 1 to 5 inputs. 
-     * @return AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
+     * Get Associated media input, limit on the number [1, 5]. 
+     * @return AttachedInputs Associated media input, limit on the number [1, 5].
      */
     public AttachedInput [] getAttachedInputs() {
         return this.AttachedInputs;
     }
 
     /**
-     * Set Inputs to attach. You can attach 1 to 5 inputs.
-     * @param AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
+     * Set Associated media input, limit on the number [1, 5].
+     * @param AttachedInputs Associated media input, limit on the number [1, 5].
      */
     public void setAttachedInputs(AttachedInput [] AttachedInputs) {
         this.AttachedInputs = AttachedInputs;
     }
 
     /**
-     * Get Configuration information of the channel's output groups. Quantity: [1, 10] 
-     * @return OutputGroups Configuration information of the channel's output groups. Quantity: [1, 10]
+     * Get Configuration message of the output group for the channel. Limit on the number [1, 10]. 
+     * @return OutputGroups Configuration message of the output group for the channel. Limit on the number [1, 10].
      */
     public StreamLiveOutputGroupsInfo [] getOutputGroups() {
         return this.OutputGroups;
     }
 
     /**
-     * Set Configuration information of the channel's output groups. Quantity: [1, 10]
-     * @param OutputGroups Configuration information of the channel's output groups. Quantity: [1, 10]
+     * Set Configuration message of the output group for the channel. Limit on the number [1, 10].
+     * @param OutputGroups Configuration message of the output group for the channel. Limit on the number [1, 10].
      */
     public void setOutputGroups(StreamLiveOutputGroupsInfo [] OutputGroups) {
         this.OutputGroups = OutputGroups;
     }
 
     /**
-     * Get Audio transcoding templates. Quantity: [1, 20] 
-     * @return AudioTemplates Audio transcoding templates. Quantity: [1, 20]
+     * Get Audio transcoding template array, with the maximum number of [1, 20]. 
+     * @return AudioTemplates Audio transcoding template array, with the maximum number of [1, 20].
      */
     public AudioTemplateInfo [] getAudioTemplates() {
         return this.AudioTemplates;
     }
 
     /**
-     * Set Audio transcoding templates. Quantity: [1, 20]
-     * @param AudioTemplates Audio transcoding templates. Quantity: [1, 20]
+     * Set Audio transcoding template array, with the maximum number of [1, 20].
+     * @param AudioTemplates Audio transcoding template array, with the maximum number of [1, 20].
      */
     public void setAudioTemplates(AudioTemplateInfo [] AudioTemplates) {
         this.AudioTemplates = AudioTemplates;
     }
 
     /**
-     * Get Video transcoding templates. Quantity: [1, 10] 
-     * @return VideoTemplates Video transcoding templates. Quantity: [1, 10]
+     * Get Video transcoding template array, with the maximum number of [1, 10]. 
+     * @return VideoTemplates Video transcoding template array, with the maximum number of [1, 10].
      */
     public VideoTemplateInfo [] getVideoTemplates() {
         return this.VideoTemplates;
     }
 
     /**
-     * Set Video transcoding templates. Quantity: [1, 10]
-     * @param VideoTemplates Video transcoding templates. Quantity: [1, 10]
+     * Set Video transcoding template array, with the maximum number of [1, 10].
+     * @param VideoTemplates Video transcoding template array, with the maximum number of [1, 10].
      */
     public void setVideoTemplates(VideoTemplateInfo [] VideoTemplates) {
         this.VideoTemplates = VideoTemplates;
     }
 
     /**
-     * Get Audio/Video transcoding templates. Quantity: [1, 10] 
-     * @return AVTemplates Audio/Video transcoding templates. Quantity: [1, 10]
+     * Get Audio and video transcoding template array, with a limit on the number between 1 and 10. 
+     * @return AVTemplates Audio and video transcoding template array, with a limit on the number between 1 and 10.
      */
     public AVTemplate [] getAVTemplates() {
         return this.AVTemplates;
     }
 
     /**
-     * Set Audio/Video transcoding templates. Quantity: [1, 10]
-     * @param AVTemplates Audio/Video transcoding templates. Quantity: [1, 10]
+     * Set Audio and video transcoding template array, with a limit on the number between 1 and 10.
+     * @param AVTemplates Audio and video transcoding template array, with a limit on the number between 1 and 10.
      */
     public void setAVTemplates(AVTemplate [] AVTemplates) {
         this.AVTemplates = AVTemplates;
     }
 
     /**
-     * Get Subtitle template configuration. 
-     * @return CaptionTemplates Subtitle template configuration.
+     * Get Subtitle template configuration is only valid for joint transcoding template. 
+     * @return CaptionTemplates Subtitle template configuration is only valid for joint transcoding template.
      */
     public SubtitleConf [] getCaptionTemplates() {
         return this.CaptionTemplates;
     }
 
     /**
-     * Set Subtitle template configuration.
-     * @param CaptionTemplates Subtitle template configuration.
+     * Set Subtitle template configuration is only valid for joint transcoding template.
+     * @param CaptionTemplates Subtitle template configuration is only valid for joint transcoding template.
      */
     public void setCaptionTemplates(SubtitleConf [] CaptionTemplates) {
         this.CaptionTemplates = CaptionTemplates;
     }
 
     /**
-     * Get Event settings 
-     * @return PlanSettings Event settings
+     * Get Configuration message of the scheduled task. 
+     * @return PlanSettings Configuration message of the scheduled task.
      */
     public PlanSettings getPlanSettings() {
         return this.PlanSettings;
     }
 
     /**
-     * Set Event settings
-     * @param PlanSettings Event settings
+     * Set Configuration message of the scheduled task.
+     * @param PlanSettings Configuration message of the scheduled task.
      */
     public void setPlanSettings(PlanSettings PlanSettings) {
         this.PlanSettings = PlanSettings;
     }
 
     /**
-     * Get The callback settings. 
-     * @return EventNotifySettings The callback settings.
+     * Get Callback configuration information. 
+     * @return EventNotifySettings Callback configuration information.
      */
     public EventNotifySetting getEventNotifySettings() {
         return this.EventNotifySettings;
     }
 
     /**
-     * Set The callback settings.
-     * @param EventNotifySettings The callback settings.
+     * Set Callback configuration information.
+     * @param EventNotifySettings Callback configuration information.
      */
     public void setEventNotifySettings(EventNotifySetting EventNotifySettings) {
         this.EventNotifySettings = EventNotifySettings;
@@ -305,64 +305,64 @@ public class CreateStreamLiveChannelRequest extends AbstractModel {
     }
 
     /**
-     * Get Recognition configuration for input content. 
-     * @return InputAnalysisSettings Recognition configuration for input content.
+     * Get Input content identification configuration. 
+     * @return InputAnalysisSettings Input content identification configuration.
      */
     public InputAnalysisInfo getInputAnalysisSettings() {
         return this.InputAnalysisSettings;
     }
 
     /**
-     * Set Recognition configuration for input content.
-     * @param InputAnalysisSettings Recognition configuration for input content.
+     * Set Input content identification configuration.
+     * @param InputAnalysisSettings Input content identification configuration.
      */
     public void setInputAnalysisSettings(InputAnalysisInfo InputAnalysisSettings) {
         this.InputAnalysisSettings = InputAnalysisSettings;
     }
 
     /**
-     * Get Console tag list. 
-     * @return Tags Console tag list.
+     * Get Console tag list 
+     * @return Tags Console tag list
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Console tag list.
-     * @param Tags Console tag list.
+     * Set Console tag list
+     * @param Tags Console tag list
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get Frame capture templates. 
-     * @return FrameCaptureTemplates Frame capture templates.
+     * Get chart template 
+     * @return FrameCaptureTemplates chart template
      */
     public FrameCaptureTemplate [] getFrameCaptureTemplates() {
         return this.FrameCaptureTemplates;
     }
 
     /**
-     * Set Frame capture templates.
-     * @param FrameCaptureTemplates Frame capture templates.
+     * Set chart template
+     * @param FrameCaptureTemplates chart template
      */
     public void setFrameCaptureTemplates(FrameCaptureTemplate [] FrameCaptureTemplates) {
         this.FrameCaptureTemplates = FrameCaptureTemplates;
     }
 
     /**
-     * Get General settings. 
-     * @return GeneralSettings General settings.
+     * Get Common configuration. 
+     * @return GeneralSettings Common configuration.
      */
     public GeneralSetting getGeneralSettings() {
         return this.GeneralSettings;
     }
 
     /**
-     * Set General settings.
-     * @param GeneralSettings General settings.
+     * Set Common configuration.
+     * @param GeneralSettings Common configuration.
      */
     public void setGeneralSettings(GeneralSetting GeneralSettings) {
         this.GeneralSettings = GeneralSettings;

@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class AudioTrackInfo extends AbstractModel {
 
     /**
-    * User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
+    * User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
     */
     @SerializedName("TrackName")
     @Expose
     private String TrackName;
 
     /**
-    * Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+    * Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
     */
     @SerializedName("AudioCodec")
     @Expose
@@ -52,7 +52,7 @@ public class AudioTrackInfo extends AbstractModel {
     private Long AudioSampleRate;
 
     /**
-    * Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
+    * Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
     */
     @SerializedName("AudioSelectorName")
     @Expose
@@ -66,39 +66,39 @@ public class AudioTrackInfo extends AbstractModel {
     private AudioNormalizationSettings AudioNormalization;
 
     /**
-    * Audio encoding configuration.
+    * Additional audio mode and sound channel configuration.
     */
     @SerializedName("AudioCodecDetails")
     @Expose
     private AudioCodecDetail AudioCodecDetails;
 
     /**
-     * Get User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel. 
-     * @return TrackName User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
+     * Get User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel. 
+     * @return TrackName User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
      */
     public String getTrackName() {
         return this.TrackName;
     }
 
     /**
-     * Set User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
-     * @param TrackName User input is limited to letters and numbers, the length should not exceed 20, and should not be repeated in the same channel.
+     * Set User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
+     * @param TrackName User input, limited to letters and digits, length not exceeding 20, non-repeating in the same channel.
      */
     public void setTrackName(String TrackName) {
         this.TrackName = TrackName;
     }
 
     /**
-     * Get Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default. 
-     * @return AudioCodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+     * Get Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC. 
+     * @return AudioCodec Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
      */
     public String getAudioCodec() {
         return this.AudioCodec;
     }
 
     /**
-     * Set Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
-     * @param AudioCodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+     * Set Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
+     * @param AudioCodec Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
      */
     public void setAudioCodec(String AudioCodec) {
         this.AudioCodec = AudioCodec;
@@ -137,16 +137,16 @@ public class AudioTrackInfo extends AbstractModel {
     }
 
     /**
-     * Get Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered. 
-     * @return AudioSelectorName Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
+     * Get Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid. 
+     * @return AudioSelectorName Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
      */
     public String getAudioSelectorName() {
         return this.AudioSelectorName;
     }
 
     /**
-     * Set Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
-     * @param AudioSelectorName Only values defined by AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid can be entered.
+     * Set Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
+     * @param AudioSelectorName Input Only the value defined in AttachedInputs.$.AudioSelectors.$.audioPidSelection.pid.
      */
     public void setAudioSelectorName(String AudioSelectorName) {
         this.AudioSelectorName = AudioSelectorName;
@@ -169,16 +169,16 @@ public class AudioTrackInfo extends AbstractModel {
     }
 
     /**
-     * Get Audio encoding configuration. 
-     * @return AudioCodecDetails Audio encoding configuration.
+     * Get Additional audio mode and sound channel configuration. 
+     * @return AudioCodecDetails Additional audio mode and sound channel configuration.
      */
     public AudioCodecDetail getAudioCodecDetails() {
         return this.AudioCodecDetails;
     }
 
     /**
-     * Set Audio encoding configuration.
-     * @param AudioCodecDetails Audio encoding configuration.
+     * Set Additional audio mode and sound channel configuration.
+     * @param AudioCodecDetails Additional audio mode and sound channel configuration.
      */
     public void setAudioCodecDetails(AudioCodecDetail AudioCodecDetails) {
         this.AudioCodecDetails = AudioCodecDetails;

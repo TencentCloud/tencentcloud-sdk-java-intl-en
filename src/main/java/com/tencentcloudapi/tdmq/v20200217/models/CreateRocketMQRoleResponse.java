@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class CreateRocketMQRoleResponse extends AbstractModel {
 
     /**
-    * Role name.
+    * <p>Role name</p>
     */
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
 
     /**
-    * Role token.
+    * <p>Role token</p>
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-    * Specifies the remark description.
+    * <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("Remark")
@@ -53,41 +53,41 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Role name. 
-     * @return RoleName Role name.
+     * Get <p>Role name</p> 
+     * @return RoleName <p>Role name</p>
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set Role name.
-     * @param RoleName Role name.
+     * Set <p>Role name</p>
+     * @param RoleName <p>Role name</p>
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get Role token. 
-     * @return Token Role token.
+     * Get <p>Role token</p> 
+     * @return Token <p>Role token</p>
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set Role token.
-     * @param Token Role token.
+     * Set <p>Role token</p>
+     * @param Token <p>Role token</p>
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get Specifies the remark description.
+     * Get <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return Remark Specifies the remark description.
+     * @return Remark <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getRemark() {
@@ -95,9 +95,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Specifies the remark description.
+     * Set <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Remark Specifies the remark description.
+     * @param Remark <p>Remarks</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setRemark(String Remark) {

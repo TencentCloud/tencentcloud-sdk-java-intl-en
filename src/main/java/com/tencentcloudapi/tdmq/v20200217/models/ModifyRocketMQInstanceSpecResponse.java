@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class ModifyRocketMQInstanceSpecResponse extends AbstractModel {
 
     /**
-    * Order ID
+    * <p>Order ID</p>
     */
     @SerializedName("OrderId")
     @Expose
@@ -38,16 +38,16 @@ public class ModifyRocketMQInstanceSpecResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Order ID 
-     * @return OrderId Order ID
+     * Get <p>Order ID</p> 
+     * @return OrderId <p>Order ID</p>
      */
     public String getOrderId() {
         return this.OrderId;
     }
 
     /**
-     * Set Order ID
-     * @param OrderId Order ID
+     * Set <p>Order ID</p>
+     * @param OrderId <p>Order ID</p>
      */
     public void setOrderId(String OrderId) {
         this.OrderId = OrderId;

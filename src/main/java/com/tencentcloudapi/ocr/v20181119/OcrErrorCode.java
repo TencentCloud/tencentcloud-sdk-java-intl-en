@@ -45,6 +45,9 @@ public enum OcrErrorCode {
      /* The information in the visual zone does not match that in the machine-readable zone. */
      FAILEDOPERATION_INCONSISTENCYBETWEENMRZANDVRZ("FailedOperation.InconsistencyBetweenMRZAndVRZ"),
      
+     /* Large model service invocation failed. Try again later. */
+     FAILEDOPERATION_LLMSERVICEFAILED("FailedOperation.LLMServiceFailed"),
+     
      /* The input language is not supported. */
      FAILEDOPERATION_LANGUAGENOTSUPPORT("FailedOperation.LanguageNotSupport"),
      
@@ -68,6 +71,9 @@ public enum OcrErrorCode {
      
      /* Unknown error. */
      FAILEDOPERATION_UNKNOWERROR("FailedOperation.UnKnowError"),
+     
+     /* Unknown file type. */
+     FAILEDOPERATION_UNKNOWFILETYPEERROR("FailedOperation.UnKnowFileTypeError"),
      
      /* The service is not activated. */
      FAILEDOPERATION_UNOPENERROR("FailedOperation.UnOpenError"),
@@ -102,7 +108,7 @@ public enum OcrErrorCode {
      /* Exceptional billing status. */
      RESOURCESSOLDOUT_CHARGESTATUSEXCEPTION("ResourcesSoldOut.ChargeStatusException"),
      
-     /* Unrecognized argument. */
+     /* Unknown parameter error. */
      UNKNOWNPARAMETER("UnknownParameter");
      
     private String value;

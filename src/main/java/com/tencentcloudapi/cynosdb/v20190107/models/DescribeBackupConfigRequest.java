@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class DescribeBackupConfigRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

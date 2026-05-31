@@ -31,45 +31,42 @@ public class DestinationInfo extends AbstractModel {
     private String OutputUrl;
 
     /**
-    * Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Authentication key, length limited to [1, 128].
     */
     @SerializedName("AuthKey")
     @Expose
     private String AuthKey;
 
     /**
-    * Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Authentication username, length limited to [1, 128].
     */
     @SerializedName("Username")
     @Expose
     private String Username;
 
     /**
-    * Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Authentication password, length limited to [1, 128].
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+    * The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
     */
     @SerializedName("DestinationType")
     @Expose
     private String DestinationType;
 
     /**
-    * Aws S3 destination setting.
+    * Forward the Aws S3 address information.
     */
     @SerializedName("AmazonS3Settings")
     @Expose
     private AmazonS3Settings AmazonS3Settings;
 
     /**
-    * Cos destination setting.
+    * Forward COS address information.
     */
     @SerializedName("CosSettings")
     @Expose
@@ -92,108 +89,96 @@ Note: this field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return AuthKey Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Authentication key, length limited to [1, 128]. 
+     * @return AuthKey Authentication key, length limited to [1, 128].
      */
     public String getAuthKey() {
         return this.AuthKey;
     }
 
     /**
-     * Set Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AuthKey Authentication key. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Authentication key, length limited to [1, 128].
+     * @param AuthKey Authentication key, length limited to [1, 128].
      */
     public void setAuthKey(String AuthKey) {
         this.AuthKey = AuthKey;
     }
 
     /**
-     * Get Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Username Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Authentication username, length limited to [1, 128]. 
+     * @return Username Authentication username, length limited to [1, 128].
      */
     public String getUsername() {
         return this.Username;
     }
 
     /**
-     * Set Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Username Authentication username. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Authentication username, length limited to [1, 128].
+     * @param Username Authentication username, length limited to [1, 128].
      */
     public void setUsername(String Username) {
         this.Username = Username;
     }
 
     /**
-     * Get Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Password Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Authentication password, length limited to [1, 128]. 
+     * @return Password Authentication password, length limited to [1, 128].
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Password Authentication password. Length limit: [1,128].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Authentication password, length limited to [1, 128].
+     * @param Password Authentication password, length limited to [1, 128].
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS. 
-     * @return DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+     * Get The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected. 
+     * @return DestinationType The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
      */
     public String getDestinationType() {
         return this.DestinationType;
     }
 
     /**
-     * Set The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
-     * @param DestinationType The destination type of the retweet. Currently available values are: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. The default is: Standard. When the output group type is FRAME_CAPTURE, valid values are: AWS_AmazonS3, COS.
+     * Set The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
+     * @param DestinationType The destination type for relay. Available values: Standard, AWS_MediaPackageV1, AWS_MediaPackageV2. Default: Standard. AWS_AmazonS3 or COS is supported when FrameCapture group is selected.
      */
     public void setDestinationType(String DestinationType) {
         this.DestinationType = DestinationType;
     }
 
     /**
-     * Get Aws S3 destination setting. 
-     * @return AmazonS3Settings Aws S3 destination setting.
+     * Get Forward the Aws S3 address information. 
+     * @return AmazonS3Settings Forward the Aws S3 address information.
      */
     public AmazonS3Settings getAmazonS3Settings() {
         return this.AmazonS3Settings;
     }
 
     /**
-     * Set Aws S3 destination setting.
-     * @param AmazonS3Settings Aws S3 destination setting.
+     * Set Forward the Aws S3 address information.
+     * @param AmazonS3Settings Forward the Aws S3 address information.
      */
     public void setAmazonS3Settings(AmazonS3Settings AmazonS3Settings) {
         this.AmazonS3Settings = AmazonS3Settings;
     }
 
     /**
-     * Get Cos destination setting. 
-     * @return CosSettings Cos destination setting.
+     * Get Forward COS address information. 
+     * @return CosSettings Forward COS address information.
      */
     public CosSettings getCosSettings() {
         return this.CosSettings;
     }
 
     /**
-     * Set Cos destination setting.
-     * @param CosSettings Cos destination setting.
+     * Set Forward COS address information.
+     * @param CosSettings Forward COS address information.
      */
     public void setCosSettings(CosSettings CosSettings) {
         this.CosSettings = CosSettings;

@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ThumbnailSettings extends AbstractModel {
 
     /**
-    * Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
+    * Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
     */
     @SerializedName("ThumbnailEnabled")
     @Expose
     private Long ThumbnailEnabled;
 
     /**
-     * Get Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0 
-     * @return ThumbnailEnabled Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
+     * Get Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0 
+     * @return ThumbnailEnabled Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
      */
     public Long getThumbnailEnabled() {
         return this.ThumbnailEnabled;
     }
 
     /**
-     * Set Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
-     * @param ThumbnailEnabled Generate thumbnail ,0: Disabled ,1: Enabled , Default: 0
+     * Set Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
+     * @param ThumbnailEnabled Whether to generate thumbnails  0: disabled  1: enabled  Default value: 0
      */
     public void setThumbnailEnabled(Long ThumbnailEnabled) {
         this.ThumbnailEnabled = ThumbnailEnabled;

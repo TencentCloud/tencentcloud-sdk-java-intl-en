@@ -45,21 +45,21 @@ public class AVTemplate extends AbstractModel {
     private String Vcodec;
 
     /**
-    * Video width. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video width will be used.
+    * Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Video height. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video height will be used.
+    * Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
+    * Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
     */
     @SerializedName("Fps")
     @Expose
@@ -87,7 +87,7 @@ public class AVTemplate extends AbstractModel {
     private Long NeedAudio;
 
     /**
-    * Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+    * Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
     */
     @SerializedName("Acodec")
     @Expose
@@ -109,7 +109,7 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     private Long VideoBitrate;
 
     /**
-    * Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+    * Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
     */
     @SerializedName("RateControlMode")
     @Expose
@@ -171,35 +171,35 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     private Long AudioSampleRate;
 
     /**
-    * This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+    * This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate is set to equal the frame rate of the first input video. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is confirmed by the HZ you input.	
     */
     @SerializedName("FrameRateType")
     @Expose
     private String FrameRateType;
 
     /**
-    * Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+    * Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.	
     */
     @SerializedName("FrameRateNumerator")
     @Expose
     private Long FrameRateNumerator;
 
     /**
-    * Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+    * Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.	
     */
     @SerializedName("FrameRateDenominator")
     @Expose
     private Long FrameRateDenominator;
 
     /**
-    * The number of B frames can be selected from 1 to 3.
+    * Number of B-frames 1-3.
     */
     @SerializedName("BFramesNum")
     @Expose
     private Long BFramesNum;
 
     /**
-    * The number of reference frames can be selected from 1 to 16.
+    * Refer to the number of frames 1-16.
     */
     @SerializedName("RefFramesNum")
     @Expose
@@ -227,21 +227,21 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     private AudioCodecDetail AudioCodecDetails;
 
     /**
-    * Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+    * Whether to enable multiple audio tracks. 0: not required 1: required. Default value: 0.
     */
     @SerializedName("MultiAudioTrackEnabled")
     @Expose
     private Long MultiAudioTrackEnabled;
 
     /**
-    * Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+    * Limit on the number 0-20. Valid when MultiAudioTrackEnabled is enabled.
     */
     @SerializedName("AudioTracks")
     @Expose
     private AudioTrackInfo [] AudioTracks;
 
     /**
-    * Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+    * Whether to enable video enhancement, 1: enable 0: disable.
     */
     @SerializedName("VideoEnhanceEnabled")
     @Expose
@@ -255,28 +255,28 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     private VideoEnhanceSetting [] VideoEnhanceSettings;
 
     /**
-    * Key frame interval, 300-10000, optional.
+    * Keyframe interval, 300-10000, optional.
     */
     @SerializedName("GopSize")
     @Expose
     private Long GopSize;
 
     /**
-    * Keyframe units, only support MILLISECONDS (milliseconds).
+    * Key frame measurement unit currently only supports MILLISECONDS (ms).
     */
     @SerializedName("GopSizeUnits")
     @Expose
     private String GopSizeUnits;
 
     /**
-    * Color space setting.
+    * Colorspace configuration.
     */
     @SerializedName("ColorSpaceSettings")
     @Expose
     private ColorSpaceSetting ColorSpaceSettings;
 
     /**
-    * Traceability watermark.
+    * Traceable watermark.
     */
     @SerializedName("ForensicWatermarkIds")
     @Expose
@@ -331,48 +331,48 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     }
 
     /**
-     * Get Video width. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video width will be used. 
-     * @return Width Video width. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video width will be used.
+     * Get Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough. 
+     * @return Width Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Video width. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video width will be used.
-     * @param Width Video width. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video width will be used.
+     * Set Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
+     * @param Width Video width. The input range is (0, 4096] and must be a multiple of 2. If left blank, it represents passthrough.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Video height. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video height will be used. 
-     * @return Height Video height. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video height will be used.
+     * Get Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough. 
+     * @return Height Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Video height. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video height will be used.
-     * @param Height Video height. Value range: (0, 4096]. The value must be an integer multiple of 2. If this parameter is left empty, the original video height will be used.
+     * Set Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
+     * @param Height Video height. Input range is (0, 4096] and must be a multiple of 2. Leave empty to represent passthrough.
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used. 
-     * @return Fps Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
+     * Get Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough. 
+     * @return Fps Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
      */
     public Long getFps() {
         return this.Fps;
     }
 
     /**
-     * Set Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
-     * @param Fps Video frame rate. Value range: [1, 240]. If this parameter is left empty, the original frame rate will be used.
+     * Set Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
+     * @param Fps Video frame rate. Valid when you select SPECIFIED_HZ for FrameRateType. Input range is [1, 240]. Leave blank to represent passthrough.
      */
     public void setFps(Long Fps) {
         this.Fps = Fps;
@@ -427,16 +427,16 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     }
 
     /**
-     * Get Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default. 
-     * @return Acodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+     * Get Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC. 
+     * @return Acodec Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
      */
     public String getAcodec() {
         return this.Acodec;
     }
 
     /**
-     * Set Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
-     * @param Acodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+     * Set Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
+     * @param Acodec Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
      */
     public void setAcodec(String Acodec) {
         this.Acodec = Acodec;
@@ -479,16 +479,16 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     }
 
     /**
-     * Get Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`. 
-     * @return RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+     * Get Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR. 
+     * @return RateControlMode Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
      */
     public String getRateControlMode() {
         return this.RateControlMode;
     }
 
     /**
-     * Set Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
-     * @param RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default), `VBR`.
+     * Set Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
+     * @param RateControlMode Bitrate control mode. Optional values: [CBR|ABR|VBR]. Default: ABR.
      */
     public void setRateControlMode(String RateControlMode) {
         this.RateControlMode = RateControlMode;
@@ -631,80 +631,80 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     }
 
     /**
-     * Get This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter. 
-     * @return FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+     * Get This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate is set to equal the frame rate of the first input video. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is confirmed by the HZ you input.	 
+     * @return FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate is set to equal the frame rate of the first input video. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is confirmed by the HZ you input.	
      */
     public String getFrameRateType() {
         return this.FrameRateType;
     }
 
     /**
-     * Set This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
-     * @param FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate will be set equal to the input video frame rate of the first input. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is determined by the HZ you enter.
+     * Set This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate is set to equal the frame rate of the first input video. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is confirmed by the HZ you input.	
+     * @param FrameRateType This field indicates how to specify the output video frame rate. If FOLLOW_SOURCE is selected, the output video frame rate is set to equal the frame rate of the first input video. If SPECIFIED_FRACTION is selected, the output video frame rate is determined by the fraction (frame rate numerator and frame rate denominator). If SPECIFIED_HZ is selected, the frame rate of the output video is confirmed by the HZ you input.	
      */
     public void setFrameRateType(String FrameRateType) {
         this.FrameRateType = FrameRateType;
     }
 
     /**
-     * Get Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting. 
-     * @return FrameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+     * Get Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.	 
+     * @return FrameRateNumerator Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.	
      */
     public Long getFrameRateNumerator() {
         return this.FrameRateNumerator;
     }
 
     /**
-     * Set Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
-     * @param FrameRateNumerator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate numerator setting.
+     * Set Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.	
+     * @param FrameRateNumerator Valid when you select SPECIFIED_FRACTION as the FrameRateType. Set the output frame rate molecular.	
      */
     public void setFrameRateNumerator(Long FrameRateNumerator) {
         this.FrameRateNumerator = FrameRateNumerator;
     }
 
     /**
-     * Get Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting. 
-     * @return FrameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+     * Get Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.	 
+     * @return FrameRateDenominator Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.	
      */
     public Long getFrameRateDenominator() {
         return this.FrameRateDenominator;
     }
 
     /**
-     * Set Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
-     * @param FrameRateDenominator Valid when the FrameRateType type you select is SPECIFIED_FRACTION, the output frame rate denominator setting.
+     * Set Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.	
+     * @param FrameRateDenominator Valid when you select SPECIFIED_FRACTION for FrameRateType. Output frame rate denominator set.	
      */
     public void setFrameRateDenominator(Long FrameRateDenominator) {
         this.FrameRateDenominator = FrameRateDenominator;
     }
 
     /**
-     * Get The number of B frames can be selected from 1 to 3. 
-     * @return BFramesNum The number of B frames can be selected from 1 to 3.
+     * Get Number of B-frames 1-3. 
+     * @return BFramesNum Number of B-frames 1-3.
      */
     public Long getBFramesNum() {
         return this.BFramesNum;
     }
 
     /**
-     * Set The number of B frames can be selected from 1 to 3.
-     * @param BFramesNum The number of B frames can be selected from 1 to 3.
+     * Set Number of B-frames 1-3.
+     * @param BFramesNum Number of B-frames 1-3.
      */
     public void setBFramesNum(Long BFramesNum) {
         this.BFramesNum = BFramesNum;
     }
 
     /**
-     * Get The number of reference frames can be selected from 1 to 16. 
-     * @return RefFramesNum The number of reference frames can be selected from 1 to 16.
+     * Get Refer to the number of frames 1-16. 
+     * @return RefFramesNum Refer to the number of frames 1-16.
      */
     public Long getRefFramesNum() {
         return this.RefFramesNum;
     }
 
     /**
-     * Set The number of reference frames can be selected from 1 to 16.
-     * @param RefFramesNum The number of reference frames can be selected from 1 to 16.
+     * Set Refer to the number of frames 1-16.
+     * @param RefFramesNum Refer to the number of frames 1-16.
      */
     public void setRefFramesNum(Long RefFramesNum) {
         this.RefFramesNum = RefFramesNum;
@@ -759,48 +759,48 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     }
 
     /**
-     * Get Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0. 
-     * @return MultiAudioTrackEnabled Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+     * Get Whether to enable multiple audio tracks. 0: not required 1: required. Default value: 0. 
+     * @return MultiAudioTrackEnabled Whether to enable multiple audio tracks. 0: not required 1: required. Default value: 0.
      */
     public Long getMultiAudioTrackEnabled() {
         return this.MultiAudioTrackEnabled;
     }
 
     /**
-     * Set Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
-     * @param MultiAudioTrackEnabled Whether to enable multiple audio tracks 0: Not required 1: Required Default value 0.
+     * Set Whether to enable multiple audio tracks. 0: not required 1: required. Default value: 0.
+     * @param MultiAudioTrackEnabled Whether to enable multiple audio tracks. 0: not required 1: required. Default value: 0.
      */
     public void setMultiAudioTrackEnabled(Long MultiAudioTrackEnabled) {
         this.MultiAudioTrackEnabled = MultiAudioTrackEnabled;
     }
 
     /**
-     * Get Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on. 
-     * @return AudioTracks Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+     * Get Limit on the number 0-20. Valid when MultiAudioTrackEnabled is enabled. 
+     * @return AudioTracks Limit on the number 0-20. Valid when MultiAudioTrackEnabled is enabled.
      */
     public AudioTrackInfo [] getAudioTracks() {
         return this.AudioTracks;
     }
 
     /**
-     * Set Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
-     * @param AudioTracks Quantity limit 0-20 Valid when MultiAudioTrackEnabled is turned on.
+     * Set Limit on the number 0-20. Valid when MultiAudioTrackEnabled is enabled.
+     * @param AudioTracks Limit on the number 0-20. Valid when MultiAudioTrackEnabled is enabled.
      */
     public void setAudioTracks(AudioTrackInfo [] AudioTracks) {
         this.AudioTracks = AudioTracks;
     }
 
     /**
-     * Get Do you want to enable video enhancement? 1: Enable 0: Do not enable. 
-     * @return VideoEnhanceEnabled Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+     * Get Whether to enable video enhancement, 1: enable 0: disable. 
+     * @return VideoEnhanceEnabled Whether to enable video enhancement, 1: enable 0: disable.
      */
     public Long getVideoEnhanceEnabled() {
         return this.VideoEnhanceEnabled;
     }
 
     /**
-     * Set Do you want to enable video enhancement? 1: Enable 0: Do not enable.
-     * @param VideoEnhanceEnabled Do you want to enable video enhancement? 1: Enable 0: Do not enable.
+     * Set Whether to enable video enhancement, 1: enable 0: disable.
+     * @param VideoEnhanceEnabled Whether to enable video enhancement, 1: enable 0: disable.
      */
     public void setVideoEnhanceEnabled(Long VideoEnhanceEnabled) {
         this.VideoEnhanceEnabled = VideoEnhanceEnabled;
@@ -823,64 +823,64 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     }
 
     /**
-     * Get Key frame interval, 300-10000, optional. 
-     * @return GopSize Key frame interval, 300-10000, optional.
+     * Get Keyframe interval, 300-10000, optional. 
+     * @return GopSize Keyframe interval, 300-10000, optional.
      */
     public Long getGopSize() {
         return this.GopSize;
     }
 
     /**
-     * Set Key frame interval, 300-10000, optional.
-     * @param GopSize Key frame interval, 300-10000, optional.
+     * Set Keyframe interval, 300-10000, optional.
+     * @param GopSize Keyframe interval, 300-10000, optional.
      */
     public void setGopSize(Long GopSize) {
         this.GopSize = GopSize;
     }
 
     /**
-     * Get Keyframe units, only support MILLISECONDS (milliseconds). 
-     * @return GopSizeUnits Keyframe units, only support MILLISECONDS (milliseconds).
+     * Get Key frame measurement unit currently only supports MILLISECONDS (ms). 
+     * @return GopSizeUnits Key frame measurement unit currently only supports MILLISECONDS (ms).
      */
     public String getGopSizeUnits() {
         return this.GopSizeUnits;
     }
 
     /**
-     * Set Keyframe units, only support MILLISECONDS (milliseconds).
-     * @param GopSizeUnits Keyframe units, only support MILLISECONDS (milliseconds).
+     * Set Key frame measurement unit currently only supports MILLISECONDS (ms).
+     * @param GopSizeUnits Key frame measurement unit currently only supports MILLISECONDS (ms).
      */
     public void setGopSizeUnits(String GopSizeUnits) {
         this.GopSizeUnits = GopSizeUnits;
     }
 
     /**
-     * Get Color space setting. 
-     * @return ColorSpaceSettings Color space setting.
+     * Get Colorspace configuration. 
+     * @return ColorSpaceSettings Colorspace configuration.
      */
     public ColorSpaceSetting getColorSpaceSettings() {
         return this.ColorSpaceSettings;
     }
 
     /**
-     * Set Color space setting.
-     * @param ColorSpaceSettings Color space setting.
+     * Set Colorspace configuration.
+     * @param ColorSpaceSettings Colorspace configuration.
      */
     public void setColorSpaceSettings(ColorSpaceSetting ColorSpaceSettings) {
         this.ColorSpaceSettings = ColorSpaceSettings;
     }
 
     /**
-     * Get Traceability watermark. 
-     * @return ForensicWatermarkIds Traceability watermark.
+     * Get Traceable watermark. 
+     * @return ForensicWatermarkIds Traceable watermark.
      */
     public String [] getForensicWatermarkIds() {
         return this.ForensicWatermarkIds;
     }
 
     /**
-     * Set Traceability watermark.
-     * @param ForensicWatermarkIds Traceability watermark.
+     * Set Traceable watermark.
+     * @param ForensicWatermarkIds Traceable watermark.
      */
     public void setForensicWatermarkIds(String [] ForensicWatermarkIds) {
         this.ForensicWatermarkIds = ForensicWatermarkIds;

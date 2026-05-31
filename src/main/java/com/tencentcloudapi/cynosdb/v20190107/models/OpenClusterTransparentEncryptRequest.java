@@ -52,6 +52,13 @@ public class OpenClusterTransparentEncryptRequest extends AbstractModel {
     private String KeyRegion;
 
     /**
+    * Whether global encryption is enabled
+    */
+    @SerializedName("IsOpenGlobalEncryption")
+    @Expose
+    private Boolean IsOpenGlobalEncryption;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -115,6 +122,22 @@ public class OpenClusterTransparentEncryptRequest extends AbstractModel {
         this.KeyRegion = KeyRegion;
     }
 
+    /**
+     * Get Whether global encryption is enabled 
+     * @return IsOpenGlobalEncryption Whether global encryption is enabled
+     */
+    public Boolean getIsOpenGlobalEncryption() {
+        return this.IsOpenGlobalEncryption;
+    }
+
+    /**
+     * Set Whether global encryption is enabled
+     * @param IsOpenGlobalEncryption Whether global encryption is enabled
+     */
+    public void setIsOpenGlobalEncryption(Boolean IsOpenGlobalEncryption) {
+        this.IsOpenGlobalEncryption = IsOpenGlobalEncryption;
+    }
+
     public OpenClusterTransparentEncryptRequest() {
     }
 
@@ -135,6 +158,9 @@ public class OpenClusterTransparentEncryptRequest extends AbstractModel {
         if (source.KeyRegion != null) {
             this.KeyRegion = new String(source.KeyRegion);
         }
+        if (source.IsOpenGlobalEncryption != null) {
+            this.IsOpenGlobalEncryption = new Boolean(source.IsOpenGlobalEncryption);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class OpenClusterTransparentEncryptRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "KeyType", this.KeyType);
         this.setParamSimple(map, prefix + "KeyId", this.KeyId);
         this.setParamSimple(map, prefix + "KeyRegion", this.KeyRegion);
+        this.setParamSimple(map, prefix + "IsOpenGlobalEncryption", this.IsOpenGlobalEncryption);
 
     }
 }

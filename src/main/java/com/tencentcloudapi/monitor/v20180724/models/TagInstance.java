@@ -61,7 +61,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     */
     @SerializedName("RegionId")
     @Expose
-    private String RegionId;
+    private Long RegionId;
 
     /**
     * Binding status. 2: bound; 1: binding
@@ -165,7 +165,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @return RegionId Region ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public String getRegionId() {
+    public Long getRegionId() {
         return this.RegionId;
     }
 
@@ -175,7 +175,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param RegionId Region ID
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public void setRegionId(String RegionId) {
+    public void setRegionId(Long RegionId) {
         this.RegionId = RegionId;
     }
 
@@ -240,7 +240,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
             this.ServiceType = new String(source.ServiceType);
         }
         if (source.RegionId != null) {
-            this.RegionId = new String(source.RegionId);
+            this.RegionId = new Long(source.RegionId);
         }
         if (source.BindingStatus != null) {
             this.BindingStatus = new Long(source.BindingStatus);

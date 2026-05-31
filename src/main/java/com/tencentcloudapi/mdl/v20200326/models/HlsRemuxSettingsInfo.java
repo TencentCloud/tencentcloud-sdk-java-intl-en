@@ -24,327 +24,347 @@ import java.util.HashMap;
 public class HlsRemuxSettingsInfo extends AbstractModel {
 
     /**
-    * Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+    * Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
     */
     @SerializedName("SegmentDuration")
     @Expose
     private Long SegmentDuration;
 
     /**
-    * Number of segments. Value range: [3,30]. Default value: 5.
+    * Number of shards. Input range [3, 30]. Default is 5.
     */
     @SerializedName("SegmentNumber")
     @Expose
     private Long SegmentNumber;
 
     /**
-    * Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
+    * Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
     */
     @SerializedName("PdtInsertion")
     @Expose
     private String PdtInsertion;
 
     /**
-    * PDT duration in seconds. Value range: (0,3000]. Default value: 600.
+    * Pdt duration in seconds. Input range (0, 3000]. Default 600.
     */
     @SerializedName("PdtDuration")
     @Expose
     private Long PdtDuration;
 
     /**
-    * Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
+    * Video packaging type, selectable SEPARATE|MERGE.
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
+    * Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
     */
     @SerializedName("SegmentType")
     @Expose
     private String SegmentType;
 
     /**
-    * The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+    * When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
     */
     @SerializedName("H265PackageType")
     @Expose
     private String H265PackageType;
 
     /**
-    * Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+    * Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
     */
     @SerializedName("LowLatency")
     @Expose
     private Long LowLatency;
 
     /**
-    * Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+    * Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
     */
     @SerializedName("PartialSegmentDuration")
     @Expose
     private Long PartialSegmentDuration;
 
     /**
-    * Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+    * Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
     */
     @SerializedName("PartialSegmentPlaySite")
     @Expose
     private Long PartialSegmentPlaySite;
 
     /**
-    * Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+    * Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
     */
     @SerializedName("StreamOrder")
     @Expose
     private Long StreamOrder;
 
     /**
-    * Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+    * Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
     */
     @SerializedName("VideoResolution")
     @Expose
     private Long VideoResolution;
 
     /**
-    * Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+    * Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
     */
     @SerializedName("EndListTag")
     @Expose
     private Long EndListTag;
 
     /**
-    * Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+    * Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
     */
     @SerializedName("AdMarkupType")
     @Expose
     private String AdMarkupType;
 
     /**
-     * Get Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000. 
-     * @return SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+     * Get Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000. 
+     * @return SegmentDuration Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
      */
     public Long getSegmentDuration() {
         return this.SegmentDuration;
     }
 
     /**
-     * Set Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
-     * @param SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
+     * Set Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
+     * @param SegmentDuration Segment duration in milliseconds. Input range is [1000, 30000], default 4000, can only be a multiple of 1000.
      */
     public void setSegmentDuration(Long SegmentDuration) {
         this.SegmentDuration = SegmentDuration;
     }
 
     /**
-     * Get Number of segments. Value range: [3,30]. Default value: 5. 
-     * @return SegmentNumber Number of segments. Value range: [3,30]. Default value: 5.
+     * Get Number of shards. Input range [3, 30]. Default is 5. 
+     * @return SegmentNumber Number of shards. Input range [3, 30]. Default is 5.
      */
     public Long getSegmentNumber() {
         return this.SegmentNumber;
     }
 
     /**
-     * Set Number of segments. Value range: [3,30]. Default value: 5.
-     * @param SegmentNumber Number of segments. Value range: [3,30]. Default value: 5.
+     * Set Number of shards. Input range [3, 30]. Default is 5.
+     * @param SegmentNumber Number of shards. Input range [3, 30]. Default is 5.
      */
     public void setSegmentNumber(Long SegmentNumber) {
         this.SegmentNumber = SegmentNumber;
     }
 
     /**
-     * Get Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE. 
-     * @return PdtInsertion Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
+     * Get Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE. 
+     * @return PdtInsertion Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
      */
     public String getPdtInsertion() {
         return this.PdtInsertion;
     }
 
     /**
-     * Set Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
-     * @param PdtInsertion Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
+     * Set Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
+     * @param PdtInsertion Whether to enable Pdt insertion. CLOSE/OPEN. Default is CLOSE.
      */
     public void setPdtInsertion(String PdtInsertion) {
         this.PdtInsertion = PdtInsertion;
     }
 
     /**
-     * Get PDT duration in seconds. Value range: (0,3000]. Default value: 600. 
-     * @return PdtDuration PDT duration in seconds. Value range: (0,3000]. Default value: 600.
+     * Get Pdt duration in seconds. Input range (0, 3000]. Default 600. 
+     * @return PdtDuration Pdt duration in seconds. Input range (0, 3000]. Default 600.
      */
     public Long getPdtDuration() {
         return this.PdtDuration;
     }
 
     /**
-     * Set PDT duration in seconds. Value range: (0,3000]. Default value: 600.
-     * @param PdtDuration PDT duration in seconds. Value range: (0,3000]. Default value: 600.
+     * Set Pdt duration in seconds. Input range (0, 3000]. Default 600.
+     * @param PdtDuration Pdt duration in seconds. Input range (0, 3000]. Default 600.
      */
     public void setPdtDuration(Long PdtDuration) {
         this.PdtDuration = PdtDuration;
     }
 
     /**
-     * Get Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE. 
-     * @return Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
+     * Get Video packaging type, selectable SEPARATE|MERGE. 
+     * @return Scheme Video packaging type, selectable SEPARATE|MERGE.
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
-     * @param Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`. Default value is: SEPARATE.
+     * Set Video packaging type, selectable SEPARATE|MERGE.
+     * @param Scheme Video packaging type, selectable SEPARATE|MERGE.
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting. 
-     * @return SegmentType The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
+     * Get Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting. 
+     * @return SegmentType Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
      */
     public String getSegmentType() {
         return this.SegmentType;
     }
 
     /**
-     * Set The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
-     * @param SegmentType The segment type. Valid values: `ts` (default), `fmp4`.
-Currently, fMP4 segments do not support DRM or time shifting.
+     * Set Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
+     * @param SegmentType Segment type, supports [ts|fmp4], default ts.
+fmp4 does not currently support DRM and time shifting.
      */
     public void setSegmentType(String SegmentType) {
         this.SegmentType = SegmentType;
     }
 
     /**
-     * Get The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default). 
-     * @return H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+     * Get When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1. 
+     * @return H265PackageType When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
      */
     public String getH265PackageType() {
         return this.H265PackageType;
     }
 
     /**
-     * Set The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
-     * @param H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+     * Set When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
+     * @param H265PackageType When the transcoding type is H265, the HLS H265 encapsulation type is selectable [hvc1|hev1], default is hev1.
      */
     public void setH265PackageType(String H265PackageType) {
         this.H265PackageType = H265PackageType;
     }
 
     /**
-     * Get Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0. 
-     * @return LowLatency Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+     * Get Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN. 
+     * @return LowLatency Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
      */
     public Long getLowLatency() {
         return this.LowLatency;
     }
 
     /**
-     * Set Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
-     * @param LowLatency Whether to enable low latency 0:CLOSE, 1:OPEN, default value: 0.
+     * Set Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
+     * @param LowLatency Whether to enable low delay. 0:CLOSE. Default is 0. 1:OPEN.
      */
     public void setLowLatency(Long LowLatency) {
         this.LowLatency = LowLatency;
     }
 
     /**
-     * Get Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms. 
-     * @return PartialSegmentDuration Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+     * Get Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms. 
+     * @return PartialSegmentDuration Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
      */
     public Long getPartialSegmentDuration() {
         return this.PartialSegmentDuration;
     }
 
     /**
-     * Set Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
-     * @param PartialSegmentDuration Low latency slice size, unit ms. Value range: integer [200-HlsRemuxSettings.SegmentDuration] Default value: 500ms.
+     * Set Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
+     * @param PartialSegmentDuration Small slice size in milliseconds. Value ranges from 200 to SegmentDuration (integer). Default value: 500 ms.
      */
     public void setPartialSegmentDuration(Long PartialSegmentDuration) {
         this.PartialSegmentDuration = PartialSegmentDuration;
     }
 
     /**
-     * Get Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration. 
-     * @return PartialSegmentPlaySite Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+     * Get Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration. 
+     * @return PartialSegmentPlaySite Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
      */
     public Long getPartialSegmentPlaySite() {
         return this.PartialSegmentPlaySite;
     }
 
     /**
-     * Set Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
-     * @param PartialSegmentPlaySite Low latency slice playback position, unit ms. Value range: integer [3*HlsRemuxSettings.PartiSegmentDuration - 3*HlsRemuxSettings.SegmentDuration], Default value: 3*HlsRemuxSettings.PartiSegmentDuration.
+     * Set Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
+     * @param PartialSegmentPlaySite Small slice playback position in milliseconds. Value ranges from 3*PartiSegmentDuration to 3*SegmentDuration (integer). Default value: 3*PartiSegmentDuration.
      */
     public void setPartialSegmentPlaySite(Long PartialSegmentPlaySite) {
         this.PartialSegmentPlaySite = PartialSegmentPlaySite;
     }
 
     /**
-     * Get Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1. 
-     * @return StreamOrder Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+     * Get Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1 
+     * @return StreamOrder Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
      */
     public Long getStreamOrder() {
         return this.StreamOrder;
     }
 
     /**
-     * Set Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
-     * @param StreamOrder Hls main m3u8 file sorting rules by bitrate, optional values: 1: video bitrate ascending order; 2: video bitrate descending order. Default value: 1.
+     * Set Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
+     * @param StreamOrder Hls master m3u8 file sorting rule by bitrate. Available values:
+1: Video bitrate ascending 2: Video bitrate descending
+Default value: 1
      */
     public void setStreamOrder(Long StreamOrder) {
         this.StreamOrder = StreamOrder;
     }
 
     /**
-     * Get Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1. 
-     * @return VideoResolution Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+     * Get Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1. 
+     * @return VideoResolution Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
      */
     public Long getVideoResolution() {
         return this.VideoResolution;
     }
 
     /**
-     * Set Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
-     * @param VideoResolution Whether the Hls main m3u8 file contains resolution information, optional values: 1: INCLUDE includes video resolution; 2: EXCLUDE does not include video resolution. Default value: 1.
+     * Set Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
+     * @param VideoResolution Whether the Hls master m3u8 file contains resolution information. Available values:
+1: INCLUDE includes video resolution 2: EXCLUDE excludes video resolution.
+Default value: 1.
      */
     public void setVideoResolution(Long VideoResolution) {
         this.VideoResolution = VideoResolution;
     }
 
     /**
-     * Get Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1. 
-     * @return EndListTag Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+     * Get Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1. 
+     * @return EndListTag Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
      */
     public Long getEndListTag() {
         return this.EndListTag;
     }
 
     /**
-     * Set Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
-     * @param EndListTag Whether to include the `EXT-X-ENDLIST` tag, 1 includes  `EXT-X-ENDLIST` tag, 2 does not include  `EXT-X-ENDLIST` tag; the default value is 1.
+     * Set Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
+     * @param EndListTag Whether the content contains the `EXT-X-ENDLIST` tag. 1: contains; 2: does not contain. Default: 1.
      */
     public void setEndListTag(Long EndListTag) {
         this.EndListTag = EndListTag;
     }
 
     /**
-     * Get Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`. 
-     * @return AdMarkupType Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+     * Get Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`. 
+     * @return AdMarkupType Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
      */
     public String getAdMarkupType() {
         return this.AdMarkupType;
     }
 
     /**
-     * Set Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
-     * @param AdMarkupType Optional: `ENHANCED_SCTE35`, `DATERANGE`; default value: `ENHANCED_SCTE35`.
+     * Set Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
+     * @param AdMarkupType Option: `ENHANCED_SCTE35`, `DATERANGE`; default `ENHANCED_SCTE35`.
      */
     public void setAdMarkupType(String AdMarkupType) {
         this.AdMarkupType = AdMarkupType;

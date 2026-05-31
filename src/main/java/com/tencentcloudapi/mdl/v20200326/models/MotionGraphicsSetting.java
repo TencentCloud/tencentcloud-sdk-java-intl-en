@@ -24,23 +24,28 @@ import java.util.HashMap;
 public class MotionGraphicsSetting extends AbstractModel {
 
     /**
-    * Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
+    * Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MotionGraphicsOverlayEnabled")
     @Expose
     private Long MotionGraphicsOverlayEnabled;
 
     /**
-     * Get Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0. 
-     * @return MotionGraphicsOverlayEnabled Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
+     * Get Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return MotionGraphicsOverlayEnabled Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMotionGraphicsOverlayEnabled() {
         return this.MotionGraphicsOverlayEnabled;
     }
 
     /**
-     * Set Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
-     * @param MotionGraphicsOverlayEnabled Whether to enable dynamic graphic overlay, '0' not enabled, '1' enabled; Default 0.
+     * Set Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MotionGraphicsOverlayEnabled Whether to enable dynamic graphic overlay. `0`: not enabled, `1`: enabled. Default: 0.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMotionGraphicsOverlayEnabled(Long MotionGraphicsOverlayEnabled) {
         this.MotionGraphicsOverlayEnabled = MotionGraphicsOverlayEnabled;

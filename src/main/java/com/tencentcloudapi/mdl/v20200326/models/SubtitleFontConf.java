@@ -31,14 +31,14 @@ public class SubtitleFontConf extends AbstractModel {
     private Long LineSpacing;
 
     /**
-    * Margins.
+    * Margin.
     */
     @SerializedName("Margins")
     @Expose
     private Long Margins;
 
     /**
-    * Rows.
+    * Number of rows.
     */
     @SerializedName("Lines")
     @Expose
@@ -52,35 +52,35 @@ public class SubtitleFontConf extends AbstractModel {
     private Long CharactersPerLine;
 
     /**
-    * Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
+    * Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
     */
     @SerializedName("SourceTextFont")
     @Expose
     private String SourceTextFont;
 
     /**
-    * Font color is represented by 6 RGB hexadecimal characters.
+    * Font color, represented by 6 characters in hexadecimal RGB.
     */
     @SerializedName("TextColor")
     @Expose
     private String TextColor;
 
     /**
-    * The background color is represented by 6 RGB hexadecimal characters.
+    * Background color, represented by 6 characters in hexadecimal RGB.
     */
     @SerializedName("BackgroundColor")
     @Expose
     private String BackgroundColor;
 
     /**
-    * Background transparency, a number from 0-100.
+    * Background opacity. A number from 0 to 100.
     */
     @SerializedName("BackgroundAlpha")
     @Expose
     private Long BackgroundAlpha;
 
     /**
-    * Preview copy.
+    * Preview the copywriting.
     */
     @SerializedName("PreviewContent")
     @Expose
@@ -101,7 +101,7 @@ public class SubtitleFontConf extends AbstractModel {
     private Long PreviewWindowWidth;
 
     /**
-    * Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
+    * Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
     */
     @SerializedName("TranslatedTextFont")
     @Expose
@@ -124,32 +124,32 @@ public class SubtitleFontConf extends AbstractModel {
     }
 
     /**
-     * Get Margins. 
-     * @return Margins Margins.
+     * Get Margin. 
+     * @return Margins Margin.
      */
     public Long getMargins() {
         return this.Margins;
     }
 
     /**
-     * Set Margins.
-     * @param Margins Margins.
+     * Set Margin.
+     * @param Margins Margin.
      */
     public void setMargins(Long Margins) {
         this.Margins = Margins;
     }
 
     /**
-     * Get Rows. 
-     * @return Lines Rows.
+     * Get Number of rows. 
+     * @return Lines Number of rows.
      */
     public Long getLines() {
         return this.Lines;
     }
 
     /**
-     * Set Rows.
-     * @param Lines Rows.
+     * Set Number of rows.
+     * @param Lines Number of rows.
      */
     public void setLines(Long Lines) {
         this.Lines = Lines;
@@ -172,80 +172,80 @@ public class SubtitleFontConf extends AbstractModel {
     }
 
     /**
-     * Get Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode 
-     * @return SourceTextFont Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
+     * Get Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode. 
+     * @return SourceTextFont Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
      */
     public String getSourceTextFont() {
         return this.SourceTextFont;
     }
 
     /**
-     * Set Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
-     * @param SourceTextFont Original font Helvetica: simhei.ttf Song Dynasty: simsun.ttc Dynacw Diamond Black: hkjgh.ttf Helvetica font: helvetica.ttf; Need to be set in Source or Source+Target mode
+     * Set Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
+     * @param SourceTextFont Original font    Heiti: simhei.ttf    Song Typeface: simsun.ttc    Huakang Diamond Black (Dynacw Diamond Black): hkjgh.ttf    Helvetica: helvetica.ttf; Needs to be set in Source or Source+Target mode.
      */
     public void setSourceTextFont(String SourceTextFont) {
         this.SourceTextFont = SourceTextFont;
     }
 
     /**
-     * Get Font color is represented by 6 RGB hexadecimal characters. 
-     * @return TextColor Font color is represented by 6 RGB hexadecimal characters.
+     * Get Font color, represented by 6 characters in hexadecimal RGB. 
+     * @return TextColor Font color, represented by 6 characters in hexadecimal RGB.
      */
     public String getTextColor() {
         return this.TextColor;
     }
 
     /**
-     * Set Font color is represented by 6 RGB hexadecimal characters.
-     * @param TextColor Font color is represented by 6 RGB hexadecimal characters.
+     * Set Font color, represented by 6 characters in hexadecimal RGB.
+     * @param TextColor Font color, represented by 6 characters in hexadecimal RGB.
      */
     public void setTextColor(String TextColor) {
         this.TextColor = TextColor;
     }
 
     /**
-     * Get The background color is represented by 6 RGB hexadecimal characters. 
-     * @return BackgroundColor The background color is represented by 6 RGB hexadecimal characters.
+     * Get Background color, represented by 6 characters in hexadecimal RGB. 
+     * @return BackgroundColor Background color, represented by 6 characters in hexadecimal RGB.
      */
     public String getBackgroundColor() {
         return this.BackgroundColor;
     }
 
     /**
-     * Set The background color is represented by 6 RGB hexadecimal characters.
-     * @param BackgroundColor The background color is represented by 6 RGB hexadecimal characters.
+     * Set Background color, represented by 6 characters in hexadecimal RGB.
+     * @param BackgroundColor Background color, represented by 6 characters in hexadecimal RGB.
      */
     public void setBackgroundColor(String BackgroundColor) {
         this.BackgroundColor = BackgroundColor;
     }
 
     /**
-     * Get Background transparency, a number from 0-100. 
-     * @return BackgroundAlpha Background transparency, a number from 0-100.
+     * Get Background opacity. A number from 0 to 100. 
+     * @return BackgroundAlpha Background opacity. A number from 0 to 100.
      */
     public Long getBackgroundAlpha() {
         return this.BackgroundAlpha;
     }
 
     /**
-     * Set Background transparency, a number from 0-100.
-     * @param BackgroundAlpha Background transparency, a number from 0-100.
+     * Set Background opacity. A number from 0 to 100.
+     * @param BackgroundAlpha Background opacity. A number from 0 to 100.
      */
     public void setBackgroundAlpha(Long BackgroundAlpha) {
         this.BackgroundAlpha = BackgroundAlpha;
     }
 
     /**
-     * Get Preview copy. 
-     * @return PreviewContent Preview copy.
+     * Get Preview the copywriting. 
+     * @return PreviewContent Preview the copywriting.
      */
     public String getPreviewContent() {
         return this.PreviewContent;
     }
 
     /**
-     * Set Preview copy.
-     * @param PreviewContent Preview copy.
+     * Set Preview the copywriting.
+     * @param PreviewContent Preview the copywriting.
      */
     public void setPreviewContent(String PreviewContent) {
         this.PreviewContent = PreviewContent;
@@ -284,16 +284,16 @@ public class SubtitleFontConf extends AbstractModel {
     }
 
     /**
-     * Get Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode 
-     * @return TranslatedTextFont Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
+     * Get Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode. 
+     * @return TranslatedTextFont Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
      */
     public String getTranslatedTextFont() {
         return this.TranslatedTextFont;
     }
 
     /**
-     * Set Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
-     * @param TranslatedTextFont Translation language font, the enumeration value is the same as Font, the fonts supported by the language need to be distinguished; TextColor needs to be set in Target or Source+Target mode
+     * Set Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
+     * @param TranslatedTextFont Font for the target language. The enumeration value is the same as SourceTextFont. Case-sensitive language support for fonts. TextColor needs to be set in Target or Source+Target mode.
      */
     public void setTranslatedTextFont(String TranslatedTextFont) {
         this.TranslatedTextFont = TranslatedTextFont;

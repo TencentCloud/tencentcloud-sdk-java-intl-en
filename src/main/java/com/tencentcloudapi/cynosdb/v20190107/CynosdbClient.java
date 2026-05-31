@@ -105,6 +105,28 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *Add a read-only instance to the serverless cluster
+     * @param req AddServerlessRoInstancesRequest
+     * @return AddServerlessRoInstancesResponse
+     * @throws TencentCloudSDKException
+     */
+    public AddServerlessRoInstancesResponse AddServerlessRoInstances(AddServerlessRoInstancesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AddServerlessRoInstances", AddServerlessRoInstancesResponse.class);
+    }
+
+    /**
+     *This API is used to bulk bind security groups to cloud resources.
+     * @param req AssociateSecurityGroupsRequest
+     * @return AssociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public AssociateSecurityGroupsResponse AssociateSecurityGroups(AssociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "AssociateSecurityGroups", AssociateSecurityGroupsResponse.class);
+    }
+
+    /**
      *This API is used to bind resource packages to a cluster.
      * @param req BindClusterResourcePackagesRequest
      * @return BindClusterResourcePackagesResponse
@@ -116,6 +138,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *Calculate the backup file list that will expire and be deleted after modifying the backup retention period
+     * @param req CalculateBackupSaveSecExpiresRequest
+     * @return CalculateBackupSaveSecExpiresResponse
+     * @throws TencentCloudSDKException
+     */
+    public CalculateBackupSaveSecExpiresResponse CalculateBackupSaveSecExpires(CalculateBackupSaveSecExpiresRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CalculateBackupSaveSecExpires", CalculateBackupSaveSecExpiresResponse.class);
+    }
+
+    /**
      *This API is used to verify whether it is possible to add a read-only analysis engine instance to the cluster.
      * @param req CheckCreateLibraDBInstanceRequest
      * @return CheckCreateLibraDBInstanceResponse
@@ -124,6 +157,17 @@ public class CynosdbClient extends AbstractClient{
     public CheckCreateLibraDBInstanceResponse CheckCreateLibraDBInstance(CheckCreateLibraDBInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CheckCreateLibraDBInstance", CheckCreateLibraDBInstanceResponse.class);
+    }
+
+    /**
+     *This API is used to check if it is possible to trigger cross-AZ migration.
+     * @param req CheckTransferClusterZoneRequest
+     * @return CheckTransferClusterZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public CheckTransferClusterZoneResponse CheckTransferClusterZone(CheckTransferClusterZoneRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CheckTransferClusterZone", CheckTransferClusterZoneResponse.class);
     }
 
     /**
@@ -190,6 +234,17 @@ public class CynosdbClient extends AbstractClient{
     public CloseWanResponse CloseWan(CloseWanRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "CloseWan", CloseWanResponse.class);
+    }
+
+    /**
+     *Copy backup files to the designated safe
+     * @param req CopyBackupToVaultRequest
+     * @return CopyBackupToVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public CopyBackupToVaultResponse CopyBackupToVault(CopyBackupToVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CopyBackupToVault", CopyBackupToVaultResponse.class);
     }
 
     /**
@@ -347,6 +402,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *Create a backup safe
+     * @param req CreateVaultRequest
+     * @return CreateVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public CreateVaultResponse CreateVault(CreateVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "CreateVault", CreateVaultResponse.class);
+    }
+
+    /**
      *This API is used to delete user accounts.
      * @param req DeleteAccountsRequest
      * @return DeleteAccountsResponse
@@ -380,6 +446,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *Delete specified backup files from the safe
+     * @param req DeleteBackupVaultRequest
+     * @return DeleteBackupVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteBackupVaultResponse DeleteBackupVault(DeleteBackupVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteBackupVault", DeleteBackupVaultResponse.class);
+    }
+
+    /**
      *This API is used to delete log delivery.
      * @param req DeleteCLSDeliveryRequest
      * @return DeleteCLSDeliveryResponse
@@ -399,6 +476,17 @@ public class CynosdbClient extends AbstractClient{
     public DeleteClusterDatabaseResponse DeleteClusterDatabase(DeleteClusterDatabaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteClusterDatabase", DeleteClusterDatabaseResponse.class);
+    }
+
+    /**
+     *This API is used to delete residual backups for cluster deletion.
+     * @param req DeleteClusterSaveBackupRequest
+     * @return DeleteClusterSaveBackupResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteClusterSaveBackupResponse DeleteClusterSaveBackup(DeleteClusterSaveBackupRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteClusterSaveBackup", DeleteClusterSaveBackupResponse.class);
     }
 
     /**
@@ -432,6 +520,17 @@ public class CynosdbClient extends AbstractClient{
     public DeleteParamTemplateResponse DeleteParamTemplate(DeleteParamTemplateRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DeleteParamTemplate", DeleteParamTemplateResponse.class);
+    }
+
+    /**
+     *Bulk deletion of backup safes
+     * @param req DeleteVaultsRequest
+     * @return DeleteVaultsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DeleteVaultsResponse DeleteVaults(DeleteVaultsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DeleteVaults", DeleteVaultsResponse.class);
     }
 
     /**
@@ -545,6 +644,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *Query backup file list based on safe ID
+     * @param req DescribeBackupListByVaultRequest
+     * @return DescribeBackupListByVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBackupListByVaultResponse DescribeBackupListByVault(DescribeBackupListByVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBackupListByVault", DescribeBackupListByVaultResponse.class);
+    }
+
+    /**
      *This API is used to query binlog configurations.
      * @param req DescribeBinlogConfigRequest
      * @return DescribeBinlogConfigResponse
@@ -564,6 +674,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrl(DescribeBinlogDownloadUrlRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeBinlogDownloadUrl", DescribeBinlogDownloadUrlResponse.class);
+    }
+
+    /**
+     *Query binlog backups in the insurance box
+     * @param req DescribeBinlogListByVaultRequest
+     * @return DescribeBinlogListByVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeBinlogListByVaultResponse DescribeBinlogListByVault(DescribeBinlogListByVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeBinlogListByVault", DescribeBinlogListByVaultResponse.class);
     }
 
     /**
@@ -776,7 +897,7 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
-     *This API is used to query the slow query logs of an instance.
+     *This API is used to query the slow log details of an instance. Subject to platform return size limits, return results may be truncated if they are too large.
      * @param req DescribeInstanceSlowQueriesRequest
      * @return DescribeInstanceSlowQueriesResponse
      * @throws TencentCloudSDKException
@@ -795,6 +916,17 @@ public class CynosdbClient extends AbstractClient{
     public DescribeInstanceSpecsResponse DescribeInstanceSpecs(DescribeInstanceSpecsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeInstanceSpecs", DescribeInstanceSpecsResponse.class);
+    }
+
+    /**
+     *Query instance specifications based on operation type
+     * @param req DescribeInstanceSpecsByOperationTypeRequest
+     * @return DescribeInstanceSpecsByOperationTypeResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeInstanceSpecsByOperationTypeResponse DescribeInstanceSpecsByOperationType(DescribeInstanceSpecsByOperationTypeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeInstanceSpecsByOperationType", DescribeInstanceSpecsByOperationTypeResponse.class);
     }
 
     /**
@@ -875,6 +1007,116 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to view the advanced mapping rule of the analysis cluster.
+     * @param req DescribeLibraDBClusterAutoMapRuleRequest
+     * @return DescribeLibraDBClusterAutoMapRuleResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClusterAutoMapRuleResponse DescribeLibraDBClusterAutoMapRule(DescribeLibraDBClusterAutoMapRuleRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusterAutoMapRule", DescribeLibraDBClusterAutoMapRuleResponse.class);
+    }
+
+    /**
+     *Query TDSQL-C analysis cluster information
+     * @param req DescribeLibraDBClusterDetailRequest
+     * @return DescribeLibraDBClusterDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClusterDetailResponse DescribeLibraDBClusterDetail(DescribeLibraDBClusterDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusterDetail", DescribeLibraDBClusterDetailResponse.class);
+    }
+
+    /**
+     *This API is used to view the database/table mapping relationship of an analysis cluster.
+     * @param req DescribeLibraDBClusterTableMappingRequest
+     * @return DescribeLibraDBClusterTableMappingResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClusterTableMappingResponse DescribeLibraDBClusterTableMapping(DescribeLibraDBClusterTableMappingRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusterTableMapping", DescribeLibraDBClusterTableMappingResponse.class);
+    }
+
+    /**
+     *Query the analysis cluster list
+     * @param req DescribeLibraDBClustersRequest
+     * @return DescribeLibraDBClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBClustersResponse DescribeLibraDBClusters(DescribeLibraDBClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBClusters", DescribeLibraDBClustersResponse.class);
+    }
+
+    /**
+     *This API is used to query the source instance information of an analysis cluster.
+     * @param req DescribeLibraDBDataSourceRequest
+     * @return DescribeLibraDBDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBDataSourceResponse DescribeLibraDBDataSource(DescribeLibraDBDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBDataSource", DescribeLibraDBDataSourceResponse.class);
+    }
+
+    /**
+     *This API is used to query the analysis engine forwarding parameters.
+     * @param req DescribeLibraDBForwardConfigRequest
+     * @return DescribeLibraDBForwardConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBForwardConfigResponse DescribeLibraDBForwardConfig(DescribeLibraDBForwardConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBForwardConfig", DescribeLibraDBForwardConfigResponse.class);
+    }
+
+    /**
+     *This API is used to query read-only analysis engine details.
+     * @param req DescribeLibraDBInstanceDetailRequest
+     * @return DescribeLibraDBInstanceDetailResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBInstanceDetailResponse DescribeLibraDBInstanceDetail(DescribeLibraDBInstanceDetailRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBInstanceDetail", DescribeLibraDBInstanceDetailResponse.class);
+    }
+
+    /**
+     *This API is used to query the specification list of the read-only analysis engine supported in the region.
+     * @param req DescribeLibraDBInstanceSpecsRequest
+     * @return DescribeLibraDBInstanceSpecsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBInstanceSpecsResponse DescribeLibraDBInstanceSpecs(DescribeLibraDBInstanceSpecsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBInstanceSpecs", DescribeLibraDBInstanceSpecsResponse.class);
+    }
+
+    /**
+     *This API is used to query slow SQL details in the read-only analysis engine.
+     * @param req DescribeLibraDBSlowLogsRequest
+     * @return DescribeLibraDBSlowLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBSlowLogsResponse DescribeLibraDBSlowLogs(DescribeLibraDBSlowLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBSlowLogs", DescribeLibraDBSlowLogsResponse.class);
+    }
+
+    /**
+     *Query the list of supported versions for the read-only analysis engine
+     * @param req DescribeLibraDBVersionRequest
+     * @return DescribeLibraDBVersionResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeLibraDBVersionResponse DescribeLibraDBVersion(DescribeLibraDBVersionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeLibraDBVersion", DescribeLibraDBVersionResponse.class);
+    }
+
+    /**
      *This interface (DescribeMaintainPeriod) is used to query the instance maintenance window.
      * @param req DescribeMaintainPeriodRequest
      * @return DescribeMaintainPeriodResponse
@@ -952,6 +1194,28 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *Query RedoLog backups
+     * @param req DescribeRedoLogListByVaultRequest
+     * @return DescribeRedoLogListByVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedoLogListByVaultResponse DescribeRedoLogListByVault(DescribeRedoLogListByVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedoLogListByVault", DescribeRedoLogListByVaultResponse.class);
+    }
+
+    /**
+     *This API is used to query the redo log list.
+     * @param req DescribeRedoLogsRequest
+     * @return DescribeRedoLogsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeRedoLogsResponse DescribeRedoLogs(DescribeRedoLogsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeRedoLogs", DescribeRedoLogsResponse.class);
+    }
+
+    /**
      *This API is used to query resource package usage details.
      * @param req DescribeResourcePackageDetailRequest
      * @return DescribeResourcePackageDetailResponse
@@ -1004,6 +1268,28 @@ public class CynosdbClient extends AbstractClient{
     public DescribeRollbackTimeRangeResponse DescribeRollbackTimeRange(DescribeRollbackTimeRangeRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeRollbackTimeRange", DescribeRollbackTimeRangeResponse.class);
+    }
+
+    /**
+     *This API is used to query the execution plan details.
+     * @param req DescribeSQLExecutionPlanRequest
+     * @return DescribeSQLExecutionPlanResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSQLExecutionPlanResponse DescribeSQLExecutionPlan(DescribeSQLExecutionPlanRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSQLExecutionPlan", DescribeSQLExecutionPlanResponse.class);
+    }
+
+    /**
+     *This API is used to query legacy backup cluster information.
+     * @param req DescribeSaveBackupClustersRequest
+     * @return DescribeSaveBackupClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeSaveBackupClustersResponse DescribeSaveBackupClusters(DescribeSaveBackupClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeSaveBackupClusters", DescribeSaveBackupClustersResponse.class);
     }
 
     /**
@@ -1062,6 +1348,28 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *Query the cluster information list associated with the backup safe
+     * @param req DescribeVaultBackupClusterInfoRequest
+     * @return DescribeVaultBackupClusterInfoResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVaultBackupClusterInfoResponse DescribeVaultBackupClusterInfo(DescribeVaultBackupClusterInfoRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVaultBackupClusterInfo", DescribeVaultBackupClusterInfoResponse.class);
+    }
+
+    /**
+     *Query backup safe list, support page, filter and sort.
+     * @param req DescribeVaultsRequest
+     * @return DescribeVaultsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DescribeVaultsResponse DescribeVaults(DescribeVaultsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DescribeVaults", DescribeVaultsResponse.class);
+    }
+
+    /**
      *This API is used to query marketable regional availability zone information.
      * @param req DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -1070,6 +1378,28 @@ public class CynosdbClient extends AbstractClient{
     public DescribeZonesResponse DescribeZones(DescribeZonesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "DescribeZones", DescribeZonesResponse.class);
+    }
+
+    /**
+     *This API is used to unbind cloud resources from security groups in batches.
+     * @param req DisassociateSecurityGroupsRequest
+     * @return DisassociateSecurityGroupsResponse
+     * @throws TencentCloudSDKException
+     */
+    public DisassociateSecurityGroupsResponse DisassociateSecurityGroups(DisassociateSecurityGroupsRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DisassociateSecurityGroups", DisassociateSecurityGroupsResponse.class);
+    }
+
+    /**
+     *Download the analysis cluster list
+     * @param req DownloadLibraDBClusterListRequest
+     * @return DownloadLibraDBClusterListResponse
+     * @throws TencentCloudSDKException
+     */
+    public DownloadLibraDBClusterListResponse DownloadLibraDBClusterList(DownloadLibraDBClusterListRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "DownloadLibraDBClusterList", DownloadLibraDBClusterListResponse.class);
     }
 
     /**
@@ -1103,6 +1433,17 @@ public class CynosdbClient extends AbstractClient{
     public ExportResourcePackageDeductDetailsResponse ExportResourcePackageDeductDetails(ExportResourcePackageDeductDetailsRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ExportResourcePackageDeductDetails", ExportResourcePackageDeductDetailsResponse.class);
+    }
+
+    /**
+     *This API is used to grant permissions to authorized accounts in batch.
+     * @param req GrantAccountPrivilegesRequest
+     * @return GrantAccountPrivilegesResponse
+     * @throws TencentCloudSDKException
+     */
+    public GrantAccountPrivilegesResponse GrantAccountPrivileges(GrantAccountPrivilegesRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "GrantAccountPrivileges", GrantAccountPrivilegesResponse.class);
     }
 
     /**
@@ -1169,6 +1510,28 @@ public class CynosdbClient extends AbstractClient{
     public IsolateInstanceResponse IsolateInstance(IsolateInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "IsolateInstance", IsolateInstanceResponse.class);
+    }
+
+    /**
+     *Isolating a TDSQL-C Analysis Cluster
+     * @param req IsolateLibraDBClusterRequest
+     * @return IsolateLibraDBClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateLibraDBClusterResponse IsolateLibraDBCluster(IsolateLibraDBClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IsolateLibraDBCluster", IsolateLibraDBClusterResponse.class);
+    }
+
+    /**
+     *This API is used to isolate read-only analysis engine instances.
+     * @param req IsolateLibraDBInstanceRequest
+     * @return IsolateLibraDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public IsolateLibraDBInstanceResponse IsolateLibraDBInstance(IsolateLibraDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "IsolateLibraDBInstance", IsolateLibraDBInstanceResponse.class);
     }
 
     /**
@@ -1293,6 +1656,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify cluster configuration to automatically copy Binlog and RedoLog to safe.
+     * @param req ModifyClusterBinlogRedoLogAutoCopyVaultRequest
+     * @return ModifyClusterBinlogRedoLogAutoCopyVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterBinlogRedoLogAutoCopyVaultResponse ModifyClusterBinlogRedoLogAutoCopyVault(ModifyClusterBinlogRedoLogAutoCopyVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterBinlogRedoLogAutoCopyVault", ModifyClusterBinlogRedoLogAutoCopyVaultResponse.class);
+    }
+
+    /**
      *This API is used to modify account authorization of a database.
      * @param req ModifyClusterDatabaseRequest
      * @return ModifyClusterDatabaseResponse
@@ -1301,6 +1675,17 @@ public class CynosdbClient extends AbstractClient{
     public ModifyClusterDatabaseResponse ModifyClusterDatabase(ModifyClusterDatabaseRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "ModifyClusterDatabase", ModifyClusterDatabaseResponse.class);
+    }
+
+    /**
+     *Enable global encryption
+     * @param req ModifyClusterGlobalEncryptionRequest
+     * @return ModifyClusterGlobalEncryptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyClusterGlobalEncryptionResponse ModifyClusterGlobalEncryption(ModifyClusterGlobalEncryptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyClusterGlobalEncryption", ModifyClusterGlobalEncryptionResponse.class);
     }
 
     /**
@@ -1403,6 +1788,94 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the description of a cluster account.
+     * @param req ModifyLibraDBClusterAccountDescriptionRequest
+     * @return ModifyLibraDBClusterAccountDescriptionResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterAccountDescriptionResponse ModifyLibraDBClusterAccountDescription(ModifyLibraDBClusterAccountDescriptionRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterAccountDescription", ModifyLibraDBClusterAccountDescriptionResponse.class);
+    }
+
+    /**
+     *This API is used to modify the log in to the host information of a cluster account.
+     * @param req ModifyLibraDBClusterAccountHostRequest
+     * @return ModifyLibraDBClusterAccountHostResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterAccountHostResponse ModifyLibraDBClusterAccountHost(ModifyLibraDBClusterAccountHostRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterAccountHost", ModifyLibraDBClusterAccountHostResponse.class);
+    }
+
+    /**
+     *This API is used to modify the permission of a cluster account for analytics.
+     * @param req ModifyLibraDBClusterAccountPrivilegeRequest
+     * @return ModifyLibraDBClusterAccountPrivilegeResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterAccountPrivilegeResponse ModifyLibraDBClusterAccountPrivilege(ModifyLibraDBClusterAccountPrivilegeRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterAccountPrivilege", ModifyLibraDBClusterAccountPrivilegeResponse.class);
+    }
+
+    /**
+     *This API is used to modify the TDSQL-C analytical cluster data source.
+     * @param req ModifyLibraDBClusterDataSourceRequest
+     * @return ModifyLibraDBClusterDataSourceResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterDataSourceResponse ModifyLibraDBClusterDataSource(ModifyLibraDBClusterDataSourceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterDataSource", ModifyLibraDBClusterDataSourceResponse.class);
+    }
+
+    /**
+     *This API is used to modify the name of an analysis cluster.
+     * @param req ModifyLibraDBClusterNameRequest
+     * @return ModifyLibraDBClusterNameResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterNameResponse ModifyLibraDBClusterName(ModifyLibraDBClusterNameRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterName", ModifyLibraDBClusterNameResponse.class);
+    }
+
+    /**
+     *This API is used to modify the project ID of an analysis cluster.
+     * @param req ModifyLibraDBClusterProjectRequest
+     * @return ModifyLibraDBClusterProjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterProjectResponse ModifyLibraDBClusterProject(ModifyLibraDBClusterProjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterProject", ModifyLibraDBClusterProjectResponse.class);
+    }
+
+    /**
+     *This API is used to modify the sync object of an analysis cluster.
+     * @param req ModifyLibraDBClusterReplicationObjectRequest
+     * @return ModifyLibraDBClusterReplicationObjectResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBClusterReplicationObjectResponse ModifyLibraDBClusterReplicationObject(ModifyLibraDBClusterReplicationObjectRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBClusterReplicationObject", ModifyLibraDBClusterReplicationObjectResponse.class);
+    }
+
+    /**
+     *This API is used to modify the automatic forwarding parameter of a read-only analysis instance.
+     * @param req ModifyLibraDBForwardConfigRequest
+     * @return ModifyLibraDBForwardConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyLibraDBForwardConfigResponse ModifyLibraDBForwardConfig(ModifyLibraDBForwardConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyLibraDBForwardConfig", ModifyLibraDBForwardConfigResponse.class);
+    }
+
+    /**
      *This API is used to modify maintenance time configuration.
      * @param req ModifyMaintainPeriodConfigRequest
      * @return ModifyMaintainPeriodConfigResponse
@@ -1491,6 +1964,28 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *This API is used to modify the snapshot backup cross-region configuration of a specified cluster.
+     * @param req ModifySnapBackupCrossRegionConfigRequest
+     * @return ModifySnapBackupCrossRegionConfigResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifySnapBackupCrossRegionConfigResponse ModifySnapBackupCrossRegionConfig(ModifySnapBackupCrossRegionConfigRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifySnapBackupCrossRegionConfig", ModifySnapBackupCrossRegionConfigResponse.class);
+    }
+
+    /**
+     *Modify backup safe configuration, including the name, description, retention duration, encryption key, lock time.
+     * @param req ModifyVaultRequest
+     * @return ModifyVaultResponse
+     * @throws TencentCloudSDKException
+     */
+    public ModifyVaultResponse ModifyVault(ModifyVaultRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ModifyVault", ModifyVaultResponse.class);
+    }
+
+    /**
      *This API is used to modify the ip and port of an instance group.
      * @param req ModifyVipVportRequest
      * @return ModifyVipVportResponse
@@ -1521,6 +2016,28 @@ public class CynosdbClient extends AbstractClient{
     public OfflineInstanceResponse OfflineInstance(OfflineInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "OfflineInstance", OfflineInstanceResponse.class);
+    }
+
+    /**
+     *Decommission an analysis cluster
+     * @param req OfflineLibraDBClusterRequest
+     * @return OfflineLibraDBClusterResponse
+     * @throws TencentCloudSDKException
+     */
+    public OfflineLibraDBClusterResponse OfflineLibraDBCluster(OfflineLibraDBClusterRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OfflineLibraDBCluster", OfflineLibraDBClusterResponse.class);
+    }
+
+    /**
+     *This API is used to decommission a read-only analysis engine instance.
+     * @param req OfflineLibraDBInstanceRequest
+     * @return OfflineLibraDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public OfflineLibraDBInstanceResponse OfflineLibraDBInstance(OfflineLibraDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "OfflineLibraDBInstance", OfflineLibraDBInstanceResponse.class);
     }
 
     /**
@@ -1645,6 +2162,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *Renew an analysis cluster
+     * @param req RenewLibraDBClustersRequest
+     * @return RenewLibraDBClustersResponse
+     * @throws TencentCloudSDKException
+     */
+    public RenewLibraDBClustersResponse RenewLibraDBClusters(RenewLibraDBClustersRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RenewLibraDBClusters", RenewLibraDBClustersResponse.class);
+    }
+
+    /**
      *This API is used to replay instance audit logs.
      * @param req ReplayInstanceAuditLogRequest
      * @return ReplayInstanceAuditLogResponse
@@ -1667,6 +2195,17 @@ public class CynosdbClient extends AbstractClient{
     }
 
     /**
+     *Modify the cluster account password for analytics
+     * @param req ResetLibraDBClusterAccountPasswordRequest
+     * @return ResetLibraDBClusterAccountPasswordResponse
+     * @throws TencentCloudSDKException
+     */
+    public ResetLibraDBClusterAccountPasswordResponse ResetLibraDBClusterAccountPassword(ResetLibraDBClusterAccountPasswordRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "ResetLibraDBClusterAccountPassword", ResetLibraDBClusterAccountPasswordResponse.class);
+    }
+
+    /**
      *This API is used to reboot an instance.
      * @param req RestartInstanceRequest
      * @return RestartInstanceResponse
@@ -1675,6 +2214,17 @@ public class CynosdbClient extends AbstractClient{
     public RestartInstanceResponse RestartInstance(RestartInstanceRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "RestartInstance", RestartInstanceResponse.class);
+    }
+
+    /**
+     *Restart the read-only analysis engine
+     * @param req RestartLibraDBInstanceRequest
+     * @return RestartLibraDBInstanceResponse
+     * @throws TencentCloudSDKException
+     */
+    public RestartLibraDBInstanceResponse RestartLibraDBInstance(RestartLibraDBInstanceRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "RestartLibraDBInstance", RestartLibraDBInstanceResponse.class);
     }
 
     /**
@@ -1730,6 +2280,17 @@ public class CynosdbClient extends AbstractClient{
     public SearchClusterTablesResponse SearchClusterTables(SearchClusterTablesRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SearchClusterTables", SearchClusterTablesResponse.class);
+    }
+
+    /**
+     *Set whether to renew the TDSQL-C analysis cluster
+     * @param req SetLibraDBClusterRenewFlagRequest
+     * @return SetLibraDBClusterRenewFlagResponse
+     * @throws TencentCloudSDKException
+     */
+    public SetLibraDBClusterRenewFlagResponse SetLibraDBClusterRenewFlag(SetLibraDBClusterRenewFlagRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "SetLibraDBClusterRenewFlag", SetLibraDBClusterRenewFlagResponse.class);
     }
 
     /**
@@ -1796,6 +2357,17 @@ public class CynosdbClient extends AbstractClient{
     public SwitchProxyVpcResponse SwitchProxyVpc(SwitchProxyVpcRequest req) throws TencentCloudSDKException{
         req.setSkipSign(false);
         return this.internalRequest(req, "SwitchProxyVpc", SwitchProxyVpcResponse.class);
+    }
+
+    /**
+     *This API is used to trigger cross-AZ migration.
+     * @param req TransferClusterZoneRequest
+     * @return TransferClusterZoneResponse
+     * @throws TencentCloudSDKException
+     */
+    public TransferClusterZoneResponse TransferClusterZone(TransferClusterZoneRequest req) throws TencentCloudSDKException{
+        req.setSkipSign(false);
+        return this.internalRequest(req, "TransferClusterZone", TransferClusterZoneResponse.class);
     }
 
     /**

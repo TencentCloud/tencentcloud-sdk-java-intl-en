@@ -25,8 +25,6 @@ public class CloseSSLResponse extends AbstractModel {
 
     /**
     * Process ID
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("FlowId")
     @Expose
@@ -34,8 +32,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
     * Task ID.
-
-Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("TaskId")
     @Expose
@@ -49,12 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String RequestId;
 
     /**
-     * Get Process ID
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Process ID 
      * @return FlowId Process ID
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getFlowId() {
         return this.FlowId;
@@ -62,23 +54,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Process ID
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param FlowId Process ID
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setFlowId(Long FlowId) {
         this.FlowId = FlowId;
     }
 
     /**
-     * Get Task ID.
-
-Note: This field may return null, indicating that no valid values can be obtained. 
+     * Get Task ID. 
      * @return TaskId Task ID.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getTaskId() {
         return this.TaskId;
@@ -86,11 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Task ID.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskId Task ID.
-
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setTaskId(Long TaskId) {
         this.TaskId = TaskId;

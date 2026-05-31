@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class AudioCodecDetail extends AbstractModel {
 
     /**
-    * Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
+    * Sound track configuration. Available values: MONO, STEREO, 5.1.
     */
     @SerializedName("ChannelMode")
     @Expose
     private String ChannelMode;
 
     /**
-    * Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
+    * Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
     */
     @SerializedName("Profile")
     @Expose
     private String Profile;
 
     /**
-     * Get Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround). 
-     * @return ChannelMode Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
+     * Get Sound track configuration. Available values: MONO, STEREO, 5.1. 
+     * @return ChannelMode Sound track configuration. Available values: MONO, STEREO, 5.1.
      */
     public String getChannelMode() {
         return this.ChannelMode;
     }
 
     /**
-     * Set Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
-     * @param ChannelMode Channel configuration, optional values: MONO (mono), STEREO (two-channel), 5.1 (surround).
+     * Set Sound track configuration. Available values: MONO, STEREO, 5.1.
+     * @param ChannelMode Sound track configuration. Available values: MONO, STEREO, 5.1.
      */
     public void setChannelMode(String ChannelMode) {
         this.ChannelMode = ChannelMode;
     }
 
     /**
-     * Get Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2". 
-     * @return Profile Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
+     * Get Level in aac, available values: "LC", "HE-aac", "HE-AACV2". 
+     * @return Profile Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
      */
     public String getProfile() {
         return this.Profile;
     }
 
     /**
-     * Set Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
-     * @param Profile Level in aac case, optional values: "LC" "HE-AAC" "HE-AACV2".
+     * Set Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
+     * @param Profile Level in aac, available values: "LC", "HE-aac", "HE-AACV2".
      */
     public void setProfile(String Profile) {
         this.Profile = Profile;

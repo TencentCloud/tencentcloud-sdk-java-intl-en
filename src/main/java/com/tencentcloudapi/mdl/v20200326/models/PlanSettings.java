@@ -24,28 +24,23 @@ import java.util.HashMap;
 public class PlanSettings extends AbstractModel {
 
     /**
-    * Timed recording settings
-Note: This field may return `null`, indicating that no valid value was found.
+    * Configuration message of the scheduled recording task.
     */
     @SerializedName("TimedRecordSettings")
     @Expose
     private TimedRecordSettings TimedRecordSettings;
 
     /**
-     * Get Timed recording settings
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return TimedRecordSettings Timed recording settings
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Configuration message of the scheduled recording task. 
+     * @return TimedRecordSettings Configuration message of the scheduled recording task.
      */
     public TimedRecordSettings getTimedRecordSettings() {
         return this.TimedRecordSettings;
     }
 
     /**
-     * Set Timed recording settings
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param TimedRecordSettings Timed recording settings
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Configuration message of the scheduled recording task.
+     * @param TimedRecordSettings Configuration message of the scheduled recording task.
      */
     public void setTimedRecordSettings(TimedRecordSettings TimedRecordSettings) {
         this.TimedRecordSettings = TimedRecordSettings;

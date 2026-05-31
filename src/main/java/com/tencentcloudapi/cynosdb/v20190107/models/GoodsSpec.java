@@ -80,7 +80,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String TimeUnit;
 
     /**
-    * Machine type.
+    * Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
     */
     @SerializedName("DeviceType")
     @Expose
@@ -227,16 +229,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Machine type. 
-     * @return DeviceType Machine type.
+     * Get Instance machine type
+1. common, universal type.
+2. exclusive, dedicated. 
+     * @return DeviceType Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Machine type.
-     * @param DeviceType Machine type.
+     * Set Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
+     * @param DeviceType Instance machine type
+1. common, universal type.
+2. exclusive, dedicated.
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;

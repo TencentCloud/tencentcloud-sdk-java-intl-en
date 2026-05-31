@@ -38,7 +38,7 @@ public class AudioSelectorInfo extends AbstractModel {
     private AudioPidSelectionInfo AudioPidSelection;
 
     /**
-    * Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+    * Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
     */
     @SerializedName("AudioSelectorType")
     @Expose
@@ -84,16 +84,16 @@ public class AudioSelectorInfo extends AbstractModel {
     }
 
     /**
-     * Get Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR. 
-     * @return AudioSelectorType Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+     * Get Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR. 
+     * @return AudioSelectorType Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
      */
     public String getAudioSelectorType() {
         return this.AudioSelectorType;
     }
 
     /**
-     * Set Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
-     * @param AudioSelectorType Audio input type, optional values: 'PID_SELECTOR' 'TRACK_SELECTOR', default value PID_SELECTOR.
+     * Set Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
+     * @param AudioSelectorType Audio input type. Value range: 'PID_SELECTOR' | 'TRACK_SELECTOR'. Default value: PID_SELECTOR.
      */
     public void setAudioSelectorType(String AudioSelectorType) {
         this.AudioSelectorType = AudioSelectorType;

@@ -24,445 +24,468 @@ import java.util.HashMap;
 public class RabbitMQClusterAccessInfo extends AbstractModel {
 
     /**
-    * 
+    * <p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PublicAccessEndpoint")
     @Expose
     private String PublicAccessEndpoint;
 
     /**
-    * 
+    * <p>Public network access URL of the cluster Web console</p>
     */
     @SerializedName("WebConsoleEndpoint")
     @Expose
     private String WebConsoleEndpoint;
 
     /**
-    * 
+    * <p>Cluster Web console login username</p>
     */
     @SerializedName("WebConsoleUsername")
     @Expose
     private String WebConsoleUsername;
 
     /**
-    * 
+    * <p>Cluster Web console login password</p>
     */
     @SerializedName("WebConsolePassword")
     @Expose
     private String WebConsolePassword;
 
     /**
-    * 
+    * <p>Abandoned</p>
     */
     @SerializedName("PublicAccessEndpointStatus")
     @Expose
     private Boolean PublicAccessEndpointStatus;
 
     /**
-    * 
+    * <p>Deprecated</p>
     */
     @SerializedName("PublicControlConsoleSwitchStatus")
     @Expose
     private Boolean PublicControlConsoleSwitchStatus;
 
     /**
-    * 
+    * <p>Abandoned</p>
     */
     @SerializedName("VpcControlConsoleSwitchStatus")
     @Expose
     private Boolean VpcControlConsoleSwitchStatus;
 
     /**
-    * 
+    * <p>VPC access URL of the Web console</p>
     */
     @SerializedName("VpcWebConsoleEndpoint")
     @Expose
     private String VpcWebConsoleEndpoint;
 
     /**
-    * Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+    * <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
     */
     @SerializedName("PublicWebConsoleSwitchStatus")
     @Expose
     private String PublicWebConsoleSwitchStatus;
 
     /**
-    * Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
+    * <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
     */
     @SerializedName("VpcWebConsoleSwitchStatus")
     @Expose
     private String VpcWebConsoleSwitchStatus;
 
     /**
-    * Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+    * <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
     */
     @SerializedName("PublicDataStreamStatus")
     @Expose
     private String PublicDataStreamStatus;
 
     /**
-    * Prometheus information.
+    * <p>Prometheus info</p>
     */
     @SerializedName("PrometheusEndpointInfo")
     @Expose
     private PrometheusEndpointInfo PrometheusEndpointInfo;
 
     /**
-    * Public domain name access point.
+    * <p>public domain name access point</p>
     */
     @SerializedName("WebConsoleDomainEndpoint")
     @Expose
     private String WebConsoleDomainEndpoint;
 
     /**
-    * VPC information used by the control plane.
+    * <p>VPC information used by the control plane</p>
     */
     @SerializedName("ControlPlaneEndpointInfo")
     @Expose
     private VpcEndpointInfo ControlPlaneEndpointInfo;
 
     /**
-    * Encrypted TLS data stream public network access point.
+    * <p>TLS encrypted data stream public network access point</p>
     */
     @SerializedName("PublicTlsAccessEndpoint")
     @Expose
     private String PublicTlsAccessEndpoint;
 
     /**
-    * Specifies whether to reuse the public IP address.
+    * <p>Whether to reuse the public IP address</p>
     */
     @SerializedName("PublicIpReused")
     @Expose
     private Boolean PublicIpReused;
 
     /**
-    * Error message for public network console access point operations.
+    * <p>Error information of public network access operations for the Web console</p>
     */
     @SerializedName("PublicWebConsoleErrorMessage")
     @Expose
     private String PublicWebConsoleErrorMessage;
 
     /**
-    * Error message for private network console access point operations.
+    * <p>Error information of VPC access operations in the Web console</p>
     */
     @SerializedName("VpcWebConsoleErrorMessage")
     @Expose
     private String VpcWebConsoleErrorMessage;
 
     /**
-    * Error message for public network access point operation failure.
+    * <p>Error information of public network access point operations</p>
     */
     @SerializedName("PublicDataStreamErrorMessage")
     @Expose
     private String PublicDataStreamErrorMessage;
 
     /**
-     * Get  
-     * @return PublicAccessEndpoint 
+    * <p>Public network Stream access point</p>
+    */
+    @SerializedName("PublicStreamAccessEndpoint")
+    @Expose
+    private String PublicStreamAccessEndpoint;
+
+    /**
+     * Get <p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return PublicAccessEndpoint <p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPublicAccessEndpoint() {
         return this.PublicAccessEndpoint;
     }
 
     /**
-     * Set 
-     * @param PublicAccessEndpoint 
+     * Set <p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PublicAccessEndpoint <p>Cluster public network access address</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPublicAccessEndpoint(String PublicAccessEndpoint) {
         this.PublicAccessEndpoint = PublicAccessEndpoint;
     }
 
     /**
-     * Get  
-     * @return WebConsoleEndpoint 
+     * Get <p>Public network access URL of the cluster Web console</p> 
+     * @return WebConsoleEndpoint <p>Public network access URL of the cluster Web console</p>
      */
     public String getWebConsoleEndpoint() {
         return this.WebConsoleEndpoint;
     }
 
     /**
-     * Set 
-     * @param WebConsoleEndpoint 
+     * Set <p>Public network access URL of the cluster Web console</p>
+     * @param WebConsoleEndpoint <p>Public network access URL of the cluster Web console</p>
      */
     public void setWebConsoleEndpoint(String WebConsoleEndpoint) {
         this.WebConsoleEndpoint = WebConsoleEndpoint;
     }
 
     /**
-     * Get  
-     * @return WebConsoleUsername 
+     * Get <p>Cluster Web console login username</p> 
+     * @return WebConsoleUsername <p>Cluster Web console login username</p>
      */
     public String getWebConsoleUsername() {
         return this.WebConsoleUsername;
     }
 
     /**
-     * Set 
-     * @param WebConsoleUsername 
+     * Set <p>Cluster Web console login username</p>
+     * @param WebConsoleUsername <p>Cluster Web console login username</p>
      */
     public void setWebConsoleUsername(String WebConsoleUsername) {
         this.WebConsoleUsername = WebConsoleUsername;
     }
 
     /**
-     * Get  
-     * @return WebConsolePassword 
+     * Get <p>Cluster Web console login password</p> 
+     * @return WebConsolePassword <p>Cluster Web console login password</p>
      */
     public String getWebConsolePassword() {
         return this.WebConsolePassword;
     }
 
     /**
-     * Set 
-     * @param WebConsolePassword 
+     * Set <p>Cluster Web console login password</p>
+     * @param WebConsolePassword <p>Cluster Web console login password</p>
      */
     public void setWebConsolePassword(String WebConsolePassword) {
         this.WebConsolePassword = WebConsolePassword;
     }
 
     /**
-     * Get  
-     * @return PublicAccessEndpointStatus 
+     * Get <p>Abandoned</p> 
+     * @return PublicAccessEndpointStatus <p>Abandoned</p>
      */
     public Boolean getPublicAccessEndpointStatus() {
         return this.PublicAccessEndpointStatus;
     }
 
     /**
-     * Set 
-     * @param PublicAccessEndpointStatus 
+     * Set <p>Abandoned</p>
+     * @param PublicAccessEndpointStatus <p>Abandoned</p>
      */
     public void setPublicAccessEndpointStatus(Boolean PublicAccessEndpointStatus) {
         this.PublicAccessEndpointStatus = PublicAccessEndpointStatus;
     }
 
     /**
-     * Get  
-     * @return PublicControlConsoleSwitchStatus 
+     * Get <p>Deprecated</p> 
+     * @return PublicControlConsoleSwitchStatus <p>Deprecated</p>
      */
     public Boolean getPublicControlConsoleSwitchStatus() {
         return this.PublicControlConsoleSwitchStatus;
     }
 
     /**
-     * Set 
-     * @param PublicControlConsoleSwitchStatus 
+     * Set <p>Deprecated</p>
+     * @param PublicControlConsoleSwitchStatus <p>Deprecated</p>
      */
     public void setPublicControlConsoleSwitchStatus(Boolean PublicControlConsoleSwitchStatus) {
         this.PublicControlConsoleSwitchStatus = PublicControlConsoleSwitchStatus;
     }
 
     /**
-     * Get  
-     * @return VpcControlConsoleSwitchStatus 
+     * Get <p>Abandoned</p> 
+     * @return VpcControlConsoleSwitchStatus <p>Abandoned</p>
      */
     public Boolean getVpcControlConsoleSwitchStatus() {
         return this.VpcControlConsoleSwitchStatus;
     }
 
     /**
-     * Set 
-     * @param VpcControlConsoleSwitchStatus 
+     * Set <p>Abandoned</p>
+     * @param VpcControlConsoleSwitchStatus <p>Abandoned</p>
      */
     public void setVpcControlConsoleSwitchStatus(Boolean VpcControlConsoleSwitchStatus) {
         this.VpcControlConsoleSwitchStatus = VpcControlConsoleSwitchStatus;
     }
 
     /**
-     * Get  
-     * @return VpcWebConsoleEndpoint 
+     * Get <p>VPC access URL of the Web console</p> 
+     * @return VpcWebConsoleEndpoint <p>VPC access URL of the Web console</p>
      */
     public String getVpcWebConsoleEndpoint() {
         return this.VpcWebConsoleEndpoint;
     }
 
     /**
-     * Set 
-     * @param VpcWebConsoleEndpoint 
+     * Set <p>VPC access URL of the Web console</p>
+     * @param VpcWebConsoleEndpoint <p>VPC access URL of the Web console</p>
      */
     public void setVpcWebConsoleEndpoint(String VpcWebConsoleEndpoint) {
         this.VpcWebConsoleEndpoint = VpcWebConsoleEndpoint;
     }
 
     /**
-     * Get Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING. 
-     * @return PublicWebConsoleSwitchStatus Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+     * Get <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul> 
+     * @return PublicWebConsoleSwitchStatus <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
      */
     public String getPublicWebConsoleSwitchStatus() {
         return this.PublicWebConsoleSwitchStatus;
     }
 
     /**
-     * Set Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
-     * @param PublicWebConsoleSwitchStatus Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+     * Set <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
+     * @param PublicWebConsoleSwitchStatus <p>Status of the public network access switch in the Web console</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: ON</li><li>CREATING: CREATING</li><li>DELETING: DELETING</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
      */
     public void setPublicWebConsoleSwitchStatus(String PublicWebConsoleSwitchStatus) {
         this.PublicWebConsoleSwitchStatus = PublicWebConsoleSwitchStatus;
     }
 
     /**
-     * Get Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING 
-     * @return VpcWebConsoleSwitchStatus Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
+     * Get <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul> 
+     * @return VpcWebConsoleSwitchStatus <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
      */
     public String getVpcWebConsoleSwitchStatus() {
         return this.VpcWebConsoleSwitchStatus;
     }
 
     /**
-     * Set Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
-     * @param VpcWebConsoleSwitchStatus Vpc console switch state. example value.
-OFF/ON/CREATING/DELETING
+     * Set <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
+     * @param VpcWebConsoleSwitchStatus <p>Web console VPC access switch status</p><p>Enumeration values:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failed</li><li>DELETE_FAILURE: Deletion failed</li></ul>
      */
     public void setVpcWebConsoleSwitchStatus(String VpcWebConsoleSwitchStatus) {
         this.VpcWebConsoleSwitchStatus = VpcWebConsoleSwitchStatus;
     }
 
     /**
-     * Get Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING. 
-     * @return PublicDataStreamStatus Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+     * Get <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul> 
+     * @return PublicDataStreamStatus <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
      */
     public String getPublicDataStreamStatus() {
         return this.PublicDataStreamStatus;
     }
 
     /**
-     * Set Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
-     * @param PublicDataStreamStatus Status of the public network access point in the console. Valid values: OFF, ON, CREATING, and DELETING.
+     * Set <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
+     * @param PublicDataStreamStatus <p>Public network access point switch state</p><p>Enumeration value:</p><ul><li>OFF: Closed</li><li>ON: Enabled</li><li>CREATING: Creating</li><li>DELETING: Deleting</li><li>CREATE_FAILURE: Creation failure</li><li>DELETE_FAILURE: Deletion failure</li></ul>
      */
     public void setPublicDataStreamStatus(String PublicDataStreamStatus) {
         this.PublicDataStreamStatus = PublicDataStreamStatus;
     }
 
     /**
-     * Get Prometheus information. 
-     * @return PrometheusEndpointInfo Prometheus information.
+     * Get <p>Prometheus info</p> 
+     * @return PrometheusEndpointInfo <p>Prometheus info</p>
      */
     public PrometheusEndpointInfo getPrometheusEndpointInfo() {
         return this.PrometheusEndpointInfo;
     }
 
     /**
-     * Set Prometheus information.
-     * @param PrometheusEndpointInfo Prometheus information.
+     * Set <p>Prometheus info</p>
+     * @param PrometheusEndpointInfo <p>Prometheus info</p>
      */
     public void setPrometheusEndpointInfo(PrometheusEndpointInfo PrometheusEndpointInfo) {
         this.PrometheusEndpointInfo = PrometheusEndpointInfo;
     }
 
     /**
-     * Get Public domain name access point. 
-     * @return WebConsoleDomainEndpoint Public domain name access point.
+     * Get <p>public domain name access point</p> 
+     * @return WebConsoleDomainEndpoint <p>public domain name access point</p>
      */
     public String getWebConsoleDomainEndpoint() {
         return this.WebConsoleDomainEndpoint;
     }
 
     /**
-     * Set Public domain name access point.
-     * @param WebConsoleDomainEndpoint Public domain name access point.
+     * Set <p>public domain name access point</p>
+     * @param WebConsoleDomainEndpoint <p>public domain name access point</p>
      */
     public void setWebConsoleDomainEndpoint(String WebConsoleDomainEndpoint) {
         this.WebConsoleDomainEndpoint = WebConsoleDomainEndpoint;
     }
 
     /**
-     * Get VPC information used by the control plane. 
-     * @return ControlPlaneEndpointInfo VPC information used by the control plane.
+     * Get <p>VPC information used by the control plane</p> 
+     * @return ControlPlaneEndpointInfo <p>VPC information used by the control plane</p>
      */
     public VpcEndpointInfo getControlPlaneEndpointInfo() {
         return this.ControlPlaneEndpointInfo;
     }
 
     /**
-     * Set VPC information used by the control plane.
-     * @param ControlPlaneEndpointInfo VPC information used by the control plane.
+     * Set <p>VPC information used by the control plane</p>
+     * @param ControlPlaneEndpointInfo <p>VPC information used by the control plane</p>
      */
     public void setControlPlaneEndpointInfo(VpcEndpointInfo ControlPlaneEndpointInfo) {
         this.ControlPlaneEndpointInfo = ControlPlaneEndpointInfo;
     }
 
     /**
-     * Get Encrypted TLS data stream public network access point. 
-     * @return PublicTlsAccessEndpoint Encrypted TLS data stream public network access point.
+     * Get <p>TLS encrypted data stream public network access point</p> 
+     * @return PublicTlsAccessEndpoint <p>TLS encrypted data stream public network access point</p>
      */
     public String getPublicTlsAccessEndpoint() {
         return this.PublicTlsAccessEndpoint;
     }
 
     /**
-     * Set Encrypted TLS data stream public network access point.
-     * @param PublicTlsAccessEndpoint Encrypted TLS data stream public network access point.
+     * Set <p>TLS encrypted data stream public network access point</p>
+     * @param PublicTlsAccessEndpoint <p>TLS encrypted data stream public network access point</p>
      */
     public void setPublicTlsAccessEndpoint(String PublicTlsAccessEndpoint) {
         this.PublicTlsAccessEndpoint = PublicTlsAccessEndpoint;
     }
 
     /**
-     * Get Specifies whether to reuse the public IP address. 
-     * @return PublicIpReused Specifies whether to reuse the public IP address.
+     * Get <p>Whether to reuse the public IP address</p> 
+     * @return PublicIpReused <p>Whether to reuse the public IP address</p>
      */
     public Boolean getPublicIpReused() {
         return this.PublicIpReused;
     }
 
     /**
-     * Set Specifies whether to reuse the public IP address.
-     * @param PublicIpReused Specifies whether to reuse the public IP address.
+     * Set <p>Whether to reuse the public IP address</p>
+     * @param PublicIpReused <p>Whether to reuse the public IP address</p>
      */
     public void setPublicIpReused(Boolean PublicIpReused) {
         this.PublicIpReused = PublicIpReused;
     }
 
     /**
-     * Get Error message for public network console access point operations. 
-     * @return PublicWebConsoleErrorMessage Error message for public network console access point operations.
+     * Get <p>Error information of public network access operations for the Web console</p> 
+     * @return PublicWebConsoleErrorMessage <p>Error information of public network access operations for the Web console</p>
      */
     public String getPublicWebConsoleErrorMessage() {
         return this.PublicWebConsoleErrorMessage;
     }
 
     /**
-     * Set Error message for public network console access point operations.
-     * @param PublicWebConsoleErrorMessage Error message for public network console access point operations.
+     * Set <p>Error information of public network access operations for the Web console</p>
+     * @param PublicWebConsoleErrorMessage <p>Error information of public network access operations for the Web console</p>
      */
     public void setPublicWebConsoleErrorMessage(String PublicWebConsoleErrorMessage) {
         this.PublicWebConsoleErrorMessage = PublicWebConsoleErrorMessage;
     }
 
     /**
-     * Get Error message for private network console access point operations. 
-     * @return VpcWebConsoleErrorMessage Error message for private network console access point operations.
+     * Get <p>Error information of VPC access operations in the Web console</p> 
+     * @return VpcWebConsoleErrorMessage <p>Error information of VPC access operations in the Web console</p>
      */
     public String getVpcWebConsoleErrorMessage() {
         return this.VpcWebConsoleErrorMessage;
     }
 
     /**
-     * Set Error message for private network console access point operations.
-     * @param VpcWebConsoleErrorMessage Error message for private network console access point operations.
+     * Set <p>Error information of VPC access operations in the Web console</p>
+     * @param VpcWebConsoleErrorMessage <p>Error information of VPC access operations in the Web console</p>
      */
     public void setVpcWebConsoleErrorMessage(String VpcWebConsoleErrorMessage) {
         this.VpcWebConsoleErrorMessage = VpcWebConsoleErrorMessage;
     }
 
     /**
-     * Get Error message for public network access point operation failure. 
-     * @return PublicDataStreamErrorMessage Error message for public network access point operation failure.
+     * Get <p>Error information of public network access point operations</p> 
+     * @return PublicDataStreamErrorMessage <p>Error information of public network access point operations</p>
      */
     public String getPublicDataStreamErrorMessage() {
         return this.PublicDataStreamErrorMessage;
     }
 
     /**
-     * Set Error message for public network access point operation failure.
-     * @param PublicDataStreamErrorMessage Error message for public network access point operation failure.
+     * Set <p>Error information of public network access point operations</p>
+     * @param PublicDataStreamErrorMessage <p>Error information of public network access point operations</p>
      */
     public void setPublicDataStreamErrorMessage(String PublicDataStreamErrorMessage) {
         this.PublicDataStreamErrorMessage = PublicDataStreamErrorMessage;
+    }
+
+    /**
+     * Get <p>Public network Stream access point</p> 
+     * @return PublicStreamAccessEndpoint <p>Public network Stream access point</p>
+     */
+    public String getPublicStreamAccessEndpoint() {
+        return this.PublicStreamAccessEndpoint;
+    }
+
+    /**
+     * Set <p>Public network Stream access point</p>
+     * @param PublicStreamAccessEndpoint <p>Public network Stream access point</p>
+     */
+    public void setPublicStreamAccessEndpoint(String PublicStreamAccessEndpoint) {
+        this.PublicStreamAccessEndpoint = PublicStreamAccessEndpoint;
     }
 
     public RabbitMQClusterAccessInfo() {
@@ -530,6 +553,9 @@ OFF/ON/CREATING/DELETING
         if (source.PublicDataStreamErrorMessage != null) {
             this.PublicDataStreamErrorMessage = new String(source.PublicDataStreamErrorMessage);
         }
+        if (source.PublicStreamAccessEndpoint != null) {
+            this.PublicStreamAccessEndpoint = new String(source.PublicStreamAccessEndpoint);
+        }
     }
 
 
@@ -556,6 +582,7 @@ OFF/ON/CREATING/DELETING
         this.setParamSimple(map, prefix + "PublicWebConsoleErrorMessage", this.PublicWebConsoleErrorMessage);
         this.setParamSimple(map, prefix + "VpcWebConsoleErrorMessage", this.VpcWebConsoleErrorMessage);
         this.setParamSimple(map, prefix + "PublicDataStreamErrorMessage", this.PublicDataStreamErrorMessage);
+        this.setParamSimple(map, prefix + "PublicStreamAccessEndpoint", this.PublicStreamAccessEndpoint);
 
     }
 }

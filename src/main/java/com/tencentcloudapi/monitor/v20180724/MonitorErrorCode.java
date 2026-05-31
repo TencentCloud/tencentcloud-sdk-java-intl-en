@@ -117,6 +117,9 @@ public enum MonitorErrorCode {
      /* DoTRPCTransferFailed */
      FAILEDOPERATION_DOTRPCTRANSFERFAILED("FailedOperation.DoTRPCTransferFailed"),
      
+     /*  */
+     FAILEDOPERATION_DOTRPCTRANSFERFAILEDWITHCORRUPTIONDATA("FailedOperation.DoTRPCTransferFailedWithCorruptionData"),
+     
      /* Failed to query analysis data. */
      FAILEDOPERATION_DRUIDQUERYFAILED("FailedOperation.DruidQueryFailed"),
      

@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class GeneralSetting extends AbstractModel {
 
     /**
-    * Static graphic overlay configuration.
+    * Static image overlay configuration.
     */
     @SerializedName("StaticImageSettings")
     @Expose
     private StaticImageSettings StaticImageSettings;
 
     /**
-    * Dynamic graphic overlay configuration.
+    * Real-time graphic overlay configuration.
     */
     @SerializedName("MotionGraphicsSettings")
     @Expose
     private MotionGraphicsSetting MotionGraphicsSettings;
 
     /**
-    * Thumbnail Configuration.
+    * Thumbnail configuration
     */
     @SerializedName("ThumbnailSettings")
     @Expose
     private ThumbnailSettings ThumbnailSettings;
 
     /**
-     * Get Static graphic overlay configuration. 
-     * @return StaticImageSettings Static graphic overlay configuration.
+     * Get Static image overlay configuration. 
+     * @return StaticImageSettings Static image overlay configuration.
      */
     public StaticImageSettings getStaticImageSettings() {
         return this.StaticImageSettings;
     }
 
     /**
-     * Set Static graphic overlay configuration.
-     * @param StaticImageSettings Static graphic overlay configuration.
+     * Set Static image overlay configuration.
+     * @param StaticImageSettings Static image overlay configuration.
      */
     public void setStaticImageSettings(StaticImageSettings StaticImageSettings) {
         this.StaticImageSettings = StaticImageSettings;
     }
 
     /**
-     * Get Dynamic graphic overlay configuration. 
-     * @return MotionGraphicsSettings Dynamic graphic overlay configuration.
+     * Get Real-time graphic overlay configuration. 
+     * @return MotionGraphicsSettings Real-time graphic overlay configuration.
      */
     public MotionGraphicsSetting getMotionGraphicsSettings() {
         return this.MotionGraphicsSettings;
     }
 
     /**
-     * Set Dynamic graphic overlay configuration.
-     * @param MotionGraphicsSettings Dynamic graphic overlay configuration.
+     * Set Real-time graphic overlay configuration.
+     * @param MotionGraphicsSettings Real-time graphic overlay configuration.
      */
     public void setMotionGraphicsSettings(MotionGraphicsSetting MotionGraphicsSettings) {
         this.MotionGraphicsSettings = MotionGraphicsSettings;
     }
 
     /**
-     * Get Thumbnail Configuration. 
-     * @return ThumbnailSettings Thumbnail Configuration.
+     * Get Thumbnail configuration 
+     * @return ThumbnailSettings Thumbnail configuration
      */
     public ThumbnailSettings getThumbnailSettings() {
         return this.ThumbnailSettings;
     }
 
     /**
-     * Set Thumbnail Configuration.
-     * @param ThumbnailSettings Thumbnail Configuration.
+     * Set Thumbnail configuration
+     * @param ThumbnailSettings Thumbnail configuration
      */
     public void setThumbnailSettings(ThumbnailSettings ThumbnailSettings) {
         this.ThumbnailSettings = ThumbnailSettings;

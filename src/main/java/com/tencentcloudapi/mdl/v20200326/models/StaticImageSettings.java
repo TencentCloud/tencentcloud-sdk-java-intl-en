@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class StaticImageSettings extends AbstractModel {
 
     /**
-    * Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
+    * Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
     */
     @SerializedName("GlobalImageOverlayEnabled")
     @Expose
     private Long GlobalImageOverlayEnabled;
 
     /**
-     * Get Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0. 
-     * @return GlobalImageOverlayEnabled Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
+     * Get Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0. 
+     * @return GlobalImageOverlayEnabled Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
      */
     public Long getGlobalImageOverlayEnabled() {
         return this.GlobalImageOverlayEnabled;
     }
 
     /**
-     * Set Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
-     * @param GlobalImageOverlayEnabled Whether to enable global static image overlay, 0: Disable, 1: Enable; Default value: 0.
+     * Set Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
+     * @param GlobalImageOverlayEnabled Whether global static image overlay is enabled. 0: not enabled, 1: enabled. Default value: 0.
      */
     public void setGlobalImageOverlayEnabled(Long GlobalImageOverlayEnabled) {
         this.GlobalImageOverlayEnabled = GlobalImageOverlayEnabled;

@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class BizTaskModifyParamsData extends AbstractModel {
 
     /**
-    * Cluster ID
+    * 
     */
     @SerializedName("ClusterId")
     @Expose
@@ -45,16 +45,16 @@ public class BizTaskModifyParamsData extends AbstractModel {
     private BizTaskModifyInstanceParam [] ModifyInstanceParams;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get  
+     * @return ClusterId 
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set 
+     * @param ClusterId 
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;

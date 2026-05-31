@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class CreateStreamLiveChannelResponse extends AbstractModel {
 
     /**
-    * Channel ID
+    * Channel ID.
     */
     @SerializedName("Id")
     @Expose
     private String Id;
 
     /**
-    * Tag prompt information, this information will be attached when the tag operation fails.
+    * Tag prompt message. When the operation fails, the information comes with it.
     */
     @SerializedName("TagMsg")
     @Expose
@@ -45,32 +45,32 @@ public class CreateStreamLiveChannelResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Channel ID 
-     * @return Id Channel ID
+     * Get Channel ID. 
+     * @return Id Channel ID.
      */
     public String getId() {
         return this.Id;
     }
 
     /**
-     * Set Channel ID
-     * @param Id Channel ID
+     * Set Channel ID.
+     * @param Id Channel ID.
      */
     public void setId(String Id) {
         this.Id = Id;
     }
 
     /**
-     * Get Tag prompt information, this information will be attached when the tag operation fails. 
-     * @return TagMsg Tag prompt information, this information will be attached when the tag operation fails.
+     * Get Tag prompt message. When the operation fails, the information comes with it. 
+     * @return TagMsg Tag prompt message. When the operation fails, the information comes with it.
      */
     public String getTagMsg() {
         return this.TagMsg;
     }
 
     /**
-     * Set Tag prompt information, this information will be attached when the tag operation fails.
-     * @param TagMsg Tag prompt information, this information will be attached when the tag operation fails.
+     * Set Tag prompt message. When the operation fails, the information comes with it.
+     * @param TagMsg Tag prompt message. When the operation fails, the information comes with it.
      */
     public void setTagMsg(String TagMsg) {
         this.TagMsg = TagMsg;

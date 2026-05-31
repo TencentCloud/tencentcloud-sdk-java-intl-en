@@ -24,141 +24,210 @@ import java.util.HashMap;
 public class Role extends AbstractModel {
 
     /**
-    * Role name.
+    * <p>Role name.</p>
     */
     @SerializedName("RoleName")
     @Expose
     private String RoleName;
 
     /**
-    * Value of the role token.
+    * <p>Role token value.</p>
     */
     @SerializedName("Token")
     @Expose
     private String Token;
 
     /**
-    * Remarks.
+    * <p>Remarks.</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Creation time.
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Update time.
+    * <p>Update time.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+    * <p>Authorization type (Cluster: cluster; TopicAndGroup: topic/consumer group)</p>
     */
     @SerializedName("PermType")
     @Expose
     private String PermType;
 
     /**
-     * Get Role name. 
-     * @return RoleName Role name.
+    * <p>Role type</p><p>Enumeration value:</p><ul><li>Temporary: Rotation key</li><li>Permanent: Permanent key</li></ul>
+    */
+    @SerializedName("TokenType")
+    @Expose
+    private String TokenType;
+
+    /**
+    * <p>SSM unique ID</p>
+    */
+    @SerializedName("SecretName")
+    @Expose
+    private String SecretName;
+
+    /**
+    * <p>Rotation cycle</p><p>Unit: day</p>
+    */
+    @SerializedName("RotateFreq")
+    @Expose
+    private Long RotateFreq;
+
+    /**
+     * Get <p>Role name.</p> 
+     * @return RoleName <p>Role name.</p>
      */
     public String getRoleName() {
         return this.RoleName;
     }
 
     /**
-     * Set Role name.
-     * @param RoleName Role name.
+     * Set <p>Role name.</p>
+     * @param RoleName <p>Role name.</p>
      */
     public void setRoleName(String RoleName) {
         this.RoleName = RoleName;
     }
 
     /**
-     * Get Value of the role token. 
-     * @return Token Value of the role token.
+     * Get <p>Role token value.</p> 
+     * @return Token <p>Role token value.</p>
      */
     public String getToken() {
         return this.Token;
     }
 
     /**
-     * Set Value of the role token.
-     * @param Token Value of the role token.
+     * Set <p>Role token value.</p>
+     * @param Token <p>Role token value.</p>
      */
     public void setToken(String Token) {
         this.Token = Token;
     }
 
     /**
-     * Get Remarks. 
-     * @return Remark Remarks.
+     * Get <p>Remarks.</p> 
+     * @return Remark <p>Remarks.</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks.
-     * @param Remark Remarks.
+     * Set <p>Remarks.</p>
+     * @param Remark <p>Remarks.</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Creation time. 
-     * @return CreateTime Creation time.
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time.
-     * @param CreateTime Creation time.
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Update time. 
-     * @return UpdateTime Update time.
+     * Get <p>Update time.</p> 
+     * @return UpdateTime <p>Update time.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time.
-     * @param UpdateTime Update time.
+     * Set <p>Update time.</p>
+     * @param UpdateTime <p>Update time.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group). 
-     * @return PermType Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+     * Get <p>Authorization type (Cluster: cluster; TopicAndGroup: topic/consumer group)</p> 
+     * @return PermType <p>Authorization type (Cluster: cluster; TopicAndGroup: topic/consumer group)</p>
      */
     public String getPermType() {
         return this.PermType;
     }
 
     /**
-     * Set Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
-     * @param PermType Authorization type (Cluster: cluster; TopicAndGroup: topic or consumer group).
+     * Set <p>Authorization type (Cluster: cluster; TopicAndGroup: topic/consumer group)</p>
+     * @param PermType <p>Authorization type (Cluster: cluster; TopicAndGroup: topic/consumer group)</p>
      */
     public void setPermType(String PermType) {
         this.PermType = PermType;
+    }
+
+    /**
+     * Get <p>Role type</p><p>Enumeration value:</p><ul><li>Temporary: Rotation key</li><li>Permanent: Permanent key</li></ul> 
+     * @return TokenType <p>Role type</p><p>Enumeration value:</p><ul><li>Temporary: Rotation key</li><li>Permanent: Permanent key</li></ul>
+     */
+    public String getTokenType() {
+        return this.TokenType;
+    }
+
+    /**
+     * Set <p>Role type</p><p>Enumeration value:</p><ul><li>Temporary: Rotation key</li><li>Permanent: Permanent key</li></ul>
+     * @param TokenType <p>Role type</p><p>Enumeration value:</p><ul><li>Temporary: Rotation key</li><li>Permanent: Permanent key</li></ul>
+     */
+    public void setTokenType(String TokenType) {
+        this.TokenType = TokenType;
+    }
+
+    /**
+     * Get <p>SSM unique ID</p> 
+     * @return SecretName <p>SSM unique ID</p>
+     */
+    public String getSecretName() {
+        return this.SecretName;
+    }
+
+    /**
+     * Set <p>SSM unique ID</p>
+     * @param SecretName <p>SSM unique ID</p>
+     */
+    public void setSecretName(String SecretName) {
+        this.SecretName = SecretName;
+    }
+
+    /**
+     * Get <p>Rotation cycle</p><p>Unit: day</p> 
+     * @return RotateFreq <p>Rotation cycle</p><p>Unit: day</p>
+     */
+    public Long getRotateFreq() {
+        return this.RotateFreq;
+    }
+
+    /**
+     * Set <p>Rotation cycle</p><p>Unit: day</p>
+     * @param RotateFreq <p>Rotation cycle</p><p>Unit: day</p>
+     */
+    public void setRotateFreq(Long RotateFreq) {
+        this.RotateFreq = RotateFreq;
     }
 
     public Role() {
@@ -187,6 +256,15 @@ public class Role extends AbstractModel {
         if (source.PermType != null) {
             this.PermType = new String(source.PermType);
         }
+        if (source.TokenType != null) {
+            this.TokenType = new String(source.TokenType);
+        }
+        if (source.SecretName != null) {
+            this.SecretName = new String(source.SecretName);
+        }
+        if (source.RotateFreq != null) {
+            this.RotateFreq = new Long(source.RotateFreq);
+        }
     }
 
 
@@ -200,6 +278,9 @@ public class Role extends AbstractModel {
         this.setParamSimple(map, prefix + "CreateTime", this.CreateTime);
         this.setParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         this.setParamSimple(map, prefix + "PermType", this.PermType);
+        this.setParamSimple(map, prefix + "TokenType", this.TokenType);
+        this.setParamSimple(map, prefix + "SecretName", this.SecretName);
+        this.setParamSimple(map, prefix + "RotateFreq", this.RotateFreq);
 
     }
 }

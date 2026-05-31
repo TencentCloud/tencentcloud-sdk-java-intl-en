@@ -45,6 +45,27 @@ public class IsolateInstanceRequest extends AbstractModel {
     private String DbType;
 
     /**
+    * Instance Refund Reason Types
+    */
+    @SerializedName("IsolateReasonTypes")
+    @Expose
+    private Long [] IsolateReasonTypes;
+
+    /**
+    * Instance Refund Reason Supplement
+    */
+    @SerializedName("IsolateReason")
+    @Expose
+    private String IsolateReason;
+
+    /**
+    * Backup retention
+    */
+    @SerializedName("SaveBackup")
+    @Expose
+    private Boolean SaveBackup;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -92,6 +113,54 @@ public class IsolateInstanceRequest extends AbstractModel {
         this.DbType = DbType;
     }
 
+    /**
+     * Get Instance Refund Reason Types 
+     * @return IsolateReasonTypes Instance Refund Reason Types
+     */
+    public Long [] getIsolateReasonTypes() {
+        return this.IsolateReasonTypes;
+    }
+
+    /**
+     * Set Instance Refund Reason Types
+     * @param IsolateReasonTypes Instance Refund Reason Types
+     */
+    public void setIsolateReasonTypes(Long [] IsolateReasonTypes) {
+        this.IsolateReasonTypes = IsolateReasonTypes;
+    }
+
+    /**
+     * Get Instance Refund Reason Supplement 
+     * @return IsolateReason Instance Refund Reason Supplement
+     */
+    public String getIsolateReason() {
+        return this.IsolateReason;
+    }
+
+    /**
+     * Set Instance Refund Reason Supplement
+     * @param IsolateReason Instance Refund Reason Supplement
+     */
+    public void setIsolateReason(String IsolateReason) {
+        this.IsolateReason = IsolateReason;
+    }
+
+    /**
+     * Get Backup retention 
+     * @return SaveBackup Backup retention
+     */
+    public Boolean getSaveBackup() {
+        return this.SaveBackup;
+    }
+
+    /**
+     * Set Backup retention
+     * @param SaveBackup Backup retention
+     */
+    public void setSaveBackup(Boolean SaveBackup) {
+        this.SaveBackup = SaveBackup;
+    }
+
     public IsolateInstanceRequest() {
     }
 
@@ -112,6 +181,18 @@ public class IsolateInstanceRequest extends AbstractModel {
         if (source.DbType != null) {
             this.DbType = new String(source.DbType);
         }
+        if (source.IsolateReasonTypes != null) {
+            this.IsolateReasonTypes = new Long[source.IsolateReasonTypes.length];
+            for (int i = 0; i < source.IsolateReasonTypes.length; i++) {
+                this.IsolateReasonTypes[i] = new Long(source.IsolateReasonTypes[i]);
+            }
+        }
+        if (source.IsolateReason != null) {
+            this.IsolateReason = new String(source.IsolateReason);
+        }
+        if (source.SaveBackup != null) {
+            this.SaveBackup = new Boolean(source.SaveBackup);
+        }
     }
 
 
@@ -122,6 +203,9 @@ public class IsolateInstanceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamArraySimple(map, prefix + "InstanceIdList.", this.InstanceIdList);
         this.setParamSimple(map, prefix + "DbType", this.DbType);
+        this.setParamArraySimple(map, prefix + "IsolateReasonTypes.", this.IsolateReasonTypes);
+        this.setParamSimple(map, prefix + "IsolateReason", this.IsolateReason);
+        this.setParamSimple(map, prefix + "SaveBackup", this.SaveBackup);
 
     }
 }

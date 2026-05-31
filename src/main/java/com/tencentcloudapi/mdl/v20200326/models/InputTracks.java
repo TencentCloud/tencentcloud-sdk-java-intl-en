@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class InputTracks extends AbstractModel {
 
     /**
-    * Audio track configuration information.
+    * Audio track configuration message.
     */
     @SerializedName("Tracks")
     @Expose
     private InputTrack [] Tracks;
 
     /**
-     * Get Audio track configuration information. 
-     * @return Tracks Audio track configuration information.
+     * Get Audio track configuration message. 
+     * @return Tracks Audio track configuration message.
      */
     public InputTrack [] getTracks() {
         return this.Tracks;
     }
 
     /**
-     * Set Audio track configuration information.
-     * @param Tracks Audio track configuration information.
+     * Set Audio track configuration message.
+     * @param Tracks Audio track configuration message.
      */
     public void setTracks(InputTrack [] Tracks) {
         this.Tracks = Tracks;

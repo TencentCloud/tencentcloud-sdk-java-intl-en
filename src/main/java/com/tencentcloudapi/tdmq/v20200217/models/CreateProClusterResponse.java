@@ -24,28 +24,28 @@ import java.util.HashMap;
 public class CreateProClusterResponse extends AbstractModel {
 
     /**
-    * Specifies the sub-order number.
+    * <p>Sub-order number</p>
     */
     @SerializedName("DealName")
     @Expose
     private String DealName;
 
     /**
-    * Order ID
+    * <p>Order ID</p>
     */
     @SerializedName("BigDealId")
     @Expose
     private String BigDealId;
 
     /**
-    * Cluster ID
+    * <p>Cluster Id</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Cluster name.
+    * <p>Cluster name.</p>
     */
     @SerializedName("ClusterName")
     @Expose
@@ -59,64 +59,64 @@ public class CreateProClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Specifies the sub-order number. 
-     * @return DealName Specifies the sub-order number.
+     * Get <p>Sub-order number</p> 
+     * @return DealName <p>Sub-order number</p>
      */
     public String getDealName() {
         return this.DealName;
     }
 
     /**
-     * Set Specifies the sub-order number.
-     * @param DealName Specifies the sub-order number.
+     * Set <p>Sub-order number</p>
+     * @param DealName <p>Sub-order number</p>
      */
     public void setDealName(String DealName) {
         this.DealName = DealName;
     }
 
     /**
-     * Get Order ID 
-     * @return BigDealId Order ID
+     * Get <p>Order ID</p> 
+     * @return BigDealId <p>Order ID</p>
      */
     public String getBigDealId() {
         return this.BigDealId;
     }
 
     /**
-     * Set Order ID
-     * @param BigDealId Order ID
+     * Set <p>Order ID</p>
+     * @param BigDealId <p>Order ID</p>
      */
     public void setBigDealId(String BigDealId) {
         this.BigDealId = BigDealId;
     }
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get <p>Cluster Id</p> 
+     * @return ClusterId <p>Cluster Id</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster Id</p>
+     * @param ClusterId <p>Cluster Id</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Cluster name. 
-     * @return ClusterName Cluster name.
+     * Get <p>Cluster name.</p> 
+     * @return ClusterName <p>Cluster name.</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name.
-     * @param ClusterName Cluster name.
+     * Set <p>Cluster name.</p>
+     * @param ClusterName <p>Cluster name.</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;

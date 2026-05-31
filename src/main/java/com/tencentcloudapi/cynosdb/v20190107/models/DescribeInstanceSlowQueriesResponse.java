@@ -24,14 +24,14 @@ import java.util.HashMap;
 public class DescribeInstanceSlowQueriesResponse extends AbstractModel {
 
     /**
-    * Total number
+    * <p>Total quantity.</p>
     */
     @SerializedName("TotalCount")
     @Expose
     private Long TotalCount;
 
     /**
-    * Slow query record
+    * <p>Slow query records.</p>
     */
     @SerializedName("SlowQueries")
     @Expose
@@ -45,32 +45,32 @@ public class DescribeInstanceSlowQueriesResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Total number 
-     * @return TotalCount Total number
+     * Get <p>Total quantity.</p> 
+     * @return TotalCount <p>Total quantity.</p>
      */
     public Long getTotalCount() {
         return this.TotalCount;
     }
 
     /**
-     * Set Total number
-     * @param TotalCount Total number
+     * Set <p>Total quantity.</p>
+     * @param TotalCount <p>Total quantity.</p>
      */
     public void setTotalCount(Long TotalCount) {
         this.TotalCount = TotalCount;
     }
 
     /**
-     * Get Slow query record 
-     * @return SlowQueries Slow query record
+     * Get <p>Slow query records.</p> 
+     * @return SlowQueries <p>Slow query records.</p>
      */
     public SlowQueriesItem [] getSlowQueries() {
         return this.SlowQueries;
     }
 
     /**
-     * Set Slow query record
-     * @param SlowQueries Slow query record
+     * Set <p>Slow query records.</p>
+     * @param SlowQueries <p>Slow query records.</p>
      */
     public void setSlowQueries(SlowQueriesItem [] SlowQueries) {
         this.SlowQueries = SlowQueries;

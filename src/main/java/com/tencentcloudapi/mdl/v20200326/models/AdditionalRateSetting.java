@@ -24,69 +24,69 @@ import java.util.HashMap;
 public class AdditionalRateSetting extends AbstractModel {
 
     /**
-    * The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
+    * The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
     */
     @SerializedName("VideoMaxBitrate")
     @Expose
     private Long VideoMaxBitrate;
 
     /**
-    * Cache configuration supports configuring a Max Bitrate value of 1-4 times.
+    * Cache configuration supports configuration as 1-4x the Max Bitrate value.
     */
     @SerializedName("BufferSize")
     @Expose
     private Long BufferSize;
 
     /**
-    * VBR scene is valid, video quality level, only supports user input numbers between 1-51.
+    * Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
     */
     @SerializedName("QualityLevel")
     @Expose
     private Long QualityLevel;
 
     /**
-     * Get The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000. 
-     * @return VideoMaxBitrate The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
+     * Get The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000. 
+     * @return VideoMaxBitrate The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
      */
     public Long getVideoMaxBitrate() {
         return this.VideoMaxBitrate;
     }
 
     /**
-     * Set The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
-     * @param VideoMaxBitrate The maximum bit rate in a VBR scenario must be a multiple of 1000 and between 50000 - 40000000.
+     * Set The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
+     * @param VideoMaxBitrate The maximum bitrate in the VBR scenario must be a multiple of 1000 and between 50000 and 40000000.
      */
     public void setVideoMaxBitrate(Long VideoMaxBitrate) {
         this.VideoMaxBitrate = VideoMaxBitrate;
     }
 
     /**
-     * Get Cache configuration supports configuring a Max Bitrate value of 1-4 times. 
-     * @return BufferSize Cache configuration supports configuring a Max Bitrate value of 1-4 times.
+     * Get Cache configuration supports configuration as 1-4x the Max Bitrate value. 
+     * @return BufferSize Cache configuration supports configuration as 1-4x the Max Bitrate value.
      */
     public Long getBufferSize() {
         return this.BufferSize;
     }
 
     /**
-     * Set Cache configuration supports configuring a Max Bitrate value of 1-4 times.
-     * @param BufferSize Cache configuration supports configuring a Max Bitrate value of 1-4 times.
+     * Set Cache configuration supports configuration as 1-4x the Max Bitrate value.
+     * @param BufferSize Cache configuration supports configuration as 1-4x the Max Bitrate value.
      */
     public void setBufferSize(Long BufferSize) {
         this.BufferSize = BufferSize;
     }
 
     /**
-     * Get VBR scene is valid, video quality level, only supports user input numbers between 1-51. 
-     * @return QualityLevel VBR scene is valid, video quality level, only supports user input numbers between 1-51.
+     * Get Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51. 
+     * @return QualityLevel Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
      */
     public Long getQualityLevel() {
         return this.QualityLevel;
     }
 
     /**
-     * Set VBR scene is valid, video quality level, only supports user input numbers between 1-51.
-     * @param QualityLevel VBR scene is valid, video quality level, only supports user input numbers between 1-51.
+     * Set Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
+     * @param QualityLevel Valid in VBR scenarios. Video quality level. Only supports user input of numbers between 1 and 51.
      */
     public void setQualityLevel(Long QualityLevel) {
         this.QualityLevel = QualityLevel;

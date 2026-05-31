@@ -46,6 +46,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String [] BinlogCrossRegions;
 
     /**
+    * Safe info
+    */
+    @SerializedName("AutoCopyVaults")
+    @Expose
+    private CreateBackupVaultItem [] AutoCopyVaults;
+
+    /**
      * Get Specifies the retention time of binlogs. 
      * @return BinlogSaveDays Specifies the retention time of binlogs.
      */
@@ -97,6 +104,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.BinlogCrossRegions = BinlogCrossRegions;
     }
 
+    /**
+     * Get Safe info 
+     * @return AutoCopyVaults Safe info
+     */
+    public CreateBackupVaultItem [] getAutoCopyVaults() {
+        return this.AutoCopyVaults;
+    }
+
+    /**
+     * Set Safe info
+     * @param AutoCopyVaults Safe info
+     */
+    public void setAutoCopyVaults(CreateBackupVaultItem [] AutoCopyVaults) {
+        this.AutoCopyVaults = AutoCopyVaults;
+    }
+
     public BinlogConfigInfo() {
     }
 
@@ -117,6 +140,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.BinlogCrossRegions[i] = new String(source.BinlogCrossRegions[i]);
             }
         }
+        if (source.AutoCopyVaults != null) {
+            this.AutoCopyVaults = new CreateBackupVaultItem[source.AutoCopyVaults.length];
+            for (int i = 0; i < source.AutoCopyVaults.length; i++) {
+                this.AutoCopyVaults[i] = new CreateBackupVaultItem(source.AutoCopyVaults[i]);
+            }
+        }
     }
 
 
@@ -127,6 +156,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "BinlogSaveDays", this.BinlogSaveDays);
         this.setParamSimple(map, prefix + "BinlogCrossRegionsEnable", this.BinlogCrossRegionsEnable);
         this.setParamArraySimple(map, prefix + "BinlogCrossRegions.", this.BinlogCrossRegions);
+        this.setParamArrayObj(map, prefix + "AutoCopyVaults.", this.AutoCopyVaults);
 
     }
 }

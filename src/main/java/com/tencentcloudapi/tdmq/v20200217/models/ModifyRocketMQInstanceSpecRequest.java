@@ -24,115 +24,118 @@ import java.util.HashMap;
 public class ModifyRocketMQInstanceSpecRequest extends AbstractModel {
 
     /**
-    * ID of the exclusive instance
+    * <p>Dedicated Instance ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
+    * <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
     */
     @SerializedName("Specification")
     @Expose
     private String Specification;
 
     /**
-    * Node count
+    * <p>Node count</p>
     */
     @SerializedName("NodeCount")
     @Expose
     private Long NodeCount;
 
     /**
-    * Storage space in GB
+    * <p>Storage space in GB</p>
     */
     @SerializedName("StorageSize")
     @Expose
     private Long StorageSize;
 
     /**
-     * Get ID of the exclusive instance 
-     * @return InstanceId ID of the exclusive instance
+    * <p>Deploy availability zone list</p>
+    */
+    @SerializedName("ZoneIds")
+    @Expose
+    private String [] ZoneIds;
+
+    /**
+     * Get <p>Dedicated Instance ID</p> 
+     * @return InstanceId <p>Dedicated Instance ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set ID of the exclusive instance
-     * @param InstanceId ID of the exclusive instance
+     * Set <p>Dedicated Instance ID</p>
+     * @param InstanceId <p>Dedicated Instance ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II). 
-     * @return Specification Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
+     * Get <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p> 
+     * @return Specification <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
      */
     public String getSpecification() {
         return this.Specification;
     }
 
     /**
-     * Set Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
-     * @param Specification Instance specification.
-Valid values: `rocket-vip-basic-1` (Basic),
-`rocket-vip-basic-2` (Standard),
-`rocket-vip-basic-3` (Advanced I),
-`rocket-vip-basic-4` (Advanced II).
+     * Set <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
+     * @param Specification <p>Instance specification,<br>rocket-vip-basic-1 basic<br>rocket-vip-basic-2 standard type<br>rocket-vip-basic-3 higher-order type I<br>rocket-vip-basic-4 higher-order type II</p>
      */
     public void setSpecification(String Specification) {
         this.Specification = Specification;
     }
 
     /**
-     * Get Node count 
-     * @return NodeCount Node count
+     * Get <p>Node count</p> 
+     * @return NodeCount <p>Node count</p>
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set Node count
-     * @param NodeCount Node count
+     * Set <p>Node count</p>
+     * @param NodeCount <p>Node count</p>
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
     }
 
     /**
-     * Get Storage space in GB 
-     * @return StorageSize Storage space in GB
+     * Get <p>Storage space in GB</p> 
+     * @return StorageSize <p>Storage space in GB</p>
      */
     public Long getStorageSize() {
         return this.StorageSize;
     }
 
     /**
-     * Set Storage space in GB
-     * @param StorageSize Storage space in GB
+     * Set <p>Storage space in GB</p>
+     * @param StorageSize <p>Storage space in GB</p>
      */
     public void setStorageSize(Long StorageSize) {
         this.StorageSize = StorageSize;
+    }
+
+    /**
+     * Get <p>Deploy availability zone list</p> 
+     * @return ZoneIds <p>Deploy availability zone list</p>
+     */
+    public String [] getZoneIds() {
+        return this.ZoneIds;
+    }
+
+    /**
+     * Set <p>Deploy availability zone list</p>
+     * @param ZoneIds <p>Deploy availability zone list</p>
+     */
+    public void setZoneIds(String [] ZoneIds) {
+        this.ZoneIds = ZoneIds;
     }
 
     public ModifyRocketMQInstanceSpecRequest() {
@@ -155,6 +158,12 @@ Valid values: `rocket-vip-basic-1` (Basic),
         if (source.StorageSize != null) {
             this.StorageSize = new Long(source.StorageSize);
         }
+        if (source.ZoneIds != null) {
+            this.ZoneIds = new String[source.ZoneIds.length];
+            for (int i = 0; i < source.ZoneIds.length; i++) {
+                this.ZoneIds[i] = new String(source.ZoneIds[i]);
+            }
+        }
     }
 
 
@@ -166,6 +175,7 @@ Valid values: `rocket-vip-basic-1` (Basic),
         this.setParamSimple(map, prefix + "Specification", this.Specification);
         this.setParamSimple(map, prefix + "NodeCount", this.NodeCount);
         this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
+        this.setParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
 
     }
 }

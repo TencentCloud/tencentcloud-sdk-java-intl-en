@@ -80,6 +80,13 @@ public class RollBackClusterRequest extends AbstractModel {
     private String RollbackMode;
 
     /**
+    * Safe id
+    */
+    @SerializedName("VaultId")
+    @Expose
+    private String VaultId;
+
+    /**
      * Get Cluster ID. 
      * @return ClusterId Cluster ID.
      */
@@ -207,6 +214,22 @@ public class RollBackClusterRequest extends AbstractModel {
         this.RollbackMode = RollbackMode;
     }
 
+    /**
+     * Get Safe id 
+     * @return VaultId Safe id
+     */
+    public String getVaultId() {
+        return this.VaultId;
+    }
+
+    /**
+     * Set Safe id
+     * @param VaultId Safe id
+     */
+    public void setVaultId(String VaultId) {
+        this.VaultId = VaultId;
+    }
+
     public RollBackClusterRequest() {
     }
 
@@ -245,6 +268,9 @@ public class RollBackClusterRequest extends AbstractModel {
         if (source.RollbackMode != null) {
             this.RollbackMode = new String(source.RollbackMode);
         }
+        if (source.VaultId != null) {
+            this.VaultId = new String(source.VaultId);
+        }
     }
 
 
@@ -260,6 +286,7 @@ public class RollBackClusterRequest extends AbstractModel {
         this.setParamArrayObj(map, prefix + "RollbackDatabases.", this.RollbackDatabases);
         this.setParamArrayObj(map, prefix + "RollbackTables.", this.RollbackTables);
         this.setParamSimple(map, prefix + "RollbackMode", this.RollbackMode);
+        this.setParamSimple(map, prefix + "VaultId", this.VaultId);
 
     }
 }

@@ -24,33 +24,28 @@ import java.util.HashMap;
 public class TimedRecordSettings extends AbstractModel {
 
     /**
-    * Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
+    * Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
     */
     @SerializedName("AutoClear")
     @Expose
     private String AutoClear;
 
     /**
-     * Get Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return AutoClear Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion. 
+     * @return AutoClear Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
      */
     public String getAutoClear() {
         return this.AutoClear;
     }
 
     /**
-     * Set Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param AutoClear Whether to automatically delete finished recording events. Valid values: `CLOSE`, `OPEN`. If this parameter is left empty, `CLOSE` will be used.
-If it is set to `OPEN`, a recording event will be deleted 7 days after it is finished.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
+     * @param AutoClear Whether to automatically clear ended recording tasks. Options: [CLOSE|OPEN]. Default is CLOSE.
+If enabled, the task will be cleared 7 days after completion.
      */
     public void setAutoClear(String AutoClear) {
         this.AutoClear = AutoClear;

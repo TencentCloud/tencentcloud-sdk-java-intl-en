@@ -24,115 +24,115 @@ import java.util.HashMap;
 public class VideoCodecDetail extends AbstractModel {
 
     /**
-    * The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
+    * Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
     */
     @SerializedName("Profile")
     @Expose
     private String Profile;
 
     /**
-    * Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+    * Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
     */
     @SerializedName("Level")
     @Expose
     private String Level;
 
     /**
-    * Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
+    * Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
     */
     @SerializedName("EntropyEncoding")
     @Expose
     private String EntropyEncoding;
 
     /**
-    * Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
+    * Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
     */
     @SerializedName("AdaptiveQuantization")
     @Expose
     private String AdaptiveQuantization;
 
     /**
-    * Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
+    * Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
     */
     @SerializedName("LookAheadRateControl")
     @Expose
     private String LookAheadRateControl;
 
     /**
-     * Get The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN. 
-     * @return Profile The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
+     * Get Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN. 
+     * @return Profile Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
      */
     public String getProfile() {
         return this.Profile;
     }
 
     /**
-     * Set The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
-     * @param Profile The three image quality levels of h264 include: BASELINE, HIGH, and MAIN. The default option is MAIN.
+     * Set Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
+     * @param Profile Three image quality levels for H264, options include: BASELINE, HIGH, MAIN. The default option is MAIN.
      */
     public void setProfile(String Profile) {
         this.Profile = Profile;
     }
 
     /**
-     * Get Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO. 
-     * @return Level Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+     * Get Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO. 
+     * @return Level Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
      */
     public String getLevel() {
         return this.Level;
     }
 
     /**
-     * Set Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
-     * @param Level Profile corresponding codec performance, options include: 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+     * Set Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
+     * @param Level Decoding performance of the profile. Options include 1, 1.1, 1.2, 1.3, 2, 2.1, 2.2, 2.3, 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, AUTO. The default option is AUTO.
      */
     public void setLevel(String Level) {
         this.Level = Level;
     }
 
     /**
-     * Get Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. . 
-     * @return EntropyEncoding Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
+     * Get Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC. 
+     * @return EntropyEncoding Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
      */
     public String getEntropyEncoding() {
         return this.EntropyEncoding;
     }
 
     /**
-     * Set Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
-     * @param EntropyEncoding Codecs include entropy coding and lossless coding, and options include: CABAC and CAVLC. The default option is CABAC. .
+     * Set Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
+     * @param EntropyEncoding Encoding/decoding includes entropy encoding and lossless encoding. Options include CABAC and CAVLC. The default option is CABAC.
      */
     public void setEntropyEncoding(String EntropyEncoding) {
         this.EntropyEncoding = EntropyEncoding;
     }
 
     /**
-     * Get Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. . 
-     * @return AdaptiveQuantization Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
+     * Get Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO. 
+     * @return AdaptiveQuantization Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
      */
     public String getAdaptiveQuantization() {
         return this.AdaptiveQuantization;
     }
 
     /**
-     * Set Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
-     * @param AdaptiveQuantization Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. The default option is: AUTO. .
+     * Set Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
+     * @param AdaptiveQuantization Mode, options include: AUTO, HIGH, HIGHER, LOW, MAX, MEDIUM, OFF. Default option: AUTO.
      */
     public void setAdaptiveQuantization(String AdaptiveQuantization) {
         this.AdaptiveQuantization = AdaptiveQuantization;
     }
 
     /**
-     * Get Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. . 
-     * @return LookAheadRateControl Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
+     * Get Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM. 
+     * @return LookAheadRateControl Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
      */
     public String getLookAheadRateControl() {
         return this.LookAheadRateControl;
     }
 
     /**
-     * Set Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
-     * @param LookAheadRateControl Analyze subsequent encoded frames in advance, options include: HIGH, LOW, MEDIUM. The default option is: MEDIUM. .
+     * Set Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
+     * @param LookAheadRateControl Analyze subsequent coding frames in advance. Options include HIGH, LOW, and MEDIUM. Default option is MEDIUM.
      */
     public void setLookAheadRateControl(String LookAheadRateControl) {
         this.LookAheadRateControl = LookAheadRateControl;

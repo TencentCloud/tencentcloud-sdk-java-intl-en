@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class QueryParamFilter extends AbstractModel {
 
     /**
-    * Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+    * Search field. Currently supports: ProxyGroupId
     */
     @SerializedName("Names")
     @Expose
@@ -45,16 +45,16 @@ public class QueryParamFilter extends AbstractModel {
     private Boolean ExactMatch;
 
     /**
-     * Get Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip" 
-     * @return Names Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+     * Get Search field. Currently supports: ProxyGroupId 
+     * @return Names Search field. Currently supports: ProxyGroupId
      */
     public String [] getNames() {
         return this.Names;
     }
 
     /**
-     * Set Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
-     * @param Names Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
+     * Set Search field. Currently supports: ProxyGroupId
+     * @param Names Search field. Currently supports: ProxyGroupId
      */
     public void setNames(String [] Names) {
         this.Names = Names;

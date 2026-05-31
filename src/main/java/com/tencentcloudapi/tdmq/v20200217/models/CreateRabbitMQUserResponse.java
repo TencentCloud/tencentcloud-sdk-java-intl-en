@@ -24,7 +24,7 @@ import java.util.HashMap;
 public class CreateRabbitMQUserResponse extends AbstractModel {
 
     /**
-    * Username, which is used for login.
+    * <p>Username, used when logging in</p>
     */
     @SerializedName("User")
     @Expose
@@ -38,16 +38,16 @@ public class CreateRabbitMQUserResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Username, which is used for login. 
-     * @return User Username, which is used for login.
+     * Get <p>Username, used when logging in</p> 
+     * @return User <p>Username, used when logging in</p>
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set Username, which is used for login.
-     * @param User Username, which is used for login.
+     * Set <p>Username, used when logging in</p>
+     * @param User <p>Username, used when logging in</p>
      */
     public void setUser(String User) {
         this.User = User;

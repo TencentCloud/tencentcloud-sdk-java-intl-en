@@ -24,203 +24,178 @@ import java.util.HashMap;
 public class DrmSettingsInfo extends AbstractModel {
 
     /**
-    * Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
+    * Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
+    * Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
     */
     @SerializedName("Scheme")
     @Expose
     private String Scheme;
 
     /**
-    * If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+    * Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
     */
     @SerializedName("ContentId")
     @Expose
     private String ContentId;
 
     /**
-    * The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Required when Scheme is CustomDRMKeys. The content is the key customized by users.
     */
     @SerializedName("Keys")
     @Expose
     private DrmKey [] Keys;
 
     /**
-    * SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
+    * SDMC key configuration information, used when Scheme is SDMCDRM.
     */
     @SerializedName("SDMCSettings")
     @Expose
     private SDMCSettingsInfo SDMCSettings;
 
     /**
-    * Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+    * Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
     */
     @SerializedName("DrmType")
     @Expose
     private String DrmType;
 
     /**
-     * Get Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs. 
-     * @return State Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
+     * Get Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE. 
+     * @return State Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
-     * @param State Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
-DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
+     * Set Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
+     * @param State Whether DRM encryption is enabled. Option: CLOSE/OPEN. Default: CLOSE.
+Currently only support HLS/DASH/HLS_ARCHIVE/DASH_ARCHIVE/HLS_MEDIAPACKAGE/DASH_MEDIAPACKAGE.
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC. 
-     * @return Scheme Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
+     * Get Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC. 
+     * @return Scheme Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
      */
     public String getScheme() {
         return this.Scheme;
     }
 
     /**
-     * Set Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
-     * @param Scheme Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
-`CustomDRMKeys` means encryption keys customized by users.
-`SDMCDRM` means the DRM key management system of SDMC.
+     * Set Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
+     * @param Scheme Optional [CustomDRMKeys|SDMCDRM], defaults to CustomDRMKeys.
+CustomDRMKeys refers to the custom encryption key.
+SDMCDRM refers to the DRM key management system using SMDC.
      */
     public void setScheme(String Scheme) {
         this.Scheme = Scheme;
     }
 
     /**
-     * Get If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used. 
-     * @return ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+     * Get Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36]. 
+     * @return ContentId Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
      */
     public String getContentId() {
         return this.ContentId;
     }
 
     /**
-     * Set If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
-     * @param ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
-If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+     * Set Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
+     * @param ContentId Scheme is CustomDRMKeys, required, filled in by the user.
+Scheme is SDMCDRM, optional, defaults to ChannelId. The format supports digits, upper- and lower-case letters, hyphens, and underscores, with a length of [1, 36].
      */
     public void setContentId(String ContentId) {
         this.ContentId = ContentId;
     }
 
     /**
-     * Get The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Keys The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Required when Scheme is CustomDRMKeys. The content is the key customized by users. 
+     * @return Keys Required when Scheme is CustomDRMKeys. The content is the key customized by users.
      */
     public DrmKey [] getKeys() {
         return this.Keys;
     }
 
     /**
-     * Set The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Keys The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Required when Scheme is CustomDRMKeys. The content is the key customized by users.
+     * @param Keys Required when Scheme is CustomDRMKeys. The content is the key customized by users.
      */
     public void setKeys(DrmKey [] Keys) {
         this.Keys = Keys;
     }
 
     /**
-     * Get SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return SDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get SDMC key configuration information, used when Scheme is SDMCDRM. 
+     * @return SDMCSettings SDMC key configuration information, used when Scheme is SDMCDRM.
      */
     public SDMCSettingsInfo getSDMCSettings() {
         return this.SDMCSettings;
     }
 
     /**
-     * Set SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param SDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set SDMC key configuration information, used when Scheme is SDMCDRM.
+     * @param SDMCSettings SDMC key configuration information, used when Scheme is SDMCDRM.
      */
     public void setSDMCSettings(SDMCSettingsInfo SDMCSettings) {
         this.SDMCSettings = SDMCSettings;
     }
 
     /**
-     * Get Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+     * Get Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE"). 
-     * @return DrmType Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE"). 
+     * @return DrmType Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
      */
     public String getDrmType() {
         return this.DrmType;
     }
 
     /**
-     * Set Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+     * Set Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
-     * @param DrmType Optional Types:
-`FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`
-
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
+     * @param DrmType Optional type:
+`FAIRPLAY` `WIDEVINE` `PLAYREADY` `AES128`
 HLS-TS supports `FAIRPLAY` and `AES128`.
-
-HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and combinations of two or three from `FAIRPLAY`, `WIDEVINE`, and `PLAYREADY` (concatenated with commas, e.g., "FAIRPLAY,WIDEVINE,PLAYREADY").
-
-DASH supports `WIDEVINE`, `PLAYREADY`, and combinations of `PLAYREADY` and `WIDEVINE` (concatenated with commas, e.g., "PLAYREADY,WIDEVINE").
+HLS-FMP4 supports `FAIRPLAY`, `WIDEVINE`, `PLAYREADY`, `AES128`, and permutation and combination of two or three from `FAIRPLAY`, `WIDEVINE`, `PLAYREADY` (use commas to concatenate, such as "FAIRPLAY,WIDEVINE,PLAYREADY").
+DASH supports `WIDEVINE`, `PLAYREADY`, and the permutation and combination of `PLAYREADY` and `WIDEVINE` (use commas to concatenate, such as "PLAYREADY,WIDEVINE").
      */
     public void setDrmType(String DrmType) {
         this.DrmType = DrmType;

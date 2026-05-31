@@ -24,35 +24,36 @@ import java.util.HashMap;
 public class RollbackToNewClusterResponse extends AbstractModel {
 
     /**
-    * Frozen transaction ID.
+    * <p>Frozen transaction ID</p>
     */
     @SerializedName("TranId")
     @Expose
     private String TranId;
 
     /**
-    * Order ID
+    * <p>Order ID</p>
     */
     @SerializedName("DealNames")
     @Expose
     private String [] DealNames;
 
     /**
-    * Resource ID list (this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to obtain resource ids.).
+    * <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p>
     */
     @SerializedName("ResourceIds")
     @Expose
     private String [] ResourceIds;
 
     /**
-    * Cluster ID list. this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to get the cluster ID.
+    * <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p>
     */
     @SerializedName("ClusterIds")
     @Expose
     private String [] ClusterIds;
 
     /**
-    * Large order number.
+    * <p>Large order number</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("BigDealIds")
     @Expose
@@ -66,80 +67,84 @@ public class RollbackToNewClusterResponse extends AbstractModel {
     private String RequestId;
 
     /**
-     * Get Frozen transaction ID. 
-     * @return TranId Frozen transaction ID.
+     * Get <p>Frozen transaction ID</p> 
+     * @return TranId <p>Frozen transaction ID</p>
      */
     public String getTranId() {
         return this.TranId;
     }
 
     /**
-     * Set Frozen transaction ID.
-     * @param TranId Frozen transaction ID.
+     * Set <p>Frozen transaction ID</p>
+     * @param TranId <p>Frozen transaction ID</p>
      */
     public void setTranId(String TranId) {
         this.TranId = TranId;
     }
 
     /**
-     * Get Order ID 
-     * @return DealNames Order ID
+     * Get <p>Order ID</p> 
+     * @return DealNames <p>Order ID</p>
      */
     public String [] getDealNames() {
         return this.DealNames;
     }
 
     /**
-     * Set Order ID
-     * @param DealNames Order ID
+     * Set <p>Order ID</p>
+     * @param DealNames <p>Order ID</p>
      */
     public void setDealNames(String [] DealNames) {
         this.DealNames = DealNames;
     }
 
     /**
-     * Get Resource ID list (this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to obtain resource ids.). 
-     * @return ResourceIds Resource ID list (this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to obtain resource ids.).
+     * Get <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p> 
+     * @return ResourceIds <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p>
      */
     public String [] getResourceIds() {
         return this.ResourceIds;
     }
 
     /**
-     * Set Resource ID list (this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to obtain resource ids.).
-     * @param ResourceIds Resource ID list (this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to obtain resource ids.).
+     * Set <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p>
+     * @param ResourceIds <p>Resource ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain resource IDs.)</p>
      */
     public void setResourceIds(String [] ResourceIds) {
         this.ResourceIds = ResourceIds;
     }
 
     /**
-     * Get Cluster ID list. this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to get the cluster ID. 
-     * @return ClusterIds Cluster ID list. this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to get the cluster ID.
+     * Get <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p> 
+     * @return ClusterIds <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p>
      */
     public String [] getClusterIds() {
         return this.ClusterIds;
     }
 
     /**
-     * Set Cluster ID list. this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to get the cluster ID.
-     * @param ClusterIds Cluster ID list. this field is no longer maintained. please use the dealNames field and the DescribeResourcesByDealName query API to get the cluster ID.
+     * Set <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p>
+     * @param ClusterIds <p>Cluster ID list (This field is no longer maintained. Please use the dealNames field to query the API DescribeResourcesByDealName to obtain cluster IDs.)</p>
      */
     public void setClusterIds(String [] ClusterIds) {
         this.ClusterIds = ClusterIds;
     }
 
     /**
-     * Get Large order number. 
-     * @return BigDealIds Large order number.
+     * Get <p>Large order number</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return BigDealIds <p>Large order number</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getBigDealIds() {
         return this.BigDealIds;
     }
 
     /**
-     * Set Large order number.
-     * @param BigDealIds Large order number.
+     * Set <p>Large order number</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param BigDealIds <p>Large order number</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setBigDealIds(String [] BigDealIds) {
         this.BigDealIds = BigDealIds;

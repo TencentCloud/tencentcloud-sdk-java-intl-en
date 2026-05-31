@@ -259,6 +259,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     private TagInstance [] TagInstances;
 
     /**
+    * 
+    */
+    @SerializedName("Filter")
+    @Expose
+    private AlarmConditionFilter Filter;
+
+    /**
+    * 
+    */
+    @SerializedName("GroupBy")
+    @Expose
+    private AlarmGroupByItem [] GroupBy;
+
+    /**
     * Information on the filter dimension associated with a policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
     */
@@ -899,6 +913,38 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     }
 
     /**
+     * Get  
+     * @return Filter 
+     */
+    public AlarmConditionFilter getFilter() {
+        return this.Filter;
+    }
+
+    /**
+     * Set 
+     * @param Filter 
+     */
+    public void setFilter(AlarmConditionFilter Filter) {
+        this.Filter = Filter;
+    }
+
+    /**
+     * Get  
+     * @return GroupBy 
+     */
+    public AlarmGroupByItem [] getGroupBy() {
+        return this.GroupBy;
+    }
+
+    /**
+     * Set 
+     * @param GroupBy 
+     */
+    public void setGroupBy(AlarmGroupByItem [] GroupBy) {
+        this.GroupBy = GroupBy;
+    }
+
+    /**
      * Get Information on the filter dimension associated with a policy.
 Note: This field may return `null`, indicating that no valid values can be obtained. 
      * @return FilterDimensionsParam Information on the filter dimension associated with a policy.
@@ -1128,6 +1174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.TagInstances[i] = new TagInstance(source.TagInstances[i]);
             }
         }
+        if (source.Filter != null) {
+            this.Filter = new AlarmConditionFilter(source.Filter);
+        }
+        if (source.GroupBy != null) {
+            this.GroupBy = new AlarmGroupByItem[source.GroupBy.length];
+            for (int i = 0; i < source.GroupBy.length; i++) {
+                this.GroupBy[i] = new AlarmGroupByItem(source.GroupBy[i]);
+            }
+        }
         if (source.FilterDimensionsParam != null) {
             this.FilterDimensionsParam = new String(source.FilterDimensionsParam);
         }
@@ -1185,6 +1240,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "RuleType", this.RuleType);
         this.setParamSimple(map, prefix + "OriginId", this.OriginId);
         this.setParamArrayObj(map, prefix + "TagInstances.", this.TagInstances);
+        this.setParamObj(map, prefix + "Filter.", this.Filter);
+        this.setParamArrayObj(map, prefix + "GroupBy.", this.GroupBy);
         this.setParamSimple(map, prefix + "FilterDimensionsParam", this.FilterDimensionsParam);
         this.setParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
         this.setParamSimple(map, prefix + "OneClickStatus", this.OneClickStatus);

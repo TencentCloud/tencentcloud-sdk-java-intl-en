@@ -66,7 +66,7 @@ public class ExportInstanceErrorLogsRequest extends AbstractModel {
     private String [] LogLevels;
 
     /**
-    * Keywords
+    * 
     */
     @SerializedName("KeyWords")
     @Expose
@@ -190,16 +190,16 @@ public class ExportInstanceErrorLogsRequest extends AbstractModel {
     }
 
     /**
-     * Get Keywords 
-     * @return KeyWords Keywords
+     * Get  
+     * @return KeyWords 
      */
     public String [] getKeyWords() {
         return this.KeyWords;
     }
 
     /**
-     * Set Keywords
-     * @param KeyWords Keywords
+     * Set 
+     * @param KeyWords 
      */
     public void setKeyWords(String [] KeyWords) {
         this.KeyWords = KeyWords;

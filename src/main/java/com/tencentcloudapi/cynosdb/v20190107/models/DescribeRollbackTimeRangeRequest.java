@@ -31,6 +31,20 @@ public class DescribeRollbackTimeRangeRequest extends AbstractModel {
     private String ClusterId;
 
     /**
+    * Safe id
+    */
+    @SerializedName("VaultId")
+    @Expose
+    private String VaultId;
+
+    /**
+    * Safe region
+    */
+    @SerializedName("VaultRegion")
+    @Expose
+    private String VaultRegion;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -46,6 +60,38 @@ public class DescribeRollbackTimeRangeRequest extends AbstractModel {
         this.ClusterId = ClusterId;
     }
 
+    /**
+     * Get Safe id 
+     * @return VaultId Safe id
+     */
+    public String getVaultId() {
+        return this.VaultId;
+    }
+
+    /**
+     * Set Safe id
+     * @param VaultId Safe id
+     */
+    public void setVaultId(String VaultId) {
+        this.VaultId = VaultId;
+    }
+
+    /**
+     * Get Safe region 
+     * @return VaultRegion Safe region
+     */
+    public String getVaultRegion() {
+        return this.VaultRegion;
+    }
+
+    /**
+     * Set Safe region
+     * @param VaultRegion Safe region
+     */
+    public void setVaultRegion(String VaultRegion) {
+        this.VaultRegion = VaultRegion;
+    }
+
     public DescribeRollbackTimeRangeRequest() {
     }
 
@@ -57,6 +103,12 @@ public class DescribeRollbackTimeRangeRequest extends AbstractModel {
         if (source.ClusterId != null) {
             this.ClusterId = new String(source.ClusterId);
         }
+        if (source.VaultId != null) {
+            this.VaultId = new String(source.VaultId);
+        }
+        if (source.VaultRegion != null) {
+            this.VaultRegion = new String(source.VaultRegion);
+        }
     }
 
 
@@ -65,6 +117,8 @@ public class DescribeRollbackTimeRangeRequest extends AbstractModel {
      */
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
+        this.setParamSimple(map, prefix + "VaultId", this.VaultId);
+        this.setParamSimple(map, prefix + "VaultRegion", this.VaultRegion);
 
     }
 }

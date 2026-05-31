@@ -55,7 +55,8 @@ Note: this field may return `null`, indicating that no valid value was found.
     private FailOverSettings FailOverSettings;
 
     /**
-    * Caption selector for the input. There can be 0 to 1 audio selectors.
+    * Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("CaptionSelectors")
     @Expose
@@ -138,16 +139,20 @@ Note: this field may return `null`, indicating that no valid value was found.
     }
 
     /**
-     * Get Caption selector for the input. There can be 0 to 1 audio selectors. 
-     * @return CaptionSelectors Caption selector for the input. There can be 0 to 1 audio selectors.
+     * Get Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CaptionSelectors Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public CaptionSelector [] getCaptionSelectors() {
         return this.CaptionSelectors;
     }
 
     /**
-     * Set Caption selector for the input. There can be 0 to 1 audio selectors.
-     * @param CaptionSelectors Caption selector for the input. There can be 0 to 1 audio selectors.
+     * Set Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CaptionSelectors Subtitle selector.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setCaptionSelectors(CaptionSelector [] CaptionSelectors) {
         this.CaptionSelectors = CaptionSelectors;

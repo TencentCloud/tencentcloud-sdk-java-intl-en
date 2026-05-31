@@ -24,191 +24,161 @@ import java.util.HashMap;
 public class CLSInfo extends AbstractModel {
 
     /**
-    * Log topic operation: optional create, reuse.
-create: create a new log topic using TopicName.
-reuse: use an existing log topic by specifying TopicId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
+    * 
     */
     @SerializedName("TopicOperation")
     @Expose
     private String TopicOperation;
 
     /**
-    * Log set operation: optional create, reuse.
-create: create a new log set using GroupName.
-reuse: use an existing log set by specifying GroupId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
+    * 
     */
     @SerializedName("GroupOperation")
     @Expose
     private String GroupOperation;
 
     /**
-    * Log Delivery Region
+    * 
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * log topic id
+    * 
     */
     @SerializedName("TopicId")
     @Expose
     private String TopicId;
 
     /**
-    * log topic name
+    * 
     */
     @SerializedName("TopicName")
     @Expose
     private String TopicName;
 
     /**
-    * log set id
+    * 
     */
     @SerializedName("GroupId")
     @Expose
     private String GroupId;
 
     /**
-    * log set name
+    * 
     */
     @SerializedName("GroupName")
     @Expose
     private String GroupName;
 
     /**
-     * Get Log topic operation: optional create, reuse.
-create: create a new log topic using TopicName.
-reuse: use an existing log topic by specifying TopicId.
-Combining the use of an existing log topic and creating a new log set is not allowed. 
-     * @return TopicOperation Log topic operation: optional create, reuse.
-create: create a new log topic using TopicName.
-reuse: use an existing log topic by specifying TopicId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
+     * Get  
+     * @return TopicOperation 
      */
     public String getTopicOperation() {
         return this.TopicOperation;
     }
 
     /**
-     * Set Log topic operation: optional create, reuse.
-create: create a new log topic using TopicName.
-reuse: use an existing log topic by specifying TopicId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
-     * @param TopicOperation Log topic operation: optional create, reuse.
-create: create a new log topic using TopicName.
-reuse: use an existing log topic by specifying TopicId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
+     * Set 
+     * @param TopicOperation 
      */
     public void setTopicOperation(String TopicOperation) {
         this.TopicOperation = TopicOperation;
     }
 
     /**
-     * Get Log set operation: optional create, reuse.
-create: create a new log set using GroupName.
-reuse: use an existing log set by specifying GroupId.
-Combining the use of an existing log topic and creating a new log set is not allowed. 
-     * @return GroupOperation Log set operation: optional create, reuse.
-create: create a new log set using GroupName.
-reuse: use an existing log set by specifying GroupId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
+     * Get  
+     * @return GroupOperation 
      */
     public String getGroupOperation() {
         return this.GroupOperation;
     }
 
     /**
-     * Set Log set operation: optional create, reuse.
-create: create a new log set using GroupName.
-reuse: use an existing log set by specifying GroupId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
-     * @param GroupOperation Log set operation: optional create, reuse.
-create: create a new log set using GroupName.
-reuse: use an existing log set by specifying GroupId.
-Combining the use of an existing log topic and creating a new log set is not allowed.
+     * Set 
+     * @param GroupOperation 
      */
     public void setGroupOperation(String GroupOperation) {
         this.GroupOperation = GroupOperation;
     }
 
     /**
-     * Get Log Delivery Region 
-     * @return Region Log Delivery Region
+     * Get  
+     * @return Region 
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Log Delivery Region
-     * @param Region Log Delivery Region
+     * Set 
+     * @param Region 
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get log topic id 
-     * @return TopicId log topic id
+     * Get  
+     * @return TopicId 
      */
     public String getTopicId() {
         return this.TopicId;
     }
 
     /**
-     * Set log topic id
-     * @param TopicId log topic id
+     * Set 
+     * @param TopicId 
      */
     public void setTopicId(String TopicId) {
         this.TopicId = TopicId;
     }
 
     /**
-     * Get log topic name 
-     * @return TopicName log topic name
+     * Get  
+     * @return TopicName 
      */
     public String getTopicName() {
         return this.TopicName;
     }
 
     /**
-     * Set log topic name
-     * @param TopicName log topic name
+     * Set 
+     * @param TopicName 
      */
     public void setTopicName(String TopicName) {
         this.TopicName = TopicName;
     }
 
     /**
-     * Get log set id 
-     * @return GroupId log set id
+     * Get  
+     * @return GroupId 
      */
     public String getGroupId() {
         return this.GroupId;
     }
 
     /**
-     * Set log set id
-     * @param GroupId log set id
+     * Set 
+     * @param GroupId 
      */
     public void setGroupId(String GroupId) {
         this.GroupId = GroupId;
     }
 
     /**
-     * Get log set name 
-     * @return GroupName log set name
+     * Get  
+     * @return GroupName 
      */
     public String getGroupName() {
         return this.GroupName;
     }
 
     /**
-     * Set log set name
-     * @param GroupName log set name
+     * Set 
+     * @param GroupName 
      */
     public void setGroupName(String GroupName) {
         this.GroupName = GroupName;

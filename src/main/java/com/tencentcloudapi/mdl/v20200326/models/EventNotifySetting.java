@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class EventNotifySetting extends AbstractModel {
 
     /**
-    * The callback configuration for push events.
+    * Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
     */
     @SerializedName("PushEventSettings")
     @Expose
     private PushEventSetting PushEventSettings;
 
     /**
-     * Get The callback configuration for push events. 
-     * @return PushEventSettings The callback configuration for push events.
+     * Get Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types. 
+     * @return PushEventSettings Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
      */
     public PushEventSetting getPushEventSettings() {
         return this.PushEventSettings;
     }
 
     /**
-     * Set The callback configuration for push events.
-     * @param PushEventSettings The callback configuration for push events.
+     * Set Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
+     * @param PushEventSettings Inference stream callback configuration. Currently supports rtmp_push, rtmps_push, and rtmp_pull input types.
      */
     public void setPushEventSettings(PushEventSetting PushEventSettings) {
         this.PushEventSettings = PushEventSettings;

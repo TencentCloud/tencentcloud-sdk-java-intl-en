@@ -24,63 +24,63 @@ import java.util.HashMap;
 public class RabbitMQUser extends AbstractModel {
 
     /**
-    * Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+    * <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Username, which is used for login.
+    * <p>Username, used when logging in</p>
     */
     @SerializedName("User")
     @Expose
     private String User;
 
     /**
-    * Password, which is used for login.
+    * <p>Password, used when logging in</p>
     */
     @SerializedName("Password")
     @Expose
     private String Password;
 
     /**
-    * User description
+    * <p>user description</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
+    * <p>User tag, used to determine the access permission of the user to RabbitMQ Management</p>
     */
     @SerializedName("Tags")
     @Expose
     private String [] Tags;
 
     /**
-    * User creation time
+    * <p>User creation time</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * Last user modification time
+    * <p>User last modification time</p>
     */
     @SerializedName("ModifyTime")
     @Expose
     private String ModifyTime;
 
     /**
-    * User type. Valid values: `System` (Created by system), `User` (Created by user).
+    * <p>Type of user, System: system creation, User: user creation</p>
     */
     @SerializedName("Type")
     @Expose
     private String Type;
 
     /**
-    * Maximum number of available connections per user.
+    * <p>Maximum available connections per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxConnections")
@@ -88,7 +88,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MaxConnections;
 
     /**
-    * Maximum number of available channels per user.
+    * <p>Maximum available channels per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("MaxChannels")
@@ -96,151 +96,166 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Long MaxChannels;
 
     /**
-    * Creation timestamp.
+    * <p>Creation time timestamp</p>
     */
     @SerializedName("CreateTs")
     @Expose
     private Long CreateTs;
 
     /**
-    * Modification timestamp.
+    * <p>Modification time timestamp</p>
     */
     @SerializedName("ModifyTs")
     @Expose
     private Long ModifyTs;
 
     /**
-     * Get Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1). 
-     * @return InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+    * <p>Whether cam authentication is enabled</p><p>Default value: false</p>
+    */
+    @SerializedName("CamAuthEnabled")
+    @Expose
+    private Boolean CamAuthEnabled;
+
+    /**
+    * <p>cam credential name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+    */
+    @SerializedName("CamCredentialName")
+    @Expose
+    private String CamCredentialName;
+
+    /**
+     * Get <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p> 
+     * @return InstanceId <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
-     * @param InstanceId Instance ID, such as amqp-xxxxxxxx. effective InstanceId can be queried by logging in to the TDMQ RabbitMQ console (https://console.cloud.tencent.com/trabbitmq/cluster?rid=1).
+     * Set <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
+     * @param InstanceId <p>Instance ID, such as amqp-xxxxxxxx. Effective InstanceId can be obtained by logging in to the <a href="https://console.cloud.tencent.com/trabbitmq/cluster?rid=1">TDMQ RabbitMQ Console</a> for querying.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Username, which is used for login. 
-     * @return User Username, which is used for login.
+     * Get <p>Username, used when logging in</p> 
+     * @return User <p>Username, used when logging in</p>
      */
     public String getUser() {
         return this.User;
     }
 
     /**
-     * Set Username, which is used for login.
-     * @param User Username, which is used for login.
+     * Set <p>Username, used when logging in</p>
+     * @param User <p>Username, used when logging in</p>
      */
     public void setUser(String User) {
         this.User = User;
     }
 
     /**
-     * Get Password, which is used for login. 
-     * @return Password Password, which is used for login.
+     * Get <p>Password, used when logging in</p> 
+     * @return Password <p>Password, used when logging in</p>
      */
     public String getPassword() {
         return this.Password;
     }
 
     /**
-     * Set Password, which is used for login.
-     * @param Password Password, which is used for login.
+     * Set <p>Password, used when logging in</p>
+     * @param Password <p>Password, used when logging in</p>
      */
     public void setPassword(String Password) {
         this.Password = Password;
     }
 
     /**
-     * Get User description 
-     * @return Description User description
+     * Get <p>user description</p> 
+     * @return Description <p>user description</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set User description
-     * @param Description User description
+     * Set <p>user description</p>
+     * @param Description <p>user description</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get User tags, which determine the scope of permissions of this user to access RabbitMQ Management. 
-     * @return Tags User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
+     * Get <p>User tag, used to determine the access permission of the user to RabbitMQ Management</p> 
+     * @return Tags <p>User tag, used to determine the access permission of the user to RabbitMQ Management</p>
      */
     public String [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
-     * @param Tags User tags, which determine the scope of permissions of this user to access RabbitMQ Management.
+     * Set <p>User tag, used to determine the access permission of the user to RabbitMQ Management</p>
+     * @param Tags <p>User tag, used to determine the access permission of the user to RabbitMQ Management</p>
      */
     public void setTags(String [] Tags) {
         this.Tags = Tags;
     }
 
     /**
-     * Get User creation time 
-     * @return CreateTime User creation time
+     * Get <p>User creation time</p> 
+     * @return CreateTime <p>User creation time</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set User creation time
-     * @param CreateTime User creation time
+     * Set <p>User creation time</p>
+     * @param CreateTime <p>User creation time</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Last user modification time 
-     * @return ModifyTime Last user modification time
+     * Get <p>User last modification time</p> 
+     * @return ModifyTime <p>User last modification time</p>
      */
     public String getModifyTime() {
         return this.ModifyTime;
     }
 
     /**
-     * Set Last user modification time
-     * @param ModifyTime Last user modification time
+     * Set <p>User last modification time</p>
+     * @param ModifyTime <p>User last modification time</p>
      */
     public void setModifyTime(String ModifyTime) {
         this.ModifyTime = ModifyTime;
     }
 
     /**
-     * Get User type. Valid values: `System` (Created by system), `User` (Created by user). 
-     * @return Type User type. Valid values: `System` (Created by system), `User` (Created by user).
+     * Get <p>Type of user, System: system creation, User: user creation</p> 
+     * @return Type <p>Type of user, System: system creation, User: user creation</p>
      */
     public String getType() {
         return this.Type;
     }
 
     /**
-     * Set User type. Valid values: `System` (Created by system), `User` (Created by user).
-     * @param Type User type. Valid values: `System` (Created by system), `User` (Created by user).
+     * Set <p>Type of user, System: system creation, User: user creation</p>
+     * @param Type <p>Type of user, System: system creation, User: user creation</p>
      */
     public void setType(String Type) {
         this.Type = Type;
     }
 
     /**
-     * Get Maximum number of available connections per user.
+     * Get <p>Maximum available connections per user</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxConnections Maximum number of available connections per user.
+     * @return MaxConnections <p>Maximum available connections per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxConnections() {
@@ -248,9 +263,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Maximum number of available connections per user.
+     * Set <p>Maximum available connections per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxConnections Maximum number of available connections per user.
+     * @param MaxConnections <p>Maximum available connections per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxConnections(Long MaxConnections) {
@@ -258,9 +273,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Maximum number of available channels per user.
+     * Get <p>Maximum available channels per user</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return MaxChannels Maximum number of available channels per user.
+     * @return MaxChannels <p>Maximum available channels per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Long getMaxChannels() {
@@ -268,9 +283,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Maximum number of available channels per user.
+     * Set <p>Maximum available channels per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MaxChannels Maximum number of available channels per user.
+     * @param MaxChannels <p>Maximum available channels per user</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setMaxChannels(Long MaxChannels) {
@@ -278,35 +293,71 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Creation timestamp. 
-     * @return CreateTs Creation timestamp.
+     * Get <p>Creation time timestamp</p> 
+     * @return CreateTs <p>Creation time timestamp</p>
      */
     public Long getCreateTs() {
         return this.CreateTs;
     }
 
     /**
-     * Set Creation timestamp.
-     * @param CreateTs Creation timestamp.
+     * Set <p>Creation time timestamp</p>
+     * @param CreateTs <p>Creation time timestamp</p>
      */
     public void setCreateTs(Long CreateTs) {
         this.CreateTs = CreateTs;
     }
 
     /**
-     * Get Modification timestamp. 
-     * @return ModifyTs Modification timestamp.
+     * Get <p>Modification time timestamp</p> 
+     * @return ModifyTs <p>Modification time timestamp</p>
      */
     public Long getModifyTs() {
         return this.ModifyTs;
     }
 
     /**
-     * Set Modification timestamp.
-     * @param ModifyTs Modification timestamp.
+     * Set <p>Modification time timestamp</p>
+     * @param ModifyTs <p>Modification time timestamp</p>
      */
     public void setModifyTs(Long ModifyTs) {
         this.ModifyTs = ModifyTs;
+    }
+
+    /**
+     * Get <p>Whether cam authentication is enabled</p><p>Default value: false</p> 
+     * @return CamAuthEnabled <p>Whether cam authentication is enabled</p><p>Default value: false</p>
+     */
+    public Boolean getCamAuthEnabled() {
+        return this.CamAuthEnabled;
+    }
+
+    /**
+     * Set <p>Whether cam authentication is enabled</p><p>Default value: false</p>
+     * @param CamAuthEnabled <p>Whether cam authentication is enabled</p><p>Default value: false</p>
+     */
+    public void setCamAuthEnabled(Boolean CamAuthEnabled) {
+        this.CamAuthEnabled = CamAuthEnabled;
+    }
+
+    /**
+     * Get <p>cam credential name</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return CamCredentialName <p>cam credential name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public String getCamCredentialName() {
+        return this.CamCredentialName;
+    }
+
+    /**
+     * Set <p>cam credential name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param CamCredentialName <p>cam credential name</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public void setCamCredentialName(String CamCredentialName) {
+        this.CamCredentialName = CamCredentialName;
     }
 
     public RabbitMQUser() {
@@ -356,6 +407,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (source.ModifyTs != null) {
             this.ModifyTs = new Long(source.ModifyTs);
         }
+        if (source.CamAuthEnabled != null) {
+            this.CamAuthEnabled = new Boolean(source.CamAuthEnabled);
+        }
+        if (source.CamCredentialName != null) {
+            this.CamCredentialName = new String(source.CamCredentialName);
+        }
     }
 
 
@@ -375,6 +432,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "MaxChannels", this.MaxChannels);
         this.setParamSimple(map, prefix + "CreateTs", this.CreateTs);
         this.setParamSimple(map, prefix + "ModifyTs", this.ModifyTs);
+        this.setParamSimple(map, prefix + "CamAuthEnabled", this.CamAuthEnabled);
+        this.setParamSimple(map, prefix + "CamCredentialName", this.CamCredentialName);
 
     }
 }

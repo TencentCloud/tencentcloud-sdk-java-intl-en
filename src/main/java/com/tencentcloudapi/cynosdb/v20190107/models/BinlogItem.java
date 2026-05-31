@@ -59,6 +59,41 @@ public class BinlogItem extends AbstractModel {
     private Long BinlogId;
 
     /**
+    * binlog cross-region coverage
+    */
+    @SerializedName("CrossRegions")
+    @Expose
+    private String [] CrossRegions;
+
+    /**
+    * Backup delivery status
+    */
+    @SerializedName("CopyStatus")
+    @Expose
+    private String CopyStatus;
+
+    /**
+    * Safe info
+    */
+    @SerializedName("VaultInfos")
+    @Expose
+    private VaultInfo [] VaultInfos;
+
+    /**
+    * Encryption key
+    */
+    @SerializedName("EncryptKeyId")
+    @Expose
+    private String EncryptKeyId;
+
+    /**
+    * Encrypt key region
+    */
+    @SerializedName("EncryptRegion")
+    @Expose
+    private String EncryptRegion;
+
+    /**
      * Get Binlog filename 
      * @return FileName Binlog filename
      */
@@ -138,6 +173,86 @@ public class BinlogItem extends AbstractModel {
         this.BinlogId = BinlogId;
     }
 
+    /**
+     * Get binlog cross-region coverage 
+     * @return CrossRegions binlog cross-region coverage
+     */
+    public String [] getCrossRegions() {
+        return this.CrossRegions;
+    }
+
+    /**
+     * Set binlog cross-region coverage
+     * @param CrossRegions binlog cross-region coverage
+     */
+    public void setCrossRegions(String [] CrossRegions) {
+        this.CrossRegions = CrossRegions;
+    }
+
+    /**
+     * Get Backup delivery status 
+     * @return CopyStatus Backup delivery status
+     */
+    public String getCopyStatus() {
+        return this.CopyStatus;
+    }
+
+    /**
+     * Set Backup delivery status
+     * @param CopyStatus Backup delivery status
+     */
+    public void setCopyStatus(String CopyStatus) {
+        this.CopyStatus = CopyStatus;
+    }
+
+    /**
+     * Get Safe info 
+     * @return VaultInfos Safe info
+     */
+    public VaultInfo [] getVaultInfos() {
+        return this.VaultInfos;
+    }
+
+    /**
+     * Set Safe info
+     * @param VaultInfos Safe info
+     */
+    public void setVaultInfos(VaultInfo [] VaultInfos) {
+        this.VaultInfos = VaultInfos;
+    }
+
+    /**
+     * Get Encryption key 
+     * @return EncryptKeyId Encryption key
+     */
+    public String getEncryptKeyId() {
+        return this.EncryptKeyId;
+    }
+
+    /**
+     * Set Encryption key
+     * @param EncryptKeyId Encryption key
+     */
+    public void setEncryptKeyId(String EncryptKeyId) {
+        this.EncryptKeyId = EncryptKeyId;
+    }
+
+    /**
+     * Get Encrypt key region 
+     * @return EncryptRegion Encrypt key region
+     */
+    public String getEncryptRegion() {
+        return this.EncryptRegion;
+    }
+
+    /**
+     * Set Encrypt key region
+     * @param EncryptRegion Encrypt key region
+     */
+    public void setEncryptRegion(String EncryptRegion) {
+        this.EncryptRegion = EncryptRegion;
+    }
+
     public BinlogItem() {
     }
 
@@ -161,6 +276,27 @@ public class BinlogItem extends AbstractModel {
         if (source.BinlogId != null) {
             this.BinlogId = new Long(source.BinlogId);
         }
+        if (source.CrossRegions != null) {
+            this.CrossRegions = new String[source.CrossRegions.length];
+            for (int i = 0; i < source.CrossRegions.length; i++) {
+                this.CrossRegions[i] = new String(source.CrossRegions[i]);
+            }
+        }
+        if (source.CopyStatus != null) {
+            this.CopyStatus = new String(source.CopyStatus);
+        }
+        if (source.VaultInfos != null) {
+            this.VaultInfos = new VaultInfo[source.VaultInfos.length];
+            for (int i = 0; i < source.VaultInfos.length; i++) {
+                this.VaultInfos[i] = new VaultInfo(source.VaultInfos[i]);
+            }
+        }
+        if (source.EncryptKeyId != null) {
+            this.EncryptKeyId = new String(source.EncryptKeyId);
+        }
+        if (source.EncryptRegion != null) {
+            this.EncryptRegion = new String(source.EncryptRegion);
+        }
     }
 
 
@@ -173,6 +309,11 @@ public class BinlogItem extends AbstractModel {
         this.setParamSimple(map, prefix + "StartTime", this.StartTime);
         this.setParamSimple(map, prefix + "FinishTime", this.FinishTime);
         this.setParamSimple(map, prefix + "BinlogId", this.BinlogId);
+        this.setParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+        this.setParamSimple(map, prefix + "CopyStatus", this.CopyStatus);
+        this.setParamArrayObj(map, prefix + "VaultInfos.", this.VaultInfos);
+        this.setParamSimple(map, prefix + "EncryptKeyId", this.EncryptKeyId);
+        this.setParamSimple(map, prefix + "EncryptRegion", this.EncryptRegion);
 
     }
 }

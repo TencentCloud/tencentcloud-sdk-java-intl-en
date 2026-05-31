@@ -38,6 +38,20 @@ public class AddClusterSlaveZoneRequest extends AbstractModel {
     private String SlaveZone;
 
     /**
+    * 
+    */
+    @SerializedName("BinlogSyncWay")
+    @Expose
+    private String BinlogSyncWay;
+
+    /**
+    * Semi-sync timeout period in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction and exceeds the timeout period, the replication method will degrade to asynchronous replication. The minimum value is set to 1000 ms, support up to 4294967295 ms, and defaults to 10000 ms.
+    */
+    @SerializedName("SemiSyncTimeout")
+    @Expose
+    private Long SemiSyncTimeout;
+
+    /**
      * Get Cluster ID 
      * @return ClusterId Cluster ID
      */
@@ -69,6 +83,38 @@ public class AddClusterSlaveZoneRequest extends AbstractModel {
         this.SlaveZone = SlaveZone;
     }
 
+    /**
+     * Get  
+     * @return BinlogSyncWay 
+     */
+    public String getBinlogSyncWay() {
+        return this.BinlogSyncWay;
+    }
+
+    /**
+     * Set 
+     * @param BinlogSyncWay 
+     */
+    public void setBinlogSyncWay(String BinlogSyncWay) {
+        this.BinlogSyncWay = BinlogSyncWay;
+    }
+
+    /**
+     * Get Semi-sync timeout period in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction and exceeds the timeout period, the replication method will degrade to asynchronous replication. The minimum value is set to 1000 ms, support up to 4294967295 ms, and defaults to 10000 ms. 
+     * @return SemiSyncTimeout Semi-sync timeout period in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction and exceeds the timeout period, the replication method will degrade to asynchronous replication. The minimum value is set to 1000 ms, support up to 4294967295 ms, and defaults to 10000 ms.
+     */
+    public Long getSemiSyncTimeout() {
+        return this.SemiSyncTimeout;
+    }
+
+    /**
+     * Set Semi-sync timeout period in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction and exceeds the timeout period, the replication method will degrade to asynchronous replication. The minimum value is set to 1000 ms, support up to 4294967295 ms, and defaults to 10000 ms.
+     * @param SemiSyncTimeout Semi-sync timeout period in milliseconds. To ensure business stability, semi-sync replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction and exceeds the timeout period, the replication method will degrade to asynchronous replication. The minimum value is set to 1000 ms, support up to 4294967295 ms, and defaults to 10000 ms.
+     */
+    public void setSemiSyncTimeout(Long SemiSyncTimeout) {
+        this.SemiSyncTimeout = SemiSyncTimeout;
+    }
+
     public AddClusterSlaveZoneRequest() {
     }
 
@@ -83,6 +129,12 @@ public class AddClusterSlaveZoneRequest extends AbstractModel {
         if (source.SlaveZone != null) {
             this.SlaveZone = new String(source.SlaveZone);
         }
+        if (source.BinlogSyncWay != null) {
+            this.BinlogSyncWay = new String(source.BinlogSyncWay);
+        }
+        if (source.SemiSyncTimeout != null) {
+            this.SemiSyncTimeout = new Long(source.SemiSyncTimeout);
+        }
     }
 
 
@@ -92,6 +144,8 @@ public class AddClusterSlaveZoneRequest extends AbstractModel {
     public void toMap(HashMap<String, String> map, String prefix) {
         this.setParamSimple(map, prefix + "ClusterId", this.ClusterId);
         this.setParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
+        this.setParamSimple(map, prefix + "BinlogSyncWay", this.BinlogSyncWay);
+        this.setParamSimple(map, prefix + "SemiSyncTimeout", this.SemiSyncTimeout);
 
     }
 }

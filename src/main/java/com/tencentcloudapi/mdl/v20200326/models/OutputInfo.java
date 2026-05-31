@@ -32,59 +32,56 @@ public class OutputInfo extends AbstractModel {
 
     /**
     * Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
+RTMP limit [0, 1], other limits [0, 20].
     */
     @SerializedName("AudioTemplateNames")
     @Expose
     private String [] AudioTemplateNames;
 
     /**
-    * Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Video transcoding template name array, with the maximum number of [0, 1].
     */
     @SerializedName("VideoTemplateNames")
     @Expose
     private String [] VideoTemplateNames;
 
     /**
-    * SCTE-35 information configuration.
+    * Scte-35 information configuration.
     */
     @SerializedName("Scte35Settings")
     @Expose
     private Scte35SettingsInfo Scte35Settings;
 
     /**
-    * Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
+    * Audio/video transcoding template name array, with the maximum number of 1.
     */
     @SerializedName("AVTemplateNames")
     @Expose
     private String [] AVTemplateNames;
 
     /**
-    * For the subtitle template used, only the AVTemplateNames is valid.
+    * The used subtitle template is only valid for merge template.
     */
     @SerializedName("CaptionTemplateNames")
     @Expose
     private String [] CaptionTemplateNames;
 
     /**
-    * Meta information controls configuration.
+    * Meta-information control configuration.
     */
     @SerializedName("TimedMetadataSettings")
     @Expose
     private TimedMetadataSettingInfo TimedMetadataSettings;
 
     /**
-    * Frame capture template name array. Quantity limit: [0,1].
+    * Screenshot transcode template name array. Limit: 1.
     */
     @SerializedName("FrameCaptureTemplateNames")
     @Expose
     private String [] FrameCaptureTemplateNames;
 
     /**
-    * Name modification for sub m3u8.
+    * Modify the name of the sub-m3u8.
     */
     @SerializedName("NameModifier")
     @Expose
@@ -108,11 +105,9 @@ Note: this field may return `null`, indicating that no valid value was found.
 
     /**
      * Get Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained. 
+RTMP limit [0, 1], other limits [0, 20]. 
      * @return AudioTemplateNames Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
+RTMP limit [0, 1], other limits [0, 20].
      */
     public String [] getAudioTemplateNames() {
         return this.AudioTemplateNames;
@@ -120,131 +115,121 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * Set Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
+RTMP limit [0, 1], other limits [0, 20].
      * @param AudioTemplateNames Audio transcoding template name array.
-Quantity limit: [0,1] for RTMP; [0,20] for others.
-Note: this field may return null, indicating that no valid values can be obtained.
+RTMP limit [0, 1], other limits [0, 20].
      */
     public void setAudioTemplateNames(String [] AudioTemplateNames) {
         this.AudioTemplateNames = AudioTemplateNames;
     }
 
     /**
-     * Get Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return VideoTemplateNames Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Video transcoding template name array, with the maximum number of [0, 1]. 
+     * @return VideoTemplateNames Video transcoding template name array, with the maximum number of [0, 1].
      */
     public String [] getVideoTemplateNames() {
         return this.VideoTemplateNames;
     }
 
     /**
-     * Set Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param VideoTemplateNames Video transcoding template name array. Quantity limit: [0,1].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Video transcoding template name array, with the maximum number of [0, 1].
+     * @param VideoTemplateNames Video transcoding template name array, with the maximum number of [0, 1].
      */
     public void setVideoTemplateNames(String [] VideoTemplateNames) {
         this.VideoTemplateNames = VideoTemplateNames;
     }
 
     /**
-     * Get SCTE-35 information configuration. 
-     * @return Scte35Settings SCTE-35 information configuration.
+     * Get Scte-35 information configuration. 
+     * @return Scte35Settings Scte-35 information configuration.
      */
     public Scte35SettingsInfo getScte35Settings() {
         return this.Scte35Settings;
     }
 
     /**
-     * Set SCTE-35 information configuration.
-     * @param Scte35Settings SCTE-35 information configuration.
+     * Set Scte-35 information configuration.
+     * @param Scte35Settings Scte-35 information configuration.
      */
     public void setScte35Settings(Scte35SettingsInfo Scte35Settings) {
         this.Scte35Settings = Scte35Settings;
     }
 
     /**
-     * Get Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found. 
-     * @return AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Get Audio/video transcoding template name array, with the maximum number of 1. 
+     * @return AVTemplateNames Audio/video transcoding template name array, with the maximum number of 1.
      */
     public String [] getAVTemplateNames() {
         return this.AVTemplateNames;
     }
 
     /**
-     * Set Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
-     * @param AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
-Note: this field may return `null`, indicating that no valid value was found.
+     * Set Audio/video transcoding template name array, with the maximum number of 1.
+     * @param AVTemplateNames Audio/video transcoding template name array, with the maximum number of 1.
      */
     public void setAVTemplateNames(String [] AVTemplateNames) {
         this.AVTemplateNames = AVTemplateNames;
     }
 
     /**
-     * Get For the subtitle template used, only the AVTemplateNames is valid. 
-     * @return CaptionTemplateNames For the subtitle template used, only the AVTemplateNames is valid.
+     * Get The used subtitle template is only valid for merge template. 
+     * @return CaptionTemplateNames The used subtitle template is only valid for merge template.
      */
     public String [] getCaptionTemplateNames() {
         return this.CaptionTemplateNames;
     }
 
     /**
-     * Set For the subtitle template used, only the AVTemplateNames is valid.
-     * @param CaptionTemplateNames For the subtitle template used, only the AVTemplateNames is valid.
+     * Set The used subtitle template is only valid for merge template.
+     * @param CaptionTemplateNames The used subtitle template is only valid for merge template.
      */
     public void setCaptionTemplateNames(String [] CaptionTemplateNames) {
         this.CaptionTemplateNames = CaptionTemplateNames;
     }
 
     /**
-     * Get Meta information controls configuration. 
-     * @return TimedMetadataSettings Meta information controls configuration.
+     * Get Meta-information control configuration. 
+     * @return TimedMetadataSettings Meta-information control configuration.
      */
     public TimedMetadataSettingInfo getTimedMetadataSettings() {
         return this.TimedMetadataSettings;
     }
 
     /**
-     * Set Meta information controls configuration.
-     * @param TimedMetadataSettings Meta information controls configuration.
+     * Set Meta-information control configuration.
+     * @param TimedMetadataSettings Meta-information control configuration.
      */
     public void setTimedMetadataSettings(TimedMetadataSettingInfo TimedMetadataSettings) {
         this.TimedMetadataSettings = TimedMetadataSettings;
     }
 
     /**
-     * Get Frame capture template name array. Quantity limit: [0,1]. 
-     * @return FrameCaptureTemplateNames Frame capture template name array. Quantity limit: [0,1].
+     * Get Screenshot transcode template name array. Limit: 1. 
+     * @return FrameCaptureTemplateNames Screenshot transcode template name array. Limit: 1.
      */
     public String [] getFrameCaptureTemplateNames() {
         return this.FrameCaptureTemplateNames;
     }
 
     /**
-     * Set Frame capture template name array. Quantity limit: [0,1].
-     * @param FrameCaptureTemplateNames Frame capture template name array. Quantity limit: [0,1].
+     * Set Screenshot transcode template name array. Limit: 1.
+     * @param FrameCaptureTemplateNames Screenshot transcode template name array. Limit: 1.
      */
     public void setFrameCaptureTemplateNames(String [] FrameCaptureTemplateNames) {
         this.FrameCaptureTemplateNames = FrameCaptureTemplateNames;
     }
 
     /**
-     * Get Name modification for sub m3u8. 
-     * @return NameModifier Name modification for sub m3u8.
+     * Get Modify the name of the sub-m3u8. 
+     * @return NameModifier Modify the name of the sub-m3u8.
      */
     public String getNameModifier() {
         return this.NameModifier;
     }
 
     /**
-     * Set Name modification for sub m3u8.
-     * @param NameModifier Name modification for sub m3u8.
+     * Set Modify the name of the sub-m3u8.
+     * @param NameModifier Modify the name of the sub-m3u8.
      */
     public void setNameModifier(String NameModifier) {
         this.NameModifier = NameModifier;

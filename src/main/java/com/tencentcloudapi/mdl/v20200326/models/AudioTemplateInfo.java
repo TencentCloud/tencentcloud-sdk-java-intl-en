@@ -38,7 +38,7 @@ public class AudioTemplateInfo extends AbstractModel {
     private String Name;
 
     /**
-    * Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+    * Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
     */
     @SerializedName("Acodec")
     @Expose
@@ -53,7 +53,7 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     private Long AudioBitrate;
 
     /**
-    * Audio language code, which length is between 2 and 20.
+    * Audio language Code, length 2-20.
     */
     @SerializedName("LanguageCode")
     @Expose
@@ -81,7 +81,7 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     private AudioCodecDetail AudioCodecDetails;
 
     /**
-    * Audio language description, which maximum length is 100.
+    * Audio language description, maximum length 100
     */
     @SerializedName("LanguageDescription")
     @Expose
@@ -120,16 +120,16 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     }
 
     /**
-     * Get Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default. 
-     * @return Acodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+     * Get Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC. 
+     * @return Acodec Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
      */
     public String getAcodec() {
         return this.Acodec;
     }
 
     /**
-     * Set Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
-     * @param Acodec Audio encoding format, only `AAC` and `PASSTHROUGH` are available, with `AAC` as the default.
+     * Set Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
+     * @param Acodec Audio encoding format, can only be `AAC` or `PASSTHROUGH`. Default is AAC.
      */
     public void setAcodec(String Acodec) {
         this.Acodec = Acodec;
@@ -156,16 +156,16 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     }
 
     /**
-     * Get Audio language code, which length is between 2 and 20. 
-     * @return LanguageCode Audio language code, which length is between 2 and 20.
+     * Get Audio language Code, length 2-20. 
+     * @return LanguageCode Audio language Code, length 2-20.
      */
     public String getLanguageCode() {
         return this.LanguageCode;
     }
 
     /**
-     * Set Audio language code, which length is between 2 and 20.
-     * @param LanguageCode Audio language code, which length is between 2 and 20.
+     * Set Audio language Code, length 2-20.
+     * @param LanguageCode Audio language Code, length 2-20.
      */
     public void setLanguageCode(String LanguageCode) {
         this.LanguageCode = LanguageCode;
@@ -220,16 +220,16 @@ Valid values: 6000, 7000, 8000, 10000, 12000, 14000, 16000, 20000, 24000, 28000,
     }
 
     /**
-     * Get Audio language description, which maximum length is 100. 
-     * @return LanguageDescription Audio language description, which maximum length is 100.
+     * Get Audio language description, maximum length 100 
+     * @return LanguageDescription Audio language description, maximum length 100
      */
     public String getLanguageDescription() {
         return this.LanguageDescription;
     }
 
     /**
-     * Set Audio language description, which maximum length is 100.
-     * @param LanguageDescription Audio language description, which maximum length is 100.
+     * Set Audio language description, maximum length 100
+     * @param LanguageDescription Audio language description, maximum length 100
      */
     public void setLanguageDescription(String LanguageDescription) {
         this.LanguageDescription = LanguageDescription;

@@ -38,7 +38,7 @@ public class DescribeTasksRequest extends AbstractModel {
     private String StartTimeEnd;
 
     /**
-    * Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
+    * Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
     */
     @SerializedName("Filters")
     @Expose
@@ -91,16 +91,16 @@ public class DescribeTasksRequest extends AbstractModel {
     }
 
     /**
-     * Get Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType". 
-     * @return Filters Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
+     * Get Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType". 
+     * @return Filters Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
      */
     public QueryFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
-     * @param Filters Filtering conditions. Supported fields for searching: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", and "TaskType".
+     * Set Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
+     * @param Filters Filtering Conditions. Supported search fields: "ClusterId", "ClusterName", "InstanceId", "InstanceName", "Status", "TaskId", "TaskType".
      */
     public void setFilters(QueryFilter [] Filters) {
         this.Filters = Filters;

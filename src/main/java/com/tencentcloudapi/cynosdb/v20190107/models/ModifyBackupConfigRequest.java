@@ -24,187 +24,233 @@ import java.util.HashMap;
 public class ModifyBackupConfigRequest extends AbstractModel {
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
+    * <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
     */
     @SerializedName("BackupTimeBeg")
     @Expose
     private Long BackupTimeBeg;
 
     /**
-    * Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively.
+    * <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
     */
     @SerializedName("BackupTimeEnd")
     @Expose
     private Long BackupTimeEnd;
 
     /**
-    * Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
+    * <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. Seven days is represented as 3600<em>24</em>7=604800. The maximum value is 158112000.</p>
     */
     @SerializedName("ReserveDuration")
     @Expose
     private Long ReserveDuration;
 
     /**
-    * Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
+    * <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup.</p>
     */
     @SerializedName("BackupFreq")
     @Expose
     private String [] BackupFreq;
 
     /**
-    * Currently, this parameter does not support modification and is not required.
+    * <p>This parameter currently does not support modification. No need to specify.</p>
     */
     @SerializedName("BackupType")
     @Expose
     private String BackupType;
 
     /**
-    * Logical Backup Configuration
+    * <p>Logical backup configuration</p>
     */
     @SerializedName("LogicBackupConfig")
     @Expose
     private LogicBackupConfigInfo LogicBackupConfig;
 
     /**
-    * Whether to delete the automatic logical backup
+    * <p>Whether to delete automatic logical backup</p>
     */
     @SerializedName("DeleteAutoLogicBackup")
     @Expose
     private Boolean DeleteAutoLogicBackup;
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+    * <p>Second-level snapshot backup parameter</p>
+    */
+    @SerializedName("SnapshotSecondaryBackupConfig")
+    @Expose
+    private SnapshotBackupConfig SnapshotSecondaryBackupConfig;
+
+    /**
+    * <p>Sparse backup configuration</p>
+    */
+    @SerializedName("SparseBackupConfig")
+    @Expose
+    private SparseBackupConfig SparseBackupConfig;
+
+    /**
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively 
-     * @return BackupTimeBeg Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
+     * Get <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p> 
+     * @return BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
      */
     public Long getBackupTimeBeg() {
         return this.BackupTimeBeg;
     }
 
     /**
-     * Set Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
-     * @param BackupTimeBeg Full backup start time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively
+     * Set <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * @param BackupTimeBeg <p>Indicates the full backup start time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
      */
     public void setBackupTimeBeg(Long BackupTimeBeg) {
         this.BackupTimeBeg = BackupTimeBeg;
     }
 
     /**
-     * Get Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively. 
-     * @return BackupTimeEnd Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively.
+     * Get <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p> 
+     * @return BackupTimeEnd <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
      */
     public Long getBackupTimeEnd() {
         return this.BackupTimeEnd;
     }
 
     /**
-     * Set Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively.
-     * @param BackupTimeEnd Full backup end time. Value range: [0-24*3600]. For example, 0:00 AM, 1:00 AM, and 2:00 AM are represented by 0, 3600, and 7200, respectively.
+     * Set <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
+     * @param BackupTimeEnd <p>Indicates the full backup end time, [0-24*3600]. For example, 0:00, 1:00, and 2:00 are 0, 3600, and 7200 respectively.</p>
      */
     public void setBackupTimeEnd(Long BackupTimeEnd) {
         this.BackupTimeEnd = BackupTimeEnd;
     }
 
     /**
-     * Get Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000. 
-     * @return ReserveDuration Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
+     * Get <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. Seven days is represented as 3600<em>24</em>7=604800. The maximum value is 158112000.</p> 
+     * @return ReserveDuration <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. Seven days is represented as 3600<em>24</em>7=604800. The maximum value is 158112000.</p>
      */
     public Long getReserveDuration() {
         return this.ReserveDuration;
     }
 
     /**
-     * Set Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
-     * @param ReserveDuration Backup retention period in seconds. Backups will be cleared after this period elapses. 7 days is represented by 3600*24*7 = 604800. Maximum value: 158112000.
+     * Set <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. Seven days is represented as 3600<em>24</em>7=604800. The maximum value is 158112000.</p>
+     * @param ReserveDuration <p>Indicates the backup retention period in seconds. Backups will be cleaned up longer than this time. Seven days is represented as 3600<em>24</em>7=604800. The maximum value is 158112000.</p>
      */
     public void setReserveDuration(Long ReserveDuration) {
         this.ReserveDuration = ReserveDuration;
     }
 
     /**
-     * Get Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered. 
-     * @return BackupFreq Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
+     * Get <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup.</p> 
+     * @return BackupFreq <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup.</p>
      */
     public String [] getBackupFreq() {
         return this.BackupFreq;
     }
 
     /**
-     * Set Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
-     * @param BackupFreq Backup frequency. It is an array of 7 elements corresponding to Monday through Sunday. full: full backup; increment: incremental backup. This parameter cannot be modified currently and doesn't need to be entered.
+     * Set <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup.</p>
+     * @param BackupFreq <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to Monday to Sunday backup method, full-full backup, increment-incremental backup.</p>
      */
     public void setBackupFreq(String [] BackupFreq) {
         this.BackupFreq = BackupFreq;
     }
 
     /**
-     * Get Currently, this parameter does not support modification and is not required. 
-     * @return BackupType Currently, this parameter does not support modification and is not required.
+     * Get <p>This parameter currently does not support modification. No need to specify.</p> 
+     * @return BackupType <p>This parameter currently does not support modification. No need to specify.</p>
      */
     public String getBackupType() {
         return this.BackupType;
     }
 
     /**
-     * Set Currently, this parameter does not support modification and is not required.
-     * @param BackupType Currently, this parameter does not support modification and is not required.
+     * Set <p>This parameter currently does not support modification. No need to specify.</p>
+     * @param BackupType <p>This parameter currently does not support modification. No need to specify.</p>
      */
     public void setBackupType(String BackupType) {
         this.BackupType = BackupType;
     }
 
     /**
-     * Get Logical Backup Configuration 
-     * @return LogicBackupConfig Logical Backup Configuration
+     * Get <p>Logical backup configuration</p> 
+     * @return LogicBackupConfig <p>Logical backup configuration</p>
      */
     public LogicBackupConfigInfo getLogicBackupConfig() {
         return this.LogicBackupConfig;
     }
 
     /**
-     * Set Logical Backup Configuration
-     * @param LogicBackupConfig Logical Backup Configuration
+     * Set <p>Logical backup configuration</p>
+     * @param LogicBackupConfig <p>Logical backup configuration</p>
      */
     public void setLogicBackupConfig(LogicBackupConfigInfo LogicBackupConfig) {
         this.LogicBackupConfig = LogicBackupConfig;
     }
 
     /**
-     * Get Whether to delete the automatic logical backup 
-     * @return DeleteAutoLogicBackup Whether to delete the automatic logical backup
+     * Get <p>Whether to delete automatic logical backup</p> 
+     * @return DeleteAutoLogicBackup <p>Whether to delete automatic logical backup</p>
      */
     public Boolean getDeleteAutoLogicBackup() {
         return this.DeleteAutoLogicBackup;
     }
 
     /**
-     * Set Whether to delete the automatic logical backup
-     * @param DeleteAutoLogicBackup Whether to delete the automatic logical backup
+     * Set <p>Whether to delete automatic logical backup</p>
+     * @param DeleteAutoLogicBackup <p>Whether to delete automatic logical backup</p>
      */
     public void setDeleteAutoLogicBackup(Boolean DeleteAutoLogicBackup) {
         this.DeleteAutoLogicBackup = DeleteAutoLogicBackup;
+    }
+
+    /**
+     * Get <p>Second-level snapshot backup parameter</p> 
+     * @return SnapshotSecondaryBackupConfig <p>Second-level snapshot backup parameter</p>
+     */
+    public SnapshotBackupConfig getSnapshotSecondaryBackupConfig() {
+        return this.SnapshotSecondaryBackupConfig;
+    }
+
+    /**
+     * Set <p>Second-level snapshot backup parameter</p>
+     * @param SnapshotSecondaryBackupConfig <p>Second-level snapshot backup parameter</p>
+     */
+    public void setSnapshotSecondaryBackupConfig(SnapshotBackupConfig SnapshotSecondaryBackupConfig) {
+        this.SnapshotSecondaryBackupConfig = SnapshotSecondaryBackupConfig;
+    }
+
+    /**
+     * Get <p>Sparse backup configuration</p> 
+     * @return SparseBackupConfig <p>Sparse backup configuration</p>
+     */
+    public SparseBackupConfig getSparseBackupConfig() {
+        return this.SparseBackupConfig;
+    }
+
+    /**
+     * Set <p>Sparse backup configuration</p>
+     * @param SparseBackupConfig <p>Sparse backup configuration</p>
+     */
+    public void setSparseBackupConfig(SparseBackupConfig SparseBackupConfig) {
+        this.SparseBackupConfig = SparseBackupConfig;
     }
 
     public ModifyBackupConfigRequest() {
@@ -242,6 +288,12 @@ public class ModifyBackupConfigRequest extends AbstractModel {
         if (source.DeleteAutoLogicBackup != null) {
             this.DeleteAutoLogicBackup = new Boolean(source.DeleteAutoLogicBackup);
         }
+        if (source.SnapshotSecondaryBackupConfig != null) {
+            this.SnapshotSecondaryBackupConfig = new SnapshotBackupConfig(source.SnapshotSecondaryBackupConfig);
+        }
+        if (source.SparseBackupConfig != null) {
+            this.SparseBackupConfig = new SparseBackupConfig(source.SparseBackupConfig);
+        }
     }
 
 
@@ -257,6 +309,8 @@ public class ModifyBackupConfigRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "BackupType", this.BackupType);
         this.setParamObj(map, prefix + "LogicBackupConfig.", this.LogicBackupConfig);
         this.setParamSimple(map, prefix + "DeleteAutoLogicBackup", this.DeleteAutoLogicBackup);
+        this.setParamObj(map, prefix + "SnapshotSecondaryBackupConfig.", this.SnapshotSecondaryBackupConfig);
+        this.setParamObj(map, prefix + "SparseBackupConfig.", this.SparseBackupConfig);
 
     }
 }

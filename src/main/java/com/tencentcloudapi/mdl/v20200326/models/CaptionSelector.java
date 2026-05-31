@@ -24,46 +24,46 @@ import java.util.HashMap;
 public class CaptionSelector extends AbstractModel {
 
     /**
-    * Caption selector name, which can contain 1-32 letters, digits, and underscores.
+    * Digits, uppercase and lowercase letters, underscore, length 1-32.
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Caption source type, only support `SCTE-128`.
+    * Supports only `SCTE-128`.
     */
     @SerializedName("CaptionSourceType")
     @Expose
     private String CaptionSourceType;
 
     /**
-     * Get Caption selector name, which can contain 1-32 letters, digits, and underscores. 
-     * @return Name Caption selector name, which can contain 1-32 letters, digits, and underscores.
+     * Get Digits, uppercase and lowercase letters, underscore, length 1-32. 
+     * @return Name Digits, uppercase and lowercase letters, underscore, length 1-32.
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Caption selector name, which can contain 1-32 letters, digits, and underscores.
-     * @param Name Caption selector name, which can contain 1-32 letters, digits, and underscores.
+     * Set Digits, uppercase and lowercase letters, underscore, length 1-32.
+     * @param Name Digits, uppercase and lowercase letters, underscore, length 1-32.
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Caption source type, only support `SCTE-128`. 
-     * @return CaptionSourceType Caption source type, only support `SCTE-128`.
+     * Get Supports only `SCTE-128`. 
+     * @return CaptionSourceType Supports only `SCTE-128`.
      */
     public String getCaptionSourceType() {
         return this.CaptionSourceType;
     }
 
     /**
-     * Set Caption source type, only support `SCTE-128`.
-     * @param CaptionSourceType Caption source type, only support `SCTE-128`.
+     * Set Supports only `SCTE-128`.
+     * @param CaptionSourceType Supports only `SCTE-128`.
      */
     public void setCaptionSourceType(String CaptionSourceType) {
         this.CaptionSourceType = CaptionSourceType;

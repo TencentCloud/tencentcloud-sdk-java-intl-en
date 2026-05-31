@@ -24,299 +24,322 @@ import java.util.HashMap;
 public class ParamItemDetail extends AbstractModel {
 
     /**
-    * Current value
+    * <p>Current value</p>
     */
     @SerializedName("CurrentValue")
     @Expose
     private String CurrentValue;
 
     /**
-    * Default value
+    * <p>Default value</p>
     */
     @SerializedName("Default")
     @Expose
     private String Default;
 
     /**
-    * Enumerated values of the parameter It is null if the parameter is non-enumerated.
+    * <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
     */
     @SerializedName("EnumValue")
     @Expose
     private String [] EnumValue;
 
     /**
-    * Valid values: `1` (global parameter),  `0`  (non-global parameter).
+    * <p>1: Global parameter, 0: Non-global parameter</p>
     */
     @SerializedName("IsGlobal")
     @Expose
     private Long IsGlobal;
 
     /**
-    * Maximum value
+    * <p>Maximum value</p>
     */
     @SerializedName("Max")
     @Expose
     private String Max;
 
     /**
-    * Minimum value
+    * <p>Minimum value</p>
     */
     @SerializedName("Min")
     @Expose
     private String Min;
 
     /**
-    * Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes)
+    * <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
     */
     @SerializedName("NeedReboot")
     @Expose
     private Long NeedReboot;
 
     /**
-    * Parameter name
+    * <p>Parameter name</p>
     */
     @SerializedName("ParamName")
     @Expose
     private String ParamName;
 
     /**
-    * Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+    * <p>Parameter type: integer, enum, float, string, func</p>
     */
     @SerializedName("ParamType")
     @Expose
     private String ParamType;
 
     /**
-    * Parameter description
+    * <p>Whether the parameter is modifiable</p>
+    */
+    @SerializedName("ModifiableInfo")
+    @Expose
+    private ModifiableInfo ModifiableInfo;
+
+    /**
+    * <p>Parameter description</p>
     */
     @SerializedName("Description")
     @Expose
     private String Description;
 
     /**
-    * Whether the type is a formula.
+    * <p>Whether the type is formula</p>
     */
     @SerializedName("IsFunc")
     @Expose
     private Boolean IsFunc;
 
     /**
-    * Parameter configuration formula.
+    * <p>Parameter configuration formula</p>
     */
     @SerializedName("Func")
     @Expose
     private String Func;
 
     /**
-    * The default formula style of parameters that support formulas.
+    * <p>Default formula style for parameters that support formulas</p>
     */
     @SerializedName("FuncPattern")
     @Expose
     private String FuncPattern;
 
     /**
-     * Get Current value 
-     * @return CurrentValue Current value
+     * Get <p>Current value</p> 
+     * @return CurrentValue <p>Current value</p>
      */
     public String getCurrentValue() {
         return this.CurrentValue;
     }
 
     /**
-     * Set Current value
-     * @param CurrentValue Current value
+     * Set <p>Current value</p>
+     * @param CurrentValue <p>Current value</p>
      */
     public void setCurrentValue(String CurrentValue) {
         this.CurrentValue = CurrentValue;
     }
 
     /**
-     * Get Default value 
-     * @return Default Default value
+     * Get <p>Default value</p> 
+     * @return Default <p>Default value</p>
      */
     public String getDefault() {
         return this.Default;
     }
 
     /**
-     * Set Default value
-     * @param Default Default value
+     * Set <p>Default value</p>
+     * @param Default <p>Default value</p>
      */
     public void setDefault(String Default) {
         this.Default = Default;
     }
 
     /**
-     * Get Enumerated values of the parameter It is null if the parameter is non-enumerated. 
-     * @return EnumValue Enumerated values of the parameter It is null if the parameter is non-enumerated.
+     * Get <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p> 
+     * @return EnumValue <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
      */
     public String [] getEnumValue() {
         return this.EnumValue;
     }
 
     /**
-     * Set Enumerated values of the parameter It is null if the parameter is non-enumerated.
-     * @param EnumValue Enumerated values of the parameter It is null if the parameter is non-enumerated.
+     * Set <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
+     * @param EnumValue <p>Optional enumerated value of the parameter. If it is a non-enumerated value, it is empty.</p>
      */
     public void setEnumValue(String [] EnumValue) {
         this.EnumValue = EnumValue;
     }
 
     /**
-     * Get Valid values: `1` (global parameter),  `0`  (non-global parameter). 
-     * @return IsGlobal Valid values: `1` (global parameter),  `0`  (non-global parameter).
+     * Get <p>1: Global parameter, 0: Non-global parameter</p> 
+     * @return IsGlobal <p>1: Global parameter, 0: Non-global parameter</p>
      */
     public Long getIsGlobal() {
         return this.IsGlobal;
     }
 
     /**
-     * Set Valid values: `1` (global parameter),  `0`  (non-global parameter).
-     * @param IsGlobal Valid values: `1` (global parameter),  `0`  (non-global parameter).
+     * Set <p>1: Global parameter, 0: Non-global parameter</p>
+     * @param IsGlobal <p>1: Global parameter, 0: Non-global parameter</p>
      */
     public void setIsGlobal(Long IsGlobal) {
         this.IsGlobal = IsGlobal;
     }
 
     /**
-     * Get Maximum value 
-     * @return Max Maximum value
+     * Get <p>Maximum value</p> 
+     * @return Max <p>Maximum value</p>
      */
     public String getMax() {
         return this.Max;
     }
 
     /**
-     * Set Maximum value
-     * @param Max Maximum value
+     * Set <p>Maximum value</p>
+     * @param Max <p>Maximum value</p>
      */
     public void setMax(String Max) {
         this.Max = Max;
     }
 
     /**
-     * Get Minimum value 
-     * @return Min Minimum value
+     * Get <p>Minimum value</p> 
+     * @return Min <p>Minimum value</p>
      */
     public String getMin() {
         return this.Min;
     }
 
     /**
-     * Set Minimum value
-     * @param Min Minimum value
+     * Set <p>Minimum value</p>
+     * @param Min <p>Minimum value</p>
      */
     public void setMin(String Min) {
         this.Min = Min;
     }
 
     /**
-     * Get Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes) 
-     * @return NeedReboot Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes)
+     * Get <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p> 
+     * @return NeedReboot <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
      */
     public Long getNeedReboot() {
         return this.NeedReboot;
     }
 
     /**
-     * Set Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes)
-     * @param NeedReboot Whether to restart the database for the modified parameters to take effect. Valid values:  `0` (no), `1` (yes)
+     * Set <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
+     * @param NeedReboot <p>After modifying parameters, whether database restart is required to take effect. 0-no restart required, 1-restart required.</p>
      */
     public void setNeedReboot(Long NeedReboot) {
         this.NeedReboot = NeedReboot;
     }
 
     /**
-     * Get Parameter name 
-     * @return ParamName Parameter name
+     * Get <p>Parameter name</p> 
+     * @return ParamName <p>Parameter name</p>
      */
     public String getParamName() {
         return this.ParamName;
     }
 
     /**
-     * Set Parameter name
-     * @param ParamName Parameter name
+     * Set <p>Parameter name</p>
+     * @param ParamName <p>Parameter name</p>
      */
     public void setParamName(String ParamName) {
         this.ParamName = ParamName;
     }
 
     /**
-     * Get Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`. 
-     * @return ParamType Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+     * Get <p>Parameter type: integer, enum, float, string, func</p> 
+     * @return ParamType <p>Parameter type: integer, enum, float, string, func</p>
      */
     public String getParamType() {
         return this.ParamType;
     }
 
     /**
-     * Set Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
-     * @param ParamType Parameter type. Valid values:  `integer`, `enum`, `float`, `string`, `func`.
+     * Set <p>Parameter type: integer, enum, float, string, func</p>
+     * @param ParamType <p>Parameter type: integer, enum, float, string, func</p>
      */
     public void setParamType(String ParamType) {
         this.ParamType = ParamType;
     }
 
     /**
-     * Get Parameter description 
-     * @return Description Parameter description
+     * Get <p>Whether the parameter is modifiable</p> 
+     * @return ModifiableInfo <p>Whether the parameter is modifiable</p>
+     */
+    public ModifiableInfo getModifiableInfo() {
+        return this.ModifiableInfo;
+    }
+
+    /**
+     * Set <p>Whether the parameter is modifiable</p>
+     * @param ModifiableInfo <p>Whether the parameter is modifiable</p>
+     */
+    public void setModifiableInfo(ModifiableInfo ModifiableInfo) {
+        this.ModifiableInfo = ModifiableInfo;
+    }
+
+    /**
+     * Get <p>Parameter description</p> 
+     * @return Description <p>Parameter description</p>
      */
     public String getDescription() {
         return this.Description;
     }
 
     /**
-     * Set Parameter description
-     * @param Description Parameter description
+     * Set <p>Parameter description</p>
+     * @param Description <p>Parameter description</p>
      */
     public void setDescription(String Description) {
         this.Description = Description;
     }
 
     /**
-     * Get Whether the type is a formula. 
-     * @return IsFunc Whether the type is a formula.
+     * Get <p>Whether the type is formula</p> 
+     * @return IsFunc <p>Whether the type is formula</p>
      */
     public Boolean getIsFunc() {
         return this.IsFunc;
     }
 
     /**
-     * Set Whether the type is a formula.
-     * @param IsFunc Whether the type is a formula.
+     * Set <p>Whether the type is formula</p>
+     * @param IsFunc <p>Whether the type is formula</p>
      */
     public void setIsFunc(Boolean IsFunc) {
         this.IsFunc = IsFunc;
     }
 
     /**
-     * Get Parameter configuration formula. 
-     * @return Func Parameter configuration formula.
+     * Get <p>Parameter configuration formula</p> 
+     * @return Func <p>Parameter configuration formula</p>
      */
     public String getFunc() {
         return this.Func;
     }
 
     /**
-     * Set Parameter configuration formula.
-     * @param Func Parameter configuration formula.
+     * Set <p>Parameter configuration formula</p>
+     * @param Func <p>Parameter configuration formula</p>
      */
     public void setFunc(String Func) {
         this.Func = Func;
     }
 
     /**
-     * Get The default formula style of parameters that support formulas. 
-     * @return FuncPattern The default formula style of parameters that support formulas.
+     * Get <p>Default formula style for parameters that support formulas</p> 
+     * @return FuncPattern <p>Default formula style for parameters that support formulas</p>
      */
     public String getFuncPattern() {
         return this.FuncPattern;
     }
 
     /**
-     * Set The default formula style of parameters that support formulas.
-     * @param FuncPattern The default formula style of parameters that support formulas.
+     * Set <p>Default formula style for parameters that support formulas</p>
+     * @param FuncPattern <p>Default formula style for parameters that support formulas</p>
      */
     public void setFuncPattern(String FuncPattern) {
         this.FuncPattern = FuncPattern;
@@ -360,6 +383,9 @@ public class ParamItemDetail extends AbstractModel {
         if (source.ParamType != null) {
             this.ParamType = new String(source.ParamType);
         }
+        if (source.ModifiableInfo != null) {
+            this.ModifiableInfo = new ModifiableInfo(source.ModifiableInfo);
+        }
         if (source.Description != null) {
             this.Description = new String(source.Description);
         }
@@ -388,6 +414,7 @@ public class ParamItemDetail extends AbstractModel {
         this.setParamSimple(map, prefix + "NeedReboot", this.NeedReboot);
         this.setParamSimple(map, prefix + "ParamName", this.ParamName);
         this.setParamSimple(map, prefix + "ParamType", this.ParamType);
+        this.setParamObj(map, prefix + "ModifiableInfo.", this.ModifiableInfo);
         this.setParamSimple(map, prefix + "Description", this.Description);
         this.setParamSimple(map, prefix + "IsFunc", this.IsFunc);
         this.setParamSimple(map, prefix + "Func", this.Func);

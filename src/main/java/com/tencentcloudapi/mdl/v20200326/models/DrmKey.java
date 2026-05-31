@@ -32,37 +32,33 @@ Note: uppercase letters in the string will be automatically converted to lowerca
     private String Key;
 
     /**
-    * Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
-ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * Widevine encryption is required. Selectable options: SD/HD/UHD1/UHD2/AUDIO/ALL.
+Among them, ALL represents select ALL. If ALL is specified, you cannot add other tracks.
     */
     @SerializedName("Track")
     @Expose
     private String Track;
 
     /**
-    * Required for Widevine encryption. It is a 32-bit hexadecimal string.
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
+    * KeyId for Widevine encryption, a 32-bit length hexadecimal string.
+Note: The string will be modified to lowercase.
     */
     @SerializedName("KeyId")
     @Expose
     private String KeyId;
 
     /**
-    * Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
-For more information about this parameter, please see: 
+    * Iv for AES encryption in Fairplay, a 32-bit length hexadecimal string.
+Iv parsing reference
 https://tools.ietf.org/html/rfc3826
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: The string will be modified to lowercase.
     */
     @SerializedName("Iv")
     @Expose
     private String Iv;
 
     /**
-    * The URI of the license server when AES-128 is used. This parameter may be empty.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+    * uri of the license server. AES128 is used. Can be empty.
     */
     @SerializedName("KeyUri")
     @Expose
@@ -89,100 +85,84 @@ Note: uppercase letters in the string will be automatically converted to lowerca
     }
 
     /**
-     * Get Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
-ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Track Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
-ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get Widevine encryption is required. Selectable options: SD/HD/UHD1/UHD2/AUDIO/ALL.
+Among them, ALL represents select ALL. If ALL is specified, you cannot add other tracks. 
+     * @return Track Widevine encryption is required. Selectable options: SD/HD/UHD1/UHD2/AUDIO/ALL.
+Among them, ALL represents select ALL. If ALL is specified, you cannot add other tracks.
      */
     public String getTrack() {
         return this.Track;
     }
 
     /**
-     * Set Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
-ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Track Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
-ALL refers to all tracks. If this parameter is set to ALL, no other tracks can be added.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set Widevine encryption is required. Selectable options: SD/HD/UHD1/UHD2/AUDIO/ALL.
+Among them, ALL represents select ALL. If ALL is specified, you cannot add other tracks.
+     * @param Track Widevine encryption is required. Selectable options: SD/HD/UHD1/UHD2/AUDIO/ALL.
+Among them, ALL represents select ALL. If ALL is specified, you cannot add other tracks.
      */
     public void setTrack(String Track) {
         this.Track = Track;
     }
 
     /**
-     * Get Required for Widevine encryption. It is a 32-bit hexadecimal string.
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return KeyId Required for Widevine encryption. It is a 32-bit hexadecimal string.
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Get KeyId for Widevine encryption, a 32-bit length hexadecimal string.
+Note: The string will be modified to lowercase. 
+     * @return KeyId KeyId for Widevine encryption, a 32-bit length hexadecimal string.
+Note: The string will be modified to lowercase.
      */
     public String getKeyId() {
         return this.KeyId;
     }
 
     /**
-     * Set Required for Widevine encryption. It is a 32-bit hexadecimal string.
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param KeyId Required for Widevine encryption. It is a 32-bit hexadecimal string.
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * Set KeyId for Widevine encryption, a 32-bit length hexadecimal string.
+Note: The string will be modified to lowercase.
+     * @param KeyId KeyId for Widevine encryption, a 32-bit length hexadecimal string.
+Note: The string will be modified to lowercase.
      */
     public void setKeyId(String KeyId) {
         this.KeyId = KeyId;
     }
 
     /**
-     * Get Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
-For more information about this parameter, please see: 
+     * Get Iv for AES encryption in Fairplay, a 32-bit length hexadecimal string.
+Iv parsing reference
 https://tools.ietf.org/html/rfc3826
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained. 
-     * @return Iv Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
-For more information about this parameter, please see: 
+Note: The string will be modified to lowercase. 
+     * @return Iv Iv for AES encryption in Fairplay, a 32-bit length hexadecimal string.
+Iv parsing reference
 https://tools.ietf.org/html/rfc3826
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: The string will be modified to lowercase.
      */
     public String getIv() {
         return this.Iv;
     }
 
     /**
-     * Set Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
-For more information about this parameter, please see: 
+     * Set Iv for AES encryption in Fairplay, a 32-bit length hexadecimal string.
+Iv parsing reference
 https://tools.ietf.org/html/rfc3826
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param Iv Required when FairPlay uses the AES encryption method. It is a 32-bit hexadecimal string.
-For more information about this parameter, please see: 
+Note: The string will be modified to lowercase.
+     * @param Iv Iv for AES encryption in Fairplay, a 32-bit length hexadecimal string.
+Iv parsing reference
 https://tools.ietf.org/html/rfc3826
-Note: uppercase letters in the string will be automatically converted to lowercase ones.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: The string will be modified to lowercase.
      */
     public void setIv(String Iv) {
         this.Iv = Iv;
     }
 
     /**
-     * Get The URI of the license server when AES-128 is used. This parameter may be empty.
-Note: This field may return `null`, indicating that no valid values can be obtained. 
-     * @return KeyUri The URI of the license server when AES-128 is used. This parameter may be empty.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Get uri of the license server. AES128 is used. Can be empty. 
+     * @return KeyUri uri of the license server. AES128 is used. Can be empty.
      */
     public String getKeyUri() {
         return this.KeyUri;
     }
 
     /**
-     * Set The URI of the license server when AES-128 is used. This parameter may be empty.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param KeyUri The URI of the license server when AES-128 is used. This parameter may be empty.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * Set uri of the license server. AES128 is used. Can be empty.
+     * @param KeyUri uri of the license server. AES128 is used. Can be empty.
      */
     public void setKeyUri(String KeyUri) {
         this.KeyUri = KeyUri;

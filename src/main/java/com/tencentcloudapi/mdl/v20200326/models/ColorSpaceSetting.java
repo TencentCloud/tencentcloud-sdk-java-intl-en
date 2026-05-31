@@ -24,23 +24,23 @@ import java.util.HashMap;
 public class ColorSpaceSetting extends AbstractModel {
 
     /**
-    * Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
+    * Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
     */
     @SerializedName("ColorSpace")
     @Expose
     private String ColorSpace;
 
     /**
-     * Get Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional. 
-     * @return ColorSpace Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
+     * Get Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty. 
+     * @return ColorSpace Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
      */
     public String getColorSpace() {
         return this.ColorSpace;
     }
 
     /**
-     * Set Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
-     * @param ColorSpace Color space, supports `PASSTHROUGH` (transparent transmission, only supports H265); optional.
+     * Set Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
+     * @param ColorSpace Colorspace, supports PASSTHROUGH (passthrough, only supports H265). Can be empty.
      */
     public void setColorSpace(String ColorSpace) {
         this.ColorSpace = ColorSpace;

@@ -24,158 +24,138 @@ import java.util.HashMap;
 public class DescribeProxiesRequest extends AbstractModel {
 
     /**
-    * Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
+    * <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Number of returned results. Default value: `20`. Maximum value: `100`,
+    * <p>Number of returned results, defaults to 20 with a maximum value of 100</p>
     */
     @SerializedName("Limit")
     @Expose
     private Long Limit;
 
     /**
-    * Record offset. Default value: `0`.
+    * <p>Record offset. Default value is 0</p>
     */
     @SerializedName("Offset")
     @Expose
     private Long Offset;
 
     /**
-    * Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
-<li> PERIODENDTIME: Expiration time</li>
+    * <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
     */
     @SerializedName("OrderBy")
     @Expose
     private String OrderBy;
 
     /**
-    * Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+    * <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
     */
     @SerializedName("OrderByType")
     @Expose
     private String OrderByType;
 
     /**
-    * Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+    * <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
     */
     @SerializedName("Filters")
     @Expose
     private QueryParamFilter [] Filters;
 
     /**
-     * Get Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111). 
-     * @return ClusterId Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
+     * Get <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p> 
+     * @return ClusterId <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
-     * @param ClusterId Cluster ID (this parameter is required. for example, cynosdbmysql-2u2mh111).
+     * Set <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
+     * @param ClusterId <p>Cluster ID (this parameter is required, such as cynosdbmysql-2u2mh111).</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Number of returned results. Default value: `20`. Maximum value: `100`, 
-     * @return Limit Number of returned results. Default value: `20`. Maximum value: `100`,
+     * Get <p>Number of returned results, defaults to 20 with a maximum value of 100</p> 
+     * @return Limit <p>Number of returned results, defaults to 20 with a maximum value of 100</p>
      */
     public Long getLimit() {
         return this.Limit;
     }
 
     /**
-     * Set Number of returned results. Default value: `20`. Maximum value: `100`,
-     * @param Limit Number of returned results. Default value: `20`. Maximum value: `100`,
+     * Set <p>Number of returned results, defaults to 20 with a maximum value of 100</p>
+     * @param Limit <p>Number of returned results, defaults to 20 with a maximum value of 100</p>
      */
     public void setLimit(Long Limit) {
         this.Limit = Limit;
     }
 
     /**
-     * Get Record offset. Default value: `0`. 
-     * @return Offset Record offset. Default value: `0`.
+     * Get <p>Record offset. Default value is 0</p> 
+     * @return Offset <p>Record offset. Default value is 0</p>
      */
     public Long getOffset() {
         return this.Offset;
     }
 
     /**
-     * Set Record offset. Default value: `0`.
-     * @param Offset Record offset. Default value: `0`.
+     * Set <p>Record offset. Default value is 0</p>
+     * @param Offset <p>Record offset. Default value is 0</p>
      */
     public void setOffset(Long Offset) {
         this.Offset = Offset;
     }
 
     /**
-     * Get Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
-<li> PERIODENDTIME: Expiration time</li> 
-     * @return OrderBy Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
-<li> PERIODENDTIME: Expiration time</li>
+     * Get <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li> 
+     * @return OrderBy <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
      */
     public String getOrderBy() {
         return this.OrderBy;
     }
 
     /**
-     * Set Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
-<li> PERIODENDTIME: Expiration time</li>
-     * @param OrderBy Sorting field. Valid values:
-<li> CREATETIME: Creation time</li>
-<li> PERIODENDTIME: Expiration time</li>
+     * Set <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
+     * @param OrderBy <p>Sorting field. Value ranges from...to...:</p><li>CREATETIME: Creation time</li><li>PERIODENDTIME: Expiration time</li>
      */
     public void setOrderBy(String OrderBy) {
         this.OrderBy = OrderBy;
     }
 
     /**
-     * Get Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li> 
-     * @return OrderByType Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+     * Get <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li> 
+     * @return OrderByType <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
      */
     public String getOrderByType() {
         return this.OrderByType;
     }
 
     /**
-     * Set Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
-     * @param OrderByType Sorting order. Valid values:
-<li> `ASC`: Ascending.</li>
-<li> `DESC`: Descending</li>
+     * Set <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
+     * @param OrderByType <p>Sorting type. Value ranges from:</p><li> ASC: ascending order </li><li> DESC: sort in descending order </li>
      */
     public void setOrderByType(String OrderByType) {
         this.OrderByType = OrderByType;
     }
 
     /**
-     * Get Filter. If there are more than one filter, the logical relationship between these filters is `AND`. 
-     * @return Filters Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+     * Get <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p> 
+     * @return Filters <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
      */
     public QueryParamFilter [] getFilters() {
         return this.Filters;
     }
 
     /**
-     * Set Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
-     * @param Filters Filter. If there are more than one filter, the logical relationship between these filters is `AND`.
+     * Set <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
+     * @param Filters <p>Search criteria. If there are multiple Filters, the relationship between Filters is logical AND. <br>Description: This parameter currently only supports two filter conditions: Status and ProxyGroupId.</p>
      */
     public void setFilters(QueryParamFilter [] Filters) {
         this.Filters = Filters;

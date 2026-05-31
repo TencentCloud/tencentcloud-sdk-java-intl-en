@@ -45,7 +45,7 @@ public class OpenAuditServiceRequest extends AbstractModel {
     private Long HighLogExpireDay;
 
     /**
-    * Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+    * Audit rule (deprecated).
     */
     @SerializedName("AuditRuleFilters")
     @Expose
@@ -57,6 +57,13 @@ public class OpenAuditServiceRequest extends AbstractModel {
     @SerializedName("RuleTemplateIds")
     @Expose
     private String [] RuleTemplateIds;
+
+    /**
+    * 
+    */
+    @SerializedName("AuditAll")
+    @Expose
+    private Boolean AuditAll;
 
     /**
      * Get Instance ID 
@@ -107,8 +114,8 @@ public class OpenAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Get Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied. 
-     * @return AuditRuleFilters Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     * Get Audit rule (deprecated). 
+     * @return AuditRuleFilters Audit rule (deprecated).
      * @deprecated
      */
     @Deprecated
@@ -117,8 +124,8 @@ public class OpenAuditServiceRequest extends AbstractModel {
     }
 
     /**
-     * Set Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
-     * @param AuditRuleFilters Audit rule. If both this parameter and `RuleTemplateIds` are left empty, full audit will be applied.
+     * Set Audit rule (deprecated).
+     * @param AuditRuleFilters Audit rule (deprecated).
      * @deprecated
      */
     @Deprecated
@@ -140,6 +147,22 @@ public class OpenAuditServiceRequest extends AbstractModel {
      */
     public void setRuleTemplateIds(String [] RuleTemplateIds) {
         this.RuleTemplateIds = RuleTemplateIds;
+    }
+
+    /**
+     * Get  
+     * @return AuditAll 
+     */
+    public Boolean getAuditAll() {
+        return this.AuditAll;
+    }
+
+    /**
+     * Set 
+     * @param AuditAll 
+     */
+    public void setAuditAll(Boolean AuditAll) {
+        this.AuditAll = AuditAll;
     }
 
     public OpenAuditServiceRequest() {
@@ -171,6 +194,9 @@ public class OpenAuditServiceRequest extends AbstractModel {
                 this.RuleTemplateIds[i] = new String(source.RuleTemplateIds[i]);
             }
         }
+        if (source.AuditAll != null) {
+            this.AuditAll = new Boolean(source.AuditAll);
+        }
     }
 
 
@@ -183,6 +209,7 @@ public class OpenAuditServiceRequest extends AbstractModel {
         this.setParamSimple(map, prefix + "HighLogExpireDay", this.HighLogExpireDay);
         this.setParamArrayObj(map, prefix + "AuditRuleFilters.", this.AuditRuleFilters);
         this.setParamArraySimple(map, prefix + "RuleTemplateIds.", this.RuleTemplateIds);
+        this.setParamSimple(map, prefix + "AuditAll", this.AuditAll);
 
     }
 }

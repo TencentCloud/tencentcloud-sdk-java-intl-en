@@ -74,7 +74,7 @@ public class DescribeBackupListRequest extends AbstractModel {
     private String BackupMethod;
 
     /**
-    * Snapshot type. Optional values: full, full backup; increment, incremental backup
+    * 
     */
     @SerializedName("SnapShotType")
     @Expose
@@ -95,7 +95,7 @@ public class DescribeBackupListRequest extends AbstractModel {
     private String EndTime;
 
     /**
-    * Backup file name, fuzzy search
+    * 
     */
     @SerializedName("FileNames")
     @Expose
@@ -114,6 +114,27 @@ public class DescribeBackupListRequest extends AbstractModel {
     @SerializedName("SnapshotIdList")
     @Expose
     private Long [] SnapshotIdList;
+
+    /**
+    * 
+    */
+    @SerializedName("BackupRegion")
+    @Expose
+    private String BackupRegion;
+
+    /**
+    * 
+    */
+    @SerializedName("IsCrossRegionsBackup")
+    @Expose
+    private String IsCrossRegionsBackup;
+
+    /**
+    * Status you want to query
+    */
+    @SerializedName("BackupStatus")
+    @Expose
+    private String [] BackupStatus;
 
     /**
      * Get Cluster ID 
@@ -232,16 +253,16 @@ public class DescribeBackupListRequest extends AbstractModel {
     }
 
     /**
-     * Get Snapshot type. Optional values: full, full backup; increment, incremental backup 
-     * @return SnapShotType Snapshot type. Optional values: full, full backup; increment, incremental backup
+     * Get  
+     * @return SnapShotType 
      */
     public String getSnapShotType() {
         return this.SnapShotType;
     }
 
     /**
-     * Set Snapshot type. Optional values: full, full backup; increment, incremental backup
-     * @param SnapShotType Snapshot type. Optional values: full, full backup; increment, incremental backup
+     * Set 
+     * @param SnapShotType 
      */
     public void setSnapShotType(String SnapShotType) {
         this.SnapShotType = SnapShotType;
@@ -280,16 +301,16 @@ public class DescribeBackupListRequest extends AbstractModel {
     }
 
     /**
-     * Get Backup file name, fuzzy search 
-     * @return FileNames Backup file name, fuzzy search
+     * Get  
+     * @return FileNames 
      */
     public String [] getFileNames() {
         return this.FileNames;
     }
 
     /**
-     * Set Backup file name, fuzzy search
-     * @param FileNames Backup file name, fuzzy search
+     * Set 
+     * @param FileNames 
      */
     public void setFileNames(String [] FileNames) {
         this.FileNames = FileNames;
@@ -325,6 +346,54 @@ public class DescribeBackupListRequest extends AbstractModel {
      */
     public void setSnapshotIdList(Long [] SnapshotIdList) {
         this.SnapshotIdList = SnapshotIdList;
+    }
+
+    /**
+     * Get  
+     * @return BackupRegion 
+     */
+    public String getBackupRegion() {
+        return this.BackupRegion;
+    }
+
+    /**
+     * Set 
+     * @param BackupRegion 
+     */
+    public void setBackupRegion(String BackupRegion) {
+        this.BackupRegion = BackupRegion;
+    }
+
+    /**
+     * Get  
+     * @return IsCrossRegionsBackup 
+     */
+    public String getIsCrossRegionsBackup() {
+        return this.IsCrossRegionsBackup;
+    }
+
+    /**
+     * Set 
+     * @param IsCrossRegionsBackup 
+     */
+    public void setIsCrossRegionsBackup(String IsCrossRegionsBackup) {
+        this.IsCrossRegionsBackup = IsCrossRegionsBackup;
+    }
+
+    /**
+     * Get Status you want to query 
+     * @return BackupStatus Status you want to query
+     */
+    public String [] getBackupStatus() {
+        return this.BackupStatus;
+    }
+
+    /**
+     * Set Status you want to query
+     * @param BackupStatus Status you want to query
+     */
+    public void setBackupStatus(String [] BackupStatus) {
+        this.BackupStatus = BackupStatus;
     }
 
     public DescribeBackupListRequest() {
@@ -386,6 +455,18 @@ public class DescribeBackupListRequest extends AbstractModel {
                 this.SnapshotIdList[i] = new Long(source.SnapshotIdList[i]);
             }
         }
+        if (source.BackupRegion != null) {
+            this.BackupRegion = new String(source.BackupRegion);
+        }
+        if (source.IsCrossRegionsBackup != null) {
+            this.IsCrossRegionsBackup = new String(source.IsCrossRegionsBackup);
+        }
+        if (source.BackupStatus != null) {
+            this.BackupStatus = new String[source.BackupStatus.length];
+            for (int i = 0; i < source.BackupStatus.length; i++) {
+                this.BackupStatus[i] = new String(source.BackupStatus[i]);
+            }
+        }
     }
 
 
@@ -406,6 +487,9 @@ public class DescribeBackupListRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "FileNames.", this.FileNames);
         this.setParamArraySimple(map, prefix + "BackupNames.", this.BackupNames);
         this.setParamArraySimple(map, prefix + "SnapshotIdList.", this.SnapshotIdList);
+        this.setParamSimple(map, prefix + "BackupRegion", this.BackupRegion);
+        this.setParamSimple(map, prefix + "IsCrossRegionsBackup", this.IsCrossRegionsBackup);
+        this.setParamArraySimple(map, prefix + "BackupStatus.", this.BackupStatus);
 
     }
 }

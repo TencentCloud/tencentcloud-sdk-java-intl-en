@@ -31,7 +31,7 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
     private String InstanceId;
 
     /**
-    * Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+    * Instance group ID, which can be obtained through the [DescribeClusterInstanceGroups](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1) API.
     */
     @SerializedName("InstanceGroupId")
     @Expose
@@ -58,16 +58,16 @@ public class DescribeDBSecurityGroupsRequest extends AbstractModel {
     }
 
     /**
-     * Get Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId. 
-     * @return InstanceGroupId Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * Get Instance group ID, which can be obtained through the [DescribeClusterInstanceGroups](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1) API. 
+     * @return InstanceGroupId Instance group ID, which can be obtained through the [DescribeClusterInstanceGroups](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1) API.
      */
     public String getInstanceGroupId() {
         return this.InstanceGroupId;
     }
 
     /**
-     * Set Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
-     * @param InstanceGroupId Specifies that the instance group ID must be provided by selecting either InstanceId or InstanceGroupId.
+     * Set Instance group ID, which can be obtained through the [DescribeClusterInstanceGroups](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1) API.
+     * @param InstanceGroupId Instance group ID, which can be obtained through the [DescribeClusterInstanceGroups](https://www.tencentcloud.com/document/product/1003/103934?from_cn_redirect=1) API.
      */
     public void setInstanceGroupId(String InstanceGroupId) {
         this.InstanceGroupId = InstanceGroupId;

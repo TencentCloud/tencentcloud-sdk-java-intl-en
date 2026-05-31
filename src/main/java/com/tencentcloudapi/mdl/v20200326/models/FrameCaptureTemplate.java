@@ -24,161 +24,161 @@ import java.util.HashMap;
 public class FrameCaptureTemplate extends AbstractModel {
 
     /**
-    * Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
+    * Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
     */
     @SerializedName("Name")
     @Expose
     private String Name;
 
     /**
-    * Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+    * Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
     */
     @SerializedName("Width")
     @Expose
     private Long Width;
 
     /**
-    * Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+    * Screenshot height, optional, input range [0, 3000], must be a multiple of 2
     */
     @SerializedName("Height")
     @Expose
     private Long Height;
 
     /**
-    * Interval of frame capture, an integer between 1 and 3600.
+    * Screenshot interval, an integer between 1 and 3600.
     */
     @SerializedName("CaptureInterval")
     @Expose
     private Long CaptureInterval;
 
     /**
-    * Interval units of frame capture, only supports SECONDS.
+    * Screenshot measurement unit, supports only SECONDS.
     */
     @SerializedName("CaptureIntervalUnits")
     @Expose
     private String CaptureIntervalUnits;
 
     /**
-    * Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
+    * Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
     */
     @SerializedName("ScalingBehavior")
     @Expose
     private String ScalingBehavior;
 
     /**
-    * Sharpness, an integer between 0 and 100.
+    * Sharpening degree, an integer between 0 and 100.
     */
     @SerializedName("Sharpness")
     @Expose
     private Long Sharpness;
 
     /**
-     * Get Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters. 
-     * @return Name Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
+     * Get Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20]. 
+     * @return Name Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
      */
     public String getName() {
         return this.Name;
     }
 
     /**
-     * Set Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
-     * @param Name Name of frame capture template, limited to uppercase and lowercase letters and numbers, with a length between 1 and 20 characters.
+     * Set Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
+     * @param Name Screenshot template name. Limited to uppercase and lowercase letters and digits. Length [1, 20].
      */
     public void setName(String Name) {
         this.Name = Name;
     }
 
     /**
-     * Get Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2. 
-     * @return Width Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+     * Get Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2. 
+     * @return Width Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
      */
     public Long getWidth() {
         return this.Width;
     }
 
     /**
-     * Set Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
-     * @param Width Width of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+     * Set Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
+     * @param Width Screenshot width. Optional. The input range is [0, 3000] and must be a multiple of 2.
      */
     public void setWidth(Long Width) {
         this.Width = Width;
     }
 
     /**
-     * Get Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2. 
-     * @return Height Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+     * Get Screenshot height, optional, input range [0, 3000], must be a multiple of 2 
+     * @return Height Screenshot height, optional, input range [0, 3000], must be a multiple of 2
      */
     public Long getHeight() {
         return this.Height;
     }
 
     /**
-     * Set Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
-     * @param Height Height of frame capture, optional, input range is from 0 to 3000, must be a multiple of 2.
+     * Set Screenshot height, optional, input range [0, 3000], must be a multiple of 2
+     * @param Height Screenshot height, optional, input range [0, 3000], must be a multiple of 2
      */
     public void setHeight(Long Height) {
         this.Height = Height;
     }
 
     /**
-     * Get Interval of frame capture, an integer between 1 and 3600. 
-     * @return CaptureInterval Interval of frame capture, an integer between 1 and 3600.
+     * Get Screenshot interval, an integer between 1 and 3600. 
+     * @return CaptureInterval Screenshot interval, an integer between 1 and 3600.
      */
     public Long getCaptureInterval() {
         return this.CaptureInterval;
     }
 
     /**
-     * Set Interval of frame capture, an integer between 1 and 3600.
-     * @param CaptureInterval Interval of frame capture, an integer between 1 and 3600.
+     * Set Screenshot interval, an integer between 1 and 3600.
+     * @param CaptureInterval Screenshot interval, an integer between 1 and 3600.
      */
     public void setCaptureInterval(Long CaptureInterval) {
         this.CaptureInterval = CaptureInterval;
     }
 
     /**
-     * Get Interval units of frame capture, only supports SECONDS. 
-     * @return CaptureIntervalUnits Interval units of frame capture, only supports SECONDS.
+     * Get Screenshot measurement unit, supports only SECONDS. 
+     * @return CaptureIntervalUnits Screenshot measurement unit, supports only SECONDS.
      */
     public String getCaptureIntervalUnits() {
         return this.CaptureIntervalUnits;
     }
 
     /**
-     * Set Interval units of frame capture, only supports SECONDS.
-     * @param CaptureIntervalUnits Interval units of frame capture, only supports SECONDS.
+     * Set Screenshot measurement unit, supports only SECONDS.
+     * @param CaptureIntervalUnits Screenshot measurement unit, supports only SECONDS.
      */
     public void setCaptureIntervalUnits(String CaptureIntervalUnits) {
         this.CaptureIntervalUnits = CaptureIntervalUnits;
     }
 
     /**
-     * Get Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option. 
-     * @return ScalingBehavior Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
+     * Get Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT. 
+     * @return ScalingBehavior Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
      */
     public String getScalingBehavior() {
         return this.ScalingBehavior;
     }
 
     /**
-     * Set Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
-     * @param ScalingBehavior Scaling behavior of frame capture, supports DEFAULT or STRETCH_TO_OUTPUT, with DEFAULT being the default option.
+     * Set Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
+     * @param ScalingBehavior Stretch behavior, supports [DEFAULT|STRETCH_TO_OUTPUT], default is DEFAULT.
      */
     public void setScalingBehavior(String ScalingBehavior) {
         this.ScalingBehavior = ScalingBehavior;
     }
 
     /**
-     * Get Sharpness, an integer between 0 and 100. 
-     * @return Sharpness Sharpness, an integer between 0 and 100.
+     * Get Sharpening degree, an integer between 0 and 100. 
+     * @return Sharpness Sharpening degree, an integer between 0 and 100.
      */
     public Long getSharpness() {
         return this.Sharpness;
     }
 
     /**
-     * Set Sharpness, an integer between 0 and 100.
-     * @param Sharpness Sharpness, an integer between 0 and 100.
+     * Set Sharpening degree, an integer between 0 and 100.
+     * @param Sharpness Sharpening degree, an integer between 0 and 100.
      */
     public void setSharpness(Long Sharpness) {
         this.Sharpness = Sharpness;

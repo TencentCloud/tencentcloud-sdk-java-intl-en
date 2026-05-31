@@ -38,28 +38,28 @@ public class CosSettings extends AbstractModel {
     private String Bucket;
 
     /**
-    * File output path, which can be empty. If it is not empty, it  ends with /.
+    * COS file output path, can be empty, ends with / if not empty.
     */
     @SerializedName("FilePath")
     @Expose
     private String FilePath;
 
     /**
-    * User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+    * User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * File suffix, only supports `jpg`.
+    * COS file suffix is only supported for jpg.
     */
     @SerializedName("FileExt")
     @Expose
     private String FileExt;
 
     /**
-    * Support `unix` or `utc0`, default unix.
+    * Support [unix|utc0]. Default is unix.
     */
     @SerializedName("TimeFormat")
     @Expose
@@ -98,64 +98,64 @@ public class CosSettings extends AbstractModel {
     }
 
     /**
-     * Get File output path, which can be empty. If it is not empty, it  ends with /. 
-     * @return FilePath File output path, which can be empty. If it is not empty, it  ends with /.
+     * Get COS file output path, can be empty, ends with / if not empty. 
+     * @return FilePath COS file output path, can be empty, ends with / if not empty.
      */
     public String getFilePath() {
         return this.FilePath;
     }
 
     /**
-     * Set File output path, which can be empty. If it is not empty, it  ends with /.
-     * @param FilePath File output path, which can be empty. If it is not empty, it  ends with /.
+     * Set COS file output path, can be empty, ends with / if not empty.
+     * @param FilePath COS file output path, can be empty, ends with / if not empty.
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
     }
 
     /**
-     * Get User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters. 
-     * @return FileName User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+     * Get User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-). 
+     * @return FileName User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
-     * @param FileName User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+     * Set User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
+     * @param FileName User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get File suffix, only supports `jpg`. 
-     * @return FileExt File suffix, only supports `jpg`.
+     * Get COS file suffix is only supported for jpg. 
+     * @return FileExt COS file suffix is only supported for jpg.
      */
     public String getFileExt() {
         return this.FileExt;
     }
 
     /**
-     * Set File suffix, only supports `jpg`.
-     * @param FileExt File suffix, only supports `jpg`.
+     * Set COS file suffix is only supported for jpg.
+     * @param FileExt COS file suffix is only supported for jpg.
      */
     public void setFileExt(String FileExt) {
         this.FileExt = FileExt;
     }
 
     /**
-     * Get Support `unix` or `utc0`, default unix. 
-     * @return TimeFormat Support `unix` or `utc0`, default unix.
+     * Get Support [unix|utc0]. Default is unix. 
+     * @return TimeFormat Support [unix|utc0]. Default is unix.
      */
     public String getTimeFormat() {
         return this.TimeFormat;
     }
 
     /**
-     * Set Support `unix` or `utc0`, default unix.
-     * @param TimeFormat Support `unix` or `utc0`, default unix.
+     * Set Support [unix|utc0]. Default is unix.
+     * @param TimeFormat Support [unix|utc0]. Default is unix.
      */
     public void setTimeFormat(String TimeFormat) {
         this.TimeFormat = TimeFormat;

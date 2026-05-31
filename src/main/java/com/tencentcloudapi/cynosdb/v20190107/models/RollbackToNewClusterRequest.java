@@ -24,647 +24,670 @@ import java.util.HashMap;
 public class RollbackToNewClusterRequest extends AbstractModel {
 
     /**
-    * AZ.
+    * <p>AZ.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * During rollback, pass in the source cluster ID to find the source pool ID.
+    * <p>During rollback, input the source cluster ID to search for the source poolId</p>
     */
     @SerializedName("OriginalClusterId")
     @Expose
     private String OriginalClusterId;
 
     /**
-    * VPC ID.
+    * <p>VPC network ID</p>
     */
     @SerializedName("UniqVpcId")
     @Expose
     private String UniqVpcId;
 
     /**
-    * Subnet ID.
+    * <p>Subnet ID</p>
     */
     @SerializedName("UniqSubnetId")
     @Expose
     private String UniqSubnetId;
 
     /**
-    * The cluster name should contain fewer than 64 characters. Valid values for each character: uppercase/lowercase letters, digits, and special characters ('-', '_', and '.').
+    * <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Rolls back by snapshot, which indicates snapshotId; rolls back by time point, which indicates queryId. When the value of queryId is 0, it indicates that the validity of the time point needs to be verified.
+    * <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
     */
     @SerializedName("RollbackId")
     @Expose
     private Long RollbackId;
 
     /**
-    * Rolls back by time point, which indicates the specified time; rolls back by snapshot, which indicates the snapshot time.
+    * <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
     */
     @SerializedName("ExpectTime")
     @Expose
     private String ExpectTime;
 
     /**
-    * Whether to select promo vouchers automatically. 1: yes; 0: no. The default value is 0.
+    * <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * Information about the tag array to be bound during cluster creation.
+    * <p>tag Array information that should be bound for cluster creation</p>
     */
     @SerializedName("ResourceTags")
     @Expose
     private Tag [] ResourceTags;
 
     /**
-    * Database type. When the value of DbType is MYSQL, the valid values are NORMAL and SERVERLESS (the default value is NORMAL).
+    * <p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * This parameter is required when the value of DbMode is SEVERLESS. For the settings of the minimum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+    * <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * This parameter is required when the value of DbMode is SEVERLESS. For the settings of the maximum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+    * <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
     */
     @SerializedName("MaxCpu")
     @Expose
     private Float MaxCpu;
 
     /**
-    * Specifies whether the cluster is automatically paused when the value of DbMode is SEVERLESS. Valid values: yes; no. The default value is yes.
+    * <p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
     */
     @SerializedName("AutoPause")
     @Expose
     private String AutoPause;
 
     /**
-    * Specifies the delay for automatic cluster pause (in seconds) when the value of DbMode is SEVERLESS. Value range: [600, 691200]. The default value is 600.
+    * <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
     */
     @SerializedName("AutoPauseDelay")
     @Expose
     private Long AutoPauseDelay;
 
     /**
-    * Security group ID array.
+    * <p>Security group id array</p>
     */
     @SerializedName("SecurityGroupIds")
     @Expose
     private String [] SecurityGroupIds;
 
     /**
-    * Alarm policy ID array.
+    * <p>Alarm policy Id array</p>
     */
     @SerializedName("AlarmPolicyIds")
     @Expose
     private String [] AlarmPolicyIds;
 
     /**
-    * Parameter array. The character_set_server (utf8 | latin1 | gbk | utf8mb4) is currently supported. lower_case_table_names: 1 - case-insensitive; 0 - case-sensitive.
+    * <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
     */
     @SerializedName("ClusterParams")
     @Expose
     private ParamItem [] ClusterParams;
 
     /**
-    * Parameter template ID, which can be obtained through the DescribeParamTemplates API.
+    * <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
     */
     @SerializedName("ParamTemplateId")
     @Expose
     private Long ParamTemplateId;
 
     /**
-    * Instance initialization configuration information, which is mainly used for selecting different instance specifications during cluster purchase.
+    * <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
     */
     @SerializedName("InstanceInitInfos")
     @Expose
     private InstanceInitInfo [] InstanceInitInfos;
 
     /**
-    * 0 - place an order and pay; 1 - place an order.
+    * <p>0-Place order and pay 1-Placing order</p>
     */
     @SerializedName("DealMode")
     @Expose
     private Long DealMode;
 
     /**
-    * Compute node billing mode: 0 - pay-as-you-go; 1 - prepaid.
+    * <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Time.
+    * <p>Time</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * Unit.
+    * <p>Unit</p>
     */
     @SerializedName("TimeUnit")
     @Expose
     private String TimeUnit;
 
     /**
-    * Rollback database information.
+    * <p>Rollback database info</p>
     */
     @SerializedName("RollbackDatabases")
     @Expose
     private RollbackDatabase [] RollbackDatabases;
 
     /**
-    * Rollback table information.
+    * <p>Roll back table information</p>
     */
     @SerializedName("RollbackTables")
     @Expose
     private RollbackTable [] RollbackTables;
 
     /**
-    * Source read-only instance information.
+    * <p>Original ro instance information</p>
     */
     @SerializedName("OriginalROInstanceList")
     @Expose
     private String [] OriginalROInstanceList;
 
     /**
-    * Project ID
+    * <p>Project ID.</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Whether to enable archiving. Valid values: yes; no. The default value is yes.
+    * <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
     */
     @SerializedName("AutoArchive")
     @Expose
     private String AutoArchive;
 
     /**
-     * Get AZ. 
-     * @return Zone AZ.
+    * <p>Whether to restore from the saved backup</p>
+    */
+    @SerializedName("FromSaveBackup")
+    @Expose
+    private Boolean FromSaveBackup;
+
+    /**
+     * Get <p>AZ.</p> 
+     * @return Zone <p>AZ.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ.
-     * @param Zone AZ.
+     * Set <p>AZ.</p>
+     * @param Zone <p>AZ.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get During rollback, pass in the source cluster ID to find the source pool ID. 
-     * @return OriginalClusterId During rollback, pass in the source cluster ID to find the source pool ID.
+     * Get <p>During rollback, input the source cluster ID to search for the source poolId</p> 
+     * @return OriginalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
      */
     public String getOriginalClusterId() {
         return this.OriginalClusterId;
     }
 
     /**
-     * Set During rollback, pass in the source cluster ID to find the source pool ID.
-     * @param OriginalClusterId During rollback, pass in the source cluster ID to find the source pool ID.
+     * Set <p>During rollback, input the source cluster ID to search for the source poolId</p>
+     * @param OriginalClusterId <p>During rollback, input the source cluster ID to search for the source poolId</p>
      */
     public void setOriginalClusterId(String OriginalClusterId) {
         this.OriginalClusterId = OriginalClusterId;
     }
 
     /**
-     * Get VPC ID. 
-     * @return UniqVpcId VPC ID.
+     * Get <p>VPC network ID</p> 
+     * @return UniqVpcId <p>VPC network ID</p>
      */
     public String getUniqVpcId() {
         return this.UniqVpcId;
     }
 
     /**
-     * Set VPC ID.
-     * @param UniqVpcId VPC ID.
+     * Set <p>VPC network ID</p>
+     * @param UniqVpcId <p>VPC network ID</p>
      */
     public void setUniqVpcId(String UniqVpcId) {
         this.UniqVpcId = UniqVpcId;
     }
 
     /**
-     * Get Subnet ID. 
-     * @return UniqSubnetId Subnet ID.
+     * Get <p>Subnet ID</p> 
+     * @return UniqSubnetId <p>Subnet ID</p>
      */
     public String getUniqSubnetId() {
         return this.UniqSubnetId;
     }
 
     /**
-     * Set Subnet ID.
-     * @param UniqSubnetId Subnet ID.
+     * Set <p>Subnet ID</p>
+     * @param UniqSubnetId <p>Subnet ID</p>
      */
     public void setUniqSubnetId(String UniqSubnetId) {
         this.UniqSubnetId = UniqSubnetId;
     }
 
     /**
-     * Get The cluster name should contain fewer than 64 characters. Valid values for each character: uppercase/lowercase letters, digits, and special characters ('-', '_', and '.'). 
-     * @return ClusterName The cluster name should contain fewer than 64 characters. Valid values for each character: uppercase/lowercase letters, digits, and special characters ('-', '_', and '.').
+     * Get <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p> 
+     * @return ClusterName <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set The cluster name should contain fewer than 64 characters. Valid values for each character: uppercase/lowercase letters, digits, and special characters ('-', '_', and '.').
-     * @param ClusterName The cluster name should contain fewer than 64 characters. Valid values for each character: uppercase/lowercase letters, digits, and special characters ('-', '_', and '.').
+     * Set <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
+     * @param ClusterName <p>Cluster name, length less than 64 characters. Each character value ranges from uppercase/lowercase letters, digits, to special symbols ('-', '_', '.').</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Rolls back by snapshot, which indicates snapshotId; rolls back by time point, which indicates queryId. When the value of queryId is 0, it indicates that the validity of the time point needs to be verified. 
-     * @return RollbackId Rolls back by snapshot, which indicates snapshotId; rolls back by time point, which indicates queryId. When the value of queryId is 0, it indicates that the validity of the time point needs to be verified.
+     * Get <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p> 
+     * @return RollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
      */
     public Long getRollbackId() {
         return this.RollbackId;
     }
 
     /**
-     * Set Rolls back by snapshot, which indicates snapshotId; rolls back by time point, which indicates queryId. When the value of queryId is 0, it indicates that the validity of the time point needs to be verified.
-     * @param RollbackId Rolls back by snapshot, which indicates snapshotId; rolls back by time point, which indicates queryId. When the value of queryId is 0, it indicates that the validity of the time point needs to be verified.
+     * Set <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
+     * @param RollbackId <p>Snapshot rollback means snapshotId; point-in-time rollback means queryId. A value of 0 indicates requirement to judge whether the time point is valid.</p>
      */
     public void setRollbackId(Long RollbackId) {
         this.RollbackId = RollbackId;
     }
 
     /**
-     * Get Rolls back by time point, which indicates the specified time; rolls back by snapshot, which indicates the snapshot time. 
-     * @return ExpectTime Rolls back by time point, which indicates the specified time; rolls back by snapshot, which indicates the snapshot time.
+     * Get <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p> 
+     * @return ExpectTime <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
      */
     public String getExpectTime() {
         return this.ExpectTime;
     }
 
     /**
-     * Set Rolls back by time point, which indicates the specified time; rolls back by snapshot, which indicates the snapshot time.
-     * @param ExpectTime Rolls back by time point, which indicates the specified time; rolls back by snapshot, which indicates the snapshot time.
+     * Set <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
+     * @param ExpectTime <p>Point-in-time rollback, specified time; snapshot rollback, snapshot time</p>
      */
     public void setExpectTime(String ExpectTime) {
         this.ExpectTime = ExpectTime;
     }
 
     /**
-     * Get Whether to select promo vouchers automatically. 1: yes; 0: no. The default value is 0. 
-     * @return AutoVoucher Whether to select promo vouchers automatically. 1: yes; 0: no. The default value is 0.
+     * Get <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p> 
+     * @return AutoVoucher <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to select promo vouchers automatically. 1: yes; 0: no. The default value is 0.
-     * @param AutoVoucher Whether to select promo vouchers automatically. 1: yes; 0: no. The default value is 0.
+     * Set <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
+     * @param AutoVoucher <p>Whether to automatically select a voucher. 1: Yes; 0: No. Default is 0.</p>
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get Information about the tag array to be bound during cluster creation. 
-     * @return ResourceTags Information about the tag array to be bound during cluster creation.
+     * Get <p>tag Array information that should be bound for cluster creation</p> 
+     * @return ResourceTags <p>tag Array information that should be bound for cluster creation</p>
      */
     public Tag [] getResourceTags() {
         return this.ResourceTags;
     }
 
     /**
-     * Set Information about the tag array to be bound during cluster creation.
-     * @param ResourceTags Information about the tag array to be bound during cluster creation.
+     * Set <p>tag Array information that should be bound for cluster creation</p>
+     * @param ResourceTags <p>tag Array information that should be bound for cluster creation</p>
      */
     public void setResourceTags(Tag [] ResourceTags) {
         this.ResourceTags = ResourceTags;
     }
 
     /**
-     * Get Database type. When the value of DbType is MYSQL, the valid values are NORMAL and SERVERLESS (the default value is NORMAL). 
-     * @return DbMode Database type. When the value of DbType is MYSQL, the valid values are NORMAL and SERVERLESS (the default value is NORMAL).
+     * Get <p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li> 
+     * @return DbMode <p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Database type. When the value of DbType is MYSQL, the valid values are NORMAL and SERVERLESS (the default value is NORMAL).
-     * @param DbMode Database type. When the value of DbType is MYSQL, the valid values are NORMAL and SERVERLESS (the default value is NORMAL).
+     * Set <p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
+     * @param DbMode <p>DB type<br>Selectable when DbType is MYSQL (default NORMAL):</p><li>NORMAL</li><li>SERVERLESS</li>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get This parameter is required when the value of DbMode is SEVERLESS. For the settings of the minimum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value. 
-     * @return MinCpu This parameter is required when the value of DbMode is SEVERLESS. For the settings of the minimum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+     * Get <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p> 
+     * @return MinCpu <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set This parameter is required when the value of DbMode is SEVERLESS. For the settings of the minimum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
-     * @param MinCpu This parameter is required when the value of DbMode is SEVERLESS. For the settings of the minimum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+     * Set <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
+     * @param MinCpu <p>Required when DbMode is SEVERLESS<br>Minimum value of cpu. For optional range, see API response of DescribeServerlessInstanceSpecs</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get This parameter is required when the value of DbMode is SEVERLESS. For the settings of the maximum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value. 
-     * @return MaxCpu This parameter is required when the value of DbMode is SEVERLESS. For the settings of the maximum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+     * Get <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p> 
+     * @return MaxCpu <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set This parameter is required when the value of DbMode is SEVERLESS. For the settings of the maximum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
-     * @param MaxCpu This parameter is required when the value of DbMode is SEVERLESS. For the settings of the maximum CPU value, refer to the value returned by the DescribeServerlessInstanceSpecs API for the valid value.
+     * Set <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
+     * @param MaxCpu <p>Required when DbMode is SEVERLESS:<br>Maximum value of cpu. For the optional range, see the API response of DescribeServerlessInstanceSpecs.</p>
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
     }
 
     /**
-     * Get Specifies whether the cluster is automatically paused when the value of DbMode is SEVERLESS. Valid values: yes; no. The default value is yes. 
-     * @return AutoPause Specifies whether the cluster is automatically paused when the value of DbMode is SEVERLESS. Valid values: yes; no. The default value is yes.
+     * Get <p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes 
+     * @return AutoPause <p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
      */
     public String getAutoPause() {
         return this.AutoPause;
     }
 
     /**
-     * Set Specifies whether the cluster is automatically paused when the value of DbMode is SEVERLESS. Valid values: yes; no. The default value is yes.
-     * @param AutoPause Specifies whether the cluster is automatically paused when the value of DbMode is SEVERLESS. Valid values: yes; no. The default value is yes.
+     * Set <p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
+     * @param AutoPause <p>When DbMode is SEVERLESS, whether to automatically pause within specified clusters. Optional range</p><li>yes</li><li>no</li>Default value: yes
      */
     public void setAutoPause(String AutoPause) {
         this.AutoPause = AutoPause;
     }
 
     /**
-     * Get Specifies the delay for automatic cluster pause (in seconds) when the value of DbMode is SEVERLESS. Value range: [600, 691200]. The default value is 600. 
-     * @return AutoPauseDelay Specifies the delay for automatic cluster pause (in seconds) when the value of DbMode is SEVERLESS. Value range: [600, 691200]. The default value is 600.
+     * Get <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p> 
+     * @return AutoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
      */
     public Long getAutoPauseDelay() {
         return this.AutoPauseDelay;
     }
 
     /**
-     * Set Specifies the delay for automatic cluster pause (in seconds) when the value of DbMode is SEVERLESS. Value range: [600, 691200]. The default value is 600.
-     * @param AutoPauseDelay Specifies the delay for automatic cluster pause (in seconds) when the value of DbMode is SEVERLESS. Value range: [600, 691200]. The default value is 600.
+     * Set <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
+     * @param AutoPauseDelay <p>When DbMode is SEVERLESS, specify the delay for Cluster Auto-Pause in seconds, optional range [600,691200]<br>Default value: 600</p>
      */
     public void setAutoPauseDelay(Long AutoPauseDelay) {
         this.AutoPauseDelay = AutoPauseDelay;
     }
 
     /**
-     * Get Security group ID array. 
-     * @return SecurityGroupIds Security group ID array.
+     * Get <p>Security group id array</p> 
+     * @return SecurityGroupIds <p>Security group id array</p>
      */
     public String [] getSecurityGroupIds() {
         return this.SecurityGroupIds;
     }
 
     /**
-     * Set Security group ID array.
-     * @param SecurityGroupIds Security group ID array.
+     * Set <p>Security group id array</p>
+     * @param SecurityGroupIds <p>Security group id array</p>
      */
     public void setSecurityGroupIds(String [] SecurityGroupIds) {
         this.SecurityGroupIds = SecurityGroupIds;
     }
 
     /**
-     * Get Alarm policy ID array. 
-     * @return AlarmPolicyIds Alarm policy ID array.
+     * Get <p>Alarm policy Id array</p> 
+     * @return AlarmPolicyIds <p>Alarm policy Id array</p>
      */
     public String [] getAlarmPolicyIds() {
         return this.AlarmPolicyIds;
     }
 
     /**
-     * Set Alarm policy ID array.
-     * @param AlarmPolicyIds Alarm policy ID array.
+     * Set <p>Alarm policy Id array</p>
+     * @param AlarmPolicyIds <p>Alarm policy Id array</p>
      */
     public void setAlarmPolicyIds(String [] AlarmPolicyIds) {
         this.AlarmPolicyIds = AlarmPolicyIds;
     }
 
     /**
-     * Get Parameter array. The character_set_server (utf8 | latin1 | gbk | utf8mb4) is currently supported. lower_case_table_names: 1 - case-insensitive; 0 - case-sensitive. 
-     * @return ClusterParams Parameter array. The character_set_server (utf8 | latin1 | gbk | utf8mb4) is currently supported. lower_case_table_names: 1 - case-insensitive; 0 - case-sensitive.
+     * Get <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p> 
+     * @return ClusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
      */
     public ParamItem [] getClusterParams() {
         return this.ClusterParams;
     }
 
     /**
-     * Set Parameter array. The character_set_server (utf8 | latin1 | gbk | utf8mb4) is currently supported. lower_case_table_names: 1 - case-insensitive; 0 - case-sensitive.
-     * @param ClusterParams Parameter array. The character_set_server (utf8 | latin1 | gbk | utf8mb4) is currently supported. lower_case_table_names: 1 - case-insensitive; 0 - case-sensitive.
+     * Set <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
+     * @param ClusterParams <p>Parameter array, temporarily supports character_set_server (utf8|latin1|gbk|utf8mb4), lower_case_table_names, 1-case-insensitive, 0-case-sensitive.</p>
      */
     public void setClusterParams(ParamItem [] ClusterParams) {
         this.ClusterParams = ClusterParams;
     }
 
     /**
-     * Get Parameter template ID, which can be obtained through the DescribeParamTemplates API. 
-     * @return ParamTemplateId Parameter template ID, which can be obtained through the DescribeParamTemplates API.
+     * Get <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p> 
+     * @return ParamTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
      */
     public Long getParamTemplateId() {
         return this.ParamTemplateId;
     }
 
     /**
-     * Set Parameter template ID, which can be obtained through the DescribeParamTemplates API.
-     * @param ParamTemplateId Parameter template ID, which can be obtained through the DescribeParamTemplates API.
+     * Set <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
+     * @param ParamTemplateId <p>Parameter template ID. The parameter template ID can be obtained through querying parameter template information DescribeParamTemplates.</p>
      */
     public void setParamTemplateId(Long ParamTemplateId) {
         this.ParamTemplateId = ParamTemplateId;
     }
 
     /**
-     * Get Instance initialization configuration information, which is mainly used for selecting different instance specifications during cluster purchase. 
-     * @return InstanceInitInfos Instance initialization configuration information, which is mainly used for selecting different instance specifications during cluster purchase.
+     * Get <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p> 
+     * @return InstanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
      */
     public InstanceInitInfo [] getInstanceInitInfos() {
         return this.InstanceInitInfos;
     }
 
     /**
-     * Set Instance initialization configuration information, which is mainly used for selecting different instance specifications during cluster purchase.
-     * @param InstanceInitInfos Instance initialization configuration information, which is mainly used for selecting different instance specifications during cluster purchase.
+     * Set <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
+     * @param InstanceInitInfos <p>Instance initialization configuration information is mainly used to select different specification instances during cluster purchase.</p>
      */
     public void setInstanceInitInfos(InstanceInitInfo [] InstanceInitInfos) {
         this.InstanceInitInfos = InstanceInitInfos;
     }
 
     /**
-     * Get 0 - place an order and pay; 1 - place an order. 
-     * @return DealMode 0 - place an order and pay; 1 - place an order.
+     * Get <p>0-Place order and pay 1-Placing order</p> 
+     * @return DealMode <p>0-Place order and pay 1-Placing order</p>
      */
     public Long getDealMode() {
         return this.DealMode;
     }
 
     /**
-     * Set 0 - place an order and pay; 1 - place an order.
-     * @param DealMode 0 - place an order and pay; 1 - place an order.
+     * Set <p>0-Place order and pay 1-Placing order</p>
+     * @param DealMode <p>0-Place order and pay 1-Placing order</p>
      */
     public void setDealMode(Long DealMode) {
         this.DealMode = DealMode;
     }
 
     /**
-     * Get Compute node billing mode: 0 - pay-as-you-go; 1 - prepaid. 
-     * @return PayMode Compute node billing mode: 0 - pay-as-you-go; 1 - prepaid.
+     * Get <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p> 
+     * @return PayMode <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Compute node billing mode: 0 - pay-as-you-go; 1 - prepaid.
-     * @param PayMode Compute node billing mode: 0 - pay-as-you-go; 1 - prepaid.
+     * Set <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
+     * @param PayMode <p>Pay-per-compute-node model: 0-Pay-As-You-Go, 1-Prepayment</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Time. 
-     * @return TimeSpan Time.
+     * Get <p>Time</p> 
+     * @return TimeSpan <p>Time</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Time.
-     * @param TimeSpan Time.
+     * Set <p>Time</p>
+     * @param TimeSpan <p>Time</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Unit. 
-     * @return TimeUnit Unit.
+     * Get <p>Unit</p> 
+     * @return TimeUnit <p>Unit</p>
      */
     public String getTimeUnit() {
         return this.TimeUnit;
     }
 
     /**
-     * Set Unit.
-     * @param TimeUnit Unit.
+     * Set <p>Unit</p>
+     * @param TimeUnit <p>Unit</p>
      */
     public void setTimeUnit(String TimeUnit) {
         this.TimeUnit = TimeUnit;
     }
 
     /**
-     * Get Rollback database information. 
-     * @return RollbackDatabases Rollback database information.
+     * Get <p>Rollback database info</p> 
+     * @return RollbackDatabases <p>Rollback database info</p>
      */
     public RollbackDatabase [] getRollbackDatabases() {
         return this.RollbackDatabases;
     }
 
     /**
-     * Set Rollback database information.
-     * @param RollbackDatabases Rollback database information.
+     * Set <p>Rollback database info</p>
+     * @param RollbackDatabases <p>Rollback database info</p>
      */
     public void setRollbackDatabases(RollbackDatabase [] RollbackDatabases) {
         this.RollbackDatabases = RollbackDatabases;
     }
 
     /**
-     * Get Rollback table information. 
-     * @return RollbackTables Rollback table information.
+     * Get <p>Roll back table information</p> 
+     * @return RollbackTables <p>Roll back table information</p>
      */
     public RollbackTable [] getRollbackTables() {
         return this.RollbackTables;
     }
 
     /**
-     * Set Rollback table information.
-     * @param RollbackTables Rollback table information.
+     * Set <p>Roll back table information</p>
+     * @param RollbackTables <p>Roll back table information</p>
      */
     public void setRollbackTables(RollbackTable [] RollbackTables) {
         this.RollbackTables = RollbackTables;
     }
 
     /**
-     * Get Source read-only instance information. 
-     * @return OriginalROInstanceList Source read-only instance information.
+     * Get <p>Original ro instance information</p> 
+     * @return OriginalROInstanceList <p>Original ro instance information</p>
      */
     public String [] getOriginalROInstanceList() {
         return this.OriginalROInstanceList;
     }
 
     /**
-     * Set Source read-only instance information.
-     * @param OriginalROInstanceList Source read-only instance information.
+     * Set <p>Original ro instance information</p>
+     * @param OriginalROInstanceList <p>Original ro instance information</p>
      */
     public void setOriginalROInstanceList(String [] OriginalROInstanceList) {
         this.OriginalROInstanceList = OriginalROInstanceList;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get <p>Project ID.</p> 
+     * @return ProjectId <p>Project ID.</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set <p>Project ID.</p>
+     * @param ProjectId <p>Project ID.</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Whether to enable archiving. Valid values: yes; no. The default value is yes. 
-     * @return AutoArchive Whether to enable archiving. Valid values: yes; no. The default value is yes.
+     * Get <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p> 
+     * @return AutoArchive <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
      */
     public String getAutoArchive() {
         return this.AutoArchive;
     }
 
     /**
-     * Set Whether to enable archiving. Valid values: yes; no. The default value is yes.
-     * @param AutoArchive Whether to enable archiving. Valid values: yes; no. The default value is yes.
+     * Set <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
+     * @param AutoArchive <p>Whether to enable archive. Optional range <li>yes</li><li>no</li> Default value: yes</p>
      */
     public void setAutoArchive(String AutoArchive) {
         this.AutoArchive = AutoArchive;
+    }
+
+    /**
+     * Get <p>Whether to restore from the saved backup</p> 
+     * @return FromSaveBackup <p>Whether to restore from the saved backup</p>
+     */
+    public Boolean getFromSaveBackup() {
+        return this.FromSaveBackup;
+    }
+
+    /**
+     * Set <p>Whether to restore from the saved backup</p>
+     * @param FromSaveBackup <p>Whether to restore from the saved backup</p>
+     */
+    public void setFromSaveBackup(Boolean FromSaveBackup) {
+        this.FromSaveBackup = FromSaveBackup;
     }
 
     public RollbackToNewClusterRequest() {
@@ -783,6 +806,9 @@ public class RollbackToNewClusterRequest extends AbstractModel {
         if (source.AutoArchive != null) {
             this.AutoArchive = new String(source.AutoArchive);
         }
+        if (source.FromSaveBackup != null) {
+            this.FromSaveBackup = new Boolean(source.FromSaveBackup);
+        }
     }
 
 
@@ -818,6 +844,7 @@ public class RollbackToNewClusterRequest extends AbstractModel {
         this.setParamArraySimple(map, prefix + "OriginalROInstanceList.", this.OriginalROInstanceList);
         this.setParamSimple(map, prefix + "ProjectId", this.ProjectId);
         this.setParamSimple(map, prefix + "AutoArchive", this.AutoArchive);
+        this.setParamSimple(map, prefix + "FromSaveBackup", this.FromSaveBackup);
 
     }
 }

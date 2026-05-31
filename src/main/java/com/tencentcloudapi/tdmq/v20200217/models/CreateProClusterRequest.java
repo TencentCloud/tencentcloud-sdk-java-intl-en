@@ -24,240 +24,233 @@ import java.util.HashMap;
 public class CreateProClusterRequest extends AbstractModel {
 
     /**
-    * Specifies multi-az deployment with three azs, for example [200002,200003,200004].
-
-Single-AZ deployment selects an availability zone. example: [200002].
+    * <p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
     */
     @SerializedName("ZoneIds")
     @Expose
     private Long [] ZoneIds;
 
     /**
-    * Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+    * <p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
     */
     @SerializedName("ProductName")
     @Expose
     private String ProductName;
 
     /**
-    * `1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
+    * <p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * Purchase duration. value range: 1–50.
+    * <p>Purchase period, value ranges from 1 to 50</p>
     */
     @SerializedName("TimeSpan")
     @Expose
     private Long TimeSpan;
 
     /**
-    * Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
+    * <p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
+    * <p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
     */
     @SerializedName("AutoVoucher")
     @Expose
     private Long AutoVoucher;
 
     /**
-    * Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+    * <p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
     */
     @SerializedName("StorageSize")
     @Expose
     private Long StorageSize;
 
     /**
-    * Specifies the vpc network tag.
+    * <p>vpc network tag</p>
     */
     @SerializedName("Vpc")
     @Expose
     private VpcInfo Vpc;
 
     /**
-    * Tag list of the cluster (abandoned).
+    * <p>Tag list of the cluster (abandoned)</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get Specifies multi-az deployment with three azs, for example [200002,200003,200004].
+    * <p>Cluster version information</p>
+    */
+    @SerializedName("InstanceVersion")
+    @Expose
+    private String InstanceVersion;
 
-Single-AZ deployment selects an availability zone. example: [200002]. 
-     * @return ZoneIds Specifies multi-az deployment with three azs, for example [200002,200003,200004].
-
-Single-AZ deployment selects an availability zone. example: [200002].
+    /**
+     * Get <p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p> 
+     * @return ZoneIds <p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
      */
     public Long [] getZoneIds() {
         return this.ZoneIds;
     }
 
     /**
-     * Set Specifies multi-az deployment with three azs, for example [200002,200003,200004].
-
-Single-AZ deployment selects an availability zone. example: [200002].
-     * @param ZoneIds Specifies multi-az deployment with three azs, for example [200002,200003,200004].
-
-Single-AZ deployment selects an availability zone. example: [200002].
+     * Set <p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
+     * @param ZoneIds <p>Multi-AZ deployment selects three AZs, example [200002,200003,200004]<br>Single-AZ deployment selects one availability zone, example [200002]</p><p>When PULSAR.P2.MINI1 is selected, it only supports two AZs. Other models support three AZs.</p>
      */
     public void setZoneIds(Long [] ZoneIds) {
         this.ZoneIds = ZoneIds;
     }
 
     /**
-     * Get Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1). 
-     * @return ProductName Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+     * Get <p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p> 
+     * @return ProductName <p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
      */
     public String getProductName() {
         return this.ProductName;
     }
 
     /**
-     * Set Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-     * @param ProductName Cluster specification code.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+     * Set <p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
+     * @param ProductName <p>Cluster specification code<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
      */
     public void setProductName(String ProductName) {
         this.ProductName = ProductName;
     }
 
     /**
-     * Get `1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal. 
-     * @return AutoRenewFlag `1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
+     * Get <p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p> 
+     * @return AutoRenewFlag <p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set `1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
-     * @param AutoRenewFlag `1`: true. enables automatic monthly renewal.
-
-false. disables automatic monthly renewal.
+     * Set <p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
+     * @param AutoRenewFlag <p>1: true, enable automatic monthly renewal</p><p>0: false, disable automatic monthly renewal</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get Purchase duration. value range: 1–50. 
-     * @return TimeSpan Purchase duration. value range: 1–50.
+     * Get <p>Purchase period, value ranges from 1 to 50</p> 
+     * @return TimeSpan <p>Purchase period, value ranges from 1 to 50</p>
      */
     public Long getTimeSpan() {
         return this.TimeSpan;
     }
 
     /**
-     * Set Purchase duration. value range: 1–50.
-     * @param TimeSpan Purchase duration. value range: 1–50.
+     * Set <p>Purchase period, value ranges from 1 to 50</p>
+     * @param TimeSpan <p>Purchase period, value ranges from 1 to 50</p>
      */
     public void setTimeSpan(Long TimeSpan) {
         this.TimeSpan = TimeSpan;
     }
 
     /**
-     * Get Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters. 
-     * @return ClusterName Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
+     * Get <p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p> 
+     * @return ClusterName <p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
-     * @param ClusterName Specifies the cluster name, which does not support chinese characters and special characters other than hyphens and underscores, with a length of no more than 64 characters.
+     * Set <p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
+     * @param ClusterName <p>Cluster name cannot be empty. It supports numbers, letters, Chinese, and symbols "-_=:.", with length not exceeding 64 characters.</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0. 
-     * @return AutoVoucher Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
+     * Get <p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p> 
+     * @return AutoVoucher <p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
      */
     public Long getAutoVoucher() {
         return this.AutoVoucher;
     }
 
     /**
-     * Set Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
-     * @param AutoVoucher Whether to automatically select voucher. valid values: 1 (yes), 0 (no). default is 0.
+     * Set <p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
+     * @param AutoVoucher <p>Whether to automatically select voucher 1 Yes 0 No Default is 0</p>
      */
     public void setAutoVoucher(Long AutoVoucher) {
         this.AutoVoucher = AutoVoucher;
     }
 
     /**
-     * Get Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1). 
-     * @return StorageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+     * Get <p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p> 
+     * @return StorageSize <p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
      */
     public Long getStorageSize() {
         return this.StorageSize;
     }
 
     /**
-     * Set Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
-     * @param StorageSize Specifies the storage specification.
-Refers to professional cluster specifications (https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1).
+     * Set <p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
+     * @param StorageSize <p>Storage specification<br>See <a href="https://www.tencentcloud.com/document/product/1179/83705?from_cn_redirect=1">professional cluster specifications</a></p>
      */
     public void setStorageSize(Long StorageSize) {
         this.StorageSize = StorageSize;
     }
 
     /**
-     * Get Specifies the vpc network tag. 
-     * @return Vpc Specifies the vpc network tag.
+     * Get <p>vpc network tag</p> 
+     * @return Vpc <p>vpc network tag</p>
      */
     public VpcInfo getVpc() {
         return this.Vpc;
     }
 
     /**
-     * Set Specifies the vpc network tag.
-     * @param Vpc Specifies the vpc network tag.
+     * Set <p>vpc network tag</p>
+     * @param Vpc <p>vpc network tag</p>
      */
     public void setVpc(VpcInfo Vpc) {
         this.Vpc = Vpc;
     }
 
     /**
-     * Get Tag list of the cluster (abandoned). 
-     * @return Tags Tag list of the cluster (abandoned).
+     * Get <p>Tag list of the cluster (abandoned)</p> 
+     * @return Tags <p>Tag list of the cluster (abandoned)</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag list of the cluster (abandoned).
-     * @param Tags Tag list of the cluster (abandoned).
+     * Set <p>Tag list of the cluster (abandoned)</p>
+     * @param Tags <p>Tag list of the cluster (abandoned)</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>Cluster version information</p> 
+     * @return InstanceVersion <p>Cluster version information</p>
+     */
+    public String getInstanceVersion() {
+        return this.InstanceVersion;
+    }
+
+    /**
+     * Set <p>Cluster version information</p>
+     * @param InstanceVersion <p>Cluster version information</p>
+     */
+    public void setInstanceVersion(String InstanceVersion) {
+        this.InstanceVersion = InstanceVersion;
     }
 
     public CreateProClusterRequest() {
@@ -301,6 +294,9 @@ Refers to professional cluster specifications (https://www.tencentcloud.com/docu
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.InstanceVersion != null) {
+            this.InstanceVersion = new String(source.InstanceVersion);
+        }
     }
 
 
@@ -317,6 +313,7 @@ Refers to professional cluster specifications (https://www.tencentcloud.com/docu
         this.setParamSimple(map, prefix + "StorageSize", this.StorageSize);
         this.setParamObj(map, prefix + "Vpc.", this.Vpc);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
 
     }
 }

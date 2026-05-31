@@ -52,6 +52,13 @@ public class DeliverSummary extends AbstractModel {
     private String DeliverConsumerName;
 
     /**
+    * Exception error in delivery
+    */
+    @SerializedName("DeliverError")
+    @Expose
+    private String DeliverError;
+
+    /**
      * Get Select the delivery type, storage class, message channel. 
      * @return DeliverType Select the delivery type, storage class, message channel.
      */
@@ -115,6 +122,22 @@ public class DeliverSummary extends AbstractModel {
         this.DeliverConsumerName = DeliverConsumerName;
     }
 
+    /**
+     * Get Exception error in delivery 
+     * @return DeliverError Exception error in delivery
+     */
+    public String getDeliverError() {
+        return this.DeliverError;
+    }
+
+    /**
+     * Set Exception error in delivery
+     * @param DeliverError Exception error in delivery
+     */
+    public void setDeliverError(String DeliverError) {
+        this.DeliverError = DeliverError;
+    }
+
     public DeliverSummary() {
     }
 
@@ -135,6 +158,9 @@ public class DeliverSummary extends AbstractModel {
         if (source.DeliverConsumerName != null) {
             this.DeliverConsumerName = new String(source.DeliverConsumerName);
         }
+        if (source.DeliverError != null) {
+            this.DeliverError = new String(source.DeliverError);
+        }
     }
 
 
@@ -146,6 +172,7 @@ public class DeliverSummary extends AbstractModel {
         this.setParamSimple(map, prefix + "DeliverSubType", this.DeliverSubType);
         this.setParamSimple(map, prefix + "DeliverConsumer", this.DeliverConsumer);
         this.setParamSimple(map, prefix + "DeliverConsumerName", this.DeliverConsumerName);
+        this.setParamSimple(map, prefix + "DeliverError", this.DeliverError);
 
     }
 }

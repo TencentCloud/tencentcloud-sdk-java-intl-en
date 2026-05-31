@@ -24,21 +24,21 @@ import java.util.HashMap;
 public class AmazonS3Settings extends AbstractModel {
 
     /**
-    * Access key ID of the S3 sub-account.
+    * Access key ID of the S3 sub-user.
     */
     @SerializedName("AccessKeyID")
     @Expose
     private String AccessKeyID;
 
     /**
-    * Secret access key of the S3 sub-account.
+    * Secret access key of the S3 sub-user.
     */
     @SerializedName("SecretAccessKey")
     @Expose
     private String SecretAccessKey;
 
     /**
-    * Region of S3.
+    * S3 region.
     */
     @SerializedName("Region")
     @Expose
@@ -52,76 +52,76 @@ public class AmazonS3Settings extends AbstractModel {
     private String Bucket;
 
     /**
-    * File output path, which can be empty. If it is not empty, it starts with / and ends with /.
+    * File output path, can be empty, starts and ends with / if not empty.
     */
     @SerializedName("FilePath")
     @Expose
     private String FilePath;
 
     /**
-    * User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+    * User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
     */
     @SerializedName("FileName")
     @Expose
     private String FileName;
 
     /**
-    * File suffix, only supports `jpg`.
+    * File suffix only supports jpg.
     */
     @SerializedName("FileExt")
     @Expose
     private String FileExt;
 
     /**
-    * Support `unix` or `utc0`, default unix.
+    * Support [unix|utc0]. Default is unix.
     */
     @SerializedName("TimeFormat")
     @Expose
     private String TimeFormat;
 
     /**
-     * Get Access key ID of the S3 sub-account. 
-     * @return AccessKeyID Access key ID of the S3 sub-account.
+     * Get Access key ID of the S3 sub-user. 
+     * @return AccessKeyID Access key ID of the S3 sub-user.
      */
     public String getAccessKeyID() {
         return this.AccessKeyID;
     }
 
     /**
-     * Set Access key ID of the S3 sub-account.
-     * @param AccessKeyID Access key ID of the S3 sub-account.
+     * Set Access key ID of the S3 sub-user.
+     * @param AccessKeyID Access key ID of the S3 sub-user.
      */
     public void setAccessKeyID(String AccessKeyID) {
         this.AccessKeyID = AccessKeyID;
     }
 
     /**
-     * Get Secret access key of the S3 sub-account. 
-     * @return SecretAccessKey Secret access key of the S3 sub-account.
+     * Get Secret access key of the S3 sub-user. 
+     * @return SecretAccessKey Secret access key of the S3 sub-user.
      */
     public String getSecretAccessKey() {
         return this.SecretAccessKey;
     }
 
     /**
-     * Set Secret access key of the S3 sub-account.
-     * @param SecretAccessKey Secret access key of the S3 sub-account.
+     * Set Secret access key of the S3 sub-user.
+     * @param SecretAccessKey Secret access key of the S3 sub-user.
      */
     public void setSecretAccessKey(String SecretAccessKey) {
         this.SecretAccessKey = SecretAccessKey;
     }
 
     /**
-     * Get Region of S3. 
-     * @return Region Region of S3.
+     * Get S3 region. 
+     * @return Region S3 region.
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region of S3.
-     * @param Region Region of S3.
+     * Set S3 region.
+     * @param Region S3 region.
      */
     public void setRegion(String Region) {
         this.Region = Region;
@@ -144,64 +144,64 @@ public class AmazonS3Settings extends AbstractModel {
     }
 
     /**
-     * Get File output path, which can be empty. If it is not empty, it starts with / and ends with /. 
-     * @return FilePath File output path, which can be empty. If it is not empty, it starts with / and ends with /.
+     * Get File output path, can be empty, starts and ends with / if not empty. 
+     * @return FilePath File output path, can be empty, starts and ends with / if not empty.
      */
     public String getFilePath() {
         return this.FilePath;
     }
 
     /**
-     * Set File output path, which can be empty. If it is not empty, it starts with / and ends with /.
-     * @param FilePath File output path, which can be empty. If it is not empty, it starts with / and ends with /.
+     * Set File output path, can be empty, starts and ends with / if not empty.
+     * @param FilePath File output path, can be empty, starts and ends with / if not empty.
      */
     public void setFilePath(String FilePath) {
         this.FilePath = FilePath;
     }
 
     /**
-     * Get User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters. 
-     * @return FileName User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+     * Get User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-). 
+     * @return FileName User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
      */
     public String getFileName() {
         return this.FileName;
     }
 
     /**
-     * Set User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
-     * @param FileName User-defined name, supports alphanumeric characters, underscores, and hyphens, with a length between 1 and 32 characters.
+     * Set User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
+     * @param FileName User-defined name supports 1 to 32 characters consisting of digits, letters, underscores (_), and hyphens (-).
      */
     public void setFileName(String FileName) {
         this.FileName = FileName;
     }
 
     /**
-     * Get File suffix, only supports `jpg`. 
-     * @return FileExt File suffix, only supports `jpg`.
+     * Get File suffix only supports jpg. 
+     * @return FileExt File suffix only supports jpg.
      */
     public String getFileExt() {
         return this.FileExt;
     }
 
     /**
-     * Set File suffix, only supports `jpg`.
-     * @param FileExt File suffix, only supports `jpg`.
+     * Set File suffix only supports jpg.
+     * @param FileExt File suffix only supports jpg.
      */
     public void setFileExt(String FileExt) {
         this.FileExt = FileExt;
     }
 
     /**
-     * Get Support `unix` or `utc0`, default unix. 
-     * @return TimeFormat Support `unix` or `utc0`, default unix.
+     * Get Support [unix|utc0]. Default is unix. 
+     * @return TimeFormat Support [unix|utc0]. Default is unix.
      */
     public String getTimeFormat() {
         return this.TimeFormat;
     }
 
     /**
-     * Set Support `unix` or `utc0`, default unix.
-     * @param TimeFormat Support `unix` or `utc0`, default unix.
+     * Set Support [unix|utc0]. Default is unix.
+     * @param TimeFormat Support [unix|utc0]. Default is unix.
      */
     public void setTimeFormat(String TimeFormat) {
         this.TimeFormat = TimeFormat;

@@ -24,338 +24,336 @@ import java.util.HashMap;
 public class CynosdbInstance extends AbstractModel {
 
     /**
-    * User `Uin`
+    * <p>User Uin</p>
     */
     @SerializedName("Uin")
     @Expose
     private String Uin;
 
     /**
-    * User `AppId`
+    * <p>User AppId</p>
     */
     @SerializedName("AppId")
     @Expose
     private Long AppId;
 
     /**
-    * Cluster ID
+    * <p>Cluster ID.</p>
     */
     @SerializedName("ClusterId")
     @Expose
     private String ClusterId;
 
     /**
-    * Cluster name
+    * <p>Cluster name.</p>
     */
     @SerializedName("ClusterName")
     @Expose
     private String ClusterName;
 
     /**
-    * Instance ID
+    * <p>Instance ID.</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * <p>Instance name</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Project ID
+    * <p>Project ID</p>
     */
     @SerializedName("ProjectId")
     @Expose
     private Long ProjectId;
 
     /**
-    * Region
+    * <p>Region</p>
     */
     @SerializedName("Region")
     @Expose
     private String Region;
 
     /**
-    * AZ
+    * <p>AZ.</p>
     */
     @SerializedName("Zone")
     @Expose
     private String Zone;
 
     /**
-    * Instance status
+    * <p>Instance status</p>
     */
     @SerializedName("Status")
     @Expose
     private String Status;
 
     /**
-    * Instance status description
+    * <p>Instance status description in Chinese</p>
     */
     @SerializedName("StatusDesc")
     @Expose
     private String StatusDesc;
 
     /**
-    * Instance type, which is used to indicate whether it is a serverless instance.
+    * <p>Instance form, whether it is a serverless instance</p>
     */
     @SerializedName("DbMode")
     @Expose
     private String DbMode;
 
     /**
-    * Database type
+    * <p>Database type</p>
     */
     @SerializedName("DbType")
     @Expose
     private String DbType;
 
     /**
-    * Database version
+    * <p>Database version.</p>
     */
     @SerializedName("DbVersion")
     @Expose
     private String DbVersion;
 
     /**
-    * Number of CPU cores
+    * <p>Cpu, unit: core</p>
     */
     @SerializedName("Cpu")
     @Expose
     private Long Cpu;
 
     /**
-    * Memory in GB
+    * <p>Memory, unit: GB</p>
     */
     @SerializedName("Memory")
     @Expose
     private Long Memory;
 
     /**
-    * Storage capacity in GB
+    * <p>Stored amount, unit: GB</p>
     */
     @SerializedName("Storage")
     @Expose
     private Long Storage;
 
     /**
-    * Instance type
+    * <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
     */
     @SerializedName("InstanceType")
     @Expose
     private String InstanceType;
 
     /**
-    * Current instance role
+    * <p>Current instance role</p>
     */
     @SerializedName("InstanceRole")
     @Expose
     private String InstanceRole;
 
     /**
-    * Update time
+    * <p>Update time.</p>
     */
     @SerializedName("UpdateTime")
     @Expose
     private String UpdateTime;
 
     /**
-    * Creation time
+    * <p>Creation time.</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private String CreateTime;
 
     /**
-    * VPC ID
+    * <p>VPC network ID</p>
     */
     @SerializedName("VpcId")
     @Expose
     private String VpcId;
 
     /**
-    * Subnet ID
+    * <p>Subnet ID.</p>
     */
     @SerializedName("SubnetId")
     @Expose
     private String SubnetId;
 
     /**
-    * Private IP of instance
+    * <p>Instance private IP address</p>
     */
     @SerializedName("Vip")
     @Expose
     private String Vip;
 
     /**
-    * Private port of instance
+    * <p>Instance Intranet Port</p>
     */
     @SerializedName("Vport")
     @Expose
     private Long Vport;
 
     /**
-    * Billing mode
+    * <p>Payment mode</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Instance expiration time
+    * <p>Instance expiration time</p>
     */
     @SerializedName("PeriodEndTime")
     @Expose
     private String PeriodEndTime;
 
     /**
-    * Termination deadline
+    * <p>Termination phase</p>
     */
     @SerializedName("DestroyDeadlineText")
     @Expose
     private String DestroyDeadlineText;
 
     /**
-    * Isolation time
+    * <p>Isolation time</p>
     */
     @SerializedName("IsolateTime")
     @Expose
     private String IsolateTime;
 
     /**
-    * Network type
+    * <p>Network type</p>
     */
     @SerializedName("NetType")
     @Expose
     private Long NetType;
 
     /**
-    * Public domain name
+    * <p>Public network domain name</p>
     */
     @SerializedName("WanDomain")
     @Expose
     private String WanDomain;
 
     /**
-    * Public IP
+    * <p>Public network IP</p>
     */
     @SerializedName("WanIP")
     @Expose
     private String WanIP;
 
     /**
-    * Public port
+    * <p>Public network port</p>
     */
     @SerializedName("WanPort")
     @Expose
     private Long WanPort;
 
     /**
-    * Public network status
+    * <p>Public network status</p>
     */
     @SerializedName("WanStatus")
     @Expose
     private String WanStatus;
 
     /**
-    * Instance termination time
+    * <p>Instance destruction time</p>
     */
     @SerializedName("DestroyTime")
     @Expose
     private String DestroyTime;
 
     /**
-    * TDSQL-C kernel version
+    * <p>Cynos kernel version</p>
     */
     @SerializedName("CynosVersion")
     @Expose
     private String CynosVersion;
 
     /**
-    * Task in progress
+    * <p>Currently processing task</p>
     */
     @SerializedName("ProcessingTask")
     @Expose
     private String ProcessingTask;
 
     /**
-    * Renewal flag
+    * <p>Renewal flag</p>
     */
     @SerializedName("RenewFlag")
     @Expose
     private Long RenewFlag;
 
     /**
-    * Minimum number of CPU cores for serverless instance
+    * <p>serverless instance cpu minimum</p>
     */
     @SerializedName("MinCpu")
     @Expose
     private Float MinCpu;
 
     /**
-    * Maximum number of CPU cores for serverless instance
+    * <p>cpu cap of the serverless instance</p>
     */
     @SerializedName("MaxCpu")
     @Expose
     private Float MaxCpu;
 
     /**
-    * Serverless instance status. Valid values:
-resume
-pause
+    * <p>serverless instance status, available values:<br>resume<br>pause</p>
     */
     @SerializedName("ServerlessStatus")
     @Expose
     private String ServerlessStatus;
 
     /**
-    * Prepayment storage Id.
+    * <p>Prepayment storage Id</p>
     */
     @SerializedName("StorageId")
     @Expose
     private String StorageId;
 
     /**
-    * Storage billing mode
+    * <p>Storage billing type</p>
     */
     @SerializedName("StoragePayMode")
     @Expose
     private Long StoragePayMode;
 
     /**
-    * Physical zone
+    * <p>Physical zone</p>
     */
     @SerializedName("PhysicalZone")
     @Expose
     private String PhysicalZone;
 
     /**
-    * Business type.
+    * <p>Business type</p>
     */
     @SerializedName("BusinessType")
     @Expose
     private String BusinessType;
 
     /**
-    * Task
+    * <p>Task</p>
     */
     @SerializedName("Tasks")
     @Expose
     private ObjectTask [] Tasks;
 
     /**
-    * Whether to freeze.
+    * <p>Whether to freeze</p>
     */
     @SerializedName("IsFreeze")
     @Expose
     private String IsFreeze;
 
     /**
-    * The resource tag
+    * <p>Resource tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourceTags")
@@ -363,840 +361,840 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private Tag [] ResourceTags;
 
     /**
-    * Primary AZ.
+    * <p>Primary AZ</p>
     */
     @SerializedName("MasterZone")
     @Expose
     private String MasterZone;
 
     /**
-    * Replica AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+    * <p>Standby availability zone</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("SlaveZones")
     @Expose
     private String [] SlaveZones;
 
     /**
-    * Network information of the instance.
+    * <p>Instance network info</p>
     */
     @SerializedName("InstanceNetInfo")
     @Expose
     private InstanceNetInfo [] InstanceNetInfo;
 
     /**
-    * Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+    * <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ResourcePackages")
     @Expose
     private ResourcePackage [] ResourcePackages;
 
     /**
-    * Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+    * <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
     */
     @SerializedName("InstanceIndexMode")
     @Expose
     private String InstanceIndexMode;
 
     /**
-    * Supported capabilities of the existing instance.
+    * <p>Supported capabilities of the current instance</p>
     */
     @SerializedName("InstanceAbility")
     @Expose
     private InstanceAbility InstanceAbility;
 
     /**
-    * Instance machine type.
+    * <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
     */
     @SerializedName("DeviceType")
     @Expose
     private String DeviceType;
 
     /**
-    * Specifies the instance storage type.
+    * <p>Instance storage type</p>
     */
     @SerializedName("InstanceStorageType")
     @Expose
     private String InstanceStorageType;
 
     /**
-    * Unknown field.
+    * <p>Unknown field</p>
     */
     @SerializedName("CynosVersionTag")
     @Expose
     private String CynosVersionTag;
 
     /**
-    * Specifies the node information of libradb.
+    * <p>libradb node information</p>
     */
     @SerializedName("NodeList")
     @Expose
     private String [] NodeList;
 
     /**
-     * Get User `Uin` 
-     * @return Uin User `Uin`
+    * <p>Unique ID of the global database</p>
+    */
+    @SerializedName("GdnId")
+    @Expose
+    private String GdnId;
+
+    /**
+     * Get <p>User Uin</p> 
+     * @return Uin <p>User Uin</p>
      */
     public String getUin() {
         return this.Uin;
     }
 
     /**
-     * Set User `Uin`
-     * @param Uin User `Uin`
+     * Set <p>User Uin</p>
+     * @param Uin <p>User Uin</p>
      */
     public void setUin(String Uin) {
         this.Uin = Uin;
     }
 
     /**
-     * Get User `AppId` 
-     * @return AppId User `AppId`
+     * Get <p>User AppId</p> 
+     * @return AppId <p>User AppId</p>
      */
     public Long getAppId() {
         return this.AppId;
     }
 
     /**
-     * Set User `AppId`
-     * @param AppId User `AppId`
+     * Set <p>User AppId</p>
+     * @param AppId <p>User AppId</p>
      */
     public void setAppId(Long AppId) {
         this.AppId = AppId;
     }
 
     /**
-     * Get Cluster ID 
-     * @return ClusterId Cluster ID
+     * Get <p>Cluster ID.</p> 
+     * @return ClusterId <p>Cluster ID.</p>
      */
     public String getClusterId() {
         return this.ClusterId;
     }
 
     /**
-     * Set Cluster ID
-     * @param ClusterId Cluster ID
+     * Set <p>Cluster ID.</p>
+     * @param ClusterId <p>Cluster ID.</p>
      */
     public void setClusterId(String ClusterId) {
         this.ClusterId = ClusterId;
     }
 
     /**
-     * Get Cluster name 
-     * @return ClusterName Cluster name
+     * Get <p>Cluster name.</p> 
+     * @return ClusterName <p>Cluster name.</p>
      */
     public String getClusterName() {
         return this.ClusterName;
     }
 
     /**
-     * Set Cluster name
-     * @param ClusterName Cluster name
+     * Set <p>Cluster name.</p>
+     * @param ClusterName <p>Cluster name.</p>
      */
     public void setClusterName(String ClusterName) {
         this.ClusterName = ClusterName;
     }
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+     * Get <p>Instance ID.</p> 
+     * @return InstanceId <p>Instance ID.</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID.</p>
+     * @param InstanceId <p>Instance ID.</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get <p>Instance name</p> 
+     * @return InstanceName <p>Instance name</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set <p>Instance name</p>
+     * @param InstanceName <p>Instance name</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Project ID 
-     * @return ProjectId Project ID
+     * Get <p>Project ID</p> 
+     * @return ProjectId <p>Project ID</p>
      */
     public Long getProjectId() {
         return this.ProjectId;
     }
 
     /**
-     * Set Project ID
-     * @param ProjectId Project ID
+     * Set <p>Project ID</p>
+     * @param ProjectId <p>Project ID</p>
      */
     public void setProjectId(Long ProjectId) {
         this.ProjectId = ProjectId;
     }
 
     /**
-     * Get Region 
-     * @return Region Region
+     * Get <p>Region</p> 
+     * @return Region <p>Region</p>
      */
     public String getRegion() {
         return this.Region;
     }
 
     /**
-     * Set Region
-     * @param Region Region
+     * Set <p>Region</p>
+     * @param Region <p>Region</p>
      */
     public void setRegion(String Region) {
         this.Region = Region;
     }
 
     /**
-     * Get AZ 
-     * @return Zone AZ
+     * Get <p>AZ.</p> 
+     * @return Zone <p>AZ.</p>
      */
     public String getZone() {
         return this.Zone;
     }
 
     /**
-     * Set AZ
-     * @param Zone AZ
+     * Set <p>AZ.</p>
+     * @param Zone <p>AZ.</p>
      */
     public void setZone(String Zone) {
         this.Zone = Zone;
     }
 
     /**
-     * Get Instance status 
-     * @return Status Instance status
+     * Get <p>Instance status</p> 
+     * @return Status <p>Instance status</p>
      */
     public String getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status
-     * @param Status Instance status
+     * Set <p>Instance status</p>
+     * @param Status <p>Instance status</p>
      */
     public void setStatus(String Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Instance status description 
-     * @return StatusDesc Instance status description
+     * Get <p>Instance status description in Chinese</p> 
+     * @return StatusDesc <p>Instance status description in Chinese</p>
      */
     public String getStatusDesc() {
         return this.StatusDesc;
     }
 
     /**
-     * Set Instance status description
-     * @param StatusDesc Instance status description
+     * Set <p>Instance status description in Chinese</p>
+     * @param StatusDesc <p>Instance status description in Chinese</p>
      */
     public void setStatusDesc(String StatusDesc) {
         this.StatusDesc = StatusDesc;
     }
 
     /**
-     * Get Instance type, which is used to indicate whether it is a serverless instance. 
-     * @return DbMode Instance type, which is used to indicate whether it is a serverless instance.
+     * Get <p>Instance form, whether it is a serverless instance</p> 
+     * @return DbMode <p>Instance form, whether it is a serverless instance</p>
      */
     public String getDbMode() {
         return this.DbMode;
     }
 
     /**
-     * Set Instance type, which is used to indicate whether it is a serverless instance.
-     * @param DbMode Instance type, which is used to indicate whether it is a serverless instance.
+     * Set <p>Instance form, whether it is a serverless instance</p>
+     * @param DbMode <p>Instance form, whether it is a serverless instance</p>
      */
     public void setDbMode(String DbMode) {
         this.DbMode = DbMode;
     }
 
     /**
-     * Get Database type 
-     * @return DbType Database type
+     * Get <p>Database type</p> 
+     * @return DbType <p>Database type</p>
      */
     public String getDbType() {
         return this.DbType;
     }
 
     /**
-     * Set Database type
-     * @param DbType Database type
+     * Set <p>Database type</p>
+     * @param DbType <p>Database type</p>
      */
     public void setDbType(String DbType) {
         this.DbType = DbType;
     }
 
     /**
-     * Get Database version 
-     * @return DbVersion Database version
+     * Get <p>Database version.</p> 
+     * @return DbVersion <p>Database version.</p>
      */
     public String getDbVersion() {
         return this.DbVersion;
     }
 
     /**
-     * Set Database version
-     * @param DbVersion Database version
+     * Set <p>Database version.</p>
+     * @param DbVersion <p>Database version.</p>
      */
     public void setDbVersion(String DbVersion) {
         this.DbVersion = DbVersion;
     }
 
     /**
-     * Get Number of CPU cores 
-     * @return Cpu Number of CPU cores
+     * Get <p>Cpu, unit: core</p> 
+     * @return Cpu <p>Cpu, unit: core</p>
      */
     public Long getCpu() {
         return this.Cpu;
     }
 
     /**
-     * Set Number of CPU cores
-     * @param Cpu Number of CPU cores
+     * Set <p>Cpu, unit: core</p>
+     * @param Cpu <p>Cpu, unit: core</p>
      */
     public void setCpu(Long Cpu) {
         this.Cpu = Cpu;
     }
 
     /**
-     * Get Memory in GB 
-     * @return Memory Memory in GB
+     * Get <p>Memory, unit: GB</p> 
+     * @return Memory <p>Memory, unit: GB</p>
      */
     public Long getMemory() {
         return this.Memory;
     }
 
     /**
-     * Set Memory in GB
-     * @param Memory Memory in GB
+     * Set <p>Memory, unit: GB</p>
+     * @param Memory <p>Memory, unit: GB</p>
      */
     public void setMemory(Long Memory) {
         this.Memory = Memory;
     }
 
     /**
-     * Get Storage capacity in GB 
-     * @return Storage Storage capacity in GB
+     * Get <p>Stored amount, unit: GB</p> 
+     * @return Storage <p>Stored amount, unit: GB</p>
      */
     public Long getStorage() {
         return this.Storage;
     }
 
     /**
-     * Set Storage capacity in GB
-     * @param Storage Storage capacity in GB
+     * Set <p>Stored amount, unit: GB</p>
+     * @param Storage <p>Stored amount, unit: GB</p>
      */
     public void setStorage(Long Storage) {
         this.Storage = Storage;
     }
 
     /**
-     * Get Instance type 
-     * @return InstanceType Instance type
+     * Get <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul> 
+     * @return InstanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
      */
     public String getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type
-     * @param InstanceType Instance type
+     * Set <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
+     * @param InstanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>rw: Read-write instance</li><li>ro: Read-only instance</li></ul>
      */
     public void setInstanceType(String InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Current instance role 
-     * @return InstanceRole Current instance role
+     * Get <p>Current instance role</p> 
+     * @return InstanceRole <p>Current instance role</p>
      */
     public String getInstanceRole() {
         return this.InstanceRole;
     }
 
     /**
-     * Set Current instance role
-     * @param InstanceRole Current instance role
+     * Set <p>Current instance role</p>
+     * @param InstanceRole <p>Current instance role</p>
      */
     public void setInstanceRole(String InstanceRole) {
         this.InstanceRole = InstanceRole;
     }
 
     /**
-     * Get Update time 
-     * @return UpdateTime Update time
+     * Get <p>Update time.</p> 
+     * @return UpdateTime <p>Update time.</p>
      */
     public String getUpdateTime() {
         return this.UpdateTime;
     }
 
     /**
-     * Set Update time
-     * @param UpdateTime Update time
+     * Set <p>Update time.</p>
+     * @param UpdateTime <p>Update time.</p>
      */
     public void setUpdateTime(String UpdateTime) {
         this.UpdateTime = UpdateTime;
     }
 
     /**
-     * Get Creation time 
-     * @return CreateTime Creation time
+     * Get <p>Creation time.</p> 
+     * @return CreateTime <p>Creation time.</p>
      */
     public String getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time
-     * @param CreateTime Creation time
+     * Set <p>Creation time.</p>
+     * @param CreateTime <p>Creation time.</p>
      */
     public void setCreateTime(String CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get VPC ID 
-     * @return VpcId VPC ID
+     * Get <p>VPC network ID</p> 
+     * @return VpcId <p>VPC network ID</p>
      */
     public String getVpcId() {
         return this.VpcId;
     }
 
     /**
-     * Set VPC ID
-     * @param VpcId VPC ID
+     * Set <p>VPC network ID</p>
+     * @param VpcId <p>VPC network ID</p>
      */
     public void setVpcId(String VpcId) {
         this.VpcId = VpcId;
     }
 
     /**
-     * Get Subnet ID 
-     * @return SubnetId Subnet ID
+     * Get <p>Subnet ID.</p> 
+     * @return SubnetId <p>Subnet ID.</p>
      */
     public String getSubnetId() {
         return this.SubnetId;
     }
 
     /**
-     * Set Subnet ID
-     * @param SubnetId Subnet ID
+     * Set <p>Subnet ID.</p>
+     * @param SubnetId <p>Subnet ID.</p>
      */
     public void setSubnetId(String SubnetId) {
         this.SubnetId = SubnetId;
     }
 
     /**
-     * Get Private IP of instance 
-     * @return Vip Private IP of instance
+     * Get <p>Instance private IP address</p> 
+     * @return Vip <p>Instance private IP address</p>
      */
     public String getVip() {
         return this.Vip;
     }
 
     /**
-     * Set Private IP of instance
-     * @param Vip Private IP of instance
+     * Set <p>Instance private IP address</p>
+     * @param Vip <p>Instance private IP address</p>
      */
     public void setVip(String Vip) {
         this.Vip = Vip;
     }
 
     /**
-     * Get Private port of instance 
-     * @return Vport Private port of instance
+     * Get <p>Instance Intranet Port</p> 
+     * @return Vport <p>Instance Intranet Port</p>
      */
     public Long getVport() {
         return this.Vport;
     }
 
     /**
-     * Set Private port of instance
-     * @param Vport Private port of instance
+     * Set <p>Instance Intranet Port</p>
+     * @param Vport <p>Instance Intranet Port</p>
      */
     public void setVport(Long Vport) {
         this.Vport = Vport;
     }
 
     /**
-     * Get Billing mode 
-     * @return PayMode Billing mode
+     * Get <p>Payment mode</p> 
+     * @return PayMode <p>Payment mode</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set Billing mode
-     * @param PayMode Billing mode
+     * Set <p>Payment mode</p>
+     * @param PayMode <p>Payment mode</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Instance expiration time 
-     * @return PeriodEndTime Instance expiration time
+     * Get <p>Instance expiration time</p> 
+     * @return PeriodEndTime <p>Instance expiration time</p>
      */
     public String getPeriodEndTime() {
         return this.PeriodEndTime;
     }
 
     /**
-     * Set Instance expiration time
-     * @param PeriodEndTime Instance expiration time
+     * Set <p>Instance expiration time</p>
+     * @param PeriodEndTime <p>Instance expiration time</p>
      */
     public void setPeriodEndTime(String PeriodEndTime) {
         this.PeriodEndTime = PeriodEndTime;
     }
 
     /**
-     * Get Termination deadline 
-     * @return DestroyDeadlineText Termination deadline
+     * Get <p>Termination phase</p> 
+     * @return DestroyDeadlineText <p>Termination phase</p>
      */
     public String getDestroyDeadlineText() {
         return this.DestroyDeadlineText;
     }
 
     /**
-     * Set Termination deadline
-     * @param DestroyDeadlineText Termination deadline
+     * Set <p>Termination phase</p>
+     * @param DestroyDeadlineText <p>Termination phase</p>
      */
     public void setDestroyDeadlineText(String DestroyDeadlineText) {
         this.DestroyDeadlineText = DestroyDeadlineText;
     }
 
     /**
-     * Get Isolation time 
-     * @return IsolateTime Isolation time
+     * Get <p>Isolation time</p> 
+     * @return IsolateTime <p>Isolation time</p>
      */
     public String getIsolateTime() {
         return this.IsolateTime;
     }
 
     /**
-     * Set Isolation time
-     * @param IsolateTime Isolation time
+     * Set <p>Isolation time</p>
+     * @param IsolateTime <p>Isolation time</p>
      */
     public void setIsolateTime(String IsolateTime) {
         this.IsolateTime = IsolateTime;
     }
 
     /**
-     * Get Network type 
-     * @return NetType Network type
+     * Get <p>Network type</p> 
+     * @return NetType <p>Network type</p>
      */
     public Long getNetType() {
         return this.NetType;
     }
 
     /**
-     * Set Network type
-     * @param NetType Network type
+     * Set <p>Network type</p>
+     * @param NetType <p>Network type</p>
      */
     public void setNetType(Long NetType) {
         this.NetType = NetType;
     }
 
     /**
-     * Get Public domain name 
-     * @return WanDomain Public domain name
+     * Get <p>Public network domain name</p> 
+     * @return WanDomain <p>Public network domain name</p>
      */
     public String getWanDomain() {
         return this.WanDomain;
     }
 
     /**
-     * Set Public domain name
-     * @param WanDomain Public domain name
+     * Set <p>Public network domain name</p>
+     * @param WanDomain <p>Public network domain name</p>
      */
     public void setWanDomain(String WanDomain) {
         this.WanDomain = WanDomain;
     }
 
     /**
-     * Get Public IP 
-     * @return WanIP Public IP
+     * Get <p>Public network IP</p> 
+     * @return WanIP <p>Public network IP</p>
      */
     public String getWanIP() {
         return this.WanIP;
     }
 
     /**
-     * Set Public IP
-     * @param WanIP Public IP
+     * Set <p>Public network IP</p>
+     * @param WanIP <p>Public network IP</p>
      */
     public void setWanIP(String WanIP) {
         this.WanIP = WanIP;
     }
 
     /**
-     * Get Public port 
-     * @return WanPort Public port
+     * Get <p>Public network port</p> 
+     * @return WanPort <p>Public network port</p>
      */
     public Long getWanPort() {
         return this.WanPort;
     }
 
     /**
-     * Set Public port
-     * @param WanPort Public port
+     * Set <p>Public network port</p>
+     * @param WanPort <p>Public network port</p>
      */
     public void setWanPort(Long WanPort) {
         this.WanPort = WanPort;
     }
 
     /**
-     * Get Public network status 
-     * @return WanStatus Public network status
+     * Get <p>Public network status</p> 
+     * @return WanStatus <p>Public network status</p>
      */
     public String getWanStatus() {
         return this.WanStatus;
     }
 
     /**
-     * Set Public network status
-     * @param WanStatus Public network status
+     * Set <p>Public network status</p>
+     * @param WanStatus <p>Public network status</p>
      */
     public void setWanStatus(String WanStatus) {
         this.WanStatus = WanStatus;
     }
 
     /**
-     * Get Instance termination time 
-     * @return DestroyTime Instance termination time
+     * Get <p>Instance destruction time</p> 
+     * @return DestroyTime <p>Instance destruction time</p>
      */
     public String getDestroyTime() {
         return this.DestroyTime;
     }
 
     /**
-     * Set Instance termination time
-     * @param DestroyTime Instance termination time
+     * Set <p>Instance destruction time</p>
+     * @param DestroyTime <p>Instance destruction time</p>
      */
     public void setDestroyTime(String DestroyTime) {
         this.DestroyTime = DestroyTime;
     }
 
     /**
-     * Get TDSQL-C kernel version 
-     * @return CynosVersion TDSQL-C kernel version
+     * Get <p>Cynos kernel version</p> 
+     * @return CynosVersion <p>Cynos kernel version</p>
      */
     public String getCynosVersion() {
         return this.CynosVersion;
     }
 
     /**
-     * Set TDSQL-C kernel version
-     * @param CynosVersion TDSQL-C kernel version
+     * Set <p>Cynos kernel version</p>
+     * @param CynosVersion <p>Cynos kernel version</p>
      */
     public void setCynosVersion(String CynosVersion) {
         this.CynosVersion = CynosVersion;
     }
 
     /**
-     * Get Task in progress 
-     * @return ProcessingTask Task in progress
+     * Get <p>Currently processing task</p> 
+     * @return ProcessingTask <p>Currently processing task</p>
      */
     public String getProcessingTask() {
         return this.ProcessingTask;
     }
 
     /**
-     * Set Task in progress
-     * @param ProcessingTask Task in progress
+     * Set <p>Currently processing task</p>
+     * @param ProcessingTask <p>Currently processing task</p>
      */
     public void setProcessingTask(String ProcessingTask) {
         this.ProcessingTask = ProcessingTask;
     }
 
     /**
-     * Get Renewal flag 
-     * @return RenewFlag Renewal flag
+     * Get <p>Renewal flag</p> 
+     * @return RenewFlag <p>Renewal flag</p>
      */
     public Long getRenewFlag() {
         return this.RenewFlag;
     }
 
     /**
-     * Set Renewal flag
-     * @param RenewFlag Renewal flag
+     * Set <p>Renewal flag</p>
+     * @param RenewFlag <p>Renewal flag</p>
      */
     public void setRenewFlag(Long RenewFlag) {
         this.RenewFlag = RenewFlag;
     }
 
     /**
-     * Get Minimum number of CPU cores for serverless instance 
-     * @return MinCpu Minimum number of CPU cores for serverless instance
+     * Get <p>serverless instance cpu minimum</p> 
+     * @return MinCpu <p>serverless instance cpu minimum</p>
      */
     public Float getMinCpu() {
         return this.MinCpu;
     }
 
     /**
-     * Set Minimum number of CPU cores for serverless instance
-     * @param MinCpu Minimum number of CPU cores for serverless instance
+     * Set <p>serverless instance cpu minimum</p>
+     * @param MinCpu <p>serverless instance cpu minimum</p>
      */
     public void setMinCpu(Float MinCpu) {
         this.MinCpu = MinCpu;
     }
 
     /**
-     * Get Maximum number of CPU cores for serverless instance 
-     * @return MaxCpu Maximum number of CPU cores for serverless instance
+     * Get <p>cpu cap of the serverless instance</p> 
+     * @return MaxCpu <p>cpu cap of the serverless instance</p>
      */
     public Float getMaxCpu() {
         return this.MaxCpu;
     }
 
     /**
-     * Set Maximum number of CPU cores for serverless instance
-     * @param MaxCpu Maximum number of CPU cores for serverless instance
+     * Set <p>cpu cap of the serverless instance</p>
+     * @param MaxCpu <p>cpu cap of the serverless instance</p>
      */
     public void setMaxCpu(Float MaxCpu) {
         this.MaxCpu = MaxCpu;
     }
 
     /**
-     * Get Serverless instance status. Valid values:
-resume
-pause 
-     * @return ServerlessStatus Serverless instance status. Valid values:
-resume
-pause
+     * Get <p>serverless instance status, available values:<br>resume<br>pause</p> 
+     * @return ServerlessStatus <p>serverless instance status, available values:<br>resume<br>pause</p>
      */
     public String getServerlessStatus() {
         return this.ServerlessStatus;
     }
 
     /**
-     * Set Serverless instance status. Valid values:
-resume
-pause
-     * @param ServerlessStatus Serverless instance status. Valid values:
-resume
-pause
+     * Set <p>serverless instance status, available values:<br>resume<br>pause</p>
+     * @param ServerlessStatus <p>serverless instance status, available values:<br>resume<br>pause</p>
      */
     public void setServerlessStatus(String ServerlessStatus) {
         this.ServerlessStatus = ServerlessStatus;
     }
 
     /**
-     * Get Prepayment storage Id. 
-     * @return StorageId Prepayment storage Id.
+     * Get <p>Prepayment storage Id</p> 
+     * @return StorageId <p>Prepayment storage Id</p>
      */
     public String getStorageId() {
         return this.StorageId;
     }
 
     /**
-     * Set Prepayment storage Id.
-     * @param StorageId Prepayment storage Id.
+     * Set <p>Prepayment storage Id</p>
+     * @param StorageId <p>Prepayment storage Id</p>
      */
     public void setStorageId(String StorageId) {
         this.StorageId = StorageId;
     }
 
     /**
-     * Get Storage billing mode 
-     * @return StoragePayMode Storage billing mode
+     * Get <p>Storage billing type</p> 
+     * @return StoragePayMode <p>Storage billing type</p>
      */
     public Long getStoragePayMode() {
         return this.StoragePayMode;
     }
 
     /**
-     * Set Storage billing mode
-     * @param StoragePayMode Storage billing mode
+     * Set <p>Storage billing type</p>
+     * @param StoragePayMode <p>Storage billing type</p>
      */
     public void setStoragePayMode(Long StoragePayMode) {
         this.StoragePayMode = StoragePayMode;
     }
 
     /**
-     * Get Physical zone 
-     * @return PhysicalZone Physical zone
+     * Get <p>Physical zone</p> 
+     * @return PhysicalZone <p>Physical zone</p>
      */
     public String getPhysicalZone() {
         return this.PhysicalZone;
     }
 
     /**
-     * Set Physical zone
-     * @param PhysicalZone Physical zone
+     * Set <p>Physical zone</p>
+     * @param PhysicalZone <p>Physical zone</p>
      */
     public void setPhysicalZone(String PhysicalZone) {
         this.PhysicalZone = PhysicalZone;
     }
 
     /**
-     * Get Business type. 
-     * @return BusinessType Business type.
+     * Get <p>Business type</p> 
+     * @return BusinessType <p>Business type</p>
      */
     public String getBusinessType() {
         return this.BusinessType;
     }
 
     /**
-     * Set Business type.
-     * @param BusinessType Business type.
+     * Set <p>Business type</p>
+     * @param BusinessType <p>Business type</p>
      */
     public void setBusinessType(String BusinessType) {
         this.BusinessType = BusinessType;
     }
 
     /**
-     * Get Task 
-     * @return Tasks Task
+     * Get <p>Task</p> 
+     * @return Tasks <p>Task</p>
      */
     public ObjectTask [] getTasks() {
         return this.Tasks;
     }
 
     /**
-     * Set Task
-     * @param Tasks Task
+     * Set <p>Task</p>
+     * @param Tasks <p>Task</p>
      */
     public void setTasks(ObjectTask [] Tasks) {
         this.Tasks = Tasks;
     }
 
     /**
-     * Get Whether to freeze. 
-     * @return IsFreeze Whether to freeze.
+     * Get <p>Whether to freeze</p> 
+     * @return IsFreeze <p>Whether to freeze</p>
      */
     public String getIsFreeze() {
         return this.IsFreeze;
     }
 
     /**
-     * Set Whether to freeze.
-     * @param IsFreeze Whether to freeze.
+     * Set <p>Whether to freeze</p>
+     * @param IsFreeze <p>Whether to freeze</p>
      */
     public void setIsFreeze(String IsFreeze) {
         this.IsFreeze = IsFreeze;
     }
 
     /**
-     * Get The resource tag
+     * Get <p>Resource tag</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResourceTags The resource tag
+     * @return ResourceTags <p>Resource tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public Tag [] getResourceTags() {
@@ -1204,9 +1202,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set The resource tag
+     * Set <p>Resource tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourceTags The resource tag
+     * @param ResourceTags <p>Resource tag</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourceTags(Tag [] ResourceTags) {
@@ -1214,167 +1212,187 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Primary AZ. 
-     * @return MasterZone Primary AZ.
+     * Get <p>Primary AZ</p> 
+     * @return MasterZone <p>Primary AZ</p>
      */
     public String getMasterZone() {
         return this.MasterZone;
     }
 
     /**
-     * Set Primary AZ.
-     * @param MasterZone Primary AZ.
+     * Set <p>Primary AZ</p>
+     * @param MasterZone <p>Primary AZ</p>
      */
     public void setMasterZone(String MasterZone) {
         this.MasterZone = MasterZone;
     }
 
     /**
-     * Get Replica AZ
-Note: This field may return null, indicating that no valid value can be obtained. 
-     * @return SlaveZones Replica AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Get <p>Standby availability zone</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return SlaveZones <p>Standby availability zone</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String [] getSlaveZones() {
         return this.SlaveZones;
     }
 
     /**
-     * Set Replica AZ
-Note: This field may return null, indicating that no valid value can be obtained.
-     * @param SlaveZones Replica AZ
-Note: This field may return null, indicating that no valid value can be obtained.
+     * Set <p>Standby availability zone</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SlaveZones <p>Standby availability zone</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setSlaveZones(String [] SlaveZones) {
         this.SlaveZones = SlaveZones;
     }
 
     /**
-     * Get Network information of the instance. 
-     * @return InstanceNetInfo Network information of the instance.
+     * Get <p>Instance network info</p> 
+     * @return InstanceNetInfo <p>Instance network info</p>
      */
     public InstanceNetInfo [] getInstanceNetInfo() {
         return this.InstanceNetInfo;
     }
 
     /**
-     * Set Network information of the instance.
-     * @param InstanceNetInfo Network information of the instance.
+     * Set <p>Instance network info</p>
+     * @param InstanceNetInfo <p>Instance network info</p>
      */
     public void setInstanceNetInfo(InstanceNetInfo [] InstanceNetInfo) {
         this.InstanceNetInfo = InstanceNetInfo;
     }
 
     /**
-     * Get Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ResourcePackages Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Get <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
+Note: This field may return null, indicating that no valid values can be obtained. 
+     * @return ResourcePackages <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public ResourcePackage [] getResourcePackages() {
         return this.ResourcePackages;
     }
 
     /**
-     * Set Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ResourcePackages Information of the resource pack bound to an instance when `packageType` is `CCU`. Note: This field may return null, indicating that no valid values can be obtained.
+     * Set <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ResourcePackages <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setResourcePackages(ResourcePackage [] ResourcePackages) {
         this.ResourcePackages = ResourcePackages;
     }
 
     /**
-     * Get Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage). 
-     * @return InstanceIndexMode Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+     * Get <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p> 
+     * @return InstanceIndexMode <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
      */
     public String getInstanceIndexMode() {
         return this.InstanceIndexMode;
     }
 
     /**
-     * Set Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
-     * @param InstanceIndexMode Specifies the instance index form. valid values include mixedRowColumn (row and column hybrid storage) and onlyRowIndex (row-only storage).
+     * Set <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
+     * @param InstanceIndexMode <p>Instance index form, available values [mixedRowColumn (hybrid row-column storage), onlyRowIndex (row storage only)]</p>
      */
     public void setInstanceIndexMode(String InstanceIndexMode) {
         this.InstanceIndexMode = InstanceIndexMode;
     }
 
     /**
-     * Get Supported capabilities of the existing instance. 
-     * @return InstanceAbility Supported capabilities of the existing instance.
+     * Get <p>Supported capabilities of the current instance</p> 
+     * @return InstanceAbility <p>Supported capabilities of the current instance</p>
      */
     public InstanceAbility getInstanceAbility() {
         return this.InstanceAbility;
     }
 
     /**
-     * Set Supported capabilities of the existing instance.
-     * @param InstanceAbility Supported capabilities of the existing instance.
+     * Set <p>Supported capabilities of the current instance</p>
+     * @param InstanceAbility <p>Supported capabilities of the current instance</p>
      */
     public void setInstanceAbility(InstanceAbility InstanceAbility) {
         this.InstanceAbility = InstanceAbility;
     }
 
     /**
-     * Get Instance machine type. 
-     * @return DeviceType Instance machine type.
+     * Get <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol> 
+     * @return DeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
      */
     public String getDeviceType() {
         return this.DeviceType;
     }
 
     /**
-     * Set Instance machine type.
-     * @param DeviceType Instance machine type.
+     * Set <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
+     * @param DeviceType <p>Instance Machine Type</p><ol><li>common, universal type.</li><li>exclusive, dedicated.</li></ol>
      */
     public void setDeviceType(String DeviceType) {
         this.DeviceType = DeviceType;
     }
 
     /**
-     * Get Specifies the instance storage type. 
-     * @return InstanceStorageType Specifies the instance storage type.
+     * Get <p>Instance storage type</p> 
+     * @return InstanceStorageType <p>Instance storage type</p>
      */
     public String getInstanceStorageType() {
         return this.InstanceStorageType;
     }
 
     /**
-     * Set Specifies the instance storage type.
-     * @param InstanceStorageType Specifies the instance storage type.
+     * Set <p>Instance storage type</p>
+     * @param InstanceStorageType <p>Instance storage type</p>
      */
     public void setInstanceStorageType(String InstanceStorageType) {
         this.InstanceStorageType = InstanceStorageType;
     }
 
     /**
-     * Get Unknown field. 
-     * @return CynosVersionTag Unknown field.
+     * Get <p>Unknown field</p> 
+     * @return CynosVersionTag <p>Unknown field</p>
      */
     public String getCynosVersionTag() {
         return this.CynosVersionTag;
     }
 
     /**
-     * Set Unknown field.
-     * @param CynosVersionTag Unknown field.
+     * Set <p>Unknown field</p>
+     * @param CynosVersionTag <p>Unknown field</p>
      */
     public void setCynosVersionTag(String CynosVersionTag) {
         this.CynosVersionTag = CynosVersionTag;
     }
 
     /**
-     * Get Specifies the node information of libradb. 
-     * @return NodeList Specifies the node information of libradb.
+     * Get <p>libradb node information</p> 
+     * @return NodeList <p>libradb node information</p>
      */
     public String [] getNodeList() {
         return this.NodeList;
     }
 
     /**
-     * Set Specifies the node information of libradb.
-     * @param NodeList Specifies the node information of libradb.
+     * Set <p>libradb node information</p>
+     * @param NodeList <p>libradb node information</p>
      */
     public void setNodeList(String [] NodeList) {
         this.NodeList = NodeList;
+    }
+
+    /**
+     * Get <p>Unique ID of the global database</p> 
+     * @return GdnId <p>Unique ID of the global database</p>
+     */
+    public String getGdnId() {
+        return this.GdnId;
+    }
+
+    /**
+     * Set <p>Unique ID of the global database</p>
+     * @param GdnId <p>Unique ID of the global database</p>
+     */
+    public void setGdnId(String GdnId) {
+        this.GdnId = GdnId;
     }
 
     public CynosdbInstance() {
@@ -1577,6 +1595,9 @@ Note: This field may return null, indicating that no valid value can be obtained
                 this.NodeList[i] = new String(source.NodeList[i]);
             }
         }
+        if (source.GdnId != null) {
+            this.GdnId = new String(source.GdnId);
+        }
     }
 
 
@@ -1642,6 +1663,7 @@ Note: This field may return null, indicating that no valid value can be obtained
         this.setParamSimple(map, prefix + "InstanceStorageType", this.InstanceStorageType);
         this.setParamSimple(map, prefix + "CynosVersionTag", this.CynosVersionTag);
         this.setParamArraySimple(map, prefix + "NodeList.", this.NodeList);
+        this.setParamSimple(map, prefix + "GdnId", this.GdnId);
 
     }
 }

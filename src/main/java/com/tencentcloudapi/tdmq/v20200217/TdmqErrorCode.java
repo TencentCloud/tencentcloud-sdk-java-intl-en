@@ -81,6 +81,9 @@ public enum TdmqErrorCode {
      /* Failed to get the environment attributes. */
      FAILEDOPERATION_GETENVIRONMENTATTRIBUTESFAILED("FailedOperation.GetEnvironmentAttributesFailed"),
      
+     /* Failed to get Tag */
+     FAILEDOPERATION_GETTAGS("FailedOperation.GetTags"),
+     
      /* Failed to get the number of topic partitions. */
      FAILEDOPERATION_GETTOPICPARTITIONSFAILED("FailedOperation.GetTopicPartitionsFailed"),
      
@@ -204,7 +207,7 @@ public enum TdmqErrorCode {
      /* Incorrect parameter. */
      INVALIDPARAMETER("InvalidParameter"),
      
-     /*  */
+     /* Cluster version information is incorrect */
      INVALIDPARAMETER_INSTANCEVERSION("InvalidParameter.InstanceVersion"),
      
      /* Invalid management API address */

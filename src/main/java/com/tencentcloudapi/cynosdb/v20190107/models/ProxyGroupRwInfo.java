@@ -94,6 +94,20 @@ public class ProxyGroupRwInfo extends AbstractModel {
     private String AccessMode;
 
     /**
+    * Whether to treat the libra node as an ordinary RO node
+    */
+    @SerializedName("ApNodeAsRoNode")
+    @Expose
+    private Boolean ApNodeAsRoNode;
+
+    /**
+    * libra node fault, whether to forward to other nodes
+    */
+    @SerializedName("ApQueryToOtherNode")
+    @Expose
+    private Boolean ApQueryToOtherNode;
+
+    /**
      * Get Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency). 
      * @return ConsistencyType Consistency type. Valid values: `eventual` (eventual consistency), `session` (session consistency), `global` (global consistency).
      */
@@ -253,6 +267,38 @@ public class ProxyGroupRwInfo extends AbstractModel {
         this.AccessMode = AccessMode;
     }
 
+    /**
+     * Get Whether to treat the libra node as an ordinary RO node 
+     * @return ApNodeAsRoNode Whether to treat the libra node as an ordinary RO node
+     */
+    public Boolean getApNodeAsRoNode() {
+        return this.ApNodeAsRoNode;
+    }
+
+    /**
+     * Set Whether to treat the libra node as an ordinary RO node
+     * @param ApNodeAsRoNode Whether to treat the libra node as an ordinary RO node
+     */
+    public void setApNodeAsRoNode(Boolean ApNodeAsRoNode) {
+        this.ApNodeAsRoNode = ApNodeAsRoNode;
+    }
+
+    /**
+     * Get libra node fault, whether to forward to other nodes 
+     * @return ApQueryToOtherNode libra node fault, whether to forward to other nodes
+     */
+    public Boolean getApQueryToOtherNode() {
+        return this.ApQueryToOtherNode;
+    }
+
+    /**
+     * Set libra node fault, whether to forward to other nodes
+     * @param ApQueryToOtherNode libra node fault, whether to forward to other nodes
+     */
+    public void setApQueryToOtherNode(Boolean ApQueryToOtherNode) {
+        this.ApQueryToOtherNode = ApQueryToOtherNode;
+    }
+
     public ProxyGroupRwInfo() {
     }
 
@@ -294,6 +340,12 @@ public class ProxyGroupRwInfo extends AbstractModel {
         if (source.AccessMode != null) {
             this.AccessMode = new String(source.AccessMode);
         }
+        if (source.ApNodeAsRoNode != null) {
+            this.ApNodeAsRoNode = new Boolean(source.ApNodeAsRoNode);
+        }
+        if (source.ApQueryToOtherNode != null) {
+            this.ApQueryToOtherNode = new Boolean(source.ApQueryToOtherNode);
+        }
     }
 
 
@@ -311,6 +363,8 @@ public class ProxyGroupRwInfo extends AbstractModel {
         this.setParamSimple(map, prefix + "RwType", this.RwType);
         this.setParamSimple(map, prefix + "TransSplit", this.TransSplit);
         this.setParamSimple(map, prefix + "AccessMode", this.AccessMode);
+        this.setParamSimple(map, prefix + "ApNodeAsRoNode", this.ApNodeAsRoNode);
+        this.setParamSimple(map, prefix + "ApQueryToOtherNode", this.ApQueryToOtherNode);
 
     }
 }

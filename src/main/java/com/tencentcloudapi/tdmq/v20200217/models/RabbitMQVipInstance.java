@@ -24,114 +24,105 @@ import java.util.HashMap;
 public class RabbitMQVipInstance extends AbstractModel {
 
     /**
-    * Instance ID
+    * <p>Instance ID</p>
     */
     @SerializedName("InstanceId")
     @Expose
     private String InstanceId;
 
     /**
-    * Instance name
+    * <p>Instance name</p>
     */
     @SerializedName("InstanceName")
     @Expose
     private String InstanceName;
 
     /**
-    * Instance version.
+    * <p>Instance version</p>
     */
     @SerializedName("InstanceVersion")
     @Expose
     private String InstanceVersion;
 
     /**
-    * Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+    * <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
     */
     @SerializedName("Status")
     @Expose
     private Long Status;
 
     /**
-    * Number of nodes
+    * <p>Node count</p>
     */
     @SerializedName("NodeCount")
     @Expose
     private Long NodeCount;
 
     /**
-    * Instance specification name
+    * <p>Instance configuration specification name</p>
     */
     @SerializedName("ConfigDisplay")
     @Expose
     private String ConfigDisplay;
 
     /**
-    * Peak TPS
+    * <p>Peak TPS</p>
     */
     @SerializedName("MaxTps")
     @Expose
     private Long MaxTps;
 
     /**
-    * Peak bandwidth in Mbps
+    * <p>Peak bandwidth in Mbps</p>
     */
     @SerializedName("MaxBandWidth")
     @Expose
     private Long MaxBandWidth;
 
     /**
-    * Storage capacity in GB
+    * <p>Storage capacity in GB</p>
     */
     @SerializedName("MaxStorage")
     @Expose
     private Long MaxStorage;
 
     /**
-    * Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
+    * <p>Instance expiration time. The value is 0 for pay-as-you-go instances, in milliseconds. unix timestamp.</p>
     */
     @SerializedName("ExpireTime")
     @Expose
     private Long ExpireTime;
 
     /**
-    * Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
+    * <p>Auto-renewal flag. 0 means default state (not set by the user, i.e., initial state is manual renewal), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user)</p>
     */
     @SerializedName("AutoRenewFlag")
     @Expose
     private Long AutoRenewFlag;
 
     /**
-    * 1 indicates prepaid mode, 0 indicates postpaid.
+    * <p>1 indicates prepaid mode, 0 indicates postpaid</p>
     */
     @SerializedName("PayMode")
     @Expose
     private Long PayMode;
 
     /**
-    * Remarks
+    * <p>Remark information</p>
     */
     @SerializedName("Remark")
     @Expose
     private String Remark;
 
     /**
-    * Node specification of the cluster. specifies the corresponding flag.
-2C8G:rabbit-vip-profession-2c8g
-4C16G:rabbit-vip-profession-4c16g
-8C32G:rabbit-vip-profession-8c32g
-16C32G:rabbit-vip-basic-4
-16C64G:rabbit-vip-profession-16c64g
-2C4G:rabbit-vip-basic-5
-4C8G:rabbit-vip-basic-1
-8C16G (sold out): rabbit-vip-basic-2.
-Specifies the default value as 4C8G: rabbit-vip-basic-1.
+    * <p>Node specification of the cluster with corresponding flag:<br>2C8G: rabbit-vip-profession-2c8g<br>4C16G: rabbit-vip-profession-4c16g<br>8C32G: rabbit-vip-profession-8c32g<br>16C32G: rabbit-vip-basic-4<br>16C64G: rabbit-vip-profession-16c64g<br>2C4G: rabbit-vip-basic-5<br>4C8G: rabbit-vip-basic-1<br>8C16G (sold out): rabbit-vip-basic-2<br>Defaults to 4C8G: rabbit-vip-basic-1 if not specified</p>
     */
     @SerializedName("SpecName")
     @Expose
     private String SpecName;
 
     /**
-    * Cluster exception information.
+    * <p>Cluster exception information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("ExceptionInformation")
@@ -139,15 +130,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String ExceptionInformation;
 
     /**
-    * Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
-This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+    * <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed<br>To separate from the billing area, enable an additional status bit for display.</p>
     */
     @SerializedName("ClusterStatus")
     @Expose
     private Long ClusterStatus;
 
     /**
-    * Public network access point.
+    * <p>public network access point</p>
 Note: This field may return null, indicating that no valid values can be obtained.
     */
     @SerializedName("PublicAccessEndpoint")
@@ -155,311 +145,282 @@ Note: This field may return null, indicating that no valid values can be obtaine
     private String PublicAccessEndpoint;
 
     /**
-    * VPC access point list.
+    * <p>VPC access point list</p>
     */
     @SerializedName("Vpcs")
     @Expose
     private VpcEndpointInfo [] Vpcs;
 
     /**
-    * Creation time in milliseconds. unix timestamp.
+    * <p>Creation time in milliseconds. unix timestamp</p>
     */
     @SerializedName("CreateTime")
     @Expose
     private Long CreateTime;
 
     /**
-    * Instance type. valid values: 0 (managed), 1 (Serverless).
+    * <p>Instance type</p><p>Enumeration value:</p><ul><li>0: Managed version instance</li></ul>
     */
     @SerializedName("InstanceType")
     @Expose
     private Long InstanceType;
 
     /**
-    * Isolation time, in milliseconds. unix timestamp.
+    * <p>Isolation time in milliseconds. unix timestamp</p>
     */
     @SerializedName("IsolatedTime")
     @Expose
     private Long IsolatedTime;
 
     /**
-    * Whether deletion protection is enabled.
+    * <p>Whether deletion protection is enabled</p>
     */
     @SerializedName("EnableDeletionProtection")
     @Expose
     private Boolean EnableDeletionProtection;
 
     /**
-    * Tag list
+    * <p>Tag list</p>
     */
     @SerializedName("Tags")
     @Expose
     private Tag [] Tags;
 
     /**
-     * Get Instance ID 
-     * @return InstanceId Instance ID
+    * <p>public data stream Stream access point</p>
+    */
+    @SerializedName("PublicStreamAccessEndpoint")
+    @Expose
+    private String PublicStreamAccessEndpoint;
+
+    /**
+     * Get <p>Instance ID</p> 
+     * @return InstanceId <p>Instance ID</p>
      */
     public String getInstanceId() {
         return this.InstanceId;
     }
 
     /**
-     * Set Instance ID
-     * @param InstanceId Instance ID
+     * Set <p>Instance ID</p>
+     * @param InstanceId <p>Instance ID</p>
      */
     public void setInstanceId(String InstanceId) {
         this.InstanceId = InstanceId;
     }
 
     /**
-     * Get Instance name 
-     * @return InstanceName Instance name
+     * Get <p>Instance name</p> 
+     * @return InstanceName <p>Instance name</p>
      */
     public String getInstanceName() {
         return this.InstanceName;
     }
 
     /**
-     * Set Instance name
-     * @param InstanceName Instance name
+     * Set <p>Instance name</p>
+     * @param InstanceName <p>Instance name</p>
      */
     public void setInstanceName(String InstanceName) {
         this.InstanceName = InstanceName;
     }
 
     /**
-     * Get Instance version. 
-     * @return InstanceVersion Instance version.
+     * Get <p>Instance version</p> 
+     * @return InstanceVersion <p>Instance version</p>
      */
     public String getInstanceVersion() {
         return this.InstanceVersion;
     }
 
     /**
-     * Set Instance version.
-     * @param InstanceVersion Instance version.
+     * Set <p>Instance version</p>
+     * @param InstanceVersion <p>Instance version</p>
      */
     public void setInstanceVersion(String InstanceVersion) {
         this.InstanceVersion = InstanceVersion;
     }
 
     /**
-     * Get Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed). 
-     * @return Status Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+     * Get <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p> 
+     * @return Status <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
      */
     public Long getStatus() {
         return this.Status;
     }
 
     /**
-     * Set Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
-     * @param Status Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
+     * Set <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
+     * @param Status <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed</p>
      */
     public void setStatus(Long Status) {
         this.Status = Status;
     }
 
     /**
-     * Get Number of nodes 
-     * @return NodeCount Number of nodes
+     * Get <p>Node count</p> 
+     * @return NodeCount <p>Node count</p>
      */
     public Long getNodeCount() {
         return this.NodeCount;
     }
 
     /**
-     * Set Number of nodes
-     * @param NodeCount Number of nodes
+     * Set <p>Node count</p>
+     * @param NodeCount <p>Node count</p>
      */
     public void setNodeCount(Long NodeCount) {
         this.NodeCount = NodeCount;
     }
 
     /**
-     * Get Instance specification name 
-     * @return ConfigDisplay Instance specification name
+     * Get <p>Instance configuration specification name</p> 
+     * @return ConfigDisplay <p>Instance configuration specification name</p>
      */
     public String getConfigDisplay() {
         return this.ConfigDisplay;
     }
 
     /**
-     * Set Instance specification name
-     * @param ConfigDisplay Instance specification name
+     * Set <p>Instance configuration specification name</p>
+     * @param ConfigDisplay <p>Instance configuration specification name</p>
      */
     public void setConfigDisplay(String ConfigDisplay) {
         this.ConfigDisplay = ConfigDisplay;
     }
 
     /**
-     * Get Peak TPS 
-     * @return MaxTps Peak TPS
+     * Get <p>Peak TPS</p> 
+     * @return MaxTps <p>Peak TPS</p>
      */
     public Long getMaxTps() {
         return this.MaxTps;
     }
 
     /**
-     * Set Peak TPS
-     * @param MaxTps Peak TPS
+     * Set <p>Peak TPS</p>
+     * @param MaxTps <p>Peak TPS</p>
      */
     public void setMaxTps(Long MaxTps) {
         this.MaxTps = MaxTps;
     }
 
     /**
-     * Get Peak bandwidth in Mbps 
-     * @return MaxBandWidth Peak bandwidth in Mbps
+     * Get <p>Peak bandwidth in Mbps</p> 
+     * @return MaxBandWidth <p>Peak bandwidth in Mbps</p>
      */
     public Long getMaxBandWidth() {
         return this.MaxBandWidth;
     }
 
     /**
-     * Set Peak bandwidth in Mbps
-     * @param MaxBandWidth Peak bandwidth in Mbps
+     * Set <p>Peak bandwidth in Mbps</p>
+     * @param MaxBandWidth <p>Peak bandwidth in Mbps</p>
      */
     public void setMaxBandWidth(Long MaxBandWidth) {
         this.MaxBandWidth = MaxBandWidth;
     }
 
     /**
-     * Get Storage capacity in GB 
-     * @return MaxStorage Storage capacity in GB
+     * Get <p>Storage capacity in GB</p> 
+     * @return MaxStorage <p>Storage capacity in GB</p>
      */
     public Long getMaxStorage() {
         return this.MaxStorage;
     }
 
     /**
-     * Set Storage capacity in GB
-     * @param MaxStorage Storage capacity in GB
+     * Set <p>Storage capacity in GB</p>
+     * @param MaxStorage <p>Storage capacity in GB</p>
      */
     public void setMaxStorage(Long MaxStorage) {
         this.MaxStorage = MaxStorage;
     }
 
     /**
-     * Get Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources. 
-     * @return ExpireTime Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
+     * Get <p>Instance expiration time. The value is 0 for pay-as-you-go instances, in milliseconds. unix timestamp.</p> 
+     * @return ExpireTime <p>Instance expiration time. The value is 0 for pay-as-you-go instances, in milliseconds. unix timestamp.</p>
      */
     public Long getExpireTime() {
         return this.ExpireTime;
     }
 
     /**
-     * Set Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
-     * @param ExpireTime Specifies the instance expiration time in milliseconds as a unix timestamp. the value is 0 for pay-as-you-go resources.
+     * Set <p>Instance expiration time. The value is 0 for pay-as-you-go instances, in milliseconds. unix timestamp.</p>
+     * @param ExpireTime <p>Instance expiration time. The value is 0 for pay-as-you-go instances, in milliseconds. unix timestamp.</p>
      */
     public void setExpireTime(Long ExpireTime) {
         this.ExpireTime = ExpireTime;
     }
 
     /**
-     * Get Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users). 
-     * @return AutoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
+     * Get <p>Auto-renewal flag. 0 means default state (not set by the user, i.e., initial state is manual renewal), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user)</p> 
+     * @return AutoRenewFlag <p>Auto-renewal flag. 0 means default state (not set by the user, i.e., initial state is manual renewal), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user)</p>
      */
     public Long getAutoRenewFlag() {
         return this.AutoRenewFlag;
     }
 
     /**
-     * Set Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
-     * @param AutoRenewFlag Renewal mode. Valid values: `0` (Manual renewal, which is the default mode), `1` (Auto-renewal), `2` (Manual renewal, which is specified by users).
+     * Set <p>Auto-renewal flag. 0 means default state (not set by the user, i.e., initial state is manual renewal), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user)</p>
+     * @param AutoRenewFlag <p>Auto-renewal flag. 0 means default state (not set by the user, i.e., initial state is manual renewal), 1 means auto-renew, 2 means explicitly no auto-renew (set by the user)</p>
      */
     public void setAutoRenewFlag(Long AutoRenewFlag) {
         this.AutoRenewFlag = AutoRenewFlag;
     }
 
     /**
-     * Get 1 indicates prepaid mode, 0 indicates postpaid. 
-     * @return PayMode 1 indicates prepaid mode, 0 indicates postpaid.
+     * Get <p>1 indicates prepaid mode, 0 indicates postpaid</p> 
+     * @return PayMode <p>1 indicates prepaid mode, 0 indicates postpaid</p>
      */
     public Long getPayMode() {
         return this.PayMode;
     }
 
     /**
-     * Set 1 indicates prepaid mode, 0 indicates postpaid.
-     * @param PayMode 1 indicates prepaid mode, 0 indicates postpaid.
+     * Set <p>1 indicates prepaid mode, 0 indicates postpaid</p>
+     * @param PayMode <p>1 indicates prepaid mode, 0 indicates postpaid</p>
      */
     public void setPayMode(Long PayMode) {
         this.PayMode = PayMode;
     }
 
     /**
-     * Get Remarks 
-     * @return Remark Remarks
+     * Get <p>Remark information</p> 
+     * @return Remark <p>Remark information</p>
      */
     public String getRemark() {
         return this.Remark;
     }
 
     /**
-     * Set Remarks
-     * @param Remark Remarks
+     * Set <p>Remark information</p>
+     * @param Remark <p>Remark information</p>
      */
     public void setRemark(String Remark) {
         this.Remark = Remark;
     }
 
     /**
-     * Get Node specification of the cluster. specifies the corresponding flag.
-2C8G:rabbit-vip-profession-2c8g
-4C16G:rabbit-vip-profession-4c16g
-8C32G:rabbit-vip-profession-8c32g
-16C32G:rabbit-vip-basic-4
-16C64G:rabbit-vip-profession-16c64g
-2C4G:rabbit-vip-basic-5
-4C8G:rabbit-vip-basic-1
-8C16G (sold out): rabbit-vip-basic-2.
-Specifies the default value as 4C8G: rabbit-vip-basic-1. 
-     * @return SpecName Node specification of the cluster. specifies the corresponding flag.
-2C8G:rabbit-vip-profession-2c8g
-4C16G:rabbit-vip-profession-4c16g
-8C32G:rabbit-vip-profession-8c32g
-16C32G:rabbit-vip-basic-4
-16C64G:rabbit-vip-profession-16c64g
-2C4G:rabbit-vip-basic-5
-4C8G:rabbit-vip-basic-1
-8C16G (sold out): rabbit-vip-basic-2.
-Specifies the default value as 4C8G: rabbit-vip-basic-1.
+     * Get <p>Node specification of the cluster with corresponding flag:<br>2C8G: rabbit-vip-profession-2c8g<br>4C16G: rabbit-vip-profession-4c16g<br>8C32G: rabbit-vip-profession-8c32g<br>16C32G: rabbit-vip-basic-4<br>16C64G: rabbit-vip-profession-16c64g<br>2C4G: rabbit-vip-basic-5<br>4C8G: rabbit-vip-basic-1<br>8C16G (sold out): rabbit-vip-basic-2<br>Defaults to 4C8G: rabbit-vip-basic-1 if not specified</p> 
+     * @return SpecName <p>Node specification of the cluster with corresponding flag:<br>2C8G: rabbit-vip-profession-2c8g<br>4C16G: rabbit-vip-profession-4c16g<br>8C32G: rabbit-vip-profession-8c32g<br>16C32G: rabbit-vip-basic-4<br>16C64G: rabbit-vip-profession-16c64g<br>2C4G: rabbit-vip-basic-5<br>4C8G: rabbit-vip-basic-1<br>8C16G (sold out): rabbit-vip-basic-2<br>Defaults to 4C8G: rabbit-vip-basic-1 if not specified</p>
      */
     public String getSpecName() {
         return this.SpecName;
     }
 
     /**
-     * Set Node specification of the cluster. specifies the corresponding flag.
-2C8G:rabbit-vip-profession-2c8g
-4C16G:rabbit-vip-profession-4c16g
-8C32G:rabbit-vip-profession-8c32g
-16C32G:rabbit-vip-basic-4
-16C64G:rabbit-vip-profession-16c64g
-2C4G:rabbit-vip-basic-5
-4C8G:rabbit-vip-basic-1
-8C16G (sold out): rabbit-vip-basic-2.
-Specifies the default value as 4C8G: rabbit-vip-basic-1.
-     * @param SpecName Node specification of the cluster. specifies the corresponding flag.
-2C8G:rabbit-vip-profession-2c8g
-4C16G:rabbit-vip-profession-4c16g
-8C32G:rabbit-vip-profession-8c32g
-16C32G:rabbit-vip-basic-4
-16C64G:rabbit-vip-profession-16c64g
-2C4G:rabbit-vip-basic-5
-4C8G:rabbit-vip-basic-1
-8C16G (sold out): rabbit-vip-basic-2.
-Specifies the default value as 4C8G: rabbit-vip-basic-1.
+     * Set <p>Node specification of the cluster with corresponding flag:<br>2C8G: rabbit-vip-profession-2c8g<br>4C16G: rabbit-vip-profession-4c16g<br>8C32G: rabbit-vip-profession-8c32g<br>16C32G: rabbit-vip-basic-4<br>16C64G: rabbit-vip-profession-16c64g<br>2C4G: rabbit-vip-basic-5<br>4C8G: rabbit-vip-basic-1<br>8C16G (sold out): rabbit-vip-basic-2<br>Defaults to 4C8G: rabbit-vip-basic-1 if not specified</p>
+     * @param SpecName <p>Node specification of the cluster with corresponding flag:<br>2C8G: rabbit-vip-profession-2c8g<br>4C16G: rabbit-vip-profession-4c16g<br>8C32G: rabbit-vip-profession-8c32g<br>16C32G: rabbit-vip-basic-4<br>16C64G: rabbit-vip-profession-16c64g<br>2C4G: rabbit-vip-basic-5<br>4C8G: rabbit-vip-basic-1<br>8C16G (sold out): rabbit-vip-basic-2<br>Defaults to 4C8G: rabbit-vip-basic-1 if not specified</p>
      */
     public void setSpecName(String SpecName) {
         this.SpecName = SpecName;
     }
 
     /**
-     * Get Cluster exception information.
+     * Get <p>Cluster exception information</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return ExceptionInformation Cluster exception information.
+     * @return ExceptionInformation <p>Cluster exception information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getExceptionInformation() {
@@ -467,9 +428,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Cluster exception information.
+     * Set <p>Cluster exception information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ExceptionInformation Cluster exception information.
+     * @param ExceptionInformation <p>Cluster exception information</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setExceptionInformation(String ExceptionInformation) {
@@ -477,29 +438,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
-This parameter is used to display the instance status additionally and distinguish from the `Status` parameter. 
-     * @return ClusterStatus Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
-This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+     * Get <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed<br>To separate from the billing area, enable an additional status bit for display.</p> 
+     * @return ClusterStatus <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed<br>To separate from the billing area, enable an additional status bit for display.</p>
      */
     public Long getClusterStatus() {
         return this.ClusterStatus;
     }
 
     /**
-     * Set Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
-This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
-     * @param ClusterStatus Instance status. Valid values: `0` (Creating), `1` (Normal), `2` (Isolated), `3` (Terminated), `4` (Abnormal), `5` (Delivery failed).
-This parameter is used to display the instance status additionally and distinguish from the `Status` parameter.
+     * Set <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed<br>To separate from the billing area, enable an additional status bit for display.</p>
+     * @param ClusterStatus <p>Instance status. 0 indicates creating in progress, 1 indicates normal, 2 indicates isolated, 3 indicates terminated, 4 - abnormal, 5 - delivery failed<br>To separate from the billing area, enable an additional status bit for display.</p>
      */
     public void setClusterStatus(Long ClusterStatus) {
         this.ClusterStatus = ClusterStatus;
     }
 
     /**
-     * Get Public network access point.
+     * Get <p>public network access point</p>
 Note: This field may return null, indicating that no valid values can be obtained. 
-     * @return PublicAccessEndpoint Public network access point.
+     * @return PublicAccessEndpoint <p>public network access point</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public String getPublicAccessEndpoint() {
@@ -507,9 +464,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Set Public network access point.
+     * Set <p>public network access point</p>
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PublicAccessEndpoint Public network access point.
+     * @param PublicAccessEndpoint <p>public network access point</p>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public void setPublicAccessEndpoint(String PublicAccessEndpoint) {
@@ -517,99 +474,115 @@ Note: This field may return null, indicating that no valid values can be obtaine
     }
 
     /**
-     * Get VPC access point list. 
-     * @return Vpcs VPC access point list.
+     * Get <p>VPC access point list</p> 
+     * @return Vpcs <p>VPC access point list</p>
      */
     public VpcEndpointInfo [] getVpcs() {
         return this.Vpcs;
     }
 
     /**
-     * Set VPC access point list.
-     * @param Vpcs VPC access point list.
+     * Set <p>VPC access point list</p>
+     * @param Vpcs <p>VPC access point list</p>
      */
     public void setVpcs(VpcEndpointInfo [] Vpcs) {
         this.Vpcs = Vpcs;
     }
 
     /**
-     * Get Creation time in milliseconds. unix timestamp. 
-     * @return CreateTime Creation time in milliseconds. unix timestamp.
+     * Get <p>Creation time in milliseconds. unix timestamp</p> 
+     * @return CreateTime <p>Creation time in milliseconds. unix timestamp</p>
      */
     public Long getCreateTime() {
         return this.CreateTime;
     }
 
     /**
-     * Set Creation time in milliseconds. unix timestamp.
-     * @param CreateTime Creation time in milliseconds. unix timestamp.
+     * Set <p>Creation time in milliseconds. unix timestamp</p>
+     * @param CreateTime <p>Creation time in milliseconds. unix timestamp</p>
      */
     public void setCreateTime(Long CreateTime) {
         this.CreateTime = CreateTime;
     }
 
     /**
-     * Get Instance type. valid values: 0 (managed), 1 (Serverless). 
-     * @return InstanceType Instance type. valid values: 0 (managed), 1 (Serverless).
+     * Get <p>Instance type</p><p>Enumeration value:</p><ul><li>0: Managed version instance</li></ul> 
+     * @return InstanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>0: Managed version instance</li></ul>
      */
     public Long getInstanceType() {
         return this.InstanceType;
     }
 
     /**
-     * Set Instance type. valid values: 0 (managed), 1 (Serverless).
-     * @param InstanceType Instance type. valid values: 0 (managed), 1 (Serverless).
+     * Set <p>Instance type</p><p>Enumeration value:</p><ul><li>0: Managed version instance</li></ul>
+     * @param InstanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>0: Managed version instance</li></ul>
      */
     public void setInstanceType(Long InstanceType) {
         this.InstanceType = InstanceType;
     }
 
     /**
-     * Get Isolation time, in milliseconds. unix timestamp. 
-     * @return IsolatedTime Isolation time, in milliseconds. unix timestamp.
+     * Get <p>Isolation time in milliseconds. unix timestamp</p> 
+     * @return IsolatedTime <p>Isolation time in milliseconds. unix timestamp</p>
      */
     public Long getIsolatedTime() {
         return this.IsolatedTime;
     }
 
     /**
-     * Set Isolation time, in milliseconds. unix timestamp.
-     * @param IsolatedTime Isolation time, in milliseconds. unix timestamp.
+     * Set <p>Isolation time in milliseconds. unix timestamp</p>
+     * @param IsolatedTime <p>Isolation time in milliseconds. unix timestamp</p>
      */
     public void setIsolatedTime(Long IsolatedTime) {
         this.IsolatedTime = IsolatedTime;
     }
 
     /**
-     * Get Whether deletion protection is enabled. 
-     * @return EnableDeletionProtection Whether deletion protection is enabled.
+     * Get <p>Whether deletion protection is enabled</p> 
+     * @return EnableDeletionProtection <p>Whether deletion protection is enabled</p>
      */
     public Boolean getEnableDeletionProtection() {
         return this.EnableDeletionProtection;
     }
 
     /**
-     * Set Whether deletion protection is enabled.
-     * @param EnableDeletionProtection Whether deletion protection is enabled.
+     * Set <p>Whether deletion protection is enabled</p>
+     * @param EnableDeletionProtection <p>Whether deletion protection is enabled</p>
      */
     public void setEnableDeletionProtection(Boolean EnableDeletionProtection) {
         this.EnableDeletionProtection = EnableDeletionProtection;
     }
 
     /**
-     * Get Tag list 
-     * @return Tags Tag list
+     * Get <p>Tag list</p> 
+     * @return Tags <p>Tag list</p>
      */
     public Tag [] getTags() {
         return this.Tags;
     }
 
     /**
-     * Set Tag list
-     * @param Tags Tag list
+     * Set <p>Tag list</p>
+     * @param Tags <p>Tag list</p>
      */
     public void setTags(Tag [] Tags) {
         this.Tags = Tags;
+    }
+
+    /**
+     * Get <p>public data stream Stream access point</p> 
+     * @return PublicStreamAccessEndpoint <p>public data stream Stream access point</p>
+     */
+    public String getPublicStreamAccessEndpoint() {
+        return this.PublicStreamAccessEndpoint;
+    }
+
+    /**
+     * Set <p>public data stream Stream access point</p>
+     * @param PublicStreamAccessEndpoint <p>public data stream Stream access point</p>
+     */
+    public void setPublicStreamAccessEndpoint(String PublicStreamAccessEndpoint) {
+        this.PublicStreamAccessEndpoint = PublicStreamAccessEndpoint;
     }
 
     public RabbitMQVipInstance() {
@@ -695,6 +668,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 this.Tags[i] = new Tag(source.Tags[i]);
             }
         }
+        if (source.PublicStreamAccessEndpoint != null) {
+            this.PublicStreamAccessEndpoint = new String(source.PublicStreamAccessEndpoint);
+        }
     }
 
 
@@ -725,6 +701,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         this.setParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
         this.setParamSimple(map, prefix + "EnableDeletionProtection", this.EnableDeletionProtection);
         this.setParamArrayObj(map, prefix + "Tags.", this.Tags);
+        this.setParamSimple(map, prefix + "PublicStreamAccessEndpoint", this.PublicStreamAccessEndpoint);
 
     }
 }

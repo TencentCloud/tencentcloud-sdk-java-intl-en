@@ -24,79 +24,69 @@ import java.util.HashMap;
 public class TimeShiftSettingsInfo extends AbstractModel {
 
     /**
-    * Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
+    * Whether to enable time shifting. Option [OPEN|CLOSE].
     */
     @SerializedName("State")
     @Expose
     private String State;
 
     /**
-    * Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
+    * Enable time-shift bound domain name.
     */
     @SerializedName("PlayDomain")
     @Expose
     private String PlayDomain;
 
     /**
-    * Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+    * The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
     */
     @SerializedName("StartoverWindow")
     @Expose
     private Long StartoverWindow;
 
     /**
-     * Get Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return State Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Whether to enable time shifting. Option [OPEN|CLOSE]. 
+     * @return State Whether to enable time shifting. Option [OPEN|CLOSE].
      */
     public String getState() {
         return this.State;
     }
 
     /**
-     * Set Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param State Whether to enable time shifting. Valid values: `OPEN`; `CLOSE`
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Whether to enable time shifting. Option [OPEN|CLOSE].
+     * @param State Whether to enable time shifting. Option [OPEN|CLOSE].
      */
     public void setState(String State) {
         this.State = State;
     }
 
     /**
-     * Get Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found. 
-     * @return PlayDomain Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
+     * Get Enable time-shift bound domain name. 
+     * @return PlayDomain Enable time-shift bound domain name.
      */
     public String getPlayDomain() {
         return this.PlayDomain;
     }
 
     /**
-     * Set Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param PlayDomain Domain name bound for time shifting
-Note: This field may return `null`, indicating that no valid value was found.
+     * Set Enable time-shift bound domain name.
+     * @param PlayDomain Enable time-shift bound domain name.
      */
     public void setPlayDomain(String PlayDomain) {
         this.PlayDomain = PlayDomain;
     }
 
     /**
-     * Get Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found. 
-     * @return StartoverWindow Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+     * Get The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300. 
+     * @return StartoverWindow The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
      */
     public Long getStartoverWindow() {
         return this.StartoverWindow;
     }
 
     /**
-     * Set Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
-     * @param StartoverWindow Allowable time-shift period (s). Value range: [300, 2592000]. Default value: 300Note: This field may return `null`, indicating that no valid value was found.
+     * Set The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
+     * @param StartoverWindow The time when time-shift replay starts, in seconds, range [300, 1209600], default value 300.
      */
     public void setStartoverWindow(Long StartoverWindow) {
         this.StartoverWindow = StartoverWindow;
